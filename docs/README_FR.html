@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Guide ��� Resident Evil : B.O.W. Protocol 0.2.0</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+<style>:root{color-scheme:dark;font-family:Segoe UI,Arial,sans-serif;background:#070809;color:#e6e0d5}body{max-width:980px;margin:auto;padding:32px;line-height:1.6;background:linear-gradient(135deg,#111416,#070809)}h1,h2,h3{font-family:Arial Narrow,Arial,sans-serif;text-transform:uppercase;letter-spacing:.035em}h1{border-left:6px solid #b5272d;padding-left:18px}h2{margin-top:38px;border-bottom:1px solid #483033;padding-bottom:8px;color:#f0e8dc}a{color:#df8e7d}code{background:#15191a;padding:2px 5px}pre{padding:15px;background:#050607;border:1px solid #343b3e;overflow:auto}table{width:100%;border-collapse:collapse}th,td{padding:9px;border:1px solid #343b3e;text-align:left}th{background:#1a1113;color:#efc4b8}blockquote{border-left:3px solid #c5a060;padding-left:14px;color:#b7b5ae}hr{border:0;border-top:1px solid #343b3e}</style></head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Guide ��� Resident Evil : B.O.W. Protocol 0.2.0</h1>
+</header>
+<h1 id="guide-complet--resident-evil--bow-protocol-020">Guide complet —
+Resident Evil : B.O.W. Protocol 0.2.0</h1>
+<h2 id="présentation">Présentation</h2>
+<p>B.O.W. Protocol est un jeu de combat 2D de fans basé sur le moteur
+CQC Versus Legacy v0.60. La version 0.2.0 transforme le prototype en
+véritable archive de confinement Resident Evil : menu survival-horror,
+états vitaux, Bestiaire, Dossiers, Opérations et 750 techniques
+traçables.</p>
+<p>Le contenu jouable comprend 75 incarnations précises. Une incarnation
+est une combinaison volontairement fermée : <strong>créature + forme +
+jeu/version</strong>. Les capacités d’une autre phase ou d’un autre
+remake ne sont pas importées sans preuve.</p>
+<h2 id="choisir-son-mode">Choisir son mode</h2>
+<p><strong>Versus</strong> : duel contre l’IA ou à deux joueurs sur le
+même appareil. Sélection du sujet, de l’arène, du nombre de manches, du
+chronomètre et du mode de conclusion.</p>
+<p><strong>Dossiers</strong> : campagne de huit rencontres propre à
+chacun des 75 sujets. Introduction, rapports intermédiaires, conclusion,
+journal, favoris et sauvegarde locale.</p>
+<p><strong>Arcade</strong> : huit combats, vie réinitialisée à chaque
+rencontre.</p>
+<p><strong>Survie</strong> : la vie restante est conservée ; 12 % de la
+vie maximale sont restaurés entre deux victoires, sans dépasser le
+maximum.</p>
+<p><strong>Boss Rush</strong> : route de dix sujets classés boss dans le
+roster disponible.</p>
+<p><strong>Laboratoire</strong> : entraînement CQC avec mannequin,
+garde, garde après impact, CPU, collisions, récupération, ressources
+libres et exercices guidés.</p>
+<p><strong>Bestiaire</strong> : 389 entrées documentaires. Les 75 sujets
+jouables sont marqués « rendu en pied / moveset 10 sur 10 audité ».</p>
+<p><strong>Archive des movesets</strong> : consultation complète des dix
+commandes de chaque sujet, avec preuve, justification, valeurs de
+simulation, contre-jeu et sources.</p>
+<h2 id="commandes-clavier">Commandes clavier</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Action</th>
+<th>P1</th>
+<th>P2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Gauche / droite</td>
+<td>Flèches</td>
+<td>A / D</td>
+</tr>
+<tr class="even">
+<td>Saut / accroupi</td>
+<td>Haut / bas</td>
+<td>W / S</td>
+</tr>
+<tr class="odd">
+<td>Léger / lourd</td>
+<td>J / K</td>
+<td>F / G</td>
+</tr>
+<tr class="even">
+<td>Frappe basse</td>
+<td>Bas + J</td>
+<td>S + F</td>
+</tr>
+<tr class="odd">
+<td>Technique</td>
+<td>I ; bas, avant ou arrière + I</td>
+<td>T ; bas, avant ou arrière + T</td>
+</tr>
+<tr class="even">
+<td>Prise</td>
+<td>U</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>Super / conclusion</td>
+<td>O</td>
+<td>Y</td>
+</tr>
+<tr class="even">
+<td>Utilitaire biologique</td>
+<td>L</td>
+<td>H</td>
+</tr>
+<tr class="odd">
+<td>Garde</td>
+<td>Espace</td>
+<td>Q</td>
+</tr>
+<tr class="even">
+<td>Dash</td>
+<td>Majuscule droite</td>
+<td>E</td>
+</tr>
+<tr class="odd">
+<td>Techniques / conclusions</td>
+<td>F1 / F2</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>Les touches suivent les positions QWERTY. Sur un clavier AZERTY, les
+directions du joueur 2 sont Q / D / Z / S et sa garde est A.</p>
+<p>« Avant » et « arrière » dépendent de la position de l’adversaire.
+L’utilitaire change selon le sujet : marquage, camouflage, régénération,
+récupération, posture ou autre fonction décrite dans son dossier.</p>
+<h2 id="manette-et-tactile">Manette et tactile</h2>
+<p>A/✕ : léger ; B/○ : lourd ; X/□ : technique ; Y/△ : prise ; LB/L1 :
+garde ; RB/R1 : dash ; LT/L2 : ressource ; RT/R2 : super ou finisher.
+Les commandes tactiles apparaissent sur les écrans compatibles.</p>
+<h2 id="lire-un-moveset">Lire un moveset</h2>
+<p>Chaque sujet possède les dix emplacements suivants : léger, lourd,
+bas, prise, spécial neutre, spécial bas, spécial avant, spécial arrière,
+super et utilitaire.</p>
+<p>Chaque technique affiche :</p>
+<ul>
+<li>son nom propre à l’incarnation ;</li>
+<li>son niveau de preuve ;</li>
+<li>sa base lore ou anatomique ;</li>
+<li>la frontière entre la référence et l’adaptation ;</li>
+<li>son démarrage, son activité, sa récupération, ses dégâts et son coût
+;</li>
+<li>une réponse ou punition recommandée ;</li>
+<li>au moins une URL de référence.</li>
+</ul>
+<h3 id="niveaux-de-preuve">Niveaux de preuve</h3>
+<p><strong>Canonique — 537 techniques.</strong> L’action ou le
+comportement est documenté pour la forme indiquée. Les frames, portées,
+dégâts et commandes restent une adaptation.</p>
+<p><strong>Anatomique — 150 techniques.</strong> Le mouvement exploite
+une partie du corps ou une locomotion visible. Il ne crée pas de nouveau
+pouvoir biologique.</p>
+<p><strong>Simulation — 63 techniques.</strong> Le moteur a besoin d’une
+retraite, d’une gestion de ressource ou d’une action comparable ; elle
+est affichée comme gameplay non canonique.</p>
+<p>Total : <strong>750 techniques / 75 signatures complètes
+distinctes</strong>.</p>
+<h2 id="exemples-de-cloisonnement-des-formes">Exemples de cloisonnement
+des formes</h2>
+<ul>
+<li>Nemesis 2020 forme 1 conserve son arsenal et son tentacule ; il ne
+reçoit pas automatiquement les capacités de ses formes quadrupède ou
+finale.</li>
+<li>Le Tyrant T-002 reste distinct du Tyrant de Resident Evil 2 et de
+leurs mutations.</li>
+<li>Chaque stade de William Birkin est traité comme une incarnation
+différente lorsqu’il possède une fiche jouable.</li>
+<li>Les personnages humains mutés, les formes exposées et les formes
+finales ne sont pas fusionnés silencieusement.</li>
+<li>Les versions originales et remakes peuvent avoir des comportements,
+silhouettes et sources séparés.</li>
+</ul>
+<h2 id="interface-et-états-vitaux">Interface et états vitaux</h2>
+<p>Le HUD emploie trois états :</p>
+<ul>
+<li><strong>FINE</strong> : plus de 60 % de vie ;</li>
+<li><strong>CAUTION</strong> : de 35 % à 60 % ;</li>
+<li><strong>DANGER</strong> : 35 % ou moins.</li>
+</ul>
+<p>L’ECG, la couleur de la jauge et les panneaux de statut suivent cet
+état. Le thème utilise un langage de terminal de confinement : noir
+industriel, rouge d’alerte, vert médical, ambre, scanlines, dossiers et
+marquages de sécurité.</p>
+<h2 id="sauvegardes-et-replays">Sauvegardes et replays</h2>
+<p>Les sauvegardes B.O.W. Protocol sont séparées de celles de CQC. Les
+Dossiers utilisent trois emplacements, des copies de secours, l’export
+et l’import JSON. Les replays stockent les entrées et la configuration ;
+ils ne sont pas des vidéos.</p>
+<p>Un changement d’appareil ou de navigateur ne transfère pas
+automatiquement les données. Utiliser l’export puis l’import depuis les
+Options.</p>
+<h2 id="fidélité--portée-exacte">Fidélité : portée exacte</h2>
+<p>La version 0.2.0 vise une fidélité maximale pour l’identité,
+l’anatomie, l’agent biologique, les capacités et les comportements de
+chaque incarnation. Elle ne prétend pas extraire ou reproduire les
+animations internes des jeux Resident Evil.</p>
+<p>Les éléments suivants sont des choix de simulation :</p>
+<ul>
+<li>commandes et disposition des boutons ;</li>
+<li>nombre de frames, dégâts, portée et coût ;</li>
+<li>hitboxes, collisions et échelle commune de l’arène ;</li>
+<li>enchaînements entre coups ;</li>
+<li>affrontements entre époques ou épisodes ;</li>
+<li>Dossiers, Arcade, Boss Rush et Survie ;</li>
+<li>conclusions stylisées.</li>
+</ul>
+<p>Cette frontière apparaît dans chaque fiche. Les documents
+<code>AUDIT_LORE_V020.md</code> et
+<code>MOVESETS_COMPLETS_V020.md</code> fournissent la traçabilité
+intégrale.</p>
+<h2 id="développement-et-tests">Développement et tests</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> start</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> run verify</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> run build</span></code></pre></div>
+<p><code>npm run verify</code> exécute l’audit lore, les 26 contrôles du
+moteur, les 20 contrôles de pages et les 10 contrôles d’interface.
+<code>npm run build</code> vérifie les ressources puis construit le site
+dans <code>dist/</code>.</p>
+<p>Le test Canvas utilise une dépendance native uniquement pour la
+validation. Le jeu déployé reste entièrement statique et ne dépend pas
+de cette bibliothèque.</p>
+<h2 id="organisation">Organisation</h2>
+<ul>
+<li><code>data/</code> : profils éditables, lore, roster, histoires et
+sources ;</li>
+<li><code>src/</code> : moteur, rendu, navigation et données compilées
+;</li>
+<li><code>styles/</code> : thème et mises en page ;</li>
+<li><code>modules/</code> : Versus et Dossiers ;</li>
+<li><code>assets/</code> : spécimens, portraits et arènes ;</li>
+<li><code>tests/</code> : audits et scénarios de validation ;</li>
+<li><code>docs/</code> : guide, rapports et traçabilité.</li>
+</ul>
+<h2 id="crédits">Crédits</h2>
+<p>Projet de fans non officiel. Resident Evil / Biohazard et ses
+éléments appartiennent à leurs ayants droit, dont Capcom. Le moteur
+d’origine provient du projet CQC Versus Legacy de Darknigthmare. Les
+références des images et fiches sont conservées dans les données du
+projet.</p>
+</body>
+</html>
