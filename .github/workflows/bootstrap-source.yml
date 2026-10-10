@@ -1,0 +1,94 @@
+name: Bootstrap complete B.O.W. Protocol source
+
+on:
+  push:
+    paths:
+      - .github/workflows/bootstrap-source.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bow-protocol-bootstrap
+  cancel-in-progress: false
+
+jobs:
+  import-complete-source:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      PART_01_URL: "https://sdmntprpolandcentral.oaiusercontent.com/files/00000000-6a68-820a-a183-a6d6e658ee8e/raw?se=2026-10-10T23%3A19%3A50Z&sp=r&sv=2026-02-06&sr=b&scid=67603be7-0b07-5579-813a-e28008ad0a6b&skoid=e5f84a89-964a-4fd3-92c2-c2cb3a12ea16&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-10T05%3A49%3A05Z&ske=2026-10-11T05%3A49%3A05Z&sks=b&skv=2026-02-06&sig=MeYBkXQenjKSinabJAUmKMM4SWjZq3PFGxFsfAGdEX4%3D"
+      PART_02_URL: "https://sdmntprpolandcentral.oaiusercontent.com/files/00000000-65bc-820a-9dbf-b950e86fbed6/raw?se=2026-10-10T23%3A19%3A57Z&sp=r&sv=2026-02-06&sr=b&scid=3aa3d041-cd23-5668-b627-c0f9fffe1f47&skoid=e5f84a89-964a-4fd3-92c2-c2cb3a12ea16&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-10T03%3A01%3A15Z&ske=2026-10-11T03%3A01%3A15Z&sks=b&skv=2026-02-06&sig=Gudv5dovdjJoX9nm39YKxQ0DdjMc5FWus7FfWuHQmCk%3D"
+      PART_03_URL: "https://sdmntprpolandcentral.oaiusercontent.com/files/00000000-a0b4-820a-8e1e-93b44f0f0f8b/raw?se=2026-10-10T23%3A20%3A03Z&sp=r&sv=2026-02-06&sr=b&scid=848c7c02-2fe7-5970-93b1-2cda2d47f8c3&skoid=e5f84a89-964a-4fd3-92c2-c2cb3a12ea16&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-10T06%3A51%3A14Z&ske=2026-10-11T06%3A51%3A14Z&sks=b&skv=2026-02-06&sig=TAtDQYalomu0G2UNus192TV1E1DeP6StGtfhkECgmBM%3D"
+      PART_04_URL: "https://sdmntprpolandcentral.oaiusercontent.com/files/00000000-720c-820a-8347-683896b79f7c/raw?se=2026-10-10T23%3A20%3A07Z&sp=r&sv=2026-02-06&sr=b&scid=6336f487-5a57-5745-b760-da34248cf0d8&skoid=e5f84a89-964a-4fd3-92c2-c2cb3a12ea16&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-10T03%3A50%3A01Z&ske=2026-10-11T03%3A50%3A01Z&sks=b&skv=2026-02-06&sig=BHVUi9dqGpPxXwf8tKU/iQq/h6E2G7tHUrIqFl6YYwI%3D"
+      PART_05_URL: "https://sdmntprpolandcentral.oaiusercontent.com/files/00000000-3ab8-820a-a1b5-f62dd1905dc7/raw?se=2026-10-10T23%3A20%3A11Z&sp=r&sv=2026-02-06&sr=b&scid=b7ca08a6-6c20-531e-9ac4-6662dbd9b01a&skoid=e5f84a89-964a-4fd3-92c2-c2cb3a12ea16&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-10T00%3A29%3A56Z&ske=2026-10-11T00%3A29%3A56Z&sks=b&skv=2026-02-06&sig=2p46UzBGc4xbS7LxT/9PtCO4LQqIwy57EfvtNDMdJa4%3D"
+      FINAL_ZIP_URL: "https://sdmntprpolandcentral.oaiusercontent.com/files/00000000-b644-820a-8ff5-191bca2b72d9/raw?se=2026-10-10T23%3A20%3A18Z&sp=r&sv=2026-02-06&sr=b&scid=e69461a9-a784-5070-83bf-1e225afb2eb9&skoid=e5f84a89-964a-4fd3-92c2-c2cb3a12ea16&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-10T22%3A18%3A42Z&ske=2026-10-11T22%3A18%3A42Z&sks=b&skv=2026-02-06&sig=2wNHNxbsm7YWOtV52sgCuYZG2oJ4AX67hkPk4QccYZg%3D"
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Download split source archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/bow-source"
+          cd "$RUNNER_TEMP/bow-source"
+          curl --fail --location --retry 5 --retry-all-errors --output BOW.z01 "$PART_01_URL"
+          curl --fail --location --retry 5 --retry-all-errors --output BOW.z02 "$PART_02_URL"
+          curl --fail --location --retry 5 --retry-all-errors --output BOW.z03 "$PART_03_URL"
+          curl --fail --location --retry 5 --retry-all-errors --output BOW.z04 "$PART_04_URL"
+          curl --fail --location --retry 5 --retry-all-errors --output BOW.z05 "$PART_05_URL"
+          curl --fail --location --retry 5 --retry-all-errors --output BOW.zip "$FINAL_ZIP_URL"
+
+      - name: Verify archive integrity
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd "$RUNNER_TEMP/bow-source"
+          cat > SHA256SUMS <<'EOF'
+          38f42e36b95507879a3b05a6c8d5a4d7304def41f5c36451f0eea9c9eb106f2d  BOW.z01
+          74bfbc822ee6ff90dc2d7c94d735aef077c089f95e8fb033ee9fedbbf11fecc6  BOW.z02
+          309f9d88c344a945ecc7e6656626393f3b6afc4bbd84bdd4b6e459a8ddf777d4  BOW.z03
+          f5fccc5f980eb9c2ea87d33e068b9acaf595a32780c4fc9beaa7500bc9e47122  BOW.z04
+          6ae725f9b93997e1f52b2970b12ca8cc39f6b8408df0c040cf504438a06e8d86  BOW.z05
+          6fcaac02ab757536fe46b289594979a8213a1fd496fc0bc597693fa6d309d7c8  BOW.zip
+          EOF
+          sha256sum --check SHA256SUMS
+
+      - name: Reconstruct and import project
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd "$RUNNER_TEMP/bow-source"
+          zip -s 0 BOW.zip --out BOW-complete.zip
+          unzip -q BOW-complete.zip -d extracted
+          PROJECT_ROOT="$(find extracted -type f -name package.json -printf '%h\n' | head -n 1)"
+          test -n "$PROJECT_ROOT"
+          rsync -a "$PROJECT_ROOT/" "$GITHUB_WORKSPACE/"
+          test -f "$GITHUB_WORKSPACE/package.json"
+          test -f "$GITHUB_WORKSPACE/data/lore-movesets.json"
+          test -f "$GITHUB_WORKSPACE/src/re-data.js"
+          test -d "$GITHUB_WORKSPACE/assets/specimens"
+
+      - name: Validate lore, engine, pages and interface
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm run verify
+          npm run build
+
+      - name: Commit complete verified source
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f .github/workflows/bootstrap-source.yml
+          git config user.name "B.O.W. Protocol CI"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          git commit -m "feat: import complete B.O.W. Protocol v0.2.0 [skip ci]"
+          git push origin HEAD:main
