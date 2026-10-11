@@ -1,0 +1,65 @@
+name: Apply B.O.W. Protocol v0.4.0
+
+on:
+  push:
+    branches:
+      - codex/v0.4-apex-mutation
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bow-v040-apply
+  cancel-in-progress: false
+
+jobs:
+  apply-and-verify:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      PATCH_URL: "https://sdmntprpolandcentral.oaiusercontent.com/files/00000000-47d0-820a-8d0d-01d974a21793/raw?se=2026-10-11T08%3A50%3A41Z&sp=r&sv=2026-02-06&sr=b&scid=08b87aed-8486-5954-8e6f-63a91b933266&skoid=e5f84a89-964a-4fd3-92c2-c2cb3a12ea16&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-11T05%3A41%3A04Z&ske=2026-10-12T05%3A41%3A04Z&sks=b&skv=2026-02-06&sig=E/hpi2URvSE1vm794fZGsPMuf06PzQdVTsfIxdJ6j4k%3D"
+      PATCH_SHA256: "4191a586be8f0306e9d5ad0b97da1266eeced4502b25c9bb0941517cd48a6dac"
+    steps:
+      - name: Checkout development branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: codex/v0.4-apex-mutation
+
+      - name: Download verified Apex Mutation patch
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -L --fail --retry 5 --retry-all-errors --retry-delay 2 "$PATCH_URL" -o /tmp/bow-v040.zip
+          echo "$PATCH_SHA256  /tmp/bow-v040.zip" | sha256sum -c -
+          unzip -q -o /tmp/bow-v040.zip -d "$GITHUB_WORKSPACE"
+
+      - name: Install native Canvas QA backend
+        run: npm install --no-save --package-lock=false @napi-rs/canvas@0.1.80
+
+      - name: Run complete QA
+        run: npm run verify
+
+      - name: Build production bundle
+        run: npm run build
+
+      - name: Validate v0.4.0 release contract
+        shell: bash
+        run: |
+          set -euo pipefail
+          node -e "const p=require('./package.json');const d=require('./data/roster.json');const m=require('./docs/RELEASE_MANIFEST_v0.4.0.json');if(p.version!=='0.4.0'||d.counts.fighters!==93||d.counts.loreMoves!==930||m.verification.failed!==0)process.exit(1)"
+          test -s dist/index.html
+          test -s dist/operations.html
+          test -s dist/modules/versus.html
+          test -s dist/styles/bow-v040.css
+
+      - name: Commit verified release to branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "B.O.W. Protocol CI"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A -- ':!.github/workflows/**'
+          git commit -m "feat: B.O.W. Protocol v0.4.0 Apex Mutation"
+          git push origin HEAD:codex/v0.4-apex-mutation
