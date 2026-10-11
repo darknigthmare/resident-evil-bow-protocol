@@ -1,6 +1,6 @@
 # Vérification des opérations et du bestiaire
 
-Exécution : 2026-10-10T23:20:26.511Z. **20 contrôles réussis ; 0 en échec.**
+Exécution : 2026-10-11T00:01:08.643Z. **20 contrôles réussis ; 0 en échec.**
 
 ## Méthode
 
@@ -22,7 +22,7 @@ Prérequis : Node.js, les données compilées et `@napi-rs/canvas`, directement 
 
 ## Couverture
 
-- 389 dossiers consultables ; 75 versions jouables.
+- 389 dossiers consultables ; 81 versions jouables.
 - Pagination, recherche avec accents, filtres par épisode/statut, sources et liens des dossiers, fermeture et retour du focus.
 - Lancement, accusé de réception et résultat du vrai moteur ; origine de fenêtre et identifiant de requête.
 - Huit victoires Arcade, sélection des dix boss, Survie, replays, défaite, retour à la sélection et records persistants.
@@ -32,21 +32,21 @@ Prérequis : Node.js, les données compilées et `@napi-rs/canvas`, directement 
 
 | Mode | Rencontre | P1 | P2 | Gagnant | Images simulées | Vie P1 / P2 |
 |---|---:|---|---|---:|---:|---:|
-| arcade | 1 | re3r-nemesis | revillage-moroaica | 1 | 1073 | 10000 / 0 |
-| arcade | 1 | re3r-nemesis | rerev2-glasp | 1 | 1114 | 10000 / 0 |
-| arcade | 2 | re3r-nemesis | revillage-sturm | 1 | 1148 | 10000 / 0 |
-| arcade | 3 | re3r-nemesis | re2-tyrant-mutation | 1 | 1175 | 10000 / 0 |
-| arcade | 4 | re3r-nemesis | re1-hunter | 1 | 1208 | 10000 / 0 |
-| arcade | 5 | re3r-nemesis | revillage-samca | 1 | 1223 | 10000 / 0 |
-| arcade | 6 | re3r-nemesis | re4-bitores-mendez-mutated | 1 | 1064 | 10000 / 0 |
-| arcade | 7 | re3r-nemesis | recv-tyrant | 1 | 1175 | 10000 / 0 |
-| arcade | 8 | re3r-nemesis | revillage-soldat-eins | 1 | 1148 | 10000 / 0 |
-| arcade | 1 | re3r-nemesis | re1r-tyrant | 1 | 1034 | 10000 / 0 |
-| arcade | 1 | re3r-nemesis | re2-g-third-form | 1 | 1058 | 10000 / 0 |
-| survival | 1 | re3r-nemesis | revillage-lycan-large | 1 | 1293 | 7547 / 0 |
-| survival | 2 | re3r-nemesis | revillage-donna-angie | 1 | 1055 | 8747 / 0 |
-| survival | 1 | re3r-nemesis | revillage-lycan | 2 | 1117 | 0 / 10000 |
-| arcade | 1 | re3r-nemesis | re4r-bitores-mendez | 1 | 1034 | 10000 / 0 |
+| arcade | 1 | re3r-nemesis | revillage-salvatore-moreau | 1 | 1034 | 10000 / 0 |
+| arcade | 1 | re3r-nemesis | re2-g-type-young | 1 | 1089 | 10000 / 0 |
+| arcade | 2 | re3r-nemesis | re7-marguerite-baker-mutated | 1 | 1112 | 10000 / 0 |
+| arcade | 3 | re3r-nemesis | re4r-ramon-salazar | 1 | 1186 | 10000 / 0 |
+| arcade | 4 | re3r-nemesis | re4-osmund-saddler-enemy | 1 | 1197 | 10000 / 0 |
+| arcade | 5 | re3r-nemesis | rerev-rachael-ooze | 1 | 1206 | 10000 / 0 |
+| arcade | 6 | re3r-nemesis | re2-ivy | 1 | 1064 | 10000 / 0 |
+| arcade | 7 | re3r-nemesis | re1r-tyrant | 1 | 1175 | 10000 / 0 |
+| arcade | 8 | re3r-nemesis | re2-g | 1 | 1184 | 10000 / 0 |
+| arcade | 1 | re3r-nemesis | rerev-globster | 1 | 1104 | 10000 / 0 |
+| arcade | 1 | re3r-nemesis | re4r-verdugo | 1 | 1055 | 10000 / 0 |
+| survival | 1 | re3r-nemesis | re7-eveline-final | 1 | 1141 | 7514 / 0 |
+| survival | 2 | re3r-nemesis | re2-g-second-form | 1 | 1058 | 8714 / 0 |
+| survival | 1 | re3r-nemesis | recv-bandersnatch | 2 | 1304 | 0 / 10000 |
+| arcade | 1 | re3r-nemesis | revillage-alcina-dimitrescu | 1 | 1034 | 10000 / 0 |
 
 ## Contrôles
 

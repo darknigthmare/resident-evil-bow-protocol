@@ -1,19 +1,20 @@
-# Vérification de l’interface Resident Evil — v0.2.0
+# Vérification de l’interface Resident Evil — v0.3.0
 
 - Résultat : **RÉUSSI**
-- Contrôles : **12/12**
-- Portée : liens de thème, compteurs publics, traçabilité lore des techniques, états FINE/CAUTION/DANGER, navigation et périmètre des Dossiers.
-- Portée technique : contrôle structurel et initialisation réelle de l’Archive des movesets dans le DOM contrôlé. Le rendu CSS pixel par pixel et les résolutions physiques ne sont pas revendiqués.
+- Contrôles : **13/13**
+- Portée : 81 sujets, 810 techniques, thème bow-v030.css, compteurs publics, Incident Baker, traçabilité lore, états FINE/CAUTION/DANGER et navigation.
+- Portée technique : contrôle structurel et initialisation réelle de l’accueil et de l’Archive des movesets dans le DOM contrôlé. Le rendu CSS pixel par pixel et les résolutions physiques ne sont pas revendiqués.
 
-- ✅ Every primary screen loads the B.O.W. 0.2 containment theme
-- ✅ Home screen exposes the exact audited scope and build
-- ✅ Home runtime fills all four public counters
-- ✅ Bestiary communicates full-body status and the 10/10 audited moveset
+- ✅ Every primary screen loads the current containment theme
+- ✅ Home screen exposes the exact audited scope and current build
+- ✅ Home runtime fills public counters and the six Incident Baker cards
+- ✅ Bestiary communicates full-body status and the audited ten-move contract
 - ✅ Technique dossier exposes traceability and adaptation boundaries
-- ✅ Combat release identifies the lore-audited 0.2.0 build
+- ✅ Combat release identifies the current audited build
 - ✅ Health presentation contains Resident Evil FINE, CAUTION and DANGER states
-- ✅ Theme contains the containment visual language without external assets
+- ✅ Theme contains the containment visual language without remote assets
 - ✅ Moveset archive declares all traceability fields and commands
-- ✅ Dossiers identify the full 75-subject, 750-technique campaign scope
+- ✅ Dossiers identify the full dynamic campaign scope
 - ✅ All public pages retain a route back to the main containment menu
-- ✅ Moveset archive initializes 75 subjects and ten rows from delivered data
+- ✅ Moveset archive initializes every subject and ten rows from delivered data
+- ✅ Home screen initializes live counters and the six-subject Incident Baker panel

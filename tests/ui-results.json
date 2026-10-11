@@ -1,26 +1,32 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "pass": true,
-  "checks": 12,
+  "fighters": 81,
+  "moves": 810,
+  "checks": 13,
   "failures": 0,
   "report": [
     {
-      "name": "Every primary screen loads the B.O.W. 0.2 containment theme",
+      "name": "Every primary screen loads the current containment theme",
       "pass": true,
       "detail": {
-        "screens": 6
+        "screens": 6,
+        "theme": "bow-v030.css"
       }
     },
     {
-      "name": "Home screen exposes the exact audited scope and build",
+      "name": "Home screen exposes the exact audited scope and current build",
       "pass": true
     },
     {
-      "name": "Home runtime fills all four public counters",
-      "pass": true
+      "name": "Home runtime fills public counters and the six Incident Baker cards",
+      "pass": true,
+      "detail": {
+        "newSubjects": 6
+      }
     },
     {
-      "name": "Bestiary communicates full-body status and the 10/10 audited moveset",
+      "name": "Bestiary communicates full-body status and the audited ten-move contract",
       "pass": true
     },
     {
@@ -28,7 +34,7 @@
       "pass": true
     },
     {
-      "name": "Combat release identifies the lore-audited 0.2.0 build",
+      "name": "Combat release identifies the current audited build",
       "pass": true
     },
     {
@@ -36,7 +42,7 @@
       "pass": true
     },
     {
-      "name": "Theme contains the containment visual language without external assets",
+      "name": "Theme contains the containment visual language without remote assets",
       "pass": true
     },
     {
@@ -44,7 +50,7 @@
       "pass": true
     },
     {
-      "name": "Dossiers identify the full 75-subject, 750-technique campaign scope",
+      "name": "Dossiers identify the full dynamic campaign scope",
       "pass": true
     },
     {
@@ -52,11 +58,20 @@
       "pass": true
     },
     {
-      "name": "Moveset archive initializes 75 subjects and ten rows from delivered data",
+      "name": "Moveset archive initializes every subject and ten rows from delivered data",
       "pass": true,
       "detail": {
-        "subjects": 75,
-        "rows": 10
+        "subjects": 81,
+        "rows": 10,
+        "moves": 810
+      }
+    },
+    {
+      "name": "Home screen initializes live counters and the six-subject Incident Baker panel",
+      "pass": true,
+      "detail": {
+        "subjects": 81,
+        "incidentCards": 6
       }
     }
   ]

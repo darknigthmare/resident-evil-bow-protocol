@@ -4,153 +4,8 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Guide ��� Resident Evil : B.O.W. Protocol 0.2.0</title>
+  <title>Guide — Resident Evil : B.O.W. Protocol 0.3.0</title>
   <style>
-    html {
-      color: #1a1a1a;
-      background-color: #fdfdfd;
-    }
-    body {
-      margin: 0 auto;
-      max-width: 36em;
-      padding-left: 50px;
-      padding-right: 50px;
-      padding-top: 50px;
-      padding-bottom: 50px;
-      hyphens: auto;
-      overflow-wrap: break-word;
-      text-rendering: optimizeLegibility;
-      font-kerning: normal;
-    }
-    @media (max-width: 600px) {
-      body {
-        font-size: 0.9em;
-        padding: 12px;
-      }
-      h1 {
-        font-size: 1.8em;
-      }
-    }
-    @media print {
-      html {
-        background-color: white;
-      }
-      body {
-        background-color: transparent;
-        color: black;
-        font-size: 12pt;
-      }
-      p, h2, h3 {
-        orphans: 3;
-        widows: 3;
-      }
-      h2, h3, h4 {
-        page-break-after: avoid;
-      }
-    }
-    p {
-      margin: 1em 0;
-    }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
-    }
-    img {
-      max-width: 100%;
-    }
-    svg {
-      height: auto;
-      max-width: 100%;
-    }
-    h1, h2, h3, h4, h5, h6 {
-      margin-top: 1.4em;
-    }
-    h5, h6 {
-      font-size: 1em;
-      font-style: italic;
-    }
-    h6 {
-      font-weight: normal;
-    }
-    ol, ul {
-      padding-left: 1.7em;
-      margin-top: 1em;
-    }
-    li > ol, li > ul {
-      margin-top: 0;
-    }
-    blockquote {
-      margin: 1em 0 1em 1.7em;
-      padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
-      color: #606060;
-    }
-    code {
-      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
-      font-size: 85%;
-      margin: 0;
-      hyphens: manual;
-    }
-    pre {
-      margin: 1em 0;
-      overflow: auto;
-    }
-    pre code {
-      padding: 0;
-      overflow: visible;
-      overflow-wrap: normal;
-    }
-    .sourceCode {
-     background-color: transparent;
-     overflow: visible;
-    }
-    hr {
-      background-color: #1a1a1a;
-      border: none;
-      height: 1px;
-      margin: 1em 0;
-    }
-    table {
-      margin: 1em 0;
-      border-collapse: collapse;
-      width: 100%;
-      overflow-x: auto;
-      display: block;
-      font-variant-numeric: lining-nums tabular-nums;
-    }
-    table caption {
-      margin-bottom: 0.75em;
-    }
-    tbody {
-      margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
-    }
-    th {
-      border-top: 1px solid #1a1a1a;
-      padding: 0.25em 0.5em 0.25em 0.5em;
-    }
-    td {
-      padding: 0.125em 0.5em 0.25em 0.5em;
-    }
-    header {
-      margin-bottom: 4em;
-      text-align: center;
-    }
-    #TOC li {
-      list-style: none;
-    }
-    #TOC ul {
-      padding-left: 1.3em;
-    }
-    #TOC > ul {
-      padding-left: 0;
-    }
-    #TOC a:not(:hover) {
-      text-decoration: none;
-    }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -231,229 +86,246 @@
     code span.vs { color: #4070a0; } /* VerbatimString */
     code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
   </style>
-<style>:root{color-scheme:dark;font-family:Segoe UI,Arial,sans-serif;background:#070809;color:#e6e0d5}body{max-width:980px;margin:auto;padding:32px;line-height:1.6;background:linear-gradient(135deg,#111416,#070809)}h1,h2,h3{font-family:Arial Narrow,Arial,sans-serif;text-transform:uppercase;letter-spacing:.035em}h1{border-left:6px solid #b5272d;padding-left:18px}h2{margin-top:38px;border-bottom:1px solid #483033;padding-bottom:8px;color:#f0e8dc}a{color:#df8e7d}code{background:#15191a;padding:2px 5px}pre{padding:15px;background:#050607;border:1px solid #343b3e;overflow:auto}table{width:100%;border-collapse:collapse}th,td{padding:9px;border:1px solid #343b3e;text-align:left}th{background:#1a1113;color:#efc4b8}blockquote{border-left:3px solid #c5a060;padding-left:14px;color:#b7b5ae}hr{border:0;border-top:1px solid #343b3e}</style></head>
+  <link rel="stylesheet" href="../styles/hub.css" />
+  <link rel="stylesheet" href="../styles/bow-v030.css" />
+</head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Guide ��� Resident Evil : B.O.W. Protocol 0.2.0</h1>
+<h1 class="title">Guide — Resident Evil : B.O.W. Protocol 0.3.0</h1>
 </header>
-<h1 id="guide-complet--resident-evil--bow-protocol-020">Guide complet —
-Resident Evil : B.O.W. Protocol 0.2.0</h1>
-<h2 id="présentation">Présentation</h2>
-<p>B.O.W. Protocol est un jeu de combat 2D de fans basé sur le moteur
-CQC Versus Legacy v0.60. La version 0.2.0 transforme le prototype en
-véritable archive de confinement Resident Evil : menu survival-horror,
-états vitaux, Bestiaire, Dossiers, Opérations et 750 techniques
-traçables.</p>
-<p>Le contenu jouable comprend 75 incarnations précises. Une incarnation
-est une combinaison volontairement fermée : <strong>créature + forme +
-jeu/version</strong>. Les capacités d’une autre phase ou d’un autre
-remake ne sont pas importées sans preuve.</p>
-<h2 id="choisir-son-mode">Choisir son mode</h2>
-<p><strong>Versus</strong> : duel contre l’IA ou à deux joueurs sur le
-même appareil. Sélection du sujet, de l’arène, du nombre de manches, du
-chronomètre et du mode de conclusion.</p>
-<p><strong>Dossiers</strong> : campagne de huit rencontres propre à
-chacun des 75 sujets. Introduction, rapports intermédiaires, conclusion,
-journal, favoris et sauvegarde locale.</p>
-<p><strong>Arcade</strong> : huit combats, vie réinitialisée à chaque
-rencontre.</p>
-<p><strong>Survie</strong> : la vie restante est conservée ; 12 % de la
-vie maximale sont restaurés entre deux victoires, sans dépasser le
-maximum.</p>
-<p><strong>Boss Rush</strong> : route de dix sujets classés boss dans le
-roster disponible.</p>
-<p><strong>Laboratoire</strong> : entraînement CQC avec mannequin,
-garde, garde après impact, CPU, collisions, récupération, ressources
-libres et exercices guidés.</p>
-<p><strong>Bestiaire</strong> : 389 entrées documentaires. Les 75 sujets
-jouables sont marqués « rendu en pied / moveset 10 sur 10 audité ».</p>
-<p><strong>Archive des movesets</strong> : consultation complète des dix
-commandes de chaque sujet, avec preuve, justification, valeurs de
-simulation, contre-jeu et sources.</p>
-<h2 id="commandes-clavier">Commandes clavier</h2>
+<h1 id="guide-complet--resident-evil--bow-protocol">Guide complet —
+Resident Evil : B.O.W. Protocol</h1>
+<p>Jeu de combat 2D de fans construit à partir du moteur <strong>CQC
+Versus Legacy v0.60</strong> de Darknigthmare, avec un roster, une
+progression, une interface et des données Resident Evil
+indépendants.</p>
+<p><strong>Version 0.3.0 — Incident Baker, 11 octobre 2026.</strong>
+Cette version porte le roster à <strong>81 incarnations
+jouables</strong> et transforme six dossiers de <em>Resident Evil 7
+biohazard</em> en combattants complets, sans fusionner leurs phases ni
+importer des capacités d’une autre mutation.</p>
+<h2 id="contenu-030">Contenu 0.3.0</h2>
+<ul>
+<li><strong>81 B.O.W., mutants et antagonistes jouables</strong>, chacun
+limité à l’épisode et à la forme indiqués.</li>
+<li><strong>810 techniques</strong>, soit dix commandes par sujet.</li>
+<li><strong>577 techniques canoniques</strong>, reliées à une action ou
+un comportement documenté.</li>
+<li><strong>165 extensions anatomiques</strong>, fondées sur la
+morphologie visible sans ajouter un pouvoir étranger.</li>
+<li><strong>68 traductions de simulation</strong>, nécessaires au jeu de
+combat et explicitement signalées comme non canoniques.</li>
+<li><strong>81 signatures complètes distinctes</strong> : aucun sujet ne
+reprend intégralement le répertoire d’un autre.</li>
+<li><strong>81 Dossiers de confinement</strong> de huit rencontres, soit
+<strong>648 essais</strong>.</li>
+<li><strong>324 conclusions de duel</strong>, <strong>389 fiches de
+Bestiaire</strong> et <strong>18 configurations d’arène</strong>.</li>
+</ul>
+<p>L’<a href="movesets.html">Archive des movesets</a> permet de
+consulter les 810 techniques avec commande, niveau de preuve,
+justification, valeurs de simulation, contre-jeu et sources.</p>
+<h2 id="incident-baker">Incident Baker</h2>
 <table>
 <thead>
 <tr class="header">
-<th>Action</th>
-<th>P1</th>
-<th>P2</th>
+<th>Sujet jouable</th>
+<th>Incarnation</th>
+<th>Agent</th>
+<th>Rôle tactique</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Gauche / droite</td>
-<td>Flèches</td>
-<td>A / D</td>
+<td>JACK BAKER — FORME MUTÉE</td>
+<td>Resident Evil 7 biohazard (2017)</td>
+<td>Moisissure / E-001</td>
+<td>COLOSSE MULTI-OCULAIRE</td>
 </tr>
 <tr class="even">
-<td>Saut / accroupi</td>
-<td>Haut / bas</td>
-<td>W / S</td>
+<td>JACK BAKER — SWAMP MAN</td>
+<td>Resident Evil 7 biohazard — End of Zoe (2017)</td>
+<td>Moisissure / E-001</td>
+<td>POURSUITE RÉGÉNÉRATIVE</td>
 </tr>
 <tr class="odd">
-<td>Léger / lourd</td>
+<td>MARGUERITE BAKER — FORME MUTÉE</td>
+<td>Resident Evil 7 biohazard (2017)</td>
+<td>Moisissure / E-001</td>
+<td>EMBUSCADE INSECTOÏDE</td>
+</tr>
+<tr class="even">
+<td>LUCAS BAKER — FORME MUTÉE</td>
+<td>Resident Evil 7 biohazard — Not a Hero (2017)</td>
+<td>Moisissure / E-001</td>
+<td>CONTAMINATION FONGIQUE</td>
+</tr>
+<tr class="odd">
+<td>EVELINE — FORME FINALE</td>
+<td>Resident Evil 7 biohazard (2017)</td>
+<td>Moisissure / E-001</td>
+<td>COLONIE TERMINALE</td>
+</tr>
+<tr class="even">
+<td>FUMER (WM-002)</td>
+<td>Resident Evil 7 biohazard — Not a Hero (2017)</td>
+<td>Moisissure blanche / WM-002</td>
+<td>RÉGÉNÉRATION BLANCHE</td>
+</tr>
+</tbody>
+</table>
+<p>Ces six profils possèdent chacun un sprite en pied, dix techniques
+écrites pour la phase concernée, quatre conclusions stylisées et un
+Dossier de huit essais. Les mutations de Jack, Marguerite, Lucas et
+Eveline restent séparées de leurs autres états.</p>
+<h2 id="jouer">Jouer</h2>
+<ul>
+<li>Production : <a
+href="https://resident-evil-bow-protocol.vercel.app/">https://resident-evil-bow-protocol.vercel.app/</a></li>
+<li>Dépôt : <a
+href="https://github.com/darknigthmare/resident-evil-bow-protocol">https://github.com/darknigthmare/resident-evil-bow-protocol</a></li>
+<li>Drive : voir <code>docs/deployment.json</code>.</li>
+</ul>
+<p>Pour lancer localement avec <strong>Node.js 20 ou ultérieur</strong>
+:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> start</span></code></pre></div>
+<p>Puis ouvrir <code>http://localhost:5173</code>. Aucune dépendance
+n’est nécessaire pour jouer. Les lanceurs
+<code>LANCER_WINDOWS.bat</code> et <code>LANCER_MAC_LINUX.sh</code> sont
+inclus.</p>
+<p>Le menu donne accès au Versus, aux Dossiers, à l’Arcade, à la Survie,
+au Boss Rush, au Laboratoire, au Bestiaire et à l’Archive des
+movesets.</p>
+<h2 id="commandes">Commandes</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Action</th>
+<th>Joueur 1</th>
+<th>Joueur 2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Déplacement, saut, accroupi</td>
+<td>Flèches</td>
+<td>W A S D</td>
+</tr>
+<tr class="even">
+<td>Coup léger / lourd</td>
 <td>J / K</td>
 <td>F / G</td>
 </tr>
-<tr class="even">
-<td>Frappe basse</td>
-<td>Bas + J</td>
+<tr class="odd">
+<td>Coup bas</td>
+<td>↓ + J</td>
 <td>S + F</td>
 </tr>
-<tr class="odd">
-<td>Technique</td>
-<td>I ; bas, avant ou arrière + I</td>
-<td>T ; bas, avant ou arrière + T</td>
-</tr>
 <tr class="even">
+<td>Technique neutre / directionnelle</td>
+<td>I + direction</td>
+<td>T + direction</td>
+</tr>
+<tr class="odd">
 <td>Prise</td>
 <td>U</td>
 <td>R</td>
 </tr>
-<tr class="odd">
-<td>Super / conclusion</td>
+<tr class="even">
+<td>Super / finisher</td>
 <td>O</td>
 <td>Y</td>
 </tr>
-<tr class="even">
-<td>Utilitaire biologique</td>
+<tr class="odd">
+<td>Utilitaire propre au sujet</td>
 <td>L</td>
 <td>H</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Garde</td>
 <td>Espace</td>
 <td>Q</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Dash</td>
 <td>Majuscule droite</td>
 <td>E</td>
 </tr>
-<tr class="odd">
-<td>Techniques / conclusions</td>
-<td>F1 / F2</td>
-<td>—</td>
-</tr>
 </tbody>
 </table>
-<p>Les touches suivent les positions QWERTY. Sur un clavier AZERTY, les
-directions du joueur 2 sont Q / D / Z / S et sa garde est A.</p>
-<p>« Avant » et « arrière » dépendent de la position de l’adversaire.
-L’utilitaire change selon le sujet : marquage, camouflage, régénération,
-récupération, posture ou autre fonction décrite dans son dossier.</p>
-<h2 id="manette-et-tactile">Manette et tactile</h2>
-<p>A/✕ : léger ; B/○ : lourd ; X/□ : technique ; Y/△ : prise ; LB/L1 :
-garde ; RB/R1 : dash ; LT/L2 : ressource ; RT/R2 : super ou finisher.
-Les commandes tactiles apparaissent sur les écrans compatibles.</p>
-<h2 id="lire-un-moveset">Lire un moveset</h2>
-<p>Chaque sujet possède les dix emplacements suivants : léger, lourd,
-bas, prise, spécial neutre, spécial bas, spécial avant, spécial arrière,
-super et utilitaire.</p>
-<p>Chaque technique affiche :</p>
+<p>Les commandes correspondent aux positions physiques QWERTY. Sur
+AZERTY, les déplacements du joueur 2 correspondent à Q / D / Z / S et sa
+garde à A. Manettes standard et commandes tactiles sont prises en
+charge. F1 ouvre le dossier des techniques ; F2 ouvre les
+conclusions.</p>
+<h2 id="portée-de-la-fidélité--11-">Portée de la fidélité « 1:1 »</h2>
+<p>La fidélité porte sur l’incarnation, l’épisode, la forme, l’agent
+biologique, l’anatomie, les familles d’attaque et les comportements
+documentés. Les formes sont cloisonnées : une créature ne reçoit pas
+silencieusement les pouvoirs d’une autre mutation, phase ou version.</p>
+<p>La livraison ne prétend pas extraire ou reproduire les animations,
+hitboxes, frames ou valeurs internes des jeux Capcom. Les commandes,
+timings, dégâts, ressources, collisions, enchaînements, campagnes,
+affrontements entre époques et finishers sont des adaptations originales
+du moteur 2D. Cette frontière est visible dans le Bestiaire, le
+Laboratoire et l’Archive des movesets.</p>
+<p>Les niveaux de preuve sont :</p>
 <ul>
-<li>son nom propre à l’incarnation ;</li>
-<li>son niveau de preuve ;</li>
-<li>sa base lore ou anatomique ;</li>
-<li>la frontière entre la référence et l’adaptation ;</li>
-<li>son démarrage, son activité, sa récupération, ses dégâts et son coût
+<li><strong>Canonique</strong> : action ou comportement documenté pour
+cette incarnation ; seules les valeurs de duel sont adaptées.</li>
+<li><strong>Anatomique</strong> : extension prudente de la morphologie
+ou de la locomotion visibles, sans nouveau pouvoir.</li>
+<li><strong>Simulation</strong> : fonction nécessaire au jeu de combat,
+explicitement non présentée comme canonique.</li>
+</ul>
+<p>Le détail complet figure dans <a
+href="docs/AUDIT_LORE_V030.md"><code>docs/AUDIT_LORE_V030.md</code></a>
+et <a
+href="docs/MOVESETS_COMPLETS_V030.md"><code>docs/MOVESETS_COMPLETS_V030.md</code></a>.</p>
+<h2 id="interface-resident-evil">Interface Resident Evil</h2>
+<p>La version 0.3.0 unifie les écrans autour d’un terminal de
+confinement original : noir industriel, rouge d’alerte, vert vital,
+ambre de précaution, scanlines, dossiers biologiques et états
+<strong>FINE / CAUTION / DANGER</strong>. L’accueil comprend désormais
+le panneau <strong>Incident Baker</strong>, alimenté directement par les
+données du roster.</p>
+<p>Cette direction artistique est une création originale pour le fangame
+; elle ne recopie pas l’interface ou les ressources d’un titre
+commercial.</p>
+<h2 id="développement-compilation-et-validation">Développement,
+compilation et validation</h2>
+<p>Le contenu éditable se trouve dans <code>data/</code>. Pour régénérer
+le contrat lore et les données navigateur :</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> scripts/apply-v030-re7-bosses.py</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> scripts/build-lore-movesets.py</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> scripts/compile-content.py</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> scripts/generate-v030-docs.py</span></code></pre></div>
+<p>Pour valider et construire :</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> run verify</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> run build</span></code></pre></div>
+<p>La validation actuelle comprend :</p>
+<ul>
+<li>l’audit exhaustif des <strong>81 profils et 810 mouvements</strong>
 ;</li>
-<li>une réponse ou punition recommandée ;</li>
-<li>au moins une URL de référence.</li>
+<li><strong>26/26</strong> contrôles moteur, IA, ressources, statuts,
+replays, images et Dossiers ;</li>
+<li><strong>20/20</strong> contrôles Bestiaire et Opérations reliés au
+moteur ;</li>
+<li><strong>13/13</strong> contrôles d’interface, navigation et
+initialisation DOM réelle.</li>
 </ul>
-<h3 id="niveaux-de-preuve">Niveaux de preuve</h3>
-<p><strong>Canonique — 537 techniques.</strong> L’action ou le
-comportement est documenté pour la forme indiquée. Les frames, portées,
-dégâts et commandes restent une adaptation.</p>
-<p><strong>Anatomique — 150 techniques.</strong> Le mouvement exploite
-une partie du corps ou une locomotion visible. Il ne crée pas de nouveau
-pouvoir biologique.</p>
-<p><strong>Simulation — 63 techniques.</strong> Le moteur a besoin d’une
-retraite, d’une gestion de ressource ou d’une action comparable ; elle
-est affichée comme gameplay non canonique.</p>
-<p>Total : <strong>750 techniques / 75 signatures complètes
-distinctes</strong>.</p>
-<h2 id="exemples-de-cloisonnement-des-formes">Exemples de cloisonnement
-des formes</h2>
-<ul>
-<li>Nemesis 2020 forme 1 conserve son arsenal et son tentacule ; il ne
-reçoit pas automatiquement les capacités de ses formes quadrupède ou
-finale.</li>
-<li>Le Tyrant T-002 reste distinct du Tyrant de Resident Evil 2 et de
-leurs mutations.</li>
-<li>Chaque stade de William Birkin est traité comme une incarnation
-différente lorsqu’il possède une fiche jouable.</li>
-<li>Les personnages humains mutés, les formes exposées et les formes
-finales ne sont pas fusionnés silencieusement.</li>
-<li>Les versions originales et remakes peuvent avoir des comportements,
-silhouettes et sources séparés.</li>
-</ul>
-<h2 id="interface-et-états-vitaux">Interface et états vitaux</h2>
-<p>Le HUD emploie trois états :</p>
-<ul>
-<li><strong>FINE</strong> : plus de 60 % de vie ;</li>
-<li><strong>CAUTION</strong> : de 35 % à 60 % ;</li>
-<li><strong>DANGER</strong> : 35 % ou moins.</li>
-</ul>
-<p>L’ECG, la couleur de la jauge et les panneaux de statut suivent cet
-état. Le thème utilise un langage de terminal de confinement : noir
-industriel, rouge d’alerte, vert médical, ambre, scanlines, dossiers et
-marquages de sécurité.</p>
-<h2 id="sauvegardes-et-replays">Sauvegardes et replays</h2>
-<p>Les sauvegardes B.O.W. Protocol sont séparées de celles de CQC. Les
-Dossiers utilisent trois emplacements, des copies de secours, l’export
-et l’import JSON. Les replays stockent les entrées et la configuration ;
-ils ne sont pas des vidéos.</p>
-<p>Un changement d’appareil ou de navigateur ne transfère pas
-automatiquement les données. Utiliser l’export puis l’import depuis les
-Options.</p>
-<h2 id="fidélité--portée-exacte">Fidélité : portée exacte</h2>
-<p>La version 0.2.0 vise une fidélité maximale pour l’identité,
-l’anatomie, l’agent biologique, les capacités et les comportements de
-chaque incarnation. Elle ne prétend pas extraire ou reproduire les
-animations internes des jeux Resident Evil.</p>
-<p>Les éléments suivants sont des choix de simulation :</p>
-<ul>
-<li>commandes et disposition des boutons ;</li>
-<li>nombre de frames, dégâts, portée et coût ;</li>
-<li>hitboxes, collisions et échelle commune de l’arène ;</li>
-<li>enchaînements entre coups ;</li>
-<li>affrontements entre époques ou épisodes ;</li>
-<li>Dossiers, Arcade, Boss Rush et Survie ;</li>
-<li>conclusions stylisées.</li>
-</ul>
-<p>Cette frontière apparaît dans chaque fiche. Les documents
-<code>AUDIT_LORE_V020.md</code> et
-<code>MOVESETS_COMPLETS_V020.md</code> fournissent la traçabilité
-intégrale.</p>
-<h2 id="développement-et-tests">Développement et tests</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> start</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> run verify</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> run build</span></code></pre></div>
-<p><code>npm run verify</code> exécute l’audit lore, les 26 contrôles du
-moteur, les 20 contrôles de pages et les 10 contrôles d’interface.
-<code>npm run build</code> vérifie les ressources puis construit le site
-dans <code>dist/</code>.</p>
-<p>Le test Canvas utilise une dépendance native uniquement pour la
-validation. Le jeu déployé reste entièrement statique et ne dépend pas
-de cette bibliothèque.</p>
-<h2 id="organisation">Organisation</h2>
-<ul>
-<li><code>data/</code> : profils éditables, lore, roster, histoires et
-sources ;</li>
-<li><code>src/</code> : moteur, rendu, navigation et données compilées
-;</li>
-<li><code>styles/</code> : thème et mises en page ;</li>
-<li><code>modules/</code> : Versus et Dossiers ;</li>
-<li><code>assets/</code> : spécimens, portraits et arènes ;</li>
-<li><code>tests/</code> : audits et scénarios de validation ;</li>
-<li><code>docs/</code> : guide, rapports et traçabilité.</li>
-</ul>
-<h2 id="crédits">Crédits</h2>
-<p>Projet de fans non officiel. Resident Evil / Biohazard et ses
-éléments appartiennent à leurs ayants droit, dont Capcom. Le moteur
-d’origine provient du projet CQC Versus Legacy de Darknigthmare. Les
-références des images et fiches sont conservées dans les données du
-projet.</p>
+<p>Total : <strong>59/59 contrôles exécutables réussis</strong>, en plus
+de l’audit exhaustif des données. GitHub Actions réexécute ces contrôles
+sur chaque push et chaque pull request.</p>
+<h2 id="sources-crédits-et-statut">Sources, crédits et statut</h2>
+<p>Resident Evil / Biohazard, ses personnages, créatures et lieux
+appartiennent à leurs ayants droit, dont Capcom. Projet de fans non
+officiel. Les URL de référence et la provenance des ressources sont
+conservées dans les données et dans
+<code>data/asset-sources.json</code>.</p>
+<p>Le code de base reste attribué au projet CQC Versus Legacy de
+Darknigthmare. La transposition et les empreintes sont documentées dans
+<code>docs/source-provenance.json</code>. Aucune licence générale sur
+les ressources Resident Evil n’est accordée par ce dépôt.</p>
 </body>
 </html>

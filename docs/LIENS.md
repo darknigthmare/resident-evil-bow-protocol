@@ -1,33 +1,21 @@
-# Resident Evil — B.O.W. Protocol · Liens et lancement
+# Liens — Resident Evil : B.O.W. Protocol
 
-**Version 0.2.0 · Lore Audit · 10 octobre 2026**
+**Version 0.3.0 · Incident Baker · 11 octobre 2026**
 
-- [Jouer dans le navigateur](https://resident-evil-bow-protocol.vercel.app)
-- [Archive complète des movesets](https://resident-evil-bow-protocol.vercel.app/movesets.html)
-- [Dossier Google Drive dédié](https://drive.google.com/drive/folders/1_nofjkXcnWNcIYh-jK0_AcB32-sZD9g5)
-- [Guide français](README_FR.html)
-- [Audit lore 0.2.0](AUDIT_LORE_V020.md)
-- [750 techniques détaillées](MOVESETS_COMPLETS_V020.md)
+## Projet
 
-## Dépôt GitHub
+- Production : <https://resident-evil-bow-protocol.vercel.app/>
+- GitHub : <https://github.com/darknigthmare/resident-evil-bow-protocol>
+- Google Drive : <https://drive.google.com/drive/folders/1_nofjkXcnWNcIYh-jK0_AcB32-sZD9g5>
 
-Le nom préparé reste `darknigthmare/resident-evil-bow-protocol`. Le dépôt distant n’est pas encore créé. Les sources complètes sont présentes dans l’archive de livraison et le déploiement Vercel fonctionne indépendamment de cette connexion.
+## Documentation
 
-## Jouer en local
+- [Guide complet](README_FR.md)
+- [Notes de version 0.3.0](RELEASE_NOTES_v0.3.0.md)
+- [Audit lore 0.3.0](AUDIT_LORE_V030.md)
+- [810 techniques détaillées](MOVESETS_COMPLETS_V030.md)
+- [Rapport de vérification](VERIFICATION_FR.md)
+- [Provenance](source-provenance.json)
+- [État du déploiement](deployment.json)
 
-Extraire l’archive complète puis lancer `LANCER_WINDOWS.bat`, `LANCER_MAC_LINUX.sh` ou :
-
-```sh
-npm start
-```
-
-Node.js 20 ou ultérieur est requis. Ouvrir ensuite `http://localhost:5173`.
-
-## Vérifier et construire
-
-```sh
-npm run verify
-npm run build
-```
-
-La version 0.2.0 contient 75 sujets, 750 techniques auditées, 389 fiches, 75 Dossiers, 300 conclusions et 18 configurations d’arène. Les animations, frames et dégâts sont des adaptations de simulation ; l’incarnation, l’anatomie, l’agent et les familles d’attaque sont cloisonnés et sourcés.
+La version 0.3.0 contient 81 sujets, 810 techniques auditées, 389 fiches, 81 Dossiers, 324 conclusions et 18 configurations d’arène. Les animations, frames et dégâts sont des adaptations de simulation ; l’incarnation, l’anatomie, l’agent et les familles d’attaque sont cloisonnés et sourcés.
