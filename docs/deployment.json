@@ -1,30 +1,60 @@
 {
-  "projectName": "resident-evil-bow-protocol",
-  "vercelProjectId": "prj_7UbXOgxYKAaAsyppLP1pth3OIK4M",
+  "projectName": "resident-evil-bow-protocol-live",
+  "vercelProjectId": "prj_abPeaRZXnL3rPrzzG3OofsCdDAqp",
+  "legacyVercelProjectId": "prj_7UbXOgxYKAaAsyppLP1pth3OIK4M",
+  "deploymentId": "dpl_CtYtyGL5DE8dXhXn4guMeeXJzkpR",
+  "deploymentCommit": "d06a14db0246ed09cbb00a7dbb91f6f4bf509fbd",
   "googleDriveFolder": "https://drive.google.com/drive/folders/1_nofjkXcnWNcIYh-jK0_AcB32-sZD9g5",
-  "githubStatus": "repository_connected_source_ready",
+  "githubStatus": "main_merged_and_ci_verified",
   "githubRepository": "darknigthmare/resident-evil-bow-protocol",
   "githubUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol",
-  "publication": "GitHub source + Vercel static deployment",
+  "pullRequest": "https://github.com/darknigthmare/resident-evil-bow-protocol/pull/1",
+  "publication": "GitHub main + Git-linked Vercel production + Google Drive release archive",
   "productionUrl": "https://resident-evil-bow-protocol.vercel.app/",
+  "gitLinkedProjectUrl": "https://resident-evil-bow-protocol-live.vercel.app/",
   "version": "0.3.0",
+  "codename": "Incident Baker",
   "releaseDate": "2026-10-11",
-  "continuousDeployment": "GitHub Actions QA on push/PR; Vercel production promotion after verified build",
+  "continuousDeployment": "GitHub Actions QA on push/PR; Vercel project linked to GitHub main",
   "developmentBranch": "codex/v0.3-re7-bosses",
-  "productionStatus": "PENDING_V030_PROMOTION",
-  "browserValidation": "automated_runtime_and_static_ui_passed",
+  "productionStatus": "READY_V030_PUBLIC",
+  "browserValidation": "production_http_200_and_release_markers_verified",
   "browserReport": "docs/VERIFICATION_FR.md",
+  "verifiedPublicRoutes": [
+    "/",
+    "/movesets.html?uid=re7-jack-baker-mutated",
+    "/codex.html?id=re7-jack-baker-mutated",
+    "/modules/versus.html?uid=re7-jack-baker-mutated",
+    "/operations.html?mode=arcade",
+    "/src/re-data.js",
+    "/styles/bow-v030.css"
+  ],
   "loreAudit": {
     "profiles": 81,
     "moves": 810,
     "canonical": 577,
     "anatomical": 165,
-    "simulation": 68
+    "simulation": 68,
+    "uniqueFullMovesets": 81
+  },
+  "content": {
+    "stories": 81,
+    "duels": 648,
+    "finishers": 324,
+    "catalogEntries": 389,
+    "newResidentEvil7Subjects": 6
   },
   "verification": {
+    "loreProfiles": "81/81",
+    "loreMoves": "810/810",
+    "engine": "26/26",
+    "pages": "20/20",
+    "ui": "13/13",
     "executableChecks": 59,
     "passed": 59,
-    "failed": 0
+    "failed": 0,
+    "githubActions": "success",
+    "productionBuild": "READY"
   },
   "completeMovesetsPath": "/movesets.html"
 }
