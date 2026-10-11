@@ -1,0 +1,59 @@
+name: Finalize v0.4.0 Deployment
+
+on:
+  push:
+    branches:
+      - codex/v0.4-finalize-deployment
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bow-v040-finalize
+  cancel-in-progress: false
+
+jobs:
+  finalize:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout finalization branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: codex/v0.4-finalize-deployment
+
+      - name: Record verified production deployment
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f .github/workflows/finalize-v040.yml
+          python3 scripts/finalize-v040-deployment.py \
+            --deployment-id dpl_FaXF4AJxdEXEE9dFJLDy8DC8XfYs \
+            --deployment-url https://resident-evil-bow-protocol-live-hzht4ajkf.vercel.app \
+            --verified-code-commit c903efcc666ae2a236e506404e77be90a74cbd3c \
+            --production-url https://resident-evil-bow-protocol.vercel.app/
+
+      - name: Validate deployment evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          node - <<'NODE'
+          const d=require('./docs/deployment.json');
+          const m=require('./docs/RELEASE_MANIFEST_v0.4.0.json');
+          if(d.productionStatus!=='READY_V040_PRODUCTION') process.exit(1);
+          if(d.verificationDeploymentId!=='dpl_FaXF4AJxdEXEE9dFJLDy8DC8XfYs') process.exit(1);
+          if(d.verifiedCodeCommit!=='c903efcc666ae2a236e506404e77be90a74cbd3c') process.exit(1);
+          if(m.production?.status!=='READY_V040_PRODUCTION'||m.verification.failed!==0) process.exit(1);
+          NODE
+
+      - name: Commit deployment evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "B.O.W. Protocol CI"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/deployment.json docs/source-provenance.json docs/RELEASE_MANIFEST_v0.4.0.json
+          git commit -m "docs: seal verified v0.4.0 production deployment"
+          git push origin HEAD:codex/v0.4-finalize-deployment
