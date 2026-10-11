@@ -1,5 +1,7 @@
 (function(){'use strict';const d=window.RE_DATA,by=id=>document.getElementById(id);if(!d||!d.fighters.length)return;
 by('fighterCount').textContent=d.fighters.length;by('arenaCount').textContent=d.stages.length;by('catalogCount').textContent=d.catalog.length;by('moveCount').textContent=d.counts?.loreMoves||d.fighters.reduce((n,f)=>n+Object.keys(f.combat?.moves||{}).length,0);
-const hero=d.fighters.find(f=>/NEMESIS/.test(f.name)&&/2020/.test(f.ep))||d.fighters[0];by('heroSpecimen').src=hero.sprite;by('heroSpecimen').alt=hero.name+' — '+hero.ep;by('heroName').textContent=hero.name;by('heroEpisode').textContent=hero.ep;
+const releaseIds=['re7-jack-baker-mutated','re7-jack-baker-swamp-man','re7-marguerite-baker-mutated','re7-lucas-baker-mutated','re7-eveline-final','re7-fumer'];const release=releaseIds.map(id=>d.fighters.find(f=>f.uid===id)).filter(Boolean);
+const hero=release[0]||d.fighters.find(f=>/NEMESIS/.test(f.name)&&/2020/.test(f.ep))||d.fighters[0];by('heroSpecimen').src=hero.sprite;by('heroSpecimen').alt=hero.name+' — '+hero.ep;by('heroName').textContent=hero.name;by('heroEpisode').textContent=hero.ep;
+const grid=by('incidentGrid');if(grid){grid.innerHTML=release.map(f=>`<a class="incident-card" href="movesets.html?uid=${encodeURIComponent(f.uid)}"><img src="${f.sprite}" alt="${f.name}"><span><small>${f.ep.includes('Not a Hero')?'NOT A HERO':f.ep.includes('End of Zoe')?'END OF ZOE':'RESIDENT EVIL 7'}</small><b>${f.name}</b><em>${f.combat.role} · MOVESET 10/10</em></span></a>`).join('')}
 by('fullscreen').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await document.documentElement.requestFullscreen();}catch(_){by('fullscreen').title='Plein écran indisponible dans cette fenêtre';}};
 })();

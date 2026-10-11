@@ -50,7 +50,7 @@ async function loadGame(htmlPath,{search='',parent,onMessage,storage,allowTimers
    // Wait for bitmap decode before emitting the simulated browser load event.
    // Keep data URLs intact too: loadImage(dataURL) internally makes a Buffer.
    const pending=Promise.resolve().then(()=>new Promise((resolve,reject)=>{
-    const im=new native.Image();im.onload=()=>{im.decode().then(()=>resolve(im),reject)};im.onerror=reject;
+    const im=new native.Image();im.onload=()=>resolve(im);im.onerror=reject;
     im.src=source.startsWith('data:')?source:source.startsWith('file:')?fileURLToPath(source):path.resolve(base,source);
    })).then(im=>{
     if(sequence!==this.sequence)return;this.native=im;this.complete=true;this.naturalWidth=im.width;this.naturalHeight=im.height;this.onload?.();
