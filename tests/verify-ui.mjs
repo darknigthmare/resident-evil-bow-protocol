@@ -32,7 +32,8 @@ const codex = read('src/codex.js');
 const operations = read('src/operations.js');
 const hub = read('src/hub.js');
 const movesets = read('src/movesets.js');
-const releaseIds = ['re7-jack-baker-mutated','re7-jack-baker-swamp-man','re7-marguerite-baker-mutated','re7-lucas-baker-mutated','re7-eveline-final','re7-fumer'];
+const incidentIds = ['re7-jack-baker-mutated','re7-jack-baker-swamp-man','re7-marguerite-baker-mutated','re7-lucas-baker-mutated','re7-eveline-final','re7-fumer'];
+const apexIds = ['re2r-super-tyrant','re3r-stage-2-nemesis','re3r-stage-3-nemesis','re4r-del-lago','re4r-garrador','re4r-iron-maiden','re4r-ramon-salazar-mutated','re4r-osmund-saddler-mutated','revillage-mutated-dimitrescu','revillage-mutated-moreau','revillage-mutated-heisenberg','re6-ustanak'];
 
 check('Every primary screen loads the current containment theme', () => {
   for (const [name, html] of Object.entries(pages)) assert.match(html, new RegExp(themeName.replace('.', '\\.')), name);
@@ -45,12 +46,14 @@ check('Home screen exposes the exact audited scope and current build', () => {
   assert.match(pages.accueil, /INCARNATIONS CLOISONNÉES/);
   assert.match(pages.accueil, /INCIDENT BAKER/);
   assert.match(pages.accueil, /id="incidentGrid"/);
+  assert.match(pages.accueil, /APEX MUTATION/);
+  assert.match(pages.accueil, /id="apexGrid"/);
 });
-check('Home runtime fills public counters and the six Incident Baker cards', () => {
-  for (const id of ['fighterCount','arenaCount','catalogCount','moveCount','incidentGrid']) assert.match(hub, new RegExp(id));
-  for (const uid of releaseIds) assert.match(hub, new RegExp(uid));
+check('Home runtime fills public counters, Incident Baker and Apex Mutation cards', () => {
+  for (const id of ['fighterCount','arenaCount','catalogCount','moveCount','incidentGrid','apexGrid']) assert.match(hub, new RegExp(id));
+  for (const uid of [...incidentIds,...apexIds]) assert.match(hub, new RegExp(uid));
   assert.match(hub, /loreMoves|fighters\.reduce/);
-  return { newSubjects: releaseIds.length };
+  return { incidentSubjects: incidentIds.length, apexSubjects: apexIds.length };
 });
 check('Bestiary communicates full-body status and the audited ten-move contract', () => {
   assert.match(pages.bestiaire, /RENDU EN PIED \+ MOVESET 10\/10 AUDITÉ/);
@@ -63,7 +66,7 @@ check('Technique dossier exposes traceability and adaptation boundaries', () => 
   for (const level of ['CANONIQUE','ANATOMIQUE','SIMULATION']) assert.match(engine, new RegExp(level));
 });
 check('Combat release identifies the current audited build', () => {
-  assert.match(engine, new RegExp(`RE ${version.replaceAll('.', '\\.')} INCIDENT BAKER / CQC 0\\.60`));
+  assert.match(engine, new RegExp(`RE ${version.replaceAll('.', '\\.')} APEX MUTATION / CQC 0\\.60`));
   assert.match(engine, /PROFIL AUDITÉ · 10 TECHNIQUES/);
   assert.match(engine, /OUVRIR LE MOVESET 10\/10/);
 });
@@ -75,7 +78,7 @@ check('Health presentation contains Resident Evil FINE, CAUTION and DANGER state
   assert.match(pages.operations, /data-state="FINE"/);
 });
 check('Theme contains the containment visual language without remote assets', () => {
-  for (const token of ['--bow-red','--bow-green','--bow-amber','lore-seal','combat-audit-badge','repeating-linear-gradient','box-shadow:inset 0 0 180px','incident-baker']) assert(theme.includes(token), token);
+  for (const token of ['--bow-red','--bow-green','--bow-amber','lore-seal','combat-audit-badge','repeating-linear-gradient','box-shadow:inset 0 0 180px','incident-baker','apex-mutation','apex-grid']) assert(theme.includes(token), token);
   assert.doesNotMatch(theme, /url\(\s*["']?https?:/i);
 });
 check('Moveset archive declares all traceability fields and commands', () => {
@@ -116,14 +119,15 @@ try {
   assert.equal(env.imageErrors.length, 0);
   assert.equal(env.document.querySelector('#fighterCount').textContent, String(fighterCount));
   assert.equal(env.document.querySelector('#moveCount').textContent, String(moveCount));
-  assert.equal(env.document.querySelectorAll('.incident-card').length, releaseIds.length);
-  assert.match(env.document.querySelector('#heroName').textContent, /JACK BAKER/);
-  report.push({ name: 'Home screen initializes live counters and the six-subject Incident Baker panel', pass: true, detail: { subjects: fighterCount, incidentCards: releaseIds.length } });
-  console.log('PASS Home screen initializes live counters and the six-subject Incident Baker panel');
+  assert.equal(env.document.querySelectorAll('.incident-card').length, incidentIds.length);
+  assert.equal(env.document.querySelectorAll('.apex-card').length, apexIds.length);
+  assert.match(env.document.querySelector('#heroName').textContent, /DIMITRESCU/);
+  report.push({ name: 'Home screen initializes Incident Baker and the twelve-subject Apex Mutation panel', pass: true, detail: { subjects: fighterCount, incidentCards: incidentIds.length, apexCards: apexIds.length } });
+  console.log('PASS Home screen initializes Incident Baker and the twelve-subject Apex Mutation panel');
   env.dispose();
 } catch (error) {
-  report.push({ name: 'Home screen initializes live counters and the six-subject Incident Baker panel', pass: false, error: error.stack || String(error) });
-  console.log('FAIL Home screen initializes live counters and the six-subject Incident Baker panel\n' + error.message);
+  report.push({ name: 'Home screen initializes Incident Baker and the twelve-subject Apex Mutation panel', pass: false, error: error.stack || String(error) });
+  console.log('FAIL Home screen initializes Incident Baker and the twelve-subject Apex Mutation panel\n' + error.message);
 }
 
 const failures = report.filter(x => !x.pass);
@@ -133,7 +137,7 @@ fs.writeFileSync(path.join(ROOT, 'docs/verification-ui.md'), [
   `# Vérification de l’interface Resident Evil — v${version}`,'',
   `- Résultat : **${payload.pass ? 'RÉUSSI' : 'ÉCHEC'}**`,
   `- Contrôles : **${payload.checks - payload.failures}/${payload.checks}**`,
-  `- Portée : ${fighterCount} sujets, ${moveCount} techniques, thème ${themeName}, compteurs publics, Incident Baker, traçabilité lore, états FINE/CAUTION/DANGER et navigation.`,
+  `- Portée : ${fighterCount} sujets, ${moveCount} techniques, thème ${themeName}, compteurs publics, Incident Baker, Apex Mutation, traçabilité lore, états FINE/CAUTION/DANGER et navigation.`,
   '- Portée technique : contrôle structurel et initialisation réelle de l’accueil et de l’Archive des movesets dans le DOM contrôlé. Le rendu CSS pixel par pixel et les résolutions physiques ne sont pas revendiqués.','',
   ...report.map(item => `- ${item.pass ? '✅' : '❌'} ${item.name}`),''
 ].join('\n'));

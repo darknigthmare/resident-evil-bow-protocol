@@ -1,8 +1,8 @@
 {
-  "version": "0.3.0",
+  "version": "0.4.0",
   "pass": true,
-  "fighters": 81,
-  "moves": 810,
+  "fighters": 93,
+  "moves": 930,
   "checks": 13,
   "failures": 0,
   "report": [
@@ -11,7 +11,7 @@
       "pass": true,
       "detail": {
         "screens": 6,
-        "theme": "bow-v030.css"
+        "theme": "bow-v040.css"
       }
     },
     {
@@ -19,10 +19,11 @@
       "pass": true
     },
     {
-      "name": "Home runtime fills public counters and the six Incident Baker cards",
+      "name": "Home runtime fills public counters, Incident Baker and Apex Mutation cards",
       "pass": true,
       "detail": {
-        "newSubjects": 6
+        "incidentSubjects": 6,
+        "apexSubjects": 12
       }
     },
     {
@@ -61,17 +62,18 @@
       "name": "Moveset archive initializes every subject and ten rows from delivered data",
       "pass": true,
       "detail": {
-        "subjects": 81,
+        "subjects": 93,
         "rows": 10,
-        "moves": 810
+        "moves": 930
       }
     },
     {
-      "name": "Home screen initializes live counters and the six-subject Incident Baker panel",
+      "name": "Home screen initializes Incident Baker and the twelve-subject Apex Mutation panel",
       "pass": true,
       "detail": {
-        "subjects": 81,
-        "incidentCards": 6
+        "subjects": 93,
+        "incidentCards": 6,
+        "apexCards": 12
       }
     }
   ]

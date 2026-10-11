@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-10-11T00:01:08.643Z",
-  "passed": 20,
+  "generatedAt": "2026-10-11T08:49:09.293Z",
+  "passed": 21,
   "failed": 0,
   "method": "Shipped HTML/scripts, controlled DOM/native Canvas (@napi-rs/canvas), queued postMessage between real operations and engine windows.",
   "sourceSHA256": {
-    "operations.html": "7a9fc181d6d6f75c991d390fa222282c01e21b84bb1f9cb7552080187ae3a234",
-    "codex.html": "6d4eb238a02ac29289fb7e5417250e327acacbc08acfa22348eb9c7788819304",
-    "src/operations.js": "9ecbf473b2f5d0a32b9a0610a7e05318e8bfed55c35ecae1731111519f5c0d7d",
+    "operations.html": "5ac0b28e3922c430aed72e8eeddcc68cc84bacca237ecba95ea7fc5853dfabac",
+    "codex.html": "d1aaabebd449f616d70ecaf396760d7ef47bcc2ad61ea297e8b186cdee354a8a",
+    "src/operations.js": "56dfb5b628c84686874bdd60044b58be7c4ba44653dc1bfe96aec3904671c0b7",
     "src/codex.js": "a8515bf8be08729b80e5261f3a879b578d3fd31eb469f0f88d82fd3b03e621fc",
-    "src/unified-engine-v060.js": "a671d902d0a7f4ae2c7c932a4eb458997d86ff1efc3585afaf49812bb5c13d0d",
+    "src/unified-engine-v060.js": "a0412dd1878b1fdfdb1e4f4af79402493fff81e7f9e031bdd01fcceb8f4b5499",
     "src/combat-foundation-v060.js": "2e0c95117247e1f38499acd9b383c2bce55789e663ac418131a1444c05867375",
-    "src/re-data.js": "9925f82bc84661e1f1a033549da5f6c42f7a54f099b8e8772e2a2a1f2ef44e74",
+    "src/re-data.js": "6b2242bced453b52e9cded9d99d0f3ccc70cc8fcb27e324109e8b770c3b441d7",
     "tests/engine-vm.cjs": "ec53cb693def75a0c70a2ec5d72ea006d224946906019d58f86ddebf3570a831"
   },
   "coverage": {
     "catalog": 389,
-    "playable": 81,
+    "playable": 93,
     "realOperationDuels": 15
   },
   "notes": [],
@@ -23,17 +23,17 @@
     {
       "mode": "arcade",
       "encounter": 1,
-      "requestId": "re-mv325926-xtr2whx1pa8",
+      "requestId": "re-mv3l0a3n-s15lukg5cul",
       "p1": "re3r-nemesis",
-      "p2": "revillage-salvatore-moreau",
+      "p2": "re2-g-fourth-form",
       "winnerSlot": 0,
-      "frame": 1034,
+      "frame": 1070,
       "life": [
         10000,
         0
       ],
       "hits": [
-        13,
+        12,
         0
       ],
       "wound": null
@@ -41,17 +41,17 @@
     {
       "mode": "arcade",
       "encounter": 1,
-      "requestId": "re-mv3259aa-y7uiqbm5gfa",
+      "requestId": "re-mv3l0abv-ekkj02w0iua",
       "p1": "re3r-nemesis",
-      "p2": "re2-g-type-young",
+      "p2": "revillage-soldat-zwei",
       "winnerSlot": 0,
-      "frame": 1089,
+      "frame": 1148,
       "life": [
         10000,
         0
       ],
       "hits": [
-        13,
+        14,
         0
       ],
       "wound": null
@@ -59,11 +59,11 @@
     {
       "mode": "arcade",
       "encounter": 2,
-      "requestId": "re-mv3259h4-z2m4oxu3e4f",
+      "requestId": "re-mv3l0aie-znodf9cce1l",
       "p1": "re3r-nemesis",
-      "p2": "re7-marguerite-baker-mutated",
+      "p2": "revillage-mutated-miranda",
       "winnerSlot": 0,
-      "frame": 1112,
+      "frame": 1220,
       "life": [
         10000,
         0
@@ -77,29 +77,11 @@
     {
       "mode": "arcade",
       "encounter": 3,
-      "requestId": "re-mv3259n9-ocuw9vh2i8n",
+      "requestId": "re-mv3l0anw-5hb485cq3pm",
       "p1": "re3r-nemesis",
-      "p2": "re4r-ramon-salazar",
+      "p2": "re4-iron-maiden",
       "winnerSlot": 0,
-      "frame": 1186,
-      "life": [
-        10000,
-        0
-      ],
-      "hits": [
-        15,
-        0
-      ],
-      "wound": null
-    },
-    {
-      "mode": "arcade",
-      "encounter": 4,
-      "requestId": "re-mv3259tb-49rut1j4a63",
-      "p1": "re3r-nemesis",
-      "p2": "re4-osmund-saddler-enemy",
-      "winnerSlot": 0,
-      "frame": 1197,
+      "frame": 1194,
       "life": [
         10000,
         0
@@ -112,18 +94,36 @@
     },
     {
       "mode": "arcade",
-      "encounter": 5,
-      "requestId": "re-mv3259y4-gfi3cxwk4j",
+      "encounter": 4,
+      "requestId": "re-mv3l0asu-xvy1r5px5t",
       "p1": "re3r-nemesis",
-      "p2": "rerev-rachael-ooze",
+      "p2": "revillage-mutated-moreau",
       "winnerSlot": 0,
-      "frame": 1206,
+      "frame": 1139,
       "life": [
         10000,
         0
       ],
       "hits": [
-        11,
+        13,
+        0
+      ],
+      "wound": null
+    },
+    {
+      "mode": "arcade",
+      "encounter": 5,
+      "requestId": "re-mv3l0axs-l5mgul7n68n",
+      "p1": "re3r-nemesis",
+      "p2": "revillage-samca",
+      "winnerSlot": 0,
+      "frame": 1223,
+      "life": [
+        10000,
+        0
+      ],
+      "hits": [
+        16,
         0
       ],
       "wound": null
@@ -131,17 +131,17 @@
     {
       "mode": "arcade",
       "encounter": 6,
-      "requestId": "re-mv325a4i-yu89jkqnxtl",
+      "requestId": "re-mv3l0b3o-ihobvqtaolo",
       "p1": "re3r-nemesis",
-      "p2": "re2-ivy",
+      "p2": "recv-alexia-ashford-third-form",
       "winnerSlot": 0,
-      "frame": 1064,
+      "frame": 1156,
       "life": [
         10000,
         0
       ],
       "hits": [
-        11,
+        12,
         0
       ],
       "wound": null
@@ -149,17 +149,17 @@
     {
       "mode": "arcade",
       "encounter": 7,
-      "requestId": "re-mv325a9k-5zzya151l7",
+      "requestId": "re-mv3l0b8x-smqhz005vu",
       "p1": "re3r-nemesis",
-      "p2": "re1r-tyrant",
+      "p2": "re7-mama-mold",
       "winnerSlot": 0,
-      "frame": 1175,
+      "frame": 1063,
       "life": [
         10000,
         0
       ],
       "hits": [
-        13,
+        11,
         0
       ],
       "wound": null
@@ -167,17 +167,17 @@
     {
       "mode": "arcade",
       "encounter": 8,
-      "requestId": "re-mv325adm-d34lwuxzxyo",
+      "requestId": "re-mv3l0bcp-0nmakj2bwtv",
       "p1": "re3r-nemesis",
-      "p2": "re2-g",
+      "p2": "re4r-osmund-saddler-mutated",
       "winnerSlot": 0,
-      "frame": 1184,
+      "frame": 1139,
       "life": [
         10000,
         0
       ],
       "hits": [
-        15,
+        13,
         0
       ],
       "wound": null
@@ -185,17 +185,17 @@
     {
       "mode": "arcade",
       "encounter": 1,
-      "requestId": "re-mv325ajk-68unmr680an",
+      "requestId": "re-mv3l0bj1-tzs15tbanr8",
       "p1": "re3r-nemesis",
-      "p2": "rerev-globster",
+      "p2": "rerev-sea-creeper",
       "winnerSlot": 0,
-      "frame": 1104,
+      "frame": 1284,
       "life": [
         10000,
         0
       ],
       "hits": [
-        15,
+        19,
         0
       ],
       "wound": null
@@ -203,53 +203,13 @@
     {
       "mode": "arcade",
       "encounter": 1,
-      "requestId": "re-mv325apn-59j8m42r1pl",
+      "requestId": "re-mv3l0bpe-avfhs53dyv",
       "p1": "re3r-nemesis",
-      "p2": "re4r-verdugo",
+      "p2": "re2r-tyrant",
       "winnerSlot": 0,
-      "frame": 1055,
+      "frame": 1034,
       "life": [
         10000,
-        0
-      ],
-      "hits": [
-        14,
-        0
-      ],
-      "wound": null
-    },
-    {
-      "mode": "survival",
-      "encounter": 1,
-      "requestId": "re-mv325avv-2dum292twxs",
-      "p1": "re3r-nemesis",
-      "p2": "re7-eveline-final",
-      "winnerSlot": 0,
-      "frame": 1141,
-      "life": [
-        7514,
-        0
-      ],
-      "hits": [
-        11,
-        3
-      ],
-      "wound": {
-        "life": 7514,
-        "opponentHits": 3,
-        "frame": 330
-      }
-    },
-    {
-      "mode": "survival",
-      "encounter": 2,
-      "requestId": "re-mv325b0k-mrabctfekyn",
-      "p1": "re3r-nemesis",
-      "p2": "re2-g-second-form",
-      "winnerSlot": 0,
-      "frame": 1058,
-      "life": [
-        8714,
         0
       ],
       "hits": [
@@ -261,29 +221,69 @@
     {
       "mode": "survival",
       "encounter": 1,
-      "requestId": "re-mv325b9c-3o1wadbozze",
+      "requestId": "re-mv3l0btz-bwlcxdpfo2h",
       "p1": "re3r-nemesis",
-      "p2": "recv-bandersnatch",
+      "p2": "re7-molded",
+      "winnerSlot": 0,
+      "frame": 1351,
+      "life": [
+        7052,
+        0
+      ],
+      "hits": [
+        14,
+        5
+      ],
+      "wound": {
+        "life": 7052,
+        "opponentHits": 5,
+        "frame": 420
+      }
+    },
+    {
+      "mode": "survival",
+      "encounter": 2,
+      "requestId": "re-mv3l0bym-hy1e6yj4t4g",
+      "p1": "re3r-nemesis",
+      "p2": "re2r-tyrant",
+      "winnerSlot": 0,
+      "frame": 1034,
+      "life": [
+        8252,
+        0
+      ],
+      "hits": [
+        13,
+        0
+      ],
+      "wound": null
+    },
+    {
+      "mode": "survival",
+      "encounter": 1,
+      "requestId": "re-mv3l0c6g-64wazcefpda",
+      "p1": "re3r-nemesis",
+      "p2": "re7-molded",
       "winnerSlot": 1,
-      "frame": 1304,
+      "frame": 1076,
       "life": [
         0,
         10000
       ],
       "hits": [
         0,
-        19
+        17
       ],
       "wound": null
     },
     {
       "mode": "arcade",
       "encounter": 1,
-      "requestId": "re-mv325bgd-kj6wvw3ybp",
+      "requestId": "re-mv3l0cc6-zuvrz84fuo",
       "p1": "re3r-nemesis",
-      "p2": "revillage-alcina-dimitrescu",
+      "p2": "re2-g-second-form",
       "winnerSlot": 0,
-      "frame": 1034,
+      "frame": 1058,
       "life": [
         10000,
         0
@@ -299,9 +299,9 @@
     {
       "name": "Operations and Codex scripts parse and their shipped HTML loads",
       "pass": true,
-      "milliseconds": 44,
+      "milliseconds": 51,
       "detail": {
-        "fighters": 81,
+        "fighters": 93,
         "difficultyValues": [
           "recruit",
           "normal",
@@ -313,17 +313,17 @@
     {
       "name": "Codex pagination exposes every dossier exactly once with the right status",
       "pass": true,
-      "milliseconds": 105,
+      "milliseconds": 106,
       "detail": {
         "dossiers": 389,
         "pages": 17,
-        "playable": 81
+        "playable": 93
       }
     },
     {
       "name": "Codex status and episode filters partition the real catalog without leakage",
       "pass": true,
-      "milliseconds": 559,
+      "milliseconds": 590,
       "detail": {
         "episodes": 19,
         "episodeStatusCombinations": 57
@@ -332,65 +332,65 @@
     {
       "name": "Codex search ignores accents and case; empty results and filter resets are usable",
       "pass": true,
-      "milliseconds": 49
+      "milliseconds": 46
     },
     {
       "name": "All Codex details resolve real assets, sources and playable links; closing restores focus",
       "pass": true,
-      "milliseconds": 3030,
+      "milliseconds": 3029,
       "detail": {
         "details": 389,
-        "playableLinks": 162,
-        "documentaryEntries": 308
+        "playableLinks": 186,
+        "documentaryEntries": 296
       }
     },
     {
       "name": "Codex direct links open the requested dossier and missing image failures stay explicit",
       "pass": true,
-      "milliseconds": 47
+      "milliseconds": 45
     },
     {
       "name": "Operations iframe handshake launches the real eight-opponent Arcade route",
       "pass": true,
-      "milliseconds": 24,
+      "milliseconds": 28,
       "detail": {
-        "requestId": "re-mv32590f-e9yc107mxka",
+        "requestId": "re-mv3l0a23-2426phweiqqi",
         "difficulty": "veteran",
         "opponents": [
-          "rerev-draghignazzo",
-          "re4r-ramon-salazar",
-          "re7-marguerite-baker-mutated",
-          "re2-ivy",
-          "revillage-varcolac",
-          "re6-zombie",
-          "revillage-soldat-eins",
-          "re7-lucas-baker-mutated"
+          "re7-fumer",
+          "revillage-mother-miranda",
+          "re2-g-type-young",
+          "revillage-soldat-panzer",
+          "re4r-garrador",
+          "re2r-tyrant",
+          "re7-flying-bug",
+          "re2-g-type-adult"
         ]
       }
     },
     {
       "name": "Operations ignore unrelated windows, stale results and stale acknowledgements",
       "pass": true,
-      "milliseconds": 29
+      "milliseconds": 28
     },
     {
       "name": "A genuine Arcade KO advances only on Next; duplicate results count once",
       "pass": true,
-      "milliseconds": 298,
+      "milliseconds": 295,
       "detail": {
         "mode": "arcade",
         "encounter": 1,
-        "requestId": "re-mv325926-xtr2whx1pa8",
+        "requestId": "re-mv3l0a3n-s15lukg5cul",
         "p1": "re3r-nemesis",
-        "p2": "revillage-salvatore-moreau",
+        "p2": "re2-g-fourth-form",
         "winnerSlot": 0,
-        "frame": 1034,
+        "frame": 1070,
         "life": [
           10000,
           0
         ],
         "hits": [
-          13,
+          12,
           0
         ],
         "wound": null
@@ -399,7 +399,7 @@
     {
       "name": "Eight real Arcade victories complete the route and persist the record",
       "pass": true,
-      "milliseconds": 1613,
+      "milliseconds": 1512,
       "detail": {
         "wins": 8,
         "difficulty": "recruit"
@@ -412,34 +412,56 @@
       "detail": {
         "difficulty": "legend",
         "opponents": [
-          "re4-el-gigante",
-          "recv-tyrant",
-          "re4r-bitores-mendez",
-          "revillage-karl-heisenberg",
-          "rerev2-ironhead",
-          "revillage-urias",
-          "re2r-tyrant",
-          "re2-g",
+          "re1r-tyrant",
           "re7-jack-baker-mutated",
-          "re1r-tyrant"
+          "re6-ustanak",
+          "re2-tyrant-mutation",
+          "re3r-stage-3-nemesis",
+          "re2-g",
+          "re4-u-3",
+          "revillage-karl-heisenberg",
+          "revillage-alcina-dimitrescu",
+          "rerev2-splasher"
         ]
+      }
+    },
+    {
+      "name": "Apex Mutation selects its twelve fixed forms and matching first chamber",
+      "pass": true,
+      "milliseconds": 22,
+      "detail": {
+        "opponents": [
+          "re2r-super-tyrant",
+          "re3r-stage-2-nemesis",
+          "re3r-stage-3-nemesis",
+          "re4r-del-lago",
+          "re4r-garrador",
+          "re4r-iron-maiden",
+          "re4r-ramon-salazar-mutated",
+          "re4r-osmund-saddler-mutated",
+          "revillage-mutated-dimitrescu",
+          "revillage-mutated-moreau",
+          "revillage-mutated-heisenberg",
+          "re6-ustanak"
+        ],
+        "firstStage": "nest_escape_2019"
       }
     },
     {
       "name": "Stylized and cinematic finishes emit one correlated result after their actual sequence",
       "pass": true,
-      "milliseconds": 443,
+      "milliseconds": 396,
       "detail": {
         "finishes": [
           {
             "mode": "stylized",
             "id": "re3r-nemesis::finisher1",
-            "requestId": "re-mv325ajk-68unmr680an"
+            "requestId": "re-mv3l0bj1-tzs15tbanr8"
           },
           {
             "mode": "cinematic",
             "id": "re3r-nemesis::finisher1",
-            "requestId": "re-mv325apn-59j8m42r1pl"
+            "requestId": "re-mv3l0bpe-avfhs53dyv"
           }
         ]
       }
@@ -447,45 +469,45 @@
     {
       "name": "Survival restores twelve percentage points after actual injuries and carries life into the next engine match",
       "pass": true,
-      "milliseconds": 345,
+      "milliseconds": 318,
       "detail": {
-        "survivingLife": 7514,
+        "survivingLife": 7052,
         "maxLife": 10000,
         "recovery": 0.12,
-        "nextHealthRatio": 0.8714,
-        "actualNextLife": 8714,
+        "nextHealthRatio": 0.8252,
+        "actualNextLife": 8252,
         "wins": 2
       }
     },
     {
       "name": "A replay recorded during reduced-health Survival reproduces the real result",
       "pass": true,
-      "milliseconds": 133,
+      "milliseconds": 131,
       "detail": {
-        "frame": 1058,
-        "initialLife": 8714,
-        "resultSHA256": "fd3c32144a308a8f5c1fccf0270f9522338df93c336075552e291cc3750b8e0a"
+        "frame": 1034,
+        "initialLife": 8252,
+        "resultSHA256": "7c7a3b56781c9b694d2a8f36da5652ad68f6adee1c562801097129b3b1fcec1c"
       }
     },
     {
       "name": "A real Survival defeat ends the run and does not increase its record",
       "pass": true,
-      "milliseconds": 208,
+      "milliseconds": 153,
       "detail": {
         "mode": "survival",
         "encounter": 1,
-        "requestId": "re-mv325b9c-3o1wadbozze",
+        "requestId": "re-mv3l0c6g-64wazcefpda",
         "p1": "re3r-nemesis",
-        "p2": "recv-bandersnatch",
+        "p2": "re7-molded",
         "winnerSlot": 1,
-        "frame": 1304,
+        "frame": 1076,
         "life": [
           0,
           10000
         ],
         "hits": [
           0,
-          19
+          17
         ],
         "wound": null
       }
@@ -493,31 +515,31 @@
     {
       "name": "Stale engine errors cannot cancel an active duel with a newer requestId",
       "pass": true,
-      "milliseconds": 22
+      "milliseconds": 23
     },
     {
       "name": "A real engine launch failure retains its requestId and offers a clean restart",
       "pass": true,
-      "milliseconds": 29,
+      "milliseconds": 30,
       "detail": {
-        "requestId": "re-mv325bff-wc488yni4pm",
+        "requestId": "re-mv3l0cb7-0n16e3r3lh99",
         "message": "Error: Fighter not found"
       }
     },
     {
       "name": "A delayed ready notification cannot automatically replay an already completed encounter",
       "pass": true,
-      "milliseconds": 151
+      "milliseconds": 230
     },
     {
       "name": "Leaving a run aborts the real engine, late results stay ignored and a new run can launch",
       "pass": true,
-      "milliseconds": 45
+      "milliseconds": 47
     },
     {
       "name": "Stored operation records survive a page reload and corrupted storage falls back to a clean setup",
       "pass": true,
-      "milliseconds": 43
+      "milliseconds": 44
     }
   ]
 }

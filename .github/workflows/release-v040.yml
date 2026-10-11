@@ -1,0 +1,42 @@
+name: Publish v0.4.0 Release
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/release-v040.yml','docs/deployment.json','docs/RELEASE_MANIFEST_v0.4.0.json']
+permissions:
+  contents: write
+concurrency:
+  group: bow-release-v040
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check production promotion gate
+        id: gate
+        run: |
+          status="$(node -p "require('./docs/deployment.json').productionStatus")"
+          if [ "$status" = "READY_V040_PRODUCTION" ]; then echo "ready=true" >> "$GITHUB_OUTPUT"; else echo "ready=false" >> "$GITHUB_OUTPUT"; fi
+      - if: steps.gate.outputs.ready == 'true'
+        uses: actions/setup-node@v4
+        with: {node-version: '22.16.0'}
+      - if: steps.gate.outputs.ready == 'true'
+        run: npm install --no-save --package-lock=false @napi-rs/canvas@0.1.80
+      - if: steps.gate.outputs.ready == 'true'
+        run: npm run verify
+      - if: steps.gate.outputs.ready == 'true'
+        run: npm run build
+      - name: Package release assets
+        if: steps.gate.outputs.ready == 'true'
+        run: |
+          git archive --format=zip --prefix=resident-evil-bow-protocol-v0.4.0/ -o RESIDENT_EVIL_BOW_PROTOCOL_v0.4.0_SOURCE.zip HEAD
+          (cd dist && zip -q -9 -r ../BOW_PROTOCOL_VERCEL_STATIC_v0.4.0.zip .)
+          sha256sum RESIDENT_EVIL_BOW_PROTOCOL_v0.4.0_SOURCE.zip BOW_PROTOCOL_VERCEL_STATIC_v0.4.0.zip > BOW_PROTOCOL_v0.4.0_SHA256SUMS.txt
+      - name: Publish immutable GitHub release
+        if: steps.gate.outputs.ready == 'true'
+        env: {GH_TOKEN: '${{ github.token }}'}
+        run: |
+          if gh release view v0.4.0 >/dev/null 2>&1; then echo "Release v0.4.0 already exists"; exit 1; fi
+          gh release create v0.4.0 RESIDENT_EVIL_BOW_PROTOCOL_v0.4.0_SOURCE.zip BOW_PROTOCOL_VERCEL_STATIC_v0.4.0.zip BOW_PROTOCOL_v0.4.0_SHA256SUMS.txt --target "$GITHUB_SHA" --title "Resident Evil — B.O.W. Protocol v0.4.0 · Apex Mutation" --notes-file docs/RELEASE_NOTES_v0.4.0.md
