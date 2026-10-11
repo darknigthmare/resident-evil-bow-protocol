@@ -33,6 +33,7 @@ const operations = read('src/operations.js');
 const hub = read('src/hub.js');
 const movesets = read('src/movesets.js');
 const incidentIds = ['re7-jack-baker-mutated','re7-jack-baker-swamp-man','re7-marguerite-baker-mutated','re7-lucas-baker-mutated','re7-eveline-final','re7-fumer'];
+const familyIds = ['re7-mia-winters-infected','re7-jack-baker','re7-jack-baker-scissor','re7-marguerite-baker','re7-lucas-baker','re7-eveline'];
 const apexIds = ['re2r-super-tyrant','re3r-stage-2-nemesis','re3r-stage-3-nemesis','re4r-del-lago','re4r-garrador','re4r-iron-maiden','re4r-ramon-salazar-mutated','re4r-osmund-saddler-mutated','revillage-mutated-dimitrescu','revillage-mutated-moreau','revillage-mutated-heisenberg','re6-ustanak'];
 
 check('Every primary screen loads the current containment theme', () => {
@@ -49,9 +50,9 @@ check('Home screen exposes the exact audited scope and current build', () => {
   assert.match(pages.accueil, /APEX MUTATION/);
   assert.match(pages.accueil, /id="apexGrid"/);
 });
-check('Home runtime fills public counters, Incident Baker and Apex Mutation cards', () => {
-  for (const id of ['fighterCount','arenaCount','catalogCount','moveCount','incidentGrid','apexGrid']) assert.match(hub, new RegExp(id));
-  for (const uid of [...incidentIds,...apexIds]) assert.match(hub, new RegExp(uid));
+check('Home runtime fills public counters, Incident Baker, Apex Mutation and E-001 Family cards', () => {
+  for (const id of ['fighterCount','arenaCount','catalogCount','moveCount','incidentGrid','apexGrid','familyGrid']) assert.match(hub, new RegExp(id));
+  for (const uid of [...incidentIds,...apexIds,...familyIds]) assert.match(hub, new RegExp(uid));
   assert.match(hub, /loreMoves|fighters\.reduce/);
   return { incidentSubjects: incidentIds.length, apexSubjects: apexIds.length };
 });
@@ -66,7 +67,7 @@ check('Technique dossier exposes traceability and adaptation boundaries', () => 
   for (const level of ['CANONIQUE','ANATOMIQUE','SIMULATION']) assert.match(engine, new RegExp(level));
 });
 check('Combat release identifies the current audited build', () => {
-  assert.match(engine, new RegExp(`RE ${version.replaceAll('.', '\\.')} APEX MUTATION / CQC 0\\.60`));
+  assert.match(engine, new RegExp(`RE ${version.replaceAll('.', '\\.')} E-001 FAMILY PROTOCOL / CQC 0\\.60`));
   assert.match(engine, /PROFIL AUDITÉ · 10 TECHNIQUES/);
   assert.match(engine, /OUVRIR LE MOVESET 10\/10/);
 });
@@ -78,7 +79,7 @@ check('Health presentation contains Resident Evil FINE, CAUTION and DANGER state
   assert.match(pages.operations, /data-state="FINE"/);
 });
 check('Theme contains the containment visual language without remote assets', () => {
-  for (const token of ['--bow-red','--bow-green','--bow-amber','lore-seal','combat-audit-badge','repeating-linear-gradient','box-shadow:inset 0 0 180px','incident-baker','apex-mutation','apex-grid']) assert(theme.includes(token), token);
+  for (const token of ['--bow-red','--bow-green','--bow-amber','lore-seal','combat-audit-badge','repeating-linear-gradient','box-shadow:inset 0 0 180px','incident-baker','apex-mutation','apex-grid','e001-family','e001-grid']) assert(theme.includes(token), token);
   assert.doesNotMatch(theme, /url\(\s*["']?https?:/i);
 });
 check('Moveset archive declares all traceability fields and commands', () => {
@@ -120,14 +121,14 @@ try {
   assert.equal(env.document.querySelector('#fighterCount').textContent, String(fighterCount));
   assert.equal(env.document.querySelector('#moveCount').textContent, String(moveCount));
   assert.equal(env.document.querySelectorAll('.incident-card').length, incidentIds.length);
-  assert.equal(env.document.querySelectorAll('.apex-card').length, apexIds.length);
-  assert.match(env.document.querySelector('#heroName').textContent, /DIMITRESCU/);
-  report.push({ name: 'Home screen initializes Incident Baker and the twelve-subject Apex Mutation panel', pass: true, detail: { subjects: fighterCount, incidentCards: incidentIds.length, apexCards: apexIds.length } });
-  console.log('PASS Home screen initializes Incident Baker and the twelve-subject Apex Mutation panel');
+  assert.equal(env.document.querySelectorAll('.apex-card').length, apexIds.length);assert.equal(env.document.querySelectorAll('.e001-card').length, familyIds.length);
+  assert.match(env.document.querySelector('#heroName').textContent, /EVELINE/);
+  report.push({ name: 'Home screen initializes Incident Baker, Apex Mutation and the six-subject E-001 Family panel', pass: true, detail: { subjects: fighterCount, incidentCards: incidentIds.length, apexCards: apexIds.length } });
+  console.log('PASS Home screen initializes Incident Baker, Apex Mutation and the six-subject E-001 Family panel');
   env.dispose();
 } catch (error) {
-  report.push({ name: 'Home screen initializes Incident Baker and the twelve-subject Apex Mutation panel', pass: false, error: error.stack || String(error) });
-  console.log('FAIL Home screen initializes Incident Baker and the twelve-subject Apex Mutation panel\n' + error.message);
+  report.push({ name: 'Home screen initializes Incident Baker, Apex Mutation and the six-subject E-001 Family panel', pass: false, error: error.stack || String(error) });
+  console.log('FAIL Home screen initializes Incident Baker, Apex Mutation and the six-subject E-001 Family panel\n' + error.message);
 }
 
 const failures = report.filter(x => !x.pass);

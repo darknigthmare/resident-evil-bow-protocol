@@ -1,25 +1,25 @@
 {
   "schema": "re.bow.chronicles.content/1",
-  "version": "0.4.0",
-  "sourceVersion": "0.4.0",
+  "version": "0.5.0",
+  "sourceVersion": "0.5.0",
   "counts": {
-    "fighters": 93,
-    "stories": 93,
-    "authored": 93,
-    "structured": 93,
-    "duels": 744,
-    "introPanels": 279,
-    "outroPanels": 279,
-    "paragraphs": 558,
-    "illustratedPortraits": 93,
-    "paintedArenas": 30,
+    "fighters": 99,
+    "stories": 99,
+    "authored": 99,
+    "structured": 99,
+    "duels": 792,
+    "introPanels": 297,
+    "outroPanels": 297,
+    "paragraphs": 594,
+    "illustratedPortraits": 99,
+    "paintedArenas": 36,
     "catalog": 389,
-    "finishers": 372,
-    "loreProfiles": 93,
-    "loreMoves": 930,
-    "canonicalMoves": 650,
-    "anatomicalMoves": 203,
-    "simulationMoves": 77
+    "finishers": 396,
+    "loreProfiles": 99,
+    "loreMoves": 990,
+    "canonicalMoves": 680,
+    "anatomicalMoves": 226,
+    "simulationMoves": 84
   },
   "fighters": [
     {
@@ -32079,6 +32079,1925 @@
         ],
         "evidence": "lore-audited"
       }
+    },
+    {
+      "uid": "re7-mia-winters-infected",
+      "id": "re7-mia-winters-infected",
+      "name": "MIA WINTERS — INFECTÉE",
+      "ep": "Resident Evil 7 biohazard (2017)",
+      "source": "RE7 · 2017",
+      "game": "resident-evil-7",
+      "role": "HÔTE E-001 À ARMES IMPROVISÉES",
+      "archetype": "molded",
+      "power": 1.18,
+      "speed": 0.95,
+      "reach": 1.18,
+      "color": "#1d2926",
+      "accent": "#86a295",
+      "visual": {
+        "kind": "human",
+        "height": 220,
+        "width": 92,
+        "drawHeight": 220,
+        "sourceFacing": "front",
+        "asymmetric": true,
+        "fullBody": true,
+        "primary": "#1d2926",
+        "secondary": "#171715",
+        "accent": "#86a295",
+        "skin": "#88776c",
+        "weapon": "none",
+        "body": "massive",
+        "morphology": "humanoid",
+        "spriteCrop": [
+          0,
+          0,
+          620,
+          1000
+        ]
+      },
+      "portrait": "assets/catalog/re7-mia-winters-infected.png",
+      "sprite": "assets/specimens/re7-mia-winters-infected.png",
+      "reference": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+      "spriteSource": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+      "assetNote": "Sprite composite original du fangame ; aucune animation propriétaire extraite.",
+      "bioAgent": "Moisissure / E-001",
+      "morphology": "MIA WINTERS — INFECTÉE. Mia infectée de la maison d’hôtes.",
+      "canonicalAttacks": [
+        "Couteau",
+        "Tronçonneuse",
+        "Saisie"
+      ],
+      "fidelity": {
+        "status": "lore-audited",
+        "visualIncarnation": "Resident Evil 7 biohazard — End of Zoe (2017)",
+        "rule": "Pouvoirs, organes et comportements propres à cette forme ; aucune capacité d’une autre phase ou d’un autre épisode n’est importée.",
+        "balanceBoundary": "Les attaques et limites biologiques suivent les références ; commandes, frames, dégâts, ressources et match-ups restent des adaptations originales du moteur 2D."
+      },
+      "boss": true,
+      "combat": {
+        "uid": "re7-mia-winters-infected",
+        "key": "re_molded",
+        "role": "HÔTE E-001 À ARMES IMPROVISÉES",
+        "resource": {
+          "kind": "energy",
+          "label": "INFLUENCE E-001",
+          "max": 100,
+          "regen": 0.25,
+          "reload": 0
+        },
+        "passive": {
+          "id": "lore-re7-mia-winters-infected",
+          "name": "Hôte instable",
+          "desc": "La forme des marais revient après les impacts jusqu’à épuisement de son budget régénératif.",
+          "regenBudget": 1050
+        },
+        "moves": {
+          "light": {
+            "name": "Lame de cuisine",
+            "kind": "melee",
+            "startup": 7,
+            "active": 3,
+            "recovery": 13,
+            "damage": 330,
+            "reach": 88,
+            "level": "mid",
+            "cost": 0,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "strike",
+            "counterplay": "Garder puis punir la récupération ; la prise contourne une garde passive.",
+            "lore": "canonical",
+            "evidence": "canonical",
+            "loreBasis": "Mia infectée de la maison d’hôtes. Actions : Couteau / Tronçonneuse / Saisie",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "id": "re7-mia-winters-infected::light",
+            "slot": "light"
+          },
+          "heavy": {
+            "name": "Taille à la tronçonneuse",
+            "kind": "melee",
+            "startup": 17,
+            "active": 5,
+            "recovery": 26,
+            "damage": 700,
+            "reach": 142,
+            "level": "mid",
+            "cost": 0,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "strike",
+            "counterplay": "Garder puis punir la récupération ; la prise contourne une garde passive.",
+            "lore": "canonical",
+            "evidence": "canonical",
+            "loreBasis": "Mia infectée de la maison d’hôtes. Actions : Couteau / Tronçonneuse / Saisie",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "id": "re7-mia-winters-infected::heavy",
+            "slot": "heavy"
+          },
+          "low": {
+            "name": "Entaille au tendon",
+            "kind": "melee",
+            "startup": 12,
+            "active": 4,
+            "recovery": 23,
+            "damage": 450,
+            "reach": 132,
+            "level": "low",
+            "cost": 0,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "strike",
+            "counterplay": "Garde basse ou saut ; la garde haute ne suffit pas.",
+            "lore": "anatomical",
+            "evidence": "anatomical",
+            "loreBasis": "Mia infectée de la maison d’hôtes. Actions : Couteau / Tronçonneuse / Saisie",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "id": "re7-mia-winters-infected::low",
+            "slot": "low"
+          },
+          "throw": {
+            "name": "Étranglement de l’escalier",
+            "kind": "melee",
+            "startup": 9,
+            "active": 3,
+            "recovery": 34,
+            "damage": 820,
+            "reach": 84,
+            "level": "throw",
+            "cost": 0,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "grapple",
+            "counterplay": "Reculer ou déchoper ; la saisie ne touche pas hors de portée.",
+            "lore": "anatomical",
+            "evidence": "anatomical",
+            "loreBasis": "Mia infectée de la maison d’hôtes. Actions : Couteau / Tronçonneuse / Saisie",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "id": "re7-mia-winters-infected::throw",
+            "slot": "throw"
+          },
+          "special": {
+            "name": "Arc motorisé",
+            "kind": "melee",
+            "startup": 19,
+            "active": 5,
+            "recovery": 28,
+            "damage": 690,
+            "reach": 172,
+            "level": "mid",
+            "cost": 19,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "tentacle",
+            "counterplay": "Déborder le côté du bras transformé et punir le retour.",
+            "lore": "canonical",
+            "evidence": "canonical",
+            "loreBasis": "Mia infectée de la maison d’hôtes. Actions : Couteau / Tronçonneuse / Saisie",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "id": "re7-mia-winters-infected::special",
+            "slot": "special"
+          },
+          "specialDown": {
+            "name": "Crawl sous la porte",
+            "kind": "melee",
+            "startup": 22,
+            "active": 6,
+            "recovery": 31,
+            "damage": 730,
+            "reach": 190,
+            "level": "low",
+            "cost": 22,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "tentacle",
+            "counterplay": "Garde basse ou saut ; la garde haute ne suffit pas.",
+            "lore": "anatomical",
+            "evidence": "anatomical",
+            "loreBasis": "Mia infectée de la maison d’hôtes. Actions : Couteau / Tronçonneuse / Saisie",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "id": "re7-mia-winters-infected::specialDown",
+            "slot": "specialDown"
+          },
+          "specialForward": {
+            "name": "Ruée de l’attique",
+            "kind": "melee",
+            "startup": 14,
+            "active": 4,
+            "recovery": 35,
+            "damage": 940,
+            "reach": 125,
+            "level": "throw",
+            "cost": 22,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "grapple",
+            "counterplay": "Sauter ou esquiver avant le contact ; punir la course ratée.",
+            "lore": "canonical",
+            "evidence": "canonical",
+            "loreBasis": "Mia infectée de la maison d’hôtes. Actions : Couteau / Tronçonneuse / Saisie",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "travel": 4,
+            "id": "re7-mia-winters-infected::specialForward",
+            "slot": "specialForward"
+          },
+          "specialBack": {
+            "name": "Repli convulsif",
+            "kind": "mobility",
+            "startup": 5,
+            "active": 18,
+            "recovery": 20,
+            "damage": 0,
+            "reach": 0,
+            "level": "mid",
+            "cost": 12,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "movement",
+            "counterplay": "Suivre le recul : la silhouette reste vulnérable.",
+            "lore": "simulation",
+            "evidence": "simulation",
+            "loreBasis": "Mia infectée de la maison d’hôtes. Actions : Couteau / Tronçonneuse / Saisie",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "travel": -7,
+            "id": "re7-mia-winters-infected::specialBack",
+            "slot": "specialBack"
+          },
+          "super": {
+            "name": "Assaut de l’hôte E-001",
+            "kind": "melee",
+            "startup": 28,
+            "active": 8,
+            "recovery": 45,
+            "damage": 2180,
+            "reach": 226,
+            "level": "mid",
+            "cost": 0,
+            "meter": 50,
+            "cooldown": 0,
+            "tag": "tentacle",
+            "counterplay": "Bloquer le premier impact et sortir avant la seconde amplitude.",
+            "lore": "canonical",
+            "evidence": "canonical",
+            "loreBasis": "Mia infectée de la maison d’hôtes. Actions : Couteau / Tronçonneuse / Saisie",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "travel": 4,
+            "id": "re7-mia-winters-infected::super",
+            "slot": "super"
+          },
+          "utility": {
+            "name": "Régénération de l’hôte",
+            "kind": "heal",
+            "startup": 46,
+            "active": 1,
+            "recovery": 25,
+            "damage": 0,
+            "reach": 0,
+            "level": "mid",
+            "cost": 22,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "recovery",
+            "counterplay": "Interrompre la reconstruction avant l’activation.",
+            "lore": "anatomical",
+            "evidence": "anatomical",
+            "loreBasis": "Mia infectée de la maison d’hôtes. Actions : Couteau / Tronçonneuse / Saisie",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "heal": 430,
+            "id": "re7-mia-winters-infected::utility",
+            "slot": "utility"
+          }
+        },
+        "sources": [
+          "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html"
+        ],
+        "fidelity": {
+          "status": "lore-audited",
+          "visualIncarnation": "Resident Evil 7 biohazard — End of Zoe (2017)",
+          "rule": "Pouvoirs, organes et comportements propres à cette forme ; aucune capacité d’une autre phase ou d’un autre épisode n’est importée.",
+          "balanceBoundary": "Les attaques et limites biologiques suivent les références ; commandes, frames, dégâts, ressources et match-ups restent des adaptations originales du moteur 2D."
+        },
+        "canonicalAttacks": [
+          "Couteau",
+          "Tronçonneuse",
+          "Saisie"
+        ],
+        "evidence": "lore-audited"
+      }
+    },
+    {
+      "uid": "re7-jack-baker",
+      "id": "re7-jack-baker",
+      "name": "JACK BAKER — FORME HUMAINE",
+      "ep": "Resident Evil 7 biohazard (2017)",
+      "source": "RE7 · 2017",
+      "game": "resident-evil-7",
+      "role": "PATRIARCHE RÉGÉNÉRATIF",
+      "archetype": "molded",
+      "power": 1.18,
+      "speed": 0.95,
+      "reach": 1.18,
+      "color": "#1d2926",
+      "accent": "#86a295",
+      "visual": {
+        "kind": "human",
+        "height": 246,
+        "width": 128,
+        "drawHeight": 246,
+        "sourceFacing": "front",
+        "asymmetric": true,
+        "fullBody": true,
+        "primary": "#1d2926",
+        "secondary": "#171715",
+        "accent": "#86a295",
+        "skin": "#88776c",
+        "weapon": "none",
+        "body": "massive",
+        "morphology": "humanoid",
+        "spriteCrop": [
+          0,
+          0,
+          620,
+          1000
+        ]
+      },
+      "portrait": "assets/catalog/re7-jack-baker.png",
+      "sprite": "assets/specimens/re7-jack-baker.png",
+      "reference": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+      "spriteSource": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+      "assetNote": "Sprite composite original du fangame ; aucune animation propriétaire extraite.",
+      "bioAgent": "Moisissure / E-001",
+      "morphology": "JACK BAKER — FORME HUMAINE. Jack sous apparence humaine infectée.",
+      "canonicalAttacks": [
+        "Pelle",
+        "Poing",
+        "Saisie",
+        "Régénération"
+      ],
+      "fidelity": {
+        "status": "lore-audited",
+        "visualIncarnation": "Resident Evil 7 biohazard — End of Zoe (2017)",
+        "rule": "Pouvoirs, organes et comportements propres à cette forme ; aucune capacité d’une autre phase ou d’un autre épisode n’est importée.",
+        "balanceBoundary": "Les attaques et limites biologiques suivent les références ; commandes, frames, dégâts, ressources et match-ups restent des adaptations originales du moteur 2D."
+      },
+      "boss": true,
+      "combat": {
+        "uid": "re7-jack-baker",
+        "key": "re_molded",
+        "role": "PATRIARCHE RÉGÉNÉRATIF",
+        "resource": {
+          "kind": "energy",
+          "label": "RÉGÉNÉRATION DU PATRIARCHE",
+          "max": 100,
+          "regen": 0.25,
+          "reload": 0
+        },
+        "passive": {
+          "id": "lore-re7-jack-baker",
+          "name": "Bienvenue dans la famille",
+          "desc": "La forme des marais revient après les impacts jusqu’à épuisement de son budget régénératif.",
+          "regenBudget": 1050
+        },
+        "moves": {
+          "light": {
+            "name": "Poing du patriarche",
+            "kind": "melee",
+            "startup": 7,
+            "active": 3,
+            "recovery": 13,
+            "damage": 330,
+            "reach": 88,
+            "level": "mid",
+            "cost": 0,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "strike",
+            "counterplay": "Garder puis punir la récupération ; la prise contourne une garde passive.",
+            "lore": "canonical",
+            "evidence": "canonical",
+            "loreBasis": "Jack sous apparence humaine infectée. Actions : Pelle / Poing / Saisie / Régénération",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "id": "re7-jack-baker::light",
+            "slot": "light"
+          },
+          "heavy": {
+            "name": "Pelle de Dulvey",
+            "kind": "melee",
+            "startup": 17,
+            "active": 5,
+            "recovery": 26,
+            "damage": 700,
+            "reach": 142,
+            "level": "mid",
+            "cost": 0,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "strike",
+            "counterplay": "Garder puis punir la récupération ; la prise contourne une garde passive.",
+            "lore": "canonical",
+            "evidence": "canonical",
+            "loreBasis": "Jack sous apparence humaine infectée. Actions : Pelle / Poing / Saisie / Régénération",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "id": "re7-jack-baker::heavy",
+            "slot": "heavy"
+          },
+          "low": {
+            "name": "Coup de botte au genou",
+            "kind": "melee",
+            "startup": 12,
+            "active": 4,
+            "recovery": 23,
+            "damage": 450,
+            "reach": 132,
+            "level": "low",
+            "cost": 0,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "strike",
+            "counterplay": "Garde basse ou saut ; la garde haute ne suffit pas.",
+            "lore": "anatomical",
+            "evidence": "anatomical",
+            "loreBasis": "Jack sous apparence humaine infectée. Actions : Pelle / Poing / Saisie / Régénération",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "id": "re7-jack-baker::low",
+            "slot": "low"
+          },
+          "throw": {
+            "name": "Projection à travers le mur",
+            "kind": "melee",
+            "startup": 9,
+            "active": 3,
+            "recovery": 34,
+            "damage": 820,
+            "reach": 84,
+            "level": "throw",
+            "cost": 0,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "grapple",
+            "counterplay": "Reculer ou déchoper ; la saisie ne touche pas hors de portée.",
+            "lore": "anatomical",
+            "evidence": "anatomical",
+            "loreBasis": "Jack sous apparence humaine infectée. Actions : Pelle / Poing / Saisie / Régénération",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "id": "re7-jack-baker::throw",
+            "slot": "throw"
+          },
+          "special": {
+            "name": "Estoc de pelle",
+            "kind": "melee",
+            "startup": 19,
+            "active": 5,
+            "recovery": 28,
+            "damage": 690,
+            "reach": 172,
+            "level": "mid",
+            "cost": 19,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "tentacle",
+            "counterplay": "Déborder le côté du bras transformé et punir le retour.",
+            "lore": "canonical",
+            "evidence": "canonical",
+            "loreBasis": "Jack sous apparence humaine infectée. Actions : Pelle / Poing / Saisie / Régénération",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "id": "re7-jack-baker::special",
+            "slot": "special"
+          },
+          "specialDown": {
+            "name": "Crochet du garage",
+            "kind": "melee",
+            "startup": 22,
+            "active": 6,
+            "recovery": 31,
+            "damage": 730,
+            "reach": 190,
+            "level": "low",
+            "cost": 22,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "tentacle",
+            "counterplay": "Garde basse ou saut ; la garde haute ne suffit pas.",
+            "lore": "anatomical",
+            "evidence": "anatomical",
+            "loreBasis": "Jack sous apparence humaine infectée. Actions : Pelle / Poing / Saisie / Régénération",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "id": "re7-jack-baker::specialDown",
+            "slot": "specialDown"
+          },
+          "specialForward": {
+            "name": "Charge du couloir",
+            "kind": "melee",
+            "startup": 14,
+            "active": 4,
+            "recovery": 35,
+            "damage": 940,
+            "reach": 125,
+            "level": "throw",
+            "cost": 22,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "grapple",
+            "counterplay": "Sauter ou esquiver avant le contact ; punir la course ratée.",
+            "lore": "canonical",
+            "evidence": "canonical",
+            "loreBasis": "Jack sous apparence humaine infectée. Actions : Pelle / Poing / Saisie / Régénération",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "travel": 4,
+            "id": "re7-jack-baker::specialForward",
+            "slot": "specialForward"
+          },
+          "specialBack": {
+            "name": "Pas de traque",
+            "kind": "mobility",
+            "startup": 5,
+            "active": 18,
+            "recovery": 20,
+            "damage": 0,
+            "reach": 0,
+            "level": "mid",
+            "cost": 12,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "movement",
+            "counterplay": "Suivre le recul : la silhouette reste vulnérable.",
+            "lore": "simulation",
+            "evidence": "simulation",
+            "loreBasis": "Jack sous apparence humaine infectée. Actions : Pelle / Poing / Saisie / Régénération",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "travel": -7,
+            "id": "re7-jack-baker::specialBack",
+            "slot": "specialBack"
+          },
+          "super": {
+            "name": "Bienvenue dans la famille",
+            "kind": "melee",
+            "startup": 28,
+            "active": 8,
+            "recovery": 45,
+            "damage": 2180,
+            "reach": 226,
+            "level": "mid",
+            "cost": 0,
+            "meter": 50,
+            "cooldown": 0,
+            "tag": "tentacle",
+            "counterplay": "Bloquer le premier impact et sortir avant la seconde amplitude.",
+            "lore": "canonical",
+            "evidence": "canonical",
+            "loreBasis": "Jack sous apparence humaine infectée. Actions : Pelle / Poing / Saisie / Régénération",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "travel": 4,
+            "id": "re7-jack-baker::super",
+            "slot": "super"
+          },
+          "utility": {
+            "name": "Régénération hyperactive",
+            "kind": "heal",
+            "startup": 46,
+            "active": 1,
+            "recovery": 25,
+            "damage": 0,
+            "reach": 0,
+            "level": "mid",
+            "cost": 22,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "recovery",
+            "counterplay": "Interrompre la reconstruction avant l’activation.",
+            "lore": "anatomical",
+            "evidence": "anatomical",
+            "loreBasis": "Jack sous apparence humaine infectée. Actions : Pelle / Poing / Saisie / Régénération",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "heal": 430,
+            "id": "re7-jack-baker::utility",
+            "slot": "utility"
+          }
+        },
+        "sources": [
+          "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html"
+        ],
+        "fidelity": {
+          "status": "lore-audited",
+          "visualIncarnation": "Resident Evil 7 biohazard — End of Zoe (2017)",
+          "rule": "Pouvoirs, organes et comportements propres à cette forme ; aucune capacité d’une autre phase ou d’un autre épisode n’est importée.",
+          "balanceBoundary": "Les attaques et limites biologiques suivent les références ; commandes, frames, dégâts, ressources et match-ups restent des adaptations originales du moteur 2D."
+        },
+        "canonicalAttacks": [
+          "Pelle",
+          "Poing",
+          "Saisie",
+          "Régénération"
+        ],
+        "evidence": "lore-audited"
+      }
+    },
+    {
+      "uid": "re7-jack-baker-scissor",
+      "id": "re7-jack-baker-scissor",
+      "name": "JACK BAKER — SCIE À CISEAUX",
+      "ep": "Resident Evil 7 biohazard (2017)",
+      "source": "RE7 · 2017",
+      "game": "resident-evil-7",
+      "role": "DUELLISTE À DOUBLE CHAÎNE",
+      "archetype": "executioner",
+      "power": 1.29,
+      "speed": 0.98,
+      "reach": 1.3,
+      "color": "#56433d",
+      "accent": "#c08b67",
+      "visual": {
+        "kind": "human",
+        "height": 250,
+        "width": 175,
+        "drawHeight": 250,
+        "sourceFacing": "front",
+        "asymmetric": true,
+        "fullBody": true,
+        "primary": "#56433d",
+        "secondary": "#171715",
+        "accent": "#c08b67",
+        "skin": "#88776c",
+        "weapon": "none",
+        "body": "massive",
+        "morphology": "humanoid",
+        "spriteCrop": [
+          0,
+          0,
+          620,
+          1000
+        ]
+      },
+      "portrait": "assets/catalog/re7-jack-baker-scissor.png",
+      "sprite": "assets/specimens/re7-jack-baker-scissor.png",
+      "reference": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+      "spriteSource": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+      "assetNote": "Sprite composite original du fangame ; aucune animation propriétaire extraite.",
+      "bioAgent": "Moisissure / E-001",
+      "morphology": "JACK BAKER — SCIE À CISEAUX. Jack pendant le duel à la scie de la morgue.",
+      "canonicalAttacks": [
+        "Scie à ciseaux",
+        "Attaque verticale",
+        "Saisie"
+      ],
+      "fidelity": {
+        "status": "lore-audited",
+        "visualIncarnation": "Resident Evil 6 (2012)",
+        "rule": "Pouvoirs, organes, équipement et comportements propres à cette forme ; aucune capacité d’une autre phase n’est importée.",
+        "balanceBoundary": "Les familles d’attaque suivent les références ; commandes, frames, dégâts, ressources, collisions et affrontements croisés restent des adaptations originales du moteur 2D."
+      },
+      "boss": true,
+      "combat": {
+        "uid": "re7-jack-baker-scissor",
+        "key": "re_executioner",
+        "role": "DUELLISTE À DOUBLE CHAÎNE",
+        "resource": {
+          "kind": "energy",
+          "label": "RÉGIME DES DEUX LAMES",
+          "max": 100,
+          "regen": 0.24,
+          "reload": 0
+        },
+        "passive": {
+          "id": "lore-re7-jack-baker-scissor",
+          "name": "Moteur de la morgue",
+          "desc": "Le changement d’outil prépare un type de pression différent."
+        },
+        "moves": {
+          "light": {
+            "name": "Morsure de lame",
+            "kind": "melee",
+            "startup": 7,
+            "active": 3,
+            "recovery": 14,
+            "damage": 350,
+            "reach": 108,
+            "level": "mid",
+            "cost": 0,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "strike",
+            "counterplay": "Bloquer puis punir la récupération.",
+            "lore": "canonical",
+            "evidence": "canonical",
+            "loreBasis": "Jack pendant le duel à la scie de la morgue. Actions : Scie à ciseaux / Attaque verticale / Saisie",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "id": "re7-jack-baker-scissor::light",
+            "slot": "light"
+          },
+          "heavy": {
+            "name": "Cisaille motorisée",
+            "kind": "melee",
+            "startup": 19,
+            "active": 6,
+            "recovery": 30,
+            "damage": 800,
+            "reach": 170,
+            "level": "mid",
+            "cost": 0,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "heavy",
+            "counterplay": "Sortir de la zone ou bloquer puis punir.",
+            "lore": "canonical",
+            "evidence": "canonical",
+            "loreBasis": "Jack pendant le duel à la scie de la morgue. Actions : Scie à ciseaux / Attaque verticale / Saisie",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "id": "re7-jack-baker-scissor::heavy",
+            "slot": "heavy"
+          },
+          "low": {
+            "name": "Coupe rasante",
+            "kind": "melee",
+            "startup": 13,
+            "active": 5,
+            "recovery": 24,
+            "damage": 470,
+            "reach": 165,
+            "level": "low",
+            "cost": 0,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "strike",
+            "counterplay": "Garde basse ou saut.",
+            "lore": "anatomical",
+            "evidence": "anatomical",
+            "loreBasis": "Jack pendant le duel à la scie de la morgue. Actions : Scie à ciseaux / Attaque verticale / Saisie",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "id": "re7-jack-baker-scissor::low",
+            "slot": "low"
+          },
+          "throw": {
+            "name": "Étreinte de la morgue",
+            "kind": "melee",
+            "startup": 11,
+            "active": 4,
+            "recovery": 37,
+            "damage": 920,
+            "reach": 98,
+            "level": "throw",
+            "cost": 0,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "grapple",
+            "counterplay": "Reculer, sauter ou déchoper.",
+            "lore": "anatomical",
+            "evidence": "anatomical",
+            "loreBasis": "Jack pendant le duel à la scie de la morgue. Actions : Scie à ciseaux / Attaque verticale / Saisie",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "id": "re7-jack-baker-scissor::throw",
+            "slot": "throw"
+          },
+          "special": {
+            "name": "Lames croisées",
+            "kind": "projectile",
+            "startup": 30,
+            "active": 1,
+            "recovery": 38,
+            "damage": 610,
+            "reach": 620,
+            "level": "mid",
+            "cost": 24,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "organic",
+            "counterplay": "Quitter la trajectoire ou l’axe puis punir.",
+            "lore": "canonical",
+            "evidence": "canonical",
+            "loreBasis": "Jack pendant le duel à la scie de la morgue. Actions : Scie à ciseaux / Attaque verticale / Saisie",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "speed": 8,
+            "life": 84,
+            "id": "re7-jack-baker-scissor::special",
+            "slot": "special"
+          },
+          "specialDown": {
+            "name": "Fente au sol",
+            "kind": "melee",
+            "startup": 16,
+            "active": 6,
+            "recovery": 29,
+            "damage": 700,
+            "reach": 180,
+            "level": "low",
+            "cost": 22,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "organic",
+            "counterplay": "Quitter le sol signalé ou garder bas.",
+            "lore": "anatomical",
+            "evidence": "anatomical",
+            "loreBasis": "Jack pendant le duel à la scie de la morgue. Actions : Scie à ciseaux / Attaque verticale / Saisie",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "travel": 3,
+            "id": "re7-jack-baker-scissor::specialDown",
+            "slot": "specialDown"
+          },
+          "specialForward": {
+            "name": "Charge de la scie",
+            "kind": "melee",
+            "startup": 20,
+            "active": 7,
+            "recovery": 36,
+            "damage": 1010,
+            "reach": 205,
+            "level": "mid",
+            "cost": 26,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "strike",
+            "counterplay": "Quitter l’axe avant le contact.",
+            "lore": "canonical",
+            "evidence": "canonical",
+            "loreBasis": "Jack pendant le duel à la scie de la morgue. Actions : Scie à ciseaux / Attaque verticale / Saisie",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "travel": 6,
+            "id": "re7-jack-baker-scissor::specialForward",
+            "slot": "specialForward"
+          },
+          "specialBack": {
+            "name": "Démarrage en recul",
+            "kind": "mobility",
+            "startup": 5,
+            "active": 19,
+            "recovery": 21,
+            "damage": 0,
+            "reach": 0,
+            "level": "mid",
+            "cost": 13,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "movement",
+            "counterplay": "Suivre le déplacement et punir la sortie.",
+            "lore": "simulation",
+            "evidence": "simulation",
+            "loreBasis": "Jack pendant le duel à la scie de la morgue. Actions : Scie à ciseaux / Attaque verticale / Saisie",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "travel": -7,
+            "id": "re7-jack-baker-scissor::specialBack",
+            "slot": "specialBack"
+          },
+          "super": {
+            "name": "Exécution à double chaîne",
+            "kind": "melee",
+            "startup": 33,
+            "active": 10,
+            "recovery": 49,
+            "damage": 2320,
+            "reach": 245,
+            "level": "mid",
+            "cost": 0,
+            "meter": 50,
+            "cooldown": 0,
+            "tag": "heavy",
+            "counterplay": "Anticiper le départ très visible et punir la récupération.",
+            "lore": "canonical",
+            "evidence": "canonical",
+            "loreBasis": "Jack pendant le duel à la scie de la morgue. Actions : Scie à ciseaux / Attaque verticale / Saisie",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "travel": 4,
+            "id": "re7-jack-baker-scissor::super",
+            "slot": "super"
+          },
+          "utility": {
+            "name": "Surchauffe contrôlée",
+            "kind": "buff",
+            "startup": 26,
+            "active": 1,
+            "recovery": 30,
+            "damage": 0,
+            "reach": 0,
+            "level": "mid",
+            "cost": 24,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "armor",
+            "counterplay": "Maintenir la pression avant l’activation.",
+            "lore": "anatomical",
+            "evidence": "anatomical",
+            "loreBasis": "Jack pendant le duel à la scie de la morgue. Actions : Scie à ciseaux / Attaque verticale / Saisie",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "buff": "armor",
+            "duration": 170,
+            "hits": 1,
+            "id": "re7-jack-baker-scissor::utility",
+            "slot": "utility"
+          }
+        },
+        "sources": [
+          "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html"
+        ],
+        "fidelity": {
+          "status": "lore-audited",
+          "visualIncarnation": "Resident Evil 6 (2012)",
+          "rule": "Pouvoirs, organes, équipement et comportements propres à cette forme ; aucune capacité d’une autre phase n’est importée.",
+          "balanceBoundary": "Les familles d’attaque suivent les références ; commandes, frames, dégâts, ressources, collisions et affrontements croisés restent des adaptations originales du moteur 2D."
+        },
+        "canonicalAttacks": [
+          "Scie à ciseaux",
+          "Attaque verticale",
+          "Saisie"
+        ],
+        "evidence": "lore-audited"
+      }
+    },
+    {
+      "uid": "re7-marguerite-baker",
+      "id": "re7-marguerite-baker",
+      "name": "MARGUERITE BAKER — FORME HUMAINE",
+      "ep": "Resident Evil 7 biohazard (2017)",
+      "source": "RE7 · 2017",
+      "game": "resident-evil-7",
+      "role": "MATRIARCHE AUX ESSAIMS",
+      "archetype": "crawler",
+      "power": 1.0,
+      "speed": 1.18,
+      "reach": 1.32,
+      "color": "#4d493a",
+      "accent": "#b9c788",
+      "visual": {
+        "kind": "human",
+        "height": 226,
+        "width": 110,
+        "drawHeight": 226,
+        "sourceFacing": "front",
+        "asymmetric": true,
+        "fullBody": true,
+        "primary": "#4d493a",
+        "secondary": "#171715",
+        "accent": "#b9c788",
+        "skin": "#88776c",
+        "weapon": "none",
+        "body": "athletic",
+        "morphology": "humanoid",
+        "spriteCrop": [
+          0,
+          0,
+          620,
+          1000
+        ]
+      },
+      "portrait": "assets/catalog/re7-marguerite-baker.png",
+      "sprite": "assets/specimens/re7-marguerite-baker.png",
+      "reference": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+      "spriteSource": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+      "assetNote": "Sprite composite original du fangame ; aucune animation propriétaire extraite.",
+      "bioAgent": "Moisissure / E-001",
+      "morphology": "MARGUERITE BAKER — FORME HUMAINE. Marguerite avant sa mutation arachnéenne.",
+      "canonicalAttacks": [
+        "Essaims",
+        "Lanterne",
+        "Nids"
+      ],
+      "fidelity": {
+        "status": "lore-audited",
+        "visualIncarnation": "Resident Evil 7 biohazard (2017)",
+        "rule": "Pouvoirs, organes et comportements propres à cette forme ; aucune capacité d’une autre phase ou d’un autre épisode n’est importée.",
+        "balanceBoundary": "Les attaques et limites biologiques suivent les références ; commandes, frames, dégâts, ressources et match-ups restent des adaptations originales du moteur 2D."
+      },
+      "boss": true,
+      "combat": {
+        "uid": "re7-marguerite-baker",
+        "key": "re_molded",
+        "role": "MATRIARCHE AUX ESSAIMS",
+        "resource": {
+          "kind": "energy",
+          "label": "COUVAIN DE LA VIEILLE MAISON",
+          "max": 100,
+          "regen": 0.3,
+          "reload": 0
+        },
+        "passive": {
+          "id": "lore-re7-marguerite-baker",
+          "name": "Matriarche du couvain",
+          "desc": "Marguerite alterne mobilité sur les parois, embuscades et génération d’insectes.",
+          "regenBudget": 760
+        },
+        "moves": {
+          "light": {
+            "name": "Coup de lanterne",
+            "kind": "melee",
+            "startup": 6,
+            "active": 3,
+            "recovery": 12,
+            "damage": 300,
+            "reach": 112,
+            "level": "mid",
+            "cost": 0,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "strike",
+            "counterplay": "Garder puis punir la récupération ; la prise contourne une garde passive.",
+            "lore": "canonical",
+            "evidence": "canonical",
+            "loreBasis": "Marguerite avant sa mutation arachnéenne. Actions : Essaims / Lanterne / Nids",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "id": "re7-marguerite-baker::light",
+            "slot": "light"
+          },
+          "heavy": {
+            "name": "Griffes de la vieille maison",
+            "kind": "melee",
+            "startup": 15,
+            "active": 6,
+            "recovery": 25,
+            "damage": 670,
+            "reach": 165,
+            "level": "mid",
+            "cost": 0,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "strike",
+            "counterplay": "Garder puis punir la récupération ; la prise contourne une garde passive.",
+            "lore": "canonical",
+            "evidence": "canonical",
+            "loreBasis": "Marguerite avant sa mutation arachnéenne. Actions : Essaims / Lanterne / Nids",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "id": "re7-marguerite-baker::heavy",
+            "slot": "heavy"
+          },
+          "low": {
+            "name": "Rampement sous les cloisons",
+            "kind": "melee",
+            "startup": 10,
+            "active": 5,
+            "recovery": 22,
+            "damage": 420,
+            "reach": 150,
+            "level": "low",
+            "cost": 0,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "strike",
+            "counterplay": "Garde basse ou saut ; la garde haute ne suffit pas.",
+            "lore": "anatomical",
+            "evidence": "anatomical",
+            "loreBasis": "Marguerite avant sa mutation arachnéenne. Actions : Essaims / Lanterne / Nids",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "lowProfile": true,
+            "id": "re7-marguerite-baker::low",
+            "slot": "low"
+          },
+          "throw": {
+            "name": "Saisie nourricière",
+            "kind": "melee",
+            "startup": 8,
+            "active": 3,
+            "recovery": 31,
+            "damage": 780,
+            "reach": 92,
+            "level": "throw",
+            "cost": 0,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "grapple",
+            "counterplay": "Rester mobile et déchoper dès le bond.",
+            "lore": "anatomical",
+            "evidence": "anatomical",
+            "loreBasis": "Marguerite avant sa mutation arachnéenne. Actions : Essaims / Lanterne / Nids",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "id": "re7-marguerite-baker::throw",
+            "slot": "throw"
+          },
+          "special": {
+            "name": "Essaim de frelons",
+            "kind": "projectile",
+            "startup": 30,
+            "active": 1,
+            "recovery": 38,
+            "damage": 240,
+            "reach": 590,
+            "level": "mid",
+            "cost": 27,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "swarm",
+            "counterplay": "Se déplacer hors de la trajectoire ou bloquer ; punir le long départ à courte portée.",
+            "lore": "canonical",
+            "evidence": "canonical",
+            "loreBasis": "Marguerite avant sa mutation arachnéenne. Actions : Essaims / Lanterne / Nids",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "status": "poison",
+            "count": 3,
+            "speed": 9,
+            "life": 78,
+            "duration": 90,
+            "id": "re7-marguerite-baker::special",
+            "slot": "special"
+          },
+          "specialDown": {
+            "name": "Nid du couvain",
+            "kind": "melee",
+            "startup": 20,
+            "active": 6,
+            "recovery": 29,
+            "damage": 720,
+            "reach": 156,
+            "level": "low",
+            "cost": 21,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "strike",
+            "counterplay": "Se déplacer après l’escalade et punir l’atterrissage.",
+            "lore": "anatomical",
+            "evidence": "anatomical",
+            "loreBasis": "Marguerite avant sa mutation arachnéenne. Actions : Essaims / Lanterne / Nids",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "travel": 5,
+            "launchSelf": -8,
+            "id": "re7-marguerite-baker::specialDown",
+            "slot": "specialDown"
+          },
+          "specialForward": {
+            "name": "Charge de la serre",
+            "kind": "melee",
+            "startup": 13,
+            "active": 4,
+            "recovery": 33,
+            "damage": 900,
+            "reach": 122,
+            "level": "throw",
+            "cost": 22,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "grapple",
+            "counterplay": "Interrompre la ruée avant le contact ou sauter.",
+            "lore": "canonical",
+            "evidence": "canonical",
+            "loreBasis": "Marguerite avant sa mutation arachnéenne. Actions : Essaims / Lanterne / Nids",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "travel": 5,
+            "id": "re7-marguerite-baker::specialForward",
+            "slot": "specialForward"
+          },
+          "specialBack": {
+            "name": "Repli dans les cloisons",
+            "kind": "mobility",
+            "startup": 4,
+            "active": 18,
+            "recovery": 18,
+            "damage": 0,
+            "reach": 0,
+            "level": "mid",
+            "cost": 16,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "movement",
+            "counterplay": "Anticiper son point de retour ; aucune invincibilité générale.",
+            "lore": "simulation",
+            "evidence": "simulation",
+            "loreBasis": "Marguerite avant sa mutation arachnéenne. Actions : Essaims / Lanterne / Nids",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "travel": -6,
+            "launchSelf": -7,
+            "id": "re7-marguerite-baker::specialBack",
+            "slot": "specialBack"
+          },
+          "super": {
+            "name": "Mère de la colonie",
+            "kind": "melee",
+            "startup": 27,
+            "active": 9,
+            "recovery": 44,
+            "damage": 2100,
+            "reach": 230,
+            "level": "mid",
+            "cost": 0,
+            "meter": 50,
+            "cooldown": 0,
+            "tag": "swarm",
+            "counterplay": "S’éloigner avant l’éclosion et punir la fin de séquence.",
+            "lore": "canonical",
+            "evidence": "canonical",
+            "loreBasis": "Marguerite avant sa mutation arachnéenne. Actions : Essaims / Lanterne / Nids",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "travel": 3,
+            "id": "re7-marguerite-baker::super",
+            "slot": "super"
+          },
+          "utility": {
+            "name": "Commande du couvain",
+            "kind": "trap",
+            "startup": 28,
+            "active": 1,
+            "recovery": 34,
+            "damage": 450,
+            "reach": 96,
+            "level": "low",
+            "cost": 24,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "poison",
+            "counterplay": "Détruire ou contourner le nid avant son armement.",
+            "lore": "anatomical",
+            "evidence": "anatomical",
+            "loreBasis": "Marguerite avant sa mutation arachnéenne. Actions : Essaims / Lanterne / Nids",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "arm": 34,
+            "duration": 360,
+            "maxTraps": 2,
+            "status": "poison",
+            "id": "re7-marguerite-baker::utility",
+            "slot": "utility"
+          }
+        },
+        "sources": [
+          "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html"
+        ],
+        "fidelity": {
+          "status": "lore-audited",
+          "visualIncarnation": "Resident Evil 7 biohazard (2017)",
+          "rule": "Pouvoirs, organes et comportements propres à cette forme ; aucune capacité d’une autre phase ou d’un autre épisode n’est importée.",
+          "balanceBoundary": "Les attaques et limites biologiques suivent les références ; commandes, frames, dégâts, ressources et match-ups restent des adaptations originales du moteur 2D."
+        },
+        "canonicalAttacks": [
+          "Essaims",
+          "Lanterne",
+          "Nids"
+        ],
+        "evidence": "lore-audited"
+      }
+    },
+    {
+      "uid": "re7-lucas-baker",
+      "id": "re7-lucas-baker",
+      "name": "LUCAS BAKER — FORME HUMAINE",
+      "ep": "Resident Evil 7 biohazard (2017)",
+      "source": "RE7 · 2017",
+      "game": "resident-evil-7",
+      "role": "INGÉNIEUR DES PIÈGES",
+      "archetype": "molded",
+      "power": 1.17,
+      "speed": 1.04,
+      "reach": 1.2,
+      "color": "#392e2c",
+      "accent": "#d7785e",
+      "visual": {
+        "kind": "human",
+        "height": 232,
+        "width": 102,
+        "drawHeight": 232,
+        "sourceFacing": "left",
+        "asymmetric": true,
+        "fullBody": true,
+        "primary": "#392e2c",
+        "secondary": "#171715",
+        "accent": "#d7785e",
+        "skin": "#88776c",
+        "weapon": "none",
+        "body": "massive",
+        "morphology": "humanoid",
+        "spriteCrop": [
+          0,
+          0,
+          620,
+          1000
+        ]
+      },
+      "portrait": "assets/catalog/re7-lucas-baker.png",
+      "sprite": "assets/specimens/re7-lucas-baker.png",
+      "reference": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+      "spriteSource": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+      "assetNote": "Sprite composite original du fangame ; aucune animation propriétaire extraite.",
+      "bioAgent": "Moisissure / E-001",
+      "morphology": "LUCAS BAKER — FORME HUMAINE. Lucas avant sa mutation, limité à ses dispositifs.",
+      "canonicalAttacks": [
+        "Pièges",
+        "Explosifs",
+        "Fils-pièges"
+      ],
+      "fidelity": {
+        "status": "lore-audited",
+        "visualIncarnation": "Resident Evil 7 biohazard — Not a Hero (2017)",
+        "rule": "Pouvoirs, organes et comportements propres à cette forme ; aucune capacité d’une autre phase ou d’un autre épisode n’est importée.",
+        "balanceBoundary": "Les attaques et limites biologiques suivent les références ; commandes, frames, dégâts, ressources et match-ups restent des adaptations originales du moteur 2D."
+      },
+      "boss": true,
+      "combat": {
+        "uid": "re7-lucas-baker",
+        "key": "re_molded",
+        "role": "INGÉNIEUR DES PIÈGES",
+        "resource": {
+          "kind": "energy",
+          "label": "RÉSEAU DE PIÈGES",
+          "max": 100,
+          "regen": 0.24,
+          "reload": 0
+        },
+        "passive": {
+          "id": "lore-re7-lucas-baker",
+          "name": "Maître de l’épreuve",
+          "desc": "Son noyau et sa régénération sont puissants mais vulnérables à l’inhibition mycotoxique.",
+          "regenBudget": 920
+        },
+        "moves": {
+          "light": {
+            "name": "Coup de clé",
+            "kind": "melee",
+            "startup": 7,
+            "active": 3,
+            "recovery": 13,
+            "damage": 325,
+            "reach": 100,
+            "level": "mid",
+            "cost": 0,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "strike",
+            "counterplay": "Garder puis punir la récupération ; la prise contourne une garde passive.",
+            "lore": "canonical",
+            "evidence": "canonical",
+            "loreBasis": "Lucas avant sa mutation, limité à ses dispositifs. Actions : Pièges / Explosifs / Fils-pièges",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "id": "re7-lucas-baker::light",
+            "slot": "light"
+          },
+          "heavy": {
+            "name": "Bombe artisanale",
+            "kind": "melee",
+            "startup": 16,
+            "active": 6,
+            "recovery": 27,
+            "damage": 710,
+            "reach": 155,
+            "level": "mid",
+            "cost": 0,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "strike",
+            "counterplay": "Garder puis punir la récupération ; la prise contourne une garde passive.",
+            "lore": "canonical",
+            "evidence": "canonical",
+            "loreBasis": "Lucas avant sa mutation, limité à ses dispositifs. Actions : Pièges / Explosifs / Fils-pièges",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "id": "re7-lucas-baker::heavy",
+            "slot": "heavy"
+          },
+          "low": {
+            "name": "Fil-piège bas",
+            "kind": "melee",
+            "startup": 12,
+            "active": 4,
+            "recovery": 23,
+            "damage": 445,
+            "reach": 140,
+            "level": "low",
+            "cost": 0,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "strike",
+            "counterplay": "Garde basse ou saut ; la garde haute ne suffit pas.",
+            "lore": "anatomical",
+            "evidence": "anatomical",
+            "loreBasis": "Lucas avant sa mutation, limité à ses dispositifs. Actions : Pièges / Explosifs / Fils-pièges",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "id": "re7-lucas-baker::low",
+            "slot": "low"
+          },
+          "throw": {
+            "name": "Saisie du technicien",
+            "kind": "melee",
+            "startup": 9,
+            "active": 3,
+            "recovery": 34,
+            "damage": 810,
+            "reach": 86,
+            "level": "throw",
+            "cost": 0,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "grapple",
+            "counterplay": "Reculer ou déchoper avant la fermeture des bras.",
+            "lore": "simulation",
+            "evidence": "simulation",
+            "loreBasis": "Lucas avant sa mutation, limité à ses dispositifs. Actions : Pièges / Explosifs / Fils-pièges",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "id": "re7-lucas-baker::throw",
+            "slot": "throw"
+          },
+          "special": {
+            "name": "Bombe télécommandée",
+            "kind": "projectile",
+            "startup": 31,
+            "active": 1,
+            "recovery": 39,
+            "damage": 520,
+            "reach": 540,
+            "level": "mid",
+            "cost": 24,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "poison",
+            "counterplay": "Se déplacer hors de la trajectoire ou bloquer ; punir le long départ à courte portée.",
+            "lore": "canonical",
+            "evidence": "canonical",
+            "loreBasis": "Lucas avant sa mutation, limité à ses dispositifs. Actions : Pièges / Explosifs / Fils-pièges",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "status": "poison",
+            "speed": 7,
+            "life": 78,
+            "duration": 105,
+            "id": "re7-lucas-baker::special",
+            "slot": "special"
+          },
+          "specialDown": {
+            "name": "Piège à câble",
+            "kind": "melee",
+            "startup": 21,
+            "active": 6,
+            "recovery": 30,
+            "damage": 700,
+            "reach": 165,
+            "level": "low",
+            "cost": 22,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "strike",
+            "counterplay": "Changer de côté pendant le bond et punir la retombée.",
+            "lore": "anatomical",
+            "evidence": "anatomical",
+            "loreBasis": "Lucas avant sa mutation, limité à ses dispositifs. Actions : Pièges / Explosifs / Fils-pièges",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "travel": 6,
+            "launchSelf": -8,
+            "id": "re7-lucas-baker::specialDown",
+            "slot": "specialDown"
+          },
+          "specialForward": {
+            "name": "Baril piégé",
+            "kind": "melee",
+            "startup": 13,
+            "active": 4,
+            "recovery": 35,
+            "damage": 940,
+            "reach": 128,
+            "level": "throw",
+            "cost": 23,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "grapple",
+            "counterplay": "Esquiver latéralement avant l’estocade puis viser la récupération.",
+            "lore": "canonical",
+            "evidence": "canonical",
+            "loreBasis": "Lucas avant sa mutation, limité à ses dispositifs. Actions : Pièges / Explosifs / Fils-pièges",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "travel": 5,
+            "id": "re7-lucas-baker::specialForward",
+            "slot": "specialForward"
+          },
+          "specialBack": {
+            "name": "Trappe de maintenance",
+            "kind": "mobility",
+            "startup": 5,
+            "active": 17,
+            "recovery": 20,
+            "damage": 0,
+            "reach": 0,
+            "level": "mid",
+            "cost": 13,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "movement",
+            "counterplay": "Rattraper le recul : Lucas reste vulnérable.",
+            "lore": "simulation",
+            "evidence": "simulation",
+            "loreBasis": "Lucas avant sa mutation, limité à ses dispositifs. Actions : Pièges / Explosifs / Fils-pièges",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "travel": -7,
+            "id": "re7-lucas-baker::specialBack",
+            "slot": "specialBack"
+          },
+          "super": {
+            "name": "Protocole Happy Birthday",
+            "kind": "projectile",
+            "startup": 34,
+            "active": 1,
+            "recovery": 48,
+            "damage": 760,
+            "reach": 650,
+            "level": "mid",
+            "cost": 0,
+            "meter": 50,
+            "cooldown": 0,
+            "tag": "poison",
+            "counterplay": "Bloquer ou sortir de la ligne avant la saturation.",
+            "lore": "canonical",
+            "evidence": "canonical",
+            "loreBasis": "Lucas avant sa mutation, limité à ses dispositifs. Actions : Pièges / Explosifs / Fils-pièges",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "status": "poison",
+            "count": 3,
+            "speed": 6,
+            "life": 100,
+            "duration": 120,
+            "spread": 0.12,
+            "id": "re7-lucas-baker::super",
+            "slot": "super"
+          },
+          "utility": {
+            "name": "Détour du système",
+            "kind": "heal",
+            "startup": 47,
+            "active": 1,
+            "recovery": 25,
+            "damage": 0,
+            "reach": 0,
+            "level": "mid",
+            "cost": 22,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "recovery",
+            "counterplay": "Interrompre avant l’activation ; les RAMRODs constituent la limite canonique.",
+            "lore": "anatomical",
+            "evidence": "anatomical",
+            "loreBasis": "Lucas avant sa mutation, limité à ses dispositifs. Actions : Pièges / Explosifs / Fils-pièges",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "heal": 390,
+            "id": "re7-lucas-baker::utility",
+            "slot": "utility"
+          }
+        },
+        "sources": [
+          "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html"
+        ],
+        "fidelity": {
+          "status": "lore-audited",
+          "visualIncarnation": "Resident Evil 7 biohazard — Not a Hero (2017)",
+          "rule": "Pouvoirs, organes et comportements propres à cette forme ; aucune capacité d’une autre phase ou d’un autre épisode n’est importée.",
+          "balanceBoundary": "Les attaques et limites biologiques suivent les références ; commandes, frames, dégâts, ressources et match-ups restent des adaptations originales du moteur 2D."
+        },
+        "canonicalAttacks": [
+          "Pièges",
+          "Explosifs",
+          "Fils-pièges"
+        ],
+        "evidence": "lore-audited"
+      }
+    },
+    {
+      "uid": "re7-eveline",
+      "id": "re7-eveline",
+      "name": "EVELINE — APPARENCE ENFANT",
+      "ep": "Resident Evil 7 biohazard (2017)",
+      "source": "RE7 · 2017",
+      "game": "resident-evil-7",
+      "role": "PROJECTION PSYCHO-FONGIQUE E-001",
+      "archetype": "colony",
+      "power": 1.28,
+      "speed": 0.65,
+      "reach": 1.4,
+      "color": "#171a1d",
+      "accent": "#8d9fa8",
+      "visual": {
+        "kind": "human",
+        "height": 166,
+        "width": 72,
+        "drawHeight": 166,
+        "sourceFacing": "left",
+        "asymmetric": true,
+        "fullBody": true,
+        "primary": "#171a1d",
+        "secondary": "#171715",
+        "accent": "#8d9fa8",
+        "skin": "#88776c",
+        "weapon": "none",
+        "body": "massive",
+        "morphology": "humanoid",
+        "spriteCrop": [
+          0,
+          0,
+          620,
+          1000
+        ]
+      },
+      "portrait": "assets/catalog/re7-eveline.png",
+      "sprite": "assets/specimens/re7-eveline.png",
+      "reference": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+      "spriteSource": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+      "assetNote": "Sprite composite original du fangame ; aucune animation propriétaire extraite.",
+      "bioAgent": "Moisissure / E-001",
+      "morphology": "EVELINE — APPARENCE ENFANT. Projection enfant d’Eveline, distincte de la forme finale.",
+      "canonicalAttacks": [
+        "Hallucinations",
+        "Onde de choc",
+        "Contrôle des infectés"
+      ],
+      "fidelity": {
+        "status": "lore-audited",
+        "visualIncarnation": "Resident Evil 7 biohazard (2017)",
+        "rule": "Pouvoirs, organes et comportements propres à cette forme ; aucune capacité d’une autre phase ou d’un autre épisode n’est importée.",
+        "balanceBoundary": "Les attaques et limites biologiques suivent les références ; commandes, frames, dégâts, ressources et match-ups restent des adaptations originales du moteur 2D."
+      },
+      "boss": true,
+      "combat": {
+        "uid": "re7-eveline",
+        "key": "re_molded",
+        "role": "PROJECTION PSYCHO-FONGIQUE E-001",
+        "resource": {
+          "kind": "energy",
+          "label": "INFLUENCE FAMILIALE",
+          "max": 100,
+          "regen": 0.2,
+          "reload": 0
+        },
+        "passive": {
+          "id": "lore-re7-eveline",
+          "name": "Projection d’E-001",
+          "desc": "La colonie terminale impose sa portée et récupère lentement une partie des dommages.",
+          "regenBudget": 1100
+        },
+        "moves": {
+          "light": {
+            "name": "Griffe de moisissure",
+            "kind": "melee",
+            "startup": 8,
+            "active": 4,
+            "recovery": 15,
+            "damage": 340,
+            "reach": 124,
+            "level": "mid",
+            "cost": 0,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "tentacle",
+            "counterplay": "Garder puis punir la récupération ; la prise contourne une garde passive.",
+            "lore": "canonical",
+            "evidence": "canonical",
+            "loreBasis": "Projection enfant d’Eveline, distincte de la forme finale. Actions : Hallucinations / Onde de choc / Contrôle des infectés",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "id": "re7-eveline::light",
+            "slot": "light"
+          },
+          "heavy": {
+            "name": "Onde de répulsion",
+            "kind": "melee",
+            "startup": 21,
+            "active": 7,
+            "recovery": 31,
+            "damage": 780,
+            "reach": 176,
+            "level": "mid",
+            "cost": 0,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "strike",
+            "counterplay": "Reculer pendant la montée puis punir l’écrasement raté.",
+            "lore": "canonical",
+            "evidence": "canonical",
+            "loreBasis": "Projection enfant d’Eveline, distincte de la forme finale. Actions : Hallucinations / Onde de choc / Contrôle des infectés",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "id": "re7-eveline::heavy",
+            "slot": "heavy"
+          },
+          "low": {
+            "name": "Nappe fongique basse",
+            "kind": "melee",
+            "startup": 14,
+            "active": 5,
+            "recovery": 25,
+            "damage": 470,
+            "reach": 165,
+            "level": "low",
+            "cost": 0,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "tentacle",
+            "counterplay": "Garde basse ou saut ; la garde haute ne suffit pas.",
+            "lore": "anatomical",
+            "evidence": "anatomical",
+            "loreBasis": "Projection enfant d’Eveline, distincte de la forme finale. Actions : Hallucinations / Onde de choc / Contrôle des infectés",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "id": "re7-eveline::low",
+            "slot": "low"
+          },
+          "throw": {
+            "name": "Emprise d’E-001",
+            "kind": "melee",
+            "startup": 11,
+            "active": 4,
+            "recovery": 36,
+            "damage": 850,
+            "reach": 96,
+            "level": "throw",
+            "cost": 0,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "grapple",
+            "counterplay": "Reculer ou déchoper avant que la masse ne soulève la cible.",
+            "lore": "anatomical",
+            "evidence": "anatomical",
+            "loreBasis": "Projection enfant d’Eveline, distincte de la forme finale. Actions : Hallucinations / Onde de choc / Contrôle des infectés",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "id": "re7-eveline::throw",
+            "slot": "throw"
+          },
+          "special": {
+            "name": "Hallucination projetée",
+            "kind": "melee",
+            "startup": 19,
+            "active": 6,
+            "recovery": 29,
+            "damage": 720,
+            "reach": 190,
+            "level": "mid",
+            "cost": 20,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "tentacle",
+            "counterplay": "Passer sous l’amplitude ou bloquer puis punir.",
+            "lore": "canonical",
+            "evidence": "canonical",
+            "loreBasis": "Projection enfant d’Eveline, distincte de la forme finale. Actions : Hallucinations / Onde de choc / Contrôle des infectés",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "id": "re7-eveline::special",
+            "slot": "special"
+          },
+          "specialDown": {
+            "name": "Mur de moisissure",
+            "kind": "melee",
+            "startup": 24,
+            "active": 7,
+            "recovery": 32,
+            "damage": 760,
+            "reach": 188,
+            "level": "low",
+            "cost": 23,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "organic",
+            "counterplay": "Garde basse ou saut ; la garde haute ne suffit pas.",
+            "lore": "anatomical",
+            "evidence": "anatomical",
+            "loreBasis": "Projection enfant d’Eveline, distincte de la forme finale. Actions : Hallucinations / Onde de choc / Contrôle des infectés",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "id": "re7-eveline::specialDown",
+            "slot": "specialDown"
+          },
+          "specialForward": {
+            "name": "Onde du corridor",
+            "kind": "melee",
+            "startup": 15,
+            "active": 5,
+            "recovery": 38,
+            "damage": 970,
+            "reach": 142,
+            "level": "throw",
+            "cost": 24,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "grapple",
+            "counterplay": "Esquiver avant le contact et viser la récupération.",
+            "lore": "canonical",
+            "evidence": "canonical",
+            "loreBasis": "Projection enfant d’Eveline, distincte de la forme finale. Actions : Hallucinations / Onde de choc / Contrôle des infectés",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "travel": 4,
+            "id": "re7-eveline::specialForward",
+            "slot": "specialForward"
+          },
+          "specialBack": {
+            "name": "Dissolution apparente",
+            "kind": "mobility",
+            "startup": 5,
+            "active": 18,
+            "recovery": 20,
+            "damage": 0,
+            "reach": 0,
+            "level": "mid",
+            "cost": 13,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "movement",
+            "counterplay": "Suivre la masse : aucun retrait invulnérable.",
+            "lore": "simulation",
+            "evidence": "simulation",
+            "loreBasis": "Projection enfant d’Eveline, distincte de la forme finale. Actions : Hallucinations / Onde de choc / Contrôle des infectés",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "travel": -7,
+            "id": "re7-eveline::specialBack",
+            "slot": "specialBack"
+          },
+          "super": {
+            "name": "Contrôle familial",
+            "kind": "melee",
+            "startup": 32,
+            "active": 10,
+            "recovery": 50,
+            "damage": 2300,
+            "reach": 255,
+            "level": "mid",
+            "cost": 0,
+            "meter": 50,
+            "cooldown": 0,
+            "tag": "tentacle",
+            "counterplay": "Sortir de la portée avant la fermeture des tentacules.",
+            "lore": "canonical",
+            "evidence": "canonical",
+            "loreBasis": "Projection enfant d’Eveline, distincte de la forme finale. Actions : Hallucinations / Onde de choc / Contrôle des infectés",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "travel": 2,
+            "id": "re7-eveline::super",
+            "slot": "super"
+          },
+          "utility": {
+            "name": "Injonction d’Eveline",
+            "kind": "heal",
+            "startup": 52,
+            "active": 1,
+            "recovery": 27,
+            "damage": 0,
+            "reach": 0,
+            "level": "mid",
+            "cost": 24,
+            "meter": 0,
+            "cooldown": 0,
+            "tag": "recovery",
+            "counterplay": "Interrompre la densification avant l’activation.",
+            "lore": "anatomical",
+            "evidence": "anatomical",
+            "loreBasis": "Projection enfant d’Eveline, distincte de la forme finale. Actions : Hallucinations / Onde de choc / Contrôle des infectés",
+            "adaptation": "Commandes, frames, valeurs et duels croisés restent une adaptation originale du moteur 2D.",
+            "source": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+            "heal": 450,
+            "id": "re7-eveline::utility",
+            "slot": "utility"
+          }
+        },
+        "sources": [
+          "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html"
+        ],
+        "fidelity": {
+          "status": "lore-audited",
+          "visualIncarnation": "Resident Evil 7 biohazard (2017)",
+          "rule": "Pouvoirs, organes et comportements propres à cette forme ; aucune capacité d’une autre phase ou d’un autre épisode n’est importée.",
+          "balanceBoundary": "Les attaques et limites biologiques suivent les références ; commandes, frames, dégâts, ressources et match-ups restent des adaptations originales du moteur 2D."
+        },
+        "canonicalAttacks": [
+          "Hallucinations",
+          "Onde de choc",
+          "Contrôle des infectés"
+        ],
+        "evidence": "lore-audited"
+      }
     }
   ],
   "stages": [
@@ -32651,6 +34570,120 @@
       "tint": "#445c6b35",
       "representation": "Déclinaison originale adaptée au duel Apex.",
       "credit": "Illustration originale de B.O.W. Protocol ; géométrie adaptée."
+    },
+    {
+      "id": "guest_house_attic_2017",
+      "name": "MAISON D’HÔTES · ATTIQUE",
+      "ep": "RE7 · 2017",
+      "family": "mansion",
+      "weather": "rain",
+      "sky": [
+        "#282315",
+        "#1a1818",
+        "#08090a"
+      ],
+      "props": [],
+      "scope": "Reconstitution originale de MAISON D’HÔTES · ATTIQUE",
+      "background": "assets/arenas/baker.png",
+      "artwork": "baker",
+      "tint": null,
+      "representation": "Reconstitution de simulation : décor original, déclinaison d’ambiance et météo du secteur.",
+      "credit": "Illustration originale générée pour B.O.W. Protocol. Ne reproduit pas exactement la géométrie du lieu Capcom."
+    },
+    {
+      "id": "baker_garage_2017",
+      "name": "MAISON PRINCIPALE · GARAGE",
+      "ep": "RE7 · 2017",
+      "family": "mansion",
+      "weather": "rain",
+      "sky": [
+        "#282315",
+        "#1a1818",
+        "#08090a"
+      ],
+      "props": [],
+      "scope": "Reconstitution originale de MAISON PRINCIPALE · GARAGE",
+      "background": "assets/arenas/baker.png",
+      "artwork": "baker",
+      "tint": null,
+      "representation": "Reconstitution de simulation : décor original, déclinaison d’ambiance et météo du secteur.",
+      "credit": "Illustration originale générée pour B.O.W. Protocol. Ne reproduit pas exactement la géométrie du lieu Capcom."
+    },
+    {
+      "id": "processing_area_morgue_2017",
+      "name": "ZONE DE TRAITEMENT · MORGUE",
+      "ep": "RE7 · 2017",
+      "family": "mansion",
+      "weather": "rain",
+      "sky": [
+        "#282315",
+        "#1a1818",
+        "#08090a"
+      ],
+      "props": [],
+      "scope": "Reconstitution originale de ZONE DE TRAITEMENT · MORGUE",
+      "background": "assets/arenas/baker.png",
+      "artwork": "baker",
+      "tint": null,
+      "representation": "Reconstitution de simulation : décor original, déclinaison d’ambiance et météo du secteur.",
+      "credit": "Illustration originale générée pour B.O.W. Protocol. Ne reproduit pas exactement la géométrie du lieu Capcom."
+    },
+    {
+      "id": "old_house_lantern_2017",
+      "name": "VIEILLE MAISON · GALERIE DE LA LANTERNE",
+      "ep": "RE7 · 2017",
+      "family": "mansion",
+      "weather": "rain",
+      "sky": [
+        "#282315",
+        "#1a1818",
+        "#08090a"
+      ],
+      "props": [],
+      "scope": "Reconstitution originale de VIEILLE MAISON · GALERIE DE LA LANTERNE",
+      "background": "assets/arenas/baker.png",
+      "artwork": "baker",
+      "tint": null,
+      "representation": "Reconstitution de simulation : décor original, déclinaison d’ambiance et météo du secteur.",
+      "credit": "Illustration originale générée pour B.O.W. Protocol. Ne reproduit pas exactement la géométrie du lieu Capcom."
+    },
+    {
+      "id": "testing_area_2017",
+      "name": "ZONE D’ESSAI · COULOIR PIÉGÉ",
+      "ep": "RE7 · 2017",
+      "family": "mansion",
+      "weather": "rain",
+      "sky": [
+        "#282315",
+        "#1a1818",
+        "#08090a"
+      ],
+      "props": [],
+      "scope": "Reconstitution originale de ZONE D’ESSAI · COULOIR PIÉGÉ",
+      "background": "assets/arenas/baker.png",
+      "artwork": "baker",
+      "tint": null,
+      "representation": "Reconstitution de simulation : décor original, déclinaison d’ambiance et météo du secteur.",
+      "credit": "Illustration originale générée pour B.O.W. Protocol. Ne reproduit pas exactement la géométrie du lieu Capcom."
+    },
+    {
+      "id": "eveline_corridor_2017",
+      "name": "MAISON PRINCIPALE · CORRIDOR D’HALLUCINATION",
+      "ep": "RE7 · 2017",
+      "family": "mansion",
+      "weather": "rain",
+      "sky": [
+        "#282315",
+        "#1a1818",
+        "#08090a"
+      ],
+      "props": [],
+      "scope": "Reconstitution originale de MAISON PRINCIPALE · CORRIDOR D’HALLUCINATION",
+      "background": "assets/arenas/baker.png",
+      "artwork": "baker",
+      "tint": null,
+      "representation": "Reconstitution de simulation : décor original, déclinaison d’ambiance et météo du secteur.",
+      "credit": "Illustration originale générée pour B.O.W. Protocol. Ne reproduit pas exactement la géométrie du lieu Capcom."
     }
   ],
   "groups": [
@@ -51598,6 +53631,1224 @@
       "meta": "Silhouette détourée et transparence alpha contrôlées ; les animations restent produites par le moteur.",
       "visualSet": "resident-evil-6",
       "narrativeVersion": "RE 0.4.0"
+    },
+    "re7-mia-winters-infected": {
+      "uid": "re7-mia-winters-infected",
+      "name": "MIA WINTERS — INFECTÉE",
+      "game": "Resident Evil 7 biohazard (2017)",
+      "group": "resident-evil-7",
+      "title": "HÔTE E-001 À ARMES IMPROVISÉES",
+      "evidence": "lore-audited",
+      "status": "playable",
+      "edition": "v0.5.0 · E-001 Family Protocol",
+      "intro": [
+        {
+          "title": "Ouverture du dossier",
+          "place": "PROPRIÉTÉ BAKER",
+          "prop": "none",
+          "camera": "wide",
+          "paragraphs": [
+            "Le dossier JACK BAKER — SWAMP MAN est chargé depuis les archives de Resident Evil 7 biohazard — End of Zoe (2017). JACK BAKER — SWAMP MAN, dans son incarnation de Resident Evil 7 biohazard — End of Zoe (2017). Forme humanoïde de Jack, couverte de matière fongique et végétale des marais."
+          ],
+          "text": "Le dossier JACK BAKER — SWAMP MAN est chargé depuis les archives de Resident Evil 7 biohazard — End of Zoe (2017). JACK BAKER — SWAMP MAN, dans son incarnation de Resident Evil 7 biohazard — End of Zoe (2017). Forme humanoïde de Jack, couverte de matière fongique et végétale des marais.",
+          "stage": "baker_house",
+          "focus": "re7-jack-baker-swamp-man",
+          "visual": {
+            "set": "re7",
+            "tile": 0,
+            "environment": "PROPRIÉTÉ BAKER"
+          }
+        },
+        {
+          "title": "Protocole d’observation",
+          "place": "PROPRIÉTÉ BAKER",
+          "prop": "none",
+          "camera": "profile",
+          "paragraphs": [
+            "La simulation confronte cette incarnation à huit profils adverses. Agent biologique : Moisissure / E-001. Les confrontations sont des essais fictifs et ne modifient pas la continuité de son épisode."
+          ],
+          "text": "La simulation confronte cette incarnation à huit profils adverses. Agent biologique : Moisissure / E-001. Les confrontations sont des essais fictifs et ne modifient pas la continuité de son épisode.",
+          "stage": "baker_house",
+          "focus": "re7-jack-baker-swamp-man",
+          "visual": {
+            "set": "re7",
+            "tile": 1,
+            "environment": "PROPRIÉTÉ BAKER"
+          }
+        },
+        {
+          "title": "Mise en confinement",
+          "place": "PROPRIÉTÉ BAKER",
+          "prop": "none",
+          "camera": "profile",
+          "paragraphs": [
+            "Les portes se verrouillent dans la PROPRIÉTÉ BAKER. Tentacule vertical du bras droit contrôle l’approche ; Retour dans les roseaux offre une réponse défensive. Le premier essai peut commencer."
+          ],
+          "text": "Les portes se verrouillent dans la PROPRIÉTÉ BAKER. Tentacule vertical du bras droit contrôle l’approche ; Retour dans les roseaux offre une réponse défensive. Le premier essai peut commencer.",
+          "stage": "baker_house",
+          "focus": "re7-jack-baker-swamp-man",
+          "visual": {
+            "set": "re7",
+            "tile": 2,
+            "environment": "PROPRIÉTÉ BAKER"
+          }
+        }
+      ],
+      "outro": [
+        {
+          "title": "Huit essais achevés",
+          "place": "PROPRIÉTÉ BAKER",
+          "prop": "none",
+          "camera": "wide",
+          "paragraphs": [
+            "Les huit confrontations du dossier JACK BAKER — SWAMP MAN sont enregistrées. Le compte rendu et la relecture de ce parcours sont débloqués."
+          ],
+          "text": "Les huit confrontations du dossier JACK BAKER — SWAMP MAN sont enregistrées. Le compte rendu et la relecture de ce parcours sont débloqués.",
+          "stage": "baker_house",
+          "focus": "re7-jack-baker-swamp-man",
+          "visual": {
+            "set": "re7",
+            "tile": 3,
+            "environment": "PROPRIÉTÉ BAKER"
+          }
+        },
+        {
+          "title": "Rapport biologique",
+          "place": "PROPRIÉTÉ BAKER",
+          "prop": "none",
+          "camera": "profile",
+          "paragraphs": [
+            "Profil observé : POURSUITE RÉGÉNÉRATIVE. L’essai a mobilisé Tentacule vertical du bras droit, Charge du Swamp Man et Poursuite de la quarantaine. Leur fonction suit cette incarnation ; commandes, timings et dégâts restent adaptés au moteur 2D."
+          ],
+          "text": "Profil observé : POURSUITE RÉGÉNÉRATIVE. L’essai a mobilisé Tentacule vertical du bras droit, Charge du Swamp Man et Poursuite de la quarantaine. Leur fonction suit cette incarnation ; commandes, timings et dégâts restent adaptés au moteur 2D.",
+          "stage": "baker_house",
+          "focus": "re7-jack-baker-swamp-man",
+          "visual": {
+            "set": "re7",
+            "tile": 4,
+            "environment": "PROPRIÉTÉ BAKER"
+          }
+        },
+        {
+          "title": "Dossier scellé",
+          "place": "PROPRIÉTÉ BAKER",
+          "prop": "none",
+          "camera": "profile",
+          "paragraphs": [
+            "La projection de JACK BAKER — SWAMP MAN se dissipe. Le spécimen de référence appartient toujours à Resident Evil 7 biohazard — End of Zoe (2017). L’archive conserve les sources, les limites et le parcours complet."
+          ],
+          "text": "La projection de JACK BAKER — SWAMP MAN se dissipe. Le spécimen de référence appartient toujours à Resident Evil 7 biohazard — End of Zoe (2017). L’archive conserve les sources, les limites et le parcours complet.",
+          "stage": "baker_house",
+          "focus": "re7-jack-baker-swamp-man",
+          "visual": {
+            "set": "re7",
+            "tile": 5,
+            "environment": "PROPRIÉTÉ BAKER"
+          }
+        }
+      ],
+      "route": [
+        {
+          "index": 0,
+          "opponent": "re7-jack-baker-scissor",
+          "stage": "guest_house_attic_2017",
+          "stageName": "MAISON D’HÔTES · ATTIQUE",
+          "label": "Ouverture du dossier",
+          "before": "Essai 1/8 : MIA WINTERS — INFECTÉE entre dans MAISON D’HÔTES · ATTIQUE.",
+          "challenge": "Observer Saisie mycélienne. Quitter la portée de la prise ou sauter avant son activation.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        },
+        {
+          "index": 1,
+          "opponent": "re7-lucas-baker",
+          "stage": "guest_house_attic_2017",
+          "stageName": "MAISON D’HÔTES · ATTIQUE",
+          "label": "Stress initial",
+          "before": "Essai 2/8 : MIA WINTERS — INFECTÉE entre dans MAISON D’HÔTES · ATTIQUE.",
+          "challenge": "Observer Charge du Fat Molded. Quitter la portée de la prise ou sauter avant son activation.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        },
+        {
+          "index": 2,
+          "opponent": "re7-marguerite-baker",
+          "stage": "guest_house_attic_2017",
+          "stageName": "MAISON D’HÔTES · ATTIQUE",
+          "label": "Contrôle de portée",
+          "before": "Essai 3/8 : MIA WINTERS — INFECTÉE entre dans MAISON D’HÔTES · ATTIQUE.",
+          "challenge": "Observer Appel des Little Crawlers. Quitter la portée de la prise ou sauter avant son activation.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        },
+        {
+          "index": 3,
+          "opponent": "re7-eveline",
+          "stage": "guest_house_attic_2017",
+          "stageName": "MAISON D’HÔTES · ATTIQUE",
+          "label": "Réponse biologique",
+          "before": "Essai 4/8 : MIA WINTERS — INFECTÉE entre dans MAISON D’HÔTES · ATTIQUE.",
+          "challenge": "Observer Accrochage du visage. Quitter la portée de la prise ou sauter avant son activation.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        },
+        {
+          "index": 4,
+          "opponent": "re7-jack-baker",
+          "stage": "guest_house_attic_2017",
+          "stageName": "MAISON D’HÔTES · ATTIQUE",
+          "label": "Escalade du risque",
+          "before": "Essai 5/8 : MIA WINTERS — INFECTÉE entre dans MAISON D’HÔTES · ATTIQUE.",
+          "challenge": "Observer Plaquage de meute lycan. Quitter la portée de la prise ou sauter avant son activation.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        },
+        {
+          "index": 5,
+          "opponent": "re7-molded",
+          "stage": "guest_house_attic_2017",
+          "stageName": "MAISON D’HÔTES · ATTIQUE",
+          "label": "Confinement avancé",
+          "before": "Essai 6/8 : MIA WINTERS — INFECTÉE entre dans MAISON D’HÔTES · ATTIQUE.",
+          "challenge": "Observer Plaquage du Vârcolac. Quitter la portée de la prise ou sauter avant son activation.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        },
+        {
+          "index": 6,
+          "opponent": "re7-molded-fat",
+          "stage": "guest_house_attic_2017",
+          "stageName": "MAISON D’HÔTES · ATTIQUE",
+          "label": "Épreuve critique",
+          "before": "Essai 7/8 : MIA WINTERS — INFECTÉE entre dans MAISON D’HÔTES · ATTIQUE.",
+          "challenge": "Observer Percée incandescente. Quitter la portée de la prise ou sauter avant son activation.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        },
+        {
+          "index": 7,
+          "opponent": "re7-jack-baker-mutated",
+          "stage": "guest_house_attic_2017",
+          "stageName": "MAISON D’HÔTES · ATTIQUE",
+          "label": "Confinement terminal",
+          "before": "Essai 8/8 : MIA WINTERS — INFECTÉE entre dans MAISON D’HÔTES · ATTIQUE.",
+          "challenge": "Observer Charge arachnéenne. Quitter la portée de la prise ou sauter avant son activation.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        }
+      ],
+      "continuity": "Confrontations fictives de données biologiques ; aucun crossover présenté comme un événement canonique.",
+      "anchor": "MIA WINTERS — INFECTÉE. Mia infectée de la maison d’hôtes.",
+      "meta": "Sprite composite original du fangame ; aucune animation propriétaire extraite.",
+      "visualSet": "re7",
+      "narrativeVersion": "RE 0.5.0"
+    },
+    "re7-jack-baker": {
+      "uid": "re7-jack-baker",
+      "name": "JACK BAKER — FORME HUMAINE",
+      "game": "Resident Evil 7 biohazard (2017)",
+      "group": "resident-evil-7",
+      "title": "PATRIARCHE RÉGÉNÉRATIF",
+      "evidence": "lore-audited",
+      "status": "playable",
+      "edition": "v0.5.0 · E-001 Family Protocol",
+      "intro": [
+        {
+          "title": "Ouverture du dossier",
+          "place": "PROPRIÉTÉ BAKER",
+          "prop": "none",
+          "camera": "wide",
+          "paragraphs": [
+            "Le dossier JACK BAKER — SWAMP MAN est chargé depuis les archives de Resident Evil 7 biohazard — End of Zoe (2017). JACK BAKER — SWAMP MAN, dans son incarnation de Resident Evil 7 biohazard — End of Zoe (2017). Forme humanoïde de Jack, couverte de matière fongique et végétale des marais."
+          ],
+          "text": "Le dossier JACK BAKER — SWAMP MAN est chargé depuis les archives de Resident Evil 7 biohazard — End of Zoe (2017). JACK BAKER — SWAMP MAN, dans son incarnation de Resident Evil 7 biohazard — End of Zoe (2017). Forme humanoïde de Jack, couverte de matière fongique et végétale des marais.",
+          "stage": "baker_house",
+          "focus": "re7-jack-baker-swamp-man",
+          "visual": {
+            "set": "re7",
+            "tile": 0,
+            "environment": "PROPRIÉTÉ BAKER"
+          }
+        },
+        {
+          "title": "Protocole d’observation",
+          "place": "PROPRIÉTÉ BAKER",
+          "prop": "none",
+          "camera": "profile",
+          "paragraphs": [
+            "La simulation confronte cette incarnation à huit profils adverses. Agent biologique : Moisissure / E-001. Les confrontations sont des essais fictifs et ne modifient pas la continuité de son épisode."
+          ],
+          "text": "La simulation confronte cette incarnation à huit profils adverses. Agent biologique : Moisissure / E-001. Les confrontations sont des essais fictifs et ne modifient pas la continuité de son épisode.",
+          "stage": "baker_house",
+          "focus": "re7-jack-baker-swamp-man",
+          "visual": {
+            "set": "re7",
+            "tile": 1,
+            "environment": "PROPRIÉTÉ BAKER"
+          }
+        },
+        {
+          "title": "Mise en confinement",
+          "place": "PROPRIÉTÉ BAKER",
+          "prop": "none",
+          "camera": "profile",
+          "paragraphs": [
+            "Les portes se verrouillent dans la PROPRIÉTÉ BAKER. Tentacule vertical du bras droit contrôle l’approche ; Retour dans les roseaux offre une réponse défensive. Le premier essai peut commencer."
+          ],
+          "text": "Les portes se verrouillent dans la PROPRIÉTÉ BAKER. Tentacule vertical du bras droit contrôle l’approche ; Retour dans les roseaux offre une réponse défensive. Le premier essai peut commencer.",
+          "stage": "baker_house",
+          "focus": "re7-jack-baker-swamp-man",
+          "visual": {
+            "set": "re7",
+            "tile": 2,
+            "environment": "PROPRIÉTÉ BAKER"
+          }
+        }
+      ],
+      "outro": [
+        {
+          "title": "Huit essais achevés",
+          "place": "PROPRIÉTÉ BAKER",
+          "prop": "none",
+          "camera": "wide",
+          "paragraphs": [
+            "Les huit confrontations du dossier JACK BAKER — SWAMP MAN sont enregistrées. Le compte rendu et la relecture de ce parcours sont débloqués."
+          ],
+          "text": "Les huit confrontations du dossier JACK BAKER — SWAMP MAN sont enregistrées. Le compte rendu et la relecture de ce parcours sont débloqués.",
+          "stage": "baker_house",
+          "focus": "re7-jack-baker-swamp-man",
+          "visual": {
+            "set": "re7",
+            "tile": 3,
+            "environment": "PROPRIÉTÉ BAKER"
+          }
+        },
+        {
+          "title": "Rapport biologique",
+          "place": "PROPRIÉTÉ BAKER",
+          "prop": "none",
+          "camera": "profile",
+          "paragraphs": [
+            "Profil observé : POURSUITE RÉGÉNÉRATIVE. L’essai a mobilisé Tentacule vertical du bras droit, Charge du Swamp Man et Poursuite de la quarantaine. Leur fonction suit cette incarnation ; commandes, timings et dégâts restent adaptés au moteur 2D."
+          ],
+          "text": "Profil observé : POURSUITE RÉGÉNÉRATIVE. L’essai a mobilisé Tentacule vertical du bras droit, Charge du Swamp Man et Poursuite de la quarantaine. Leur fonction suit cette incarnation ; commandes, timings et dégâts restent adaptés au moteur 2D.",
+          "stage": "baker_house",
+          "focus": "re7-jack-baker-swamp-man",
+          "visual": {
+            "set": "re7",
+            "tile": 4,
+            "environment": "PROPRIÉTÉ BAKER"
+          }
+        },
+        {
+          "title": "Dossier scellé",
+          "place": "PROPRIÉTÉ BAKER",
+          "prop": "none",
+          "camera": "profile",
+          "paragraphs": [
+            "La projection de JACK BAKER — SWAMP MAN se dissipe. Le spécimen de référence appartient toujours à Resident Evil 7 biohazard — End of Zoe (2017). L’archive conserve les sources, les limites et le parcours complet."
+          ],
+          "text": "La projection de JACK BAKER — SWAMP MAN se dissipe. Le spécimen de référence appartient toujours à Resident Evil 7 biohazard — End of Zoe (2017). L’archive conserve les sources, les limites et le parcours complet.",
+          "stage": "baker_house",
+          "focus": "re7-jack-baker-swamp-man",
+          "visual": {
+            "set": "re7",
+            "tile": 5,
+            "environment": "PROPRIÉTÉ BAKER"
+          }
+        }
+      ],
+      "route": [
+        {
+          "index": 0,
+          "opponent": "re7-jack-baker-scissor",
+          "stage": "baker_garage_2017",
+          "stageName": "MAISON PRINCIPALE · GARAGE",
+          "label": "Ouverture du dossier",
+          "before": "Essai 1/8 : JACK BAKER — FORME HUMAINE entre dans MAISON PRINCIPALE · GARAGE.",
+          "challenge": "Observer Saisie mycélienne. Quitter la portée de la prise ou sauter avant son activation.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        },
+        {
+          "index": 1,
+          "opponent": "re7-lucas-baker",
+          "stage": "baker_garage_2017",
+          "stageName": "MAISON PRINCIPALE · GARAGE",
+          "label": "Stress initial",
+          "before": "Essai 2/8 : JACK BAKER — FORME HUMAINE entre dans MAISON PRINCIPALE · GARAGE.",
+          "challenge": "Observer Charge du Fat Molded. Quitter la portée de la prise ou sauter avant son activation.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        },
+        {
+          "index": 2,
+          "opponent": "re7-marguerite-baker",
+          "stage": "baker_garage_2017",
+          "stageName": "MAISON PRINCIPALE · GARAGE",
+          "label": "Contrôle de portée",
+          "before": "Essai 3/8 : JACK BAKER — FORME HUMAINE entre dans MAISON PRINCIPALE · GARAGE.",
+          "challenge": "Observer Appel des Little Crawlers. Quitter la portée de la prise ou sauter avant son activation.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        },
+        {
+          "index": 3,
+          "opponent": "re7-eveline",
+          "stage": "baker_garage_2017",
+          "stageName": "MAISON PRINCIPALE · GARAGE",
+          "label": "Réponse biologique",
+          "before": "Essai 4/8 : JACK BAKER — FORME HUMAINE entre dans MAISON PRINCIPALE · GARAGE.",
+          "challenge": "Observer Accrochage du visage. Quitter la portée de la prise ou sauter avant son activation.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        },
+        {
+          "index": 4,
+          "opponent": "re7-mia-winters-infected",
+          "stage": "baker_garage_2017",
+          "stageName": "MAISON PRINCIPALE · GARAGE",
+          "label": "Escalade du risque",
+          "before": "Essai 5/8 : JACK BAKER — FORME HUMAINE entre dans MAISON PRINCIPALE · GARAGE.",
+          "challenge": "Observer Plaquage de meute lycan. Quitter la portée de la prise ou sauter avant son activation.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        },
+        {
+          "index": 5,
+          "opponent": "re7-molded",
+          "stage": "baker_garage_2017",
+          "stageName": "MAISON PRINCIPALE · GARAGE",
+          "label": "Confinement avancé",
+          "before": "Essai 6/8 : JACK BAKER — FORME HUMAINE entre dans MAISON PRINCIPALE · GARAGE.",
+          "challenge": "Observer Plaquage du Vârcolac. Quitter la portée de la prise ou sauter avant son activation.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        },
+        {
+          "index": 6,
+          "opponent": "re7-molded-fat",
+          "stage": "baker_garage_2017",
+          "stageName": "MAISON PRINCIPALE · GARAGE",
+          "label": "Épreuve critique",
+          "before": "Essai 7/8 : JACK BAKER — FORME HUMAINE entre dans MAISON PRINCIPALE · GARAGE.",
+          "challenge": "Observer Percée incandescente. Quitter la portée de la prise ou sauter avant son activation.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        },
+        {
+          "index": 7,
+          "opponent": "re7-jack-baker-mutated",
+          "stage": "baker_garage_2017",
+          "stageName": "MAISON PRINCIPALE · GARAGE",
+          "label": "Confinement terminal",
+          "before": "Essai 8/8 : JACK BAKER — FORME HUMAINE entre dans MAISON PRINCIPALE · GARAGE.",
+          "challenge": "Observer Charge arachnéenne. Quitter la portée de la prise ou sauter avant son activation.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        }
+      ],
+      "continuity": "Confrontations fictives de données biologiques ; aucun crossover présenté comme un événement canonique.",
+      "anchor": "JACK BAKER — FORME HUMAINE. Jack sous apparence humaine infectée.",
+      "meta": "Sprite composite original du fangame ; aucune animation propriétaire extraite.",
+      "visualSet": "re7",
+      "narrativeVersion": "RE 0.5.0"
+    },
+    "re7-jack-baker-scissor": {
+      "uid": "re7-jack-baker-scissor",
+      "name": "JACK BAKER — SCIE À CISEAUX",
+      "game": "Resident Evil 7 biohazard (2017)",
+      "group": "resident-evil-6",
+      "title": "DUELLISTE À DOUBLE CHAÎNE",
+      "evidence": "lore-audited",
+      "status": "playable",
+      "edition": "v0.5.0 · E-001 Family Protocol",
+      "intro": [
+        {
+          "title": "Ouverture du dossier Apex",
+          "place": "EDONIA · SITE DU CRASH",
+          "prop": "none",
+          "camera": "wide",
+          "paragraphs": [
+            "Le dossier USTANAK est chargé depuis Resident Evil 6 (2012). USTANAK, dans son incarnation de Resident Evil 6 (2012). B.O.W. massif équipé d’un bras-outil interchangeable pour saisir, forer et frapper."
+          ],
+          "text": "Le dossier USTANAK est chargé depuis Resident Evil 6 (2012). USTANAK, dans son incarnation de Resident Evil 6 (2012). B.O.W. massif équipé d’un bras-outil interchangeable pour saisir, forer et frapper.",
+          "stage": "edonia_crash_2012",
+          "focus": "re6-ustanak",
+          "visual": {
+            "set": "resident-evil-6",
+            "tile": 0,
+            "environment": "EDONIA · SITE DU CRASH"
+          }
+        },
+        {
+          "title": "Protocole d’observation",
+          "place": "EDONIA · SITE DU CRASH",
+          "prop": "none",
+          "camera": "profile",
+          "paragraphs": [
+            "Cette incarnation affronte huit profils dans une simulation fictive. Agent biologique : Virus-C."
+          ],
+          "text": "Cette incarnation affronte huit profils dans une simulation fictive. Agent biologique : Virus-C.",
+          "stage": "edonia_crash_2012",
+          "focus": "re6-ustanak",
+          "visual": {
+            "set": "resident-evil-6",
+            "tile": 1,
+            "environment": "EDONIA · SITE DU CRASH"
+          }
+        },
+        {
+          "title": "Mise en confinement",
+          "place": "EDONIA · SITE DU CRASH",
+          "prop": "none",
+          "camera": "profile",
+          "paragraphs": [
+            "EDONIA · SITE DU CRASH se verrouille. Le premier essai commence."
+          ],
+          "text": "EDONIA · SITE DU CRASH se verrouille. Le premier essai commence.",
+          "stage": "edonia_crash_2012",
+          "focus": "re6-ustanak",
+          "visual": {
+            "set": "resident-evil-6",
+            "tile": 2,
+            "environment": "EDONIA · SITE DU CRASH"
+          }
+        }
+      ],
+      "outro": [
+        {
+          "title": "Huit essais achevés",
+          "place": "EDONIA · SITE DU CRASH",
+          "prop": "none",
+          "camera": "wide",
+          "paragraphs": [
+            "Les huit confrontations du dossier USTANAK sont enregistrées."
+          ],
+          "text": "Les huit confrontations du dossier USTANAK sont enregistrées.",
+          "stage": "edonia_crash_2012",
+          "focus": "re6-ustanak",
+          "visual": {
+            "set": "resident-evil-6",
+            "tile": 3,
+            "environment": "EDONIA · SITE DU CRASH"
+          }
+        },
+        {
+          "title": "Rapport biologique",
+          "place": "EDONIA · SITE DU CRASH",
+          "prop": "none",
+          "camera": "profile",
+          "paragraphs": [
+            "Profil : TRAQUEUR À OUTILS INTERCHANGEABLES. Les fonctions suivent la forme ; valeurs et commandes restent des adaptations."
+          ],
+          "text": "Profil : TRAQUEUR À OUTILS INTERCHANGEABLES. Les fonctions suivent la forme ; valeurs et commandes restent des adaptations.",
+          "stage": "edonia_crash_2012",
+          "focus": "re6-ustanak",
+          "visual": {
+            "set": "resident-evil-6",
+            "tile": 4,
+            "environment": "EDONIA · SITE DU CRASH"
+          }
+        },
+        {
+          "title": "Dossier scellé",
+          "place": "EDONIA · SITE DU CRASH",
+          "prop": "none",
+          "camera": "profile",
+          "paragraphs": [
+            "La projection de USTANAK se dissipe. La forme de référence reste celle de Resident Evil 6 (2012)."
+          ],
+          "text": "La projection de USTANAK se dissipe. La forme de référence reste celle de Resident Evil 6 (2012).",
+          "stage": "edonia_crash_2012",
+          "focus": "re6-ustanak",
+          "visual": {
+            "set": "resident-evil-6",
+            "tile": 5,
+            "environment": "EDONIA · SITE DU CRASH"
+          }
+        }
+      ],
+      "route": [
+        {
+          "index": 0,
+          "opponent": "re7-lucas-baker",
+          "stage": "processing_area_morgue_2017",
+          "stageName": "ZONE DE TRAITEMENT · MORGUE",
+          "label": "Ouverture du dossier",
+          "before": "Essai 1/8 : JACK BAKER — SCIE À CISEAUX entre dans ZONE DE TRAITEMENT · MORGUE.",
+          "challenge": "Observer SUPER TYRANT · charge de poursuite. Quitter l’axe avant le contact.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        },
+        {
+          "index": 1,
+          "opponent": "re7-marguerite-baker",
+          "stage": "processing_area_morgue_2017",
+          "stageName": "ZONE DE TRAITEMENT · MORGUE",
+          "label": "Stress initial",
+          "before": "Essai 2/8 : JACK BAKER — SCIE À CISEAUX entre dans ZONE DE TRAITEMENT · MORGUE.",
+          "challenge": "Observer NEMESIS · charge de poursuite. Quitter l’axe avant le contact.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        },
+        {
+          "index": 2,
+          "opponent": "re7-eveline",
+          "stage": "processing_area_morgue_2017",
+          "stageName": "ZONE DE TRAITEMENT · MORGUE",
+          "label": "Contrôle de portée",
+          "before": "Essai 3/8 : JACK BAKER — SCIE À CISEAUX entre dans ZONE DE TRAITEMENT · MORGUE.",
+          "challenge": "Observer NEMESIS · charge de poursuite. Quitter l’axe avant le contact.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        },
+        {
+          "index": 3,
+          "opponent": "re7-mia-winters-infected",
+          "stage": "processing_area_morgue_2017",
+          "stageName": "ZONE DE TRAITEMENT · MORGUE",
+          "label": "Réponse biologique",
+          "before": "Essai 4/8 : JACK BAKER — SCIE À CISEAUX entre dans ZONE DE TRAITEMENT · MORGUE.",
+          "challenge": "Observer DEL LAGO · charge de poursuite. Quitter l’axe avant le contact.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        },
+        {
+          "index": 4,
+          "opponent": "re7-jack-baker",
+          "stage": "processing_area_morgue_2017",
+          "stageName": "ZONE DE TRAITEMENT · MORGUE",
+          "label": "Escalade du risque",
+          "before": "Essai 5/8 : JACK BAKER — SCIE À CISEAUX entre dans ZONE DE TRAITEMENT · MORGUE.",
+          "challenge": "Observer GARRADOR · charge de poursuite. Quitter l’axe avant le contact.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        },
+        {
+          "index": 5,
+          "opponent": "re7-molded",
+          "stage": "processing_area_morgue_2017",
+          "stageName": "ZONE DE TRAITEMENT · MORGUE",
+          "label": "Confinement avancé",
+          "before": "Essai 6/8 : JACK BAKER — SCIE À CISEAUX entre dans ZONE DE TRAITEMENT · MORGUE.",
+          "challenge": "Observer IRON MAIDEN · charge de poursuite. Quitter l’axe avant le contact.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        },
+        {
+          "index": 6,
+          "opponent": "re7-molded-fat",
+          "stage": "processing_area_morgue_2017",
+          "stageName": "ZONE DE TRAITEMENT · MORGUE",
+          "label": "Épreuve critique",
+          "before": "Essai 7/8 : JACK BAKER — SCIE À CISEAUX entre dans ZONE DE TRAITEMENT · MORGUE.",
+          "challenge": "Observer RAMÓN SALAZAR · charge de poursuite. Quitter l’axe avant le contact.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        },
+        {
+          "index": 7,
+          "opponent": "re7-jack-baker-mutated",
+          "stage": "processing_area_morgue_2017",
+          "stageName": "ZONE DE TRAITEMENT · MORGUE",
+          "label": "Confinement terminal",
+          "before": "Essai 8/8 : JACK BAKER — SCIE À CISEAUX entre dans ZONE DE TRAITEMENT · MORGUE.",
+          "challenge": "Observer OSMUND SADDLER · charge de poursuite. Quitter l’axe avant le contact.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        }
+      ],
+      "continuity": "Confrontations fictives de données biologiques ; aucun crossover présenté comme canonique.",
+      "anchor": "JACK BAKER — SCIE À CISEAUX. Jack pendant le duel à la scie de la morgue.",
+      "meta": "Sprite composite original du fangame ; aucune animation propriétaire extraite.",
+      "visualSet": "resident-evil-6",
+      "narrativeVersion": "RE 0.5.0"
+    },
+    "re7-marguerite-baker": {
+      "uid": "re7-marguerite-baker",
+      "name": "MARGUERITE BAKER — FORME HUMAINE",
+      "game": "Resident Evil 7 biohazard (2017)",
+      "group": "resident-evil-7",
+      "title": "MATRIARCHE AUX ESSAIMS",
+      "evidence": "lore-audited",
+      "status": "playable",
+      "edition": "v0.5.0 · E-001 Family Protocol",
+      "intro": [
+        {
+          "title": "Ouverture du dossier",
+          "place": "PROPRIÉTÉ BAKER",
+          "prop": "none",
+          "camera": "wide",
+          "paragraphs": [
+            "Le dossier MARGUERITE BAKER — FORME MUTÉE est chargé depuis les archives de Resident Evil 7 biohazard (2017). MARGUERITE BAKER — FORME MUTÉE, dans son incarnation de Resident Evil 7 biohazard (2017). Mutation aux membres allongés et à l’abdomen transformé en nid, capable d’escalader la serre."
+          ],
+          "text": "Le dossier MARGUERITE BAKER — FORME MUTÉE est chargé depuis les archives de Resident Evil 7 biohazard (2017). MARGUERITE BAKER — FORME MUTÉE, dans son incarnation de Resident Evil 7 biohazard (2017). Mutation aux membres allongés et à l’abdomen transformé en nid, capable d’escalader la serre.",
+          "stage": "baker_house",
+          "focus": "re7-marguerite-baker-mutated",
+          "visual": {
+            "set": "re7",
+            "tile": 0,
+            "environment": "PROPRIÉTÉ BAKER"
+          }
+        },
+        {
+          "title": "Protocole d’observation",
+          "place": "PROPRIÉTÉ BAKER",
+          "prop": "none",
+          "camera": "profile",
+          "paragraphs": [
+            "La simulation confronte cette incarnation à huit profils adverses. Agent biologique : Moisissure / E-001. Les confrontations sont des essais fictifs et ne modifient pas la continuité de son épisode."
+          ],
+          "text": "La simulation confronte cette incarnation à huit profils adverses. Agent biologique : Moisissure / E-001. Les confrontations sont des essais fictifs et ne modifient pas la continuité de son épisode.",
+          "stage": "baker_house",
+          "focus": "re7-marguerite-baker-mutated",
+          "visual": {
+            "set": "re7",
+            "tile": 1,
+            "environment": "PROPRIÉTÉ BAKER"
+          }
+        },
+        {
+          "title": "Mise en confinement",
+          "place": "PROPRIÉTÉ BAKER",
+          "prop": "none",
+          "camera": "profile",
+          "paragraphs": [
+            "Les portes se verrouillent dans la PROPRIÉTÉ BAKER. Essaim vomi de Marguerite contrôle l’approche ; Retraite dans les chevrons offre une réponse défensive. Le premier essai peut commencer."
+          ],
+          "text": "Les portes se verrouillent dans la PROPRIÉTÉ BAKER. Essaim vomi de Marguerite contrôle l’approche ; Retraite dans les chevrons offre une réponse défensive. Le premier essai peut commencer.",
+          "stage": "baker_house",
+          "focus": "re7-marguerite-baker-mutated",
+          "visual": {
+            "set": "re7",
+            "tile": 2,
+            "environment": "PROPRIÉTÉ BAKER"
+          }
+        }
+      ],
+      "outro": [
+        {
+          "title": "Huit essais achevés",
+          "place": "PROPRIÉTÉ BAKER",
+          "prop": "none",
+          "camera": "wide",
+          "paragraphs": [
+            "Les huit confrontations du dossier MARGUERITE BAKER — FORME MUTÉE sont enregistrées. Le compte rendu et la relecture de ce parcours sont débloqués."
+          ],
+          "text": "Les huit confrontations du dossier MARGUERITE BAKER — FORME MUTÉE sont enregistrées. Le compte rendu et la relecture de ce parcours sont débloqués.",
+          "stage": "baker_house",
+          "focus": "re7-marguerite-baker-mutated",
+          "visual": {
+            "set": "re7",
+            "tile": 3,
+            "environment": "PROPRIÉTÉ BAKER"
+          }
+        },
+        {
+          "title": "Rapport biologique",
+          "place": "PROPRIÉTÉ BAKER",
+          "prop": "none",
+          "camera": "profile",
+          "paragraphs": [
+            "Profil observé : EMBUSCADE INSECTOÏDE. L’essai a mobilisé Essaim vomi de Marguerite, Ruée sur les murs de la serre et Serre transformée en nid. Leur fonction suit cette incarnation ; commandes, timings et dégâts restent adaptés au moteur 2D."
+          ],
+          "text": "Profil observé : EMBUSCADE INSECTOÏDE. L’essai a mobilisé Essaim vomi de Marguerite, Ruée sur les murs de la serre et Serre transformée en nid. Leur fonction suit cette incarnation ; commandes, timings et dégâts restent adaptés au moteur 2D.",
+          "stage": "baker_house",
+          "focus": "re7-marguerite-baker-mutated",
+          "visual": {
+            "set": "re7",
+            "tile": 4,
+            "environment": "PROPRIÉTÉ BAKER"
+          }
+        },
+        {
+          "title": "Dossier scellé",
+          "place": "PROPRIÉTÉ BAKER",
+          "prop": "none",
+          "camera": "profile",
+          "paragraphs": [
+            "La projection de MARGUERITE BAKER — FORME MUTÉE se dissipe. Le spécimen de référence appartient toujours à Resident Evil 7 biohazard (2017). L’archive conserve les sources, les limites et le parcours complet."
+          ],
+          "text": "La projection de MARGUERITE BAKER — FORME MUTÉE se dissipe. Le spécimen de référence appartient toujours à Resident Evil 7 biohazard (2017). L’archive conserve les sources, les limites et le parcours complet.",
+          "stage": "baker_house",
+          "focus": "re7-marguerite-baker-mutated",
+          "visual": {
+            "set": "re7",
+            "tile": 5,
+            "environment": "PROPRIÉTÉ BAKER"
+          }
+        }
+      ],
+      "route": [
+        {
+          "index": 0,
+          "opponent": "re7-jack-baker-scissor",
+          "stage": "old_house_lantern_2017",
+          "stageName": "VIEILLE MAISON · GALERIE DE LA LANTERNE",
+          "label": "Ouverture du dossier",
+          "before": "Essai 1/8 : MARGUERITE BAKER — FORME HUMAINE entre dans VIEILLE MAISON · GALERIE DE LA LANTERNE.",
+          "challenge": "Observer Saisie mycélienne. Quitter la portée de la prise ou sauter avant son activation.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        },
+        {
+          "index": 1,
+          "opponent": "re7-lucas-baker",
+          "stage": "old_house_lantern_2017",
+          "stageName": "VIEILLE MAISON · GALERIE DE LA LANTERNE",
+          "label": "Stress initial",
+          "before": "Essai 2/8 : MARGUERITE BAKER — FORME HUMAINE entre dans VIEILLE MAISON · GALERIE DE LA LANTERNE.",
+          "challenge": "Observer Charge du Fat Molded. Quitter la portée de la prise ou sauter avant son activation.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        },
+        {
+          "index": 2,
+          "opponent": "re7-eveline",
+          "stage": "old_house_lantern_2017",
+          "stageName": "VIEILLE MAISON · GALERIE DE LA LANTERNE",
+          "label": "Contrôle de portée",
+          "before": "Essai 3/8 : MARGUERITE BAKER — FORME HUMAINE entre dans VIEILLE MAISON · GALERIE DE LA LANTERNE.",
+          "challenge": "Observer Appel des Little Crawlers. Quitter la portée de la prise ou sauter avant son activation.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        },
+        {
+          "index": 3,
+          "opponent": "re7-mia-winters-infected",
+          "stage": "old_house_lantern_2017",
+          "stageName": "VIEILLE MAISON · GALERIE DE LA LANTERNE",
+          "label": "Réponse biologique",
+          "before": "Essai 4/8 : MARGUERITE BAKER — FORME HUMAINE entre dans VIEILLE MAISON · GALERIE DE LA LANTERNE.",
+          "challenge": "Observer Accrochage du visage. Quitter la portée de la prise ou sauter avant son activation.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        },
+        {
+          "index": 4,
+          "opponent": "re7-jack-baker",
+          "stage": "old_house_lantern_2017",
+          "stageName": "VIEILLE MAISON · GALERIE DE LA LANTERNE",
+          "label": "Escalade du risque",
+          "before": "Essai 5/8 : MARGUERITE BAKER — FORME HUMAINE entre dans VIEILLE MAISON · GALERIE DE LA LANTERNE.",
+          "challenge": "Observer Plaquage de meute lycan. Quitter la portée de la prise ou sauter avant son activation.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        },
+        {
+          "index": 5,
+          "opponent": "re7-molded",
+          "stage": "old_house_lantern_2017",
+          "stageName": "VIEILLE MAISON · GALERIE DE LA LANTERNE",
+          "label": "Confinement avancé",
+          "before": "Essai 6/8 : MARGUERITE BAKER — FORME HUMAINE entre dans VIEILLE MAISON · GALERIE DE LA LANTERNE.",
+          "challenge": "Observer Plaquage du Vârcolac. Quitter la portée de la prise ou sauter avant son activation.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        },
+        {
+          "index": 6,
+          "opponent": "re7-molded-fat",
+          "stage": "old_house_lantern_2017",
+          "stageName": "VIEILLE MAISON · GALERIE DE LA LANTERNE",
+          "label": "Épreuve critique",
+          "before": "Essai 7/8 : MARGUERITE BAKER — FORME HUMAINE entre dans VIEILLE MAISON · GALERIE DE LA LANTERNE.",
+          "challenge": "Observer Percée incandescente. Quitter la portée de la prise ou sauter avant son activation.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        },
+        {
+          "index": 7,
+          "opponent": "re7-jack-baker-mutated",
+          "stage": "old_house_lantern_2017",
+          "stageName": "VIEILLE MAISON · GALERIE DE LA LANTERNE",
+          "label": "Confinement terminal",
+          "before": "Essai 8/8 : MARGUERITE BAKER — FORME HUMAINE entre dans VIEILLE MAISON · GALERIE DE LA LANTERNE.",
+          "challenge": "Observer Charge arachnéenne. Quitter la portée de la prise ou sauter avant son activation.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        }
+      ],
+      "continuity": "Confrontations fictives de données biologiques ; aucun crossover présenté comme un événement canonique.",
+      "anchor": "MARGUERITE BAKER — FORME HUMAINE. Marguerite avant sa mutation arachnéenne.",
+      "meta": "Sprite composite original du fangame ; aucune animation propriétaire extraite.",
+      "visualSet": "re7",
+      "narrativeVersion": "RE 0.5.0"
+    },
+    "re7-lucas-baker": {
+      "uid": "re7-lucas-baker",
+      "name": "LUCAS BAKER — FORME HUMAINE",
+      "game": "Resident Evil 7 biohazard (2017)",
+      "group": "resident-evil-7",
+      "title": "INGÉNIEUR DES PIÈGES",
+      "evidence": "lore-audited",
+      "status": "playable",
+      "edition": "v0.5.0 · E-001 Family Protocol",
+      "intro": [
+        {
+          "title": "Ouverture du dossier",
+          "place": "PROPRIÉTÉ BAKER",
+          "prop": "none",
+          "camera": "wide",
+          "paragraphs": [
+            "Le dossier LUCAS BAKER — FORME MUTÉE est chargé depuis les archives de Resident Evil 7 biohazard — Not a Hero (2017). LUCAS BAKER — FORME MUTÉE, dans son incarnation de Resident Evil 7 biohazard — Not a Hero (2017). Mutation fongique rapide aux bras griffus et noyau thoracique exposé, propre au laboratoire de Not a Hero."
+          ],
+          "text": "Le dossier LUCAS BAKER — FORME MUTÉE est chargé depuis les archives de Resident Evil 7 biohazard — Not a Hero (2017). LUCAS BAKER — FORME MUTÉE, dans son incarnation de Resident Evil 7 biohazard — Not a Hero (2017). Mutation fongique rapide aux bras griffus et noyau thoracique exposé, propre au laboratoire de Not a Hero.",
+          "stage": "baker_house",
+          "focus": "re7-lucas-baker-mutated",
+          "visual": {
+            "set": "re7",
+            "tile": 0,
+            "environment": "PROPRIÉTÉ BAKER"
+          }
+        },
+        {
+          "title": "Protocole d’observation",
+          "place": "PROPRIÉTÉ BAKER",
+          "prop": "none",
+          "camera": "profile",
+          "paragraphs": [
+            "La simulation confronte cette incarnation à huit profils adverses. Agent biologique : Moisissure / E-001. Les confrontations sont des essais fictifs et ne modifient pas la continuité de son épisode."
+          ],
+          "text": "La simulation confronte cette incarnation à huit profils adverses. Agent biologique : Moisissure / E-001. Les confrontations sont des essais fictifs et ne modifient pas la continuité de son épisode.",
+          "stage": "baker_house",
+          "focus": "re7-lucas-baker-mutated",
+          "visual": {
+            "set": "re7",
+            "tile": 1,
+            "environment": "PROPRIÉTÉ BAKER"
+          }
+        },
+        {
+          "title": "Mise en confinement",
+          "place": "PROPRIÉTÉ BAKER",
+          "prop": "none",
+          "camera": "profile",
+          "paragraphs": [
+            "Les portes se verrouillent dans la PROPRIÉTÉ BAKER. Poussée de spores contaminantes contrôle l’approche ; Repli derrière le réacteur offre une réponse défensive. Le premier essai peut commencer."
+          ],
+          "text": "Les portes se verrouillent dans la PROPRIÉTÉ BAKER. Poussée de spores contaminantes contrôle l’approche ; Repli derrière le réacteur offre une réponse défensive. Le premier essai peut commencer.",
+          "stage": "baker_house",
+          "focus": "re7-lucas-baker-mutated",
+          "visual": {
+            "set": "re7",
+            "tile": 2,
+            "environment": "PROPRIÉTÉ BAKER"
+          }
+        }
+      ],
+      "outro": [
+        {
+          "title": "Huit essais achevés",
+          "place": "PROPRIÉTÉ BAKER",
+          "prop": "none",
+          "camera": "wide",
+          "paragraphs": [
+            "Les huit confrontations du dossier LUCAS BAKER — FORME MUTÉE sont enregistrées. Le compte rendu et la relecture de ce parcours sont débloqués."
+          ],
+          "text": "Les huit confrontations du dossier LUCAS BAKER — FORME MUTÉE sont enregistrées. Le compte rendu et la relecture de ce parcours sont débloqués.",
+          "stage": "baker_house",
+          "focus": "re7-lucas-baker-mutated",
+          "visual": {
+            "set": "re7",
+            "tile": 3,
+            "environment": "PROPRIÉTÉ BAKER"
+          }
+        },
+        {
+          "title": "Rapport biologique",
+          "place": "PROPRIÉTÉ BAKER",
+          "prop": "none",
+          "camera": "profile",
+          "paragraphs": [
+            "Profil observé : CONTAMINATION FONGIQUE. L’essai a mobilisé Poussée de spores contaminantes, Estocade du laboratoire et Saturation toxique du laboratoire. Leur fonction suit cette incarnation ; commandes, timings et dégâts restent adaptés au moteur 2D."
+          ],
+          "text": "Profil observé : CONTAMINATION FONGIQUE. L’essai a mobilisé Poussée de spores contaminantes, Estocade du laboratoire et Saturation toxique du laboratoire. Leur fonction suit cette incarnation ; commandes, timings et dégâts restent adaptés au moteur 2D.",
+          "stage": "baker_house",
+          "focus": "re7-lucas-baker-mutated",
+          "visual": {
+            "set": "re7",
+            "tile": 4,
+            "environment": "PROPRIÉTÉ BAKER"
+          }
+        },
+        {
+          "title": "Dossier scellé",
+          "place": "PROPRIÉTÉ BAKER",
+          "prop": "none",
+          "camera": "profile",
+          "paragraphs": [
+            "La projection de LUCAS BAKER — FORME MUTÉE se dissipe. Le spécimen de référence appartient toujours à Resident Evil 7 biohazard — Not a Hero (2017). L’archive conserve les sources, les limites et le parcours complet."
+          ],
+          "text": "La projection de LUCAS BAKER — FORME MUTÉE se dissipe. Le spécimen de référence appartient toujours à Resident Evil 7 biohazard — Not a Hero (2017). L’archive conserve les sources, les limites et le parcours complet.",
+          "stage": "baker_house",
+          "focus": "re7-lucas-baker-mutated",
+          "visual": {
+            "set": "re7",
+            "tile": 5,
+            "environment": "PROPRIÉTÉ BAKER"
+          }
+        }
+      ],
+      "route": [
+        {
+          "index": 0,
+          "opponent": "re7-jack-baker-scissor",
+          "stage": "testing_area_2017",
+          "stageName": "ZONE D’ESSAI · COULOIR PIÉGÉ",
+          "label": "Ouverture du dossier",
+          "before": "Essai 1/8 : LUCAS BAKER — FORME HUMAINE entre dans ZONE D’ESSAI · COULOIR PIÉGÉ.",
+          "challenge": "Observer Saisie mycélienne. Quitter la portée de la prise ou sauter avant son activation.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        },
+        {
+          "index": 1,
+          "opponent": "re7-marguerite-baker",
+          "stage": "testing_area_2017",
+          "stageName": "ZONE D’ESSAI · COULOIR PIÉGÉ",
+          "label": "Stress initial",
+          "before": "Essai 2/8 : LUCAS BAKER — FORME HUMAINE entre dans ZONE D’ESSAI · COULOIR PIÉGÉ.",
+          "challenge": "Observer Charge du Fat Molded. Quitter la portée de la prise ou sauter avant son activation.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        },
+        {
+          "index": 2,
+          "opponent": "re7-eveline",
+          "stage": "testing_area_2017",
+          "stageName": "ZONE D’ESSAI · COULOIR PIÉGÉ",
+          "label": "Contrôle de portée",
+          "before": "Essai 3/8 : LUCAS BAKER — FORME HUMAINE entre dans ZONE D’ESSAI · COULOIR PIÉGÉ.",
+          "challenge": "Observer Appel des Little Crawlers. Quitter la portée de la prise ou sauter avant son activation.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        },
+        {
+          "index": 3,
+          "opponent": "re7-mia-winters-infected",
+          "stage": "testing_area_2017",
+          "stageName": "ZONE D’ESSAI · COULOIR PIÉGÉ",
+          "label": "Réponse biologique",
+          "before": "Essai 4/8 : LUCAS BAKER — FORME HUMAINE entre dans ZONE D’ESSAI · COULOIR PIÉGÉ.",
+          "challenge": "Observer Accrochage du visage. Quitter la portée de la prise ou sauter avant son activation.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        },
+        {
+          "index": 4,
+          "opponent": "re7-jack-baker",
+          "stage": "testing_area_2017",
+          "stageName": "ZONE D’ESSAI · COULOIR PIÉGÉ",
+          "label": "Escalade du risque",
+          "before": "Essai 5/8 : LUCAS BAKER — FORME HUMAINE entre dans ZONE D’ESSAI · COULOIR PIÉGÉ.",
+          "challenge": "Observer Plaquage de meute lycan. Quitter la portée de la prise ou sauter avant son activation.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        },
+        {
+          "index": 5,
+          "opponent": "re7-molded",
+          "stage": "testing_area_2017",
+          "stageName": "ZONE D’ESSAI · COULOIR PIÉGÉ",
+          "label": "Confinement avancé",
+          "before": "Essai 6/8 : LUCAS BAKER — FORME HUMAINE entre dans ZONE D’ESSAI · COULOIR PIÉGÉ.",
+          "challenge": "Observer Plaquage du Vârcolac. Quitter la portée de la prise ou sauter avant son activation.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        },
+        {
+          "index": 6,
+          "opponent": "re7-molded-fat",
+          "stage": "testing_area_2017",
+          "stageName": "ZONE D’ESSAI · COULOIR PIÉGÉ",
+          "label": "Épreuve critique",
+          "before": "Essai 7/8 : LUCAS BAKER — FORME HUMAINE entre dans ZONE D’ESSAI · COULOIR PIÉGÉ.",
+          "challenge": "Observer Percée incandescente. Quitter la portée de la prise ou sauter avant son activation.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        },
+        {
+          "index": 7,
+          "opponent": "re7-jack-baker-mutated",
+          "stage": "testing_area_2017",
+          "stageName": "ZONE D’ESSAI · COULOIR PIÉGÉ",
+          "label": "Confinement terminal",
+          "before": "Essai 8/8 : LUCAS BAKER — FORME HUMAINE entre dans ZONE D’ESSAI · COULOIR PIÉGÉ.",
+          "challenge": "Observer Charge arachnéenne. Quitter la portée de la prise ou sauter avant son activation.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        }
+      ],
+      "continuity": "Confrontations fictives de données biologiques ; aucun crossover présenté comme un événement canonique.",
+      "anchor": "LUCAS BAKER — FORME HUMAINE. Lucas avant sa mutation, limité à ses dispositifs.",
+      "meta": "Sprite composite original du fangame ; aucune animation propriétaire extraite.",
+      "visualSet": "re7",
+      "narrativeVersion": "RE 0.5.0"
+    },
+    "re7-eveline": {
+      "uid": "re7-eveline",
+      "name": "EVELINE — APPARENCE ENFANT",
+      "game": "Resident Evil 7 biohazard (2017)",
+      "group": "resident-evil-7",
+      "title": "PROJECTION PSYCHO-FONGIQUE E-001",
+      "evidence": "lore-audited",
+      "status": "playable",
+      "edition": "v0.5.0 · E-001 Family Protocol",
+      "intro": [
+        {
+          "title": "Ouverture du dossier",
+          "place": "PROPRIÉTÉ BAKER",
+          "prop": "none",
+          "camera": "wide",
+          "paragraphs": [
+            "Le dossier EVELINE — FORME FINALE est chargé depuis les archives de Resident Evil 7 biohazard (2017). EVELINE — FORME FINALE, dans son incarnation de Resident Evil 7 biohazard (2017). Masse colossale de mutamycète à visage et tentacules, limitée à la manifestation finale du domaine Baker."
+          ],
+          "text": "Le dossier EVELINE — FORME FINALE est chargé depuis les archives de Resident Evil 7 biohazard (2017). EVELINE — FORME FINALE, dans son incarnation de Resident Evil 7 biohazard (2017). Masse colossale de mutamycète à visage et tentacules, limitée à la manifestation finale du domaine Baker.",
+          "stage": "baker_house",
+          "focus": "re7-eveline-final",
+          "visual": {
+            "set": "re7",
+            "tile": 0,
+            "environment": "PROPRIÉTÉ BAKER"
+          }
+        },
+        {
+          "title": "Protocole d’observation",
+          "place": "PROPRIÉTÉ BAKER",
+          "prop": "none",
+          "camera": "profile",
+          "paragraphs": [
+            "La simulation confronte cette incarnation à huit profils adverses. Agent biologique : Moisissure / E-001. Les confrontations sont des essais fictifs et ne modifient pas la continuité de son épisode."
+          ],
+          "text": "La simulation confronte cette incarnation à huit profils adverses. Agent biologique : Moisissure / E-001. Les confrontations sont des essais fictifs et ne modifient pas la continuité de son épisode.",
+          "stage": "baker_house",
+          "focus": "re7-eveline-final",
+          "visual": {
+            "set": "re7",
+            "tile": 1,
+            "environment": "PROPRIÉTÉ BAKER"
+          }
+        },
+        {
+          "title": "Mise en confinement",
+          "place": "PROPRIÉTÉ BAKER",
+          "prop": "none",
+          "camera": "profile",
+          "paragraphs": [
+            "Les portes se verrouillent dans la PROPRIÉTÉ BAKER. Fouet de tentacule terminal contrôle l’approche ; Retrait dans le domaine offre une réponse défensive. Le premier essai peut commencer."
+          ],
+          "text": "Les portes se verrouillent dans la PROPRIÉTÉ BAKER. Fouet de tentacule terminal contrôle l’approche ; Retrait dans le domaine offre une réponse défensive. Le premier essai peut commencer.",
+          "stage": "baker_house",
+          "focus": "re7-eveline-final",
+          "visual": {
+            "set": "re7",
+            "tile": 2,
+            "environment": "PROPRIÉTÉ BAKER"
+          }
+        }
+      ],
+      "outro": [
+        {
+          "title": "Huit essais achevés",
+          "place": "PROPRIÉTÉ BAKER",
+          "prop": "none",
+          "camera": "wide",
+          "paragraphs": [
+            "Les huit confrontations du dossier EVELINE — FORME FINALE sont enregistrées. Le compte rendu et la relecture de ce parcours sont débloqués."
+          ],
+          "text": "Les huit confrontations du dossier EVELINE — FORME FINALE sont enregistrées. Le compte rendu et la relecture de ce parcours sont débloqués.",
+          "stage": "baker_house",
+          "focus": "re7-eveline-final",
+          "visual": {
+            "set": "re7",
+            "tile": 3,
+            "environment": "PROPRIÉTÉ BAKER"
+          }
+        },
+        {
+          "title": "Rapport biologique",
+          "place": "PROPRIÉTÉ BAKER",
+          "prop": "none",
+          "camera": "profile",
+          "paragraphs": [
+            "Profil observé : COLONIE TERMINALE. L’essai a mobilisé Fouet de tentacule terminal, Assaut de la colonie E-001 et Effondrement du domaine Baker. Leur fonction suit cette incarnation ; commandes, timings et dégâts restent adaptés au moteur 2D."
+          ],
+          "text": "Profil observé : COLONIE TERMINALE. L’essai a mobilisé Fouet de tentacule terminal, Assaut de la colonie E-001 et Effondrement du domaine Baker. Leur fonction suit cette incarnation ; commandes, timings et dégâts restent adaptés au moteur 2D.",
+          "stage": "baker_house",
+          "focus": "re7-eveline-final",
+          "visual": {
+            "set": "re7",
+            "tile": 4,
+            "environment": "PROPRIÉTÉ BAKER"
+          }
+        },
+        {
+          "title": "Dossier scellé",
+          "place": "PROPRIÉTÉ BAKER",
+          "prop": "none",
+          "camera": "profile",
+          "paragraphs": [
+            "La projection de EVELINE — FORME FINALE se dissipe. Le spécimen de référence appartient toujours à Resident Evil 7 biohazard (2017). L’archive conserve les sources, les limites et le parcours complet."
+          ],
+          "text": "La projection de EVELINE — FORME FINALE se dissipe. Le spécimen de référence appartient toujours à Resident Evil 7 biohazard (2017). L’archive conserve les sources, les limites et le parcours complet.",
+          "stage": "baker_house",
+          "focus": "re7-eveline-final",
+          "visual": {
+            "set": "re7",
+            "tile": 5,
+            "environment": "PROPRIÉTÉ BAKER"
+          }
+        }
+      ],
+      "route": [
+        {
+          "index": 0,
+          "opponent": "re7-jack-baker-scissor",
+          "stage": "eveline_corridor_2017",
+          "stageName": "MAISON PRINCIPALE · CORRIDOR D’HALLUCINATION",
+          "label": "Ouverture du dossier",
+          "before": "Essai 1/8 : EVELINE — APPARENCE ENFANT entre dans MAISON PRINCIPALE · CORRIDOR D’HALLUCINATION.",
+          "challenge": "Observer Saisie mycélienne. Quitter la portée de la prise ou sauter avant son activation.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        },
+        {
+          "index": 1,
+          "opponent": "re7-lucas-baker",
+          "stage": "eveline_corridor_2017",
+          "stageName": "MAISON PRINCIPALE · CORRIDOR D’HALLUCINATION",
+          "label": "Stress initial",
+          "before": "Essai 2/8 : EVELINE — APPARENCE ENFANT entre dans MAISON PRINCIPALE · CORRIDOR D’HALLUCINATION.",
+          "challenge": "Observer Charge du Fat Molded. Quitter la portée de la prise ou sauter avant son activation.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        },
+        {
+          "index": 2,
+          "opponent": "re7-marguerite-baker",
+          "stage": "eveline_corridor_2017",
+          "stageName": "MAISON PRINCIPALE · CORRIDOR D’HALLUCINATION",
+          "label": "Contrôle de portée",
+          "before": "Essai 3/8 : EVELINE — APPARENCE ENFANT entre dans MAISON PRINCIPALE · CORRIDOR D’HALLUCINATION.",
+          "challenge": "Observer Appel des Little Crawlers. Quitter la portée de la prise ou sauter avant son activation.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        },
+        {
+          "index": 3,
+          "opponent": "re7-mia-winters-infected",
+          "stage": "eveline_corridor_2017",
+          "stageName": "MAISON PRINCIPALE · CORRIDOR D’HALLUCINATION",
+          "label": "Réponse biologique",
+          "before": "Essai 4/8 : EVELINE — APPARENCE ENFANT entre dans MAISON PRINCIPALE · CORRIDOR D’HALLUCINATION.",
+          "challenge": "Observer Accrochage du visage. Quitter la portée de la prise ou sauter avant son activation.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        },
+        {
+          "index": 4,
+          "opponent": "re7-jack-baker",
+          "stage": "eveline_corridor_2017",
+          "stageName": "MAISON PRINCIPALE · CORRIDOR D’HALLUCINATION",
+          "label": "Escalade du risque",
+          "before": "Essai 5/8 : EVELINE — APPARENCE ENFANT entre dans MAISON PRINCIPALE · CORRIDOR D’HALLUCINATION.",
+          "challenge": "Observer Plaquage de meute lycan. Quitter la portée de la prise ou sauter avant son activation.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        },
+        {
+          "index": 5,
+          "opponent": "re7-molded",
+          "stage": "eveline_corridor_2017",
+          "stageName": "MAISON PRINCIPALE · CORRIDOR D’HALLUCINATION",
+          "label": "Confinement avancé",
+          "before": "Essai 6/8 : EVELINE — APPARENCE ENFANT entre dans MAISON PRINCIPALE · CORRIDOR D’HALLUCINATION.",
+          "challenge": "Observer Plaquage du Vârcolac. Quitter la portée de la prise ou sauter avant son activation.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        },
+        {
+          "index": 6,
+          "opponent": "re7-molded-fat",
+          "stage": "eveline_corridor_2017",
+          "stageName": "MAISON PRINCIPALE · CORRIDOR D’HALLUCINATION",
+          "label": "Épreuve critique",
+          "before": "Essai 7/8 : EVELINE — APPARENCE ENFANT entre dans MAISON PRINCIPALE · CORRIDOR D’HALLUCINATION.",
+          "challenge": "Observer Percée incandescente. Quitter la portée de la prise ou sauter avant son activation.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        },
+        {
+          "index": 7,
+          "opponent": "re7-jack-baker-mutated",
+          "stage": "eveline_corridor_2017",
+          "stageName": "MAISON PRINCIPALE · CORRIDOR D’HALLUCINATION",
+          "label": "Confinement terminal",
+          "before": "Essai 8/8 : EVELINE — APPARENCE ENFANT entre dans MAISON PRINCIPALE · CORRIDOR D’HALLUCINATION.",
+          "challenge": "Observer Charge arachnéenne. Quitter la portée de la prise ou sauter avant son activation.",
+          "after": "La simulation E-001 prépare la chambre suivante."
+        }
+      ],
+      "continuity": "Confrontations fictives de données biologiques ; aucun crossover présenté comme un événement canonique.",
+      "anchor": "EVELINE — APPARENCE ENFANT. Projection enfant d’Eveline, distincte de la forme finale.",
+      "meta": "Sprite composite original du fangame ; aucune animation propriétaire extraite.",
+      "visualSet": "re7",
+      "narrativeVersion": "RE 0.5.0"
     }
   },
   "visualMethod": "Reference render composition",
