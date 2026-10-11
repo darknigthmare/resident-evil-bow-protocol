@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-10-11T08:49:01.345Z",
-  "version": "0.4.0",
+  "generatedAt": "2026-10-11T13:27:33.453Z",
+  "version": "0.5.0",
   "method": "Real delivered JavaScript, deterministic combat CPU, controlled DOM and native Canvas (@napi-rs/canvas). No browser/CSS layout or physical controller verification.",
   "passed": 26,
   "failed": 0,
   "sourceSHA256": {
     "src/combat-foundation-v060.js": "2e0c95117247e1f38499acd9b383c2bce55789e663ac418131a1444c05867375",
-    "src/unified-engine-v060.js": "a0412dd1878b1fdfdb1e4f4af79402493fff81e7f9e031bdd01fcceb8f4b5499",
+    "src/unified-engine-v060.js": "831c448a1f92fd65a669a5fe0ddae297f5b446964f6a0aacca97d09bd0c67ba3",
     "src/chronicles-core-v060.js": "d3f3d7afab085481152088739ef99a6389dece01848efaba49b451c6182fd5d9",
     "src/re-renderer.js": "6242a30c8aa9103f6e29fd4e6c86932ec670175e1ade39d3af631bfd9bc15c0a",
-    "src/re-data.js": "6b2242bced453b52e9cded9d99d0f3ccc70cc8fcb27e324109e8b770c3b441d7",
+    "src/re-data.js": "535fd2d42c99bd69a926de6e36145099011f59a58bbcd10ae01ecca212684117",
     "tests/engine-vm.cjs": "ec53cb693def75a0c70a2ec5d72ea006d224946906019d58f86ddebf3570a831"
   },
   "coverage": {
-    "fighters": 93,
-    "moveContracts": 930,
+    "fighters": 99,
+    "moveContracts": 990,
     "actualCPUDuels": 8,
-    "CPUReadinessSpecies": 93,
-    "decodedImages": 194
+    "CPUReadinessSpecies": 99,
+    "decodedImages": 206
   },
   "notes": [],
   "duels": [
@@ -1194,6 +1194,54 @@
       "starts": 14,
       "denied": 0,
       "resource": 20.55999999999997
+    },
+    {
+      "uid": "re7-mia-winters-infected",
+      "hits": 15,
+      "damage": 10000,
+      "starts": 15,
+      "denied": 0,
+      "resource": 6
+    },
+    {
+      "uid": "re7-jack-baker",
+      "hits": 15,
+      "damage": 10000,
+      "starts": 15,
+      "denied": 0,
+      "resource": 4.75
+    },
+    {
+      "uid": "re7-jack-baker-scissor",
+      "hits": 14,
+      "damage": 10000,
+      "starts": 15,
+      "denied": 0,
+      "resource": 5.999999999999964
+    },
+    {
+      "uid": "re7-marguerite-baker",
+      "hits": 21,
+      "damage": 9895,
+      "starts": 18,
+      "denied": 0,
+      "resource": 1.4999999999999751
+    },
+    {
+      "uid": "re7-lucas-baker",
+      "hits": 15,
+      "damage": 9615,
+      "starts": 13,
+      "denied": 0,
+      "resource": 7.199999999999971
+    },
+    {
+      "uid": "re7-eveline",
+      "hits": 13,
+      "damage": 10000,
+      "starts": 13,
+      "denied": 0,
+      "resource": 18.799999999999983
     }
   ],
   "decodedImages": [
@@ -2308,6 +2356,78 @@
       "bytes": 169734
     },
     {
+      "path": "assets/specimens/re7-mia-winters-infected.png",
+      "width": 620,
+      "height": 1000,
+      "bytes": 54049
+    },
+    {
+      "path": "assets/catalog/re7-mia-winters-infected.png",
+      "width": 185,
+      "height": 185,
+      "bytes": 52318
+    },
+    {
+      "path": "assets/specimens/re7-jack-baker.png",
+      "width": 620,
+      "height": 1000,
+      "bytes": 56199
+    },
+    {
+      "path": "assets/catalog/re7-jack-baker.png",
+      "width": 240,
+      "height": 240,
+      "bytes": 79144
+    },
+    {
+      "path": "assets/specimens/re7-jack-baker-scissor.png",
+      "width": 620,
+      "height": 1000,
+      "bytes": 56452
+    },
+    {
+      "path": "assets/catalog/re7-jack-baker-scissor.png",
+      "width": 240,
+      "height": 240,
+      "bytes": 79144
+    },
+    {
+      "path": "assets/specimens/re7-marguerite-baker.png",
+      "width": 620,
+      "height": 1000,
+      "bytes": 58540
+    },
+    {
+      "path": "assets/catalog/re7-marguerite-baker.png",
+      "width": 240,
+      "height": 240,
+      "bytes": 91807
+    },
+    {
+      "path": "assets/specimens/re7-lucas-baker.png",
+      "width": 620,
+      "height": 1000,
+      "bytes": 44536
+    },
+    {
+      "path": "assets/catalog/re7-lucas-baker.png",
+      "width": 240,
+      "height": 240,
+      "bytes": 57031
+    },
+    {
+      "path": "assets/specimens/re7-eveline.png",
+      "width": 620,
+      "height": 1000,
+      "bytes": 48366
+    },
+    {
+      "path": "assets/catalog/re7-eveline.png",
+      "width": 620,
+      "height": 616,
+      "bytes": 227480
+    },
+    {
       "path": "assets/arenas/spencer.png",
       "width": 1672,
       "height": 941,
@@ -2366,7 +2486,7 @@
     {
       "name": "Every delivered JavaScript source parses",
       "pass": true,
-      "milliseconds": 68,
+      "milliseconds": 51,
       "detail": {
         "sources": 22
       }
@@ -2374,20 +2494,20 @@
     {
       "name": "Compiled browser datasets exactly match their editable release records",
       "pass": true,
-      "milliseconds": 125,
+      "milliseconds": 85,
       "detail": {
-        "fighters": 93,
-        "stages": 30,
+        "fighters": 99,
+        "stages": 36,
         "catalog": 389
       }
     },
     {
       "name": "Unique playable identities, physical dimensions and complete authored move contracts",
       "pass": true,
-      "milliseconds": 8,
+      "milliseconds": 7,
       "detail": {
-        "fighters": 93,
-        "moves": 930,
+        "fighters": 99,
+        "moves": 990,
         "kinds": [
           "melee",
           "mobility",
@@ -2403,10 +2523,10 @@
     {
       "name": "All referenced local portraits, full-body sprites and declared arena files decode",
       "pass": true,
-      "milliseconds": 1026,
+      "milliseconds": 875,
       "detail": {
-        "decoded": 194,
-        "stagesWithImage": 30,
+        "decoded": 206,
+        "stagesWithImage": 36,
         "fallbackStages": []
       }
     },
@@ -2415,22 +2535,22 @@
       "pass": true,
       "milliseconds": 1,
       "detail": {
-        "routes": 93,
-        "duels": 744
+        "routes": 99,
+        "duels": 792
       }
     },
     {
       "name": "All real repertoires start, spend resources and activate only after their startup",
       "pass": true,
-      "milliseconds": 275,
+      "milliseconds": 155,
       "detail": {
-        "executed": 930
+        "executed": 990
       }
     },
     {
       "name": "Resource exhaustion blocks paid attacks, then passive recovery restores eligibility",
       "pass": true,
-      "milliseconds": 9,
+      "milliseconds": 4,
       "detail": {
         "fighter": "re1-cerberus",
         "paidStarts": 5,
@@ -2441,12 +2561,12 @@
     {
       "name": "The real recovery utility is delayed and clamps to the reserve capacity",
       "pass": true,
-      "milliseconds": 2
+      "milliseconds": 1
     },
     {
       "name": "Organic healing uses real recoverable damage, has a budget and can be interrupted",
       "pass": true,
-      "milliseconds": 8,
+      "milliseconds": 5,
       "detail": {
         "fighter": "re7-molded",
         "totalHealed": 900,
@@ -2456,7 +2576,7 @@
     {
       "name": "A morphologically small attacker really leaves the floor during its authored leap",
       "pass": true,
-      "milliseconds": 3,
+      "milliseconds": 2,
       "detail": {
         "fighter": "re1-cerberus",
         "impulse": -6
@@ -2474,7 +2594,7 @@
     {
       "name": "Authored projectiles travel into real targets and ranged CPU adapts to a crouched small body",
       "pass": true,
-      "milliseconds": 41,
+      "milliseconds": 25,
       "detail": {
         "shooter": "re3r-nemesis",
         "projectile": "Lance-roquettes M202",
@@ -2507,16 +2627,16 @@
     {
       "name": "Every playable species closes distance and damages an idle opponent through the real CPU",
       "pass": true,
-      "milliseconds": 1975,
+      "milliseconds": 1249,
       "detail": {
-        "fighters": 93,
-        "totalHits": 1455
+        "fighters": 99,
+        "totalHits": 1548
       }
     },
     {
       "name": "Eight complete CPU duels cover asymmetric matchups at full initial life",
       "pass": true,
-      "milliseconds": 287,
+      "milliseconds": 174,
       "detail": {
         "duels": 8,
         "knockouts": 8,
@@ -2537,7 +2657,7 @@
     {
       "name": "Seeded CPU commands reproduce the same simulation without consulting AI during replay",
       "pass": true,
-      "milliseconds": 167,
+      "milliseconds": 88,
       "detail": {
         "recordedFrames": 1364,
         "physicsHash": "a6442170f2f87c4bf7062c718d9535c86797f1c9355703831ce7ca54b6e3e380"
@@ -2546,10 +2666,10 @@
     {
       "name": "All stories advance through eight validated wins into their own unlocked ending",
       "pass": true,
-      "milliseconds": 61,
+      "milliseconds": 50,
       "detail": {
-        "completedStories": 93,
-        "progressionResults": 744
+        "completedStories": 99,
+        "progressionResults": 792
       }
     },
     {
@@ -2560,12 +2680,12 @@
     {
       "name": "Two-slot saves preserve progression and recover from a corrupted latest write",
       "pass": true,
-      "milliseconds": 2
+      "milliseconds": 1
     },
     {
       "name": "The actual versus HTML initializes its real controls, engine and reference renderer",
       "pass": true,
-      "milliseconds": 752,
+      "milliseconds": 442,
       "detail": {
         "source": "modules/versus.html",
         "renderer": "RE-1.0 / CQC-0.60",
@@ -2575,12 +2695,12 @@
     {
       "name": "Actual keyboard movement, pause and rematch preserve the chosen match configuration",
       "pass": true,
-      "milliseconds": 156
+      "milliseconds": 103
     },
     {
       "name": "The actual UI engine records and replays a complete CPU match identically",
       "pass": true,
-      "milliseconds": 529,
+      "milliseconds": 306,
       "detail": {
         "winner": 0,
         "frames": 1297,
@@ -2591,12 +2711,12 @@
     {
       "name": "Corrupted replays are rejected and truncated replays pause with an explicit incomplete state",
       "pass": true,
-      "milliseconds": 56
+      "milliseconds": 33
     },
     {
       "name": "Cinematic contracts draw actual references for hero, before, after and ending scenes",
       "pass": true,
-      "milliseconds": 994,
+      "milliseconds": 689,
       "detail": {
         "species": [
           "re3r-nemesis",

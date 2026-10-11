@@ -1,0 +1,84 @@
+name: Publish v0.5.0 Release
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/release-v050.yml'
+      - 'docs/deployment.json'
+      - 'docs/RELEASE_MANIFEST_v0.5.0.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bow-release-v050
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout verified main
+        uses: actions/checkout@v4
+
+      - name: Check production promotion gate
+        id: gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          status="$(node -p "require('./docs/deployment.json').productionStatus")"
+          if [ "$status" = "READY_V050_PRODUCTION" ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "Release remains gated: $status"
+          fi
+
+      - name: Use Node.js 22
+        if: steps.gate.outputs.ready == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+
+      - name: Install native Canvas QA backend
+        if: steps.gate.outputs.ready == 'true'
+        run: npm install --no-save --package-lock=false @napi-rs/canvas@0.1.80
+
+      - name: Re-run complete release QA
+        if: steps.gate.outputs.ready == 'true'
+        run: npm run verify
+
+      - name: Build static production bundle
+        if: steps.gate.outputs.ready == 'true'
+        run: npm run build
+
+      - name: Package release assets
+        if: steps.gate.outputs.ready == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git archive --format=zip --prefix=resident-evil-bow-protocol-v0.5.0/ -o RESIDENT_EVIL_BOW_PROTOCOL_v0.5.0_SOURCE.zip HEAD
+          (cd dist && zip -q -9 -r ../BOW_PROTOCOL_VERCEL_STATIC_v0.5.0.zip .)
+          sha256sum RESIDENT_EVIL_BOW_PROTOCOL_v0.5.0_SOURCE.zip BOW_PROTOCOL_VERCEL_STATIC_v0.5.0.zip > BOW_PROTOCOL_v0.5.0_SHA256SUMS.txt
+
+      - name: Publish immutable GitHub release
+        if: steps.gate.outputs.ready == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if gh release view v0.5.0 >/dev/null 2>&1; then
+            echo "Release v0.5.0 already exists"
+            exit 1
+          fi
+          gh release create v0.5.0 \
+            RESIDENT_EVIL_BOW_PROTOCOL_v0.5.0_SOURCE.zip \
+            BOW_PROTOCOL_VERCEL_STATIC_v0.5.0.zip \
+            BOW_PROTOCOL_v0.5.0_SHA256SUMS.txt \
+            --target "$GITHUB_SHA" \
+            --title "Resident Evil — B.O.W. Protocol v0.5.0 · E-001 Family Protocol" \
+            --notes-file docs/RELEASE_NOTES_v0.5.0.md

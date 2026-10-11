@@ -36,12 +36,13 @@ jobs:
       - name: Build static production bundle
         run: npm run build
 
-      - name: Check release manifest and build entrypoints
+      - name: Check v0.5.0 release manifest and build entrypoints
         shell: bash
         run: |
           set -euo pipefail
-          test -s docs/RELEASE_MANIFEST_v0.4.0.json
+          test -s docs/RELEASE_MANIFEST_v0.5.0.json
           test -s dist/index.html
           test -s dist/movesets.html
+          test -s dist/operations.html
           test -s dist/modules/versus.html
-          node -e "const m=require('./docs/RELEASE_MANIFEST_v0.4.0.json'); if(m.version!=='0.4.0'||m.counts.fighters!==93||m.counts.loreMoves!==930) process.exit(1)"
+          node -e "const m=require('./docs/RELEASE_MANIFEST_v0.5.0.json'); if(m.version!=='0.5.0'||m.counts.fighters!==99||m.counts.loreMoves!==990||m.counts.stories!==99||m.counts.finishers!==396||m.counts.paintedArenas!==36||m.verification.passed!==61||m.verification.failed!==0) process.exit(1)"

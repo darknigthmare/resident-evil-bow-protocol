@@ -1,6 +1,6 @@
 # Vérification des opérations et du bestiaire
 
-Exécution : 2026-10-11T08:49:09.293Z. **21 contrôles réussis ; 0 en échec.**
+Exécution : 2026-10-11T13:27:38.277Z. **22 contrôles réussis ; 0 en échec.**
 
 ## Méthode
 
@@ -22,7 +22,7 @@ Prérequis : Node.js, les données compilées et `@napi-rs/canvas`, directement 
 
 ## Couverture
 
-- 389 dossiers consultables ; 93 versions jouables.
+- 389 dossiers consultables ; 99 versions jouables.
 - Pagination, recherche avec accents, filtres par épisode/statut, sources et liens des dossiers, fermeture et retour du focus.
 - Lancement, accusé de réception et résultat du vrai moteur ; origine de fenêtre et identifiant de requête.
 - Huit victoires Arcade, sélection des dix boss, Survie, replays, défaite, retour à la sélection et records persistants.
@@ -32,21 +32,21 @@ Prérequis : Node.js, les données compilées et `@napi-rs/canvas`, directement 
 
 | Mode | Rencontre | P1 | P2 | Gagnant | Images simulées | Vie P1 / P2 |
 |---|---:|---|---|---:|---:|---:|
-| arcade | 1 | re3r-nemesis | re2-g-fourth-form | 1 | 1070 | 10000 / 0 |
-| arcade | 1 | re3r-nemesis | revillage-soldat-zwei | 1 | 1148 | 10000 / 0 |
-| arcade | 2 | re3r-nemesis | revillage-mutated-miranda | 1 | 1220 | 10000 / 0 |
-| arcade | 3 | re3r-nemesis | re4-iron-maiden | 1 | 1194 | 10000 / 0 |
-| arcade | 4 | re3r-nemesis | revillage-mutated-moreau | 1 | 1139 | 10000 / 0 |
-| arcade | 5 | re3r-nemesis | revillage-samca | 1 | 1223 | 10000 / 0 |
-| arcade | 6 | re3r-nemesis | recv-alexia-ashford-third-form | 1 | 1156 | 10000 / 0 |
-| arcade | 7 | re3r-nemesis | re7-mama-mold | 1 | 1063 | 10000 / 0 |
-| arcade | 8 | re3r-nemesis | re4r-osmund-saddler-mutated | 1 | 1139 | 10000 / 0 |
-| arcade | 1 | re3r-nemesis | rerev-sea-creeper | 1 | 1284 | 10000 / 0 |
-| arcade | 1 | re3r-nemesis | re2r-tyrant | 1 | 1034 | 10000 / 0 |
-| survival | 1 | re3r-nemesis | re7-molded | 1 | 1351 | 7052 / 0 |
-| survival | 2 | re3r-nemesis | re2r-tyrant | 1 | 1034 | 8252 / 0 |
-| survival | 1 | re3r-nemesis | re7-molded | 2 | 1076 | 0 / 10000 |
-| arcade | 1 | re3r-nemesis | re2-g-second-form | 1 | 1058 | 10000 / 0 |
+| arcade | 1 | re3r-nemesis | re7-fumer | 1 | 1034 | 10000 / 0 |
+| arcade | 1 | re3r-nemesis | re2-g-third-form | 1 | 1184 | 10000 / 0 |
+| arcade | 2 | re3r-nemesis | re4-bitores-mendez-mutated | 1 | 1064 | 10000 / 0 |
+| arcade | 3 | re3r-nemesis | re3-hunter-gamma | 1 | 1208 | 10000 / 0 |
+| arcade | 4 | re3r-nemesis | re2-ivy | 1 | 1064 | 10000 / 0 |
+| arcade | 5 | re3r-nemesis | rerev-globster | 1 | 1114 | 10000 / 0 |
+| arcade | 6 | re3r-nemesis | re7-jack-baker | 1 | 1175 | 10000 / 0 |
+| arcade | 7 | re3r-nemesis | re7-lucas-baker | 1 | 1208 | 10000 / 0 |
+| arcade | 8 | re3r-nemesis | re7-jack-baker-mutated | 1 | 1139 | 10000 / 0 |
+| arcade | 1 | re3r-nemesis | re6-strelat | 1 | 1047 | 10000 / 0 |
+| arcade | 1 | re3r-nemesis | revillage-sturm | 1 | 1058 | 10000 / 0 |
+| survival | 1 | re3r-nemesis | re2-g-type-adult | 1 | 1411 | 6741 / 0 |
+| survival | 2 | re3r-nemesis | revillage-mutated-miranda | 1 | 1099 | 7941 / 0 |
+| survival | 1 | re3r-nemesis | re1-chimera | 2 | 1214 | 0 / 10000 |
+| arcade | 1 | re3r-nemesis | re4r-iron-maiden | 1 | 1058 | 10000 / 0 |
 
 ## Contrôles
 
@@ -62,6 +62,7 @@ Prérequis : Node.js, les données compilées et `@napi-rs/canvas`, directement 
 - RÉUSSI — Eight real Arcade victories complete the route and persist the record
 - RÉUSSI — Boss Rush selects ten genuine bosses and preserves the selected difficulty
 - RÉUSSI — Apex Mutation selects its twelve fixed forms and matching first chamber
+- RÉUSSI — E-001 Family Protocol selects fourteen Dulvey subjects
 - RÉUSSI — Stylized and cinematic finishes emit one correlated result after their actual sequence
 - RÉUSSI — Survival restores twelve percentage points after actual injuries and carries life into the next engine match
 - RÉUSSI — A replay recorded during reduced-health Survival reproduces the real result

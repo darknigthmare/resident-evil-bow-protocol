@@ -15,6 +15,7 @@ const require = createRequire(import.meta.url);
 const { loadGame, native } = require('./engine-vm.cjs');
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const Data = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/roster.json')));
+const FAMILY_IDS = ['re7-mia-winters-infected','re7-jack-baker','re7-jack-baker-scissor','re7-marguerite-baker','re7-lucas-baker','re7-eveline','re7-jack-baker-mutated','re7-jack-baker-swamp-man','re7-marguerite-baker-mutated','re7-lucas-baker-mutated','re7-eveline-final','re7-fumer','re7-mama-mold','re7-little-crawler'];
 const APEX_IDS = ['re2r-super-tyrant','re3r-stage-2-nemesis','re3r-stage-3-nemesis','re4r-del-lago','re4r-garrador','re4r-iron-maiden','re4r-ramon-salazar-mutated','re4r-osmund-saddler-mutated','revillage-mutated-dimitrescu','revillage-mutated-moreau','revillage-mutated-heisenberg','re6-ustanak'];
 const checks = [], duels = [], notes = [], environments = new Set();
 const clone = x => JSON.parse(JSON.stringify(x));
@@ -346,6 +347,8 @@ async function main() {
     assert.deepEqual(Array.from(pair.ops.window.RE_OPERATIONS.apexIds), APEX_IDS);
     return { opponents: run.route, firstStage: stateNow.stage.id };
   });
+
+  await test('E-001 Family Protocol selects fourteen Dulvey subjects',()=>{const run=pair.start({mode:'family',difficulty:'legend',uid:'re3r-nemesis'}),stateNow=assertActive(pair);assert.equal(run.route.length,14);assert.deepEqual(Array.from(run.route),FAMILY_IDS);assert.equal(stateNow.stage.id,'guest_house_attic_2017');assert.equal(pair.engine.api().getMatchConfig().route,'family');return{opponents:run.route}});
 
   await test('Stylized and cinematic finishes emit one correlated result after their actual sequence', async () => {
     const results = [];
