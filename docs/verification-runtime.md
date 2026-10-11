@@ -1,6 +1,6 @@
 # Vérification du moteur Resident Evil — B.O.W. Protocol
 
-Exécution : 2026-10-11T00:01:00.587Z. Version du contenu : 0.3.0.
+Exécution : 2026-10-11T08:46:40.048Z. Version du contenu : 0.4.0.
 
 **26 contrôles réussis ; 0 contrôle(s) en échec.**
 
@@ -26,10 +26,10 @@ Le contenu compilé doit déjà exister dans `data/roster.json`, `data/chronicle
 
 ## Couverture
 
-- 81 combattants et 810 contrats de techniques.
-- 81 espèces testées contre un adversaire immobile avec la véritable IA.
+- 93 combattants et 930 contrats de techniques.
+- 93 espèces testées contre un adversaire immobile avec la véritable IA.
 - 8 duels CPU complets ciblant notamment les petites et grandes morphologies.
-- 170 images locales réellement décodées.
+- 194 images locales réellement décodées.
 
 ## Duels CPU à vie entière
 

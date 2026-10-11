@@ -82,14 +82,12 @@
       "retained": false
     }
   ],
-  "residentEvilRelease": "0.3.0",
+  "residentEvilRelease": "0.4.0",
   "adaptationNotes": [
-    "81 incarnations cloisonnées par forme et épisode.",
-    "810 techniques auditées : 577 canoniques, 165 anatomiques, 68 de simulation.",
-    "Aucun moveset complet dupliqué parmi les 81 sujets.",
-    "Incident Baker : six formes RE7 passées du dossier documentaire au roster jouable.",
-    "Traçabilité visible dans le Bestiaire, le Laboratoire et l’Archive des movesets.",
-    "Interface originale de confinement avec états FINE, CAUTION et DANGER."
+    "93 incarnations cloisonnées.",
+    "930 techniques auditées.",
+    "Incident Baker conservé.",
+    "Apex Mutation ajoute douze formes terminales et douze chambres."
   ],
   "finalSourceHashes": {
     "src/chronicles-core-v060.js": "d3f3d7afab085481152088739ef99a6389dece01848efaba49b451c6182fd5d9",
@@ -129,27 +127,23 @@
   },
   "browserValidation": "docs/verification-browser.md",
   "loreAudit": {
-    "schema": "re.bow.lore-movesets/2",
-    "profiles": 81,
-    "moves": 810,
-    "canonical": 577,
-    "anatomical": 165,
-    "simulation": 68,
-    "uniqueFullMovesets": 81,
-    "source": "data/lore-movesets.json",
-    "report": "docs/AUDIT_LORE_V030.md",
-    "completeMoveList": "docs/MOVESETS_COMPLETS_V030.md"
+    "profiles": 93,
+    "moves": 930,
+    "canonical": 650,
+    "anatomical": 203,
+    "simulation": 77,
+    "uniqueFullMovesets": 93,
+    "report": "docs/AUDIT_LORE_V040.md",
+    "completeMoveList": "docs/MOVESETS_COMPLETS_V040.md"
   },
   "verification": {
-    "lore": "tests/verify-lore.mjs",
     "engine": "tests/engine-results.json",
     "pages": "tests/pages-results.json",
     "ui": "tests/ui-results.json",
     "summary": "docs/VERIFICATION_FR.md",
-    "executableChecks": 59,
-    "passed": 59,
-    "failed": 0,
-    "canvasBackend": "@napi-rs/canvas in CI; skia-canvas compatible fallback locally"
+    "executableChecks": 60,
+    "passed": 60,
+    "failed": 0
   },
   "releaseDate": "2026-10-11",
   "editableSourceHashes": {
@@ -163,9 +157,8 @@
     "scripts/generate-v030-docs.py": "a2ec3caf93bab19531197238023982e667b090fe331af26131d45e0e223bb69d"
   },
   "deployment": {
-    "projectId": "prj_7UbXOgxYKAaAsyppLP1pth3OIK4M",
+    "projectId": "prj_abPeaRZXnL3rPrzzG3OofsCdDAqp",
     "productionAlias": "https://resident-evil-bow-protocol.vercel.app/",
-    "githubRepository": "darknigthmare/resident-evil-bow-protocol",
-    "status": "v0.3.0 pending verified promotion"
+    "status": "PENDING_V040_PROMOTION"
   }
 }

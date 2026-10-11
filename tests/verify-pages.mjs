@@ -15,6 +15,7 @@ const require = createRequire(import.meta.url);
 const { loadGame, native } = require('./engine-vm.cjs');
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const Data = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/roster.json')));
+const APEX_IDS = ['re2r-super-tyrant','re3r-stage-2-nemesis','re3r-stage-3-nemesis','re4r-del-lago','re4r-garrador','re4r-iron-maiden','re4r-ramon-salazar-mutated','re4r-osmund-saddler-mutated','revillage-mutated-dimitrescu','revillage-mutated-moreau','revillage-mutated-heisenberg','re6-ustanak'];
 const checks = [], duels = [], notes = [], environments = new Set();
 const clone = x => JSON.parse(JSON.stringify(x));
 const equal = (a, b, message) => assert.deepEqual(clone(a), clone(b), message);
@@ -332,6 +333,18 @@ async function main() {
     assert.equal(s.options.aiLevel49, 'legend'); assert.equal(s.stage.id, Data.stages[5].id);
     assert.equal(pair.engine.api().getMatchConfig().route, 'boss');
     return { difficulty: s.options.aiLevel49, opponents: run.route };
+  });
+
+  await test('Apex Mutation selects its twelve fixed forms and matching first chamber', () => {
+    const run = pair.start({ mode: 'apex', difficulty: 'veteran' }), stateNow = assertActive(pair);
+    assert.equal(run.route.length, 12); assert.equal(new Set(run.route).size, 12);
+    assert.deepEqual(Array.from(run.route), APEX_IDS);
+    assert.equal(stateNow.b.f.uid, APEX_IDS[0]);
+    assert.equal(stateNow.stage.id, 'nest_escape_2019');
+    assert.equal(stateNow.options.aiLevel49, 'veteran');
+    assert.equal(pair.engine.api().getMatchConfig().route, 'apex');
+    assert.deepEqual(Array.from(pair.ops.window.RE_OPERATIONS.apexIds), APEX_IDS);
+    return { opponents: run.route, firstStage: stateNow.stage.id };
   });
 
   await test('Stylized and cinematic finishes emit one correlated result after their actual sequence', async () => {

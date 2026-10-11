@@ -2,115 +2,66 @@
 
 Jeu de combat 2D de fans construit à partir du moteur **CQC Versus Legacy v0.60** de Darknigthmare, avec un roster, une progression, une interface et des données Resident Evil indépendants.
 
-**Version 0.3.0 — Incident Baker, 11 octobre 2026.** Cette version porte le roster à **81 incarnations jouables** et transforme six dossiers de *Resident Evil 7 biohazard* en combattants complets, sans fusionner leurs phases ni importer des capacités d’une autre mutation.
+**Version 0.4.0 — Apex Mutation, 11 octobre 2026.** Cette livraison cumulative conserve **Incident Baker** et ajoute douze formes terminales issues de Resident Evil 2 remake, Resident Evil 3 remake, Resident Evil 4 remake, Resident Evil 6 et Resident Evil Village.
 
-## Contenu 0.3.0
+## Contenu
 
-- **81 B.O.W., mutants et antagonistes jouables**, chacun limité à l’épisode et à la forme indiqués.
-- **810 techniques**, soit dix commandes par sujet.
-- **577 techniques canoniques**, reliées à une action ou un comportement documenté.
-- **165 extensions anatomiques**, fondées sur la morphologie visible sans ajouter un pouvoir étranger.
-- **68 traductions de simulation**, nécessaires au jeu de combat et explicitement signalées comme non canoniques.
-- **81 signatures complètes distinctes** : aucun sujet ne reprend intégralement le répertoire d’un autre.
-- **81 Dossiers de confinement** de huit rencontres, soit **648 essais**.
-- **324 conclusions de duel**, **389 fiches de Bestiaire** et **18 configurations d’arène**.
+- **93** incarnations jouables et **930** techniques.
+- **650** techniques canoniques, **203** anatomiques et **77** de simulation.
+- **93** Dossiers de huit rencontres, soit **744** essais.
+- **372** conclusions stylisées, **389** fiches de Bestiaire et **30** configurations d’arène.
+- Sept protocoles : Versus, Dossiers, Arcade, Survie, Boss Rush, Laboratoire et **Apex Mutation**.
 
-L’[Archive des movesets](movesets.html) permet de consulter les 810 techniques avec commande, niveau de preuve, justification, valeurs de simulation, contre-jeu et sources.
+## Apex Mutation
 
-## Incident Baker
-
-| Sujet jouable | Incarnation | Agent | Rôle tactique |
+| Sujet | Incarnation | Agent | Rôle |
 |---|---|---|---|
-| JACK BAKER — FORME MUTÉE | Resident Evil 7 biohazard (2017) | Moisissure / E-001 | COLOSSE MULTI-OCULAIRE |
-| JACK BAKER — SWAMP MAN | Resident Evil 7 biohazard — End of Zoe (2017) | Moisissure / E-001 | POURSUITE RÉGÉNÉRATIVE |
-| MARGUERITE BAKER — FORME MUTÉE | Resident Evil 7 biohazard (2017) | Moisissure / E-001 | EMBUSCADE INSECTOÏDE |
-| LUCAS BAKER — FORME MUTÉE | Resident Evil 7 biohazard — Not a Hero (2017) | Moisissure / E-001 | CONTAMINATION FONGIQUE |
-| EVELINE — FORME FINALE | Resident Evil 7 biohazard (2017) | Moisissure / E-001 | COLONIE TERMINALE |
-| FUMER (WM-002) | Resident Evil 7 biohazard — Not a Hero (2017) | Moisissure blanche / WM-002 | RÉGÉNÉRATION BLANCHE |
+| SUPER TYRANT — T-103 LIBÉRÉ | Resident Evil 2 remake (2019) | Virus-T / T-103 | BERSERKER DU LIMITATEUR ROMPU |
+| NEMESIS — STADE 2 | Resident Evil 3 remake (2020) | Virus-T / parasite NE-α | POURSUITE QUADRUPÈDE |
+| NEMESIS — STADE 3 | Resident Evil 3 remake (2020) | Virus-T / parasite NE-α | MASSE TERMINALE NE-α |
+| DEL LAGO | Resident Evil 4 remake (2023) | Las Plagas | PRÉDATEUR LACUSTRE |
+| GARRADOR | Resident Evil 4 remake (2023) | Las Plagas | BOURREAU AVEUGLE |
+| IRON MAIDEN | Resident Evil 4 remake (2023) | Las Plagas / parasites régénératifs | RÉGÉNÉRATEUR À POINTES |
+| RAMÓN SALAZAR — MUTATION | Resident Evil 4 remake (2023) | Las Plagas dominante | PRÉDATEUR DE LA CHANTRERIE |
+| OSMUND SADDLER — MUTATION | Resident Evil 4 remake (2023) | Las Plagas dominante | ARCHONTE DES PLAGAS |
+| ALCINA DIMITRESCU — MUTATION | Resident Evil Village (2021) | Cadou / mutamycète | DÉMON AILÉ DU CHÂTEAU |
+| SALVATORE MOREAU — MUTATION | Resident Evil Village (2021) | Cadou / mutamycète | LEVIATHAN CORROSIF |
+| KARL HEISENBERG — MUTATION | Resident Evil Village (2021) | Cadou / mutamycète | COLOSSE FERROMAGNÉTIQUE |
+| USTANAK | Resident Evil 6 (2012) | Virus-C | TRAQUEUR À OUTILS INTERCHANGEABLES |
 
-Ces six profils possèdent chacun un sprite en pied, dix techniques écrites pour la phase concernée, quatre conclusions stylisées et un Dossier de huit essais. Les mutations de Jack, Marguerite, Lucas et Eveline restent séparées de leurs autres états.
+Le protocole Apex enchaîne douze affrontements fixes. Chaque adversaire ouvre sa chambre de confinement et conserve son UID, son agent, sa morphologie, sa ressource, son passif et ses dix techniques propres.
 
 ## Jouer
 
 - Production : <https://resident-evil-bow-protocol.vercel.app/>
-- Dépôt : <https://github.com/darknigthmare/resident-evil-bow-protocol>
-- Drive : voir `docs/deployment.json`.
-
-Pour lancer localement avec **Node.js 20 ou ultérieur** :
+- GitHub : <https://github.com/darknigthmare/resident-evil-bow-protocol>
 
 ```sh
 npm start
 ```
 
-Puis ouvrir `http://localhost:5173`. Aucune dépendance n’est nécessaire pour jouer. Les lanceurs `LANCER_WINDOWS.bat` et `LANCER_MAC_LINUX.sh` sont inclus.
-
-Le menu donne accès au Versus, aux Dossiers, à l’Arcade, à la Survie, au Boss Rush, au Laboratoire, au Bestiaire et à l’Archive des movesets.
-
-## Commandes
-
-| Action | Joueur 1 | Joueur 2 |
-|---|---|---|
-| Déplacement, saut, accroupi | Flèches | W A S D |
-| Coup léger / lourd | J / K | F / G |
-| Coup bas | ↓ + J | S + F |
-| Technique neutre / directionnelle | I + direction | T + direction |
-| Prise | U | R |
-| Super / finisher | O | Y |
-| Utilitaire propre au sujet | L | H |
-| Garde | Espace | Q |
-| Dash | Majuscule droite | E |
-
-Les commandes correspondent aux positions physiques QWERTY. Sur AZERTY, les déplacements du joueur 2 correspondent à Q / D / Z / S et sa garde à A. Manettes standard et commandes tactiles sont prises en charge. F1 ouvre le dossier des techniques ; F2 ouvre les conclusions.
-
-## Portée de la fidélité « 1:1 »
-
-La fidélité porte sur l’incarnation, l’épisode, la forme, l’agent biologique, l’anatomie, les familles d’attaque et les comportements documentés. Les formes sont cloisonnées : une créature ne reçoit pas silencieusement les pouvoirs d’une autre mutation, phase ou version.
-
-La livraison ne prétend pas extraire ou reproduire les animations, hitboxes, frames ou valeurs internes des jeux Capcom. Les commandes, timings, dégâts, ressources, collisions, enchaînements, campagnes, affrontements entre époques et finishers sont des adaptations originales du moteur 2D. Cette frontière est visible dans le Bestiaire, le Laboratoire et l’Archive des movesets.
-
-Les niveaux de preuve sont :
-
-- **Canonique** : action ou comportement documenté pour cette incarnation ; seules les valeurs de duel sont adaptées.
-- **Anatomique** : extension prudente de la morphologie ou de la locomotion visibles, sans nouveau pouvoir.
-- **Simulation** : fonction nécessaire au jeu de combat, explicitement non présentée comme canonique.
-
-Le détail complet figure dans [`docs/AUDIT_LORE_V030.md`](docs/AUDIT_LORE_V030.md) et [`docs/MOVESETS_COMPLETS_V030.md`](docs/MOVESETS_COMPLETS_V030.md).
-
-## Interface Resident Evil
-
-La version 0.3.0 unifie les écrans autour d’un terminal de confinement original : noir industriel, rouge d’alerte, vert vital, ambre de précaution, scanlines, dossiers biologiques et états **FINE / CAUTION / DANGER**. L’accueil comprend désormais le panneau **Incident Baker**, alimenté directement par les données du roster.
-
-Cette direction artistique est une création originale pour le fangame ; elle ne recopie pas l’interface ou les ressources d’un titre commercial.
-
-## Développement, compilation et validation
-
-Le contenu éditable se trouve dans `data/`. Pour régénérer le contrat lore et les données navigateur :
+Pour reconstruire le contenu éditable :
 
 ```sh
-python3 scripts/apply-v030-re7-bosses.py
+python3 -m pip install -r requirements-content.txt
+python3 scripts/apply-v040-apex-mutation.py
 python3 scripts/build-lore-movesets.py
 python3 scripts/compile-content.py
-python3 scripts/generate-v030-docs.py
-```
-
-Pour valider et construire :
-
-```sh
 npm run verify
+python3 scripts/generate-v040-docs.py
 npm run build
 ```
 
-La validation actuelle comprend :
+## Fidélité
 
-- l’audit exhaustif des **81 profils et 810 mouvements** ;
-- **26/26** contrôles moteur, IA, ressources, statuts, replays, images et Dossiers ;
-- **20/20** contrôles Bestiaire et Opérations reliés au moteur ;
-- **13/13** contrôles d’interface, navigation et initialisation DOM réelle.
+La fidélité porte sur l’incarnation, l’épisode, l’agent biologique, l’anatomie, la locomotion et les familles d’attaque documentées. Les commandes, timings, dégâts, ressources, collisions, duels croisés et finishers restent des adaptations originales du moteur 2D. Le projet ne revendique pas l’extraction des animations, hitboxes, frames ou paramètres internes des jeux Capcom.
 
-Total : **59/59 contrôles exécutables réussis**, en plus de l’audit exhaustif des données. GitHub Actions réexécute ces contrôles sur chaque push et chaque pull request.
+## Validation
 
-## Sources, crédits et statut
+- Lore : **93/93 profils**, **930/930 techniques**, **93 signatures distinctes**.
+- Moteur et Dossiers : **26/26**.
+- Bestiaire et Opérations : **21/21**.
+- Interface : **13/13**.
+- Total exécutable : **60/60**.
 
-Resident Evil / Biohazard, ses personnages, créatures et lieux appartiennent à leurs ayants droit, dont Capcom. Projet de fans non officiel. Les URL de référence et la provenance des ressources sont conservées dans les données et dans `data/asset-sources.json`.
-
-Le code de base reste attribué au projet CQC Versus Legacy de Darknigthmare. La transposition et les empreintes sont documentées dans `docs/source-provenance.json`. Aucune licence générale sur les ressources Resident Evil n’est accordée par ce dépôt.
+Resident Evil / Biohazard, ses personnages, créatures et lieux appartiennent à leurs ayants droit, dont Capcom. Projet de fans non officiel.
