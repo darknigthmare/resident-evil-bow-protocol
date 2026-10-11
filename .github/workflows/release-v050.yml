@@ -24,13 +24,13 @@ jobs:
       - name: Checkout verified main
         uses: actions/checkout@v4
 
-      - name: Check production promotion gate
+      - name: Check GitHub release gate
         id: gate
         shell: bash
         run: |
           set -euo pipefail
-          status="$(node -p "require('./docs/deployment.json').productionStatus")"
-          if [ "$status" = "READY_V050_PRODUCTION" ]; then
+          status="$(node -p "require('./docs/deployment.json').releaseStatus || 'BLOCKED'")"
+          if [ "$status" = "READY_V050_GITHUB_RELEASE" ]; then
             echo "ready=true" >> "$GITHUB_OUTPUT"
           else
             echo "ready=false" >> "$GITHUB_OUTPUT"
