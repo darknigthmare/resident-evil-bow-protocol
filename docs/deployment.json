@@ -8,11 +8,25 @@
   "version": "0.5.0",
   "releaseDate": "2026-10-11",
   "developmentBranch": "codex/v0.5-e001-family-protocol",
-  "productionStatus": "PENDING_V050_PROMOTION",
+  "mainCommit": "4c2deddd175c99d535da1b32215c100653422569",
+  "productionStatus": "VERCEL_DAILY_QUOTA_BLOCKED",
+  "productionBlock": {
+    "provider": "Vercel",
+    "status": 402,
+    "code": "api-deployments-free-per-day",
+    "message": "Resource is limited - try again in 24 hours (more than 100 deployments created through the API on the Hobby plan).",
+    "retryAfterSeconds": 86400,
+    "requestId": "arn1:sfo1::2xj99-1791725654753-4fe5ef75b65c",
+    "currentPublicVersion": "0.4.0",
+    "targetVersion": "0.5.0"
+  },
+  "releaseStatus": "READY_V050_GITHUB_RELEASE",
   "verification": {
     "executableChecks": 61,
     "passed": 61,
-    "failed": 0
+    "failed": 0,
+    "mainWorkflowRun": 38143619536,
+    "mainWorkflowConclusion": "success"
   },
   "familyRoutePath": "/operations.html?mode=family"
 }
