@@ -1,6 +1,6 @@
 # Vérification du moteur Resident Evil — B.O.W. Protocol
 
-Exécution : 2026-10-11T13:27:33.453Z. Version du contenu : 0.5.0.
+Exécution : 2026-10-11T23:59:44.699Z. Version du contenu : 0.6.0.
 
 **26 contrôles réussis ; 0 contrôle(s) en échec.**
 
@@ -26,10 +26,10 @@ Le contenu compilé doit déjà exister dans `data/roster.json`, `data/chronicle
 
 ## Couverture
 
-- 99 combattants et 990 contrats de techniques.
-- 99 espèces testées contre un adversaire immobile avec la véritable IA.
+- 115 combattants et 1150 contrats de techniques.
+- 115 espèces testées contre un adversaire immobile avec la véritable IA.
 - 8 duels CPU complets ciblant notamment les petites et grandes morphologies.
-- 206 images locales réellement décodées.
+- 222 images locales réellement décodées.
 
 ## Duels CPU à vie entière
 
@@ -72,6 +72,10 @@ Le contenu compilé doit déjà exister dans `data/roster.json`, `data/chronicle
 - RÉUSSI — The actual UI engine records and replays a complete CPU match identically
 - RÉUSSI — Corrupted replays are rejected and truncated replays pause with an explicit incomplete state
 - RÉUSSI — Cinematic contracts draw actual references for hero, before, after and ending scenes
+
+## Périmètre signalé
+
+- Stages use the visible simulation fallback when no background was declared. re5_060_adjule, re5_060_big_man_majini, re5_060_chainsaw_majini, re5_060_executioner, re5_060_gatling_gun_majini, re5_060_jill_valentine_enemy, re5_060_licker_beta, re5_060_reaper, re5_060_popokarimu, re5_060_ndesu, re5_060_irving, re5_060_u_8, re5_060_uroboros, re5_060_uroboros_mkono, re5_060_uroboros_aheri, re5_060_uroboros_albert_wesker
 
 ## Traçabilité
 

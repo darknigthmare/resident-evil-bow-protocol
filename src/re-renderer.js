@@ -404,6 +404,8 @@
         -bodyWidth / 2, -bodyHeight, bodyWidth, bodyHeight);
       ctx.restore();
     } else silhouettePlaceholder(ctx, f, entry, bodyHeight);
+    if(f?.fidelity?.visualStatus?.includes('provisional')){ctx.fillStyle='#deb877';ctx.font='9px monospace';ctx.textAlign='center';ctx.fillText('VISUEL PROVISOIRE',0,20);}
+    if(pose.actor?.statuses?.exposed?.t>0){ctx.strokeStyle='#e6b862';ctx.lineWidth=2;ctx.strokeRect(-bodyWidth/2-8,-bodyHeight-8,bodyWidth+16,bodyHeight+13);ctx.fillStyle='#f1cc81';ctx.font='11px monospace';ctx.textAlign='center';ctx.fillText('NOYAU EXPOSÉ',0,-bodyHeight-17);}
     if (!pose.knockdown) drawAttackAccent(ctx, f, face, bodyHeight, bodyWidth, pose);
     ctx.restore();
     return true;
@@ -473,6 +475,7 @@
   function drawStage(ctx, stage, time = 0, camera = 0, preview = false) {
     if (!ctx) return true;
     const s = stage || root.RE_DATA?.stages?.[0] || {};
+    if(s.re5Scene&&root.RE5_SCENES?.draw(ctx,s,root.matchMedia?.('(prefers-reduced-motion: reduce)').matches?0:time,camera,preview))return true;
     const entry = requestAsset(s.background || s.image || '', 'stage');
     const miniBinding = ctx.canvas?.id === 'stageMini' ? { id: s.id, serial: ++revision } : null;
     if (miniBinding) stageBindings.set(ctx.canvas, miniBinding);
@@ -497,6 +500,7 @@
 
   function preloadStage(stage) {
     const s = typeof stage === 'string' ? root.RE_DATA?.stages?.find(item => item.id === stage) : stage;
+    if(s?.re5Scene&&root.RE5_SCENES?.themes.includes(s.re5Scene))return Promise.resolve({ok:true,path:'procedural:'+s.id});
     const entry = requestAsset(s?.background || s?.image || '', 'stage');
     if (!entry) return Promise.resolve({ ok: false, path: '' });
     if (entry.state === 'ready' || entry.state === 'error') return Promise.resolve({ ok: entry.state === 'ready', path: entry.path });

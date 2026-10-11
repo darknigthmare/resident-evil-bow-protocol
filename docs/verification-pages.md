@@ -1,6 +1,6 @@
 # Vérification des opérations et du bestiaire
 
-Exécution : 2026-10-11T13:27:38.277Z. **22 contrôles réussis ; 0 en échec.**
+Exécution : 2026-10-11T23:59:52.884Z. **22 contrôles réussis ; 0 en échec.**
 
 ## Méthode
 
@@ -22,7 +22,7 @@ Prérequis : Node.js, les données compilées et `@napi-rs/canvas`, directement 
 
 ## Couverture
 
-- 389 dossiers consultables ; 99 versions jouables.
+- 389 dossiers consultables ; 115 versions jouables.
 - Pagination, recherche avec accents, filtres par épisode/statut, sources et liens des dossiers, fermeture et retour du focus.
 - Lancement, accusé de réception et résultat du vrai moteur ; origine de fenêtre et identifiant de requête.
 - Huit victoires Arcade, sélection des dix boss, Survie, replays, défaite, retour à la sélection et records persistants.
@@ -32,21 +32,21 @@ Prérequis : Node.js, les données compilées et `@napi-rs/canvas`, directement 
 
 | Mode | Rencontre | P1 | P2 | Gagnant | Images simulées | Vie P1 / P2 |
 |---|---:|---|---|---:|---:|---:|
-| arcade | 1 | re3r-nemesis | re7-fumer | 1 | 1034 | 10000 / 0 |
-| arcade | 1 | re3r-nemesis | re2-g-third-form | 1 | 1184 | 10000 / 0 |
-| arcade | 2 | re3r-nemesis | re4-bitores-mendez-mutated | 1 | 1064 | 10000 / 0 |
-| arcade | 3 | re3r-nemesis | re3-hunter-gamma | 1 | 1208 | 10000 / 0 |
-| arcade | 4 | re3r-nemesis | re2-ivy | 1 | 1064 | 10000 / 0 |
-| arcade | 5 | re3r-nemesis | rerev-globster | 1 | 1114 | 10000 / 0 |
-| arcade | 6 | re3r-nemesis | re7-jack-baker | 1 | 1175 | 10000 / 0 |
-| arcade | 7 | re3r-nemesis | re7-lucas-baker | 1 | 1208 | 10000 / 0 |
-| arcade | 8 | re3r-nemesis | re7-jack-baker-mutated | 1 | 1139 | 10000 / 0 |
-| arcade | 1 | re3r-nemesis | re6-strelat | 1 | 1047 | 10000 / 0 |
-| arcade | 1 | re3r-nemesis | revillage-sturm | 1 | 1058 | 10000 / 0 |
-| survival | 1 | re3r-nemesis | re2-g-type-adult | 1 | 1411 | 6741 / 0 |
-| survival | 2 | re3r-nemesis | revillage-mutated-miranda | 1 | 1099 | 7941 / 0 |
-| survival | 1 | re3r-nemesis | re1-chimera | 2 | 1214 | 0 / 10000 |
-| arcade | 1 | re3r-nemesis | re4r-iron-maiden | 1 | 1058 | 10000 / 0 |
+| arcade | 1 | re3r-nemesis | rerev-sea-creeper | 1 | 1284 | 10000 / 0 |
+| arcade | 1 | re3r-nemesis | revillage-donna-angie | 1 | 1194 | 10000 / 0 |
+| arcade | 2 | re3r-nemesis | revillage-moroaica | 1 | 1206 | 10000 / 0 |
+| arcade | 3 | re3r-nemesis | rerev-sea-creeper | 1 | 1114 | 10000 / 0 |
+| arcade | 4 | re3r-nemesis | rerev-draghignazzo | 1 | 1220 | 10000 / 0 |
+| arcade | 5 | re3r-nemesis | revillage-urias | 1 | 1184 | 10000 / 0 |
+| arcade | 6 | re3r-nemesis | revillage-sturm | 1 | 1148 | 10000 / 0 |
+| arcade | 7 | re3r-nemesis | re2-g-type-adult | 1 | 1156 | 10000 / 0 |
+| arcade | 8 | re3r-nemesis | revillage-lycan | 1 | 1208 | 10000 / 0 |
+| arcade | 1 | re3r-nemesis | re4-osmund-saddler-enemy | 1 | 1201 | 10000 / 0 |
+| arcade | 1 | re3r-nemesis | recv-tyrant | 1 | 1034 | 10000 / 0 |
+| survival | 1 | re3r-nemesis | revillage-karl-heisenberg | 1 | 1434 | 7126 / 0 |
+| survival | 2 | re3r-nemesis | revillage-lycan-large | 1 | 1056 | 8326 / 0 |
+| survival | 1 | re3r-nemesis | re2-licker | 2 | 1260 | 0 / 10000 |
+| arcade | 1 | re3r-nemesis | re4r-ramon-salazar | 1 | 1158 | 10000 / 0 |
 
 ## Contrôles
 

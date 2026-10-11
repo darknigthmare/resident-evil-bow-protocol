@@ -1,25 +1,48 @@
 {
-  "generatedAt": "2026-10-11T13:27:33.453Z",
-  "version": "0.5.0",
+  "generatedAt": "2026-10-11T23:59:44.699Z",
+  "version": "0.6.0",
   "method": "Real delivered JavaScript, deterministic combat CPU, controlled DOM and native Canvas (@napi-rs/canvas). No browser/CSS layout or physical controller verification.",
   "passed": 26,
   "failed": 0,
   "sourceSHA256": {
-    "src/combat-foundation-v060.js": "2e0c95117247e1f38499acd9b383c2bce55789e663ac418131a1444c05867375",
-    "src/unified-engine-v060.js": "831c448a1f92fd65a669a5fe0ddae297f5b446964f6a0aacca97d09bd0c67ba3",
+    "src/combat-foundation-v060.js": "c88ee2245c89695a961c62c599446b9e2523d082b9c8bfe6209427ac70fcd36f",
+    "src/unified-engine-v060.js": "730a2da03e5c8e6c3d87af8519db0860fde413e683e970b0593f8c8c0da98e4c",
     "src/chronicles-core-v060.js": "d3f3d7afab085481152088739ef99a6389dece01848efaba49b451c6182fd5d9",
-    "src/re-renderer.js": "6242a30c8aa9103f6e29fd4e6c86932ec670175e1ade39d3af631bfd9bc15c0a",
-    "src/re-data.js": "535fd2d42c99bd69a926de6e36145099011f59a58bbcd10ae01ecca212684117",
+    "src/re-renderer.js": "542e8bd0253c534c737a92e0f0fa258cf75b816a83572a6032221ce4cc1e4e13",
+    "src/re-data.js": "7ecf3e7a09a6543b984bd7ee630f985917aea259f92970b981069e2e7cb26b8c",
     "tests/engine-vm.cjs": "ec53cb693def75a0c70a2ec5d72ea006d224946906019d58f86ddebf3570a831"
   },
   "coverage": {
-    "fighters": 99,
-    "moveContracts": 990,
+    "fighters": 115,
+    "moveContracts": 1150,
     "actualCPUDuels": 8,
-    "CPUReadinessSpecies": 99,
-    "decodedImages": 206
+    "CPUReadinessSpecies": 115,
+    "decodedImages": 222
   },
-  "notes": [],
+  "notes": [
+    {
+      "category": "arenas",
+      "note": "Stages use the visible simulation fallback when no background was declared.",
+      "stages": [
+        "re5_060_adjule",
+        "re5_060_big_man_majini",
+        "re5_060_chainsaw_majini",
+        "re5_060_executioner",
+        "re5_060_gatling_gun_majini",
+        "re5_060_jill_valentine_enemy",
+        "re5_060_licker_beta",
+        "re5_060_reaper",
+        "re5_060_popokarimu",
+        "re5_060_ndesu",
+        "re5_060_irving",
+        "re5_060_u_8",
+        "re5_060_uroboros",
+        "re5_060_uroboros_mkono",
+        "re5_060_uroboros_aheri",
+        "re5_060_uroboros_albert_wesker"
+      ]
+    }
+  ],
   "duels": [
     {
       "p1": "re1-cerberus",
@@ -1242,6 +1265,134 @@
       "starts": 13,
       "denied": 0,
       "resource": 18.799999999999983
+    },
+    {
+      "uid": "re5-adjule",
+      "hits": 17,
+      "damage": 10000,
+      "starts": 19,
+      "denied": 0,
+      "resource": 4.929999999999997
+    },
+    {
+      "uid": "re5-big-man-majini",
+      "hits": 12,
+      "damage": 7368,
+      "starts": 19,
+      "denied": 0,
+      "resource": 5.0800000000002825
+    },
+    {
+      "uid": "re5-chainsaw-majini",
+      "hits": 14,
+      "damage": 10000,
+      "starts": 17,
+      "denied": 0,
+      "resource": 71.88000000000002
+    },
+    {
+      "uid": "re5-executioner",
+      "hits": 9,
+      "damage": 10000,
+      "starts": 11,
+      "denied": 0,
+      "resource": 12.500000000000043
+    },
+    {
+      "uid": "re5-gatling-gun-majini",
+      "hits": 58,
+      "damage": 5703,
+      "starts": 17,
+      "denied": 0,
+      "resource": 68
+    },
+    {
+      "uid": "re5-jill-valentine-enemy",
+      "hits": 60,
+      "damage": 5905,
+      "starts": 18,
+      "denied": 0,
+      "resource": 15
+    },
+    {
+      "uid": "re5-licker-beta",
+      "hits": 15,
+      "damage": 10000,
+      "starts": 18,
+      "denied": 0,
+      "resource": 2.32
+    },
+    {
+      "uid": "re5-reaper",
+      "hits": 9,
+      "damage": 3530,
+      "starts": 17,
+      "denied": 0,
+      "resource": 17.080000000000247
+    },
+    {
+      "uid": "re5-popokarimu",
+      "hits": 12,
+      "damage": 5712,
+      "starts": 17,
+      "denied": 0,
+      "resource": 44.29999999999994
+    },
+    {
+      "uid": "re5-ndesu",
+      "hits": 6,
+      "damage": 7332,
+      "starts": 17,
+      "denied": 0,
+      "resource": 16.089999999999982
+    },
+    {
+      "uid": "re5-irving",
+      "hits": 12,
+      "damage": 10000,
+      "starts": 15,
+      "denied": 0,
+      "resource": 11.769999999999996
+    },
+    {
+      "uid": "re5-u-8",
+      "hits": 11,
+      "damage": 9887,
+      "starts": 17,
+      "denied": 0,
+      "resource": 17.200000000000472
+    },
+    {
+      "uid": "re5-uroboros",
+      "hits": 15,
+      "damage": 10000,
+      "starts": 17,
+      "denied": 0,
+      "resource": 5.550000000000077
+    },
+    {
+      "uid": "re5-uroboros-mkono",
+      "hits": 12,
+      "damage": 10000,
+      "starts": 12,
+      "denied": 0,
+      "resource": 13.079999999999979
+    },
+    {
+      "uid": "re5-uroboros-aheri",
+      "hits": 16,
+      "damage": 5188,
+      "starts": 17,
+      "denied": 0,
+      "resource": 4.8499999999999455
+    },
+    {
+      "uid": "re5-uroboros-albert-wesker",
+      "hits": 11,
+      "damage": 10000,
+      "starts": 13,
+      "denied": 0,
+      "resource": 22.42000000000013
     }
   ],
   "decodedImages": [
@@ -2428,6 +2579,102 @@
       "bytes": 227480
     },
     {
+      "path": "assets/catalog/re5-adjule.png",
+      "width": 450,
+      "height": 360,
+      "bytes": 164996
+    },
+    {
+      "path": "assets/catalog/re5-big-man-majini.png",
+      "width": 450,
+      "height": 360,
+      "bytes": 170810
+    },
+    {
+      "path": "assets/catalog/re5-chainsaw-majini.png",
+      "width": 450,
+      "height": 360,
+      "bytes": 104260
+    },
+    {
+      "path": "assets/catalog/re5-executioner.png",
+      "width": 450,
+      "height": 360,
+      "bytes": 160757
+    },
+    {
+      "path": "assets/catalog/re5-gatling-gun-majini.png",
+      "width": 450,
+      "height": 360,
+      "bytes": 176112
+    },
+    {
+      "path": "assets/catalog/re5-jill-valentine-enemy.png",
+      "width": 450,
+      "height": 360,
+      "bytes": 123700
+    },
+    {
+      "path": "assets/catalog/re5-licker-beta.png",
+      "width": 450,
+      "height": 360,
+      "bytes": 173360
+    },
+    {
+      "path": "assets/catalog/re5-reaper.png",
+      "width": 450,
+      "height": 360,
+      "bytes": 211723
+    },
+    {
+      "path": "assets/catalog/re5-popokarimu.png",
+      "width": 450,
+      "height": 360,
+      "bytes": 273618
+    },
+    {
+      "path": "assets/catalog/re5-ndesu.png",
+      "width": 450,
+      "height": 360,
+      "bytes": 253228
+    },
+    {
+      "path": "assets/catalog/re5-irving.png",
+      "width": 450,
+      "height": 360,
+      "bytes": 224678
+    },
+    {
+      "path": "assets/catalog/re5-u-8.png",
+      "width": 450,
+      "height": 360,
+      "bytes": 118825
+    },
+    {
+      "path": "assets/catalog/re5-uroboros.png",
+      "width": 450,
+      "height": 360,
+      "bytes": 176489
+    },
+    {
+      "path": "assets/catalog/re5-uroboros-mkono.png",
+      "width": 450,
+      "height": 360,
+      "bytes": 161601
+    },
+    {
+      "path": "assets/catalog/re5-uroboros-aheri.png",
+      "width": 450,
+      "height": 360,
+      "bytes": 177710
+    },
+    {
+      "path": "assets/catalog/re5-uroboros-albert-wesker.png",
+      "width": 450,
+      "height": 360,
+      "bytes": 170221
+    },
+    {
       "path": "assets/arenas/spencer.png",
       "width": 1672,
       "height": 941,
@@ -2486,28 +2733,28 @@
     {
       "name": "Every delivered JavaScript source parses",
       "pass": true,
-      "milliseconds": 51,
+      "milliseconds": 74,
       "detail": {
-        "sources": 22
+        "sources": 25
       }
     },
     {
       "name": "Compiled browser datasets exactly match their editable release records",
       "pass": true,
-      "milliseconds": 85,
+      "milliseconds": 143,
       "detail": {
-        "fighters": 99,
-        "stages": 36,
+        "fighters": 115,
+        "stages": 52,
         "catalog": 389
       }
     },
     {
       "name": "Unique playable identities, physical dimensions and complete authored move contracts",
       "pass": true,
-      "milliseconds": 7,
+      "milliseconds": 10,
       "detail": {
-        "fighters": 99,
-        "moves": 990,
+        "fighters": 115,
+        "moves": 1150,
         "kinds": [
           "melee",
           "mobility",
@@ -2516,18 +2763,36 @@
           "projectile",
           "recover",
           "heal",
-          "trap"
+          "trap",
+          "reload"
         ]
       }
     },
     {
       "name": "All referenced local portraits, full-body sprites and declared arena files decode",
       "pass": true,
-      "milliseconds": 875,
+      "milliseconds": 1050,
       "detail": {
-        "decoded": 206,
+        "decoded": 222,
         "stagesWithImage": 36,
-        "fallbackStages": []
+        "fallbackStages": [
+          "re5_060_adjule",
+          "re5_060_big_man_majini",
+          "re5_060_chainsaw_majini",
+          "re5_060_executioner",
+          "re5_060_gatling_gun_majini",
+          "re5_060_jill_valentine_enemy",
+          "re5_060_licker_beta",
+          "re5_060_reaper",
+          "re5_060_popokarimu",
+          "re5_060_ndesu",
+          "re5_060_irving",
+          "re5_060_u_8",
+          "re5_060_uroboros",
+          "re5_060_uroboros_mkono",
+          "re5_060_uroboros_aheri",
+          "re5_060_uroboros_albert_wesker"
+        ]
       }
     },
     {
@@ -2535,22 +2800,22 @@
       "pass": true,
       "milliseconds": 1,
       "detail": {
-        "routes": 99,
-        "duels": 792
+        "routes": 115,
+        "duels": 920
       }
     },
     {
       "name": "All real repertoires start, spend resources and activate only after their startup",
       "pass": true,
-      "milliseconds": 155,
+      "milliseconds": 332,
       "detail": {
-        "executed": 990
+        "executed": 1150
       }
     },
     {
       "name": "Resource exhaustion blocks paid attacks, then passive recovery restores eligibility",
       "pass": true,
-      "milliseconds": 4,
+      "milliseconds": 8,
       "detail": {
         "fighter": "re1-cerberus",
         "paidStarts": 5,
@@ -2561,12 +2826,12 @@
     {
       "name": "The real recovery utility is delayed and clamps to the reserve capacity",
       "pass": true,
-      "milliseconds": 1
+      "milliseconds": 2
     },
     {
       "name": "Organic healing uses real recoverable damage, has a budget and can be interrupted",
       "pass": true,
-      "milliseconds": 5,
+      "milliseconds": 8,
       "detail": {
         "fighter": "re7-molded",
         "totalHealed": 900,
@@ -2576,7 +2841,7 @@
     {
       "name": "A morphologically small attacker really leaves the floor during its authored leap",
       "pass": true,
-      "milliseconds": 2,
+      "milliseconds": 3,
       "detail": {
         "fighter": "re1-cerberus",
         "impulse": -6
@@ -2594,7 +2859,7 @@
     {
       "name": "Authored projectiles travel into real targets and ranged CPU adapts to a crouched small body",
       "pass": true,
-      "milliseconds": 25,
+      "milliseconds": 42,
       "detail": {
         "shooter": "re3r-nemesis",
         "projectile": "Lance-roquettes M202",
@@ -2627,16 +2892,16 @@
     {
       "name": "Every playable species closes distance and damages an idle opponent through the real CPU",
       "pass": true,
-      "milliseconds": 1249,
+      "milliseconds": 2390,
       "detail": {
-        "fighters": 99,
-        "totalHits": 1548
+        "fighters": 115,
+        "totalHits": 1837
       }
     },
     {
       "name": "Eight complete CPU duels cover asymmetric matchups at full initial life",
       "pass": true,
-      "milliseconds": 174,
+      "milliseconds": 259,
       "detail": {
         "duels": 8,
         "knockouts": 8,
@@ -2657,7 +2922,7 @@
     {
       "name": "Seeded CPU commands reproduce the same simulation without consulting AI during replay",
       "pass": true,
-      "milliseconds": 88,
+      "milliseconds": 112,
       "detail": {
         "recordedFrames": 1364,
         "physicsHash": "a6442170f2f87c4bf7062c718d9535c86797f1c9355703831ce7ca54b6e3e380"
@@ -2666,10 +2931,10 @@
     {
       "name": "All stories advance through eight validated wins into their own unlocked ending",
       "pass": true,
-      "milliseconds": 50,
+      "milliseconds": 68,
       "detail": {
-        "completedStories": 99,
-        "progressionResults": 792
+        "completedStories": 115,
+        "progressionResults": 920
       }
     },
     {
@@ -2680,12 +2945,12 @@
     {
       "name": "Two-slot saves preserve progression and recover from a corrupted latest write",
       "pass": true,
-      "milliseconds": 1
+      "milliseconds": 2
     },
     {
       "name": "The actual versus HTML initializes its real controls, engine and reference renderer",
       "pass": true,
-      "milliseconds": 442,
+      "milliseconds": 700,
       "detail": {
         "source": "modules/versus.html",
         "renderer": "RE-1.0 / CQC-0.60",
@@ -2695,12 +2960,12 @@
     {
       "name": "Actual keyboard movement, pause and rematch preserve the chosen match configuration",
       "pass": true,
-      "milliseconds": 103
+      "milliseconds": 161
     },
     {
       "name": "The actual UI engine records and replays a complete CPU match identically",
       "pass": true,
-      "milliseconds": 306,
+      "milliseconds": 484,
       "detail": {
         "winner": 0,
         "frames": 1297,
@@ -2711,12 +2976,12 @@
     {
       "name": "Corrupted replays are rejected and truncated replays pause with an explicit incomplete state",
       "pass": true,
-      "milliseconds": 33
+      "milliseconds": 51
     },
     {
       "name": "Cinematic contracts draw actual references for hero, before, after and ending scenes",
       "pass": true,
-      "milliseconds": 689,
+      "milliseconds": 944,
       "detail": {
         "species": [
           "re3r-nemesis",
