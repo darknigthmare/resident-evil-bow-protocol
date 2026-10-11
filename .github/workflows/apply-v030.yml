@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
-      PATCH_URL: "https://sdmntprpolandcentral.oaiusercontent.com/files/00000000-a328-820a-b7a0-1d3f6272b53b/raw?se=2026-10-11T00%3A04%3A25Z&sp=r&sv=2026-02-06&sr=b&scid=c515468c-439c-5d56-b562-1db673b9e236&skoid=e5f84a89-964a-4fd3-92c2-c2cb3a12ea16&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-10T05%3A49%3A05Z&ske=2026-10-11T05%3A49%3A05Z&sks=b&skv=2026-02-06&sig=sJ1/a5qHSm64Qhf26fH9NNOS24ewzYMphpmy7G1fopM%3D"
+      PATCH_URL: "https://sdmntprpolandcentral.oaiusercontent.com/files/00000000-c430-820a-b74a-fad3a87331d1/raw?se=2026-10-11T00%3A05%3A25Z&sp=r&sv=2026-02-06&sr=b&scid=ae35c328-c474-5efa-8b9d-70b0112ca954&skoid=e5f84a89-964a-4fd3-92c2-c2cb3a12ea16&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-10T05%3A49%3A05Z&ske=2026-10-11T05%3A49%3A05Z&sks=b&skv=2026-02-06&sig=wzctSedzAEpgStBIK/bb84Wn5wCJ8EJ/W957a4zYP9I%3D"
       PATCH_SHA256: "1d1df949a1e23bf123c19d73e79bfdefa0f4d52734c6dfea5067f82e04546a9f"
     steps:
       - name: Checkout development branch
@@ -72,7 +72,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          rm -f .github/workflows/apply-v030.yml .github/workflows/bootstrap-source.yml .github/workflows/bootstrap-source-v2.yml
+          rm -f .github/workflows/apply-v030.yml .github/workflows/ci.yml .github/workflows/bootstrap-source.yml .github/workflows/bootstrap-source-v2.yml
           git config user.name "B.O.W. Protocol CI"
           git config user.email "actions@users.noreply.github.com"
           git add -A
