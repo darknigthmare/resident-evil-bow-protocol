@@ -40,6 +40,7 @@ jobs:
         run: |
           python3 scripts/bootstrap-v050-data.py
           python3 scripts/bootstrap-v050-ui.py
+          python3 scripts/fix-v050-runtime.py
           python3 scripts/build-lore-movesets.py
           python3 scripts/compile-content.py
 
