@@ -40,8 +40,8 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          test -s docs/RELEASE_MANIFEST_v0.3.0.json
+          test -s docs/RELEASE_MANIFEST_v0.4.0.json
           test -s dist/index.html
           test -s dist/movesets.html
           test -s dist/modules/versus.html
-          node -e "const m=require('./docs/RELEASE_MANIFEST_v0.3.0.json'); if(m.version!=='0.3.0'||m.counts.fighters!==81||m.counts.loreMoves!==810) process.exit(1)"
+          node -e "const m=require('./docs/RELEASE_MANIFEST_v0.4.0.json'); if(m.version!=='0.4.0'||m.counts.fighters!==93||m.counts.loreMoves!==930) process.exit(1)"
