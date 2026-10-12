@@ -1,0 +1,85 @@
+{
+  "version": "0.6.1",
+  "codename": "Containment Continuity",
+  "counts": {
+    "fighters": 115,
+    "stories": 115,
+    "authored": 115,
+    "structured": 115,
+    "duels": 920,
+    "introPanels": 345,
+    "outroPanels": 345,
+    "paragraphs": 690,
+    "illustratedPortraits": 115,
+    "paintedArenas": 9,
+    "catalog": 389,
+    "finishers": 460,
+    "loreProfiles": 115,
+    "loreMoves": 1150,
+    "canonicalMoves": 727,
+    "anatomicalMoves": 290,
+    "simulationMoves": 133,
+    "proceduralArenas": 16,
+    "arenaConfigurations": 52
+  },
+  "newPlayableSubjects": 0,
+  "runtimeContract": {
+    "schema": "re.bow.runtime-contract/1",
+    "version": "0.6.1",
+    "digest": "1fdcd5c04080b0868d1da6106af30c187a38a641076e3f8ef66c715302b01745"
+  },
+  "verification": {
+    "passed": 97,
+    "failed": 0,
+    "suites": {
+      "engine": {
+        "passed": 26,
+        "failed": 0
+      },
+      "pages": {
+        "passed": 22,
+        "failed": 0
+      },
+      "ui": {
+        "passed": 13,
+        "failed": 0
+      },
+      "re5": {
+        "passed": 17,
+        "failed": 0
+      },
+      "continuity": {
+        "passed": 19,
+        "failed": 0
+      }
+    },
+    "offlineChromium": {
+      "passed": 10,
+      "failed": 0,
+      "report": "docs/qa-v061-offline-ui.json",
+      "scope": "Chromium offline set_content with local JS/CSS/images in memory. No HTTP navigation, iframe network or physical-phone certification. Descendant overflow is acceptable only within a scroll or clipped container; document width stays within viewport."
+    },
+    "scope": "Executed engine, paired controlled DOM and native Canvas. Evidence labels in movesets are not a canon certification."
+  },
+  "features": [
+    "Validated dual-slot operation checkpoints",
+    "Interrupted encounter restarts with same route/seed/starting health",
+    "Checkpoint import/export and stale-tab conflict detection",
+    "Versioned replay runtime contracts",
+    "Engine-driven laboratory for 1150 existing command slots",
+    "Searchable archive of 460 existing stylized finishers",
+    "Winner-slot identity validation",
+    "Local packaged assets instead of historical Vercel proxy"
+  ],
+  "remaining": {
+    "documentaryWithinExistingCatalog": 274,
+    "referenceOnlyRE5Sprites": 16,
+    "provisionalE001Composites": 6,
+    "spatialWeakpointsImplemented": false,
+    "perMoveSkeletalAnimationImplemented": false,
+    "franchiseExhaustive": false,
+    "cloudSave": false,
+    "legacyReplays": "Kept intact; require their original game version"
+  },
+  "production": "Read current Vercel deployment and alias; a release archive does not prove production promotion."
+}

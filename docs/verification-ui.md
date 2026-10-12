@@ -1,8 +1,8 @@
-# Vérification de l’interface Resident Evil — v0.6.0
+# Vérification de l’interface Resident Evil — v0.6.1
 
 - Résultat : **RÉUSSI**
 - Contrôles : **13/13**
-- Portée : 115 sujets, 1150 techniques, thème bow-v060.css, compteurs publics, Incident Baker, Apex Mutation, traçabilité lore, états FINE/CAUTION/DANGER et navigation.
+- Portée : 115 sujets, 1150 techniques, thème bow-v061.css, compteurs publics, Incident Baker, Apex Mutation, traçabilité lore, états FINE/CAUTION/DANGER et navigation.
 - Portée technique : contrôle structurel et initialisation réelle de l’accueil et de l’Archive des movesets dans le DOM contrôlé. Le rendu CSS pixel par pixel et les résolutions physiques ne sont pas revendiqués.
 
 - ✅ Every primary screen loads the current containment theme

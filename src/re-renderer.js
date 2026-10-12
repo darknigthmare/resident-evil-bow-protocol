@@ -6,6 +6,7 @@
   'use strict';
 
   const doc = root.document;
+  const scriptAssetRoot = doc.currentScript?.src ? new URL('../', doc.currentScript.src).href : null;
   const WIDTH = 1280, HEIGHT = 720;
   const LIMITS = Object.freeze({ portrait: 40, sprite: 8, stage: 4 });
   const PRIORITY = { stage: 3, sprite: 2, portrait: 1 };
@@ -26,7 +27,7 @@
     if (/^(?:data:|blob:|https?:|file:)/i.test(key)) return key;
     if (!key) return '';
     try {
-      return new URL('../' + key.replace(/^\//, ''), root.RE_ASSET_BASE || doc.baseURI).href;
+      return root.RE_ASSET_BASE ? new URL('../' + key.replace(/^\//, ''), root.RE_ASSET_BASE).href : new URL(key.replace(/^\//, ''), scriptAssetRoot || new URL('../', doc.baseURI).href).href;
     } catch (_) {
       return key;
     }
