@@ -1,3 +1,5 @@
-# Historical release workflows
+# Historical workflows
 
-The workflows for v0.4, v0.5 and v0.6 are preserved here rather than in `.github/workflows/` so future package/configuration changes do not trigger obsolete publishers. Existing tags and release assets are unchanged. The active publisher is `.github/workflows/release-v061.yml`, guarded by the actual package version and full QA.
+Release publishers v0.4, v0.5, v0.6 and v0.6.1 are archived here instead of `.github/workflows/` to prevent obsolete releases being triggered by current package changes. Existing tags and release assets are unchanged. The active publisher is `.github/workflows/release-v070.yml`, guarded by package version and complete QA.
+
+The completed v0.7 public-reference inspection workflow is retained here for provenance. Its source collector remains in `scripts/inspect-catalog-sources.py`; it does not run automatically. Integration transfer payloads were removed after their checksums, generated content, tests and build all succeeded.
