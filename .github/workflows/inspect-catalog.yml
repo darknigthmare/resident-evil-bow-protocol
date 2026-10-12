@@ -1,0 +1,19 @@
+name: Inspect missing catalog references
+on:
+  push:
+    branches: ['codex/v0.7-catalog-completion']
+    paths: ['.github/workflows/inspect-catalog.yml']
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - run: python3 scripts/inspect-catalog-sources.py
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-missing-catalog-references
+          path: research-output/observations.json
+          retention-days: 1
