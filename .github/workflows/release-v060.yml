@@ -1,0 +1,46 @@
+name: Publish v0.6.0 Release
+on:
+  push:
+    branches: [main]
+    paths: ['package.json', '.github/workflows/release-v060.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: bow-release-v060
+  cancel-in-progress: false
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - run: node -e "if(require('./package.json').version!=='0.6.0')process.exit(1)"
+      - run: npm install --no-save --package-lock=false @napi-rs/canvas@0.1.80
+      - run: npm run verify
+      - run: npm run build
+      - name: Package source and static build
+        run: |
+          git archive --format=zip --prefix=resident-evil-bow-protocol-v0.6.0/ -o BOW_PROTOCOL_v0.6.0_SOURCE.zip HEAD
+          (cd dist && zip -q -r ../BOW_PROTOCOL_v0.6.0_STATIC.zip .)
+          sha256sum BOW_PROTOCOL_v0.6.0_SOURCE.zip BOW_PROTOCOL_v0.6.0_STATIC.zip > BOW_PROTOCOL_v0.6.0_SHA256SUMS.txt
+      - name: Retain exact archives for authenticated Drive backup
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-v060-verified-release
+          path: |
+            BOW_PROTOCOL_v0.6.0_SOURCE.zip
+            BOW_PROTOCOL_v0.6.0_STATIC.zip
+            BOW_PROTOCOL_v0.6.0_SHA256SUMS.txt
+          compression-level: 0
+          retention-days: 7
+          if-no-files-found: error
+      - name: Publish without overwriting an existing release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view v0.6.0 >/dev/null 2>&1; then echo 'Release already exists; no overwrite'; exit 0; fi
+          gh release create v0.6.0 BOW_PROTOCOL_v0.6.0_SOURCE.zip BOW_PROTOCOL_v0.6.0_STATIC.zip BOW_PROTOCOL_v0.6.0_SHA256SUMS.txt --target "$GITHUB_SHA" --title 'B.O.W. Protocol v0.6.0 — Uroboros Ascension' --notes-file docs/RELEASE_NOTES_v0.6.0.md

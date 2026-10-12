@@ -57,7 +57,7 @@ check('Home runtime fills public counters, Incident Baker, Apex Mutation and E-0
   return { incidentSubjects: incidentIds.length, apexSubjects: apexIds.length };
 });
 check('Bestiary communicates full-body status and the audited ten-move contract', () => {
-  assert.match(pages.bestiaire, /RENDU EN PIED \+ MOVESET 10\/10 AUDITÉ/);
+  assert.match(pages.bestiaire, /STATUT VISUEL DÉTAILLÉ \+ MOVESET 10\/10 AUDITÉ/);
   assert.match(codex, /MOVESET 10 (?:SUR|\/) 10 AUDITÉ/i);
   for (const label of ['Agent biologique','Incarnation','Techniques','Actions de référence']) assert.match(codex, new RegExp(label, 'i'));
 });
@@ -67,7 +67,7 @@ check('Technique dossier exposes traceability and adaptation boundaries', () => 
   for (const level of ['CANONIQUE','ANATOMIQUE','SIMULATION']) assert.match(engine, new RegExp(level));
 });
 check('Combat release identifies the current audited build', () => {
-  assert.match(engine, new RegExp(`RE ${version.replaceAll('.', '\\.')} E-001 FAMILY PROTOCOL / CQC 0\\.60`));
+  assert.match(engine, new RegExp(`RE ${version.replaceAll('.', '\\.')} UROBOROS ASCENSION / CQC 0\\.60`));
   assert.match(engine, /PROFIL AUDITÉ · 10 TECHNIQUES/);
   assert.match(engine, /OUVRIR LE MOVESET 10\/10/);
 });
@@ -122,7 +122,7 @@ try {
   assert.equal(env.document.querySelector('#moveCount').textContent, String(moveCount));
   assert.equal(env.document.querySelectorAll('.incident-card').length, incidentIds.length);
   assert.equal(env.document.querySelectorAll('.apex-card').length, apexIds.length);assert.equal(env.document.querySelectorAll('.e001-card').length, familyIds.length);
-  assert.match(env.document.querySelector('#heroName').textContent, /EVELINE/);
+  assert.match(env.document.querySelector('#heroName').textContent, /WESKER/);
   report.push({ name: 'Home screen initializes Incident Baker, Apex Mutation and the six-subject E-001 Family panel', pass: true, detail: { subjects: fighterCount, incidentCards: incidentIds.length, apexCards: apexIds.length } });
   console.log('PASS Home screen initializes Incident Baker, Apex Mutation and the six-subject E-001 Family panel');
   env.dispose();

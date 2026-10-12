@@ -20,7 +20,7 @@
  function open(id){
   const x=catalog.find(x=>x.id===id),f=F.get(id);if(!x)return;focusId=id;
   $('#detailImage').src=f?.sprite||imagePath(x);$('#detailImage').alt=x.name;$('#detailImage').hidden=!imagePath(x)&&!f;
-  $('#detailStatus').textContent=f?'SPÉCIMEN JOUABLE / RENDU EN PIED / MOVESET 10 SUR 10 AUDITÉ':'ARCHIVE DOCUMENTAIRE';$('#detailName').textContent=x.name;$('#detailEpisode').textContent=x.game;
+  $('#detailStatus').textContent=f?('SPÉCIMEN JOUABLE / '+(f.fidelity?.visualStatus?.includes('provisional')?'VISUEL PROVISOIRE':'POSE DE RÉFÉRENCE')+' / MOVESET 10 SUR 10 AUDITÉ'):'ARCHIVE DOCUMENTAIRE';$('#detailName').textContent=x.name;$('#detailEpisode').textContent=x.game;
   $('#detailDescription').textContent=f?.morphology||x.description||'Référence visuelle de la créature dans cet épisode.';
   const facts=f?{'Agent biologique':f.bioAgent,'Profil de combat':f.combat?.role||f.role,'Incarnation':f.ep,'Fidélité':'LORE AUDITÉ · POUVOIRS CLOISONNÉS','Techniques':Object.keys(f.combat?.moves||{}).length+' / 10','Actions de référence':(f.combat?.canonicalAttacks||[]).join(' · ')||'Voir les sources du dossier'}:{'Version':x.game,'Statut':'Référence consultable ; représentation de combat à intégrer'};
   $('#detailFacts').replaceChildren();for(const[k,v]of Object.entries(facts)){const dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=k;dd.textContent=v;$('#detailFacts').append(dt,dd)}

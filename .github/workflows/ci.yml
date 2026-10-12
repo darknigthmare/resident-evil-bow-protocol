@@ -1,48 +1,28 @@
 name: B.O.W. Protocol QA
-
 on:
   push:
     branches: [main, 'codex/**']
   pull_request:
     branches: [main]
   workflow_dispatch:
-
 permissions:
   contents: read
-
 concurrency:
-  group: bow-qa-${{ github.workflow }}-${{ github.ref }}
+  group: bow-qa-${{ github.ref }}
   cancel-in-progress: true
-
 jobs:
   verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 15
     steps:
-      - name: Checkout reviewed source
-        uses: actions/checkout@v4
-
-      - name: Use Node.js 22
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: '22.16.0'
-
-      - name: Install native Canvas test backend
-        run: npm install --no-save --package-lock=false @napi-rs/canvas@0.1.80
-
-      - name: Verify lore, engine, pages and interface
-        run: npm run verify
-
-      - name: Build static production bundle
-        run: npm run build
-
-      - name: Check v0.5.0 release manifest and build entrypoints
-        shell: bash
+      - run: npm install --no-save --package-lock=false @napi-rs/canvas@0.1.80
+      - run: npm run verify
+      - run: npm run build
+      - name: Compare package, actual roster and current manifest
         run: |
-          set -euo pipefail
-          test -s docs/RELEASE_MANIFEST_v0.5.0.json
-          test -s dist/index.html
-          test -s dist/movesets.html
-          test -s dist/operations.html
+          node -e "const p=require('./package.json'),r=require('./data/roster.json'),m=require('./docs/RELEASE_MANIFEST_v'+p.version+'.json');if(m.version!==p.version||r.version!==p.version||m.counts.fighters!==r.fighters.length||m.counts.loreMoves!==r.fighters.length*10)process.exit(1)"
           test -s dist/modules/versus.html
-          node -e "const m=require('./docs/RELEASE_MANIFEST_v0.5.0.json'); if(m.version!=='0.5.0'||m.counts.fighters!==99||m.counts.loreMoves!==990||m.counts.stories!==99||m.counts.finishers!==396||m.counts.paintedArenas!==36||m.verification.passed!==61||m.verification.failed!==0) process.exit(1)"

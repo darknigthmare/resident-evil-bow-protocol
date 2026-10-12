@@ -1,11 +1,11 @@
 {
-  "version": "0.5.0",
-  "fighterCount": 99,
+  "version": "0.6.0",
+  "fighterCount": 115,
   "finishersPerFighter": 4,
-  "finisherCount": 396,
+  "finisherCount": 460,
   "familyCounts": {
-    "beast": 29,
-    "capture": 47,
+    "beast": 34,
+    "capture": 64,
     "blade": 10,
     "mechanical": 7
   },
@@ -14961,6 +14961,2278 @@
       "power": 1.28,
       "speed": 0.65,
       "reach": 1.4
+    },
+    "re5-adjule": {
+      "uid": "re5-adjule",
+      "fighterName": "ADJULE",
+      "episode": "Resident Evil 5 (2009)",
+      "source": "RE5 · 2009",
+      "family": "beast",
+      "tone": "stylized",
+      "basis": "Chien parasité, rapide au sol ; morsure et ouverture de la tête autour du parasite.",
+      "evidence": "simulation",
+      "finishers": [
+        {
+          "id": "re5-adjule::finisher1",
+          "index": 0,
+          "slot": "neutral",
+          "commandP1": "O",
+          "commandP2": "Y",
+          "name": "Assaut de la gueule — Conclusion stylisée",
+          "family": "beast",
+          "tone": "stylized",
+          "duration": 210,
+          "camera": "close",
+          "description": "ADJULE conclut la simulation : Assaut de la gueule.",
+          "loreBasis": "Chien parasité, rapide au sol ; morsure et ouverture de la tête autour du parasite.",
+          "sourceMoves": [
+            "Assaut de la gueule"
+          ],
+          "phases": [
+            "approach",
+            "pounce",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-adjule::finisher2",
+          "index": 1,
+          "slot": "down",
+          "commandP1": "↓ + O",
+          "commandP2": "S + Y",
+          "name": "Gueule parasitée — Conclusion stylisée",
+          "family": "beast",
+          "tone": "stylized",
+          "duration": 226,
+          "camera": "wide",
+          "description": "ADJULE conclut la simulation : Gueule parasitée.",
+          "loreBasis": "Chien parasité, rapide au sol ; morsure et ouverture de la tête autour du parasite.",
+          "sourceMoves": [
+            "Gueule parasitée"
+          ],
+          "phases": [
+            "approach",
+            "pounce",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-adjule::finisher3",
+          "index": 2,
+          "slot": "forward",
+          "commandP1": "AVANT + O",
+          "commandP2": "AVANT + Y",
+          "name": "Bond de prédation — Conclusion stylisée",
+          "family": "beast",
+          "tone": "stylized",
+          "duration": 242,
+          "camera": "low",
+          "description": "ADJULE conclut la simulation : Bond de prédation.",
+          "loreBasis": "Chien parasité, rapide au sol ; morsure et ouverture de la tête autour du parasite.",
+          "sourceMoves": [
+            "Bond de prédation"
+          ],
+          "phases": [
+            "approach",
+            "pounce",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-adjule::finisher4",
+          "index": 3,
+          "slot": "back",
+          "commandP1": "ARRIÈRE + O",
+          "commandP2": "ARRIÈRE + Y",
+          "name": "Saisie canine — Conclusion stylisée",
+          "family": "beast",
+          "tone": "stylized",
+          "duration": 258,
+          "camera": "orbit",
+          "description": "ADJULE conclut la simulation : Saisie canine.",
+          "loreBasis": "Chien parasité, rapide au sol ; morsure et ouverture de la tête autour du parasite.",
+          "sourceMoves": [
+            "Saisie canine"
+          ],
+          "phases": [
+            "approach",
+            "pounce",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        }
+      ],
+      "color": "#765a55",
+      "accent": "#dda898",
+      "visual": {
+        "kind": "quadruped",
+        "width": 156,
+        "height": 104,
+        "drawHeight": 104,
+        "sourceFacing": "front",
+        "asymmetric": true,
+        "fullBody": false,
+        "maxDrawWidth": 430,
+        "morphology": "reference",
+        "body": "reference",
+        "weapon": "none"
+      },
+      "power": 1.0,
+      "speed": 1.18,
+      "reach": 1
+    },
+    "re5-big-man-majini": {
+      "uid": "re5-big-man-majini",
+      "fighterName": "BIG MAN MAJINI",
+      "episode": "Resident Evil 5 (2009)",
+      "source": "RE5 · 2009",
+      "family": "capture",
+      "tone": "stylized",
+      "basis": "Majini massif, spécialiste des coups et de l’écrasement ; aucun projectile biologique.",
+      "evidence": "simulation",
+      "finishers": [
+        {
+          "id": "re5-big-man-majini::finisher1",
+          "index": 0,
+          "slot": "neutral",
+          "commandP1": "O",
+          "commandP2": "Y",
+          "name": "Pilon du port — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 210,
+          "camera": "close",
+          "description": "BIG MAN MAJINI conclut la simulation : Pilon du port.",
+          "loreBasis": "Majini massif, spécialiste des coups et de l’écrasement ; aucun projectile biologique.",
+          "sourceMoves": [
+            "Pilon du port"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-big-man-majini::finisher2",
+          "index": 1,
+          "slot": "down",
+          "commandP1": "↓ + O",
+          "commandP2": "S + Y",
+          "name": "Marteau des deux bras — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 226,
+          "camera": "wide",
+          "description": "BIG MAN MAJINI conclut la simulation : Marteau des deux bras.",
+          "loreBasis": "Majini massif, spécialiste des coups et de l’écrasement ; aucun projectile biologique.",
+          "sourceMoves": [
+            "Marteau des deux bras"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-big-man-majini::finisher3",
+          "index": 2,
+          "slot": "forward",
+          "commandP1": "AVANT + O",
+          "commandP2": "AVANT + Y",
+          "name": "Crochet de démolition — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 242,
+          "camera": "low",
+          "description": "BIG MAN MAJINI conclut la simulation : Crochet de démolition.",
+          "loreBasis": "Majini massif, spécialiste des coups et de l’écrasement ; aucun projectile biologique.",
+          "sourceMoves": [
+            "Crochet de démolition"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-big-man-majini::finisher4",
+          "index": 3,
+          "slot": "back",
+          "commandP1": "ARRIÈRE + O",
+          "commandP2": "ARRIÈRE + Y",
+          "name": "Étreinte écrasante — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 258,
+          "camera": "orbit",
+          "description": "BIG MAN MAJINI conclut la simulation : Étreinte écrasante.",
+          "loreBasis": "Majini massif, spécialiste des coups et de l’écrasement ; aucun projectile biologique.",
+          "sourceMoves": [
+            "Étreinte écrasante"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        }
+      ],
+      "color": "#765a55",
+      "accent": "#dda898",
+      "visual": {
+        "kind": "human",
+        "width": 164,
+        "height": 250,
+        "drawHeight": 250,
+        "sourceFacing": "front",
+        "asymmetric": true,
+        "fullBody": false,
+        "maxDrawWidth": 430,
+        "morphology": "reference",
+        "body": "reference",
+        "weapon": "none"
+      },
+      "power": 1.009,
+      "speed": 0.81,
+      "reach": 1
+    },
+    "re5-chainsaw-majini": {
+      "uid": "re5-chainsaw-majini",
+      "fighterName": "CHAINSAW MAJINI",
+      "episode": "Resident Evil 5 (2009)",
+      "source": "RE5 · 2009",
+      "family": "capture",
+      "tone": "stylized",
+      "basis": "Majini encagoulé armé d’une tronçonneuse ; moteur et portée de lame, sans pouvoir à distance.",
+      "evidence": "simulation",
+      "finishers": [
+        {
+          "id": "re5-chainsaw-majini::finisher1",
+          "index": 0,
+          "slot": "neutral",
+          "commandP1": "O",
+          "commandP2": "Y",
+          "name": "Coupe de rupture — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 210,
+          "camera": "close",
+          "description": "CHAINSAW MAJINI conclut la simulation : Coupe de rupture.",
+          "loreBasis": "Majini encagoulé armé d’une tronçonneuse ; moteur et portée de lame, sans pouvoir à distance.",
+          "sourceMoves": [
+            "Coupe de rupture"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-chainsaw-majini::finisher2",
+          "index": 1,
+          "slot": "down",
+          "commandP1": "↓ + O",
+          "commandP2": "S + Y",
+          "name": "Coupe verticale — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 226,
+          "camera": "wide",
+          "description": "CHAINSAW MAJINI conclut la simulation : Coupe verticale.",
+          "loreBasis": "Majini encagoulé armé d’une tronçonneuse ; moteur et portée de lame, sans pouvoir à distance.",
+          "sourceMoves": [
+            "Coupe verticale"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-chainsaw-majini::finisher3",
+          "index": 2,
+          "slot": "forward",
+          "commandP1": "AVANT + O",
+          "commandP2": "AVANT + Y",
+          "name": "Sciage frontal — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 242,
+          "camera": "low",
+          "description": "CHAINSAW MAJINI conclut la simulation : Sciage frontal.",
+          "loreBasis": "Majini encagoulé armé d’une tronçonneuse ; moteur et portée de lame, sans pouvoir à distance.",
+          "sourceMoves": [
+            "Sciage frontal"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-chainsaw-majini::finisher4",
+          "index": 3,
+          "slot": "back",
+          "commandP1": "ARRIÈRE + O",
+          "commandP2": "ARRIÈRE + Y",
+          "name": "Capture à la scie — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 258,
+          "camera": "orbit",
+          "description": "CHAINSAW MAJINI conclut la simulation : Capture à la scie.",
+          "loreBasis": "Majini encagoulé armé d’une tronçonneuse ; moteur et portée de lame, sans pouvoir à distance.",
+          "sourceMoves": [
+            "Capture à la scie"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        }
+      ],
+      "color": "#765a55",
+      "accent": "#dda898",
+      "visual": {
+        "kind": "human",
+        "width": 122,
+        "height": 245,
+        "drawHeight": 245,
+        "sourceFacing": "front",
+        "asymmetric": true,
+        "fullBody": false,
+        "maxDrawWidth": 430,
+        "morphology": "reference",
+        "body": "reference",
+        "weapon": "none"
+      },
+      "power": 1.018,
+      "speed": 0.9,
+      "reach": 1
+    },
+    "re5-executioner": {
+      "uid": "re5-executioner",
+      "fighterName": "EXECUTIONER MAJINI",
+      "episode": "Resident Evil 5 (2009)",
+      "source": "RE5 · 2009",
+      "family": "capture",
+      "tone": "stylized",
+      "basis": "Bourreau du chapitre 1-1 ; grande hache de fortune. Variante noire sans hache enflammée.",
+      "evidence": "simulation",
+      "finishers": [
+        {
+          "id": "re5-executioner::finisher1",
+          "index": 0,
+          "slot": "neutral",
+          "commandP1": "O",
+          "commandP2": "Y",
+          "name": "Sentence de la place — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 210,
+          "camera": "close",
+          "description": "EXECUTIONER MAJINI conclut la simulation : Sentence de la place.",
+          "loreBasis": "Bourreau du chapitre 1-1 ; grande hache de fortune. Variante noire sans hache enflammée.",
+          "sourceMoves": [
+            "Sentence de la place"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-executioner::finisher2",
+          "index": 1,
+          "slot": "down",
+          "commandP1": "↓ + O",
+          "commandP2": "S + Y",
+          "name": "Abattage de la hache — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 226,
+          "camera": "wide",
+          "description": "EXECUTIONER MAJINI conclut la simulation : Abattage de la hache.",
+          "loreBasis": "Bourreau du chapitre 1-1 ; grande hache de fortune. Variante noire sans hache enflammée.",
+          "sourceMoves": [
+            "Abattage de la hache"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-executioner::finisher3",
+          "index": 2,
+          "slot": "forward",
+          "commandP1": "AVANT + O",
+          "commandP2": "AVANT + Y",
+          "name": "Grand arc de hache — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 242,
+          "camera": "low",
+          "description": "EXECUTIONER MAJINI conclut la simulation : Grand arc de hache.",
+          "loreBasis": "Bourreau du chapitre 1-1 ; grande hache de fortune. Variante noire sans hache enflammée.",
+          "sourceMoves": [
+            "Grand arc de hache"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-executioner::finisher4",
+          "index": 3,
+          "slot": "back",
+          "commandP1": "ARRIÈRE + O",
+          "commandP2": "ARRIÈRE + Y",
+          "name": "Poigne du condamné — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 258,
+          "camera": "orbit",
+          "description": "EXECUTIONER MAJINI conclut la simulation : Poigne du condamné.",
+          "loreBasis": "Bourreau du chapitre 1-1 ; grande hache de fortune. Variante noire sans hache enflammée.",
+          "sourceMoves": [
+            "Poigne du condamné"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        }
+      ],
+      "color": "#765a55",
+      "accent": "#dda898",
+      "visual": {
+        "kind": "human",
+        "width": 184,
+        "height": 302,
+        "drawHeight": 302,
+        "sourceFacing": "front",
+        "asymmetric": true,
+        "fullBody": false,
+        "maxDrawWidth": 430,
+        "morphology": "reference",
+        "body": "massive",
+        "weapon": "none"
+      },
+      "power": 1.027,
+      "speed": 0.78,
+      "reach": 1
+    },
+    "re5-gatling-gun-majini": {
+      "uid": "re5-gatling-gun-majini",
+      "fighterName": "GATLING GUN MAJINI",
+      "episode": "Resident Evil 5 (2009)",
+      "source": "RE5 · 2009",
+      "family": "capture",
+      "tone": "stylized",
+      "basis": "Majini à mitrailleuse rotative ; le conteneur dorsal est un équipement, pas une carapace biologique.",
+      "evidence": "simulation",
+      "finishers": [
+        {
+          "id": "re5-gatling-gun-majini::finisher1",
+          "index": 0,
+          "slot": "neutral",
+          "commandP1": "O",
+          "commandP2": "Y",
+          "name": "Saturation du pont — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 210,
+          "camera": "close",
+          "description": "GATLING GUN MAJINI conclut la simulation : Saturation du pont.",
+          "loreBasis": "Majini à mitrailleuse rotative ; le conteneur dorsal est un équipement, pas une carapace biologique.",
+          "sourceMoves": [
+            "Saturation du pont"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-gatling-gun-majini::finisher2",
+          "index": 1,
+          "slot": "down",
+          "commandP1": "↓ + O",
+          "commandP2": "S + Y",
+          "name": "Revers de mitrailleuse — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 226,
+          "camera": "wide",
+          "description": "GATLING GUN MAJINI conclut la simulation : Revers de mitrailleuse.",
+          "loreBasis": "Majini à mitrailleuse rotative ; le conteneur dorsal est un équipement, pas une carapace biologique.",
+          "sourceMoves": [
+            "Revers de mitrailleuse"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-gatling-gun-majini::finisher3",
+          "index": 2,
+          "slot": "forward",
+          "commandP1": "AVANT + O",
+          "commandP2": "AVANT + Y",
+          "name": "Rafale rotative — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 242,
+          "camera": "low",
+          "description": "GATLING GUN MAJINI conclut la simulation : Rafale rotative.",
+          "loreBasis": "Majini à mitrailleuse rotative ; le conteneur dorsal est un équipement, pas une carapace biologique.",
+          "sourceMoves": [
+            "Rafale rotative"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-gatling-gun-majini::finisher4",
+          "index": 3,
+          "slot": "back",
+          "commandP1": "ARRIÈRE + O",
+          "commandP2": "ARRIÈRE + Y",
+          "name": "Poigne de l’artilleur — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 258,
+          "camera": "orbit",
+          "description": "GATLING GUN MAJINI conclut la simulation : Poigne de l’artilleur.",
+          "loreBasis": "Majini à mitrailleuse rotative ; le conteneur dorsal est un équipement, pas une carapace biologique.",
+          "sourceMoves": [
+            "Poigne de l’artilleur"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        }
+      ],
+      "color": "#765a55",
+      "accent": "#dda898",
+      "visual": {
+        "kind": "human",
+        "width": 174,
+        "height": 260,
+        "drawHeight": 260,
+        "sourceFacing": "front",
+        "asymmetric": true,
+        "fullBody": false,
+        "maxDrawWidth": 430,
+        "morphology": "reference",
+        "body": "reference",
+        "weapon": "none"
+      },
+      "power": 1.036,
+      "speed": 0.77,
+      "reach": 1
+    },
+    "re5-jill-valentine-enemy": {
+      "uid": "re5-jill-valentine-enemy",
+      "fighterName": "JILL VALENTINE — SOUS P30",
+      "episode": "Resident Evil 5 (2009)",
+      "source": "RE5 · 2009",
+      "family": "capture",
+      "tone": "stylized",
+      "basis": "Jill sous administration continue de P30 : capacités physiques augmentées et équipement humain ; aucune mutation Uroboros.",
+      "evidence": "simulation",
+      "finishers": [
+        {
+          "id": "re5-jill-valentine-enemy::finisher1",
+          "index": 0,
+          "slot": "neutral",
+          "commandP1": "O",
+          "commandP2": "Y",
+          "name": "Enchaînement sous P30 — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 210,
+          "camera": "close",
+          "description": "JILL VALENTINE — SOUS P30 conclut la simulation : Enchaînement sous P30.",
+          "loreBasis": "Jill sous administration continue de P30 : capacités physiques augmentées et équipement humain ; aucune mutation Uroboros.",
+          "sourceMoves": [
+            "Enchaînement sous P30"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-jill-valentine-enemy::finisher2",
+          "index": 1,
+          "slot": "down",
+          "commandP1": "↓ + O",
+          "commandP2": "S + Y",
+          "name": "Coup de pied retourné — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 226,
+          "camera": "wide",
+          "description": "JILL VALENTINE — SOUS P30 conclut la simulation : Coup de pied retourné.",
+          "loreBasis": "Jill sous administration continue de P30 : capacités physiques augmentées et équipement humain ; aucune mutation Uroboros.",
+          "sourceMoves": [
+            "Coup de pied retourné"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-jill-valentine-enemy::finisher3",
+          "index": 2,
+          "slot": "forward",
+          "commandP1": "AVANT + O",
+          "commandP2": "AVANT + Y",
+          "name": "Rafale des mitraillettes — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 242,
+          "camera": "low",
+          "description": "JILL VALENTINE — SOUS P30 conclut la simulation : Rafale des mitraillettes.",
+          "loreBasis": "Jill sous administration continue de P30 : capacités physiques augmentées et équipement humain ; aucune mutation Uroboros.",
+          "sourceMoves": [
+            "Rafale des mitraillettes"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-jill-valentine-enemy::finisher4",
+          "index": 3,
+          "slot": "back",
+          "commandP1": "ARRIÈRE + O",
+          "commandP2": "ARRIÈRE + Y",
+          "name": "Projection de neutralisation — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 258,
+          "camera": "orbit",
+          "description": "JILL VALENTINE — SOUS P30 conclut la simulation : Projection de neutralisation.",
+          "loreBasis": "Jill sous administration continue de P30 : capacités physiques augmentées et équipement humain ; aucune mutation Uroboros.",
+          "sourceMoves": [
+            "Projection de neutralisation"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        }
+      ],
+      "color": "#765a55",
+      "accent": "#dda898",
+      "visual": {
+        "kind": "human",
+        "width": 88,
+        "height": 223,
+        "drawHeight": 223,
+        "sourceFacing": "front",
+        "asymmetric": true,
+        "fullBody": false,
+        "maxDrawWidth": 430,
+        "morphology": "reference",
+        "body": "reference",
+        "weapon": "none"
+      },
+      "power": 1.045,
+      "speed": 1.2,
+      "reach": 1
+    },
+    "re5-licker-beta": {
+      "uid": "re5-licker-beta",
+      "fighterName": "LICKER β",
+      "episode": "Resident Evil 5 (2009)",
+      "source": "RE5 · 2009",
+      "family": "beast",
+      "tone": "stylized",
+      "basis": "Licker amélioré par Tricell : griffes, langue allongée, corps dépourvu de peau ; ne pas lui attribuer une Plaga.",
+      "evidence": "simulation",
+      "finishers": [
+        {
+          "id": "re5-licker-beta::finisher1",
+          "index": 0,
+          "slot": "neutral",
+          "commandP1": "O",
+          "commandP2": "Y",
+          "name": "Empalement lingual — Conclusion stylisée",
+          "family": "beast",
+          "tone": "stylized",
+          "duration": 210,
+          "camera": "close",
+          "description": "LICKER β conclut la simulation : Empalement lingual.",
+          "loreBasis": "Licker amélioré par Tricell : griffes, langue allongée, corps dépourvu de peau ; ne pas lui attribuer une Plaga.",
+          "sourceMoves": [
+            "Empalement lingual"
+          ],
+          "phases": [
+            "approach",
+            "pounce",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-licker-beta::finisher2",
+          "index": 1,
+          "slot": "down",
+          "commandP1": "↓ + O",
+          "commandP2": "S + Y",
+          "name": "Double lacération — Conclusion stylisée",
+          "family": "beast",
+          "tone": "stylized",
+          "duration": 226,
+          "camera": "wide",
+          "description": "LICKER β conclut la simulation : Double lacération.",
+          "loreBasis": "Licker amélioré par Tricell : griffes, langue allongée, corps dépourvu de peau ; ne pas lui attribuer une Plaga.",
+          "sourceMoves": [
+            "Double lacération"
+          ],
+          "phases": [
+            "approach",
+            "pounce",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-licker-beta::finisher3",
+          "index": 2,
+          "slot": "forward",
+          "commandP1": "AVANT + O",
+          "commandP2": "AVANT + Y",
+          "name": "Fouet de langue — Conclusion stylisée",
+          "family": "beast",
+          "tone": "stylized",
+          "duration": 242,
+          "camera": "low",
+          "description": "LICKER β conclut la simulation : Fouet de langue.",
+          "loreBasis": "Licker amélioré par Tricell : griffes, langue allongée, corps dépourvu de peau ; ne pas lui attribuer une Plaga.",
+          "sourceMoves": [
+            "Fouet de langue"
+          ],
+          "phases": [
+            "approach",
+            "pounce",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-licker-beta::finisher4",
+          "index": 3,
+          "slot": "back",
+          "commandP1": "ARRIÈRE + O",
+          "commandP2": "ARRIÈRE + Y",
+          "name": "Enserrement lingual — Conclusion stylisée",
+          "family": "beast",
+          "tone": "stylized",
+          "duration": 258,
+          "camera": "orbit",
+          "description": "LICKER β conclut la simulation : Enserrement lingual.",
+          "loreBasis": "Licker amélioré par Tricell : griffes, langue allongée, corps dépourvu de peau ; ne pas lui attribuer une Plaga.",
+          "sourceMoves": [
+            "Enserrement lingual"
+          ],
+          "phases": [
+            "approach",
+            "pounce",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        }
+      ],
+      "color": "#765a55",
+      "accent": "#dda898",
+      "visual": {
+        "kind": "quadruped",
+        "width": 200,
+        "height": 128,
+        "drawHeight": 128,
+        "sourceFacing": "front",
+        "asymmetric": true,
+        "fullBody": false,
+        "maxDrawWidth": 430,
+        "morphology": "reference",
+        "body": "reference",
+        "weapon": "none"
+      },
+      "power": 1.054,
+      "speed": 1.1,
+      "reach": 1
+    },
+    "re5-reaper": {
+      "uid": "re5-reaper",
+      "fighterName": "REAPER",
+      "episode": "Resident Evil 5 (2009)",
+      "source": "RE5 · 2009",
+      "family": "capture",
+      "tone": "stylized",
+      "basis": "Insecte mutant aux appendices coupants et sécrétion aveuglante. Le gaz est un trouble visuel, pas un poison mortel confirmé.",
+      "evidence": "simulation",
+      "finishers": [
+        {
+          "id": "re5-reaper::finisher1",
+          "index": 0,
+          "slot": "neutral",
+          "commandP1": "O",
+          "commandP2": "Y",
+          "name": "Étreinte du Reaper — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 210,
+          "camera": "close",
+          "description": "REAPER conclut la simulation : Étreinte du Reaper.",
+          "loreBasis": "Insecte mutant aux appendices coupants et sécrétion aveuglante. Le gaz est un trouble visuel, pas un poison mortel confirmé.",
+          "sourceMoves": [
+            "Étreinte du Reaper"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-reaper::finisher2",
+          "index": 1,
+          "slot": "down",
+          "commandP1": "↓ + O",
+          "commandP2": "S + Y",
+          "name": "Double perforation — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 226,
+          "camera": "wide",
+          "description": "REAPER conclut la simulation : Double perforation.",
+          "loreBasis": "Insecte mutant aux appendices coupants et sécrétion aveuglante. Le gaz est un trouble visuel, pas un poison mortel confirmé.",
+          "sourceMoves": [
+            "Double perforation"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-reaper::finisher3",
+          "index": 2,
+          "slot": "forward",
+          "commandP1": "AVANT + O",
+          "commandP2": "AVANT + Y",
+          "name": "Sécrétion aveuglante — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 242,
+          "camera": "low",
+          "description": "REAPER conclut la simulation : Sécrétion aveuglante.",
+          "loreBasis": "Insecte mutant aux appendices coupants et sécrétion aveuglante. Le gaz est un trouble visuel, pas un poison mortel confirmé.",
+          "sourceMoves": [
+            "Sécrétion aveuglante"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-reaper::finisher4",
+          "index": 3,
+          "slot": "back",
+          "commandP1": "ARRIÈRE + O",
+          "commandP2": "ARRIÈRE + Y",
+          "name": "Capture perforante — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 258,
+          "camera": "orbit",
+          "description": "REAPER conclut la simulation : Capture perforante.",
+          "loreBasis": "Insecte mutant aux appendices coupants et sécrétion aveuglante. Le gaz est un trouble visuel, pas un poison mortel confirmé.",
+          "sourceMoves": [
+            "Capture perforante"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        }
+      ],
+      "color": "#765a55",
+      "accent": "#dda898",
+      "visual": {
+        "kind": "human",
+        "width": 158,
+        "height": 275,
+        "drawHeight": 275,
+        "sourceFacing": "front",
+        "asymmetric": true,
+        "fullBody": false,
+        "maxDrawWidth": 430,
+        "morphology": "reference",
+        "body": "massive",
+        "weapon": "none"
+      },
+      "power": 1.063,
+      "speed": 0.87,
+      "reach": 1
+    },
+    "re5-popokarimu": {
+      "uid": "re5-popokarimu",
+      "fighterName": "POPOKARIMU",
+      "episode": "Resident Evil 5 (2009)",
+      "source": "RE5 · 2009",
+      "family": "capture",
+      "tone": "stylized",
+      "basis": "Chauve-souris infectée avec queue parasitaire blindée ; substance collante et talons. Son point faible se trouve sous la queue.",
+      "evidence": "simulation",
+      "finishers": [
+        {
+          "id": "re5-popokarimu::finisher1",
+          "index": 0,
+          "slot": "neutral",
+          "commandP1": "O",
+          "commandP2": "Y",
+          "name": "Assaut du Popokarimu — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 210,
+          "camera": "close",
+          "description": "POPOKARIMU conclut la simulation : Assaut du Popokarimu.",
+          "loreBasis": "Chauve-souris infectée avec queue parasitaire blindée ; substance collante et talons. Son point faible se trouve sous la queue.",
+          "sourceMoves": [
+            "Assaut du Popokarimu"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-popokarimu::finisher2",
+          "index": 1,
+          "slot": "down",
+          "commandP1": "↓ + O",
+          "commandP2": "S + Y",
+          "name": "Percussion corporelle — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 226,
+          "camera": "wide",
+          "description": "POPOKARIMU conclut la simulation : Percussion corporelle.",
+          "loreBasis": "Chauve-souris infectée avec queue parasitaire blindée ; substance collante et talons. Son point faible se trouve sous la queue.",
+          "sourceMoves": [
+            "Percussion corporelle"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-popokarimu::finisher3",
+          "index": 2,
+          "slot": "forward",
+          "commandP1": "AVANT + O",
+          "commandP2": "AVANT + Y",
+          "name": "Sécrétion adhésive — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 242,
+          "camera": "low",
+          "description": "POPOKARIMU conclut la simulation : Sécrétion adhésive.",
+          "loreBasis": "Chauve-souris infectée avec queue parasitaire blindée ; substance collante et talons. Son point faible se trouve sous la queue.",
+          "sourceMoves": [
+            "Sécrétion adhésive"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-popokarimu::finisher4",
+          "index": 3,
+          "slot": "back",
+          "commandP1": "ARRIÈRE + O",
+          "commandP2": "ARRIÈRE + Y",
+          "name": "Capture des talons — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 258,
+          "camera": "orbit",
+          "description": "POPOKARIMU conclut la simulation : Capture des talons.",
+          "loreBasis": "Chauve-souris infectée avec queue parasitaire blindée ; substance collante et talons. Son point faible se trouve sous la queue.",
+          "sourceMoves": [
+            "Capture des talons"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        }
+      ],
+      "color": "#765a55",
+      "accent": "#dda898",
+      "visual": {
+        "kind": "human",
+        "width": 266,
+        "height": 215,
+        "drawHeight": 215,
+        "sourceFacing": "front",
+        "asymmetric": true,
+        "fullBody": false,
+        "maxDrawWidth": 430,
+        "morphology": "reference",
+        "body": "reference",
+        "weapon": "none"
+      },
+      "power": 1.072,
+      "speed": 0.95,
+      "reach": 1
+    },
+    "re5-ndesu": {
+      "uid": "re5-ndesu",
+      "fighterName": "NDESU",
+      "episode": "Resident Evil 5 (2009)",
+      "source": "RE5 · 2009",
+      "family": "capture",
+      "tone": "stylized",
+      "basis": "Géant à cinq Plagas ; force permettant de manier les débris du décor. Les débris ne sont pas des projectiles produits par son organisme.",
+      "evidence": "simulation",
+      "finishers": [
+        {
+          "id": "re5-ndesu::finisher1",
+          "index": 0,
+          "slot": "neutral",
+          "commandP1": "O",
+          "commandP2": "Y",
+          "name": "Poteau arraché — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 210,
+          "camera": "close",
+          "description": "NDESU conclut la simulation : Poteau arraché.",
+          "loreBasis": "Géant à cinq Plagas ; force permettant de manier les débris du décor. Les débris ne sont pas des projectiles produits par son organisme.",
+          "sourceMoves": [
+            "Poteau arraché"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-ndesu::finisher2",
+          "index": 1,
+          "slot": "down",
+          "commandP1": "↓ + O",
+          "commandP2": "S + Y",
+          "name": "Double marteau — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 226,
+          "camera": "wide",
+          "description": "NDESU conclut la simulation : Double marteau.",
+          "loreBasis": "Géant à cinq Plagas ; force permettant de manier les débris du décor. Les débris ne sont pas des projectiles produits par son organisme.",
+          "sourceMoves": [
+            "Double marteau"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-ndesu::finisher3",
+          "index": 2,
+          "slot": "forward",
+          "commandP1": "AVANT + O",
+          "commandP2": "AVANT + Y",
+          "name": "Projection de gravats — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 242,
+          "camera": "low",
+          "description": "NDESU conclut la simulation : Projection de gravats.",
+          "loreBasis": "Géant à cinq Plagas ; force permettant de manier les débris du décor. Les débris ne sont pas des projectiles produits par son organisme.",
+          "sourceMoves": [
+            "Projection de gravats"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-ndesu::finisher4",
+          "index": 3,
+          "slot": "back",
+          "commandP1": "ARRIÈRE + O",
+          "commandP2": "ARRIÈRE + Y",
+          "name": "Poigne du géant — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 258,
+          "camera": "orbit",
+          "description": "NDESU conclut la simulation : Poigne du géant.",
+          "loreBasis": "Géant à cinq Plagas ; force permettant de manier les débris du décor. Les débris ne sont pas des projectiles produits par son organisme.",
+          "sourceMoves": [
+            "Poigne du géant"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        }
+      ],
+      "color": "#765a55",
+      "accent": "#dda898",
+      "visual": {
+        "kind": "human",
+        "width": 235,
+        "height": 350,
+        "drawHeight": 350,
+        "sourceFacing": "front",
+        "asymmetric": true,
+        "fullBody": false,
+        "maxDrawWidth": 430,
+        "morphology": "reference",
+        "body": "massive",
+        "weapon": "none"
+      },
+      "power": 1.081,
+      "speed": 0.76,
+      "reach": 1
+    },
+    "re5-irving": {
+      "uid": "re5-irving",
+      "fighterName": "RICARDO IRVING — MUTATION",
+      "episode": "Resident Evil 5 (2009)",
+      "source": "RE5 · 2009",
+      "family": "capture",
+      "tone": "stylized",
+      "basis": "Mutation aquatique d’Irving : longs tentacules, gueule dentée et noyau vulnérable. Tout déplacement hors de l’eau est une abstraction du Versus.",
+      "evidence": "simulation",
+      "finishers": [
+        {
+          "id": "re5-irving::finisher1",
+          "index": 0,
+          "slot": "neutral",
+          "commandP1": "O",
+          "commandP2": "Y",
+          "name": "Morsure du navire — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 210,
+          "camera": "close",
+          "description": "RICARDO IRVING — MUTATION conclut la simulation : Morsure du navire.",
+          "loreBasis": "Mutation aquatique d’Irving : longs tentacules, gueule dentée et noyau vulnérable. Tout déplacement hors de l’eau est une abstraction du Versus.",
+          "sourceMoves": [
+            "Morsure du navire"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-irving::finisher2",
+          "index": 1,
+          "slot": "down",
+          "commandP1": "↓ + O",
+          "commandP2": "S + Y",
+          "name": "Frappe de la gueule — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 226,
+          "camera": "wide",
+          "description": "RICARDO IRVING — MUTATION conclut la simulation : Frappe de la gueule.",
+          "loreBasis": "Mutation aquatique d’Irving : longs tentacules, gueule dentée et noyau vulnérable. Tout déplacement hors de l’eau est une abstraction du Versus.",
+          "sourceMoves": [
+            "Frappe de la gueule"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-irving::finisher3",
+          "index": 2,
+          "slot": "forward",
+          "commandP1": "AVANT + O",
+          "commandP2": "AVANT + Y",
+          "name": "Fouet de surface — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 242,
+          "camera": "low",
+          "description": "RICARDO IRVING — MUTATION conclut la simulation : Fouet de surface.",
+          "loreBasis": "Mutation aquatique d’Irving : longs tentacules, gueule dentée et noyau vulnérable. Tout déplacement hors de l’eau est une abstraction du Versus.",
+          "sourceMoves": [
+            "Fouet de surface"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-irving::finisher4",
+          "index": 3,
+          "slot": "back",
+          "commandP1": "ARRIÈRE + O",
+          "commandP2": "ARRIÈRE + Y",
+          "name": "Saisie du bateau — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 258,
+          "camera": "orbit",
+          "description": "RICARDO IRVING — MUTATION conclut la simulation : Saisie du bateau.",
+          "loreBasis": "Mutation aquatique d’Irving : longs tentacules, gueule dentée et noyau vulnérable. Tout déplacement hors de l’eau est une abstraction du Versus.",
+          "sourceMoves": [
+            "Saisie du bateau"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        }
+      ],
+      "color": "#765a55",
+      "accent": "#dda898",
+      "visual": {
+        "kind": "human",
+        "width": 280,
+        "height": 300,
+        "drawHeight": 300,
+        "sourceFacing": "front",
+        "asymmetric": true,
+        "fullBody": false,
+        "maxDrawWidth": 430,
+        "morphology": "reference",
+        "body": "massive",
+        "weapon": "none"
+      },
+      "power": 1.09,
+      "speed": 0.82,
+      "reach": 1
+    },
+    "re5-u-8": {
+      "uid": "re5-u-8",
+      "fighterName": "U-8",
+      "episode": "Resident Evil 5 (2009)",
+      "source": "RE5 · 2009",
+      "family": "capture",
+      "tone": "stylized",
+      "basis": "B.O.W. crustacée à carapace résistante et défauts de blindage. Le U de sa désignation ne désigne pas Uroboros.",
+      "evidence": "simulation",
+      "finishers": [
+        {
+          "id": "re5-u-8::finisher1",
+          "index": 0,
+          "slot": "neutral",
+          "commandP1": "O",
+          "commandP2": "Y",
+          "name": "Gueule ouverte — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 210,
+          "camera": "close",
+          "description": "U-8 conclut la simulation : Gueule ouverte.",
+          "loreBasis": "B.O.W. crustacée à carapace résistante et défauts de blindage. Le U de sa désignation ne désigne pas Uroboros.",
+          "sourceMoves": [
+            "Gueule ouverte"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-u-8::finisher2",
+          "index": 1,
+          "slot": "down",
+          "commandP1": "↓ + O",
+          "commandP2": "S + Y",
+          "name": "Double percussion blindée — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 226,
+          "camera": "wide",
+          "description": "U-8 conclut la simulation : Double percussion blindée.",
+          "loreBasis": "B.O.W. crustacée à carapace résistante et défauts de blindage. Le U de sa désignation ne désigne pas Uroboros.",
+          "sourceMoves": [
+            "Double percussion blindée"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-u-8::finisher3",
+          "index": 2,
+          "slot": "forward",
+          "commandP1": "AVANT + O",
+          "commandP2": "AVANT + Y",
+          "name": "Percée des pattes — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 242,
+          "camera": "low",
+          "description": "U-8 conclut la simulation : Percée des pattes.",
+          "loreBasis": "B.O.W. crustacée à carapace résistante et défauts de blindage. Le U de sa désignation ne désigne pas Uroboros.",
+          "sourceMoves": [
+            "Percée des pattes"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-u-8::finisher4",
+          "index": 3,
+          "slot": "back",
+          "commandP1": "ARRIÈRE + O",
+          "commandP2": "ARRIÈRE + Y",
+          "name": "Capture des mandibules — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 258,
+          "camera": "orbit",
+          "description": "U-8 conclut la simulation : Capture des mandibules.",
+          "loreBasis": "B.O.W. crustacée à carapace résistante et défauts de blindage. Le U de sa désignation ne désigne pas Uroboros.",
+          "sourceMoves": [
+            "Capture des mandibules"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        }
+      ],
+      "color": "#765a55",
+      "accent": "#dda898",
+      "visual": {
+        "kind": "human",
+        "width": 280,
+        "height": 330,
+        "drawHeight": 330,
+        "sourceFacing": "front",
+        "asymmetric": true,
+        "fullBody": false,
+        "maxDrawWidth": 430,
+        "morphology": "reference",
+        "body": "massive",
+        "weapon": "none"
+      },
+      "power": 1.099,
+      "speed": 0.72,
+      "reach": 1
+    },
+    "re5-uroboros": {
+      "uid": "re5-uroboros",
+      "fighterName": "UROBOROS — PREMIER SUJET",
+      "episode": "Resident Evil 5 (2009)",
+      "source": "RE5 · 2009",
+      "family": "capture",
+      "tone": "stylized",
+      "basis": "Premier Uroboros de RE5 : filaments noirs et noyau orange. Sa sensibilité au feu ne lui donne aucun pouvoir pyrogène.",
+      "evidence": "simulation",
+      "finishers": [
+        {
+          "id": "re5-uroboros::finisher1",
+          "index": 0,
+          "slot": "neutral",
+          "commandP1": "O",
+          "commandP2": "Y",
+          "name": "Absorption du premier sujet — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 210,
+          "camera": "close",
+          "description": "UROBOROS — PREMIER SUJET conclut la simulation : Absorption du premier sujet.",
+          "loreBasis": "Premier Uroboros de RE5 : filaments noirs et noyau orange. Sa sensibilité au feu ne lui donne aucun pouvoir pyrogène.",
+          "sourceMoves": [
+            "Absorption du premier sujet"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-uroboros::finisher2",
+          "index": 1,
+          "slot": "down",
+          "commandP1": "↓ + O",
+          "commandP2": "S + Y",
+          "name": "Masse d’Uroboros — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 226,
+          "camera": "wide",
+          "description": "UROBOROS — PREMIER SUJET conclut la simulation : Masse d’Uroboros.",
+          "loreBasis": "Premier Uroboros de RE5 : filaments noirs et noyau orange. Sa sensibilité au feu ne lui donne aucun pouvoir pyrogène.",
+          "sourceMoves": [
+            "Masse d’Uroboros"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-uroboros::finisher3",
+          "index": 2,
+          "slot": "forward",
+          "commandP1": "AVANT + O",
+          "commandP2": "AVANT + Y",
+          "name": "Allonge du noyau — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 242,
+          "camera": "low",
+          "description": "UROBOROS — PREMIER SUJET conclut la simulation : Allonge du noyau.",
+          "loreBasis": "Premier Uroboros de RE5 : filaments noirs et noyau orange. Sa sensibilité au feu ne lui donne aucun pouvoir pyrogène.",
+          "sourceMoves": [
+            "Allonge du noyau"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-uroboros::finisher4",
+          "index": 3,
+          "slot": "back",
+          "commandP1": "ARRIÈRE + O",
+          "commandP2": "ARRIÈRE + Y",
+          "name": "Enveloppement du sujet — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 258,
+          "camera": "orbit",
+          "description": "UROBOROS — PREMIER SUJET conclut la simulation : Enveloppement du sujet.",
+          "loreBasis": "Premier Uroboros de RE5 : filaments noirs et noyau orange. Sa sensibilité au feu ne lui donne aucun pouvoir pyrogène.",
+          "sourceMoves": [
+            "Enveloppement du sujet"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        }
+      ],
+      "color": "#765a55",
+      "accent": "#dda898",
+      "visual": {
+        "kind": "human",
+        "width": 192,
+        "height": 285,
+        "drawHeight": 285,
+        "sourceFacing": "front",
+        "asymmetric": true,
+        "fullBody": false,
+        "maxDrawWidth": 430,
+        "morphology": "reference",
+        "body": "massive",
+        "weapon": "none"
+      },
+      "power": 1.108,
+      "speed": 0.81,
+      "reach": 1
+    },
+    "re5-uroboros-mkono": {
+      "uid": "re5-uroboros-mkono",
+      "fighterName": "UROBOROS MKONO",
+      "episode": "Resident Evil 5 (2009)",
+      "source": "RE5 · 2009",
+      "family": "capture",
+      "tone": "stylized",
+      "basis": "Uroboros Mkono, distinct du premier sujet ; bras allongés, noyaux exposables et vulnérabilité au feu.",
+      "evidence": "simulation",
+      "finishers": [
+        {
+          "id": "re5-uroboros-mkono::finisher1",
+          "index": 0,
+          "slot": "neutral",
+          "commandP1": "O",
+          "commandP2": "Y",
+          "name": "Convergence des bras — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 210,
+          "camera": "close",
+          "description": "UROBOROS MKONO conclut la simulation : Convergence des bras.",
+          "loreBasis": "Uroboros Mkono, distinct du premier sujet ; bras allongés, noyaux exposables et vulnérabilité au feu.",
+          "sourceMoves": [
+            "Convergence des bras"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-uroboros-mkono::finisher2",
+          "index": 1,
+          "slot": "down",
+          "commandP1": "↓ + O",
+          "commandP2": "S + Y",
+          "name": "Bras de démolition — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 226,
+          "camera": "wide",
+          "description": "UROBOROS MKONO conclut la simulation : Bras de démolition.",
+          "loreBasis": "Uroboros Mkono, distinct du premier sujet ; bras allongés, noyaux exposables et vulnérabilité au feu.",
+          "sourceMoves": [
+            "Bras de démolition"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-uroboros-mkono::finisher3",
+          "index": 2,
+          "slot": "forward",
+          "commandP1": "AVANT + O",
+          "commandP2": "AVANT + Y",
+          "name": "Allonge du bras — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 242,
+          "camera": "low",
+          "description": "UROBOROS MKONO conclut la simulation : Allonge du bras.",
+          "loreBasis": "Uroboros Mkono, distinct du premier sujet ; bras allongés, noyaux exposables et vulnérabilité au feu.",
+          "sourceMoves": [
+            "Allonge du bras"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-uroboros-mkono::finisher4",
+          "index": 3,
+          "slot": "back",
+          "commandP1": "ARRIÈRE + O",
+          "commandP2": "ARRIÈRE + Y",
+          "name": "Enserrement de Mkono — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 258,
+          "camera": "orbit",
+          "description": "UROBOROS MKONO conclut la simulation : Enserrement de Mkono.",
+          "loreBasis": "Uroboros Mkono, distinct du premier sujet ; bras allongés, noyaux exposables et vulnérabilité au feu.",
+          "sourceMoves": [
+            "Enserrement de Mkono"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        }
+      ],
+      "color": "#765a55",
+      "accent": "#dda898",
+      "visual": {
+        "kind": "human",
+        "width": 238,
+        "height": 310,
+        "drawHeight": 310,
+        "sourceFacing": "front",
+        "asymmetric": true,
+        "fullBody": false,
+        "maxDrawWidth": 430,
+        "morphology": "reference",
+        "body": "massive",
+        "weapon": "none"
+      },
+      "power": 1.117,
+      "speed": 0.79,
+      "reach": 1
+    },
+    "re5-uroboros-aheri": {
+      "uid": "re5-uroboros-aheri",
+      "fighterName": "UROBOROS AHERI",
+      "episode": "Resident Evil 5 (2009)",
+      "source": "RE5 · 2009",
+      "family": "capture",
+      "tone": "stylized",
+      "basis": "Excella transformée après assimilation d’un charnier. Masse géante à noyaux ; rejet d’organismes filamenteux, pas de laser satellite intégré.",
+      "evidence": "simulation",
+      "finishers": [
+        {
+          "id": "re5-uroboros-aheri::finisher1",
+          "index": 0,
+          "slot": "neutral",
+          "commandP1": "O",
+          "commandP2": "Y",
+          "name": "Marée d’Aheri — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 210,
+          "camera": "close",
+          "description": "UROBOROS AHERI conclut la simulation : Marée d’Aheri.",
+          "loreBasis": "Excella transformée après assimilation d’un charnier. Masse géante à noyaux ; rejet d’organismes filamenteux, pas de laser satellite intégré.",
+          "sourceMoves": [
+            "Marée d’Aheri"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-uroboros-aheri::finisher2",
+          "index": 1,
+          "slot": "down",
+          "commandP1": "↓ + O",
+          "commandP2": "S + Y",
+          "name": "Écrasement du pont — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 226,
+          "camera": "wide",
+          "description": "UROBOROS AHERI conclut la simulation : Écrasement du pont.",
+          "loreBasis": "Excella transformée après assimilation d’un charnier. Masse géante à noyaux ; rejet d’organismes filamenteux, pas de laser satellite intégré.",
+          "sourceMoves": [
+            "Écrasement du pont"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-uroboros-aheri::finisher3",
+          "index": 2,
+          "slot": "forward",
+          "commandP1": "AVANT + O",
+          "commandP2": "AVANT + Y",
+          "name": "Rejet d’organismes — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 242,
+          "camera": "low",
+          "description": "UROBOROS AHERI conclut la simulation : Rejet d’organismes.",
+          "loreBasis": "Excella transformée après assimilation d’un charnier. Masse géante à noyaux ; rejet d’organismes filamenteux, pas de laser satellite intégré.",
+          "sourceMoves": [
+            "Rejet d’organismes"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-uroboros-aheri::finisher4",
+          "index": 3,
+          "slot": "back",
+          "commandP1": "ARRIÈRE + O",
+          "commandP2": "ARRIÈRE + Y",
+          "name": "Enveloppement terminal — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 258,
+          "camera": "orbit",
+          "description": "UROBOROS AHERI conclut la simulation : Enveloppement terminal.",
+          "loreBasis": "Excella transformée après assimilation d’un charnier. Masse géante à noyaux ; rejet d’organismes filamenteux, pas de laser satellite intégré.",
+          "sourceMoves": [
+            "Enveloppement terminal"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        }
+      ],
+      "color": "#765a55",
+      "accent": "#dda898",
+      "visual": {
+        "kind": "human",
+        "width": 280,
+        "height": 355,
+        "drawHeight": 355,
+        "sourceFacing": "front",
+        "asymmetric": true,
+        "fullBody": false,
+        "maxDrawWidth": 430,
+        "morphology": "reference",
+        "body": "massive",
+        "weapon": "none"
+      },
+      "power": 1.126,
+      "speed": 0.66,
+      "reach": 1
+    },
+    "re5-uroboros-albert-wesker": {
+      "uid": "re5-uroboros-albert-wesker",
+      "fighterName": "ALBERT WESKER — UROBOROS",
+      "episode": "Resident Evil 5 (2009)",
+      "source": "RE5 · 2009",
+      "family": "capture",
+      "tone": "stylized",
+      "basis": "Wesker du combat final : bras filamenteux et débris métalliques intégrés au bras droit. Aucune arme de poing de sa forme humaine importée.",
+      "evidence": "simulation",
+      "finishers": [
+        {
+          "id": "re5-uroboros-albert-wesker::finisher1",
+          "index": 0,
+          "slot": "neutral",
+          "commandP1": "O",
+          "commandP2": "Y",
+          "name": "Tourbillon du volcan — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 210,
+          "camera": "close",
+          "description": "ALBERT WESKER — UROBOROS conclut la simulation : Tourbillon du volcan.",
+          "loreBasis": "Wesker du combat final : bras filamenteux et débris métalliques intégrés au bras droit. Aucune arme de poing de sa forme humaine importée.",
+          "sourceMoves": [
+            "Tourbillon du volcan"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-uroboros-albert-wesker::finisher2",
+          "index": 1,
+          "slot": "down",
+          "commandP1": "↓ + O",
+          "commandP2": "S + Y",
+          "name": "Croisement filamenteux — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 226,
+          "camera": "wide",
+          "description": "ALBERT WESKER — UROBOROS conclut la simulation : Croisement filamenteux.",
+          "loreBasis": "Wesker du combat final : bras filamenteux et débris métalliques intégrés au bras droit. Aucune arme de poing de sa forme humaine importée.",
+          "sourceMoves": [
+            "Croisement filamenteux"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-uroboros-albert-wesker::finisher3",
+          "index": 2,
+          "slot": "forward",
+          "commandP1": "AVANT + O",
+          "commandP2": "AVANT + Y",
+          "name": "Allonge métallique — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 242,
+          "camera": "low",
+          "description": "ALBERT WESKER — UROBOROS conclut la simulation : Allonge métallique.",
+          "loreBasis": "Wesker du combat final : bras filamenteux et débris métalliques intégrés au bras droit. Aucune arme de poing de sa forme humaine importée.",
+          "sourceMoves": [
+            "Allonge métallique"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        },
+        {
+          "id": "re5-uroboros-albert-wesker::finisher4",
+          "index": 3,
+          "slot": "back",
+          "commandP1": "ARRIÈRE + O",
+          "commandP2": "ARRIÈRE + Y",
+          "name": "Poigne Uroboros — Conclusion stylisée",
+          "family": "capture",
+          "tone": "stylized",
+          "duration": 258,
+          "camera": "orbit",
+          "description": "ALBERT WESKER — UROBOROS conclut la simulation : Poigne Uroboros.",
+          "loreBasis": "Wesker du combat final : bras filamenteux et débris métalliques intégrés au bras droit. Aucune arme de poing de sa forme humaine importée.",
+          "sourceMoves": [
+            "Poigne Uroboros"
+          ],
+          "phases": [
+            "approach",
+            "grab",
+            "impact",
+            "fall"
+          ],
+          "victimRule": "any",
+          "rating": "stylized",
+          "gore": false,
+          "canonical": false,
+          "evidence": "simulation"
+        }
+      ],
+      "color": "#765a55",
+      "accent": "#dda898",
+      "visual": {
+        "kind": "human",
+        "width": 170,
+        "height": 300,
+        "drawHeight": 300,
+        "sourceFacing": "front",
+        "asymmetric": true,
+        "fullBody": false,
+        "maxDrawWidth": 430,
+        "morphology": "reference",
+        "body": "massive",
+        "weapon": "none"
+      },
+      "power": 1.135,
+      "speed": 0.91,
+      "reach": 1
     }
   },
   "routes": [],

@@ -243,7 +243,7 @@ async function main() {
           const url = new URL(a.getAttribute('href'), 'https://example.test/');
           assert.equal(url.pathname, '/modules/versus.html'); assert.equal(url.searchParams.get('uid'), entry.id);
         }
-        assert(/RENDu EN PIED/i.test($(codex, '#detailStatus').textContent));
+        assert(/VISUEL PROVISOIRE|POSE DE RÉFÉRENCE/i.test($(codex, '#detailStatus').textContent));
       } else { assert.equal(links.length, 0); assert(/ARCHIVE DOCUMENTAIRE/.test($(codex, '#detailStatus').textContent)); archives++; }
       const sources = $(codex, '#detailSources').querySelectorAll('a');
       assert(sources.length >= 1, entry.id + ' needs source attribution');

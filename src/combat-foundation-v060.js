@@ -38,6 +38,7 @@ function denied(s,p,why){p.stats.denied++;p.feedback=why;p.feedbackT=48;event(s,
 // One predicate serves player commands, CPU choices and the training inspector.
 // Looking up availability never consumes resources or writes combat telemetry.
 function unavailableReason(s,p,slot){const d=p.f.combat.moves[slot];if(!d)return 'Technique inconnue';
+ if(d.kind==='heal'&&p.f.combat.biology?.noHealingWhileBurning&&p.statuses.burn?.t>0)return 'Réassemblage interrompu par le feu';
  if(p.attack){const a=p.attack,link=p.f.combat.links?.some(l=>l[0]===a.name&&l[1]===slot);if(!(a.confirmed&&link&&p.chainDepth<2&&a.t>=a.def.startup&&a.t<a.def.startup+a.def.active+12))return 'busy';}
  if(p.hit>0||p.blockstun>0||p.cool>0||p.life<=0)return 'busy';
  if(rule58(s,'no_throws')&&d.level==='throw')return 'Saisies désactivées par le règlement';
@@ -63,7 +64,7 @@ function start(s,p,slot){p.stats.attempts++;const why=unavailableReason(s,p,slot
 function canParry(p,m,projectile){const a=p.attack;if(!inActive(a)||a.def.kind!=='parry'||m.level==='throw')return false;
  if(projectile)return a.def.parryMode==='projectile'&&!['explosive','fire','rocket'].includes(m.tag)&&!m.fuse;
  return a.def.parryMode==='melee';}
-function heal(s,p,n,budget){const cap=budget??(p.f.combat.passive.regenBudget||900);const amount=Math.max(0,Math.min(n,p.gray,10000-p.life,cap-p.regenUsed));if(!amount)return 0;p.life+=amount;p.gray-=amount;p.regenUsed+=amount;p.stats.healed+=amount;event(s,'heal',p,{amount});return amount;}
+function heal(s,p,n,budget){if(p.f.combat.biology?.noHealingWhileBurning&&p.statuses.burn?.t>0)return 0;const cap=budget??(p.f.combat.passive.regenBudget||900);const amount=Math.max(0,Math.min(n,p.gray,10000-p.life,cap-p.regenUsed));if(!amount)return 0;p.life+=amount;p.gray-=amount;p.regenUsed+=amount;p.stats.healed+=amount;event(s,'heal',p,{amount});return amount;}
 function buffHit(p,name){const b=p.buffs[name];if(!b||b.t<=0)return false;b.hits--;if(b.hits<=0)delete p.buffs[name];return true;}
 function applyStatus(s,a,d,m){const machine=d.f.combat.passive.machine||d.f.visual?.kind==='machine',status=m.status;
  if(m.disarm){d.statuses.disarm={t:m.disarm};fx(s,d.x,d.y-245,'text','counter','DÉSARMÉ');event(s,'disarm',a,{target:d.slot,frames:m.disarm});}
@@ -73,6 +74,13 @@ function applyStatus(s,a,d,m){const machine=d.f.combat.passive.machine||d.f.visu
  if(status==='shock'){if(d.shockImmune>0)return;d.shockImmune=120;d.hit=clamp(d.hit+6,0,36);d.statuses.shock={t:36};if(machine){d.r=['heat','cost'].includes(d.f.combat.resource.kind)?Math.min(d.f.combat.resource.max,d.r+40):Math.max(0,d.r-40);d.buffs={};event(s,'emp',a,{target:d.slot});fx(s,d.x,d.y-130,'ring','electric','EMP');}else event(s,'shock',a,{target:d.slot});return;}
  if(status==='marked'){d.statuses.marked={t:m.duration||120};delete d.buffs.cloak;return;}
  if(status==='slow'){if(!d.statuses.slow)d.statuses.slow={t:clamp(m.duration||100,30,140)};event(s,'slow',a,{target:d.slot});}
+}
+function biologyDamage060(s,p,m,blocked){
+ const b=p.f.combat.biology;if(!b)return 1;
+ const fire=m.tag==='fire'||m.status==='burn';
+ if(!blocked&&fire&&b.exposeOnFire){p.statuses.exposed={t:Math.max(p.statuses.exposed?.t||0,b.exposeOnFire)};event(s,'coreExposed',p,{frames:b.exposeOnFire,by:'fire'});}
+ const open=p.statuses.exposed?.t>0;
+ return clamp(open?(b.exposed||1):(b.shell||1),.5,1.5)*(fire?clamp(b.fire||1,.5,2):1);
 }
 function damage(s,a,d,m,{projectile=null,forced=false,scale=1}={}){if(d.life<=0)return {hit:false};const throwing=m.level==='throw';
  if(throwing&&(d.hit>0||d.blockstun>0||!d.onGround||d.throwProtect>0||!a.onGround))return{hit:false};
@@ -92,7 +100,7 @@ function damage(s,a,d,m,{projectile=null,forced=false,scale=1}={}){if(d.life<=0)
  const blocking=!forced&&d.block&&frontal&&!throwing&&(m.level!=='low'||d.crouch);
  const armor=!forced&&!throwing&&!['electric','emp','rail'].includes(m.tag)&&!!d.buffs.armor;
  const reactive=!forced&&!throwing&&!['electric','emp','rail'].includes(m.tag)&&!!d.buffs.reactive;
- const base=Math.max(0,m.damage||0)*clamp(a.f.power||1,.85,1.18)*scale*(projectile?.damageScale||1)*(rule58(s,'double_damage')?2:1);
+ const base=Math.max(0,m.damage||0)*clamp(a.f.power||1,.85,1.18)*scale*(projectile?.damageScale||1)*(rule58(s,'double_damage')?2:1)*biologyDamage060(s,d,m,blocking||armor||reactive);
  const precision=(m.tag==='precision'||m.tag==='rail')&&(projectile?.steady||a.attack?.steady)?1.15:1;
  const marked=!!d.statuses.marked&&(!!projectile||!!a.f.combat.passive.markMelee&&m.kind==='melee');
  const comboScale=clamp(1-.13*Math.max(0,d.comboHits),.35,1);let amount=Math.round(base*precision*(marked?1.12:1)*(a.buffs.power?1.24:1)*(a.buffs.taunt?1.16:1)*(d.buffs.taunt?1.2:1)*(d.buffs.power?1.08:1)*comboScale);
@@ -128,6 +136,7 @@ function spawn(s,p,m,atk,i){if(rule58(s,'no_projectiles'))return null;const heav
  burstId:atk.id,hitMax:m.returnAt?2:1};
  s.projectiles.push(q);event(s,'projectile',p,{id:q.id,slot:m.slot,index:i});if(s.projectiles.length>60)s.projectiles.shift();return q;}
 function activate(s,p,a){if(a.activated)return;a.activated=true;p.stats.activations++;p.lastActivation=a.name;const d=a.def,o=other(s,p);event(s,'activate',p,{slot:a.name,kind:d.kind,name:d.name});
+ if(d.exposeSelf&&p.f.combat.biology){p.statuses.exposed={t:d.exposeSelf};event(s,'coreExposed',p,{frames:d.exposeSelf,by:a.name});}
  if(d.kind==='projectile'){for(let i=0;i<(d.count||1);i++)spawn(s,p,d,a,i);}
  if(d.kind==='trap'){
   const owned=s.traps.filter(t=>t.owner===p.slot&&!t.dead);while(owned.length>=(d.maxTraps||2)){owned.shift().dead=true;}
