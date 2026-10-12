@@ -1,0 +1,97 @@
+{
+  "version": "0.6.1",
+  "passed": 19,
+  "failed": 0,
+  "scope": "Executed CPU, controlled DOM and native Canvas. Browser navigation is tested separately.",
+  "checks": [
+    {
+      "name": "Checkpoints round-trip all 115 fighter identities without touching dossier slots",
+      "pass": true,
+      "detail": {
+        "subjects": 115
+      }
+    },
+    {
+      "name": "Corrupted newest checkpoint recovers the other slot and repairs the broken one",
+      "pass": true
+    },
+    {
+      "name": "A terminal tombstone prevents resurrection of a completed or failed run",
+      "pass": true
+    },
+    {
+      "name": "Checksum damage, malformed JSON and oversized imports do not alter the valid checkpoint",
+      "pass": true
+    },
+    {
+      "name": "Invalid health, counters, routes, difficulty and unknown creatures are rejected",
+      "pass": true,
+      "detail": {
+        "invalidProfiles": 12
+      }
+    },
+    {
+      "name": "Imported profiles are reconstructed from a whitelist, not merged into prototypes",
+      "pass": true
+    },
+    {
+      "name": "Stale tabs detect a changed storage head and refuse to overwrite it",
+      "pass": true
+    },
+    {
+      "name": "Unavailable storage and unconfirmed writes return explicit failures",
+      "pass": true
+    },
+    {
+      "name": "Bench executes all 1150 real move startups with no reward or result channel",
+      "pass": true,
+      "detail": {
+        "activated": 1150
+      }
+    },
+    {
+      "name": "Bench tick count is independent from playback speed and rendering",
+      "pass": true
+    },
+    {
+      "name": "Directional command selection stays relative to the opponent on both sides",
+      "pass": true
+    },
+    {
+      "name": "Laboratory controls initialize and step the real engine without navigation or saving",
+      "pass": true
+    },
+    {
+      "name": "All 460 finisher entries are reachable exactly once and filtering retains four per specimen",
+      "pass": true,
+      "detail": {
+        "entries": 460,
+        "subjects": 115
+      }
+    },
+    {
+      "name": "An interrupted operation resumes its identical opponent, seed and starting health after reload",
+      "pass": true
+    },
+    {
+      "name": "A real victory stores the next encounter; reload cannot grant that victory twice",
+      "pass": true
+    },
+    {
+      "name": "Reversed winner-slot identities and zero-life winners cannot change progression",
+      "pass": true
+    },
+    {
+      "name": "A real replay carries the runtime contract and mismatches are rejected before state changes",
+      "pass": true
+    },
+    {
+      "name": "Checkpoint import rejects invalid data without interrupting a running duel",
+      "pass": true
+    },
+    {
+      "name": "Production serves packaged assets without redirecting them to an obsolete deployment",
+      "pass": true
+    }
+  ]
+}
