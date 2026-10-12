@@ -1,0 +1,30 @@
+name: Snapshot PR7 source
+on:
+  push:
+    branches: ['codex/v0.7.1-encounter-journal']
+    paths: ['.github/workflows/snapshot-pr7.yml']
+permissions:
+  contents: read
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: d6c28a1ac530201036cce05940ad3edf5a6d7714
+          persist-credentials: false
+      - name: Archive exact base without executing project code
+        run: |
+          test "$(git rev-parse HEAD)" = "d6c28a1ac530201036cce05940ad3edf5a6d7714"
+          git archive --format=zip --prefix=bow-pr7/ -o BOW_PR7_BASE.zip HEAD
+          sha256sum BOW_PR7_BASE.zip > BOW_PR7_BASE.sha256
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-pr7-source-base
+          path: |
+            BOW_PR7_BASE.zip
+            BOW_PR7_BASE.sha256
+          compression-level: 0
+          retention-days: 7
+          if-no-files-found: error
