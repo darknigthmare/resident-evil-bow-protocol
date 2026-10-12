@@ -27,6 +27,17 @@ jobs:
           git archive --format=zip --prefix=resident-evil-bow-protocol-v0.6.0/ -o BOW_PROTOCOL_v0.6.0_SOURCE.zip HEAD
           (cd dist && zip -q -r ../BOW_PROTOCOL_v0.6.0_STATIC.zip .)
           sha256sum BOW_PROTOCOL_v0.6.0_SOURCE.zip BOW_PROTOCOL_v0.6.0_STATIC.zip > BOW_PROTOCOL_v0.6.0_SHA256SUMS.txt
+      - name: Retain exact archives for authenticated Drive backup
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-v060-verified-release
+          path: |
+            BOW_PROTOCOL_v0.6.0_SOURCE.zip
+            BOW_PROTOCOL_v0.6.0_STATIC.zip
+            BOW_PROTOCOL_v0.6.0_SHA256SUMS.txt
+          compression-level: 0
+          retention-days: 7
+          if-no-files-found: error
       - name: Publish without overwriting an existing release
         env:
           GH_TOKEN: ${{ github.token }}
