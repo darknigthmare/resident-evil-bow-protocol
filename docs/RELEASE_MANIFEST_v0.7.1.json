@@ -1,0 +1,109 @@
+{
+  "version": "0.7.1",
+  "codename": "Journal des essais",
+  "productionCounts": {
+    "fighters": 115,
+    "stories": 115,
+    "authored": 115,
+    "structured": 115,
+    "duels": 920,
+    "introPanels": 345,
+    "outroPanels": 345,
+    "paragraphs": 690,
+    "illustratedPortraits": 115,
+    "paintedArenas": 9,
+    "catalog": 389,
+    "finishers": 460,
+    "loreProfiles": 115,
+    "loreMoves": 1150,
+    "canonicalMoves": 727,
+    "anatomicalMoves": 290,
+    "simulationMoves": 133,
+    "proceduralArenas": 16,
+    "arenaConfigurations": 52,
+    "catalogDossiersEnriched": 274,
+    "experimentalFighters": 231,
+    "contextualEncounters": 43
+  },
+  "annexCounts": {
+    "completedRecords": 274,
+    "experimentalFighters": 231,
+    "contextualEncounters": 43,
+    "experimentalCommands": 2310,
+    "descriptiveReferences": 239,
+    "indexOnlyReferences": 35
+  },
+  "basePR": 7,
+  "baseCommit": "d6c28a1ac530201036cce05940ad3edf5a6d7714",
+  "preservation": {
+    "baseCommit": "d6c28a1ac530201036cce05940ad3edf5a6d7714",
+    "mainFighters": "f5c46f977bc0cab3a3cedff82745125a58e21b07dbfe6de1225a90b57b540d1c",
+    "experimentalFighters": "367fee295d2643bf42de11e652c1246f6e4472d84478dc36668eb97f4c9a5cd0",
+    "records": "f4072179ace11153c08b1ddc250556eb948ac6cfb1610e9d147fbc13577d22bd"
+  },
+  "newPlayableSubjects": 0,
+  "newCanonAbilities": 0,
+  "verification": {
+    "passed": 135,
+    "failed": 0,
+    "suites": {
+      "engine": {
+        "passed": 26,
+        "failed": 0
+      },
+      "pages": {
+        "passed": 22,
+        "failed": 0
+      },
+      "ui": {
+        "passed": 13,
+        "failed": 0
+      },
+      "re5": {
+        "passed": 17,
+        "failed": 0
+      },
+      "continuity": {
+        "passed": 19,
+        "failed": 0
+      },
+      "catalog": {
+        "passed": 16,
+        "failed": 0
+      },
+      "journal": {
+        "passed": 22,
+        "failed": 0
+      }
+    },
+    "browser": {
+      "passed": 6,
+      "failed": 0,
+      "scope": "Chromium offline set_content. Real local HTML/JS/CSS and image data; explicit memory substitute for localStorage. No HTTP navigation, network iframe, real device or browser persistent-storage certification. Keyboard interaction and document overflow verified.",
+      "execution": "Local, distinct from CI; captures in delivery report."
+    }
+  },
+  "scope": {
+    "mainProgression": 115,
+    "experimentalCombat": 231,
+    "contextualExercises": 43,
+    "catalogEntries": 389,
+    "newFinalAnimations": 0
+  },
+  "features": [
+    "Distinct contextual success/failure and per-kind completion conditions",
+    "Replay-validated contextual checkpoint and two independent local slots",
+    "Unique contextual records without campaign rewards",
+    "Manual pause, input edge triggers, multi-pointer holds and standard-gamepad mapping",
+    "No promotion of experimental profiles into progression"
+  ],
+  "limitations": [
+    "The 43 exercises use nine abstract state machines, not the CQC physics or original boss scripts.",
+    "Trial input frames and thresholds are simulation design, not canon.",
+    "Checksums detect corruption; no anti-cheat or transactional tab lock claimed.",
+    "Local journal only; no cloud saves.",
+    "Per-move final animation, spatial weakpoints and incomplete primary-reference review remain open.",
+    "Old contextual checkpoints with incompatible contracts are preserved and rejected rather than silently migrated.",
+    "GitHub pull request and Drive archive do not establish production deployment."
+  ]
+}
