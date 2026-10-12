@@ -244,7 +244,7 @@ async function main() {
           assert.equal(url.pathname, '/modules/versus.html'); assert.equal(url.searchParams.get('uid'), entry.id);
         }
         assert(/VISUEL PROVISOIRE|POSE DE RÉFÉRENCE/i.test($(codex, '#detailStatus').textContent));
-      } else { assert.equal(links.length, 0); assert(/ARCHIVE DOCUMENTAIRE/.test($(codex, '#detailStatus').textContent)); archives++; }
+      } else { assert.equal(links.length, 1); assert.equal(new URL(links[0].getAttribute('href'),'https://example.test/').pathname,'/catalog.html'); assert.equal(new URL(links[0].getAttribute('href'),'https://example.test/').searchParams.get('id'),entry.id); assert(/ARCHIVE DOCUMENTAIRE/.test($(codex, '#detailStatus').textContent)); archives++; }
       const sources = $(codex, '#detailSources').querySelectorAll('a');
       assert(sources.length >= 1, entry.id + ' needs source attribution');
       for (const a of sources) {

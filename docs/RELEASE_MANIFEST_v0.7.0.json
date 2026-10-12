@@ -1,0 +1,99 @@
+{
+  "version": "0.7.0",
+  "codename": "Catalog Annex",
+  "productionCounts": {
+    "fighters": 115,
+    "stories": 115,
+    "authored": 115,
+    "structured": 115,
+    "duels": 920,
+    "introPanels": 345,
+    "outroPanels": 345,
+    "paragraphs": 690,
+    "illustratedPortraits": 115,
+    "paintedArenas": 9,
+    "catalog": 389,
+    "finishers": 460,
+    "loreProfiles": 115,
+    "loreMoves": 1150,
+    "canonicalMoves": 727,
+    "anatomicalMoves": 290,
+    "simulationMoves": 133,
+    "proceduralArenas": 16,
+    "arenaConfigurations": 52,
+    "catalogDossiersEnriched": 274,
+    "experimentalFighters": 231,
+    "contextualEncounters": 43
+  },
+  "annexCounts": {
+    "completedRecords": 274,
+    "experimentalFighters": 231,
+    "contextualEncounters": 43,
+    "experimentalCommands": 2310,
+    "descriptiveReferences": 239,
+    "indexOnlyReferences": 35
+  },
+  "technicalFamilies": 107,
+  "experimentalProfileDigest": "884ec0ab1d942c9db72d4d9548493d9b1cb481c1f1db8d36fdc8df7eaedea5b6",
+  "verification": {
+    "passed": 113,
+    "failed": 0,
+    "suites": {
+      "engine": {
+        "passed": 26,
+        "failed": 0
+      },
+      "pages": {
+        "passed": 22,
+        "failed": 0
+      },
+      "ui": {
+        "passed": 13,
+        "failed": 0
+      },
+      "re5": {
+        "passed": 17,
+        "failed": 0
+      },
+      "continuity": {
+        "passed": 19,
+        "failed": 0
+      },
+      "catalog": {
+        "passed": 16,
+        "failed": 0
+      }
+    },
+    "browser": {
+      "passed": 10,
+      "failed": 0,
+      "scope": "Offline Chromium set_content, local scripts/styles and mocked local assets; not public HTTP deployment or physical-device certification.",
+      "execution": "Local offline browser, separate from GitHub Actions",
+      "screenshots": "Included in delivery report, not necessarily in the source release"
+    }
+  },
+  "preservation": {
+    "productionFighters": 115,
+    "productionMoves": 1150,
+    "productionStories": 115,
+    "productionFinishers": 460,
+    "newProgressionFighters": 0,
+    "newCommandsCanonCertified": 0
+  },
+  "scope": {
+    "existingCatalogEntries": 389,
+    "enrichedFormerlyMissingEntries": 274,
+    "experimentalFighters": 231,
+    "contextualExercises": 43,
+    "newFinalAnimations": 0,
+    "unreviewedDescriptiveSources": 35,
+    "allFranchiseEntriesCovered": false
+  },
+  "limitations": [
+    "Command mappings reuse technical family templates; they are not 231 individually reconstructed original movesets.",
+    "All new images are provisional source portraits; no anatomy was fabricated.",
+    "43 contextual entries use nine abstract diagnostic state machines, not final boss scripts or canon outcomes.",
+    "Exact spatial weakpoints, encounter geometry, coordinated swarms and per-move animations remain unfinished.",
+    "Release on GitHub does not prove deployment on Vercel."
+  ]
+}
