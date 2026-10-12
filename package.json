@@ -1,19 +1,19 @@
 {
   "name": "resident-evil-bow-protocol",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "private": true,
-  "description": "Resident Evil — B.O.W. Protocol · Containment Continuity",
+  "description": "Resident Evil — B.O.W. Protocol · Journal des essais",
   "type": "module",
   "scripts": {
     "dev": "node scripts/dev.mjs",
     "start": "node scripts/dev.mjs",
     "build": "node scripts/build.mjs",
-    "verify": "node scripts/contract.mjs && node tests/verify-lore.mjs && node tests/verify-engine.mjs && node tests/verify-pages.mjs && node tests/verify-ui.mjs && node tests/verify-v060.mjs && node tests/verify-v061.mjs && node tests/verify-v070.mjs",
+    "verify": "node scripts/contract.mjs && node scripts/context-contract.mjs && node tests/verify-lore.mjs && node tests/verify-engine.mjs && node tests/verify-pages.mjs && node tests/verify-ui.mjs && node tests/verify-v060.mjs && node tests/verify-v061.mjs && node tests/verify-v070.mjs && node tests/verify-v071.mjs",
     "verify:lore": "node tests/verify-lore.mjs",
     "verify:ui": "node tests/verify-ui.mjs",
     "compile:content": "python3 scripts/compile-content.py && node scripts/contract.mjs --write",
     "compile:lore": "python3 scripts/build-lore-movesets.py",
-    "docs:release": "python3 scripts/release-v070.py"
+    "docs:release": "python3 scripts/release-v071.py"
   },
   "engines": {
     "node": ">=20"

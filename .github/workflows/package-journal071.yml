@@ -1,0 +1,53 @@
+name: Package reviewed Journal des essais
+on:
+  push:
+    branches: ['codex/v0.7.1-encounter-journal']
+    paths: ['.github/workflows/package-journal071.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: bow-package-journal071
+  cancel-in-progress: false
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - name: Validate delivery identity and preserved scope
+        run: |
+          node --input-type=commonjs <<'NODE'
+          const assert=require('node:assert/strict');
+          const p=require('./package.json'),r=require('./data/roster.json'),e=require('./data/catalog-expansion-v070.json');
+          assert.equal(p.version,'0.7.1');assert.equal(r.fighters.length,115);assert.equal(e.fighters.length,231);assert.equal(e.records.length,274);
+          NODE
+      - run: npm install --no-save --package-lock=false @napi-rs/canvas@0.1.80
+      - run: npm run verify
+      - run: npm run build
+      - name: Package exact reviewed commit without publishing a release or changing main
+        run: |
+          set -euo pipefail
+          git archive --format=zip --prefix=resident-evil-bow-protocol-v0.7.1/ -o BOW_PROTOCOL_v0.7.1_SOURCE.zip HEAD
+          (cd dist && zip -q -r ../BOW_PROTOCOL_v0.7.1_STATIC.zip .)
+          git diff --binary d6c28a1ac530201036cce05940ad3edf5a6d7714 HEAD > BOW_PROTOCOL_PR7_v0.7.0_to_v0.7.1.patch
+          sha256sum BOW_PROTOCOL_v0.7.1_SOURCE.zip BOW_PROTOCOL_v0.7.1_STATIC.zip BOW_PROTOCOL_PR7_v0.7.0_to_v0.7.1.patch > BOW_PROTOCOL_v0.7.1_SHA256SUMS.txt
+          git rev-parse HEAD > BOW_PROTOCOL_v0.7.1_COMMIT.txt
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-v071-reviewed-delivery
+          path: |
+            BOW_PROTOCOL_v0.7.1_SOURCE.zip
+            BOW_PROTOCOL_v0.7.1_STATIC.zip
+            BOW_PROTOCOL_PR7_v0.7.0_to_v0.7.1.patch
+            BOW_PROTOCOL_v0.7.1_SHA256SUMS.txt
+            BOW_PROTOCOL_v0.7.1_COMMIT.txt
+          compression-level: 0
+          retention-days: 7
+          if-no-files-found: error
