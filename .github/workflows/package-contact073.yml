@@ -1,0 +1,52 @@
+name: Package reviewed contacts v0.7.3
+on:
+  push:
+    branches: ['codex/v0.7.3-contact-continuity']
+    paths: ['.github/workflows/package-contact073.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: bow-package-contact073
+  cancel-in-progress: false
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - name: Check exact version and preserved population
+        run: |
+          node --input-type=commonjs <<'NODE'
+          const assert=require('node:assert/strict'),p=require('./package.json'),r=require('./data/roster.json'),e=require('./data/catalog-expansion-v070.json');
+          assert.equal(p.version,'0.7.3');assert.equal(r.fighters.length,115);assert.equal(e.fighters.length,231);assert.equal(e.records.length,274);
+          NODE
+      - run: npm install --no-save --package-lock=false @napi-rs/canvas@0.1.80
+      - run: npm run verify
+      - run: npm run build
+      - name: Archive tested branch without changing main or creating a release
+        run: |
+          set -euo pipefail
+          git archive --format=zip --prefix=resident-evil-bow-protocol-v0.7.3/ -o BOW_PROTOCOL_v0.7.3_SOURCE.zip HEAD
+          (cd dist && zip -q -r ../BOW_PROTOCOL_v0.7.3_STATIC.zip .)
+          git diff --binary b8330410ca9880914aac110285af965f3db592a5 HEAD > BOW_PROTOCOL_v0.7.2_to_v0.7.3.patch
+          sha256sum BOW_PROTOCOL_v0.7.3_SOURCE.zip BOW_PROTOCOL_v0.7.3_STATIC.zip BOW_PROTOCOL_v0.7.2_to_v0.7.3.patch > BOW_PROTOCOL_v0.7.3_SHA256SUMS.txt
+          git rev-parse HEAD > BOW_PROTOCOL_v0.7.3_COMMIT.txt
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-v073-reviewed-delivery
+          path: |
+            BOW_PROTOCOL_v0.7.3_SOURCE.zip
+            BOW_PROTOCOL_v0.7.3_STATIC.zip
+            BOW_PROTOCOL_v0.7.2_to_v0.7.3.patch
+            BOW_PROTOCOL_v0.7.3_SHA256SUMS.txt
+            BOW_PROTOCOL_v0.7.3_COMMIT.txt
+          compression-level: 0
+          retention-days: 7
+          if-no-files-found: error

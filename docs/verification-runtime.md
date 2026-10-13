@@ -1,6 +1,6 @@
 # Vérification du moteur Resident Evil — B.O.W. Protocol
 
-Exécution : 2026-10-13T07:42:19.440Z. Version du contenu : 0.7.2.
+Exécution : 2026-10-13T12:35:23.114Z. Version du contenu : 0.7.3.
 
 **26 contrôles réussis ; 0 contrôle(s) en échec.**
 

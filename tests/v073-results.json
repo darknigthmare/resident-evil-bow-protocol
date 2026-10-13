@@ -1,0 +1,99 @@
+{
+  "version": "0.7.3",
+  "passed": 19,
+  "failed": 0,
+  "canvasBackend": "@napi-rs/canvas",
+  "checks": [
+    {
+      "name": "Fast returning projectiles hit before clearing the outgoing-pass marker",
+      "pass": true
+    },
+    {
+      "name": "Turning while still overlapping a target cannot produce an immediate second hit",
+      "pass": true
+    },
+    {
+      "name": "Both return directions hit narrow and wide targets without a distance threshold",
+      "pass": true,
+      "detail": {
+        "cases": 4
+      }
+    },
+    {
+      "name": "An outward crossing and later return each hit once in a real projectile trajectory",
+      "pass": true
+    },
+    {
+      "name": "A diagonal crossing of a deeper core cannot pierce the earlier body contact",
+      "pass": true
+    },
+    {
+      "name": "A vertical projectile can hit the upper core at the first body contact",
+      "pass": true
+    },
+    {
+      "name": "A shot starting inside the body cannot borrow a deeper critical later in its segment",
+      "pass": true
+    },
+    {
+      "name": "Front and rear zones remain reachable from their intended incoming sides",
+      "pass": true,
+      "detail": {
+        "surfaceZones": 7
+      }
+    },
+    {
+      "name": "Combo escape knockback follows return flight instead of original shooter facing",
+      "pass": true
+    },
+    {
+      "name": "Last impact records the first surface point and a clipped trajectory",
+      "pass": true
+    },
+    {
+      "name": "Reset clears diagnostic contacts and draw never changes combat state",
+      "pass": true
+    },
+    {
+      "name": "Controlled input replay preserves contact telemetry and complete combat state",
+      "pass": true,
+      "detail": {
+        "frames": 2200
+      }
+    },
+    {
+      "name": "laboratory.html: share links recreate a paused validated scenario without save data",
+      "pass": true
+    },
+    {
+      "name": "laboratory.html: persisted pageshow restores exactly one paused animation loop",
+      "pass": true
+    },
+    {
+      "name": "catalog-laboratory.html: share links recreate a paused validated scenario without save data",
+      "pass": true
+    },
+    {
+      "name": "catalog-laboratory.html: persisted pageshow restores exactly one paused animation loop",
+      "pass": true
+    },
+    {
+      "name": "Experimental duel returns from page cache paused with no ghost attack or double loop",
+      "pass": true
+    },
+    {
+      "name": "Context page returns from cache at the same frame and can resume its saved journal",
+      "pass": true
+    },
+    {
+      "name": "Main fighters, annex records and context contract remain unchanged from v0.7.2",
+      "pass": true,
+      "detail": {
+        "main": 115,
+        "experimental": 231,
+        "contextual": 43
+      }
+    }
+  ],
+  "scope": "Real engine and controlled DOM lifecycle events; native Canvas. Not physical-device or canonical-animation certification."
+}

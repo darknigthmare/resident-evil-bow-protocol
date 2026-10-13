@@ -2,7 +2,7 @@
  * Profiles are opt-in by exact incarnation. All coordinates/thresholds are
  * authored 2D approximations. No limb destruction or new canon power is implied. */
 (function(root){'use strict';
- const VERSION='spatial-zones/1';
+ const VERSION='spatial-zones/2';
  const profiles={
   're5-uroboros':{label:'Noyaux des appendices',source:'https://www.evilresource.com/resident-evil-5/enemies/uroboros',zones:[
    {id:'arm-front',label:'Noyau antérieur',x:.72,y:.30,w:.28,h:.24,side:'front'},
@@ -48,10 +48,15 @@
   if(!(p.statuses?.exposed?.t>0))return result;
   if(!contact||!['melee','projectile'].includes(contact.kind)||!finite(contact.fromX)){result.reason='unlocalized';return result;}
   result.reason='body';const front=(contact.fromX-p.x)*p.face>=0;
+  const entry=contact.kind==='projectile'?sweep(contact.x0,contact.y0,contact.x1,contact.y1,body,contact.padX??8,contact.padY??7):null;
+  if(contact.kind==='projectile'&&!entry)return result;
   for(const z of zones(p,body)){
    if(z.side!=='either'&&(z.side==='front')!==front)continue;
    const hit=contact.kind==='melee'?overlap(contact.box,z):
     sweep(contact.x0,contact.y0,contact.x1,contact.y1,z,contact.padX??8,contact.padY??7);
+   // A non-piercing shot stops at its first body contact: deeper zones cannot
+   // grant a critical through an intervening part of the body.
+   if(hit&&entry&&hit.t>entry.t+1e-8){result.reason='occluded';continue;}
    if(hit)return {id:z.id,label:z.label,critical:true,reason:'zone',point:contact.kind==='projectile'?hit:null};
   }
   return result;
