@@ -1,0 +1,102 @@
+{
+  "version": "0.7.3",
+  "codename": "Contacts et reprise",
+  "productionCounts": {
+    "fighters": 115,
+    "stories": 115,
+    "authored": 115,
+    "structured": 115,
+    "duels": 920,
+    "introPanels": 345,
+    "outroPanels": 345,
+    "paragraphs": 690,
+    "illustratedPortraits": 115,
+    "paintedArenas": 9,
+    "catalog": 389,
+    "finishers": 460,
+    "loreProfiles": 115,
+    "loreMoves": 1150,
+    "canonicalMoves": 727,
+    "anatomicalMoves": 290,
+    "simulationMoves": 133,
+    "proceduralArenas": 16,
+    "arenaConfigurations": 52,
+    "catalogDossiersEnriched": 274,
+    "experimentalFighters": 231,
+    "contextualEncounters": 43
+  },
+  "annexCounts": {
+    "completedRecords": 274,
+    "experimentalFighters": 231,
+    "contextualEncounters": 43,
+    "experimentalCommands": 2310,
+    "descriptiveReferences": 239,
+    "indexOnlyReferences": 35
+  },
+  "annexDataVersion": "0.7.1",
+  "baseCommit": "b8330410ca9880914aac110285af965f3db592a5",
+  "newCharacters": 0,
+  "newFinalAnimations": 0,
+  "verification": {
+    "passed": 172,
+    "failed": 0,
+    "suites": {
+      "engine": {
+        "passed": 26,
+        "failed": 0
+      },
+      "pages": {
+        "passed": 22,
+        "failed": 0
+      },
+      "ui": {
+        "passed": 13,
+        "failed": 0
+      },
+      "re5": {
+        "passed": 17,
+        "failed": 0
+      },
+      "continuity": {
+        "passed": 19,
+        "failed": 0
+      },
+      "catalog": {
+        "passed": 16,
+        "failed": 0
+      },
+      "journal": {
+        "passed": 22,
+        "failed": 0
+      },
+      "spatial": {
+        "passed": 18,
+        "failed": 0
+      },
+      "contacts": {
+        "passed": 19,
+        "failed": 0
+      }
+    },
+    "browser": "Separate offline Chromium report in delivery; HTTP navigation blocked by environment. No actual bfcache or physical-phone claim."
+  },
+  "compatibility": {
+    "mainReplay": "New runtime digest; old files kept for their original version.",
+    "contextJournal": "Engine, data and contract preserved byte-for-byte."
+  },
+  "changes": [
+    "Fast return projectiles hit on their actual crossing frame",
+    "Critical projectile zones limited to first body contact",
+    "Combo escape follows incoming projectile flight",
+    "Last impact point and clipped trace in both laboratories",
+    "Validated shareable laboratory settings",
+    "Paused, single-loop resume after persisted pageshow in four rehearsal screens"
+  ],
+  "limits": [
+    "115 main fighters, 231 experimental profiles and 43 abstract contextual exercises remain separate.",
+    "Only the existing five RE5 incarnations have spatial zones; no new weakpoint invented.",
+    "Sprites, per-move animations, exact Capcom hitboxes and the full primary-source lore audit remain unfinished.",
+    "Checksums are compatibility/corruption checks, not anti-cheat.",
+    "A pull request or archive does not constitute a production deployment."
+  ]
+}
