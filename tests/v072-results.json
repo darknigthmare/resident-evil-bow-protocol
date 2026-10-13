@@ -1,0 +1,94 @@
+{
+  "version": "0.7.2",
+  "passed": 18,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "All 389 identities have one exclusive gameplay route and local assets",
+      "pass": true,
+      "detail": {
+        "identities": 389,
+        "pages": 13,
+        "assets": 555
+      }
+    },
+    {
+      "name": "Five exact incarnations opt in; unknown forms receive no invented spatial weakness",
+      "pass": true
+    },
+    {
+      "name": "Normalized zones mirror with facing and follow vertical movement and crouch",
+      "pass": true
+    },
+    {
+      "name": "Segment clipping rejects diagonal rectangle false positives and malformed geometry",
+      "pass": true
+    },
+    {
+      "name": "Segment clipping returns earliest entry for fast, reverse and stationary shots",
+      "pass": true
+    },
+    {
+      "name": "Open core bonus requires a matching hitbox and incoming side for all five subjects",
+      "pass": true,
+      "detail": {
+        "subjects": 5
+      }
+    },
+    {
+      "name": "Closed, blocked, thrown, area and unlocalized hits never receive a spatial critical",
+      "pass": true
+    },
+    {
+      "name": "Tail weakness is rear-facing and misses at the wrong height",
+      "pass": true
+    },
+    {
+      "name": "Thermal exposure still interrupts regeneration, expires and resets normally",
+      "pass": true
+    },
+    {
+      "name": "Fast projectile collision uses the actual outgoing segment on its return frame",
+      "pass": true
+    },
+    {
+      "name": "Returning shot guard uses flight direction before the velocity reversal",
+      "pass": true
+    },
+    {
+      "name": "Diagonal projectile cannot hit a body only covered by its enclosing rectangle",
+      "pass": true
+    },
+    {
+      "name": "Projectile crossing an open front zone records one critical and is consumed",
+      "pass": true
+    },
+    {
+      "name": "Area explosions do not borrow a body-wide weakpoint bonus",
+      "pass": true
+    },
+    {
+      "name": "Spatial overlay renders pixels without changing simulation or consuming openings",
+      "pass": true
+    },
+    {
+      "name": "Main and experimental labs show explicit opening/rear fixtures and pause on blur",
+      "pass": true
+    },
+    {
+      "name": "Recorded input replay is identical with active spatial rules, resources and impacts",
+      "pass": true,
+      "detail": {
+        "frames": 2300
+      }
+    },
+    {
+      "name": "Context journal contract stays byte-identical to the shipped v0.7.1 journal",
+      "pass": true,
+      "detail": {
+        "unchangedContextFiles": 4
+      }
+    }
+  ],
+  "scope": "Executed geometry, engine and controlled DOM; approximated zones, not original hitboxes."
+}

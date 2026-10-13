@@ -1,0 +1,112 @@
+{
+  "version": "0.7.2",
+  "codename": "Zones critiques",
+  "productionCounts": {
+    "fighters": 115,
+    "stories": 115,
+    "authored": 115,
+    "structured": 115,
+    "duels": 920,
+    "introPanels": 345,
+    "outroPanels": 345,
+    "paragraphs": 690,
+    "illustratedPortraits": 115,
+    "paintedArenas": 9,
+    "catalog": 389,
+    "finishers": 460,
+    "loreProfiles": 115,
+    "loreMoves": 1150,
+    "canonicalMoves": 727,
+    "anatomicalMoves": 290,
+    "simulationMoves": 133,
+    "proceduralArenas": 16,
+    "arenaConfigurations": 52,
+    "catalogDossiersEnriched": 274,
+    "experimentalFighters": 231,
+    "contextualEncounters": 43
+  },
+  "annexCounts": {
+    "completedRecords": 274,
+    "experimentalFighters": 231,
+    "contextualEncounters": 43,
+    "experimentalCommands": 2310,
+    "descriptiveReferences": 239,
+    "indexOnlyReferences": 35
+  },
+  "annexDataVersion": "0.7.1",
+  "scope": {
+    "main": 115,
+    "experimental": 231,
+    "contextual": 43,
+    "catalog": 389,
+    "newCharacters": 0,
+    "spatialIncarnations": 5,
+    "spatialZones": 8,
+    "finalAnimationsAdded": 0
+  },
+  "verification": {
+    "passed": 153,
+    "failed": 0,
+    "suites": {
+      "engine": {
+        "passed": 26,
+        "failed": 0
+      },
+      "pages": {
+        "passed": 22,
+        "failed": 0
+      },
+      "ui": {
+        "passed": 13,
+        "failed": 0
+      },
+      "re5": {
+        "passed": 17,
+        "failed": 0
+      },
+      "continuity": {
+        "passed": 19,
+        "failed": 0
+      },
+      "catalog": {
+        "passed": 16,
+        "failed": 0
+      },
+      "journal": {
+        "passed": 22,
+        "failed": 0
+      },
+      "spatial": {
+        "passed": 18,
+        "failed": 0
+      }
+    },
+    "delivery": {
+      "version": "0.7.2",
+      "identities": 389,
+      "main": 115,
+      "experimental": 231,
+      "contextual": 43,
+      "commands": 3460,
+      "pages": 13,
+      "checkedLocalFiles": 555,
+      "missing": []
+    },
+    "browser": {
+      "executed": false,
+      "reason": "Local Chromium HTTP navigation returned ERR_BLOCKED_BY_ADMINISTRATOR; no alternate network access attempted. Native Canvas and controlled DOM are separate tests."
+    }
+  },
+  "compatibility": {
+    "contextJournal": "Exact v0.7.1 source/data/contract preserved; checkpoints remain compatible.",
+    "mainReplay": "New runtime contract; old files are preserved but require their original combat version."
+  },
+  "limits": [
+    "Spatial rectangles are authored collision-space approximations, not Capcom hitboxes.",
+    "Only five exact RE5 incarnations opt into eight zones. Other old biology profiles retain their global rules.",
+    "No new skeletal animations, final sprites, limb destruction or phase scripts.",
+    "231 experimental fighters and 43 contextual exercises remain outside campaign progression.",
+    "Community lore references are cited, not an exhaustive primary-source certification.",
+    "PR and Drive archives do not mean main is merged or Vercel promoted."
+  ]
+}

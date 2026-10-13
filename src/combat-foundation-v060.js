@@ -75,19 +75,21 @@ function applyStatus(s,a,d,m){const machine=d.f.combat.passive.machine||d.f.visu
  if(status==='marked'){d.statuses.marked={t:m.duration||120};delete d.buffs.cloak;return;}
  if(status==='slow'){if(!d.statuses.slow)d.statuses.slow={t:clamp(m.duration||100,30,140)};event(s,'slow',a,{target:d.slot});}
 }
-function biologyDamage060(s,p,m,blocked){
- const b=p.f.combat.biology;if(!b)return 1;
+function biologyDamage060(s,p,m,blocked,contact){
+ const b=p.f.combat.biology;if(!b)return {factor:1,zone:null};
  const fire=m.tag==='fire'||m.status==='burn';
  if(!blocked&&fire&&b.exposeOnFire){p.statuses.exposed={t:Math.max(p.statuses.exposed?.t||0,b.exposeOnFire)};event(s,'coreExposed',p,{frames:b.exposeOnFire,by:'fire'});}
- const open=p.statuses.exposed?.t>0;
- return clamp(open?(b.exposed||1):(b.shell||1),.5,1.5)*(fire?clamp(b.fire||1,.5,2):1);
+ const zone=root.RE_SPATIAL?.resolve(p,box(p),m,contact,blocked)||null;
+ const open=zone?zone.critical:p.statuses.exposed?.t>0;
+ return {factor:clamp(open?(b.exposed||1):(b.shell||1),.5,1.5)*(fire?clamp(b.fire||1,.5,2):1),zone};
 }
-function damage(s,a,d,m,{projectile=null,forced=false,scale=1}={}){if(d.life<=0)return {hit:false};const throwing=m.level==='throw';
+function damage(s,a,d,m,{projectile=null,forced=false,scale=1,contact=null}={}){if(d.life<=0)return {hit:false};const throwing=m.level==='throw';
  if(throwing&&(d.hit>0||d.blockstun>0||!d.onGround||d.throwProtect>0||!a.onGround))return{hit:false};
  if(throwing&&s.frame-d.lastTech<=7){d.throwProtect=a.throwProtect=65;a.hit=d.hit=10;a.attack=d.attack=null;a.vx=-a.face*4;d.vx=a.face*4;event(s,'throwTech',d);fx(s,(a.x+d.x)/2,FLOOR-160,'ring','counter','DÉCHOPE');return{hit:true,teched:true};}
  // A returning or ricocheting shot arrives from its current flight direction,
  // regardless of the original shooter's position.
- const incomingX=projectile?(Math.abs(projectile.vx)>.001?d.x-Math.sign(projectile.vx)*32:projectile.x):a.x;
+ const flightVX=projectile?(projectile.flightVX??projectile.vx):0;
+ const incomingX=projectile?(Math.abs(flightVX)>.001?d.x-Math.sign(flightVX)*32:projectile.x):a.x;
  const frontal=(incomingX-d.x)*d.face>=-8;
  if(!forced&&frontal&&canParry(d,m,!!projectile)){
   const par=d.attack.def;d.stats.parries++;d.meter=clamp(d.meter+10+(d.f.combat.passive.parryMeter||0),0,100);
@@ -100,7 +102,8 @@ function damage(s,a,d,m,{projectile=null,forced=false,scale=1}={}){if(d.life<=0)
  const blocking=!forced&&d.block&&frontal&&!throwing&&(m.level!=='low'||d.crouch);
  const armor=!forced&&!throwing&&!['electric','emp','rail'].includes(m.tag)&&!!d.buffs.armor;
  const reactive=!forced&&!throwing&&!['electric','emp','rail'].includes(m.tag)&&!!d.buffs.reactive;
- const base=Math.max(0,m.damage||0)*clamp(a.f.power||1,.85,1.18)*scale*(projectile?.damageScale||1)*(rule58(s,'double_damage')?2:1)*biologyDamage060(s,d,m,blocking||armor||reactive);
+ const bio=biologyDamage060(s,d,m,blocking||armor||reactive,contact);
+ const base=Math.max(0,m.damage||0)*clamp(a.f.power||1,.85,1.18)*scale*(projectile?.damageScale||1)*(rule58(s,'double_damage')?2:1)*bio.factor;
  const precision=(m.tag==='precision'||m.tag==='rail')&&(projectile?.steady||a.attack?.steady)?1.15:1;
  const marked=!!d.statuses.marked&&(!!projectile||!!a.f.combat.passive.markMelee&&m.kind==='melee');
  const comboScale=clamp(1-.13*Math.max(0,d.comboHits),.35,1);let amount=Math.round(base*precision*(marked?1.12:1)*(a.buffs.power?1.24:1)*(a.buffs.taunt?1.16:1)*(d.buffs.taunt?1.2:1)*(d.buffs.power?1.08:1)*comboScale);
@@ -112,7 +115,7 @@ function damage(s,a,d,m,{projectile=null,forced=false,scale=1}={}){if(d.life<=0)
  delete d.buffs.cloak;delete d.buffs.focus;if(marked)delete d.statuses.marked;
  if(!blocking&&!armor&&!reactive){
   d.comboHits++;d.comboQuiet=0;const stun=Math.min(35,throwing?32:14+Math.round(amount/100));d.hit=Math.max(d.hit,stun);d.comboStun+=stun;d.block=false;d.attack=null;d.cool=0;
-  d.vx=(projectile?Math.sign(projectile.vx):a.face)*(throwing?8:5);if(m.launch&&d.comboHits<4){d.vy=m.launch;d.onGround=false;}
+  d.vx=(projectile?Math.sign(flightVX):a.face)*(throwing?8:5);if(m.launch&&d.comboHits<4){d.vy=m.launch;d.onGround=false;}
   if(throwing){d.throwProtect=110;a.throwProtect=Math.max(a.throwProtect,30);d.x=clamp(d.x+a.face*48,LEFT,RIGHT);}
   if(d.comboStun>=105){d.hit=12;d.vx=a.face*14;d.throwProtect=150;d.comboStun=0;event(s,'comboEscape',d);}
   applyStatus(s,a,d,m);
@@ -121,12 +124,13 @@ function damage(s,a,d,m,{projectile=null,forced=false,scale=1}={}){if(d.life<=0)
   if(m.restoreEnergy&&(d.f.combat.passive.machine||d.f.combat.passive.bladeEnergy||d.f.visual?.outfit==='cyborg')){a.r=clamp(a.r+m.restoreEnergy,0,a.f.combat.resource.max);const restored=heal(s,a,m.heal||0,600);event(s,'zandatsu',a,{restored});fx(s,a.x,a.y-220,'ring','electric','ABSORPTION');}
   if(a.attack)a.attack.confirmed=true;
  }
- a.stats.hits++;a.stats.damage+=amount;s.idleTraining=0;fx(s,d.x,d.y-100,blocking?'guard':'hit',m.tag);event(s,'damage',a,{target:d.slot,amount,blocked:blocking,slot:m.slot,tag:m.tag});
- return{hit:true,blocked:blocking,amount};
+ a.stats.hits++;a.stats.damage+=amount;s.idleTraining=0;fx(s,d.x,d.y-100,blocking?'guard':'hit',m.tag);if(bio.zone?.critical&&amount>0)event(s,'weakpointHit',a,{target:d.slot,zone:bio.zone.id,amount});
+ event(s,'damage',a,{target:d.slot,amount,blocked:blocking,slot:m.slot,tag:m.tag,weakpoint:bio.zone?.critical?bio.zone.id:null});
+ return{hit:true,blocked:blocking,amount,weakpoint:bio.zone?.critical?bio.zone.id:null};
 }
 function explode(s,q){if(q.dead)return;q.dead=true;const a=actors(s)[q.owner],d=other(s,a),radius=q.def.radius||90;
  fx(s,q.x,q.y,'blast',q.def.tag,'');event(s,'explosion',a,{id:q.id});
- const hb={x:q.x-radius,y:q.y-radius,w:radius*2,h:radius*2};if(overlap(hb,box(d)))damage(s,a,d,{...q.def,level:'mid'},{scale:q.damageScale||1});
+ const hb={x:q.x-radius,y:q.y-radius,w:radius*2,h:radius*2};if(overlap(hb,box(d)))damage(s,a,d,{...q.def,level:'mid'},{scale:q.damageScale||1,contact:{kind:'blast',box:hb,fromX:q.x}});
  for(const tr of s.traps)if(tr.owner!==q.owner&&overlap(hb,{x:tr.x-20,y:tr.y-35,w:40,h:35}))tr.dead=true;
 }
 function spawn(s,p,m,atk,i){if(rule58(s,'no_projectiles'))return null;const heavy=['rocket','rail','explosive','fire'].includes(m.tag);const q={id:s.nextId++,owner:p.slot,
@@ -155,7 +159,7 @@ function activate(s,p,a){if(a.activated)return;a.activated=true;p.stats.activati
  if(d.launchSelf&&p.onGround){p.vy=d.launchSelf;p.onGround=false;}
  if(d.selfDamage){p.life=Math.max(1,p.life-d.selfDamage);p.gray=Math.min(p.gray,10000-p.life);event(s,'selfDamage',p,{amount:d.selfDamage});}
 }
-function prepare(s,p,input){const o=other(s,p);if(!p.attack)p.face=o.x>=p.x?1:-1;
+function prepare(s,p,input){const o=other(s,p);if(!p.attack)p.face=s.options.training&&p.slot===1&&[-1,1].includes(s.options.dummyFacing)?s.options.dummyFacing:o.x>=p.x?1:-1;
  p.crouch=!!input.down&&p.onGround&&!p.attack;p.block=!!input.guard&&!p.attack&&!p.hit;
  if(input.tech||input.slot==='throw')p.lastTech=s.frame;
  if(p.hit||p.blockstun){p.state=p.hit?'hit':'guard';return;}
@@ -194,20 +198,22 @@ function action(s,p){const a=p.attack;if(!a)return;const d=a.def;a.t++;
  if(a.t>=d.startup+d.active+d.recovery){p.attack=null;p.state='idle';}
 }
 function projectileStep(s){for(const q of s.projectiles){if(q.dead)continue;if(q.delay>0){q.delay--;continue;}q.age++;q.life--;
- const m=q.def,a=actors(s)[q.owner],d=other(s,a);q.x+=q.vx;q.y+=q.vy;
+ const m=q.def,a=actors(s)[q.owner],d=other(s,a),x0=q.x,y0=q.y,reflectionsAtMove=q.reflections;q.flightVX=q.vx;q.x+=q.vx;q.y+=q.vy;
  if(m.gravity)q.vy+=m.gravity;
  if(m.homing&&!d.buffs.cloak){const targetY=d.y-Math.min(box(d).h*.55,140),max=m.homing;q.vy=clamp(q.vy+clamp((targetY-q.y)*.001,-max,max),-3.6,3.6);}
- if(m.returnAt&&q.age>=m.returnAt&&!q.returned){q.vx=-q.vx;q.returned=true;event(s,'return',a,{id:q.id});}
+ const turnAfterContact=m.returnAt&&q.age>=m.returnAt&&!q.returned;
  if(m.gravity&&q.y>=FLOOR-10){q.y=FLOOR-10;q.vy=-Math.abs(q.vy)*.46;q.vx*=.7;}
  if(m.fuse){if(q.age>=m.fuse){explode(s,q);continue;}}
  else{
   // Swept segment prevents a fast bullet skipping a narrow drone.
-  const r={x:Math.min(q.x,q.x-q.vx)-8,y:Math.min(q.y,q.y-q.vy)-7,w:Math.abs(q.vx)+16,h:Math.abs(q.vy)+14};
-  if(overlap(r,box(d))&&!q.hitTargets[d.slot]){
-   const ret=damage(s,a,d,m,{projectile:q});
+  const r={x:Math.min(q.x,x0)-8,y:Math.min(q.y,y0)-7,w:Math.abs(q.x-x0)+16,h:Math.abs(q.y-y0)+14};
+  const crossing=root.RE_SPATIAL?root.RE_SPATIAL.sweep(x0,y0,q.x,q.y,box(d),8,7):overlap(r,box(d));
+  if(crossing&&!q.hitTargets[d.slot]){
+   const ret=damage(s,a,d,m,{projectile:q,contact:{kind:'projectile',fromX:x0,x0,y0,x1:q.x,y1:q.y,padX:8,padY:7}});
    if(!ret.parried){q.hitTargets[d.slot]=q.returned?'return':'out';if(!m.returnAt||q.returned)q.dead=true;}
   }else if(m.returnAt&&q.returned&&q.hitTargets[d.slot]==='out'&&Math.abs(q.x-d.x)>90){delete q.hitTargets[d.slot];}
  }
+ if(turnAfterContact&&!q.dead&&q.reflections===reflectionsAtMove){q.vx=-q.vx;q.returned=true;event(s,'return',a,{id:q.id});}
  if(q.x<LEFT-35||q.x>RIGHT+35){if(q.bounces>0){q.vx=-q.vx;q.bounces--;q.x=clamp(q.x,LEFT-35,RIGHT+35);event(s,'ricochet',a,{id:q.id});}else if(!m.returnAt||q.returned)q.dead=true;}
  if(q.life<=0){if(m.fuse)explode(s,q);else q.dead=true;}if(q.y>FLOOR+100||q.y<-140)q.dead=true;
  }
@@ -215,7 +221,7 @@ function projectileStep(s){for(const q of s.projectiles){if(q.dead)continue;if(q
 }
 function objectsStep(s){for(const tr of s.traps){if(tr.dead)continue;tr.age++;tr.life--;const a=actors(s)[tr.owner],d=other(s,a);
  if(tr.life<=0){tr.dead=true;continue;}if(tr.age<tr.arm)continue;
- if(!tr.def.remoteOnly&&Math.abs(tr.x-d.x)<(tr.def.reach||90)&&d.y>FLOOR-95){const result=damage(s,a,d,{...tr.def,level:tr.def.tag==='snare'?'low':'mid'});if(result.hit){tr.dead=true;fx(s,tr.x,FLOOR-30,'blast',tr.def.tag);event(s,'trapTrigger',a);}}
+ if(!tr.def.remoteOnly&&Math.abs(tr.x-d.x)<(tr.def.reach||90)&&d.y>FLOOR-95){const result=damage(s,a,d,{...tr.def,level:tr.def.tag==='snare'?'low':'mid'},{contact:{kind:'trap',fromX:tr.x}});if(result.hit){tr.dead=true;fx(s,tr.x,FLOOR-30,'blast',tr.def.tag);event(s,'trapTrigger',a);}}
  }s.traps=s.traps.filter(t=>!t.dead);}
 function destroyObjects(s,p,hb,m){for(const tr of s.traps)if(tr.owner!==p.slot&&!tr.dead&&overlap(hb,{x:tr.x-22,y:tr.y-60,w:44,h:60})){tr.hp-=Math.max(140,m.damage);if(tr.hp<=0){tr.dead=true;event(s,'trapDestroyed',p);fx(s,tr.x,tr.y-30,'hit',tr.def.tag);}}
  for(const q of s.projectiles)if(q.owner!==p.slot&&!q.dead&&q.delay<=0&&overlap(hb,{x:q.x-16,y:q.y-12,w:32,h:24})&& !['rail','laser'].includes(q.def.tag)){q.dead=true;event(s,'projectileDestroyed',p);fx(s,q.x,q.y,'ring','counter');}
@@ -236,8 +242,8 @@ function step(s,inputs=[empty(),empty()]){if(s.finished)return s;
   const remaining=minGap-(right.x-left.x);if(remaining>0){if(left.x<=LEFT)right.x=Math.min(RIGHT,right.x+remaining);else left.x=Math.max(LEFT,left.x-remaining);}
  }
  // Collect before applying damage, allowing genuinely simultaneous active frames.
- const pending=[];for(const p of ps){const hb=hitbox(p),a=p.attack;if(!hb||!a||a.hit)continue;destroyObjects(s,p,hb,a.def);const o=other(s,p);if(overlap(hb,box(o))){pending.push({p,o,a});}}
- for(const {p,o,a} of pending){const hit=damage(s,p,o,a.def);if(hit.hit){a.hit=true;a.confirmed=!hit.blocked&&!hit.parried;}}
+ const pending=[];for(const p of ps){const hb=hitbox(p),a=p.attack;if(!hb||!a||a.hit)continue;destroyObjects(s,p,hb,a.def);const o=other(s,p);if(overlap(hb,box(o))){pending.push({p,o,a,hb});}}
+ for(const {p,o,a,hb} of pending){const hit=damage(s,p,o,a.def,{contact:{kind:'melee',box:hb,fromX:p.x}});if(hit.hit){a.hit=true;a.confirmed=!hit.blocked&&!hit.parried;}}
  projectileStep(s);objectsStep(s);for(const p of ps)p.projectiles=s.projectiles.filter(q=>q.owner===p.slot&&!q.dead);
  if(s.options.training){s.idleTraining++;for(const p of ps)p.life=Math.max(1,p.life);if(s.options.autoheal&&s.idleTraining>=150){for(const p of ps){p.life=10000;p.gray=0;p.guard=100;p.statuses={};}s.idleTraining=0;}}
  else if(s.a.life<=0||s.b.life<=0)roundEnd(s,s.a.life===s.b.life?-1:s.a.life>s.b.life?0:1);

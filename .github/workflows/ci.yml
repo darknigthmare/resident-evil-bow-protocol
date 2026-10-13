@@ -38,7 +38,7 @@ jobs:
             const a = require('./data/catalog-expansion-v070.json');
             const ids = new Set(r.fighters.map(f => f.uid));
             const records = new Set(a.records.map(f => f.id));
-            assert.equal(a.version, p.version);
+            assert.equal(a.version, m.annexDataVersion ?? p.version);
             assert.equal(records.size, a.records.length);
             assert.equal(m.annexCounts.completedRecords, a.records.length);
             assert.equal(m.annexCounts.experimentalFighters, a.fighters.length);

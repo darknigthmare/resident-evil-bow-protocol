@@ -1,37 +1,32 @@
-<!doctype html><html lang="fr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Guide B.O.W. Protocol 0.7.0</title><body style="background:#102029;color:#e3e8da;font:16px/1.6 Arial;max-width:950px;margin:40px auto;padding:20px"><a href="../index.html" style="color:#cbe2bc">← MENU</a><h1>B.O.W. Protocol — v0.7.0</h1><pre style="white-space:pre-wrap"># Resident Evil — B.O.W. Protocol
+<!doctype html><html lang="fr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>B.O.W. Protocol 0.7.2</title><body style="background:#102029;color:#e3e8da;font:16px/1.6 Arial;max-width:950px;margin:40px auto;padding:20px"><a href="../index.html" style="color:#cbe2bc">← MENU</a><h1>Zones critiques — v0.7.2</h1><pre style="white-space:pre-wrap"># B.O.W. Protocol v0.7.2 — Zones critiques
 
-## v0.7.0 — Annexe du catalogue
+## Intégration et périmètre
+Cette PR réunit les corrections du Journal des essais (#8, fusionné dans la branche catalogue après la fusion de #7) et cette nouvelle passe vers main.
+115 combattants principaux + 231 prototypes isolés + 43 exercices = 389 identités. Aucun nouveau sujet ou pouvoir canonique n’a été ajouté. Les définitions des combattants et les 274 dossiers sont conservées.
 
-Fangame non officiel, moteur CQC Versus Legacy v0.60.
+## Changements
+- Cinq incarnations RE5 disposent de huit volumes critiques : Uroboros, Mkono, Reaper, Popokarimu et U-8.
+- La fenêtre d’exposition ne suffit plus : la trajectoire doit rencontrer une zone au bon endroit et depuis le bon côté. Le reste du corps conserve sa résistance.
+- Prises, dégâts non localisés et explosions n’empruntent pas un bonus critique global. Le feu conserve son multiplicateur thermique et interrompt le soin d’Uroboros/Mkono.
+- Les rectangles suivent la collision, la posture, l’orientation et la hauteur, indépendamment de la déformation de l’illustration provisoire.
+- Les projectiles utilisent leur segment de déplacement réel : correction des faux contacts diagonaux et du segment/du côté de garde pendant le retour.
+- Les deux laboratoires permettent de préparer explicitement une ouverture de 600 frames et de fixer la cible de face ou de dos. Ces paramètres ne sont jamais des récompenses ni des règles imposées à une campagne.
+- Pause du laboratoire à la perte du focus ; retour textuel du nombre d’impacts localisés.
+- Affichage des limites spatiales dans les movesets et des numéros de version corrigés.
+- Audit local des 389 identités : routes exclusives, ressources fournies, module de collision chargé, absence de promotion des prototypes.
 
-**274 fiches enrichies, 231 prototypes de combat, 43 exercices contextuels.** Les 115 combattants de progression précédents sont conservés. Les nouvelles commandes sont des simulations de familles techniques, pas des movesets complets Capcom certifiés. Aucune nouvelle animation finale 1:1 n’est revendiquée.
+## Tests exécutés
+153 contrôles réussis, 0 échec : engine 26, pages 22, ui 13, re5 17, continuity 19, catalog 16, journal 22, spatial 18.
+Le contrôle local couvre 13 pages et 555 fichiers liés. Les tests antérieurs sont relancés avec les nouvelles règles spatiales, y compris les duels CPU. Les coordonnées restent des approximations de gameplay. La vérification HTTP Chromium est bloquée par l’environnement ; aucun contrôle navigateur réel récent n’est revendiqué.
 
-### Lancer
-```sh
-npm start
-```
-Ouvrir l’adresse locale affichée. Les lanceurs Windows/macOS/Linux précédents sont conservés.
+## Sauvegardes
+Le journal des exercices et son contrat v0.7.1 sont inchangés octet par octet. Les replays du moteur principal utilisent un nouveau contrat ; les anciens restent conservés et doivent être ouverts avec leur version d’origine. Aucune sauvegarde n’est supprimée.
 
-### Accès aux nouveautés
-- `catalog.html` : les 274 fiches, avec recherche et filtres.
-- `catalog-laboratory.html` : démarrage réel des techniques, pause et pas de simulation.
-- `catalog-duel.html` : duels d’essai avec clavier/tactile ou IA contre IA, sans récompense.
-- `catalog-encounter.html` : exercices abstraits pour les 43 entités dépendantes d’un contexte.
+## Limites
+Les zones critiques ne sont configurées que pour les cinq incarnations listées ; elles ne constituent ni un démembrement ni toutes les phases des boss originaux. La queue, la gueule et les noyaux sont des rectangles de collision schématiques ; les sprites ne sont pas rendus anatomiquement définitifs par ces rectangles. Les cartes, commandes, frames et coefficients du versus restent adaptés. Les 35 références sommaires de l’annexe et les animations finales restent à documenter/produire.
 
-### Reconstruire et vérifier
-```sh
-python3 scripts/build-catalog-v070.py
-python3 scripts/build-lore-movesets.py
-python3 scripts/compile-content.py
-node scripts/contract.mjs --write
-npm install --no-save --package-lock=false @napi-rs/canvas@0.1.80
-npm run verify
-python3 scripts/release-v070.py
-npm run build
-```
-Les captures du contrôle navigateur local sont dans le rapport de livraison. Le registre complet des identifiants est `docs/CATALOG_REGISTER_v0.7.0.md`.
+## Jouer
+Extraire la source, lancer npm start puis ouvrir l’adresse affichée. Laboratoire : sélectionner une cible RE5 concernée ; cocher « ouverture préparée » pour inspecter ses volumes, ajuster le côté et la distance. Cette case est une fixture de test explicite, jamais une preuve d’exposition canonique.
 
-Les données de l’annexe sont séparées dans `data/catalog-expansion-v070.json`. Les champs `canonicalMovesetComplete=false` et `finalArt=false` empêchent de confondre couverture de fiches, intégration expérimentale et fidélité finale.
-
-Resident Evil et ses personnages appartiennent à leurs ayants droit, dont Capcom. Projet de fans, non officiel.
+Les références et choix d’adaptation sont consignés dans docs/SOURCES_SPATIAL_v072.md.
 </pre></body></html>

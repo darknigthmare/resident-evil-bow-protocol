@@ -1,36 +1,23 @@
 # Resident Evil — B.O.W. Protocol
 
-## v0.7.0 — Annexe du catalogue
+## v0.7.2 — Zones critiques
 
-Fangame non officiel, moteur CQC Versus Legacy v0.60.
+115 combattants principaux, 231 prototypes isolés, 43 exercices contextuels. Le catalogue compte 389 identités, pas 389 combattants 1:1 finalisés.
 
-**274 fiches enrichies, 231 prototypes de combat, 43 exercices contextuels.** Les 115 combattants de progression précédents sont conservés. Les nouvelles commandes sont des simulations de familles techniques, pas des movesets complets Capcom certifiés. Aucune nouvelle animation finale 1:1 n’est revendiquée.
+Cinq profils RE5 disposent de zones critiques localisées ; le calcul des trajectoires, les laboratoires et l’intégration du journal sont corrigés.
 
-### Lancer
 ```sh
 npm start
 ```
-Ouvrir l’adresse locale affichée. Les lanceurs Windows/macOS/Linux précédents sont conservés.
 
-### Accès aux nouveautés
-- `catalog.html` : les 274 fiches, avec recherche et filtres.
-- `catalog-laboratory.html` : démarrage réel des techniques, pause et pas de simulation.
-- `catalog-duel.html` : duels d’essai avec clavier/tactile ou IA contre IA, sans récompense.
-- `catalog-encounter.html` : exercices abstraits pour les 43 entités dépendantes d’un contexte.
-
-### Reconstruire et vérifier
 ```sh
-python3 scripts/build-catalog-v070.py
-python3 scripts/build-lore-movesets.py
-python3 scripts/compile-content.py
-node scripts/contract.mjs --write
 npm install --no-save --package-lock=false @napi-rs/canvas@0.1.80
 npm run verify
-python3 scripts/release-v070.py
 npm run build
 ```
-Les captures du contrôle navigateur local sont dans le rapport de livraison. Le registre complet des identifiants est `docs/CATALOG_REGISTER_v0.7.0.md`.
 
-Les données de l’annexe sont séparées dans `data/catalog-expansion-v070.json`. Les champs `canonicalMovesetComplete=false` et `finalArt=false` empêchent de confondre couverture de fiches, intégration expérimentale et fidélité finale.
+Voir `docs/RELEASE_NOTES_v0.7.2.md`, le manifeste et `docs/DELIVERY_AUDIT_v0.7.2.json`.
 
-Resident Evil et ses personnages appartiennent à leurs ayants droit, dont Capcom. Projet de fans, non officiel.
+L’annexe et le journal contextuel gardent leur version de données 0.7.1 : leur contrat n’a pas changé. Le moteur principal porte la nouvelle empreinte de combat.
+
+Les illustrations sont provisoires et les règles de combat adaptées. Aucune nouvelle animation originale ou extraite n’est revendiquée. Fangame non officiel ; Resident Evil appartient à ses ayants droit dont Capcom.

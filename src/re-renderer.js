@@ -406,9 +406,10 @@
       ctx.restore();
     } else silhouettePlaceholder(ctx, f, entry, bodyHeight);
     if(f?.fidelity?.visualStatus?.includes('provisional')){ctx.fillStyle='#deb877';ctx.font='9px monospace';ctx.textAlign='center';ctx.fillText('VISUEL PROVISOIRE',0,20);}
-    if(pose.actor?.statuses?.exposed?.t>0){ctx.strokeStyle='#e6b862';ctx.lineWidth=2;ctx.strokeRect(-bodyWidth/2-8,-bodyHeight-8,bodyWidth+16,bodyHeight+13);ctx.fillStyle='#f1cc81';ctx.font='11px monospace';ctx.textAlign='center';ctx.fillText('NOYAU EXPOSÉ',0,-bodyHeight-17);}
+    if(pose.actor?.statuses?.exposed?.t>0&&!root.RE_SPATIAL?.profile(pose.actor)){ctx.strokeStyle='#e6b862';ctx.lineWidth=2;ctx.strokeRect(-bodyWidth/2-8,-bodyHeight-8,bodyWidth+16,bodyHeight+13);ctx.fillStyle='#f1cc81';ctx.font='11px monospace';ctx.textAlign='center';ctx.fillText('NOYAU EXPOSÉ',0,-bodyHeight-17);}
     if (!pose.knockdown) drawAttackAccent(ctx, f, face, bodyHeight, bodyWidth, pose);
     ctx.restore();
+    if(pose.actor&&root.RE_SPATIAL&&root.CQCCombat060&&!pose.knockdown)root.RE_SPATIAL.draw(ctx,pose.actor,root.CQCCombat060.box(pose.actor),number(x),number(y),number(scale,1));
     return true;
   }
 
