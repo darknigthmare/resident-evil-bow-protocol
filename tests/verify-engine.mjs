@@ -138,6 +138,7 @@ async function main() {
   }
   Data = json('data/roster.json'); StoryData = json('data/chronicles.json');
   const pure = sandbox();
+  vm.runInContext(read('src/spatial-weakpoints-v072.js'), pure);
   vm.runInContext(read('src/combat-foundation-v060.js'), pure);
   vm.runInContext(read('src/chronicles-core-v060.js'), pure);
   Combat = pure.CQCCombat060; Stories = pure.CQC60_CORE;

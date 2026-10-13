@@ -1,30 +1,23 @@
 # Resident Evil — B.O.W. Protocol
 
-## v0.7.1 — Journal des essais
+## v0.7.2 — Zones critiques
 
-Fangame non officiel, base CQC Versus Legacy. Version construite sur la PR7 du catalogue.
+115 combattants principaux, 231 prototypes isolés, 43 exercices contextuels. Le catalogue compte 389 identités, pas 389 combattants 1:1 finalisés.
 
-**115 combattants principaux + 231 prototypes expérimentaux isolés + 43 exercices contextuels.** Les 389 identités sont cataloguées ; ce ne sont pas 389 combattants complets 1:1.
+Cinq profils RE5 disposent de zones critiques localisées ; le calcul des trajectoires, les laboratoires et l’intégration du journal sont corrigés.
 
-### Jouer
 ```sh
 npm start
 ```
-Ouvrir l’adresse affichée. Le projet conserve ses lanceurs précédents.
 
-- `catalog.html` : annexe des 274 fiches.
-- `catalog-duel.html` : clavier, tactile et manette standard ; aucune progression.
-- `catalog-laboratory.html` : commandes des prototypes dans le moteur CQC.
-- `catalog-encounter.html` : 43 exercices abstraits avec journal local et reprise en pause.
-
-### Vérifier / compiler
 ```sh
 npm install --no-save --package-lock=false @napi-rs/canvas@0.1.80
 npm run verify
 npm run build
 ```
-Après un changement aux exercices : `node scripts/context-contract.mjs --write` puis tests. Après un changement au moteur principal : `node scripts/contract.mjs --write` puis tests. Modifier une empreinte ne rétablit pas la compatibilité des anciennes sauvegardes.
 
-Voir `docs/RELEASE_NOTES_v0.7.1.md` et le manifeste pour les tests et limites. Les sources de la PR7 sont conservées sans révision des données de lore. Aucun nouvel asset définitif ou répertoire officiel complet n’est revendiqué. La création d’une PR n’est pas un déploiement de production.
+Voir `docs/RELEASE_NOTES_v0.7.2.md`, le manifeste et `docs/DELIVERY_AUDIT_v0.7.2.json`.
 
-Univers, personnages et lieux Resident Evil appartiennent à leurs ayants droit, dont Capcom.
+L’annexe et le journal contextuel gardent leur version de données 0.7.1 : leur contrat n’a pas changé. Le moteur principal porte la nouvelle empreinte de combat.
+
+Les illustrations sont provisoires et les règles de combat adaptées. Aucune nouvelle animation originale ou extraite n’est revendiquée. Fangame non officiel ; Resident Evil appartient à ses ayants droit dont Capcom.

@@ -3,7 +3,7 @@ import fs from 'node:fs';import path from 'node:path';import crypto from 'node:c
 const R=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),read=p=>fs.readFileSync(path.join(R,p),'utf8');
 export function calculateContract(){
  const env={window:{}};vm.createContext(env);vm.runInContext(read('src/re-data.js'),env);const d=env.window.RE_DATA;
- const files=['src/combat-foundation-v060.js','src/unified-engine-v060.js','src/operations.js','src/operation-vault-v061.js'];
+ const files=['src/spatial-weakpoints-v072.js','src/combat-foundation-v060.js','src/unified-engine-v060.js','src/operations.js','src/operation-vault-v061.js'];
  const hash=crypto.createHash('sha256');for(const file of files)hash.update(file+'\0'+read(file)+'\0');
  hash.update(JSON.stringify({fighters:d.fighters.map(f=>({uid:f.uid,power:f.power,speed:f.speed,reach:f.reach,visual:f.visual,combat:f.combat})),stages:d.stages.map(s=>s.id),protocols:d.protocols}));
  return{schema:'re.bow.runtime-contract/1',version:JSON.parse(read('package.json')).version,digest:hash.digest('hex')};

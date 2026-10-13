@@ -1,7 +1,7 @@
 import fs from 'node:fs';import path from 'node:path';import vm from 'node:vm';import assert from 'node:assert/strict';import {fileURLToPath} from 'node:url';import {createRequire} from 'node:module';
 const R=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),read=p=>fs.readFileSync(path.join(R,p),'utf8'),D=JSON.parse(read('data/roster.json'));
 const require=createRequire(import.meta.url),{loadGame}=require('./engine-vm.cjs'),env={console};env.window=env;vm.createContext(env);
-for(const f of ['re-data','runtime-contract','operation-vault-v061','combat-foundation-v060','technique-lab-v061'])vm.runInContext(read('src/'+f+'.js'),env);
+for(const f of ['re-data','runtime-contract','operation-vault-v061','spatial-weakpoints-v072','combat-foundation-v060','technique-lab-v061'])vm.runInContext(read('src/'+f+'.js'),env);
 const V=env.RE_OPERATION_VAULT,digest=env.RE_RUNTIME_CONTRACT.digest,copy=x=>JSON.parse(JSON.stringify(x));
 const checks=[];async function test(name,fn){try{const detail=await fn();checks.push({name,pass:true,detail});console.log('PASS '+name);}catch(e){checks.push({name,pass:false,error:e.stack});console.log('FAIL '+name+'\n'+e.message);}}
 function memory(){const map=new Map();return{map,getItem:k=>map.get(k)??null,setItem:(k,v)=>map.set(k,v)};}

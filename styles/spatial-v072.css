@@ -1,0 +1,6 @@
+/* Existing terminal palette. Readouts supplement rather than replace color. */
+#labWeakpoints{padding:14px 18px;border:1px solid #aa9562;background:#252a21;color:#ecd397;line-height:1.6}
+.lab-config label:has(input[type=checkbox]){display:flex;align-items:center;gap:10px;line-height:1.5}
+.lab-config input[type=checkbox]{width:20px;height:20px;flex-shrink:0}
+.lab-config select{max-width:100%;min-width:0}.lab-config label{min-width:0}
+@media(max-width:600px){.lab-config{grid-template-columns:1fr!important}.lab-readout{grid-template-columns:1fr 1fr}.lab-transport{gap:8px;flex-wrap:wrap}.lab-main{min-width:0}}
