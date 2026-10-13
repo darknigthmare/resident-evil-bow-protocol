@@ -1,0 +1,52 @@
+name: Package reviewed spatial completion v0.7.2
+on:
+  push:
+    branches: ['codex/v0.7.2-spatial-completion']
+    paths: ['.github/workflows/package-spatial072.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: bow-package-spatial072
+  cancel-in-progress: false
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - name: Check exact release and preserved content scope
+        run: |
+          node --input-type=commonjs <<'NODE'
+          const a=require('node:assert/strict'),p=require('./package.json'),d=require('./data/roster.json'),e=require('./data/catalog-expansion-v070.json'),m=require('./docs/RELEASE_MANIFEST_v0.7.2.json');
+          a.equal(p.version,'0.7.2');a.equal(d.fighters.length,115);a.equal(e.fighters.length,231);a.equal(e.records.length,274);a.equal(e.version,'0.7.1');a.equal(m.verification.failed,0);a.equal(m.verification.passed,153);
+          NODE
+      - run: npm install --no-save --package-lock=false @napi-rs/canvas@0.1.80
+      - run: npm run verify
+      - run: npm run build
+      - name: Archive exact tested source and static output without publishing or merging
+        run: |
+          set -euo pipefail
+          git archive --format=zip --prefix=resident-evil-bow-protocol-v0.7.2/ -o BOW_PROTOCOL_v0.7.2_SOURCE.zip HEAD
+          (cd dist && zip -q -r ../BOW_PROTOCOL_v0.7.2_STATIC.zip .)
+          git diff --binary 3cce2ab7eaac8b2c2a79747503d888ba06e79281 HEAD > BOW_PROTOCOL_MAIN_v0.7.0_to_v0.7.2.patch
+          sha256sum BOW_PROTOCOL_v0.7.2_SOURCE.zip BOW_PROTOCOL_v0.7.2_STATIC.zip BOW_PROTOCOL_MAIN_v0.7.0_to_v0.7.2.patch > BOW_PROTOCOL_v0.7.2_SHA256SUMS.txt
+          git rev-parse HEAD > BOW_PROTOCOL_v0.7.2_COMMIT.txt
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-v072-reviewed-delivery
+          path: |
+            BOW_PROTOCOL_v0.7.2_SOURCE.zip
+            BOW_PROTOCOL_v0.7.2_STATIC.zip
+            BOW_PROTOCOL_MAIN_v0.7.0_to_v0.7.2.patch
+            BOW_PROTOCOL_v0.7.2_SHA256SUMS.txt
+            BOW_PROTOCOL_v0.7.2_COMMIT.txt
+          compression-level: 0
+          retention-days: 7
+          if-no-files-found: error
