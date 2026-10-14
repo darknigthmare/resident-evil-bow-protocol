@@ -357,8 +357,9 @@
   function drawFighter(ctx, fighter, x, y, facing = 1, scale = 1, pose = {}) {
     if (!ctx) return true;
     const f = findFighter(fighter), v = f?.visual || {};
-    const entry = requestAsset(spritePath(f), 'sprite');
-    const face = number(facing, 1) < 0 ? -1 : 1;
+    const plan = root.RE_FIGHTER_DIRECTIONS.resolve(f, facing, pose, number(x));
+    const entry = requestAsset(plan.path, 'sprite');
+    const face = plan.face;
     const baseHeight = clamp(number(v.drawHeight, number(v.height, v.kind === 'quadruped' ? 112 : 225)), 45, 580);
     const assetScale = clamp(number(v.scale, 1), .25, 3);
     const outputScale = Math.max(.05, number(scale, 1)) * assetScale;
@@ -371,7 +372,7 @@
     let bodyWidth = baseHeight * .55;
     let crop;
     if (entry?.state === 'ready') {
-      crop = cropFor(entry, f?.spriteCrop || v.spriteCrop);
+      crop = cropFor(entry, plan.crop);
       bodyWidth = bodyHeight * crop.w / crop.h;
       const cap = number(v.maxDrawWidth, 760);
       if (bodyWidth > cap) { bodyHeight *= cap / bodyWidth; bodyWidth = cap; }
@@ -390,10 +391,9 @@
     const advance = pose.attack ? face * pulse * 11 : pose.guard ? -face * 3 : 0;
     ctx.translate(advance, lift);
     ctx.rotate(pose.knockdown ? face * 1.34 : lean + (pose.crouch ? .05 * face : 0));
-    // Asymmetric reference art is never mirrored: original eye/arm/body sides remain intact.
-    const asymmetric = v.asymmetric === true || /BIRKIN|BANDERSNATCH|N[EÉ]M[EÉ]SIS|T[-\s]?002/i.test(f?.name || '');
-    const originalFace = sourceFacing(v.sourceFacing);
-    const mirror = !asymmetric && originalFace !== 0 ? face * originalFace : 1;
+    // The same plan is shared by Versus, dossiers, replays, finishers and both laboratories.
+    // Opposite-side artwork is selected before drawing; do not flip a paired sprite again.
+    const mirror = plan.mirror;
     if (entry?.state === 'ready' && crop) {
       ctx.save();
       ctx.scale(mirror, 1);
@@ -402,10 +402,10 @@
       ctx.shadowColor = pose.hit ? '#7f25224d' : '#000b';
       ctx.shadowBlur = pose.hit ? 8 : 3;
       ctx.drawImage(entry.image, crop.x, crop.y, crop.w, crop.h,
-        -bodyWidth / 2, -bodyHeight, bodyWidth, bodyHeight);
+        -bodyWidth * plan.anchor[0], -bodyHeight * plan.anchor[1], bodyWidth, bodyHeight);
       ctx.restore();
     } else silhouettePlaceholder(ctx, f, entry, bodyHeight);
-    if(f?.fidelity?.visualStatus?.includes('provisional')){ctx.fillStyle='#deb877';ctx.font='9px monospace';ctx.textAlign='center';ctx.fillText('VISUEL PROVISOIRE',0,20);}
+    if(!plan.sideProfile || f?.fidelity?.visualStatus?.includes('provisional')){ctx.fillStyle='#deb877';ctx.font='9px monospace';ctx.textAlign='center';ctx.fillText(plan.sideProfile?'VISUEL PROVISOIRE':'PROFIL LATÉRAL À PRODUIRE',0,20);}
     if(pose.actor?.statuses?.exposed?.t>0&&!root.RE_SPATIAL?.profile(pose.actor)){ctx.strokeStyle='#e6b862';ctx.lineWidth=2;ctx.strokeRect(-bodyWidth/2-8,-bodyHeight-8,bodyWidth+16,bodyHeight+13);ctx.fillStyle='#f1cc81';ctx.font='11px monospace';ctx.textAlign='center';ctx.fillText('NOYAU EXPOSÉ',0,-bodyHeight-17);}
     if (!pose.knockdown) drawAttackAccent(ctx, f, face, bodyHeight, bodyWidth, pose);
     ctx.restore();
@@ -527,9 +527,10 @@
     drawStage(ctx, stage, time, time ? Math.sin(time * .14) * 75 : 0, true);
     const target = hero ? 535 : 410;
     const visualHeight = number(fighter?.visual?.drawHeight, number(fighter?.visual?.height, 225));
-    const subjectImage = requestAsset(spritePath(fighter), 'sprite');
+    const subjectPlan = root.RE_FIGHTER_DIRECTIONS.resolve(fighter, hero ? -1 : 1);
+    const subjectImage = requestAsset(subjectPlan.path, 'sprite');
     const subjectBounds = subjectImage?.state === 'ready' ? cropFor(subjectImage,
-      fighter?.spriteCrop || fighter?.visual?.spriteCrop) : null;
+      subjectPlan.crop) : null;
     const visualWidth = subjectBounds ? Math.min(number(fighter?.visual?.maxDrawWidth, 760),
       visualHeight * subjectBounds.w / subjectBounds.h) : visualHeight * .6;
     const bigScale = Math.min(clamp(target / visualHeight, .5, 3.5), 630 / visualWidth) /
@@ -560,7 +561,8 @@
     const items = [...cache.values()];
     return {
       version: 'RE-1.0 / CQC-0.60',
-      animation: 'Reference poses with whole-image movement; no reconstructed skeletal frames',
+      animation: 'Direction-specific sprite selection; unresolved front references remain explicitly provisional.',
+      directionalArt: 're.bow.directional-art/1',
       limits: { ...LIMITS, concurrentLoads: 6 }, loading, queued: queue.length, completed, released,
       cached: Object.fromEntries(Object.keys(LIMITS).map(kind => [kind,
         items.filter(item => item.kind === kind && item.state === 'ready').length])),
@@ -580,5 +582,6 @@
     preload: value => requestAsset(portraitPath(findFighter(value)), 'portrait'), diagnostics });
   root.CQC60_CINEMA = root.CQC58_CINEMA = root.CQC57_CINEMA = root.CQC56_CINEMA = cinema;
   root.RE_RENDERER = Object.freeze({ ...art, drawCinema, drawPortraitInContext,
-    resolveAsset, preloadStage, diagnostics, retryAssets });
+    resolveAsset, preloadStage, diagnostics, retryAssets,
+    directionalPlan: root.RE_FIGHTER_DIRECTIONS.resolve });
 })(window);

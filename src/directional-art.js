@@ -1,0 +1,2 @@
+/* Generated from data/directional-art.json; no roster mutation. */
+globalThis.RE_DIRECTIONAL_ART={"schema":"re.bow.directional-art/1","revision":1,"scope":"All gameplay renderers; original portraits stay unchanged.","readyDefinition":"Two reviewed side views, or a reviewed side view and an explicitly approved bilateral mirror. A front or three-quarter reference is not a finished lateral sprite.","records":{},"productionBlocker":"No new side-view artwork was generated in this pass. Existing reference poses are retained rather than falsely labelled as completed sprites."};
