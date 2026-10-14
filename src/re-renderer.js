@@ -50,6 +50,8 @@
       entry.image.removeAttribute('src');
     }
     entry.image = null;
+    if (entry.cutout) entry.cutout.width = entry.cutout.height = 1;
+    entry.cutout = null;
     entry.bounds = null;
     entry.state = 'released';
     entry.watchers.clear();
@@ -354,16 +356,40 @@
     ctx.restore();
   }
 
+  // Optional exact border-connected black matte removal, only for reviewed sources.
+  // Interior dark feathers/eyes are preserved, and portrait images remain untouched.
+  function spriteBitmap(entry, plan) {
+    const tolerance = plan.borderKey;
+    if (!Number.isInteger(tolerance) || tolerance < 0 || tolerance > 12) return entry.image;
+    if (entry.cutout && entry.cutoutTolerance === tolerance) return entry.cutout;
+    try {
+      const w=entry.image.naturalWidth,h=entry.image.naturalHeight;
+      if(w*h>4*1024*1024)return entry.image;
+      const cv=doc.createElement('canvas');cv.width=w;cv.height=h;
+      const cx=cv.getContext('2d',{willReadFrequently:true});cx.drawImage(entry.image,0,0);
+      const image=cx.getImageData(0,0,w,h),bytes=image.data,seen=new Uint8Array(w*h),queue=new Uint32Array(w*h);let head=0,tail=0;
+      const offer=i=>{if(i<0||i>=w*h||seen[i])return;seen[i]=1;const p=i*4;if(bytes[p]<=tolerance&&bytes[p+1]<=tolerance&&bytes[p+2]<=tolerance){bytes[p+3]=0;queue[tail++]=i;}};
+      for(let x=0;x<w;x++){offer(x);offer((h-1)*w+x);}for(let y=0;y<h;y++){offer(y*w);offer(y*w+w-1);}
+      while(head<tail){const i=queue[head++],x=i%w;if(x)offer(i-1);if(x<w-1)offer(i+1);offer(i-w);offer(i+w);}
+      cx.putImageData(image,0,0);entry.cutout=cv;entry.cutoutTolerance=tolerance;return cv;
+    } catch (_) { return entry.image; }
+  }
+
   function drawFighter(ctx, fighter, x, y, facing = 1, scale = 1, pose = {}) {
     if (!ctx) return true;
     const f = findFighter(fighter), v = f?.visual || {};
-    const plan = root.RE_FIGHTER_DIRECTIONS.resolve(f, facing, pose, number(x));
-    const entry = requestAsset(plan.path, 'sprite');
+    let plan = root.RE_FIGHTER_DIRECTIONS.resolve(f, facing, pose, number(x));
+    let entry = requestAsset(plan.path, 'sprite');
+    if (entry?.state === 'error' && plan.sideProfile) {
+      plan = { ...plan, path: spritePath(f), crop: f?.spriteCrop || v.spriteCrop || null,
+        anchor: [.5, 1], mirror: 1, sideProfile: false, animated: false, borderKey: undefined, status: 'asset-error' };
+      entry = requestAsset(plan.path, 'sprite');
+    }
     const face = plan.face;
     const baseHeight = clamp(number(v.drawHeight, number(v.height, v.kind === 'quadruped' ? 112 : 225)), 45, 580);
     const assetScale = clamp(number(v.scale, 1), .25, 3);
     const outputScale = Math.max(.05, number(scale, 1)) * assetScale;
-    const quiet = !!(pose.reduceMotion || pose.reducedMotion || pose.time === 0);
+    const quiet = !!(plan.animated || pose.reduceMotion || pose.reducedMotion || pose.time === 0);
     const time = quiet ? 0 : number(pose.time, now());
     const progress = clamp(number(pose.moveProgress, .5), 0, 1);
     const pulse = pose.attack ? Math.sin(progress * Math.PI) : 0;
@@ -388,9 +414,9 @@
     ctx.restore();
     const lean = quiet ? 0 : (pose.hit ? -.045 * face : pose.attack ? .025 * face * pulse : stepping * .008);
     const lift = quiet ? 0 : pose.walk ? -Math.abs(stepping) * 2.2 : Math.sin(time * 2.1) * .7;
-    const advance = pose.attack ? face * pulse * 11 : pose.guard ? -face * 3 : 0;
+    const advance = plan.animated ? 0 : pose.attack ? face * pulse * 11 : pose.guard ? -face * 3 : 0;
     ctx.translate(advance, lift);
-    ctx.rotate(pose.knockdown ? face * 1.34 : lean + (pose.crouch ? .05 * face : 0));
+    ctx.rotate(plan.animated ? 0 : pose.knockdown ? face * 1.34 : lean + (pose.crouch ? .05 * face : 0));
     // The same plan is shared by Versus, dossiers, replays, finishers and both laboratories.
     // Opposite-side artwork is selected before drawing; do not flip a paired sprite again.
     const mirror = plan.mirror;
@@ -401,11 +427,11 @@
       ctx.imageSmoothingQuality = 'high';
       ctx.shadowColor = pose.hit ? '#7f25224d' : '#000b';
       ctx.shadowBlur = pose.hit ? 8 : 3;
-      ctx.drawImage(entry.image, crop.x, crop.y, crop.w, crop.h,
+      ctx.drawImage(spriteBitmap(entry, plan), crop.x, crop.y, crop.w, crop.h,
         -bodyWidth * plan.anchor[0], -bodyHeight * plan.anchor[1], bodyWidth, bodyHeight);
       ctx.restore();
     } else silhouettePlaceholder(ctx, f, entry, bodyHeight);
-    if(!plan.sideProfile || f?.fidelity?.visualStatus?.includes('provisional')){ctx.fillStyle='#deb877';ctx.font='9px monospace';ctx.textAlign='center';ctx.fillText(plan.sideProfile?'VISUEL PROVISOIRE':'PROFIL LATÉRAL À PRODUIRE',0,20);}
+    if(!plan.sideProfile || f?.fidelity?.visualStatus?.includes('provisional')){ctx.fillStyle='#deb877';ctx.font='9px monospace';ctx.textAlign='center';ctx.fillText(plan.status==='asset-error'?'SPRITE LATÉRAL INDISPONIBLE':plan.sideProfile?'POSE DE RÉFÉRENCE LATÉRALE':'PROFIL LATÉRAL À PRODUIRE',0,20);}
     if(pose.actor?.statuses?.exposed?.t>0&&!root.RE_SPATIAL?.profile(pose.actor)){ctx.strokeStyle='#e6b862';ctx.lineWidth=2;ctx.strokeRect(-bodyWidth/2-8,-bodyHeight-8,bodyWidth+16,bodyHeight+13);ctx.fillStyle='#f1cc81';ctx.font='11px monospace';ctx.textAlign='center';ctx.fillText('NOYAU EXPOSÉ',0,-bodyHeight-17);}
     if (!pose.knockdown) drawAttackAccent(ctx, f, face, bodyHeight, bodyWidth, pose);
     ctx.restore();
@@ -557,12 +583,26 @@
     return true;
   }
 
+  // Resolve and warm only the two currently required sides, not a whole roster.
+  async function preloadFighter(fighter, pose = {}) {
+    const f = findFighter(fighter), state = root.RE_FIGHTER_DIRECTIONS.poseState(pose);
+    const paths = new Set([-1, 1].map(face => root.RE_FIGHTER_DIRECTIONS.resolve(f, face,
+      { ...pose, actor: null, opponentX: undefined, animationState: state }).path));
+    return Promise.all([...paths].map(path => {
+      const e = requestAsset(path, 'sprite');
+      if (!e) return Promise.resolve({ ok: false, path });
+      if (e.state === 'ready' || e.state === 'error') return Promise.resolve({ ok: e.state === 'ready', path });
+      return new Promise(resolve => e.waiters.push(resolve));
+    }));
+  }
+
   function diagnostics() {
     const items = [...cache.values()];
     return {
       version: 'RE-1.0 / CQC-0.60',
       animation: 'Direction-specific sprite selection; unresolved front references remain explicitly provisional.',
       directionalArt: 're.bow.directional-art/1',
+      directionalRevision: root.RE_DIRECTIONAL_ART?.revision || 0,
       limits: { ...LIMITS, concurrentLoads: 6 }, loading, queued: queue.length, completed, released,
       cached: Object.fromEntries(Object.keys(LIMITS).map(kind => [kind,
         items.filter(item => item.kind === kind && item.state === 'ready').length])),
@@ -582,6 +622,6 @@
     preload: value => requestAsset(portraitPath(findFighter(value)), 'portrait'), diagnostics });
   root.CQC60_CINEMA = root.CQC58_CINEMA = root.CQC57_CINEMA = root.CQC56_CINEMA = cinema;
   root.RE_RENDERER = Object.freeze({ ...art, drawCinema, drawPortraitInContext,
-    resolveAsset, preloadStage, diagnostics, retryAssets,
+    resolveAsset, preloadStage, preloadFighter, diagnostics, retryAssets,
     directionalPlan: root.RE_FIGHTER_DIRECTIONS.resolve });
 })(window);

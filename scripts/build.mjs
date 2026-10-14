@@ -2,7 +2,9 @@ import {readFile,cp,mkdir,rm,stat} from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import vm from 'node:vm';
+import {execFileSync} from 'node:child_process';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+execFileSync(process.execPath,['scripts/compile-directions.mjs'],{cwd:root,stdio:'inherit'});
 const ctx={window:{}};vm.createContext(ctx);vm.runInContext(await readFile(path.join(root,'src/re-data.js'),'utf8'),ctx);const D=ctx.window.RE_DATA;
 const ids=new Set();for(const f of D.fighters){if(ids.has(f.uid))throw Error('Duplicate fighter '+f.uid);ids.add(f.uid);for(const key of ['sprite','portrait'])await stat(path.join(root,f[key]));if(!f.combat?.moves?.special)throw Error('Missing combat profile '+f.uid)}
 for(const f of D.catalog)if(f.portrait)await stat(path.join(root,f.portrait));
