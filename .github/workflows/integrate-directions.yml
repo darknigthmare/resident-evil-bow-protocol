@@ -16,7 +16,15 @@ jobs:
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: '22.16.0'
-      - run: python3 scripts/apply-reviewed-directions.py
+      - name: Apply reviewed edits and portable PNG MIME correction
+        run: |
+          python3 scripts/apply-reviewed-directions.py
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('tests/verify-directions.mjs');s=p.read_text()
+          assert s.count("cv.toDataURL('png')")==2
+          p.write_text(s.replace("cv.toDataURL('png')","cv.toDataURL('image/png')"))
+          PY
       - run: npm install --no-save --package-lock=false @napi-rs/canvas@0.1.80
       - run: npm run verify
       - run: npm run build
