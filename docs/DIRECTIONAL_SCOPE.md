@@ -1,4 +1,4 @@
-# Rendu latéral — reprise R2 sur le moteur 0.7.3
+# Rendu latéral — reprise R3 sur le moteur 0.7.3
 
 ## État réel
 
@@ -6,11 +6,22 @@ Le renderer commun et son choix gauche/droite sont intégrés dans le projet, pa
 
 Le jeu possède 346 corps de combat (115 modes principaux + 231 essais isolés), et 43 exercices contextuels sans corps physique dans ce renderer. Ces derniers ne sont pas comptés comme des sprites réalisés.
 
-Cette reprise raccorde deux poses de référence existantes exploitables de profil : le corbeau de RE1 et la larve de papillon d’Outbreak. Leur dessin bilatéral est réfléchi après revue explicite ; ce ne sont pas deux anatomies opposées redessinées. Le Bandersnatch dispose de sa vue droite native uniquement ; sa vue gauche reste à produire et n’est jamais obtenue en inversant son bras hypertrophié. Trois autres corbeaux reçoivent une correction de direction de leur référence trois-quarts, sans être comptés comme de vrais profils complets.
+Cette reprise raccorde trois poses de référence existantes exploitables de profil : le corbeau de RE1, la larve de papillon d’Outbreak et la larve de RE2. Leur dessin bilatéral est réfléchi après revue explicite ; ce ne sont pas deux anatomies opposées redessinées. Le Bandersnatch dispose de sa vue droite native uniquement ; sa vue gauche reste à produire et n’est jamais obtenue en inversant son bras hypertrophié. Trois autres corbeaux reçoivent une correction de direction de leur référence trois-quarts, sans être comptés comme de vrais profils complets.
 
 **Aucune nouvelle illustration de personnage, aucune nouvelle paire anatomique indépendante et aucune animation définitive n’a été produite.** Les tentatives de génération n’ont fourni aucun asset utilisable pour cette intégration. Les images promotionnelles produites dans le fil sont exclues des sources et du build ; leurs compteurs et annonces ne sont pas une preuve de fonctionnalités.
 
-Les 344 autres identités n’ont pas une couverture gauche/droite validée. La majorité conserve sa référence frontale ou partielle, clairement indiquée. Ne pas annoncer « tout le projet est désormais latéral ».
+Les 343 autres identités n’ont pas une couverture gauche/droite validée. La majorité conserve sa référence frontale ou partielle, clairement indiquée. Ne pas annoncer « tout le projet est désormais latéral ».
+
+## Ajouts R3 (2026-10-16)
+
+- Une animation non chargée conserve la pose latérale du même côté lorsqu’elle est disponible, plutôt que de montrer le portrait frontal. L’échec reste visible dans les diagnostics.
+- Les réactions non bouclées démarrent à leur transition observée. Le temps de simulation arrêté conserve la frame ; retour temporel, nouvel acteur et nouveau choc réinitialisent leur horloge de présentation. Les attaques utilisent toujours leur tick réel. Aucun état de combat n’est écrit.
+- Les états de marche, recul, garde sous impact, saut, accroupissement et KO sont aussi déduits des champs réels de l’acteur quand un appelant ne fournit pas tous les indicateurs de dessin.
+- L’atelier inspecte 21 états/commandes avec lecture, pause, pas de 1 tick, retour à zéro et saisie de tick bornée. Les deux côtés sont vérifiés ensemble, avec accès direct au laboratoire du sujet. Une recherche vide masque les anciens liens.
+- La larve RE2 utilise son illustration native complète de profil. Cinq dessins obliques d’animaux ont seulement leur sens de référence et leur réflexion de présentation revus ; ils ne sont pas comptés comme des profils latéraux stricts.
+- Le cache libère aussi la surface détourée lors de l’éviction d’un sprite.
+
+Le gain graphique est limité : 3 poses natives bidirectionnelles au total, 0 paire anatomique indépendante, 0 nouvelle animation dessinée. Cette passe ne termine pas la demande de tous les personnages latéraux.
 
 ## Changements exécutables
 
@@ -29,7 +40,7 @@ Les 344 autres identités n’ont pas une couverture gauche/droite validée. La 
 
 ## Données et compatibilité
 
-Les définitions de combattants, les movesets, les hitboxes et les dossiers ne sont pas modifiés. Les contrats de combat et de journal contextuel demeurent ceux de la base. Version de gameplay : 0.7.3 ; révision du registre graphique : 2.
+Les définitions de combattants, les movesets, les hitboxes et les dossiers ne sont pas modifiés. Les contrats de combat et de journal contextuel demeurent ceux de la base. Version de gameplay : 0.7.3 ; révision du registre graphique : 3.
 
 `docs/DIRECTIONAL_WORKORDERS.json` décrit chaque corps, ses références, ses états à dessiner et ses côtés manquants. Il ne certifie pas une revue visuelle de l’ensemble des 346 sources.
 
@@ -46,6 +57,8 @@ Les crops directionnels sont en pixels. Sans crop, le canvas source entier est c
 
 ## QA et publication
 
-Tests locaux R2 : sélection de frames, asymétries, stabilité des données, dimensions raster, positions de l’atelier. Les tests pixels utilisent des textures techniques de test, pas de nouveaux personnages. Les vues Chromium sont testées hors ligne par injection des véritables HTML/JS/CSS/images : la navigation directe locale a été bloquée par l’environnement. Ce n’est pas un test de déploiement réseau, de téléphone ou de manette physique.
+Tests hérités R2 : sélection de frames, asymétries, stabilité des données, dimensions raster, positions de l’atelier. Les tests pixels utilisent des textures techniques de test, pas de nouveaux personnages. Les vues Chromium sont testées hors ligne par injection des véritables HTML/JS/CSS/images : la navigation directe locale a été bloquée par l’environnement. Ce n’est pas un test de déploiement réseau, de téléphone ou de manette physique.
 
 La PR reste un chantier graphique incomplet. Une archive et une PR ne prouvent ni une fusion dans main, ni une mise en production Vercel.
+
+R3 : 13 groupes de contrôles supplémentaires, chaîne complète de 215 contrôles passée localement avec skia-canvas. Deux parcours Chromium hors ligne supplémentaires en 1440/390 px (pas de réseau ni appareil physique). Résultats ciblés dans `docs/DIRECTIONAL_R3_TESTS.json` ; empreintes des données préservées dans `docs/DIRECTIONAL_R3_PRESERVATION.json`. Les captures du rapport de livraison proviennent de l’atelier exécuté, pas d’une génération graphique.

@@ -1,0 +1,67 @@
+{
+  "revision": 3,
+  "passed": 13,
+  "failed": 0,
+  "backend": "@napi-rs/canvas",
+  "scope": "Real shared renderer and native Canvas pixels plus controlled DOM. Fixtures are not character art.",
+  "checks": [
+    {
+      "name": "Shared selector infers walking, retreat, air, crouch and blockstun from actual actor fields",
+      "passed": true
+    },
+    {
+      "name": "Terminal poses and attack locking do not depend on absolute sprite position",
+      "passed": true
+    },
+    {
+      "name": "Reaction clock begins on its state transition instead of final frame at match age",
+      "passed": true
+    },
+    {
+      "name": "Clock pauses with simulation time and resets on seek or a new actor without mutation",
+      "passed": true
+    },
+    {
+      "name": "Explicit frame scrub and committed attack tick override the passive clock",
+      "passed": true
+    },
+    {
+      "name": "Clip-disabled fallback keeps the requested anatomical side and never a second reflection",
+      "passed": true
+    },
+    {
+      "name": "A loading attack atlas renders the already-loaded same-side idle pixels",
+      "passed": true
+    },
+    {
+      "name": "Broken directional action keeps valid lateral idle instead of a frontal reference",
+      "passed": true,
+      "details": {
+        "expectedMissingFixture": true
+      }
+    },
+    {
+      "name": "Native RE2 larva uses a measured complete silhouette and a declared bilateral reflection",
+      "passed": true
+    },
+    {
+      "name": "Oblique animal references stay oblique even when approved to face the opponent",
+      "passed": true
+    },
+    {
+      "name": "Atelier exposes all 21 states, exact stepping, scrub limits and real laboratory links",
+      "passed": true
+    },
+    {
+      "name": "Atelier pauses on blur and hides stale actions for an empty search",
+      "passed": true
+    },
+    {
+      "name": "Presentation code leaves combat, contextual journal and all 346 records unchanged",
+      "passed": true,
+      "details": {
+        "unchangedFiles": 9
+      }
+    }
+  ]
+}

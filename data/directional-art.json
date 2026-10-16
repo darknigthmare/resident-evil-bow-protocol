@@ -1,6 +1,6 @@
 {
   "schema": "re.bow.directional-art/1",
-  "revision": 2,
+  "revision": 3,
   "scope": "All gameplay renderers; original portraits stay unchanged.",
   "readyDefinition": "Two reviewed side views, or a reviewed side view and an explicitly approved bilateral mirror. A front or three-quarter reference is not a finished lateral sprite.",
   "records": {
@@ -138,6 +138,122 @@
         }
       },
       "reviewScope": "Existing lateral illustration only. Opposite side MUST be independently drawn; enlarged arm is never mirrored."
+    },
+    "re2-larvae": {
+      "mirrorReviewed": true,
+      "bilateralReview": {
+        "uid": "re2-larvae",
+        "approved": true,
+        "rationale": "Full worm-like larva profile in the supplied RE2 illustration: head at left, tapered rear at right, no lateralized weapon or limb. Reflection is a visual approximation of this reference, not an independent opposite anatomical reconstruction."
+      },
+      "production": {
+        "status": "native-reference-profile",
+        "newArtwork": false,
+        "animated": false
+      },
+      "views": {
+        "left": {
+          "path": "assets/catalog/re2-larvae.png",
+          "facing": "left",
+          "projection": "side",
+          "reviewed": true,
+          "width": 450,
+          "height": 360,
+          "crop": [
+            18,
+            102,
+            414,
+            162
+          ],
+          "anchor": [
+            0.5,
+            0.975
+          ],
+          "sha256": "5dae1391bd57ec847bc80ad69b4633e3a9bf9efb3f9c95acde23ce5d05ca09ec",
+          "borderKey": 6
+        }
+      },
+      "reviewScope": "Existing full larva silhouette inspected at source resolution on 2026-10-16. Static reference only; no source-game animation or full canon certification."
+    },
+    "re1-adder": {
+      "referenceFacing": "left",
+      "referenceMirrorReviewed": true,
+      "referenceBorderKey": 6,
+      "bilateralReview": {
+        "uid": "re1-adder",
+        "approved": true,
+        "rationale": "Unarmed animal reference with no identified one-sided equipment in the inspected picture. Reflection is approved only for approximate target-facing presentation of this image, not for canonical wounds or an independently drawn opposite body."
+      },
+      "production": {
+        "status": "three-quarter-reference",
+        "newArtwork": false,
+        "animated": false
+      },
+      "reviewScope": "Head points left, with a curled body seen obliquely; this is not a strict orthographic side drawing."
+    },
+    "re0-leech": {
+      "referenceFacing": "left",
+      "referenceMirrorReviewed": true,
+      "referenceBorderKey": 6,
+      "bilateralReview": {
+        "uid": "re0-leech",
+        "approved": true,
+        "rationale": "Unarmed animal reference with no identified one-sided equipment in the inspected picture. Reflection is approved only for approximate target-facing presentation of this image, not for canonical wounds or an independently drawn opposite body."
+      },
+      "production": {
+        "status": "three-quarter-reference",
+        "newArtwork": false,
+        "animated": false
+      },
+      "reviewScope": "Mouth is at lower left; dorsal surface remains visible, so this is only an oblique directional reference."
+    },
+    "reoutbreak-small-leech": {
+      "referenceFacing": "left",
+      "referenceMirrorReviewed": true,
+      "referenceBorderKey": 6,
+      "bilateralReview": {
+        "uid": "reoutbreak-small-leech",
+        "approved": true,
+        "rationale": "Unarmed animal reference with no identified one-sided equipment in the inspected picture. Reflection is approved only for approximate target-facing presentation of this image, not for canonical wounds or an independently drawn opposite body."
+      },
+      "production": {
+        "status": "three-quarter-reference",
+        "newArtwork": false,
+        "animated": false
+      },
+      "reviewScope": "Sucker is at lower left on a curved body; full orthographic lateral reconstruction remains missing."
+    },
+    "re4r-colmillos": {
+      "referenceFacing": "left",
+      "referenceMirrorReviewed": true,
+      "referenceBorderKey": 6,
+      "bilateralReview": {
+        "uid": "re4r-colmillos",
+        "approved": true,
+        "rationale": "Unarmed animal reference with no identified one-sided equipment in the inspected picture. Reflection is approved only for approximate target-facing presentation of this image, not for canonical wounds or an independently drawn opposite body."
+      },
+      "production": {
+        "status": "three-quarter-reference",
+        "newArtwork": false,
+        "animated": false
+      },
+      "reviewScope": "Muzzle points left but chest is oblique; preserve this exact drawing without certifying a strict lateral sprite."
+    },
+    "rerequiem-garmr": {
+      "referenceFacing": "right",
+      "referenceMirrorReviewed": true,
+      "referenceBorderKey": 6,
+      "bilateralReview": {
+        "uid": "rerequiem-garmr",
+        "approved": true,
+        "rationale": "Unarmed animal reference with no identified one-sided equipment in the inspected picture. Reflection is approved only for approximate target-facing presentation of this image, not for canonical wounds or an independently drawn opposite body."
+      },
+      "production": {
+        "status": "three-quarter-reference",
+        "newArtwork": false,
+        "animated": false
+      },
+      "reviewScope": "Muzzle and tongue point right in this supplied catalogue image; body is oblique, not a certified side view. No new lore is inferred from the image."
     }
   },
   "productionBlocker": "Most bodies remain frontal or incomplete references. Only individually inspected native profiles are enabled; no generated mockup is a game asset."

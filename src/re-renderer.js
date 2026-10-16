@@ -14,6 +14,7 @@
   const portraitBindings = new WeakMap(), regionBindings = new WeakMap(), stageBindings = new WeakMap();
   let revision = 0, loading = 0, completed = 0, released = 0;
   let rosterSource = null, rosterIndex = new Map();
+  const animationClock = root.RE_FIGHTER_DIRECTIONS.createClock();
 
   const number = (value, fallback = 0) => Number.isFinite(Number(value)) ? Number(value) : fallback;
   const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
@@ -53,6 +54,7 @@
     if (entry.cutout) entry.cutout.width = entry.cutout.height = 1;
     entry.cutout = null;
     entry.bounds = null;
+    if (entry.cutout) { entry.cutout.width = entry.cutout.height = 1; entry.cutout = null; }
     entry.state = 'released';
     entry.watchers.clear();
     released++;
@@ -378,18 +380,33 @@
   function drawFighter(ctx, fighter, x, y, facing = 1, scale = 1, pose = {}) {
     if (!ctx) return true;
     const f = findFighter(fighter), v = f?.visual || {};
-    let plan = root.RE_FIGHTER_DIRECTIONS.resolve(f, facing, pose, number(x));
+    const directions = root.RE_FIGHTER_DIRECTIONS;
+    const sampledPose = { ...pose, animationTick: animationClock.tick(pose) };
+    let plan = directions.resolve(f, facing, sampledPose, number(x));
+    const requestedPlan = plan;
     let entry = requestAsset(plan.path, 'sprite');
+    // An atlas can be loading, absent, or corrupt. Keep the SAME reviewed side in
+    // its idle pose while possible; do not suddenly show a frontal portrait.
+    if (entry?.state !== 'ready' && plan.animated) {
+      const still = directions.resolve(f, facing, sampledPose, number(x), { skipClips: true });
+      if (still.sideProfile) {
+        const stillEntry = requestAsset(still.path, 'sprite');
+        if (stillEntry?.state === 'ready') {
+          plan = { ...still, animationUnavailable: true, requestedState: requestedPlan.state };
+          entry = stillEntry;
+        }
+      }
+    }
     if (entry?.state === 'error' && plan.sideProfile) {
-      plan = { ...plan, path: spritePath(f), crop: f?.spriteCrop || v.spriteCrop || null,
-        anchor: [.5, 1], mirror: 1, sideProfile: false, animated: false, borderKey: undefined, status: 'asset-error' };
+      plan = { ...directions.resolve(f, facing, sampledPose, number(x), { skipClips: true, skipViews: true }),
+        status: 'asset-error', sideProfile: false, animated: false, animationUnavailable: requestedPlan.animated };
       entry = requestAsset(plan.path, 'sprite');
     }
     const face = plan.face;
     const baseHeight = clamp(number(v.drawHeight, number(v.height, v.kind === 'quadruped' ? 112 : 225)), 45, 580);
     const assetScale = clamp(number(v.scale, 1), .25, 3);
     const outputScale = Math.max(.05, number(scale, 1)) * assetScale;
-    const quiet = !!(plan.animated || pose.reduceMotion || pose.reducedMotion || pose.time === 0);
+    const quiet = !!(plan.animated || plan.animationUnavailable || pose.reduceMotion || pose.reducedMotion || pose.time === 0);
     const time = quiet ? 0 : number(pose.time, now());
     const progress = clamp(number(pose.moveProgress, .5), 0, 1);
     const pulse = pose.attack ? Math.sin(progress * Math.PI) : 0;
@@ -414,9 +431,9 @@
     ctx.restore();
     const lean = quiet ? 0 : (pose.hit ? -.045 * face : pose.attack ? .025 * face * pulse : stepping * .008);
     const lift = quiet ? 0 : pose.walk ? -Math.abs(stepping) * 2.2 : Math.sin(time * 2.1) * .7;
-    const advance = plan.animated ? 0 : pose.attack ? face * pulse * 11 : pose.guard ? -face * 3 : 0;
+    const advance = (plan.animated || plan.animationUnavailable) ? 0 : pose.attack ? face * pulse * 11 : pose.guard ? -face * 3 : 0;
     ctx.translate(advance, lift);
-    ctx.rotate(plan.animated ? 0 : pose.knockdown ? face * 1.34 : lean + (pose.crouch ? .05 * face : 0));
+    ctx.rotate((plan.animated || plan.animationUnavailable) ? 0 : pose.knockdown ? face * 1.34 : lean + (pose.crouch ? .05 * face : 0));
     // The same plan is shared by Versus, dossiers, replays, finishers and both laboratories.
     // Opposite-side artwork is selected before drawing; do not flip a paired sprite again.
     const mirror = plan.mirror;
@@ -431,6 +448,7 @@
         -bodyWidth * plan.anchor[0], -bodyHeight * plan.anchor[1], bodyWidth, bodyHeight);
       ctx.restore();
     } else silhouettePlaceholder(ctx, f, entry, bodyHeight);
+    if(plan.animationUnavailable)type(ctx,'ANIMATION NON CHARGÉE · POSE CONSERVÉE',0,34,8,'#d6ba82','center');
     if(!plan.sideProfile || f?.fidelity?.visualStatus?.includes('provisional')){ctx.fillStyle='#deb877';ctx.font='9px monospace';ctx.textAlign='center';ctx.fillText(plan.status==='asset-error'?'SPRITE LATÉRAL INDISPONIBLE':plan.sideProfile?'POSE DE RÉFÉRENCE LATÉRALE':'PROFIL LATÉRAL À PRODUIRE',0,20);}
     if(pose.actor?.statuses?.exposed?.t>0&&!root.RE_SPATIAL?.profile(pose.actor)){ctx.strokeStyle='#e6b862';ctx.lineWidth=2;ctx.strokeRect(-bodyWidth/2-8,-bodyHeight-8,bodyWidth+16,bodyHeight+13);ctx.fillStyle='#f1cc81';ctx.font='11px monospace';ctx.textAlign='center';ctx.fillText('NOYAU EXPOSÉ',0,-bodyHeight-17);}
     if (!pose.knockdown) drawAttackAccent(ctx, f, face, bodyHeight, bodyWidth, pose);
