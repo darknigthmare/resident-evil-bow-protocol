@@ -15,6 +15,7 @@
   let revision = 0, loading = 0, completed = 0, released = 0;
   let rosterSource = null, rosterIndex = new Map();
   const animationClock = root.RE_FIGHTER_DIRECTIONS.createClock();
+  const cinemaBindings = new WeakMap();
 
   const number = (value, fallback = 0) => Number.isFinite(Number(value)) ? Number(value) : fallback;
   const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
@@ -54,7 +55,7 @@
     if (entry.cutout) entry.cutout.width = entry.cutout.height = 1;
     entry.cutout = null;
     entry.bounds = null;
-    if (entry.cutout) { entry.cutout.width = entry.cutout.height = 1; entry.cutout = null; }
+    // The detached cutout was released above with the decoded image.
     entry.state = 'released';
     entry.watchers.clear();
     released++;
@@ -402,6 +403,10 @@
         status: 'asset-error', sideProfile: false, animated: false, animationUnavailable: requestedPlan.animated };
       entry = requestAsset(plan.path, 'sprite');
     }
+    if (entry?.state === 'error' && plan.referenceOverride && plan.path !== spritePath(f)) {
+      plan = { ...plan, path: spritePath(f), crop: f?.spriteCrop || f?.visual?.spriteCrop || null, anchor: [.5, 1], borderKey: undefined, referenceOverride: false, status: 'reference-asset-error', sideProfile: false, animated: false };
+      entry = requestAsset(plan.path, 'sprite');
+    }
     const face = plan.face;
     const baseHeight = clamp(number(v.drawHeight, number(v.height, v.kind === 'quadruped' ? 112 : 225)), 45, 580);
     const assetScale = clamp(number(v.scale, 1), .25, 3);
@@ -563,7 +568,11 @@
     const fighter = options.fighters?.[story.uid] || findFighter(story.uid);
     const other = options.fighters?.[story.route?.[index]?.opponent] || findFighter(story.route?.[index]?.opponent);
     const stage = stages[card.stage] || stages[story.stage] || root.RE_DATA?.stages?.[0];
-    const time = options.motion === false ? 0 : now();
+    const time = options.motion === false ? 0 : Number.isFinite(options.time) ? Math.max(0, options.time) : now();
+    const sceneKey = JSON.stringify([story.uid, phase, index, page, other?.uid, canvas.id]);
+    let binding = cinemaBindings.get(canvas);
+    if (!binding || binding.key !== sceneKey) { binding = { key: sceneKey, subject: {}, opponent: {} }; cinemaBindings.set(canvas, binding); }
+    const cinemaState = phase === 'outro' || phase === 'post' ? 'win' : phase === 'defeat' ? 'lose' : phase === 'pre' ? 'guard' : 'idle';
     const hero = canvas.id === 'heroArt';
     ctx.save();
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -582,11 +591,11 @@
     if (!stories && other) {
       ctx.save(); ctx.globalAlpha = .62;
       drawFighter(ctx, other, 912, 638, -1, Math.min(1.38, 400 / number(other.visual?.height, 225)),
-        { time, guard: phase === 'pre', hit: phase === 'post', reduceMotion: !time });
+        { time, animationKey: binding.opponent, animationState: phase === 'post' ? 'lose' : phase === 'defeat' ? 'win' : 'guard', guard: phase === 'pre', reduceMotion: !time });
       ctx.restore();
     }
     drawFighter(ctx, fighter, hero ? 985 : 318, hero ? 725 : 694, hero ? -1 : 1, bigScale,
-      { time, guard: phase === 'pre', hit: phase === 'defeat', reduceMotion: !time });
+      { time, animationKey: binding.subject, animationState: cinemaState, guard: phase === 'pre', reduceMotion: !time });
     const edge = ctx.createLinearGradient(0, 0, WIDTH, 0);
     if (hero) {
       edge.addColorStop(0, '#08090bed'); edge.addColorStop(.4, '#08090b9f'); edge.addColorStop(.7, '#08090b00');
@@ -604,8 +613,12 @@
   // Resolve and warm only the two currently required sides, not a whole roster.
   async function preloadFighter(fighter, pose = {}) {
     const f = findFighter(fighter), state = root.RE_FIGHTER_DIRECTIONS.poseState(pose);
-    const paths = new Set([-1, 1].map(face => root.RE_FIGHTER_DIRECTIONS.resolve(f, face,
-      { ...pose, actor: null, opponentX: undefined, animationState: state }).path));
+    const paths = new Set();
+    for (const face of [-1, 1]) {
+      const sample = { ...pose, actor: null, opponentX: undefined, animationState: state };
+      paths.add(root.RE_FIGHTER_DIRECTIONS.resolve(f, face, sample).path);
+      paths.add(root.RE_FIGHTER_DIRECTIONS.resolve(f, face, sample, undefined, { skipClips: true }).path);
+    }
     return Promise.all([...paths].map(path => {
       const e = requestAsset(path, 'sprite');
       if (!e) return Promise.resolve({ ok: false, path });

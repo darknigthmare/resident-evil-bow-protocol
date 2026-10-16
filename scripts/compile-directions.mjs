@@ -1,6 +1,7 @@
 /** Compile only reviewed direction records; validate actual files, crops and fixed frame bounds. */
 import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';import {dimensions} from './directional-image-metadata.mjs';
+import {assertDistinctSides} from './directional-pair-validation.mjs';
 const R=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=p=>JSON.parse(fs.readFileSync(path.join(R,p),'utf8'));
 const D=read('data/roster.json'),E=read('data/catalog-expansion-v070.json'),M=read('data/directional-art.json');
@@ -21,8 +22,10 @@ function checkImage(view){
 for(const [uid,r]of Object.entries(M.records)){
  const f=fighters.get(uid);if(!f)throw Error('Unknown incarnation: '+uid);
  if((r.mirrorReviewed===true||r.referenceMirrorReviewed===true)&&!A.mayMirror(f,r))throw Error('Asymmetric drawing cannot be mirrored: '+uid);
+ if(r.referenceImage){if(!A.validReference(r.referenceImage))throw Error('Invalid reviewed reference: '+uid);checkImage(r.referenceImage);}
  for(const [dir,v]of Object.entries(r.views||{})){if(!['left','right'].includes(dir)||!A.validView(v,dir))throw Error('Invalid/unreviewed directional view: '+uid);checkImage(v);}
  for(const [state,views]of Object.entries(r.clips||{})){
+  assertDistinctSides(views.left,views.right,uid+' / '+state);
   if(!A.states.includes(state)&&!A.slots.includes(state))throw Error('Unknown animation state: '+state);
   for(const [dir,c]of Object.entries(views)){if(!['left','right'].includes(dir)||!A.validClip(c,dir))throw Error('Invalid directional clip: '+uid+' '+state);checkImage(c);
    const size=c.frames[0].crop.slice(2);if(c.frames.some(f=>f.crop[2]!==size[0]||f.crop[3]!==size[1]))throw Error('Frame canvases must share dimensions to avoid breathing scale');
