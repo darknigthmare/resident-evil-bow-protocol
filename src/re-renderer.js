@@ -373,7 +373,7 @@
   }
 
   function drawAttackAccent(ctx, f, face, height, width, pose) {
-    if (!pose.attack || pose.reduceMotion || pose.reducedMotion) return;
+    if (root.RE_COMBAT_CUES || !pose.attack || pose.reduceMotion || pose.reducedMotion) return;
     const progress = clamp(number(pose.moveProgress, .4), 0, 1);
     const strength = Math.max(0, 1 - Math.abs(progress - .42) * 5);
     if (!strength) return;
@@ -533,7 +533,7 @@
   }
 
   function atmosphere(ctx, stage, time, preview) {
-    const weather = String(stage?.weather || stage?.family || '').toLowerCase();
+    const weather = root.RE_STAGE_DYNAMICS ? 'none' : String(stage?.weather || stage?.family || '').toLowerCase();
     const fog = ctx.createLinearGradient(0, 0, 0, HEIGHT);
     fog.addColorStop(0, '#02030555'); fog.addColorStop(.48, '#04040608');
     fog.addColorStop(.78, '#06070930'); fog.addColorStop(1, '#050607e0');
@@ -569,7 +569,10 @@
   function drawStage(ctx, stage, time = 0, camera = 0, preview = false) {
     if (!ctx) return true;
     const s = stage || root.RE_DATA?.stages?.[0] || {};
-    if(s.re5Scene&&root.RE5_SCENES?.draw(ctx,s,root.matchMedia?.('(prefers-reduced-motion: reduce)').matches?0:time,camera,preview))return true;
+    const reduced=!!root.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+    time=reduced?0:number(time);camera=reduced?0:number(camera);
+    if(root.RE_STAGE_DYNAMICS?.drawBase(ctx,s,time,camera,preview)){root.RE_STAGE_DYNAMICS.drawAmbient(ctx,s,time,{reducedMotion:reduced});return true;}
+    if(s.re5Scene&&root.RE5_SCENES?.draw(ctx,s,time,camera,preview)){root.RE_STAGE_DYNAMICS?.drawAmbient(ctx,s,time,{reducedMotion:reduced});return true;}
     const entry = requestAsset(s.background || s.image || '', 'stage');
     const miniBinding = ctx.canvas?.id === 'stageMini' ? { id: s.id, serial: ++revision } : null;
     if (miniBinding) stageBindings.set(ctx.canvas, miniBinding);
@@ -588,12 +591,14 @@
       });
     }
     atmosphere(ctx, s, number(time), preview);
+    root.RE_STAGE_DYNAMICS?.drawAmbient(ctx,s,time,{reducedMotion:reduced});
     ctx.restore();
     return true;
   }
 
   function preloadStage(stage) {
     const s = typeof stage === 'string' ? root.RE_DATA?.stages?.find(item => item.id === stage) : stage;
+    if(root.RE_STAGE_DYNAMICS?.describe(s).native)return Promise.resolve({ok:true,path:'procedural-r6:'+s.id});
     if(s?.re5Scene&&root.RE5_SCENES?.themes.includes(s.re5Scene))return Promise.resolve({ok:true,path:'procedural:'+s.id});
     const entry = requestAsset(s?.background || s?.image || '', 'stage');
     if (!entry) return Promise.resolve({ ok: false, path: '' });

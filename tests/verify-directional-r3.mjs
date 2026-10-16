@@ -1,3 +1,4 @@
+import {r6Expected} from './r6-baseline.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';import vm from 'node:vm';import path from 'node:path';import crypto from 'node:crypto';
 import {fileURLToPath} from 'node:url';import {createRequire} from 'node:module';
@@ -73,8 +74,8 @@ await test('Atelier pauses on blur and hides stale actions for an empty search',
   d.getElementById('directionSearch').value='zzzz_no_match_zzzz';d.getElementById('directionSearch').dispatchEvent({type:'input'});assert.equal(api.snapshot().uid,null);assert(d.getElementById('directionPlay').hidden);assert(d.getElementById('directionStep').disabled);
  }finally{env.dispose();}
 });
-await test('Presentation code leaves combat, contextual journal and all 346 records unchanged',()=>{
- const baseline=JSON.parse(read('docs/DIRECTIONAL_R3_PRESERVATION.json'));for(const [file,hash]of Object.entries(baseline.files))assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(R,file))).digest('hex'),hash,file);
+await test('Historical R3 preservation with explicitly checked R6 combat delta',()=>{
+ const baseline=JSON.parse(read('docs/DIRECTIONAL_R3_PRESERVATION.json'));for(const [file,hash]of Object.entries(baseline.files))assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(R,file))).digest('hex'),r6Expected(R,file,hash),file);
  return{unchangedFiles:Object.keys(baseline.files).length};
 });
 const failed=checks.filter(c=>!c.passed).length;fs.writeFileSync(path.join(R,'docs/DIRECTIONAL_R3_TESTS.json'),JSON.stringify({revision:3,passed:checks.length-failed,failed,backend:native.__binding,scope:'Real shared renderer and native Canvas pixels plus controlled DOM. Fixtures are not character art.',checks},null,2)+'\n');if(failed)process.exitCode=1;

@@ -1,0 +1,118 @@
+{
+  "suite": "combat-stage-r6",
+  "passed": 24,
+  "failed": 0,
+  "backend": "@napi-rs/canvas",
+  "scope": "Actual engine, read-only vector renderer, native Canvas and controlled DOM. Not original Capcom animation/geometry certification.",
+  "checks": [
+    {
+      "name": "Only four reviewed production profiles change; 111 remaining definitions are exact",
+      "pass": true,
+      "detail": {
+        "unchanged": 111,
+        "changed": 4
+      }
+    },
+    {
+      "name": "Nemesis rocket equipment does not gain fire, another mutation, or teleportation",
+      "pass": true
+    },
+    {
+      "name": "Nemesis backward jump moves continuously and lands without a position jump",
+      "pass": true
+    },
+    {
+      "name": "Rocket hits once, explodes once and cannot also apply direct contact damage",
+      "pass": true,
+      "detail": {
+        "explosions": 1,
+        "hits": 1,
+        "damage": 1239
+      }
+    },
+    {
+      "name": "A missed rocket detonates once on the wall without damaging a remote opponent",
+      "pass": true
+    },
+    {
+      "name": "Rocket explosion preserves frontal guard and gives no spatial critical bonus",
+      "pass": true
+    },
+    {
+      "name": "Gatling sustained emissions stop after a real interrupt; emitted rounds survive",
+      "pass": true
+    },
+    {
+      "name": "Uninterrupted Gatling burst emits six rounds at authored intervals, charged only once",
+      "pass": true
+    },
+    {
+      "name": "Pending burst originates at current actor position while keeping engaged facing",
+      "pass": true
+    },
+    {
+      "name": "Jill burst respects the same interruption rules without a new biological effect",
+      "pass": true
+    },
+    {
+      "name": "Nemesis super costs gauge and resource once and exposes a punishable startup",
+      "pass": true
+    },
+    {
+      "name": "Full Nemesis salvo has exactly three independently colliding explosive rounds",
+      "pass": true
+    },
+    {
+      "name": "Quadruped super has two active windows separated by a real non-hitting gap",
+      "pass": true
+    },
+    {
+      "name": "Interrupting the quadruped sequence removes its second strike without refund",
+      "pass": true
+    },
+    {
+      "name": "Pounce collision remains closed during ascent and opens on the descent window",
+      "pass": true
+    },
+    {
+      "name": "Shared effects read simulation state without modifying resources, RNG or event logs",
+      "pass": true
+    },
+    {
+      "name": "Rocket, ballistic, flame, secretion and electric visuals use distinct pixel geometry",
+      "pass": true
+    },
+    {
+      "name": "Window cues have no attack stroke during startup or between active hits",
+      "pass": true
+    },
+    {
+      "name": "Four authored scenes produce distinct deterministic images and changing animation frames",
+      "pass": true,
+      "detail": {
+        "scenes": 4,
+        "independentCompositions": 4
+      }
+    },
+    {
+      "name": "Interior precipitation is disabled while exterior rain remains allowed",
+      "pass": true
+    },
+    {
+      "name": "All combat/laboratory screens load the identical shared effects implementation",
+      "pass": true
+    },
+    {
+      "name": "Primary and annex benches execute new real startup/gap mechanics with no save packets",
+      "pass": true
+    },
+    {
+      "name": "Stage workshop filters safely and returns from lifecycle events as one paused loop",
+      "pass": true
+    },
+    {
+      "name": "All declared multi-hit windows are bounded and profiles have unique ten-slot names",
+      "pass": true
+    }
+  ]
+}

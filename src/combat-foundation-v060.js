@@ -30,7 +30,12 @@ function reset(s,{keepWins=true}={}){const oldA=s.a,oldB=s.b;s.a=makeActor(oldA.
  s.projectiles=[];s.traps=[];s.fx=[];s.roundWinner=null;s.idleTraining=0;s.lastImpact=null;if(rule58(s,'glass'))s.a.life=s.b.life=4000;if(rule58(s,'mirror_resource')){const ratio=Math.min(s.a.r/s.a.f.combat.resource.max,s.b.r/s.b.f.combat.resource.max);s.a.r=s.a.f.combat.resource.max*ratio;s.b.r=s.b.f.combat.resource.max*ratio;}event(s,'roundReset',null);return s;}
 function box(p){const v=p.f.visual||{},w=Math.max(40,Math.min(280,v.width||78));let h=Math.max(45,Math.min(360,v.height||230));if(p.crouch||p.attack?.def.lowProfile)h*=.53;return{x:p.x-w/2,y:p.y-h,w,h};}
 function overlap(a,b){return a&&b&&a.x<b.x+b.w&&a.x+a.w>b.x&&a.y<b.y+b.h&&a.y+a.h>b.y;}
-function inActive(a){return a&&a.t>=a.def.startup&&a.t<a.def.startup+a.def.active;}
+function strikeWindow(a){
+ if(!a)return -1;const age=a.t-a.def.startup;
+ if(age<0||age>=a.def.active)return -1;
+ return Array.isArray(a.def.hitWindows)?a.def.hitWindows.findIndex(w=>age>=w.start&&age<w.end):0;
+}
+function inActive(a){return strikeWindow(a)>=0;}
 function hitbox(p){const a=p.attack;if(!inActive(a)||a.def.kind!=='melee')return null;const d=a.def,r=d.reach*clamp(p.f.reach||1,.85,1.25),lo=d.level==='low',h=lo?62:Math.min(155,d.height?d.height:155),top=d.height|| (lo?62:190);return{x:p.face>0?p.x:p.x-r,y:p.y-top,w:r,h};}
 function isGun(m){return m.kind==='projectile'&&['ballistic','precision','tranq','rail','rocket'].includes(m.tag);}
 function costAllowed(p,d){const r=p.f.combat.resource,c=d.cost||0;return ['heat','cost'].includes(r.kind)?p.r+c<=r.max+.001:p.r>=c;}
@@ -140,14 +145,14 @@ function damage(s,a,d,m,{projectile=null,forced=false,scale=1,contact=null}={}){
  return{hit:true,blocked:blocking,amount,weakpoint:bio.zone?.critical?bio.zone.id:null};
 }
 function explode(s,q){if(q.dead)return;q.dead=true;const a=actors(s)[q.owner],d=other(s,a),radius=q.def.radius||90;
- fx(s,q.x,q.y,'blast',q.def.tag,'');event(s,'explosion',a,{id:q.id});
- const hb={x:q.x-radius,y:q.y-radius,w:radius*2,h:radius*2};if(overlap(hb,box(d)))damage(s,a,d,{...q.def,level:'mid'},{scale:q.damageScale||1,contact:{kind:'blast',box:hb,fromX:q.x}});
+ fx(s,q.x,q.y,'blast',q.def.tag,'');event(s,'explosion',a,{id:q.id,x:q.x,y:q.y,radius,tag:q.def.tag});
+ const hb={x:q.x-radius,y:q.y-radius,w:radius*2,h:radius*2};if(overlap(hb,box(d)))damage(s,a,d,{...q.def,level:'mid'},{scale:q.def.detonateOnContact?1:q.damageScale||1,projectile:q.def.detonateOnContact?q:null,contact:{kind:'blast',box:hb,fromX:q.x}});
  for(const tr of s.traps)if(tr.owner!==q.owner&&overlap(hb,{x:tr.x-20,y:tr.y-35,w:40,h:35}))tr.dead=true;
 }
 function spawn(s,p,m,atk,i){if(rule58(s,'no_projectiles'))return null;const heavy=['rocket','rail','explosive','fire'].includes(m.tag);const q={id:s.nextId++,owner:p.slot,
  x:p.x+p.face*52,y:p.y-(m.height||Math.min(145,box(p).h*.75)),vx:p.face*(m.speed||15),vy:m.vy||0,
  def:m,damageScale:1,life:m.life||80,delay:i*(m.interval||0),age:0,kind:m.fuse?'grenade':m.tag==='psychic'?'orb':m.tag,
- face:p.face,reflections:0,bounces:m.bounces||0,returned:false,dead:false,hitTargets:{},steady:atk.steady,
+ face:p.face,reflections:0,bounces:m.bounces||0,returned:false,dead:false,hitTargets:{},steady:atk.steady,scheduled:m.sustainBurst===true&&i>0,burstIndex:i,
  burstId:atk.id,hitMax:m.returnAt?2:1};
  s.projectiles.push(q);event(s,'projectile',p,{id:q.id,slot:m.slot,index:i});if(s.projectiles.length>60)s.projectiles.shift();return q;}
 function activate(s,p,a){if(a.activated)return;a.activated=true;p.stats.activations++;p.lastActivation=a.name;const d=a.def,o=other(s,p);event(s,'activate',p,{slot:a.name,kind:d.kind,name:d.name});
@@ -202,13 +207,20 @@ function upkeep(s,p){for(const k of ['hit','blockstun','cool','flash','throwProt
 }
 function action(s,p){const a=p.attack;if(!a)return;const d=a.def;a.t++;
  if(a.t===d.startup)activate(s,p,a);
- if(inActive(a)){
+ const window=strikeWindow(a);if(window>=0&&a.strikeWindow!==window){a.strikeWindow=window;a.hit=false;}
+ if(a.t>=d.startup&&a.t<d.startup+d.active){
   if(d.travel&&!p.hit)p.x=clamp(p.x+p.face*d.travel,LEFT,RIGHT);
   if(d.kind==='mobility')p.state='walk';
  }
  if(a.t>=d.startup+d.active+d.recovery){p.attack=null;p.state='idle';}
 }
-function projectileStep(s){for(const q of s.projectiles){if(q.dead)continue;if(q.delay>0){q.delay--;continue;}q.age++;q.life--;
+function projectileStep(s){for(const q of s.projectiles){if(q.dead)continue;
+ if(q.scheduled){
+  const owner=actors(s)[q.owner],attack=owner.attack;
+  if(owner.life<=0||!attack||attack.id!==q.burstId||attack.name!==q.def.slot){q.dead=true;event(s,'burstCancelled',owner,{id:q.id,index:q.burstIndex});continue;}
+  if(q.delay<=0){q.x=owner.x+attack.face*52;q.y=owner.y-(q.def.height||Math.min(145,box(owner).h*.75));q.face=attack.face;q.vx=attack.face*(q.def.speed||15);q.scheduled=false;event(s,'burstRelease',owner,{id:q.id,index:q.burstIndex});}
+ }
+ if(q.delay>0){q.delay--;continue;}q.age++;q.life--;
  const m=q.def,a=actors(s)[q.owner],d=other(s,a),x0=q.x,y0=q.y,reflectionsAtMove=q.reflections;q.flightVX=q.vx;q.x+=q.vx;q.y+=q.vy;
  if(m.gravity)q.vy+=m.gravity;
  if(m.homing&&!d.buffs.cloak){const targetY=d.y-Math.min(box(d).h*.55,140),max=m.homing;q.vy=clamp(q.vy+clamp((targetY-q.y)*.001,-max,max),-3.6,3.6);}
@@ -223,12 +235,13 @@ function projectileStep(s){for(const q of s.projectiles){if(q.dead)continue;if(q
   // crossing loses fast return hits. Do not re-arm while still inside a body.
   if(m.returnAt&&q.returned&&q.hitTargets[d.slot]==='out'&&!overlap({x:x0-8,y:y0-7,w:16,h:14},box(d)))delete q.hitTargets[d.slot];
   if(crossing&&!q.hitTargets[d.slot]){
+   if(m.detonateOnContact){if(typeof crossing==='object'){q.x=crossing.x;q.y=crossing.y;}explode(s,q);continue;}
    const ret=damage(s,a,d,m,{projectile:q,contact:{kind:'projectile',fromX:x0,x0,y0,x1:q.x,y1:q.y,padX:8,padY:7}});
    if(!ret.parried){q.hitTargets[d.slot]=q.returned?'return':'out';if(!m.returnAt||q.returned)q.dead=true;}
   }else if(m.returnAt&&q.returned&&q.hitTargets[d.slot]==='out'&&Math.abs(q.x-d.x)>90){delete q.hitTargets[d.slot];}
  }
  if(turnAfterContact&&!q.dead&&q.reflections===reflectionsAtMove){q.vx=-q.vx;q.returned=true;event(s,'return',a,{id:q.id});}
- if(q.x<LEFT-35||q.x>RIGHT+35){if(q.bounces>0){q.vx=-q.vx;q.bounces--;q.x=clamp(q.x,LEFT-35,RIGHT+35);event(s,'ricochet',a,{id:q.id});}else if(!m.returnAt||q.returned)q.dead=true;}
+ if(q.x<LEFT-35||q.x>RIGHT+35){if(m.detonateOnContact){q.x=clamp(q.x,LEFT-35,RIGHT+35);explode(s,q);continue;}if(q.bounces>0){q.vx=-q.vx;q.bounces--;q.x=clamp(q.x,LEFT-35,RIGHT+35);event(s,'ricochet',a,{id:q.id});}else if(!m.returnAt||q.returned)q.dead=true;}
  if(q.life<=0){if(m.fuse)explode(s,q);else q.dead=true;}if(q.y>FLOOR+100||q.y<-140)q.dead=true;
  }
  s.projectiles=s.projectiles.filter(q=>!q.dead);
@@ -257,7 +270,7 @@ function step(s,inputs=[empty(),empty()]){if(s.finished)return s;
  }
  // Collect before applying damage, allowing genuinely simultaneous active frames.
  const pending=[];for(const p of ps){const hb=hitbox(p),a=p.attack;if(!hb||!a||a.hit)continue;destroyObjects(s,p,hb,a.def);const o=other(s,p);if(overlap(hb,box(o))){pending.push({p,o,a,hb});}}
- for(const {p,o,a,hb} of pending){const hit=damage(s,p,o,a.def,{contact:{kind:'melee',box:hb,fromX:p.x}});if(hit.hit){a.hit=true;a.confirmed=!hit.blocked&&!hit.parried;}}
+ for(const {p,o,a,hb} of pending){const hit=damage(s,p,o,a.def,{scale:a.def.hitWindows?.[a.strikeWindow]?.scale??1,contact:{kind:'melee',box:hb,fromX:p.x}});if(hit.hit){a.hit=true;a.confirmed=!hit.blocked&&!hit.parried;}}
  projectileStep(s);objectsStep(s);for(const p of ps)p.projectiles=s.projectiles.filter(q=>q.owner===p.slot&&!q.dead);
  if(s.options.training){s.idleTraining++;for(const p of ps)p.life=Math.max(1,p.life);if(s.options.autoheal&&s.idleTraining>=150){for(const p of ps){p.life=10000;p.gray=0;p.guard=100;p.statuses={};}s.idleTraining=0;}}
  else if(s.a.life<=0||s.b.life<=0)roundEnd(s,s.a.life===s.b.life?-1:s.a.life>s.b.life?0:1);

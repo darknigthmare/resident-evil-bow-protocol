@@ -1,3 +1,4 @@
+import {r6Expected} from './r6-baseline.mjs';
 import assert from 'node:assert/strict';import fs from 'node:fs';import vm from 'node:vm';import path from 'node:path';import crypto from 'node:crypto';import {fileURLToPath} from 'node:url';import {createRequire} from 'node:module';
 import {assertDistinctSides} from '../scripts/directional-pair-validation.mjs';
 const require=createRequire(import.meta.url),{loadGame,native}=require('./engine-vm.cjs');
@@ -71,8 +72,8 @@ await test('Dossier outcome clips advance through real renderer pixels and resta
  e.window.RE_RENDERER.drawCinema(c,story,'outro',0,1,{...options,motion:false,time:99});p=rgb(cx,318,480);assert(p[0]>p[1]*2,'motion disabled remains first frame');
  }finally{e.dispose();}
 });
-await test('All 346 body definitions and combat/replay contracts remain unchanged',()=>{
- const base=json('docs/DIRECTIONAL_R3_PRESERVATION.json');for(const [file,sha]of Object.entries(base.files))assert.equal(hash(fs.readFileSync(path.join(R,file))),sha,file);
+await test('All 346 identities preserved with explicit R6 combat-contract changes',()=>{
+ const base=json('docs/DIRECTIONAL_R3_PRESERVATION.json');for(const [file,sha]of Object.entries(base.files))assert.equal(hash(fs.readFileSync(path.join(R,file))),r6Expected(R,file,sha),file);
  assert.equal(F.length,346);assert.equal(json('package.json').version,'0.7.3');return{unchangedFiles:Object.keys(base.files).length,combatIdentities:F.length};
 });
 const failed=checks.filter(c=>!c.passed).length;fs.writeFileSync(path.join(R,'docs/DIRECTIONAL_R4_TESTS.json'),JSON.stringify({revision:4,passed:checks.length-failed,failed,backend:native.__binding,scope:'Shared production renderer, actual processed native PNGs and synthetic pixel fixtures. No new source-game animation or exhaustive lore certification.',checks},null,2)+'\n');console.log(JSON.stringify({passed:checks.length-failed,failed}));if(failed)process.exitCode=1;
