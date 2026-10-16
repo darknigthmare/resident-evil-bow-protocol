@@ -24,8 +24,9 @@ patch('src/re-renderer.js',"    const time = options.motion === false ? 0 : now(
 patch('src/re-renderer.js',"{ time, guard: phase === 'pre', hit: phase === 'post', reduceMotion: !time });", "{ time, animationKey: binding.opponent, animationState: phase === 'post' ? 'lose' : phase === 'defeat' ? 'win' : 'guard', guard: phase === 'pre', reduceMotion: !time });")
 patch('src/re-renderer.js',"{ time, guard: phase === 'pre', hit: phase === 'defeat', reduceMotion: !time });", "{ time, animationKey: binding.subject, animationState: cinemaState, guard: phase === 'pre', reduceMotion: !time });")
 patch('src/re-renderer.js',"    const paths = new Set([-1, 1].map(face => root.RE_FIGHTER_DIRECTIONS.resolve(f, face,\n      { ...pose, actor: null, opponentX: undefined, animationState: state }).path));", "    const paths = new Set();\n    for (const face of [-1, 1]) {\n      const sample = { ...pose, actor: null, opponentX: undefined, animationState: state };\n      paths.add(root.RE_FIGHTER_DIRECTIONS.resolve(f, face, sample).path);\n      paths.add(root.RE_FIGHTER_DIRECTIONS.resolve(f, face, sample, undefined, { skipClips: true }).path);\n    }")
-# Previous assertion expressed the old content count; retain its purpose with the new reviewed poses.
+# Content coverage expands by exactly two reviewed reference poses, not new animations.
 patch('tests/verify-directional-r3.mjs',"assert.equal(api.counts.ready,3)","assert.equal(api.counts.ready,5)")
+patch('tests/verify-directional-animation.mjs',"assert.equal(F.filter(f=>A.audit(f).ready).length,3)","assert.equal(F.filter(f=>A.audit(f).ready).length,5)")
 p=R/'package.json';d=json.loads(p.read_text());extra=' && node tests/verify-directional-r4.mjs'
 if extra not in d['scripts']['verify']:d['scripts']['verify']+=extra
 p.write_text(json.dumps(d,indent=2,ensure_ascii=False)+'\n')
