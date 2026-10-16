@@ -12,7 +12,9 @@
   const PRIORITY = { stage: 3, sprite: 2, portrait: 1 };
   const cache = new Map(), queue = [], failures = new Map();
   const portraitBindings = new WeakMap(), regionBindings = new WeakMap(), stageBindings = new WeakMap();
+  const LOAD_TIMEOUT_MS = 15000, FAILURE_LIMIT = 512;
   let revision = 0, loading = 0, completed = 0, released = 0;
+  let retryEpoch = 0, pumping = false;
   let rosterSource = null, rosterIndex = new Map();
   const animationClock = root.RE_FIGHTER_DIRECTIONS.createClock();
   const cinemaBindings = new WeakMap();
@@ -67,19 +69,34 @@
     while (candidates.length > LIMITS[kind]) releaseEntry(candidates.shift());
   }
 
-  function settle(entry, ok) {
+  // A failed image is remembered beyond bitmap eviction. Explicit retry starts
+  // a new epoch; errors remain visible until that exact kind/path succeeds.
+  function rememberFailure(entry, reason) {
+    failures.delete(entry.key);
+    failures.set(entry.key, { path: entry.path, kind: entry.kind,
+      attempts: entry.attempts, epoch: retryEpoch, reason });
+    while (failures.size > FAILURE_LIMIT) failures.delete(failures.keys().next().value);
+  }
+
+  function settle(entry, ok, reason = 'load') {
     if (entry.state !== 'loading') return;
+    root.clearTimeout(entry.timer);
+    entry.timer = null;
+    const img = entry.image;
+    if (img) img.onload = img.onerror = null;
     loading--;
     entry.state = ok ? 'ready' : 'error';
     entry.used = ++revision;
     if (ok) {
       completed++;
-      failures.delete(entry.path);
+      failures.delete(entry.key);
     } else {
       entry.error = 'Image introuvable ou illisible : ' + entry.path;
-      failures.set(entry.path, { path: entry.path, kind: entry.kind, attempts: entry.attempts });
-      // The same failure is also shown in its portrait/stage placeholder.
-      if (entry.attempts === 1 && root.console) root.console.warn('[B.O.W. visuel]', entry.error);
+      if (reason === 'timeout') entry.error += ' (délai de chargement dépassé)';
+      rememberFailure(entry, reason);
+      if (img) img.removeAttribute('src');
+      entry.image = null;
+      if (entry.attempts === 1) root.console?.warn('[B.O.W. visuel]', entry.error);
     }
     const callbacks = [...entry.watchers.values()];
     entry.watchers.clear();
@@ -93,20 +110,33 @@
   }
 
   function pump() {
-    queue.sort((a, b) => PRIORITY[b.kind] - PRIORITY[a.kind] || b.used - a.used);
-    while (loading < 6 && queue.length) {
-      const entry = queue.shift();
-      if (entry.state !== 'queued') continue;
-      entry.state = 'loading';
-      entry.attempts++;
-      loading++;
-      const img = new root.Image();
-      entry.image = img;
-      img.decoding = 'async';
-      img.onload = () => settle(entry, img.naturalWidth > 0 && img.naturalHeight > 0);
-      img.onerror = () => settle(entry, false);
-      img.src = resolveAsset(entry.path);
-    }
+    // Also safe with synchronous decoders or a throwing Image.src setter.
+    if (pumping) return;
+    pumping = true;
+    try {
+      queue.sort((a, b) => PRIORITY[b.kind] - PRIORITY[a.kind] || b.used - a.used);
+      while (loading < 6 && queue.length) {
+        const entry = queue.shift();
+        if (entry.state !== 'queued') continue;
+        entry.state = 'loading';
+        entry.attempts++;
+        loading++;
+        try {
+          const img = new root.Image();
+          entry.image = img;
+          img.decoding = 'async';
+          const finish = (ok, reason) => {
+            // A late event belonging to an expired attempt must never settle a retry.
+            if (entry.image !== img || entry.state !== 'loading') return;
+            settle(entry, ok, reason);
+          };
+          entry.timer = root.setTimeout(() => finish(false, 'timeout'), LOAD_TIMEOUT_MS);
+          img.onload = () => finish(img.naturalWidth > 0 && img.naturalHeight > 0, 'load');
+          img.onerror = () => finish(false, 'load');
+          img.src = resolveAsset(entry.path);
+        } catch (_) { settle(entry, false, 'source'); }
+      }
+    } finally { pumping = false; }
   }
 
   function requestAsset(path, kind) {
@@ -115,11 +145,13 @@
     const key = kind + ':' + clean;
     let entry = cache.get(key);
     if (!entry) {
-      entry = { key, path: clean, kind, state: 'queued', image: null, bounds: null,
-        used: ++revision, attempts: 0, watchers: new Map(), waiters: [] };
+      const failure = failures.get(key);
+      const blocked = failure && failure.epoch === retryEpoch;
+      entry = { key, path: clean, kind, state: blocked ? 'error' : 'queued', image: null, bounds: null,
+        used: ++revision, attempts: failure?.attempts || 0, watchers: new Map(), waiters: [], timer: null };
       cache.set(key, entry);
-      queue.push(entry);
-      pump();
+      if (blocked) trimCache(kind);
+      else { queue.push(entry); pump(); }
     }
     entry.used = ++revision;
     return entry;
@@ -132,6 +164,7 @@
   }
 
   function retryAssets() {
+    retryEpoch++;
     for (const entry of cache.values()) {
       if (entry.state !== 'error') continue;
       entry.error = null;
@@ -141,7 +174,7 @@
       entry.used = ++revision;
       queue.push(entry);
     }
-    failures.clear();
+    // Do not hide failure diagnostics while the replacement is still loading.
     publishStatus();
     pump();
   }
@@ -172,9 +205,10 @@
     if (!img) return { x: 0, y: 0, w: 1, h: 1 };
     const full = { x: 0, y: 0, w: img.naturalWidth, h: img.naturalHeight };
     entry.bounds = full;
+    let probe;
     try {
       const scale = Math.min(1, 280 / Math.max(full.w, full.h));
-      const probe = doc.createElement('canvas');
+      probe = doc.createElement('canvas');
       probe.width = Math.max(1, Math.ceil(full.w * scale));
       probe.height = Math.max(1, Math.ceil(full.h * scale));
       const ctx = probe.getContext('2d', { willReadFrequently: true });
@@ -194,10 +228,9 @@
         entry.bounds = { x: left / probe.width * full.w, y: top / probe.height * full.h,
           w: (right - left) / probe.width * full.w, h: (bottom - top) / probe.height * full.h };
       }
-      probe.width = probe.height = 1;
     } catch (_) {
       // Cross-origin references remain drawable using their complete rectangle.
-    }
+    } finally { if (probe) probe.width = probe.height = 1; }
     return entry.bounds;
   }
 
@@ -364,11 +397,16 @@
   function spriteBitmap(entry, plan) {
     const tolerance = plan.borderKey;
     if (!Number.isInteger(tolerance) || tolerance < 0 || tolerance > 12) return entry.image;
-    if (entry.cutout && entry.cutoutTolerance === tolerance) return entry.cutout;
+    if (entry.cutoutTolerance === tolerance && entry.cutoutAttempted) return entry.cutout || entry.image;
+    if (entry.cutout) entry.cutout.width = entry.cutout.height = 1;
+    entry.cutout = null;
+    entry.cutoutTolerance = tolerance;
+    entry.cutoutAttempted = true;
+    let cv;
     try {
       const w=entry.image.naturalWidth,h=entry.image.naturalHeight;
       if(w*h>4*1024*1024)return entry.image;
-      const cv=doc.createElement('canvas');cv.width=w;cv.height=h;
+      cv=doc.createElement('canvas');cv.width=w;cv.height=h;
       const cx=cv.getContext('2d',{willReadFrequently:true});cx.drawImage(entry.image,0,0);
       const image=cx.getImageData(0,0,w,h),bytes=image.data,seen=new Uint8Array(w*h),queue=new Uint32Array(w*h);let head=0,tail=0;
       const offer=i=>{if(i<0||i>=w*h||seen[i])return;seen[i]=1;const p=i*4;if(bytes[p]<=tolerance&&bytes[p+1]<=tolerance&&bytes[p+2]<=tolerance){bytes[p+3]=0;queue[tail++]=i;}};
@@ -376,6 +414,7 @@
       while(head<tail){const i=queue[head++],x=i%w;if(x)offer(i-1);if(x<w-1)offer(i+1);offer(i-w);offer(i+w);}
       cx.putImageData(image,0,0);entry.cutout=cv;entry.cutoutTolerance=tolerance;return cv;
     } catch (_) { return entry.image; }
+    finally { if (cv && cv !== entry.cutout) cv.width = cv.height = 1; }
   }
 
   function drawFighter(ctx, fighter, x, y, facing = 1, scale = 1, pose = {}) {
@@ -404,7 +443,11 @@
       entry = requestAsset(plan.path, 'sprite');
     }
     if (entry?.state === 'error' && plan.referenceOverride && plan.path !== spritePath(f)) {
-      plan = { ...plan, path: spritePath(f), crop: f?.spriteCrop || f?.visual?.spriteCrop || null, anchor: [.5, 1], borderKey: undefined, referenceOverride: false, status: 'reference-asset-error', sideProfile: false, animated: false };
+      // Resolve the original's orientation and anchor again. A prepared image
+      // may face the opposite way; its mirror must not leak to the fallback.
+      plan = { ...directions.resolve(f, facing, sampledPose, number(x),
+        { skipClips: true, skipViews: true, skipReference: true }),
+        status: 'reference-asset-error', animationUnavailable: requestedPlan.animated };
       entry = requestAsset(plan.path, 'sprite');
     }
     const face = plan.face;
@@ -634,7 +677,8 @@
       animation: 'Direction-specific sprite selection; unresolved front references remain explicitly provisional.',
       directionalArt: 're.bow.directional-art/1',
       directionalRevision: root.RE_DIRECTIONAL_ART?.revision || 0,
-      limits: { ...LIMITS, concurrentLoads: 6 }, loading, queued: queue.length, completed, released,
+      assetRecovery: 'R5',
+      limits: { ...LIMITS, concurrentLoads: 6, loadTimeoutMs: LOAD_TIMEOUT_MS, rememberedFailures: FAILURE_LIMIT }, loading, queued: queue.length, completed, released,
       cached: Object.fromEntries(Object.keys(LIMITS).map(kind => [kind,
         items.filter(item => item.kind === kind && item.state === 'ready').length])),
       errors: [...failures.values()],

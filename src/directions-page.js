@@ -29,7 +29,14 @@
   const s=state();return {time:tick/60,animationTick:tick,animationState:s,walk:s==='walk'||s==='retreat',velocity:face*(s==='retreat'?-1:1),actor:{face},reduceMotion:true};
  }
  function statusLine(plan){return plan.animated?'FRAME '+(plan.animationFrame+1)+' · SÉQUENCE FOURNIE':plan.sideProfile?'POSE STATIQUE · AUCUNE ANIMATION FOURNIE':'RÉFÉRENCE PROVISOIRE · PROFIL À PRODUIRE';}
+ function syncAssets(){
+  const d=R.diagnostics(),pending=d.loading+d.queued;
+  const label=d.errors.length?(d.errors.length+' VISUEL(S) INDISPONIBLE(S)'+(pending?' · CHARGEMENT EN COURS':' · NOUVEL ESSAI POSSIBLE')):pending?'CHARGEMENT DES VISUELS…':'VISUELS CHARGÉS';
+  if($('directionAssets').textContent!==label)$('directionAssets').textContent=label;
+  $('directionRetry').disabled=!d.errors.length||pending>0;
+ }
  function draw(){
+  syncAssets();
   dirty=false;ctx.clearRect(0,0,1280,720);R.drawStage(ctx,D.stages[0],0,0,true);
   $('directionTick').value=String(tick);$('directionTime').textContent='TICK '+tick+' · '+(playing?'LECTURE':'PAUSE');
   for(const id of ['directionPlay','directionLab']){$(id).hidden=!selected;}
@@ -64,7 +71,8 @@
  $('directionStep').addEventListener('click',()=>{stop();tick=Math.min(36000,tick+1);draw();});
  $('directionReset').addEventListener('click',()=>{reset();draw();});
  $('directionTick').addEventListener('input',()=>{stop();const raw=Number($('directionTick').value);tick=Number.isFinite(raw)?Math.max(0,Math.min(36000,Math.floor(raw))):0;draw();});
- root.addEventListener('re:assetstatus',()=>dirty=true);
+ $('directionRetry').addEventListener('click',()=>{R.retryAssets();syncAssets();dirty=true;});
+ root.addEventListener('re:assetstatus',()=>{dirty=true;syncAssets();});
  root.addEventListener('blur',stop);document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();});
  root.addEventListener('pagehide',()=>{stop();cancelAnimationFrame(raf);raf=null;});
  root.addEventListener('pageshow',e=>{if(e.persisted&&raf===null){dirty=true;raf=requestAnimationFrame(loop);}});

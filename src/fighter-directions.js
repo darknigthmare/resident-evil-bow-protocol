@@ -66,7 +66,7 @@
  function resolve(f,requested=1,pose={},x,options={}){
   const face=facing(pose.actor,requested,x,pose.opponentX),direction=face===1?'right':'left',opposite=face===1?'left':'right';
   const record=(root.RE_DIRECTIONAL_ART||{}).records?.[f?.uid||f?.id],state=poseState(pose);
-  const reference=validReference(record?.referenceImage)?record.referenceImage:null;
+  const reference=!options.skipReference&&validReference(record?.referenceImage)?record.referenceImage:null;
   const result={face,direction,state,animationFrame:null,animated:false,borderKey:reference?undefined:record?.referenceBorderKey,referenceOverride:!!reference,path:reference?.path||f?.sprite||f?.visual?.sprite||f?.portrait||'',mirror:1,anchor:reference?.anchor||[.5,1],crop:reference?.crop||f?.spriteCrop||f?.visual?.spriteCrop||null,status:'reference-only',sideProfile:false,oppositeAnatomyValidated:false,reason:'Référence provisoire : le corps latéral de cette incarnation reste à produire.'};
   const canMirror=mayMirror(f,record)&&record?.mirrorReviewed===true;
   // An explicit clip is never synthesized from the idle illustration.
