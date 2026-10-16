@@ -1,0 +1,48 @@
+name: Package directional renderer R3
+on:
+  push:
+    branches: ['codex/lateral-renderer-integration']
+    paths: ['.github/workflows/package-direction-r3.yml']
+permissions:
+  contents: read
+concurrency:
+  group: bow-package-direction-r3
+  cancel-in-progress: false
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - run: npm install --no-save --package-lock=false @napi-rs/canvas@0.1.80
+      - run: npm run verify
+      - run: npm run build
+      - name: Archive exact draft without release, main merge or deployment
+        shell: bash
+        run: |
+          set -euo pipefail
+          git archive --format=zip --prefix=bow-directional-r3/ -o BOW_DIRECTIONAL_R3_SOURCE.zip HEAD
+          (cd dist && zip -qr ../BOW_DIRECTIONAL_R3_STATIC.zip .)
+          git diff --binary 86edbf48aba383c3bc0a7c8ed6e79b53042c98bd HEAD > BOW_DIRECTIONAL_R3_FROM_R2.patch
+          git diff --binary 1cac959cd5cc5b40b6cffc94a705970bc74c9580 HEAD > BOW_DIRECTIONAL_R3_FROM_MAIN.patch
+          git rev-parse HEAD > BOW_DIRECTIONAL_R3_COMMIT.txt
+          sha256sum BOW_DIRECTIONAL_R3_SOURCE.zip BOW_DIRECTIONAL_R3_STATIC.zip BOW_DIRECTIONAL_R3_FROM_R2.patch BOW_DIRECTIONAL_R3_FROM_MAIN.patch > BOW_DIRECTIONAL_R3_SHA256SUMS.txt
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-directional-r3-verified
+          path: |
+            BOW_DIRECTIONAL_R3_SOURCE.zip
+            BOW_DIRECTIONAL_R3_STATIC.zip
+            BOW_DIRECTIONAL_R3_FROM_R2.patch
+            BOW_DIRECTIONAL_R3_FROM_MAIN.patch
+            BOW_DIRECTIONAL_R3_COMMIT.txt
+            BOW_DIRECTIONAL_R3_SHA256SUMS.txt
+          compression-level: 0
+          retention-days: 7
+          if-no-files-found: error
