@@ -13,9 +13,9 @@
   "counts": {
     "fighters": 115,
     "moves": 1150,
-    "canonical": 727,
-    "anatomical": 290,
-    "simulation": 133
+    "canonical": 719,
+    "anatomical": 286,
+    "simulation": 145
   },
   "profiles": {
     "re1-cerberus": {
@@ -1008,11 +1008,12 @@
       "passive": {
         "id": "lore-re3r-nemesis",
         "name": "Directive S.T.A.R.S.",
-        "desc": "Le parasite NE-α conserve une cible verrouillée ; le marquage révèle le camouflage et renforce le contact suivant.",
+        "desc": "Directive de poursuite ; le marquage, la révélation du camouflage et le bonus de contact restent des règles de simulation.",
         "markMelee": true
       },
       "source": "https://www.evilresource.com/resident-evil-3-remake/enemies/nemesis",
       "sources": [
+        "https://blog.playstation.com/archive/2020/05/15/making-a-monster-how-nemesis-was-brought-to-terrifying-life-in-resident-evil-3/",
         "https://www.evilresource.com/resident-evil-3-remake/enemies/nemesis",
         "https://game.capcom.com/residentevil/en/exfile-1-40.html",
         "https://game.capcom.com/residentevil/uk/umbrella-20201023110000.html"
@@ -1084,12 +1085,12 @@
           "cost": 0,
           "meter": 0,
           "cooldown": 0,
-          "tag": "strike",
+          "tag": "tentacle",
           "counterplay": "Garde basse ou saut. Une garde debout ne suffit pas.",
           "lore": "canonical",
           "evidence": "canonical",
           "loreBasis": "Attaques documentées pour Resident Evil 3 remake (2020) : Tentacule de saisie / Coup de poing / Course / Lance-roquettes ou lance-flammes selon équipement",
-          "adaptation": "Action directement rattachée aux attaques ou comportements documentés de cette incarnation ; seuls le timing, la portée et les dégâts sont équilibrés pour le moteur 2D.",
+          "adaptation": "Action directement rattachée aux attaques ou comportements documentés de cette incarnation ; seuls le timing, la portée et les dégâts sont équilibrés pour le moteur 2D. R6 : paramètres du versus 2D, non extraits du jeu original ; effets vectoriels distincts des animations de personnage.",
           "source": "https://www.evilresource.com/resident-evil-3-remake/enemies/nemesis"
         },
         "throw": {
@@ -1113,7 +1114,7 @@
           "source": "https://www.evilresource.com/resident-evil-3-remake/enemies/nemesis"
         },
         "special": {
-          "name": "Lance-roquettes M202",
+          "name": "Lance-roquettes de Nemesis",
           "kind": "projectile",
           "startup": 37,
           "active": 1,
@@ -1128,13 +1129,16 @@
           "counterplay": "Le tir a un long départ. Se baisser sous sa trajectoire, sauter avec le bon timing ou bloquer ; punir la récupération à courte portée.",
           "lore": "canonical",
           "evidence": "canonical",
-          "loreBasis": "Attaques documentées pour Resident Evil 3 remake (2020) : Tentacule de saisie / Coup de poing / Course / Lance-roquettes ou lance-flammes selon équipement",
-          "adaptation": "Action directement rattachée aux attaques ou comportements documentés de cette incarnation ; seuls le timing, la portée et les dégâts sont équilibrés pour le moteur 2D.",
-          "source": "https://www.evilresource.com/resident-evil-3-remake/enemies/nemesis",
+          "loreBasis": "Le directeur cite le lance-roquettes parmi les attaques de la forme humanoïde de RE3. La désignation industrielle M202 n’est pas attestée par cette source.",
+          "adaptation": "Action directement rattachée aux attaques ou comportements documentés de cette incarnation ; seuls le timing, la portée et les dégâts sont équilibrés pour le moteur 2D. R6 : paramètres du versus 2D, non extraits du jeu original ; effets vectoriels distincts des animations de personnage.",
+          "source": "https://blog.playstation.com/archive/2020/05/15/making-a-monster-how-nemesis-was-brought-to-terrifying-life-in-resident-evil-3/",
           "speed": 11,
           "life": 100,
           "height": 190,
-          "knock": 11
+          "knock": 11,
+          "detonateOnContact": true,
+          "radius": 78,
+          "telegraph": true
         },
         "specialDown": {
           "name": "Frappe du tentacule",
@@ -1194,34 +1198,42 @@
           "cooldown": 0,
           "tag": "movement",
           "counterplay": "Suivre le retrait et attaquer sa sortie ; ce mouvement ne donne pas d’invincibilité permanente.",
-          "lore": "canonical",
-          "evidence": "canonical",
-          "loreBasis": "Attaques documentées pour Resident Evil 3 remake (2020) : Tentacule de saisie / Coup de poing / Course / Lance-roquettes ou lance-flammes selon équipement",
-          "adaptation": "Action directement rattachée aux attaques ou comportements documentés de cette incarnation ; seuls le timing, la portée et les dégâts sont équilibrés pour le moteur 2D.",
-          "source": "https://www.evilresource.com/resident-evil-3-remake/enemies/nemesis",
-          "travel": -2,
-          "blink": -135
+          "lore": "simulation",
+          "evidence": "simulation",
+          "loreBasis": "La poursuite physique de la forme humanoïde est documentée ; le bond arrière à trajectoire continue est une commande adaptée, pas une téléportation.",
+          "adaptation": "Action directement rattachée aux attaques ou comportements documentés de cette incarnation ; seuls le timing, la portée et les dégâts sont équilibrés pour le moteur 2D. R6 : paramètres du versus 2D, non extraits du jeu original ; effets vectoriels distincts des animations de personnage.",
+          "source": "https://blog.playstation.com/archive/2020/05/15/making-a-monster-how-nemesis-was-brought-to-terrifying-life-in-resident-evil-3/",
+          "travel": -4,
+          "launchSelf": -10
         },
         "super": {
-          "name": "Arsenal Nemesis",
-          "kind": "melee",
-          "startup": 28,
-          "active": 8,
-          "recovery": 45,
-          "damage": 2150,
-          "reach": 222,
+          "name": "Salve S.T.A.R.S. — synthèse versus",
+          "kind": "projectile",
+          "startup": 48,
+          "active": 1,
+          "recovery": 64,
+          "damage": 650,
+          "reach": 850,
           "level": "mid",
-          "cost": 0,
-          "meter": 50,
+          "cost": 48,
+          "meter": 100,
           "cooldown": 0,
-          "tag": "strike",
+          "tag": "rocket",
           "counterplay": "Anticiper le départ très visible, bloquer puis punir la longue récupération.",
-          "lore": "canonical",
-          "evidence": "canonical",
-          "loreBasis": "Attaques documentées pour Resident Evil 3 remake (2020) : Tentacule de saisie / Coup de poing / Course / Lance-roquettes ou lance-flammes selon équipement",
-          "adaptation": "Action directement rattachée aux attaques ou comportements documentés de cette incarnation ; seuls le timing, la portée et les dégâts sont équilibrés pour le moteur 2D.",
-          "source": "https://www.evilresource.com/resident-evil-3-remake/enemies/nemesis",
-          "travel": 4
+          "lore": "simulation",
+          "evidence": "simulation",
+          "loreBasis": "Synthèse de trois tirs de l’arme de cette incarnation ; la salve, les délais et la jauge sont propres au versus. Aucun lance-flammes ni transformation ajouté.",
+          "adaptation": "Action directement rattachée aux attaques ou comportements documentés de cette incarnation ; seuls le timing, la portée et les dégâts sont équilibrés pour le moteur 2D. R6 : paramètres du versus 2D, non extraits du jeu original ; effets vectoriels distincts des animations de personnage.",
+          "source": "https://blog.playstation.com/archive/2020/05/15/making-a-monster-how-nemesis-was-brought-to-terrifying-life-in-resident-evil-3/",
+          "height": 190,
+          "speed": 11,
+          "life": 100,
+          "count": 3,
+          "interval": 18,
+          "sustainBurst": true,
+          "detonateOnContact": true,
+          "radius": 82,
+          "telegraph": true
         },
         "utility": {
           "name": "Verrouillage S.T.A.R.S.",
@@ -1237,11 +1249,11 @@
           "cooldown": 0,
           "tag": "recon",
           "counterplay": "Mettre la pression avant la fin de la récupération.",
-          "lore": "canonical",
-          "evidence": "canonical",
-          "loreBasis": "Attaques documentées pour Resident Evil 3 remake (2020) : Tentacule de saisie / Coup de poing / Course / Lance-roquettes ou lance-flammes selon équipement",
-          "adaptation": "Action directement rattachée aux attaques ou comportements documentés de cette incarnation ; seuls le timing, la portée et les dégâts sont équilibrés pour le moteur 2D.",
-          "source": "https://www.evilresource.com/resident-evil-3-remake/enemies/nemesis",
+          "lore": "simulation",
+          "evidence": "simulation",
+          "loreBasis": "La directive S.T.A.R.S. motive la poursuite. Le marquage et la révélation d’une cible camouflée sont une assistance de simulation, pas un pouvoir documenté dans RE3.",
+          "adaptation": "Action directement rattachée aux attaques ou comportements documentés de cette incarnation ; seuls le timing, la portée et les dégâts sont équilibrés pour le moteur 2D. R6 : paramètres du versus 2D, non extraits du jeu original ; effets vectoriels distincts des animations de personnage.",
+          "source": "https://blog.playstation.com/archive/2020/05/15/making-a-monster-how-nemesis-was-brought-to-terrifying-life-in-resident-evil-3/",
           "restore": 0,
           "duration": 240
         }
@@ -20182,11 +20194,12 @@
       "passive": {
         "id": "lore-re3r-stage-2-nemesis",
         "name": "Boucle de prédation",
-        "desc": "Les déplacements rapides renforcent la prochaine attaque de contact.",
+        "desc": "Prédateur rapide : deux impacts possibles pendant le super seulement dans les fenêtres actives. Aucun bonus de vitesse ou de puissance passif non implémenté.",
         "markMelee": true
       },
       "source": "https://www.evilresource.com/resident-evil-3-remake/enemies/stage-2-nemesis",
       "sources": [
+        "https://blog.playstation.com/archive/2020/05/15/making-a-monster-how-nemesis-was-brought-to-terrifying-life-in-resident-evil-3/",
         "https://www.evilresource.com/resident-evil-3-remake/enemies/stage-2-nemesis"
       ],
       "canonicalAttacks": [
@@ -20203,7 +20216,7 @@
       },
       "moves": {
         "light": {
-          "name": "NEMESIS · frappe rapide",
+          "name": "Griffe quadrupède",
           "kind": "melee",
           "startup": 7,
           "active": 3,
@@ -20218,12 +20231,12 @@
           "counterplay": "Bloquer puis punir la récupération.",
           "lore": "canonical",
           "evidence": "canonical",
-          "loreBasis": "Capacités documentées pour Resident Evil 3 remake (2020) : Charge quadrupède / Bond / Course sur les structures / Griffes",
-          "adaptation": "Action ou comportement documenté pour cette incarnation ; les valeurs numériques et la commande sont adaptées au moteur 2D.",
-          "source": "https://www.evilresource.com/resident-evil-3-remake/enemies/stage-2-nemesis"
+          "loreBasis": "RE3 (2020), stade 2 : le directeur décrit une mutation non humanoïde plus rapide et moins intelligente. Le détail de cette commande est une chorégraphie de simulation, pas une extraction de son animation officielle.",
+          "adaptation": "Action ou comportement documenté pour cette incarnation ; les valeurs numériques et la commande sont adaptées au moteur 2D. R6 : paramètres du versus 2D, non extraits du jeu original ; effets vectoriels distincts des animations de personnage.",
+          "source": "https://blog.playstation.com/archive/2020/05/15/making-a-monster-how-nemesis-was-brought-to-terrifying-life-in-resident-evil-3/"
         },
         "heavy": {
-          "name": "NEMESIS · impact massif",
+          "name": "Revers de l’avant-bras",
           "kind": "melee",
           "startup": 19,
           "active": 6,
@@ -20236,14 +20249,14 @@
           "cooldown": 0,
           "tag": "heavy",
           "counterplay": "Sortir de la zone ou bloquer puis punir.",
-          "lore": "canonical",
-          "evidence": "canonical",
-          "loreBasis": "Capacités documentées pour Resident Evil 3 remake (2020) : Charge quadrupède / Bond / Course sur les structures / Griffes",
-          "adaptation": "Action ou comportement documenté pour cette incarnation ; les valeurs numériques et la commande sont adaptées au moteur 2D.",
-          "source": "https://www.evilresource.com/resident-evil-3-remake/enemies/stage-2-nemesis"
+          "lore": "simulation",
+          "evidence": "simulation",
+          "loreBasis": "RE3 (2020), stade 2 : le directeur décrit une mutation non humanoïde plus rapide et moins intelligente. Le détail de cette commande est une chorégraphie de simulation, pas une extraction de son animation officielle.",
+          "adaptation": "Action ou comportement documenté pour cette incarnation ; les valeurs numériques et la commande sont adaptées au moteur 2D. R6 : paramètres du versus 2D, non extraits du jeu original ; effets vectoriels distincts des animations de personnage.",
+          "source": "https://blog.playstation.com/archive/2020/05/15/making-a-monster-how-nemesis-was-brought-to-terrifying-life-in-resident-evil-3/"
         },
         "low": {
-          "name": "NEMESIS · balayage bas",
+          "name": "Fauchage au ras du sol",
           "kind": "melee",
           "startup": 13,
           "active": 5,
@@ -20256,14 +20269,14 @@
           "cooldown": 0,
           "tag": "strike",
           "counterplay": "Garde basse ou saut.",
-          "lore": "anatomical",
-          "evidence": "anatomical",
-          "loreBasis": "Forme quadrupède de Nemesis privilégiant bonds, courses circulaires et frappes massives.",
-          "adaptation": "Extension prudente de la morphologie et de la locomotion de cette même incarnation, sans pouvoir importé.",
-          "source": "https://www.evilresource.com/resident-evil-3-remake/enemies/stage-2-nemesis"
+          "lore": "simulation",
+          "evidence": "simulation",
+          "loreBasis": "RE3 (2020), stade 2 : le directeur décrit une mutation non humanoïde plus rapide et moins intelligente. Le détail de cette commande est une chorégraphie de simulation, pas une extraction de son animation officielle.",
+          "adaptation": "Extension prudente de la morphologie et de la locomotion de cette même incarnation, sans pouvoir importé. R6 : paramètres du versus 2D, non extraits du jeu original ; effets vectoriels distincts des animations de personnage.",
+          "source": "https://blog.playstation.com/archive/2020/05/15/making-a-monster-how-nemesis-was-brought-to-terrifying-life-in-resident-evil-3/"
         },
         "throw": {
-          "name": "NEMESIS · capture terminale",
+          "name": "Capture de la gueule",
           "kind": "melee",
           "startup": 11,
           "active": 4,
@@ -20276,35 +20289,43 @@
           "cooldown": 0,
           "tag": "grapple",
           "counterplay": "Reculer, sauter ou déchoper.",
-          "lore": "canonical",
-          "evidence": "canonical",
-          "loreBasis": "Capacités documentées pour Resident Evil 3 remake (2020) : Charge quadrupède / Bond / Course sur les structures / Griffes",
-          "adaptation": "Action ou comportement documenté pour cette incarnation ; les valeurs numériques et la commande sont adaptées au moteur 2D.",
-          "source": "https://www.evilresource.com/resident-evil-3-remake/enemies/stage-2-nemesis"
+          "lore": "simulation",
+          "evidence": "simulation",
+          "loreBasis": "RE3 (2020), stade 2 : le directeur décrit une mutation non humanoïde plus rapide et moins intelligente. Le détail de cette commande est une chorégraphie de simulation, pas une extraction de son animation officielle.",
+          "adaptation": "Action ou comportement documenté pour cette incarnation ; les valeurs numériques et la commande sont adaptées au moteur 2D. R6 : paramètres du versus 2D, non extraits du jeu original ; effets vectoriels distincts des animations de personnage.",
+          "source": "https://blog.playstation.com/archive/2020/05/15/making-a-monster-how-nemesis-was-brought-to-terrifying-life-in-resident-evil-3/"
         },
         "special": {
-          "name": "NEMESIS · technique de portée",
+          "name": "Bond d’écrasement",
           "kind": "melee",
-          "startup": 17,
-          "active": 6,
-          "recovery": 32,
-          "damage": 860,
-          "reach": 180,
+          "startup": 18,
+          "active": 38,
+          "recovery": 34,
+          "damage": 920,
+          "reach": 175,
           "level": "mid",
           "cost": 24,
           "meter": 0,
           "cooldown": 0,
           "tag": "strike",
           "counterplay": "Quitter la trajectoire ou l’axe puis punir.",
-          "lore": "canonical",
-          "evidence": "canonical",
-          "loreBasis": "Capacités documentées pour Resident Evil 3 remake (2020) : Charge quadrupède / Bond / Course sur les structures / Griffes",
-          "adaptation": "Action ou comportement documenté pour cette incarnation ; les valeurs numériques et la commande sont adaptées au moteur 2D.",
-          "source": "https://www.evilresource.com/resident-evil-3-remake/enemies/stage-2-nemesis",
-          "travel": 6
+          "lore": "simulation",
+          "evidence": "simulation",
+          "loreBasis": "RE3 (2020), stade 2 : le directeur décrit une mutation non humanoïde plus rapide et moins intelligente. Le détail de cette commande est une chorégraphie de simulation, pas une extraction de son animation officielle.",
+          "adaptation": "Action ou comportement documenté pour cette incarnation ; les valeurs numériques et la commande sont adaptées au moteur 2D. R6 : paramètres du versus 2D, non extraits du jeu original ; effets vectoriels distincts des animations de personnage. R6 : paramètres du versus 2D, non extraits du jeu original ; effets vectoriels distincts des animations de personnage.",
+          "source": "https://blog.playstation.com/archive/2020/05/15/making-a-monster-how-nemesis-was-brought-to-terrifying-life-in-resident-evil-3/",
+          "travel": 5,
+          "launchSelf": -10,
+          "hitWindows": [
+            {
+              "start": 27,
+              "end": 38,
+              "scale": 1
+            }
+          ]
         },
         "specialDown": {
-          "name": "NEMESIS · contrôle inférieur",
+          "name": "Balayage des membres antérieurs",
           "kind": "melee",
           "startup": 16,
           "active": 6,
@@ -20317,19 +20338,19 @@
           "cooldown": 0,
           "tag": "organic",
           "counterplay": "Quitter le sol signalé ou garder bas.",
-          "lore": "anatomical",
-          "evidence": "anatomical",
-          "loreBasis": "Forme quadrupède de Nemesis privilégiant bonds, courses circulaires et frappes massives.",
-          "adaptation": "Extension prudente de la morphologie et de la locomotion de cette même incarnation, sans pouvoir importé.",
-          "source": "https://www.evilresource.com/resident-evil-3-remake/enemies/stage-2-nemesis",
+          "lore": "simulation",
+          "evidence": "simulation",
+          "loreBasis": "RE3 (2020), stade 2 : le directeur décrit une mutation non humanoïde plus rapide et moins intelligente. Le détail de cette commande est une chorégraphie de simulation, pas une extraction de son animation officielle.",
+          "adaptation": "Extension prudente de la morphologie et de la locomotion de cette même incarnation, sans pouvoir importé. R6 : paramètres du versus 2D, non extraits du jeu original ; effets vectoriels distincts des animations de personnage.",
+          "source": "https://blog.playstation.com/archive/2020/05/15/making-a-monster-how-nemesis-was-brought-to-terrifying-life-in-resident-evil-3/",
           "travel": 3
         },
         "specialForward": {
-          "name": "NEMESIS · charge de poursuite",
+          "name": "Ruée quadrupède",
           "kind": "melee",
-          "startup": 20,
-          "active": 7,
-          "recovery": 36,
+          "startup": 25,
+          "active": 18,
+          "recovery": 38,
           "damage": 1010,
           "reach": 205,
           "level": "mid",
@@ -20338,15 +20359,15 @@
           "cooldown": 0,
           "tag": "strike",
           "counterplay": "Quitter l’axe avant le contact.",
-          "lore": "canonical",
-          "evidence": "canonical",
-          "loreBasis": "Capacités documentées pour Resident Evil 3 remake (2020) : Charge quadrupède / Bond / Course sur les structures / Griffes",
-          "adaptation": "Action ou comportement documenté pour cette incarnation ; les valeurs numériques et la commande sont adaptées au moteur 2D.",
-          "source": "https://www.evilresource.com/resident-evil-3-remake/enemies/stage-2-nemesis",
-          "travel": 6
+          "lore": "simulation",
+          "evidence": "simulation",
+          "loreBasis": "RE3 (2020), stade 2 : le directeur décrit une mutation non humanoïde plus rapide et moins intelligente. Le détail de cette commande est une chorégraphie de simulation, pas une extraction de son animation officielle.",
+          "adaptation": "Action ou comportement documenté pour cette incarnation ; les valeurs numériques et la commande sont adaptées au moteur 2D. R6 : paramètres du versus 2D, non extraits du jeu original ; effets vectoriels distincts des animations de personnage. R6 : paramètres du versus 2D, non extraits du jeu original ; effets vectoriels distincts des animations de personnage.",
+          "source": "https://blog.playstation.com/archive/2020/05/15/making-a-monster-how-nemesis-was-brought-to-terrifying-life-in-resident-evil-3/",
+          "travel": 7
         },
         "specialBack": {
-          "name": "NEMESIS · repositionnement",
+          "name": "Recul de prédation",
           "kind": "mobility",
           "startup": 5,
           "active": 19,
@@ -20359,36 +20380,49 @@
           "cooldown": 0,
           "tag": "movement",
           "counterplay": "Suivre le déplacement et punir la sortie.",
-          "lore": "anatomical",
-          "evidence": "anatomical",
-          "loreBasis": "Forme quadrupède de Nemesis privilégiant bonds, courses circulaires et frappes massives.",
-          "adaptation": "Extension prudente de la morphologie et de la locomotion de cette même incarnation, sans pouvoir importé.",
-          "source": "https://www.evilresource.com/resident-evil-3-remake/enemies/stage-2-nemesis",
+          "lore": "simulation",
+          "evidence": "simulation",
+          "loreBasis": "RE3 (2020), stade 2 : le directeur décrit une mutation non humanoïde plus rapide et moins intelligente. Le détail de cette commande est une chorégraphie de simulation, pas une extraction de son animation officielle.",
+          "adaptation": "Extension prudente de la morphologie et de la locomotion de cette même incarnation, sans pouvoir importé. R6 : paramètres du versus 2D, non extraits du jeu original ; effets vectoriels distincts des animations de personnage.",
+          "source": "https://blog.playstation.com/archive/2020/05/15/making-a-monster-how-nemesis-was-brought-to-terrifying-life-in-resident-evil-3/",
           "travel": -7
         },
         "super": {
-          "name": "NEMESIS · mutation apicale",
+          "name": "Assaut quadrupède — double frappe",
           "kind": "melee",
-          "startup": 33,
-          "active": 10,
-          "recovery": 49,
-          "damage": 2320,
+          "startup": 30,
+          "active": 18,
+          "recovery": 48,
+          "damage": 2050,
           "reach": 245,
           "level": "mid",
-          "cost": 0,
-          "meter": 50,
+          "cost": 22,
+          "meter": 100,
           "cooldown": 0,
-          "tag": "heavy",
+          "tag": "blade",
           "counterplay": "Anticiper le départ très visible et punir la récupération.",
-          "lore": "canonical",
-          "evidence": "canonical",
-          "loreBasis": "Capacités documentées pour Resident Evil 3 remake (2020) : Charge quadrupède / Bond / Course sur les structures / Griffes",
-          "adaptation": "Action ou comportement documenté pour cette incarnation ; les valeurs numériques et la commande sont adaptées au moteur 2D.",
-          "source": "https://www.evilresource.com/resident-evil-3-remake/enemies/stage-2-nemesis",
-          "travel": 4
+          "lore": "simulation",
+          "evidence": "simulation",
+          "loreBasis": "RE3 (2020), stade 2 : le directeur décrit une mutation non humanoïde plus rapide et moins intelligente. Le détail de cette commande est une chorégraphie de simulation, pas une extraction de son animation officielle.",
+          "adaptation": "Action ou comportement documenté pour cette incarnation ; les valeurs numériques et la commande sont adaptées au moteur 2D. R6 : paramètres du versus 2D, non extraits du jeu original ; effets vectoriels distincts des animations de personnage. R6 : paramètres du versus 2D, non extraits du jeu original ; effets vectoriels distincts des animations de personnage.",
+          "source": "https://blog.playstation.com/archive/2020/05/15/making-a-monster-how-nemesis-was-brought-to-terrifying-life-in-resident-evil-3/",
+          "travel": 4,
+          "hitWindows": [
+            {
+              "start": 0,
+              "end": 4,
+              "scale": 0.48
+            },
+            {
+              "start": 12,
+              "end": 18,
+              "scale": 0.52
+            }
+          ],
+          "telegraph": false
         },
         "utility": {
-          "name": "NEMESIS · verrouillage de cible",
+          "name": "Repérage de proie",
           "kind": "mark",
           "startup": 18,
           "active": 1,
@@ -20401,11 +20435,11 @@
           "cooldown": 0,
           "tag": "recon",
           "counterplay": "Attaquer pendant le verrouillage.",
-          "lore": "anatomical",
-          "evidence": "anatomical",
-          "loreBasis": "Forme quadrupède de Nemesis privilégiant bonds, courses circulaires et frappes massives.",
-          "adaptation": "Extension prudente de la morphologie et de la locomotion de cette même incarnation, sans pouvoir importé.",
-          "source": "https://www.evilresource.com/resident-evil-3-remake/enemies/stage-2-nemesis",
+          "lore": "simulation",
+          "evidence": "simulation",
+          "loreBasis": "RE3 (2020), stade 2 : le directeur décrit une mutation non humanoïde plus rapide et moins intelligente. Le détail de cette commande est une chorégraphie de simulation, pas une extraction de son animation officielle.",
+          "adaptation": "Extension prudente de la morphologie et de la locomotion de cette même incarnation, sans pouvoir importé. R6 : paramètres du versus 2D, non extraits du jeu original ; effets vectoriels distincts des animations de personnage.",
+          "source": "https://blog.playstation.com/archive/2020/05/15/making-a-monster-how-nemesis-was-brought-to-terrifying-life-in-resident-evil-3/",
           "duration": 230
         }
       }
@@ -25461,8 +25495,9 @@
           "evidence": "canonical",
           "source": "https://www.evilresource.com/resident-evil-5/enemies/gatling-gun-majini",
           "loreBasis": "Majini à mitrailleuse rotative ; le conteneur dorsal est un équipement, pas une carapace biologique. Famille d’action : Rafale rotative.",
-          "adaptation": "Noms de commandes, valeurs, jauges et duels sont une adaptation Versus. Les poses de référence ne sont pas des animations 1:1. Les géants sont ramenés à une enveloppe de collision jouable.",
-          "counterplay": "Interrompre le démarrage, éviter la trajectoire et punir la récupération."
+          "adaptation": "Noms de commandes, valeurs, jauges et duels sont une adaptation Versus. Les poses de référence ne sont pas des animations 1:1. Les géants sont ramenés à une enveloppe de collision jouable. R6 : paramètres du versus 2D, non extraits du jeu original ; effets vectoriels distincts des animations de personnage.",
+          "counterplay": "Interrompre le démarrage, éviter la trajectoire et punir la récupération.",
+          "sustainBurst": true
         },
         "specialDown": {
           "name": "Balayage de tir bas",
@@ -25486,8 +25521,9 @@
           "evidence": "anatomical",
           "source": "https://www.evilresource.com/resident-evil-5/enemies/gatling-gun-majini",
           "loreBasis": "Majini à mitrailleuse rotative ; le conteneur dorsal est un équipement, pas une carapace biologique. Famille d’action : Balayage de tir bas.",
-          "adaptation": "Noms de commandes, valeurs, jauges et duels sont une adaptation Versus. Les poses de référence ne sont pas des animations 1:1. Les géants sont ramenés à une enveloppe de collision jouable.",
-          "counterplay": "Interrompre le démarrage, éviter la trajectoire et punir la récupération."
+          "adaptation": "Noms de commandes, valeurs, jauges et duels sont une adaptation Versus. Les poses de référence ne sont pas des animations 1:1. Les géants sont ramenés à une enveloppe de collision jouable. R6 : paramètres du versus 2D, non extraits du jeu original ; effets vectoriels distincts des animations de personnage.",
+          "counterplay": "Interrompre le démarrage, éviter la trajectoire et punir la récupération.",
+          "sustainBurst": true
         },
         "specialForward": {
           "name": "Tir de couverture",
@@ -25511,8 +25547,9 @@
           "evidence": "canonical",
           "source": "https://www.evilresource.com/resident-evil-5/enemies/gatling-gun-majini",
           "loreBasis": "Majini à mitrailleuse rotative ; le conteneur dorsal est un équipement, pas une carapace biologique. Famille d’action : Tir de couverture.",
-          "adaptation": "Noms de commandes, valeurs, jauges et duels sont une adaptation Versus. Les poses de référence ne sont pas des animations 1:1. Les géants sont ramenés à une enveloppe de collision jouable.",
-          "counterplay": "Interrompre le démarrage, éviter la trajectoire et punir la récupération."
+          "adaptation": "Noms de commandes, valeurs, jauges et duels sont une adaptation Versus. Les poses de référence ne sont pas des animations 1:1. Les géants sont ramenés à une enveloppe de collision jouable. R6 : paramètres du versus 2D, non extraits du jeu original ; effets vectoriels distincts des animations de personnage.",
+          "counterplay": "Interrompre le démarrage, éviter la trajectoire et punir la récupération.",
+          "sustainBurst": true
         },
         "specialBack": {
           "name": "Repli de l’artilleur",
@@ -25558,8 +25595,9 @@
           "evidence": "simulation",
           "source": "https://www.evilresource.com/resident-evil-5/enemies/gatling-gun-majini",
           "loreBasis": "Majini à mitrailleuse rotative ; le conteneur dorsal est un équipement, pas une carapace biologique. Famille d’action : Saturation du pont.",
-          "adaptation": "Noms de commandes, valeurs, jauges et duels sont une adaptation Versus. Les poses de référence ne sont pas des animations 1:1. Les géants sont ramenés à une enveloppe de collision jouable.",
-          "counterplay": "Interrompre le démarrage, éviter la trajectoire et punir la récupération."
+          "adaptation": "Noms de commandes, valeurs, jauges et duels sont une adaptation Versus. Les poses de référence ne sont pas des animations 1:1. Les géants sont ramenés à une enveloppe de collision jouable. R6 : paramètres du versus 2D, non extraits du jeu original ; effets vectoriels distincts des animations de personnage.",
+          "counterplay": "Interrompre le démarrage, éviter la trajectoire et punir la récupération.",
+          "sustainBurst": true
         },
         "utility": {
           "name": "Alimentation de bande",
@@ -25724,8 +25762,9 @@
           "evidence": "canonical",
           "source": "https://www.evilresource.com/resident-evil-5/enemies/jill-valentine-enemy",
           "loreBasis": "Jill sous administration continue de P30 : capacités physiques augmentées et équipement humain ; aucune mutation Uroboros. Famille d’action : Rafale des mitraillettes.",
-          "adaptation": "Noms de commandes, valeurs, jauges et duels sont une adaptation Versus. Les poses de référence ne sont pas des animations 1:1. Les géants sont ramenés à une enveloppe de collision jouable.",
-          "counterplay": "Interrompre le démarrage, éviter la trajectoire et punir la récupération."
+          "adaptation": "Noms de commandes, valeurs, jauges et duels sont une adaptation Versus. Les poses de référence ne sont pas des animations 1:1. Les géants sont ramenés à une enveloppe de collision jouable. R6 : paramètres du versus 2D, non extraits du jeu original ; effets vectoriels distincts des animations de personnage.",
+          "counterplay": "Interrompre le démarrage, éviter la trajectoire et punir la récupération.",
+          "sustainBurst": true
         },
         "specialDown": {
           "name": "Glissade de combat",

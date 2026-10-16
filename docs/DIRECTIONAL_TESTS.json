@@ -1,0 +1,79 @@
+{
+  "version": "render-directions-1",
+  "passed": 14,
+  "failed": 0,
+  "scope": "Runtime selection, native Canvas pixels, controlled DOM. No new final sprite artwork.",
+  "checks": [
+    {
+      "name": "All 346 combat identities resolve both requested directions without mutation",
+      "passed": true,
+      "details": {
+        "identities": 346,
+        "resolutions": 692
+      }
+    },
+    {
+      "name": "Attack direction takes precedence over screen crossing and actor velocity",
+      "passed": true
+    },
+    {
+      "name": "Engine owns idle facing; retreating does not turn the sprite away from the opponent",
+      "passed": true
+    },
+    {
+      "name": "Presentation-only actors face their counterpart and retain direction at identical positions",
+      "passed": true
+    },
+    {
+      "name": "Front-facing portraits are never labelled as lateral and are not squashed",
+      "passed": true
+    },
+    {
+      "name": "Independent side files are selected with no second flip and with their own foot anchors",
+      "passed": true
+    },
+    {
+      "name": "A single lateral pose cannot be mirrored without a per-drawing review",
+      "passed": true
+    },
+    {
+      "name": "Asymmetric anatomy rejects reflection even when a malformed registry requests it",
+      "passed": true
+    },
+    {
+      "name": "Unreviewed, frontal or mismatched directional images cannot pass the runtime contract",
+      "passed": true
+    },
+    {
+      "name": "All gameplay renderer pages load the same direction contract before drawing",
+      "passed": true,
+      "details": {
+        "pages": 6
+      }
+    },
+    {
+      "name": "Native Canvas draws independent directional texture pixels, not an illustrative screenshot",
+      "passed": true
+    },
+    {
+      "name": "Portrait path is preserved independently of directional combat selection",
+      "passed": true
+    },
+    {
+      "name": "Production registry does not pretend that undelivered artwork exists",
+      "passed": true,
+      "details": {
+        "registeredIdentities": 24,
+        "contextualExercisesOutsideFighterRenderer": 43
+      }
+    },
+    {
+      "name": "In-game direction inspection initializes the actual shared rendering code",
+      "passed": true,
+      "details": {
+        "ready": 5,
+        "pending": 341
+      }
+    }
+  ]
+}

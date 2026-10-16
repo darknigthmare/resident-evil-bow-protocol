@@ -1,0 +1,72 @@
+{
+  "suite": "renderer-recovery-r5",
+  "passed": 16,
+  "failed": 0,
+  "scope": "Real source in Node VM; fake image transport, virtual timers and recording canvas. Not art or browser certification.",
+  "checks": [
+    {
+      "name": "Six stalled images time out and release the seventh queued request",
+      "pass": true
+    },
+    {
+      "name": "Timed-out preload resolves false instead of hanging forever",
+      "pass": true
+    },
+    {
+      "name": "Late callbacks from an expired image cannot settle its retry",
+      "pass": true
+    },
+    {
+      "name": "Source assignment failures settle as errors without consuming queue capacity",
+      "pass": true
+    },
+    {
+      "name": "Evicted failed assets stay negative-cached until explicitly retried",
+      "pass": true
+    },
+    {
+      "name": "An explicit retry recovers an evicted failure on its next request",
+      "pass": true
+    },
+    {
+      "name": "Retry keeps the failure visible until successful image recovery",
+      "pass": true
+    },
+    {
+      "name": "A successful portrait does not erase a failed sprite of the same path",
+      "pass": true
+    },
+    {
+      "name": "Synchronous image completion does not leak timers or load slots",
+      "pass": true
+    },
+    {
+      "name": "Success detaches stale callbacks and cancels the timeout",
+      "pass": true
+    },
+    {
+      "name": "Tainted matte readback is attempted only once per decoded image/tolerance",
+      "pass": true
+    },
+    {
+      "name": "Changing the reviewed matte tolerance allows exactly one new read attempt",
+      "pass": true
+    },
+    {
+      "name": "Failed matte attempts release temporary canvases without destroying the original",
+      "pass": true
+    },
+    {
+      "name": "Fallback to the original re-resolves its own direction, not the failed derivative mirror",
+      "pass": true
+    },
+    {
+      "name": "Cache and failure diagnostics stay bounded across large error sets",
+      "pass": true
+    },
+    {
+      "name": "All body definitions, source images, art metadata and gameplay contracts match R4",
+      "pass": true
+    }
+  ]
+}

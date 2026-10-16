@@ -1,0 +1,24 @@
+/** Optional real-browser QA; no injected HTML, substitute media or saved progression. */
+import {chromium} from 'playwright';import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {spawn} from 'node:child_process';import {fileURLToPath} from 'node:url';
+const R=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),out=path.join(R,'qa-directional-r4');fs.mkdirSync(out,{recursive:true});
+const port=5194,base='http://127.0.0.1:'+port,server=spawn(process.execPath,['scripts/dev.mjs'],{cwd:R,env:{...process.env,RE_BOW_PORT:String(port)},stdio:['ignore','pipe','pipe']});let browser;const checks=[];
+async function ready(){for(let i=0;i<100;i++){try{if((await fetch(base+'/directions.html')).ok)return;}catch{}await new Promise(r=>setTimeout(r,100));}throw Error('Local server did not start');}
+try{
+ await ready();browser=await chromium.launch({headless:true,...(process.env.CHROME_BIN?{executablePath:process.env.CHROME_BIN}:{}),args:['--no-sandbox']});
+ for(const width of[1440,390]){
+  const context=await browser.newContext({viewport:{width,height:1000},deviceScaleFactor:1,reducedMotion:'reduce'});const page=await context.newPage();const errors=[],badAssets=[];
+  page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400&&/\.(?:png|webp|js|css)(?:\?|$)/.test(r.url()))badAssets.push({url:r.url(),status:r.status()});});
+  for(const uid of['re6-strelat','reoutbreak2-zombie-hyena']){
+   const response=await page.goto(base+'/directions.html?uid='+uid,{waitUntil:'networkidle'});assert.equal(response.status(),200);await page.waitForFunction(()=>!!globalThis.RE_DIRECTIONS_PAGE);await page.waitForTimeout(350);
+   const status=await page.evaluate(uid=>{const f=globalThis.RE_DATA.fighters.find(f=>f.uid===uid)||globalThis.RE_CATALOG_EXPANSION?.fighters.find(f=>f.uid===uid);const a=globalThis.RE_FIGHTER_DIRECTIONS;return{left:a.resolve(f,-1).path,right:a.resolve(f,1).path,leftProfile:a.resolve(f,-1).sideProfile,rightProfile:a.resolve(f,1).sideProfile,overflow:document.documentElement.scrollWidth>innerWidth+1,ready:globalThis.RE_DIRECTIONS_PAGE.counts.ready};},uid);
+   assert(status.left.includes('/r4/')&&status.right.includes('/r4/'));assert(status.leftProfile&&status.rightProfile);assert.equal(status.ready,5);assert.equal(status.overflow,false);
+   const name='atelier-'+uid+'-'+width+'.png';await page.screenshot({path:path.join(out,name),fullPage:false});checks.push({page:'directions.html',uid,width,httpStatus:response.status(),pass:true,status,screenshot:name});
+  }
+  const response=await page.goto(base+'/catalog-duel.html?uid=reoutbreak2-zombie-hyena',{waitUntil:'networkidle'});assert.equal(response.status(),200);await page.waitForFunction(()=>!!globalThis.RE_CATALOG_DUEL);await page.selectOption('#trialTarget','re6-strelat');await page.waitForTimeout(300);
+  const loaded=await page.evaluate(()=>{const s=RE_CATALOG_DUEL.getState(),r=RE_RENDERER,a=RE_FIGHTER_DIRECTIONS;return{subject:s.a.f.uid,target:s.b.f.uid,subjectFace:s.a.face,targetFace:s.b.face,subjectPath:a.resolve(s.a.f,s.a.face,{actor:s.a}).path,targetPath:a.resolve(s.b.f,s.b.face,{actor:s.b}).path,readyImages:r.diagnostics().assets.filter(x=>x.state==='ready'&&x.path.includes('/r4/')).map(x=>x.path),overflow:document.documentElement.scrollWidth>innerWidth+1};});
+  assert.equal(loaded.subject,'reoutbreak2-zombie-hyena');assert.equal(loaded.target,'re6-strelat');assert.equal(loaded.subjectFace,1);assert.equal(loaded.targetFace,-1);assert(loaded.readyImages.length>=2);assert.equal(loaded.overflow,false);
+  const name='duel-profiles-'+width+'.png';await page.screenshot({path:path.join(out,name),fullPage:false});
+  await page.click('#trialStart');await page.waitForFunction(()=>RE_CATALOG_DUEL.getState().frame>=30);await page.click('#trialPause');const before=await page.evaluate(()=>RE_CATALOG_DUEL.getState().frame);await page.waitForTimeout(150);assert.equal(await page.evaluate(()=>RE_CATALOG_DUEL.getState().frame),before);assert(await page.evaluate(()=>RE_CATALOG_DUEL.isPaused()));
+  assert.deepEqual(errors,[]);assert.deepEqual(badAssets,[]);checks.push({page:'catalog-duel.html',width,httpStatus:response.status(),pass:true,loaded,ranAtLeast30Frames:true,pausePreservedFrame:true,screenshot:name,jsErrors:errors,failedLocalAssets:badAssets});await context.close();
+ }
+}catch(e){checks.push({pass:false,error:e.stack});process.exitCode=1;console.error(e.stack);}finally{await browser?.close();server.kill('SIGTERM');fs.writeFileSync(path.join(out,'BROWSER_R4_RESULTS.json'),JSON.stringify({mode:'Actual localhost HTTP navigation in Chromium on GitHub Actions',passed:checks.filter(c=>c.pass).length,failed:checks.filter(c=>!c.pass).length,sourceGameArtCertification:false,physicalMobileDevice:false,checks},null,2)+'\n');console.log(JSON.stringify({passed:checks.filter(c=>c.pass).length,failed:checks.filter(c=>!c.pass).length}));}

@@ -1,0 +1,41 @@
+name: Package directional-renderer draft
+on:
+  push:
+    branches: ['codex/lateral-renderer-integration']
+    paths: ['.github/workflows/package-directions.yml']
+permissions:
+  contents: read
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - run: npm install --no-save --package-lock=false @napi-rs/canvas@0.1.80
+      - run: npm run verify
+      - run: npm run build
+      - name: Archive exact draft, without merging or publishing a release
+        run: |
+          git archive --format=zip --prefix=bow-directional-renderer-draft/ -o BOW_DIRECTIONAL_DRAFT_SOURCE.zip HEAD
+          (cd dist && zip -q -r ../BOW_DIRECTIONAL_DRAFT_STATIC.zip .)
+          git diff --binary 1cac959cd5cc5b40b6cffc94a705970bc74c9580 HEAD > BOW_DIRECTIONAL_DRAFT.patch
+          sha256sum BOW_DIRECTIONAL_DRAFT_SOURCE.zip BOW_DIRECTIONAL_DRAFT_STATIC.zip BOW_DIRECTIONAL_DRAFT.patch > BOW_DIRECTIONAL_DRAFT_SHA256.txt
+          git rev-parse HEAD > BOW_DIRECTIONAL_DRAFT_COMMIT.txt
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-directional-renderer-draft
+          path: |
+            BOW_DIRECTIONAL_DRAFT_SOURCE.zip
+            BOW_DIRECTIONAL_DRAFT_STATIC.zip
+            BOW_DIRECTIONAL_DRAFT.patch
+            BOW_DIRECTIONAL_DRAFT_SHA256.txt
+            BOW_DIRECTIONAL_DRAFT_COMMIT.txt
+          compression-level: 0
+          retention-days: 7
+          if-no-files-found: error
