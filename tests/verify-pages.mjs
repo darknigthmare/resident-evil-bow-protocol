@@ -355,7 +355,7 @@ async function main() {
     for (const finishers of ['stylized', 'cinematic']) {
       pair.start({ finishers }); const before = pair.packets.length;
       const result = await realDuel(pair, { selectFinisher: true });
-      assert(result.packet.finisher?.id, finishers + ' must execute the selected canonical finisher');
+      assert(result.packet.finisher?.id, finishers + ' must execute the selected stylized finisher');
       assert.equal(pair.packets.slice(before).filter(x => x.data.type === 'cqc-versus-result').length, 1);
       assert.equal(state(pair).wins, 1); assert.equal(state(pair).pending, false);
       assert.equal(pair.engine.api().getFinisherState().window, null);

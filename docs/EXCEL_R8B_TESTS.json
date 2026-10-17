@@ -1,0 +1,71 @@
+{
+  "suite": "excel-r8b",
+  "passed": 15,
+  "failed": 0,
+  "scope": "Real selection/lifecycle code; terminal states explicitly prepared in controller tests. No art/canon certification.",
+  "checks": [
+    {
+      "name": "All 460 existing definitions select without altering actors, profiles or RNG",
+      "pass": true,
+      "detail": {
+        "definitions": 460
+      }
+    },
+    {
+      "name": "An intermediate round cannot nominate a finisher winner",
+      "pass": true
+    },
+    {
+      "name": "An already-reported match cannot reopen its conclusion window",
+      "pass": true
+    },
+    {
+      "name": "Unknown, fractional, negative and string selections do not silently choose slot zero",
+      "pass": true
+    },
+    {
+      "name": "A foreign profile or copied actor cannot own the current winner presentation",
+      "pass": true
+    },
+    {
+      "name": "Duration and phase contracts are validated before presentation starts",
+      "pass": true
+    },
+    {
+      "name": "Early, NaN and infinite ticks cannot validate finisher completion",
+      "pass": true
+    },
+    {
+      "name": "Cinematic completion uses its own exact scaled duration",
+      "pass": true
+    },
+    {
+      "name": "A different match, replaced actor, mutation or changed round invalidates the pending sequence",
+      "pass": true
+    },
+    {
+      "name": "The exact original finisher definition is required for its completion record",
+      "pass": true
+    },
+    {
+      "name": "The live controller does not credit a started or interrupted conclusion",
+      "pass": true
+    },
+    {
+      "name": "The live skip button preserves one standard result and no finisher achievement",
+      "pass": true
+    },
+    {
+      "name": "The live controller credits one completed sequence exactly once, not at startup",
+      "pass": true
+    },
+    {
+      "name": "Invalid selection keeps the live choice window unchanged and retryable",
+      "pass": true
+    },
+    {
+      "name": "Pause freezes a pending conclusion without adding progress, then resumes normally",
+      "pass": true
+    }
+  ]
+}
