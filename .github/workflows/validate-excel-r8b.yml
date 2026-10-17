@@ -1,0 +1,56 @@
+name: Validate Excel sequence integration R8B
+on:
+  push:
+    branches: ['codex/excel-r8b-integration-20261017']
+    paths: ['.github/workflows/validate-excel-r8b.yml', 'scripts/integrate-excel-r8b.py', 'tests/verify-excel-integration-r8.mjs', 'tests/browser-excel-integration-r8.mjs', 'src/finisher-session-r8.js']
+permissions:
+  contents: write
+concurrency:
+  group: bow-excel-r8b-validation
+  cancel-in-progress: false
+jobs:
+  validate:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: codex/excel-r8b-integration-20261017
+          fetch-depth: 0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - run: python3 scripts/integrate-excel-r8b.py
+      - run: npm install --no-save --package-lock=false @napi-rs/canvas@0.1.80 playwright@1.51.1
+      - name: Complete executable validation
+        run: |
+          set -o pipefail
+          npm run verify 2>&1 | tee excel-r8b-verify.log
+      - run: npm run build
+      - name: Locate Chromium
+        run: |
+          if command -v google-chrome >/dev/null; then echo "CHROME_BIN=$(command -v google-chrome)" >> "$GITHUB_ENV"; else npx playwright install --with-deps chromium; fi
+      - run: node tests/browser-match-sequences-r8.mjs
+      - run: node tests/browser-excel-integration-r8.mjs
+      - name: Commit only validated runtime changes to staging
+        run: |
+          git config user.name 'B.O.W. Protocol CI'
+          git config user.email 'actions@users.noreply.github.com'
+          git add src/unified-engine-v060.js src/runtime-contract.js modules/versus.html scripts/contract.mjs tests/verify-pages.mjs tests/r8-baseline.mjs package.json docs/EXCEL_R8B_CHANGES.json docs/EXCEL_R8B_TESTS.json
+          git commit -m 'fix: finishers credit only after completion, single results and safe skipping'
+          git push origin HEAD:codex/excel-r8b-integration-20261017
+      - name: Preserve actual executed test evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-excel-r8b-evidence
+          path: |
+            excel-r8b-verify.log
+            docs/EXCEL_R8B_TESTS.json
+            docs/SEQUENCES_R8_TESTS.json
+            docs/SEQUENCES_R8_ADDITIONAL_TESTS.json
+            qa-sequences-r8/
+            qa-excel-r8b/
+          retention-days: 14
+          if-no-files-found: warn
