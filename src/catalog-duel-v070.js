@@ -38,7 +38,7 @@ function tick(count=1,pad){
 function unavailable(slot){if(replay)return'Lecture seule du replay.';if(paused)return'Démarrez ou reprenez le duel.';if(s.finished||s.phase!=='fight')return'Duel hors phase de combat.';const why=C.unavailableReason(s,s.a,slot);return why==='busy'?'Action ou récupération en cours.':why;}
 function draw(){
  if(!s)return;dirty=false;ctx.clearRect(0,0,1280,720);root.RE_RENDERER.drawStage(ctx,stage,s.frame/60,0,false);
- for(const p of [s.a,s.b])root.RE_RENDERER.drawFighter(ctx,p.f,p.x,p.y,p.face,1,{actor:p,time:s.frame/60,attack:!!p.attack,move:p.attack?.def,moveProgress:p.attack?p.attack.t/(p.attack.def.startup+p.attack.def.active+p.attack.def.recovery):0,guard:p.block,crouch:p.crouch,hit:p.hit>0,jump:!p.onGround});
+ for(const p of [s.a,s.b])root.RE_RENDERER.drawFighter(ctx,p.f,p.x,p.y,p.face,1,{actor:p,time:s.frame/60,attack:!!p.attack,move:p.attack?.def,moveProgress:p.attack?p.attack.t/(p.attack.def.startup+p.attack.def.active+p.attack.def.recovery):0,guard:p.block,crouch:p.crouch,hit:p.hit>0,jump:!p.onGround,...root.RE_MATCH_SEQUENCES.pose(s,p.slot,{finalTick:0,reducedMotion:!!root.matchMedia?.('(prefers-reduced-motion: reduce)').matches})});
  root.RE_COMBAT_CUES?.draw(ctx,s,{reducedMotion:!!root.matchMedia?.('(prefers-reduced-motion: reduce)').matches});
  $('trialHealthA').textContent=s.a.f.name+' · '+s.a.life+' PV · '+Math.round(s.a.r)+' R';$('trialHealthB').textContent=s.b.f.name+' · '+s.b.life+' PV · '+Math.round(s.b.r)+' R';
  $('trialClock').textContent='F'+s.frame+(replay?' · REPLAY':'')+(paused?' · PAUSE':' · EN COURS');$('trialPause').textContent=paused?'REPRENDRE':'PAUSE';

@@ -1,0 +1,63 @@
+{
+  "suite": "sequences-r8-addendum",
+  "passed": 7,
+  "failed": 0,
+  "scope": "Real module and engine; synthetic clips labelled as fixtures, no new art",
+  "checks": [
+    {
+      "name": "Exact sequence keys cover both orientations without inheriting attack or death states",
+      "pass": true,
+      "detail": {
+        "subjects": 346,
+        "contexts": 2768,
+        "orientationsTested": 5536
+      }
+    },
+    {
+      "name": "An authored round clip respects its explicit tick rather than the stale actor attack tick",
+      "pass": true
+    },
+    {
+      "name": "Round and final ticks can be rewound without presentation state leaking into gameplay",
+      "pass": true
+    },
+    {
+      "name": "Malformation and unknown slots never manufacture a valid presentation or conclusion",
+      "pass": true
+    },
+    {
+      "name": "A drawn final outro is never substituted for a match or round loss",
+      "pass": true
+    },
+    {
+      "name": "Preparation data carries no command, life, mutation or source of campaign rewards",
+      "pass": true
+    },
+    {
+      "name": "A complete first-to-two CPU match produces reversible round results and one final victor",
+      "pass": true,
+      "detail": {
+        "frames": 2361,
+        "rounds": [
+          {
+            "round": 1,
+            "winner": 1,
+            "life": [
+              0,
+              1983
+            ]
+          },
+          {
+            "round": 2,
+            "winner": 1,
+            "life": [
+              0,
+              4670
+            ]
+          }
+        ],
+        "winner": 1
+      }
+    }
+  ]
+}

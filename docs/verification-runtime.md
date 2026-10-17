@@ -1,6 +1,6 @@
 # Vérification du moteur Resident Evil — B.O.W. Protocol
 
-Exécution : 2026-10-16T11:43:31.233Z. Version du contenu : 0.7.3.
+Exécution : 2026-10-17T17:01:38.238Z. Version du contenu : 0.7.3.
 
 **26 contrôles réussis ; 0 contrôle(s) en échec.**
 
@@ -37,8 +37,8 @@ Le contenu compilé doit déjà exister dans `data/roster.json`, `data/chronicle
 |---|---|---|---:|---:|---:|
 | re1-cerberus | re4-el-gigante | KO | 1098 | 10 / 12 | 0 / 5735 |
 | re4-el-gigante | re1-cerberus | KO | 1017 | 13 / 8 | 5450 / 0 |
-| re7-flying-bug | re3r-nemesis | KO | 1229 | 10 / 11 | 0 / 3566 |
-| re3r-nemesis | re7-flying-bug | KO | 1218 | 14 / 10 | 5171 / 0 |
+| re7-flying-bug | re3r-nemesis | KO | 1446 | 12 / 14 | 0 / 1160 |
+| re3r-nemesis | re7-flying-bug | KO | 1563 | 15 / 20 | 197 / 0 |
 | re7-molded | re5-albert-wesker-enemy | KO | 1241 | 11 / 12 | 0 / 3340 |
 | re5-albert-wesker-enemy | revillage-sturm | KO | 1253 | 13 / 10 | 1402 / 0 |
 | revillage-samca | revillage-hauler | KO | 1081 | 4 / 16 | 0 / 7006 |

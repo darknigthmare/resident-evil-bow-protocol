@@ -419,6 +419,7 @@
 
   function drawFighter(ctx, fighter, x, y, facing = 1, scale = 1, pose = {}) {
     if (!ctx) return true;
+    if(pose.presentationNeutral)pose={...pose,reduceMotion:true,attack:false,hit:false,walk:false,dash:false,guard:false,crouch:false,jump:false,knockdown:false};
     const f = findFighter(fighter), v = f?.visual || {};
     const directions = root.RE_FIGHTER_DIRECTIONS;
     const sampledPose = { ...pose, animationTick: animationClock.tick(pose) };
@@ -496,6 +497,7 @@
         -bodyWidth * plan.anchor[0], -bodyHeight * plan.anchor[1], bodyWidth, bodyHeight);
       ctx.restore();
     } else silhouettePlaceholder(ctx, f, entry, bodyHeight);
+    if(pose.presentationState&&!plan.animated)type(ctx,'SÉQUENCE À PRODUIRE · POSE CONSERVÉE',0,46,8,'#d6ba82','center');
     if(plan.animationUnavailable)type(ctx,'ANIMATION NON CHARGÉE · POSE CONSERVÉE',0,34,8,'#d6ba82','center');
     if(!plan.sideProfile || f?.fidelity?.visualStatus?.includes('provisional')){ctx.fillStyle='#deb877';ctx.font='9px monospace';ctx.textAlign='center';ctx.fillText(plan.status==='asset-error'?'SPRITE LATÉRAL INDISPONIBLE':plan.sideProfile?'POSE DE RÉFÉRENCE LATÉRALE':'PROFIL LATÉRAL À PRODUIRE',0,20);}
     if(pose.actor?.statuses?.exposed?.t>0&&!root.RE_SPATIAL?.profile(pose.actor)){ctx.strokeStyle='#e6b862';ctx.lineWidth=2;ctx.strokeRect(-bodyWidth/2-8,-bodyHeight-8,bodyWidth+16,bodyHeight+13);ctx.fillStyle='#f1cc81';ctx.font='11px monospace';ctx.textAlign='center';ctx.fillText('NOYAU EXPOSÉ',0,-bodyHeight-17);}

@@ -20,7 +20,9 @@
  function protectedAsymmetry(f){return /BIRKIN|BANDERSNATCH|N[EÉ]M[EÉ]SIS|T[-\s]?002/i.test(f?.name||'');}
  function asymmetric(f){return f?.visual?.asymmetric===true||protectedAsymmetry(f);}
  function mayMirror(f,record){return !protectedAsymmetry(f)&&(!asymmetric(f)||(record?.bilateralReview?.approved===true&&record.bilateralReview.uid===(f.uid||f.id)&&typeof record.bilateralReview.rationale==='string'&&record.bilateralReview.rationale.length>=30));}
+ const PRESENTATIONS=Object.freeze(['intro','roundWin','roundLose','roundDraw','matchWin','matchLose','matchDraw','outro']);
  function poseState(pose={}){
+  if(PRESENTATIONS.includes(pose.presentationState))return pose.presentationState;
   const p=pose.actor;
   // Explicit end-of-round presentation takes precedence over the actor's KO flag.
   if(['win','lose'].includes(pose.animationState))return pose.animationState;
@@ -83,5 +85,5 @@
  }
  function paths(f){const r=(root.RE_DIRECTIONAL_ART||{}).records?.[f?.uid||f?.id],out=new Set();for(const [dir,v]of Object.entries(r?.views||{}))if(validView(v,dir))out.add(v.path);for(const views of Object.values(r?.clips||{}))for(const [dir,v]of Object.entries(views))if(validClip(v,dir))out.add(v.path);return [...out];}
  function audit(f){const l=resolve(f,-1),r=resolve(f,1),record=(root.RE_DIRECTIONAL_ART||{}).records?.[f.uid||f.id];return {uid:f.uid||f.id,name:f.name,asymmetric:!mayMirror(f,record),sourceAsymmetryFlag:f.visual?.asymmetric===true,left:l.status,right:r.status,ready:l.sideProfile&&r.sideProfile,assetLeft:l.path,assetRight:r.path,referenceFacing:record?.referenceFacing||f.visual?.sourceFacing||'unknown',motionClips:Object.keys(record?.clips||{}).length,artStatus:record?.production?.status||'awaiting-side-art'};}
- root.RE_FIGHTER_DIRECTIONS=Object.freeze({resolve,facing,side,audit,validView,validClip,validReference,validCrop,safeAsset,paths,poseState,frameOf,createClock,states:STATES,slots:SLOTS,mayMirror,version:'1.3.0'});
+ root.RE_FIGHTER_DIRECTIONS=Object.freeze({resolve,facing,side,audit,validView,validClip,validReference,validCrop,safeAsset,paths,poseState,frameOf,createClock,states:STATES,slots:SLOTS,mayMirror,presentationStates:PRESENTATIONS,version:'1.4.0'});
 })(globalThis);

@@ -15,14 +15,7 @@
 
   function themeFor(fighter, provided) {
     const ep = clean(fighter && fighter.ep, '').toUpperCase();
-    let theme;
-    if (/REVENGEANCE|MGR/.test(ep)) theme = { name: 'HF / CYBORG', accent: '#81e0ee', bg: '#0b1b27', kind: 'angular' };
-    else if (/AC!D/.test(ep)) theme = { name: 'COST / AC!D', accent: '#deacf5', bg: '#201228', kind: 'card' };
-    else if (/METAL GEAR|MG1|MG2|GHOST|REVENGE/.test(ep) && !/MGS/.test(ep)) theme = { name: 'RETRO / OPS', accent: '#d0e9a1', bg: '#132014', kind: 'steps' };
-    else if (/MGS3|SNAKE EATER|THE JOY|DELTA|MPO|PORTABLE|PW|PEACE/.test(ep)) theme = { name: 'FOX / SURVIVAL', accent: '#dfd1a0', bg: '#242c1d', kind: 'field' };
-    else if (/MGS2|SONS/.test(ep)) theme = { name: 'SOLITON / 2009', accent: '#9bdede', bg: '#102d31', kind: 'digital' };
-    else if (/MGS4|MGSV|PHANTOM|TPP/.test(ep)) theme = { name: 'TACTICAL / CQC', accent: '#e3e7d1', bg: '#1c241f', kind: 'digital' };
-    else theme = { name: 'CODEC / OPS', accent: '#a1dbc8', bg: '#122c26', kind: 'codec' };
+    const theme = { name: 'BIOHAZARD / CONFINEMENT', accent: '#cb6963', bg: '#160c10', kind: 'digital' };
     if (!provided || typeof provided !== 'object') return theme;
     return {
       name: clean(provided.name, theme.name),

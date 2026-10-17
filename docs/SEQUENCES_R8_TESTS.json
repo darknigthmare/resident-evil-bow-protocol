@@ -1,0 +1,80 @@
+{
+  "suite": "match-sequences-r8",
+  "passed": 17,
+  "failed": 0,
+  "scope": "Phase/clip slots and read-only rendering. No new character art or canon certification.",
+  "checks": [
+    {
+      "name": "Eight distinct sequence slots are supported without changing the 21 ordinary states/actions",
+      "pass": true
+    },
+    {
+      "name": "Intro ticks use the current round countdown and restart at round boundaries",
+      "pass": true
+    },
+    {
+      "name": "First-round loss stays reversible despite zero life and a KO actor",
+      "pass": true
+    },
+    {
+      "name": "Reaching match point does not start a final defeat before the round countdown ends",
+      "pass": true
+    },
+    {
+      "name": "Draw and malformed winner values never nominate the second player",
+      "pass": true
+    },
+    {
+      "name": "A pending conclusion suppresses the ordinary final presentation",
+      "pass": true
+    },
+    {
+      "name": "Only the declared winner object with the correct slot can conclude",
+      "pass": true
+    },
+    {
+      "name": "Final victory flows to a separate outro slot, without extending the combat state",
+      "pass": true
+    },
+    {
+      "name": "Reduced motion, NaN and extreme ticks cannot advance or overflow a sequence",
+      "pass": true
+    },
+    {
+      "name": "A lethal final clip is not reused as a first-round loss",
+      "pass": true
+    },
+    {
+      "name": "All 346 identities and eight sequence contexts stay read-only",
+      "pass": true,
+      "detail": {
+        "bodies": 346,
+        "calls": 2076
+      }
+    },
+    {
+      "name": "Current art contains no newly invented sequence clips",
+      "pass": true
+    },
+    {
+      "name": "Resident Evil transitions do not fall back to CODEC, FOX or CQC archive themes",
+      "pass": true
+    },
+    {
+      "name": "Source integration uses the same phase mapper and guards both conclusion entry points",
+      "pass": true
+    },
+    {
+      "name": "Runtime contract covers the new main-controller dependency, with catalog and journal unchanged",
+      "pass": true
+    },
+    {
+      "name": "Workshop supports search, selected state, stepping and no-result safely",
+      "pass": true
+    },
+    {
+      "name": "Workshop pause and persisted-page restoration own a single render loop",
+      "pass": true
+    }
+  ]
+}
