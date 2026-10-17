@@ -62,9 +62,9 @@ await test('Native RE2 larva uses a measured complete silhouette and a declared 
 await test('Oblique animal references stay oblique even when approved to face the opponent',()=>{
  const F=JSON.parse(read('data/catalog-expansion-v070.json')).fighters;for(const uid of['re1-adder','re0-leech','reoutbreak-small-leech','re4r-colmillos','rerequiem-garmr']){const f=F.find(f=>f.uid===uid);assert(f);for(const face of[-1,1]){const p=A.resolve(f,face);assert.equal(p.sideProfile,false);assert.equal(p.status,'directional-reference');}}
 });
-await test('Atelier exposes all 21 states, exact stepping, scrub limits and real laboratory links',async()=>{
+await test('Atelier exposes all 28 states, exact stepping, scrub limits and real laboratory links',async()=>{
  const env=await loadGame(path.join(R,'directions.html'),{search:'?uid=re2-larvae'});try{
-  const d=env.document,$=id=>d.getElementById(id),api=env.window.RE_DIRECTIONS_PAGE;await env.images();assert.equal($('directionState').children.length,21);assert.equal(api.counts.ready,5);
+  const d=env.document,$=id=>d.getElementById(id),api=env.window.RE_DIRECTIONS_PAGE;await env.images();assert.equal($('directionState').children.length,28);assert.equal(api.counts.ready,5);
   $('directionState').value='heavy';$('directionState').dispatchEvent({type:'change'});assert.equal(api.snapshot().tick,0);$('directionStep').click();assert.equal(api.snapshot().tick,1);assert($('directionLab').href.includes('catalog-laboratory.html?uid=re2-larvae&slot=heavy'));assert.match($('directionLeft').textContent,/POSE STATIQUE/);
   $('directionTick').value='-2';$('directionTick').dispatchEvent({type:'input'});assert.equal(api.snapshot().tick,0);$('directionTick').value='50000';$('directionTick').dispatchEvent({type:'input'});assert.equal(api.snapshot().tick,36000);$('directionReset').click();assert.equal(api.snapshot().tick,0);
  }finally{env.dispose();}

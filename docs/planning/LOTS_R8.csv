@@ -1,0 +1,14 @@
+﻿Lot,Domaine,Travail,État,Limite,Preuve
+R8-01,Fin de manche,Victoire / défaite R1 distinctes du match,Raccord testé,Aucun dessin ajouté,src/round-presentation-r8.js
+R8-02,Égalité,Aucun vainqueur en double KO ou temps égal,Raccord testé,"Règle 2D, pas une scène canonique",docs/ROUND_PRESENTATION_R8_TESTS.json
+R8-03,Fin de match,États finaux seulement après finished=true,Raccord testé,Pas de mort finale empruntée pour R1,src/round-presentation-r8.js
+R8-04,Introduction,Entrée du premier round ; autres manches séparées,Raccord testé,Séquence source à relever par incarnation,src/round-presentation-r8.js
+R8-05,Atelier,"7 nouveaux états présentables, sans synthèse de frames",Raccord testé,Intros/outros définitives à produire,directions.html
+R8-06,Horloges,"Pause, reprise, retour temporel et manches répétées",Raccord testé,Temps de simulation uniquement,src/fighter-directions.js
+R8-07,Sauvegardes / replay,12 fichiers de gameplay et contrats inchangés,Préservé,Aucune migration ni modification de statistiques,docs/ROUND_PRESENTATION_R8_BASELINE.json
+R8-08,Animations R1,Dessiner et référencer les 692 poses R1,À produire,346 victoire + 346 défaite ; aucun clip livré,08_Poses_Manches / classeur maître
+R8-09,Animations finales,Dessiner et référencer les 692 poses de match,À produire,Les poses héritées ne certifient pas une scène 1:1,08_Poses_Manches / classeur maître
+R8-10,Movesets,Répertoire complet de chaque incarnation,À référencer,Ne pas limiter la recherche à 10 commandes,03_Movesets / classeur maître
+R8-11,Supers,Attaque majeure + distinction campagne/mode bonus,À référencer,Aucune jauge de Mercenaires importée tacitement,04_Supers / classeur maître
+R8-12,Conclusions,Mises à mort sourcées et victimes compatibles,À référencer,Un finisher de versus n'est pas une mort canonique,06_Conclusions_plan / classeur maître
+R8-13,Stages,"Boucles, lumière, eau et machinerie par lieu",À produire,Pas de nouvelles animations de stage dans R8,11_Stages_Anim / classeur maître

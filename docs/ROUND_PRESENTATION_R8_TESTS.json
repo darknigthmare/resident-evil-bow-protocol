@@ -1,0 +1,96 @@
+{
+  "revision": "R8",
+  "passed": 19,
+  "failed": 0,
+  "scope": "VM pure states, one actual multi-round CPU match, controlled DOM. No new final character animation.",
+  "checks": [
+    {
+      "name": "Seven explicit presentation states coexist with eleven legacy states and ten commands",
+      "pass": true
+    },
+    {
+      "name": "R1 victory and defeat remain nonterminal even while the loser is knocked down",
+      "pass": true
+    },
+    {
+      "name": "Sudden-death first round still waits for actual match completion",
+      "pass": true
+    },
+    {
+      "name": "All 346 bodies resolve each requested ending without borrowing a death clip for R1",
+      "pass": true,
+      "detail": {
+        "testedSlots": 1384,
+        "actualDrawingsAdded": 0
+      }
+    },
+    {
+      "name": "A legacy lose clip is eligible for match loss, never for round loss",
+      "pass": true
+    },
+    {
+      "name": "Dedicated round pose supersedes only its own state",
+      "pass": true
+    },
+    {
+      "name": "First match intro is distinct from subsequent round preparation",
+      "pass": true
+    },
+    {
+      "name": "Double KO and equal-timeout states do not assign a winner",
+      "pass": true
+    },
+    {
+      "name": "A timeout loser still alive is not promoted to a corpse by decoration",
+      "pass": true
+    },
+    {
+      "name": "End state masks stale attacking or locomotion flags without writing the actual actor",
+      "pass": true
+    },
+    {
+      "name": "Presentation tick follows exact round event, pause and backward seek",
+      "pass": true
+    },
+    {
+      "name": "Repeated round victories restart their clocks through an explicit token",
+      "pass": true
+    },
+    {
+      "name": "Foreign, stale or copied actors cannot borrow a real match ending",
+      "pass": true
+    },
+    {
+      "name": "Training, incomplete matches and invalid winners do not create a terminal presentation",
+      "pass": true
+    },
+    {
+      "name": "Explicit atelier and cinematic pose requests remain independent of live match lookup",
+      "pass": true
+    },
+    {
+      "name": "CPU match passes R1, resets actors and produces final match states without sampling changing it",
+      "pass": true,
+      "detail": {
+        "frames": 2436,
+        "rounds": 2,
+        "scores": [
+          0,
+          2
+        ]
+      }
+    },
+    {
+      "name": "Actual Versus uses presentation module and never offers a finisher in nonterminal R1",
+      "pass": true
+    },
+    {
+      "name": "Atelier exposes reversible R1 poses separately from final ones for real subject links",
+      "pass": true
+    },
+    {
+      "name": "Twelve gameplay/identity/contract files remain byte-identical to the verified R7 base",
+      "pass": true
+    }
+  ]
+}

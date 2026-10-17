@@ -5,6 +5,7 @@
 (function(root){
  'use strict';
  const STATES=Object.freeze(['idle','walk','retreat','dash','jump','crouch','guard','hit','knockdown','win','lose']);
+ const PRESENTATION=Object.freeze(['intro','roundWin','roundLose','roundDraw','matchWin','matchLose','outro']);
  const SLOTS=Object.freeze(['light','heavy','low','throw','special','specialDown','specialForward','specialBack','super','utility']);
  function side(v){return v===-1||v==='left'||v==='gauche'?-1:v===1||v==='right'||v==='droite'?1:0;}
  function facing(actor,requested=1,x,opponentX){
@@ -23,7 +24,7 @@
  function poseState(pose={}){
   const p=pose.actor;
   // Explicit end-of-round presentation takes precedence over the actor's KO flag.
-  if(['win','lose'].includes(pose.animationState))return pose.animationState;
+  if(['win','lose',...PRESENTATION].includes(pose.animationState))return pose.animationState;
   if(pose.knockdown||p?.state==='ko'||(Number.isFinite(p?.life)&&p.life<=0))return 'knockdown';
   if(pose.hit||p?.hit>0)return 'hit';
   if(p?.attack&&SLOTS.includes(p.attack.name))return p.attack.name;
@@ -46,7 +47,7 @@
    const now=Math.max(0,Math.floor((Number.isFinite(pose.time)?pose.time:0)*60+1e-6));
    const key=pose.animationKey||pose.actor;
    if(!key||(typeof key!=='object'&&typeof key!=='function'))return 0;
-   const token=state==='hit'?pose.actor?.lastHit:null;let old=actors.get(key);
+   const token=pose.presentationToken??(state==='hit'?pose.actor?.lastHit:null);let old=actors.get(key);
    if(!old||old.state!==state||old.token!==token||now<old.last){old={state,token,start:now,last:now};actors.set(key,old);}
    old.last=now;
    return Math.max(0,now-old.start);
@@ -70,7 +71,8 @@
   const result={face,direction,state,animationFrame:null,animated:false,borderKey:reference?undefined:record?.referenceBorderKey,referenceOverride:!!reference,path:reference?.path||f?.sprite||f?.visual?.sprite||f?.portrait||'',mirror:1,anchor:reference?.anchor||[.5,1],crop:reference?.crop||f?.spriteCrop||f?.visual?.spriteCrop||null,status:'reference-only',sideProfile:false,oppositeAnatomyValidated:false,reason:'Référence provisoire : le corps latéral de cette incarnation reste à produire.'};
   const canMirror=mayMirror(f,record)&&record?.mirrorReviewed===true;
   // An explicit clip is never synthesized from the idle illustration.
-  const exactClip=record?.clips?.[state]?.[direction],mirrorClip=record?.clips?.[state]?.[opposite];
+  const clipState=record?.clips?.[state]?state:state==='matchWin'?'win':state==='matchLose'?'lose':state;
+  const exactClip=record?.clips?.[clipState]?.[direction],mirrorClip=record?.clips?.[clipState]?.[opposite];
   const clip=options.skipClips?null:validClip(exactClip,direction)?exactClip:canMirror&&validClip(mirrorClip,opposite)?mirrorClip:null;
   if(clip){const selected=frameOf(clip,frameTick(pose,state));return {...result,path:clip.path,borderKey:clip.borderKey,crop:selected.frame.crop,anchor:selected.frame.anchor||clip.anchor||[.5,1],mirror:clip===exactClip?1:-1,animationFrame:selected.index,animated:true,sideProfile:true,status:'side-animation',oppositeAnatomyValidated:validClip(exactClip,direction)&&validClip(mirrorClip,opposite),reason:'Séquence latérale dessinée pour cet état ; aucune image de mouvement inventée.'};}
   const exact=record?.views?.[direction];
@@ -83,5 +85,5 @@
  }
  function paths(f){const r=(root.RE_DIRECTIONAL_ART||{}).records?.[f?.uid||f?.id],out=new Set();for(const [dir,v]of Object.entries(r?.views||{}))if(validView(v,dir))out.add(v.path);for(const views of Object.values(r?.clips||{}))for(const [dir,v]of Object.entries(views))if(validClip(v,dir))out.add(v.path);return [...out];}
  function audit(f){const l=resolve(f,-1),r=resolve(f,1),record=(root.RE_DIRECTIONAL_ART||{}).records?.[f.uid||f.id];return {uid:f.uid||f.id,name:f.name,asymmetric:!mayMirror(f,record),sourceAsymmetryFlag:f.visual?.asymmetric===true,left:l.status,right:r.status,ready:l.sideProfile&&r.sideProfile,assetLeft:l.path,assetRight:r.path,referenceFacing:record?.referenceFacing||f.visual?.sourceFacing||'unknown',motionClips:Object.keys(record?.clips||{}).length,artStatus:record?.production?.status||'awaiting-side-art'};}
- root.RE_FIGHTER_DIRECTIONS=Object.freeze({resolve,facing,side,audit,validView,validClip,validReference,validCrop,safeAsset,paths,poseState,frameOf,createClock,states:STATES,slots:SLOTS,mayMirror,version:'1.3.0'});
+ root.RE_FIGHTER_DIRECTIONS=Object.freeze({resolve,facing,side,audit,validView,validClip,validReference,validCrop,safeAsset,paths,poseState,frameOf,createClock,states:STATES,presentationStates:PRESENTATION,slots:SLOTS,mayMirror,version:'1.4.0'});
 })(globalThis);

@@ -419,6 +419,7 @@
 
   function drawFighter(ctx, fighter, x, y, facing = 1, scale = 1, pose = {}) {
     if (!ctx) return true;
+    pose = root.RE_ROUND_PRESENTATION?.decorate(pose) || pose;
     const f = findFighter(fighter), v = f?.visual || {};
     const directions = root.RE_FIGHTER_DIRECTIONS;
     const sampledPose = { ...pose, animationTick: animationClock.tick(pose) };
@@ -499,6 +500,7 @@
     if(plan.animationUnavailable)type(ctx,'ANIMATION NON CHARGÉE · POSE CONSERVÉE',0,34,8,'#d6ba82','center');
     if(!plan.sideProfile || f?.fidelity?.visualStatus?.includes('provisional')){ctx.fillStyle='#deb877';ctx.font='9px monospace';ctx.textAlign='center';ctx.fillText(plan.status==='asset-error'?'SPRITE LATÉRAL INDISPONIBLE':plan.sideProfile?'POSE DE RÉFÉRENCE LATÉRALE':'PROFIL LATÉRAL À PRODUIRE',0,20);}
     if(pose.actor?.statuses?.exposed?.t>0&&!root.RE_SPATIAL?.profile(pose.actor)){ctx.strokeStyle='#e6b862';ctx.lineWidth=2;ctx.strokeRect(-bodyWidth/2-8,-bodyHeight-8,bodyWidth+16,bodyHeight+13);ctx.fillStyle='#f1cc81';ctx.font='11px monospace';ctx.textAlign='center';ctx.fillText('NOYAU EXPOSÉ',0,-bodyHeight-17);}
+    if (pose.presentation && !plan.animated) {ctx.fillStyle='#dfc88c';ctx.font='10px monospace';ctx.textAlign='center';ctx.fillText(pose.presentation.label+' · POSE À PRODUIRE',0,35);}
     if (!pose.knockdown) drawAttackAccent(ctx, f, face, bodyHeight, bodyWidth, pose);
     ctx.restore();
     if(pose.actor&&root.RE_SPATIAL&&root.CQCCombat060&&!pose.knockdown)root.RE_SPATIAL.draw(ctx,pose.actor,root.CQCCombat060.box(pose.actor),number(x),number(y),number(scale,1));

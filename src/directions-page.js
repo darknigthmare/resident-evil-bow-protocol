@@ -5,13 +5,13 @@
  const $=id=>document.getElementById(id),D=root.RE_DATA,E=root.RE_CATALOG_EXPANSION;
  const F=D.fighters.concat(E.fighters),A=root.RE_FIGHTER_DIRECTIONS,R=root.RE_RENDERER;
  const canvas=$('directionCanvas'),ctx=canvas.getContext('2d');
- const labels={idle:'REPOS',walk:'MARCHE',retreat:'RECUL',dash:'DASH',jump:'SAUT',crouch:'ACCROUPI',guard:'GARDE',hit:'IMPACT',knockdown:'CHUTE',win:'VICTOIRE',lose:'DÉFAITE',light:'LÉGER',heavy:'LOURD',low:'BAS',throw:'PRISE',special:'TECHNIQUE NEUTRE',specialDown:'TECHNIQUE BASSE',specialForward:'TECHNIQUE AVANT',specialBack:'TECHNIQUE ARRIÈRE',super:'SUPER',utility:'UTILITAIRE'};
+ const labels={idle:'REPOS',walk:'MARCHE',retreat:'RECUL',dash:'DASH',jump:'SAUT',crouch:'ACCROUPI',guard:'GARDE',hit:'IMPACT',knockdown:'CHUTE',win:'VICTOIRE (HÉRITÉE)',lose:'DÉFAITE (HÉRITÉE)',intro:'INTRO',roundWin:'VICTOIRE DE MANCHE',roundLose:'DÉFAITE DE MANCHE',roundDraw:'MANCHE NULLE',matchWin:'VICTOIRE DE MATCH',matchLose:'DÉFAITE DE MATCH',outro:'OUTRO',light:'LÉGER',heavy:'LOURD',low:'BAS',throw:'PRISE',special:'TECHNIQUE NEUTRE',specialDown:'TECHNIQUE BASSE',specialForward:'TECHNIQUE AVANT',specialBack:'TECHNIQUE ARRIÈRE',super:'SUPER',utility:'UTILITAIRE'};
  let selected=F.find(f=>f.uid===new URLSearchParams(location.search).get('uid'))||F[0];
  let swap=false,raf=null,last=null,dirty=true,tick=0,playing=false,carry=0;
  const normalize=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
  const count=F.filter(f=>A.audit(f).ready).length;
  $('directionCounts').textContent=F.length+' CORPS DE COMBAT · '+count+' POSES DE RÉFÉRENCE BIDIRECTIONNELLES · '+(F.length-count)+' À TERMINER';
- for(const state of [...A.states,...A.slots]){const o=document.createElement('option');o.value=state;o.textContent=labels[state];$('directionState').append(o);}
+ for(const state of [...A.states,...A.presentationStates,...A.slots]){const o=document.createElement('option');o.value=state;o.textContent=labels[state];$('directionState').append(o);}
  $('directionState').value='idle';
  function state(){return $('directionState').value;}
  function stop(){playing=false;last=null;carry=0;dirty=true;$('directionAnimate').textContent='LIRE LES FRAMES';}

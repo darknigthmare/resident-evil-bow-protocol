@@ -26,7 +26,7 @@ for(const [uid,r]of Object.entries(M.records)){
  for(const [dir,v]of Object.entries(r.views||{})){if(!['left','right'].includes(dir)||!A.validView(v,dir))throw Error('Invalid/unreviewed directional view: '+uid);checkImage(v);}
  for(const [state,views]of Object.entries(r.clips||{})){
   assertDistinctSides(views.left,views.right,uid+' / '+state);
-  if(!A.states.includes(state)&&!A.slots.includes(state))throw Error('Unknown animation state: '+state);
+  if(!A.states.includes(state)&&!A.presentationStates.includes(state)&&!A.slots.includes(state))throw Error('Unknown animation state: '+state);
   for(const [dir,c]of Object.entries(views)){if(!['left','right'].includes(dir)||!A.validClip(c,dir))throw Error('Invalid directional clip: '+uid+' '+state);checkImage(c);
    const size=c.frames[0].crop.slice(2);if(c.frames.some(f=>f.crop[2]!==size[0]||f.crop[3]!==size[1]))throw Error('Frame canvases must share dimensions to avoid breathing scale');
   }
