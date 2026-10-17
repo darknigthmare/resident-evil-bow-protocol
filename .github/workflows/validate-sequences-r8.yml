@@ -1,0 +1,69 @@
+name: Validate recovered R8 sequences and round safety
+on:
+  push:
+    branches: ['codex/r8-sequences-recovery-20261017']
+    paths: ['.github/workflows/validate-sequences-r8.yml']
+permissions:
+  contents: write
+concurrency:
+  group: bow-r8-recovery-validation
+  cancel-in-progress: false
+jobs:
+  validate:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: codex/r8-sequences-recovery-20261017
+          fetch-depth: 0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - name: Apply the locally reviewed checksum-guarded sources
+        run: |
+          python3 scripts/recover-r8-text.py
+          python3 - <<'PY'
+          from pathlib import Path
+          import zipfile, json
+          with zipfile.ZipFile('R8_RECOVERED_TEXT.zip') as z:
+              for name in z.namelist():
+                  if not name.startswith('changes/'): continue
+                  p=Path(name).relative_to('changes')
+                  assert not p.is_absolute() and '..' not in p.parts
+                  p.parent.mkdir(parents=True,exist_ok=True)
+                  p.write_bytes(z.read(name))
+          p=Path('package.json');d=json.loads(p.read_text())
+          d['scripts']['verify']+=' && node tests/verify-sequences-r8-addendum.mjs'
+          p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n')
+          PY
+      - run: npm install --no-save --package-lock=false @napi-rs/canvas@0.1.80 playwright@1.51.1
+      - name: Re-run full executable validation
+        run: |
+          set -o pipefail
+          npm run verify 2>&1 | tee r8-verify.log
+      - run: npm run build
+      - name: Locate Chromium for actual HTTP navigation
+        run: |
+          if command -v google-chrome >/dev/null; then echo "CHROME_BIN=$(command -v google-chrome)" >> "$GITHUB_ENV"; else npx playwright install --with-deps chromium; fi
+      - run: node tests/browser-match-sequences-r8.mjs
+      - name: Commit validated game code only to staging
+        run: |
+          git config user.name 'B.O.W. Protocol CI'
+          git config user.email 'actions@users.noreply.github.com'
+          git add src tests docs scripts/contract.mjs scripts/compile-directions.mjs scripts/build.mjs scripts/package-sequences-r8.py package.json sequences.html directions.html index.html catalog-duel.html modules/versus.html
+          git commit -m 'feat: R8 sequence states, reversible rounds, Resident Evil transitions and QA'
+          git push origin HEAD:codex/r8-sequences-recovery-20261017
+      - name: Preserve tests and screenshots
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-r8-validation-evidence
+          path: |
+            r8-verify.log
+            qa-sequences-r8/
+            docs/SEQUENCES_R8_TESTS.json
+            docs/SEQUENCES_R8_ADDITIONAL_TESTS.json
+          retention-days: 14
+          if-no-files-found: warn
