@@ -1,0 +1,61 @@
+name: Validate round presentation R8
+on:
+  push:
+    branches: ['codex/round-presentation-r8']
+    paths: ['.github/workflows/integrate-round-r8.yml', 'scripts/apply-round-r8.py']
+permissions:
+  contents: write
+concurrency:
+  group: bow-round-r8-integration
+  cancel-in-progress: false
+jobs:
+  integrate:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: codex/round-presentation-r8
+          fetch-depth: 0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - name: Integrate reviewed source and companion Excel
+        run: |
+          python3 scripts/apply-round-r8.py
+          node scripts/compile-directions.mjs
+          node scripts/directional-workorders.mjs
+      - run: npm install --no-save --package-lock=false @napi-rs/canvas@0.1.80 playwright@1.51.1
+      - name: Complete executable validation
+        run: |
+          set -o pipefail
+          npm run verify 2>&1 | tee r8-verify.log
+      - run: npm run build
+      - name: Prepare real HTTP browser
+        run: |
+          if command -v google-chrome >/dev/null; then echo "CHROME_BIN=$(command -v google-chrome)" >> "$GITHUB_ENV"; else npx playwright install --with-deps chromium; fi
+      - run: node tests/browser-round-presentation-r8.mjs
+      - name: Commit tested changes on staging only
+        run: |
+          set -euo pipefail
+          git config user.name 'B.O.W. Protocol CI'
+          git config user.email 'actions@users.noreply.github.com'
+          git add catalog-duel.html catalog-laboratory.html directions.html laboratory.html modules/chronicles.html modules/versus.html stages.html package.json
+          git add scripts/compile-directions.mjs scripts/directional-workorders.mjs src/directions-page.js src/fighter-directions.js src/re-renderer.js src/round-presentation-r8.js
+          git add tests/browser-round-presentation-r8.mjs tests/verify-directional-r3.mjs tests/verify-round-presentation-r8.mjs
+          git add docs/ROUND_PRESENTATION_R8_BASELINE.json docs/ROUND_PRESENTATION_R8_SCOPE.md docs/ROUND_PRESENTATION_R8_TESTS.json docs/DIRECTIONAL_WORKORDERS.json docs/planning/
+          git diff --cached --quiet && exit 0
+          git commit -m 'feat(presentation): separate first-round results, final match poses and tracked Excel lots'
+          git push origin HEAD:codex/round-presentation-r8
+      - name: Preserve exact execution evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-round-r8-integration-evidence
+          path: |
+            r8-verify.log
+            qa-round-r8/
+            docs/ROUND_PRESENTATION_R8_TESTS.json
+          retention-days: 14
+          if-no-files-found: warn
