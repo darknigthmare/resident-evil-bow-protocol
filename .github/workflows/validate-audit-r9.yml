@@ -1,0 +1,83 @@
+name: Validate six audit closures R9
+on:
+  push:
+    branches: ['codex/audit-closures-r9-20261018']
+    paths: ['.github/workflows/validate-audit-r9.yml', 'src/platform-safety-r9.js', 'scripts/reviewed-audit-r9.json', 'tests/verify-audit-r9.mjs', 'tests/browser-audit-r9.mjs']
+permissions:
+  contents: write
+concurrency:
+  group: bow-audit-r9-validation
+  cancel-in-progress: false
+jobs:
+  validate:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: codex/audit-closures-r9-20261018
+          fetch-depth: 0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - run: npm install --no-save --package-lock=false @napi-rs/canvas@0.1.80 playwright@1.51.1
+      - name: Reproduce six original defects on the exact R8 commit
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/bow-audit-r8"
+          git archive ba4e3cc82f2c9af7c7324420a0cc4409c599fd1a | tar -x -C "$RUNNER_TEMP/bow-audit-r8"
+          ln -s "$GITHUB_WORKSPACE/node_modules" "$RUNNER_TEMP/bow-audit-r8/node_modules"
+          node tests/reproduce-audit-r8-r9.cjs "$RUNNER_TEMP/bow-audit-r8" docs
+      - name: Apply reviewed source edits only after their before/after hashes agree
+        run: |
+          if ! grep -q 'const safetyR9=' src/unified-engine-v060.js; then python3 scripts/apply-audit-r9.py; fi
+          node scripts/contract.mjs
+      - name: Run all historical and new executable regressions
+        run: |
+          set -o pipefail
+          npm run verify 2>&1 | tee r9-verify.log
+      - run: npm run build
+      - name: Locate Chromium for actual HTTP and Web Audio checks
+        run: |
+          if command -v google-chrome >/dev/null; then echo "CHROME_BIN=$(command -v google-chrome)" >> "$GITHUB_ENV"; else npx playwright install --with-deps chromium; fi
+      - run: node tests/browser-audit-r9.mjs
+      - run: node tests/browser-match-sequences-r8.mjs
+      - name: Commit only verified source and audit results to staging
+        run: |
+          set -euo pipefail
+          git config user.name 'B.O.W. Protocol CI'
+          git config user.email 'actions@users.noreply.github.com'
+          git add src modules/versus.html catalog-duel.html scripts/contract.mjs package.json tests/r8-baseline.mjs docs/AUDIT_R9_CHANGES.json docs/AUDIT_R9_TESTS.json docs/AUDIT_R8_BEFORE_R9.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'fix: R9 audit closures for input, preferences, conclusions, outro and audio lifecycle'
+            git push origin HEAD:codex/audit-closures-r9-20261018
+          fi
+      - name: Archive exact tested source excluding unchanged asset binaries
+        run: |
+          git archive --format=zip --prefix=bow-audit-r9/ -o BOW_R9_CODE_VERIFIED.zip HEAD -- . ':!assets'
+          git rev-parse HEAD > BOW_R9_TESTED_COMMIT.txt
+          sha256sum BOW_R9_CODE_VERIFIED.zip > BOW_R9_CODE_SHA256.txt
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-r9-verified-code
+          path: |
+            BOW_R9_CODE_VERIFIED.zip
+            BOW_R9_TESTED_COMMIT.txt
+            BOW_R9_CODE_SHA256.txt
+          compression-level: 0
+          retention-days: 14
+          if-no-files-found: error
+      - name: Retain success or failure evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-r9-validation-evidence
+          path: |
+            r9-verify.log
+            docs/AUDIT_R9_TESTS.json
+            docs/AUDIT_R8_BEFORE_R9.json
+            qa-audit-r9/
+            qa-sequences-r8/
+          retention-days: 14
+          if-no-files-found: warn
