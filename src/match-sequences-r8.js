@@ -34,7 +34,7 @@
    knockdown:false};
  }
  function canFinish(s,actor){
-  return !!s&&s.finished===true&&slot(s.winner)&&actor===(s.winner===0?s.a:s.b)&&
+  return !!s&&s.finished===true&&s._resultSent55!==true&&slot(s.winner)&&actor===(s.winner===0?s.a:s.b)&&
    s.a!==s.b&&!!actor?.f&&actor.slot===s.winner;
  }
  function coverage(f){
