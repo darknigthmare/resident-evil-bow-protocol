@@ -231,9 +231,17 @@
     }
     function menu() { return play('menu', null, true); }
     function finisher(id, event) { const key = text(id, 180); if (!key || key === lastFinisher || !audible()) return false; lastFinisher = key; return play('finisher', event); }
+    function park() {
+      pause(true); stop(); unlocked = false;
+      if (audio?.state === 'running' && audio.suspend) {
+        try { return Promise.resolve(audio.suspend()).catch(error => { lastError = 'Suspension audio indisponible : ' + error.message; }); }
+        catch (error) { lastError = 'Suspension audio indisponible : ' + error.message; }
+      }
+      return Promise.resolve();
+    }
     function dispose() { if (disposed) return; stop(); disposed = true; unlocked = false; cache.clear(); for (const node of [effectsBus, ambienceBus, menuBus, master, limiter]) if (node) try { node.disconnect(); } catch (_) {} if (audio && audio.close) try { Promise.resolve(audio.close()).catch(() => {}); } catch (_) {} }
     function diagnostics() { return { version: VERSION, supported: !!AudioCtor, unlocked, enabled: prefs.enabled, paused, disposed, contextState: audio ? audio.state : 'uncreated', voices: voices.size, maxVoices, cachedBuffers: cache.size, ambience: ambience ? ambience.family : null, sampleRate: audio ? audio.sampleRate : null, session, ended: endedSession !== null, lastFrame, lastSequence: lastSeq, lastCue, error: lastError, settings: { ...prefs }, ...counts }; }
-    return Object.freeze({ unlock, setSettings, observe, pause, stop, end, finish: end, finisher, menu, dispose, diagnostics });
+    return Object.freeze({ unlock, setSettings, observe, pause, stop, end, finish: end, finisher, menu, park, dispose, diagnostics });
   }
   const API = Object.freeze({ version: VERSION, defaults: DEFAULTS, cues: CUES, stageFamilies: STAGE_FAMILIES, create, snapshot, synthesize, ambienceSamples, cueFor });
   scope.CQC_AUDIO_058 = API;

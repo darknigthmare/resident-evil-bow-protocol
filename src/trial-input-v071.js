@@ -9,7 +9,7 @@ function create(){
  function queue(slot){if(edges.length<16)edges.push(slot);}
  function pointer(id,action,down){if(!down){pointers.delete(id);return;}if(pointers.has(id))return;pointers.set(id,action);if(!['left','right','down','guard'].includes(action))queue(action);}
  function samplePad(){
-  let gp=null;try{gp=Array.from(root.navigator?.getGamepads?.()||[]).find(p=>p&&p.connected!==false&&p.mapping==='standard')||null;}catch(e){gp=null;}
+  let gp=null;try{gp=Array.from(root.RE_PLATFORM_SAFETY?root.RE_PLATFORM_SAFETY.gamepads():root.navigator?.getGamepads?.()||[]).find(p=>p&&p.connected!==false&&p.mapping==='standard')||null;}catch(e){gp=null;}
   if(!gp){padId=null;previous=[];lastPad=null;return{edges:[],held:{},connected:false};}
   const buttons=Array.from(gp.buttons||[],b=>!!b?.pressed||(Number(b?.value)||0)>.5),id=String(gp.index)+'|'+gp.id;
   if(id!==padId){padId=id;previous=buttons.slice();}

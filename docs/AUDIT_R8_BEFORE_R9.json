@@ -1,0 +1,36 @@
+{
+  "baseCommit": "ba4e3cc82f2c9af7c7324420a0cc4409c599fd1a",
+  "reproduced": 6,
+  "checks": [
+    {
+      "id": "AUD-01",
+      "reproduced": true
+    },
+    {
+      "id": "AUD-02",
+      "reproduced": true,
+      "injection": "Gamepad policy denial"
+    },
+    {
+      "id": "AUD-03",
+      "reproduced": true,
+      "injection": "invalid persisted bindings"
+    },
+    {
+      "id": "AUD-04",
+      "reproduced": true,
+      "injection": "prepared verdict + done:null"
+    },
+    {
+      "id": "AUD-05",
+      "reproduced": true,
+      "injection": "prepared verdict",
+      "renderSamples": 240
+    },
+    {
+      "id": "AUD-06",
+      "reproduced": true,
+      "injection": "synthetic persisted lifecycle"
+    }
+  ]
+}
