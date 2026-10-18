@@ -7,7 +7,7 @@ const cfg={p1:'re3r-nemesis',p2:'re1-hunter',mode:'local',rounds:2,seconds:99,fi
 async function ready(){for(let i=0;i<90;i++){try{if((await fetch(base+'/index.html')).ok)return;}catch{}await new Promise(r=>setTimeout(r,100));}throw Error('HTTP server missing');}
 async function run(id,width,fn){try{const detail=await fn();checks.push({id,width,pass:true,...detail});console.log('PASS '+id+' '+width);}catch(e){checks.push({id,width,pass:false,error:e.stack});console.error(e.stack);throw e;}}
 try{
- await ready();browser=await chromium.launch({headless:true,...(process.env.CHROME_BIN?{executablePath:process.env.CHROME_BIN}:{}),ignoreDefaultArgs:['--disable-back-forward-cache'],args:['--no-sandbox']});
+ await ready();browser=await chromium.launch({headless:true,...(process.env.CHROME_BIN?{executablePath:process.env.CHROME_BIN}:{}),args:['--no-sandbox']});
  for(const width of [1440,390]){
   let ctx=await browser.newContext({viewport:{width,height:1000}}),page=await ctx.newPage(),errors=[];
   page.on('pageerror',e=>errors.push(e.message));
@@ -21,8 +21,9 @@ try{
   await ctx.close();
   ctx=await browser.newContext({viewport:{width,height:1000}});page=await ctx.newPage();errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto(base+'/catalog-duel.html',{waitUntil:'networkidle'});
   await run('AUD-05',width,async()=>{await page.evaluate(()=>{document.getElementById('trialMode').value='cpu';RE_CATALOG_DUEL.reset(true);RE_CATALOG_DUEL.tick(7000);});assert(await page.evaluate(()=>RE_CATALOG_DUEL.getState().finished));const combat=await page.evaluate(()=>JSON.stringify(RE_CATALOG_DUEL.getState()));await page.waitForFunction(()=>RE_CATALOG_DUEL.getPresentation().frame>=90);await page.click('#trialPause');const tick=await page.evaluate(()=>RE_CATALOG_DUEL.getPresentation().frame);await page.waitForTimeout(140);assert.equal(await page.evaluate(()=>RE_CATALOG_DUEL.getPresentation().frame),tick);assert.equal(await page.evaluate(()=>JSON.stringify(RE_CATALOG_DUEL.getState())),combat);assert.match(await page.locator('#trialCommandState').textContent(),/SORTIE DU VAINQUEUR|DUEL INDÉCIS/);await page.click('#trialStep');assert.equal(await page.evaluate(()=>RE_CATALOG_DUEL.getPresentation().frame),tick+1);assert.equal(await page.evaluate(()=>localStorage.length),0);await page.screenshot({path:path.join(out,'outro-pause-'+width+'.png')});assert.deepEqual(errors,[]);return{naturalCPUResult:true,simulationAccelerated:true,finalFrame:tick,presentationPause:true,combatFrozen:true};});await ctx.close();
-  // No route interception in this context: observe actual history caching, and
-  // report a reload honestly when Chromium does not choose to use BFCache.
+  // Native history navigation is tested under Playwright defaults. Playwright
+  // does not support BFCache lifecycle tracking; persisted events are tested
+  // explicitly below, without claiming a real BFCache restoration.
   ctx=await browser.newContext({viewport:{width,height:1000}});page=await ctx.newPage();errors=[];page.on('pageerror',e=>errors.push(e.message));await page.addInitScript(()=>{window.__r9Shows=[];addEventListener('pageshow',e=>window.__r9Shows.push(e.persisted));});await page.goto(base+'/modules/versus.html',{waitUntil:'networkidle'});
   await run('AUD-06',width,async()=>{await page.click('#selectScreen .audio-open58');await page.click('#audioToggle58');await page.waitForFunction(()=>__CQC053Versus.host.audio.diagnostics().unlocked);await page.click('#audioClose58');await page.evaluate(c=>__CQC053Versus.startExternal(c),cfg);await page.goto(base+'/index.html',{waitUntil:'networkidle'});await page.goBack({waitUntil:'load'});await page.waitForFunction(()=>!!window.__CQC053Versus);const persisted=await page.evaluate(()=>window.__r9Shows.includes(true));const disposed=await page.evaluate(()=>__CQC053Versus.host.audio.diagnostics().disposed);assert.equal(disposed,false);
    // Regardless of BFCache eligibility, verify the root failure using the real
