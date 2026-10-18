@@ -1,0 +1,88 @@
+name: Complete and validate R8 Excel integration
+on:
+  push:
+    branches: ['codex/r8-planning-complete-20261018']
+    paths: ['.github/workflows/complete-planning-r8.yml', 'scripts/complete-planning-r8.py', 'tests/verify-planning-integration-r8.mjs', 'tests/browser-planning-integration-r8.mjs']
+permissions:
+  contents: write
+concurrency:
+  group: bow-r8-planning-completion
+  cancel-in-progress: false
+jobs:
+  complete:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: codex/r8-planning-complete-20261018
+          fetch-depth: 0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - name: Apply reviewed integration and losslessly reconstruct spreadsheet
+        run: |
+          if test -f .github/integration/matrix-r8-1.bin; then python3 scripts/complete-planning-r8.py; fi
+      - run: npm install --no-save --package-lock=false @napi-rs/canvas@0.1.80 playwright@1.51.1
+      - name: Execute all gameplay and planning regressions
+        run: |
+          set -o pipefail
+          npm run verify 2>&1 | tee r8-verify.log
+      - run: npm run build
+      - name: Locate Chromium for real HTTP tests
+        run: |
+          if command -v google-chrome >/dev/null; then echo "CHROME_BIN=$(command -v google-chrome)" >> "$GITHUB_ENV"; else npx playwright install --with-deps chromium; fi
+      - run: node tests/browser-match-sequences-r8.mjs
+      - run: node tests/browser-planning-integration-r8.mjs
+      - name: Commit only validated changes on staging
+        run: |
+          git config user.name 'B.O.W. Protocol CI'
+          git config user.email 'actions@users.noreply.github.com'
+          git add src/match-sequences-r8.js src/sequences-page-r8.js src/unified-engine-v060.js src/runtime-contract.js sequences.html package.json docs/SEQUENCES_R8_CHANGES.json docs/SEQUENCES_R8_TESTS.json docs/SEQUENCES_R8_ADDITIONAL_TESTS.json docs/PLANNING_INTEGRATION_R8_TESTS.json docs/planning
+          git add -u -- .github/integration
+          if ! git diff --cached --quiet; then
+            git commit -m 'feat: integrate R8 Excel tracking, eight sequence states and safe final conclusions'
+            git push origin HEAD:codex/r8-planning-complete-20261018
+          fi
+      - run: python3 scripts/package-sequences-r8.py
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-r8-final-report
+          path: r8-delivery/00_RAPPORT_PATCH_R8.zip
+          compression-level: 0
+          retention-days: 14
+          if-no-files-found: error
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-r8-final-code
+          path: r8-delivery/01_CODE_ET_EXCEL_R8.zip
+          compression-level: 0
+          retention-days: 14
+          if-no-files-found: error
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-r8-final-assets-a
+          path: r8-delivery/02_ASSETS_A_R8.zip
+          compression-level: 0
+          retention-days: 14
+          if-no-files-found: error
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-r8-final-assets-b
+          path: r8-delivery/03_ASSETS_B_R8.zip
+          compression-level: 0
+          retention-days: 14
+          if-no-files-found: error
+      - name: Preserve failures or completed browser evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-r8-final-evidence
+          path: |
+            r8-verify.log
+            qa-sequences-r8/
+            qa-planning-r8/
+            docs/PLANNING_INTEGRATION_R8_TESTS.json
+          retention-days: 14
+          if-no-files-found: warn

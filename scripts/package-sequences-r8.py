@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Package exact tracked source, including dotfiles and the generated XLSX."""
+"""Package exact tracked source, including dotfiles and the actual generated XLSX."""
 from pathlib import Path
 import hashlib,json,subprocess,zipfile,shutil
 R=Path(__file__).resolve().parents[1];out=R/'r8-delivery';out.mkdir(exist_ok=True)
@@ -29,15 +29,16 @@ for n in parts:
    restored[rel]=hashlib.sha256(z.read(p)).hexdigest()
 assert restored==manifest and any(x.startswith('.github/workflows/') for x in restored)
 assert 'docs/planning/BOW_PR11_MATRICE_EXECUTION_R8.xlsx' in restored
-m={'sourceCommit':commit,'baseCommit':BASE,'files':manifest,'sourceFiles':len(manifest),'gameplayVersion':'0.7.3','newCharacterArt':0,'sequenceSlots':2768}
+m={'sourceCommit':commit,'baseCommit':BASE,'files':manifest,'sourceFiles':len(manifest),'gameplayVersion':'0.7.3','newCharacterArt':0,'sequenceSlots':2768,'stageConfigurations':52}
 report=out/'00_RAPPORT_PATCH_R8.zip'
 with zipfile.ZipFile(report,'w',zipfile.ZIP_DEFLATED,compresslevel=6) as z:
  z.writestr('MANIFESTE_R8.json',json.dumps(m,indent=2,ensure_ascii=False)+'\n')
  z.writestr('BOW_R8_FROM_R7.patch',subprocess.check_output(['git','diff','--binary',BASE,'HEAD'],cwd=R))
- for p in ['docs/SEQUENCES_R8_SCOPE.md','docs/SEQUENCES_R8_TESTS.json','docs/SEQUENCES_R8_CHANGES.json','r8-verify.log']:
+ for p in ['docs/SEQUENCES_R8_SCOPE.md','docs/SEQUENCES_R8_TESTS.json','docs/SEQUENCES_R8_ADDITIONAL_TESTS.json','docs/PLANNING_INTEGRATION_R8_TESTS.json','docs/SEQUENCES_R8_CHANGES.json','docs/planning/MANIFESTE_EXECUTION_R8.json','docs/planning/README_R8.md','r8-verify.log']:
   if (R/p).is_file():z.write(R/p,Path(p).name)
- for p in (R/'qa-sequences-r8').glob('*'):
-  if p.is_file():z.write(p,'qa-sequences-r8/'+p.name)
+ for folder in ['qa-sequences-r8','qa-planning-r8']:
+  for p in (R/folder).glob('*'):
+   if p.is_file():z.write(p,folder+'/'+p.name)
  z.writestr('verifier_reconstruction.py',"from pathlib import Path\nimport json,hashlib,sys\nh=Path(__file__).resolve().parent;m=json.loads((h/'MANIFESTE_R8.json').read_text());r=h/'bow-sequences-r8';bad=[p for p,s in m['files'].items() if not (r/p).is_file() or hashlib.sha256((r/p).read_bytes()).hexdigest()!=s];print(m['sourceCommit'],len(m['files']),bad);sys.exit(bool(bad))\n")
  z.writestr('LISEZ_MOI_R8.txt',f'B.O.W. Protocol PR11 / R8\nCommit: {commit}\nExtraire les quatre ZIP dans le meme dossier. Jeu sous bow-sequences-r8/. Verifier avec python verifier_reconstruction.py.\nPuis npm start ; http://localhost:5173/sequences.html\nExcel dans docs/planning/. Emplacements relies, dessins non produits.\nPR sans fusion ni promotion Vercel.\n')
 checks={n:hashlib.sha256((out/n).read_bytes()).hexdigest() for n in [report.name,*parts]}
