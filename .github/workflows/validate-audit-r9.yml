@@ -1,0 +1,46 @@
+name: Validate six audited R9 defects
+on:
+  push:
+    branches: ['codex/audit-closure-r9']
+    paths: ['.github/workflows/validate-audit-r9.yml']
+permissions:
+  contents: read
+concurrency:
+  group: bow-audit-r9
+  cancel-in-progress: false
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - run: python3 scripts/apply-audit-r9.py
+      - run: npm install --no-save --package-lock=false @napi-rs/canvas@0.1.80 playwright@1.51.1
+      - name: Audited regressions
+        run: |
+          set -o pipefail
+          node tests/verify-audit-r9.mjs 2>&1 | tee r9-targeted.log
+      - name: Full regression suite
+        run: |
+          set -o pipefail
+          npm run verify 2>&1 | tee r9-full.log
+      - run: npm run build
+      - name: Preserve reports and public dependencies for reproducibility
+        if: always()
+        run: |
+          mkdir -p r9-evidence
+          cp r9-*.log r9-evidence/ 2>/dev/null || true
+          cp docs/AUDIT_R9_TESTS.json r9-evidence/ 2>/dev/null || true
+          if test -d node_modules; then tar czf r9-evidence/public-node-dependencies.tgz node_modules; fi
+      - if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-r9-first-validation
+          path: r9-evidence/
+          retention-days: 7
+          if-no-files-found: warn
