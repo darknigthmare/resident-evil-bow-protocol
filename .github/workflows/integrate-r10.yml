@@ -1,0 +1,85 @@
+name: Integrate and validate R10 for PR11 merge
+on:
+  push:
+    branches: ['codex/r10-integration-20261019']
+    paths: ['.github/workflows/integrate-r10.yml']
+permissions:
+  contents: write
+concurrency:
+  group: bow-integrate-r10-20261019
+  cancel-in-progress: false
+jobs:
+  integrate:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: codex/r10-integration-20261019
+          fetch-depth: 0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - run: python3 scripts/integrate-r10-reviewed.py
+      - run: npm install --no-save --package-lock=false @napi-rs/canvas@0.1.80 playwright@1.64.1
+      - name: Full executable regression chain
+        run: |
+          set -o pipefail
+          npm run verify 2>&1 | tee r10-verify.log
+      - run: npm run build
+      - name: Locate Chromium
+        run: |
+          if command -v google-chrome >/dev/null; then echo "CHROME_BIN=$(command -v google-chrome)" >> "$GITHUB_ENV"; else npx playwright install --with-deps chromium; fi
+      - run: node tests/browser-delivery-r10-http.mjs
+      - run: node tests/browser-audit-r9.mjs
+      - run: node tests/browser-match-sequences-r8.mjs
+      - name: Commit tested source and original workbook; remove transfer files
+        run: |
+          set -euo pipefail
+          git config user.name 'B.O.W. Protocol CI'
+          git config user.email 'actions@users.noreply.github.com'
+          git add src tests docs package.json catalog-duel.html finishers.html modules/versus.html scripts/contract.mjs
+          git rm .github/integration/r10-text-1.b64 .github/integration/r10-text-2.b64 .github/integration/r10-workbook.b64 scripts/integrate-r10-reviewed.py .github/workflows/integrate-r10.yml
+          git commit -m 'feat: R10 intros, anatomy-aware prototype conclusions and verified Excel'
+          git push origin HEAD:codex/r10-integration-20261019
+      - run: python3 scripts/package-r10-reviewed.py
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: r10-00-report
+          path: r10-delivery/00_REPORT_R10.zip
+          compression-level: 0
+          retention-days: 14
+          if-no-files-found: error
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: r10-01-code
+          path: r10-delivery/01_CODE_R10.zip
+          compression-level: 0
+          retention-days: 14
+          if-no-files-found: error
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: r10-02-assets
+          path: r10-delivery/02_ASSETS_A_R10.zip
+          compression-level: 0
+          retention-days: 14
+          if-no-files-found: error
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: r10-03-assets
+          path: r10-delivery/03_ASSETS_B_R10.zip
+          compression-level: 0
+          retention-days: 14
+          if-no-files-found: error
+      - if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: r10-integration-evidence
+          path: |
+            r10-verify.log
+            qa-r10-http/
+            qa-audit-r9/
+            qa-sequences-r8/
+          retention-days: 14
+          if-no-files-found: warn
