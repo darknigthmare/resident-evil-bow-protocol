@@ -13,9 +13,9 @@
   "counts": {
     "fighters": 115,
     "moves": 1150,
-    "canonical": 714,
-    "anatomical": 283,
-    "simulation": 153
+    "canonical": 708,
+    "anatomical": 279,
+    "simulation": 163
   },
   "profiles": {
     "re1-cerberus": {
@@ -2976,7 +2976,7 @@
     "re7-flying-bug": {
       "uid": "re7-flying-bug",
       "incarnation": "Resident Evil 7 biohazard (2017)",
-      "role": "ESSAIM AÉRIEN",
+      "role": "INSECTE VOLANT — SIMULATION",
       "resource": {
         "kind": "energy",
         "label": "ENDURANCE AÉRIENNE",
@@ -2985,9 +2985,9 @@
         "reload": 0
       },
       "passive": {
-        "id": "lore-re7-flying-bug",
-        "name": "Vol erratique",
-        "desc": "Le déplacement aérien complique l’alignement mais la créature reste fragile."
+        "id": "flight-maneuvers-r12",
+        "name": "Manœuvres aériennes — simulation",
+        "desc": "UTILITAIRE : envol bref avec faible recul. ARRIÈRE + SPÉCIAL : retrait plus long. Ces commandes sont payantes, utilisables depuis le sol et restent vulnérables ; aucun bonus automatique de focus."
       },
       "source": "https://www.evilresource.com/resident-evil-7/enemies/flying-bug",
       "sources": [
@@ -2998,10 +2998,10 @@
         "Vol"
       ],
       "fidelity": {
-        "status": "lore-audited",
+        "status": "source-review-partial",
         "visualIncarnation": "Resident Evil 7 biohazard (2017)",
-        "rule": "Pouvoirs et anatomie propres à cette incarnation ; aucune capacité d’une autre forme n’est importée.",
-        "balanceBoundary": "Les noms, fonctions biologiques et familles d’attaque suivent les références ; les frames, dégâts, ressources, commandes et match-ups sont des adaptations originales."
+        "rule": "Incarnation RE7 uniquement. La reprise R12 corrige les déplacements du prototype ; le répertoire officiel, les dimensions et animations restent à documenter.",
+        "balanceBoundary": "Envol bref et retrait continus sous la gravité existante, sans téléportation, invincibilité, soin ou invocation. Les durées, déplacements et ressources sont des paramètres originaux de simulation."
       },
       "moves": {
         "light": {
@@ -3018,10 +3018,10 @@
           "cooldown": 0,
           "tag": "strike",
           "counterplay": "Garder la distance, bloquer la frappe puis punir sa récupération.",
-          "lore": "canonical",
-          "evidence": "canonical",
-          "loreBasis": "Attaques documentées pour Resident Evil 7 biohazard (2017) : Piqûre / Vol",
-          "adaptation": "Action directement rattachée aux attaques ou comportements documentés de cette incarnation ; seuls le timing, la portée et les dégâts sont équilibrés pour le moteur 2D.",
+          "lore": "simulation",
+          "evidence": "simulation",
+          "loreBasis": "Incarnation RE7 déjà identifiée dans le catalogue. Une vérification primaire et des séquences horodatées restent nécessaires pour certifier chaque geste ; pas de transfert depuis les homonymes Outbreak.",
+          "adaptation": "Commande héritée du prototype 2D, non recertifiée comme geste officiel par R12. La référence secondaire indique le sujet RE7, pas ses timings, hitboxes ou ce mapping.",
           "source": "https://www.evilresource.com/resident-evil-7/enemies/flying-bug",
           "height": 77
         },
@@ -3039,10 +3039,10 @@
           "cooldown": 0,
           "tag": "strike",
           "counterplay": "Garder la distance, bloquer la frappe puis punir sa récupération.",
-          "lore": "canonical",
-          "evidence": "canonical",
-          "loreBasis": "Attaques documentées pour Resident Evil 7 biohazard (2017) : Piqûre / Vol",
-          "adaptation": "Action directement rattachée aux attaques ou comportements documentés de cette incarnation ; seuls le timing, la portée et les dégâts sont équilibrés pour le moteur 2D.",
+          "lore": "simulation",
+          "evidence": "simulation",
+          "loreBasis": "Incarnation RE7 déjà identifiée dans le catalogue. Une vérification primaire et des séquences horodatées restent nécessaires pour certifier chaque geste ; pas de transfert depuis les homonymes Outbreak.",
+          "adaptation": "Commande héritée du prototype 2D, non recertifiée comme geste officiel par R12. La référence secondaire indique le sujet RE7, pas ses timings, hitboxes ou ce mapping.",
           "source": "https://www.evilresource.com/resident-evil-7/enemies/flying-bug",
           "height": 86
         },
@@ -3060,10 +3060,10 @@
           "cooldown": 0,
           "tag": "strike",
           "counterplay": "Garde basse ou saut. Une garde debout ne suffit pas.",
-          "lore": "anatomical",
-          "evidence": "anatomical",
-          "loreBasis": "Flying Bug, dans son apparence de Resident Evil 7 biohazard (2017). La pose conserve la silhouette et les détails du rendu référencé.",
-          "adaptation": "Extension prudente de l’anatomie et de la locomotion visibles de cette incarnation ; aucun nouveau pouvoir biologique n’est ajouté.",
+          "lore": "simulation",
+          "evidence": "simulation",
+          "loreBasis": "Incarnation RE7 déjà identifiée dans le catalogue. Une vérification primaire et des séquences horodatées restent nécessaires pour certifier chaque geste ; pas de transfert depuis les homonymes Outbreak.",
+          "adaptation": "Commande héritée du prototype 2D, non recertifiée comme geste officiel par R12. La référence secondaire indique le sujet RE7, pas ses timings, hitboxes ou ce mapping.",
           "source": "https://www.evilresource.com/resident-evil-7/enemies/flying-bug"
         },
         "throw": {
@@ -3080,10 +3080,10 @@
           "cooldown": 0,
           "tag": "grapple",
           "counterplay": "Reculer, sauter ou déchoper pendant la fenêtre de prise.",
-          "lore": "anatomical",
-          "evidence": "anatomical",
-          "loreBasis": "Flying Bug, dans son apparence de Resident Evil 7 biohazard (2017). La pose conserve la silhouette et les détails du rendu référencé.",
-          "adaptation": "Extension prudente de l’anatomie et de la locomotion visibles de cette incarnation ; aucun nouveau pouvoir biologique n’est ajouté.",
+          "lore": "simulation",
+          "evidence": "simulation",
+          "loreBasis": "Incarnation RE7 déjà identifiée dans le catalogue. Une vérification primaire et des séquences horodatées restent nécessaires pour certifier chaque geste ; pas de transfert depuis les homonymes Outbreak.",
+          "adaptation": "Commande héritée du prototype 2D, non recertifiée comme geste officiel par R12. La référence secondaire indique le sujet RE7, pas ses timings, hitboxes ou ce mapping.",
           "source": "https://www.evilresource.com/resident-evil-7/enemies/flying-bug"
         },
         "special": {
@@ -3100,10 +3100,10 @@
           "cooldown": 0,
           "tag": "strike",
           "counterplay": "Garder la distance, bloquer la frappe puis punir sa récupération.",
-          "lore": "canonical",
-          "evidence": "canonical",
-          "loreBasis": "Attaques documentées pour Resident Evil 7 biohazard (2017) : Piqûre / Vol",
-          "adaptation": "Action directement rattachée aux attaques ou comportements documentés de cette incarnation ; seuls le timing, la portée et les dégâts sont équilibrés pour le moteur 2D.",
+          "lore": "simulation",
+          "evidence": "simulation",
+          "loreBasis": "Incarnation RE7 déjà identifiée dans le catalogue. Une vérification primaire et des séquences horodatées restent nécessaires pour certifier chaque geste ; pas de transfert depuis les homonymes Outbreak.",
+          "adaptation": "Commande héritée du prototype 2D, non recertifiée comme geste officiel par R12. La référence secondaire indique le sujet RE7, pas ses timings, hitboxes ou ce mapping.",
           "source": "https://www.evilresource.com/resident-evil-7/enemies/flying-bug",
           "travel": 7,
           "launchSelf": -7
@@ -3122,10 +3122,10 @@
           "cooldown": 0,
           "tag": "strike",
           "counterplay": "Garder la distance, bloquer la frappe puis punir sa récupération.",
-          "lore": "anatomical",
-          "evidence": "anatomical",
-          "loreBasis": "Flying Bug, dans son apparence de Resident Evil 7 biohazard (2017). La pose conserve la silhouette et les détails du rendu référencé.",
-          "adaptation": "Extension prudente de l’anatomie et de la locomotion visibles de cette incarnation ; aucun nouveau pouvoir biologique n’est ajouté.",
+          "lore": "simulation",
+          "evidence": "simulation",
+          "loreBasis": "Incarnation RE7 déjà identifiée dans le catalogue. Une vérification primaire et des séquences horodatées restent nécessaires pour certifier chaque geste ; pas de transfert depuis les homonymes Outbreak.",
+          "adaptation": "Commande héritée du prototype 2D, non recertifiée comme geste officiel par R12. La référence secondaire indique le sujet RE7, pas ses timings, hitboxes ou ce mapping.",
           "source": "https://www.evilresource.com/resident-evil-7/enemies/flying-bug"
         },
         "specialForward": {
@@ -3142,15 +3142,15 @@
           "cooldown": 0,
           "tag": "grapple",
           "counterplay": "Quitter la portée de la prise ou sauter avant son activation.",
-          "lore": "anatomical",
-          "evidence": "anatomical",
-          "loreBasis": "Flying Bug, dans son apparence de Resident Evil 7 biohazard (2017). La pose conserve la silhouette et les détails du rendu référencé.",
-          "adaptation": "Extension prudente de l’anatomie et de la locomotion visibles de cette incarnation ; aucun nouveau pouvoir biologique n’est ajouté.",
+          "lore": "simulation",
+          "evidence": "simulation",
+          "loreBasis": "Incarnation RE7 déjà identifiée dans le catalogue. Une vérification primaire et des séquences horodatées restent nécessaires pour certifier chaque geste ; pas de transfert depuis les homonymes Outbreak.",
+          "adaptation": "Commande héritée du prototype 2D, non recertifiée comme geste officiel par R12. La référence secondaire indique le sujet RE7, pas ses timings, hitboxes ou ce mapping.",
           "source": "https://www.evilresource.com/resident-evil-7/enemies/flying-bug",
           "travel": 2
         },
         "specialBack": {
-          "name": "Écart aérien",
+          "name": "Écart aérien — recul continu",
           "kind": "mobility",
           "startup": 4,
           "active": 17,
@@ -3160,16 +3160,15 @@
           "level": "mid",
           "cost": 14,
           "meter": 0,
-          "cooldown": 0,
+          "cooldown": 60,
           "tag": "movement",
-          "counterplay": "Suivre le retrait et attaquer sa sortie ; ce mouvement ne donne pas d’invincibilité permanente.",
-          "lore": "canonical",
-          "evidence": "canonical",
-          "loreBasis": "Attaques documentées pour Resident Evil 7 biohazard (2017) : Piqûre / Vol",
-          "adaptation": "Action directement rattachée aux attaques ou comportements documentés de cette incarnation ; seuls le timing, la portée et les dégâts sont équilibrés pour le moteur 2D.",
+          "counterplay": "Recul continu de 6 unités par tick actif après 4 ticks de départ ; pas de téléportation. Coins, atterrissage et interruption restent contraignants.",
+          "lore": "simulation",
+          "evidence": "simulation",
+          "loreBasis": "Incarnation RE7 déjà identifiée dans le catalogue. Une vérification primaire et des séquences horodatées restent nécessaires pour certifier chaque geste ; pas de transfert depuis les homonymes Outbreak.",
+          "adaptation": "Envol bref et retrait continus sous la gravité existante, sans téléportation, invincibilité, soin ou invocation. Les durées, déplacements et ressources sont des paramètres originaux de simulation.",
           "source": "https://www.evilresource.com/resident-evil-7/enemies/flying-bug",
           "travel": -6,
-          "blink": -120,
           "launchSelf": -8
         },
         "super": {
@@ -3186,36 +3185,34 @@
           "cooldown": 0,
           "tag": "strike",
           "counterplay": "Anticiper le départ très visible, bloquer puis punir la longue récupération.",
-          "lore": "canonical",
-          "evidence": "canonical",
-          "loreBasis": "Attaques documentées pour Resident Evil 7 biohazard (2017) : Piqûre / Vol",
-          "adaptation": "Action directement rattachée aux attaques ou comportements documentés de cette incarnation ; seuls le timing, la portée et les dégâts sont équilibrés pour le moteur 2D.",
+          "lore": "simulation",
+          "evidence": "simulation",
+          "loreBasis": "Incarnation RE7 déjà identifiée dans le catalogue. Une vérification primaire et des séquences horodatées restent nécessaires pour certifier chaque geste ; pas de transfert depuis les homonymes Outbreak.",
+          "adaptation": "Commande héritée du prototype 2D, non recertifiée comme geste officiel par R12. La référence secondaire indique le sujet RE7, pas ses timings, hitboxes ou ce mapping.",
           "source": "https://www.evilresource.com/resident-evil-7/enemies/flying-bug",
           "travel": 4
         },
         "utility": {
-          "name": "Vol erratique",
-          "kind": "buff",
-          "startup": 18,
-          "active": 1,
-          "recovery": 18,
+          "name": "Vol erratique — envol bref",
+          "kind": "mobility",
+          "startup": 8,
+          "active": 12,
+          "recovery": 20,
           "damage": 0,
           "reach": 0,
           "level": "mid",
           "cost": 16,
           "meter": 0,
-          "cooldown": 0,
+          "cooldown": 90,
           "tag": "movement",
-          "counterplay": "Mettre la pression avant la fin de la récupération.",
-          "lore": "canonical",
-          "evidence": "canonical",
-          "loreBasis": "Attaques documentées pour Resident Evil 7 biohazard (2017) : Piqûre / Vol",
-          "adaptation": "Action directement rattachée aux attaques ou comportements documentés de cette incarnation ; seuls le timing, la portée et les dégâts sont équilibrés pour le moteur 2D.",
+          "counterplay": "Anticipation de 8 ticks, envol vulnérable et faible recul. Toucher le corps pendant le départ ou en altitude ; punir la descente. Aucun dégât, soin, buff de focus ou invincibilité.",
+          "lore": "simulation",
+          "evidence": "simulation",
+          "loreBasis": "Incarnation RE7 déjà identifiée dans le catalogue. Une vérification primaire et des séquences horodatées restent nécessaires pour certifier chaque geste ; pas de transfert depuis les homonymes Outbreak.",
+          "adaptation": "Envol bref et retrait continus sous la gravité existante, sans téléportation, invincibilité, soin ou invocation. Les durées, déplacements et ressources sont des paramètres originaux de simulation.",
           "source": "https://www.evilresource.com/resident-evil-7/enemies/flying-bug",
-          "restore": 0,
-          "buff": "focus",
-          "duration": 120,
-          "hits": 1
+          "travel": -5,
+          "launchSelf": -10.5
         }
       }
     },
