@@ -1,0 +1,144 @@
+{
+  "suite": "audit-closures-r9",
+  "baseCommit": "ba4e3cc82f2c9af7c7324420a0cc4409c599fd1a",
+  "passed": 26,
+  "failed": 0,
+  "pureOnly": false,
+  "scope": "Real source; controlled DOM and declared policy/storage failures/prepared final verdicts. No new art or canon claim.",
+  "checks": [
+    {
+      "id": "AUD-03",
+      "name": "Malformed bindings repair to usable defaults without modifying their input",
+      "pass": true
+    },
+    {
+      "id": "AUD-03",
+      "name": "Valid individual remaps survive and missing actions inherit defaults",
+      "pass": true
+    },
+    {
+      "id": "AUD-03",
+      "name": "Reserved, oversized and duplicate codes cannot silently disable another action",
+      "pass": true
+    },
+    {
+      "id": "AUD-04",
+      "name": "Malformed conclusion objects normalize before a scene may be published",
+      "pass": true
+    },
+    {
+      "id": "AUD-04",
+      "name": "Valid history survives and unknown ids/dates cannot enter the repaired ledger",
+      "pass": true
+    },
+    {
+      "id": "AUD-04",
+      "name": "Finisher settings reject infinite duration and preserve valid choices",
+      "pass": true
+    },
+    {
+      "id": "AUD-02",
+      "name": "Gamepad denial is contained once, then optional retry can recover it",
+      "pass": true
+    },
+    {
+      "id": "AUD-02",
+      "name": "Absent API, sparse arrays and disconnected or malformed gamepads remain safe",
+      "pass": true
+    },
+    {
+      "id": "AUD-03",
+      "name": "Malformed JSON and unavailable storage report fallback without any write",
+      "pass": true
+    },
+    {
+      "id": "AUD-01",
+      "name": "Pause Tab stays in its menu; Enter and Space retain native button activation",
+      "pass": true
+    },
+    {
+      "id": "AUD-01",
+      "name": "Techniques Tab and Shift+Tab move inside the modal and Escape restores the arena",
+      "pass": true
+    },
+    {
+      "id": "AUD-01",
+      "name": "A modal opened from pause returns to pause rather than restarting combat",
+      "pass": true
+    },
+    {
+      "id": "AUD-01",
+      "name": "F2 uses its own focus sequence and guarded browser modifiers cannot fire attacks",
+      "pass": true
+    },
+    {
+      "id": "AUD-02",
+      "name": "Denied gamepad cannot leave a half-started controller and keyboard still moves",
+      "pass": true
+    },
+    {
+      "id": "AUD-03",
+      "name": "Corrupt persisted mappings load repaired controls without deleting campaign data",
+      "pass": true
+    },
+    {
+      "id": "AUD-04",
+      "name": "Corrupt done:null no longer throws after scene creation and credit is not duplicated",
+      "pass": true
+    },
+    {
+      "id": "AUD-04",
+      "name": "Storage write refusal keeps a valid single conclusion in memory and reports the limit",
+      "pass": true
+    },
+    {
+      "id": "AUD-04",
+      "name": "Directly damaged in-memory history is repaired before changing the conclusion window",
+      "pass": true
+    },
+    {
+      "id": "AUD-06",
+      "name": "Persisted page lifecycle retains one useful audio host and one paused render loop",
+      "pass": true
+    },
+    {
+      "id": "AUD-06",
+      "name": "Discarded page disposes audio permanently instead of leaking its context",
+      "pass": true
+    },
+    {
+      "id": "AUD-05",
+      "name": "Natural full-health CPU end advances victory to outro without advancing combat or replay",
+      "pass": true
+    },
+    {
+      "id": "AUD-05",
+      "name": "Final sequence pauses, steps by one tick, resumes and has a bounded duration",
+      "pass": true
+    },
+    {
+      "id": "AUD-05",
+      "name": "Replay seek/restart resets only presentation and a rejected import preserves both states",
+      "pass": true
+    },
+    {
+      "id": "AUD-05",
+      "name": "Focus loss freezes final presentation, and a partial recording never becomes a final sequence",
+      "pass": true
+    },
+    {
+      "id": "AUD-06",
+      "name": "Audio parking suspends rather than disposes, preserves volumes and can unlock again",
+      "pass": true
+    },
+    {
+      "id": "PRESERVATION",
+      "name": "All fighter definitions, art and stage assets remain byte-identical to R8",
+      "pass": true,
+      "detail": {
+        "files": 28,
+        "assets": 508
+      }
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "scope": "Actual modules in Node VM; choreography policy and presentation only, not canon certification.",
+  "passed": 16,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "An intro starts and ends without storing combat state or commands",
+      "pass": true
+    },
+    {
+      "name": "Pause freezes the clock and step advances exactly one integer tick",
+      "pass": true
+    },
+    {
+      "name": "Intro speed is scaled after delta clamping, independent of monitor frequency",
+      "pass": true
+    },
+    {
+      "name": "Invalid clock inputs never advance and excessive time is bounded",
+      "pass": true
+    },
+    {
+      "name": "Skipping is idempotent and a restart resets every presentation field",
+      "pass": true
+    },
+    {
+      "name": "All 346 subjects use the correct intro UID without advancing the true engine",
+      "pass": true,
+      "detail": {
+        "subjects": 346,
+        "contexts": 692
+      }
+    },
+    {
+      "name": "Reduced motion freezes the artwork tick, not the deterministic intro duration",
+      "pass": true
+    },
+    {
+      "name": "All existing finisher IDs have a defined noncanonical compatibility verdict",
+      "pass": true,
+      "detail": {
+        "choices": 52900,
+        "allowed": 8744,
+        "blocked": 44156,
+        "codes": {
+          "prototype-compatible": 8744,
+          "size-envelope": 652,
+          "victim-unreviewed": 6912,
+          "victim-winged": 1296,
+          "victim-mechanical": 1512,
+          "victim-collective": 216,
+          "victim-giant": 648,
+          "victim-plant": 432,
+          "victim-colony": 864,
+          "victim-aquatic": 1080,
+          "victim-projection": 216,
+          "grasp-rig": 2268,
+          "attacker-unreviewed": 14720,
+          "attacker-winged": 2760,
+          "attacker-mechanical": 3220,
+          "attacker-collective": 460,
+          "attacker-giant": 1380,
+          "attacker-plant": 920,
+          "attacker-colony": 1840,
+          "attacker-aquatic": 2300,
+          "attacker-projection": 460
+        }
+      }
+    },
+    {
+      "name": "Humanlike compatible shapes retain the inherited prototype conclusion",
+      "pass": true
+    },
+    {
+      "name": "Every conclusion rejects a projection as a victim",
+      "pass": true
+    },
+    {
+      "name": "Aquatic, collective, plant, giant, winged and mechanical victims cannot use the generic fall",
+      "pass": true
+    },
+    {
+      "name": "Unknown/reference gabarits fail closed instead of inheriting a human body",
+      "pass": true
+    },
+    {
+      "name": "Cross-incarnation finisher IDs cannot select another fighter repertoire",
+      "pass": true
+    },
+    {
+      "name": "A low body cannot enter the standing grapple sequence and size envelopes are respected",
+      "pass": true
+    },
+    {
+      "name": "Policy evaluation never mutates profiles, life, resources or finishing history",
+      "pass": true
+    },
+    {
+      "name": "Gameplay, art and isolated replay contracts remain byte-identical to R9",
+      "pass": true,
+      "detail": {
+        "preservedFiles": 518
+      }
+    }
+  ]
+}

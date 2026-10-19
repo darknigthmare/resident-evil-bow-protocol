@@ -1,0 +1,68 @@
+name: Package verified directional R4
+on:
+  push:
+    branches: ['codex/lateral-r4-validation']
+    paths: ['.github/workflows/package-direction-r4.yml','tests/browser-directional-r4.mjs','scripts/package-directional-r4.py']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: bow-package-direction-r4
+  cancel-in-progress: false
+jobs:
+  verify-package:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - run: npm install --no-save --package-lock=false @napi-rs/canvas@0.1.80 playwright@1.51.1
+      - run: npm run verify
+      - run: npm run build
+      - name: Locate or install Chromium for actual HTTP navigation
+        run: |
+          if command -v google-chrome >/dev/null; then echo "CHROME_BIN=$(command -v google-chrome)" >> "$GITHUB_ENV"; else npx playwright install --with-deps chromium; fi
+      - run: node tests/browser-directional-r4.mjs
+      - run: python3 scripts/package-directional-r4.py
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-r4-00-report
+          path: r4-delivery/00_RAPPORT/
+          compression-level: 6
+          retention-days: 14
+          if-no-files-found: error
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-r4-01-code
+          path: r4-delivery/01_CODE/
+          compression-level: 6
+          retention-days: 14
+          if-no-files-found: error
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-r4-02-assets
+          path: r4-delivery/02_ASSETS_A/
+          compression-level: 6
+          retention-days: 14
+          if-no-files-found: error
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-r4-03-assets
+          path: r4-delivery/03_ASSETS_B/
+          compression-level: 6
+          retention-days: 14
+          if-no-files-found: error
+      - name: Preserve browser evidence even when a check fails
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-r4-browser-evidence
+          path: qa-directional-r4/
+          compression-level: 6
+          retention-days: 14
+          if-no-files-found: warn

@@ -12,8 +12,12 @@
   const PRIORITY = { stage: 3, sprite: 2, portrait: 1 };
   const cache = new Map(), queue = [], failures = new Map();
   const portraitBindings = new WeakMap(), regionBindings = new WeakMap(), stageBindings = new WeakMap();
+  const LOAD_TIMEOUT_MS = 15000, FAILURE_LIMIT = 512;
   let revision = 0, loading = 0, completed = 0, released = 0;
+  let retryEpoch = 0, pumping = false;
   let rosterSource = null, rosterIndex = new Map();
+  const animationClock = root.RE_FIGHTER_DIRECTIONS.createClock();
+  const cinemaBindings = new WeakMap();
 
   const number = (value, fallback = 0) => Number.isFinite(Number(value)) ? Number(value) : fallback;
   const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
@@ -50,7 +54,10 @@
       entry.image.removeAttribute('src');
     }
     entry.image = null;
+    if (entry.cutout) entry.cutout.width = entry.cutout.height = 1;
+    entry.cutout = null;
     entry.bounds = null;
+    // The detached cutout was released above with the decoded image.
     entry.state = 'released';
     entry.watchers.clear();
     released++;
@@ -62,19 +69,34 @@
     while (candidates.length > LIMITS[kind]) releaseEntry(candidates.shift());
   }
 
-  function settle(entry, ok) {
+  // A failed image is remembered beyond bitmap eviction. Explicit retry starts
+  // a new epoch; errors remain visible until that exact kind/path succeeds.
+  function rememberFailure(entry, reason) {
+    failures.delete(entry.key);
+    failures.set(entry.key, { path: entry.path, kind: entry.kind,
+      attempts: entry.attempts, epoch: retryEpoch, reason });
+    while (failures.size > FAILURE_LIMIT) failures.delete(failures.keys().next().value);
+  }
+
+  function settle(entry, ok, reason = 'load') {
     if (entry.state !== 'loading') return;
+    root.clearTimeout(entry.timer);
+    entry.timer = null;
+    const img = entry.image;
+    if (img) img.onload = img.onerror = null;
     loading--;
     entry.state = ok ? 'ready' : 'error';
     entry.used = ++revision;
     if (ok) {
       completed++;
-      failures.delete(entry.path);
+      failures.delete(entry.key);
     } else {
       entry.error = 'Image introuvable ou illisible : ' + entry.path;
-      failures.set(entry.path, { path: entry.path, kind: entry.kind, attempts: entry.attempts });
-      // The same failure is also shown in its portrait/stage placeholder.
-      if (entry.attempts === 1 && root.console) root.console.warn('[B.O.W. visuel]', entry.error);
+      if (reason === 'timeout') entry.error += ' (délai de chargement dépassé)';
+      rememberFailure(entry, reason);
+      if (img) img.removeAttribute('src');
+      entry.image = null;
+      if (entry.attempts === 1) root.console?.warn('[B.O.W. visuel]', entry.error);
     }
     const callbacks = [...entry.watchers.values()];
     entry.watchers.clear();
@@ -88,20 +110,33 @@
   }
 
   function pump() {
-    queue.sort((a, b) => PRIORITY[b.kind] - PRIORITY[a.kind] || b.used - a.used);
-    while (loading < 6 && queue.length) {
-      const entry = queue.shift();
-      if (entry.state !== 'queued') continue;
-      entry.state = 'loading';
-      entry.attempts++;
-      loading++;
-      const img = new root.Image();
-      entry.image = img;
-      img.decoding = 'async';
-      img.onload = () => settle(entry, img.naturalWidth > 0 && img.naturalHeight > 0);
-      img.onerror = () => settle(entry, false);
-      img.src = resolveAsset(entry.path);
-    }
+    // Also safe with synchronous decoders or a throwing Image.src setter.
+    if (pumping) return;
+    pumping = true;
+    try {
+      queue.sort((a, b) => PRIORITY[b.kind] - PRIORITY[a.kind] || b.used - a.used);
+      while (loading < 6 && queue.length) {
+        const entry = queue.shift();
+        if (entry.state !== 'queued') continue;
+        entry.state = 'loading';
+        entry.attempts++;
+        loading++;
+        try {
+          const img = new root.Image();
+          entry.image = img;
+          img.decoding = 'async';
+          const finish = (ok, reason) => {
+            // A late event belonging to an expired attempt must never settle a retry.
+            if (entry.image !== img || entry.state !== 'loading') return;
+            settle(entry, ok, reason);
+          };
+          entry.timer = root.setTimeout(() => finish(false, 'timeout'), LOAD_TIMEOUT_MS);
+          img.onload = () => finish(img.naturalWidth > 0 && img.naturalHeight > 0, 'load');
+          img.onerror = () => finish(false, 'load');
+          img.src = resolveAsset(entry.path);
+        } catch (_) { settle(entry, false, 'source'); }
+      }
+    } finally { pumping = false; }
   }
 
   function requestAsset(path, kind) {
@@ -110,11 +145,13 @@
     const key = kind + ':' + clean;
     let entry = cache.get(key);
     if (!entry) {
-      entry = { key, path: clean, kind, state: 'queued', image: null, bounds: null,
-        used: ++revision, attempts: 0, watchers: new Map(), waiters: [] };
+      const failure = failures.get(key);
+      const blocked = failure && failure.epoch === retryEpoch;
+      entry = { key, path: clean, kind, state: blocked ? 'error' : 'queued', image: null, bounds: null,
+        used: ++revision, attempts: failure?.attempts || 0, watchers: new Map(), waiters: [], timer: null };
       cache.set(key, entry);
-      queue.push(entry);
-      pump();
+      if (blocked) trimCache(kind);
+      else { queue.push(entry); pump(); }
     }
     entry.used = ++revision;
     return entry;
@@ -127,6 +164,7 @@
   }
 
   function retryAssets() {
+    retryEpoch++;
     for (const entry of cache.values()) {
       if (entry.state !== 'error') continue;
       entry.error = null;
@@ -136,7 +174,7 @@
       entry.used = ++revision;
       queue.push(entry);
     }
-    failures.clear();
+    // Do not hide failure diagnostics while the replacement is still loading.
     publishStatus();
     pump();
   }
@@ -167,9 +205,10 @@
     if (!img) return { x: 0, y: 0, w: 1, h: 1 };
     const full = { x: 0, y: 0, w: img.naturalWidth, h: img.naturalHeight };
     entry.bounds = full;
+    let probe;
     try {
       const scale = Math.min(1, 280 / Math.max(full.w, full.h));
-      const probe = doc.createElement('canvas');
+      probe = doc.createElement('canvas');
       probe.width = Math.max(1, Math.ceil(full.w * scale));
       probe.height = Math.max(1, Math.ceil(full.h * scale));
       const ctx = probe.getContext('2d', { willReadFrequently: true });
@@ -189,10 +228,9 @@
         entry.bounds = { x: left / probe.width * full.w, y: top / probe.height * full.h,
           w: (right - left) / probe.width * full.w, h: (bottom - top) / probe.height * full.h };
       }
-      probe.width = probe.height = 1;
     } catch (_) {
       // Cross-origin references remain drawable using their complete rectangle.
-    }
+    } finally { if (probe) probe.width = probe.height = 1; }
     return entry.bounds;
   }
 
@@ -335,7 +373,7 @@
   }
 
   function drawAttackAccent(ctx, f, face, height, width, pose) {
-    if (!pose.attack || pose.reduceMotion || pose.reducedMotion) return;
+    if (root.RE_COMBAT_CUES || !pose.attack || pose.reduceMotion || pose.reducedMotion) return;
     const progress = clamp(number(pose.moveProgress, .4), 0, 1);
     const strength = Math.max(0, 1 - Math.abs(progress - .42) * 5);
     if (!strength) return;
@@ -354,15 +392,70 @@
     ctx.restore();
   }
 
+  // Optional exact border-connected black matte removal, only for reviewed sources.
+  // Interior dark feathers/eyes are preserved, and portrait images remain untouched.
+  function spriteBitmap(entry, plan) {
+    const tolerance = plan.borderKey;
+    if (!Number.isInteger(tolerance) || tolerance < 0 || tolerance > 12) return entry.image;
+    if (entry.cutoutTolerance === tolerance && entry.cutoutAttempted) return entry.cutout || entry.image;
+    if (entry.cutout) entry.cutout.width = entry.cutout.height = 1;
+    entry.cutout = null;
+    entry.cutoutTolerance = tolerance;
+    entry.cutoutAttempted = true;
+    let cv;
+    try {
+      const w=entry.image.naturalWidth,h=entry.image.naturalHeight;
+      if(w*h>4*1024*1024)return entry.image;
+      cv=doc.createElement('canvas');cv.width=w;cv.height=h;
+      const cx=cv.getContext('2d',{willReadFrequently:true});cx.drawImage(entry.image,0,0);
+      const image=cx.getImageData(0,0,w,h),bytes=image.data,seen=new Uint8Array(w*h),queue=new Uint32Array(w*h);let head=0,tail=0;
+      const offer=i=>{if(i<0||i>=w*h||seen[i])return;seen[i]=1;const p=i*4;if(bytes[p]<=tolerance&&bytes[p+1]<=tolerance&&bytes[p+2]<=tolerance){bytes[p+3]=0;queue[tail++]=i;}};
+      for(let x=0;x<w;x++){offer(x);offer((h-1)*w+x);}for(let y=0;y<h;y++){offer(y*w);offer(y*w+w-1);}
+      while(head<tail){const i=queue[head++],x=i%w;if(x)offer(i-1);if(x<w-1)offer(i+1);offer(i-w);offer(i+w);}
+      cx.putImageData(image,0,0);entry.cutout=cv;entry.cutoutTolerance=tolerance;return cv;
+    } catch (_) { return entry.image; }
+    finally { if (cv && cv !== entry.cutout) cv.width = cv.height = 1; }
+  }
+
   function drawFighter(ctx, fighter, x, y, facing = 1, scale = 1, pose = {}) {
     if (!ctx) return true;
+    if(pose.presentationNeutral)pose={...pose,reduceMotion:true,attack:false,hit:false,walk:false,dash:false,guard:false,crouch:false,jump:false,knockdown:false};
     const f = findFighter(fighter), v = f?.visual || {};
-    const entry = requestAsset(spritePath(f), 'sprite');
-    const face = number(facing, 1) < 0 ? -1 : 1;
+    const directions = root.RE_FIGHTER_DIRECTIONS;
+    const sampledPose = { ...pose, animationTick: animationClock.tick(pose) };
+    let plan = directions.resolve(f, facing, sampledPose, number(x));
+    const requestedPlan = plan;
+    let entry = requestAsset(plan.path, 'sprite');
+    // An atlas can be loading, absent, or corrupt. Keep the SAME reviewed side in
+    // its idle pose while possible; do not suddenly show a frontal portrait.
+    if (entry?.state !== 'ready' && plan.animated) {
+      const still = directions.resolve(f, facing, sampledPose, number(x), { skipClips: true });
+      if (still.sideProfile) {
+        const stillEntry = requestAsset(still.path, 'sprite');
+        if (stillEntry?.state === 'ready') {
+          plan = { ...still, animationUnavailable: true, requestedState: requestedPlan.state };
+          entry = stillEntry;
+        }
+      }
+    }
+    if (entry?.state === 'error' && plan.sideProfile) {
+      plan = { ...directions.resolve(f, facing, sampledPose, number(x), { skipClips: true, skipViews: true }),
+        status: 'asset-error', sideProfile: false, animated: false, animationUnavailable: requestedPlan.animated };
+      entry = requestAsset(plan.path, 'sprite');
+    }
+    if (entry?.state === 'error' && plan.referenceOverride && plan.path !== spritePath(f)) {
+      // Resolve the original's orientation and anchor again. A prepared image
+      // may face the opposite way; its mirror must not leak to the fallback.
+      plan = { ...directions.resolve(f, facing, sampledPose, number(x),
+        { skipClips: true, skipViews: true, skipReference: true }),
+        status: 'reference-asset-error', animationUnavailable: requestedPlan.animated };
+      entry = requestAsset(plan.path, 'sprite');
+    }
+    const face = plan.face;
     const baseHeight = clamp(number(v.drawHeight, number(v.height, v.kind === 'quadruped' ? 112 : 225)), 45, 580);
     const assetScale = clamp(number(v.scale, 1), .25, 3);
     const outputScale = Math.max(.05, number(scale, 1)) * assetScale;
-    const quiet = !!(pose.reduceMotion || pose.reducedMotion || pose.time === 0);
+    const quiet = !!(plan.animated || plan.animationUnavailable || pose.reduceMotion || pose.reducedMotion || pose.time === 0);
     const time = quiet ? 0 : number(pose.time, now());
     const progress = clamp(number(pose.moveProgress, .5), 0, 1);
     const pulse = pose.attack ? Math.sin(progress * Math.PI) : 0;
@@ -371,7 +464,7 @@
     let bodyWidth = baseHeight * .55;
     let crop;
     if (entry?.state === 'ready') {
-      crop = cropFor(entry, f?.spriteCrop || v.spriteCrop);
+      crop = cropFor(entry, plan.crop);
       bodyWidth = bodyHeight * crop.w / crop.h;
       const cap = number(v.maxDrawWidth, 760);
       if (bodyWidth > cap) { bodyHeight *= cap / bodyWidth; bodyWidth = cap; }
@@ -387,13 +480,12 @@
     ctx.restore();
     const lean = quiet ? 0 : (pose.hit ? -.045 * face : pose.attack ? .025 * face * pulse : stepping * .008);
     const lift = quiet ? 0 : pose.walk ? -Math.abs(stepping) * 2.2 : Math.sin(time * 2.1) * .7;
-    const advance = pose.attack ? face * pulse * 11 : pose.guard ? -face * 3 : 0;
+    const advance = (plan.animated || plan.animationUnavailable) ? 0 : pose.attack ? face * pulse * 11 : pose.guard ? -face * 3 : 0;
     ctx.translate(advance, lift);
-    ctx.rotate(pose.knockdown ? face * 1.34 : lean + (pose.crouch ? .05 * face : 0));
-    // Asymmetric reference art is never mirrored: original eye/arm/body sides remain intact.
-    const asymmetric = v.asymmetric === true || /BIRKIN|BANDERSNATCH|N[EÉ]M[EÉ]SIS|T[-\s]?002/i.test(f?.name || '');
-    const originalFace = sourceFacing(v.sourceFacing);
-    const mirror = !asymmetric && originalFace !== 0 ? face * originalFace : 1;
+    ctx.rotate((plan.animated || plan.animationUnavailable) ? 0 : pose.knockdown ? face * 1.34 : lean + (pose.crouch ? .05 * face : 0));
+    // The same plan is shared by Versus, dossiers, replays, finishers and both laboratories.
+    // Opposite-side artwork is selected before drawing; do not flip a paired sprite again.
+    const mirror = plan.mirror;
     if (entry?.state === 'ready' && crop) {
       ctx.save();
       ctx.scale(mirror, 1);
@@ -401,11 +493,13 @@
       ctx.imageSmoothingQuality = 'high';
       ctx.shadowColor = pose.hit ? '#7f25224d' : '#000b';
       ctx.shadowBlur = pose.hit ? 8 : 3;
-      ctx.drawImage(entry.image, crop.x, crop.y, crop.w, crop.h,
-        -bodyWidth / 2, -bodyHeight, bodyWidth, bodyHeight);
+      ctx.drawImage(spriteBitmap(entry, plan), crop.x, crop.y, crop.w, crop.h,
+        -bodyWidth * plan.anchor[0], -bodyHeight * plan.anchor[1], bodyWidth, bodyHeight);
       ctx.restore();
     } else silhouettePlaceholder(ctx, f, entry, bodyHeight);
-    if(f?.fidelity?.visualStatus?.includes('provisional')){ctx.fillStyle='#deb877';ctx.font='9px monospace';ctx.textAlign='center';ctx.fillText('VISUEL PROVISOIRE',0,20);}
+    if(pose.presentationState&&!plan.animated)type(ctx,'SÉQUENCE À PRODUIRE · POSE CONSERVÉE',0,46,8,'#d6ba82','center');
+    if(plan.animationUnavailable)type(ctx,'ANIMATION NON CHARGÉE · POSE CONSERVÉE',0,34,8,'#d6ba82','center');
+    if(!plan.sideProfile || f?.fidelity?.visualStatus?.includes('provisional')){ctx.fillStyle='#deb877';ctx.font='9px monospace';ctx.textAlign='center';ctx.fillText(plan.status==='asset-error'?'SPRITE LATÉRAL INDISPONIBLE':plan.sideProfile?'POSE DE RÉFÉRENCE LATÉRALE':'PROFIL LATÉRAL À PRODUIRE',0,20);}
     if(pose.actor?.statuses?.exposed?.t>0&&!root.RE_SPATIAL?.profile(pose.actor)){ctx.strokeStyle='#e6b862';ctx.lineWidth=2;ctx.strokeRect(-bodyWidth/2-8,-bodyHeight-8,bodyWidth+16,bodyHeight+13);ctx.fillStyle='#f1cc81';ctx.font='11px monospace';ctx.textAlign='center';ctx.fillText('NOYAU EXPOSÉ',0,-bodyHeight-17);}
     if (!pose.knockdown) drawAttackAccent(ctx, f, face, bodyHeight, bodyWidth, pose);
     ctx.restore();
@@ -441,7 +535,7 @@
   }
 
   function atmosphere(ctx, stage, time, preview) {
-    const weather = String(stage?.weather || stage?.family || '').toLowerCase();
+    const weather = root.RE_STAGE_DYNAMICS ? 'none' : String(stage?.weather || stage?.family || '').toLowerCase();
     const fog = ctx.createLinearGradient(0, 0, 0, HEIGHT);
     fog.addColorStop(0, '#02030555'); fog.addColorStop(.48, '#04040608');
     fog.addColorStop(.78, '#06070930'); fog.addColorStop(1, '#050607e0');
@@ -477,7 +571,10 @@
   function drawStage(ctx, stage, time = 0, camera = 0, preview = false) {
     if (!ctx) return true;
     const s = stage || root.RE_DATA?.stages?.[0] || {};
-    if(s.re5Scene&&root.RE5_SCENES?.draw(ctx,s,root.matchMedia?.('(prefers-reduced-motion: reduce)').matches?0:time,camera,preview))return true;
+    const reduced=!!root.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+    time=reduced?0:number(time);camera=reduced?0:number(camera);
+    if(root.RE_STAGE_DYNAMICS?.drawBase(ctx,s,time,camera,preview)){root.RE_STAGE_DYNAMICS.drawAmbient(ctx,s,time,{reducedMotion:reduced});return true;}
+    if(s.re5Scene&&root.RE5_SCENES?.draw(ctx,s,time,camera,preview)){root.RE_STAGE_DYNAMICS?.drawAmbient(ctx,s,time,{reducedMotion:reduced});return true;}
     const entry = requestAsset(s.background || s.image || '', 'stage');
     const miniBinding = ctx.canvas?.id === 'stageMini' ? { id: s.id, serial: ++revision } : null;
     if (miniBinding) stageBindings.set(ctx.canvas, miniBinding);
@@ -496,12 +593,14 @@
       });
     }
     atmosphere(ctx, s, number(time), preview);
+    root.RE_STAGE_DYNAMICS?.drawAmbient(ctx,s,time,{reducedMotion:reduced});
     ctx.restore();
     return true;
   }
 
   function preloadStage(stage) {
     const s = typeof stage === 'string' ? root.RE_DATA?.stages?.find(item => item.id === stage) : stage;
+    if(root.RE_STAGE_DYNAMICS?.describe(s).native)return Promise.resolve({ok:true,path:'procedural-r6:'+s.id});
     if(s?.re5Scene&&root.RE5_SCENES?.themes.includes(s.re5Scene))return Promise.resolve({ok:true,path:'procedural:'+s.id});
     const entry = requestAsset(s?.background || s?.image || '', 'stage');
     if (!entry) return Promise.resolve({ ok: false, path: '' });
@@ -519,7 +618,11 @@
     const fighter = options.fighters?.[story.uid] || findFighter(story.uid);
     const other = options.fighters?.[story.route?.[index]?.opponent] || findFighter(story.route?.[index]?.opponent);
     const stage = stages[card.stage] || stages[story.stage] || root.RE_DATA?.stages?.[0];
-    const time = options.motion === false ? 0 : now();
+    const time = options.motion === false ? 0 : Number.isFinite(options.time) ? Math.max(0, options.time) : now();
+    const sceneKey = JSON.stringify([story.uid, phase, index, page, other?.uid, canvas.id]);
+    let binding = cinemaBindings.get(canvas);
+    if (!binding || binding.key !== sceneKey) { binding = { key: sceneKey, subject: {}, opponent: {} }; cinemaBindings.set(canvas, binding); }
+    const cinemaState = phase === 'outro' || phase === 'post' ? 'win' : phase === 'defeat' ? 'lose' : phase === 'pre' ? 'guard' : 'idle';
     const hero = canvas.id === 'heroArt';
     ctx.save();
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -527,9 +630,10 @@
     drawStage(ctx, stage, time, time ? Math.sin(time * .14) * 75 : 0, true);
     const target = hero ? 535 : 410;
     const visualHeight = number(fighter?.visual?.drawHeight, number(fighter?.visual?.height, 225));
-    const subjectImage = requestAsset(spritePath(fighter), 'sprite');
+    const subjectPlan = root.RE_FIGHTER_DIRECTIONS.resolve(fighter, hero ? -1 : 1);
+    const subjectImage = requestAsset(subjectPlan.path, 'sprite');
     const subjectBounds = subjectImage?.state === 'ready' ? cropFor(subjectImage,
-      fighter?.spriteCrop || fighter?.visual?.spriteCrop) : null;
+      subjectPlan.crop) : null;
     const visualWidth = subjectBounds ? Math.min(number(fighter?.visual?.maxDrawWidth, 760),
       visualHeight * subjectBounds.w / subjectBounds.h) : visualHeight * .6;
     const bigScale = Math.min(clamp(target / visualHeight, .5, 3.5), 630 / visualWidth) /
@@ -537,11 +641,11 @@
     if (!stories && other) {
       ctx.save(); ctx.globalAlpha = .62;
       drawFighter(ctx, other, 912, 638, -1, Math.min(1.38, 400 / number(other.visual?.height, 225)),
-        { time, guard: phase === 'pre', hit: phase === 'post', reduceMotion: !time });
+        { time, animationKey: binding.opponent, animationState: phase === 'post' ? 'lose' : phase === 'defeat' ? 'win' : 'guard', guard: phase === 'pre', reduceMotion: !time });
       ctx.restore();
     }
     drawFighter(ctx, fighter, hero ? 985 : 318, hero ? 725 : 694, hero ? -1 : 1, bigScale,
-      { time, guard: phase === 'pre', hit: phase === 'defeat', reduceMotion: !time });
+      { time, animationKey: binding.subject, animationState: cinemaState, guard: phase === 'pre', reduceMotion: !time });
     const edge = ctx.createLinearGradient(0, 0, WIDTH, 0);
     if (hero) {
       edge.addColorStop(0, '#08090bed'); edge.addColorStop(.4, '#08090b9f'); edge.addColorStop(.7, '#08090b00');
@@ -556,12 +660,32 @@
     return true;
   }
 
+  // Resolve and warm only the two currently required sides, not a whole roster.
+  async function preloadFighter(fighter, pose = {}) {
+    const f = findFighter(fighter), state = root.RE_FIGHTER_DIRECTIONS.poseState(pose);
+    const paths = new Set();
+    for (const face of [-1, 1]) {
+      const sample = { ...pose, actor: null, opponentX: undefined, animationState: state };
+      paths.add(root.RE_FIGHTER_DIRECTIONS.resolve(f, face, sample).path);
+      paths.add(root.RE_FIGHTER_DIRECTIONS.resolve(f, face, sample, undefined, { skipClips: true }).path);
+    }
+    return Promise.all([...paths].map(path => {
+      const e = requestAsset(path, 'sprite');
+      if (!e) return Promise.resolve({ ok: false, path });
+      if (e.state === 'ready' || e.state === 'error') return Promise.resolve({ ok: e.state === 'ready', path });
+      return new Promise(resolve => e.waiters.push(resolve));
+    }));
+  }
+
   function diagnostics() {
     const items = [...cache.values()];
     return {
       version: 'RE-1.0 / CQC-0.60',
-      animation: 'Reference poses with whole-image movement; no reconstructed skeletal frames',
-      limits: { ...LIMITS, concurrentLoads: 6 }, loading, queued: queue.length, completed, released,
+      animation: 'Direction-specific sprite selection; unresolved front references remain explicitly provisional.',
+      directionalArt: 're.bow.directional-art/1',
+      directionalRevision: root.RE_DIRECTIONAL_ART?.revision || 0,
+      assetRecovery: 'R5',
+      limits: { ...LIMITS, concurrentLoads: 6, loadTimeoutMs: LOAD_TIMEOUT_MS, rememberedFailures: FAILURE_LIMIT }, loading, queued: queue.length, completed, released,
       cached: Object.fromEntries(Object.keys(LIMITS).map(kind => [kind,
         items.filter(item => item.kind === kind && item.state === 'ready').length])),
       errors: [...failures.values()],
@@ -580,5 +704,6 @@
     preload: value => requestAsset(portraitPath(findFighter(value)), 'portrait'), diagnostics });
   root.CQC60_CINEMA = root.CQC58_CINEMA = root.CQC57_CINEMA = root.CQC56_CINEMA = cinema;
   root.RE_RENDERER = Object.freeze({ ...art, drawCinema, drawPortraitInContext,
-    resolveAsset, preloadStage, diagnostics, retryAssets });
+    resolveAsset, preloadStage, preloadFighter, diagnostics, retryAssets,
+    directionalPlan: root.RE_FIGHTER_DIRECTIONS.resolve });
 })(window);

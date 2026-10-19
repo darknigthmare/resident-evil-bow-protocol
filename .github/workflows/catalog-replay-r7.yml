@@ -1,0 +1,71 @@
+name: Validate and package experimental replays R7
+on:
+  push:
+    branches: ['codex/catalog-replay-r7']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: bow-replay-r7
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - run: npm install --no-save --package-lock=false @napi-rs/canvas@0.1.80 playwright@1.51.1
+      - name: Re-run every executable suite
+        run: |
+          set -o pipefail
+          npm run verify 2>&1 | tee catalog-replay-r7-verify.log
+      - run: npm run build
+      - name: Locate or install Chromium
+        run: |
+          if command -v google-chrome >/dev/null; then echo "CHROME_BIN=$(command -v google-chrome)" >> "$GITHUB_ENV"; else npx playwright install --with-deps chromium; fi
+      - run: node tests/browser-catalog-replay-r7.mjs
+      - run: python3 scripts/package-catalog-replay-r7.py
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-r7-report
+          path: r7-delivery/00_RAPPORT_PATCHES_R7.zip
+          compression-level: 0
+          retention-days: 14
+          if-no-files-found: error
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-r7-code
+          path: r7-delivery/01_CODE_R7.zip
+          compression-level: 0
+          retention-days: 14
+          if-no-files-found: error
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-r7-assets-a
+          path: r7-delivery/02_ASSETS_A_R7.zip
+          compression-level: 0
+          retention-days: 14
+          if-no-files-found: error
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-r7-assets-b
+          path: r7-delivery/03_ASSETS_B_R7.zip
+          compression-level: 0
+          retention-days: 14
+          if-no-files-found: error
+      - name: Preserve evidence even on failure
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-r7-evidence
+          path: |
+            catalog-replay-r7-verify.log
+            qa-catalog-replay-r7/
+          retention-days: 14
+          if-no-files-found: warn

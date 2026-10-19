@@ -1,0 +1,44 @@
+{
+  "suite": "planning-integration-r8",
+  "passed": 9,
+  "failed": 0,
+  "scope": "Real controllers in controlled DOM; verdicts deliberately prepared, not original-game evidence",
+  "checks": [
+    {
+      "name": "An emitted verdict cannot reopen a finisher or credit a second conclusion",
+      "pass": true
+    },
+    {
+      "name": "All 52 stages are selectable without adding actor or campaign state",
+      "pass": true
+    },
+    {
+      "name": "A validated shared scenario restores identity, sequence, stage and exact tick",
+      "pass": true
+    },
+    {
+      "name": "Unknown stage/state and noninteger time fall back safely",
+      "pass": true
+    },
+    {
+      "name": "Sharing includes only allowed presentation fields, never health or external paths",
+      "pass": true
+    },
+    {
+      "name": "Empty search hides the scenario instead of sharing a removed subject",
+      "pass": true
+    },
+    {
+      "name": "Invalid finisher indices never silently choose the first conclusion",
+      "pass": true
+    },
+    {
+      "name": "Double openings preserve the existing countdown and cannot interrupt an active conclusion",
+      "pass": true
+    },
+    {
+      "name": "Already delivered main result rejects both direct and public conclusion entry points",
+      "pass": true
+    }
+  ]
+}

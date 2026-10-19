@@ -13,6 +13,7 @@
   const BASE_HEIGHT = 720;
   const freeze = Object.freeze;
   const families = freeze({
+    biohazard: freeze({id:'biohazard',label:'BIOHAZARD / SUJET NEUTRALISÉ',accent:'#c74c4c',second:'#725253',paper:'#eee4d7',ground:'#140c0e',shape:'terminal'}),
     retro: freeze({id:'retro', label:'RADIO / 8 BITS', accent:'#93efa8', second:'#477a68', paper:'#eaffdf', ground:'#081915', shape:'terminal'}),
     handheld: freeze({id:'handheld', label:'TRANSMISSION / PORTABLE', accent:'#cce49c', second:'#647d44', paper:'#f4ffd3', ground:'#172214', shape:'lcd'}),
     codec: freeze({id:'codec', label:'CODEC / INFILTRATION', accent:'#ff6d66', second:'#738d96', paper:'#f2e7db', ground:'#12191e', shape:'carrier'}),
@@ -164,6 +165,7 @@
   function themeFor(fighter, override) {
     if (typeof override === 'string' && Object.prototype.hasOwnProperty.call(families,override)) return families[override];
     const episode = episodeOf(fighter);
+    if(/^re[a-z0-9-]*-/i.test(fighter?.uid||fighter?.id||'')||/Resident Evil|BIOHAZARD|^RE\d/i.test(episode))return families.biohazard;
     if (Object.prototype.hasOwnProperty.call(episodeFamilies,episode)) return families[episodeFamilies[episode]];
     if (Object.prototype.hasOwnProperty.call(groupFamilies,episode)) return families[groupFamilies[episode]];
     const s = episode.toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');

@@ -1,0 +1,76 @@
+{
+  "revision": 4,
+  "passed": 12,
+  "failed": 0,
+  "backend": "@napi-rs/canvas",
+  "scope": "Shared production renderer, actual processed native PNGs and synthetic pixel fixtures. No new source-game animation or exhaustive lore certification.",
+  "checks": [
+    {
+      "name": "Twelve processed references match reviewed source hashes and emitted PNG metadata",
+      "passed": true,
+      "details": {
+        "processed": 12,
+        "newDrawings": 0
+      }
+    },
+    {
+      "name": "Derived references have transparent padding, without removing opaque nonblack source pixels",
+      "passed": true,
+      "details": {
+        "opaqueNonblackPixelsPreserved": 854557
+      }
+    },
+    {
+      "name": "Hyena dark belly survives exact-black processing and source-clipped art stays flagged",
+      "passed": true
+    },
+    {
+      "name": "Ten oblique images face their target without becoming validated lateral silhouettes",
+      "passed": true
+    },
+    {
+      "name": "Two existing near-profile poses join the three earlier reference poses, not five new drawings",
+      "passed": true,
+      "details": {
+        "readyNativeReferencePoses": 5,
+        "newIndependentAnatomicalPairs": 0,
+        "newAnimationSheets": 0
+      }
+    },
+    {
+      "name": "Reviewed reference descriptors reject unsafe or unreviewed inputs",
+      "passed": true
+    },
+    {
+      "name": "Protected asymmetric subjects cannot receive an automatic bilateral exemption",
+      "passed": true
+    },
+    {
+      "name": "Identical atlas pixels cannot claim two anatomical sides by changing names, timings or anchors",
+      "passed": true
+    },
+    {
+      "name": "Action preloading also warms the same-side idle fallback, bounded to four unique images",
+      "passed": true
+    },
+    {
+      "name": "Missing processed reference falls back to its original image and retains the error",
+      "passed": true,
+      "details": {
+        "expectedMissingFixture": true
+      }
+    },
+    {
+      "name": "Dossier outcome clips advance through real renderer pixels and restart on a new page",
+      "passed": true
+    },
+    {
+      "name": "All 346 identities preserved with explicit R6 combat-contract changes",
+      "passed": true,
+      "details": {
+        "unchangedFiles": 9,
+        "combatIdentities": 346
+      }
+    }
+  ]
+}

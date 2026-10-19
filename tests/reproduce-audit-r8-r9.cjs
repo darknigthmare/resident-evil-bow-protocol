@@ -1,0 +1,14 @@
+/* Verify the six original audit symptoms against an exact archived R8 tree. */
+const fs=require('fs'),path=require('path'),R=path.resolve(process.argv[2]),out=path.resolve(process.argv[3]||'.');
+const{loadGame}=require(path.join(R,'tests/engine-vm.cjs')),checks=[];
+const cfg={p1:'re3r-nemesis',p2:'re1-hunter',mode:'local',rounds:2,seconds:99,finishers:'stylized'};
+async function check(id,fn,storage,page='modules/versus.html'){const e=await loadGame(path.join(R,page),{storage});try{checks.push({id,...await fn(e,e.api())});}finally{e.dispose();}}
+(async()=>{
+await check('AUD-01',(e,a)=>{a.startExternal(cfg);e.key('F1');const before=e.document.activeElement;const event=new e.window.KeyboardEvent('keydown',{key:'Tab',code:'Tab',target:before});e.window.dispatchEvent(event);return{reproduced:event.defaultPrevented&&e.document.activeElement===before};});
+await check('AUD-02',(e,a)=>{e.window.navigator.getGamepads=()=>{const x=Error('Injected policy denial');x.name='SecurityError';throw x;};try{a.startExternal(cfg);return{reproduced:false};}catch(x){return{reproduced:x.name==='SecurityError',injection:'Gamepad policy denial'};}});
+await check('AUD-03',(e,a)=>({reproduced:typeof a.getBindings().p1==='string',injection:'invalid persisted bindings'}),new Map([['re-bow-v048-bindings','{"p1":"wrong","p2":"wrong"}']]));
+await check('AUD-04',(e,a)=>{a.startExternal(cfg);const s=a.getState();s.finished=true;s.winner=0;s.a.wins=2;s.b.life=0;try{a.beginFinisher();a.startFinisher(0);return{reproduced:false};}catch(x){return{reproduced:/null/.test(x.message),injection:'prepared verdict + done:null'};}},new Map([['re-bow-v046-finishers','{"done":null,"history":[]}']]));
+await check('AUD-05',(e)=>{const a=e.window.RE_CATALOG_DUEL,s=a.getState(),seen=[],M=e.window.RE_MATCH_SEQUENCES;e.window.RE_MATCH_SEQUENCES={...M,pose:(s,p,o)=>{seen.push(o.finalTick);return M.pose(s,p,o);}};s.finished=true;s.winner=0;a.tick(1);for(let i=0;i<120;i++){e.window.dispatchEvent({type:'re:assetstatus'});e.tick(17);}return{reproduced:seen.length>0&&seen.every(x=>x===0),injection:'prepared verdict',renderSamples:seen.length};},undefined,'catalog-duel.html');
+await check('AUD-06',(e,a)=>{a.startExternal(cfg);e.window.dispatchEvent({type:'pagehide',persisted:true});e.window.dispatchEvent({type:'pageshow',persisted:true});a.restartMatch();return{reproduced:a.host.audio.diagnostics().disposed,injection:'synthetic persisted lifecycle'};});
+fs.mkdirSync(out,{recursive:true});fs.writeFileSync(path.join(out,'AUDIT_R8_BEFORE_R9.json'),JSON.stringify({baseCommit:'ba4e3cc82f2c9af7c7324420a0cc4409c599fd1a',reproduced:checks.filter(c=>c.reproduced).length,checks},null,2)+'\n');console.log(checks);if(checks.length!==6||checks.some(c=>!c.reproduced))process.exitCode=1;
+})().catch(e=>{console.error(e.stack);process.exitCode=1;});

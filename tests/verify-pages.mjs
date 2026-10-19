@@ -353,9 +353,11 @@ async function main() {
   await test('Stylized and cinematic finishes emit one correlated result after their actual sequence', async () => {
     const results = [];
     for (const finishers of ['stylized', 'cinematic']) {
-      pair.start({ finishers }); const before = pair.packets.length;
+      // R10: use the fixed Family opener (Mia) against Nemesis so this test
+      // still exercises an actual compatible conclusion, not a random excluded rig.
+      pair.start({ mode: 'family', uid: 're3r-nemesis', finishers }); const before = pair.packets.length;
       const result = await realDuel(pair, { selectFinisher: true });
-      assert(result.packet.finisher?.id, finishers + ' must execute the selected canonical finisher');
+      assert(result.packet.finisher?.id, finishers + ' must execute the selected compatible prototype finisher');
       assert.equal(pair.packets.slice(before).filter(x => x.data.type === 'cqc-versus-result').length, 1);
       assert.equal(state(pair).wins, 1); assert.equal(state(pair).pending, false);
       assert.equal(pair.engine.api().getFinisherState().window, null);

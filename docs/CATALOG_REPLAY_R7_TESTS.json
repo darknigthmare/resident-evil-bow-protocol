@@ -1,0 +1,117 @@
+{
+  "suite": "catalog-replay-r7",
+  "passed": 24,
+  "failed": 0,
+  "scope": "Actual CQC engine in VM plus controlled DOM; not physical device or browser certification.",
+  "checks": [
+    {
+      "name": "Empty recordings validate and exports do not expose mutable internal commands",
+      "pass": true
+    },
+    {
+      "name": "Human commands reproduce full state, actual AI RNG and transient contacts",
+      "pass": true,
+      "detail": {
+        "frames": 1257,
+        "commands": 138
+      }
+    },
+    {
+      "name": "Complete CPU duels replay until the identical terminal state without imported health",
+      "pass": true,
+      "detail": {
+        "completedDuels": 6
+      }
+    },
+    {
+      "name": "Every one of 346 stable/experimental selections preserves identity in replay",
+      "pass": true,
+      "detail": {
+        "selections": 346
+      }
+    },
+    {
+      "name": "All 52 stages and unsigned seed extremes retain exact setup",
+      "pass": true,
+      "detail": {
+        "configurations": 104
+      }
+    },
+    {
+      "name": "Replay seek backward reconstructs RNG, life, resources and object state exactly",
+      "pass": true
+    },
+    {
+      "name": "Replay speed/chunk size changes presentation only, never simulation outcome",
+      "pass": true
+    },
+    {
+      "name": "Malformed JSON and oversized UTF-8 payloads fail before a replay is constructed",
+      "pass": true
+    },
+    {
+      "name": "Version/contract mismatches and unknown identities or stage paths are rejected",
+      "pass": true
+    },
+    {
+      "name": "Unexpected health/profile fields and prototype pollution keys cannot be imported",
+      "pass": true
+    },
+    {
+      "name": "Seed, frame count, mask and slot boundaries reject negative/fractional/out-of-range values",
+      "pass": true
+    },
+    {
+      "name": "Truncated blocks and commands added after terminal time are rejected",
+      "pass": true
+    },
+    {
+      "name": "Checksum tampering and altered human commands cannot preserve a valid result",
+      "pass": true
+    },
+    {
+      "name": "CPU files reject hidden manual inputs instead of changing deterministic AI decisions",
+      "pass": true
+    },
+    {
+      "name": "Replay end is immutable, and invalid seek/count arguments do not advance state",
+      "pass": true
+    },
+    {
+      "name": "Recording step after terminal completion cannot append extra input frames",
+      "pass": true
+    },
+    {
+      "name": "Starting or resuming a duel transfers focus from the button to the keyboard arena",
+      "pass": true
+    },
+    {
+      "name": "Editing form fields or using browser modifier shortcuts never triggers a combat attack",
+      "pass": true
+    },
+    {
+      "name": "A bad replay import leaves the current running match, setup and playback mode intact",
+      "pass": true
+    },
+    {
+      "name": "UI imports a valid replay paused, gates human commands and exposes step/seek/exit",
+      "pass": true
+    },
+    {
+      "name": "Pause and cache restoration keep one loop, no held movement and no phantom attack",
+      "pass": true
+    },
+    {
+      "name": "An asynchronous import cannot replace a different subject chosen in the meantime",
+      "pass": true
+    },
+    {
+      "name": "No replay/session action writes storage or sends a campaign result message",
+      "pass": true
+    },
+    {
+      "name": "R7 profiles/annex/art preserved; only the documented R8 controller/contract successor is allowed",
+      "pass": true
+    }
+  ]
+}

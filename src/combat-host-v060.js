@@ -172,7 +172,11 @@
     });
     root.addEventListener('blur', () => { if (isModalOpen()) panelInterrupted = true; });
     document.addEventListener('visibilitychange', () => { if (document.hidden && isModalOpen()) panelInterrupted = true; });
-    root.addEventListener('pagehide', () => { abort(); audio?.dispose(); });
+    root.addEventListener('pagehide', event => {
+      if (event.persisted) { closePanel(false); audio?.park(); lastPacket = ''; }
+      else { abort(); audio?.dispose(); }
+    });
+    root.addEventListener('pageshow', event => { if (event.persisted) { audio?.pause(true); lastPacket = ''; status(); } });
     mount();
     return {start, step:packet, pause, abort, end, finisher, draw, audio, isModalOpen,
       diagnostics:() => ({session, subscribed, ended, modalOpen:isModalOpen(), portraits:portraitIds, audio:audio?.diagnostics() || null})};

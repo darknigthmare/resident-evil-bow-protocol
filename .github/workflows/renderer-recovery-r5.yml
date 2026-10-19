@@ -1,0 +1,88 @@
+name: Validate and back up renderer recovery R5
+on:
+  push:
+    branches: ['codex/renderer-recovery-r5']
+    paths: ['.github/workflows/renderer-recovery-r5.yml', 'scripts/apply-renderer-recovery-r5.py', 'tests/verify-renderer-recovery-r5.mjs', 'tests/browser-renderer-recovery-r5.mjs', 'scripts/package-renderer-recovery-r5.py']
+permissions:
+  contents: write
+concurrency:
+  group: bow-renderer-recovery-r5
+  cancel-in-progress: false
+jobs:
+  verify:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: codex/renderer-recovery-r5
+          fetch-depth: 0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - name: Apply hash-guarded source changes
+        run: |
+          if ! grep -q "assetRecovery: 'R5'" src/re-renderer.js; then python3 scripts/apply-renderer-recovery-r5.py; fi
+      - run: npm install --no-save --package-lock=false @napi-rs/canvas@0.1.80 playwright@1.51.1
+      - name: Run complete executable validation
+        run: |
+          set -o pipefail
+          npm run verify 2>&1 | tee r5-verify.log
+      - run: npm run build
+      - name: Use actual Chromium for HTTP navigation
+        run: |
+          if command -v google-chrome >/dev/null; then echo "CHROME_BIN=$(command -v google-chrome)" >> "$GITHUB_ENV"; else npx playwright install --with-deps chromium; fi
+      - run: node tests/browser-directional-r4.mjs
+      - run: node tests/browser-renderer-recovery-r5.mjs
+      - name: Commit only tested source on the staging branch
+        run: |
+          set -euo pipefail
+          git config user.name 'B.O.W. Protocol CI'
+          git config user.email 'actions@users.noreply.github.com'
+          git add src/re-renderer.js src/fighter-directions.js src/directions-page.js directions.html package.json docs/RENDERER_RECOVERY_R5_TESTS.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'fix(render): recover stalled assets, preserve fallback orientation and bounded errors'
+            git push origin HEAD:codex/renderer-recovery-r5
+          fi
+      - run: python3 scripts/package-renderer-recovery-r5.py
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-r5-00-report
+          path: r5-delivery/00_RAPPORT_PATCHES_R5.zip
+          compression-level: 0
+          retention-days: 14
+          if-no-files-found: error
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-r5-01-code
+          path: r5-delivery/01_CODE_R5.zip
+          compression-level: 0
+          retention-days: 14
+          if-no-files-found: error
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-r5-02-assets
+          path: r5-delivery/02_ASSETS_A_R5.zip
+          compression-level: 0
+          retention-days: 14
+          if-no-files-found: error
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-r5-03-assets
+          path: r5-delivery/03_ASSETS_B_R5.zip
+          compression-level: 0
+          retention-days: 14
+          if-no-files-found: error
+      - name: Preserve evidence independently of test outcome
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-r5-evidence
+          path: |
+            r5-verify.log
+            qa-directional-r4/
+            qa-renderer-r5/
+          compression-level: 6
+          retention-days: 14
+          if-no-files-found: warn

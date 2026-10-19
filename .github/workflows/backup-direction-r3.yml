@@ -1,0 +1,161 @@
+name: Backup exact directional R3 source
+on:
+  push:
+    branches: ['codex/lateral-renderer-integration']
+    paths: ['.github/workflows/backup-direction-r3.yml']
+permissions:
+  contents: read
+concurrency:
+  group: bow-backup-direction-r3
+  cancel-in-progress: false
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: 41fbeaaa44ad976ab59f05c2e5b56bf5655dd217
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - run: npm install --no-save --package-lock=false @napi-rs/canvas@0.1.80
+      - run: npm run verify
+      - run: npm run build
+      - name: Partition exact tracked source; no new artwork or game changes
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = '41fbeaaa44ad976ab59f05c2e5b56bf5655dd217'
+          mkdir -p .delivery
+          git archive --format=zip --prefix=bow-directional-r3/ -o .delivery/exact-source.zip HEAD
+          git diff --binary 1cac959cd5cc5b40b6cffc94a705970bc74c9580 HEAD > .delivery/R3_FROM_MAIN.patch
+          git diff --binary 86edbf48aba383c3bc0a7c8ed6e79b53042c98bd HEAD > .delivery/R3_FROM_R2.patch
+          python3 - <<'PY'
+          from pathlib import Path, PurePosixPath
+          from zipfile import ZipFile
+          import hashlib, json, shutil, stat
+          out=Path('.delivery'); budget=80*1024*1024
+          code=[]; assets=[]; manifest={}
+          with ZipFile(out/'exact-source.zip') as z:
+              for info in z.infolist():
+                  if info.is_dir(): continue
+                  p=PurePosixPath(info.filename)
+                  assert p.parts[0]=='bow-directional-r3' and '..' not in p.parts
+                  assert not stat.S_ISLNK(info.external_attr >> 16), str(p)
+                  assert info.file_size < budget, str(p)
+                  rel=PurePosixPath(*p.parts[1:])
+                  assert not rel.name.startswith('.env'), 'Unexpected environment file'
+                  entry=(info.filename,info.file_size)
+                  (assets if rel.parts[0]=='assets' else code).append(entry)
+              groups=[code]; current=[]; size=0
+              for entry in sorted(assets):
+                  if current and size+entry[1] > budget:
+                      groups.append(current); current=[]; size=0
+                  current.append(entry);size+=entry[1]
+              if current: groups.append(current)
+              assert 2<=len(groups)<=5
+              assert sum(n for _,n in code)<budget, 'Code part exceeds safe transfer size'
+              part_sizes=[]
+              for i,entries in enumerate(groups,1):
+                  part=out/f'{i:02d}';part.mkdir()
+                  for name,_ in entries:
+                      raw=z.read(name); target=part/name
+                      target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(raw)
+                      assert name not in manifest
+                      manifest[name]={'sha256':hashlib.sha256(raw).hexdigest(),'bytes':len(raw),'part':i}
+                  part_sizes.append({'part':i,'files':len(entries),'uncompressedBytes':sum(n for _,n in entries)})
+                  (part/f'PART_{i:02d}_R3.txt').write_text('B.O.W. Protocol — rendu directionnel R3\nExtraire TOUS les paquets dans le même dossier. Le sous-dossier bow-directional-r3 doit contenir le code et assets.\nCommit exact : 41fbeaaa44ad976ab59f05c2e5b56bf5655dd217\nLa refonte des sprites de tous les personnages reste incomplète.\n',encoding='utf8')
+              assert len(manifest)==sum(len(g) for g in groups)
+          proof=out/'00';proof.mkdir()
+          report={'commit':'41fbeaaa44ad976ab59f05c2e5b56bf5655dd217','root':'bow-directional-r3','parts':part_sizes,'sourceFiles':len(manifest),'files':manifest,'scope':'Exact reviewed source; no new sprites, no merge, no deployment. All part archives must be extracted together.'}
+          (proof/'MANIFESTE_RECONSTRUCTION_R3.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+          guide='''B.O.W. PROTOCOL — RENDU DIRECTIONNEL R3
+          Source exacte : 41fbeaaa44ad976ab59f05c2e5b56bf5655dd217
+          PR : https://github.com/darknigthmare/resident-evil-bow-protocol/pull/11
+          
+          1. Extraire le paquet 00 (rapport) et TOUS les paquets 01 à {last} dans UN MÊME dossier.
+          2. Conserver leur arborescence : le code et les ressources se réunissent sous bow-directional-r3/.
+          3. Vérifier avec Python 3 : python verifier-reconstruction-r3.py
+          4. Dans bow-directional-r3/ : npm start, puis ouvrir http://localhost:5173/directions.html
+          
+          Le rapport contrôle chaque fichier source avec son SHA-256. Il ne télécharge rien.
+          Les données de combat sont inchangées. Les anciennes sauvegardes ne sont pas supprimées.
+          Trois poses natives sont exploitées dans les deux sens (réflexion bilatérale revue), pas trois paires anatomiques redessinées.
+          Les 343 autres corps n'ont pas deux orientations latérales validées. Aucune nouvelle illustration finale ni animation de personnage n'est fournie.
+          Cette sauvegarde de la PR n'est ni une fusion dans main ni un déploiement Vercel.
+          '''.format(last=f'{len(groups):02d}')
+          (proof/'LISEZ_MOI_R3.txt').write_text(guide,encoding='utf8')
+          verifier="""from pathlib import Path
+          import hashlib,json,sys
+          root=Path(__file__).resolve().parent
+          data=json.loads((root/'MANIFESTE_RECONSTRUCTION_R3.json').read_text(encoding='utf8'))
+          errors=[]
+          for name,expected in data['files'].items():
+              p=root/name
+              if not p.is_file():errors.append('MANQUANT '+name);continue
+              if p.stat().st_size!=expected['bytes'] or hashlib.sha256(p.read_bytes()).hexdigest()!=expected['sha256']:errors.append('DIFFERENT '+name)
+          for e in errors:print(e)
+          print(str(len(data['files']))+' fichiers controles ; '+str(len(errors))+' erreur(s).')
+          sys.exit(bool(errors))
+          """
+          (proof/'verifier-reconstruction-r3.py').write_text(verifier,encoding='utf8')
+          for p in [Path('docs/DIRECTIONAL_SCOPE.md'),Path('docs/DIRECTIONAL_R3_TESTS.json'),Path('docs/DIRECTIONAL_R3_PRESERVATION.json'),Path('docs/DIRECTIONAL_WORKORDERS.json'),out/'R3_FROM_MAIN.patch',out/'R3_FROM_R2.patch']:
+              if p.is_file():shutil.copyfile(p,proof/p.name)
+          for name,expected in manifest.items():
+              p=out/f"{expected['part']:02d}"/name
+              assert hashlib.sha256(p.read_bytes()).hexdigest()==expected['sha256']
+          compile(verifier,'verifier-reconstruction-r3.py','exec')
+          print(json.dumps({'sourceFiles':len(manifest),'parts':part_sizes,'exactSourceSha256':hashlib.sha256((out/'exact-source.zip').read_bytes()).hexdigest()}))
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-r3-00-rapport
+          path: .delivery/00/
+          include-hidden-files: true
+          retention-days: 14
+          if-no-files-found: error
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-r3-01-code
+          path: .delivery/01/
+          include-hidden-files: true
+          retention-days: 14
+          if-no-files-found: error
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-r3-02-assets
+          path: .delivery/02/
+          include-hidden-files: true
+          compression-level: 0
+          retention-days: 14
+          if-no-files-found: error
+      - if: hashFiles('.delivery/03/PART_03_R3.txt') != ''
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-r3-03-assets
+          path: .delivery/03/
+          include-hidden-files: true
+          compression-level: 0
+          retention-days: 14
+          if-no-files-found: error
+      - if: hashFiles('.delivery/04/PART_04_R3.txt') != ''
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-r3-04-assets
+          path: .delivery/04/
+          include-hidden-files: true
+          compression-level: 0
+          retention-days: 14
+          if-no-files-found: error
+      - if: hashFiles('.delivery/05/PART_05_R3.txt') != ''
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-r3-05-assets
+          path: .delivery/05/
+          include-hidden-files: true
+          compression-level: 0
+          retention-days: 14
+          if-no-files-found: error

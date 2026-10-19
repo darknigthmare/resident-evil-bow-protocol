@@ -1,0 +1,16 @@
+/* Existing confinement-terminal palette; no replacement of original menus. */
+#trialCanvas:focus-visible{outline:3px solid #dac086;outline-offset:4px}
+.trial-command-state{min-height:1.7em;color:#d8c490;font-size:13px;line-height:1.7}
+.trial-actions button:disabled,.trial-controls button:disabled{opacity:.52;cursor:not-allowed}
+.replay-panel{margin-top:24px;padding:20px;border:1px solid #556964;background:linear-gradient(130deg,#1a2626,#10191e);color:#d2ded8}
+.replay-panel h2{margin:0 0 12px;font-size:20px;letter-spacing:.08em;color:#e5d0a2}
+.replay-panel p{font-size:13px;line-height:1.65;max-width:960px}
+.replay-controls{display:flex;align-items:end;flex-wrap:wrap;gap:12px;margin-top:14px}
+.replay-controls label{display:flex;flex-direction:column;gap:7px;font-size:11px;letter-spacing:.06em;min-width:0}
+.replay-controls button,.replay-controls select,.replay-controls input{font:inherit;background:#1d3032;color:#e4e7d8;border:1px solid #687976;padding:10px;min-height:44px;border-radius:2px;box-sizing:border-box}
+.replay-controls button:hover{background:#314243}.replay-controls button:disabled,.replay-controls input:disabled{opacity:.5}
+.replay-controls input[type=number]{width:135px}.replay-file{max-width:100%}.replay-file input{width:100%;max-width:350px}
+#trialReplayLength{align-self:center;color:#bcc9bd;font:12px monospace}
+#trialReplayStatus{color:#cbe5db;border-left:3px solid #859e92;padding-left:12px;min-height:22px}
+.replay-panel .replay-limit{color:#acb7b6;font-size:12px}
+@media(max-width:560px){.replay-panel{padding:14px}.replay-panel h2{font-size:17px}.replay-controls{align-items:stretch}.replay-controls button{flex:1 1 150px}.replay-controls .replay-file{flex:1 1 100%}.replay-file input{max-width:none}}

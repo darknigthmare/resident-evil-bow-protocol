@@ -1,0 +1,76 @@
+name: Package verified combat and stages R6
+on:
+  push:
+    branches: ['codex/combat-stage-r6']
+    paths: ['.github/workflows/package-combat-stage-r6.yml', 'scripts/package-combat-stage-r6.py']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: bow-combat-stage-r6-package
+  cancel-in-progress: false
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - run: npm install --no-save --package-lock=false @napi-rs/canvas@0.1.80 playwright@1.51.1
+      - name: Re-execute all groups for the exact archived commit
+        run: |
+          set -o pipefail
+          npm run verify 2>&1 | tee combat-stage-r6-verify.log
+      - run: npm run build
+      - name: Locate or install Chromium for real HTTP navigation
+        run: |
+          if command -v google-chrome >/dev/null; then echo "CHROME_BIN=$(command -v google-chrome)" >> "$GITHUB_ENV"; else npx playwright install --with-deps chromium; fi
+      - run: node tests/browser-combat-stage-r6.mjs
+      - run: node tests/browser-renderer-recovery-r5.mjs
+      - run: python3 scripts/package-combat-stage-r6.py
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-r6-00-report
+          path: r6-delivery/00_RAPPORT_PATCHES_R6.zip
+          compression-level: 0
+          retention-days: 14
+          if-no-files-found: error
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-r6-01-code
+          path: r6-delivery/01_CODE_R6.zip
+          compression-level: 0
+          retention-days: 14
+          if-no-files-found: error
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-r6-02-assets
+          path: r6-delivery/02_ASSETS_A_R6.zip
+          compression-level: 0
+          retention-days: 14
+          if-no-files-found: error
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-r6-03-assets
+          path: r6-delivery/03_ASSETS_B_R6.zip
+          compression-level: 0
+          retention-days: 14
+          if-no-files-found: error
+      - name: Preserve executed evidence even after failure
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-r6-final-evidence
+          path: |
+            combat-stage-r6-verify.log
+            qa-combat-stage-r6/
+            qa-renderer-r5/
+            r6-delivery/SHA256_R6.json
+          compression-level: 6
+          retention-days: 14
+          if-no-files-found: warn

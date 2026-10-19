@@ -1,0 +1,29 @@
+/* Inspector for exact UID/state/side clips. No combat or save-state ownership. */
+(function(root){'use strict';
+ const $=id=>document.getElementById(id),M=root.RE_MATCH_SEQUENCES,A=root.RE_FIGHTER_DIRECTIONS,R=root.RE_RENDERER;
+ const F=root.RE_DATA.fighters.concat(root.RE_CATALOG_EXPANSION.fighters),q=new URLSearchParams(location.search);
+ const stages=root.RE_DATA.stages;let stage=stages.find(s=>s.id===q.get('stage'))||stages[0];
+ const cv=$('sequenceCanvas'),c=cv.getContext('2d');let chosen=F.find(f=>f.uid===q.get('uid'))||F[0],tick=0,playing=false,last=null,carry=0,raf=null,dirty=true;
+ const clean=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+ for(const state of M.states){const o=document.createElement('option');o.value=state;o.textContent=M.labels[state];$('sequenceState').append(o);}
+ $('sequenceState').value=M.states.includes(q.get('state'))?q.get('state'):'roundLose';
+ for(const s of stages){const o=document.createElement('option');o.value=s.id;o.textContent=s.name;$('sequenceStage').append(o);}$('sequenceStage').value=stage.id;
+ function scenario(){const p=new URLSearchParams();if(chosen)p.set('uid',chosen.uid);p.set('state',$('sequenceState').value);p.set('stage',stage.id);p.set('tick',String(tick));return 'sequences.html?'+p.toString();}
+ const filled=F.flatMap(f=>M.coverage(f)).filter(r=>r.ready).length;
+ $('sequenceCounts').textContent=F.length+' CORPS · '+(F.length*M.states.length)+' EMPLACEMENTS · '+filled+' CLIPS FOURNIS DES DEUX CÔTÉS';
+ function pause(){playing=false;last=null;carry=0;dirty=true;}
+ function list(){const s=clean($('sequenceSearch').value),rows=F.filter(f=>clean(f.uid+' '+f.name+' '+f.ep).includes(s));$('sequenceSubject').replaceChildren();for(const f of rows){const o=document.createElement('option');o.value=f.uid;o.textContent=f.name+' / '+f.ep;$('sequenceSubject').append(o);}chosen=rows.find(f=>f===chosen)||rows[0];if(chosen)$('sequenceSubject').value=chosen.uid;tick=0;pause();draw();}
+ function draw(){dirty=false;c.clearRect(0,0,1280,720);const reduced=!!root.matchMedia?.('(prefers-reduced-motion: reduce)').matches;R.drawStage(c,stage,reduced?0:tick/60,0,true);$('sequenceScenario').href=scenario();$('sequenceScenario').hidden=!chosen;$('sequenceTick').value=String(tick);$('sequenceTime').textContent='TICK '+tick+' · '+(playing?'LECTURE DE TEST':'PAUSE');$('sequencePlay').textContent=playing?'PAUSE':'LIRE LE TEMPS DE TEST';for(const id of ['sequencePlay','sequenceStep','sequenceReset','sequenceTick','sequenceState'])$(id).disabled=!chosen;$('sequenceMoves').hidden=!chosen;
+  if(!chosen){$('sequenceDetail').textContent='Aucun sujet ne correspond à la recherche.';$('sequenceLeft').textContent=$('sequenceRight').textContent='';return;}
+  const state=$('sequenceState').value,pose={presentationState:state,animationState:state,animationTick:tick,presentationNeutral:true,reduceMotion:true};
+  for(const [dir,x,key]of [[1,350,'sequenceRight'],[-1,930,'sequenceLeft']]){const scale=Math.min(1.3,380/(chosen.visual?.drawHeight||chosen.visual?.height||225));R.drawFighter(c,chosen,x,600,dir,scale,pose);const plan=A.resolve(chosen,dir,pose);$(key).textContent=(dir===1?'DROITE':'GAUCHE')+' : '+(plan.animated?'FRAME '+(plan.animationFrame+1)+' · CLIP FOURNI':'SÉQUENCE NON DESSINÉE · POSE CONSERVÉE');}
+  c.fillStyle='#0d131bea';c.fillRect(0,0,1280,82);c.fillStyle='#dfb5a1';c.font='18px monospace';c.textAlign='center';c.fillText(chosen.name,640,32);c.fillText(M.labels[state]+' · R8 / PRÉSENTATION',640,61);
+  $('sequenceDetail').textContent=chosen.uid+' · '+(state.startsWith('round')?'SÉQUENCE ENTRE MANCHES RÉVERSIBLE. ':'SÉQUENCE DISTINCTE DE FIN OU D’ENTRÉE. ')+'Le temps affiché est un paramètre du test, pas un relevé des frames Capcom.';
+  $('sequenceMoves').href=(root.RE_CATALOG_EXPANSION.fighters.includes(chosen)?'catalog-laboratory.html?uid=':'movesets.html?uid=')+encodeURIComponent(chosen.uid);
+ }
+ function loop(now){if(playing&&!document.hidden){if(last!==null){carry+=Math.min(100,Math.max(0,now-last))*60/1000;const n=Math.floor(carry);carry-=n;tick=Math.min(36000,tick+n);dirty=true;if(tick===36000)pause();}last=now;}else last=null;if(dirty)draw();raf=requestAnimationFrame(loop);}
+ $('sequenceSearch').addEventListener('input',list);$('sequenceSubject').addEventListener('change',()=>{chosen=F.find(f=>f.uid===$('sequenceSubject').value);tick=0;pause();draw();});$('sequenceState').addEventListener('change',()=>{tick=0;pause();draw();});$('sequencePlay').addEventListener('click',()=>{playing=!playing;last=null;carry=0;dirty=true;});$('sequenceStep').addEventListener('click',()=>{pause();tick=Math.min(36000,tick+1);draw();});$('sequenceReset').addEventListener('click',()=>{pause();tick=0;draw();});$('sequenceTick').addEventListener('change',()=>{pause();const n=Number($('sequenceTick').value);tick=Number.isInteger(n)?Math.max(0,Math.min(36000,n)):0;draw();});
+ $('sequenceStage').addEventListener('change',()=>{stage=stages.find(s=>s.id===$('sequenceStage').value)||stages[0];tick=0;pause();draw();});
+ root.addEventListener('blur',pause);document.addEventListener('visibilitychange',()=>{if(document.hidden)pause();});root.addEventListener('pagehide',()=>{pause();cancelAnimationFrame(raf);raf=null;});root.addEventListener('pageshow',e=>{if(e.persisted&&raf===null){pause();draw();raf=requestAnimationFrame(loop);}});root.addEventListener('re:assetstatus',()=>dirty=true);
+ root.RE_SEQUENCE_WORKSHOP=Object.freeze({diagnostics:()=>({uid:chosen?.uid||null,tick,playing,state:$('sequenceState').value,stage:stage.id,scenario:scenario(),drawings:filled,progression:false}),draw});list();const requested=q.get('tick');if(requested!==null&&/^\d{1,5}$/.test(requested)){tick=Math.min(36000,Number(requested));draw();}raf=requestAnimationFrame(loop);
+})(globalThis);
