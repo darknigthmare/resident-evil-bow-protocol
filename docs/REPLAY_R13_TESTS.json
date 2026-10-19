@@ -1,0 +1,119 @@
+{
+  "suite": "replay-vault-r13",
+  "passed": 26,
+  "failed": 0,
+  "scope": "Real engine plus controlled DOM. Quota, denial, stale read and lower limit fixtures are explicit; no art or canon claim.",
+  "checks": [
+    {
+      "name": "RLE recorder preserves every command, including facing-independent packed edges",
+      "pass": true,
+      "detail": {
+        "rawFrames": 2000,
+        "runs": 101
+      }
+    },
+    {
+      "name": "216000 actual captured ticks use one run when idle and never grow beyond the frame cap",
+      "pass": true
+    },
+    {
+      "name": "Worst-case alternating input is bounded independently of elapsed play duration",
+      "pass": true
+    },
+    {
+      "name": "Invalid packed commands are rejected without consuming frames; exported runs are detached",
+      "pass": true
+    },
+    {
+      "name": "A successful archive save is read back, de-duplicated and independent of caller mutations",
+      "pass": true
+    },
+    {
+      "name": "Quota denial leaves original bytes untouched and exposes an unsaved exportable record",
+      "pass": true
+    },
+    {
+      "name": "Recovery retry persists the same pending record once after storage becomes writable",
+      "pass": true
+    },
+    {
+      "name": "Unreadable legacy archive is not replaced; raw backup reproduces every original byte",
+      "pass": true
+    },
+    {
+      "name": "30 existing records are never silently trimmed to make room for the next match",
+      "pass": true
+    },
+    {
+      "name": "A changed storage snapshot blocks a stale write instead of replacing another tab",
+      "pass": true
+    },
+    {
+      "name": "A silently refused write is not advertised as durable persistence",
+      "pass": true
+    },
+    {
+      "name": "An identical ID with different contents never overwrites the existing entry",
+      "pass": true
+    },
+    {
+      "name": "Pending storage stays bounded and capture can be suspended rather than dropping archives",
+      "pass": true
+    },
+    {
+      "name": "Single removal and explicit clear preserve unrelated campaign and experiment keys",
+      "pass": true
+    },
+    {
+      "name": "Denied deletion never advertises success or discards the only pending copy",
+      "pass": true
+    },
+    {
+      "name": "Corrupt and oversized import envelopes are rejected before a match is started",
+      "pass": true
+    },
+    {
+      "name": "Actual main match records compact commands and replays its result and actor state",
+      "pass": true
+    },
+    {
+      "name": "A real result survives storage quota and remains exportable across a new match",
+      "pass": true
+    },
+    {
+      "name": "Training consumes no replay memory and does not erase earlier match archives",
+      "pass": true
+    },
+    {
+      "name": "Recording limit fixture keeps the real victory but saves only a marked excerpt",
+      "pass": true
+    },
+    {
+      "name": "Manual excerpt is detached and cannot alter ongoing simulation or award a victory",
+      "pass": true
+    },
+    {
+      "name": "Archive opening pauses current combat and closing restores only its previous state",
+      "pass": true
+    },
+    {
+      "name": "Two-click deletion and same-version playback are linked to the actual stored selection",
+      "pass": true
+    },
+    {
+      "name": "Invalid or stale asynchronous file reads do not replace a changed match",
+      "pass": true
+    },
+    {
+      "name": "Legacy incompatible records stay listed and exportable but cannot start playback",
+      "pass": true
+    },
+    {
+      "name": "Code and art preservation excludes only the reviewed controller change",
+      "pass": true,
+      "detail": {
+        "files": 15
+      }
+    }
+  ]
+}
