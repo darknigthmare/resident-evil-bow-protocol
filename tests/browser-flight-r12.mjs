@@ -1,0 +1,28 @@
+/** Real HTTP and UI. Bench/CPU acceleration declared; no canon art claim. */
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import{spawn}from'node:child_process';import{fileURLToPath}from'node:url';import{chromium}from'playwright';
+const R=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),O=path.join(R,'qa-flight-r12'),base='http://127.0.0.1:5196',checks=[];fs.mkdirSync(O,{recursive:true});let browser;
+const server=spawn(process.execPath,['scripts/dev.mjs'],{cwd:R,env:{...process.env,RE_BOW_PORT:'5196'},stdio:'ignore'});
+async function test(name,width,fn){try{const detail=await fn();checks.push({name,width,pass:true,...detail});console.log('PASS '+name+' '+width);}catch(x){checks.push({name,width,pass:false,error:x.stack});throw x;}}
+try{
+ for(let i=0;i<100;i++){try{if((await fetch(base+'/laboratory.html')).ok)break;}catch{}await new Promise(r=>setTimeout(r,100));}
+ browser=await chromium.launch({headless:true,...(process.env.CHROME_BIN?{executablePath:process.env.CHROME_BIN}:{}),args:['--no-sandbox']});
+ for(const width of[1440,390]){const context=await browser.newContext({viewport:{width,height:1000},reducedMotion:'reduce'}),page=await context.newPage(),errors=[];page.on('pageerror',x=>errors.push(x.message));
+  for(const lab of ['laboratory.html','catalog-laboratory.html'])await test('Measured flight and landing / '+lab,width,async()=>{
+   assert.equal((await page.goto(base+'/'+lab+'?uid=re7-flying-bug&slot=utility',{waitUntil:'networkidle'})).status(),200);
+   await page.click('#labActivation');const takeoff=await page.evaluate(()=>RE_TECHNIQUE_LAB.getBench().snapshot());assert(takeoff.motion.altitude>0&&takeoff.motion.dx<0);assert.equal(takeoff.resource,84);assert.match(await page.locator('#labMotion').textContent(),/EN AIR/);
+   await page.evaluate(()=>RE_TECHNIQUE_LAB.getBench().tick(14));await page.click('#labBoxes');const high=await page.evaluate(()=>RE_TECHNIQUE_LAB.getBench().snapshot());assert(high.motion.peakAltitude>60);assert.equal(high.damage,0);await page.screenshot({path:path.join(O,'flight-'+lab.replace('.html','')+'-'+width+'.png')});
+   const state=await page.evaluate(()=>JSON.stringify(RE_TECHNIQUE_LAB.getBench().getState()));await page.waitForTimeout(120);assert.equal(await page.evaluate(()=>JSON.stringify(RE_TECHNIQUE_LAB.getBench().getState())),state);
+   await page.evaluate(()=>RE_TECHNIQUE_LAB.getBench().tick(100));await page.click('#labBoxes');assert.match(await page.locator('#labMotion').textContent(),/AU SOL/);assert.equal(await page.evaluate(()=>RE_TECHNIQUE_LAB.getBench().snapshot().motion.altitude),0);
+   await page.selectOption('#labMove','specialBack');await page.click('#labActivation');const back=await page.evaluate(()=>RE_TECHNIQUE_LAB.getBench().snapshot());assert.equal(back.motion.dx,-6);await page.click('#labReset');assert.equal(await page.evaluate(()=>RE_TECHNIQUE_LAB.getBench().snapshot().motion.peakAltitude),0);
+   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);return{benchAccelerated:true,takeoff:takeoff.motion,peak:high.motion.peakAltitude,firstRetreatTick:back.motion.dx};
+  });
+  await test('Main Versus utility through native keyboard and preserved preferences',width,async()=>{
+   await page.goto(base+'/modules/versus.html?uid=re7-flying-bug',{waitUntil:'networkidle'});await page.evaluate(()=>localStorage.setItem('r12-sentinel','preserve me'));await page.click('#launch');await page.waitForFunction(()=>__CQC053Versus.getState()?.phase==='fight');await page.keyboard.press('KeyL');await page.waitForFunction(()=>__CQC053Versus.getState().a.y<550);await page.keyboard.press('Escape');const s=await page.evaluate(()=>{const s=__CQC053Versus.getState();return{uid:s.a.f.uid,life:s.a.life,resource:s.a.r,altitude:568-s.a.y,focus:s.a.buffs.focus||null,activations:s.a.stats.activations};});assert.equal(s.uid,'re7-flying-bug');assert.equal(s.activations,1);assert.equal(s.focus,null);assert(s.altitude>0);assert.equal(await page.evaluate(()=>localStorage.getItem('r12-sentinel')),'preserve me');return{nativeKeyboard:true,...s};
+  });
+  await test('Complete experimental CPU replay includes the exact aerial path without storage changes',width,async()=>{
+   const saved=await page.evaluate(()=>JSON.stringify(Object.keys(localStorage).sort().map(k=>[k,localStorage.getItem(k)])));
+   await page.goto(base+'/catalog-duel.html?uid=re7-flying-bug&target=re1-hunter',{waitUntil:'networkidle'});
+   const result=await page.evaluate(()=>{const a=RE_CATALOG_DUEL;document.getElementById('trialMode').value='cpu';a.reset(true);a.tick(7000);const before=JSON.stringify(a.getState()),v=a.exportReplay(),finished=a.getState().finished;a.installReplay(v);a.tick(v.frames);return{finished,frames:v.frames,same:JSON.stringify(a.getState())===before};});assert(result.finished&&result.same);assert.equal(await page.evaluate(()=>JSON.stringify(Object.keys(localStorage).sort().map(k=>[k,localStorage.getItem(k)]))),saved);assert.deepEqual(errors,[]);return{simulationAccelerated:true,...result};
+  });await context.close();
+ }
+}catch(x){console.error(x.stack);process.exitCode=1;if(!checks.some(c=>!c.pass))checks.push({pass:false,error:x.stack});}finally{await browser?.close();server.kill('SIGTERM');const r={suite:'flight-r12-http',passed:checks.filter(c=>c.pass).length,failed:checks.filter(c=>!c.pass).length,physicalDevices:false,newArtwork:false,checks};fs.writeFileSync(path.join(O,'BROWSER_FLIGHT_R12_RESULTS.json'),JSON.stringify(r,null,2)+'\n');console.log(JSON.stringify({passed:r.passed,failed:r.failed}));}
