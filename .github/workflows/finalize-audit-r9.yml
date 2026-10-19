@@ -1,0 +1,89 @@
+name: Finalize verified audit R9 and Excel
+on:
+  push:
+    branches: ['codex/audit-closures-r9-20261018']
+    paths: ['.github/workflows/finalize-audit-r9.yml', 'scripts/materialize-r9-tracker.py', 'docs/planning/r9-workbook-xml.xz.b64', 'scripts/package-audit-r9-final.py']
+permissions:
+  contents: write
+concurrency:
+  group: bow-r9-final-package
+  cancel-in-progress: false
+jobs:
+  verify:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - name: Reconstruct unchanged artifact_tool workbook components
+        run: python3 scripts/materialize-r9-tracker.py
+      - run: npm install --no-save --package-lock=false @napi-rs/canvas@0.1.80 playwright@1.64.1
+      - name: Revalidate all executable suites against final source
+        run: |
+          set -o pipefail
+          npm run verify 2>&1 | tee r9-final-verify.log
+      - run: npm run build
+      - name: Locate Chromium
+        run: |
+          if command -v google-chrome >/dev/null; then echo "CHROME_BIN=$(command -v google-chrome)" >> "$GITHUB_ENV"; else npx playwright install --with-deps chromium; fi
+      - run: node tests/browser-audit-r9.mjs
+      - run: node tests/browser-match-sequences-r8.mjs
+      - name: Commit only the verified tracker to staging, without force
+        run: |
+          set -euo pipefail
+          git config user.name 'B.O.W. Protocol CI'
+          git config user.email 'actions@users.noreply.github.com'
+          git add docs/planning/BOW_PR11_CLOTURES_AUDIT_R9.xlsx
+          if ! git diff --cached --quiet; then
+            git commit -m 'docs: verified Excel tracking for six closed R9 technical defects'
+            git push origin HEAD:codex/audit-closures-r9-20261018
+          fi
+      - name: Package exact tracked source and verify reconstruction
+        run: python3 scripts/package-audit-r9-final.py
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-r9-final-report
+          path: |
+            r9-delivery/00_RAPPORT_PATCHES_R9.zip
+            r9-delivery/SHA256_R9.json
+          compression-level: 0
+          retention-days: 14
+          if-no-files-found: error
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-r9-final-code
+          path: r9-delivery/01_CODE_ET_EXCEL_R9.zip
+          compression-level: 0
+          retention-days: 14
+          if-no-files-found: error
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-r9-final-assets-a
+          path: r9-delivery/02_ASSETS_A_R9.zip
+          compression-level: 0
+          retention-days: 14
+          if-no-files-found: error
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-r9-final-assets-b
+          path: r9-delivery/03_ASSETS_B_R9.zip
+          compression-level: 0
+          retention-days: 14
+          if-no-files-found: error
+      - name: Preserve evidence even if a late step fails
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: bow-r9-final-browser-evidence
+          path: |
+            r9-final-verify.log
+            qa-audit-r9/
+            qa-sequences-r8/
+          retention-days: 14
+          if-no-files-found: warn
