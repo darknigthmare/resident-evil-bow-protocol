@@ -13,7 +13,8 @@ try{
   assert.equal((await page.goto(base+'/catalog-duel.html?uid=re3r-nemesis&target=re3r-stage-2-nemesis&stage=nest2_weapon_test_2020',{waitUntil:'networkidle'})).status(),200);
   assert.equal(await page.evaluate(()=>RE_CATALOG_DUEL.getState().a.f.uid),'re3r-nemesis');
   const storage=await page.evaluate(()=>JSON.stringify({...localStorage}));
-  await page.click('#trialStart');assert.equal(await page.evaluate(()=>document.activeElement.id),'trialCanvas');
+  await page.click('#trialStart');await page.click('#trialIntroSkip'); // R10: focus/replay test begins after the presentation.
+assert.equal(await page.evaluate(()=>document.activeElement.id),'trialCanvas');
   await page.keyboard.press('KeyJ');await page.waitForFunction(()=>RE_CATALOG_DUEL.getState().a.stats.starts>=1);
   await page.waitForFunction(()=>RE_CATALOG_DUEL.getState().frame>=70);await page.click('#trialPause');
   const value=await page.evaluate(()=>RE_CATALOG_DUEL.exportReplay());assert(value.frames>=70);

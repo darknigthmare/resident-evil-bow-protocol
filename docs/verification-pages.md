@@ -1,6 +1,6 @@
 # Vérification des opérations et du bestiaire
 
-Exécution : 2026-10-17T17:01:44.559Z. **22 contrôles réussis ; 0 en échec.**
+Exécution : 2026-10-19T10:06:45.556Z. **22 contrôles réussis ; 0 en échec.**
 
 ## Méthode
 
@@ -41,12 +41,12 @@ Prérequis : Node.js, les données compilées et `@napi-rs/canvas`, directement 
 | arcade | 6 | re3r-nemesis | re2r-super-tyrant | 1 | 1293 | 10000 / 0 |
 | arcade | 7 | re3r-nemesis | re5-ndesu | 1 | 1311 | 10000 / 0 |
 | arcade | 8 | re3r-nemesis | revillage-mutated-miranda | 1 | 1154 | 10000 / 0 |
-| arcade | 1 | re3r-nemesis | re4r-garrador | 1 | 1214 | 10000 / 0 |
-| arcade | 1 | re3r-nemesis | re7-little-crawler | 1 | 1288 | 10000 / 0 |
-| survival | 1 | re3r-nemesis | re7-lucas-baker-mutated | 1 | 1526 | 7330 / 0 |
-| survival | 2 | re3r-nemesis | re4r-del-lago | 1 | 1176 | 8530 / 0 |
-| survival | 1 | re3r-nemesis | re4r-garrador | 2 | 940 | 0 / 10000 |
-| arcade | 1 | re3r-nemesis | re7-marguerite-baker-mutated | 1 | 1161 | 10000 / 0 |
+| family | 1 | re3r-nemesis | re7-mia-winters-infected | 1 | 1311 | 10000 / 0 |
+| family | 1 | re3r-nemesis | re7-mia-winters-infected | 1 | 1302 | 10000 / 0 |
+| survival | 1 | re3r-nemesis | recv-alexia-ashford-third-form | 1 | 1678 | 7275 / 0 |
+| survival | 2 | re3r-nemesis | re4r-bitores-mendez | 1 | 1231 | 8475 / 0 |
+| survival | 1 | re3r-nemesis | revillage-mutated-heisenberg | 2 | 1138 | 0 / 10000 |
+| arcade | 1 | re3r-nemesis | revillage-salvatore-moreau-exposed | 1 | 1317 | 10000 / 0 |
 
 ## Contrôles
 
