@@ -82,10 +82,15 @@ function draw(ctx,s,options={}){
  }
  for(const tr of s.traps||[]){
   if(tr.dead)continue;const active=tr.age>=tr.arm,c=active?col(tr.def):'#788581';
-  if(['snare','bio','organic'].includes(tr.def.tag)){
+  if(tr.def.lucasDevice){
+   const label=tr.def.lucasDevice==='remote'?'RADIO':tr.def.lucasDevice==='wire'?'FIL':tr.def.lucasDevice==='timed'?'RETARD':'CAISSE';
+   ctx.globalAlpha=.9;ctx.fillStyle='#34423c';ctx.fillRect(X(tr.x)-14*z,Y(tr.y)-20*z,28*z,20*z);ctx.strokeStyle=c;ctx.strokeRect(X(tr.x)-14*z,Y(tr.y)-20*z,28*z,20*z);
+   if(tr.def.lucasDevice==='wire')line(tr.x-(tr.def.triggerRadius||50),tr.y-16,tr.x+(tr.def.triggerRadius||50),tr.y-16,c,2,.8);
+   ctx.font=`${Math.max(9,10*z)}px monospace`;ctx.textAlign='center';ctx.fillStyle=c;ctx.fillText('P'+(tr.owner+1)+' '+label+' '+(active?(tr.deviceFuse?Math.max(0,tr.deviceFuse-tr.age)+'F':'ARMÉ'):Math.max(0,tr.arm-tr.age)+'F'),X(tr.x),Y(tr.y)-30*z);
+  }else if(['snare','bio','organic'].includes(tr.def.tag)){
    for(let i=0;i<5;i++)line(tr.x-22+i*11,tr.y,tr.x-16+i*8,tr.y-12-(i%2)*8,c,2,.7);
   }else{ctx.globalAlpha=.9;ctx.fillStyle='#34423c';ctx.fillRect(X(tr.x)-14*z,Y(tr.y)-12*z,28*z,12*z);ellipse(tr.x,tr.y-9,2,2,c);}
-  ctx.setLineDash([4*z,7*z]);ctx.strokeStyle=c;ctx.globalAlpha=.35;ctx.lineWidth=z;ctx.beginPath();ctx.ellipse(X(tr.x),Y(tr.y),Math.min(180,tr.def.reach||65)*z,9*z,0,0,Math.PI*2);ctx.stroke();ctx.setLineDash([]);
+  ctx.setLineDash([4*z,7*z]);ctx.strokeStyle=c;ctx.globalAlpha=.35;ctx.lineWidth=z;ctx.beginPath();ctx.ellipse(X(tr.x),Y(tr.y),Math.min(180,tr.def.lucasDevice?(tr.def.triggerRadius||tr.def.blastRadius||65):(tr.def.reach||65))*z,9*z,0,0,Math.PI*2);ctx.stroke();ctx.setLineDash([]);
  }
  for(const f of s.fx||[]){
   if(f.t<=0)continue;const age=(f.max||40)-f.t,c=colors[f.tag]||'#c9bca4';

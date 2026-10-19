@@ -1,0 +1,37 @@
+{
+  "suite": "lucas-continuity-r11",
+  "passed": 4,
+  "failed": 0,
+  "scope": "Original fangame Dossier text; preserved stories; actual controller with declared short-timer setup. Not canon verification.",
+  "checks": [
+    {
+      "name": "Six human Lucas panels use the correct identity, and eight challenges match current opponents",
+      "pass": true,
+      "detail": {
+        "panels": 6,
+        "challenges": 8
+      }
+    },
+    {
+      "name": "All 114 peer Dossiers and the existing eight-fight human route remain unchanged",
+      "pass": true
+    },
+    {
+      "name": "The four inherited Lucas conclusions are kept but blocked as attacker for all 115 victims",
+      "pass": true,
+      "detail": {
+        "blockedPairs": 460,
+        "definitionBytesPreserved": true
+      }
+    },
+    {
+      "name": "Human Lucas still finishes a real short-timer match normally without a legacy conclusion credit",
+      "pass": true,
+      "detail": {
+        "configuredShortTimer": true,
+        "configuredOpponentHealth": 1,
+        "normalResult": true
+      }
+    }
+  ]
+}

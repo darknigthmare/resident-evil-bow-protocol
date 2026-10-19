@@ -17,7 +17,7 @@ function makeBench(config={}){
  else if(move.kind==='recover')s.a.r=Math.min(f.combat.resource.max*.3,f.combat.resource.max);
  if(move.requiresStagger){s.b.hit=40;s.b.lastHit=s.frame;}
  // A detonation needs an armed test object. It is labelled as a laboratory fixture.
- if(move.kind==='detonate')s.traps.push({id:s.nextId++,owner:0,x:s.b.x,y:C.FLOOR,age:99,life:400,arm:1,hp:100,dead:false,def:{kind:'trap',tag:'explosive',damage:600,radius:80,reach:80,remoteOnly:true}});
+ if(move.kind==='detonate')s.traps.push({id:s.nextId++,owner:0,x:s.b.x,y:C.FLOOR,age:99,life:400,arm:1,hp:100,dead:false,def:{kind:'trap',tag:'explosive',damage:600,radius:80,reach:80,remoteOnly:true,...(move.lucasDevice?{lucasDevice:'remote',blastRadius:80}:{})}});
  const mode=['idle','guard','crouch','jump'].includes(config.dummy)?config.dummy:'idle';
  const begun=C.start(s,s.a,slot),denied=begun?null:C.unavailableReason(s,s.a,slot);
  let ticks=0;

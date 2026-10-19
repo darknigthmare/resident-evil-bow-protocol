@@ -41,6 +41,7 @@
   const result=(allowed,code,reason)=>Object.freeze({allowed,code,reason,attacker:a.rig,victim:b.rig,canonical:false,
    scope:'Compatibilité technique de la chorégraphie héritée, à valider artistiquement ; aucune fatalité canonique certifiée.'});
   if(!fin)return result(false,'unknown-conclusion','Conclusion absente de cette incarnation.');
+  if(attackerUID==='re7-lucas-baker')return result(false,'lucas-review-required','Lucas humain : les anciennes conclusions par saisie ne représentent pas ses dispositifs. Victoire normale ; chorégraphie dédiée à produire.');
   if(a.reason)return result(false,'attacker-'+a.rig,a.reason);
   if(b.reason)return result(false,'victim-'+b.rig,b.reason);
   // Current files declare three inherited phase lists. Anything else fails closed.
