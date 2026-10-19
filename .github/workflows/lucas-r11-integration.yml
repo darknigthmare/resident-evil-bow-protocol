@@ -21,11 +21,12 @@ jobs:
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: '22.16.0'
-      - name: Verify base and materialize the reviewed source delta
+      - name: Materialize and check the reviewed source delta
         run: |
           test "$(git merge-base "$BOW_R11_BASE" HEAD)" = "$BOW_R11_BASE"
           python3 scripts/integrate-lucas-r11.py
           python3 scripts/fix-device-origin-r11.py
+          python3 scripts/complete-lucas-review-r11.py
           python3 scripts/materialize-lucas-workbook-r11.py
       - run: npm install --no-save --package-lock=false @napi-rs/canvas@0.1.80 playwright@1.64.1
       - name: Run complete executable QA
@@ -38,12 +39,12 @@ jobs:
           if command -v google-chrome >/dev/null; then echo "CHROME_BIN=$(command -v google-chrome)" >> "$GITHUB_ENV"; else npx playwright install --with-deps chromium; fi
       - run: node tests/browser-lucas-r11.mjs
       - run: node tests/browser-delivery-r10-http.mjs
-      - name: Commit verified candidate on this integration branch only
+      - name: Commit verified candidate only on the integration branch
         run: |
           git config user.name 'B.O.W. Protocol CI'
           git config user.email 'actions@users.noreply.github.com'
-          git add data/roster.json data/chronicles.json data/lore-movesets.json scripts/compile-content.py package.json src/combat-foundation-v060.js src/combat-cues-r6.js src/unified-engine-v060.js src/re-data.js src/chronicles-data-v060.js src/runtime-contract.js src/catalog-replay-contract.js src/technique-lab-v061.js src/catalog-laboratory-v070.js tests/verify-lore.mjs tests/r10-baseline.mjs tests/verify-match-sequences-r8.mjs tests/verify-delivery-r10.mjs tests/verify-audit-r9.mjs tests/verify-combat-stage-r6.mjs tests/verify-lucas-r11.mjs docs/LUCAS_R11_CHANGES.json docs/LUCAS_R11_PRESERVATION.json docs/LUCAS_R11_TESTS.json docs/planning/BOW_LUCAS_DISPOSITIFS_R11.xlsx
-          git commit -m 'feat: R11 human Lucas devices, truthful evidence and verified tracker'
+          git add data/roster.json data/chronicles.json data/lore-movesets.json scripts/compile-content.py scripts/package-lucas-r11.py package.json src/combat-foundation-v060.js src/combat-cues-r6.js src/unified-engine-v060.js src/re-data.js src/chronicles-data-v060.js src/runtime-contract.js src/catalog-replay-contract.js src/finisher-compatibility-r10.js src/technique-lab-v061.js src/catalog-laboratory-v070.js tests/verify-lore.mjs tests/r10-baseline.mjs tests/verify-match-sequences-r8.mjs tests/verify-delivery-r10.mjs tests/verify-audit-r9.mjs tests/verify-combat-stage-r6.mjs tests/verify-lucas-r11.mjs tests/browser-lucas-r11.mjs docs/LUCAS_R11_CHANGES.json docs/LUCAS_R11_PRESERVATION.json docs/LUCAS_R11_TESTS.json docs/LUCAS_R11_STORY_PRESERVATION.json docs/LUCAS_R11_CONTINUITY_TESTS.json docs/planning/BOW_LUCAS_DISPOSITIFS_R11.xlsx
+          git commit -m 'feat: R11 usable Lucas network and corrected human dossier, verified before publication'
           git push origin HEAD:refs/heads/codex/r11-build-20261019
       - run: python3 scripts/package-lucas-r11.py
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -74,7 +75,7 @@ jobs:
           compression-level: 0
           if-no-files-found: error
           retention-days: 14
-      - name: Preserve test evidence including failures
+      - name: Preserve evidence even on failure
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
@@ -82,6 +83,7 @@ jobs:
           path: |
             r11-verify.log
             docs/LUCAS_R11_TESTS.json
+            docs/LUCAS_R11_CONTINUITY_TESTS.json
             qa-lucas-r11/
             qa-r10-http/
           retention-days: 14
