@@ -25,6 +25,7 @@ jobs:
         run: |
           test "$(git merge-base "$BOW_R13_BASE" HEAD)" = "$BOW_R13_BASE"
           python3 scripts/integrate-replay-r13.py
+          python3 scripts/patch-replay-focus-r13.py
           python3 scripts/materialize-replays-workbook-r13.py
       - run: npm install --no-save --package-lock=false @napi-rs/canvas@0.1.80 playwright@1.64.1
       - name: Verify all executable suites
@@ -43,7 +44,7 @@ jobs:
         run: |
           git config user.name 'B.O.W. Protocol CI'
           git config user.email 'actions@users.noreply.github.com'
-          git add modules/versus.html package.json scripts/contract.mjs src/unified-engine-v060.js src/runtime-contract.js tests/r12-baseline.mjs docs/REPLAY_R13_CHANGES.json docs/REPLAY_R13_PRESERVATION.json docs/REPLAY_R13_TESTS.json docs/planning/BOW_REPLAYS_R13.xlsx
+          git add modules/versus.html package.json scripts/contract.mjs src/unified-engine-v060.js src/runtime-contract.js tests/r12-baseline.mjs tests/verify-audit-r9.mjs tests/browser-audit-r9.mjs docs/REPLAY_R13_CHANGES.json docs/REPLAY_R13_PRESERVATION.json docs/REPLAY_R13_TESTS.json docs/planning/BOW_REPLAYS_R13.xlsx
           git diff --cached --quiet || git commit -m 'feat: R13 bounded replay recording and recoverable archive, verified'
           git push origin HEAD:refs/heads/codex/r13-replays-build-20261019
       - run: python3 scripts/package-replays-r13.py
