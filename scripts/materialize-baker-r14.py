@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
-"""Apply the locally reviewed UTF-8 changes, preflighting all files before writes.
-No generated art is fetched and no credentials, save files or remote code are read.
-"""
+"""Apply reviewed UTF-8 changes; preflight every before/after hash before writes."""
 from pathlib import Path
 import hashlib,json,lzma,subprocess
 R=Path(__file__).resolve().parents[1];sha=lambda b:hashlib.sha256(b).hexdigest()
@@ -23,5 +21,5 @@ for f,b in planned:f.parent.mkdir(exist_ok=True,parents=True);f.write_bytes(b)
 p=R/'tests/verify-baker-stages-r14.mjs';s=p.read_text()
 if 'assert(n>=10)' in s:
  assert s.count('assert(n>=10)')==1;p.write_text(s.replace('assert(n>=10)','assert.equal(n,8)'))
-subprocess.run(['python3','scripts/fix-baker-framing-r14.py'],cwd=R,check=True)
-print('R14 reviewed delta materialized:',len(planned),'files; all eight renderer pages included.')
+for script in ['fix-baker-framing-r14.py','extend-replay-baseline-r14.py']:subprocess.run(['python3','scripts/'+script],cwd=R,check=True)
+print('R14 reviewed delta materialized:',len(planned),'files; eight renderer pages checked.')
