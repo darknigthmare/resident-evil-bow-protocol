@@ -11,6 +11,7 @@ try{
   const context=await browser.newContext({viewport:{width,height:1000},reducedMotion:'no-preference'}),p=await context.newPage(),errors=[];p.on('pageerror',e=>errors.push(e.message));
   for(const id of['baker_garage_2017','guest_house_attic_2017','testing_area_2017'])await test('Distinct room, layers and exact shared frame / '+id,width,async()=>{
    assert.equal((await p.goto(base+'/stages.html?stage='+id,{waitUntil:'networkidle'})).status(),200);assert.equal(await p.locator('#stageSelect option').count(),52);assert.match(await p.locator('#stageDescription').textContent(),/R14/);
+   const book=await p.request.get(base+'/docs/planning/BOW_STAGES_BAKER_R14.xlsx');assert.equal(book.status(),200);assert.deepEqual(await book.body(),fs.readFileSync(path.join(R,'docs/planning/BOW_STAGES_BAKER_R14.xlsx')));
    await p.fill('#stageSeek','120');await p.locator('#stageSeek').dispatchEvent('change');assert.equal(await p.evaluate(()=>RE_STAGE_WORKSHOP.getState().frame),120);
    await p.locator('#stageCanvas').screenshot({path:path.join(O,id+'-'+width+'.png')});
    const before=await p.evaluate(()=>document.getElementById('stageCanvas').toDataURL());await p.selectOption('#stageLayer','architecture');const bare=await p.evaluate(()=>document.getElementById('stageCanvas').toDataURL());assert.notEqual(bare,before);
