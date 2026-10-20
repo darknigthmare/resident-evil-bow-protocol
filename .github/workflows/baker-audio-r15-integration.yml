@@ -1,0 +1,83 @@
+name: R15 reviewed Baker ambience integration
+on:
+  push:
+    branches: ['codex/r15-audio-build-20261020']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: bow-baker-audio-r15-integration
+  cancel-in-progress: true
+jobs:
+  integrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - name: Materialize exact reviewed source and authored workbook
+        run: |
+          test "$(git merge-base 4810b5e74f97e41f0fdddcec565246fa72003b01 HEAD)" = 4810b5e74f97e41f0fdddcec565246fa72003b01
+          python3 scripts/materialize-baker-audio-r15.py
+      - run: npm install --no-save --package-lock=false @napi-rs/canvas@0.1.80 playwright@1.64.1
+      - name: Complete executable QA
+        run: |
+          set -o pipefail
+          npm run verify 2>&1 | tee r15-verify.log
+      - run: npm run build
+      - name: Locate Chromium
+        run: |
+          if command -v google-chrome >/dev/null; then echo "CHROME_BIN=$(command -v google-chrome)" >> "$GITHUB_ENV"; else npx playwright install --with-deps chromium; fi
+      - run: node tests/browser-baker-audio-r15.mjs
+      - run: node tests/browser-baker-r14.mjs
+      - run: node tests/browser-replay-vault-r13.mjs
+      - run: node tests/browser-flight-r12.mjs
+      - run: node tests/browser-lucas-r11.mjs
+      - run: node tests/browser-delivery-r10-http.mjs
+      - name: Commit verified candidate on integration branch only
+        run: |
+          git config user.name 'B.O.W. Protocol CI'
+          git config user.email 'actions@users.noreply.github.com'
+          python3 - <<'PY'
+          import json,subprocess
+          paths=json.load(open('R15_REVIEWED_PATHS.json'))
+          subprocess.run(['git','add','--',*paths],check=True)
+          PY
+          git commit -m 'feat: R15 original Baker room audio and safe audition, fully verified'
+          git push origin HEAD:refs/heads/codex/r15-audio-build-20261020
+      - run: python3 scripts/package-baker-audio-r15.py
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: r15-report
+          path: r15-delivery/00_REPORT_R15.zip
+          compression-level: 0
+          if-no-files-found: error
+          retention-days: 14
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: r15-code
+          path: r15-delivery/01_CODE_R15.zip
+          compression-level: 0
+          if-no-files-found: error
+          retention-days: 14
+      - name: Preserve executed evidence even on failure
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: r15-evidence
+          path: |
+            r15-verify.log
+            docs/BAKER_AUDIO_R15_TESTS.json
+            qa-audio-r15/
+            qa-audio-r15-http/
+            qa-baker-r14-http/
+            qa-replay-r13/
+            qa-flight-r12/
+            qa-lucas-r11/
+            qa-r10-http/
+          if-no-files-found: warn
+          retention-days: 14
