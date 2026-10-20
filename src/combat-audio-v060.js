@@ -192,7 +192,7 @@
         if (audio.createStereoPanner) { pan = audio.createStereoPanner(); pan.pan.value = event && event.actor === 0 ? -0.27 : event && event.actor === 1 ? 0.27 : 0; gain.connect(pan); pan.connect(menuOnly ? menuBus : effectsBus); } else gain.connect(menuOnly ? menuBus : effectsBus);
         const voice = { id, source, gain, pan, menuOnly: !!menuOnly, ends: audio.currentTime + source.buffer.duration };
         voices.set(id, voice); source.onended = () => release(voice); source.start(audio.currentTime);
-        counts.played++; counts.peakVoices = Math.max(counts.peakVoices, voices.size); lastCue = cue; return true;
+        counts.played++; counts.peakVoices = Math.max(counts.peakVoices, voices.size); lastCue = cue; if(typeof options.onCue==='function')try{options.onCue(cue,event);}catch(_){} return true;
       } catch (error) { lastError = 'Effet indisponible : ' + error.message; return false; }
     }
     function prime(packet) { session = packet.session; lastFrame = packet.frame; lastSeq = packet.eventCount; lastPhase = packet.phase; lastRound = packet.round; }
@@ -212,7 +212,7 @@
       }
       if (discardNext) { prime(packet); discardNext = false; refreshAmbience(); return true; }
       const current = packet.events.filter(e => e.seq > lastSeq && e.frame >= lastFrame);
-      const candidates = current.map(e => ({ e, cue: cueFor(e) })).filter(x => x.cue);
+      const candidates = current.map(e => {let cue=null;try{cue=typeof options.cueFor==='function'?options.cueFor(e):cueFor(e);}catch(_){}return{e,cue};}).filter(x => CUES.includes(x.cue));
       counts.events += current.length;
       // Bursts are bounded, and old events from a throttled tab are consumed silently.
       const timely = candidates.filter(x => packet.frame - x.e.frame <= 6).slice(-8);
