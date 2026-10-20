@@ -54,11 +54,14 @@ a='sha(fs.readFileSync(path.join(R,file))),digest,file)';assert text.count(a)==1
 text=text.replace(a,'sha(fs.readFileSync(path.join(R,file))),r15Expected(R,file,digest),file)')
 assert sha(text.encode())=='49f4e770d33daea75d44aaad6f949f88efe7461938563f5e779e317aaeb65135'
 writes[name]=text.encode()
-# Native click sets the timeline dirty; audio starts on the next rendering tick.
-# Wait for that real source, not an arbitrary delay or a changed tolerance.
+# Native clicks set the timeline dirty. Assert the real source on its next
+# rendering tick, not the transient stopped graph immediately after the click.
 name='tests/browser-baker-audio-r15.mjs';text=writes[name].decode()
 a="await p.click('#stagePlay');assert(Math.abs(await p.evaluate(()=>RE_STAGE_AUDIO_WORKSHOP.diagnostics().ambienceOffset)-2.5)<.2);"
 b="await p.click('#stagePlay');await p.waitForFunction(()=>RE_STAGE_AUDIO_WORKSHOP.diagnostics().ambienceOffset!==null);const offset=await p.evaluate(()=>RE_STAGE_AUDIO_WORKSHOP.diagnostics().ambienceOffset);assert(Math.abs(offset-2.5)<.2,'Expected frame-150 audio offset, received '+offset);"
+assert text.count(a)==1;text=text.replace(a,b)
+a="await p.selectOption('#stageSoundLayer','rain');await p.click('#stagePlay');assert.equal(await p.evaluate(()=>RE_STAGE_AUDIO_WORKSHOP.diagnostics().ambienceLayer),'rain');"
+b="await p.selectOption('#stageSoundLayer','rain');await p.click('#stagePlay');await p.waitForFunction(()=>RE_STAGE_AUDIO_WORKSHOP.diagnostics().ambience==='baker:baker_garage_2017'&&RE_STAGE_AUDIO_WORKSHOP.diagnostics().ambienceLayer==='rain');assert.equal(await p.evaluate(()=>RE_STAGE_AUDIO_WORKSHOP.diagnostics().ambienceLayer),'rain');"
 assert text.count(a)==1;writes[name]=text.replace(a,b).encode()
 for name,value in writes.items():
  p=R/name;p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(value)
