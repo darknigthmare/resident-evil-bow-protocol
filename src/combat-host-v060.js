@@ -67,6 +67,8 @@
         button.setAttribute('aria-label', 'Régler les sons du combat');
       }
       if (panel) {
+        const room=root.RE_BAKER_AMBIENCE?.describe(state()?.stage);
+        panel.querySelector('#audioRoomR15').textContent=room?room.name+' · '+room.provenance:'Ambiance générique du prototype pour cette arène.';
         const toggle = panel.querySelector('#audioToggle58');
         toggle.textContent = prefs.enabled && d?.unlocked ? 'Couper le son' : 'Activer le son';
         toggle.setAttribute('aria-pressed', String(!!(prefs.enabled && d?.unlocked)));
@@ -98,7 +100,7 @@
       document.head.appendChild(css);
       panel = document.createElement('section'); panel.id = 'audioPanel58'; panel.className = 'audio-panel58 hidden';
       panel.setAttribute('role', 'dialog'); panel.setAttribute('aria-modal', 'true'); panel.setAttribute('aria-labelledby', 'audioTitle58');
-      panel.innerHTML = '<div class="audio-card58"><h2 id="audioTitle58">Sons du combat</h2><p id="audioStatus58" role="status"></p><div class="audio-actions58"><button id="audioToggle58" type="button">Activer le son</button><button id="audioClose58" type="button">Revenir au jeu</button></div><label for="audioMaster58">Volume général<output id="audioMasterValue58"></output><input id="audioMaster58" type="range" min="0" max="100" step="1"></label><label for="audioEffects58">Coups et annonces<output id="audioEffectsValue58"></output><input id="audioEffects58" type="range" min="0" max="100" step="1"></label><label for="audioAmbience58">Ambiance de l’arène<output id="audioAmbienceValue58"></output><input id="audioAmbience58" type="range" min="0" max="100" step="1"></label><p>Les sons restent facultatifs. Une pause suspend les effets et l’ambiance.</p></div>';
+      panel.innerHTML = '<div class="audio-card58"><h2 id="audioTitle58">Sons du combat</h2><p id="audioStatus58" role="status"></p><div class="audio-actions58"><button id="audioToggle58" type="button">Activer le son</button><button id="audioClose58" type="button">Revenir au jeu</button></div><label for="audioMaster58">Volume général<output id="audioMasterValue58"></output><input id="audioMaster58" type="range" min="0" max="100" step="1"></label><label for="audioEffects58">Coups et annonces<output id="audioEffectsValue58"></output><input id="audioEffects58" type="range" min="0" max="100" step="1"></label><label for="audioAmbience58">Ambiance de l’arène<output id="audioAmbienceValue58"></output><input id="audioAmbience58" type="range" min="0" max="100" step="1"></label><p id="audioRoomR15"></p><p>Les sons restent facultatifs. Une pause suspend les effets et l’ambiance.</p></div>';
       document.body.appendChild(panel);
       for (const [id, key] of [['Master','master'],['Effects','effects'],['Ambience','ambience']]) {
         const range = panel.querySelector('#audio' + id + '58'), output = panel.querySelector('#audio' + id + 'Value58');
