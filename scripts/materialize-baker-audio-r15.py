@@ -46,6 +46,16 @@ for item in d['entries']:
   value=text.encode()
  if 'after' in item:assert sha(value)==item['after'],str(p)
  writes[p.as_posix()]=value
+# Keep the old preservation check: its audio exception must match both the
+# declared R14 predecessor and the exact reviewed R15 successor, never any file.
+name='tests/verify-baker-stages-r14.mjs';original=(R/name).read_bytes()
+assert sha(original)=='8ba44308879e6c9f8aa05beda7b822e8c15e9ae84b25da8f71b5a94f179dfc9b'
+text="import {r15Expected} from './r15-baseline.mjs';\n"+original.decode()
+text=text.replace('Unchanged datasets, audio, actor clips and all replay contracts match the exact R13 snapshot','R14 protected data retained; audio follows the exact documented R15 successor')
+a='sha(fs.readFileSync(path.join(R,file))),digest,file)';assert text.count(a)==1
+text=text.replace(a,'sha(fs.readFileSync(path.join(R,file))),r15Expected(R,file,digest),file)')
+assert sha(text.encode())=='49f4e770d33daea75d44aaad6f949f88efe7461938563f5e779e317aaeb65135'
+writes[name]=text.encode()
 for name,value in writes.items():
  p=R/name;p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(value)
 (R/'R15_REVIEWED_PATHS.json').write_text(json.dumps(list(writes),indent=2)+'\n')
