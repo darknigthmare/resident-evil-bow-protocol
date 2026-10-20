@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
-"""Apply a reviewed, hash-pinned UTF-8 delta and an authored Excel transport.
-All preconditions and reconstructed bytes are verified before any source write.
-The workbook XML is not authored or modified by this transport script.
+"""Apply reviewed UTF-8 source and byte-preserved artifact_tool workbook XML.
+Every predecessor, replacement and workbook component is checked before writing.
 """
 from pathlib import Path
 from zipfile import ZipFile,ZipInfo,ZIP_DEFLATED
@@ -46,8 +45,7 @@ for item in d['entries']:
   value=text.encode()
  if 'after' in item:assert sha(value)==item['after'],str(p)
  writes[p.as_posix()]=value
-# Keep the old preservation check: its audio exception must match both the
-# declared R14 predecessor and the exact reviewed R15 successor, never any file.
+# Preserve the old integrity test through exact declared successor hashes.
 name='tests/verify-baker-stages-r14.mjs';original=(R/name).read_bytes()
 assert sha(original)=='8ba44308879e6c9f8aa05beda7b822e8c15e9ae84b25da8f71b5a94f179dfc9b'
 text="import {r15Expected} from './r15-baseline.mjs';\n"+original.decode()
@@ -56,6 +54,12 @@ a='sha(fs.readFileSync(path.join(R,file))),digest,file)';assert text.count(a)==1
 text=text.replace(a,'sha(fs.readFileSync(path.join(R,file))),r15Expected(R,file,digest),file)')
 assert sha(text.encode())=='49f4e770d33daea75d44aaad6f949f88efe7461938563f5e779e317aaeb65135'
 writes[name]=text.encode()
+# Native click sets the timeline dirty; audio starts on the next rendering tick.
+# Wait for that real source, not an arbitrary delay or a changed tolerance.
+name='tests/browser-baker-audio-r15.mjs';text=writes[name].decode()
+a="await p.click('#stagePlay');assert(Math.abs(await p.evaluate(()=>RE_STAGE_AUDIO_WORKSHOP.diagnostics().ambienceOffset)-2.5)<.2);"
+b="await p.click('#stagePlay');await p.waitForFunction(()=>RE_STAGE_AUDIO_WORKSHOP.diagnostics().ambienceOffset!==null);const offset=await p.evaluate(()=>RE_STAGE_AUDIO_WORKSHOP.diagnostics().ambienceOffset);assert(Math.abs(offset-2.5)<.2,'Expected frame-150 audio offset, received '+offset);"
+assert text.count(a)==1;writes[name]=text.replace(a,b).encode()
 for name,value in writes.items():
  p=R/name;p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(value)
 (R/'R15_REVIEWED_PATHS.json').write_text(json.dumps(list(writes),indent=2)+'\n')
