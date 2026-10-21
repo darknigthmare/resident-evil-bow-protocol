@@ -7,6 +7,7 @@ let s=null,live=null,replay=null,paused=true,last=0,acc=0,pending=null,raf=null,
 const introR10=root.RE_TRIAL_INTRO.create();let suppressPadR10=false;
 const introActiveR10=()=>introR10.snapshot().active;
 const FINAL_TICKS_R9=600;let finalStateR9=null,finalTickR9=0,finalPausedR9=true;
+function soundR16(){const model={state:s,stage:stage?.id,paused,intro:introActiveR10(),speed:Number($('trialSpeed').value),hidden:document.hidden};root.RE_TRIAL_AUDIO_PANEL?.sync(model);root.RE_TRIAL_TEXT_PANEL?.sync(model);}
 const names={light:'LÉGER',heavy:'LOURD',low:'BAS',throw:'PRISE',special:'TECHNIQUE NEUTRE',specialDown:'TECHNIQUE BASSE',specialForward:'TECHNIQUE AVANT',specialBack:'TECHNIQUE ARRIÈRE',super:'SUPER',utility:'UTILITAIRE'};
 for(const id of ['trialSubject','trialTarget'])for(const f of D.fighters){const o=document.createElement('option');o.value=f.uid;o.textContent=(f.experimental?'ESSAI · ':'BASE · ')+f.name+' / '+f.ep;$(id).append(o);}
 for(const st of D.stages){const o=document.createElement('option');o.value=st.id;o.textContent=st.name;$('trialStage').append(o);}
@@ -45,7 +46,7 @@ function finishIntroR10(run){clear();suppressPadR10=true;paused=!run;
  $('trialResult').textContent=run?'CONFINEMENT OUVERT · duel démarré.':'INTRO TERMINÉE · duel prêt, en pause.';dirty=true;focusArena();}
 function advanceIntroR10(ms,speed=1){if(!introActiveR10()||document.hidden)return introR10.snapshot();
  const wasRunning=!introR10.snapshot().paused;const next=introR10.advance(ms,speed);dirty=true;
- if(!next.active)finishIntroR10(wasRunning);return next;}
+ if(!next.active)finishIntroR10(wasRunning);soundR16();return next;}
 function skipIntroR10(){if(!introActiveR10())return false;const run=!introR10.snapshot().paused;
  introR10.skip();finishIntroR10(run);draw();return true;}
 function tick(count=1,pad){
@@ -60,10 +61,11 @@ function tick(count=1,pad){
  }
  if(replay&&replay.ended()){paused=true;clear();$('trialResult').textContent=s.finished?'REPLAY TERMINÉ · résultat reconstruit, aucune progression.':'FIN DE L’EXTRAIT · duel incomplet, aucune victoire attribuée.';}
  else if(s.finished){paused=true;clear();$('trialResult').textContent='ESSAI TERMINÉ · '+(s.winner===0?s.a.f.name:s.winner===1?s.b.f.name:'ÉGALITÉ')+' · résultat non enregistré';}
- syncPresentationR9(autoplayR9);dirty=true;return s;
+ syncPresentationR9(autoplayR9);dirty=true;soundR16();return s;
 }
 function unavailable(slot){if(introActiveR10())return'Introduction en cours : le combat ne démarre qu’après sa fin.';if(replay)return'Lecture seule du replay.';if(paused)return'Démarrez ou reprenez le duel.';if(s.finished||s.phase!=='fight')return'Duel hors phase de combat.';const why=C.unavailableReason(s,s.a,slot);return why==='busy'?'Action ou récupération en cours.':why;}
 function draw(){
+ soundR16();
  if(!s)return;dirty=false;ctx.clearRect(0,0,1280,720);root.RE_RENDERER.drawStage(ctx,stage,(s.frame+finalTickR9)/60,0,false);
  for(const p of [s.a,s.b])root.RE_RENDERER.drawFighter(ctx,p.f,p.x,p.y,p.face,1,{actor:p,time:s.frame/60,attack:!!p.attack,move:p.attack?.def,moveProgress:p.attack?p.attack.t/(p.attack.def.startup+p.attack.def.active+p.attack.def.recovery):0,guard:p.block,crouch:p.crouch,hit:p.hit>0,jump:!p.onGround,...(introActiveR10()?introR10.pose(s,p.slot,!!root.matchMedia?.('(prefers-reduced-motion: reduce)').matches):root.RE_MATCH_SEQUENCES.pose(s,p.slot,{finalTick:finalTickR9,reducedMotion:!!root.matchMedia?.('(prefers-reduced-motion: reduce)').matches}))});
  root.RE_COMBAT_CUES?.draw(ctx,s,{reducedMotion:!!root.matchMedia?.('(prefers-reduced-motion: reduce)').matches});
@@ -80,8 +82,8 @@ function draw(){
  for(const b of document.querySelectorAll('[data-hold]'))b.disabled=paused||!!replay||s.finished;
  $('trialCommandState').textContent=presentationActiveR9()?('SÉQUENCE '+root.RE_MATCH_SEQUENCES.describe(s,s.winner===-1?0:s.winner,{finalTick:finalTickR9}).label+' · F'+Math.floor(finalTickR9)+' · combat figé, aucun nouveau dessin'):replay?'LECTURE SEULE · commandes humaines désactivées.':s.a.feedbackT>0?s.a.feedback:s.a.attack?names[s.a.attack.name]+' · F'+s.a.attack.t+' · ressource '+Math.round(s.a.r):paused?'Clavier actif dans la zone de combat après Démarrer/Reprendre.':'PRÊT · coûts et délais réels du moveset.';
 }
-function pause(){introR10.pause();paused=true;finalPausedR9=true;clear();dirty=true;}
-function togglePause(){if(introActiveR10()){introR10.toggle();clear();dirty=true;focusArena();return;}if(presentationActiveR9()){if(finalTickR9>=FINAL_TICKS_R9)return;finalPausedR9=!finalPausedR9;clear();dirty=true;focusArena();return;}if(replay?replay.ended():s.finished)return;paused=!paused;clear();dirty=true;if(!paused)focusArena();}
+function pause(){introR10.pause();paused=true;finalPausedR9=true;clear();dirty=true;soundR16();}
+function togglePause(){if(introActiveR10()){introR10.toggle();clear();dirty=true;focusArena();soundR16();return;}if(presentationActiveR9()){if(finalTickR9>=FINAL_TICKS_R9)return;finalPausedR9=!finalPausedR9;clear();dirty=true;focusArena();return;}if(replay?replay.ended():s.finished)return;paused=!paused;clear();dirty=true;if(!paused)focusArena();soundR16();}
 function exportReplay(){return R.validate(replay?replay.exportValue():live.exportValue());}
 function installReplay(value){
  // Verification completes before touching the current match or selectors.
@@ -103,14 +105,14 @@ function loop(now){
  if(dirty)draw();raf=requestAnimationFrame(loop);
 }
 $('trialStart').addEventListener('click',startPresentedR10);$('trialIntroSkip').addEventListener('click',skipIntroR10);$('trialPause').addEventListener('click',togglePause);
-$('trialStep').addEventListener('click',()=>{pause();if(presentationActiveR9()){finalTickR9=Math.min(FINAL_TICKS_R9,finalTickR9+1);dirty=true;}else tick(1,{held:{},edges:[]});draw();});$('trialSpeed').addEventListener('change',()=>{acc=0;last=0;});
+$('trialStep').addEventListener('click',()=>{pause();if(presentationActiveR9()){finalTickR9=Math.min(FINAL_TICKS_R9,finalTickR9+1);dirty=true;}else tick(1,{held:{},edges:[]});draw();});$('trialSpeed').addEventListener('change',()=>{acc=0;last=0;soundR16();});
 for(const id of ['trialSubject','trialTarget','trialStage','trialMode'])$(id).addEventListener('change',()=>reset(false));
-$('trialReplayExit').addEventListener('click',()=>reset(false));$('trialReplayRestart').addEventListener('click',()=>{if(replay){pause();clearPresentationR9();s=replay.seek(0);$('trialResult').textContent='REPLAY · retour au début.';draw();}});
-$('trialReplaySeek').addEventListener('change',()=>{if(!replay)return;pause();const n=Number($('trialReplaySeek').value);if(!Number.isInteger(n)||n<0||n>replay.length()){status('Position hors du replay.');$('trialReplaySeek').value=String(replay.frame());draw();return;}clearPresentationR9();s=replay.seek(n);syncPresentationR9(false);$('trialResult').textContent='REPLAY · position reconstruite F'+n;draw();});
+$('trialReplayExit').addEventListener('click',()=>reset(false));$('trialReplayRestart').addEventListener('click',()=>{if(replay){pause();clearPresentationR9();s=replay.seek(0);root.RE_TRIAL_TEXT_PANEL?.reset();$('trialResult').textContent='REPLAY · retour au début.';draw();}});
+$('trialReplaySeek').addEventListener('change',()=>{if(!replay)return;pause();const n=Number($('trialReplaySeek').value);if(!Number.isInteger(n)||n<0||n>replay.length()){status('Position hors du replay.');$('trialReplaySeek').value=String(replay.frame());draw();return;}clearPresentationR9();s=replay.seek(n);root.RE_TRIAL_TEXT_PANEL?.reset();syncPresentationR9(false);$('trialResult').textContent='REPLAY · position reconstruite F'+n;draw();});
 $('trialReplayExport').addEventListener('click',()=>{pause();try{const value=exportReplay(),url=URL.createObjectURL(new Blob([JSON.stringify(value)],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download='BOW_duel_'+value.setup.uid+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);status('Replay vérifié exporté · '+value.frames+' frames.');}catch(error){status('EXPORT REFUSÉ : '+error.message);}dirty=true;});
 $('trialReplayImport').addEventListener('change',async e=>{const file=e.target.files?.[0];if(!file)return;const ticket=++ioTicket;try{if(file.size>R.MAX_BYTES)throw Error('Fichier trop volumineux (1 Mio maximum).');const text=await file.text();if(ticket!==ioTicket)return;installReplay(text);}catch(error){if(ticket===ioTicket)status('IMPORT REFUSÉ : '+error.message+' Duel actuel conservé.');}finally{if(ticket===ioTicket||replay)e.target.value='';}});
 root.addEventListener('keydown',e=>{
- if(e.ctrlKey||e.altKey||e.metaKey||['INPUT','SELECT','TEXTAREA','BUTTON','A'].includes(e.target?.tagName)||e.target?.isContentEditable)return;
+ if(e.ctrlKey||e.altKey||e.metaKey||['INPUT','SELECT','TEXTAREA','BUTTON','A','SUMMARY'].includes(e.target?.tagName)||e.target?.isContentEditable)return;
  if((e.code==='KeyP'||e.code==='Escape')&&!e.repeat){e.preventDefault();if(e.code==='Escape')pause();else togglePause();return;}
  if(e.code==='Enter'&&introActiveR10()&&e.target===canvas&&!e.repeat){e.preventDefault();skipIntroR10();return;}
  if(controls.controlled(e.code)){e.preventDefault();if(!paused&&!replay&&!introActiveR10())controls.key(e.code,true,e.repeat);}

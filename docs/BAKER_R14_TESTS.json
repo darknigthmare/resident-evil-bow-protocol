@@ -1,0 +1,107 @@
+{
+  "suite": "baker-stages-r14",
+  "passed": 20,
+  "failed": 0,
+  "scope": "Original procedural room drawings. Real native Canvas/controlled DOM, declared CPU and synthetic lifecycle. No exact geometry or hardware certification.",
+  "checks": [
+    {
+      "name": "Exactly three existing RE7 IDs are opted in; 52 stage records and their routes are not enlarged",
+      "pass": true,
+      "detail": {
+        "newConfigurations": 0,
+        "redesignedConfigurations": 3,
+        "remainingConfigurations": 49
+      }
+    },
+    {
+      "name": "All three sets produce independent opaque frames with no dependency on remote images",
+      "pass": true,
+      "detail": {
+        "independentCompositions": 3
+      }
+    },
+    {
+      "name": "Repeated time and time rewind reproduce exact pixels, regardless of draw order",
+      "pass": true
+    },
+    {
+      "name": "Reduced motion freezes every animated layer and camera without hiding its room",
+      "pass": true
+    },
+    {
+      "name": "Invalid time/camera values are bounded and never create stale or transparent margins",
+      "pass": true
+    },
+    {
+      "name": "Architecture and three animation categories can be isolated without moving collision terrain",
+      "pass": true
+    },
+    {
+      "name": "The combat floor stays pixel-stable while the ceiling and background animate",
+      "pass": true
+    },
+    {
+      "name": "Exterior rain has explicit apertures; the testing corridor has no weather overlay",
+      "pass": true
+    },
+    {
+      "name": "Unsupported IDs fail without painting, clearing or allocating stage state",
+      "pass": true
+    },
+    {
+      "name": "Context transforms, alpha, stroke state and inputs are restored after every drawing",
+      "pass": true
+    },
+    {
+      "name": "Renderer code has no wall-clock, mutable random generator, timers, audio or save channel",
+      "pass": true
+    },
+    {
+      "name": "Every HTML renderer entry point loads the same optional R14 module before drawing",
+      "pass": true,
+      "detail": {
+        "pages": 8
+      }
+    },
+    {
+      "name": "Workshop exposes the selected real room, five layer choices and original 52 configurations",
+      "pass": true
+    },
+    {
+      "name": "Seek, step and share link restore the chosen room/layer/frame in pause",
+      "pass": true
+    },
+    {
+      "name": "Invalid deep links do not import a camera, life, stage file or unknown layer",
+      "pass": true
+    },
+    {
+      "name": "Empty search removes stale links and reduced-motion prevents automatic playback",
+      "pass": true
+    },
+    {
+      "name": "Focus loss and simulated persisted lifecycle retain one paused loop and exact frame",
+      "pass": true
+    },
+    {
+      "name": "Real renderer preloads procedural rooms, and a missing module still uses preserved original art",
+      "pass": true
+    },
+    {
+      "name": "Rendering each new room cannot change full CPU-duel state or consume simulation random numbers",
+      "pass": true,
+      "detail": {
+        "fullMatches": 3,
+        "simulationFrames": 6192
+      }
+    },
+    {
+      "name": "Unchanged datasets, audio, actor clips and all replay contracts match the exact R13 snapshot",
+      "pass": true,
+      "detail": {
+        "protectedFiles": 44,
+        "assets": 508
+      }
+    }
+  ]
+}

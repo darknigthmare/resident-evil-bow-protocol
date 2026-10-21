@@ -1,0 +1,59 @@
+name: R14 verified workbook publication
+on:
+  push:
+    branches: ['codex/r14-baker-package-20261020']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: bow-baker-r14-workbook
+  cancel-in-progress: true
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - name: Restore the authored workbook and verify all XML parts
+        run: |
+          test "$(git merge-base 37af62dc87bee391222fb6ed8d90d98111a34bae HEAD)" = 37af62dc87bee391222fb6ed8d90d98111a34bae
+          python3 scripts/materialize-baker-workbook-r14.py
+      - run: npm install --no-save --package-lock=false @napi-rs/canvas@0.1.80 playwright@1.64.1
+      - name: Reverify the complete exact candidate
+        run: |
+          set -o pipefail
+          npm run verify 2>&1 | tee r14-publish-verify.log
+      - run: npm run build
+      - name: Locate Chromium
+        run: |
+          if command -v google-chrome >/dev/null; then echo "CHROME_BIN=$(command -v google-chrome)" >> "$GITHUB_ENV"; else npx playwright install --with-deps chromium; fi
+      - run: node tests/browser-baker-r14.mjs
+      - name: Commit only the verified workbook and its link/download test
+        run: |
+          git config user.name 'B.O.W. Protocol CI'
+          git config user.email 'actions@users.noreply.github.com'
+          git add docs/planning/BOW_STAGES_BAKER_R14.xlsx stages.html tests/browser-baker-r14.mjs
+          git diff --cached --quiet || git commit -m 'docs: R14 six-sheet P1 stage tracker and verified in-game download'
+          git push origin HEAD:refs/heads/codex/r14-baker-package-20261020
+          git rev-parse HEAD > R14_FINAL_COMMIT.txt
+      - name: Final publication artifacts
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: r14-final-workbook-and-evidence
+          path: |
+            docs/planning/BOW_STAGES_BAKER_R14.xlsx
+            stages.html
+            tests/browser-baker-r14.mjs
+            R14_FINAL_COMMIT.txt
+            r14-publish-verify.log
+            docs/BAKER_R14_TESTS.json
+            qa-baker-r14/
+            qa-baker-r14-http/
+          if-no-files-found: error
+          retention-days: 14

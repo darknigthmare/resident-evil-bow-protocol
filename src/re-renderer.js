@@ -568,11 +568,12 @@
     ctx.fillStyle = shade; ctx.fillRect(0, 0, WIDTH, HEIGHT);
   }
 
-  function drawStage(ctx, stage, time = 0, camera = 0, preview = false) {
+  function drawStage(ctx, stage, time = 0, camera = 0, preview = false, options = {}) {
     if (!ctx) return true;
     const s = stage || root.RE_DATA?.stages?.[0] || {};
     const reduced=!!root.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
     time=reduced?0:number(time);camera=reduced?0:number(camera);
+    if(root.RE_BAKER_STAGES?.describe(s)){if(ctx.canvas?.id==='stageMini')stageBindings.delete(ctx.canvas);if(root.RE_BAKER_STAGES.draw(ctx,s,time,camera,preview,{...options,reducedMotion:reduced||options.reducedMotion===true}))return true;}
     if(root.RE_STAGE_DYNAMICS?.drawBase(ctx,s,time,camera,preview)){root.RE_STAGE_DYNAMICS.drawAmbient(ctx,s,time,{reducedMotion:reduced});return true;}
     if(s.re5Scene&&root.RE5_SCENES?.draw(ctx,s,time,camera,preview)){root.RE_STAGE_DYNAMICS?.drawAmbient(ctx,s,time,{reducedMotion:reduced});return true;}
     const entry = requestAsset(s.background || s.image || '', 'stage');
@@ -600,6 +601,7 @@
 
   function preloadStage(stage) {
     const s = typeof stage === 'string' ? root.RE_DATA?.stages?.find(item => item.id === stage) : stage;
+    if(root.RE_BAKER_STAGES?.describe(s))return Promise.resolve({ok:true,path:'procedural-r14:'+s.id});
     if(root.RE_STAGE_DYNAMICS?.describe(s).native)return Promise.resolve({ok:true,path:'procedural-r6:'+s.id});
     if(s?.re5Scene&&root.RE5_SCENES?.themes.includes(s.re5Scene))return Promise.resolve({ok:true,path:'procedural:'+s.id});
     const entry = requestAsset(s?.background || s?.image || '', 'stage');

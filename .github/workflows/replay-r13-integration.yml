@@ -1,0 +1,78 @@
+name: R13 reviewed replay recovery integration
+on:
+  push:
+    branches: ['codex/r13-replays-build-20261019']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: bow-replays-r13-integration
+  cancel-in-progress: true
+jobs:
+  integrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      BOW_R13_BASE: 31671fecf53a26d81f77d2cb13a5ff61f15ef363
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - name: Materialize reviewed source and authored workbook
+        run: |
+          test "$(git merge-base "$BOW_R13_BASE" HEAD)" = "$BOW_R13_BASE"
+          python3 scripts/integrate-replay-r13.py
+          python3 scripts/patch-replay-focus-r13.py
+          python3 scripts/materialize-replays-workbook-r13.py
+      - run: npm install --no-save --package-lock=false @napi-rs/canvas@0.1.80 playwright@1.64.1
+      - name: Verify all executable suites
+        run: |
+          set -o pipefail
+          npm run verify 2>&1 | tee r13-verify.log
+      - run: npm run build
+      - name: Locate Chromium
+        run: |
+          if command -v google-chrome >/dev/null; then echo "CHROME_BIN=$(command -v google-chrome)" >> "$GITHUB_ENV"; else npx playwright install --with-deps chromium; fi
+      - run: node tests/browser-replay-vault-r13.mjs
+      - run: node tests/browser-flight-r12.mjs
+      - run: node tests/browser-lucas-r11.mjs
+      - run: node tests/browser-delivery-r10-http.mjs
+      - name: Commit tested candidate on integration branch only
+        run: |
+          git config user.name 'B.O.W. Protocol CI'
+          git config user.email 'actions@users.noreply.github.com'
+          git add modules/versus.html package.json scripts/contract.mjs src/unified-engine-v060.js src/runtime-contract.js tests/r12-baseline.mjs tests/verify-audit-r9.mjs tests/browser-audit-r9.mjs docs/REPLAY_R13_CHANGES.json docs/REPLAY_R13_PRESERVATION.json docs/REPLAY_R13_TESTS.json docs/planning/BOW_REPLAYS_R13.xlsx
+          git diff --cached --quiet || git commit -m 'feat: R13 bounded replay recording and recoverable archive, verified'
+          git push origin HEAD:refs/heads/codex/r13-replays-build-20261019
+      - run: python3 scripts/package-replays-r13.py
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: r13-report
+          path: r13-delivery/00_REPORT_R13.zip
+          compression-level: 0
+          if-no-files-found: error
+          retention-days: 14
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: r13-code
+          path: r13-delivery/01_CODE_R13.zip
+          compression-level: 0
+          if-no-files-found: error
+          retention-days: 14
+      - name: Preserve evidence even on failure
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: r13-evidence
+          path: |
+            r13-verify.log
+            docs/REPLAY_R13_TESTS.json
+            qa-replay-r13/
+            qa-flight-r12/
+            qa-lucas-r11/
+            qa-r10-http/
+          if-no-files-found: warn
+          retention-days: 14

@@ -1,0 +1,136 @@
+{
+  "suite": "flight-r12",
+  "passed": 19,
+  "failed": 0,
+  "scope": "Actual engine with existing gravity; controlled DOM. Motion values are simulation units, not Capcom motion capture or new art.",
+  "checks": [
+    {
+      "name": "The original R11 paid focus command had no displacement; the exact old definition reproduces it",
+      "pass": true,
+      "detail": {
+        "beforeCost": 16,
+        "beforeDisplacement": 0
+      }
+    },
+    {
+      "name": "Only two mechanical commands change; no borrowed anatomy, sprite or attack is created",
+      "pass": true
+    },
+    {
+      "name": "Both maneuvers commit their existing cost once, before any movement",
+      "pass": true
+    },
+    {
+      "name": "Left and right flight trajectories are symmetric and bounded in continuous increments",
+      "pass": true,
+      "detail": [
+        {
+          "slot": "utility",
+          "results": [
+            {
+              "face": -1,
+              "delta": 60,
+              "peak": 71.39999999999992,
+              "maxStep": 5
+            },
+            {
+              "face": 1,
+              "delta": -60,
+              "peak": 71.39999999999992,
+              "maxStep": 5
+            }
+          ]
+        },
+        {
+          "slot": "specialBack",
+          "results": [
+            {
+              "face": -1,
+              "delta": 102,
+              "peak": 40.479999999999905,
+              "maxStep": 6
+            },
+            {
+              "face": 1,
+              "delta": -102,
+              "peak": 40.479999999999905,
+              "maxStep": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The previous instantaneous blink is absent; the retreat moves through its active ticks",
+      "pass": true
+    },
+    {
+      "name": "No energy means no takeoff, no invisible focus, no health or damage side effect",
+      "pass": true
+    },
+    {
+      "name": "No midair re-trigger or unlimited flight chain is admitted",
+      "pass": true
+    },
+    {
+      "name": "Corners restrict the real path instead of teleporting through the arena bounds",
+      "pass": true
+    },
+    {
+      "name": "A crossing opponent does not reverse the committed maneuver halfway through its attack",
+      "pass": true
+    },
+    {
+      "name": "Damage before activation interrupts departure without refunding its committed cost",
+      "pass": true
+    },
+    {
+      "name": "The insect remains hittable in flight and a hit cancels the maneuver, not gravity",
+      "pass": true
+    },
+    {
+      "name": "A low hitbox misses only when the actual body is above it, without an invulnerability flag",
+      "pass": true
+    },
+    {
+      "name": "Repeated maneuvers cannot heal, poison, deal damage or summon an extra entity",
+      "pass": true
+    },
+    {
+      "name": "A fresh round/reset never inherits a hovering actor or a focus buff",
+      "pass": true
+    },
+    {
+      "name": "Seeded CPU choices can use the utility and preserve full deterministic replay states",
+      "pass": true,
+      "detail": {
+        "candidateSelections": 2,
+        "duels": 5,
+        "frames": 6664,
+        "maneuvers": 1
+      }
+    },
+    {
+      "name": "Archived experimental replay validates flight coordinates, landing and RNG exactly",
+      "pass": true
+    },
+    {
+      "name": "Both laboratories expose measured motion after takeoff, pause and reset without writes",
+      "pass": true
+    },
+    {
+      "name": "Main Versus selects the correct incarnation and runs its utility through the real input path",
+      "pass": true
+    },
+    {
+      "name": "The 114 other profiles, all Dossiers, core simulation and auxiliary content remain unchanged",
+      "pass": true,
+      "detail": {
+        "otherMainProfiles": 114,
+        "annex": 231,
+        "contexts": 43,
+        "coreEngineUnchanged": true
+      }
+    }
+  ]
+}

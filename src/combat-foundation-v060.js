@@ -155,15 +155,47 @@ function spawn(s,p,m,atk,i){if(rule58(s,'no_projectiles'))return null;const heav
  face:p.face,reflections:0,bounces:m.bounces||0,returned:false,dead:false,hitTargets:{},steady:atk.steady,scheduled:m.sustainBurst===true&&i>0,burstIndex:i,
  burstId:atk.id,hitMax:m.returnAt?2:1};
  s.projectiles.push(q);event(s,'projectile',p,{id:q.id,slot:m.slot,index:i});if(s.projectiles.length>60)s.projectiles.shift();return q;}
+// R11 devices occupy the existing trap list and use its destruction/reset paths.
+// Only commands carrying lucasDevice opt in; legacy traps retain their behavior.
+function fireDeviceR11(s,tr,cause){
+ if(tr.dead||tr.deviceFired)return false;
+ tr.deviceFired=true;tr.dead=true;
+ const a=actors(s)[tr.owner];
+ const direction=Math.sign(other(s,a).x-tr.x)||a.face;
+ explode(s,{...tr,dead:false,exploded:false,vx:direction,flightVX:direction,damageScale:1,def:{...tr.def,radius:tr.def.blastRadius||140,detonateOnContact:true}});
+ event(s,'deviceDetonated',a,{id:tr.id,mode:tr.def.lucasDevice,cause});return true;
+}
+function placeDevicesR11(s,p,d){
+ const count=clamp(Math.trunc(d.deviceCount)||1,1,3),facing=p.attack?.face||p.face;
+ for(let n=0;n<count;n++){
+  const owned=s.traps.filter(t=>t.owner===p.slot&&!t.dead);
+  while(owned.length>=3){const expired=owned.shift();expired.dead=true;event(s,'deviceRetired',p,{id:expired.id,cause:'capacity'});}
+  const x=clamp(p.x+facing*((d.reach||120)+n*(d.spacing||0)),LEFT,RIGHT);
+  s.traps.push({id:s.nextId++,owner:p.slot,x,y:FLOOR,age:0,life:d.duration||480,arm:d.arm||30,hp:d.hp||160,def:d,dead:false,deviceFired:false,deviceFuse:d.lucasDevice==='timed'?(d.fuse||125)+n*(d.fuseInterval||0):null,lastTargetX:other(s,p).x});
+  event(s,'trapPlaced',p,{slot:d.slot,mode:d.lucasDevice,x});
+ }
+}
+function stepDeviceR11(s,tr,a,d){
+ if(a.life<=0){tr.dead=true;event(s,'deviceRetired',a,{id:tr.id,cause:'owner-ko'});return;}
+ const previous=tr.lastTargetX;tr.lastTargetX=d.x;
+ if(tr.age===tr.arm)event(s,'deviceArmed',a,{id:tr.id,mode:tr.def.lucasDevice});
+ if(tr.age<tr.arm)return;
+ if(tr.def.lucasDevice==='timed'){if(tr.age>=tr.deviceFuse)fireDeviceR11(s,tr,'timer');return;}
+ if(tr.def.lucasDevice==='remote')return;
+ const range=tr.def.triggerRadius||50,body=box(d);
+ const near=tr.def.lucasDevice==='wire'?Math.min(previous,d.x)-body.w/2<tr.x+range&&Math.max(previous,d.x)+body.w/2>tr.x-range:Math.abs(tr.x-d.x)<range+body.w/2;
+ if(near&&d.y>FLOOR-95)fireDeviceR11(s,tr,'proximity');
+}
 function activate(s,p,a){if(a.activated)return;a.activated=true;p.stats.activations++;p.lastActivation=a.name;const d=a.def,o=other(s,p);event(s,'activate',p,{slot:a.name,kind:d.kind,name:d.name});
  if(d.exposeSelf&&p.f.combat.biology){p.statuses.exposed={t:d.exposeSelf};event(s,'coreExposed',p,{frames:d.exposeSelf,by:a.name});}
  if(d.kind==='projectile'){for(let i=0;i<(d.count||1);i++)spawn(s,p,d,a,i);}
- if(d.kind==='trap'){
+ if(d.kind==='trap'&&d.lucasDevice)placeDevicesR11(s,p,d);
+ if(d.kind==='trap'&&!d.lucasDevice){
   const owned=s.traps.filter(t=>t.owner===p.slot&&!t.dead);while(owned.length>=(d.maxTraps||2)){owned.shift().dead=true;}
   s.traps.push({id:s.nextId++,owner:p.slot,x:clamp(p.x+p.face*(Math.min(d.reach||70,150)),LEFT,RIGHT),y:FLOOR,age:0,life:d.duration||360,arm:d.arm||40,hp:d.hp||160,def:d,dead:false});
   event(s,'trapPlaced',p,{slot:a.name});
  }
- if(d.kind==='detonate'){for(const tr of s.traps)if(tr.owner===p.slot&&!tr.dead&&tr.age>=tr.arm){explode(s,{...tr,def:{...tr.def,radius:tr.def.reach||90}});tr.dead=true;}event(s,'detonator',p);}
+ if(d.kind==='detonate'){let count=0;for(const tr of s.traps)if(tr.owner===p.slot&&!tr.dead&&tr.age>=tr.arm){if(d.lucasDevice==='remote-trigger'){if(tr.def.lucasDevice==='remote'){fireDeviceR11(s,tr,'remote');count++;}}else{explode(s,{...tr,def:{...tr.def,radius:tr.def.reach||90}});tr.dead=true;count++;}}if(d.lucasDevice&&count===0){p.feedback='AUCUNE CHARGE TÉLÉCOMMANDÉE ARMÉE';p.feedbackT=80;}event(s,'detonator',p,{count});}
  if(d.kind==='buff'){const target=d.target==='enemy'?o:p;if(d.target!=='enemy'||Math.abs(o.x-p.x)<(d.reach||600)){target.buffs[d.buff]={t:d.duration||120,hits:d.hits||1};fx(s,target.x,target.y-120,'ring',d.tag,d.buff==='cloak'?'CAMOUFLAGE':d.buff==='power'?'SURACTIVITÉ':d.buff==='taunt'?'PROVOQUÉ':d.name);event(s,'buff:'+d.buff,p,{target:target.slot});}}
  if(d.kind==='heal'){const amount=heal(s,p,d.heal||250);fx(s,p.x,p.y-245,'text','recovery',amount?'+'+amount+' RÉCUPÉRABLE':'AUCUNE BLESSURE RÉCUPÉRABLE');}
  if(d.kind==='mark'){if(Math.abs(o.x-p.x)<(d.reach||600)){o.statuses.marked={t:d.duration||180};delete o.buffs.cloak;fx(s,o.x,o.y-250,'text','recon','MARQUÉ');event(s,'mark',p,{target:o.slot});}}
@@ -247,7 +279,7 @@ function projectileStep(s){for(const q of s.projectiles){if(q.dead)continue;
  s.projectiles=s.projectiles.filter(q=>!q.dead);
 }
 function objectsStep(s){for(const tr of s.traps){if(tr.dead)continue;tr.age++;tr.life--;const a=actors(s)[tr.owner],d=other(s,a);
- if(tr.life<=0){tr.dead=true;continue;}if(tr.age<tr.arm)continue;
+ if(tr.life<=0){tr.dead=true;continue;}if(tr.def.lucasDevice){stepDeviceR11(s,tr,a,d);continue;}if(tr.age<tr.arm)continue;
  if(!tr.def.remoteOnly&&Math.abs(tr.x-d.x)<(tr.def.reach||90)&&d.y>FLOOR-95){const result=damage(s,a,d,{...tr.def,level:tr.def.tag==='snare'?'low':'mid'},{contact:{kind:'trap',fromX:tr.x}});if(result.hit){tr.dead=true;fx(s,tr.x,FLOOR-30,'blast',tr.def.tag);event(s,'trapTrigger',a);}}
  }s.traps=s.traps.filter(t=>!t.dead);}
 function destroyObjects(s,p,hb,m){for(const tr of s.traps)if(tr.owner!==p.slot&&!tr.dead&&overlap(hb,{x:tr.x-22,y:tr.y-60,w:44,h:60})){tr.hp-=Math.max(140,m.damage);if(tr.hp<=0){tr.dead=true;event(s,'trapDestroyed',p);fx(s,tr.x,tr.y-30,'hit',tr.def.tag);}}
@@ -327,7 +359,7 @@ function cpu(s,p,o,settings={}){
   else if(m.kind==='buff'){const targetActor=m.target==='enemy'?o:p;weight=!targetActor.buffs[m.buff]&&d>170&&(m.target!=='enemy'||d<(m.reach||600))?1:0;}
   else if(m.kind==='mark')weight=!o.statuses.marked&&d>160&&d<(m.reach||600)?1.2:0;
   else if(m.kind==='trap')weight=d>110&&s.traps.filter(t=>t.owner===p.slot&&!t.dead).length<(m.maxTraps||2)?(profile==='trapper'?3:1):0;
-  else if(m.kind==='detonate')weight=s.traps.some(t=>t.owner===p.slot&&!t.dead&&t.age>=t.arm&&Math.abs(t.x-o.x)<(t.def.reach||90)+target.w/2&&o.y>FLOOR-95)?4:0;
+  else if(m.kind==='detonate')weight=s.traps.some(t=>t.owner===p.slot&&!t.dead&&t.age>=t.arm&&(!m.lucasDevice||t.def.lucasDevice==='remote')&&Math.abs(t.x-o.x)<(t.def.blastRadius||t.def.reach||90)+target.w/2&&o.y>FLOOR-95)?4:0;
   else if(m.kind==='mobility'){const shift=m.blink||(m.travel||0)*(m.active||1),after=Math.abs(d-shift);weight=Math.abs(d-preferred)-Math.abs(after-preferred)>30?1.2:0;}
   if(m.slot==='super'&&weight)weight*=profile==='boss'?2:1.15;
   if(memory.recent.includes(m.slot))weight*=memory.recent[0]===m.slot?.36:.7;

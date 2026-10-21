@@ -1,0 +1,151 @@
+{
+  "suite": "trial-audio-r16",
+  "passed": 25,
+  "failed": 0,
+  "scope": "Real engine, controlled DOM and explicit Web Audio graph fixture. No physical audio or canon certification.",
+  "checks": [
+    {
+      "name": "No context, voice or sample is created by initialization, query data or untrusted clicks",
+      "pass": true
+    },
+    {
+      "name": "All 346 combat identities can be observed without changing their data or the simulation",
+      "pass": true,
+      "detail": {
+        "identities": 346
+      }
+    },
+    {
+      "name": "Trusted activation consumes past events silently, preserving health, frame and command history",
+      "pass": true
+    },
+    {
+      "name": "A real Gatling burst sounds only six emitted shots at the exact release frames",
+      "pass": true,
+      "detail": {
+        "shots": 6,
+        "frames": [
+          25,
+          30,
+          35,
+          40,
+          45,
+          50
+        ]
+      }
+    },
+    {
+      "name": "Interrupting a sustained burst silences cancelled rounds instead of playing its whole reservation",
+      "pass": true
+    },
+    {
+      "name": "A declared non-sustained delayed-burst fixture sounds on actual movement, not reservation",
+      "pass": true,
+      "detail": {
+        "customFixture": true
+      }
+    },
+    {
+      "name": "Rocket launch and its unique actual explosion are distinct, with no activation double",
+      "pass": true
+    },
+    {
+      "name": "Three Lucas timed charges each signal placement, arming and one blast",
+      "pass": true
+    },
+    {
+      "name": "Empty detonator, rejected command and paid startup do not invent healing or impact cues",
+      "pass": true
+    },
+    {
+      "name": "Ordinary melee sound is delayed until activation and failed early attacks stay silent",
+      "pass": true
+    },
+    {
+      "name": "Pause and manual stepping consume events without sounding them or replaying backlog on resume",
+      "pass": true
+    },
+    {
+      "name": "The explicit intro remains silent and does not create a fake combat or result event",
+      "pass": true
+    },
+    {
+      "name": "Non-real-time playback speed silences both buses; return to x1 does not replay missed attacks",
+      "pass": true
+    },
+    {
+      "name": "Replay seek creates a silent audio discontinuity; state and exported replay stay exact",
+      "pass": true
+    },
+    {
+      "name": "A real short-timer match sounds one terminal result and later outcome drawings do not repeat it",
+      "pass": true,
+      "detail": {
+        "shortTimerConfigured": true
+      }
+    },
+    {
+      "name": "Repeated presentation calls at the same frame never duplicate a sound or reset a loop",
+      "pass": true
+    },
+    {
+      "name": "Master, effects and ambience controls are independent and safe before activation",
+      "pass": true
+    },
+    {
+      "name": "A delayed unlock cannot activate the wrong duel after selection changes",
+      "pass": true
+    },
+    {
+      "name": "A missing or rejected Web Audio API does not throw into the controller",
+      "pass": true
+    },
+    {
+      "name": "Persisted navigation parks audio and needs activation again; discarded pages dispose it",
+      "pass": true
+    },
+    {
+      "name": "Effects, event diagnostics and delayed projectile metadata remain bounded under repeated attacks",
+      "pass": true
+    },
+    {
+      "name": "Three Baker rooms use existing authored loops; other stages retain the old generic fallback",
+      "pass": true,
+      "detail": {
+        "stages": 52
+      }
+    },
+    {
+      "name": "Enabled versus disabled sound preserves complete CPU states, RNG and replay commands",
+      "pass": true,
+      "detail": {
+        "duels": [
+          {
+            "uid": "re5-gatling-gun-majini",
+            "frames": 1500
+          },
+          {
+            "uid": "re7-lucas-baker",
+            "frames": 1579
+          },
+          {
+            "uid": "re7-flying-bug",
+            "frames": 1145
+          }
+        ]
+      }
+    },
+    {
+      "name": "The real experimental page binds native controls without storage, autoplay, messages or extra loops",
+      "pass": true
+    },
+    {
+      "name": "All gameplay contracts, rosters, art, existing workbooks and Baker PCM data remain unchanged",
+      "pass": true,
+      "detail": {
+        "files": 50,
+        "assets": 508
+      }
+    }
+  ]
+}

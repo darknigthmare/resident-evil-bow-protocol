@@ -1,0 +1,77 @@
+name: R12 reviewed flight integration
+on:
+  push:
+    branches: ['codex/r12-flight-build-20261019']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: bow-flight-r12-integration
+  cancel-in-progress: true
+jobs:
+  integrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      BOW_R12_BASE: 355d545e08327d3cea0af20d3c0248de0e3364a5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - name: Materialize reviewed source and authored workbook
+        run: |
+          test "$(git merge-base "$BOW_R12_BASE" HEAD)" = "$BOW_R12_BASE"
+          python3 scripts/integrate-flight-r12.py
+          python3 scripts/materialize-flight-workbook-r12.py
+          # Controlled-DOM textContent is a property, not Playwright's method.
+          sed -i 's/\.textContent(),\/EN AIR/\.textContent,\/EN AIR/' tests/verify-flight-r12.mjs
+      - run: npm install --no-save --package-lock=false @napi-rs/canvas@0.1.80 playwright@1.64.1
+      - name: Verify all executable suites
+        run: |
+          set -o pipefail
+          npm run verify 2>&1 | tee r12-verify.log
+      - run: npm run build
+      - name: Locate Chromium
+        run: |
+          if command -v google-chrome >/dev/null; then echo "CHROME_BIN=$(command -v google-chrome)" >> "$GITHUB_ENV"; else npx playwright install --with-deps chromium; fi
+      - run: node tests/browser-flight-r12.mjs
+      - run: node tests/browser-lucas-r11.mjs
+      - run: node tests/browser-delivery-r10-http.mjs
+      - name: Commit tested candidate on integration branch only
+        run: |
+          git config user.name 'B.O.W. Protocol CI'
+          git config user.email 'actions@users.noreply.github.com'
+          git add data/roster.json data/lore-movesets.json data/chronicles.json src/re-data.js src/chronicles-data-v060.js src/runtime-contract.js src/catalog-replay-contract.js src/technique-lab-v061.js src/catalog-laboratory-v070.js laboratory.html catalog-laboratory.html package.json tests/r11-baseline.mjs tests/verify-lucas-r11.mjs tests/verify-combat-stage-r6.mjs tests/verify-flight-r12.mjs docs/FLIGHT_R12_CHANGES.json docs/FLIGHT_R12_PRESERVATION.json docs/FLIGHT_R12_TESTS.json docs/planning/BOW_FLIGHT_R12.xlsx
+          git commit -m 'fix: R12 functional Flying Bug flight and measured laboratory motion, verified'
+          git push origin HEAD:refs/heads/codex/r12-flight-build-20261019
+      - run: python3 scripts/package-flight-r12.py
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: r12-report
+          path: r12-delivery/00_REPORT_R12.zip
+          compression-level: 0
+          if-no-files-found: error
+          retention-days: 14
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: r12-code
+          path: r12-delivery/01_CODE_R12.zip
+          compression-level: 0
+          if-no-files-found: error
+          retention-days: 14
+      - name: Preserve evidence even on failure
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: r12-evidence
+          path: |
+            r12-verify.log
+            docs/FLIGHT_R12_TESTS.json
+            qa-flight-r12/
+            qa-lucas-r11/
+            qa-r10-http/
+          if-no-files-found: warn
+          retention-days: 14

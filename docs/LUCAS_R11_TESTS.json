@@ -1,0 +1,105 @@
+{
+  "version": "R11",
+  "passed": 22,
+  "failed": 0,
+  "scope": "Engine, CPU and controlled DOM; all Lucas commands explicitly simulation. No new Capcom timecode, 1:1 clip or final character art.",
+  "checks": [
+    {
+      "name": "Only human Lucas changes; all other 345 combat definitions and art are preserved",
+      "pass": true,
+      "detail": {
+        "mainPreserved": 114,
+        "annexPreserved": 231
+      }
+    },
+    {
+      "name": "Ten actions are classified as simulation, with human/mutated variants strictly separate",
+      "pass": true
+    },
+    {
+      "name": "All ten commands still activate through startup with resources paid exactly once",
+      "pass": true
+    },
+    {
+      "name": "Remote placement causes no immediate damage and arms only after its stated delay",
+      "pass": true
+    },
+    {
+      "name": "Manual detonation triggers the owned armed charge once, not poison or healing",
+      "pass": true
+    },
+    {
+      "name": "An empty detonator gives an explicit message with no resource cost or artificial blast",
+      "pass": true
+    },
+    {
+      "name": "Detonation before arming neither consumes nor explodes a charge",
+      "pass": true
+    },
+    {
+      "name": "Remote activation cannot trigger another owner or a non-remote device",
+      "pass": true
+    },
+    {
+      "name": "The fourth charge retires the oldest instead of exceeding the global capacity",
+      "pass": true
+    },
+    {
+      "name": "Super creates three visible charges, then three distinct timed blasts",
+      "pass": true
+    },
+    {
+      "name": "A super shares the same three-object budget with the previously deployed network",
+      "pass": true
+    },
+    {
+      "name": "Wire catches a fast low crossing in either direction without a skipped contact",
+      "pass": true
+    },
+    {
+      "name": "A jump over a wire is allowed; landing within its zone can trigger it",
+      "pass": true
+    },
+    {
+      "name": "Proximity crate waits for arming and explodes only at nearby ground contact",
+      "pass": true
+    },
+    {
+      "name": "Enemy melee can destroy a remote charge before the activation command",
+      "pass": true
+    },
+    {
+      "name": "Interrupted setup never spawns a device and never refunds the committed cost",
+      "pass": true
+    },
+    {
+      "name": "Owner KO, round transition and reset clear the deployed network",
+      "pass": true
+    },
+    {
+      "name": "Remote charges expire without an explosion, and no future round inherits them",
+      "pass": true
+    },
+    {
+      "name": "Thrown charge is a timed projectile and detonates once, not a melee strike",
+      "pass": true
+    },
+    {
+      "name": "Ten deterministic CPU trials finish and the replay reconstructs each exact state",
+      "pass": true,
+      "detail": {
+        "trials": 10,
+        "frames": 15234,
+        "devices": 92
+      }
+    },
+    {
+      "name": "Laboratory explicitly primes a remote fixture for the detonator, with no progression writes",
+      "pass": true
+    },
+    {
+      "name": "Device cues render without changing objects, input state or resources",
+      "pass": true
+    }
+  ]
+}

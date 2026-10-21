@@ -77,7 +77,7 @@
     return { cue, sampleRate: rate, duration: length / rate, samples };
   }
   const STAGE_FAMILIES = Object.freeze({ flower_field: 'wind', shadow_heliport: 'wind', torture_room: 'interior', tanker_deck: 'sea', big_shell: 'sea', groznyj: 'forest', sokrovenno: 'forest', outer_haven: 'machine', middle_east: 'wind', mother_base: 'sea', costa_rica: 'forest', camp_omega: 'sea', afghan_ruins: 'wind', okb_zero: 'wind', world_marshal: 'machine', pakistan_wreck: 'wind', outer_heaven: 'interior', zanzibar: 'forest', galuade: 'interior', lobito: 'interior', saintlogic: 'machine', san_hieronymo: 'interior', dite: 'wind', vr_grid: 'virtual', arsenal_corridor: 'machine', gindran_fort: 'interior', saintlogic_security: 'machine', dite_crystal_pit: 'virtual', san_hieronymo_yard: 'wind', mother_base_platform: 'sea' });
-  function stageFamily(stage) { const id = typeof stage === 'string' ? stage : stage && stage.id; return STAGE_FAMILIES[id] || 'wind'; }
+  function stageFamily(stage) { const id = typeof stage === 'string' ? stage : stage && stage.id; return scope.RE_BAKER_AMBIENCE?.describe(id)?'baker:'+id:Object.prototype.hasOwnProperty.call(STAGE_FAMILIES,id)?STAGE_FAMILIES[id]:'wind'; }
   function ambienceSamples(family, sampleRate) {
     const rate = Math.round(clamp(finite(sampleRate, 48000), 8000, 96000)), seconds = 4, length = rate * seconds;
     const samples = new Float32Array(length), rand = generator(seedOf(family)), harmonics = [];
@@ -135,6 +135,7 @@
     let unlocked = false, disposed = false, paused = false, discardNext = false, session = null, lastFrame = -1, lastSeq = 0, lastPhase = '', lastRound = 0, ambience = null, wantedStage = '', voiceId = 0;
     const voices = new Map(), cache = new Map(), maxVoices = Math.round(clamp(finite(options.maxVoices, 12), 1, 16));
     const counts = { observed: 0, events: 0, played: 0, dropped: 0, stale: 0, peakVoices: 0, generated: 0 };
+    let ambienceFrame=0,ambienceLayer='all',audition=false,ambienceStarts=0;
     let lastError = '', lastCue = '', lastFinisher = '', endedSession = null;
     const AudioCtor = options.AudioContext || scope.AudioContext || scope.webkitAudioContext;
     const usable = () => !!(audio && unlocked && audio.state === 'running' && prefs.master > 0 && !disposed);
@@ -142,23 +143,43 @@
     function gainValue(node, value) { if (!node) return; const p = node.gain; if (p.cancelScheduledValues) p.cancelScheduledValues(audio.currentTime); if (p.setTargetAtTime) p.setTargetAtTime(value, audio.currentTime, 0.015); else p.value = value; }
     function release(voice) { if (!voice || !voices.has(voice.id)) return; voices.delete(voice.id); try { voice.source.disconnect(); } catch (_) {} try { voice.gain.disconnect(); } catch (_) {} if (voice.pan) try { voice.pan.disconnect(); } catch (_) {} }
     function kill(voice) { if (!voice) return; try { voice.gain.gain.value = 0; voice.source.stop(); } catch (_) {} release(voice); }
-    function stopAmbience() { if (!ambience) return; try { ambience.source.stop(); ambience.source.disconnect(); } catch (_) {} ambience = null; }
+    function stopAmbience() { const old=ambience;ambience=null;if(!old)return;try{old.source.onended=null;old.source.stop();old.source.disconnect();old.fade?.disconnect();}catch(_){} }
     function silence() { for (const voice of [...voices.values()]) kill(voice); stopAmbience(); }
     function bufferFor(cue, variant) {
       const key = cue + ':' + (variant % 4);
       if (cache.has(key)) return cache.get(key);
-      const pcm = cue.startsWith('ambience:') ? ambienceSamples(cue.slice(9), audio.sampleRate) : synthesize(cue, audio.sampleRate, variant % 4);
-      const buffer = audio.createBuffer(1, pcm.samples.length, pcm.sampleRate); buffer.getChannelData(0).set(pcm.samples); cache.set(key, buffer); counts.generated++;
-      // Six ambience loops and at most 4 variants per cue. No per-frame allocations retained.
-      if (cache.size > 118) cache.delete(cache.keys().next().value);
-      return buffer;
+      const baker=cue.startsWith('baker:');
+      const pcm=baker?scope.RE_BAKER_AMBIENCE.synthesize(cue.split(':')[1],audio.sampleRate,cue.split(':')[2]||'all'):cue.startsWith('ambience:')?ambienceSamples(cue.slice(9),audio.sampleRate):synthesize(cue,audio.sampleRate,variant%4);
+      const channels=pcm.channels||[pcm.samples],buffer=audio.createBuffer(channels.length,channels[0].length,pcm.sampleRate);
+      channels.forEach((samples,i)=>buffer.getChannelData(i).set(samples));cache.set(key,buffer);counts.generated++;
+      // Four stereo 12-second buffers maximum (<=18.5 MB at 48 kHz).
+      const authored=[...cache.keys()].filter(k=>k.startsWith('baker:'));while(authored.length>4)cache.delete(authored.shift());
+      if(cache.size>122)cache.delete(cache.keys().next().value);return buffer;
     }
     function refreshAmbience() {
-      const family = stageFamily(wantedStage);
-      if (!audible() || prefs.ambience <= 0 || !wantedStage) { stopAmbience(); return; }
-      if (ambience && ambience.family === family) return;
-      stopAmbience();
-      try { const source = audio.createBufferSource(); source.buffer = bufferFor('ambience:' + family, 0); source.loop = true; source.connect(ambienceBus); source.start(audio.currentTime); ambience = { source, family }; } catch (error) { lastError = 'Ambiance indisponible : ' + error.message; }
+      const family=stageFamily(wantedStage),authored=family.startsWith('baker:');
+      if(!audible()||prefs.ambience<=0||!wantedStage){stopAmbience();return;}
+      const offset=authored?(ambienceFrame/60)%12:0;
+      if(ambience&&ambience.family===family&&ambience.layer===ambienceLayer&&ambience.audition===audition){
+        const elapsed=audio.currentTime-ambience.started,drift=authored?Math.abs(((ambience.offset+elapsed-offset+18)%12)-6):0;
+        if(audition||drift<.25)return;
+      }
+      stopAmbience();let source,fade;
+      try{
+        source=audio.createBufferSource();source.buffer=bufferFor(authored?family+':'+ambienceLayer:'ambience:'+family,0);source.loop=true;
+        fade=audio.createGain();fade.gain.value=0;source.connect(fade);fade.connect(ambienceBus);
+        if(fade.gain.setTargetAtTime)fade.gain.setTargetAtTime(1,audio.currentTime,.02);else fade.gain.value=1;
+        const current={source,fade,family,layer:ambienceLayer,audition,offset,started:audio.currentTime};ambience=current;
+        source.onended=()=>{if(ambience!==current)return;ambience=null;source.disconnect();fade.disconnect();if(current.audition){wantedStage='';audition=false;}options.onAmbienceEnd?.();};
+        if(audition)source.start(audio.currentTime,offset,12);else source.start(audio.currentTime,offset);ambienceStarts++;
+      }catch(error){stopAmbience();try{source?.disconnect();fade?.disconnect();}catch(_){}lastError='Ambiance indisponible : '+error.message;}
+    }
+    function previewStage(stage,frame,config={}){
+      if(disposed)return false;const room=scope.RE_BAKER_AMBIENCE?.describe(stage);
+      if(!room){stop();return false;}
+      const layer=room.layers.some(x=>x.id===config.layer)?config.layer:'all';
+      wantedStage=room.id;ambienceFrame=Math.max(0,Math.min(216000,Math.floor(finite(frame,0))));ambienceLayer=layer;audition=config.audition===true;
+      pause(config.paused===true);refreshAmbience();return true;
     }
     function play(cue, event, menuOnly) {
       if (menuOnly ? !usable() || !prefs.menuEnabled : !audible() || prefs.effects <= 0) return false;
@@ -171,7 +192,7 @@
         if (audio.createStereoPanner) { pan = audio.createStereoPanner(); pan.pan.value = event && event.actor === 0 ? -0.27 : event && event.actor === 1 ? 0.27 : 0; gain.connect(pan); pan.connect(menuOnly ? menuBus : effectsBus); } else gain.connect(menuOnly ? menuBus : effectsBus);
         const voice = { id, source, gain, pan, menuOnly: !!menuOnly, ends: audio.currentTime + source.buffer.duration };
         voices.set(id, voice); source.onended = () => release(voice); source.start(audio.currentTime);
-        counts.played++; counts.peakVoices = Math.max(counts.peakVoices, voices.size); lastCue = cue; return true;
+        counts.played++; counts.peakVoices = Math.max(counts.peakVoices, voices.size); lastCue = cue; if(typeof options.onCue==='function')try{options.onCue(cue,event);}catch(_){} return true;
       } catch (error) { lastError = 'Effet indisponible : ' + error.message; return false; }
     }
     function prime(packet) { session = packet.session; lastFrame = packet.frame; lastSeq = packet.eventCount; lastPhase = packet.phase; lastRound = packet.round; }
@@ -179,10 +200,11 @@
       if (disposed) return false;
       const packet = snapshot(state, context); if (!packet) { counts.stale++; return false; }
       if (endedSession !== null && endedSession === packet.session) return false;
-      counts.observed++; wantedStage = packet.stage || wantedStage;
+      counts.observed++;
       if (context && typeof context.paused === 'boolean' && context.paused !== paused) pause(context.paused);
       const differentSession = session !== packet.session;
       if (!differentSession && (packet.frame < lastFrame || packet.eventCount < lastSeq)) { counts.stale++; return false; }
+      wantedStage=packet.stage||wantedStage;ambienceFrame=packet.frame;ambienceLayer='all';audition=false;
       if (differentSession) {
         silence(); prime(packet); lastFinisher = ''; endedSession = null;
         if (audible() && !discardNext && packet.frame <= 2 && packet.phase === 'intro') play('round');
@@ -190,7 +212,7 @@
       }
       if (discardNext) { prime(packet); discardNext = false; refreshAmbience(); return true; }
       const current = packet.events.filter(e => e.seq > lastSeq && e.frame >= lastFrame);
-      const candidates = current.map(e => ({ e, cue: cueFor(e) })).filter(x => x.cue);
+      const candidates = current.map(e => {let cue=null;try{cue=typeof options.cueFor==='function'?options.cueFor(e):cueFor(e);}catch(_){}return{e,cue};}).filter(x => CUES.includes(x.cue));
       counts.events += current.length;
       // Bursts are bounded, and old events from a throttled tab are consumed silently.
       const timely = candidates.filter(x => packet.frame - x.e.frame <= 6).slice(-8);
@@ -202,7 +224,7 @@
     }
     function pause(value) { const next = value !== false; if (next === paused) return; paused = next; silence(); if (!next) discardNext = true; }
     function end() { stopAmbience(); wantedStage = ''; endedSession = session; }
-    function stop() { silence(); endedSession = null; session = null; lastFrame = -1; lastSeq = 0; lastPhase = ''; lastRound = 0; wantedStage = ''; lastFinisher = ''; discardNext = true; }
+    function stop() { silence(); endedSession = null; session = null; lastFrame = -1; lastSeq = 0; lastPhase = ''; lastRound = 0; wantedStage = ''; lastFinisher = ''; ambienceFrame=0;ambienceLayer='all';audition=false; discardNext = true; }
     function setSettings(value) {
       const previous = prefs; prefs = settings(value, prefs);
       gainValue(master, prefs.master); gainValue(effectsBus, prefs.enabled ? prefs.effects : 0); gainValue(ambienceBus, prefs.enabled ? prefs.ambience : 0); gainValue(menuBus, prefs.menuEnabled ? 0.35 : 0);
@@ -240,10 +262,10 @@
       return Promise.resolve();
     }
     function dispose() { if (disposed) return; stop(); disposed = true; unlocked = false; cache.clear(); for (const node of [effectsBus, ambienceBus, menuBus, master, limiter]) if (node) try { node.disconnect(); } catch (_) {} if (audio && audio.close) try { Promise.resolve(audio.close()).catch(() => {}); } catch (_) {} }
-    function diagnostics() { return { version: VERSION, supported: !!AudioCtor, unlocked, enabled: prefs.enabled, paused, disposed, contextState: audio ? audio.state : 'uncreated', voices: voices.size, maxVoices, cachedBuffers: cache.size, ambience: ambience ? ambience.family : null, sampleRate: audio ? audio.sampleRate : null, session, ended: endedSession !== null, lastFrame, lastSequence: lastSeq, lastCue, error: lastError, settings: { ...prefs }, ...counts }; }
-    return Object.freeze({ unlock, setSettings, observe, pause, stop, end, finish: end, finisher, menu, park, dispose, diagnostics });
+    function diagnostics() { return { version: VERSION, supported: !!AudioCtor, unlocked, enabled: prefs.enabled, paused, disposed, contextState: audio ? audio.state : 'uncreated', voices: voices.size, maxVoices, cachedBuffers: cache.size, ambience: ambience ? ambience.family : null, ambienceLayer, ambienceFrame, ambienceOffset:ambience?.offset??null, audition:!!ambience?.audition, ambienceStarts, authoredBuffers:[...cache.keys()].filter(k=>k.startsWith('baker:')).length, sampleRate: audio ? audio.sampleRate : null, session, ended: endedSession !== null, lastFrame, lastSequence: lastSeq, lastCue, error: lastError, settings: { ...prefs }, ...counts }; }
+    return Object.freeze({ unlock, setSettings, observe, previewStage, pause, stop, end, finish: end, finisher, menu, park, dispose, diagnostics });
   }
-  const API = Object.freeze({ version: VERSION, defaults: DEFAULTS, cues: CUES, stageFamilies: STAGE_FAMILIES, create, snapshot, synthesize, ambienceSamples, cueFor });
+  const API = Object.freeze({ version: VERSION, defaults: DEFAULTS, cues: CUES, stageFamilies: STAGE_FAMILIES, create, snapshot, synthesize, ambienceSamples, cueFor, stageFamily });
   scope.CQC_AUDIO_058 = API;
   if (typeof module !== 'undefined' && module.exports) module.exports = API;
 })(typeof globalThis !== 'undefined' ? globalThis : this);

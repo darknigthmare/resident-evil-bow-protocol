@@ -19,7 +19,7 @@ if set(ids)!=set(profiles): raise SystemExit('Lore profile coverage does not mat
 counts={'canonical':0,'anatomical':0,'simulation':0}
 for fighter in fighters:
     profile=profiles[fighter['uid']]; fighter['role']=fighter['combat']['role']=profile['role']; fighter['canonicalAttacks']=copy.deepcopy(profile.get('canonicalAttacks',[])); fighter['fidelity']=copy.deepcopy(profile['fidelity'])
-    fighter['combat'].update({'resource':copy.deepcopy(profile['resource']),'passive':copy.deepcopy(profile['passive']),'sources':copy.deepcopy(profile.get('sources',[])),'fidelity':copy.deepcopy(profile['fidelity']),'canonicalAttacks':copy.deepcopy(profile.get('canonicalAttacks',[])),'evidence':'lore-audited'})
+    fighter['combat'].update({'resource':copy.deepcopy(profile['resource']),'passive':copy.deepcopy(profile['passive']),'sources':copy.deepcopy(profile.get('sources',[])),'fidelity':copy.deepcopy(profile['fidelity']),'canonicalAttacks':copy.deepcopy(profile.get('canonicalAttacks',[])),'evidence':profile['fidelity']['status']})
     compiled={}
     for slot in SLOTS:
         if slot not in fighter['combat']['moves'] or slot not in profile['moves']: raise SystemExit(f"{fighter['uid']}: missing {slot}")

@@ -1,0 +1,148 @@
+{
+  "suite": "baker-audio-r15",
+  "passed": 21,
+  "failed": 0,
+  "scope": "Original PCM measured, graph fixture and actual controlled page DOM. Not an auditory fidelity or physical speaker certification.",
+  "pcmStats": [
+    {
+      "id": "baker_garage_2017",
+      "peak": 0.13108423352241516,
+      "rms": 0.03677563477784197,
+      "dc": 0.00018379198363696188,
+      "seam": 0.00460650771856308,
+      "sha256": "406d2220bbcd103491838cf2ca17b3bf3e606a084e23cc722701347a0f0c0177"
+    },
+    {
+      "id": "guest_house_attic_2017",
+      "peak": 0.10829384624958038,
+      "rms": 0.022768040469647716,
+      "dc": -0.0002552039669164995,
+      "seam": 0.00002041459083557129,
+      "sha256": "2cc52bfe81a6a9ef3c7aa8d8366607e914ad08b67f83c921579449db29e98e37"
+    },
+    {
+      "id": "testing_area_2017",
+      "peak": 0.10146645456552505,
+      "rms": 0.03367744973488225,
+      "dc": -0.00021817142644474794,
+      "seam": 0.0011748885735869408,
+      "sha256": "9c998127e3218dd374b8eb5c0dc43c040c569625cd08d953f90042d838af0030"
+    }
+  ],
+  "checks": [
+    {
+      "name": "Three exact stage IDs expose nine original layers, not generic or copied recordings",
+      "pass": true
+    },
+    {
+      "name": "Mixed stereo PCM is bounded, nonzero, finite and seamless over 12 seconds",
+      "pass": true,
+      "detail": [
+        {
+          "id": "baker_garage_2017",
+          "peak": 0.13108423352241516,
+          "rms": 0.03677563477784197,
+          "dc": 0.00018379198363696188,
+          "seam": 0.00460650771856308,
+          "sha256": "406d2220bbcd103491838cf2ca17b3bf3e606a084e23cc722701347a0f0c0177"
+        },
+        {
+          "id": "guest_house_attic_2017",
+          "peak": 0.10829384624958038,
+          "rms": 0.022768040469647716,
+          "dc": -0.0002552039669164995,
+          "seam": 0.00002041459083557129,
+          "sha256": "2cc52bfe81a6a9ef3c7aa8d8366607e914ad08b67f83c921579449db29e98e37"
+        },
+        {
+          "id": "testing_area_2017",
+          "peak": 0.10146645456552505,
+          "rms": 0.03367744973488225,
+          "dc": -0.00021817142644474794,
+          "seam": 0.0011748885735869408,
+          "sha256": "9c998127e3218dd374b8eb5c0dc43c040c569625cd08d953f90042d838af0030"
+        }
+      ]
+    },
+    {
+      "name": "All nine solo layers are audible-valued and have distinct PCM fingerprints",
+      "pass": true
+    },
+    {
+      "name": "Sample rate is bounded and invalid room or layer cannot cause arbitrary allocation",
+      "pass": true
+    },
+    {
+      "name": "Synthesis is deterministic and never consults the combat/global random source",
+      "pass": true
+    },
+    {
+      "name": "Full mix equals its three authored stems and retains distinct stereo channels",
+      "pass": true
+    },
+    {
+      "name": "No audio context or sound starts without a trusted activation and enabled settings",
+      "pass": true
+    },
+    {
+      "name": "Timeline frame gives an exact buffer offset while only one ambience voice exists",
+      "pass": true
+    },
+    {
+      "name": "Steady updates reuse their node; a large seek resynchronizes from the requested frame",
+      "pass": true
+    },
+    {
+      "name": "Pause ends the audible node; resume uses the new simulation offset without a duplicate",
+      "pass": true
+    },
+    {
+      "name": "Changing room or stem disconnects the old graph and isolates the requested recipe",
+      "pass": true
+    },
+    {
+      "name": "All requested mixes/stems keep at most four authored PCM buffers",
+      "pass": true
+    },
+    {
+      "name": "An isolated audition lasts exactly 12 seconds, then cannot restart on a volume update",
+      "pass": true
+    },
+    {
+      "name": "Master and ambience zero silence their bus without changing effect preferences",
+      "pass": true
+    },
+    {
+      "name": "Failed AudioContext and failed buffer start stay nonfatal and clean up the source",
+      "pass": true
+    },
+    {
+      "name": "Legacy family audio remains byte-identical and missing R15 module falls back safely",
+      "pass": true
+    },
+    {
+      "name": "Real combat snapshots select the room without mutating state, events or RNG",
+      "pass": true
+    },
+    {
+      "name": "End, stop, navigation parking and final disposal cannot leave a scene playing",
+      "pass": true
+    },
+    {
+      "name": "Workshop has no autoplay, no persistence and no stale room/layer after an empty search",
+      "pass": true
+    },
+    {
+      "name": "The two real game consumers load the shared composition before their audio controller",
+      "pass": true
+    },
+    {
+      "name": "Roster, all historical files of art, stage data, core engine and replay contracts remain exact R14",
+      "pass": true,
+      "detail": {
+        "files": 44,
+        "assets": 508
+      }
+    }
+  ]
+}
