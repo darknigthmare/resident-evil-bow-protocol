@@ -1,0 +1,41 @@
+name: R18 source inspection
+on:
+  push:
+    branches: ['codex/r18-access-build-20261021']
+    paths: ['.github/workflows/inspect-access-r18.yml']
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - run: python3 scripts/materialize-access-r18.py
+      - name: Archive the exact materialized source, without original artwork
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from zipfile import ZipFile, ZIP_DEFLATED
+          import json, hashlib
+          r=Path('.'); names=set(json.load(open('R18_REVIEWED_PATHS.json')))
+          import subprocess
+          names.update(subprocess.check_output(['git','ls-files'],text=True).splitlines())
+          manifest={}
+          with ZipFile('R18_INSPECTION_SOURCE.zip','w',ZIP_DEFLATED,compresslevel=6) as z:
+            for name in sorted(names):
+              if name.startswith('assets/'): continue
+              p=r/name
+              if p.is_file():
+                b=p.read_bytes(); z.writestr(name,b); manifest[name]=hashlib.sha256(b).hexdigest()
+            z.writestr('INSPECTION_MANIFEST.json',json.dumps(manifest,indent=2))
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: r18-inspection-source
+          path: R18_INSPECTION_SOURCE.zip
+          compression-level: 0
+          retention-days: 7
+          if-no-files-found: error
