@@ -1,0 +1,2 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';
+export function r17Expected(root,key,previous){const p=path.join(root,'docs/COMBAT_TEXT_R17_CHANGES.json');if(!fs.existsSync(p))return previous;const e=JSON.parse(fs.readFileSync(p,'utf8')).changed[key];if(!e)return previous;assert.equal(e.before,previous,'Unexpected R17 predecessor '+key);return e.after;}

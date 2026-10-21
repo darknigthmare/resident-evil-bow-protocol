@@ -49,7 +49,8 @@
     const audio = story ? null : A?.create();
     let sequence = 0, session = '', subscribed = false, lastPacket = '', ended = false;
     let portraitIds = '', portraits = [], returnFocus = null, previousPause = true, panel = null;
-    let panelState = null, panelRevision = 0, panelInterrupted = false;
+    let panelState = null, panelRevision = 0, panelInterrupted = false, captionsR17 = null;
+    function textR17(on){captionsR17?.sync({state:state(),paused:typeof on==='boolean'?on:isPaused(),speed:1,hidden:document.hidden});}
     let prefs = { ...A?.defaults }, buttons = [];
     if (!story) {
       try { const saved = JSON.parse(localStorage.getItem('re.bow.audio058') || 'null'); if (saved && typeof saved === 'object') prefs = audio?.setSettings(saved) || prefs; } catch (_) {}
@@ -140,6 +141,7 @@
       });
     }
     function packet(force) {
+      textR17();
       const s = state(); if (!s || ended || !A) return;
       if (story && (!subscribed || !token())) return;
       const count = Object.values(s.metrics || {}).reduce((sum, value) => sum + value, 0);
@@ -151,13 +153,14 @@
       else audio?.observe(snap, {session, stage:s.stage.id, paused:isPaused()});
     }
     function start(s) {
+      captionsR17?.reset();
       closePanel(false);
       session = story ? token() : 'versus58-' + (++sequence);
       subscribed = false; lastPacket = ''; ended = false;
       audio?.stop(); audio?.pause(false); preparePortraits(s); packet(true);
     }
-    function pause(on) { audio?.pause(on); if (!on) packet(true); }
-    function abort() { closePanel(false); audio?.stop(); subscribed = false; lastPacket = ''; ended = true; }
+    function pause(on) { textR17(on); audio?.pause(on); if (!on) packet(true); }
+    function abort() { captionsR17?.reset(); closePanel(false); audio?.stop(); subscribed = false; lastPacket = ''; ended = true; }
     function end() { closePanel(false); packet(true); ended = true; if (audio?.end) audio.end(); else audio?.stop(); }
     function finisher(id, actor) {
       if (story) { if (subscribed && token()) parent.postMessage({type:'cqc55.audioFinisher',token:token(),id:String(id || '').slice(0,120),actor}, '*'); }
@@ -180,7 +183,12 @@
     });
     root.addEventListener('pageshow', event => { if (event.persisted) { audio?.pause(true); lastPacket = ''; status(); } });
     mount();
-    return {start, step:packet, pause, abort, end, finisher, draw, audio, isModalOpen,
+    if(!story&&root.RE_COMBAT_TEXT_UI){
+      const holder=document.querySelector('.canvas-wrap');
+      captionsR17=root.RE_COMBAT_TEXT_UI.create({state,isPaused,pause:()=>options.pause(true,'modal'),resume:()=>options.pause(false,'restore'),revision:pauseRevision,overlayTarget:holder,buttonTargets:[document.querySelector('#selectScreen .top-actions'),holder],focusTarget:document.getElementById('game'),prefix:'../'});
+      root.RE_MAIN_TEXT_PANEL=captionsR17;
+    }
+    return {start, step:packet, pause, abort, end, finisher, draw, audio, isModalOpen:()=>isModalOpen()||captionsR17?.isOpen(),
       diagnostics:() => ({session, subscribed, ended, modalOpen:isModalOpen(), portraits:portraitIds, audio:audio?.diagnostics() || null})};
   }
   root.CQC_HOST_060 = root.CQC_HOST_059 = root.CQC_HOST_058 = {create};

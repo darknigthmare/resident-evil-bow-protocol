@@ -1,0 +1,131 @@
+{
+  "suite": "combat-text-r17",
+  "passed": 26,
+  "failed": 0,
+  "pureOnly": false,
+  "scope": "Engine plus controlled DOM. Synthetic events explicitly named; native browser and assistive hardware checked separately. No canon subtitles/art.",
+  "checks": [
+    {
+      "name": "Disabled by default: no history, audio context, persistent writes or game changes",
+      "pass": true
+    },
+    {
+      "name": "All 346 identities are observed read-only without requiring sound or source reclassification",
+      "pass": true,
+      "detail": {
+        "identities": 346
+      }
+    },
+    {
+      "name": "Enabling late starts from the current cursor, never displays the past attack backlog",
+      "pass": true
+    },
+    {
+      "name": "Gatling captions count exactly the six emitted shots and group close repeats",
+      "pass": true,
+      "detail": {
+        "emitted": 6,
+        "range": [
+          25,
+          50
+        ]
+      }
+    },
+    {
+      "name": "Interrupted bursts do not describe the five reserved but cancelled bullets",
+      "pass": true
+    },
+    {
+      "name": "Delayed independent projectiles are described when moving, not during reservation",
+      "pass": true
+    },
+    {
+      "name": "Lucas placement, arming and explosion remain distinct; secondary blast event is not duplicated",
+      "pass": true
+    },
+    {
+      "name": "Empty detonator explains the absence of armed charges without inventing a blast",
+      "pass": true
+    },
+    {
+      "name": "Blocked damage names the defender and is not repeated as a normal impact",
+      "pass": true
+    },
+    {
+      "name": "Healing is described only for health actually restored; annotations use fixed participant IDs",
+      "pass": true
+    },
+    {
+      "name": "Pause freezes text; overlays expire in simulation ticks, not wall time or paint calls",
+      "pass": true
+    },
+    {
+      "name": "Seek to another state clears transcript and never claims an unobserved full history",
+      "pass": true
+    },
+    {
+      "name": "Frame rewind and clear do not replay stale captions on a later draw",
+      "pass": true
+    },
+    {
+      "name": "Large unobserved advances are labelled partial instead of claiming every event was recorded",
+      "pass": true
+    },
+    {
+      "name": "The transcript and repeated-source queue stay bounded over a long fixture stream",
+      "pass": true
+    },
+    {
+      "name": "Synthetic draw/guard break/results distinguish the affected participant without guessing dialogue",
+      "pass": true
+    },
+    {
+      "name": "Announcements are excluded during pause, hidden pages, acceleration and manual steps",
+      "pass": true
+    },
+    {
+      "name": "Malformed state and control characters remain safe; exported journal views cannot mutate the observer",
+      "pass": true
+    },
+    {
+      "name": "Three full CPU replays and their exported data are byte-identical with or without text observation",
+      "pass": true,
+      "detail": {
+        "duels": 3,
+        "frames": 4811
+      }
+    },
+    {
+      "name": "Main panel pauses, stays keyboard-contained and restores a running match without writes",
+      "pass": true
+    },
+    {
+      "name": "Closing a panel opened from pause leaves the game paused; blur cannot auto-resume it",
+      "pass": true
+    },
+    {
+      "name": "Actual main controller emits captions while its audio remains disabled",
+      "pass": true
+    },
+    {
+      "name": "Trial mode, imports and overlay journal do not add progression writes or a second animation loop",
+      "pass": true
+    },
+    {
+      "name": "HTML-looking names are text nodes, not executable markup; hidden modal restores inert state",
+      "pass": true
+    },
+    {
+      "name": "Conserved navigation closes the text panel without a forced resume or duplicated listener loop",
+      "pass": true
+    },
+    {
+      "name": "Fighters, moves, stages, Dossiers, artwork and all three replay/journal contracts are preserved",
+      "pass": true,
+      "detail": {
+        "protectedFiles": 47,
+        "resources": 508
+      }
+    }
+  ]
+}
