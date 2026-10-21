@@ -1,0 +1,15 @@
+/* Read-only overlay belongs to its host page, never to an independent clock. */
+.context-text-host-r18{position:relative;min-height:110px;padding:12px;border:1px solid #43564e;background:#102021;margin:12px 0}.context-text-host-r18 .ct-overlay-r17{bottom:8px;left:12px;right:12px;width:auto;transform:none}.context-text-host-r18 .ct-open-r17{position:static;margin-bottom:52px;min-height:42px}#storyTextMountR18{display:inline-flex}#storyTextMountR18 button{min-height:40px}#fight .ct-overlay-r17{bottom:6%;left:2%;right:2%;width:auto;transform:none}#fight .ct-overlay-r17 p{font-size:clamp(12px,1.3vw,19px)}#fight .ct-overlay-r17.large p{font-size:clamp(16px,1.7vw,23px)}@media(max-width:520px){#fight .fightbar>div{display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end}#storyTextMountR18 button{padding:8px}.context-text-host-r18 .ct-overlay-r17 p{font-size:12px}.context-text-host-r18 .ct-overlay-r17.large p{font-size:16px}}
+
+/* R18: controls own their space when the subject label is long. */
+#fight .fightbar{height:auto;min-height:48px;padding-top:4px;padding-bottom:4px}
+#fight .fightbar>small{min-width:0;flex:1 1 0}
+#fight .fightbar>div{display:flex;gap:6px;flex:0 0 auto;align-items:center}
+#storyTextMountR18 button{min-height:44px}
+@media(max-width:720px){
+ #fight .fightbar{flex-wrap:wrap;align-items:stretch;padding:6px 8px;gap:4px}
+ #fight .fightbar>small{flex:1 1 100%;max-width:100%;line-height:1.5}
+ #fight .fightbar>div{flex:1 1 100%;min-width:0;flex-wrap:nowrap;justify-content:flex-end}
+ #fight .fightbar>div>button,#storyTextMountR18{flex:1 1 0;min-width:0}
+ #storyTextMountR18 button{width:100%}
+}

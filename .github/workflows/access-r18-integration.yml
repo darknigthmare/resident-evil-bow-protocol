@@ -1,0 +1,91 @@
+name: R18 reviewed Dossiers and contextual accessibility
+on:
+  push:
+    branches: ['codex/r18-access-build-20261021']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: bow-access-r18-integration
+  cancel-in-progress: true
+jobs:
+  integrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - name: Materialize reviewed source and exact workbook
+        run: |
+          test "$(git merge-base 86aa2637b03f1bc094e52339eb4ebf622aa0ce60 HEAD)" = 86aa2637b03f1bc094e52339eb4ebf622aa0ce60
+          python3 scripts/materialize-access-r18.py
+          python3 scripts/fix-access-modal-r18.py
+          python3 scripts/fix-access-focus-r18.py
+          python3 scripts/fix-access-mobile-r18.py
+      - run: npm install --no-save --package-lock=false @napi-rs/canvas@0.1.80 playwright@1.64.1
+      - name: Complete executable QA
+        run: |
+          set -o pipefail
+          npm run verify 2>&1 | tee r18-verify.log
+      - run: npm run build
+      - name: Locate Chromium
+        run: |
+          if command -v google-chrome >/dev/null; then echo "CHROME_BIN=$(command -v google-chrome)" >> "$GITHUB_ENV"; else npx playwright install --with-deps chromium; fi
+      - run: node tests/browser-access-context-r18.mjs
+      - run: node tests/browser-combat-text-r17.mjs
+      - run: node tests/browser-trial-audio-r16.mjs
+      - run: node tests/browser-baker-audio-r15.mjs
+      - run: node tests/browser-baker-r14.mjs
+      - run: node tests/browser-replay-vault-r13.mjs
+      - run: node tests/browser-flight-r12.mjs
+      - run: node tests/browser-lucas-r11.mjs
+      - run: node tests/browser-delivery-r10-http.mjs
+      - name: Commit verified candidate on integration branch only
+        run: |
+          git config user.name 'B.O.W. Protocol CI'
+          git config user.email 'actions@users.noreply.github.com'
+          python3 - <<'PY'
+          import json,subprocess
+          paths=json.load(open('R18_REVIEWED_PATHS.json'))
+          subprocess.run(['git','add','--',*paths],check=True)
+          PY
+          git commit -m 'feat: R18 accessible story iframe and contextual journals without progression writes, verified'
+          git push origin HEAD:refs/heads/codex/r18-access-build-20261021
+      - run: python3 scripts/package-access-r18.py
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: r18-report
+          path: r18-delivery/00_REPORT_R18.zip
+          compression-level: 0
+          if-no-files-found: error
+          retention-days: 14
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: r18-code
+          path: r18-delivery/01_CODE_R18.zip
+          compression-level: 0
+          if-no-files-found: error
+          retention-days: 14
+      - name: Preserve evidence even on failure
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: r18-evidence
+          path: |
+            r18-verify.log
+            docs/ACCESS_R18_TESTS.json
+            qa-access-r18/
+            qa-combat-text-r17/
+            qa-trial-audio-r16/
+            qa-audio-r15-http/
+            qa-baker-r14-http/
+            qa-replay-r13/
+            qa-flight-r12/
+            qa-lucas-r11/
+            qa-r10-http/
+          if-no-files-found: warn
+          retention-days: 14
