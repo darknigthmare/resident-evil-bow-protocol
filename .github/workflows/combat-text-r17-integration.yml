@@ -23,6 +23,7 @@ jobs:
         run: |
           test "$(git merge-base 0663f925b2cba8fbe3b42fc2f0dbcf7f2a2e70ef HEAD)" = 0663f925b2cba8fbe3b42fc2f0dbcf7f2a2e70ef
           python3 scripts/materialize-combat-text-r17.py
+          python3 scripts/fix-combat-text-seek-r17.py
       - run: npm install --no-save --package-lock=false @napi-rs/canvas@0.1.80 playwright@1.64.1
       - name: Complete executable QA
         run: |
