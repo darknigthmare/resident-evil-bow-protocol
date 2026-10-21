@@ -25,6 +25,7 @@ jobs:
           python3 scripts/materialize-access-r18.py
           python3 scripts/fix-access-modal-r18.py
           python3 scripts/fix-access-focus-r18.py
+          python3 scripts/fix-access-mobile-r18.py
       - run: npm install --no-save --package-lock=false @napi-rs/canvas@0.1.80 playwright@1.64.1
       - name: Complete executable QA
         run: |
