@@ -23,16 +23,17 @@ jobs:
         run: |
           test "$(git merge-base 86aa2637b03f1bc094e52339eb4ebf622aa0ce60 HEAD)" = 86aa2637b03f1bc094e52339eb4ebf622aa0ce60
           python3 scripts/materialize-text-continuity-r18.py
+          python3 scripts/diagnose-story-start-r18.py
       - run: npm install --no-save --package-lock=false @napi-rs/canvas@0.1.80 playwright@1.64.1
+      - name: Locate Chromium
+        run: |
+          if command -v google-chrome >/dev/null; then echo "CHROME_BIN=$(command -v google-chrome)" >> "$GITHUB_ENV"; else npx playwright install --with-deps chromium; fi
+      - run: node tests/browser-text-continuity-r18.mjs
       - name: Complete executable QA
         run: |
           set -o pipefail
           npm run verify 2>&1 | tee r18-verify.log
       - run: npm run build
-      - name: Locate Chromium
-        run: |
-          if command -v google-chrome >/dev/null; then echo "CHROME_BIN=$(command -v google-chrome)" >> "$GITHUB_ENV"; else npx playwright install --with-deps chromium; fi
-      - run: node tests/browser-text-continuity-r18.mjs
       - run: node tests/browser-combat-text-r17.mjs
       - run: node tests/browser-trial-audio-r16.mjs
       - run: node tests/browser-baker-audio-r15.mjs
