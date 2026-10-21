@@ -1,0 +1,86 @@
+name: R17 reviewed combat text integration
+on:
+  push:
+    branches: ['codex/r17-combat-text-build-20261021']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: bow-combat-text-r17-integration
+  cancel-in-progress: true
+jobs:
+  integrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - name: Materialize reviewed source and exact authored workbook
+        run: |
+          test "$(git merge-base 0663f925b2cba8fbe3b42fc2f0dbcf7f2a2e70ef HEAD)" = 0663f925b2cba8fbe3b42fc2f0dbcf7f2a2e70ef
+          python3 scripts/materialize-combat-text-r17.py
+      - run: npm install --no-save --package-lock=false @napi-rs/canvas@0.1.80 playwright@1.64.1
+      - name: Complete executable QA
+        run: |
+          set -o pipefail
+          npm run verify 2>&1 | tee r17-verify.log
+      - run: npm run build
+      - name: Locate Chromium
+        run: |
+          if command -v google-chrome >/dev/null; then echo "CHROME_BIN=$(command -v google-chrome)" >> "$GITHUB_ENV"; else npx playwright install --with-deps chromium; fi
+      - run: node tests/browser-combat-text-r17.mjs
+      - run: node tests/browser-trial-audio-r16.mjs
+      - run: node tests/browser-baker-audio-r15.mjs
+      - run: node tests/browser-baker-r14.mjs
+      - run: node tests/browser-replay-vault-r13.mjs
+      - run: node tests/browser-flight-r12.mjs
+      - run: node tests/browser-lucas-r11.mjs
+      - run: node tests/browser-delivery-r10-http.mjs
+      - name: Commit verified candidate only on integration branch
+        run: |
+          git config user.name 'B.O.W. Protocol CI'
+          git config user.email 'actions@users.noreply.github.com'
+          python3 - <<'PY'
+          import json,subprocess
+          paths=json.load(open('R17_REVIEWED_PATHS.json'))
+          subprocess.run(['git','add','--',*paths],check=True)
+          PY
+          git commit -m 'feat: R17 sound-independent combat cues, bounded journal and accessible controls, verified'
+          git push origin HEAD:refs/heads/codex/r17-combat-text-build-20261021
+      - run: python3 scripts/package-combat-text-r17.py
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: r17-report
+          path: r17-delivery/00_REPORT_R17.zip
+          compression-level: 0
+          if-no-files-found: error
+          retention-days: 14
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: r17-code
+          path: r17-delivery/01_CODE_R17.zip
+          compression-level: 0
+          if-no-files-found: error
+          retention-days: 14
+      - name: Preserve evidence even on failure
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: r17-evidence
+          path: |
+            r17-verify.log
+            docs/COMBAT_TEXT_R17_TESTS.json
+            qa-combat-text-r17/
+            qa-trial-audio-r16/
+            qa-audio-r15-http/
+            qa-baker-r14-http/
+            qa-replay-r13/
+            qa-flight-r12/
+            qa-lucas-r11/
+            qa-r10-http/
+          if-no-files-found: warn
+          retention-days: 14
