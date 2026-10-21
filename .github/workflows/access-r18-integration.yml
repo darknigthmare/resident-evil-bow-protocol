@@ -23,6 +23,7 @@ jobs:
         run: |
           test "$(git merge-base 86aa2637b03f1bc094e52339eb4ebf622aa0ce60 HEAD)" = 86aa2637b03f1bc094e52339eb4ebf622aa0ce60
           python3 scripts/materialize-access-r18.py
+          python3 scripts/fix-access-modal-r18.py
       - run: npm install --no-save --package-lock=false @napi-rs/canvas@0.1.80 playwright@1.64.1
       - name: Complete executable QA
         run: |
