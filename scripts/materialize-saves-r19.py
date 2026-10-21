@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Materialize hash-pinned reviewed source. Validate every preimage before writes.
 The spreadsheet is an exact artifact_tool export, never edited during transport.
+The browser workflow is published separately through the authorized repository
+connection: the Actions job never creates or changes a workflow with its token.
 """
 from pathlib import Path
 from zipfile import ZipFile
@@ -16,7 +18,9 @@ writes={}
 for item in data['entries']:
  p=Path(item['path']);assert not p.is_absolute() and '..' not in p.parts and p.as_posix() not in writes
  target=R/p
- if item['before'] is None:assert not target.exists(),str(p)
+ if p.as_posix()=='.github/workflows/saves-r19-browser.yml':
+  assert target.is_file() and sha(target.read_bytes())==item['after'],'Browser workflow must already match its separately published revision'
+ elif item['before'] is None:assert not target.exists(),str(p)
  else:assert target.is_file() and sha(target.read_bytes())==item['before'],str(p)
  if 'base64' in item:
   value=base64.b64decode(item['base64'],validate=True)
@@ -32,4 +36,4 @@ for item in data['entries']:
 for name,value in writes.items():
  p=R/name;p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(value)
 (R/'R19_REVIEWED_PATHS.json').write_text(json.dumps(list(writes),indent=2)+'\n')
-print('R19: fourteen reviewed paths restored; all preimages and output hashes checked; exact XLSX retained.')
+print('R19: fourteen reviewed paths checked; exact XLSX retained; browser workflow unchanged from its authorized publication.')
