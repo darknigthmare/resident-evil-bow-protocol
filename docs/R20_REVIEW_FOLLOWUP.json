@@ -1,0 +1,88 @@
+{
+  "schema": "re.bow.r20-review-followup/1",
+  "asOf": "2026-10-22",
+  "reviewUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/pull/14#pullrequestreview-5611654672",
+  "reviewedCommit": "928d07b9b79445193929123a96e2f9bd3d34a575",
+  "localParentCommit": "566a6802cb2584d085558738a20d7a5f371d8e29",
+  "changes": [
+    {
+      "commentId": 4346398313,
+      "path": ".github/workflows/saves-r19-integration.yml",
+      "resolution": "Checkout does not persist credentials; an ephemeral Git credential helper receives GH_TOKEN only in the publication step."
+    },
+    {
+      "commentId": 4346398328,
+      "path": "docs/SAVES_R19_SCOPE.md",
+      "resolution": "The preservation claim is explicitly scoped to historical R19; the three reviewed R20 presentation modules and sprite namespace are documented."
+    },
+    {
+      "commentId": 4346398389,
+      "path": "src/codex.js",
+      "resolution": "The documentary catalog link retains dev=1 in DEV mode. HTTP checks navigate the real player and DEV routes at both widths."
+    },
+    {
+      "commentId": 4346398407,
+      "path": "tests/browser-sprites-r20.mjs",
+      "resolution": "The stale-image test subscribes before release, waits for requestfinished and the real load promise, then checks after two animation frames."
+    },
+    {
+      "reviewNitpick": "fullscreen accessible name",
+      "path": "index.html; src/game-menu-r20.js",
+      "resolution": "aria-labelledby combines the fullscreen title and action. Removed aria-pressed; HTTP checks both accessible names with explicit simulated fullscreen states."
+    }
+  ],
+  "workflowVerification": {
+    "checkoutPersistsCredentials": false,
+    "tokenExposedOnlyToPushStep": true,
+    "shellBlocksSyntaxValid": 17,
+    "dummyCredentialHelperRoundtrip": true,
+    "credentialWrittenToDisk": false,
+    "networkPushExecuted": false
+  },
+  "validationStages": [
+    {
+      "stage": "verify",
+      "command": [
+        "npm",
+        "run",
+        "verify"
+      ],
+      "exitCode": 0,
+      "sha256": "630a7c634979ab0db612f6f9eda1264cc7b826776a8e0063bc7a52cc0b6e3a4b"
+    },
+    {
+      "stage": "build",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exitCode": 0,
+      "sha256": "3132b96771b9d794afb71245f9c8ec0ff88db3cec70d12b2213364ef3ef927d1"
+    },
+    {
+      "stage": "http-r20",
+      "command": [
+        "npm",
+        "run",
+        "verify:r20:http"
+      ],
+      "exitCode": 0,
+      "sha256": "bc8238e498716ac4fd6ff7fba8e602d60d05653a14a189eba10593de39015f0a"
+    },
+    {
+      "stage": "http-r18",
+      "command": [
+        "node",
+        "tests/browser-access-context-r18.mjs"
+      ],
+      "exitCode": 0,
+      "sha256": "538919745a77713f8c5c3225b54e512266bc8ceca4276832e864b6c5237429bc"
+    }
+  ],
+  "fullVerifyPassed": 605,
+  "httpRerunPassed": 51,
+  "httpCumulativeDistinctPassed": 155,
+  "workbookCountsUnchanged": true,
+  "limits": "The R19 integration workflow was not dispatched. No physical controller, screen reader, native fullscreen success, or 1:1 art certification is inferred."
+}

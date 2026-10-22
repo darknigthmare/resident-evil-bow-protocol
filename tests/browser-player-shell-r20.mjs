@@ -36,7 +36,14 @@ try{
   await test('Bestiary keeps search and playable dossier actions without production status',width,async()=>{
    errors=[];await page.goto(base+'/codex.html',{waitUntil:'networkidle'});await page.fill('#catalogSearch','Nemesis');await page.locator('#catalogGrid button').first().click();
    assert.equal(await page.locator('#specimenDialog').evaluate(e=>e.open),true);assert.doesNotMatch(await page.locator('#detailStatus').innerText(),/AUDIT|PROVISOIRE/);await playerLinks();await page.click('#closeSpecimen');await layout();
-   await page.screenshot({path:path.join(out,'archives-'+width+'.png')});assert.deepEqual(errors,[]);return{nativeSearchAndDossier:true};
+   await page.screenshot({path:path.join(out,'archives-'+width+'.png')});
+   await page.fill('#catalogSearch','');await page.selectOption('#catalogStatus','reference');
+   const reference=page.locator('#catalogGrid button').first(),id=await reference.getAttribute('data-id');await reference.click();
+   const observations=page.locator('#detailActions a[href^="catalog.html?id="]');
+   assert.equal(new URL(await observations.getAttribute('href'),page.url()).searchParams.has('dev'),false);
+   await observations.click();await page.waitForURL(url=>url.pathname.endsWith('/catalog.html')&&url.searchParams.get('id')===id,{waitUntil:'networkidle'});
+   assert.equal(await page.evaluate(()=>RE_PLAYER_SHELL.isDev),false);await playerLinks();
+   assert.deepEqual(errors,[]);return{nativeSearchAndDossier:true,documentaryRouteKeepsPlayerMode:true};
   });
   await test('Complementary archive creates no experimental launch links',width,async()=>{
    errors=[];await page.goto(base+'/catalog.html',{waitUntil:'networkidle'});await page.locator('#catGrid button').nth(1).click();await playerLinks();await layout();
@@ -53,7 +60,12 @@ try{
   await test('DEV centre and explicit diagnostic mode preserve technical links',width,async()=>{
    errors=[];await page.goto(base+'/dev.html',{waitUntil:'networkidle'});await layout();assert.equal(await page.evaluate(()=>RE_PLAYER_SHELL.isDev&&RE_PLAYER_SHELL.isTool),true);
    await page.locator('a[href="movesets.html?dev=1"]').click();await page.waitForURL('**/movesets.html?dev=1');assert.equal(await page.locator('.lab-link').count(),10);assert.equal(await page.locator('.r20-dev-bar').isVisible(),true);
-   await page.goto(base+'/saves.html?dev=1',{waitUntil:'networkidle'});assert.equal(await page.locator('a[download="BOW_SAUVEGARDES_R19.xlsx"]').isVisible(),true);assert.deepEqual(errors,[]);return{explicitDevelopmentMode:true};
+   await page.goto(base+'/codex.html?dev=1',{waitUntil:'networkidle'});await page.selectOption('#catalogStatus','reference');
+   const reference=page.locator('#catalogGrid button').first(),id=await reference.getAttribute('data-id');await reference.click();
+   await page.locator('#detailActions a[href^="catalog.html?id="]').click();
+   await page.waitForURL(url=>url.pathname.endsWith('/catalog.html')&&url.searchParams.get('id')===id&&url.searchParams.get('dev')==='1',{waitUntil:'networkidle'});
+   assert.equal(await page.evaluate(()=>RE_PLAYER_SHELL.isDev),true);assert.equal(await page.locator('.r20-dev-bar').isVisible(),true);
+   await page.goto(base+'/saves.html?dev=1',{waitUntil:'networkidle'});assert.equal(await page.locator('a[download="BOW_SAUVEGARDES_R19.xlsx"]').isVisible(),true);assert.deepEqual(errors,[]);return{explicitDevelopmentMode:true,documentaryRouteKeepsDevelopmentMode:true};
   });
   await test('Large text keeps Dossier header hit targets and Versus launch accessible',width,async()=>{
    errors=[];await page.evaluate(()=>RE_INTERFACE_R20.save({text:'large',contrast:'high',motion:'reduced'}));

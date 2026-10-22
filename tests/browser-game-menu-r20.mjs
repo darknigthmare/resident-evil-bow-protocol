@@ -114,10 +114,18 @@ try {
   await page.goto(url+'/index.html#options',{waitUntil:'networkidle'});
   await test('Unavailable storage and fullscreen API report a usable session',390,async()=>{
     await page.selectOption('#motionSetting','reduced');assert.match(await page.locator('#optionsStatus').innerText(),/session/);
+    assert.equal(await page.getByRole('button',{name:'PLEIN ÉCRAN ACTIVER',exact:true}).count(),1);
+    assert.equal(await page.locator('#fullscreen').getAttribute('aria-pressed'),null);
     await page.evaluate(()=>{document.documentElement.requestFullscreen=async()=>{throw Error('test refusal')}});
     await page.click('#fullscreen');assert.match(await page.locator('#optionsStatus').innerText(),/pas disponible/);
     assert.equal(await page.locator('html').getAttribute('data-r20-motion'),'reduced');
-    return {storageFaultInjected:true,fullscreenRefusalInjected:true};
+    // Simulate fullscreen state changes to inspect the native accessible name.
+    await page.evaluate(()=>{Object.defineProperty(document,'fullscreenElement',{configurable:true,value:document.documentElement});document.dispatchEvent(new Event('fullscreenchange'));});
+    assert.equal(await page.getByRole('button',{name:'PLEIN ÉCRAN QUITTER',exact:true}).count(),1);
+    assert.equal(await page.locator('#fullscreen').getAttribute('aria-pressed'),null);
+    await page.evaluate(()=>{delete document.fullscreenElement;document.dispatchEvent(new Event('fullscreenchange'));});
+    assert.equal(await page.getByRole('button',{name:'PLEIN ÉCRAN ACTIVER',exact:true}).count(),1);
+    return {storageFaultInjected:true,fullscreenRefusalInjected:true,fullscreenLabelStatesSimulated:true};
   });
   await context.close();
 } catch(error) {console.error(error.stack);process.exitCode=1;if(!checks.some(c=>!c.pass))checks.push({pass:false,error:error.stack});}

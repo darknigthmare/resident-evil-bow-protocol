@@ -11,7 +11,7 @@
   "suites": [
     {
       "source": "qa-interface-r20/GAME_MENU_R20_RESULTS.json",
-      "sourceSha256": "90054707bbb0ca553e0908b057794f356a6bca97197816a5fd8f2355f4f8c2c0",
+      "sourceSha256": "731a500f8cedff561bc734498a0fd3d5354e1e18a680227c1bd37a5575e48b7f",
       "suite": "game-menu-r20-http",
       "passed": 17,
       "failed": 0,
@@ -134,13 +134,14 @@
           "width": 390,
           "pass": true,
           "storageFaultInjected": true,
-          "fullscreenRefusalInjected": true
+          "fullscreenRefusalInjected": true,
+          "fullscreenLabelStatesSimulated": true
         }
       ]
     },
     {
       "source": "qa-player-shell-r20/BROWSER_PLAYER_SHELL_R20_RESULTS.json",
-      "sourceSha256": "aff772169bb70f9a87e53750013e095b43b49619b7238dbab74042f1fd7bc950",
+      "sourceSha256": "20074e88445d3fbe5c3a8bd033333538618f89cacd73193f058f579c0416938e",
       "suite": "player-shell-r20-http",
       "passed": 16,
       "failed": 0,
@@ -162,7 +163,8 @@
           "name": "Bestiary keeps search and playable dossier actions without production status",
           "width": 1440,
           "pass": true,
-          "nativeSearchAndDossier": true
+          "nativeSearchAndDossier": true,
+          "documentaryRouteKeepsPlayerMode": true
         },
         {
           "name": "Complementary archive creates no experimental launch links",
@@ -186,7 +188,8 @@
           "name": "DEV centre and explicit diagnostic mode preserve technical links",
           "width": 1440,
           "pass": true,
-          "explicitDevelopmentMode": true
+          "explicitDevelopmentMode": true,
+          "documentaryRouteKeepsDevelopmentMode": true
         },
         {
           "name": "Large text keeps Dossier header hit targets and Versus launch accessible",
@@ -212,7 +215,8 @@
           "name": "Bestiary keeps search and playable dossier actions without production status",
           "width": 390,
           "pass": true,
-          "nativeSearchAndDossier": true
+          "nativeSearchAndDossier": true,
+          "documentaryRouteKeepsPlayerMode": true
         },
         {
           "name": "Complementary archive creates no experimental launch links",
@@ -236,7 +240,8 @@
           "name": "DEV centre and explicit diagnostic mode preserve technical links",
           "width": 390,
           "pass": true,
-          "explicitDevelopmentMode": true
+          "explicitDevelopmentMode": true,
+          "documentaryRouteKeepsDevelopmentMode": true
         },
         {
           "name": "Large text keeps Dossier header hit targets and Versus launch accessible",
@@ -1292,7 +1297,7 @@
     },
     {
       "source": "qa-access-r18/BROWSER_ACCESS_R18_RESULTS.json",
-      "sourceSha256": "aab436c7bc73745cda71cf804725da74b1c0621aebe8c45ba8bdf35b335a7452",
+      "sourceSha256": "078fc0faa55831c93a6bd5d2b8912e1072ecd143e9cef63b7e4591ed44d543b0",
       "suite": "access-context-r18-http",
       "passed": 10,
       "failed": 0,
@@ -1312,7 +1317,7 @@
           "width": 1440,
           "pass": true,
           "nativeTab": true,
-          "pausedFrame": 9
+          "pausedFrame": 8
         },
         {
           "name": "Rejected file import preserves context and text; changing exercise clears the previous journal",
@@ -1335,7 +1340,7 @@
           "width": 1440,
           "pass": true,
           "nativeEscape": true,
-          "realPausedEngineFrame": 143
+          "realPausedEngineFrame": 157
         },
         {
           "name": "Native contextual controls and journal are available without audio",
@@ -1373,7 +1378,7 @@
           "width": 390,
           "pass": true,
           "nativeEscape": true,
-          "realPausedEngineFrame": 135
+          "realPausedEngineFrame": 136
         }
       ]
     },
@@ -1493,5 +1498,32 @@
         }
       ]
     }
-  ]
+  ],
+  "reviewFollowup": {
+    "evidence": "docs/R20_REVIEW_FOLLOWUP.json",
+    "rerunPassed": 51,
+    "otherHistoricalPassed": 104,
+    "rerunSuites": [
+      {
+        "source": "qa-interface-r20/GAME_MENU_R20_RESULTS.json",
+        "passed": 17,
+        "failed": 0
+      },
+      {
+        "source": "qa-player-shell-r20/BROWSER_PLAYER_SHELL_R20_RESULTS.json",
+        "passed": 16,
+        "failed": 0
+      },
+      {
+        "source": "qa-sprites-r20/BROWSER_SPRITES_R20_RESULTS.json",
+        "passed": 8,
+        "failed": 0
+      },
+      {
+        "source": "qa-access-r18/BROWSER_ACCESS_R18_RESULTS.json",
+        "passed": 10,
+        "failed": 0
+      }
+    ]
+  }
 }

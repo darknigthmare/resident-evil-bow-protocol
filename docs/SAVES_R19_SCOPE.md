@@ -77,9 +77,15 @@ pour sa portée complète (cloud, formats historiques non documentés, crash-ato
 
 ## Préservation et sources
 
-Aucun ancien fichier `src/`, données, assets ou classeur n’est modifié. Les trois
-contrats de replay/journal sont identiques. Aucun sprite, son, geste canonique ou
-récompense ajouté. Le centre de sauvegarde ne lance pas un combat.
+La livraison R19 a conservé les anciens fichiers `src/`, données, assets et
+classeurs, sans ajouter de sprite, son, geste canonique ou récompense. Les trois
+contrats de replay/journal sont identiques. Le centre de sauvegarde ne lance pas
+un combat.
+
+La continuation R20 modifie séparément `src/catalog-page-v070.js`, `src/codex.js`
+et `src/movesets.js`, et ajoute les sprites sous `assets/sprites/bow/`. Les
+différences de présentation relues et leurs empreintes sont enregistrées dans
+`docs/R20_PRESENTATION_BASELINE.json` ; la préservation R19 reste vérifiée.
 
 - Code R18 : https://github.com/darknigthmare/resident-evil-bow-protocol/tree/f9dcf65c0b147be5942aba82ffbab738147d0481
 - MDN Web Storage : https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API

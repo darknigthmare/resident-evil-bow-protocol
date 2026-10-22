@@ -79,8 +79,21 @@ try {
     await page.evaluate(() => RE_COMBAT.select('re2r-tyrant', 're1-hunter'));
     await requestSeen;
     await page.evaluate(() => RE_COMBAT.select('re2-licker', 're1-hunter'));
+    await page.waitForFunction(() => {
+      const slot = RE_SPRITE_PRESENTATION_R20.state().slots[0];
+      return slot.requested === 're2-licker' && slot.status === 'original';
+    });
+    // networkidle may already have been reached before this deliberately held PNG.
+    // Subscribe before releasing it, then wait for its actual load and consumers.
+    const imageFinished = page.waitForEvent('requestfinished', {
+      predicate: request => request.url() === base + '/assets/sprites/bow/re2r-tyrant/idle-right.png'
+    });
     release();
-    await page.waitForLoadState('networkidle');
+    await imageFinished;
+    await page.evaluate(async () => {
+      await BOWSpritesR20.load('re2r-tyrant');
+      await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+    });
     assert.equal(await page.evaluate(() => RE_SPRITE_PRESENTATION_R20.state().slots[0].displayed), '');
     assert.equal(await page.locator('.r20-sprite-active').count(), 0);
     return { delayedNativeImage: true };

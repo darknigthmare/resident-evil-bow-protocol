@@ -62,6 +62,25 @@ Les contrôles du Codex et du catalogue vérifient séparément les présentatio
 
 Les contrôles d’intégrité historiques conservent leurs ensembles d’origine. [R20_PRESENTATION_BASELINE.json](R20_PRESENTATION_BASELINE.json) enregistre les empreintes avant et après des trois seuls modules de présentation existants modifiés : `catalog-page-v070.js`, `codex.js` et `movesets.js`. Les huit tests de refus de conservation injectent des lectures altérées en mémoire : un fichier moteur modifié, un ancien asset modifié ou absent, un ajout hors du dossier de sprites, une nouvelle modification non revue de la présentation ou une altération des sauvegardes R19 sont toujours rejetés.
 
+## Corrections de la revue de PR
+
+Les quatre remarques de la revue CodeRabbit initiale et son point d’accessibilité
+ont été traités : conservation de `dev=1` entre le bestiaire et le catalogue,
+attente du téléchargement réellement terminé dans le test de portrait obsolète,
+distinction explicite des périmètres R19 et R20, absence de jeton conservé par le
+checkout du workflow d’intégration R19, et nom accessible complet du bouton
+plein écran. Le jeton de publication est fourni uniquement à l’étape de push et
+son helper Git reste limité à cette commande.
+
+Après ces changements, la suite complète réussit de nouveau ses 605 contrôles,
+le build réussit, puis les 41 scénarios HTTP R20 et les 10 scénarios R18 sont
+rejoués avec succès. Les 104 autres résultats HTTP historiques sont conservés
+dans le bilan de 155 sans additionner les réexécutions. Les états plein écran
+ajoutés au test de nom accessible sont simulés. La syntaxe des 17 blocs shell
+du workflow et le helper d’authentification ont été vérifiés avec un jeton
+factice ; le workflow historique de publication R19 n’a pas été relancé.
+Voir [le suivi de revue](R20_REVIEW_FOLLOWUP.json).
+
 ## Contrats et données conservés
 
 La comparaison avec R19 confirme les octets identiques des trois modules de contrat. Leurs validateurs ont également réussi. Voir [R20_CONTRACTS_PRESERVATION.json](R20_CONTRACTS_PRESERVATION.json).

@@ -98,7 +98,7 @@
     by('optionsStatus').textContent = result.persisted ? 'Réglages enregistrés sur cet appareil.' : 'Réglages appliqués pour cette session. L’enregistrement sur cet appareil est indisponible.';
   });
   window.addEventListener('storage', event => { if (event.key === prefs.KEY || event.key === null) populateSettings(); });
-  function fullscreenLabel() { const full = !!document.fullscreenElement; by('fullscreen').textContent = full ? 'QUITTER' : 'ACTIVER'; by('fullscreen').setAttribute('aria-pressed', String(full)); }
+  function fullscreenLabel() { const full = !!document.fullscreenElement; by('fullscreen').textContent = full ? 'QUITTER' : 'ACTIVER'; }
   by('fullscreen').addEventListener('click', async () => {
     try {
       if (document.fullscreenElement) await document.exitFullscreen();

@@ -16,6 +16,7 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           fetch-depth: 0
+          persist-credentials: false
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: '22.16.0'
@@ -43,6 +44,8 @@ jobs:
       - run: node tests/browser-lucas-r11.mjs
       - run: node tests/browser-delivery-r10-http.mjs
       - name: Commit verified candidate on integration branch only
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           git config user.name 'B.O.W. Protocol CI'
           git config user.email 'actions@users.noreply.github.com'
@@ -52,7 +55,9 @@ jobs:
           subprocess.run(['git','add','--',*paths],check=True)
           PY
           git commit -m 'feat: R19 explicit save export, selective restore and guarded rollback, verified'
-          git push origin HEAD:refs/heads/codex/r19-saves-build-20261021
+          git -c credential.helper= \
+            -c 'credential.helper=!f() { if [ "$1" = get ]; then printf "%s\n" "username=x-access-token" "password=$GH_TOKEN"; fi; }; f' \
+            push origin HEAD:refs/heads/codex/r19-saves-build-20261021
       - name: Package exact tracked commit, not regenerated historical reports
         run: |
           python3 - <<'PY'

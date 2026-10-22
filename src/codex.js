@@ -27,7 +27,7 @@
   $('#detailFacts').replaceChildren();for(const[k,v]of Object.entries(facts)){const dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=k;dd.textContent=v;$('#detailFacts').append(dt,dd)}
   $('#detailScope').textContent=f?(f.combat?.fidelity?.rule||'Les capacités restent propres à cette incarnation.')+' '+(f.combat?.fidelity?.balanceBoundary||'Les commandes, frames et dégâts sont adaptés au moteur 2D.')+' '+f.assetNote:'Cette entrée documente l’apparence du jeu indiqué. Un portrait ne remplace pas un corps entier ni ses animations.';
   $('#detailActions').replaceChildren();if(f){const play=link('JOUER CE SPÉCIMEN →','modules/versus.html?uid='+encodeURIComponent(id));play.className='primary-action';$('#detailActions').append(play,link('ENTRAÎNEMENT','modules/versus.html?mode=training&uid='+encodeURIComponent(id)))}
-  if(!f)$('#detailActions').append(link(DEV?'FICHE ENRICHIE ET ESSAI →':'CONSULTER LES OBSERVATIONS →','catalog.html?id='+encodeURIComponent(id)));
+  if(!f)$('#detailActions').append(link(DEV?'FICHE ENRICHIE ET ESSAI →':'CONSULTER LES OBSERVATIONS →','catalog.html?id='+encodeURIComponent(id)+(DEV?'&dev=1':'')));
   $('#detailSources').replaceChildren();const urls=[['DOSSIER DE RÉFÉRENCE',x.sourcePage],['SOURCE DU RENDU',f?.spriteSource||x.spriteSource],...((f?.combat?.sources||[]).map((u,i)=>['RÉFÉRENCE LORE '+String(i+1).padStart(2,'0'),u]))].filter(([,u])=>/^https?:\/\//.test(u||''));const used=new Set;for(const[label,url]of urls){if(used.has(url))continue;used.add(url);$('#detailSources').append(link(label+' ↗',url,true))}
   $('#specimenDialog').showModal();
  }
