@@ -126,11 +126,11 @@
       "id": "R20-12",
       "kind": "Livraison R20",
       "title": "Publication de la continuation",
-      "status": "EN COURS",
-      "delivered": "Branche R20 fondée sur R18 fusionnée et R19 conservée.",
-      "remaining": "Publier le commit vérifié et la PR de continuation.",
-      "evidence": "codex/r20-player-shell-sprites",
-      "source": "GitHub darknigthmare/resident-evil-bow-protocol"
+      "status": "VALIDÉ",
+      "delivered": "Branche codex/r20-player-shell-sprites publiée avec code, rapports et Excel; PR #14 ouverte.",
+      "remaining": "Revue humaine et suite de production ; résultats CI consultables sur la PR.",
+      "evidence": "https://github.com/darknigthmare/resident-evil-bow-protocol/pull/14",
+      "source": "Commit initial 928d07b9; arbre identique au candidat testé"
     },
     {
       "id": "G-PERIMETRE",
@@ -277,8 +277,8 @@
       "kind": "Lot global",
       "title": "Livraisons et suivi",
       "status": "EN COURS",
-      "delivered": "R8 à R19 conservées et nouveau suivi lié au code.",
-      "remaining": "Publication R20, CI finale et livraisons futures, sans déclarer le jeu complet.",
+      "delivered": "R8 à R19 conservées; R20 publiée avec code, rapports et classeur dans la PR #14.",
+      "remaining": "Revue humaine et livraisons futures ; résultats CI consultables sur la PR. Les lots globaux restent ouverts.",
       "evidence": "docs/R20_TRACKING.json",
       "source": "docs/planning/BOW_PR11_MATRICE_EXECUTION_R8.xlsx"
     }
@@ -488,5 +488,17 @@
     "canonicalReview": "À VÉRIFIER"
   },
   "baseTree": "1425afc447b84a1873c0d7e1bfa5575d3ff25d98",
-  "publishedEquivalentBase": "67b805aa814856148297dbf42a6fda219d20a8ac"
+  "publishedEquivalentBase": "67b805aa814856148297dbf42a6fda219d20a8ac",
+  "publication": {
+    "prUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/pull/14",
+    "branch": "codex/r20-player-shell-sprites",
+    "initialCommit": "928d07b9b79445193929123a96e2f9bd3d34a575",
+    "initialTree": "9b51e48089743e0ffe97d422b363650e40b83939",
+    "testedCandidateTreeIdentical": true,
+    "ciStatus": "RÉUSSI_SUR_COMMIT_INITIAL",
+    "ciCommit": "928d07b9b79445193929123a96e2f9bd3d34a575",
+    "ciSuccessfulWorkflows": 12,
+    "ciUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/pull/14/checks",
+    "humanReview": "À FAIRE"
+  }
 }
