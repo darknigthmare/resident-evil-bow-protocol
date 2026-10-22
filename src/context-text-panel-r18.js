@@ -1,0 +1,7 @@
+/* The exercise owns the clock and the pause revision. No second loop/storage. */
+(function(root){'use strict';
+ const D=root.document,A=()=>root.RE_CONTEXT_PAGE,mount=D.getElementById('contextTextMountR18');
+ const observer=root.RE_CONTEXT_TEXT.create();
+ root.RE_CONTEXT_TEXT_PANEL=root.RE_COMBAT_TEXT_UI.create({observer,announceTarget:D.getElementById('encResult'),state:()=>A()?.getTrial(),isPaused:()=>!A()?.isPlaying(),pause:()=>A()?.pause(),resume:()=>A()?.resume(),revision:()=>A()?.revision(),overlayTarget:mount,buttonTargets:[mount],focusTarget:D.getElementById('encPlay'),prefix:'',workbook:'docs/planning/BOW_ACCESS_DOSSIERS_R18.xlsx',title:'REPÈRES DE L’EXERCICE CONTEXTUEL',description:'Phases, contre-mesures, impacts et résultats effectivement observés dans cette simulation abstraite. Ni un dialogue officiel ni la reproduction du combat d’origine.',boundary:'Deux lignes visibles, journal de session limité à 60 entrées. Une session restaurée ouvre un journal neuf. Aucun record ni fichier de reprise modifié par cet affichage.',announcementLabel:'ANNONCER LE RÉSULTAT DE L’EXERCICE',partialMessage:'JOURNAL PARTIEL : une portion des événements intermédiaires n’a pas été observée.',buttonLabel:'Repères textuels de l’exercice'});
+ root.RE_CONTEXT_TEXT_PANEL.sync({state:A()?.getTrial()?.snapshot(),session:A()?.getTrial(),paused:!A()?.isPlaying(),hidden:D.hidden});
+})(globalThis);
