@@ -1,0 +1,44 @@
+{
+  "suite": "sprites-r20",
+  "passed": 9,
+  "failed": 0,
+  "scope": "PNG byte integrity, decoded alpha, production boundaries, bounded loader and draw contract. No animation, canonical 1:1 or physical-device certification.",
+  "checks": [
+    {
+      "name": "re2r-tyrant: real PNG alpha, complete bounds and SHA-256 match its manifest",
+      "pass": true
+    },
+    {
+      "name": "re2r-licker: real PNG alpha, complete bounds and SHA-256 match its manifest",
+      "pass": true
+    },
+    {
+      "name": "re1r-hunter: real PNG alpha, complete bounds and SHA-256 match its manifest",
+      "pass": true
+    },
+    {
+      "name": "re3r-nemesis: real PNG alpha, complete bounds and SHA-256 match its manifest",
+      "pass": true
+    },
+    {
+      "name": "Registry exactly matches reviewed source and exposes no invented animation or limb layers",
+      "pass": true
+    },
+    {
+      "name": "Unknown identity and absent animation fail before loading any image",
+      "pass": true
+    },
+    {
+      "name": "Loading failure or incorrect dimensions can be retried without an unresolved cache entry",
+      "pass": true
+    },
+    {
+      "name": "All four decoded images remain bounded and repeated loading shares the same promise",
+      "pass": true
+    },
+    {
+      "name": "Drawing anchors the image at its grounded pivot and refuses missing direction or state",
+      "pass": true
+    }
+  ]
+}

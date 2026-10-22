@@ -1,6 +1,6 @@
 # Vérification des opérations et du bestiaire
 
-Exécution : 2026-10-19T10:06:45.556Z. **22 contrôles réussis ; 0 en échec.**
+Exécution : 2026-10-22T08:29:21.802Z. **22 contrôles réussis ; 0 en échec.**
 
 ## Méthode
 
@@ -54,7 +54,7 @@ Prérequis : Node.js, les données compilées et `@napi-rs/canvas`, directement 
 - RÉUSSI — Codex pagination exposes every dossier exactly once with the right status
 - RÉUSSI — Codex status and episode filters partition the real catalog without leakage
 - RÉUSSI — Codex search ignores accents and case; empty results and filter resets are usable
-- RÉUSSI — All Codex details resolve real assets, sources and playable links; closing restores focus
+- RÉUSSI — All Codex details preserve assets, links and focus; reviewed visual diagnostics remain available in DEV
 - RÉUSSI — Codex direct links open the requested dossier and missing image failures stay explicit
 - RÉUSSI — Operations iframe handshake launches the real eight-opponent Arcade route
 - RÉUSSI — Operations ignore unrelated windows, stale results and stale acknowledgements

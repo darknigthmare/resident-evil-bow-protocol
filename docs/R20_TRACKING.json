@@ -1,0 +1,505 @@
+{
+  "schema": "re.bow.production-tracking/1",
+  "release": "R20",
+  "asOf": "2026-10-22",
+  "baseCommit": "e4b27bc42eacee69ecb0280fb35de117d4031cf1",
+  "baseDescription": "main R18 et sauvegardes R19 réunis avant la refonte",
+  "counts": {
+    "mainFighters": 115,
+    "experimentalFighters": 231,
+    "contextualEncounters": 43,
+    "catalogIdentities": 389,
+    "stages": 52
+  },
+  "tasks": [
+    {
+      "id": "R20-01",
+      "kind": "Livraison R20",
+      "title": "Conserver les sauvegardes R19",
+      "status": "VALIDÉ",
+      "delivered": "Export, aperçu et restauration choisie conservés. R19 HTTP 16/16 après refonte et empreintes des deux modules + XLSX intactes.",
+      "remaining": "La résilience à une extinction brutale et le cloud ne sont pas garantis.",
+      "evidence": "qa-saves-r19/BROWSER_SAVES_R19_RESULTS.json",
+      "source": "docs/SAVES_R19_SCOPE.md"
+    },
+    {
+      "id": "R20-02",
+      "kind": "Livraison R20",
+      "title": "Menu principal de jeu",
+      "status": "VALIDÉ",
+      "delivered": "Six entrées joueur, sept modes, archives et crédits. Navigation et retours testés en HTTP.",
+      "remaining": "Revue éditoriale future et enrichissements de contenu.",
+      "evidence": "index.html",
+      "source": "Demande utilisateur du 22 octobre 2026"
+    },
+    {
+      "id": "R20-03",
+      "kind": "Livraison R20",
+      "title": "Menu DEV séparé",
+      "status": "VALIDÉ",
+      "delivered": "Ateliers, diagnostics, sprites et classeurs regroupés dans DEV; données techniques masquées dans le parcours joueur.",
+      "remaining": "Ajuster le regroupement à chaque nouvel outil.",
+      "evidence": "dev.html",
+      "source": "Demande utilisateur du 22 octobre 2026"
+    },
+    {
+      "id": "R20-04",
+      "kind": "Livraison R20",
+      "title": "Écrans de jeu cohérents",
+      "status": "VALIDÉ",
+      "delivered": "Écrans joueur vérifiés en 1440/390. Grand texte et contraste renforcé vérifiés dans Dossiers et Versus; recette HTTP 16/16.",
+      "remaining": "Vérifier sur appareils physiques et avec lecteurs d’écran réels.",
+      "evidence": "src/player-shell-r20.js",
+      "source": "styles/player-shell-r20.css"
+    },
+    {
+      "id": "R20-05",
+      "kind": "Livraison R20",
+      "title": "Navigation clavier et manette simulée",
+      "status": "VALIDÉ",
+      "delivered": "Clavier et ports manette simulés testés; retour, focus, répétition et verrouillage des actions couverts.",
+      "remaining": "Valider avec plusieurs manettes physiques et leurs navigateurs.",
+      "evidence": "src/game-menu-r20.js",
+      "source": "Demande utilisateur du 22 octobre 2026"
+    },
+    {
+      "id": "R20-06",
+      "kind": "Livraison R20",
+      "title": "Options et plein écran",
+      "status": "VALIDÉ",
+      "delivered": "Panneau d’options, focus de sortie, préférences persistées et gestion d’un refus de plein écran contrôlés.",
+      "remaining": "Vérifier l’entrée/sortie réussie du plein écran et compléter la recette sur matériel physique.",
+      "evidence": "src/game-menu-r20.js",
+      "source": "Demande utilisateur du 22 octobre 2026"
+    },
+    {
+      "id": "R20-07",
+      "kind": "Livraison R20",
+      "title": "Premier lot de PNG indépendants",
+      "status": "VALIDÉ",
+      "delivered": "Quatre identités et cinq PNG transparents: Tyrant RE2R, Licker RE2R, Hunter RE1R, Nemesis RE3R armé + corps sans arme.",
+      "remaining": "Quinze lots globaux restent ouverts; 385 identités sans PNG R20, fidélité canonique à revoir.",
+      "evidence": "assets/sprites/bow/manifest.json; docs/SPRITES_R20_TESTS.json",
+      "source": "Demande utilisateur du 22 octobre 2026"
+    },
+    {
+      "id": "R20-08",
+      "kind": "Livraison R20",
+      "title": "Manifestes et prévisualisation des sprites",
+      "status": "VALIDÉ",
+      "delivered": "Manifestes avec dimensions, alpha, pivots, références et variante. Menu/DEV:4 identités; sélection Versus:2; combat:0.",
+      "remaining": "Rig, clips, sens opposé et rendu combat à produire. La variante sans arme reste une référence de production.",
+      "evidence": "assets/sprites/bow/manifest.json; qa-sprites-r20/BROWSER_SPRITES_R20_RESULTS.json",
+      "source": "Demande utilisateur du 22 octobre 2026"
+    },
+    {
+      "id": "R20-09",
+      "kind": "Production ouverte",
+      "title": "Rig par membre et animations",
+      "status": "À FAIRE",
+      "delivered": "Les poses statiques ne valent pas des cycles d’animation.",
+      "remaining": "Tête, corps, membres indépendants et cycles complets par mouvement, deux orientations.",
+      "evidence": "docs/SPRITES_R20.md",
+      "source": "G-RENDU / matrice R8"
+    },
+    {
+      "id": "R20-10",
+      "kind": "Production ouverte",
+      "title": "Étendre les sprites au catalogue",
+      "status": "À FAIRE",
+      "delivered": "389 identités inventoriées. Quatre identités couvertes par cinq PNG statiques R20.",
+      "remaining": "Produire les PNG des 385 identités restantes, puis variantes, membres, orientations, mouvements et effets.",
+      "evidence": "data/roster.json",
+      "source": "data/catalog-expansion-v070.json"
+    },
+    {
+      "id": "R20-11",
+      "kind": "Livraison R20",
+      "title": "Recette et non-régression",
+      "status": "VALIDÉ",
+      "delivered": "605/605 contrôles en une exécution complète, sortie 0; build sortie 0; HTTP 155/155 : 41 R20 et 114 historiques.",
+      "remaining": "Recette matérielle : manettes, lecteurs d’écran et entrée/sortie plein écran; revue canonique par incarnation.",
+      "evidence": "docs/R20_VERIFY_RESULTS.json",
+      "source": "docs/R20_HTTP_TESTS.json"
+    },
+    {
+      "id": "R20-12",
+      "kind": "Livraison R20",
+      "title": "Publication de la continuation",
+      "status": "VALIDÉ",
+      "delivered": "Branche codex/r20-player-shell-sprites publiée avec code, rapports et Excel; PR #14 ouverte.",
+      "remaining": "Revue humaine et suite de production ; résultats CI consultables sur la PR.",
+      "evidence": "https://github.com/darknigthmare/resident-evil-bow-protocol/pull/14",
+      "source": "Commit initial 928d07b9; arbre identique au candidat testé"
+    },
+    {
+      "id": "G-PERIMETRE",
+      "kind": "Lot global",
+      "title": "Périmètre et alias",
+      "status": "EN COURS",
+      "delivered": "389 identités du catalogue sont inventoriées.",
+      "remaining": "Revue exhaustive des alias, DLC, modes, variantes et extensions.",
+      "evidence": "data/roster.json",
+      "source": "docs/planning/BOW_PR11_MATRICE_EXECUTION_R8.xlsx"
+    },
+    {
+      "id": "G-PREUVES",
+      "kind": "Lot global",
+      "title": "Preuves et revue canonique",
+      "status": "EN COURS",
+      "delivered": "Références documentaires conservées par identité.",
+      "remaining": "Relevés primaires et séquences horodatées de chaque geste, forme et phase.",
+      "evidence": "data/roster.json",
+      "source": "docs/planning/BOW_PR11_MATRICE_EXECUTION_R8.xlsx"
+    },
+    {
+      "id": "G-COMMANDES",
+      "kind": "Lot global",
+      "title": "Répertoire complet des commandes",
+      "status": "EN COURS",
+      "delivered": "Profils et slots du moteur existant conservés.",
+      "remaining": "Relever tous les gestes officiels et dépasser dix slots lorsque nécessaire.",
+      "evidence": "src/combat-foundation-v060.js",
+      "source": "docs/planning/BOW_PR11_MATRICE_EXECUTION_R8.xlsx"
+    },
+    {
+      "id": "G-MANCHES",
+      "kind": "Lot global",
+      "title": "Fin de manche et résultat",
+      "status": "EN COURS",
+      "delivered": "Résultats, nuls et états de manche réversibles intégrés.",
+      "remaining": "Gestes et dessins finaux de victoire, défaite et égalité pour chaque incarnation.",
+      "evidence": "src/match-sequences-r8.js",
+      "source": "docs/planning/BOW_PR11_MATRICE_EXECUTION_R8.xlsx"
+    },
+    {
+      "id": "G-CINEMATIQUES",
+      "kind": "Lot global",
+      "title": "Intros et outros",
+      "status": "EN COURS",
+      "delivered": "Transitions, atelier, pause et scènes raccordés.",
+      "remaining": "Séquences de référence, clips définitifs et bande sonore par sujet.",
+      "evidence": "src/match-sequences-r8.js",
+      "source": "docs/planning/BOW_PR11_MATRICE_EXECUTION_R8.xlsx"
+    },
+    {
+      "id": "G-REPLAYS",
+      "kind": "Lot global",
+      "title": "Compatibilité des replays",
+      "status": "EN COURS",
+      "delivered": "Archivage et contrôles R13, audio R16, repères R17/R18, copie R19.",
+      "remaining": "Compatibilité des formats historiques et validation exhaustive dans leur moteur d’origine.",
+      "evidence": "src/replay-vault-r13.js",
+      "source": "docs/planning/BOW_REPLAYS_R13.xlsx"
+    },
+    {
+      "id": "G-SAUVES",
+      "kind": "Lot global",
+      "title": "Sauvegardes et restauration",
+      "status": "EN COURS",
+      "delivered": "R19 couvre 18 clés, huit groupes, aperçu, conflits et récupération après erreur.",
+      "remaining": "Cloud, formats anciens inconnus et résilience à un arrêt brutal ne sont pas garantis.",
+      "evidence": "src/save-center-r19.js",
+      "source": "docs/planning/BOW_SAUVEGARDES_R19.xlsx"
+    },
+    {
+      "id": "G-VICTIMES",
+      "kind": "Lot global",
+      "title": "Compatibilité des conclusions",
+      "status": "EN COURS",
+      "delivered": "R10 contrôle anatomie et gabarits. Pas de conclusion fatale sur manche non décisive.",
+      "remaining": "Revue artistique et séquences finales de chaque association admissible.",
+      "evidence": "src/finisher-compatibility-r10.js",
+      "source": "docs/planning/BOW_PR11_SUIVI_R10.xlsx"
+    },
+    {
+      "id": "G-ECHELLE",
+      "kind": "Lot global",
+      "title": "Dimensions et points faibles",
+      "status": "EN COURS",
+      "delivered": "Gabarits de collision et règles spatiales existantes conservés.",
+      "remaining": "Mesures de référence documentées, géants et aquatiques, distinction taille réelle/collision.",
+      "evidence": "src/spatial-weakpoints-v072.js",
+      "source": "docs/planning/BOW_PR11_MATRICE_EXECUTION_R8.xlsx"
+    },
+    {
+      "id": "G-RENDU",
+      "kind": "Lot global",
+      "title": "Sprites, clips et asymétries",
+      "status": "EN COURS",
+      "delivered": "Cinq PNG statiques pour quatre incarnations; deux portraits de sélection. Aucun rig ou cycle animé R20.",
+      "remaining": "Deux sens, membres séparés, mouvements, transformations, impacts et fins de manche du catalogue complet.",
+      "evidence": "docs/SPRITES_R20.md",
+      "source": "docs/planning/BOW_PR11_MATRICE_EXECUTION_R8.xlsx"
+    },
+    {
+      "id": "G-PERF",
+      "kind": "Lot global",
+      "title": "Performances sur appareils cibles",
+      "status": "EN COURS",
+      "delivered": "Limites de ressources des effets, textes et audio déjà présentes.",
+      "remaining": "Mesures mémoire, temps de frame, chargement et longues sessions sur matériel cible.",
+      "evidence": "src/combat-text-r17.js",
+      "source": "docs/planning/BOW_REPERES_COMBAT_R17.xlsx"
+    },
+    {
+      "id": "G-ACCESS",
+      "kind": "Lot global",
+      "title": "Accessibilité et appareils",
+      "status": "EN COURS",
+      "delivered": "Repères textuels R17/R18 et parcours clavier intégrés.",
+      "remaining": "VoiceOver/NVDA réels, tactile et manettes physiques, parcours complets des 115 Dossiers.",
+      "evidence": "src/context-text-panel-r18.js",
+      "source": "docs/planning/BOW_ACCESS_DOSSIERS_R18.xlsx"
+    },
+    {
+      "id": "G-AUDIO",
+      "kind": "Lot global",
+      "title": "Voix et sons par incarnation",
+      "status": "EN COURS",
+      "delivered": "Ambiances originales Baker R15 et son des duels R16.",
+      "remaining": "Cris, voix et sons spécifiques référencés, écoute matérielle et mixage final.",
+      "evidence": "src/baker-ambience-r15.js",
+      "source": "docs/planning/BOW_DUELS_AUDIO_R16.xlsx"
+    },
+    {
+      "id": "G-RECETTE",
+      "kind": "Lot global",
+      "title": "Recette cumulative",
+      "status": "EN COURS",
+      "delivered": "Suites automatisées et contrôles navigateur cumulés.",
+      "remaining": "Toutes les combinaisons, gestes, séquences, campagnes et validations artistiques sur appareils cibles.",
+      "evidence": "tests/",
+      "source": "docs/planning/BOW_PR11_MATRICE_EXECUTION_R8.xlsx"
+    },
+    {
+      "id": "G-LIVRAISON",
+      "kind": "Lot global",
+      "title": "Livraisons et suivi",
+      "status": "EN COURS",
+      "delivered": "R8 à R19 conservées; R20 publiée avec code, rapports et classeur dans la PR #14.",
+      "remaining": "Revue humaine et livraisons futures ; résultats CI consultables sur la PR. Les lots globaux restent ouverts.",
+      "evidence": "docs/R20_TRACKING.json",
+      "source": "docs/planning/BOW_PR11_MATRICE_EXECUTION_R8.xlsx"
+    }
+  ],
+  "qa": [
+    {
+      "id": "BASE-VERIFY",
+      "suite": "Suite complète avant refonte",
+      "status": "RÉUSSI",
+      "passed": 579,
+      "failed": 0,
+      "scope": "Arbre immuable du commit e4b27bc; commande npm run verify, sortie 0",
+      "evidence": "docs/R20_BASELINE_VERIFY.json"
+    },
+    {
+      "id": "BASE-BUILD",
+      "suite": "Build R18 + R19 avant refonte",
+      "status": "RÉUSSI",
+      "passed": 1,
+      "failed": 0,
+      "scope": "Copie immutable du commit de base",
+      "evidence": "docs/R20_QA_BASELINE.md"
+    },
+    {
+      "id": "BASE-R19-HTTP",
+      "suite": "Sauvegardes R19 HTTP avant refonte",
+      "status": "RÉUSSI",
+      "passed": 16,
+      "failed": 0,
+      "scope": "Chromium 1440/390, imports, téléchargements, clavier, conflit multi-onglets et quota injecté",
+      "evidence": "docs/R20_QA_BASELINE.md"
+    },
+    {
+      "id": "R20-PRESERVE",
+      "suite": "Préservation et refus des altérations",
+      "status": "RÉUSSI",
+      "passed": 8,
+      "failed": 0,
+      "scope": "508 assets anciens; données, moteurs, classeurs et R19. Huit contrôles avec erreurs injectées en mémoire.",
+      "evidence": "docs/R20_PRESERVATION_TESTS.json"
+    },
+    {
+      "id": "R20-SPRITE",
+      "suite": "PNG, alpha, manifeste et limites",
+      "status": "RÉUSSI",
+      "passed": 9,
+      "failed": 0,
+      "scope": "Cinq PNG décodés, quatre identités; aucune animation, rig, fidélité canonique complète ou intégration combat.",
+      "evidence": "docs/SPRITES_R20_TESTS.json"
+    },
+    {
+      "id": "R20-MENU-HTTP",
+      "suite": "Menu joueur en HTTP",
+      "status": "RÉUSSI",
+      "passed": 17,
+      "failed": 0,
+      "scope": "Navigation, retours, options, clavier, préférences et port manette simulé. Pas de manette physique.",
+      "evidence": "qa-interface-r20/GAME_MENU_R20_RESULTS.json"
+    },
+    {
+      "id": "R20-SHELL-HTTP",
+      "suite": "Écrans joueur et accès DEV en HTTP",
+      "status": "RÉUSSI",
+      "passed": 16,
+      "failed": 0,
+      "scope": "Pages joueur en 1440/390. Grand texte/contraste renforcé: Dossiers et Versus. Liens DEV, absence de débordement et erreurs JavaScript.",
+      "evidence": "qa-player-shell-r20/BROWSER_PLAYER_SHELL_R20_RESULTS.json"
+    },
+    {
+      "id": "R20-SPRITE-HTTP",
+      "suite": "Sprites et viewer en HTTP",
+      "status": "RÉUSSI",
+      "passed": 8,
+      "failed": 0,
+      "scope": "1440/390; sélection de deux incarnations; PNG retardé/refusé et cycle de vie simulés.",
+      "evidence": "qa-sprites-r20/BROWSER_SPRITES_R20_RESULTS.json"
+    },
+    {
+      "id": "R10-HTTP",
+      "suite": "Livraison R10 en HTTP",
+      "status": "RÉUSSI",
+      "passed": 22,
+      "failed": 0,
+      "scope": "Non-régression historique sous Chromium.",
+      "evidence": "qa-r10-http/R10_HTTP_RESULTS.json"
+    },
+    {
+      "id": "R11-HTTP",
+      "suite": "Lucas R11 en HTTP",
+      "status": "RÉUSSI",
+      "passed": 8,
+      "failed": 0,
+      "scope": "Non-régression historique sous Chromium.",
+      "evidence": "qa-lucas-r11/BROWSER_LUCAS_R11_RESULTS.json"
+    },
+    {
+      "id": "R12-HTTP",
+      "suite": "Vol R12 en HTTP",
+      "status": "RÉUSSI",
+      "passed": 8,
+      "failed": 0,
+      "scope": "Non-régression historique sous Chromium.",
+      "evidence": "qa-flight-r12/BROWSER_FLIGHT_R12_RESULTS.json"
+    },
+    {
+      "id": "R13-HTTP",
+      "suite": "Replays R13 en HTTP",
+      "status": "RÉUSSI",
+      "passed": 8,
+      "failed": 0,
+      "scope": "Non-régression des enregistrements et relectures.",
+      "evidence": "qa-replay-r13/BROWSER_REPLAY_R13_RESULTS.json"
+    },
+    {
+      "id": "R14-HTTP",
+      "suite": "Arènes Baker R14 en HTTP",
+      "status": "RÉUSSI",
+      "passed": 8,
+      "failed": 0,
+      "scope": "Non-régression historique sous Chromium.",
+      "evidence": "qa-baker-r14-http/BROWSER_BAKER_R14_RESULTS.json"
+    },
+    {
+      "id": "R15-HTTP",
+      "suite": "Ambiances Baker R15 en HTTP",
+      "status": "RÉUSSI",
+      "passed": 10,
+      "failed": 0,
+      "scope": "Non-régression audio; ne remplace pas une écoute matérielle.",
+      "evidence": "qa-audio-r15-http/BROWSER_AUDIO_R15_RESULTS.json"
+    },
+    {
+      "id": "R16-HTTP",
+      "suite": "Audio des duels R16 en HTTP",
+      "status": "RÉUSSI",
+      "passed": 12,
+      "failed": 0,
+      "scope": "Non-régression historique sous Chromium.",
+      "evidence": "qa-trial-audio-r16/BROWSER_TRIAL_AUDIO_R16_RESULTS.json"
+    },
+    {
+      "id": "R17-HTTP",
+      "suite": "Repères de combat R17 en HTTP",
+      "status": "RÉUSSI",
+      "passed": 12,
+      "failed": 0,
+      "scope": "Non-régression historique sous Chromium.",
+      "evidence": "qa-combat-text-r17/BROWSER_COMBAT_TEXT_R17_RESULTS.json"
+    },
+    {
+      "id": "R18-HTTP",
+      "suite": "Repères contextuels R18 en HTTP",
+      "status": "RÉUSSI",
+      "passed": 10,
+      "failed": 0,
+      "scope": "Non-régression historique sous Chromium.",
+      "evidence": "qa-access-r18/BROWSER_ACCESS_R18_RESULTS.json"
+    },
+    {
+      "id": "R19-HTTP",
+      "suite": "Sauvegardes R19 après refonte",
+      "status": "RÉUSSI",
+      "passed": 16,
+      "failed": 0,
+      "scope": "Export/import/download, validation, conflits, restauration choisie; XLSX accessibles en DEV.",
+      "evidence": "qa-saves-r19/BROWSER_SAVES_R19_RESULTS.json"
+    },
+    {
+      "id": "R20-VERIFY",
+      "suite": "Suite complète après refonte",
+      "status": "RÉUSSI",
+      "passed": 605,
+      "failed": 0,
+      "scope": "Une exécution complète et ininterrompue de npm run verify, sortie 0; 605 PASS, 0 FAIL. Recettes HTTP comptées séparément.",
+      "evidence": "docs/R20_VERIFY_RESULTS.json"
+    },
+    {
+      "id": "R20-BUILD",
+      "suite": "Build du candidat final",
+      "status": "RÉUSSI",
+      "passed": 1,
+      "failed": 0,
+      "scope": "npm run build, sortie 0; manifeste et registre sprites cohérents; compilation statique 115/389/52.",
+      "evidence": "docs/R20_VERIFY_RESULTS.json"
+    },
+    {
+      "id": "R20-PHYSICAL",
+      "suite": "Matériel physique et lecteur d’écran",
+      "status": "À FAIRE",
+      "passed": null,
+      "failed": null,
+      "scope": "Smartphone, manette et lecteur d’écran réels",
+      "evidence": "Non exécuté dans cette session"
+    }
+  ],
+  "spriteProduction": {
+    "identities": 4,
+    "pngFiles": 5,
+    "primaryImages": 4,
+    "pngBytes": 11752490,
+    "remainingIdentitiesWithoutR20Png": 385,
+    "mainMenuIdentities": 4,
+    "versusSelectionIdentities": 2,
+    "combatIntegratedIdentities": 0,
+    "animatedClips": 0,
+    "modularRigs": 0,
+    "canonicalReview": "À VÉRIFIER"
+  },
+  "baseTree": "1425afc447b84a1873c0d7e1bfa5575d3ff25d98",
+  "publishedEquivalentBase": "67b805aa814856148297dbf42a6fda219d20a8ac",
+  "publication": {
+    "prUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/pull/14",
+    "branch": "codex/r20-player-shell-sprites",
+    "initialCommit": "928d07b9b79445193929123a96e2f9bd3d34a575",
+    "initialTree": "9b51e48089743e0ffe97d422b363650e40b83939",
+    "testedCandidateTreeIdentical": true,
+    "ciStatus": "RÉUSSI_SUR_COMMIT_INITIAL",
+    "ciCommit": "928d07b9b79445193929123a96e2f9bd3d34a575",
+    "ciSuccessfulWorkflows": 12,
+    "ciUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/pull/14/checks",
+    "humanReview": "À FAIRE",
+    "reviewFollowup": "docs/R20_REVIEW_FOLLOWUP.json"
+  }
+}

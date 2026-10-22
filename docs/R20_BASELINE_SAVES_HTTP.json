@@ -1,0 +1,114 @@
+{
+  "suite": "save-center-r19-http",
+  "passed": 16,
+  "failed": 0,
+  "physicalDevice": false,
+  "checks": [
+    {
+      "name": "Native export preserves game raw values and excludes unrelated credentials",
+      "width": 1440,
+      "pass": true,
+      "nativeDownload": true,
+      "untouchedStorage": true
+    },
+    {
+      "name": "Import, unchecked groups and preview are read-only until an explicit decision",
+      "width": 1440,
+      "pass": true,
+      "selectedGroup": "audio",
+      "noWrites": true
+    },
+    {
+      "name": "Before-copy download then native confirmation restores only the chosen group",
+      "width": 1440,
+      "pass": true,
+      "nativeConfirmation": true,
+      "changedKeys": 1
+    },
+    {
+      "name": "Corrupted imports and malformed copies cannot overwrite a good local group",
+      "width": 1440,
+      "pass": true,
+      "corruptionInjected": true
+    },
+    {
+      "name": "An actual second browser tab invalidates a stale preview via the storage event",
+      "width": 1440,
+      "pass": true,
+      "realSecondTab": true
+    },
+    {
+      "name": "A quota error on a later write rolls back earlier keys with an honest failure message",
+      "width": 1440,
+      "pass": true,
+      "faultInjected": true,
+      "oldValuesRestored": true
+    },
+    {
+      "name": "Native keyboard navigation, mobile layout and cancellation preserve the session",
+      "width": 1440,
+      "pass": true,
+      "keyboardEnter": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "name": "The Excel link downloads the exact shipped tracking workbook",
+      "width": 1440,
+      "pass": true,
+      "exactWorkbook": true
+    },
+    {
+      "name": "Native export preserves game raw values and excludes unrelated credentials",
+      "width": 390,
+      "pass": true,
+      "nativeDownload": true,
+      "untouchedStorage": true
+    },
+    {
+      "name": "Import, unchecked groups and preview are read-only until an explicit decision",
+      "width": 390,
+      "pass": true,
+      "selectedGroup": "audio",
+      "noWrites": true
+    },
+    {
+      "name": "Before-copy download then native confirmation restores only the chosen group",
+      "width": 390,
+      "pass": true,
+      "nativeConfirmation": true,
+      "changedKeys": 1
+    },
+    {
+      "name": "Corrupted imports and malformed copies cannot overwrite a good local group",
+      "width": 390,
+      "pass": true,
+      "corruptionInjected": true
+    },
+    {
+      "name": "An actual second browser tab invalidates a stale preview via the storage event",
+      "width": 390,
+      "pass": true,
+      "realSecondTab": true
+    },
+    {
+      "name": "A quota error on a later write rolls back earlier keys with an honest failure message",
+      "width": 390,
+      "pass": true,
+      "faultInjected": true,
+      "oldValuesRestored": true
+    },
+    {
+      "name": "Native keyboard navigation, mobile layout and cancellation preserve the session",
+      "width": 390,
+      "pass": true,
+      "keyboardEnter": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "name": "The Excel link downloads the exact shipped tracking workbook",
+      "width": 390,
+      "pass": true,
+      "exactWorkbook": true
+    }
+  ]
+}

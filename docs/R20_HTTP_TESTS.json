@@ -1,0 +1,1529 @@
+{
+  "schema": "re.bow.r20-http-evidence/1",
+  "asOf": "2026-10-22",
+  "browser": "Chromium 153.0.8010.0",
+  "transport": "HTTP local",
+  "newR20Passed": 41,
+  "historicalPassed": 114,
+  "passed": 155,
+  "failed": 0,
+  "scope": "Executed browser suites. Gamepad input, storage faults and stated lifecycle events use controlled fixtures. No physical-device certification.",
+  "suites": [
+    {
+      "source": "qa-interface-r20/GAME_MENU_R20_RESULTS.json",
+      "sourceSha256": "731a500f8cedff561bc734498a0fd3d5354e1e18a680227c1bd37a5575e48b7f",
+      "suite": "game-menu-r20-http",
+      "passed": 17,
+      "failed": 0,
+      "physicalController": false,
+      "checks": [
+        {
+          "name": "Entry screen blocks the background and opens without touching progression",
+          "width": 1440,
+          "pass": true,
+          "realClick": true,
+          "progressionUntouched": true
+        },
+        {
+          "name": "Player menu and every mode point to real player screens",
+          "width": 1440,
+          "pass": true,
+          "modes": 7,
+          "allDestinations200": true
+        },
+        {
+          "name": "Keyboard navigation, nested back and focus trap keep the current panel",
+          "width": 1440,
+          "pass": true,
+          "nestedBack": true,
+          "tabCycle": true
+        },
+        {
+          "name": "Display choices persist separately and apply to another player screen",
+          "width": 1440,
+          "pass": true,
+          "separateInterfaceKey": true,
+          "crossPage": true
+        },
+        {
+          "name": "A standard gamepad uses edges and back without repeated activation",
+          "width": 1440,
+          "pass": true,
+          "gamepadApiInjected": true,
+          "physicalController": false,
+          "heldConfirmBlocked": true
+        },
+        {
+          "name": "Specimen selection loads a different transparent independent PNG",
+          "width": 1440,
+          "pass": true,
+          "independentPng": true
+        },
+        {
+          "name": "Developer shortcut opens the dedicated terminal; tools remain reachable",
+          "width": 1440,
+          "pass": true,
+          "toolsChecked": 21,
+          "allDestinations200": true
+        },
+        {
+          "name": "Real navigation opens the versus roster and returns to the menu",
+          "width": 1440,
+          "pass": true,
+          "realRoster": true,
+          "noPageErrors": true
+        },
+        {
+          "name": "Entry screen blocks the background and opens without touching progression",
+          "width": 390,
+          "pass": true,
+          "realClick": true,
+          "progressionUntouched": true
+        },
+        {
+          "name": "Player menu and every mode point to real player screens",
+          "width": 390,
+          "pass": true,
+          "modes": 7,
+          "allDestinations200": true
+        },
+        {
+          "name": "Keyboard navigation, nested back and focus trap keep the current panel",
+          "width": 390,
+          "pass": true,
+          "nestedBack": true,
+          "tabCycle": true
+        },
+        {
+          "name": "Display choices persist separately and apply to another player screen",
+          "width": 390,
+          "pass": true,
+          "separateInterfaceKey": true,
+          "crossPage": true
+        },
+        {
+          "name": "A standard gamepad uses edges and back without repeated activation",
+          "width": 390,
+          "pass": true,
+          "gamepadApiInjected": true,
+          "physicalController": false,
+          "heldConfirmBlocked": true
+        },
+        {
+          "name": "Specimen selection loads a different transparent independent PNG",
+          "width": 390,
+          "pass": true,
+          "independentPng": true
+        },
+        {
+          "name": "Developer shortcut opens the dedicated terminal; tools remain reachable",
+          "width": 390,
+          "pass": true,
+          "toolsChecked": 21,
+          "allDestinations200": true
+        },
+        {
+          "name": "Real navigation opens the versus roster and returns to the menu",
+          "width": 390,
+          "pass": true,
+          "realRoster": true,
+          "noPageErrors": true
+        },
+        {
+          "name": "Unavailable storage and fullscreen API report a usable session",
+          "width": 390,
+          "pass": true,
+          "storageFaultInjected": true,
+          "fullscreenRefusalInjected": true,
+          "fullscreenLabelStatesSimulated": true
+        }
+      ]
+    },
+    {
+      "source": "qa-player-shell-r20/BROWSER_PLAYER_SHELL_R20_RESULTS.json",
+      "sourceSha256": "20074e88445d3fbe5c3a8bd033333538618f89cacd73193f058f579c0416938e",
+      "suite": "player-shell-r20-http",
+      "passed": 16,
+      "failed": 0,
+      "physicalDevices": false,
+      "checks": [
+        {
+          "name": "Versus selection remains playable with no audit badges",
+          "width": 1440,
+          "pass": true,
+          "nativeLaunchAndPause": true
+        },
+        {
+          "name": "Dossiers retain their accessible menu and options",
+          "width": 1440,
+          "pass": true,
+          "nativeOptionsDialog": true
+        },
+        {
+          "name": "Bestiary keeps search and playable dossier actions without production status",
+          "width": 1440,
+          "pass": true,
+          "nativeSearchAndDossier": true,
+          "documentaryRouteKeepsPlayerMode": true
+        },
+        {
+          "name": "Complementary archive creates no experimental launch links",
+          "width": 1440,
+          "pass": true,
+          "informationOnlyArchive": true
+        },
+        {
+          "name": "Combat protocols expose training and tactics without technical lab links",
+          "width": 1440,
+          "pass": true,
+          "tenTechniquesAndTraining": true
+        },
+        {
+          "name": "Operations and typewriter keep saves outside development navigation",
+          "width": 1440,
+          "pass": true,
+          "saveActionsPresent": true
+        },
+        {
+          "name": "DEV centre and explicit diagnostic mode preserve technical links",
+          "width": 1440,
+          "pass": true,
+          "explicitDevelopmentMode": true,
+          "documentaryRouteKeepsDevelopmentMode": true
+        },
+        {
+          "name": "Large text keeps Dossier header hit targets and Versus launch accessible",
+          "width": 1440,
+          "pass": true,
+          "largeText": true,
+          "highContrast": true,
+          "nativeClicks": true
+        },
+        {
+          "name": "Versus selection remains playable with no audit badges",
+          "width": 390,
+          "pass": true,
+          "nativeLaunchAndPause": true
+        },
+        {
+          "name": "Dossiers retain their accessible menu and options",
+          "width": 390,
+          "pass": true,
+          "nativeOptionsDialog": true
+        },
+        {
+          "name": "Bestiary keeps search and playable dossier actions without production status",
+          "width": 390,
+          "pass": true,
+          "nativeSearchAndDossier": true,
+          "documentaryRouteKeepsPlayerMode": true
+        },
+        {
+          "name": "Complementary archive creates no experimental launch links",
+          "width": 390,
+          "pass": true,
+          "informationOnlyArchive": true
+        },
+        {
+          "name": "Combat protocols expose training and tactics without technical lab links",
+          "width": 390,
+          "pass": true,
+          "tenTechniquesAndTraining": true
+        },
+        {
+          "name": "Operations and typewriter keep saves outside development navigation",
+          "width": 390,
+          "pass": true,
+          "saveActionsPresent": true
+        },
+        {
+          "name": "DEV centre and explicit diagnostic mode preserve technical links",
+          "width": 390,
+          "pass": true,
+          "explicitDevelopmentMode": true,
+          "documentaryRouteKeepsDevelopmentMode": true
+        },
+        {
+          "name": "Large text keeps Dossier header hit targets and Versus launch accessible",
+          "width": 390,
+          "pass": true,
+          "largeText": true,
+          "highContrast": true,
+          "nativeClicks": true
+        }
+      ]
+    },
+    {
+      "source": "qa-sprites-r20/BROWSER_SPRITES_R20_RESULTS.json",
+      "sourceSha256": "674dc0b0e454c63ce113067807cda998155460bbffb8bbce8fe269fe91edf268",
+      "suite": "sprite-presentation-r20-http",
+      "passed": 8,
+      "failed": 0,
+      "physicalDevices": false,
+      "checks": [
+        {
+          "name": "Selection displays the exact Tyrant and Nemesis incarnation with original canvas retained",
+          "width": 1440,
+          "pass": true,
+          "exactIds": true,
+          "combatStateCreated": false
+        },
+        {
+          "name": "Unsupported identities restore original portraits and simulated page restoration adds no duplicates",
+          "width": 1440,
+          "pass": true,
+          "originalIncarnationsPreserved": true,
+          "simulatedLifecycle": true
+        },
+        {
+          "name": "Four independent images load in the DEV viewer with real alpha and working controls",
+          "width": 1440,
+          "pass": true,
+          "realImages": 4,
+          "nativeControls": true
+        },
+        {
+          "name": "Selection displays the exact Tyrant and Nemesis incarnation with original canvas retained",
+          "width": 390,
+          "pass": true,
+          "exactIds": true,
+          "combatStateCreated": false
+        },
+        {
+          "name": "Unsupported identities restore original portraits and simulated page restoration adds no duplicates",
+          "width": 390,
+          "pass": true,
+          "originalIncarnationsPreserved": true,
+          "simulatedLifecycle": true
+        },
+        {
+          "name": "Four independent images load in the DEV viewer with real alpha and working controls",
+          "width": 390,
+          "pass": true,
+          "realImages": 4,
+          "nativeControls": true
+        },
+        {
+          "name": "Delayed image completion cannot overwrite a newer selection",
+          "width": 1440,
+          "pass": true,
+          "delayedNativeImage": true
+        },
+        {
+          "name": "Blocked PNG retains original canvas and permits retry after a new selection",
+          "width": 1440,
+          "pass": true,
+          "explicitNetworkFailure": true,
+          "fallbackAndRetry": true
+        }
+      ]
+    },
+    {
+      "source": "qa-r10-http/R10_HTTP_RESULTS.json",
+      "sourceSha256": "ebe919a1cdffc132a604204fb762e01c25f2e0ee2d48f2de903674b6b4191b8d",
+      "suite": "R10 HTTP integration",
+      "mode": "Chromium navigating actual localhost HTTP",
+      "physicalHardware": false,
+      "artworkCertification": false,
+      "passed": 22,
+      "failed": 0,
+      "checks": [
+        {
+          "name": "Presented intro, native pause/step/skip and keyboard",
+          "width": 1440,
+          "pass": true,
+          "details": {
+            "combatFrozenAt": 0,
+            "nativeKeyboard": true
+          }
+        },
+        {
+          "name": "Intro inputs cannot become a delayed attack",
+          "width": 1440,
+          "pass": true,
+          "details": {
+            "ghostAttack": false
+          }
+        },
+        {
+          "name": "Synthetic held pad must return to neutral",
+          "width": 1440,
+          "pass": true,
+          "details": {
+            "syntheticInput": true,
+            "blocked": true,
+            "afterNeutral": true
+          }
+        },
+        {
+          "name": "Whole CPU duel/replay identical with or without intro",
+          "width": 1440,
+          "pass": true,
+          "details": {
+            "acceleratedCPU": true,
+            "finished": true,
+            "sameState": true,
+            "sameReplay": true
+          }
+        },
+        {
+          "name": "Final presentation advances but never advances the combat",
+          "width": 1440,
+          "pass": true,
+          "details": {
+            "unchanged": true,
+            "state": "outro",
+            "frame": 120
+          }
+        },
+        {
+          "name": "Invalid import preserves intro, valid replay removes it",
+          "width": 1440,
+          "pass": true,
+          "details": {
+            "rejected": true,
+            "preserved": true,
+            "noIntro": true,
+            "replay": true,
+            "frame": 0
+          }
+        },
+        {
+          "name": "Qualified final pair can still conclude",
+          "width": 1440,
+          "pass": true,
+          "details": {
+            "preparedVerdict": true
+          }
+        },
+        {
+          "name": "Aquatic, projection, plant and mechanical victims refuse generic conclusions",
+          "width": 1440,
+          "pass": true,
+          "details": {
+            "preparedVerdicts": true,
+            "targets": [
+              "re4r-del-lago",
+              "re7-eveline",
+              "re2-ivy",
+              "revillage-mutated-heisenberg"
+            ]
+          }
+        },
+        {
+          "name": "Natural incompatible CPU match resolves normally",
+          "width": 1440,
+          "pass": true,
+          "details": {
+            "acceleratedCPU": true,
+            "preparedVerdict": false,
+            "finished": true,
+            "resultSent": true,
+            "noFinisher": true,
+            "historySame": true,
+            "window": false,
+            "frames": 1251
+          }
+        },
+        {
+          "name": "First-round loss is reversible with no finisher window",
+          "width": 1440,
+          "pass": true,
+          "details": {
+            "preparedRoundVerdict": true
+          }
+        },
+        {
+          "name": "Victim-specific archive and real HTTP Excel delivery",
+          "width": 1440,
+          "pass": true,
+          "details": {
+            "workbookBytes": 23781,
+            "sha256": "8dc06096806b5a3500e387dd471c7a4eda0be8d7bd9ae552c51bc815e9e04363",
+            "horizontalOverflow": false
+          }
+        },
+        {
+          "name": "Presented intro, native pause/step/skip and keyboard",
+          "width": 390,
+          "pass": true,
+          "details": {
+            "combatFrozenAt": 0,
+            "nativeKeyboard": true
+          }
+        },
+        {
+          "name": "Intro inputs cannot become a delayed attack",
+          "width": 390,
+          "pass": true,
+          "details": {
+            "ghostAttack": false
+          }
+        },
+        {
+          "name": "Synthetic held pad must return to neutral",
+          "width": 390,
+          "pass": true,
+          "details": {
+            "syntheticInput": true,
+            "blocked": true,
+            "afterNeutral": true
+          }
+        },
+        {
+          "name": "Whole CPU duel/replay identical with or without intro",
+          "width": 390,
+          "pass": true,
+          "details": {
+            "acceleratedCPU": true,
+            "finished": true,
+            "sameState": true,
+            "sameReplay": true
+          }
+        },
+        {
+          "name": "Final presentation advances but never advances the combat",
+          "width": 390,
+          "pass": true,
+          "details": {
+            "unchanged": true,
+            "state": "outro",
+            "frame": 120
+          }
+        },
+        {
+          "name": "Invalid import preserves intro, valid replay removes it",
+          "width": 390,
+          "pass": true,
+          "details": {
+            "rejected": true,
+            "preserved": true,
+            "noIntro": true,
+            "replay": true,
+            "frame": 0
+          }
+        },
+        {
+          "name": "Qualified final pair can still conclude",
+          "width": 390,
+          "pass": true,
+          "details": {
+            "preparedVerdict": true
+          }
+        },
+        {
+          "name": "Aquatic, projection, plant and mechanical victims refuse generic conclusions",
+          "width": 390,
+          "pass": true,
+          "details": {
+            "preparedVerdicts": true,
+            "targets": [
+              "re4r-del-lago",
+              "re7-eveline",
+              "re2-ivy",
+              "revillage-mutated-heisenberg"
+            ]
+          }
+        },
+        {
+          "name": "Natural incompatible CPU match resolves normally",
+          "width": 390,
+          "pass": true,
+          "details": {
+            "acceleratedCPU": true,
+            "preparedVerdict": false,
+            "finished": true,
+            "resultSent": true,
+            "noFinisher": true,
+            "historySame": true,
+            "window": false,
+            "frames": 1251
+          }
+        },
+        {
+          "name": "First-round loss is reversible with no finisher window",
+          "width": 390,
+          "pass": true,
+          "details": {
+            "preparedRoundVerdict": true
+          }
+        },
+        {
+          "name": "Victim-specific archive and real HTTP Excel delivery",
+          "width": 390,
+          "pass": true,
+          "details": {
+            "workbookBytes": 23781,
+            "sha256": "8dc06096806b5a3500e387dd471c7a4eda0be8d7bd9ae552c51bc815e9e04363",
+            "horizontalOverflow": false
+          }
+        }
+      ]
+    },
+    {
+      "source": "qa-lucas-r11/BROWSER_LUCAS_R11_RESULTS.json",
+      "sourceSha256": "81a8062931f16dad19e2575b28c5c818cb768d288149963aca36701ce699df1d",
+      "suite": "lucas-r11-http",
+      "passed": 8,
+      "failed": 0,
+      "physicalDevices": false,
+      "canonicalArt": false,
+      "checks": [
+        {
+          "name": "Compiled moveset and manual laboratory detonation agree",
+          "width": 1440,
+          "pass": true,
+          "explicitLabChargeFixture": true,
+          "damage": 548,
+          "life": 7000
+        },
+        {
+          "name": "Timed super remains visible before fuse and emits three real explosions",
+          "width": 1440,
+          "pass": true,
+          "labTimeAccelerated": true,
+          "explosions": 3,
+          "heal": 0,
+          "poison": null
+        },
+        {
+          "name": "Main menu selects exact Lucas, while frame-zero profile has no mutated utility",
+          "width": 1440,
+          "pass": true,
+          "uid": "re7-lucas-baker",
+          "utility": "detonate",
+          "sourceStatus": "source-review-partial",
+          "poison": false,
+          "paused": true
+        },
+        {
+          "name": "Experimental replay reconstructs a complete Lucas CPU duel including network objects",
+          "width": 1440,
+          "pass": true,
+          "realCPUAccelerated": true,
+          "finished": true,
+          "devices": 6,
+          "same": true,
+          "frames": 1394,
+          "storageUnchanged": true
+        },
+        {
+          "name": "Compiled moveset and manual laboratory detonation agree",
+          "width": 390,
+          "pass": true,
+          "explicitLabChargeFixture": true,
+          "damage": 548,
+          "life": 7000
+        },
+        {
+          "name": "Timed super remains visible before fuse and emits three real explosions",
+          "width": 390,
+          "pass": true,
+          "labTimeAccelerated": true,
+          "explosions": 3,
+          "heal": 0,
+          "poison": null
+        },
+        {
+          "name": "Main menu selects exact Lucas, while frame-zero profile has no mutated utility",
+          "width": 390,
+          "pass": true,
+          "uid": "re7-lucas-baker",
+          "utility": "detonate",
+          "sourceStatus": "source-review-partial",
+          "poison": false,
+          "paused": true
+        },
+        {
+          "name": "Experimental replay reconstructs a complete Lucas CPU duel including network objects",
+          "width": 390,
+          "pass": true,
+          "realCPUAccelerated": true,
+          "finished": true,
+          "devices": 6,
+          "same": true,
+          "frames": 1394,
+          "storageUnchanged": true
+        }
+      ]
+    },
+    {
+      "source": "qa-flight-r12/BROWSER_FLIGHT_R12_RESULTS.json",
+      "sourceSha256": "5a4bdf872ebc62afb4b1492bb6922a14f10f6d7b9125948057aa21b7606e0bd5",
+      "suite": "flight-r12-http",
+      "passed": 8,
+      "failed": 0,
+      "physicalDevices": false,
+      "newArtwork": false,
+      "checks": [
+        {
+          "name": "Measured flight and landing / laboratory.html",
+          "width": 1440,
+          "pass": true,
+          "benchAccelerated": true,
+          "takeoff": {
+            "x": 235,
+            "y": 558.22,
+            "dx": -5,
+            "altitude": 9.779999999999973,
+            "peakAltitude": 9.779999999999973,
+            "grounded": false
+          },
+          "peak": 71.39999999999992,
+          "firstRetreatTick": -6
+        },
+        {
+          "name": "Measured flight and landing / catalog-laboratory.html",
+          "width": 1440,
+          "pass": true,
+          "benchAccelerated": true,
+          "takeoff": {
+            "x": 235,
+            "y": 558.22,
+            "dx": -5,
+            "altitude": 9.779999999999973,
+            "peakAltitude": 9.779999999999973,
+            "grounded": false
+          },
+          "peak": 71.39999999999992,
+          "firstRetreatTick": -6
+        },
+        {
+          "name": "Main Versus utility through native keyboard and preserved preferences",
+          "width": 1440,
+          "pass": true,
+          "nativeKeyboard": true,
+          "uid": "re7-flying-bug",
+          "life": 10000,
+          "resource": 84,
+          "altitude": 18.839999999999918,
+          "focus": null,
+          "activations": 1
+        },
+        {
+          "name": "Complete experimental CPU replay includes the exact aerial path without storage changes",
+          "width": 1440,
+          "pass": true,
+          "simulationAccelerated": true,
+          "finished": true,
+          "frames": 1433,
+          "same": true
+        },
+        {
+          "name": "Measured flight and landing / laboratory.html",
+          "width": 390,
+          "pass": true,
+          "benchAccelerated": true,
+          "takeoff": {
+            "x": 235,
+            "y": 558.22,
+            "dx": -5,
+            "altitude": 9.779999999999973,
+            "peakAltitude": 9.779999999999973,
+            "grounded": false
+          },
+          "peak": 71.39999999999992,
+          "firstRetreatTick": -6
+        },
+        {
+          "name": "Measured flight and landing / catalog-laboratory.html",
+          "width": 390,
+          "pass": true,
+          "benchAccelerated": true,
+          "takeoff": {
+            "x": 235,
+            "y": 558.22,
+            "dx": -5,
+            "altitude": 9.779999999999973,
+            "peakAltitude": 9.779999999999973,
+            "grounded": false
+          },
+          "peak": 71.39999999999992,
+          "firstRetreatTick": -6
+        },
+        {
+          "name": "Main Versus utility through native keyboard and preserved preferences",
+          "width": 390,
+          "pass": true,
+          "nativeKeyboard": true,
+          "uid": "re7-flying-bug",
+          "life": 10000,
+          "resource": 84,
+          "altitude": 18.839999999999918,
+          "focus": null,
+          "activations": 1
+        },
+        {
+          "name": "Complete experimental CPU replay includes the exact aerial path without storage changes",
+          "width": 390,
+          "pass": true,
+          "simulationAccelerated": true,
+          "finished": true,
+          "frames": 1433,
+          "same": true
+        }
+      ]
+    },
+    {
+      "source": "qa-replay-r13/BROWSER_REPLAY_R13_RESULTS.json",
+      "sourceSha256": "201c54009ce6a5fc404f2ea1af112053f1d9463e45284f5a6403d193e4096baf",
+      "suite": "replay-vault-r13-http",
+      "passed": 8,
+      "failed": 0,
+      "physicalDevices": false,
+      "newArtwork": false,
+      "checks": [
+        {
+          "name": "Quota failure, native export and explicit retry preserve the complete replay",
+          "width": 1440,
+          "pass": true,
+          "configuredShortMatch": true,
+          "quotaInjected": true,
+          "realDownload": true,
+          "frames": 250
+        },
+        {
+          "name": "Native read-only playback and confirmed single removal preserve other storage",
+          "width": 1440,
+          "pass": true,
+          "nativeKeyboard": true,
+          "replayReadOnly": true,
+          "removalConfirmed": true
+        },
+        {
+          "name": "Corrupt archive is backed up exactly; invalid file import preserves the active match",
+          "width": 1440,
+          "pass": true,
+          "corruptFixture": true,
+          "backupByteExact": true,
+          "realFileInput": true
+        },
+        {
+          "name": "Full archive never trims history and lets the user free exactly one slot",
+          "width": 1440,
+          "pass": true,
+          "synthetic30EntryFixture": true,
+          "noAutoTrim": true,
+          "oneExplicitRemoval": true
+        },
+        {
+          "name": "Quota failure, native export and explicit retry preserve the complete replay",
+          "width": 390,
+          "pass": true,
+          "configuredShortMatch": true,
+          "quotaInjected": true,
+          "realDownload": true,
+          "frames": 250
+        },
+        {
+          "name": "Native read-only playback and confirmed single removal preserve other storage",
+          "width": 390,
+          "pass": true,
+          "nativeKeyboard": true,
+          "replayReadOnly": true,
+          "removalConfirmed": true
+        },
+        {
+          "name": "Corrupt archive is backed up exactly; invalid file import preserves the active match",
+          "width": 390,
+          "pass": true,
+          "corruptFixture": true,
+          "backupByteExact": true,
+          "realFileInput": true
+        },
+        {
+          "name": "Full archive never trims history and lets the user free exactly one slot",
+          "width": 390,
+          "pass": true,
+          "synthetic30EntryFixture": true,
+          "noAutoTrim": true,
+          "oneExplicitRemoval": true
+        }
+      ]
+    },
+    {
+      "source": "qa-baker-r14-http/BROWSER_BAKER_R14_RESULTS.json",
+      "sourceSha256": "7242ba295bd1c6146f937b4873791dfc365fa83e2b26120d53101e48a9926dce",
+      "suite": "baker-r14-http",
+      "passed": 8,
+      "failed": 0,
+      "physicalDevices": false,
+      "canonicalArt": false,
+      "checks": [
+        {
+          "name": "Distinct room, layers and exact shared frame / baker_garage_2017",
+          "width": 1440,
+          "pass": true,
+          "stage": "baker_garage_2017",
+          "nativeControls": true,
+          "sharedFrame": 120,
+          "rewindAndReduced": true,
+          "canvasScreenshot": true
+        },
+        {
+          "name": "Distinct room, layers and exact shared frame / guest_house_attic_2017",
+          "width": 1440,
+          "pass": true,
+          "stage": "guest_house_attic_2017",
+          "nativeControls": true,
+          "sharedFrame": 120,
+          "rewindAndReduced": true,
+          "canvasScreenshot": true
+        },
+        {
+          "name": "Distinct room, layers and exact shared frame / testing_area_2017",
+          "width": 1440,
+          "pass": true,
+          "stage": "testing_area_2017",
+          "nativeControls": true,
+          "sharedFrame": 120,
+          "rewindAndReduced": true,
+          "canvasScreenshot": true
+        },
+        {
+          "name": "Main Versus and laboratories render rooms without advancing paused combat",
+          "width": 1440,
+          "pass": true,
+          "pausedDraw": true,
+          "actualControllers": true
+        },
+        {
+          "name": "Distinct room, layers and exact shared frame / baker_garage_2017",
+          "width": 390,
+          "pass": true,
+          "stage": "baker_garage_2017",
+          "nativeControls": true,
+          "sharedFrame": 120,
+          "rewindAndReduced": true,
+          "canvasScreenshot": true
+        },
+        {
+          "name": "Distinct room, layers and exact shared frame / guest_house_attic_2017",
+          "width": 390,
+          "pass": true,
+          "stage": "guest_house_attic_2017",
+          "nativeControls": true,
+          "sharedFrame": 120,
+          "rewindAndReduced": true,
+          "canvasScreenshot": true
+        },
+        {
+          "name": "Distinct room, layers and exact shared frame / testing_area_2017",
+          "width": 390,
+          "pass": true,
+          "stage": "testing_area_2017",
+          "nativeControls": true,
+          "sharedFrame": 120,
+          "rewindAndReduced": true,
+          "canvasScreenshot": true
+        },
+        {
+          "name": "Main Versus and laboratories render rooms without advancing paused combat",
+          "width": 390,
+          "pass": true,
+          "pausedDraw": true,
+          "actualControllers": true
+        }
+      ]
+    },
+    {
+      "source": "qa-audio-r15-http/BROWSER_AUDIO_R15_RESULTS.json",
+      "sourceSha256": "b3fa9f219738439a9349ffd7eddfbf02be745541417c6a57985ed4b4c60572b3",
+      "suite": "baker-audio-r15-http",
+      "passed": 10,
+      "failed": 0,
+      "physicalDevices": false,
+      "subjectiveListening": false,
+      "checks": [
+        {
+          "name": "Native activation, timeline pause, seek and independent volume",
+          "width": 1440,
+          "pass": true,
+          "trustedActivation": true,
+          "realAudioContext": true,
+          "frameSeek": 150,
+          "workbookBytes": 16621
+        },
+        {
+          "name": "Layer and room changes use new recipes; unknown rooms remain silent",
+          "width": 1440,
+          "pass": true,
+          "sceneChangePauses": true,
+          "soloLayers": true,
+          "emptySearchSilent": true
+        },
+        {
+          "name": "Isolated audition works with frozen visuals, stops and never moves the stage",
+          "width": 1440,
+          "pass": true,
+          "isolatedPreview": true,
+          "realTwelveSecondEnd": true,
+          "reducedMotion": true
+        },
+        {
+          "name": "Real OfflineAudioContext reproduces the generated stereo loop without clipping",
+          "width": 1440,
+          "pass": true,
+          "realOfflineAudioContext": true,
+          "pcm": [
+            {
+              "id": "baker_garage_2017",
+              "peak": 0.13108423352241516,
+              "rms": 0.03677563477784197,
+              "error": 0
+            },
+            {
+              "id": "guest_house_attic_2017",
+              "peak": 0.10829384624958038,
+              "rms": 0.022768040469647716,
+              "error": 0
+            },
+            {
+              "id": "testing_area_2017",
+              "peak": 0.10146645456552505,
+              "rms": 0.03367744973488225,
+              "error": 0
+            }
+          ],
+          "subjectiveListening": false
+        },
+        {
+          "name": "Versus uses the shared room audio, pauses it and cannot restart it after match end",
+          "width": 1440,
+          "pass": true,
+          "configuredShortMatch": true,
+          "realEngineTicks": true,
+          "normalResult": true
+        },
+        {
+          "name": "Native activation, timeline pause, seek and independent volume",
+          "width": 390,
+          "pass": true,
+          "trustedActivation": true,
+          "realAudioContext": true,
+          "frameSeek": 150,
+          "workbookBytes": 16621
+        },
+        {
+          "name": "Layer and room changes use new recipes; unknown rooms remain silent",
+          "width": 390,
+          "pass": true,
+          "sceneChangePauses": true,
+          "soloLayers": true,
+          "emptySearchSilent": true
+        },
+        {
+          "name": "Isolated audition works with frozen visuals, stops and never moves the stage",
+          "width": 390,
+          "pass": true,
+          "isolatedPreview": true,
+          "realTwelveSecondEnd": false,
+          "reducedMotion": true
+        },
+        {
+          "name": "Real OfflineAudioContext reproduces the generated stereo loop without clipping",
+          "width": 390,
+          "pass": true,
+          "realOfflineAudioContext": true,
+          "pcm": [
+            {
+              "id": "baker_garage_2017",
+              "peak": 0.13108423352241516,
+              "rms": 0.03677563477784197,
+              "error": 0
+            },
+            {
+              "id": "guest_house_attic_2017",
+              "peak": 0.10829384624958038,
+              "rms": 0.022768040469647716,
+              "error": 0
+            },
+            {
+              "id": "testing_area_2017",
+              "peak": 0.10146645456552505,
+              "rms": 0.03367744973488225,
+              "error": 0
+            }
+          ],
+          "subjectiveListening": false
+        },
+        {
+          "name": "Versus uses the shared room audio, pauses it and cannot restart it after match end",
+          "width": 390,
+          "pass": true,
+          "configuredShortMatch": true,
+          "realEngineTicks": true,
+          "normalResult": true
+        }
+      ]
+    },
+    {
+      "source": "qa-trial-audio-r16/BROWSER_TRIAL_AUDIO_R16_RESULTS.json",
+      "sourceSha256": "d8ae2aa0864a260e84ebfef7463cd7fee01c0064f1ff0ec10cd2c8ece50585b6",
+      "suite": "trial-audio-r16-http",
+      "passed": 12,
+      "failed": 0,
+      "physicalDevices": false,
+      "canonAudio": false,
+      "checks": [
+        {
+          "name": "No autoplay; native activation and workbook download match the repository",
+          "width": 1440,
+          "pass": true,
+          "nativeActivation": true,
+          "realAudioContext": true,
+          "noAutoplay": true,
+          "xlsxBytes": 17179
+        },
+        {
+          "name": "Native attack releases six audible shots; pause and step do not replay pending sound",
+          "width": 1440,
+          "pass": true,
+          "nativeKeyboard": true,
+          "shots": [
+            25,
+            30,
+            35,
+            40,
+            45,
+            50
+          ],
+          "singleStepSilent": true
+        },
+        {
+          "name": "Non-real-time speed is silent; bus volumes and resume apply without historical bursts",
+          "width": 1440,
+          "pass": true,
+          "speedHalfSilent": true,
+          "independentVolumes": true
+        },
+        {
+          "name": "Native replay download/import/seek are silent and preserve all existing storage",
+          "width": 1440,
+          "pass": true,
+          "downloadAndImport": true,
+          "seek": 52,
+          "corruptionInjected": true,
+          "storageUnchanged": true
+        },
+        {
+          "name": "Natural CPU result ends ambience once; cached-page fixture requires deliberate reactivation",
+          "width": 1440,
+          "pass": true,
+          "realCPUAccelerated": true,
+          "frame": 1920,
+          "persistedEventsSynthetic": true
+        },
+        {
+          "name": "An unavailable AudioContext reports the problem and never prevents play",
+          "width": 1440,
+          "pass": true,
+          "AudioContextDenialInjected": true,
+          "gameStillRunning": true
+        },
+        {
+          "name": "No autoplay; native activation and workbook download match the repository",
+          "width": 390,
+          "pass": true,
+          "nativeActivation": true,
+          "realAudioContext": true,
+          "noAutoplay": true,
+          "xlsxBytes": 17179
+        },
+        {
+          "name": "Native attack releases six audible shots; pause and step do not replay pending sound",
+          "width": 390,
+          "pass": true,
+          "nativeKeyboard": true,
+          "shots": [
+            28,
+            33,
+            38,
+            43,
+            48,
+            53
+          ],
+          "singleStepSilent": true
+        },
+        {
+          "name": "Non-real-time speed is silent; bus volumes and resume apply without historical bursts",
+          "width": 390,
+          "pass": true,
+          "speedHalfSilent": true,
+          "independentVolumes": true
+        },
+        {
+          "name": "Native replay download/import/seek are silent and preserve all existing storage",
+          "width": 390,
+          "pass": true,
+          "downloadAndImport": true,
+          "seek": 62,
+          "corruptionInjected": true,
+          "storageUnchanged": true
+        },
+        {
+          "name": "Natural CPU result ends ambience once; cached-page fixture requires deliberate reactivation",
+          "width": 390,
+          "pass": true,
+          "realCPUAccelerated": true,
+          "frame": 1920,
+          "persistedEventsSynthetic": true
+        },
+        {
+          "name": "An unavailable AudioContext reports the problem and never prevents play",
+          "width": 390,
+          "pass": true,
+          "AudioContextDenialInjected": true,
+          "gameStillRunning": true
+        }
+      ]
+    },
+    {
+      "source": "qa-combat-text-r17/BROWSER_COMBAT_TEXT_R17_RESULTS.json",
+      "sourceSha256": "cc56b9dd39b9a42797efcbedf1048238f2604ff3ba62f09292ebe4c39e2f42aa",
+      "suite": "combat-text-r17-http",
+      "passed": 12,
+      "failed": 0,
+      "physicalDevices": false,
+      "screenReaderSpeechCertified": false,
+      "checks": [
+        {
+          "name": "Native panel setup, workbook bytes and independent sound-off activation",
+          "width": 1440,
+          "pass": true,
+          "nativeControls": true,
+          "xlsxBytes": 16532,
+          "storageUnchanged": true
+        },
+        {
+          "name": "Actual empty detonator gets readable captions with no audio unlock",
+          "width": 1440,
+          "pass": true,
+          "nativeUtility": true,
+          "soundDisabled": true,
+          "noFakeExplosion": true
+        },
+        {
+          "name": "Native modal keyboard, pause continuity and inert background",
+          "width": 1440,
+          "pass": true,
+          "nativeTab": true,
+          "nativeShiftTab": true,
+          "restoredFocus": true,
+          "preexistingPauseRetained": true
+        },
+        {
+          "name": "Configured real timed match records one textual result without repeating on final draw",
+          "width": 1440,
+          "pass": true,
+          "realEngineStepped": true,
+          "shortTimerAndHealthConfigured": true,
+          "finished": true,
+          "resultCount": 1,
+          "winner": 0,
+          "unchanged": true
+        },
+        {
+          "name": "Experimental journal follows CPU events and rejects bad import without replacing its transcript",
+          "width": 1440,
+          "pass": true,
+          "CPUAccelerated": true,
+          "nativeFileInput": true,
+          "storageUnchanged": true
+        },
+        {
+          "name": "Clear affects only the journal; replay seeking resets annotations, not gameplay data",
+          "width": 1440,
+          "pass": true,
+          "nativeImport": true,
+          "seekFrame": 120,
+          "clearIsPresentationOnly": true,
+          "consoleErrors": 0
+        },
+        {
+          "name": "Native panel setup, workbook bytes and independent sound-off activation",
+          "width": 390,
+          "pass": true,
+          "nativeControls": true,
+          "xlsxBytes": 16532,
+          "storageUnchanged": true
+        },
+        {
+          "name": "Actual empty detonator gets readable captions with no audio unlock",
+          "width": 390,
+          "pass": true,
+          "nativeUtility": true,
+          "soundDisabled": true,
+          "noFakeExplosion": true
+        },
+        {
+          "name": "Native modal keyboard, pause continuity and inert background",
+          "width": 390,
+          "pass": true,
+          "nativeTab": true,
+          "nativeShiftTab": true,
+          "restoredFocus": true,
+          "preexistingPauseRetained": true
+        },
+        {
+          "name": "Configured real timed match records one textual result without repeating on final draw",
+          "width": 390,
+          "pass": true,
+          "realEngineStepped": true,
+          "shortTimerAndHealthConfigured": true,
+          "finished": true,
+          "resultCount": 1,
+          "winner": 0,
+          "unchanged": true
+        },
+        {
+          "name": "Experimental journal follows CPU events and rejects bad import without replacing its transcript",
+          "width": 390,
+          "pass": true,
+          "CPUAccelerated": true,
+          "nativeFileInput": true,
+          "storageUnchanged": true
+        },
+        {
+          "name": "Clear affects only the journal; replay seeking resets annotations, not gameplay data",
+          "width": 390,
+          "pass": true,
+          "nativeImport": true,
+          "seekFrame": 120,
+          "clearIsPresentationOnly": true,
+          "consoleErrors": 0
+        }
+      ]
+    },
+    {
+      "source": "qa-access-r18/BROWSER_ACCESS_R18_RESULTS.json",
+      "sourceSha256": "078fc0faa55831c93a6bd5d2b8912e1072ecd143e9cef63b7e4591ed44d543b0",
+      "suite": "access-context-r18-http",
+      "passed": 10,
+      "failed": 0,
+      "physicalDevices": false,
+      "realScreenReaderSpeech": false,
+      "checks": [
+        {
+          "name": "Native contextual controls and journal are available without audio",
+          "width": 1440,
+          "pass": true,
+          "nativeClick": true,
+          "frameZeroManualAction": true,
+          "noPreferenceWrites": true
+        },
+        {
+          "name": "Modal pauses the real exercise, keyboard focus stays inside and Escape restores playback",
+          "width": 1440,
+          "pass": true,
+          "nativeTab": true,
+          "pausedFrame": 8
+        },
+        {
+          "name": "Rejected file import preserves context and text; changing exercise clears the previous journal",
+          "width": 1440,
+          "pass": true,
+          "nativeFileInput": true,
+          "allOptions": 43,
+          "exactWorkbookDownload": true
+        },
+        {
+          "name": "Story parent observes its genuine iframe and shows a real empty detonator without audio",
+          "width": 1440,
+          "pass": true,
+          "realSameOriginIframe": true,
+          "nativeKeyboard": true,
+          "unchangedStorySave": true
+        },
+        {
+          "name": "Story panel freezes both windows, keeps focus and restores only that current match",
+          "width": 1440,
+          "pass": true,
+          "nativeEscape": true,
+          "realPausedEngineFrame": 157
+        },
+        {
+          "name": "Native contextual controls and journal are available without audio",
+          "width": 390,
+          "pass": true,
+          "nativeClick": true,
+          "frameZeroManualAction": true,
+          "noPreferenceWrites": true
+        },
+        {
+          "name": "Modal pauses the real exercise, keyboard focus stays inside and Escape restores playback",
+          "width": 390,
+          "pass": true,
+          "nativeTab": true,
+          "pausedFrame": 7
+        },
+        {
+          "name": "Rejected file import preserves context and text; changing exercise clears the previous journal",
+          "width": 390,
+          "pass": true,
+          "nativeFileInput": true,
+          "allOptions": 43,
+          "exactWorkbookDownload": true
+        },
+        {
+          "name": "Story parent observes its genuine iframe and shows a real empty detonator without audio",
+          "width": 390,
+          "pass": true,
+          "realSameOriginIframe": true,
+          "nativeKeyboard": true,
+          "unchangedStorySave": true
+        },
+        {
+          "name": "Story panel freezes both windows, keeps focus and restores only that current match",
+          "width": 390,
+          "pass": true,
+          "nativeEscape": true,
+          "realPausedEngineFrame": 136
+        }
+      ]
+    },
+    {
+      "source": "qa-saves-r19/BROWSER_SAVES_R19_RESULTS.json",
+      "sourceSha256": "e24984d41808d9e30b5d06967d10d0e2b13fb039d42a6ddef51c27fba9c2286c",
+      "suite": "save-center-r19-http",
+      "passed": 16,
+      "failed": 0,
+      "physicalDevice": false,
+      "checks": [
+        {
+          "name": "Native export preserves game raw values and excludes unrelated credentials",
+          "width": 1440,
+          "pass": true,
+          "nativeDownload": true,
+          "untouchedStorage": true
+        },
+        {
+          "name": "Import, unchecked groups and preview are read-only until an explicit decision",
+          "width": 1440,
+          "pass": true,
+          "selectedGroup": "audio",
+          "noWrites": true
+        },
+        {
+          "name": "Before-copy download then native confirmation restores only the chosen group",
+          "width": 1440,
+          "pass": true,
+          "nativeConfirmation": true,
+          "changedKeys": 1
+        },
+        {
+          "name": "Corrupted imports and malformed copies cannot overwrite a good local group",
+          "width": 1440,
+          "pass": true,
+          "corruptionInjected": true
+        },
+        {
+          "name": "An actual second browser tab invalidates a stale preview via the storage event",
+          "width": 1440,
+          "pass": true,
+          "realSecondTab": true
+        },
+        {
+          "name": "A quota error on a later write rolls back earlier keys with an honest failure message",
+          "width": 1440,
+          "pass": true,
+          "faultInjected": true,
+          "oldValuesRestored": true
+        },
+        {
+          "name": "Native keyboard navigation, mobile layout and cancellation preserve the session",
+          "width": 1440,
+          "pass": true,
+          "keyboardEnter": true,
+          "noHorizontalOverflow": true
+        },
+        {
+          "name": "The Excel link downloads the exact shipped tracking workbook",
+          "width": 1440,
+          "pass": true,
+          "exactWorkbook": true
+        },
+        {
+          "name": "Native export preserves game raw values and excludes unrelated credentials",
+          "width": 390,
+          "pass": true,
+          "nativeDownload": true,
+          "untouchedStorage": true
+        },
+        {
+          "name": "Import, unchecked groups and preview are read-only until an explicit decision",
+          "width": 390,
+          "pass": true,
+          "selectedGroup": "audio",
+          "noWrites": true
+        },
+        {
+          "name": "Before-copy download then native confirmation restores only the chosen group",
+          "width": 390,
+          "pass": true,
+          "nativeConfirmation": true,
+          "changedKeys": 1
+        },
+        {
+          "name": "Corrupted imports and malformed copies cannot overwrite a good local group",
+          "width": 390,
+          "pass": true,
+          "corruptionInjected": true
+        },
+        {
+          "name": "An actual second browser tab invalidates a stale preview via the storage event",
+          "width": 390,
+          "pass": true,
+          "realSecondTab": true
+        },
+        {
+          "name": "A quota error on a later write rolls back earlier keys with an honest failure message",
+          "width": 390,
+          "pass": true,
+          "faultInjected": true,
+          "oldValuesRestored": true
+        },
+        {
+          "name": "Native keyboard navigation, mobile layout and cancellation preserve the session",
+          "width": 390,
+          "pass": true,
+          "keyboardEnter": true,
+          "noHorizontalOverflow": true
+        },
+        {
+          "name": "The Excel link downloads the exact shipped tracking workbook",
+          "width": 390,
+          "pass": true,
+          "exactWorkbook": true
+        }
+      ]
+    }
+  ],
+  "reviewFollowup": {
+    "evidence": "docs/R20_REVIEW_FOLLOWUP.json",
+    "rerunPassed": 51,
+    "otherHistoricalPassed": 104,
+    "rerunSuites": [
+      {
+        "source": "qa-interface-r20/GAME_MENU_R20_RESULTS.json",
+        "passed": 17,
+        "failed": 0
+      },
+      {
+        "source": "qa-player-shell-r20/BROWSER_PLAYER_SHELL_R20_RESULTS.json",
+        "passed": 16,
+        "failed": 0
+      },
+      {
+        "source": "qa-sprites-r20/BROWSER_SPRITES_R20_RESULTS.json",
+        "passed": 8,
+        "failed": 0
+      },
+      {
+        "source": "qa-access-r18/BROWSER_ACCESS_R18_RESULTS.json",
+        "passed": 10,
+        "failed": 0
+      }
+    ]
+  }
+}

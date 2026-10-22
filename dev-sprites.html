@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Atelier des sprites — B.O.W. Protocol</title>
+  <link rel="stylesheet" href="styles/player-shell-r20.css">
+  <script src="src/interface-preferences-r20.js"></script>
+  <script src="src/player-shell-r20.js"></script>
+  <style>
+    :root{color-scheme:dark}body{margin:0;background:#0b1013;color:#dbe5e6;font:15px/1.5 system-ui,sans-serif}main{width:min(1180px,94vw);margin:35px auto}h1{margin-bottom:6px}a{color:#a0d2d2}.sprite-tools{display:flex;flex-wrap:wrap;gap:18px;align-items:end;margin:24px 0}.sprite-tools label{display:grid;gap:6px}button,select{padding:10px 15px;border:1px solid #576767;color:#e5eeee;background:#172124;font:inherit}button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid #e4be7b;outline-offset:4px}.sprite-workspace{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:24px}.sprite-preview{min-width:0;border:1px solid #47575b;background:#131c21;position:relative}.sprite-preview[data-background="light"]{background:#d8dddd}.sprite-preview[data-background="checker"]{background-color:#384347;background-image:linear-gradient(45deg,#252f33 25%,transparent 25%),linear-gradient(-45deg,#252f33 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#252f33 75%),linear-gradient(-45deg,transparent 75%,#252f33 75%);background-size:32px 32px;background-position:0 0,0 16px,16px -16px,-16px 0}canvas{width:100%;height:600px;display:block}.sprite-information{padding:20px;background:#141d20;border:1px solid #47575b}.sprite-information dl{margin:0}.sprite-information dt{margin-top:12px;color:#97abab;text-transform:uppercase;letter-spacing:.1em;font-size:11px}.sprite-information dd{margin:3px 0;overflow-wrap:anywhere}.sprite-boundary{padding:12px;border-left:3px solid #d4ad65;color:#d1be9c}#spriteStatus{min-height:1.5em;color:#d0baa0}#spriteManifest{font-size:13px}#spriteNative{margin-top:20px;display:inline-block}footer{margin:28px 0;color:#91a0a5;font-size:13px}@media(max-width:760px){.sprite-workspace{grid-template-columns:1fr}canvas{height:450px}.sprite-tools{gap:10px}.sprite-tools label{flex:1 1 150px}.sprite-information{padding:16px}}
+    .sprite-tools label{min-width:0}.sprite-tools select{width:100%;min-width:0;max-width:100%}.sprite-tools input[type="range"]{max-width:100%}
+  </style>
+</head>
+<body>
+  <main>
+    <a href="dev.html?dev=1">← Menu DEV</a>
+    <h1>Atelier des sprites indépendants</h1>
+    <p>Contrôle des quatre images de présentation R20 : alpha, cadrage, pivot et incarnation.</p>
+    <div class="sprite-tools">
+      <label>Sujet<select id="spriteSelect" aria-label="Sprite à examiner"></select></label>
+      <label>Fond<select id="spriteBackground"><option value="checker">Damier</option><option value="dark">Sombre</option><option value="light">Clair</option></select></label>
+      <label>Échelle<input id="spriteScale" type="range" min="35" max="95" value="85" aria-label="Échelle de l’image"></label>
+      <label><span>Repère</span><span><input id="spritePivot" type="checkbox" checked> Montrer le pivot</span></label>
+    </div>
+    <p id="spriteStatus" role="status" aria-live="polite">Chargement du sujet…</p>
+    <div class="sprite-workspace">
+      <div class="sprite-preview" id="spritePreview" data-background="checker"><canvas id="spriteCanvas" role="img" aria-label="Sprite indépendant et repère du sol"></canvas></div>
+      <aside class="sprite-information" aria-label="Données de production">
+        <h2 id="spriteName"></h2>
+        <dl id="spriteMetadata"></dl>
+        <p class="sprite-boundary">Une pose principale par sujet, plus une variante de Nemesis sans arme. Aucun cycle animé ni découpage des membres n’est livré par ce lot. Les fichiers ne remplacent pas le moteur de combat.</p>
+        <a id="spriteNative" download>Télécharger le PNG</a><br>
+        <a id="spriteManifest" download>Manifeste individuel</a>
+        <p><a id="spriteVariant" download hidden>Variante de production sans lance-roquettes</a></p>
+      </aside>
+    </div>
+    <footer>Interprétations graphiques générées à partir des références d’incarnation du dépôt. La conformité géométrique et les animations officielles restent à contrôler. Aucun retournement automatique des asymétries.</footer>
+  </main>
+  <script src="src/bow-sprite-library-r20.js"></script>
+  <script src="src/bow-sprite-viewer-r20.js"></script>
+</body>
+</html>

@@ -223,7 +223,7 @@ async function main() {
     assert.equal($(codex, '.codex-filters').dispatchEvent({ type: 'submit' }), false);
   });
 
-  await test('All Codex details resolve real assets, sources and playable links; closing restores focus', () => {
+  await test('All Codex details preserve assets, links and focus; reviewed visual diagnostics remain available in DEV', async () => {
     resetCodex(codex); const fighters = new Map(Data.fighters.map(f => [f.uid, f]));
     let details = 0, actions = 0, archives = 0;
     collectCards(codex, button => {
@@ -243,7 +243,8 @@ async function main() {
           const url = new URL(a.getAttribute('href'), 'https://example.test/');
           assert.equal(url.pathname, '/modules/versus.html'); assert.equal(url.searchParams.get('uid'), entry.id);
         }
-        assert(/VISUEL PROVISOIRE|POSE DE RÉFÉRENCE/i.test($(codex, '#detailStatus').textContent));
+        assert.equal($(codex, '#detailStatus').textContent, 'SPÉCIMEN JOUABLE');
+        assert(!/Fidélité|LORE AUDITÉ/i.test($(codex, '#detailFacts').textContent));
       } else { assert.equal(links.length, 1); assert.equal(new URL(links[0].getAttribute('href'),'https://example.test/').pathname,'/catalog.html'); assert.equal(new URL(links[0].getAttribute('href'),'https://example.test/').searchParams.get('id'),entry.id); assert(/ARCHIVE DOCUMENTAIRE/.test($(codex, '#detailStatus').textContent)); archives++; }
       const sources = $(codex, '#detailSources').querySelectorAll('a');
       assert(sources.length >= 1, entry.id + ' needs source attribution');
@@ -254,7 +255,32 @@ async function main() {
       $(codex, '#closeSpecimen').click(); assert.equal($(codex, '#specimenDialog').open, false);
       assert.equal(codex.document.activeElement, button); details++;
     });
-    return { details, playableLinks: actions, documentaryEntries: archives };
+    const dev = await load('codex.html', { search: '?dev=1' });
+    assert.equal(dev.window.RE_PLAYER_SHELL.isDev, true);
+    resetCodex(dev, { status: 'playable' });
+    let devDiagnostics = 0;
+    collectCards(dev, button => {
+      button.focus(); button.click();
+      assert.equal($(dev, '#specimenDialog').open, true);
+      assert(/VISUEL PROVISOIRE|POSE DE RÉFÉRENCE/i.test($(dev, '#detailStatus').textContent));
+      assert($(dev, '#detailStatus').textContent.includes('MOVESET 10 SUR 10 AUDITÉ'));
+      assert($(dev, '#detailFacts').textContent.includes('LORE AUDITÉ'));
+      assert.equal($(dev, '#detailImage').getAttribute('src'), fighters.get(button.dataset.id).sprite);
+      const links = $(dev, '#detailActions').querySelectorAll('a');
+      assert.equal(links.length, 2);
+      for (const link of links) {
+        const url = new URL(link.getAttribute('href'), 'https://example.test/');
+        assert.equal(url.pathname, '/modules/versus.html');
+        assert.equal(url.searchParams.get('uid'), button.dataset.id);
+      }
+      $(dev, '#closeSpecimen').click();
+      assert.equal($(dev, '#specimenDialog').open, false);
+      assert.equal(dev.document.activeElement, button);
+      devDiagnostics++;
+    });
+    assert.equal(devDiagnostics, Data.fighters.length);
+    dispose(dev);
+    return { details, playableLinks: actions, documentaryEntries: archives, devDiagnostics };
   });
 
   await test('Codex direct links open the requested dossier and missing image failures stay explicit', async () => {

@@ -1,3 +1,4 @@
+import {legacyAssetFiles} from './legacy-preservation-r20.mjs';
 import {r6Expected} from './r6-baseline.mjs';
 /** Deterministic fault-injection tests for the real shared renderer.
  * Fake transport/timers and a recording canvas are NOT visual certification. */
@@ -86,7 +87,7 @@ await test('Cache and failure diagnostics stay bounded across large error sets',
 await test('R4 assets/art and R5 baselines retained, R6 combat edits checked explicitly',()=>{
  const baseline=JSON.parse(fs.readFileSync(path.join(root,'docs/RENDERER_RECOVERY_R5_BASELINE.json'),'utf8'));
  for(const [file,expected] of Object.entries(baseline.files))assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex'),r6Expected(root,file,expected),file);
- const files=[];function walk(dir){for(const x of fs.readdirSync(dir,{withFileTypes:true})){const p=path.join(dir,x.name);if(x.isDirectory())walk(p);else if(x.isFile())files.push(p);}}walk(path.join(root,'assets'));const digest=crypto.createHash('sha256');for(const f of files.sort()){const rel=path.relative(root,f).split(path.sep).join('/');digest.update(rel+'\0'+crypto.createHash('sha256').update(fs.readFileSync(f)).digest('hex')+'\n');}assert.equal(files.length,baseline.assetCount);assert.equal(digest.digest('hex'),baseline.assetSetSha256);
+ const files=legacyAssetFiles(root);const digest=crypto.createHash('sha256');for(const f of files.sort()){const rel=path.relative(root,f).split(path.sep).join('/');digest.update(rel+'\0'+crypto.createHash('sha256').update(fs.readFileSync(f)).digest('hex')+'\n');}assert.equal(files.length,baseline.assetCount);assert.equal(digest.digest('hex'),baseline.assetSetSha256);
  const f=JSON.parse(fs.readFileSync(path.join(root,'data/roster.json'))).fighters,e=JSON.parse(fs.readFileSync(path.join(root,'data/catalog-expansion-v070.json'))).fighters;assert.equal(f.length+e.length,346);
 });
 const failed=results.filter(x=>!x.pass).length;

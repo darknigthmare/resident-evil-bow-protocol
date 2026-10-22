@@ -1,0 +1,43 @@
+{
+  "baseline": "67b805aa814856148297dbf42a6fda219d20a8ac",
+  "verified_at_utc": "2026-10-22T07:52:03.339876+00:00",
+  "files": [
+    {
+      "path": "src/runtime-contract.js",
+      "baseline_sha256": "6566ab58194e7c07c7e531213aaf408c703e8bb9358c4899ea0f5913239afe8c",
+      "working_sha256": "6566ab58194e7c07c7e531213aaf408c703e8bb9358c4899ea0f5913239afe8c",
+      "identical": true
+    },
+    {
+      "path": "src/catalog-replay-contract.js",
+      "baseline_sha256": "2778547c459e6efcc95810e8c3dd1108449ca752adaf54f751406573b84ec934",
+      "working_sha256": "2778547c459e6efcc95810e8c3dd1108449ca752adaf54f751406573b84ec934",
+      "identical": true
+    },
+    {
+      "path": "src/context-contract.js",
+      "baseline_sha256": "b522b4984b04828e7c33173db2bf3e3adc0add6ecad06b0ad0f45dc182cae66b",
+      "working_sha256": "b522b4984b04828e7c33173db2bf3e3adc0add6ecad06b0ad0f45dc182cae66b",
+      "identical": true
+    }
+  ],
+  "validation": [
+    {
+      "command": "node scripts/contract.mjs",
+      "exit_code": 0,
+      "output": "Runtime contract 0.7.3 612953ce952cdd2bd6b5dd21a489bc961c2bfcc3ff1321d15528e341f34ee67d"
+    },
+    {
+      "command": "node scripts/catalog-replay-contract.mjs",
+      "exit_code": 0,
+      "output": "Catalog replay contract 7481cce1dabb7aab981422cd28448648476e60737991e764783118ae038e2ca0"
+    },
+    {
+      "command": "node scripts/context-contract.mjs",
+      "exit_code": 0,
+      "output": "Context contract 4af946077d25392fb409ab18d6ed619bc955610ab4a17c38863a2921513977f6"
+    }
+  ],
+  "migration_required": false,
+  "scope": "R20 presentation: existing runtime, catalog replay and contextual journal contracts are byte-identical to reviewed R19."
+}

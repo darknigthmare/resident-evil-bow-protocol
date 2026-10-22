@@ -1,0 +1,134 @@
+{
+  "suite": "save-center-r19",
+  "passed": 25,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "The registry contains exactly 18 persistent game keys in eight disjoint groups",
+      "pass": true
+    },
+    {
+      "name": "Export reads only known keys and cannot include auth tokens or unrelated storage",
+      "pass": true
+    },
+    {
+      "name": "Raw Unicode, whitespace, malformed copies and absence survive export byte-for-byte",
+      "pass": true
+    },
+    {
+      "name": "Preview lists adds, replacements and removals but performs no write",
+      "pass": true
+    },
+    {
+      "name": "A restoration requires both exact before-copy acknowledgement and explicit confirmation",
+      "pass": true
+    },
+    {
+      "name": "Only selected groups change and old double slots cannot mask a restored revision",
+      "pass": true
+    },
+    {
+      "name": "Whole-group preview refuses empty and damaged incoming groups without changing the target",
+      "pass": true
+    },
+    {
+      "name": "Outer corruption, future format and damaged checksum are refused",
+      "pass": true
+    },
+    {
+      "name": "Unknown, repeated, missing and extra keys are rejected even with a recomputed checksum",
+      "pass": true
+    },
+    {
+      "name": "Invalid metadata or non-string raw values cannot be imported",
+      "pass": true
+    },
+    {
+      "name": "Per-value and aggregate bounds reject oversize content before any restore",
+      "pass": true
+    },
+    {
+      "name": "Internal checksums protect Dossier, Operations and contextual paired copies",
+      "pass": true
+    },
+    {
+      "name": "A read denied by the browser cannot be misreported as an empty valid backup",
+      "pass": true
+    },
+    {
+      "name": "A change after preview refuses restoration before the first write",
+      "pass": true
+    },
+    {
+      "name": "A quota failure on the second key rolls back the first without losing old data",
+      "pass": true
+    },
+    {
+      "name": "A silent failed write is detected and the first write is rolled back",
+      "pass": true
+    },
+    {
+      "name": "A persistent rollback failure exposes exact recovery data instead of claiming success",
+      "pass": true
+    },
+    {
+      "name": "An external writer during restoration is never overwritten by rollback",
+      "pass": true
+    },
+    {
+      "name": "Cancelled, fake, reused and cross-instance previews cannot be applied",
+      "pass": true
+    },
+    {
+      "name": "Selectors reject unknown groups and duplicates; preview metadata is immutable",
+      "pass": true
+    },
+    {
+      "name": "A real Dossier profile round-trips and remains validated by its existing loader",
+      "pass": true
+    },
+    {
+      "name": "A real contextual checkpoint round-trips with identical restored state and records",
+      "pass": true
+    },
+    {
+      "name": "All 18 keys, including older dojo copies, round-trip without parsing or reformatting values",
+      "pass": true,
+      "detail": {
+        "copiedKeys": 18,
+        "gameSemanticValidation": "separate loader responsibility"
+      }
+    },
+    {
+      "name": "New page is linked, included in the static build and has no remote upload code",
+      "pass": true
+    },
+    {
+      "name": "R19 gameplay, original assets and workbooks are preserved; three R20 presentation diffs are reviewed explicitly",
+      "pass": true,
+      "detail": {
+        "sets": [
+          "src",
+          "data",
+          "assets",
+          "docs/planning"
+        ],
+        "originalAssets": 508,
+        "originalDataFiles": 19,
+        "historicalSourceFiles": 66,
+        "reviewedPresentationChanges": [
+          "src/catalog-page-v070.js",
+          "src/codex.js",
+          "src/movesets.js"
+        ],
+        "protectedR19Additions": [
+          "src/save-center-r19.js",
+          "src/save-center-page-r19.js",
+          "docs/planning/BOW_SAUVEGARDES_R19.xlsx"
+        ],
+        "allowedNewArtNamespace": "assets/sprites/bow/"
+      }
+    }
+  ],
+  "limits": "Injected Storage failures and real loader fixtures. Not crash-atomic, anti-cheat or physical-device certification."
+}

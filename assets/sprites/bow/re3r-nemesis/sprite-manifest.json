@@ -1,0 +1,133 @@
+{
+  "id": "re3r-nemesis",
+  "label": "Nemesis — stade 1",
+  "incarnation": "Resident Evil 3 remake (2020)",
+  "image": "assets/sprites/bow/re3r-nemesis/idle-right-armed.png",
+  "width": 1024,
+  "height": 1536,
+  "format": "PNG",
+  "bytes": 2734760,
+  "sha256": "0a437afaea6ca7c37b76541fc403a6cd9041d18d1cdd31445077fa17203c0679",
+  "alpha": {
+    "channel": true,
+    "min": 0,
+    "max": 254,
+    "transparentPixels": 755056,
+    "totalPixels": 1572864,
+    "transparentFraction": 0.480052,
+    "visibleThreshold": 16
+  },
+  "bounds": {
+    "x": 97,
+    "y": 12,
+    "width": 918,
+    "height": 1509
+  },
+  "pivot": {
+    "x": 556,
+    "y": 1521
+  },
+  "sourceFacing": "right",
+  "view": "three-quarter",
+  "canMirror": false,
+  "mirrorReason": "Appareil thoracique et tube de l’épaule gauche asymétriques.",
+  "availableStates": [
+    "idle"
+  ],
+  "animationFrames": 1,
+  "layers": [
+    {
+      "id": "body-with-launcher",
+      "path": "assets/sprites/bow/re3r-nemesis/idle-right-armed.png",
+      "order": 0,
+      "offset": {
+        "x": 0,
+        "y": 0
+      }
+    }
+  ],
+  "modularParts": false,
+  "combatIntegrated": false,
+  "canonicalFidelity": "review-required",
+  "presentation": "menu-and-selection",
+  "referenceComparison": "Incarnation contrôlée à partir de la référence locale ; réinterprétation générée, fidélité géométrique 1:1 non certifiée.",
+  "openStates": [
+    "idle-cycle",
+    "walk",
+    "run",
+    "light",
+    "heavy",
+    "special",
+    "super",
+    "hurt",
+    "guard",
+    "knockdown",
+    "intro",
+    "victory",
+    "defeat",
+    "left-view",
+    "modular-limbs"
+  ],
+  "provenance": {
+    "generator": "image_gen built-in",
+    "generationDate": "2026-10-22",
+    "generatedSourceFilename": "exec-563809bb-0982-46c9-8bfe-be3ee7602ca8.png",
+    "references": [
+      {
+        "local": "assets/specimens/re3r-nemesis.webp",
+        "sourcePage": "https://www.evilresource.com/resident-evil-3-remake/enemies/nemesis",
+        "role": "incarnation reference"
+      },
+      {
+        "local": "assets/sprites/bow/re3r-nemesis/idle-right.png",
+        "role": "generated body edit target"
+      }
+    ],
+    "promptFile": "assets/sprites/bow/generation-prompts.json",
+    "originalBytesPreserved": true
+  },
+  "integration": {
+    "mainMenu": true,
+    "versusSelection": true,
+    "combatRendering": false,
+    "devViewer": true
+  },
+  "variants": [
+    {
+      "image": "assets/sprites/bow/re3r-nemesis/idle-right.png",
+      "width": 1024,
+      "height": 1536,
+      "format": "PNG",
+      "bytes": 2565007,
+      "sha256": "9fac32e73e77d403ba71821a573211a4fd57ccd295167e70ef32228ebc4d1fb3",
+      "alpha": {
+        "channel": true,
+        "min": 0,
+        "max": 254,
+        "transparentPixels": 862450,
+        "totalPixels": 1572864,
+        "transparentFraction": 0.548331,
+        "visibleThreshold": 16
+      },
+      "bounds": {
+        "x": 158,
+        "y": 12,
+        "width": 723,
+        "height": 1513
+      },
+      "pivot": {
+        "x": 520,
+        "y": 1525
+      },
+      "sourceFacing": "right",
+      "view": "three-quarter",
+      "id": "unarmed-idle",
+      "state": "idle",
+      "usage": "production-reference",
+      "label": "Corps sans lance-roquettes",
+      "animationFrames": 1,
+      "generatedSourceFilename": "exec-31d07546-c301-4ee4-ae11-a612a0a14d35.png"
+    }
+  ],
+  "equipment": "rocket-launcher"
+}

@@ -1,0 +1,62 @@
+{
+  "suite": "legacy-preservation-r20",
+  "passed": 8,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "All original sets and the three reviewed presentation changes match exact recorded hashes",
+      "pass": true,
+      "detail": {
+        "sets": [
+          "src",
+          "data",
+          "assets",
+          "docs/planning"
+        ],
+        "originalAssets": 508,
+        "originalDataFiles": 19,
+        "historicalSourceFiles": 66,
+        "reviewedPresentationChanges": [
+          "src/catalog-page-v070.js",
+          "src/codex.js",
+          "src/movesets.js"
+        ],
+        "protectedR19Additions": [
+          "src/save-center-r19.js",
+          "src/save-center-page-r19.js",
+          "docs/planning/BOW_SAUVEGARDES_R19.xlsx"
+        ],
+        "allowedNewArtNamespace": "assets/sprites/bow/"
+      }
+    },
+    {
+      "name": "An unreviewed engine modification is rejected",
+      "pass": true
+    },
+    {
+      "name": "A later edit of an approved presentation module still requires a new review",
+      "pass": true
+    },
+    {
+      "name": "Changed historical artwork cannot hide behind the new sprite namespace",
+      "pass": true
+    },
+    {
+      "name": "A new file outside assets/sprites/bow is rejected",
+      "pass": true
+    },
+    {
+      "name": "A removed historical asset is rejected before computing its aggregate",
+      "pass": true
+    },
+    {
+      "name": "The R19 backup implementation stays byte-identical",
+      "pass": true
+    },
+    {
+      "name": "The R19 workbook stays byte-identical",
+      "pass": true
+    }
+  ],
+  "scope": "Exact source/data/art/workbook hashes, with in-memory fault injections. No source files mutated."
+}
