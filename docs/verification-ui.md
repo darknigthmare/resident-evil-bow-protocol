@@ -2,19 +2,19 @@
 
 - Résultat : **RÉUSSI**
 - Contrôles : **13/13**
-- Portée : 115 sujets, 1150 techniques, thème bow-v073.css, compteurs publics, Incident Baker, Apex Mutation, traçabilité lore, états FINE/CAUTION/DANGER et navigation.
-- Portée technique : contrôle structurel et initialisation réelle de l’accueil et de l’Archive des movesets dans le DOM contrôlé. Le rendu CSS pixel par pixel et les résolutions physiques ne sont pas revendiqués.
+- Portée : 115 sujets, 1150 techniques, menu R20, sept protocoles, archives, options, sources des incarnations et états FINE/CAUTION/DANGER.
+- Portée technique : structure et routes réellement présentes, initialisation de l’Archive des movesets dans le DOM contrôlé. Interactions du menu R20 vérifiées séparément par les suites dédiées et le navigateur.
 
-- ✅ Every primary screen loads the current containment theme
-- ✅ Home screen exposes the exact audited scope and current build
-- ✅ Home runtime fills public counters, Incident Baker, Apex Mutation and E-001 Family cards
-- ✅ Bestiary communicates full-body status and the audited ten-move contract
+- ✅ Primary screens load the R20 game presentation and shared preferences
+- ✅ Main menu exposes six player entries without development routes or audit badges
+- ✅ Seven game protocols and biological archives retain exact native routes
+- ✅ Bestiary preserves identified incarnations and their biological sources
 - ✅ Technique dossier exposes traceability and adaptation boundaries
-- ✅ Combat release identifies the current audited build
+- ✅ Combat selection, pause and technique controls retain their engine mounts
 - ✅ Health presentation contains Resident Evil FINE, CAUTION and DANGER states
-- ✅ Theme contains the containment visual language without remote assets
+- ✅ Presentation styles are local and preserve keyboard focus and reduced-motion support
 - ✅ Moveset archive declares all traceability fields and commands
-- ✅ Dossiers identify the full dynamic campaign scope
+- ✅ Dossiers preserve campaign selection, continuation and the real combat iframe
 - ✅ All public pages retain a route back to the main containment menu
 - ✅ Moveset archive initializes every subject and ten rows from delivered data
-- ✅ Home screen initializes Incident Baker, Apex Mutation and the six-subject E-001 Family panel
+- ✅ Every menu route resolves to a shipped page; boot and options have explicit controls

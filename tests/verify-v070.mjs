@@ -13,7 +13,70 @@ await test('Terminal explosions consume the organism once and prevent subsequent
 await test('Cocoon incubates without attacking and can be contained before emergence',()=>{const r=E.records.find(r=>r.encounter?.kind==='cocoon'),a=K.create(r),b=K.create(r);assert.equal(a.tick(600).result,'éclosion non contenue');assert.equal(a.snapshot().health,100);for(let i=0;i<4;i++){assert(b.act('counter'));b.tick(25);}assert.equal(b.snapshot().result,'incubation contenue');});
 await test('UV stays exclusive to The Girl and cannot create a canonical kill',()=>{for(const r of E.records.filter(r=>r.encounter)){const a=K.create(r);assert.equal(a.act('uv'),r.id==='rerequiem-the-girl');if(r.id==='rerequiem-the-girl'){assert(a.snapshot().uvUntil>0);assert.equal(a.snapshot().finished,false);}}});
 await test('Stable pages never import the experiment adapter or write experiment rewards',()=>{for(const file of ['index.html','operations.html','modules/versus.html','modules/chronicles.html','laboratory.html'])assert(!read(file).includes('catalog-trial-adapter'));for(const file of ['src/catalog-duel-v070.js','src/catalog-laboratory-v070.js','src/catalog-encounter-page.js'])assert.doesNotMatch(read(file),/localStorage|postMessage|RE_OPERATION_VAULT/);});
-await test('Catalog UI exposes all 274 exactly once; filters and deep links resolve',async()=>{const e=await loadGame(path.join(R,'catalog.html'));try{const ids=[];for(let p=0;p<30;p++){ids.push(...e.document.querySelectorAll('.catalog-card').map(x=>x.dataset.id));if(e.document.getElementById('catNext').disabled)break;e.document.getElementById('catNext').click();}assert.equal(ids.length,274);assert.equal(new Set(ids).size,274);for(const r of E.records){assert(e.window.RE_CATALOG_PAGE.open(r.id));assert.equal(e.document.getElementById('catTitle').textContent,r.name);assert.equal(e.document.querySelectorAll('#catMoveRows tr').length,r.encounter?0:10);}const type=e.document.getElementById('catType');type.value='index';type.dispatchEvent({type:'change'});assert.match(e.document.getElementById('catStatus').textContent,/35 dossiers/);const search=e.document.getElementById('catSearch');search.value='ZZ_NO_RECORD';search.dispatchEvent({type:'input'});assert.equal(e.document.querySelectorAll('.catalog-card').length,0);assert.equal(e.storage.size,0);}finally{e.dispose();}});
+await test('Catalog exposes all 274 player archives and preserves DEV techniques, routes, filters and deep links',async()=>{
+  const details=[];
+  for(const dev of [false,true]){
+    const e=await loadGame(path.join(R,'catalog.html'),{search:dev?'?dev=1':''});
+    try{
+      assert.equal(e.window.RE_PLAYER_SHELL.isDev,dev);
+      const ids=[];
+      for(let p=0;p<30;p++){
+        ids.push(...e.document.querySelectorAll('.catalog-card').map(x=>x.dataset.id));
+        if(e.document.getElementById('catNext').disabled)break;
+        e.document.getElementById('catNext').click();
+      }
+      assert.equal(ids.length,274);assert.equal(new Set(ids).size,274);
+      assert.deepEqual(ids,E.records.map(r=>r.id));
+      let techniques=0,actionRoutes=0;
+      for(const r of E.records){
+        assert(e.window.RE_CATALOG_PAGE.open(r.id));
+        assert.equal(e.document.getElementById('catTitle').textContent,r.name);
+        assert.equal(e.document.getElementById('catSource').getAttribute('href'),r.source);
+        const rows=e.document.querySelectorAll('#catMoveRows tr');
+        const actions=e.document.querySelectorAll('#catActions a');
+        if(!dev){
+          assert.equal(e.document.getElementById('catClass').textContent,'ARCHIVE DOCUMENTAIRE');
+          assert.equal(e.document.getElementById('catMoves').hidden,true);
+          assert.equal(rows.length,0);
+          assert.equal(actions.length,1);
+          assert.equal(actions[0].getAttribute('href'),'codex.html');
+        }else{
+          assert.equal(rows.length,r.encounter?0:10);
+          assert.equal(e.document.getElementById('catMoves').hidden,Boolean(r.encounter));
+          const paths=r.encounter?['catalog-encounter.html']:['catalog-laboratory.html','catalog-duel.html'];
+          assert.equal(actions.length,paths.length);
+          for(const [i,action]of actions.entries()){
+            const url=new URL(action.getAttribute('href'),e.window.location.href);
+            assert.equal(url.pathname,new URL(paths[i],e.window.location.href).pathname);
+            assert.equal(url.searchParams.get(r.encounter?'id':'uid'),r.id);
+            assert.equal(url.searchParams.get('dev'),'1');actionRoutes++;
+          }
+          const f=E.fighters.find(f=>f.uid===r.id);
+          if(f)for(const [i,[slot,move]]of Object.entries(f.combat.moves).entries()){
+            const cells=rows[i].querySelectorAll('td');
+            assert.equal(cells[0].textContent,slot);assert.equal(cells[1].textContent,move.name);
+            assert.equal(cells[2].textContent,move.startup+'/'+move.active+'/'+move.recovery);
+            const url=new URL(rows[i].querySelector('a').getAttribute('href'),e.window.location.href);
+            assert.equal(url.pathname,new URL('catalog-laboratory.html',e.window.location.href).pathname);
+            assert.equal(url.searchParams.get('uid'),r.id);assert.equal(url.searchParams.get('slot'),slot);
+            assert.equal(url.searchParams.get('dev'),'1');techniques++;
+          }
+        }
+      }
+      const type=e.document.getElementById('catType');type.value='index';type.dispatchEvent({type:'change'});
+      assert.match(e.document.getElementById('catStatus').textContent,/35 dossiers/);
+      const search=e.document.getElementById('catSearch');search.value='ZZ_NO_RECORD';search.dispatchEvent({type:'input'});
+      assert.equal(e.document.querySelectorAll('.catalog-card').length,0);assert.equal(e.storage.size,0);
+      if(dev){assert.equal(techniques,2310);assert.equal(actionRoutes,505);}
+      details.push({dev,dossiers:ids.length,techniques,actionRoutes});
+    }finally{e.dispose();}
+    for(const id of[E.fighters.at(-1).uid,E.records.find(r=>r.encounter).id]){
+      const direct=await loadGame(path.join(R,'catalog.html'),{search:'?id='+encodeURIComponent(id)+(dev?'&dev=1':'')});
+      try{assert.equal(direct.document.getElementById('catTitle').textContent,E.records.find(r=>r.id===id).name);assert.equal(direct.storage.size,0);}finally{direct.dispose();}
+    }
+  }
+  return details;
+});
 await test('Experimental laboratory loads 346 choices and executes requested subject without writing storage',async()=>{const e=await loadGame(path.join(R,'catalog-laboratory.html'),{search:'?uid=recv-sweeper&slot=special'});try{await e.images();assert.equal(e.imageErrors.length,0);assert.equal(e.document.getElementById('labSubject').children.length,346);assert.equal(e.window.RE_TECHNIQUE_LAB.getBench().snapshot().uid,'recv-sweeper');e.document.getElementById('labActivation').click();assert.equal(e.window.RE_TECHNIQUE_LAB.getBench().snapshot().activations,1);assert.equal(e.storage.size,0);assert.equal(e.messages.length,0);}finally{e.dispose();}});
 await test('Duel initializes, accepts input, pauses and retains no result channel',async()=>{const e=await loadGame(path.join(R,'catalog-duel.html'),{search:'?uid=re4-jj'});try{await e.images();assert.equal(e.imageErrors.length,0);const api=e.window.RE_CATALOG_DUEL;assert.equal(api.getState().a.f.uid,'re4-jj');e.document.getElementById('trialStart').click();e.window.RE_CATALOG_DUEL.skipIntro(); /* R10: this historical test begins at combat, intro has separate regressions. */const x=api.getState().a.x;e.key('KeyD');api.tick(8);assert(api.getState().a.x>x);e.key('KeyD',false);e.document.getElementById('trialPause').click();assert.equal(e.storage.size,0);assert.equal(e.messages.length,0);}finally{e.dispose();}});
 await test('Context UI accepts all 43 identities and disables UV for other records',async()=>{const e=await loadGame(path.join(R,'catalog-encounter.html'),{search:'?id=rerequiem-the-girl'});try{assert.equal(e.document.getElementById('encSelect').children.length,43);assert.equal(e.document.getElementById('encUV').hidden,false);e.document.getElementById('encUV').click();assert(e.window.RE_CONTEXT_PAGE.getTrial().snapshot().uvUntil>0);const s=e.document.getElementById('encSelect');s.value='re6-chrysalid';s.dispatchEvent({type:'change'});assert.equal(e.document.getElementById('encUV').hidden,true);e.document.getElementById('encStep').click();assert.equal(e.window.RE_CONTEXT_PAGE.getTrial().snapshot().frame,15);assert.equal(e.storage.size,0);}finally{e.dispose();}});

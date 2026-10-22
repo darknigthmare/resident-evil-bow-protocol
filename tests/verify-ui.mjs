@@ -30,46 +30,50 @@ const theme = read(themeFile);
 const engine = read('src/unified-engine-v060.js');
 const codex = read('src/codex.js');
 const operations = read('src/operations.js');
-const hub = read('src/hub.js');
+const gameMenu = read('src/game-menu-r20.js');
+const menuTheme = read('styles/game-menu-r20.css');
+const playerTheme = read('styles/player-shell-r20.css');
 const movesets = read('src/movesets.js');
-const incidentIds = ['re7-jack-baker-mutated','re7-jack-baker-swamp-man','re7-marguerite-baker-mutated','re7-lucas-baker-mutated','re7-eveline-final','re7-fumer'];
-const familyIds = ['re7-mia-winters-infected','re7-jack-baker','re7-jack-baker-scissor','re7-marguerite-baker','re7-lucas-baker','re7-eveline'];
-const apexIds = ['re2r-super-tyrant','re3r-stage-2-nemesis','re3r-stage-3-nemesis','re4r-del-lago','re4r-garrador','re4r-iron-maiden','re4r-ramon-salazar-mutated','re4r-osmund-saddler-mutated','revillage-mutated-dimitrescu','revillage-mutated-moreau','revillage-mutated-heisenberg','re6-ustanak'];
+const section = id => pages.accueil.match(new RegExp(`<section[^>]*id="${id}"[\\s\\S]*?<\\/section>`))?.[0] || '';
+const hrefs = html => [...html.matchAll(/\bhref="([^"#][^"]*)"/g)].map(m => m[1]);
+const toolPages = new Set(['dev.html','laboratory.html','catalog-laboratory.html','catalog-duel.html','catalog-encounter.html','coverage.html','directions.html','finishers.html','stages.html','sequences.html']);
 
-check('Every primary screen loads the current containment theme', () => {
-  for (const [name, html] of Object.entries(pages)) assert.match(html, new RegExp(themeName.replace('.', '\\.')), name);
-  return { screens: Object.keys(pages).length, theme: themeName };
+check('Primary screens load the R20 game presentation and shared preferences', () => {
+  assert.match(pages.accueil,/styles\/game-menu-r20\.css/);
+  for (const [name, html] of Object.entries(pages)) {
+    assert.match(html,/src\/interface-preferences-r20\.js/,name);
+    if(name!=='accueil')assert.match(html,/styles\/player-shell-r20\.css/,name);
+  }
+  return { screens: Object.keys(pages).length, theme: 'R20 game menu and shared player shell' };
 });
-check('Home screen exposes the exact audited scope and current build', () => {
-  assert.match(pages.accueil, new RegExp(`${fighterCount}/${fighterCount}`));
-  assert.match(pages.accueil, new RegExp(`BUILD ${version.replaceAll('.', '\\.')}`));
-  assert.match(pages.accueil, /id="moveCount"/);
-  assert.match(pages.accueil, /INCARNATIONS CLOISONNÉES/);
-  assert.match(pages.accueil, /INCIDENT BAKER/);
-  assert.match(pages.accueil, /id="incidentGrid"/);
-  assert.match(pages.accueil, /APEX MUTATION/);
-  assert.match(pages.accueil, /id="apexGrid"/);
+check('Main menu exposes six player entries without development routes or audit badges', () => {
+  const home=section('homeView');
+  assert.equal((home.match(/class="menu-item(?:[ "])/g)||[]).length,6);
+  for(const label of ['JOUER','DOSSIERS','ENTRAÎNEMENT','ARCHIVES','OPTIONS','CRÉDITS'])assert(home.includes(label),label);
+  for(const href of hrefs(pages.accueil))assert(!toolPages.has(new URL(href,'https://game.test/').pathname.slice(1)),href);
+  assert.doesNotMatch(pages.accueil,/LORE AUDIT|BUILD \d|lore-seal|combat-audit-badge|PR\d+ · R\d+/);
+  assert.doesNotMatch(pages.accueil,/<script[^>]+src="src\/hub\.js"/);
 });
-check('Home runtime fills public counters, Incident Baker, Apex Mutation and E-001 Family cards', () => {
-  for (const id of ['fighterCount','arenaCount','catalogCount','moveCount','incidentGrid','apexGrid','familyGrid']) assert.match(hub, new RegExp(id));
-  for (const uid of [...incidentIds,...apexIds,...familyIds]) assert.match(hub, new RegExp(uid));
-  assert.match(hub, /loreMoves|fighters\.reduce/);
-  return { incidentSubjects: incidentIds.length, apexSubjects: apexIds.length };
+check('Seven game protocols and biological archives retain exact native routes', () => {
+  assert.deepEqual(hrefs(section('modesView')),['modules/versus.html','operations.html?mode=arcade','operations.html?mode=survival','operations.html?mode=boss','operations.html?mode=apex','operations.html?mode=family','operations.html?mode=uroboros']);
+  assert.deepEqual(hrefs(section('archivesView')),['codex.html','movesets.html','catalog.html']);
+  assert.match(section('homeView'),/href="modules\/chronicles\.html"/);
+  assert.match(section('homeView'),/href="modules\/versus\.html\?mode=training"/);
+  assert.match(section('optionsView'),/href="saves\.html"/);
+  return { protocols:7,archives:3 };
 });
-check('Bestiary communicates full-body status and the audited ten-move contract', () => {
-  assert.match(pages.bestiaire, /STATUT VISUEL DÉTAILLÉ \+ MOVESET 10\/10 AUDITÉ/);
-  assert.match(codex, /MOVESET 10 (?:SUR|\/) 10 AUDITÉ/i);
+check('Bestiary preserves identified incarnations and their biological sources', () => {
+  for(const id of ['catalogGrid','catalogSearch','catalogGame','catalogStatus','detailName','detailEpisode','detailFacts','detailSources'])assert(pages.bestiaire.includes(`id="${id}"`),id);
   for (const label of ['Agent biologique','Incarnation','Techniques','Actions de référence']) assert.match(codex, new RegExp(label, 'i'));
 });
 check('Technique dossier exposes traceability and adaptation boundaries', () => {
   for (const id of ['moveEvidence45','moveLore45','moveScope45','sourceList45','techLimit45']) assert.match(pages.versus, new RegExp(`id="${id}"`));
-  assert.match(pages.versus, /TRACABILITÉ LORE, SOURCES ET FRONTIÈRE DE SIMULATION/);
   for (const level of ['CANONIQUE','ANATOMIQUE','SIMULATION']) assert.match(engine, new RegExp(level));
 });
-check('Combat release identifies the current audited build', () => {
-  assert.match(engine, new RegExp(`RE ${version.replaceAll('.', '\\.')} UROBOROS ASCENSION / CQC 0\\.60`));
-  assert.match(engine, /PROFIL AUDITÉ · 10 TECHNIQUES/);
-  assert.match(engine, /OUVRIR LE MOVESET 10\/10/);
+check('Combat selection, pause and technique controls retain their engine mounts', () => {
+  for(const id of ['launch','game','pauseBtn','resume43','techSelect45','techFight45'])assert(pages.versus.includes(`id="${id}"`),id);
+  assert(pages.versus.includes('src/unified-engine-v060.js'));
+  assert(pages.versus.includes('src/runtime-contract.js'));
 });
 check('Health presentation contains Resident Evil FINE, CAUTION and DANGER states', () => {
   for (const state of ['FINE','CAUTION','DANGER']) assert.match(engine, new RegExp(`label:'${state}'`));
@@ -78,9 +82,11 @@ check('Health presentation contains Resident Evil FINE, CAUTION and DANGER state
   assert.match(operations, /FINE|CAUTION|DANGER/);
   assert.match(pages.operations, /data-state="FINE"/);
 });
-check('Theme contains the containment visual language without remote assets', () => {
-  for (const token of ['--bow-red','--bow-green','--bow-amber','lore-seal','combat-audit-badge','repeating-linear-gradient','box-shadow:inset 0 0 180px','incident-baker','apex-mutation','apex-grid','e001-family','e001-grid']) assert(theme.includes(token), token);
-  assert.doesNotMatch(theme, /url\(\s*["']?https?:/i);
+check('Presentation styles are local and preserve keyboard focus and reduced-motion support', () => {
+  for(const css of [theme,menuTheme,playerTheme])assert.doesNotMatch(css,/url\(\s*["']?https?:/i);
+  assert.match(menuTheme,/:focus-visible/);
+  assert.match(menuTheme,/prefers-reduced-motion|data-r20-motion/);
+  assert.match(playerTheme,/:focus-visible/);
 });
 check('Moveset archive declares all traceability fields and commands', () => {
   for (const id of ['movesetRoster','movesetRows','movesetAgent','movesetResource','movesetPassive','movesetBoundary','movesetSources']) assert.match(pages.movesets, new RegExp(`id="${id}"`));
@@ -88,10 +94,10 @@ check('Moveset archive declares all traceability fields and commands', () => {
   assert.match(pages.movesets, new RegExp(String(moveCount)));
   assert.match(pages.movesets, /CANONIQUES/);
 });
-check('Dossiers identify the full dynamic campaign scope', () => {
-  assert.match(pages.dossiers, new RegExp(`${dossierCount} DOSSIERS · ${moveCount} TECHNIQUES`));
-  assert.match(pages.dossiers, /8 DUELS · RAPPORT DE CONFINEMENT/);
-  assert.match(pages.dossiers, new RegExp(`${fighterCount} INCARNATIONS CLOISONNÉES`));
+check('Dossiers preserve campaign selection, continuation and the real combat iframe', () => {
+  for(const id of ['roster','beginBtn','resumeBtn','saveStatus','engine','storyTextMountR18'])assert(pages.dossiers.includes(`id="${id}"`),id);
+  for(const script of ['chronicles-data-v060.js','chronicles-core-v060.js','chronicles-v060.js'])assert(pages.dossiers.includes(script),script);
+  assert.equal(dossierCount,fighterCount);
 });
 check('All public pages retain a route back to the main containment menu', () => {
   for (const [name, html] of Object.entries(pages)) if (name !== 'accueil') assert.match(html, /(?:\.\.\/|)index\.html/, name);
@@ -114,22 +120,16 @@ try {
   report.push({ name: 'Moveset archive initializes every subject and ten rows from delivered data', pass: false, error: error.stack || String(error) });
   console.log('FAIL Moveset archive initializes every subject and ten rows from delivered data\n' + error.message);
 }
-try {
-  const env = await loadGame(path.join(ROOT, 'index.html'));
-  await env.images();
-  assert.equal(env.imageErrors.length, 0);
-  assert.equal(env.document.querySelector('#fighterCount').textContent, String(fighterCount));
-  assert.equal(env.document.querySelector('#moveCount').textContent, String(moveCount));
-  assert.equal(env.document.querySelectorAll('.incident-card').length, incidentIds.length);
-  assert.equal(env.document.querySelectorAll('.apex-card').length, apexIds.length);assert.equal(env.document.querySelectorAll('.e001-card').length, familyIds.length);
-  assert.match(env.document.querySelector('#heroName').textContent, /WESKER/);
-  report.push({ name: 'Home screen initializes Incident Baker, Apex Mutation and the six-subject E-001 Family panel', pass: true, detail: { subjects: fighterCount, incidentCards: incidentIds.length, apexCards: apexIds.length } });
-  console.log('PASS Home screen initializes Incident Baker, Apex Mutation and the six-subject E-001 Family panel');
-  env.dispose();
-} catch (error) {
-  report.push({ name: 'Home screen initializes Incident Baker, Apex Mutation and the six-subject E-001 Family panel', pass: false, error: error.stack || String(error) });
-  console.log('FAIL Home screen initializes Incident Baker, Apex Mutation and the six-subject E-001 Family panel\n' + error.message);
-}
+check('Every menu route resolves to a shipped page; boot and options have explicit controls',()=>{
+  for(const href of hrefs(pages.accueil)){
+    const url=new URL(href,'https://game.test/');
+    assert.equal(url.origin,'https://game.test');
+    assert(fs.statSync(path.join(ROOT,url.pathname)).isFile(),href);
+  }
+  for(const id of ['enterProtocol','fullscreen','motionSetting','contrastSetting','textSetting','optionsStatus'])assert(pages.accueil.includes(`id="${id}"`),id);
+  assert.match(gameMenu,/ctrlKey[\s\S]*shiftKey[\s\S]*KeyD/);
+  return {runtimeValidation:'Dedicated R20 menu unit and browser suites'};
+});
 
 const failures = report.filter(x => !x.pass);
 const payload = { version, pass: failures.length === 0, fighters: fighterCount, moves: moveCount, checks: report.length, failures: failures.length, report };
@@ -138,8 +138,8 @@ fs.writeFileSync(path.join(ROOT, 'docs/verification-ui.md'), [
   `# Vérification de l’interface Resident Evil — v${version}`,'',
   `- Résultat : **${payload.pass ? 'RÉUSSI' : 'ÉCHEC'}**`,
   `- Contrôles : **${payload.checks - payload.failures}/${payload.checks}**`,
-  `- Portée : ${fighterCount} sujets, ${moveCount} techniques, thème ${themeName}, compteurs publics, Incident Baker, Apex Mutation, traçabilité lore, états FINE/CAUTION/DANGER et navigation.`,
-  '- Portée technique : contrôle structurel et initialisation réelle de l’accueil et de l’Archive des movesets dans le DOM contrôlé. Le rendu CSS pixel par pixel et les résolutions physiques ne sont pas revendiqués.','',
+  `- Portée : ${fighterCount} sujets, ${moveCount} techniques, menu R20, sept protocoles, archives, options, sources des incarnations et états FINE/CAUTION/DANGER.`,
+  '- Portée technique : structure et routes réellement présentes, initialisation de l’Archive des movesets dans le DOM contrôlé. Interactions du menu R20 vérifiées séparément par les suites dédiées et le navigateur.','',
   ...report.map(item => `- ${item.pass ? '✅' : '❌'} ${item.name}`),''
 ].join('\n'));
 if (failures.length) process.exitCode = 1;

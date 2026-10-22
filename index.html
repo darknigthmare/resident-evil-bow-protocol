@@ -1,23 +1,88 @@
-<!doctype html><html lang="fr"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#100d0d">
-<meta name="description" content="Resident Evil — B.O.W. Protocol. Un jeu de combat 2D : Versus, dossiers de confinement, laboratoire et opérations."><title>Resident Evil — B.O.W. Protocol</title><link rel="stylesheet" href="styles/hub.css"><link rel="stylesheet" href="styles/bow-v073.css"></head>
-<body><a class="skip" href="#modes">Accéder aux modes de jeu</a><main class="shell">
-<header class="topbar"><a class="brand" href="index.html"><span class="bio-mark" aria-hidden="true">☣</span><span>RESIDENT EVIL<small>BIO ORGANIC WEAPON ARCHIVE</small></span></a><div class="top-right"><span class="lore-seal"><b>115/115</b><small>LORE AUDIT</small><small>BUILD 0.7.3</small></span><span class="connection"><i></i> CONFINEMENT ACTIF</span><button id="fullscreen" aria-label="Activer le plein écran">⛶</button><a href="laboratory.html">BANC D’ESSAI ↗</a><a href="directions.html">PROFILS LATÉRAUX ↗</a><a href="movesets.html">MOVESETS ↗</a><a href="codex.html">ARCHIVES ↗</a><a href="coverage.html">COUVERTURE ↗</a><a href="finishers.html">CONCLUSIONS ↗</a></div></header>
-<section class="hero"><div class="hero-background" aria-hidden="true"></div><div class="hero-grid" aria-hidden="true"></div><div class="hero-creature"><img id="heroSpecimen" alt="" fetchpriority="high"><div class="specimen-caption"><span id="heroEpisode">ARCHIVE BIOLOGIQUE</span><b id="heroName">SPÉCIMEN EN CONFINEMENT</b></div></div>
-<div class="hero-copy"><div class="eyebrow"><span class="red-line"></span> PROTOCOLE EXPÉRIMENTAL · 001</div><h1>B.O.W.<br><span>PROTOCOL</span></h1><p class="hero-subtitle">La peur change de camp.</p><p class="hero-description">Choisissez une incarnation précise.<br>Maîtrisez dix techniques auditées. Survivez au confinement.</p><a class="primary" href="modules/versus.html">DÉMARRER UN AFFRONTEMENT <span>↗</span></a><div class="hero-actions"><a href="modules/chronicles.html">DOSSIERS DE CONFINEMENT <span>→</span></a><a href="modules/versus.html?mode=training">LABORATOIRE <span>→</span></a></div></div><div class="hero-index"><span>CLASSIFICATION</span><b>B.O.W. / MUTANTS</b><span>FIDÉLITÉ BIOLOGIQUE</span><b>INCARNATIONS CLOISONNÉES</b><span>ÉTAT DU PROTOCOLE</span><b class="red">LORE AUDITÉ · 0.6.1</b></div></section>
-<section class="status-strip" aria-label="Contenu disponible"><div><b id="fighterCount">—</b><span>SPÉCIMENS JOUABLES</span></div><div><b id="arenaCount">—</b><span>ARÈNES</span></div><div><b id="catalogCount">—</b><span>FICHES AU BESTIAIRE</span></div><div><b id="moveCount">—</b><span>TECHNIQUES AUDITÉES</span></div><p>UN SPÉCIMEN.<br><strong>HUIT ÉPREUVES POUR UN DOSSIER.</strong></p></section>
-<section class="modes" id="modes" aria-labelledby="modesHeading"><div class="section-heading"><h2 id="modesHeading">CHOISIR UN PROTOCOLE</h2><span>01 — 07 / ACCÈS AUTORISÉ</span></div><div class="mode-grid">
-<a class="mode active" href="modules/versus.html"><span class="mode-num">01</span><span class="mode-symbol">⚔</span><h3>VERSUS</h3><p>Contre l’IA ou à deux en local. Choisissez librement les spécimens et l’arène.</p><span class="mode-bottom">ENGAGEMENT LIBRE <b>↗</b></span></a>
-<a class="mode" href="modules/chronicles.html"><span class="mode-num">02</span><span class="mode-symbol">▤</span><h3>DOSSIERS</h3><p>Introduction, huit affrontements et conclusion. Progression et journal de relecture.</p><span class="mode-bottom">CONFINEMENT NARRATIF <b>↗</b></span></a>
-<a class="mode" href="operations.html?mode=arcade"><span class="mode-num">03</span><span class="mode-symbol">⌁</span><h3>ARCADE</h3><p>Une série de huit adversaires. Difficulté progressive et bilan de l’opération.</p><span class="mode-bottom">PROTOCOLE D’ASSAUT <b>↗</b></span></a>
-<a class="mode" href="operations.html?mode=survival"><span class="mode-num">04</span><span class="mode-symbol">◴</span><h3>SURVIE</h3><p>Enchaînez les confrontations avec votre santé restante. Jusqu’où tiendrez-vous ?</p><span class="mode-bottom">RÉSISTANCE CONTINUE <b>↗</b></span></a>
-<a class="mode" href="operations.html?mode=boss"><span class="mode-num">05</span><span class="mode-symbol">♜</span><h3>BOSS RUSH</h3><p>Les sujets les plus dangereux du programme réunis dans une même opération.</p><span class="mode-bottom">RISQUE MAXIMAL <b>↗</b></span></a>
-<a class="mode" href="modules/versus.html?mode=training"><span class="mode-num">06</span><span class="mode-symbol">⌖</span><h3>LABORATOIRE</h3><p>Dojo, exercices, collisions, techniques, ressources libres et mannequin réglable.</p><span class="mode-bottom">ESSAIS CONTRÔLÉS <b>↗</b></span></a>
-<a class="mode" href="operations.html?mode=apex"><span class="mode-num">07</span><span class="mode-symbol">◈</span><h3>APEX MUTATION</h3><p>Douze formes terminales dans un parcours fixe, chacune liée à sa chambre de confinement.</p><span class="mode-bottom apex-mode-badge">MENACE APEX <b>↗</b></span></a><a class="mode" href="operations.html?mode=family"><span class="mode-num">08</span><span class="mode-symbol">◉</span><h3>E-001 FAMILY</h3><p>Quatorze sujets de Dulvey réunis dans une route chronologique autour de l’influence d’Eveline.</p><span class="mode-bottom family-mode-badge">PROTOCOLE E-001 <b>↗</b></span></a><a class="mode" href="operations.html?mode=uroboros"><span class="mode-num">09</span><span class="mode-symbol">◬</span><h3>UROBOROS ASCENSION</h3><p>16 sujets RE5. Munitions, feu et noyaux exposés dans les chambres Tricell.</p><span class="mode-bottom">PROTOCOLE TRICELL <b>↗</b></span></a></div></section>
-<section class="incident-baker" aria-labelledby="incidentHeading"><div class="incident-copy"><p class="eyebrow">EXTENSION DE CONFINEMENT · V0.3.0</p><h2 id="incidentHeading">INCIDENT BAKER</h2><p>Six formes de Resident Evil 7 passent du statut documentaire au statut jouable. Chaque phase possède son corps, sa ressource, son passif et dix techniques propres.</p><div class="incident-metrics"><span><b>6</b>NOUVEAUX SUJETS</span><span><b>60</b>TECHNIQUES AUDITÉES</span><span><b>48</b>ESSAIS DE DOSSIER</span></div></div><div id="incidentGrid" class="incident-grid" aria-label="Nouveaux spécimens Resident Evil 7"></div></section>
-<section class="apex-mutation" aria-labelledby="apexHeading"><div class="apex-copy"><p class="eyebrow">EXTENSION DE CONFINEMENT · V0.4.0</p><h2 id="apexHeading">APEX MUTATION</h2><p>Douze formes terminales issues de Resident Evil 2, 3, 4, 6 et Village deviennent jouables sans fusion entre phases. Chaque sujet conserve son agent, sa morphologie, sa mobilité et ses familles d’attaque documentées.</p><div class="apex-metrics"><span><b>12</b>NOUVEAUX SUJETS</span><span><b>120</b>TECHNIQUES AUDITÉES</span><span><b>96</b>ESSAIS DE DOSSIER</span><span><b>12</b>CHAMBRES APEX</span></div></div><div id="apexGrid" class="apex-grid" aria-label="Nouvelles formes terminales Apex Mutation"></div></section>
-<section class="e001-family" aria-labelledby="familyHeading"><div class="e001-copy"><p class="eyebrow">EXTENSION DE CONFINEMENT · V0.5.0</p><h2 id="familyHeading">E-001 · FAMILY PROTOCOL</h2><p>Six formes humaines ou infectées de Dulvey rejoignent leurs mutations déjà répertoriées. Chaque incarnation conserve sa morphologie, son équipement, son agent et ses attaques.</p><div class="e001-metrics"><span><b>6</b>NOUVEAUX SUJETS</span><span><b>60</b>TECHNIQUES AUDITÉES</span><span><b>48</b>ESSAIS DE DOSSIER</span><span><b>6</b>CHAMBRES DULVEY</span></div></div><div id="familyGrid" class="e001-grid" aria-label="Nouvelles incarnations E-001 de Dulvey"></div></section>
-<section class="uroboros-panel" aria-labelledby="uroborosHeading"><div class="uroboros-copy"><p class="eyebrow">EXTENSION · V0.6.0 / RE5</p><h2 id="uroborosHeading">UROBOROS<br>ASCENSION</h2><p>Du quartier autonome de Kijuju aux laboratoires Tricell. Seize incarnations rejoignent le programme.</p><p class="asset-warning">VISUELS DE RÉFÉRENCE PROVISOIRES<br>Animations latérales définitives à produire. Les nouvelles chambres sont des décors procéduraux originaux.</p><a class="primary-action" href="operations.html?mode=uroboros">OUVRIR LE PROTOCOLE →</a><a class="quiet-link" href="coverage.html">VOIR LES MANQUANTS ET LIMITES →</a></div><div id="uroborosGrid" class="uroboros-grid"></div></section>
-<section class="archive-banner"><div><span class="eyebrow">EXTENSION DU CATALOGUE · V0.7.0</span><h2>274 dossiers désormais détaillés.</h2><p>231 prototypes de combat et 43 exercices contextuels, hors progression. Illustrations provisoires ; animations originales à produire.</p></div><div class="archive-actions"><a href="catalog.html">OUVRIR LES 274 DOSSIERS →</a><a href="catalog-duel.html">DUEL EXPÉRIMENTAL →</a></div></section>
-<section class="archive-banner"><div><span class="eyebrow">DOCUMENTATION BIOLOGIQUE</span><h2>Connaissez votre spécimen.</h2><p>Retrouvez son épisode exact, son agent biologique, ses dix techniques classées et les références de cette incarnation.</p></div><div class="archive-actions"><a href="movesets.html">CONSULTER LES 1150 TECHNIQUES <span>↗</span></a><a href="codex.html">OUVRIR LE BESTIAIRE <span>↗</span></a></div></section>
-<footer><span>RESIDENT EVIL — B.O.W. PROTOCOL <b>0.7.3 · CATALOGUE ÉTENDU</b></span><span>Projet de fan indépendant · Univers et personnages © CAPCOM</span><a href="docs/README_FR.html">GUIDE & CRÉDITS</a></footer><section style="padding:24px;border-top:1px solid #4c6758"><p>PR11 · R6 — Combat et scènes</p><a href="stages.html">CHAMBRES ANIMÉES →</a> · <a href="laboratory.html?uid=re3r-nemesis&amp;slot=super">TESTER LA SALVE NEMESIS →</a></section><a href="sequences.html" class="quiet-link">SÉQUENCES DE MANCHE / R8 →</a></main><script src="src/re-data.js"></script><script src="src/hub.js"></script><script src="src/uroboros-ui.js"></script></body></html>
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#101112">
+  <meta name="description" content="Resident Evil — B.O.W. Protocol. Entrez dans le confinement. Affrontements, dossiers et opérations.">
+  <title>Resident Evil — B.O.W. Protocol</title>
+  <link rel="stylesheet" href="styles/game-menu-r20.css">
+  <script src="src/interface-preferences-r20.js"></script>
+</head>
+<body class="game-menu-r20">
+  <a class="skip-link" href="#mainMenu">Accéder au menu principal</a>
+  <div class="facility" aria-hidden="true"><div class="facility-light"></div><div class="facility-lines"></div></div>
+  <main id="gameShell" class="game-shell">
+    <header class="identity">
+      <span class="series-name">RESIDENT EVIL</span>
+      <h1>B.O.W.<span>PROTOCOL</span></h1>
+      <p>LA PEUR CHANGE DE CAMP.</p>
+    </header>
+    <div class="station-status"><span class="status-led" aria-hidden="true"></span> CONFINEMENT ACTIF <span class="station-number">SECTEUR 01</span></div>
+    <section class="specimen-chamber" aria-label="Spécimen observé">
+      <div class="chamber-backlight" aria-hidden="true"></div>
+      <img id="menuSpecimen" src="assets/specimens/re2r-tyrant.png" alt="Tyrant, incarnation de Resident Evil 2 (2019)" fetchpriority="high">
+      <div class="chamber-grain" aria-hidden="true"></div>
+      <div class="specimen-data"><span>SUJET EN OBSERVATION</span><h2 id="specimenName">TYRANT</h2><p id="specimenOrigin">Resident Evil 2 · 2019</p><div class="specimen-selector"><button id="previousSpecimen" aria-label="Spécimen précédent">←</button><span id="specimenIndex" aria-live="polite">01 / 04</span><button id="nextSpecimen" aria-label="Spécimen suivant">→</button></div></div>
+    </section>
+    <section id="homeView" class="menu-view home-view" data-view="home" aria-label="Menu principal">
+      <nav id="mainMenu" class="main-menu" aria-label="Menu principal">
+        <button class="menu-item" data-open="modes" data-description="Choisissez votre adversaire. Engagez le protocole."><span class="menu-marker" aria-hidden="true"></span>JOUER<span class="item-arrow" aria-hidden="true">↗</span></button>
+        <a class="menu-item" href="modules/chronicles.html" data-description="Une incarnation. Huit affrontements. Votre dossier de confinement."><span class="menu-marker" aria-hidden="true"></span>DOSSIERS<span class="item-arrow" aria-hidden="true">↗</span></a>
+        <a class="menu-item" href="modules/versus.html?mode=training" data-description="Apprenez les techniques de votre spécimen et préparez vos enchaînements."><span class="menu-marker" aria-hidden="true"></span>ENTRAÎNEMENT<span class="item-arrow" aria-hidden="true">↗</span></a>
+        <button class="menu-item" data-open="archives" data-description="Retrouvez les sujets, leurs origines et leurs protocoles de combat."><span class="menu-marker" aria-hidden="true"></span>ARCHIVES<span class="item-arrow" aria-hidden="true">↗</span></button>
+        <button class="menu-item" data-open="options" data-description="Adaptez l’affichage, consultez les commandes et gérez vos sauvegardes."><span class="menu-marker" aria-hidden="true"></span>OPTIONS<span class="item-arrow" aria-hidden="true">↗</span></button>
+        <button class="menu-item menu-secondary" data-open="credits" data-description="À propos de B.O.W. Protocol."><span class="menu-marker" aria-hidden="true"></span>CRÉDITS<span class="item-arrow" aria-hidden="true">↗</span></button>
+      </nav>
+      <p class="menu-description" id="menuDescription">Choisissez votre adversaire. Engagez le protocole.</p>
+    </section>
+    <section id="modesView" class="menu-view sub-view" data-view="modes" aria-labelledby="modesTitle" hidden>
+      <div class="panel-heading"><div><span class="overline">ENGAGEMENT</span><h2 id="modesTitle">Choisir un protocole</h2></div><button class="back-button" data-back aria-label="Retour au menu principal">←</button></div>
+      <nav class="operation-list" aria-label="Modes de jeu">
+        <a href="modules/versus.html"><span class="operation-number">01</span><span><b>VERSUS</b><small>Affrontement libre · IA ou deux joueurs</small></span><span aria-hidden="true">↗</span></a>
+        <a href="operations.html?mode=arcade"><span class="operation-number">02</span><span><b>ARCADE</b><small>Huit adversaires. Une seule opération.</small></span><span aria-hidden="true">↗</span></a>
+        <a href="operations.html?mode=survival"><span class="operation-number">03</span><span><b>SURVIE</b><small>Gardez vos forces. Repoussez vos limites.</small></span><span aria-hidden="true">↗</span></a>
+        <a href="operations.html?mode=boss"><span class="operation-number">04</span><span><b>BOSS RUSH</b><small>Les sujets les plus dangereux du programme.</small></span><span aria-hidden="true">↗</span></a>
+        <a href="operations.html?mode=apex"><span class="operation-number">05</span><span><b>APEX MUTATION</b><small>Douze formes terminales.</small></span><span aria-hidden="true">↗</span></a>
+        <a href="operations.html?mode=family"><span class="operation-number">06</span><span><b>E-001 FAMILY</b><small>Les événements de Dulvey.</small></span><span aria-hidden="true">↗</span></a>
+        <a href="operations.html?mode=uroboros"><span class="operation-number">07</span><span><b>UROBOROS ASCENSION</b><small>Au cœur des chambres Tricell.</small></span><span aria-hidden="true">↗</span></a>
+      </nav>
+    </section>
+    <section id="archivesView" class="menu-view sub-view" data-view="archives" aria-labelledby="archivesTitle" hidden>
+      <div class="panel-heading"><div><span class="overline">RENSEIGNEMENTS</span><h2 id="archivesTitle">Archives biologiques</h2></div><button class="back-button" data-back aria-label="Retour au menu principal">←</button></div>
+      <nav class="operation-list archive-list" aria-label="Archives">
+        <a href="codex.html"><span class="operation-number">01</span><span><b>BESTIAIRE</b><small>Identifiez les sujets et leurs origines.</small></span><span aria-hidden="true">↗</span></a>
+        <a href="movesets.html"><span class="operation-number">02</span><span><b>TECHNIQUES DE COMBAT</b><small>Attaques, ressources et contre-mesures.</small></span><span aria-hidden="true">↗</span></a>
+        <a href="catalog.html"><span class="operation-number">03</span><span><b>DOSSIERS COMPLÉMENTAIRES</b><small>Consultez le registre des autres organismes.</small></span><span aria-hidden="true">↗</span></a>
+      </nav>
+    </section>
+    <section id="optionsView" class="menu-view sub-view" data-view="options" aria-labelledby="optionsTitle" hidden>
+      <div class="panel-heading"><div><span class="overline">TERMINAL OPÉRATEUR</span><h2 id="optionsTitle">Options</h2></div><button class="back-button" data-back aria-label="Retour au menu principal">←</button></div>
+      <div class="options-list">
+        <div class="option-row"><span><b>PLEIN ÉCRAN</b><small>Occuper tout l’écran</small></span><button id="fullscreen" class="setting-button" aria-pressed="false">ACTIVER</button></div>
+        <label class="option-row" for="motionSetting"><span><b>MOUVEMENTS DE L’INTERFACE</b><small>Transitions et animations d’ambiance</small></span><select id="motionSetting"><option value="system">SELON L’APPAREIL</option><option value="reduced">RÉDUITS</option><option value="full">COMPLETS</option></select></label>
+        <label class="option-row" for="contrastSetting"><span><b>CONTRASTE</b><small>Lisibilité des textes et des panneaux</small></span><select id="contrastSetting"><option value="standard">STANDARD</option><option value="high">RENFORCÉ</option></select></label>
+        <label class="option-row" for="textSetting"><span><b>TAILLE DU TEXTE</b><small>Menus et commandes</small></span><select id="textSetting"><option value="normal">NORMALE</option><option value="large">GRANDE</option></select></label>
+        <button class="option-link" data-open="controls">COMMANDES <span aria-hidden="true">→</span></button>
+        <a class="option-link" href="saves.html">SAUVEGARDES <span aria-hidden="true">→</span></a>
+      </div>
+      <p id="optionsStatus" class="option-status" role="status" aria-live="polite"></p>
+    </section>
+    <section id="controlsView" class="menu-view sub-view" data-view="controls" aria-labelledby="controlsTitle" hidden>
+      <div class="panel-heading"><div><span class="overline">PRISE EN MAIN</span><h2 id="controlsTitle">Commandes</h2></div><button class="back-button" data-back="options" aria-label="Retour aux options">←</button></div>
+      <div class="controls-copy"><h3>MENUS</h3><p><kbd>↑</kbd> <kbd>↓</kbd> Parcourir · <kbd>Entrée</kbd> Valider · <kbd>Échap</kbd> Revenir</p><p>Manette : croix directionnelle ou stick gauche, bouton sud pour valider, bouton est pour revenir.</p><h3>COMBAT · JOUEUR 1</h3><dl><div><dt>Flèches</dt><dd>Se déplacer, sauter, s’accroupir</dd></div><div><dt>J / K</dt><dd>Attaque légère / lourde</dd></div><div><dt>I + direction</dt><dd>Technique</dd></div><div><dt>U / O / L</dt><dd>Projection / super / capacité</dd></div><div><dt>Espace / Maj droite</dt><dd>Garde / déplacement rapide</dd></div><div><dt>Échap</dt><dd>Pause</dd></div></dl><p>Les commandes détaillées et les réglages du son sont disponibles pendant l’affrontement.</p></div>
+    </section>
+    <section id="creditsView" class="menu-view sub-view" data-view="credits" aria-labelledby="creditsTitle" hidden>
+      <div class="panel-heading"><div><span class="overline">B.O.W. PROTOCOL</span><h2 id="creditsTitle">Crédits</h2></div><button class="back-button" data-back aria-label="Retour au menu principal">←</button></div>
+      <div class="credits-copy"><p class="credits-intro">La peur change de camp.</p><p>Un projet de fan indépendant imaginé autour des organismes et des mutations de Resident Evil.</p><p>Resident Evil, ses personnages et son univers appartiennent à CAPCOM. Ce projet n’est ni affilié ni approuvé par CAPCOM.</p><p>Les affrontements, récits et règles de ce jeu sont des adaptations originales. Les incarnations de chaque sujet sont identifiées dans les archives.</p><a class="option-link" href="docs/README_FR.html">GUIDE ET SOURCES <span aria-hidden="true">↗</span></a></div>
+    </section>
+    <footer class="menu-footer"><div id="inputHints"><span><kbd>↑ ↓</kbd> PARCOURIR</span><span><kbd>ENTRÉE</kbd> VALIDER</span><span><kbd>ÉCHAP</kbd> RETOUR</span></div><span class="footer-mark">B.O.W. <i>／</i> CONFINEMENT</span></footer>
+  </main>
+  <section id="bootScreen" class="boot-screen" aria-label="Entrer dans B.O.W. Protocol" hidden><div><span class="series-name">RESIDENT EVIL</span><h2>B.O.W.<span>PROTOCOL</span></h2><p>LA PEUR CHANGE DE CAMP.</p><button id="enterProtocol">ENTRER DANS LE CONFINEMENT <span aria-hidden="true">→</span></button><small>Projet de fan indépendant · Univers et personnages © CAPCOM</small></div></section>
+  <div id="transitionScreen" class="transition-screen" role="status" aria-live="polite" hidden><span class="transition-mark" aria-hidden="true"></span><p>OUVERTURE DU CONFINEMENT</p></div>
+  <noscript><div class="no-script"><p>Activez JavaScript pour utiliser les menus et jouer.</p><a href="modules/versus.html">Versus</a> · <a href="modules/chronicles.html">Dossiers</a></div></noscript>
+  <script src="src/menu-navigation-r20.js"></script>
+  <script src="src/bow-sprite-library-r20.js"></script>
+  <script src="src/game-menu-r20.js"></script>
+</body>
+</html>

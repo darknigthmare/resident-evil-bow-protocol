@@ -73,8 +73,22 @@
       "pass": true
     },
     {
-      "name": "Catalog UI exposes all 274 exactly once; filters and deep links resolve",
-      "pass": true
+      "name": "Catalog exposes all 274 player archives and preserves DEV techniques, routes, filters and deep links",
+      "pass": true,
+      "detail": [
+        {
+          "dev": false,
+          "dossiers": 274,
+          "techniques": 0,
+          "actionRoutes": 0
+        },
+        {
+          "dev": true,
+          "dossiers": 274,
+          "techniques": 2310,
+          "actionRoutes": 505
+        }
+      ]
     },
     {
       "name": "Experimental laboratory loads 346 choices and executes requested subject without writing storage",

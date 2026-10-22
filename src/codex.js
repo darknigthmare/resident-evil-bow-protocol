@@ -1,5 +1,6 @@
 (() => {
  'use strict';
+ const DEV=window.RE_PLAYER_SHELL?.isDev===true;
  const D=window.RE_DATA,$=s=>document.querySelector(s),catalog=D.catalog,F=new Map(D.fighters.map(f=>[f.uid,f]));
  const fold=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase(),escape=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const imagePath=x=>x.portrait||F.get(x.id)?.portrait||'';
@@ -20,13 +21,13 @@
  function open(id){
   const x=catalog.find(x=>x.id===id),f=F.get(id);if(!x)return;focusId=id;
   $('#detailImage').src=f?.sprite||imagePath(x);$('#detailImage').alt=x.name;$('#detailImage').hidden=!imagePath(x)&&!f;
-  $('#detailStatus').textContent=f?('SPÉCIMEN JOUABLE / '+(f.fidelity?.visualStatus?.includes('provisional')?'VISUEL PROVISOIRE':'POSE DE RÉFÉRENCE')+' / MOVESET 10 SUR 10 AUDITÉ'):'ARCHIVE DOCUMENTAIRE';$('#detailName').textContent=x.name;$('#detailEpisode').textContent=x.game;
+  $('#detailStatus').textContent=f?(DEV?'SPÉCIMEN JOUABLE / '+(f.fidelity?.visualStatus?.includes('provisional')?'VISUEL PROVISOIRE':'POSE DE RÉFÉRENCE')+' / MOVESET 10 SUR 10 AUDITÉ':'SPÉCIMEN JOUABLE'):'ARCHIVE DOCUMENTAIRE';$('#detailName').textContent=x.name;$('#detailEpisode').textContent=x.game;
   $('#detailDescription').textContent=f?.morphology||x.description||'Référence visuelle de la créature dans cet épisode.';
-  const facts=f?{'Agent biologique':f.bioAgent,'Profil de combat':f.combat?.role||f.role,'Incarnation':f.ep,'Fidélité':'LORE AUDITÉ · POUVOIRS CLOISONNÉS','Techniques':Object.keys(f.combat?.moves||{}).length+' / 10','Actions de référence':(f.combat?.canonicalAttacks||[]).join(' · ')||'Voir les sources du dossier'}:{'Version':x.game,'Statut':'Référence consultable ; représentation de combat à intégrer'};
+  const facts=f?{'Agent biologique':f.bioAgent,'Profil de combat':f.combat?.role||f.role,'Incarnation':f.ep,...(DEV?{'Fidélité':'LORE AUDITÉ · POUVOIRS CLOISONNÉS'}:{}),'Techniques':Object.keys(f.combat?.moves||{}).length+' / 10','Actions de référence':(f.combat?.canonicalAttacks||[]).join(' · ')||'Voir les sources du dossier'}:{'Version':x.game,'Statut':DEV?'Référence consultable ; représentation de combat à intégrer':'Archive documentaire'};
   $('#detailFacts').replaceChildren();for(const[k,v]of Object.entries(facts)){const dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=k;dd.textContent=v;$('#detailFacts').append(dt,dd)}
   $('#detailScope').textContent=f?(f.combat?.fidelity?.rule||'Les capacités restent propres à cette incarnation.')+' '+(f.combat?.fidelity?.balanceBoundary||'Les commandes, frames et dégâts sont adaptés au moteur 2D.')+' '+f.assetNote:'Cette entrée documente l’apparence du jeu indiqué. Un portrait ne remplace pas un corps entier ni ses animations.';
   $('#detailActions').replaceChildren();if(f){const play=link('JOUER CE SPÉCIMEN →','modules/versus.html?uid='+encodeURIComponent(id));play.className='primary-action';$('#detailActions').append(play,link('ENTRAÎNEMENT','modules/versus.html?mode=training&uid='+encodeURIComponent(id)))}
-  if(!f)$('#detailActions').append(link('FICHE ENRICHIE ET ESSAI →','catalog.html?id='+encodeURIComponent(id)));
+  if(!f)$('#detailActions').append(link(DEV?'FICHE ENRICHIE ET ESSAI →':'CONSULTER LES OBSERVATIONS →','catalog.html?id='+encodeURIComponent(id)));
   $('#detailSources').replaceChildren();const urls=[['DOSSIER DE RÉFÉRENCE',x.sourcePage],['SOURCE DU RENDU',f?.spriteSource||x.spriteSource],...((f?.combat?.sources||[]).map((u,i)=>['RÉFÉRENCE LORE '+String(i+1).padStart(2,'0'),u]))].filter(([,u])=>/^https?:\/\//.test(u||''));const used=new Set;for(const[label,url]of urls){if(used.has(url))continue;used.add(url);$('#detailSources').append(link(label+' ↗',url,true))}
   $('#specimenDialog').showModal();
  }
