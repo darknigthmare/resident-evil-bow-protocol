@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#10191d">
+  <title>Mouvements d’origine — B.O.W. Protocol</title>
+  <link rel="stylesheet" href="../../styles/player-shell-r20.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="../../src/interface-preferences-r20.js"></script>
+  <script src="../../src/player-shell-r20.js"></script>
+</head>
+<body>
+  <header><a href="../../index.html">☣ B.O.W. PROTOCOL</a><a id="returnLink" href="../../codex.html?id=re3r-nemesis">← Retour au dossier</a></header>
+  <main>
+    <p class="eyebrow">IMAGES DU JEU D’ORIGINE</p>
+    <h1>Mouvements d’origine</h1>
+    <label class="sequence-choice">Séquence<select id="sequenceSelect" disabled aria-label="Séquence à examiner"></select></label>
+    <section class="motion-player" aria-labelledby="sequenceTitle">
+      <div class="motion-heading"><h2 id="sequenceTitle">Chargement de la séquence…</h2><p id="sequenceGame"></p></div>
+      <div class="screen"><canvas id="motionCanvas" width="400" height="225" role="img" aria-label="Image de la séquence d’origine" hidden></canvas><p id="screenMessage">Chargement de la séquence…</p></div>
+      <p id="sequenceDescription"></p>
+      <div class="transport" role="group" aria-label="Lecture de la séquence">
+        <button id="previousFrame" type="button" disabled>← Image précédente</button>
+        <button id="playToggle" type="button" disabled>Lire</button>
+        <button id="nextFrame" type="button" disabled>Image suivante →</button>
+        <button id="restart" type="button" disabled>Revenir au début</button>
+      </div>
+      <label class="timeline-label" for="framePosition">Position dans la séquence</label>
+      <input id="framePosition" type="range" min="0" max="0" value="0" disabled aria-label="Image de la séquence">
+      <div class="position"><span id="frameCounter">Image —</span><span id="timeCounter">—</span></div>
+      <p id="motionStatus" role="status" aria-live="polite">Les images s’affichent après vérification de la séquence.</p>
+      <button id="retry" type="button" hidden>Réessayer le chargement</button>
+    </section>
+    <details class="source-details"><summary>Origine de la séquence</summary><p id="sourceDescription"></p><a id="sourceLink" target="_blank" rel="noopener noreferrer" hidden>Consulter la source ↗</a><a id="sourceDownload" download hidden>Télécharger la séquence d’origine</a></details>
+    <p class="reading-note">La lecture commence à votre demande. Vous pouvez examiner chaque image avec les boutons ou le curseur.</p>
+  </main>
+  <script src="player.js"></script>
+</body>
+</html>
