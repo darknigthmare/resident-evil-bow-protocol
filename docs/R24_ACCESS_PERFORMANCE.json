@@ -1,0 +1,548 @@
+{
+  "schema": "re.bow.performance-evidence-r24/1",
+  "startedAt": "2026-10-23T21:43:54.488Z",
+  "completedAt": "2026-10-23T21:47:01.587Z",
+  "environment": {
+    "node": "v22.16.0",
+    "chromium": "154.0.8037.57",
+    "virtualized": true,
+    "headless": true,
+    "os": "6.18.55"
+  },
+  "passed": 2,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "1,000 sequential source-frame actions retain exact pixels and at most two decoded atlases",
+      "pass": true,
+      "detail": {
+        "actions": 1000,
+        "sourceFrames": 218,
+        "pixelCheckpoints": [
+          0,
+          100,
+          200,
+          300,
+          400,
+          500,
+          600,
+          700,
+          800,
+          900,
+          1000
+        ],
+        "elapsedMs": 4710,
+        "latencyMs": {
+          "median": 1,
+          "p95": 4.300000004470348,
+          "maximum": 334.6000000014901
+        },
+        "measurements": [
+          {
+            "action": 0,
+            "heap": {
+              "usedSize": 1358548,
+              "totalSize": 2428928,
+              "embedderHeapUsedSize": 442224,
+              "backingStorageSize": 5718
+            },
+            "dom": {
+              "documents": 1,
+              "nodes": 123,
+              "jsEventListeners": 22
+            },
+            "bitmaps": {
+              "created": 1,
+              "closed": 0,
+              "active": 1,
+              "peak": 1,
+              "activePixels": 2439360,
+              "peakPixels": 2439360
+            }
+          },
+          {
+            "action": 100,
+            "heap": {
+              "usedSize": 1599768,
+              "totalSize": 3477504,
+              "embedderHeapUsedSize": 3241784,
+              "backingStorageSize": 19555798
+            },
+            "dom": {
+              "documents": 1,
+              "nodes": 294,
+              "jsEventListeners": 22
+            },
+            "bitmaps": {
+              "created": 5,
+              "closed": 3,
+              "active": 2,
+              "peak": 2,
+              "activePixels": 4878720,
+              "peakPixels": 4878720
+            }
+          },
+          {
+            "action": 200,
+            "heap": {
+              "usedSize": 1654752,
+              "totalSize": 4001792,
+              "embedderHeapUsedSize": 1129056,
+              "backingStorageSize": 26619852
+            },
+            "dom": {
+              "documents": 1,
+              "nodes": 393,
+              "jsEventListeners": 22
+            },
+            "bitmaps": {
+              "created": 9,
+              "closed": 7,
+              "active": 2,
+              "peak": 2,
+              "activePixels": 4878720,
+              "peakPixels": 4878720
+            }
+          },
+          {
+            "action": 300,
+            "heap": {
+              "usedSize": 1572380,
+              "totalSize": 4788224,
+              "embedderHeapUsedSize": 1045288,
+              "backingStorageSize": 13782565
+            },
+            "dom": {
+              "documents": 1,
+              "nodes": 253,
+              "jsEventListeners": 22
+            },
+            "bitmaps": {
+              "created": 14,
+              "closed": 12,
+              "active": 2,
+              "peak": 2,
+              "activePixels": 4878720,
+              "peakPixels": 4878720
+            }
+          },
+          {
+            "action": 400,
+            "heap": {
+              "usedSize": 2017056,
+              "totalSize": 4788224,
+              "embedderHeapUsedSize": 1331672,
+              "backingStorageSize": 64077477
+            },
+            "dom": {
+              "documents": 1,
+              "nodes": 753,
+              "jsEventListeners": 22
+            },
+            "bitmaps": {
+              "created": 18,
+              "closed": 16,
+              "active": 2,
+              "peak": 2,
+              "activePixels": 4878720,
+              "peakPixels": 4878720
+            }
+          },
+          {
+            "action": 500,
+            "heap": {
+              "usedSize": 1662060,
+              "totalSize": 4263936,
+              "embedderHeapUsedSize": 1041144,
+              "backingStorageSize": 22147685
+            },
+            "dom": {
+              "documents": 1,
+              "nodes": 326,
+              "jsEventListeners": 22
+            },
+            "bitmaps": {
+              "created": 23,
+              "closed": 21,
+              "active": 2,
+              "peak": 2,
+              "activePixels": 4878720,
+              "peakPixels": 4878720
+            }
+          },
+          {
+            "action": 600,
+            "heap": {
+              "usedSize": 2113388,
+              "totalSize": 4263936,
+              "embedderHeapUsedSize": 1544672,
+              "backingStorageSize": 72845995
+            },
+            "dom": {
+              "documents": 1,
+              "nodes": 826,
+              "jsEventListeners": 22
+            },
+            "bitmaps": {
+              "created": 27,
+              "closed": 25,
+              "active": 2,
+              "peak": 2,
+              "activePixels": 4878720,
+              "peakPixels": 4878720
+            }
+          },
+          {
+            "action": 700,
+            "heap": {
+              "usedSize": 1618084,
+              "totalSize": 4788224,
+              "embedderHeapUsedSize": 1084840,
+              "backingStorageSize": 15721843
+            },
+            "dom": {
+              "documents": 1,
+              "nodes": 284,
+              "jsEventListeners": 22
+            },
+            "bitmaps": {
+              "created": 32,
+              "closed": 30,
+              "active": 2,
+              "peak": 2,
+              "activePixels": 4878720,
+              "peakPixels": 4878720
+            }
+          },
+          {
+            "action": 800,
+            "heap": {
+              "usedSize": 2063672,
+              "totalSize": 4788224,
+              "embedderHeapUsedSize": 1389360,
+              "backingStorageSize": 69186306
+            },
+            "dom": {
+              "documents": 1,
+              "nodes": 784,
+              "jsEventListeners": 22
+            },
+            "bitmaps": {
+              "created": 37,
+              "closed": 35,
+              "active": 2,
+              "peak": 2,
+              "activePixels": 4878720,
+              "peakPixels": 4878720
+            }
+          },
+          {
+            "action": 900,
+            "heap": {
+              "usedSize": 1548828,
+              "totalSize": 5050368,
+              "embedderHeapUsedSize": 1120520,
+              "backingStorageSize": 8401928
+            },
+            "dom": {
+              "documents": 1,
+              "nodes": 194,
+              "jsEventListeners": 22
+            },
+            "bitmaps": {
+              "created": 42,
+              "closed": 40,
+              "active": 2,
+              "peak": 2,
+              "activePixels": 4878720,
+              "peakPixels": 4878720
+            }
+          },
+          {
+            "action": 1000,
+            "heap": {
+              "usedSize": 1988256,
+              "totalSize": 5050368,
+              "embedderHeapUsedSize": 1388888,
+              "backingStorageSize": 59231789
+            },
+            "dom": {
+              "documents": 1,
+              "nodes": 694,
+              "jsEventListeners": 22
+            },
+            "bitmaps": {
+              "created": 46,
+              "closed": 44,
+              "active": 2,
+              "peak": 2,
+              "activePixels": 4878720,
+              "peakPixels": 4878720
+            }
+          }
+        ],
+        "beforeExplicitFinalGc": {
+          "usedSize": 1988256,
+          "totalSize": 5050368,
+          "embedderHeapUsedSize": 1388888,
+          "backingStorageSize": 59231789
+        },
+        "afterExplicitFinalGc": {
+          "usedSize": 1435816,
+          "totalSize": 2166784,
+          "embedderHeapUsedSize": 475632,
+          "backingStorageSize": 5838
+        },
+        "decodedBitmapAccounting": {
+          "created": 46,
+          "closed": 44,
+          "active": 2,
+          "peak": 2,
+          "activePixels": 4878720,
+          "peakPixels": 4878720,
+          "peakRgbaByteEstimate": 19514880,
+          "estimateMeaning": "4 bytes per currently live application-owned ImageBitmap pixel; excludes GPU/process/canvas duplicates."
+        },
+        "atlasRequests": 46,
+        "atlasEncodedBodyBytes": 98885934,
+        "longTasks": [
+          {
+            "startTime": 624.1999999955297,
+            "duration": 184
+          },
+          {
+            "startTime": 1423.8999999985099,
+            "duration": 55
+          }
+        ],
+        "realBackNavigation": {
+          "events": [
+            {
+              "type": "pageshow",
+              "persisted": false,
+              "bitmaps": {
+                "created": 0,
+                "closed": 0,
+                "active": 0,
+                "peak": 0,
+                "activePixels": 0,
+                "peakPixels": 0
+              }
+            }
+          ],
+          "bitmaps": {
+            "created": 1,
+            "closed": 0,
+            "active": 1,
+            "peak": 1,
+            "activePixels": 2439360,
+            "peakPixels": 2439360
+          },
+          "caption": "Image 1 / 218 — pixels d’origine vérifiés",
+          "navigation": "back_forward",
+          "restoredFromBackForwardCache": false,
+          "expectedFrame": 0,
+          "nextFrameVerified": 1
+        },
+        "limits": [
+          "1000 bounded sequential actions, not an overnight endurance test.",
+          "Loopback HTTP and a virtual host do not represent target hardware or a mobile network.",
+          "Native bitmap ownership accounting does not measure total GPU, browser image cache or process RSS.",
+          "Explicit garbage collection is used only before action zero and after the final action; both final heap snapshots are retained."
+        ]
+      }
+    },
+    {
+      "name": "Three-minute paced source inspection keeps decoded ownership and DOM counts bounded",
+      "pass": true,
+      "detail": {
+        "requestedDurationMs": 180000,
+        "observedDurationMs": 180653,
+        "actions": 1020,
+        "checkpoints": [
+          {
+            "elapsedMs": 0,
+            "actions": 0,
+            "heap": {
+              "usedSize": 1349848,
+              "totalSize": 2428928,
+              "embedderHeapUsedSize": 439856,
+              "backingStorageSize": 5681
+            },
+            "dom": {
+              "documents": 1,
+              "nodes": 123,
+              "jsEventListeners": 20
+            },
+            "attachedDomNodes": 109
+          },
+          {
+            "elapsedMs": 30861,
+            "actions": 170,
+            "heap": {
+              "usedSize": 1517364,
+              "totalSize": 3477504,
+              "embedderHeapUsedSize": 1061552,
+              "backingStorageSize": 7686118
+            },
+            "dom": {
+              "documents": 1,
+              "nodes": 183,
+              "jsEventListeners": 20
+            },
+            "attachedDomNodes": 109,
+            "bitmaps": {
+              "created": 8,
+              "closed": 6,
+              "active": 2,
+              "peak": 2,
+              "activePixels": 4878720,
+              "peakPixels": 4878720
+            }
+          },
+          {
+            "elapsedMs": 60904,
+            "actions": 340,
+            "heap": {
+              "usedSize": 1500968,
+              "totalSize": 2953216,
+              "embedderHeapUsedSize": 949600,
+              "backingStorageSize": 3307959
+            },
+            "dom": {
+              "documents": 1,
+              "nodes": 136,
+              "jsEventListeners": 20
+            },
+            "attachedDomNodes": 109,
+            "bitmaps": {
+              "created": 16,
+              "closed": 14,
+              "active": 2,
+              "peak": 2,
+              "activePixels": 4878720,
+              "peakPixels": 4878720
+            }
+          },
+          {
+            "elapsedMs": 90590,
+            "actions": 510,
+            "heap": {
+              "usedSize": 1686548,
+              "totalSize": 3215360,
+              "embedderHeapUsedSize": 1046448,
+              "backingStorageSize": 33114510
+            },
+            "dom": {
+              "documents": 1,
+              "nodes": 376,
+              "jsEventListeners": 20
+            },
+            "attachedDomNodes": 109,
+            "bitmaps": {
+              "created": 24,
+              "closed": 22,
+              "active": 2,
+              "peak": 2,
+              "activePixels": 4878720,
+              "peakPixels": 4878720
+            }
+          },
+          {
+            "elapsedMs": 120704,
+            "actions": 680,
+            "heap": {
+              "usedSize": 1731136,
+              "totalSize": 3215360,
+              "embedderHeapUsedSize": 1045760,
+              "backingStorageSize": 28364462
+            },
+            "dom": {
+              "documents": 1,
+              "nodes": 386,
+              "jsEventListeners": 20
+            },
+            "attachedDomNodes": 109,
+            "bitmaps": {
+              "created": 32,
+              "closed": 30,
+              "active": 2,
+              "peak": 2,
+              "activePixels": 4878720,
+              "peakPixels": 4878720
+            }
+          },
+          {
+            "elapsedMs": 150769,
+            "actions": 850,
+            "heap": {
+              "usedSize": 1698352,
+              "totalSize": 3215360,
+              "embedderHeapUsedSize": 3386136,
+              "backingStorageSize": 32230040
+            },
+            "dom": {
+              "documents": 1,
+              "nodes": 378,
+              "jsEventListeners": 20
+            },
+            "attachedDomNodes": 109,
+            "bitmaps": {
+              "created": 39,
+              "closed": 37,
+              "active": 2,
+              "peak": 2,
+              "activePixels": 4878720,
+              "peakPixels": 4878720
+            }
+          },
+          {
+            "elapsedMs": 180633,
+            "actions": 1020,
+            "heap": {
+              "usedSize": 1727840,
+              "totalSize": 2691072,
+              "embedderHeapUsedSize": 1243896,
+              "backingStorageSize": 28794648
+            },
+            "dom": {
+              "documents": 1,
+              "nodes": 386,
+              "jsEventListeners": 20
+            },
+            "attachedDomNodes": 109,
+            "bitmaps": {
+              "created": 47,
+              "closed": 45,
+              "active": 2,
+              "peak": 2,
+              "activePixels": 4878720,
+              "peakPixels": 4878720
+            }
+          }
+        ],
+        "maximumAttachedDomNodes": 109,
+        "initialAttachedDomNodes": 109,
+        "beforeFinalGc": {
+          "usedSize": 1729860,
+          "totalSize": 2691072,
+          "embedderHeapUsedSize": 1243896,
+          "backingStorageSize": 28794648
+        },
+        "afterFinalGc": {
+          "usedSize": 1467728,
+          "totalSize": 2166784,
+          "embedderHeapUsedSize": 471928,
+          "backingStorageSize": 5801
+        },
+        "domAfterFinalGc": {
+          "documents": 1,
+          "nodes": 123,
+          "jsEventListeners": 20
+        },
+        "domCounterMeaning": "CDP nodes includes detached nodes awaiting collection; only document-attached TreeWalker counts are asserted stable.",
+        "physicalDeviceOrOvernightCertification": false
+      }
+    }
+  ]
+}

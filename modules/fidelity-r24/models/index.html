@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#10191d">
+  <title>Corps et mouvements sources — B.O.W. Protocol</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../access/gamepad.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three/build/three.module.min.js","three/addons/":"./vendor/three/examples/jsm/"}}</script>
+<link rel="stylesheet" href="../access/text-reflow.css">
+</head>
+<body>
+  <a class="skip" href="#main">Aller au modèle</a>
+  <header><a href="../index.html">← Chantiers R24</a><a href="../../../codex.html">Bestiaire</a></header>
+  <main id="main" data-r24-gamepad-root>
+    <p class="eyebrow">FICHIERS D’ORIGINE PUBLIÉS · R24</p>
+    <h1>Corps et mouvements sources</h1>
+    <p>Tourner autour du modèle et examiner les mouvements présents dans son archive. Les fichiers gardent leurs formes et leurs variantes ; le rendu exact du jeu reste à vérifier.</p>
+    <label for="modelSelect">Sujet et version<select id="modelSelect" disabled></select></label>
+    <p id="modelStatus" role="status" aria-live="polite">Chargement du catalogue…</p>
+    <button id="retry" type="button" hidden>Réessayer</button>
+    <section aria-labelledby="modelTitle">
+      <h2 id="modelTitle">Choisir un modèle</h2><p id="modelGame"></p>
+      <div id="viewport" class="viewport"><p id="screenMessage">Le modèle s’affiche après vérification de ses fichiers.</p></div>
+      <p id="viewHint">Souris ou doigt : tourner la vue. Les boutons permettent les mêmes actions au clavier.</p>
+      <div id="cameraControls" class="transport" role="group" aria-label="Examiner le modèle">
+        <button id="turnLeft" type="button" disabled>Tourner −90°</button><button id="turnRight" type="button" disabled>Tourner +90°</button>
+        <button id="opposite" type="button" disabled>Vue opposée</button><button id="resetView" type="button" disabled>Vue initiale</button>
+        <button id="zoomIn" type="button" disabled>Rapprocher</button><button id="zoomOut" type="button" disabled>Éloigner</button>
+      </div>
+      <label class="check"><input id="showBones" type="checkbox" disabled> Voir l’armature publiée</label>
+      <section id="animationSection" aria-labelledby="animationTitle" hidden>
+        <h3 id="animationTitle">Mouvements du même modèle</h3>
+        <label for="clipSelect">Fichier du mouvement<select id="clipSelect" disabled></select></label>
+        <div id="animationControls" class="transport" role="group" aria-label="Examiner le mouvement" data-r24-focus-retention data-r24-focus-fallback="timePosition">
+          <button id="previousKey" type="button" disabled>Clé précédente</button><button id="playToggle" type="button" disabled>Lire</button>
+          <button id="nextKey" type="button" disabled>Clé suivante</button><button id="restartClip" type="button" disabled>Début</button>
+        </div>
+        <label for="timePosition">Position dans le mouvement</label><input id="timePosition" type="range" min="0" max="0" step="0.001" value="0" disabled>
+        <p id="timeCounter" role="status">—</p>
+        <p>La lecture commence à votre demande. Les pistes s’appliquent uniquement aux os de cette archive, sans transfert vers un autre personnage.</p>
+      </section>
+      <p id="geometryInfo"></p>
+    </section>
+    <section aria-labelledby="sourceTitle"><h2 id="sourceTitle">Source et limites</h2><ul id="limits"></ul><div id="sourceLinks" class="source-links"></div></section>
+    <div data-r24-gamepad-ui></div>
+    <p class="note">L’aperçu emploie un éclairage neutre et une caméra d’examen. Il ne produit pas de rig, de vue anatomique ou de geste absent des fichiers publiés.</p>
+  </main>
+  <script src="../../../src/menu-navigation-r20.js"></script>
+  <script src="../access/gamepad-navigation.js"></script>
+  <script src="../access/focus-retention.js"></script>
+  <script type="module" src="viewer.js"></script>
+</body>
+</html>

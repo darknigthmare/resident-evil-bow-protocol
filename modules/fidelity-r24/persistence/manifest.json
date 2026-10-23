@@ -1,0 +1,418 @@
+{
+  "schema": "re.bow.persistence-delivery/2",
+  "release": "R24",
+  "tasks": [
+    "G-REPLAYS",
+    "G-SAUVES"
+  ],
+  "status": "partial",
+  "entrypoint": "index.html",
+  "real_engine_reconstruction": true,
+  "deterministic_passes": 2,
+  "known_engine_routes": 3,
+  "historical_revisions_added": 1,
+  "historical_source_commit": "31671fecf53a26d81f77d2cb13a5ff61f15ef363",
+  "historical_scripts_preserved": 24,
+  "historical_script_bytes": 2522777,
+  "engine_index": "engines.json",
+  "production_scope": "B.O.W. app-engine replays; not native Resident Evil motion/art/sound certification",
+  "game_storage_access": false,
+  "sandbox_origin": "opaque-null",
+  "private_storage_initially_empty": true,
+  "cloud_backend": false,
+  "delivered": [
+    "Replay commands reconstructed by unchanged current main engine and matching pre-R13 engine",
+    "R13 recorded result fields compared with actual reconstructed outcome",
+    "Two exact reconstructed simulation states compared independently",
+    "R7 original validation reconstructs and checks stored stateDigest",
+    "Historical engine selected by its actual contract; all 24 original scripts and HTML frozen byte-for-byte",
+    "Opaque-origin sandbox with private memory storage, no automatic animation/audio, cancellation and stale-response refusal"
+  ],
+  "validation": {
+    "targeted_tests": 14,
+    "browser_groups": 6,
+    "unit_report": "../../../docs/R24_PERSISTENCE_TESTS.json",
+    "browser_report": "../../../docs/R24_PERSISTENCE_BROWSER_TESTS.json",
+    "actual_recording_sources": [
+      "Current main app engine",
+      "Git 31671fec pre-R13 main app engine",
+      "Current experimental R7 app engine"
+    ]
+  },
+  "remaining": [
+    "Other historical contracts and exhaustive original-engine compatibility",
+    "Cloud synchronization: no configured backend exists",
+    "Crash-atomic restoration and physical power-loss resilience",
+    "Physical-device and screen-reader certification",
+    "Native original Resident Evil art, rigs, combat clips and audio fidelity"
+  ],
+  "source_files": [
+    {
+      "path": "modules/versus.html",
+      "bytes": 32024,
+      "sha256": "d85f7a37b95bcd31937308e9086478a9782f7cfc72fe76f0e4a327f06460139d"
+    },
+    {
+      "path": "src/baker-ambience-r15.js",
+      "bytes": 4117,
+      "sha256": "ffb355735f83c8f18589cd02b4daef519105287848343dc5eb5a50907df7a86a"
+    },
+    {
+      "path": "src/baker-stages-r14.js",
+      "bytes": 18066,
+      "sha256": "2735c502a55bf54964bfe6a61be4d7eeee09d6c9b24c1acf164fe9d084b878fb"
+    },
+    {
+      "path": "src/bow-sprite-library-r20.js",
+      "bytes": 11660,
+      "sha256": "6a0abd067c725dd318aa0d98033530095be315ac0b3702607defdd1b3fbb5421"
+    },
+    {
+      "path": "src/catalog-expansion-data.js",
+      "bytes": 3010594,
+      "sha256": "c33d05f4139ee9832990903289bf0edd5c16c54ccb678b6e81b0e13d75a0cce4"
+    },
+    {
+      "path": "src/catalog-replay-contract.js",
+      "bytes": 248,
+      "sha256": "2778547c459e6efcc95810e8c3dd1108449ca752adaf54f751406573b84ec934"
+    },
+    {
+      "path": "src/catalog-replay-r7.js",
+      "bytes": 5939,
+      "sha256": "8a6536128b5400c85ac1737000d5eb5f12715d554ffd102ca4a375240f22da50"
+    },
+    {
+      "path": "src/catalog-trial-adapter.js",
+      "bytes": 583,
+      "sha256": "2804ad111b5ee44e959ee2f12c604275193691e803f819a704950ca89fa502b7"
+    },
+    {
+      "path": "src/combat-audio-v060.js",
+      "bytes": 25749,
+      "sha256": "c40377240c4093b99154b01b713706829fc33ad324f581d77f4ceb2a816659ea"
+    },
+    {
+      "path": "src/combat-camera-v060.js",
+      "bytes": 10101,
+      "sha256": "e90f502073a3eaa0ca571fafb17883f0c98bf09923b19e04d42709c684d43444"
+    },
+    {
+      "path": "src/combat-cues-r6.js",
+      "bytes": 8629,
+      "sha256": "7b24fb33b1ee04fa76301685efc468273eb564fa9d4c8141b59a70430894124d"
+    },
+    {
+      "path": "src/combat-flow-v060.js",
+      "bytes": 15718,
+      "sha256": "df121f4be06adb4016221ffabf0660581368a62e61e765330fbbe1dc6036f203"
+    },
+    {
+      "path": "src/combat-foundation-v060.js",
+      "bytes": 39241,
+      "sha256": "4c2aa12007670a1535d4c467db115a148161a4ab08778be17d4ef4f44e95ba82"
+    },
+    {
+      "path": "src/combat-host-v060.js",
+      "bytes": 13149,
+      "sha256": "d54bdad2c8b5589035c84ce38e86cd12e948c8ced06943a66a0cfc561c280bfc"
+    },
+    {
+      "path": "src/combat-text-panel-r17.js",
+      "bytes": 7819,
+      "sha256": "45eebba4cbfb2a9517615d86111b1b12565c09b668bb5179e70896f6049fefb5"
+    },
+    {
+      "path": "src/combat-text-r17.js",
+      "bytes": 7689,
+      "sha256": "952d6254e5897dd36deb93a8cd96fa7d8f50898d9ba238492b9d4880a31d23c5"
+    },
+    {
+      "path": "src/defeat-presentation-v060.js",
+      "bytes": 17950,
+      "sha256": "a49d5f44a1fccdd412f2c8cc5870a42f1c03b92ad4950f6f94b0c940526d1b56"
+    },
+    {
+      "path": "src/directional-art.js",
+      "bytes": 22293,
+      "sha256": "50d15c95c4c5e402543dad18a6163746315af27605f701ea8777d6f57cb6ba2f"
+    },
+    {
+      "path": "src/dojo-coach-v060.js",
+      "bytes": 13849,
+      "sha256": "9c4b29ab4e5ddd45df17250b07424c5ff25633260786665c2c1708a161d243f5"
+    },
+    {
+      "path": "src/fighter-directions.js",
+      "bytes": 9826,
+      "sha256": "3787d48622665d1fd8a33ed2f48f2887e1409c9dd312b11c16e031989f2ceb4e"
+    },
+    {
+      "path": "src/finisher-compatibility-r10.js",
+      "bytes": 4710,
+      "sha256": "337a09567e5574c0330a093c51cc9f206219c241c560214918ebb998c37065bd"
+    },
+    {
+      "path": "src/finisher-library-v060.js",
+      "bytes": 12948,
+      "sha256": "9abcabeffb282794e5c12e32c868c72a8e36ff92eec91bce8ac8adc2e7f3d72e"
+    },
+    {
+      "path": "src/finishers-v053.js",
+      "bytes": 392215,
+      "sha256": "20047534e8c6dcefed35699b96cb42c902d1a8fb4243c9db4249faa256a1615f"
+    },
+    {
+      "path": "src/freeplay-bridge-v060.js",
+      "bytes": 1220,
+      "sha256": "4394a2fe38b7bf5438ca0349a2d2d16fd42861b0c608aaaab490c6e505774f95"
+    },
+    {
+      "path": "src/interface-preferences-r20.js",
+      "bytes": 2051,
+      "sha256": "79e4655dcff4674e9447c7473a4a2db77fdc5ff31c370bc331d5c74e6d83ea35"
+    },
+    {
+      "path": "src/match-sequences-r8.js",
+      "bytes": 2882,
+      "sha256": "4659ab336463951c5a269dac71321beb77c288a77ddc9036961b58e310fdb368"
+    },
+    {
+      "path": "src/platform-safety-r9.js",
+      "bytes": 4609,
+      "sha256": "c22d658049085e8e2c051dd0a15d2028ffaadd20cd5c343144a075340abe471d"
+    },
+    {
+      "path": "src/player-shell-r20.js",
+      "bytes": 6567,
+      "sha256": "97621067c2878bb193fb4b2d30c7ff903e0ceaf7ec17d7b33858ff90521732f4"
+    },
+    {
+      "path": "src/re-data.js",
+      "bytes": 1786234,
+      "sha256": "090cf6e14a5ddf73291bcc443db1500e1810911beb926b4b4e26f9b0160b355a"
+    },
+    {
+      "path": "src/re-navigation.js",
+      "bytes": 692,
+      "sha256": "aa090be0125e3bffc3e87ea12747eb19f8a406dafb97396225d562dacbff48e7"
+    },
+    {
+      "path": "src/re-renderer.js",
+      "bytes": 37112,
+      "sha256": "fbd24f06be8c246356ba47715dce9bf80fdb75f2eb3e1648819611e8d0f6850c"
+    },
+    {
+      "path": "src/re5-scenes-v060.js",
+      "bytes": 8517,
+      "sha256": "759f94aad96616e2bdab18b6ce998b2d185e8f9f0703f875c26980727de7bb49"
+    },
+    {
+      "path": "src/replay-panel-r13.js",
+      "bytes": 10520,
+      "sha256": "62708bebf080d65e4ea599064d78c942980dbd644c84e0c07e711884b3dda26e"
+    },
+    {
+      "path": "src/replay-vault-r13.js",
+      "bytes": 7600,
+      "sha256": "243cae05f698591d9665d09a1ed60a4c7c9f9d4dd20d2b384b8057cf619fed83"
+    },
+    {
+      "path": "src/runtime-contract.js",
+      "bytes": 221,
+      "sha256": "6566ab58194e7c07c7e531213aaf408c703e8bb9358c4899ea0f5913239afe8c"
+    },
+    {
+      "path": "src/spatial-weakpoints-v072.js",
+      "bytes": 5261,
+      "sha256": "046cb41f2536b9d51204d01f27b9dc4a55472fb916ace2f1d8dfebe9c1b80ff7"
+    },
+    {
+      "path": "src/sprite-presentation-r20.js",
+      "bytes": 4288,
+      "sha256": "ac69a62067ceb393416e6e455a98bb296f7b2f9f54c4eb0dc8889b77f332c6d4"
+    },
+    {
+      "path": "src/stage-dynamics-r6.js",
+      "bytes": 9148,
+      "sha256": "448bd71890918de9841637c86bb9b2c7c6c991195d0e07472f2a1275a0fb49a5"
+    },
+    {
+      "path": "src/unified-engine-v060.js",
+      "bytes": 85581,
+      "sha256": "e54bb7bec80396b5fe7d4883aeb93a11efcc013865b406c70d8d86a999d3a69c"
+    }
+  ],
+  "files": [
+    {
+      "path": "bootstrap.js",
+      "bytes": 1485,
+      "sha256": "e3cb385be578dfa143e131dfebfbe000d0563b7bddfac8032e2d21d9cb623967"
+    },
+    {
+      "path": "engines.json",
+      "bytes": 556,
+      "sha256": "d99c7e4e93bf09fa9f85dc62a4ed1a9abba26066c2d1328e907a7ac03d9e03b1"
+    },
+    {
+      "path": "historical/pre-r13/manifest.json",
+      "bytes": 8539,
+      "sha256": "7dc4a1223d33d46fd93db1979a6e00cf249baaa7ce22bd35c8ef9f9fcffbe4c6"
+    },
+    {
+      "path": "historical/pre-r13/src/combat-audio-v060.js",
+      "bytes": 23275,
+      "sha256": "b7763431abb62febd72d07c6eaa5b39aa49f18757f5b9de1219b884e4104f2ed"
+    },
+    {
+      "path": "historical/pre-r13/src/combat-camera-v060.js",
+      "bytes": 10101,
+      "sha256": "e90f502073a3eaa0ca571fafb17883f0c98bf09923b19e04d42709c684d43444"
+    },
+    {
+      "path": "historical/pre-r13/src/combat-cues-r6.js",
+      "bytes": 8629,
+      "sha256": "7b24fb33b1ee04fa76301685efc468273eb564fa9d4c8141b59a70430894124d"
+    },
+    {
+      "path": "historical/pre-r13/src/combat-flow-v060.js",
+      "bytes": 15718,
+      "sha256": "df121f4be06adb4016221ffabf0660581368a62e61e765330fbbe1dc6036f203"
+    },
+    {
+      "path": "historical/pre-r13/src/combat-foundation-v060.js",
+      "bytes": 39241,
+      "sha256": "4c2aa12007670a1535d4c467db115a148161a4ab08778be17d4ef4f44e95ba82"
+    },
+    {
+      "path": "historical/pre-r13/src/combat-host-v060.js",
+      "bytes": 12155,
+      "sha256": "501ab594bda12739119096d2bf836267b5fd67df74f54d14bad66184cb98ea58"
+    },
+    {
+      "path": "historical/pre-r13/src/defeat-presentation-v060.js",
+      "bytes": 17950,
+      "sha256": "a49d5f44a1fccdd412f2c8cc5870a42f1c03b92ad4950f6f94b0c940526d1b56"
+    },
+    {
+      "path": "historical/pre-r13/src/directional-art.js",
+      "bytes": 22293,
+      "sha256": "50d15c95c4c5e402543dad18a6163746315af27605f701ea8777d6f57cb6ba2f"
+    },
+    {
+      "path": "historical/pre-r13/src/dojo-coach-v060.js",
+      "bytes": 13849,
+      "sha256": "9c4b29ab4e5ddd45df17250b07424c5ff25633260786665c2c1708a161d243f5"
+    },
+    {
+      "path": "historical/pre-r13/src/fighter-directions.js",
+      "bytes": 9826,
+      "sha256": "3787d48622665d1fd8a33ed2f48f2887e1409c9dd312b11c16e031989f2ceb4e"
+    },
+    {
+      "path": "historical/pre-r13/src/finisher-compatibility-r10.js",
+      "bytes": 4710,
+      "sha256": "337a09567e5574c0330a093c51cc9f206219c241c560214918ebb998c37065bd"
+    },
+    {
+      "path": "historical/pre-r13/src/finisher-library-v060.js",
+      "bytes": 12948,
+      "sha256": "9abcabeffb282794e5c12e32c868c72a8e36ff92eec91bce8ac8adc2e7f3d72e"
+    },
+    {
+      "path": "historical/pre-r13/src/finishers-v053.js",
+      "bytes": 392215,
+      "sha256": "20047534e8c6dcefed35699b96cb42c902d1a8fb4243c9db4249faa256a1615f"
+    },
+    {
+      "path": "historical/pre-r13/src/freeplay-bridge-v060.js",
+      "bytes": 1220,
+      "sha256": "4394a2fe38b7bf5438ca0349a2d2d16fd42861b0c608aaaab490c6e505774f95"
+    },
+    {
+      "path": "historical/pre-r13/src/match-sequences-r8.js",
+      "bytes": 2882,
+      "sha256": "4659ab336463951c5a269dac71321beb77c288a77ddc9036961b58e310fdb368"
+    },
+    {
+      "path": "historical/pre-r13/src/platform-safety-r9.js",
+      "bytes": 4609,
+      "sha256": "c22d658049085e8e2c051dd0a15d2028ffaadd20cd5c343144a075340abe471d"
+    },
+    {
+      "path": "historical/pre-r13/src/re-data.js",
+      "bytes": 1786234,
+      "sha256": "090cf6e14a5ddf73291bcc443db1500e1810911beb926b4b4e26f9b0160b355a"
+    },
+    {
+      "path": "historical/pre-r13/src/re-navigation.js",
+      "bytes": 692,
+      "sha256": "aa090be0125e3bffc3e87ea12747eb19f8a406dafb97396225d562dacbff48e7"
+    },
+    {
+      "path": "historical/pre-r13/src/re-renderer.js",
+      "bytes": 36752,
+      "sha256": "3dfbe4eaa4a24b4256b15d68f68fe482456f7eb4d6971ac0a9c251fb60112e21"
+    },
+    {
+      "path": "historical/pre-r13/src/re5-scenes-v060.js",
+      "bytes": 8517,
+      "sha256": "759f94aad96616e2bdab18b6ce998b2d185e8f9f0703f875c26980727de7bb49"
+    },
+    {
+      "path": "historical/pre-r13/src/runtime-contract.js",
+      "bytes": 221,
+      "sha256": "a690a61427171d80d1aa47d3416941bc12aa26b6230e37551cf7b472730887c6"
+    },
+    {
+      "path": "historical/pre-r13/src/spatial-weakpoints-v072.js",
+      "bytes": 5261,
+      "sha256": "046cb41f2536b9d51204d01f27b9dc4a55472fb916ace2f1d8dfebe9c1b80ff7"
+    },
+    {
+      "path": "historical/pre-r13/src/stage-dynamics-r6.js",
+      "bytes": 9148,
+      "sha256": "448bd71890918de9841637c86bb9b2c7c6c991195d0e07472f2a1275a0fb49a5"
+    },
+    {
+      "path": "historical/pre-r13/src/unified-engine-v060.js",
+      "bytes": 84331,
+      "sha256": "a6a90f0c38b8b0de3b5531e0f36f282ba16c250c0204622ae477d857a5334701"
+    },
+    {
+      "path": "historical/pre-r13/versus.html",
+      "bytes": 31334,
+      "sha256": "f9c11174b1d8feadec2e418e7711a7005d11cb8953028e2f157755282de2a2e5"
+    },
+    {
+      "path": "index.html",
+      "bytes": 2202,
+      "sha256": "c120ef325cbe88a88af612e0900177362e809f9c3958942be2ae64b26feed547"
+    },
+    {
+      "path": "page.js",
+      "bytes": 4337,
+      "sha256": "43455ed9f4711958499bff982e502c5c44a21b3f422fb3c52de54f892b8ce635"
+    },
+    {
+      "path": "runner.js",
+      "bytes": 1279,
+      "sha256": "53b2b02084e8029e98b262079722143d04bb283d3f3317e69027cdf94e910dff"
+    },
+    {
+      "path": "sandbox.js",
+      "bytes": 6228,
+      "sha256": "0e9c76a5c67428669327347d3995eab6580564dbffa026aa5ffbfecd9f227cf1"
+    },
+    {
+      "path": "style.css",
+      "bytes": 1360,
+      "sha256": "a79f2090c21f273b960ca485857b1c7b62d4cb563df88462df262eadb1124de8"
+    },
+    {
+      "path": "verifier.js",
+      "bytes": 7187,
+      "sha256": "3c9c71a3001d490f08e5313e017d83221a70571270008c1e4f37273eda62f735"
+    }
+  ]
+}

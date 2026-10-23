@@ -1,0 +1,56 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "Manual playback, volume, pause and labelled controls at 1440px",
+      "pass": true,
+      "detail": {
+        "clips": 57,
+        "initialAutoplay": false,
+        "playback": {
+          "time": 0.094072,
+          "volume": 0.25,
+          "paused": true
+        },
+        "noPageOverflow": true
+      }
+    },
+    {
+      "name": "Manual playback, volume, pause and labelled controls at 390px",
+      "pass": true,
+      "detail": {
+        "clips": 57,
+        "initialAutoplay": false,
+        "playback": {
+          "time": 0.09199,
+          "volume": 0.25,
+          "paused": true
+        },
+        "noPageOverflow": true
+      }
+    },
+    {
+      "name": "All published MP3 files match their hashes and decode without playback",
+      "pass": true,
+      "detail": {
+        "decodedClips": 57,
+        "playbackStarted": false
+      }
+    },
+    {
+      "name": "Corrupted source bytes are refused before audio loading",
+      "pass": true,
+      "detail": {
+        "corruptionRefused": true
+      }
+    },
+    {
+      "name": "A delayed previous selection cannot replace the current source",
+      "pass": true,
+      "detail": {
+        "currentClip": "agarrenlo",
+        "maximumObjectURLs": 1
+      }
+    }
+  ]
+}

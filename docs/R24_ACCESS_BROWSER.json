@@ -1,0 +1,2151 @@
+{
+  "schema": "re.bow.accessibility-evidence-r24/1",
+  "startedAt": "2026-10-23T21:53:29.019Z",
+  "completedAt": "2026-10-23T21:54:16.250Z",
+  "environment": {
+    "node": "v22.16.0",
+    "chromium": "154.0.8037.57",
+    "axeCore": "4.14.0",
+    "virtualized": true,
+    "headless": true,
+    "softwareWebGL": true
+  },
+  "certification": {
+    "physicalDevices": false,
+    "physicalGamepads": false,
+    "screenReaders": false,
+    "completeWcagConformance": false,
+    "originalArtFidelity": false
+  },
+  "passed": 28,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "WCAG automation and reflow: modules/fidelity-r23/index.html at 1280px",
+      "pass": true,
+      "detail": {
+        "page": "modules/fidelity-r23/index.html",
+        "width": 1280,
+        "axeVersion": "4.14.0",
+        "automatedPassRules": 39,
+        "violations": [],
+        "incomplete": [],
+        "measuredTextContrast": {
+          "scope": "Flat backgrounds and visible text in the current viewport only; transparent layers composited; disabled controls excluded.",
+          "skippedComplexOrTransparentCases": 0,
+          "pairs": [
+            {
+              "foreground": "rgb(166, 232, 197)",
+              "background": [
+                16,
+                25,
+                29
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 12.699320743028078,
+              "meetsThreshold": true,
+              "sample": "☣ B.O.W. PROTOCOL"
+            },
+            {
+              "foreground": "rgb(229, 238, 235)",
+              "background": [
+                16,
+                25,
+                29
+              ],
+              "requiredRatio": 3,
+              "ratio": 15.066728941241186,
+              "meetsThreshold": true,
+              "sample": "Sources et chantiers"
+            },
+            {
+              "foreground": "rgb(179, 199, 197)",
+              "background": [
+                16,
+                25,
+                29
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 10.08830509579776,
+              "meetsThreshold": true,
+              "sample": "Examiner les ressources d’origine, les avancées et le travail restant pour chaque chantier du classe"
+            },
+            {
+              "foreground": "rgb(229, 238, 235)",
+              "background": [
+                36,
+                71,
+                58
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 8.717478881011397,
+              "meetsThreshold": true,
+              "sample": "Télécharger le classeur R23"
+            },
+            {
+              "foreground": "rgb(229, 238, 235)",
+              "background": [
+                16,
+                25,
+                29
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 15.066728941241186,
+              "meetsThreshold": true,
+              "sample": "Les 17 chantiers restent ouverts. Les ressources consultables et les critères restants sont détaillé"
+            },
+            {
+              "foreground": "rgb(229, 238, 235)",
+              "background": [
+                23,
+                37,
+                42
+              ],
+              "requiredRatio": 3,
+              "ratio": 13.309217992246937,
+              "meetsThreshold": true,
+              "sample": "Vues natives"
+            },
+            {
+              "foreground": "rgb(179, 199, 197)",
+              "background": [
+                23,
+                37,
+                42
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 8.911519694546728,
+              "meetsThreshold": true,
+              "sample": "Sept vignettes natives RE3 remake intégrées et deux variantes Wesker RE5 à comparer séparément."
+            },
+            {
+              "foreground": "rgb(166, 232, 197)",
+              "background": [
+                23,
+                37,
+                42
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 11.21796434923455,
+              "meetsThreshold": true,
+              "sample": "Examiner les vues"
+            }
+          ]
+        },
+        "reflow": {
+          "viewportCssPx": 1280,
+          "equivalentLayout": null,
+          "rootTextResizeAt320": null
+        }
+      }
+    },
+    {
+      "name": "WCAG automation and reflow: modules/fidelity-r23/visual/index.html at 1280px",
+      "pass": true,
+      "detail": {
+        "page": "modules/fidelity-r23/visual/index.html",
+        "width": 1280,
+        "axeVersion": "4.14.0",
+        "automatedPassRules": 32,
+        "violations": [],
+        "incomplete": [],
+        "measuredTextContrast": {
+          "scope": "Flat backgrounds and visible text in the current viewport only; transparent layers composited; disabled controls excluded.",
+          "skippedComplexOrTransparentCases": 0,
+          "pairs": [
+            {
+              "foreground": "rgb(183, 230, 179)",
+              "background": [
+                16,
+                20,
+                21
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 13.225187875098385,
+              "meetsThreshold": true,
+              "sample": "Retour au suivi des chantiers"
+            },
+            {
+              "foreground": "rgb(237, 241, 237)",
+              "background": [
+                16,
+                20,
+                21
+              ],
+              "requiredRatio": 3,
+              "ratio": 16.24639327961628,
+              "meetsThreshold": true,
+              "sample": "Vignettes natives de Resident Evil 3 remake"
+            },
+            {
+              "foreground": "rgb(237, 241, 237)",
+              "background": [
+                16,
+                20,
+                21
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 16.24639327961628,
+              "meetsThreshold": true,
+              "sample": "Sept vues du menu de modèles, conservées pixel pour pixel depuis une archive communautaire. Ces port"
+            },
+            {
+              "foreground": "rgb(237, 241, 237)",
+              "background": [
+                25,
+                32,
+                29
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 14.5422962432429,
+              "meetsThreshold": true,
+              "sample": "Zombie Dog"
+            },
+            {
+              "foreground": "rgb(199, 211, 202)",
+              "background": [
+                25,
+                32,
+                29
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 10.744399375302955,
+              "meetsThreshold": true,
+              "sample": "re3r-zombie-dog"
+            },
+            {
+              "foreground": "rgb(183, 230, 179)",
+              "background": [
+                25,
+                32,
+                29
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 11.83798746233276,
+              "meetsThreshold": true,
+              "sample": "Comparer avec la fiche Evil Resource"
+            }
+          ]
+        },
+        "reflow": {
+          "viewportCssPx": 1280,
+          "equivalentLayout": null,
+          "rootTextResizeAt320": null
+        }
+      }
+    },
+    {
+      "name": "WCAG automation and reflow: modules/fidelity-r23/motion/index.html at 1280px",
+      "pass": true,
+      "detail": {
+        "page": "modules/fidelity-r23/motion/index.html",
+        "width": 1280,
+        "axeVersion": "4.14.0",
+        "automatedPassRules": 34,
+        "violations": [],
+        "incomplete": [],
+        "measuredTextContrast": {
+          "scope": "Flat backgrounds and visible text in the current viewport only; transparent layers composited; disabled controls excluded.",
+          "skippedComplexOrTransparentCases": 0,
+          "pairs": [
+            {
+              "foreground": "rgb(169, 228, 206)",
+              "background": [
+                16,
+                22,
+                23
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 12.770640463096159,
+              "meetsThreshold": true,
+              "sample": "← Chantiers de fidélité"
+            },
+            {
+              "foreground": "rgb(237, 244, 241)",
+              "background": [
+                16,
+                22,
+                23
+              ],
+              "requiredRatio": 3,
+              "ratio": 16.369542335031376,
+              "meetsThreshold": true,
+              "sample": "Malacoda — images d’origine"
+            },
+            {
+              "foreground": "rgb(237, 244, 241)",
+              "background": [
+                16,
+                22,
+                23
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 16.369542335031376,
+              "meetsThreshold": true,
+              "sample": "Resident Evil Revelations (2012). Scène documentaire avec son décor et sa caméra."
+            },
+            {
+              "foreground": "rgb(237, 244, 241)",
+              "background": [
+                39,
+                48,
+                42
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 12.19551384780516,
+              "meetsThreshold": true,
+              "sample": "Le GIF publié ne définit aucun délai entre ses 218 images. Explorez-les manuellement ; la cadence du"
+            },
+            {
+              "foreground": "rgb(244, 252, 248)",
+              "background": [
+                35,
+                59,
+                50
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 11.546177832859614,
+              "meetsThreshold": true,
+              "sample": "Image suivante"
+            }
+          ]
+        },
+        "reflow": {
+          "viewportCssPx": 1280,
+          "equivalentLayout": null,
+          "rootTextResizeAt320": null
+        }
+      }
+    },
+    {
+      "name": "WCAG automation and reflow: modules/fidelity-r23/canonical/index.html at 1280px",
+      "pass": true,
+      "detail": {
+        "page": "modules/fidelity-r23/canonical/index.html",
+        "width": 1280,
+        "axeVersion": "4.14.0",
+        "automatedPassRules": 43,
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "affectedNodes": 1143,
+            "help": "Elements must meet minimum color contrast ratio thresholds"
+          }
+        ],
+        "measuredTextContrast": {
+          "scope": "Flat backgrounds and visible text in the current viewport only; transparent layers composited; disabled controls excluded.",
+          "skippedComplexOrTransparentCases": 0,
+          "pairs": [
+            {
+              "foreground": "rgb(195, 234, 152)",
+              "background": [
+                16,
+                21,
+                21
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 13.63265098036492,
+              "meetsThreshold": true,
+              "sample": "← Chantiers R23"
+            },
+            {
+              "foreground": "rgb(238, 243, 238)",
+              "background": [
+                16,
+                21,
+                21
+              ],
+              "requiredRatio": 3,
+              "ratio": 16.39315782114976,
+              "meetsThreshold": true,
+              "sample": "Retrouver ce que les sources disent."
+            },
+            {
+              "foreground": "rgb(238, 243, 238)",
+              "background": [
+                16,
+                21,
+                21
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 16.39315782114976,
+              "meetsThreshold": true,
+              "sample": "Identités, gestes et points faibles, avec citations et limites. Les sources secondaires conservées n"
+            },
+            {
+              "foreground": "rgb(180, 195, 186)",
+              "background": [
+                16,
+                21,
+                21
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 10.047776114050528,
+              "meetsThreshold": true,
+              "sample": "389 identités · 38 citations revues · 389 copies de pages · 1 désaccord documenté"
+            },
+            {
+              "foreground": "rgb(238, 243, 238)",
+              "background": [
+                32,
+                43,
+                39
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 13.013131200433318,
+              "meetsThreshold": true,
+              "sample": "Toutes les identités\n        Avec citations revues\n        Alias explicites\n        Gestes décrits\n "
+            }
+          ]
+        },
+        "reflow": {
+          "viewportCssPx": 1280,
+          "equivalentLayout": null,
+          "rootTextResizeAt320": null
+        }
+      }
+    },
+    {
+      "name": "WCAG automation and reflow: modules/fidelity-r23/persistence/index.html at 1280px",
+      "pass": true,
+      "detail": {
+        "page": "modules/fidelity-r23/persistence/index.html",
+        "width": 1280,
+        "axeVersion": "4.14.0",
+        "automatedPassRules": 30,
+        "violations": [],
+        "incomplete": [],
+        "measuredTextContrast": {
+          "scope": "Flat backgrounds and visible text in the current viewport only; transparent layers composited; disabled controls excluded.",
+          "skippedComplexOrTransparentCases": 0,
+          "pairs": [
+            {
+              "foreground": "rgb(209, 229, 173)",
+              "background": [
+                16,
+                25,
+                24
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 13.21856459362921,
+              "meetsThreshold": true,
+              "sample": "Suivi de fidélité"
+            },
+            {
+              "foreground": "rgb(228, 236, 231)",
+              "background": [
+                16,
+                25,
+                24
+              ],
+              "requiredRatio": 3,
+              "ratio": 14.861000252723752,
+              "meetsThreshold": true,
+              "sample": "Inspecter une copie"
+            },
+            {
+              "foreground": "rgb(228, 236, 231)",
+              "background": [
+                16,
+                25,
+                24
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 14.861000252723752,
+              "meetsThreshold": true,
+              "sample": "Vérifiez une sauvegarde R19, un replay principal, une archive de replays ou un replay expérimental. "
+            },
+            {
+              "foreground": "rgb(228, 236, 231)",
+              "background": [
+                32,
+                52,
+                44
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 10.982431135265195,
+              "meetsThreshold": true,
+              "sample": "Choisissez un fichier JSON, jusqu’à 32 Mio."
+            }
+          ]
+        },
+        "reflow": {
+          "viewportCssPx": 1280,
+          "equivalentLayout": null,
+          "rootTextResizeAt320": null
+        }
+      }
+    },
+    {
+      "name": "WCAG automation and reflow: modules/fidelity-r23/audio/index.html at 1280px",
+      "pass": true,
+      "detail": {
+        "page": "modules/fidelity-r23/audio/index.html",
+        "width": 1280,
+        "axeVersion": "4.14.0",
+        "automatedPassRules": 40,
+        "violations": [],
+        "incomplete": [],
+        "measuredTextContrast": {
+          "scope": "Flat backgrounds and visible text in the current viewport only; transparent layers composited; disabled controls excluded.",
+          "skippedComplexOrTransparentCases": 0,
+          "pairs": [
+            {
+              "foreground": "rgb(157, 221, 193)",
+              "background": [
+                16,
+                22,
+                19
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 11.81841123520882,
+              "meetsThreshold": true,
+              "sample": "← Chantiers R23"
+            },
+            {
+              "foreground": "rgb(232, 238, 233)",
+              "background": [
+                16,
+                22,
+                19
+              ],
+              "requiredRatio": 3,
+              "ratio": 15.562405303210214,
+              "meetsThreshold": true,
+              "sample": "Voix et sons d’origine"
+            },
+            {
+              "foreground": "rgb(232, 238, 233)",
+              "background": [
+                16,
+                22,
+                19
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 15.562405303210214,
+              "meetsThreshold": true,
+              "sample": "Aucun enregistrement natif n’a pu être vérifié et intégré dans ce lot. Les voix, cris et effets prop"
+            },
+            {
+              "foreground": "rgb(232, 238, 233)",
+              "background": [
+                33,
+                55,
+                42
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 10.846333811468993,
+              "meetsThreshold": true,
+              "sample": "Incarnation"
+            },
+            {
+              "foreground": "rgb(184, 200, 188)",
+              "background": [
+                33,
+                55,
+                42
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 7.312494226522028,
+              "meetsThreshold": true,
+              "sample": "re3r-zombie"
+            }
+          ]
+        },
+        "reflow": {
+          "viewportCssPx": 1280,
+          "equivalentLayout": null,
+          "rootTextResizeAt320": null
+        }
+      }
+    },
+    {
+      "name": "WCAG automation and reflow: modules/fidelity-r24/index.html at 1280px",
+      "pass": true,
+      "detail": {
+        "page": "modules/fidelity-r24/index.html",
+        "width": 1280,
+        "axeVersion": "4.14.0",
+        "automatedPassRules": 40,
+        "violations": [],
+        "incomplete": [],
+        "measuredTextContrast": {
+          "scope": "Flat backgrounds and visible text in the current viewport only; transparent layers composited; disabled controls excluded.",
+          "skippedComplexOrTransparentCases": 0,
+          "pairs": [
+            {
+              "foreground": "rgb(166, 232, 197)",
+              "background": [
+                16,
+                25,
+                29
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 12.699320743028078,
+              "meetsThreshold": true,
+              "sample": "☣ B.O.W. PROTOCOL"
+            },
+            {
+              "foreground": "rgb(229, 238, 235)",
+              "background": [
+                16,
+                25,
+                29
+              ],
+              "requiredRatio": 3,
+              "ratio": 15.066728941241186,
+              "meetsThreshold": true,
+              "sample": "Sources et chantiers"
+            },
+            {
+              "foreground": "rgb(179, 199, 197)",
+              "background": [
+                16,
+                25,
+                29
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 10.08830509579776,
+              "meetsThreshold": true,
+              "sample": "Examiner les ressources d’origine, les avancées et le travail restant pour chaque chantier du classe"
+            },
+            {
+              "foreground": "rgb(229, 238, 235)",
+              "background": [
+                36,
+                71,
+                58
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 8.717478881011397,
+              "meetsThreshold": true,
+              "sample": "Télécharger le classeur R24"
+            },
+            {
+              "foreground": "rgb(229, 238, 235)",
+              "background": [
+                16,
+                25,
+                29
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 15.066728941241186,
+              "meetsThreshold": true,
+              "sample": "R24 : corps, armatures et mouvements publiés, extraits audio documentaires et nouvelles relectures. "
+            },
+            {
+              "foreground": "rgb(229, 238, 235)",
+              "background": [
+                23,
+                37,
+                42
+              ],
+              "requiredRatio": 3,
+              "ratio": 13.309217992246937,
+              "meetsThreshold": true,
+              "sample": "Corps et armatures"
+            },
+            {
+              "foreground": "rgb(179, 199, 197)",
+              "background": [
+                23,
+                37,
+                42
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 8.911519694546728,
+              "meetsThreshold": true,
+              "sample": "Modèles publiés, ports et variantes distingués, caméra d’examen et sources conservées."
+            },
+            {
+              "foreground": "rgb(166, 232, 197)",
+              "background": [
+                23,
+                37,
+                42
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 11.21796434923455,
+              "meetsThreshold": true,
+              "sample": "Examiner les modèles"
+            }
+          ]
+        },
+        "reflow": {
+          "viewportCssPx": 1280,
+          "equivalentLayout": null,
+          "rootTextResizeAt320": null
+        }
+      }
+    },
+    {
+      "name": "WCAG automation and reflow: modules/fidelity-r24/models/index.html at 1280px",
+      "pass": true,
+      "detail": {
+        "page": "modules/fidelity-r24/models/index.html",
+        "width": 1280,
+        "axeVersion": "4.14.0",
+        "automatedPassRules": 39,
+        "violations": [],
+        "incomplete": [],
+        "measuredTextContrast": {
+          "scope": "Flat backgrounds and visible text in the current viewport only; transparent layers composited; disabled controls excluded.",
+          "skippedComplexOrTransparentCases": 0,
+          "pairs": [
+            {
+              "foreground": "rgb(172, 233, 202)",
+              "background": [
+                16,
+                25,
+                29
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 12.947248259670872,
+              "meetsThreshold": true,
+              "sample": "← Chantiers R24"
+            },
+            {
+              "foreground": "rgb(228, 238, 235)",
+              "background": [
+                16,
+                25,
+                29
+              ],
+              "requiredRatio": 3,
+              "ratio": 15.038899029865819,
+              "meetsThreshold": true,
+              "sample": "Corps et mouvements sources"
+            },
+            {
+              "foreground": "rgb(228, 238, 235)",
+              "background": [
+                16,
+                25,
+                29
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 15.038899029865819,
+              "meetsThreshold": true,
+              "sample": "Tourner autour du modèle et examiner les mouvements présents dans son archive. Les fichiers gardent "
+            },
+            {
+              "foreground": "rgb(238, 245, 238)",
+              "background": [
+                21,
+                35,
+                40
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 14.529462518890707,
+              "meetsThreshold": true,
+              "sample": "Resident Evil 2 — port GameCube — G — première forme, port GameCubeResident Evil (1996) — Zombie — m"
+            }
+          ]
+        },
+        "reflow": {
+          "viewportCssPx": 1280,
+          "equivalentLayout": null,
+          "rootTextResizeAt320": null
+        }
+      }
+    },
+    {
+      "name": "WCAG automation and reflow: modules/fidelity-r24/motion/index.html at 1280px",
+      "pass": true,
+      "detail": {
+        "page": "modules/fidelity-r24/motion/index.html",
+        "width": 1280,
+        "axeVersion": "4.14.0",
+        "automatedPassRules": 34,
+        "violations": [],
+        "incomplete": [],
+        "measuredTextContrast": {
+          "scope": "Flat backgrounds and visible text in the current viewport only; transparent layers composited; disabled controls excluded.",
+          "skippedComplexOrTransparentCases": 0,
+          "pairs": [
+            {
+              "foreground": "rgb(166, 232, 197)",
+              "background": [
+                16,
+                25,
+                29
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 12.699320743028078,
+              "meetsThreshold": true,
+              "sample": "← Chantiers R24"
+            },
+            {
+              "foreground": "rgb(229, 238, 235)",
+              "background": [
+                16,
+                25,
+                29
+              ],
+              "requiredRatio": 3,
+              "ratio": 15.066728941241186,
+              "meetsThreshold": true,
+              "sample": "Armature et mouvements sources"
+            },
+            {
+              "foreground": "rgb(229, 238, 235)",
+              "background": [
+                16,
+                25,
+                29
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 15.066728941241186,
+              "meetsThreshold": true,
+              "sample": "Sea Creeper, dans Resident Evil Revelations : une armature pondérée et 48 fichiers de mouvements con"
+            },
+            {
+              "foreground": "rgb(229, 238, 235)",
+              "background": [
+                36,
+                71,
+                58
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 8.717478881011397,
+              "meetsThreshold": true,
+              "sample": "Examiner l’armature et les mouvements"
+            },
+            {
+              "foreground": "rgb(229, 238, 235)",
+              "background": [
+                27,
+                41,
+                43
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 12.698606922975042,
+              "meetsThreshold": true,
+              "sample": "Les fichiers gardent leurs os, leurs poids, leurs courbes et leurs clés temporelles. Les noms BA, DM"
+            }
+          ]
+        },
+        "reflow": {
+          "viewportCssPx": 1280,
+          "equivalentLayout": null,
+          "rootTextResizeAt320": null
+        }
+      }
+    },
+    {
+      "name": "WCAG automation and reflow: modules/fidelity-r24/canonical/index.html at 1280px",
+      "pass": true,
+      "detail": {
+        "page": "modules/fidelity-r24/canonical/index.html",
+        "width": 1280,
+        "axeVersion": "4.14.0",
+        "automatedPassRules": 43,
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "affectedNodes": 209,
+            "help": "Elements must meet minimum color contrast ratio thresholds"
+          }
+        ],
+        "measuredTextContrast": {
+          "scope": "Flat backgrounds and visible text in the current viewport only; transparent layers composited; disabled controls excluded.",
+          "skippedComplexOrTransparentCases": 0,
+          "pairs": [
+            {
+              "foreground": "rgb(195, 234, 152)",
+              "background": [
+                16,
+                21,
+                21
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 13.63265098036492,
+              "meetsThreshold": true,
+              "sample": "← Chantiers R24"
+            },
+            {
+              "foreground": "rgb(237, 243, 237)",
+              "background": [
+                16,
+                21,
+                21
+              ],
+              "requiredRatio": 3,
+              "ratio": 16.35259393062264,
+              "meetsThreshold": true,
+              "sample": "Comparer les sources, garder la bonne incarnation."
+            },
+            {
+              "foreground": "rgb(237, 243, 237)",
+              "background": [
+                16,
+                21,
+                21
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 16.35259393062264,
+              "meetsThreshold": true,
+              "sample": "Des gestes, des formes et des dimensions documentés par jeu et par phase. Les fichiers en jeu sont t"
+            },
+            {
+              "foreground": "rgb(182, 201, 188)",
+              "background": [
+                16,
+                21,
+                21
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 10.586405755101449,
+              "meetsThreshold": true,
+              "sample": "115 nouvelles citations · 77 nouvelles identités relues · 14 énoncés recoupés · 21 citations de fich"
+            },
+            {
+              "foreground": "rgb(237, 243, 237)",
+              "background": [
+                32,
+                43,
+                39
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 12.980930984026665,
+              "meetsThreshold": true,
+              "sample": "Toutes les nouvelles revues\n        Énoncés recoupés entre éditeurs\n        Fichiers en jeu transcri"
+            }
+          ]
+        },
+        "reflow": {
+          "viewportCssPx": 1280,
+          "equivalentLayout": null,
+          "rootTextResizeAt320": null
+        }
+      }
+    },
+    {
+      "name": "WCAG automation and reflow: modules/fidelity-r24/persistence/index.html at 1280px",
+      "pass": true,
+      "detail": {
+        "page": "modules/fidelity-r24/persistence/index.html",
+        "width": 1280,
+        "axeVersion": "4.14.0",
+        "automatedPassRules": 32,
+        "violations": [],
+        "incomplete": [],
+        "measuredTextContrast": {
+          "scope": "Flat backgrounds and visible text in the current viewport only; transparent layers composited; disabled controls excluded.",
+          "skippedComplexOrTransparentCases": 0,
+          "pairs": [
+            {
+              "foreground": "rgb(209, 229, 173)",
+              "background": [
+                16,
+                25,
+                24
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 13.21856459362921,
+              "meetsThreshold": true,
+              "sample": "Suivi R24"
+            },
+            {
+              "foreground": "rgb(228, 236, 231)",
+              "background": [
+                16,
+                25,
+                24
+              ],
+              "requiredRatio": 3,
+              "ratio": 14.861000252723752,
+              "meetsThreshold": true,
+              "sample": "Vérifier un replay par relecture"
+            },
+            {
+              "foreground": "rgb(228, 236, 231)",
+              "background": [
+                16,
+                25,
+                24
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 14.861000252723752,
+              "meetsThreshold": true,
+              "sample": "Le moteur du jeu reconstruit les commandes du fichier deux fois dans un espace isolé. Les sauvegarde"
+            },
+            {
+              "foreground": "rgb(228, 236, 231)",
+              "background": [
+                32,
+                52,
+                44
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 10.982431135265195,
+              "meetsThreshold": true,
+              "sample": "Choisissez un replay. Un ancien contrat exige son moteur d’origine."
+            }
+          ]
+        },
+        "reflow": {
+          "viewportCssPx": 1280,
+          "equivalentLayout": null,
+          "rootTextResizeAt320": null
+        }
+      }
+    },
+    {
+      "name": "WCAG automation and reflow: modules/fidelity-r24/audio/index.html at 1280px",
+      "pass": true,
+      "detail": {
+        "page": "modules/fidelity-r24/audio/index.html",
+        "width": 1280,
+        "axeVersion": "4.14.0",
+        "automatedPassRules": 36,
+        "violations": [],
+        "incomplete": [],
+        "measuredTextContrast": {
+          "scope": "Flat backgrounds and visible text in the current viewport only; transparent layers composited; disabled controls excluded.",
+          "skippedComplexOrTransparentCases": 0,
+          "pairs": [
+            {
+              "foreground": "rgb(157, 221, 193)",
+              "background": [
+                16,
+                22,
+                19
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 11.81841123520882,
+              "meetsThreshold": true,
+              "sample": "← Chantiers R24"
+            },
+            {
+              "foreground": "rgb(232, 238, 233)",
+              "background": [
+                16,
+                22,
+                19
+              ],
+              "requiredRatio": 3,
+              "ratio": 15.562405303210214,
+              "meetsThreshold": true,
+              "sample": "Extraits publiés des Ganados"
+            },
+            {
+              "foreground": "rgb(232, 238, 233)",
+              "background": [
+                16,
+                22,
+                19
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 15.562405303210214,
+              "meetsThreshold": true,
+              "sample": "Resident Evil 4 (2005) · espagnol selon les libellés de la publication"
+            },
+            {
+              "foreground": "rgb(232, 238, 233)",
+              "background": [
+                23,
+                36,
+                28
+              ],
+              "requiredRatio": 3,
+              "ratio": 13.662908382567906,
+              "meetsThreshold": true,
+              "sample": "Écouter une référence publiée"
+            },
+            {
+              "foreground": "rgb(232, 238, 233)",
+              "background": [
+                23,
+                36,
+                28
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 13.662908382567906,
+              "meetsThreshold": true,
+              "sample": "Rechercher une phrase"
+            },
+            {
+              "foreground": "rgb(232, 238, 233)",
+              "background": [
+                16,
+                27,
+                21
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 14.994208113415588,
+              "meetsThreshold": true,
+              "sample": "Aca · 2.48 sAgarrenlo · 1.25 sAhi Esta · 1.36 sAhi Esta 2 · 1.12 sAhi Esta 3 · 1.10 sAhi Esta 4 · 1."
+            },
+            {
+              "foreground": "rgb(255, 255, 255)",
+              "background": [
+                49,
+                93,
+                67
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 7.561073454606932,
+              "meetsThreshold": true,
+              "sample": "Charger l’extrait"
+            },
+            {
+              "foreground": "rgb(157, 221, 193)",
+              "background": [
+                23,
+                36,
+                28
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 10.375894136419932,
+              "meetsThreshold": true,
+              "sample": "Voir le fichier publié"
+            }
+          ]
+        },
+        "reflow": {
+          "viewportCssPx": 1280,
+          "equivalentLayout": null,
+          "rootTextResizeAt320": null
+        }
+      }
+    },
+    {
+      "name": "WCAG automation and reflow: modules/fidelity-r23/index.html at 320px",
+      "pass": true,
+      "detail": {
+        "page": "modules/fidelity-r23/index.html",
+        "width": 320,
+        "axeVersion": "4.14.0",
+        "automatedPassRules": 39,
+        "violations": [],
+        "incomplete": [],
+        "measuredTextContrast": {
+          "scope": "Flat backgrounds and visible text in the current viewport only; transparent layers composited; disabled controls excluded.",
+          "skippedComplexOrTransparentCases": 0,
+          "pairs": [
+            {
+              "foreground": "rgb(166, 232, 197)",
+              "background": [
+                16,
+                25,
+                29
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 12.699320743028078,
+              "meetsThreshold": true,
+              "sample": "☣ B.O.W. PROTOCOL"
+            },
+            {
+              "foreground": "rgb(229, 238, 235)",
+              "background": [
+                16,
+                25,
+                29
+              ],
+              "requiredRatio": 3,
+              "ratio": 15.066728941241186,
+              "meetsThreshold": true,
+              "sample": "Sources et chantiers"
+            },
+            {
+              "foreground": "rgb(179, 199, 197)",
+              "background": [
+                16,
+                25,
+                29
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 10.08830509579776,
+              "meetsThreshold": true,
+              "sample": "Examiner les ressources d’origine, les avancées et le travail restant pour chaque chantier du classe"
+            },
+            {
+              "foreground": "rgb(229, 238, 235)",
+              "background": [
+                36,
+                71,
+                58
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 8.717478881011397,
+              "meetsThreshold": true,
+              "sample": "Télécharger le classeur R23"
+            },
+            {
+              "foreground": "rgb(229, 238, 235)",
+              "background": [
+                16,
+                25,
+                29
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 15.066728941241186,
+              "meetsThreshold": true,
+              "sample": "Les 17 chantiers restent ouverts. Les ressources consultables et les critères restants sont détaillé"
+            }
+          ]
+        },
+        "reflow": {
+          "viewportCssPx": 320,
+          "equivalentLayout": "1280px screen at 400% layout zoom, simulated via viewport; browser UI zoom not exercised",
+          "rootTextResizeAt320": "200%"
+        }
+      }
+    },
+    {
+      "name": "WCAG automation and reflow: modules/fidelity-r23/visual/index.html at 320px",
+      "pass": true,
+      "detail": {
+        "page": "modules/fidelity-r23/visual/index.html",
+        "width": 320,
+        "axeVersion": "4.14.0",
+        "automatedPassRules": 32,
+        "violations": [],
+        "incomplete": [],
+        "measuredTextContrast": {
+          "scope": "Flat backgrounds and visible text in the current viewport only; transparent layers composited; disabled controls excluded.",
+          "skippedComplexOrTransparentCases": 0,
+          "pairs": [
+            {
+              "foreground": "rgb(183, 230, 179)",
+              "background": [
+                16,
+                20,
+                21
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 13.225187875098385,
+              "meetsThreshold": true,
+              "sample": "Retour au suivi des chantiers"
+            },
+            {
+              "foreground": "rgb(237, 241, 237)",
+              "background": [
+                16,
+                20,
+                21
+              ],
+              "requiredRatio": 3,
+              "ratio": 16.24639327961628,
+              "meetsThreshold": true,
+              "sample": "Vignettes natives de Resident Evil 3 remake"
+            },
+            {
+              "foreground": "rgb(237, 241, 237)",
+              "background": [
+                16,
+                20,
+                21
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 16.24639327961628,
+              "meetsThreshold": true,
+              "sample": "Sept vues du menu de modèles, conservées pixel pour pixel depuis une archive communautaire. Ces port"
+            },
+            {
+              "foreground": "rgb(237, 241, 237)",
+              "background": [
+                25,
+                32,
+                29
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 14.5422962432429,
+              "meetsThreshold": true,
+              "sample": "Zombie Dog"
+            },
+            {
+              "foreground": "rgb(199, 211, 202)",
+              "background": [
+                25,
+                32,
+                29
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 10.744399375302955,
+              "meetsThreshold": true,
+              "sample": "re3r-zombie-dog"
+            }
+          ]
+        },
+        "reflow": {
+          "viewportCssPx": 320,
+          "equivalentLayout": "1280px screen at 400% layout zoom, simulated via viewport; browser UI zoom not exercised",
+          "rootTextResizeAt320": "200%"
+        }
+      }
+    },
+    {
+      "name": "WCAG automation and reflow: modules/fidelity-r23/motion/index.html at 320px",
+      "pass": true,
+      "detail": {
+        "page": "modules/fidelity-r23/motion/index.html",
+        "width": 320,
+        "axeVersion": "4.14.0",
+        "automatedPassRules": 34,
+        "violations": [],
+        "incomplete": [],
+        "measuredTextContrast": {
+          "scope": "Flat backgrounds and visible text in the current viewport only; transparent layers composited; disabled controls excluded.",
+          "skippedComplexOrTransparentCases": 0,
+          "pairs": [
+            {
+              "foreground": "rgb(169, 228, 206)",
+              "background": [
+                16,
+                22,
+                23
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 12.770640463096159,
+              "meetsThreshold": true,
+              "sample": "← Chantiers de fidélité"
+            },
+            {
+              "foreground": "rgb(237, 244, 241)",
+              "background": [
+                16,
+                22,
+                23
+              ],
+              "requiredRatio": 3,
+              "ratio": 16.369542335031376,
+              "meetsThreshold": true,
+              "sample": "Malacoda — images d’origine"
+            },
+            {
+              "foreground": "rgb(237, 244, 241)",
+              "background": [
+                16,
+                22,
+                23
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 16.369542335031376,
+              "meetsThreshold": true,
+              "sample": "Resident Evil Revelations (2012). Scène documentaire avec son décor et sa caméra."
+            },
+            {
+              "foreground": "rgb(237, 244, 241)",
+              "background": [
+                39,
+                48,
+                42
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 12.19551384780516,
+              "meetsThreshold": true,
+              "sample": "Le GIF publié ne définit aucun délai entre ses 218 images. Explorez-les manuellement ; la cadence du"
+            },
+            {
+              "foreground": "rgb(244, 252, 248)",
+              "background": [
+                35,
+                59,
+                50
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 11.546177832859614,
+              "meetsThreshold": true,
+              "sample": "Image suivante"
+            }
+          ]
+        },
+        "reflow": {
+          "viewportCssPx": 320,
+          "equivalentLayout": "1280px screen at 400% layout zoom, simulated via viewport; browser UI zoom not exercised",
+          "rootTextResizeAt320": "200%"
+        }
+      }
+    },
+    {
+      "name": "WCAG automation and reflow: modules/fidelity-r23/canonical/index.html at 320px",
+      "pass": true,
+      "detail": {
+        "page": "modules/fidelity-r23/canonical/index.html",
+        "width": 320,
+        "axeVersion": "4.14.0",
+        "automatedPassRules": 43,
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "affectedNodes": 1147,
+            "help": "Elements must meet minimum color contrast ratio thresholds"
+          }
+        ],
+        "measuredTextContrast": {
+          "scope": "Flat backgrounds and visible text in the current viewport only; transparent layers composited; disabled controls excluded.",
+          "skippedComplexOrTransparentCases": 0,
+          "pairs": [
+            {
+              "foreground": "rgb(195, 234, 152)",
+              "background": [
+                16,
+                21,
+                21
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 13.63265098036492,
+              "meetsThreshold": true,
+              "sample": "← Chantiers R23"
+            },
+            {
+              "foreground": "rgb(238, 243, 238)",
+              "background": [
+                16,
+                21,
+                21
+              ],
+              "requiredRatio": 3,
+              "ratio": 16.39315782114976,
+              "meetsThreshold": true,
+              "sample": "Retrouver ce que les sources disent."
+            },
+            {
+              "foreground": "rgb(238, 243, 238)",
+              "background": [
+                16,
+                21,
+                21
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 16.39315782114976,
+              "meetsThreshold": true,
+              "sample": "Identités, gestes et points faibles, avec citations et limites. Les sources secondaires conservées n"
+            },
+            {
+              "foreground": "rgb(180, 195, 186)",
+              "background": [
+                16,
+                21,
+                21
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 10.047776114050528,
+              "meetsThreshold": true,
+              "sample": "389 identités · 38 citations revues · 389 copies de pages · 1 désaccord documenté"
+            },
+            {
+              "foreground": "rgb(238, 243, 238)",
+              "background": [
+                32,
+                43,
+                39
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 13.013131200433318,
+              "meetsThreshold": true,
+              "sample": "Toutes les identités\n        Avec citations revues\n        Alias explicites\n        Gestes décrits\n "
+            }
+          ]
+        },
+        "reflow": {
+          "viewportCssPx": 320,
+          "equivalentLayout": "1280px screen at 400% layout zoom, simulated via viewport; browser UI zoom not exercised",
+          "rootTextResizeAt320": "200%"
+        }
+      }
+    },
+    {
+      "name": "WCAG automation and reflow: modules/fidelity-r23/persistence/index.html at 320px",
+      "pass": true,
+      "detail": {
+        "page": "modules/fidelity-r23/persistence/index.html",
+        "width": 320,
+        "axeVersion": "4.14.0",
+        "automatedPassRules": 30,
+        "violations": [],
+        "incomplete": [],
+        "measuredTextContrast": {
+          "scope": "Flat backgrounds and visible text in the current viewport only; transparent layers composited; disabled controls excluded.",
+          "skippedComplexOrTransparentCases": 0,
+          "pairs": [
+            {
+              "foreground": "rgb(209, 229, 173)",
+              "background": [
+                16,
+                25,
+                24
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 13.21856459362921,
+              "meetsThreshold": true,
+              "sample": "Suivi de fidélité"
+            },
+            {
+              "foreground": "rgb(228, 236, 231)",
+              "background": [
+                16,
+                25,
+                24
+              ],
+              "requiredRatio": 3,
+              "ratio": 14.861000252723752,
+              "meetsThreshold": true,
+              "sample": "Inspecter une copie"
+            },
+            {
+              "foreground": "rgb(228, 236, 231)",
+              "background": [
+                16,
+                25,
+                24
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 14.861000252723752,
+              "meetsThreshold": true,
+              "sample": "Vérifiez une sauvegarde R19, un replay principal, une archive de replays ou un replay expérimental. "
+            },
+            {
+              "foreground": "rgb(228, 236, 231)",
+              "background": [
+                32,
+                52,
+                44
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 10.982431135265195,
+              "meetsThreshold": true,
+              "sample": "Choisissez un fichier JSON, jusqu’à 32 Mio."
+            }
+          ]
+        },
+        "reflow": {
+          "viewportCssPx": 320,
+          "equivalentLayout": "1280px screen at 400% layout zoom, simulated via viewport; browser UI zoom not exercised",
+          "rootTextResizeAt320": "200%"
+        }
+      }
+    },
+    {
+      "name": "WCAG automation and reflow: modules/fidelity-r23/audio/index.html at 320px",
+      "pass": true,
+      "detail": {
+        "page": "modules/fidelity-r23/audio/index.html",
+        "width": 320,
+        "axeVersion": "4.14.0",
+        "automatedPassRules": 41,
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "affectedNodes": 1167,
+            "help": "Elements must meet minimum color contrast ratio thresholds"
+          }
+        ],
+        "measuredTextContrast": {
+          "scope": "Flat backgrounds and visible text in the current viewport only; transparent layers composited; disabled controls excluded.",
+          "skippedComplexOrTransparentCases": 0,
+          "pairs": [
+            {
+              "foreground": "rgb(157, 221, 193)",
+              "background": [
+                16,
+                22,
+                19
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 11.81841123520882,
+              "meetsThreshold": true,
+              "sample": "← Chantiers R23"
+            },
+            {
+              "foreground": "rgb(232, 238, 233)",
+              "background": [
+                16,
+                22,
+                19
+              ],
+              "requiredRatio": 3,
+              "ratio": 15.562405303210214,
+              "meetsThreshold": true,
+              "sample": "Voix et sons d’origine"
+            },
+            {
+              "foreground": "rgb(232, 238, 233)",
+              "background": [
+                16,
+                22,
+                19
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 15.562405303210214,
+              "meetsThreshold": true,
+              "sample": "Aucun enregistrement natif n’a pu être vérifié et intégré dans ce lot. Les voix, cris et effets prop"
+            }
+          ]
+        },
+        "reflow": {
+          "viewportCssPx": 320,
+          "equivalentLayout": "1280px screen at 400% layout zoom, simulated via viewport; browser UI zoom not exercised",
+          "rootTextResizeAt320": "200%"
+        }
+      }
+    },
+    {
+      "name": "WCAG automation and reflow: modules/fidelity-r24/index.html at 320px",
+      "pass": true,
+      "detail": {
+        "page": "modules/fidelity-r24/index.html",
+        "width": 320,
+        "axeVersion": "4.14.0",
+        "automatedPassRules": 40,
+        "violations": [],
+        "incomplete": [],
+        "measuredTextContrast": {
+          "scope": "Flat backgrounds and visible text in the current viewport only; transparent layers composited; disabled controls excluded.",
+          "skippedComplexOrTransparentCases": 0,
+          "pairs": [
+            {
+              "foreground": "rgb(166, 232, 197)",
+              "background": [
+                16,
+                25,
+                29
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 12.699320743028078,
+              "meetsThreshold": true,
+              "sample": "☣ B.O.W. PROTOCOL"
+            },
+            {
+              "foreground": "rgb(229, 238, 235)",
+              "background": [
+                16,
+                25,
+                29
+              ],
+              "requiredRatio": 3,
+              "ratio": 15.066728941241186,
+              "meetsThreshold": true,
+              "sample": "Sources et chantiers"
+            },
+            {
+              "foreground": "rgb(179, 199, 197)",
+              "background": [
+                16,
+                25,
+                29
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 10.08830509579776,
+              "meetsThreshold": true,
+              "sample": "Examiner les ressources d’origine, les avancées et le travail restant pour chaque chantier du classe"
+            },
+            {
+              "foreground": "rgb(229, 238, 235)",
+              "background": [
+                36,
+                71,
+                58
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 8.717478881011397,
+              "meetsThreshold": true,
+              "sample": "Télécharger le classeur R24"
+            },
+            {
+              "foreground": "rgb(229, 238, 235)",
+              "background": [
+                16,
+                25,
+                29
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 15.066728941241186,
+              "meetsThreshold": true,
+              "sample": "R24 : corps, armatures et mouvements publiés, extraits audio documentaires et nouvelles relectures. "
+            }
+          ]
+        },
+        "reflow": {
+          "viewportCssPx": 320,
+          "equivalentLayout": "1280px screen at 400% layout zoom, simulated via viewport; browser UI zoom not exercised",
+          "rootTextResizeAt320": "200%"
+        }
+      }
+    },
+    {
+      "name": "WCAG automation and reflow: modules/fidelity-r24/models/index.html at 320px",
+      "pass": true,
+      "detail": {
+        "page": "modules/fidelity-r24/models/index.html",
+        "width": 320,
+        "axeVersion": "4.14.0",
+        "automatedPassRules": 39,
+        "violations": [],
+        "incomplete": [],
+        "measuredTextContrast": {
+          "scope": "Flat backgrounds and visible text in the current viewport only; transparent layers composited; disabled controls excluded.",
+          "skippedComplexOrTransparentCases": 0,
+          "pairs": [
+            {
+              "foreground": "rgb(172, 233, 202)",
+              "background": [
+                16,
+                25,
+                29
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 12.947248259670872,
+              "meetsThreshold": true,
+              "sample": "← Chantiers R24"
+            },
+            {
+              "foreground": "rgb(228, 238, 235)",
+              "background": [
+                16,
+                25,
+                29
+              ],
+              "requiredRatio": 3,
+              "ratio": 15.038899029865819,
+              "meetsThreshold": true,
+              "sample": "Corps et mouvements sources"
+            },
+            {
+              "foreground": "rgb(228, 238, 235)",
+              "background": [
+                16,
+                25,
+                29
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 15.038899029865819,
+              "meetsThreshold": true,
+              "sample": "Tourner autour du modèle et examiner les mouvements présents dans son archive. Les fichiers gardent "
+            },
+            {
+              "foreground": "rgb(238, 245, 238)",
+              "background": [
+                21,
+                35,
+                40
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 14.529462518890707,
+              "meetsThreshold": true,
+              "sample": "Resident Evil 2 — port GameCube — G — première forme, port GameCubeResident Evil (1996) — Zombie — m"
+            }
+          ]
+        },
+        "reflow": {
+          "viewportCssPx": 320,
+          "equivalentLayout": "1280px screen at 400% layout zoom, simulated via viewport; browser UI zoom not exercised",
+          "rootTextResizeAt320": "200%"
+        }
+      }
+    },
+    {
+      "name": "WCAG automation and reflow: modules/fidelity-r24/motion/index.html at 320px",
+      "pass": true,
+      "detail": {
+        "page": "modules/fidelity-r24/motion/index.html",
+        "width": 320,
+        "axeVersion": "4.14.0",
+        "automatedPassRules": 34,
+        "violations": [],
+        "incomplete": [],
+        "measuredTextContrast": {
+          "scope": "Flat backgrounds and visible text in the current viewport only; transparent layers composited; disabled controls excluded.",
+          "skippedComplexOrTransparentCases": 0,
+          "pairs": [
+            {
+              "foreground": "rgb(166, 232, 197)",
+              "background": [
+                16,
+                25,
+                29
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 12.699320743028078,
+              "meetsThreshold": true,
+              "sample": "← Chantiers R24"
+            },
+            {
+              "foreground": "rgb(229, 238, 235)",
+              "background": [
+                16,
+                25,
+                29
+              ],
+              "requiredRatio": 3,
+              "ratio": 15.066728941241186,
+              "meetsThreshold": true,
+              "sample": "Armature et mouvements sources"
+            },
+            {
+              "foreground": "rgb(229, 238, 235)",
+              "background": [
+                16,
+                25,
+                29
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 15.066728941241186,
+              "meetsThreshold": true,
+              "sample": "Sea Creeper, dans Resident Evil Revelations : une armature pondérée et 48 fichiers de mouvements con"
+            },
+            {
+              "foreground": "rgb(229, 238, 235)",
+              "background": [
+                36,
+                71,
+                58
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 8.717478881011397,
+              "meetsThreshold": true,
+              "sample": "Examiner l’armature et les mouvements"
+            },
+            {
+              "foreground": "rgb(229, 238, 235)",
+              "background": [
+                27,
+                41,
+                43
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 12.698606922975042,
+              "meetsThreshold": true,
+              "sample": "Les fichiers gardent leurs os, leurs poids, leurs courbes et leurs clés temporelles. Les noms BA, DM"
+            }
+          ]
+        },
+        "reflow": {
+          "viewportCssPx": 320,
+          "equivalentLayout": "1280px screen at 400% layout zoom, simulated via viewport; browser UI zoom not exercised",
+          "rootTextResizeAt320": "200%"
+        }
+      }
+    },
+    {
+      "name": "WCAG automation and reflow: modules/fidelity-r24/canonical/index.html at 320px",
+      "pass": true,
+      "detail": {
+        "page": "modules/fidelity-r24/canonical/index.html",
+        "width": 320,
+        "axeVersion": "4.14.0",
+        "automatedPassRules": 43,
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "affectedNodes": 213,
+            "help": "Elements must meet minimum color contrast ratio thresholds"
+          }
+        ],
+        "measuredTextContrast": {
+          "scope": "Flat backgrounds and visible text in the current viewport only; transparent layers composited; disabled controls excluded.",
+          "skippedComplexOrTransparentCases": 0,
+          "pairs": [
+            {
+              "foreground": "rgb(195, 234, 152)",
+              "background": [
+                16,
+                21,
+                21
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 13.63265098036492,
+              "meetsThreshold": true,
+              "sample": "← Chantiers R24"
+            },
+            {
+              "foreground": "rgb(237, 243, 237)",
+              "background": [
+                16,
+                21,
+                21
+              ],
+              "requiredRatio": 3,
+              "ratio": 16.35259393062264,
+              "meetsThreshold": true,
+              "sample": "Comparer les sources, garder la bonne incarnation."
+            },
+            {
+              "foreground": "rgb(237, 243, 237)",
+              "background": [
+                16,
+                21,
+                21
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 16.35259393062264,
+              "meetsThreshold": true,
+              "sample": "Des gestes, des formes et des dimensions documentés par jeu et par phase. Les fichiers en jeu sont t"
+            },
+            {
+              "foreground": "rgb(182, 201, 188)",
+              "background": [
+                16,
+                21,
+                21
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 10.586405755101449,
+              "meetsThreshold": true,
+              "sample": "115 nouvelles citations · 77 nouvelles identités relues · 14 énoncés recoupés · 21 citations de fich"
+            },
+            {
+              "foreground": "rgb(237, 243, 237)",
+              "background": [
+                32,
+                43,
+                39
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 12.980930984026665,
+              "meetsThreshold": true,
+              "sample": "Toutes les nouvelles revues\n        Énoncés recoupés entre éditeurs\n        Fichiers en jeu transcri"
+            }
+          ]
+        },
+        "reflow": {
+          "viewportCssPx": 320,
+          "equivalentLayout": "1280px screen at 400% layout zoom, simulated via viewport; browser UI zoom not exercised",
+          "rootTextResizeAt320": "200%"
+        }
+      }
+    },
+    {
+      "name": "WCAG automation and reflow: modules/fidelity-r24/persistence/index.html at 320px",
+      "pass": true,
+      "detail": {
+        "page": "modules/fidelity-r24/persistence/index.html",
+        "width": 320,
+        "axeVersion": "4.14.0",
+        "automatedPassRules": 32,
+        "violations": [],
+        "incomplete": [],
+        "measuredTextContrast": {
+          "scope": "Flat backgrounds and visible text in the current viewport only; transparent layers composited; disabled controls excluded.",
+          "skippedComplexOrTransparentCases": 0,
+          "pairs": [
+            {
+              "foreground": "rgb(209, 229, 173)",
+              "background": [
+                16,
+                25,
+                24
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 13.21856459362921,
+              "meetsThreshold": true,
+              "sample": "Suivi R24"
+            },
+            {
+              "foreground": "rgb(228, 236, 231)",
+              "background": [
+                16,
+                25,
+                24
+              ],
+              "requiredRatio": 3,
+              "ratio": 14.861000252723752,
+              "meetsThreshold": true,
+              "sample": "Vérifier un replay par relecture"
+            },
+            {
+              "foreground": "rgb(228, 236, 231)",
+              "background": [
+                16,
+                25,
+                24
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 14.861000252723752,
+              "meetsThreshold": true,
+              "sample": "Le moteur du jeu reconstruit les commandes du fichier deux fois dans un espace isolé. Les sauvegarde"
+            },
+            {
+              "foreground": "rgb(228, 236, 231)",
+              "background": [
+                32,
+                52,
+                44
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 10.982431135265195,
+              "meetsThreshold": true,
+              "sample": "Choisissez un replay. Un ancien contrat exige son moteur d’origine."
+            }
+          ]
+        },
+        "reflow": {
+          "viewportCssPx": 320,
+          "equivalentLayout": "1280px screen at 400% layout zoom, simulated via viewport; browser UI zoom not exercised",
+          "rootTextResizeAt320": "200%"
+        }
+      }
+    },
+    {
+      "name": "WCAG automation and reflow: modules/fidelity-r24/audio/index.html at 320px",
+      "pass": true,
+      "detail": {
+        "page": "modules/fidelity-r24/audio/index.html",
+        "width": 320,
+        "axeVersion": "4.14.0",
+        "automatedPassRules": 36,
+        "violations": [],
+        "incomplete": [],
+        "measuredTextContrast": {
+          "scope": "Flat backgrounds and visible text in the current viewport only; transparent layers composited; disabled controls excluded.",
+          "skippedComplexOrTransparentCases": 0,
+          "pairs": [
+            {
+              "foreground": "rgb(157, 221, 193)",
+              "background": [
+                16,
+                22,
+                19
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 11.81841123520882,
+              "meetsThreshold": true,
+              "sample": "← Chantiers R24"
+            },
+            {
+              "foreground": "rgb(232, 238, 233)",
+              "background": [
+                16,
+                22,
+                19
+              ],
+              "requiredRatio": 3,
+              "ratio": 15.562405303210214,
+              "meetsThreshold": true,
+              "sample": "Extraits publiés des Ganados"
+            },
+            {
+              "foreground": "rgb(232, 238, 233)",
+              "background": [
+                16,
+                22,
+                19
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 15.562405303210214,
+              "meetsThreshold": true,
+              "sample": "Resident Evil 4 (2005) · espagnol selon les libellés de la publication"
+            },
+            {
+              "foreground": "rgb(232, 238, 233)",
+              "background": [
+                23,
+                36,
+                28
+              ],
+              "requiredRatio": 3,
+              "ratio": 13.662908382567906,
+              "meetsThreshold": true,
+              "sample": "Écouter une référence publiée"
+            },
+            {
+              "foreground": "rgb(232, 238, 233)",
+              "background": [
+                23,
+                36,
+                28
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 13.662908382567906,
+              "meetsThreshold": true,
+              "sample": "Rechercher une phrase"
+            },
+            {
+              "foreground": "rgb(232, 238, 233)",
+              "background": [
+                16,
+                27,
+                21
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 14.994208113415588,
+              "meetsThreshold": true,
+              "sample": "Aca · 2.48 sAgarrenlo · 1.25 sAhi Esta · 1.36 sAhi Esta 2 · 1.12 sAhi Esta 3 · 1.10 sAhi Esta 4 · 1."
+            },
+            {
+              "foreground": "rgb(255, 255, 255)",
+              "background": [
+                49,
+                93,
+                67
+              ],
+              "requiredRatio": 4.5,
+              "ratio": 7.561073454606932,
+              "meetsThreshold": true,
+              "sample": "Charger l’extrait"
+            }
+          ]
+        },
+        "reflow": {
+          "viewportCssPx": 320,
+          "equivalentLayout": "1280px screen at 400% layout zoom, simulated via viewport; browser UI zoom not exercised",
+          "rootTextResizeAt320": "200%"
+        }
+      }
+    },
+    {
+      "name": "Malacoda endpoint focus recovers without stealing a deliberate new target",
+      "pass": true,
+      "detail": {
+        "previousEndpointMovesFocusToRange": true,
+        "subsequentArrowWorks": true,
+        "deliberateSummaryFocusRetained": true
+      }
+    },
+    {
+      "name": "Opt-in simulated standard gamepad: modules/fidelity-r24/index.html",
+      "pass": true,
+      "detail": {
+        "realPage": "modules/fidelity-r24/index.html",
+        "navigatorApiSimulated": true,
+        "physicalGamepad": false,
+        "explicitEnable": true,
+        "initialHeldIgnored": true,
+        "dpadFocus": true,
+        "confirmationEdgeOnly": true,
+        "deadZoneObserved": 0.3,
+        "visibilityBranchFaultInjected": true,
+        "heldOnReturnIgnored": true,
+        "backStopsWithoutNavigation": true
+      }
+    },
+    {
+      "name": "Opt-in simulated standard gamepad: modules/fidelity-r24/models/index.html",
+      "pass": true,
+      "detail": {
+        "realPage": "modules/fidelity-r24/models/index.html",
+        "navigatorApiSimulated": true,
+        "physicalGamepad": false,
+        "explicitEnable": true,
+        "initialHeldIgnored": true,
+        "dpadFocus": true,
+        "confirmationEdgeOnly": true,
+        "deadZoneObserved": 0.3,
+        "visibilityBranchFaultInjected": true,
+        "heldOnReturnIgnored": true,
+        "backStopsWithoutNavigation": true
+      }
+    },
+    {
+      "name": "Denied or missing gamepad API preserves keyboard and hides unavailable opt-in",
+      "pass": true,
+      "detail": [
+        {
+          "apiDenied": false,
+          "noKeyboardBlock": true
+        },
+        {
+          "apiDenied": true,
+          "noKeyboardBlock": true
+        }
+      ]
+    }
+  ]
+}

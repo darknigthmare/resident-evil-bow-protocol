@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#10191d">
+  <title>Armature et mouvements sources — B.O.W. Protocol</title>
+  <link rel="stylesheet" href="../../fidelity-r23/style.css">
+  <link rel="stylesheet" href="../access/gamepad.css">
+  <style>main{max-width:900px}.source-note{padding:16px;border-left:4px solid #8cdac4;background:#1b292b}details{margin:24px 0}summary{min-height:44px;cursor:pointer}code{overflow-wrap:anywhere}li{margin:10px 0}.resource-links{display:flex;flex-wrap:wrap;gap:12px}.resource-links a{min-height:44px;display:inline-flex;align-items:center}h1{overflow-wrap:anywhere}</style>
+<link rel="stylesheet" href="../access/text-reflow.css">
+</head>
+<body>
+  <a class="skip" href="#main">Aller aux mouvements</a>
+  <header><a href="../index.html">← Chantiers R24</a><a href="../../../codex.html">Bestiaire</a></header>
+  <main id="main" data-r24-gamepad-root>
+    <p class="eyebrow">RESSOURCES D’ORIGINE PUBLIÉES · R24</p>
+    <h1>Armature et mouvements sources</h1>
+    <p>Sea Creeper, dans Resident Evil Revelations : une armature pondérée et 48 fichiers à clés conservés dans leur archive publiée pour PC. Ils comprennent 47 mouvements et une pose fixe après la clé initiale.</p>
+    <div class="actions"><a class="button" href="../models/index.html?model=rerev-sea-creeper">Examiner l’armature et les fichiers</a></div>
+    <p class="source-note">Les fichiers gardent leurs os, leurs poids, leurs courbes et leurs clés temporelles. Les noms BA, DM et SC ne suffisent pas à désigner une attaque, une prise ou une mort : le sens de chaque geste reste à vérifier.</p>
+    <section aria-labelledby="scopeTitle">
+      <h2 id="scopeTitle">Ce que vous pouvez examiner</h2>
+      <ul>
+        <li>Tourner autour du corps et afficher l’armature publiée.</li>
+        <li>Choisir parmi les 48 fichiers, démarrer ou suspendre leur lecture et passer d’une clé à l’autre.</li>
+        <li>Examiner chaque mouvement sur la scène et le corps de son propre fichier, sans transfert vers une autre incarnation.</li>
+      </ul>
+      <p>Les exports contiennent une très courte préclé négative, conservée dans la source. Le lecteur commence à zéro ; la durée entre la première et la dernière clé peut donc être légèrement supérieure à la durée de lecture affichée.</p>
+      <p>Ces ressources proviennent d’une archive communautaire. Leur conservation ne certifie pas le rendu exact du jeu, un rig de production final, un répertoire complet de commandes ou leur intégration au combat.</p>
+    </section>
+    <section aria-labelledby="sourcesTitle">
+      <h2 id="sourcesTitle">Sources et vérification</h2>
+      <div class="resource-links">
+        <a href="https://models.spriters-resource.com/pc_computer/residentevilrevelations/asset/461302/" rel="noreferrer">Archive Sea Creeper</a>
+        <a href="https://www.evilresource.com/resident-evil-revelations/enemies/sea-creeper" rel="noreferrer">Sea Creeper dans Revelations</a>
+        <a href="sea-creeper/source/original.zip" download>Télécharger l’archive intacte — 33,8 Mo</a>
+        <a href="manifest.json">Consulter les fichiers et leurs empreintes</a>
+      </div>
+      <p>Les 48 fichiers ont une armature pondérée. Dans 47 fichiers, les courbes varient pendant la lecture après zéro. Le fichier <code>em1200_em1201_BA_1</code> conserve une pose fixe : son seul changement se trouve avant zéro. Aucune clé n’a été créée ou modifiée pour cette livraison.</p>
+    </section>
+    <section aria-labelledby="previousTitle">
+      <h2 id="previousTitle">Scènes documentaires déjà disponibles</h2>
+      <div class="resource-links">
+        <a href="../../source-motion-r22/index.html">Nemesis — scène à sa cadence publiée</a>
+        <a href="../../fidelity-r23/motion/index.html">Malacoda — 218 images, parcours manuel</a>
+      </div>
+      <p>Ces scènes conservent leur caméra et leur décor ; elles ne sont pas comptées parmi les nouveaux mouvements de Sea Creeper.</p>
+    </section>
+    <div data-r24-gamepad-ui></div>
+  </main>
+  <script src="../../../src/menu-navigation-r20.js"></script>
+  <script src="../access/gamepad-navigation.js"></script>
+</body>
+</html>

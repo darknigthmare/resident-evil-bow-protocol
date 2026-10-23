@@ -1,0 +1,50 @@
+{
+  "schema": "re.bow.persistence-r24-browser-tests/1",
+  "passed": 6,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Actual principal replay is reconstructed twice in an opaque sandbox on desktop and mobile with unchanged game saves",
+      "pass": true,
+      "evidence": {
+        "widths": [
+          1440,
+          390
+        ],
+        "opaqueOrigin": true,
+        "gameStorageUnchanged": true,
+        "replays": 2
+      }
+    },
+    {
+      "name": "Experimental replay verifies its stored state digest with the actual R7 browser engine",
+      "pass": true,
+      "evidence": {
+        "frames": 360,
+        "storedDigestVerified": true
+      }
+    },
+    {
+      "name": "A falsified principal result and experimental state digest are rejected after real reconstruction",
+      "pass": true
+    },
+    {
+      "name": "An older replay contract is preserved and refused without launching under current rules",
+      "pass": true
+    },
+    {
+      "name": "A genuine pre-R13 recording selects its frozen original engine and reconstructs its own outcome",
+      "pass": true,
+      "evidence": {
+        "sourceCommit": "31671fecf53a26d81f77d2cb13a5ff61f15ef363",
+        "contract": "87b735420800aa6fc6f1f252e9991bca0ee307107b13e5ed81192d50389cfcb2",
+        "commandFrames": 250
+      }
+    },
+    {
+      "name": "Cancellation tears down a pending sandbox and delayed loading cannot publish a stale result",
+      "pass": true
+    }
+  ],
+  "scope": "Local headless Chromium with original current source engines. No cloud backend, physical crash or unknown historical engine certification."
+}

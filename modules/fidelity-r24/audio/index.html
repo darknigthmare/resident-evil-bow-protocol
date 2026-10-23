@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Extraits publiés des Ganados — Resident Evil 4</title>
+  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../access/text-reflow.css">
+</head>
+<body>
+  <main>
+    <a href="../index.html">← Chantiers R24</a>
+    <h1>Extraits publiés des Ganados</h1>
+    <p>Resident Evil 4 (2005) · espagnol selon les libellés de la publication</p>
+    <p>Ces extraits proviennent d’un soundboard publié en 2016. L’auteur nomme les phrases et la famille des Ganados. L’attribution de chaque voix à une incarnation reste à valider.</p>
+    <p id="summary" role="status">Chargement du catalogue sonore…</p>
+    <section aria-labelledby="listen-title">
+      <h2 id="listen-title">Écouter une référence publiée</h2>
+      <label for="search">Rechercher une phrase</label>
+      <input id="search" type="search" placeholder="Ex. Forastero, Morir es vivir" autocomplete="off">
+      <label for="clip">Extrait</label>
+      <select id="clip" disabled><option>Chargement…</option></select>
+      <button id="prepare" type="button" disabled>Charger l’extrait</button>
+      <p id="status" aria-live="polite">Aucune lecture automatique.</p>
+      <audio id="audio" controls preload="none" aria-label="Écouter l’extrait sélectionné"></audio>
+      <p id="selection"></p>
+      <p><a id="source" hidden>Voir le fichier publié</a></p>
+    </section>
+    <section aria-labelledby="scope-title">
+      <h2 id="scope-title">Portée de ces références</h2>
+      <p>Les octets MP3 sont conservés et vérifiés avant chargement. Cette copie exacte de la publication ne certifie pas les banques audio du jeu. Aucun clip n’est affecté aux combats ni à une incarnation précise.</p>
+      <ul id="limitations"></ul>
+      <p><a id="publication" href="https://github.com/juliani91/resident-evil-4-soundboard">Publication source</a> · <a href="manifest.json">Provenance et empreintes</a></p>
+    </section>
+  </main>
+  <script src="player.js" defer></script>
+</body>
+</html>
