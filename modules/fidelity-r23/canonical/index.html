@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; object-src 'none'; base-uri 'none'">
+  <title>Références et citations — B.O.W. R23</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="page.js"></script>
+</head>
+<body>
+  <a class="skip" href="#details">Aller à la fiche</a>
+  <header>
+    <a href="../index.html">← Chantiers R23</a>
+    <p class="eyebrow">B.O.W. PROTOCOL / PREUVES DOCUMENTAIRES</p>
+    <h1>Retrouver ce que les sources disent.</h1>
+    <p>Identités, gestes et points faibles, avec citations et limites. Les sources secondaires conservées ne certifient pas une production fidèle à 1:1.</p>
+    <p id="summary" class="summary" role="status">Chargement des références…</p>
+  </header>
+  <main>
+    <section class="catalogue" aria-labelledby="catalogue-title">
+      <h2 id="catalogue-title">Catalogue</h2>
+      <label for="search">Nom, UID, jeu ou citation</label>
+      <input id="search" type="search" placeholder="Licker, RE5, pinces…" autocomplete="off">
+      <label for="filter">Afficher</label>
+      <select id="filter">
+        <option value="all">Toutes les identités</option>
+        <option value="reviewed">Avec citations revues</option>
+        <option value="alias">Alias explicites</option>
+        <option value="move">Gestes décrits</option>
+        <option value="weakpoint">Points faibles décrits</option>
+        <option value="dimension">Dimension corporelle citée</option>
+        <option value="conflict">Sources en désaccord</option>
+      </select>
+      <p id="count" role="status" aria-live="polite"></p>
+      <ul id="results"></ul>
+    </section>
+    <article id="details" tabindex="-1" aria-labelledby="detail-title">
+      <h2 id="detail-title">Choisir une identité</h2>
+      <p>Les titres des pages sont conservés comme références liées au catalogue. Un titre seul ne valide ni un alias officiel ni une phase.</p>
+    </article>
+  </main>
+  <footer>Copies des pages brutes téléchargeables au format gzip, avec SHA-256. Aucun paramètre de combat n’est modifié par cet index.</footer>
+</body>
+</html>

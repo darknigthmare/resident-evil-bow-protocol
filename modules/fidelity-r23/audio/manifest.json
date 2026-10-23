@@ -1,0 +1,60 @@
+{
+  "schema": "re.bow.native-audio-status/1",
+  "observed_at_utc": "2026-10-23T21:11:39.848193+00:00",
+  "task_ids": [
+    "G-AUDIO",
+    "G-PREUVES",
+    "G-RECETTE"
+  ],
+  "status": "RESEARCH_BLOCKED_NO_NATIVE_AUDIO",
+  "canonical_fidelity_certified": false,
+  "counts": {
+    "catalogue_identities_audited": 389,
+    "source_documents_hash_verified": 371,
+    "source_documents_with_direct_audio_link": 0,
+    "native_clips_imported": 0,
+    "identities_with_native_audio": 0,
+    "final_combat_audio": 0
+  },
+  "sources": [
+    {
+      "url": "https://www.spriters-resource.com/",
+      "observed_at_utc": "2026-10-23T21:11:38.304294+00:00",
+      "http_status": 200,
+      "effective_url": "https://www.spriters-resource.com/",
+      "bytes": 634112,
+      "sha256": "547ad26e83125d51d706e55c84a6c69eaa51bd3e50b024e192c4bdc8091dddf3",
+      "advertised_sound_sites": [
+        "https://sounds.spriters-resource.com/"
+      ],
+      "cache_path": "c42e138792cba0b17c974038.html"
+    },
+    {
+      "url": "https://www.sounds-resource.com/",
+      "observed_at_utc": "2026-10-23T21:11:39.277629+00:00",
+      "http_status": null,
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://sounds.spriters-resource.com/",
+      "observed_at_utc": "2026-10-23T21:11:39.602814+00:00",
+      "http_status": null,
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://residentevil.fandom.com/wiki/Category:Audio",
+      "observed_at_utc": "2026-10-23T21:11:39.614660+00:00",
+      "http_status": 402,
+      "error": "HTTP Error 402: Payment Required",
+      "response_preserved": false
+    }
+  ],
+  "entries": [],
+  "catalogue": "catalogue.json",
+  "limitations": [
+    "L’absence de lien audio direct dans les pages auditées ne prouve pas l’absence de sons dans les jeux.",
+    "Les anciennes ambiances de l’application ne constituent pas des voix ou cris natifs par incarnation.",
+    "Le sous-domaine sounds.spriters-resource.com est publié par la page d’accueil, mais sa consultation est refusée par le proxy.",
+    "Aucun son synthétique, extrait d’un autre jeu ou attribué sans preuve n’a été ajouté."
+  ]
+}

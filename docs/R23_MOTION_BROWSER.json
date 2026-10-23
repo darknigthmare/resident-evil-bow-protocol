@@ -1,0 +1,63 @@
+{
+  "checks": [
+    {
+      "name": "Pixels, manual timing and layout at 1440px",
+      "pass": true,
+      "detail": {
+        "framesCompared": [
+          0,
+          23,
+          24,
+          50,
+          100,
+          150,
+          217
+        ],
+        "autoplay": false,
+        "timingDefined": false
+      }
+    },
+    {
+      "name": "Pixels, manual timing and layout at 390px",
+      "pass": true,
+      "detail": {
+        "framesCompared": [
+          0,
+          23,
+          24,
+          50,
+          100,
+          150,
+          217
+        ],
+        "autoplay": false,
+        "timingDefined": false
+      }
+    },
+    {
+      "name": "Keyboard navigation and bounded decoded atlas cache",
+      "pass": true,
+      "detail": {
+        "active": 2,
+        "peak": 2
+      }
+    },
+    {
+      "name": "Corrupt atlas is refused without replacing verified pixels, then retry succeeds",
+      "pass": true,
+      "detail": {
+        "refused": true,
+        "recovered": true
+      }
+    },
+    {
+      "name": "A later manual request wins after a delayed source load",
+      "pass": true,
+      "detail": {
+        "latestFrame": 217
+      }
+    }
+  ],
+  "passed": 5,
+  "failed": 0
+}
