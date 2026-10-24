@@ -7,6 +7,9 @@ import {fileURLToPath} from 'node:url';
 import {chromium} from 'playwright';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const codex = fs.readFileSync(path.join(root, 'codex.html'), 'utf8');
+const expectedWorkbench = codex.includes('<script src="modules/fidelity-r25/dossier-link.js"></script>')
+  ? '/modules/fidelity-r25/index.html' : '/modules/fidelity-r24/index.html';
 const output = path.join(root, 'qa-fidelity-r24-dashboard');
 fs.mkdirSync(output, {recursive: true});
 const expected = JSON.parse(fs.readFileSync(path.join(root, 'docs/R20_TRACKING.json'))).tasks.filter(item => item.status !== 'VALIDÉ').map(item => item.id).sort();
@@ -78,7 +81,7 @@ try {
       } finally { await context.close(); }
     });
   }
-  await test('Bestiary retains one visible R24 sources link after header setup at 1440/390px', async () => {
+  await test('Bestiary retains one visible current sources link after header setup at 1440/390px', async () => {
     const routes = [];
     for (const touch of [false, true]) {
       const width = touch ? 390 : 1440;
@@ -88,7 +91,7 @@ try {
       try {
         await page.goto(base + '/codex.html', {waitUntil: 'load'});
         await page.waitForSelector('.r20-header-nav');
-        const target = base + '/modules/fidelity-r24/index.html';
+        const target = base + expectedWorkbench;
         await page.waitForFunction(href => [...document.querySelectorAll('.r20-header-nav a')].some(node => node.href === href), target);
         assert.equal(await page.locator('#fidelityR23Link').count(), 1, 'The compatible entry ID remains unique after DOMContentLoaded');
         const link = page.getByRole('link', {name: 'Sources et chantiers', exact: true});

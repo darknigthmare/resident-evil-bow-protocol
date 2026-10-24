@@ -159,6 +159,16 @@ try {
       await page.goto(base + '/modules/source-motion-r22/index.html'); await ready(page);
       await page.locator('#framePosition').focus(); await page.keyboard.press('End'); await seen;
       await page.waitForFunction(() => RE_SOURCE_MOTION_R22.state().buffering);
+      assert.equal(await page.locator('#framePosition').isDisabled(), true);
+      const retainedDisabledRange = await page.evaluate(() => {
+        const range = document.getElementById('framePosition');
+        if (document.activeElement !== range && document.activeElement !== document.body) throw Error('Focus moved to an unrelated target before deliberate navigation.');
+        const retained = document.activeElement === range;
+        // Exercise the BODY-focus branch deliberately: Chrome versions differ
+        // in when a disabled input loses focus, which is not the user contract.
+        if (retained) range.blur();
+        return retained;
+      });
       assert.equal(await page.evaluate(() => document.activeElement === document.body), true);
       await page.keyboard.press('Tab');
       const focusBefore = await page.evaluate(() => document.activeElement.outerHTML);
@@ -173,7 +183,8 @@ try {
         document.dispatchEvent(new Event('visibilitychange')); RE_SOURCE_MOTION_R22.play();
       });
       assert.equal(await page.evaluate(() => RE_SOURCE_MOTION_R22.state().playing), false);
-      return {deferredAtlas: 4, deliberateTabRetained: true, laterKeyboardSeekFocusRestored: true, hiddenCannotAutoplay: true};
+      return {deferredAtlas: 4, controlledBodyFocusPrecondition: true, browserInitiallyRetainedDisabledRange: retainedDisabledRange,
+        deliberateTabRetained: true, laterKeyboardSeekFocusRestored: true, hiddenCannotAutoplay: true};
     } finally { release?.(); await context.close(); }
   });
   await test('Source player touch targets, tap transport and 200% text', async () => {

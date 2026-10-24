@@ -62,11 +62,15 @@ try {
   }
   await test('Source clock keeps 40ms frame timing and manual pause', async () => {
     const context = await browser.newContext(), page = await context.newPage();
-    await page.clock.install(); await page.goto(base + '/modules/source-motion-r22/index.html'); await ready(page);
+    // Keep actionability and CDP round trips outside the native playback clock.
+    // An installed clock still advances in real time until it is paused.
+    await page.clock.install({time: new Date('2026-10-24T00:00:00.000Z')});
+    await page.clock.pauseAt(new Date('2026-10-24T00:00:01.000Z'));
+    await page.goto(base + '/modules/source-motion-r22/index.html'); await ready(page);
     await page.click('#playToggle'); await page.clock.runFor(240); await page.evaluate(() => RE_SOURCE_MOTION_R22.pause());
     const state = await page.evaluate(() => RE_SOURCE_MOTION_R22.state());
-    assert.equal(state.playing, false); assert(state.positionMs >= 200 && state.positionMs <= 260);
-    assert.equal(state.frame, Math.min(149, Math.floor(state.positionMs / 40)));
+    assert.equal(state.playing, false); assert.equal(state.positionMs, 240);
+    assert.equal(state.frame, 6);
     const before = state.frame; await page.clock.runFor(200); assert.equal(await page.evaluate(() => RE_SOURCE_MOTION_R22.state().frame), before);
     await context.close(); return {positionMs: state.positionMs, frame: state.frame};
   });
