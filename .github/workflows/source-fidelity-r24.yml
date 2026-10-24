@@ -30,10 +30,11 @@ jobs:
         with:
           node-version: '22.16.0'
       - name: Install pinned validation tools
+        timeout-minutes: 10
         run: |
           python3 -m venv "$RUNNER_TEMP/fidelity-r24-venv"
-          "$RUNNER_TEMP/fidelity-r24-venv/bin/python" -m pip install Pillow==12.3.0 openpyxl==3.1.5
-          npm install --no-save --package-lock=false playwright@1.64.1 @napi-rs/canvas@0.1.80 axe-core@4.14.0
+          "$RUNNER_TEMP/fidelity-r24-venv/bin/python" -m pip install --timeout 60 --retries 2 Pillow==12.3.0 openpyxl==3.1.5
+          npm install --no-audit --no-fund --no-save --package-lock=false --fetch-timeout=60000 --fetch-retries=2 playwright@1.64.1 @napi-rs/canvas@0.1.80 axe-core@4.14.0
           if ! command -v ffprobe >/dev/null || ! command -v ffmpeg >/dev/null; then
             sudo apt-get update
             sudo apt-get install -y ffmpeg
@@ -85,16 +86,25 @@ jobs:
             npx playwright install --with-deps chromium
             node --input-type=module -e "import {chromium} from 'playwright'; console.log('CHROME_BIN=' + chromium.executablePath())" >> "$GITHUB_ENV"
           fi
-      - name: Exercise all R24 browser suites, including software rendering, access and paced stress
-        run: |
-          node tests/browser-visual-models-r24.mjs
-          node tests/browser-models-r24.mjs
-          node tests/browser-audio-r24.mjs
-          node tests/browser-canonical-r24.mjs
-          node tests/browser-persistence-r24.mjs
-          node tests/browser-fidelity-dashboard-r24.mjs
-          node tests/browser-access-r24.mjs
-          node tests/browser-perf-r24.mjs
+      - name: Exercise original OBJ models and source textures
+        run: node tests/browser-visual-models-r24.mjs
+      - name: Exercise all source model and motion files
+        run: node tests/browser-models-r24.mjs
+      - name: Exercise documentary audio decoding and controls
+        run: node tests/browser-audio-r24.mjs
+      - name: Exercise canonical evidence and source boundaries
+        run: node tests/browser-canonical-r24.mjs
+      - name: Exercise actual-engine replay reconstruction
+        run: node tests/browser-persistence-r24.mjs
+      - name: Exercise the source dashboard and Bestiary access
+        run: node tests/browser-fidelity-dashboard-r24.mjs
+      - name: Exercise keyboard, reflow and simulated gamepad access
+        run: node tests/browser-access-r24.mjs
+      - name: Exercise paced source stress and resource lifetime
+        run: node tests/browser-perf-r24.mjs
+      - name: Publish completed browser failures as GitHub annotations
+        if: always()
+        run: node tests/ci-report-r25.mjs qa-visual-models-r24 qa-models-r24-browser qa-audio-r24-browser qa-canonical-r24 qa-persistence-r24-browser qa-fidelity-r24-dashboard qa-access-r24 qa-perf-r24
       - name: Build the complete static delivery
         run: npm run build
       - name: Preserve executed R24 evidence
