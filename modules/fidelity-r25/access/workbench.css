@@ -1,0 +1,4 @@
+/* A skip link also works on source pages whose inherited stylesheet has none. */
+.skip{position:absolute;top:0;left:1rem;z-index:100;display:block;box-sizing:border-box;max-width:calc(100% - 2rem);padding:.75rem;background:#10191d;border:1px solid #94c2ae;overflow-wrap:anywhere;transform:translateY(calc(-100% - 1rem))}
+.skip:not(:focus){top:0;transform:translateY(calc(-100% - 1rem))}
+.skip:focus{top:1rem;transform:none;outline:3px solid #ffd688;outline-offset:3px}

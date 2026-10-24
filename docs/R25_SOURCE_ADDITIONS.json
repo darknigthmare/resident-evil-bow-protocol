@@ -1,0 +1,4787 @@
+{
+  "schema": "re.bow.source-delivery/1",
+  "release": "R25",
+  "baseline_commit": "259f9e255e10210cbdf481f5f1aec9abf8ba58f1",
+  "modified_files": [
+    {
+      "path": ".github/workflows/source-fidelity-r22.yml",
+      "before_sha256": "53c28274386c0bffe79996b17b7d3dde2c9df5dd8131cf6854f63c6eeb4d5bb2",
+      "after_sha256": "556181527e88679d2bb966375212d5967718a02e42c0cbddc8cb97b8ecf268b9",
+      "scope": "Deterministic validation and failure reporting; historical readers and asset bytes unchanged"
+    },
+    {
+      "path": ".github/workflows/source-fidelity-r23.yml",
+      "before_sha256": "e4de55e233fe050a675adb874f7c91c15d75461c0c6dceca3cfd2f0cee7730a5",
+      "after_sha256": "f47dd35b936b7d4374a599b213fdebb133305b02cc62eca5fd1d1d265e9cb225",
+      "scope": "Deterministic validation and failure reporting; historical readers and asset bytes unchanged"
+    },
+    {
+      "path": ".github/workflows/source-fidelity-r24.yml",
+      "before_sha256": "6917fcd67ade00203927d82d7423b79d0d0b3af77e8b5462be14cbb28862827e",
+      "after_sha256": "90568e8bc430a6a2f5b7c2baad1d42588875fc8bcc1d17e15e67308d3a834412",
+      "scope": "Deterministic validation and failure reporting; historical readers and asset bytes unchanged"
+    },
+    {
+      "path": "codex.html",
+      "before_sha256": "3f6122e18566ff30e6bfa6d92f5b1690396cd1e3954b459acb16bcbc06426d75",
+      "after_sha256": "020d2e8c5a4d8a513e721b11b88286367518a51d873b41139106f983491aa5c9",
+      "scope": "Add R25 source entry only"
+    },
+    {
+      "path": "tests/browser-fidelity-dashboard-r24.mjs",
+      "before_sha256": "ca669a6023882dd6d29369676cd61b35e5b83056c312ab0ceceb2396797dd395",
+      "after_sha256": "82e9942928825ffd27d00aa8c6aed8f777a281e0a4c8b153deecb958f0120f15",
+      "scope": "Deterministic validation and failure reporting; historical readers and asset bytes unchanged"
+    },
+    {
+      "path": "tests/browser-fidelity-r23.mjs",
+      "before_sha256": "2ca042164c2011ae0abfe711b39fdf7ac74354f17eaefe557acd4d0971bae223",
+      "after_sha256": "5940e3edd508da4d67b843a318d8f070666fc7c36d978f2b89d659255475df4d",
+      "scope": "Deterministic validation and failure reporting; historical readers and asset bytes unchanged"
+    },
+    {
+      "path": "tests/browser-source-motion-r22.mjs",
+      "before_sha256": "efe5cff79cc022a7a025a23b56bc70e26fc641d1cf3f2634208280e0312313e5",
+      "after_sha256": "20b3edd29b0dffe985e491f752aa0cadb95c86f84e40fe8bf30a8cf561e07337",
+      "scope": "Deterministic validation and failure reporting; historical readers and asset bytes unchanged"
+    }
+  ],
+  "protected_tracked_trees_unchanged": [
+    "src",
+    "data",
+    "assets",
+    "docs/planning",
+    "modules/source-motion-r22",
+    "modules/fidelity-r23",
+    "modules/fidelity-r24"
+  ],
+  "existing_documents_unchanged": true,
+  "module_files": [
+    {
+      "path": "modules/fidelity-r25/access/workbench.css",
+      "bytes": 470,
+      "sha256": "543b6d43613062b9b4937c77b2ffeeded3f35c9d0416ccc5eda9abe3c3e6765e"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/archives/revelations-enemies.zip",
+      "bytes": 87661655,
+      "sha256": "5d53eddc59a22056916ac304219008d1a4267aa032522b06624ac0f2bb1e74ae"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Draghignazzo/em1420_atk_hit01.wav",
+      "bytes": 103980,
+      "sha256": "37ba4b51d455d710a7fe9e9bd67abe747ce0329fe5ca5e29051bf4e5279aac60"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Draghignazzo/em1420_dmg_bloken.wav",
+      "bytes": 273708,
+      "sha256": "8846e04bc88b2a1ee33f01f883371302996f3870d08f4217a99c351c47385f64"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Draghignazzo/em1420_dmg_bloken_amb_lr_.wav",
+      "bytes": 798684,
+      "sha256": "47e3060fbb25d1867ed5cba12f77c4b727f723bac10c4258c8db7e462c040ab6"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Draghignazzo/em1420_dmg_bloken_lfe_.wav",
+      "bytes": 159788,
+      "sha256": "80f1a671b55ac62ceb2f3bec43bc71bbadb28ac78335609217f073cab89b5e4a"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Draghignazzo/em1420_dmg_gunhit01.wav",
+      "bytes": 49964,
+      "sha256": "67ddfb180af4da4a70421ac7641096ab87b09a7ee0888d19164d51c203568ed8"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Draghignazzo/em1420_dmg_gunhit02.wav",
+      "bytes": 52524,
+      "sha256": "4495b7dfb31a9802bbcce75d01f3814672707f40aae9bab42fe53880946cc30c"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Draghignazzo/em1420_dmg_knifehit01.wav",
+      "bytes": 49964,
+      "sha256": "703710ce2497049a548cf1dd48569e8af0510fb143238d20f35381416421d7c6"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Draghignazzo/em1420_dmg_knifehit02.wav",
+      "bytes": 32812,
+      "sha256": "f9d17371fdb18c99223c39b6291bab367a9b2fb020823b33fe0ac79de9e115a3"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Draghignazzo/em1420_dmg_shhit01.wav",
+      "bytes": 52268,
+      "sha256": "c8be1615e0075a98708fb85f3e451b22b7c6ed1933bbb76e7f2738637b2971d9"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Draghignazzo/em1420_dmg_shhit02.wav",
+      "bytes": 49452,
+      "sha256": "e3fe690401e268275528679e28da3bf193846473efdf5d00bf8a4eabacea5cbc"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Draghignazzo/em1420_dmg_shhit03.wav",
+      "bytes": 54828,
+      "sha256": "58a54ef5f07eccbc409d406a93951f0531bcd851808947bef06059f8b9f4c244"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Draghignazzo/em1420_ft_01.wav",
+      "bytes": 89132,
+      "sha256": "3b15f966cb87c6f216e51140a7dca3134c76c3448ca734b58b81dcb82c20189a"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Draghignazzo/em1420_ft_02.wav",
+      "bytes": 101676,
+      "sha256": "42669385a4d2b4666366402a8f8748d5dc147059bfbbca7a0c9e4ea849ea3b81"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Draghignazzo/em1420_mvt_lhand01.wav",
+      "bytes": 118316,
+      "sha256": "ad2d969e7249011d6a81d849cf3a8f94d2987c75fa5b11c5b3eb4d9b688c3131"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Draghignazzo/em1420_mvt_lhand01_lfe_.wav",
+      "bytes": 57388,
+      "sha256": "234fec87fea7e62354dbf52d07612785c7b59c035d44a2a74311489887b7be86"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Draghignazzo/em1420_mvt_lhand02.wav",
+      "bytes": 118828,
+      "sha256": "6476b7b9f1c87e6202d4b1d2cd5cd1e7cde68f1aa73d0ab13d806eb9349319bd"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Draghignazzo/em1420_mvt_lhand03.wav",
+      "bytes": 103980,
+      "sha256": "6e24ae70d713219db19c9d3c863de9f53c2a7e4dcc96d7498de07be7e4d8994b"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Draghignazzo/em1420_mvt_light01.wav",
+      "bytes": 44588,
+      "sha256": "82549f973cfc0f1ff1a2a9cb33bd41f3c491908c22ed918337f94e69b8f3153b"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Draghignazzo/em1420_mvt_light02.wav",
+      "bytes": 49196,
+      "sha256": "27e3b5e8a0aa505ca671661f64820c23e6d1fe688f18d0a78ea793e986c3db44"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Draghignazzo/em1420_mvt_light03.wav",
+      "bytes": 46636,
+      "sha256": "5afe37b8ad7249f3537bfe740c7ba589be7a3b0776d4aa0bc29f3e7de07006ac"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Draghignazzo/em1420_mvt_main01_01.wav",
+      "bytes": 97580,
+      "sha256": "02d29f1c8960a4a9379e67f251f7355423b4b6278b9b87b87aba43a4eae98486"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Draghignazzo/em1420_mvt_main01_02.wav",
+      "bytes": 117548,
+      "sha256": "f1b979ed1caee1399780dc36bbb8887877604177aae5e1f585cbdc63d72386fd"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Draghignazzo/em1420_mvt_main01_03.wav",
+      "bytes": 137772,
+      "sha256": "b1edcbb3bca92001913f2c3cd248ced4ab3c7502d97bed597b3dc25481e7eab0"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Draghignazzo/em1420_mvt_sub01_01.wav",
+      "bytes": 171052,
+      "sha256": "2cf881247fb2b1547f0f57d41770d5331c0396c7129aab91111e3f9df4d29541"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Draghignazzo/em1420_mvt_sub01_02.wav",
+      "bytes": 112172,
+      "sha256": "f395e6a576179f391b1db78fa3723139e560469ee4685bbeeb7622a2e1467cbb"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Draghignazzo/em1420_vo_atk01.wav",
+      "bytes": 200236,
+      "sha256": "fd1501db2294e9905a3f9442ddbe94808263f796cc4bc97fbf1559e58ece069a"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Draghignazzo/em1420_vo_atk02.wav",
+      "bytes": 204588,
+      "sha256": "f0c5465268275dac65ac9e13da73df3200a177e01aa202982873e48dbdd5c0bf"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Draghignazzo/em1420_vo_breath.wav",
+      "bytes": 182572,
+      "sha256": "a5604d3af22128409be984aa02ff62970a5b9ae4d6dc82cd132315204e495a55"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Draghignazzo/em1420_vo_dmg01_01.wav",
+      "bytes": 184620,
+      "sha256": "3a56822b5ed66897c71adf79a12634a2e7fb9adf169ed95e422a23e4a06e5426"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Draghignazzo/em1420_vo_dmg01_02.wav",
+      "bytes": 189228,
+      "sha256": "a18e7cf2c2407a7bd1c73f1ca36ac13db72328bc12435b84040f92624f51d55a"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Draghignazzo/em1420_vo_idledown01.wav",
+      "bytes": 167724,
+      "sha256": "8a6424649222bc283e831b4b9f301bcbbb9d3d113b634cf265914853974fb316"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Draghignazzo/em1420_vo_idledown02.wav",
+      "bytes": 161836,
+      "sha256": "2fc5f06aacd39f944893e5d568ab6c853ade87b7e198a2a6b718d41768a9fc58"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Draghignazzo/em1420_vo_idleup01.wav",
+      "bytes": 130092,
+      "sha256": "5d5aa86b0ff3699f6490dcc456f4700cc2bae9fd179fbb0ed1ddfedf8ffbbc4c"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Draghignazzo/em1420_vo_idleup02.wav",
+      "bytes": 127020,
+      "sha256": "2ebcf317a01ceda69a8516f44c5e19456e38efe437afbd85810ac6a6a4df6421"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_atk_arm01.wav",
+      "bytes": 38188,
+      "sha256": "94c1fcccf2d44a0c4f8a4e3364c1210d6598991c9947795ca9bb932370de6724"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_atk_arm02.wav",
+      "bytes": 32044,
+      "sha256": "04dae95bbed5f10c4a755c98a264d87454e7ede070f07259f08c640add166858"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_atk_cut.wav",
+      "bytes": 84268,
+      "sha256": "a238596edf233fe398147f3530687b0e977ecf7e80f3dc8a52b2ca6e377149fc"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_atk_kick.wav",
+      "bytes": 60460,
+      "sha256": "e1bc04e3c8d621ffbcc7a5b455bf5a41a9140dd9ad9943c2f395e28c102ac1f9"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_atk_swing01_01.wav",
+      "bytes": 49452,
+      "sha256": "046b8d1b99c2b7b7d4eb6c643588ce9c3e4b7fe80c6d3f68f232a8b48f6dbb30"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_atk_swing01_02.wav",
+      "bytes": 48172,
+      "sha256": "d5c1435020e4de7154abc7bdfc7209677769beb1a4d9da653d160662ad749294"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_atk_swing02.wav",
+      "bytes": 53548,
+      "sha256": "b36f175ddf568c8d385db4541a5018757a413f3a7868c8372dae69170fb88453"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_dmg_cut01_01.wav",
+      "bytes": 143660,
+      "sha256": "4b80742a9a8b8050f5990e00058ecbc6c6e871974d94a5d0302db24a0ebb0d1c"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_dmg_cut01_02.wav",
+      "bytes": 196652,
+      "sha256": "6a925d409e87e8fb994b22c4b588e9fce5251c63afdd9ca6a3741cb78e7a8f53"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_dmg_cut03_01.wav",
+      "bytes": 82732,
+      "sha256": "8f94a6352495d433a4df547de8897faf23aa7b9ce4360109a8ed0a81a3514e0c"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_dmg_cut03_02.wav",
+      "bytes": 53548,
+      "sha256": "2ee821092637840685a9b3f2fb7b38866bc1a47a155e750742b0d47f79424e05"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_dmg_dead.wav",
+      "bytes": 207148,
+      "sha256": "0adf1398e8f6931e2d0ccd76e07247dc7eac3c1332d40ca8f3a4ea52bce2268f"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_dmg_down.wav",
+      "bytes": 59948,
+      "sha256": "5afd3d094abd7954b263e5797fca7e21c6b6aebd49d676c7ee63c3123995583a"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_dmg_hit01.wav",
+      "bytes": 82988,
+      "sha256": "0ce27e38e235e8bcb9866d52e72e4cd5502986234c218d1dbf02a8576489ce2e"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_ft_jump.wav",
+      "bytes": 30764,
+      "sha256": "7e485209a64e06c7796d1b2791486dbfcfede41eb4ad80a53f670aec19cb37a1"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_ft_run01.wav",
+      "bytes": 21548,
+      "sha256": "e0465e6ec1c11f5e6a346ea19e0ef859752066aa871ee00bcc49e03aa429b9bb"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_ft_run02.wav",
+      "bytes": 23596,
+      "sha256": "d518b627115f40089219d538c3e43119052d95d78857e5630a6f4854fead6b5a"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_ft_walk01.wav",
+      "bytes": 37932,
+      "sha256": "8b72e6511c17ab855517b3bafe7b142d07b32c91a015b8c34a003d4dbd49914e"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_ft_walk02.wav",
+      "bytes": 27948,
+      "sha256": "f85646ddc4e1ff385ebf96be191ba36e708ea5758d4ed68e9f3fbe68eba179ec"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_mvt_clear01.wav",
+      "bytes": 91180,
+      "sha256": "634476c699acc2b00ed53fc1960018b8cac4a83313facb2a64c1a389536e3f47"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_mvt_cloth00_01.wav",
+      "bytes": 97068,
+      "sha256": "12f0bfb475a6e0111ae5ada21991e1d2c5351d68ac43693d846c6b59458dfd12"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_mvt_cloth00_02.wav",
+      "bytes": 64812,
+      "sha256": "16285a39733d474afa813aa5e4c66614b0b02df6b85c09d8444ee6d866431b78"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_mvt_cloth01.wav",
+      "bytes": 84268,
+      "sha256": "ce4973a2a3f74fcd50bbca8c1128b0311d6a11a7ce95fc08ff9c363f6b605df5"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_mvt_cloth02_01.wav",
+      "bytes": 40492,
+      "sha256": "9c4014d2bc6685d75e8dedc109198c659ada42eeeef4840a494396142a06f517"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_mvt_cloth02_02.wav",
+      "bytes": 50732,
+      "sha256": "eb52aa98d0e7698b5370dd34a62f9aab6c5be127afa2f407dcca7079aed5c3a7"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_mvt_cloth03.wav",
+      "bytes": 122668,
+      "sha256": "b48486960bce763c7415714e6cdcbac51d5bb841a51b0b9247cb5afb5131fcd0"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_mvt_cloth04.wav",
+      "bytes": 65324,
+      "sha256": "0c1af7e861fb66cf1a048be6d3af7de256bb814c399b132d8a49288451dd2897"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_mvt_ep01.wav",
+      "bytes": 120620,
+      "sha256": "3b992fb001c89fc71b35a4a631d25ffc9fb432faa0752cfcfd3f69a8f962e35a"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_mvt_ep02.wav",
+      "bytes": 79660,
+      "sha256": "04d6c85a57692e29c2e857d84bf3e17a443f08af1e5e2b3f5cef2faab1d72edc"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_mvt_ep03.wav",
+      "bytes": 74284,
+      "sha256": "e55b19a0e202fe424f604298d4fb53dcb1bfff8f23b593cc77ba2b1724242dcb"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_vo_atk01_01.wav",
+      "bytes": 83500,
+      "sha256": "a60072bbdb9021fbdc56d4d0caf53887d9fa09598ddc12a2f6eaaf6655c10d5c"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_vo_atk01_02.wav",
+      "bytes": 93996,
+      "sha256": "51e1f90f54d1e31a9074185f9595622724a91f730dac4f598f2b0f1786ef8293"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_vo_breath01_01.wav",
+      "bytes": 29228,
+      "sha256": "5bbd0efcffd4502a30d6f20cc571533ec1484721a133a0125119afd2fffabdf0"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_vo_breath01_02.wav",
+      "bytes": 49708,
+      "sha256": "b227b12d609954d0bdb5d0799741f01850f05d6a38e0261f733d4464068e93e8"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_vo_breath02_01.wav",
+      "bytes": 98604,
+      "sha256": "cda70a6fc34567ab665557adda7a88546bf991a4a7a76614f7fd0aaed738e9c6"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_vo_breath02_02.wav",
+      "bytes": 112428,
+      "sha256": "0b2762767252387e593d3077126a25fe0880e8ce461be6ac214df44f47281a76"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_vo_damage_l01.wav",
+      "bytes": 159276,
+      "sha256": "f95ac81d1f9470d143bc5a36f1ed592a17564f66b3b832aea0cca1ad12c906ab"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_vo_damage_l02.wav",
+      "bytes": 125484,
+      "sha256": "46a78e79d984cd8e3d46fe7409f9fec554c869e37bfbc11136721044572ea9df"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_vo_damage_s01.wav",
+      "bytes": 54828,
+      "sha256": "d91f24b2ecd6353a61f1e35d06e99c70457ff5a7ef4c58e9f4120b260c231b08"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_vo_damage_s02.wav",
+      "bytes": 119596,
+      "sha256": "efbe1f721ccbcf184857ebb7ae91d9b1c5b9d76e20c49cfa121cd372526658ee"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_vo_damage_s03.wav",
+      "bytes": 74540,
+      "sha256": "cdf0c5b09fab810fa79ec7ccd50cfb106b22dff2ec4da0a6ec886234655aa61d"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_vo_idle01_01.wav",
+      "bytes": 76844,
+      "sha256": "c440b78c69a1b73ca33557d6c42104df1c85fa9839c27d2dcaba1b271c089315"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_vo_idle01_02.wav",
+      "bytes": 81708,
+      "sha256": "47681e08cf2e3bf252fb2b9f2fa85ae0d0cda423dc3ca9acfe45a386d5fadc77"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_vo_idle02.wav",
+      "bytes": 94764,
+      "sha256": "a6b67714d6348bf1ca1c5e24401d77c765ce514bf061621ba6001380d4282a30"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_vo_menace01_01.wav",
+      "bytes": 127788,
+      "sha256": "ec66b6a4714b2babc0d5aaf1748a3999a351635b4885f71acc118abe2105bed8"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_vo_menace01_02.wav",
+      "bytes": 84012,
+      "sha256": "0efa4c5ac779b661ceaa0efb393d31829e19b6bb2fb8ce09e05a740e300a4dc1"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_vo_wakeup01.wav",
+      "bytes": 65836,
+      "sha256": "74086296fe160be4ddbdd89b0545d6fa1e3de9b15fcab95e9c85d4518e6370ed"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Farfarello/em1240_vo_wakeup02.wav",
+      "bytes": 109612,
+      "sha256": "4c1272fd8be7f339616cddef2003730456a60ce9798f253395c0eef82db4a2e0"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_atk_bite01.wav",
+      "bytes": 87596,
+      "sha256": "86fc91ed740629ff5615cae7c270821522416a11e204bc956691a3f24b9b2217"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_dmg_gunhit01.wav",
+      "bytes": 121388,
+      "sha256": "8daf98933d2b9a13bcc7cb4be89c161a26f6cf9e149fa775e7cd1b2966bbaf34"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_dmg_knife_01.wav",
+      "bytes": 75564,
+      "sha256": "450c64b3913b41a0df8949fcb108be817579850400340d1c1d401c0deeb29c4a"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_ft_footstep01.wav",
+      "bytes": 9004,
+      "sha256": "af1b7aa49a145964b77574b7b36b1580c74054af60342726c9715a6d12398c3d"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_ft_footstep02.wav",
+      "bytes": 14124,
+      "sha256": "eea0bf3d35b48b4d02279160d54949fda2ec605d0b7e908bba60f722341805c3"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_ft_footstep03.wav",
+      "bytes": 11820,
+      "sha256": "af8dbff1df3f61a26845186f644ae886d836e7c19840313bcc06e3e78d9063d6"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_ft_footstep04.wav",
+      "bytes": 17708,
+      "sha256": "f82df3787d074f83a214dbbfdfbd2bc02bb3d1c52c0335885cdcd2f7519e5a0f"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_ft_footstep05.wav",
+      "bytes": 12332,
+      "sha256": "7849c2dbfd8d424fc2295933ae1ab5bf4c6b6e84cad607b9308e97fa7f80cf88"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_ft_footstep06.wav",
+      "bytes": 10796,
+      "sha256": "47720ca515fc08617f6ac1a43f7dd031abe00ba1b2233ac3647190243652d539"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_ft_footstep2_1.wav",
+      "bytes": 9772,
+      "sha256": "d91b2fd22f81919a9257a2f368cf9ad967b234b889fe17868684d3054d3e959b"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_ft_footstep2_2.wav",
+      "bytes": 14380,
+      "sha256": "ea84db34b982804332aa3060d2864ea1c99034eefca740f4723f47862feed1d9"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_ft_footstep2_3.wav",
+      "bytes": 12332,
+      "sha256": "bb548f5789408be11028c8b676ff22e1b591139d20a6ed07ec4a2632df52ea28"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_ft_footstep2_4.wav",
+      "bytes": 14892,
+      "sha256": "bb21f348658a24378462c368f6359f163316020bf7a27e6aa4e6ff8d0deeae90"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_ft_footstep2_5.wav",
+      "bytes": 13100,
+      "sha256": "673e724361ca09a8c8e525d6fcbb62bf73d9061d30ee5b97f0625a9f080f0e75"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_ft_footstep2_6.wav",
+      "bytes": 6188,
+      "sha256": "f4f6f6bf4c918f7c93782d8884e1efe521c10b5f84fd372169b7e7800b833a89"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_mvt_bite02.wav",
+      "bytes": 105260,
+      "sha256": "d524e26809c0b2698ad277e8296d1e96f0199e24c37f057c2104d9aca05316e4"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_mvt_bite04.wav",
+      "bytes": 88620,
+      "sha256": "9d1de4025b1a309d8fc2e4d184dc643ea971afdefac936b95bdeaa7740433426"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_mvt_bite05.wav",
+      "bytes": 99372,
+      "sha256": "8711873ee2a33746cfe6e411afa4a6dcf2587efe10e0a73b32ab7a692d8c3aff"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_mvt_bite06.wav",
+      "bytes": 201260,
+      "sha256": "ca4fec09e771eaaaf14e016db3f2042faa0eccd0edb785c15d6bb80060abd394"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_mvt_bite07.wav",
+      "bytes": 71468,
+      "sha256": "665ffc8e52befc3eee59a583e85340b82c78b7d8547901e5a3460013e4d4a871"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_mvt_bite08.wav",
+      "bytes": 52268,
+      "sha256": "1543f2d8eacb5a5532a568aa9ced4c36d436ea9e2e5ca23bc02748bba719c82d"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_mvt_bite09.wav",
+      "bytes": 63788,
+      "sha256": "9f6bc70bc125e92bd7264275eb65863a4887566cc49c4e0962c17883b8d4117e"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_mvt_bite_b_01.wav",
+      "bytes": 54572,
+      "sha256": "d1b9a1d520d2203d8df00b3ff221823a084012aa3cde0fc836bb95b1d2f104a7"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_mvt_bite_b_02.wav",
+      "bytes": 62508,
+      "sha256": "185c8b0cdfa8c42fd18818fd8ccd3c3625b50c239946c2f27e0fd751ff835d9a"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_mvt_down0101.wav",
+      "bytes": 13356,
+      "sha256": "7dccfa51954310be872f6c1ddcaad3d73bc63e1b4ccb8ce42c2185428c637ad9"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_mvt_down0102.wav",
+      "bytes": 81708,
+      "sha256": "ac01ce2bae415258b5d94d21cca9c66f747ac7682f04ff26d6acd61d6a09c6a6"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_mvt_down0201.wav",
+      "bytes": 14892,
+      "sha256": "2778b0d8997b1d97ccf7691900559a24b18dafcca0a6c1949b384a4b35073d24"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_mvt_down0202.wav",
+      "bytes": 132140,
+      "sha256": "32114203321b396a12fd7163a29baac382fdfe444da492db6ff0497a6923feff"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_mvt_down_b_01.wav",
+      "bytes": 67372,
+      "sha256": "a02d2c77edeb53aebcb6d76159e0726b8af60151966f7ec8136df3ad98808aa6"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_mvt_evaporation_2240.wav",
+      "bytes": 215084,
+      "sha256": "39dacc4c61cc8f452dc276c85fb319d785d22fbb6f0f5d365f879acc59d7d5bd"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_mvt_shiver.wav",
+      "bytes": 167468,
+      "sha256": "7331133ee4d2509eca8a70a7894ac9056a8e2c50370c9797f6d404581fc5719c"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_vo_bark01.wav",
+      "bytes": 99372,
+      "sha256": "f4abdeef3e5de4454661c10bd9ff3b6749c03059cbc8587d1e7b62e23c5cb5bd"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_vo_bark02.wav",
+      "bytes": 113196,
+      "sha256": "cc1ac31aac98a62a5e1dc6f8d2ec4d8c47df0443c751f458d896ef26be65d61e"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_vo_bark03.wav",
+      "bytes": 96300,
+      "sha256": "d4cadc68e8d304a35249719fff004d544dead28e89dd278e558e7e0de71beb4d"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_vo_barks01.wav",
+      "bytes": 99372,
+      "sha256": "f4abdeef3e5de4454661c10bd9ff3b6749c03059cbc8587d1e7b62e23c5cb5bd"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_vo_barks02.wav",
+      "bytes": 113196,
+      "sha256": "cc1ac31aac98a62a5e1dc6f8d2ec4d8c47df0443c751f458d896ef26be65d61e"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_vo_breath_b_01.wav",
+      "bytes": 50220,
+      "sha256": "b7cf20db1c838a49d0246c488e781292e6c3a7faa81c7d5b4638aa4ff5a4836a"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_vo_breath_b_02.wav",
+      "bytes": 36396,
+      "sha256": "ca9f10fe657e55f15a994961a8a8657a6cd69124b148a241effc9b24d1cef94f"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_vo_damage01.wav",
+      "bytes": 46380,
+      "sha256": "34895f1df3531394aadcc26a4cc840efb06e6d1ef4e7e76476b77bb7cbefca3f"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_vo_damage02.wav",
+      "bytes": 92972,
+      "sha256": "b1a6cec171488e0d2d8126ff0ebf239075f3e8ed3c366c2a50a26b5400accffa"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_vo_damage04.wav",
+      "bytes": 55084,
+      "sha256": "2a0e68d029a5e2e4318ecfa7fa3e9836ac341f5fb32c2fcbaae6c510b67818f3"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_vo_damage05.wav",
+      "bytes": 120364,
+      "sha256": "7db9d0e1be5b948ee8381574403476a785f043585e710770a1ac95c2bac8e093"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_vo_damage06.wav",
+      "bytes": 98348,
+      "sha256": "750a809b70973299fde2e6bd2c65be9045d8b9acb8c31915ec864d25e4d6fb46"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_vo_damage08.wav",
+      "bytes": 52268,
+      "sha256": "2cf4a87ba77aaa217228001053c877fdaa9f3e1dd2fc9d54bd86d6e40bb7e4e6"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_vo_damage_b_01.wav",
+      "bytes": 74028,
+      "sha256": "7f4ab28a14964aa64166d34de96c29f225e44137d72b2665cd5ec6568740cd50"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_vo_damage_b_02.wav",
+      "bytes": 63532,
+      "sha256": "8f60f0eeaffa350db2aa8e25048d0cefd90e9a81fe776cf6d59abd013d6bff07"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_vo_death_b_01.wav",
+      "bytes": 145964,
+      "sha256": "d812f8d9f322272206c18859132187508e13d3d4c1e3e81d58b9958e74fa404d"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_vo_death_c_01.wav",
+      "bytes": 192044,
+      "sha256": "2bc20805de37407ea50174aa942fb14d8f897763a9fd4c184e5bce2706737334"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_vo_death_c_02.wav",
+      "bytes": 192044,
+      "sha256": "c417f7ccf99d0cd71f43ea6106950388c4430f1507249c1b56b4ca6d98e4da83"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_vo_eager01.wav",
+      "bytes": 90412,
+      "sha256": "b9888df9694c567b9e2e4da0e64ec6a0cb798a86608dce0dc9f67e9ac39e1585"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_vo_eager02.wav",
+      "bytes": 35116,
+      "sha256": "0b75581e948dcb12d88318c4d41de617187a91885a41d852413e6102585154e5"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_vo_groan01.wav",
+      "bytes": 50732,
+      "sha256": "004144d5167b03b850ae08d91737e9f4f66645de7b682285bbac36b37195fb9f"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_vo_groan02.wav",
+      "bytes": 133420,
+      "sha256": "28f0aeb4a5a0ce98e84ccf52cdf5f4e6dde7eb7c3e7261a7f7c4d22be9eea2cb"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_vo_groan05.wav",
+      "bytes": 177452,
+      "sha256": "2f0709a847e0e523c5c159f7d8afbd9eec035dfb372e4433e81f68ecba55f569"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_vo_groan07.wav",
+      "bytes": 62508,
+      "sha256": "14e9c06a62b792c74d7c940d15bda265029b5a2057cdbdd358615ccb1cea63c9"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_vo_groan08.wav",
+      "bytes": 61484,
+      "sha256": "75bdb6f856180f6ad8bd98ef01829a835b69f6be0fb4f15a34323e8039f13b5f"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_vo_groans01.wav",
+      "bytes": 203308,
+      "sha256": "eb7c54e0d4210443785ceace98baa87548c1b6da711f64566574fb78e048b11a"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_vo_groans04.wav",
+      "bytes": 62508,
+      "sha256": "464fdeb6b4f0db75e4d82260a75b79dc7786707215b0b80ce64fb41ccdf3e1c8"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_vo_howls01_c_.wav",
+      "bytes": 309292,
+      "sha256": "88a6b76fe4ec96cc9012f7b701b599219a092b2eddc796c279e48885621867ac"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_vo_howls_amb_lr_.wav",
+      "bytes": 1036132,
+      "sha256": "50e2ab087ec619c2b6a1a305b5f1a4fd1d73399e377fd3a811dc38a8214a44f8"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_vo_howls_ls_.wav",
+      "bytes": 503852,
+      "sha256": "e5ebc3c770969515fc8751fd78f932f592f72363b98ab990f353c861b1f0b1bc"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Fenrir/em1210_vo_howls_rs_.wav",
+      "bytes": 1054892,
+      "sha256": "aa0170295eeb087f51aeb9e578b38471f0a0b2e7e28125dc1fa3782f3e0d7e3b"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ghiozzo/em1220_atk_bites.wav",
+      "bytes": 108332,
+      "sha256": "ce24e8196cf1b6b54c67c8b138fc8a500607766206cb66532d4be76d4625d876"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ghiozzo/em1220_dmg_gunhit.wav",
+      "bytes": 125228,
+      "sha256": "6e4572fd24f2a3fcca00a09d249c5bc49556991d12cac620be46ce11d9e3257a"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ghiozzo/em1220_dmg_knife.wav",
+      "bytes": 75308,
+      "sha256": "16a19a17ee8b934ee3d5cfbf92bbcdbb6bde3230207cccaa010d833a231b45c2"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ghiozzo/em1220_ft_01.wav",
+      "bytes": 37932,
+      "sha256": "7fc84ba8176a54e32d7c6f69714a624a031f8e9b16e8352ea8a60df8ef13fa60"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ghiozzo/em1220_ft_02.wav",
+      "bytes": 42284,
+      "sha256": "13feca3ed42b7e2bc53eefa6c48893705ba3a5ab18ee3427a382c3c907c8a532"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ghiozzo/em1220_ft_crawls_01.wav",
+      "bytes": 79404,
+      "sha256": "6d77989a815b785b3c715bbfada8bcc6ed322c0bec4b5e2a4eaf637d0450bc2f"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ghiozzo/em1220_ft_crawls_03.wav",
+      "bytes": 80940,
+      "sha256": "df4095248255b5cfc8cb6a3a6983144982fc144090f8b84aaff9a28fe3e7108c"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ghiozzo/em1220_fx_jump.wav",
+      "bytes": 73772,
+      "sha256": "5c9284a7eab1f2519867ca195ab7e1dfa878ecaa215c620f535848d46577defe"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ghiozzo/em1220_fx_jump_over_water.wav",
+      "bytes": 176428,
+      "sha256": "0a1ac88c11f6a9bebb2553b5357b259cdd9d13ea10f910b49b0d813a86d32529"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ghiozzo/em1220_fx_jump_under_water.wav",
+      "bytes": 110124,
+      "sha256": "53fd7a1c41b465a0b305088989d23e8a7bdb86df0091a10aa405ae670572fd79"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ghiozzo/em1220_fx_landing.wav",
+      "bytes": 51500,
+      "sha256": "2ece82d78bf1842ca62e93019046f771799aefb22b9256bef01f8adfe74e0296"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ghiozzo/em1220_fx_landing_over_water.wav",
+      "bytes": 176684,
+      "sha256": "4eabe6cf817901ce9df16a1e99a6c7101ab73dac68fc49b430c6dca884c0dc91"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ghiozzo/em1220_fx_landing_under_water.wav",
+      "bytes": 181292,
+      "sha256": "570f15e2ae69d8949cad92e45741bc727d0070a931d4770bb992bfa7d6a81088"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ghiozzo/em1220_fx_swims_over_water_02.wav",
+      "bytes": 92460,
+      "sha256": "ef598d67a682028c94a6084c1361cac948c4bd0be8015cb24427437e5f7d8bec"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ghiozzo/em1220_fx_swims_over_water_03.wav",
+      "bytes": 87340,
+      "sha256": "ad68106999ec9bbe3393e5e4c6156ec4933ada6ace89cd7e9a097dda903d81d8"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ghiozzo/em1220_fx_swims_under_water_02.wav",
+      "bytes": 137516,
+      "sha256": "ad5ac6c4470f84a8b0d7966a8be390580e5411ce1c7393721ad2913db9445591"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ghiozzo/em1220_mvt_evaporation.wav",
+      "bytes": 279084,
+      "sha256": "fac01ded0f71d4bbc0625831e39afbe57bdd0dfefef1950d5aa914d87f1dee18"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ghiozzo/em1220_mvt_scrape_01.wav",
+      "bytes": 8748,
+      "sha256": "6a14e1a7bb95fc6a121c26e4f556ff55900915e16b31e4e0ccc6a9dcc6ce9fcd"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ghiozzo/em1220_mvt_scrape_04.wav",
+      "bytes": 19500,
+      "sha256": "348ddae8a9e18fa5c9986c76431e70354b63f9848b8fdeca0da444702e0e5fef"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ghiozzo/em1220_mvt_teeth_05.wav",
+      "bytes": 8492,
+      "sha256": "4140f3bf8038b284f248877e755740959efe2d9aaa0a89618c5938560be42418"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ghiozzo/em1220_vo_barks_01.wav",
+      "bytes": 27948,
+      "sha256": "360a60296b59f77b42373e158664b2322d96da28d2cf1a8e90be6740d81f9b1f"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ghiozzo/em1220_vo_barks_02.wav",
+      "bytes": 23084,
+      "sha256": "511ece09c4377e42158aeb227d9ef88e35a9effe8563c4e66639a9d51b86470e"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ghiozzo/em1220_vo_barks_b01.wav",
+      "bytes": 95532,
+      "sha256": "aafbc5e057b38869926088be1e565058c5cb0154021a299b76e394a54ba533c4"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ghiozzo/em1220_vo_barks_b03.wav",
+      "bytes": 95788,
+      "sha256": "0731b68532c663add70e0300673738a66daf9a96f080d530e6e0b89f013efffb"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ghiozzo/em1220_vo_damage_01.wav",
+      "bytes": 96044,
+      "sha256": "5f0da093d20eb47f5540fe8d75a6918ddccd34b0a6a184385cc1ebb211caf37b"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ghiozzo/em1220_vo_damage_02.wav",
+      "bytes": 96044,
+      "sha256": "b2131010e9f53a88225f855572eaa57d1099bc6d8fa0e4573533d63ef943ea8f"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ghiozzo/em1220_vo_death_03.wav",
+      "bytes": 192044,
+      "sha256": "4b7bb86230330ad3b45fec1c3f128bca16c6165ccad514c431daecba6c7b4dd5"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ghiozzo/em1220_vo_groans_01.wav",
+      "bytes": 151596,
+      "sha256": "8271ec8bd43c44a643346ceec272279616b439ad5a9c8cb80e7d15fb097472a6"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ghiozzo/em1220_vo_groans_02.wav",
+      "bytes": 140332,
+      "sha256": "e5128bf0de49ed2c3b7d83e1328c64c12eba290bdcb115aa9987b9a594714a96"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Globster/em1310_death_a.wav",
+      "bytes": 607788,
+      "sha256": "8e3921f0a9247c74a7fe268d8de7da25992aff0704bc1d671077a864344b6a15"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Globster/em1310_dmwater4.wav",
+      "bytes": 225836,
+      "sha256": "d7d2348980438becbe23a7118c6673db37c31c5933b8bdc2c5b46f7e0c6ff5d8"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Globster/em1310_eat_e.wav",
+      "bytes": 146220,
+      "sha256": "71b90a427d74a27c9e1592727149452b5c69ed9bae4393056ba5f58bfc5ceda5"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Globster/em1310_eat_g.wav",
+      "bytes": 210476,
+      "sha256": "82ab5abff6c07f34861a76f9fabbd3c923699cde4ef7d2a46ed8fe5d27b1a0b7"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Globster/em1310_fs_Sand1.wav",
+      "bytes": 178988,
+      "sha256": "88aee3e3bf1bf9d5acc8359948c409987922b26ce31f4811e736d09251431cff"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Globster/em1310_fs_Sand1_lfe_.wav",
+      "bytes": 94252,
+      "sha256": "342ac5d8c2163c74d67f2685a982e642a06f077b0f8eface742a50796d546389"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Globster/em1310_fs_Sand1_lr_.wav",
+      "bytes": 451892,
+      "sha256": "d904413f8d5197abc91a4ec50e6e2b2d9adae84c8ecb4fcbcbdbda03b05aa7ae"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Globster/em1310_fs_Sand2.wav",
+      "bytes": 158252,
+      "sha256": "f2e9692cc0db7089c531e5786527929e9b5546e1aa9b48515e41208c550e5c56"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Globster/em1310_fs_Sand3.wav",
+      "bytes": 142124,
+      "sha256": "83281b9249b943a416a0ab33a26c1f893373a69b07b9a7c1ae01c4e1f2b72dd5"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Globster/em1310_fs_water1.wav",
+      "bytes": 214828,
+      "sha256": "4aea7f9b28fd3936afc98497498fa89afb6f4160bba9704f01322c2e29191206"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Globster/em1310_fs_water2.wav",
+      "bytes": 179244,
+      "sha256": "6f16a4f2a0681024bd161a189df654c4871f07d54b5c4d6797eedabd7892013e"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Globster/em1310_fs_water4_.wav",
+      "bytes": 219692,
+      "sha256": "e697d8a023b9b6bbb9d5630527f6edcdadcbed8c86477c650acdcffbefffd6f8"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Globster/em1310_hit4.wav",
+      "bytes": 60204,
+      "sha256": "96eeb1601c546d6d8fc35b68af75be5e1ac9e0abfd37aa106865b44c0c05013e"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Globster/em1310_hit5.wav",
+      "bytes": 53292,
+      "sha256": "f05b8659ab8f78f735c4fa7d450630434087985a83e4338653a76b461547fac3"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Globster/em1310_hit_d.wav",
+      "bytes": 42284,
+      "sha256": "16aafb87d141b7fa83bf17ef9803675a9c9e9eca7de5bb5dcefe16ec1b68b8b4"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Globster/em1310_mvmt_Jarring_b.wav",
+      "bytes": 181804,
+      "sha256": "f7f96d2eec5654fda9697c9fccb3d3b1f95fad7261ed84d72cd8649a00506916"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Globster/em1310_mvmt_Jarring_c_.wav",
+      "bytes": 124716,
+      "sha256": "07698c4ec13aca3b40c26de06517dfe77cb79aa2d35bbdccd230fc3d0111ff67"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Globster/em1310_mvmt_Standby_f.wav",
+      "bytes": 128044,
+      "sha256": "667b25e8c2eb8c6af87faa907e6e31262e515ca536bcb85b5b6132000b1a004b"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Globster/em1310_mvmt_Standby_h.wav",
+      "bytes": 131884,
+      "sha256": "c9ca55e7ae6150f463d1545792d969e18f0911414d3a30cc5831e45c4a38c353"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Globster/em1310_mvmt_standby_i.wav",
+      "bytes": 135980,
+      "sha256": "e42ee3f5d9ae0ade917f0591e79cdfcdec888b19a1aaa99f4f56f74b8eb208c6"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Globster/em1310_mvmt_walk_d.wav",
+      "bytes": 118828,
+      "sha256": "835eb7309168f57dcf2a14ed4ec8f5adebf974fe4c336dc3852345d10f520b04"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Globster/em1310_pl_hit1.wav",
+      "bytes": 151596,
+      "sha256": "82cf8ad661f65139fba774f4e0d7980cfe0f3cf435b50418b5253a0be8dee4a9"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Globster/em1310_vo_Sign1.wav",
+      "bytes": 289324,
+      "sha256": "85c79e3b1d9f709866dcf80ed18adaaa20d1429b4eb8d9704f871d8335bbaad1"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Globster/em1310_vo_death2.wav",
+      "bytes": 486956,
+      "sha256": "2f80094b80bfedd063504d9b0bec88875e62bee881aec56d813dc5ea93edaba2"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Globster/em1310_vo_dm1.wav",
+      "bytes": 92972,
+      "sha256": "f59a08499eca6a352b567d1d3acc285438f01a5dd0ee67759f342b370ca691d9"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Globster/em1310_vo_dm2.wav",
+      "bytes": 55084,
+      "sha256": "878308765909b4879c5119e0b834c7d70e70ce93ac0765040ad1b4e8db9b3b59"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Globster/em1310_vo_dm3.wav",
+      "bytes": 230188,
+      "sha256": "78744faab492c458f552bded04d7534b8aff4f10f460d93e8a0d2515f56fc375"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Globster/em1310_vo_threat4.wav",
+      "bytes": 243500,
+      "sha256": "c19b07f89446b78e3e9125a61790deee81a10707c44e2cae717477dcbd74af46"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Globster/em1310_vo_threat7.wav",
+      "bytes": 160556,
+      "sha256": "cf37dc94633cee47ebdb094d61c2f016cae53d0112b948e4fb9eb465ae39e820"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Globster/em1310_vo_threat7_.wav",
+      "bytes": 162348,
+      "sha256": "20f044ecb1899c1dcc58fdce927db303ffe707b7d40b897153dd828f9674ee46"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Globster/em1310_vo_threat8.wav",
+      "bytes": 133420,
+      "sha256": "3eee2505d4f925026210559c348bb6f02ad9deb98870736eb20d47a2fab5aff4"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Globster/em1310_vo_threat9.wav",
+      "bytes": 208684,
+      "sha256": "6a9d0a2427b18114606318467e50f643d64a5e51a645ccdc78e80eded135fa6d"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Globster/em1310_whoosh_b.wav",
+      "bytes": 102188,
+      "sha256": "29af2de633280d4dd1e192b040b9c9ad0d5c5d39f89b5ac1944e7533429a90da"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Globster/em1310_whoosh_c_.wav",
+      "bytes": 83756,
+      "sha256": "c89517ac20cd65af0b354139933143a89221ffb09233d7f8ad3ed9160b7d730c"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Globster/em1320_Grobuster_swim01.wav",
+      "bytes": 165164,
+      "sha256": "534ba54f579f650a023ac600fa58b3cba6198a2ec5b134a3a2baa371e53ac719"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Globster/em1320_Grobuster_swim02.wav",
+      "bytes": 164908,
+      "sha256": "1aa0c09928b2dd4dcbab24220d9752cfacb8704bb69877ec5cd19af5d63df538"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Globster/em1320_hit5.wav",
+      "bytes": 53292,
+      "sha256": "f05b8659ab8f78f735c4fa7d450630434087985a83e4338653a76b461547fac3"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Globster/em1320_whoosh_b.wav",
+      "bytes": 98348,
+      "sha256": "596dad88ff8f631e8fea21cabba974eb86023a4e905c4901862160da74634e2c"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_atk_arm01.wav",
+      "bytes": 42540,
+      "sha256": "4f33404c86f1f53fd11aa619f8434984a1dc41a58402daa31cb39740880b26e9"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_atk_arm02.wav",
+      "bytes": 37420,
+      "sha256": "459b673d10a464fd7083942f0346fe460ff919cff49f9fdf58e63b9be8f81a0d"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_atk_cut.wav",
+      "bytes": 86316,
+      "sha256": "fff5454cfa503646088ebc3b470e062e35c61a590142b54b8ce163f1b0d06951"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_atk_kick.wav",
+      "bytes": 60460,
+      "sha256": "e1bc04e3c8d621ffbcc7a5b455bf5a41a9140dd9ad9943c2f395e28c102ac1f9"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_atk_swing01_01.wav",
+      "bytes": 51500,
+      "sha256": "2df6310a42c941c9be7a9d5fa55f705bd75343de70c564194d8a1f03b8f64ca8"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_atk_swing01_02.wav",
+      "bytes": 49452,
+      "sha256": "d912db8f6672fba36976f5c49a26007fbb48f2952c708f0ecc7b0317034f6aff"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_atk_swing02.wav",
+      "bytes": 64556,
+      "sha256": "d043167e05ea9bab1b30bdd047bd322656c0b13dc498ce25f7ee5f0a34635f3f"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_dmg_cut01_01.wav",
+      "bytes": 143148,
+      "sha256": "bb49b0ad195b26812137750491249f8d575b6601369a747b07558d515a14a7ed"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_dmg_cut01_02.wav",
+      "bytes": 194092,
+      "sha256": "41b54a2cda8e58961df5fe191faeaa20526496e6bc764ab6b4cd06d726d7e96b"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_dmg_cut03_01.wav",
+      "bytes": 74796,
+      "sha256": "865b6352d7237f35dacae3a254b3e5b2754e5048926a3f01fa81cfc91ebd043e"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_dmg_cut03_02.wav",
+      "bytes": 56876,
+      "sha256": "4d9d15a074f51bdab7b6b158af01ab60d011a2b5aaec0900ad0be34514f5ccb8"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_dmg_dead.wav",
+      "bytes": 205868,
+      "sha256": "cfff44aacf20f9f7c8bac4839d2bd7b17a58d10360901b0e04aec08f88e97ee9"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_dmg_down.wav",
+      "bytes": 57900,
+      "sha256": "e1ec8af0b2829eea2a590a467e05cbe3aaa1b1412a1e3e647e3f1284b04cc5f7"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_dmg_hit01.wav",
+      "bytes": 82988,
+      "sha256": "116eba60bd2aa40bc6f9f147c77845753df65bf8ec4e3a2bd4135ced85b3698b"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_ft_evwalk01.wav",
+      "bytes": 68140,
+      "sha256": "50853271ae961da8de8a19b0784ad46abbaabc8bbbe85030fd1951e1f901ffe1"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_ft_evwalk02.wav",
+      "bytes": 71468,
+      "sha256": "5d96471e1666c5ef01cd1e6d5fadb50e78d56e2de72c43e43a5807bbdcbe374b"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_ft_evwalk03.wav",
+      "bytes": 80172,
+      "sha256": "2591fc6f51866221989ae9acd1450c5345ed9510365ce2fc001f832285a1e0ac"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_ft_jump.wav",
+      "bytes": 30252,
+      "sha256": "3b54ac6310e2d8d13cc0e8be6f489b90656d6e754d54ff0c8f42eca89be29d42"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_ft_run01.wav",
+      "bytes": 22060,
+      "sha256": "373905ba6816d91b05d9dede5524a8742af8c37899386b3d63a1bcc6fa243bf4"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_ft_run02.wav",
+      "bytes": 23596,
+      "sha256": "89c4e48864ae07af08d616f9d44f48edac012647ad46b64d0fdc969ecc1e92f8"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_ft_walk01.wav",
+      "bytes": 38188,
+      "sha256": "dbd308eb099aa898388fcd88550dff94f91598f54ef7696bc776b9d9880ec0b6"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_ft_walk02.wav",
+      "bytes": 25900,
+      "sha256": "baea5c132982efe3ae72f96cfd61da17572b07d430c37a2b884c175c66ed4815"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_mvt_cloth00_01.wav",
+      "bytes": 105772,
+      "sha256": "64829ca62530b3eb3d8e1889932088d6798b1e124d1af5bebfcdf7b91491b35a"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_mvt_cloth00_02.wav",
+      "bytes": 65324,
+      "sha256": "c91a97af8e6f8dd4504c69953a1058e7b2841b8d7b93b738343efd13bc1c550a"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_mvt_cloth01.wav",
+      "bytes": 102188,
+      "sha256": "538afd7b18880c934ea644429c0d96004d0e890a03e2ab00d822fbd283dfdc57"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_mvt_cloth02_01.wav",
+      "bytes": 40492,
+      "sha256": "f7fc257ecc93e01cbb26ae2949a6e6a3ff115bd0a9fbb865bc2c75773d8bc987"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_mvt_cloth02_02.wav",
+      "bytes": 53292,
+      "sha256": "66ab45f24a7ff24b5fcd4d4291cc3933931b7f69e16abae24ff8991d50de8ad1"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_mvt_cloth03.wav",
+      "bytes": 110380,
+      "sha256": "532de9b46d6ce12c1b31224d48901fd9bda7923c5d335429ae461d9cfcbed9f9"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_mvt_cloth04.wav",
+      "bytes": 74796,
+      "sha256": "e600aa16ac2e625f9a8f0450aee48b8d5a2ec251c2cce8be4689d475f3febad4"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_vo_atk01_01.wav",
+      "bytes": 54316,
+      "sha256": "59785f549bddc553da65fef1ddde24ed81c684a7bfcc9b44a82b2fd99999d57f"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_vo_atk01_02.wav",
+      "bytes": 80684,
+      "sha256": "c085037c9ea0873946a51946fea6e39447acac1036434b770b95a39fc078b07c"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_vo_atk01_03.wav",
+      "bytes": 59692,
+      "sha256": "b193cab74901db752fd0424b53ff54b10dfc6ba70a343a49ff0c51cc7e54cc59"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_vo_breath01_01.wav",
+      "bytes": 28716,
+      "sha256": "71f9188eb8245d913bb00cf2f317d677cf8b75b317664e92c45e95f1d627949f"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_vo_breath01_02.wav",
+      "bytes": 46636,
+      "sha256": "4e749e8a5438b663c181f2b0fed124136bb9c3831862a54d0fbc24d8e841187d"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_vo_breath02_01.wav",
+      "bytes": 98604,
+      "sha256": "c1c3f76a32d32570b9b0b38244f43962624ce5d0a269a73ec77cd6b395f5473d"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_vo_breath02_02.wav",
+      "bytes": 121388,
+      "sha256": "2e863e0c3e155e52e459f0f28f20055f566f1cf3ca355a286f2546beaaeeb1ab"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_vo_damage_l01.wav",
+      "bytes": 145196,
+      "sha256": "cfc650369f5579b1e5251796b790aaf1e051324e1b5c032e5766baee053b9f37"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_vo_damage_l02.wav",
+      "bytes": 123436,
+      "sha256": "27ce8aed718ff090f3508ba743c594870a7b803ec5e97fe3862a6696c7656389"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_vo_damage_s01.wav",
+      "bytes": 54060,
+      "sha256": "e250d6f0e4c8ef3f23c9e68df823356b491ec47fcda00fb1a45b65eff48621a4"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_vo_damage_s02.wav",
+      "bytes": 121900,
+      "sha256": "18413643342f610b47d6d49d5aeec231ea82faca3b911e31711f42f724ef248d"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_vo_damage_s03.wav",
+      "bytes": 65580,
+      "sha256": "0f6ba41f0ce0405d80dd85ed2fb1d0c2efc893cbf333cdc1273f541d6cfac037"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_vo_idle01_01.wav",
+      "bytes": 76844,
+      "sha256": "3de22a0da76027594171bb8fb1a863788b7916c4dd58003491efdab21bc11fb2"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_vo_idle01_02.wav",
+      "bytes": 79660,
+      "sha256": "05a7633af524e8859b8df0e6c100705339cb531b9ebb9dfe7a6f2cd6459ec56a"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_vo_idle02.wav",
+      "bytes": 94252,
+      "sha256": "a08abcd933ae25f6827c92abba206dcc2b8433fd0f40721a458f4d696fb0a3c0"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_vo_menace01_01.wav",
+      "bytes": 100396,
+      "sha256": "1404ec1e3ffdb203fea26cfdcd9e700f930170cb1aa23feb957098d4f8b5d6bc"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_vo_menace01_02.wav",
+      "bytes": 77100,
+      "sha256": "03717afb39b04a7dd27a7e78a1b1103315661afcf0f2b0b724d40f77e4222a26"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_vo_wakeup01.wav",
+      "bytes": 62764,
+      "sha256": "7d98800ee4315e4ed81015a5e880b897bf3d52459161a9ab72b4ae117815058d"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_vo_wakeup02.wav",
+      "bytes": 104748,
+      "sha256": "2bed53442a7cac0f03ae14400d408979702f25d8f610d2304b4ee6fcdfa41d36"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_water_ankle_down01.wav",
+      "bytes": 57644,
+      "sha256": "e75fc45c41cac4b6bdf1401d2f8e04a5d8a3ca36f590d0f38533e29bc9f3f659"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_water_ankle_down02.wav",
+      "bytes": 57644,
+      "sha256": "6f3aae07e1c3e9d766db165788ab294e35fccb4186ebb7c01fe22091b4e7db7e"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_water_ankle_run01.wav",
+      "bytes": 38444,
+      "sha256": "6dca10c11132470afa5a3e5cd860833c85b88a2806fc872b3e48c5d48a000bd9"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_water_ankle_run02.wav",
+      "bytes": 38444,
+      "sha256": "0b9dcffa67fdc142a93b4a6b1c62c21fe13127c10fac27d4ba27da6d87c7aef0"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_water_ankle_walk01.wav",
+      "bytes": 48172,
+      "sha256": "fdd73c329fd113fa55ba4f8d02eedf2bdf647bcc11457eae59e4ec3bc0e6a941"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_water_knee_down01.wav",
+      "bytes": 67372,
+      "sha256": "a382f86ac15a95472de8a0539200bcaf77752bb0255d0ca510de9cfb384d0667"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_water_knee_down02.wav",
+      "bytes": 67372,
+      "sha256": "90c5dd2fac08d92fc589c8dd987e98391033e3d57d39b053080832186d5fcf7a"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_water_knee_jump01.wav",
+      "bytes": 76844,
+      "sha256": "ee9676b673eeca19c29e9e6b3496a525eadc267b64c3ab7de1506733b3d80535"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_water_knee_jump02.wav",
+      "bytes": 76844,
+      "sha256": "ab06c55e903debf651d7abeeb73a52099bf5dde63f6106330cd3465e3fd38ee7"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_water_knee_run01.wav",
+      "bytes": 48172,
+      "sha256": "7b103068763f83be14003c7f4e16c6221dc84990c8147ab7ca3489cae78935e7"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_water_knee_run02.wav",
+      "bytes": 48172,
+      "sha256": "4fcedede32ca3036ce6f7c5e482dc3cf5ae886bacba21774117d9d806dca620d"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_water_knee_walk01.wav",
+      "bytes": 57644,
+      "sha256": "fe0c20d14aafa6d8b2a9bfe3caca0dd3795010b33a7245acf4b970f15a5448cd"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Hunter/em1230_water_knee_walk02.wav",
+      "bytes": 57644,
+      "sha256": "84a5b93066bcb893854d8ed68f040cee380f8d2ec7fff89f094271358bade359"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda/em1430_atk_hit01.wav",
+      "bytes": 82988,
+      "sha256": "0f1c9623854ce9f8243250cb900a21cd6068eb3a2eafd80880e120fcaeda4802"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda/em1430_dmg_gunhit01.wav",
+      "bytes": 49964,
+      "sha256": "12ae104c6020d9bfa2a3fd8edddbd049b51061ab52eedd1412e382d8e172e41b"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda/em1430_dmg_gunhit02.wav",
+      "bytes": 55596,
+      "sha256": "4ed463e012d58857a0b5eba19cc83e5d48bb778912a1cfd862b845f83de84259"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda/em1430_dmg_knifehit01.wav",
+      "bytes": 51500,
+      "sha256": "29048d979f3d6c4623fcae1dcdd6b19f4f743998c6ae682576298bceca1ebcf0"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda/em1430_mvt_01_01.wav",
+      "bytes": 127020,
+      "sha256": "a386a8fb757674ef9b2364cd68b67b8f92325139929b9e88dde41f4817c86f10"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda/em1430_mvt_01_02.wav",
+      "bytes": 130348,
+      "sha256": "9cd539f869a57007f615e52902e2fe524a60cdefef1d5c23dcc280490983227f"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda/em1430_mvt_down.wav",
+      "bytes": 248108,
+      "sha256": "330ee6fb55ee17c57bd8b783c69afa72bad81a83e0dc5bb6a070d27bc78fb766"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda/em1430_vo_dmg_01_amb_lr_.wav",
+      "bytes": 962164,
+      "sha256": "3f397ec1779daf63af221d9ce5b11f9f24aeb3e97438d6c8633705b523df750f"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda/em1430_vo_dmg_01_c_.wav",
+      "bytes": 273708,
+      "sha256": "6108dc1a7e22e87d9739336882b1467cfb8fe60e265e573889203a45eb70b9b6"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda/em1430_vo_dmg_01_lfe_.wav",
+      "bytes": 189228,
+      "sha256": "7211e813aff7c0fb0acee3b267ef5d6bb51756e27da15ed5527445c9263e33ad"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda/em1430_vo_dmg_01_ls_.wav",
+      "bytes": 472364,
+      "sha256": "1762fce25baae2df6cbd13ad61245fa87d12e8a459a93271765a3611f72ce46b"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda/em1430_vo_dmg_01_rs_.wav",
+      "bytes": 472364,
+      "sha256": "5b273f42d3c3f6282a83edaae509f00a0d710da5822032ccccadab7a20e761e6"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda/em1430_vo_dmg_down_amb_lr_.wav",
+      "bytes": 973956,
+      "sha256": "cd2af7a049262a7a88b140969d498fc34e1e63d757a1e4cd0d4ede5a33c61087"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda/em1430_vo_dmg_down_c_.wav",
+      "bytes": 370988,
+      "sha256": "7922c44add2a0337d89550082bbbafec33b0bc99d62b061fb4559111b64054f2"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda/em1430_vo_dmg_down_lfe_.wav",
+      "bytes": 291372,
+      "sha256": "2602ca497cbf6b13f011391a667a79dd4166d3b85a5dfb7e2417b7445d1deaad"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda/em1430_vo_dmg_down_ls_.wav",
+      "bytes": 470828,
+      "sha256": "561d0502ed37c9c041700a1cb07b588d16acebb92196f0b777db2565d605da06"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda/em1430_vo_dmg_down_rs_.wav",
+      "bytes": 470828,
+      "sha256": "7484bc3efc89207dd76836676024ee6c9b84a463db4cc535e70de2ce5a22c3ff"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_atk_hit01.wav",
+      "bytes": 82988,
+      "sha256": "19d9e319195aa68943eba56383d1a4358b50a7370a41ca43545723d83fba4bf4"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_dmg_bombhit.wav",
+      "bytes": 113964,
+      "sha256": "2ffbf1db3b160256f29210becee30e5aa942e85ea954f70f048b038edf0adaa9"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_dmg_fall.wav",
+      "bytes": 256556,
+      "sha256": "19ea79f5a439ef69580a60484ebe52974340295555b29b34b2b916e57d14bcab"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_dmg_gunhit01.wav",
+      "bytes": 49196,
+      "sha256": "9f5f2c43f9c992a554c973e0a92ebb327bd86191bd6012c36c1e3a3e1363e537"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_dmg_gunhit02.wav",
+      "bytes": 55340,
+      "sha256": "c725c56a309374bfbc3de55a069690d664d974574cf3249a551b67c80fc60b2d"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_dmg_hit01.wav",
+      "bytes": 80940,
+      "sha256": "d0f533e3694f70a39de995541471e6146011e3b51aab59d8a1cde1c61e63c351"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_dmg_hit02.wav",
+      "bytes": 80940,
+      "sha256": "2f4d8990c70b7f8a19156b466fd56af602a33e219728f3f3fbd151a10b4880f5"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_dmg_knifehit01.wav",
+      "bytes": 51500,
+      "sha256": "703aedd7e4ab1b00af579a39a2a18e1487c468599af70903199c865251ebf730"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_mvt01_01.wav",
+      "bytes": 75308,
+      "sha256": "be838ccbdb1ea9144b6c05095814c4149ca9ddd43a096291431dea8f4b4b92b7"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_mvt01_02.wav",
+      "bytes": 70700,
+      "sha256": "64c2da6a5da8f82dac8514de95cd45bf2999d41aae8d91498371caef378ae739"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_mvt01_03.wav",
+      "bytes": 81452,
+      "sha256": "9ccae80fdbf357e504c5092f3585c3bc1b5a2682ffd9e654898fe8a5dde7eddf"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_mvt02_01.wav",
+      "bytes": 99628,
+      "sha256": "545dd245f5c5cc1a19d8dd76dc1dbe2c158625950b28673dee13ab8af525cf07"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_mvt02_02.wav",
+      "bytes": 73772,
+      "sha256": "e018f70d1e53fe037e47b56146e1c9475ac62517497d15a12f014b5710aa7cc0"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_mvt02_03.wav",
+      "bytes": 59692,
+      "sha256": "409aab6dc76a75252ae6c698758df1598458ca4b72fdf07bff6cf223b8822e77"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_mvt03_01.wav",
+      "bytes": 86572,
+      "sha256": "7affcccd6021bb172aedc0b21a21e946c123f99ffae8aafec687b0a3482a2fa9"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_mvt03_02.wav",
+      "bytes": 142380,
+      "sha256": "bcac37c8f0a61a7582cdd76f6f87b1e6fd212d5c4b0e244eba70c7f1b31b9452"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_mvt03_03.wav",
+      "bytes": 92972,
+      "sha256": "c5f877ba96e972cde176712c614305cb070c70d8d0298de08abb914446deedf8"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_mvt_crash.wav",
+      "bytes": 153644,
+      "sha256": "922c505b7f91ab09e3bf5c3f90d1d6c8d1b1ccab6ccbf44bc19dcce9a3ff49db"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_mvt_down.wav",
+      "bytes": 95532,
+      "sha256": "e171e69a6f936648da809e1f7312dcc7648a66ec1264610d58addf645d37926f"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_mvt_shell_01.wav",
+      "bytes": 99116,
+      "sha256": "711001687c67c162812dd62053dab11e8d9e3af4c7bee4b9e247cce626487416"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_mvt_shell_02.wav",
+      "bytes": 124716,
+      "sha256": "670c34f79ae2ea1f0ebf53ce4e736e2b8d0a152aaa47d06d7a38b150e13d5580"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_mvt_shell_03.wav",
+      "bytes": 101164,
+      "sha256": "087bd83b9f9c72976e35fd07f151d8e0e441dc9e854191bcd4efb868e99abf7b"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_mvt_up.wav",
+      "bytes": 121900,
+      "sha256": "b6ab2ab5c0ff0fad9299da063e82d725b8eb173c2d9e16ba5378093b3c154a60"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_mvt_water01.wav",
+      "bytes": 94252,
+      "sha256": "a440b5498f342a5065b1b0c494ffcbc6e8c28f7eacb2b0a8b7a10ab509e7f1a6"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_mvt_water02.wav",
+      "bytes": 109356,
+      "sha256": "183eb12926898038e518a3d4a5f549590fef38df6a296982560380a8f6c80caa"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_mvt_water_down.wav",
+      "bytes": 300588,
+      "sha256": "2f6db03c8e6b080ca5a640d37f80c9954143da4e5cd10662e20e201b059ae58d"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_mvt_water_up.wav",
+      "bytes": 262188,
+      "sha256": "2e986face1de7d6aa583cedf75f22218855a0d967e380187efff3303bdc32a7b"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_vo_atk01_amb_lr_.wav",
+      "bytes": 462612,
+      "sha256": "95defae81c1a15eca7842ac0730153617328342e209a6aa71af72894d6c71b4a"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_vo_atk01_c_.wav",
+      "bytes": 156460,
+      "sha256": "e632ef15f4c241ff128456382487f9ec3ec9de23ffa83551e64b6dabb4f3eb4c"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_vo_atk01_ls_.wav",
+      "bytes": 253484,
+      "sha256": "424bde36340c246fe700991205993cc14edc5ab91c74a08ee0959c676223b549"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_vo_atk01_rs_.wav",
+      "bytes": 253484,
+      "sha256": "e3a175e620ea4f80afc1869d4e7a886cb2c71a7e236d558fa72b75b770e24227"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_vo_atk02_amb_lr_.wav",
+      "bytes": 559092,
+      "sha256": "6c54266c0de7cc2e6f300ad6004aa959953204ffedccae9fa6eaa66286f49f89"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_vo_atk02_c_.wav",
+      "bytes": 172844,
+      "sha256": "44ed84e831541924e8df8000fecee333d368d3e7e623a29797d9215606d5aeb9"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_vo_atk02_ls_.wav",
+      "bytes": 293676,
+      "sha256": "9f41cf2190d47c13e0d7fea35de2235fe0aab1e35c87b5d75c090efa95c9ebd5"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_vo_atk02_rs_.wav",
+      "bytes": 293676,
+      "sha256": "c7fe6e5b5766ff93e397222f70dc123f9638a1a6b44f80337e7d793223bcddb2"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_vo_death_amb_lr_.wav",
+      "bytes": 555340,
+      "sha256": "49827cedcc1ebf1048749f73bbb0a82b869f6d0feb07f4ab027816b64e209ab9"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_vo_death_c_.wav",
+      "bytes": 162348,
+      "sha256": "28dfa04ce7e4428ed860e3b27cd070f05f70c3f1061dda6dfc67b096b271d857"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_vo_death_ls_.wav",
+      "bytes": 312876,
+      "sha256": "322bf661ce139204baff99a170f8aac9eb796362090ccb1f289fbff04cd9eb7f"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_vo_death_rs_.wav",
+      "bytes": 312876,
+      "sha256": "2f1078998082fc23aee1f5d03c54999d808039f49fc56c2e6e1d1da9b0d69243"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_vo_dmg01_amb_lr_.wav",
+      "bytes": 405796,
+      "sha256": "289c66c3bb056ced2990d19c41f25f478b97af0e133c49b903ed2cb5126f7919"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_vo_dmg01_c_.wav",
+      "bytes": 154412,
+      "sha256": "d010e15e7153e1c58eaf9235a6024b5ef14db699ebdf9080621795b1d0e7a311"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_vo_dmg01_ls_.wav",
+      "bytes": 234796,
+      "sha256": "ff194a157ec01216d9de6307d0d808988f99500a27f5c32c1193becee08df612"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_vo_dmg01_rs_.wav",
+      "bytes": 234796,
+      "sha256": "7a5a886e0748a218d0a282264cd6af59806efcb94e17b997a3849a1625cc0c2f"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_vo_dmg02_amb_lr_.wav",
+      "bytes": 429380,
+      "sha256": "06dc6012730f6abcb17db2c2d3666798ffada67d82039706f7042efcc5409ce8"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_vo_dmg02_c_.wav",
+      "bytes": 127276,
+      "sha256": "044a42ea74bbb90bad1e5eb66716dd14ab27c191c7f7a476454bcdd60f696ab9"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_vo_dmg02_ls_.wav",
+      "bytes": 223276,
+      "sha256": "141782900505ed9e5f0474b5b7a029bd812240996e3bca621462b82e3961fce8"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_vo_dmg02_rs_.wav",
+      "bytes": 223276,
+      "sha256": "7cde67d23b9a0ece79856d91b8a4628b730c79a802f931da2b8feae5c03f873a"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_vo_dmg03_amb_lr_.wav",
+      "bytes": 472796,
+      "sha256": "4ba862c7fd2a905232f549b5d0770803375e787e258906c46bef48ed2e365b5e"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_vo_dmg03_c_.wav",
+      "bytes": 160300,
+      "sha256": "09ba9008349f9082bd9ad89dd6b9df42ead2699a1051eb6a5117a5a15acd5973"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_vo_dmg03_ls_.wav",
+      "bytes": 234284,
+      "sha256": "e8fb8abfd05b2a4548d8e9d73187cd045254df14b53cf4868785db21bc8eeeeb"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_vo_dmg03_rs_.wav",
+      "bytes": 234284,
+      "sha256": "068ffdbe7acf4199643b894325e0d58ad9e3781da9eb4001be204332f44c4d76"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_vo_dmg04_amb_lr_.wav",
+      "bytes": 489412,
+      "sha256": "19a956aec3f0c7595813abd305402a492159df254c5e4a9bbb576cd021c274c7"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_vo_dmg04_c_.wav",
+      "bytes": 152108,
+      "sha256": "dfc352d021e4073a36448c6efa148e97b91994a355f5ced9f2a5c71d21c2e983"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_vo_dmg04_ls_.wav",
+      "bytes": 252716,
+      "sha256": "42eeda62c30f87e97de4e9d42ed2bbc222384b70265543b568e0196e86a16457"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Malacoda (Final)/em1910_vo_dmg04_rs_.wav",
+      "bytes": 252716,
+      "sha256": "7f1e46dd0e722a711eedc35916a0013f51ca499735fbf466c1d3a868b6a15516"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze/em1000_vo_atk01.wav",
+      "bytes": 162348,
+      "sha256": "9923bc81e736bd9c3e34ce39850599fd81a31923aa3d0520316899b978586de3"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze/em1000_vo_atk02.wav",
+      "bytes": 169516,
+      "sha256": "e9fa20f3a9b9bb9c47338063a5e7d48ff1005b9d3afb60c35a54829893a06402"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze/em1000_vo_atk03.wav",
+      "bytes": 202284,
+      "sha256": "68bc13d00c5bd9862f0e6ae940c9ab27ff9b6a69f2807a5b93308af3e2a61d23"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze/em1000_vo_dmg_L01.wav",
+      "bytes": 152364,
+      "sha256": "a59b57d0dc9abc3de680b6055840cf09db2ae0d617088d329f7d702a659c2440"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze/em1000_vo_dmg_L02.wav",
+      "bytes": 176172,
+      "sha256": "7fb9022a1eb1350ad74270ebe6ffb96b5a1a09206205f8cdfd8f9da767f72247"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze/em1000_vo_dmg_L03.wav",
+      "bytes": 193068,
+      "sha256": "d06cedd21a7513debb1b365f74cc3c6e71711892276ea43b6557391105b2ca02"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze/em1000_vo_dmg_S01.wav",
+      "bytes": 117036,
+      "sha256": "637a04eae781c176ff52c48acfb87a3a03363464e88571381ef6d7f482c49d1f"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze/em1000_vo_dmg_S02.wav",
+      "bytes": 88620,
+      "sha256": "b8e4fc203e1a7463fd17934d421b4564a3de3a2c53bcaab02ab890a98663ff9d"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze/em1000_vo_dmg_S03.wav",
+      "bytes": 86828,
+      "sha256": "94a79de06a26b75ea3ca12264c5a6c3c6249bf9a22453b92b2c829805fa80b3e"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze/em1000_vo_dmg_down.wav",
+      "bytes": 234540,
+      "sha256": "7826dcf06897aaa1458367fbe5ee0826914a54d0371b2e1ea87d1e44021b7dc4"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze/em1000_vo_dmg_sit.wav",
+      "bytes": 248108,
+      "sha256": "34f8fdb94363062cc77566b1917194a85c867c8296d8319b221280da9349b30a"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze/em1000_vo_idle01.wav",
+      "bytes": 221740,
+      "sha256": "98451cd00b87311c1fd2d35df510dc9f7c4959d044bfbeb75609d79c278bb9b8"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze/em1000_vo_idle02.wav",
+      "bytes": 164652,
+      "sha256": "8c5fb450e43592e1aa92ee9b7f49850794aa72ffc39ec2feefed769b0de0496f"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze/em1000_vo_idle03.wav",
+      "bytes": 172076,
+      "sha256": "72bdfd6e1a49a499cc1855677cd35b665631fe71c04326893683a118f41c477a"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze/em1000_vo_idle04_01.wav",
+      "bytes": 64300,
+      "sha256": "6ab0a8f263edeec72f7bb1071f5a5cf46db2d33489448ef86a05af7faee2eb22"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze/em1000_vo_idle04_02.wav",
+      "bytes": 69164,
+      "sha256": "a6c9958efe16f805ed6e0bdf045cac866355c6cf8b1175a601b9312bc7cea32a"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Chunk)/em1030_dmg_air.wav",
+      "bytes": 121644,
+      "sha256": "d31f77533d9f0b0cdb36b19dafc7533a0cb89fb61d345bdcd51d2f84ed369d71"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Chunk)/em1030_dmg_air02.wav",
+      "bytes": 97580,
+      "sha256": "a54bca6f398fa8afb1dfbbf6cacda456890880b54f1eee8a2d1d0ab35d99accb"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Chunk)/em1030_dmg_dead02.wav",
+      "bytes": 106284,
+      "sha256": "651235888b9a41eddefe690779fcea11bea26e09828cd004b1f3c833b4b2b3c2"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Chunk)/em1030_dmg_dead02_amb_lr_.wav",
+      "bytes": 275548,
+      "sha256": "60f7ad33800ac68ff34f0e70344ca9aad4a6b99449be9853d2b4ff11d0565401"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Chunk)/em1030_dmg_dead02_lfe_.wav",
+      "bytes": 58668,
+      "sha256": "924aed075df24783f2725e85826f300f69af842f6ec86287e31f21cbd058d787"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Chunk)/em1030_mvt_swells01.wav",
+      "bytes": 90668,
+      "sha256": "b9aa826b0e71dd713fc1a5c086a9f97c254ca2ab62eff096503a815ff59d2b53"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Chunk)/em1030_mvt_swells02.wav",
+      "bytes": 56108,
+      "sha256": "31abc4b2ec63f287b6c3290c7998cc364fa531d047a7c59f6d0a032dc4714481"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Chunk)/em1030_mvt_swells03.wav",
+      "bytes": 55340,
+      "sha256": "f2170c0b796283ad95f7b175ad4636dc56c6f961fd8bb589b45b190101bb5b66"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Chunk)/em1030_vo_atk01.wav",
+      "bytes": 134188,
+      "sha256": "eb53371550d9d0c8affaf1f62f5e41795cdcc7dce2d92a6b968da703301ef62f"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Chunk)/em1030_vo_atk02.wav",
+      "bytes": 130092,
+      "sha256": "d8449813a95cd044f9426cb4a0466b6ffaaf0ed39dfa69f1ec13a2f5ff23348d"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Chunk)/em1030_vo_dmg_L01.wav",
+      "bytes": 116012,
+      "sha256": "5cf05d627b521fc2ce43909e2f3e5662cac049a5e0e881b75e4ffc7c22927789"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Chunk)/em1030_vo_dmg_L02.wav",
+      "bytes": 138284,
+      "sha256": "492b1dcef11cc8da262008824e23e6acb998be526275ecf3c533085b84ed3105"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Chunk)/em1030_vo_dmg_S01.wav",
+      "bytes": 124204,
+      "sha256": "4f89019a7e00e050b64c5d95e2978677b487ae5b9a0dfa194c4a3d22179f1800"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Chunk)/em1030_vo_dmg_S02.wav",
+      "bytes": 119084,
+      "sha256": "76e4ec09a4983ed13aa3914b995b1fb9395c70ad7d9e77ad4dba39111cc997ae"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Chunk)/em1030_vo_dmg_down.wav",
+      "bytes": 234028,
+      "sha256": "172af5ff540417505d8db8fb6b74d1aa8787339cc419872755f636cfebb1d084"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Chunk)/em1030_vo_dmg_sit.wav",
+      "bytes": 238380,
+      "sha256": "0fffe8339c50a6575e0501c4b9927d47b78e158665399c60417cd928d300c817"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Chunk)/em1030_vo_idle01.wav",
+      "bytes": 143148,
+      "sha256": "1c2185bd394f386348c804f0bfbcf0b75505a3f825352c257b3f7b9365764e4c"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Chunk)/em1030_vo_idle02.wav",
+      "bytes": 175916,
+      "sha256": "5a545f90e983e9147e3134e647637efd499e4cff38d092433751591f6b39c6fd"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Pincer)/em1010_atk_blow.wav",
+      "bytes": 56876,
+      "sha256": "c5aaff56d7c349c2c02d5f0ea2579940ef452e346f47fdac2ba25cb18edd4ae2"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Pincer)/em1010_atk_blow02.wav",
+      "bytes": 68652,
+      "sha256": "a6a570acc0d4a70a9489738b86e0da7f6273d172e74d05f3fddb3e4f64c5704c"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Pincer)/em1010_atk_blowcut01.wav",
+      "bytes": 65068,
+      "sha256": "a009acb8142684da3c3e0c4cfbff40d06a02175212d49e17b5bfc8779e46d54a"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Pincer)/em1010_atk_blowcut02.wav",
+      "bytes": 91948,
+      "sha256": "a0b2afbc0a7f60d894c75a4b8f712ab8def5f1cc14b8016a9520f3572dc26843"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Pincer)/em1010_vo_atk01.wav",
+      "bytes": 115500,
+      "sha256": "2ef2c0f20ea975c66667a7202b358302c7115183ecb3105b29bc8281112c9d59"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Pincer)/em1010_vo_atk02.wav",
+      "bytes": 166188,
+      "sha256": "9c798a223f365cc55f9ab15cc2d0bdbed2c26f66743fc5340631ad9b90c92331"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Pincer)/em1010_vo_dmg_L01.wav",
+      "bytes": 111660,
+      "sha256": "41a54ee2cdf009c3c17692f66f45972cefef86d854878a8150c903f2db403f0c"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Pincer)/em1010_vo_dmg_L02.wav",
+      "bytes": 165164,
+      "sha256": "0a458cba547fbaac894245da1df6d04fa1080c0ed5b5810579a938cb2be28e59"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Pincer)/em1010_vo_dmg_S01.wav",
+      "bytes": 125996,
+      "sha256": "eefce3e850ad99a4f81a0da013ca32daec725e4b0f6928925596057ea8842965"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Pincer)/em1010_vo_dmg_S02.wav",
+      "bytes": 119596,
+      "sha256": "9190537ad8ac626bfa102bae9eead7434962f87c696afa0600a4351baf88d5a2"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Pincer)/em1010_vo_dmg_down.wav",
+      "bytes": 225324,
+      "sha256": "ab24809019b7b656ed65e77062403e1933f3a93b0c8c2e400830c75e500adc51"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Pincer)/em1010_vo_dmg_sit.wav",
+      "bytes": 238380,
+      "sha256": "3302057e2cd2f0047129776c3569c59f32987be88be25c3db317344cfa241a8f"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Pincer)/em1010_vo_idle01.wav",
+      "bytes": 144172,
+      "sha256": "90f6b6c5c305eb3686dfbf8464d2e4ec2a3d3b5de0c607d6a42eb46c8303e500"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Pincer)/em1010_vo_idle02.wav",
+      "bytes": 137260,
+      "sha256": "91d85ec347e54be001615b5dc8f8623e7af82a2a95ae0471e0d63ae7dc8678d0"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Tricorne)/em1020_atk_ready.wav",
+      "bytes": 54828,
+      "sha256": "dd1581f2509ae305bf5c87a68ab5ed239fe64df9f15195939503577de00d486e"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Tricorne)/em1020_atk_shoot.wav",
+      "bytes": 59948,
+      "sha256": "6e8eef3f428e533cc8cc8e053121ec70f0bd9d8407f0f034eb843ec20ae27cb9"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Tricorne)/em1020_vo_atk01.wav",
+      "bytes": 114220,
+      "sha256": "c86caedb5ae76ac3fbf5afe14566fd85630928f6234c9849c8a997b6a0018197"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Tricorne)/em1020_vo_dmg_L01.wav",
+      "bytes": 119852,
+      "sha256": "3b98cd417a7c6ab9e54ca9d13ea1cb7cfb7813faa0465494485df9965e1f0792"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Tricorne)/em1020_vo_dmg_L02.wav",
+      "bytes": 143660,
+      "sha256": "da93540e77f0b4f0a56de43a50a2bc11b8b27868eed390611e515f8e07ec05b3"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Tricorne)/em1020_vo_dmg_S01.wav",
+      "bytes": 122924,
+      "sha256": "8809545bdab4bc7d9dbd81eaf5184b361d46a4b297ce61528c5fc6074ef87933"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Tricorne)/em1020_vo_dmg_S02.wav",
+      "bytes": 126508,
+      "sha256": "941bf72d9b5696fb8c4765f04e8ea9769f214c4e0a94dc654971adab71eb15aa"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Tricorne)/em1020_vo_dmg_down.wav",
+      "bytes": 226860,
+      "sha256": "2d6e0660450d04d883945461224eabb08b43ebeb370728b2868c015a51c90388"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Tricorne)/em1020_vo_dmg_sit.wav",
+      "bytes": 246572,
+      "sha256": "93984404b2ec297307b5257b0fe0124639f2a36039fdbc6ce0fecf9e07f48da6"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Tricorne)/em1020_vo_idle01.wav",
+      "bytes": 142124,
+      "sha256": "6df041ed27bc2c446ef84b0324ac359ae00a159625d99e9ca8d151b5bd36e2cc"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Tricorne)/em1020_vo_idle02.wav",
+      "bytes": 156460,
+      "sha256": "8b260a974a2feb554ed2c9984ad66addb5914d3c7cbcc9e7f6e3493b16e36b23"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Tricorne)/wp1c00_wp_dmg_hit.wav",
+      "bytes": 81196,
+      "sha256": "3b15594b18401e34d8f86fa9baf19152f9b8ecee54229ddba779fd8bb920f39e"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Tricorne)/wp1c00_wp_exp.wav",
+      "bytes": 81196,
+      "sha256": "df2bae573c5f13a7378714b088c8bcc08dca069acdf1c4c08fe21ddac18c9b6e"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Ooze (Tricorne)/wp1c00_wp_hit.wav",
+      "bytes": 57132,
+      "sha256": "9f5dbc3061a5b1b73afef9653495bad12727f9a3ee3d86829e8b88a1b2a604ed"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/Common/em_mvt_armup.wav",
+      "bytes": 108588,
+      "sha256": "ff1df69cceab2d415bcf71267aad55af270b1a61500557e24d22d7586d2441f8"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/ENG/em1060_ENG_vo_atk01.wav",
+      "bytes": 102956,
+      "sha256": "2056c2302bd6513130897454d404770dedbc389c8cebbcd499a92d74f10b7e59"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/ENG/em1060_ENG_vo_atk02.wav",
+      "bytes": 104748,
+      "sha256": "f45095a0130173ebf6e68f0d6a6f70a68faffbce0dbaea628f80bb5e4f248096"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/ENG/em1060_ENG_vo_atk03.wav",
+      "bytes": 119084,
+      "sha256": "258d4462b4cda0b4bdcddeb118009d77dd55f3ca61b83ce02c14ccec055348c5"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/ENG/em1060_ENG_vo_dmg_L01.wav",
+      "bytes": 133676,
+      "sha256": "6c4d9b9108ec90e2ca3639ffbbb18c63fd286439ac6dc24fe38eded88435d647"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/ENG/em1060_ENG_vo_dmg_L02.wav",
+      "bytes": 121388,
+      "sha256": "bc1dc9fe4f42f59cc1dda9b0fdabc6d18b31ebc0c5193d7d46b8c6cbda7079ec"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/ENG/em1060_ENG_vo_dmg_S01.wav",
+      "bytes": 68396,
+      "sha256": "436591ec0ea0d4805c8c03dc0b5cba7c532ddfe0151bbe0dacd42182aea3cd35"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/ENG/em1060_ENG_vo_dmg_S02.wav",
+      "bytes": 71980,
+      "sha256": "18d127affac572b4ec475a56a0f1e534b8376a67afdff84e9ba3f907e8b1b055"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/ENG/em1060_ENG_vo_dmg_down01.wav",
+      "bytes": 261164,
+      "sha256": "0e4d3c53de6b466f85da46096906fa5465e65a2fa811fe777659d6a251d33395"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/ENG/em1060_ENG_vo_dmg_down02.wav",
+      "bytes": 181292,
+      "sha256": "4cc2be0ab79c7b5b27dd4d250ae195f3638b41e16e84875ec831738a3af845f0"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/ENG/em1060_ENG_vo_dmg_sit.wav",
+      "bytes": 108332,
+      "sha256": "6e7d3229a0677d6de9a3e70b28dad1fd825857d7afce108fdf07c611203a0032"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/ENG/em1060_ENG_vo_idle01.wav",
+      "bytes": 220460,
+      "sha256": "292fc82c99224d4773cc9a18714e0a68b5f1b1c010fccac9fdfccc86778d0bd0"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/ENG/em1060_ENG_vo_idle02.wav",
+      "bytes": 145452,
+      "sha256": "62a4b2e1d57d5545cc29ca3ac37665b721b9afa4f5f4a04336a9c123d8ac1905"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/ENG/em1060_ENG_vo_idle03.wav",
+      "bytes": 205612,
+      "sha256": "b1074e82d5a08c485b12a10ea2969e06bc6251b25e5f7c69270aef3635572ee3"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/ENG/em1060_ENG_vo_idle04.wav",
+      "bytes": 163372,
+      "sha256": "6bf93fcb454655ea231c0edac48bd2e9b016c3f30963b2d722e8e5d862a5d067"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/ESP/em1060_ESP_vo_atk01.wav",
+      "bytes": 76844,
+      "sha256": "811d32449b9df1ad93186dcba4b36cbb4ba34824aa781cbcbce2b1cfcd2b8892"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/ESP/em1060_ESP_vo_dmg_L01.wav",
+      "bytes": 79916,
+      "sha256": "4e36f19376cddf0aa1501a329ec6ca006c7172cbfb887270991ce9e606255423"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/ESP/em1060_ESP_vo_dmg_L02.wav",
+      "bytes": 79148,
+      "sha256": "cdc92d78c4d2cfe0b6dec2ae9f8a989ed7391937778eec5e06aaa2ba8d1f1ffe"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/ESP/em1060_ESP_vo_dmg_S01.wav",
+      "bytes": 64044,
+      "sha256": "27a6f940ca918cdb8ad86f9ce6705bfbe84ebe6795584f9e6f7d2bc986ad011a"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/ESP/em1060_ESP_vo_dmg_S02.wav",
+      "bytes": 62764,
+      "sha256": "37fb61db1087c575d3c57183775b1c0fe834a451cca7d5f5a87564dd540dc558"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/ESP/em1060_ESP_vo_dmg_down01.wav",
+      "bytes": 195628,
+      "sha256": "f902cc5efe61d8fc4d1cf9410fbfdcbdb4e5cae5365259c4dcf4a0ff19955784"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/ESP/em1060_ESP_vo_dmg_down02.wav",
+      "bytes": 203308,
+      "sha256": "4be8ac31da8e0d26c8f4ee8cb4aed46da63891675ff7bc4158aaa186df22c631"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/ESP/em1060_ESP_vo_dmg_sit.wav",
+      "bytes": 154156,
+      "sha256": "518ac0d0db8287dc73bb7a1e57391e1816a26cdbbcad5f444a555e845900d0f6"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/ESP/em1060_ESP_vo_idle01.wav",
+      "bytes": 193580,
+      "sha256": "91079f49ce5e5506610c9d878671929223037685d0cfa45dc4bbb9486bcce8c3"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/ESP/em1060_ESP_vo_idle02.wav",
+      "bytes": 101164,
+      "sha256": "5dfa23303ecc7948ce964b6dcaf389ed206374eea919232b1564cb44a29231ff"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/ESP/em1060_ESP_vo_idle03.wav",
+      "bytes": 182828,
+      "sha256": "776320f9518b8465f2d6c08a50d36413c5d37dfa2ed6b725e4156b99b62c5c3b"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/FRA/em1060_FRA_vo_atk01.wav",
+      "bytes": 69164,
+      "sha256": "6e0e5cb8b0e11d032ff985c5622c2f19890fe0eb38b28202738fed5239be5f56"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/FRA/em1060_FRA_vo_atk03.wav",
+      "bytes": 78636,
+      "sha256": "1b50566dc4cfd8b2eed664707ed34d17ff8975058e586be229bc801c302fbf35"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/FRA/em1060_FRA_vo_dmg_L01.wav",
+      "bytes": 93740,
+      "sha256": "0c3e98194e16e620170ecc235f57eb70ef027ad6745abf62f90111fea1543679"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/FRA/em1060_FRA_vo_dmg_L02.wav",
+      "bytes": 78892,
+      "sha256": "bc0d838d3cd02004b7ef656a932fe16eeb608045e4cd9dad3457c07c0925dbb5"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/FRA/em1060_FRA_vo_dmg_S01.wav",
+      "bytes": 64300,
+      "sha256": "9b0b8c576b29b98dac0d9157f5d68d6808f9595024d302b475464c2d02f7f8d9"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/FRA/em1060_FRA_vo_dmg_S02.wav",
+      "bytes": 59948,
+      "sha256": "f62126426b61e750febba2842e3032d7a83f01041f5235f8fcbe27616f688ce4"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/FRA/em1060_FRA_vo_dmg_down01.wav",
+      "bytes": 189996,
+      "sha256": "efe07d3436bdc1df71c59ff83379d166bd34a1ee23fbf33de8b57e493e8dd1d7"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/FRA/em1060_FRA_vo_dmg_down02.wav",
+      "bytes": 193068,
+      "sha256": "f691e3f212486633b61019f7e3b7ff255d8b4b2720f5eda6169803c2d3adb509"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/FRA/em1060_FRA_vo_dmg_sit.wav",
+      "bytes": 163884,
+      "sha256": "9810ecef4a945badbb07820aae2ae440308df4c372f264fe7e0019956e713c7f"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/FRA/em1060_FRA_vo_idle01.wav",
+      "bytes": 184364,
+      "sha256": "6172a69dc8aa37f06feafda644bdf022b4c8fdda045c48d16ae5ca34c56771a9"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/FRA/em1060_FRA_vo_idle02.wav",
+      "bytes": 102700,
+      "sha256": "b8616f409281b6a14994f5c6b7182d24459c7c3afebd7f40dc5c4ddfd98c8bea"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/FRA/em1060_FRA_vo_idle03.wav",
+      "bytes": 166956,
+      "sha256": "f7d638d564771038a11a7d7b87a57c9b0c30e1222481c895224ef5bb8e6d7ec3"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/GER/em1060_GER_vo_atk01.wav",
+      "bytes": 70700,
+      "sha256": "00dba720252152c0f36645f3e8cf9441adbb6ba07f1263144d6a4c1540ae7e05"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/GER/em1060_GER_vo_atk03.wav",
+      "bytes": 111404,
+      "sha256": "62c68fac8dceebf1fa55e96f83517242bd0244aa6c08322a7c2b3761ea017068"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/GER/em1060_GER_vo_dmg_L01.wav",
+      "bytes": 109100,
+      "sha256": "7734b2bb748a2f93eaf0c05d6fcfbddf7b7df5f6f2e4695e20b80b17717a6910"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/GER/em1060_GER_vo_dmg_L02.wav",
+      "bytes": 116012,
+      "sha256": "d511e49acd59f8e01fe77738d051f6d52316e72bc8230ebeb44c5b6a573dfae9"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/GER/em1060_GER_vo_dmg_S01.wav",
+      "bytes": 68908,
+      "sha256": "78a3dc5d2a81e398b3f343b9c5d3b4e51d0d4dc6fa854b451a384531e417c17f"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/GER/em1060_GER_vo_dmg_S02.wav",
+      "bytes": 65580,
+      "sha256": "e1fdd1f9602bedbb7577bb345ac90e9a37a67c9f925c7c325c70290107051007"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/GER/em1060_GER_vo_dmg_down01.wav",
+      "bytes": 236076,
+      "sha256": "878706b630d5048e6f9a7d9b6fc33ee24b237dcfd5b516f2510470e3812f7a66"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/GER/em1060_GER_vo_dmg_down02.wav",
+      "bytes": 166956,
+      "sha256": "713d34ebe419ecb181efef5359f0f5924cf4e3c6c393401962137a69f83b1521"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/GER/em1060_GER_vo_dmg_sit.wav",
+      "bytes": 151596,
+      "sha256": "8a1781aef51c4e8868f792d98adf9cb5fe631d7dcfa487f99480d85cca76a895"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/GER/em1060_GER_vo_idle01.wav",
+      "bytes": 125484,
+      "sha256": "f46fbe37288b633d78279547a1c6bbcf5ed4783904de728770bbc2e8c6aa7f20"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/GER/em1060_GER_vo_idle02.wav",
+      "bytes": 162348,
+      "sha256": "af25bb27eb72b6d7e14b4427c962d4e6b3782ce7c58ee579eb66be03b1db3ca1"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/GER/em1060_GER_vo_idle03.wav",
+      "bytes": 179756,
+      "sha256": "ae712eba6de719999770729c2b048e828cbc84b16501fc54648c6fe1e07aa809"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/ITA/em1060_ITA_vo_atk01.wav",
+      "bytes": 91692,
+      "sha256": "3214b1163ade9a1d30b910fbec821ef72e852718f9858a222fd3f454fded3dee"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/ITA/em1060_ITA_vo_atk03.wav",
+      "bytes": 73516,
+      "sha256": "6a41f106a5dd3cdb62cd1a4546377d882783cfb6a4737884d9702e485f594e1d"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/ITA/em1060_ITA_vo_dmg_L01.wav",
+      "bytes": 101164,
+      "sha256": "1b56c59e8dadeb6b7c6351c9cef16291163b9cbcb66c5e3b4e1b940ce7767c74"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/ITA/em1060_ITA_vo_dmg_L02.wav",
+      "bytes": 119084,
+      "sha256": "422db2e15cd0454c96c8132e0362bb5288f868a5e875661929d290e97f60694d"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/ITA/em1060_ITA_vo_dmg_S01.wav",
+      "bytes": 68652,
+      "sha256": "465e269f0701c2324dc3dcd66baadd84b73fe0af75d235483adf8bf342ee8e58"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/ITA/em1060_ITA_vo_dmg_S02.wav",
+      "bytes": 59180,
+      "sha256": "3c2a06ba290b8308547d3df41e54fa86734fe05d44d3ccca01c242aac10a9968"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/ITA/em1060_ITA_vo_dmg_down01.wav",
+      "bytes": 234540,
+      "sha256": "eb3ba665cbf6bb7bf4526880e944ed5967e689a937e7d3428fe33d821e067565"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/ITA/em1060_ITA_vo_dmg_down02.wav",
+      "bytes": 133164,
+      "sha256": "51e75c9d5e0046cb881ca0808c8f9a52a5c944c67cf42506a56d5f6869e1fab3"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/ITA/em1060_ITA_vo_dmg_sit.wav",
+      "bytes": 132908,
+      "sha256": "1e8473349d3ce7360c5fee27b67db796816a2df7a73c82b2190ebc96efd7cc40"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/ITA/em1060_ITA_vo_idle01.wav",
+      "bytes": 217132,
+      "sha256": "feaa93b0dac9720c2333c1a2925b58d6643972c934a217ad3a225281de85bd7c"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/ITA/em1060_ITA_vo_idle02.wav",
+      "bytes": 206892,
+      "sha256": "66ada606509449ffee8ba0c452cf9647876c53a13d30e3d7741329154d80461f"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/ITA/em1060_ITA_vo_idle03.wav",
+      "bytes": 118828,
+      "sha256": "98782964490d98011c3d456afc59deb6d49aa75b4efb42656223696074329765"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/JPN/em1060_JPN_vo_atk01.wav",
+      "bytes": 107820,
+      "sha256": "53db3de7f571d2d63bd47832678ac91d481ee07d565dab5e128d90f7a76dd5cb"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/JPN/em1060_JPN_vo_atk02.wav",
+      "bytes": 104492,
+      "sha256": "a52bd2b468e8435d2834a953c4640b518c07fda830044791bbde668309ea59c0"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/JPN/em1060_JPN_vo_atk03.wav",
+      "bytes": 130860,
+      "sha256": "b3c84bfa28f1a8ae6f7438befa1f71fd505cce350987da62c1a66c0982a5b14b"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/JPN/em1060_JPN_vo_dmg_L01.wav",
+      "bytes": 124204,
+      "sha256": "40c7973e8385435c1a0ab0bfb59a4b7ebfd41c1e1ea887d92b92243fdd1029c8"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/JPN/em1060_JPN_vo_dmg_L02.wav",
+      "bytes": 136748,
+      "sha256": "6f42a4ea15cc863d42160a88f05c9891ec16da428c5fe744d174276ff9b1ae4c"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/JPN/em1060_JPN_vo_dmg_S01.wav",
+      "bytes": 78892,
+      "sha256": "a7ba2d40eb33fb466f7f90bcb76e929d74763581fab8a82fed49f876aa7d6d9b"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/JPN/em1060_JPN_vo_dmg_S02.wav",
+      "bytes": 95532,
+      "sha256": "08bfb9326bd2613ff41c2b59cba14ae2740e021ae794f5fd125c784153e168e2"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/JPN/em1060_JPN_vo_dmg_S03.wav",
+      "bytes": 68908,
+      "sha256": "669c843eefa2c6c9ccf8d511ce549bd372024ba354948e35484fe2e837a8e987"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/JPN/em1060_JPN_vo_dmg_down01.wav",
+      "bytes": 265516,
+      "sha256": "eb9b5820f57a732f28ae1b3083b71f2989d0e2adc6f1be160eb26a30903f945d"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/JPN/em1060_JPN_vo_dmg_down02.wav",
+      "bytes": 265260,
+      "sha256": "6fe1ffe2c52f5c73f4c19dae2b22d1a937dc208a15a7f73862822e69dbf962c2"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/JPN/em1060_JPN_vo_dmg_down03.wav",
+      "bytes": 266540,
+      "sha256": "82e3af41ea992901762e7beac40858022719335cb12f98b08535fa194e73950e"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/JPN/em1060_JPN_vo_dmg_sit.wav",
+      "bytes": 187948,
+      "sha256": "ea2738096a315741025c85f724b75812f638b146462387f3e2e307cd74d6b590"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/JPN/em1060_JPN_vo_idle01.wav",
+      "bytes": 143148,
+      "sha256": "b9c8e9f98154251b61a09988a15ad4d4dc23170ecc77f148074594f55e6136ca"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/JPN/em1060_JPN_vo_idle02.wav",
+      "bytes": 181804,
+      "sha256": "be8cfeb17687cc73707bbaf0281efe3730ae8e7090e5da493bd4f9c42bff4e51"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/JPN/em1060_JPN_vo_idle03.wav",
+      "bytes": 106284,
+      "sha256": "7b59afcdec1594f920a95b39837de5f23ab298f3b23ac793405c9cb5bc398239"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/JPN/em1060_JPN_vo_idle04.wav",
+      "bytes": 166700,
+      "sha256": "a6041f92c1e92becc60a84d310ed3e329dca7d09f74dd5bd6ae6bafca00a7e8c"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Rachael Foley (Ooze)/JPN/em1060_JPN_vo_idle05.wav",
+      "bytes": 234540,
+      "sha256": "4ac2ebdd22f3866289874e342a7411eadf09b618d53f2d487fd4cb8ee54c334f"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scagdead/em1400_atk_saw_def01.wav",
+      "bytes": 66604,
+      "sha256": "9062881bd13a993a4e5492e883d1df4d59b900eee5802c08583805e568a5705d"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scagdead/em1400_atk_saw_def02.wav",
+      "bytes": 67884,
+      "sha256": "79468209916b8d9d6d027786e23f2064d045e15e5ff65c59568d02d6abcb8709"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scagdead/em1400_atk_swing01.wav",
+      "bytes": 108332,
+      "sha256": "e8b0e9eb35541caf7f1189538562c07e2a2712bbd31d7e1200d818da02efcc37"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scagdead/em1400_atk_swing02.wav",
+      "bytes": 111660,
+      "sha256": "2ec91c16662fec4919f9f3deaa7af9f5034431a0ec3bde832e77fe9cda7050b6"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scagdead/em1400_ch05_ed01.wav",
+      "bytes": 99628,
+      "sha256": "a4b559b91ba20708161a8c9662fc514ea3123cd02d83c82d3d217b641bbe7f4b"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scagdead/em1400_ch05_ed02.wav",
+      "bytes": 95532,
+      "sha256": "4e2649415d8ac1da9bf6cc03a0195d840a0e2000d116d1887167a33db15a29ac"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scagdead/em1400_ch05_ed03.wav",
+      "bytes": 151340,
+      "sha256": "e2f6fcb1b2f60247f383f5bf8ef434d9dd90e8241d779750aa8213f2f551ca61"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scagdead/em1400_ch05lp01.wav",
+      "bytes": 76844,
+      "sha256": "bfa8a0fd67fb34c707d09f7026b791c2d2e49f244818f5e9182f91749f392cb2"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scagdead/em1400_ch05lp02.wav",
+      "bytes": 97324,
+      "sha256": "3892fdb0bb308ffbef9cfa2093b41831c993a02fb6499aee525e81acf48776d4"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scagdead/em1400_ch05lp03.wav",
+      "bytes": 65068,
+      "sha256": "0233ae5cfaa38bf0e9098d422fd1aa4ecb6249f92cfb6cba6842efe358f67a16"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scagdead/em1400_ch05lp04.wav",
+      "bytes": 193068,
+      "sha256": "78cb1bef47e747693fc787dc9805edc8e515de952cc7b5dddc39f76e7a37669b"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scagdead/em1400_chain03_st01.wav",
+      "bytes": 26668,
+      "sha256": "43547f218dba887d75622158126fbfb9d5489ae2f3b49c5f40becc2527cd8f56"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scagdead/em1400_chain03_st02.wav",
+      "bytes": 30764,
+      "sha256": "49e0a822c7442a455ccdd8c100cf38bdddba90f4138eb37cf23729511a93ffa5"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scagdead/em1400_chain03_st03.wav",
+      "bytes": 25388,
+      "sha256": "367714e4d6115bd6a7e8d9164a1e989c8ca2fe72a8509dad995e4d9335be1b8c"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scagdead/em1400_chain03_st04.wav",
+      "bytes": 29996,
+      "sha256": "b413bdec4b7e9266ecc256fcb1457e7635787d48e2ed404685524dd4dde8919d"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scagdead/em1400_dmg_dead.wav",
+      "bytes": 137516,
+      "sha256": "7d620614a81450a87fa515a8c0b2cd2f99629754061eeec44b7bf1abc7448e6e"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scagdead/em1400_dmg_dead_amb_lr_.wav",
+      "bytes": 335044,
+      "sha256": "9825b68d5e98c6aeba06b5133b61a1c622cae9abccecf0ca0f5eb41f861aae56"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scagdead/em1400_dmg_dead_lfe_.wav",
+      "bytes": 66604,
+      "sha256": "7d3ef8e216d8213921adde61e72ead90afb99c9c0954ff1469f196c5617fc778"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scagdead/em1400_dmg_down01.wav",
+      "bytes": 73516,
+      "sha256": "80c9adfbbb08b8f18f2a1a33e3c9285ec6302ea0888a5be0848264e72f9ca585"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scagdead/em1400_dmg_down02.wav",
+      "bytes": 116268,
+      "sha256": "e7422e46c0373ad3cf4baa00bdfad91f49dd2c073c62bbc935586a85e5cc0684"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scagdead/em1400_dmg_down02_lfe_.wav",
+      "bytes": 59948,
+      "sha256": "f888c3eee5b60a6af1f2bfa3fb341e8d8e1a6a638886e0f7326b9ceb00ba2547"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scagdead/em1400_ft_walk01.wav",
+      "bytes": 87084,
+      "sha256": "35a648d49f4671cd6f0ac474c38ffee9196e951f6229b5acdf605077c9cde3eb"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scagdead/em1400_ft_walk02.wav",
+      "bytes": 87084,
+      "sha256": "dc5457167afc5a234b85ac61584ba03546ea2cf2aa971c8dd6ba95aadcf6be39"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scagdead/em1400_mvt_saw05_01.wav",
+      "bytes": 106028,
+      "sha256": "0a9be420e7bde6eee622ff38833966c7a182c0974c76c55dfbb76f8dce6cca54"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scagdead/em1400_mvt_saw05_02.wav",
+      "bytes": 99372,
+      "sha256": "57d76962158537d4f801fdc22f346379707d54c634c763e54ffc04e9c12ce3e1"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scagdead/em1400_vo_atk01.wav",
+      "bytes": 109612,
+      "sha256": "2f6883dc2bdfb58568360230e03a62ee0e63735b76ac188c69f9434592ab9a94"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scagdead/em1400_vo_atk02.wav",
+      "bytes": 130604,
+      "sha256": "d3261a38997bbd37d3cda0fa0530860706ca73eeb5cb67d742c1752184442925"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scagdead/em1400_vo_atk03.wav",
+      "bytes": 110892,
+      "sha256": "435f9a11fc370e5f5e941185d4d941742dd1f526eefea34f57a504b846aa4dec"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scagdead/em1400_vo_dmg_L01.wav",
+      "bytes": 122924,
+      "sha256": "7041a21247e7488ea499e83ec79568266e1f783a89e77238b5873ee0ef8a2666"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scagdead/em1400_vo_dmg_L02.wav",
+      "bytes": 125740,
+      "sha256": "8e7e1370fdef5d0f012caea19eaf96fad021f016ffbbac9977e8bcf6e1c3d6cd"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scagdead/em1400_vo_dmg_L03.wav",
+      "bytes": 131372,
+      "sha256": "5a0b4078f3b11d647b151d2dc8f8c4f14e96217731b8bf914b622b7c71522d41"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scagdead/em1400_vo_dmg_S01.wav",
+      "bytes": 104748,
+      "sha256": "ba5d289f208b0fcfef4d2dc289d712a7b99004cae64b6257e7b6e76b895cc7eb"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scagdead/em1400_vo_dmg_S02.wav",
+      "bytes": 121388,
+      "sha256": "c23076fa41d3032464eb9e2bf46a6d5347b6b15b032b01a5d51693e3483c587d"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scagdead/em1400_vo_dmg_S03.wav",
+      "bytes": 89900,
+      "sha256": "005d6764cd8c748672644349e51ae6df0b9220412490746d7f591f5c376b5726"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scagdead/em1400_vo_dmg_down.wav",
+      "bytes": 267564,
+      "sha256": "27d05bab8a3418c6f50c55c6e138a8d4f6f64875d74db27b229c8e6266ebdb20"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scagdead/em1400_vo_dmg_sit.wav",
+      "bytes": 247084,
+      "sha256": "5aabec1884d7f6ea1f27c93fe5f740f91fef89648d5c57dd198dc16e9262a3e6"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scagdead/em1400_vo_idle01.wav",
+      "bytes": 142636,
+      "sha256": "f40288b78988e05e31c610d2bda4d32f20f81a740bad4f9861abf9583b50cd31"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scagdead/em1400_vo_idle02.wav",
+      "bytes": 169516,
+      "sha256": "7825f0b7bc28304ba880cc416138da3b02b49482360b62a21b62e95c6b6c77b6"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scagdead/em1400_vo_idle03.wav",
+      "bytes": 163116,
+      "sha256": "e9da6b222f39abfc6ef5a96475bdeeeb51a78f679610bb043d63b78ab84adcc2"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scagdead/om1706_fx_trap_break.wav",
+      "bytes": 78636,
+      "sha256": "a9f657b540ced2cc42a11d78f034e0c4d3d59fdfd596446936c6b1c91c710b2a"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scagdead/om1706_fx_trap_cought.wav",
+      "bytes": 192044,
+      "sha256": "d160284e4f8e570a8e0443c0c2b37d8406d4b8245dbba8bf47d9157edd8980b9"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scagdead/om1706_fx_trap_set.wav",
+      "bytes": 92204,
+      "sha256": "d06a83f76442020f18b97ee3e09ccfe4ec06e9255088d24f2ee53b2c2218bb48"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/Tentacle/em1301_atk_arm01.wav",
+      "bytes": 144940,
+      "sha256": "226ec822308de495705a19b86da2ec354550446054110e50edb79233be3ad1e8"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/Tentacle/em1301_atk_elec.wav",
+      "bytes": 108588,
+      "sha256": "b80c1fd1d0d3d46ca43ba32e9485686e1d2a862f490290578e03fa62c98ea015"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/Tentacle/em1301_dmg_gunhit01.wav",
+      "bytes": 45612,
+      "sha256": "b95eafd92bdb72a45efb0a07cb7ebc841d1eef40e3420e9fe2a02e7b154636da"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/Tentacle/em1301_dmg_gunhit02.wav",
+      "bytes": 52524,
+      "sha256": "3266c81bca276558cf43fe9df87e6ef5f082a563d3ca2134762263f7337a9402"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/Tentacle/em1301_dmg_knifehit.wav",
+      "bytes": 49452,
+      "sha256": "12d400d924cb4c7370ccb1edc584659f44eec9c9b03fc148479bcbaa483bb911"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/Tentacle/em1301_ft_walk01.wav",
+      "bytes": 50476,
+      "sha256": "a6569fb354065aac9e4d52735cb15bc023ae8fc3837aac6a4b5c5d8f88bd2fd3"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/Tentacle/em1301_ft_walk02.wav",
+      "bytes": 48940,
+      "sha256": "97a0472a8a9ed639cb45ab035ca9ee003cd4b0b3ddee5f73f00f4148aaaae916"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/Tentacle/em1301_mvt01_01.wav",
+      "bytes": 86572,
+      "sha256": "e142f3da0a03cb07196bebffd11f6005b69aa3cc1c7ca55238139ecdf5bec4ac"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/Tentacle/em1301_mvt01_02.wav",
+      "bytes": 92460,
+      "sha256": "c190a8449cfebca09fa43d0fe9865f6456c721b6a678fa59434bfc09ce0ea174"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/Tentacle/em1301_mvt01_03.wav",
+      "bytes": 74284,
+      "sha256": "5f3b619266db0b6994999260ed5942e4bb1bd19fc468b1e1b33bb17b950e34fd"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/Tentacle/em1301_mvt02_01.wav",
+      "bytes": 34348,
+      "sha256": "fee514f0a80004d0c4b423e29f7dcaa639a89d74c3c76ade89b8d1baac4d39f0"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/Tentacle/em1301_mvt02_02.wav",
+      "bytes": 53292,
+      "sha256": "beddd4a9dfbbb795452ac3c2a270cac4079181f15798971fee2e7835d1cd0801"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/Tentacle/em1301_mvt02_03.wav",
+      "bytes": 50476,
+      "sha256": "865789acab68bd947b6a4dba9e6dfd0cb5bcbb7926cda84f4fdf6a802390e280"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/Tentacle/em1301_mvt03_01.wav",
+      "bytes": 61996,
+      "sha256": "5bf9a5b923e633e14a3fb592c69b42b3e89c3b2d53e0ddfa61fca1cfb7fde5bc"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/Tentacle/em1301_mvt03_02.wav",
+      "bytes": 56364,
+      "sha256": "cb3f69857c1c6c7e1ffd843195eee5a82f27c30999f3260169bbc17860c0705b"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/Tentacle/em1301_swing01.wav",
+      "bytes": 54828,
+      "sha256": "cc35d9bce8bf4a1ac93c5b47bca563a22c24ff0db0c0b20294789963435cf506"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/Tentacle/em1301_swing02.wav",
+      "bytes": 57388,
+      "sha256": "762b0a0e340fc637660947981eb27848837049cbcc4cab3e28dabe0a035ac8fb"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/Tentacle/em1301_vo_atk01.wav",
+      "bytes": 49452,
+      "sha256": "b0729729488790159ea2700d6de5e19164e2e6eb767eb2ca1be232249b009505"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/Tentacle/em1301_vo_atk02.wav",
+      "bytes": 41772,
+      "sha256": "f33adf2cafa91183960a167cf33d7fc27b236bb891c981a94df272ae7e53aa52"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/Tentacle/em1301_vo_idle01_01.wav",
+      "bytes": 115500,
+      "sha256": "64aed2f65dca15b62eac32fc1f96c342e94d19dc5f4d9291938700ffc540940a"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/Tentacle/em1301_vo_idle01_02.wav",
+      "bytes": 162604,
+      "sha256": "d9dce555abfa9a59c524bdcdda09060c2c7b93b94cedf09291a85d534e8c77be"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/Tentacle/em1301_vo_idle02_01.wav",
+      "bytes": 140332,
+      "sha256": "ccd34ccf25d9dc99eeb26fa553276dd01c3a80a2f667af52e0184fc37d4c16a8"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/Tentacle/em1301_vo_idle02_02.wav",
+      "bytes": 74284,
+      "sha256": "2302cc2f2c134400e181bbfc7942c672805c654a3ecf362d2e2f18665c0e65dd"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_atk_arm01.wav",
+      "bytes": 88620,
+      "sha256": "63f35e55320a95f940fdf37302c09500c671e4508f3dfaac1564ce23fa2229f4"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_atk_arm02.wav",
+      "bytes": 128556,
+      "sha256": "f86ca1279b01eb98544e4bddae2f91082e006f7b290aaa6cad570008f0e6ad38"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_atk_arm03.wav",
+      "bytes": 38188,
+      "sha256": "32a03738091e56dfb5e4179cd1b8c07ddf7fe6ea0781e332da19ca3ddd4a3fa2"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_atk_sp01.wav",
+      "bytes": 97068,
+      "sha256": "e83a72f2c31a69565967d028a4aa339a3bb38c7fb7ac153e42123a95c3374ae9"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_atk_sp02.wav",
+      "bytes": 92716,
+      "sha256": "e0334e5b3a965791e95bec7bd6631c6e9db08e8405976ca99ef2c10b7f103162"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_atk_sp03.wav",
+      "bytes": 81196,
+      "sha256": "079d4f3ca64a1b94c39ee354b0b7f2c4b75332b474c86a2e452eb5ae6b29ce82"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_atk_sp_blow.wav",
+      "bytes": 116012,
+      "sha256": "8830836c61d3c830cefef9f78fb3fa0a53dbcd05bc0cab3f3ea8533d24225f2f"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_atk_sp_blow_amb_lr_.wav",
+      "bytes": 280372,
+      "sha256": "5f2e02d67bbd1aff0e6431b5da11ad9a649866ae1d9f09a3b43b8eb74e16c55c"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_dmg_alldead.wav",
+      "bytes": 236332,
+      "sha256": "3ef577c254eb20098ede9bf0d44c93df49c6c5960634dad52b2792b5592b9421"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_dmg_expl.wav",
+      "bytes": 110124,
+      "sha256": "9520193f73ad2025593ba0b178f06a1cbadf2009c2d4b8429245c17475bbeaec"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_dmg_gunhit01.wav",
+      "bytes": 48428,
+      "sha256": "10ba2ca75afe3a8b3f56c9a5cf5023912a30d93da946263d2429264b31022b19"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_dmg_gunhit02.wav",
+      "bytes": 52268,
+      "sha256": "fdbcf304f2a3a4c697a30c60a2bfd36b5d9e67e58c929f55630fff730aa81822"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_dmg_knifehit01.wav",
+      "bytes": 49964,
+      "sha256": "d780da55ffea1ff0ac442899ab542b4bc1b97e2e705ced15c928b2cb036ba44c"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_dmg_knifehit02.wav",
+      "bytes": 32812,
+      "sha256": "e49ab6ef070b8e3020ee37304d693ddc22c2f3df274557bb16eb6f05a3ad3172"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_dmg_shhit01.wav",
+      "bytes": 50732,
+      "sha256": "daf9fac71ec6ebbfdb1ef84b2b52dcca43162449447964a17c8fbbcbd0a7e1fe"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_dmg_shhit02.wav",
+      "bytes": 49452,
+      "sha256": "9dffe7b3803a76f519f593c8eb3dba3297b29a0b46886ec7beeb3cdfcf508f51"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_dmg_shhit03.wav",
+      "bytes": 54572,
+      "sha256": "dcc8f082eba952b29f00ac8b88ff76ca7cc52e7dd5ef0578e12a3b613d8e96be"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_ft_knee.wav",
+      "bytes": 106028,
+      "sha256": "f146d14bced46a9bfdf5deb44751413ae0d5d27615d44903645fa5ef4a43e606"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_ft_l_walk01.wav",
+      "bytes": 49964,
+      "sha256": "16a118d3a22aba052ef1f60012f5d678eff8d5d3766ba1927ce724d941c17987"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_ft_l_walk02.wav",
+      "bytes": 49196,
+      "sha256": "273f815439997c34ebdc8b3ba1b5dc2537f5347125e1a979bdf146d93c74ad7c"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_ft_rem01.wav",
+      "bytes": 35884,
+      "sha256": "1393ee1744eaddf5f453b73acd6706143f87a4971439d94c2e4c8f505d33ad66"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_ft_rem02.wav",
+      "bytes": 36140,
+      "sha256": "a9771415e85b25fd6dd6d44cd6b1bacec1a5a53d33fd16eb25dc546f30b53995"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_ft_run01.wav",
+      "bytes": 90412,
+      "sha256": "c9b170ffd74464a4e08b421ad553cccc50631b61773159770ce494a68e23727c"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_ft_run02.wav",
+      "bytes": 73260,
+      "sha256": "715de01badb8f14b47ca592805e0c28d629a26bc00de30f11191af90562c2973"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_ft_walk01.wav",
+      "bytes": 67116,
+      "sha256": "d75a92a38bfee341d0b791de9675d1f30eb299d71adca9211d377c59131ced79"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_ft_walk02.wav",
+      "bytes": 70444,
+      "sha256": "22ded2220219f83c5317c4b017d06b67d8fef4831074f12b552910884e458653"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_mvt_run01.wav",
+      "bytes": 72748,
+      "sha256": "e03e218a9c847bf401b430da222a8b7ccef47d1ef7399fde10d5039113287566"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_mvt_run02.wav",
+      "bytes": 68908,
+      "sha256": "dfb5682ad3717b933f3ecf208019e212fdb5c35889001bf35f654d2ae5bbef84"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_mvt_run03.wav",
+      "bytes": 71468,
+      "sha256": "10e5617ee3ef3c9961907293fa9fca291c8b92a32170e13230c9f90d0f975017"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_mvt_swing01.wav",
+      "bytes": 118828,
+      "sha256": "7577443358451d119e006b9e00fd3380cf46c4a5c201671f0948d40d02d195c2"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_mvt_swing02.wav",
+      "bytes": 79660,
+      "sha256": "be425b560dcacb0b8d6ef1ad40938179c9d93204d33a57895e81772b460381eb"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_mvt_swing_amb_lr_.wav",
+      "bytes": 398292,
+      "sha256": "194684ec4d0f5cce9e60962e2a5268ff7ede5c997f9fb14fc502b45d7fcfb0ec"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_mvt_swing_ls_.wav",
+      "bytes": 190764,
+      "sha256": "1f1d24f7546e34ac777ce3756a27610f896fd894027ae9f4c9e9b833961fa5f3"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_mvt_swing_rs_.wav",
+      "bytes": 190764,
+      "sha256": "4bd8f61c0bd4ffe9e35024183eef8742b49f7392efc0cfadf9f2f514c3fab8b5"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_mvt_walk01.wav",
+      "bytes": 163884,
+      "sha256": "8f8b176c1c20ac2e385954a627700f7f8e40320810008aeb8771b9693c4af052"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_mvt_walk02.wav",
+      "bytes": 145452,
+      "sha256": "25a683d5f54fcec389687f35c4d51f0ba68ad1f906c88b2fc89b194053114411"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_mvt_walk03.wav",
+      "bytes": 135212,
+      "sha256": "c888486aa59fafc807977a1d2a57bad371f9947370929702c7b0d1b7b7e96b98"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_vo_atk_l01.wav",
+      "bytes": 135212,
+      "sha256": "ed91666f921dd0fdfc8b25a62aaa3da9067c6ab797ac2fcdaa29f51dcac73b84"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_vo_atk_l02.wav",
+      "bytes": 146476,
+      "sha256": "7bef718a1e3ccfa704a11ebfc39cdccea75612c1d47cead2e64ee5748782ebbd"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_vo_atk_l_sp.wav",
+      "bytes": 155436,
+      "sha256": "4984b99b425fd4f5b5b76b8c05353904bd341f7f72805f6f83e52192718b19ab"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_vo_atk_s01.wav",
+      "bytes": 125740,
+      "sha256": "5d8e840399b443e3c9b03e6c09171e9196d048197327f0098e37368f9dd9f039"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_vo_atk_s02.wav",
+      "bytes": 75052,
+      "sha256": "688f6188dc0664064a03075b795d5f09bb3cf5f921953779830a3ac7cf5fefdd"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_vo_charge.wav",
+      "bytes": 53804,
+      "sha256": "3263a978e45e77ad98907fe084e17d88115775ae8e8d21056eed591afe9a70e2"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_vo_dmg_02_01.wav",
+      "bytes": 95020,
+      "sha256": "88a48d4caa7fabcc98b943a654363218a17ffc6a09816c9e51ceb9e1381a8fa9"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_vo_dmg_02_02.wav",
+      "bytes": 98092,
+      "sha256": "8a65c10627a933d47cf6773e4ad2a9d0213b8f475f909e2b4088f2a8ac7498fa"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_vo_dmg_03_02.wav",
+      "bytes": 82732,
+      "sha256": "38e02e7313898bd8589b9e98e1071d8b6934daf0f1f26ff10e623d4c705c8851"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_vo_dmg_down.wav",
+      "bytes": 323116,
+      "sha256": "a70313d7d9a70040b399a805bf08f89c389385cc84fdeac9c3cbadd0dc6ba9d9"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_vo_dmg_l01_01.wav",
+      "bytes": 146476,
+      "sha256": "e05595b1e2d36341a25eaf2f4b04d14e1af198486b9ca74cb21b738893a93a28"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_vo_dmg_l01_02.wav",
+      "bytes": 145964,
+      "sha256": "178a02dff8df73edb341a6d1db312153abaf3d1c66a20a5a340d1ee0f7eee4a8"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_vo_dmg_s01_01.wav",
+      "bytes": 110124,
+      "sha256": "892c28ef897546507c5a1024d16b5a47afc3b7fd9c7bfaea59f43950dc50166d"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_vo_dmg_s01_02.wav",
+      "bytes": 115500,
+      "sha256": "18efd054aa5baacbd944798b27b5e8dbee97595a12922f308ef45353d19607ae"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_vo_idle01_01.wav",
+      "bytes": 71468,
+      "sha256": "b85ee5d37294dfd4a83d933f0f8de3a9b80a06c383152d4443b387fc30d0089d"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_vo_idle01_02.wav",
+      "bytes": 98604,
+      "sha256": "ab16dea1b7d25aa8ea0562d5773dec0724f8f39226d2c38dfbf667c14d0d9c47"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_vo_idle01_03.wav",
+      "bytes": 66604,
+      "sha256": "4fd6b4cef0fdd908ca1b5acd97513aedb884b89b0b3b8521f58643c09657d829"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_vo_idle02_01.wav",
+      "bytes": 91436,
+      "sha256": "d20cbdeba266f270d0941ae18757b46df78b24cb102cfe18cd25c97677b16e45"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_vo_idle02_02.wav",
+      "bytes": 104492,
+      "sha256": "e243f16d3310e198ad35e98d28354fae770b43774cdf76c9009f01802acf7e06"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_vo_idle02_03.wav",
+      "bytes": 89900,
+      "sha256": "091500b40d44af0f28b9ac03db1aca9808e7ec885f006a771298494f2711db56"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_vo_idle03.wav",
+      "bytes": 163372,
+      "sha256": "94b90043f1ef2af4debe658b64210c0b9724be7eec4fdf67c72f1887b35d5eb8"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_vo_idle04.wav",
+      "bytes": 209708,
+      "sha256": "bf817868e6949e5e2c1c009f496f6095446669f1fd38736232ecdf079da74daf"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_vo_idlesub01.wav",
+      "bytes": 51756,
+      "sha256": "27ff33a9d6b188c65415cb98c45141b11bd20a29c4eac73f103ad7555c24b9f8"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1300_vo_idlesub02.wav",
+      "bytes": 51244,
+      "sha256": "f68567c12e4d086ca4d537470fa07acf5d1db87fada8eda9ca7ee02f37e1ed1e"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1301_dmg_down.wav",
+      "bytes": 109356,
+      "sha256": "451b389d79c86d3d0f66e79636b00c81534d0f67142c9042b0a77bf5f9bb4339"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Scarmiglione/em1301_dmg_down_lfe_.wav",
+      "bytes": 64300,
+      "sha256": "493dba1dd1df8cdc3256c036f392c4cb8125add9d7bbd5be75b2c666768aec48"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Sea Creeper/em1200_Mvmt_Standard_a.wav",
+      "bytes": 106028,
+      "sha256": "a6ac129c8b02f8c473d628651b9ce4385568341c5f25750b15c5acc1ddf13795"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Sea Creeper/em1200_Mvmt_walk2.wav",
+      "bytes": 117804,
+      "sha256": "aa2d39f9769951905761eca39338b6feac557ffb23ad5ea1d677e905a2712fcd"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Sea Creeper/em1200_Spray.wav",
+      "bytes": 66348,
+      "sha256": "2290cba5aef2c85b276d281559399b3d94d3c3e3c0ed54257b15a61a79544d2e"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Sea Creeper/em1200_Spray2.wav",
+      "bytes": 73516,
+      "sha256": "6efd173de2b3e8feb5d559e66616e9e7036a27d4b8d24a66949c1cb396732677"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Sea Creeper/em1200_Spray3.wav",
+      "bytes": 57644,
+      "sha256": "8d5fb452b7971ddee42c7a5efd7a2a74b00312d0ee93e1b40dd8756722267857"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Sea Creeper/em1200_Spray4.wav",
+      "bytes": 266028,
+      "sha256": "1a5355fcc384eddfc934d8f93821f56de50219e26c39ad17735bbc09d0c16164"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Sea Creeper/em1200_appear_03.wav",
+      "bytes": 108332,
+      "sha256": "aef757b7162cc139fbbc6bee98b7f9ad0585baade207830dbf792de54f6f2684"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Sea Creeper/em1200_dead_water.wav",
+      "bytes": 196908,
+      "sha256": "a720546684ce6f60dc0e2623357f02539a29af435a23cb511a3d479028cdb551"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Sea Creeper/em1200_death_Vo.wav",
+      "bytes": 179756,
+      "sha256": "2267aa80d091747c6d37e9a342a9202776027d1333b062e050c25b9185292347"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Sea Creeper/em1200_hit_gun1.wav",
+      "bytes": 42796,
+      "sha256": "9da81588762652aeedad24bf04219f427542be2f066b56167e88d322c0d5dc64"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Sea Creeper/em1200_hit_knife1.wav",
+      "bytes": 67116,
+      "sha256": "1e80682c9dce4a23d13694b276777b00574b66bab1f2175f3a8e55e3452cdb23"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Sea Creeper/em1200_pl_hit2.wav",
+      "bytes": 51244,
+      "sha256": "c51f3e23c5df19c2a64ff315274e4dafac761b6594e06216c50c1d338ed2e45e"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Sea Creeper/em1200_swim.wav",
+      "bytes": 181548,
+      "sha256": "46882fa10cf8675fa52a08ab5673df5ee1504593c73559501e886b0ba62404b5"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Sea Creeper/em1200_swim3.wav",
+      "bytes": 176428,
+      "sha256": "2701d38711c9d3ebeab8e9e788f51fee0f8d872a75f1696de8d66856d9d6c5e4"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Sea Creeper/em1200_vo_Threat_1.wav",
+      "bytes": 133164,
+      "sha256": "ee7bc40035103cf2db0d60d900ba8f25ce064510243784c75a4434be2f372e66"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Sea Creeper/em1200_vo_at.wav",
+      "bytes": 97068,
+      "sha256": "fa9e5080e86672abfd30ba6e1e05ecdb35d01ed9ac4ef1b955cebd9ae24999e5"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Sea Creeper/em1200_vo_at_c_.wav",
+      "bytes": 98604,
+      "sha256": "973bf509fa59d48f855f1c36a418c36f85cdc1e56bf533c20a1890729b7eeccb"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Sea Creeper/em1200_vo_death.wav",
+      "bytes": 290092,
+      "sha256": "eaf41a858d6437e8de788d81dceca02ab6e16e507249e5440880605c7994630f"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Sea Creeper/em1200_vo_end1.wav",
+      "bytes": 43308,
+      "sha256": "033006ed6cd99a76be8fb7d58da3904b7c0e178ebf1c9dd1afa20a138a1ce4cd"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Sea Creeper/em1200_vo_standby_2.wav",
+      "bytes": 120364,
+      "sha256": "4cfa2ba8b87931b7f07529cd9fc226839e87ce51d888b0b89eea4d32c767ff1d"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Sea Creeper/em1200_vo_threat_a.wav",
+      "bytes": 87852,
+      "sha256": "7c64a17ffd3a39443d874f6c7d98b609d915295145c02ad156d54c1ce013820e"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Sea Creeper/em1200_vo_walk_1.wav",
+      "bytes": 148524,
+      "sha256": "f02778dc320a233e94c3790658a73b0e82f299279901c936eb95680625999376"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Sea Creeper/em1200_vo_walk_2.wav",
+      "bytes": 103980,
+      "sha256": "d03ac1670b2662e57dfda52e2a13a4c1dbe5638b883ab8253ca0975cb649f0b5"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Sea Creeper/em1200_vo_walk_a.wav",
+      "bytes": 218156,
+      "sha256": "ed748a23038f5d1c19072e720985b6ea4b8449674b502f3b1f60575a377c0745"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_atk_hit01.wav",
+      "bytes": 82988,
+      "sha256": "8711be503658406f2b0dada79c2224a83c182a7e692754bd4cb890f465bb4c8c"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_dmg_death01.wav",
+      "bytes": 244524,
+      "sha256": "ab91d5d70df35f4d33452038336cbe49dc8f4719948b33a152b272845887bf77"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_dmg_death02_amb_.wav",
+      "bytes": 387572,
+      "sha256": "5ba6a3b01e8edafff429cb7ae5a6d9c376d4e629b4f96ec9ef84c31ac668a3e1"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_dmg_death02_c_.wav",
+      "bytes": 137260,
+      "sha256": "16deec2b76b4f45673ea5e9857ebdf8ee2a800b6fcdec3e17f4f639a38bd1752"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_dmg_death02_lfe_.wav",
+      "bytes": 56108,
+      "sha256": "8e70be944cfbc3954bbb499eb54f163f1ff95c49d9b2ee165c00355f2d928be7"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_dmg_gunhit01.wav",
+      "bytes": 48428,
+      "sha256": "10ba2ca75afe3a8b3f56c9a5cf5023912a30d93da946263d2429264b31022b19"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_dmg_gunhit02.wav",
+      "bytes": 52268,
+      "sha256": "fdbcf304f2a3a4c697a30c60a2bfd36b5d9e67e58c929f55630fff730aa81822"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_dmg_knifehit01.wav",
+      "bytes": 49964,
+      "sha256": "d780da55ffea1ff0ac442899ab542b4bc1b97e2e705ced15c928b2cb036ba44c"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_dmg_knifehit02.wav",
+      "bytes": 32812,
+      "sha256": "e49ab6ef070b8e3020ee37304d693ddc22c2f3df274557bb16eb6f05a3ad3172"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_dmg_shhit01.wav",
+      "bytes": 50732,
+      "sha256": "daf9fac71ec6ebbfdb1ef84b2b52dcca43162449447964a17c8fbbcbd0a7e1fe"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_dmg_shhit02.wav",
+      "bytes": 49452,
+      "sha256": "9dffe7b3803a76f519f593c8eb3dba3297b29a0b46886ec7beeb3cdfcf508f51"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_dmg_shhit03.wav",
+      "bytes": 54572,
+      "sha256": "dcc8f082eba952b29f00ac8b88ff76ca7cc52e7dd5ef0578e12a3b613d8e96be"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_fs_run01.wav",
+      "bytes": 40748,
+      "sha256": "69b9ba24de97915c7b5b0e8eab04161f8a61daab6eca4a69cce2298bf693096e"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_fs_run02.wav",
+      "bytes": 42284,
+      "sha256": "2b42c56d54238144b172dbc52af8846293881a044416a586615cc8f99ce7dde2"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_fs_sub01.wav",
+      "bytes": 43564,
+      "sha256": "b8e0d1b7eeb7707e62a7d4e3eff3108b14511cf2f9cff76b99e256ff3398c471"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_fs_sub02.wav",
+      "bytes": 44844,
+      "sha256": "80febb2cd9ecd6d3af8f16d0887e13781c18bcb06df20126c7a5f06b0e6599f0"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_fs_walk01.wav",
+      "bytes": 41516,
+      "sha256": "969afc4941fb6188ed48c030bb50700417b656c96d0b555ead30f337e5187137"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_fs_walk03.wav",
+      "bytes": 47660,
+      "sha256": "aa2576c5cd229f3281bc68e6195adab905d160794025c439974d965c423e0d82"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_fs_walk04.wav",
+      "bytes": 47148,
+      "sha256": "ca8313964bb522c93b26b115f6c04913fd9946ad5ea0b236edda261c7d55886c"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_mvt_al_grab01.wav",
+      "bytes": 249900,
+      "sha256": "0e508431dee47e3770914364d747aee800603e448a446c07c95905f85deb0587"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_mvt_al_grab02.wav",
+      "bytes": 249132,
+      "sha256": "12a56d242fc2601b934836746082d86dfe096c9937c651a1134e50fe7816b8ef"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_mvt_al_grab03.wav",
+      "bytes": 177196,
+      "sha256": "8f9737d0a99517d7752e897a76b09a344dfd84413f82a085a5cd15e3890b9c92"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_mvt_al_grab04.wav",
+      "bytes": 169516,
+      "sha256": "5b7e0d88225a4e2ebffea7ae79201f6a8dd0a83c56b6861d8008bf8313481416"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_mvt_arm01_01.wav",
+      "bytes": 52524,
+      "sha256": "329530db172d9f94b2b855018eaf7822d0b62df852790a2936c2c30d5a211e47"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_mvt_arm02_02.wav",
+      "bytes": 65324,
+      "sha256": "50bf7cd4103b73467f84ae4dd2181b7b57460c9498bb0a1327e148f09f657161"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_mvt_armblow01.wav",
+      "bytes": 107564,
+      "sha256": "2f1f4e98a1b332712dfa9fd363888a94e813ebc3d4db7f20a046924b0a8ad9fc"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_mvt_armblow02.wav",
+      "bytes": 104236,
+      "sha256": "90cf99144ed2d658fc8593794811e4d4bb91f8b3e636349c8a80c27bd2a8975a"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_mvt_armblow02_03.wav",
+      "bytes": 114476,
+      "sha256": "c20891b6c97a8997b4e8e50c6c29ecdd1db2ccceb9cef1cc5d8f1edee22c9e7b"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_mvt_armblow02_04.wav",
+      "bytes": 90668,
+      "sha256": "760b0090cb99ec46729c3efc0ec72cd4f229e7485f5d6c057585b13359af733e"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_mvt_armblow03.wav",
+      "bytes": 117548,
+      "sha256": "12ef45d6e6095886b0afea4d2dac13d993c37cf036c620aa2bf10c01f716cecd"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_mvt_armblow04.wav",
+      "bytes": 104492,
+      "sha256": "c89a0cf0122478d4699cce823c657f03e512b5ff9910ba0b3f6a7055e12faf43"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_mvt_body01_01.wav",
+      "bytes": 63788,
+      "sha256": "a61aaa3bc9def4f5de71cfead92768a1955e62848d4103b4296b9056e2b13efd"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_mvt_body01_02.wav",
+      "bytes": 73004,
+      "sha256": "da98522e3491db9e6f29ca3417308d9c2d90cdc0ff03aec425e2bab0e8f7adbe"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_mvt_body02_01.wav",
+      "bytes": 72236,
+      "sha256": "4a1bfad4e55ddad099f120878694850c7005c3b0877311b3d7547e16b344e3a4"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_mvt_body02_03.wav",
+      "bytes": 73772,
+      "sha256": "b91d2e6a16910f17e59f31c8492caf4acee47d5def0ccc6116bd3147a6fabcfc"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_mvt_down.wav",
+      "bytes": 164396,
+      "sha256": "f1633fc436fca7a7f6c1e2d982056efa1bafb7241d882f18397615f60f35f573"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_mvt_jump.wav",
+      "bytes": 80172,
+      "sha256": "36afc9778c331780486009f56e6c607f2fe720ef954cc8b971326874fb69e958"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_mvt_stand.wav",
+      "bytes": 70188,
+      "sha256": "57a4445a745d3701252158e9026685862f9225be76eb298d4f62847f49f8e398"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_mvt_swing.wav",
+      "bytes": 55340,
+      "sha256": "f33dc664400dc6c2914bfdddbd53ecc6b0df2268fb1ab49585d7928e1e7baf5a"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_mvt_w_arm.wav",
+      "bytes": 83500,
+      "sha256": "566f971a3df080ddee5af886ea152dc947656a1df0c48e0ee92796dd2d9227b1"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_vo_atk01.wav",
+      "bytes": 135212,
+      "sha256": "5a63bc7516da4676a33b67f66980239e28258f95b351699414f5aabe8ec562d5"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_vo_atk02_01.wav",
+      "bytes": 132652,
+      "sha256": "fea0a8ee344f4afc81d070f000b1892526963df1ff4bfc088fbf50dae0db81ff"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_vo_atk02_02.wav",
+      "bytes": 131628,
+      "sha256": "cc783adc48b7b6464c5e389126921ab0ab05d17a0bced2a11c3bfb1e3d533102"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_vo_atk03.wav",
+      "bytes": 167212,
+      "sha256": "1a36fd250592cbb5217c914a0594424ce7c3919d1ab2d0bb1563bede316480eb"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_vo_atk04.wav",
+      "bytes": 189996,
+      "sha256": "2da05e488ccf63b23f29953dc037482070257df585f89b94e96fad603c64f6a7"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_vo_dash_atk01.wav",
+      "bytes": 162092,
+      "sha256": "9402b0b5d0cae7542626894b4466b1c8333876d8b9680ec9c3499884a174d31a"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_vo_dash_atk02.wav",
+      "bytes": 204332,
+      "sha256": "492c96011c7993c2beab0b628fb2ba93b4552555cb267d38c061789eb5d74298"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_vo_dash_breath01.wav",
+      "bytes": 84524,
+      "sha256": "557dda28687c4142aa2bd33220fda022148113780f952177d959db974089df81"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_vo_dash_breath02.wav",
+      "bytes": 79404,
+      "sha256": "88320364a8beee4987baf06776b166ac2f10073a42599bac86e9df29e43deccd"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_vo_dash_breath03.wav",
+      "bytes": 79148,
+      "sha256": "b04d6e4279bbd27fea29330ca3583bced0e64347aea2d78047c4e7a65e601e4b"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_vo_dash_end.wav",
+      "bytes": 168748,
+      "sha256": "ebb569e3f7ac6130a1d17724deaf1f395934e4ed4ca193849a0650df641e456e"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_vo_dash_roar.wav",
+      "bytes": 274988,
+      "sha256": "d1ce87ab680b718dfd6e8ee43bf3017112c296069458b2999c265240801ed7f6"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_vo_dash_roar_amb_lr_.wav",
+      "bytes": 936436,
+      "sha256": "195c7ee597910892eda12324426c8d631ec6479f40f518d0d0027eb6cb2dd34c"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_vo_dash_roar_ls_.wav",
+      "bytes": 446508,
+      "sha256": "07cffed940f4ec85478eba93672d208e9510e60b3befe99676de65b9f2d5bbb4"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_vo_dash_roar_rs_.wav",
+      "bytes": 446508,
+      "sha256": "b9b70d2f061ab5524e73f1e8967e97b2508fccfdc35612ba697b2543e28bf94b"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_vo_dash_start.wav",
+      "bytes": 207404,
+      "sha256": "16cf68781a8a63fdcc269793099027811fa3808dd5e055cb7b0fc7a947688de9"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_vo_death.wav",
+      "bytes": 247596,
+      "sha256": "1e5cc032ffc5515b5097839fa9b87f365e8cfc0b42787a5e76252322d22d474a"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_vo_death_sub.wav",
+      "bytes": 126764,
+      "sha256": "f78386efcfd7b51a3b56189ecfb4523e2c8ac5758014f37445bd91fb000115b9"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_vo_dmg_01_01.wav",
+      "bytes": 131116,
+      "sha256": "e7a3cb79472dca1af347bfaf901beed70a8fbc960ae75c5d29e550fe21eafa40"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_vo_dmg_01_03.wav",
+      "bytes": 132396,
+      "sha256": "50631494c8ab91030aacb864061d735c45cd84de67ff5473f9766b90ce81d8b5"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_vo_dmg_02_01.wav",
+      "bytes": 137004,
+      "sha256": "680ba77b4771e9c8a50ee29ea27c947332286594cd8e860da7288e4c11ce0842"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_vo_dmg_02_03.wav",
+      "bytes": 128044,
+      "sha256": "5c9696db289c146cfe3c5eacc36e16bcb76aa2ecf222fd9f045d85766c1be41d"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_vo_down01.wav",
+      "bytes": 184620,
+      "sha256": "95a1cf96c69578294811d5b378c4010cd593c84afafe5d6ff690b0f5acf026f4"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_vo_down02.wav",
+      "bytes": 182828,
+      "sha256": "cdd35bf8343862984524350d5217cf983f3bbfaa59b9b6e4fbe6dd1af6a6bf65"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_vo_idle01.wav",
+      "bytes": 137772,
+      "sha256": "836851d99d4346568f0e21874229918e8c8f0e4ee35b7f9013c1331271af7bd3"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_vo_idle03.wav",
+      "bytes": 160812,
+      "sha256": "516d28b5ebbffbf55147d9eb30497c018d999e1c5540ea0b1dc69aead117f7c2"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_vo_idle_m01.wav",
+      "bytes": 82988,
+      "sha256": "e3d754807f87c381d143356415cd8b9113fdeb84abb3c9bb2b7daf6ef29ad846"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_vo_idle_m03.wav",
+      "bytes": 86060,
+      "sha256": "97aff06c8213fce6faebd13c13f0a33d9918c2655ca16b057bf284ad98cf8879"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_vo_idle_s01.wav",
+      "bytes": 123692,
+      "sha256": "5d5a5ccb91cef11220f084707dd13726915a066fc4b53e65cccb477b174a824d"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_vo_idle_s02.wav",
+      "bytes": 118316,
+      "sha256": "92ebcfd920d2c8af68da7d0d36acd28562205c683fb6755454445ed760aa6920"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/clips/Wall Blister/em1410_vo_idle_ss03.wav",
+      "bytes": 126252,
+      "sha256": "61f95b1bc69996594179a04445ff64850461d147efd7feca7ddb9b1ccc73d66f"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/evidence/source-page.html.txt",
+      "bytes": 80201,
+      "sha256": "2878ed4c2f8c0f82ce57b89937af85883e0ecdb89a5bb1447aca6397edc7d452"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/import-request.json",
+      "bytes": 17244,
+      "sha256": "b476b0f5a581fb830eed2ad36687b3b2b9f4f3b494fe3580c7574499c42773e3"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/index.html",
+      "bytes": 2688,
+      "sha256": "f427454eba1ff58d8fe85bf8c018b4843a564b70b89a7e5b019d8d0eda90a2d7"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/manifest.json",
+      "bytes": 1513462,
+      "sha256": "8f257c9684e3149030b66677eb882e3d576f80ef4f1fa2b2c8d71b1e44f38c8e"
+    },
+    {
+      "path": "modules/fidelity-r25/audio/player.js",
+      "bytes": 9340,
+      "sha256": "af0bf35d63e47933910ac33209ce06a32312fbf4677521303fa4796347ad115c"
+    },
+    {
+      "path": "modules/fidelity-r25/canonical/curation.json",
+      "bytes": 45634,
+      "sha256": "95d8c0813f39df176762792d0486225b9be5412dbed15ff7efe463de5298c7f7"
+    },
+    {
+      "path": "modules/fidelity-r25/canonical/index.html",
+      "bytes": 2681,
+      "sha256": "4e7d393ee8736c8773cb685d0068b02a34c20132107f857792310e65077c9827"
+    },
+    {
+      "path": "modules/fidelity-r25/canonical/manifest.json",
+      "bytes": 365160,
+      "sha256": "554ee1c955f81cd4b47a78a10d55dc34f02c469659805dcf798a5950c96f41fd"
+    },
+    {
+      "path": "modules/fidelity-r25/canonical/page.js",
+      "bytes": 9987,
+      "sha256": "998858e2c1a5b15f5f5861288f705560cd837533ec4d7831037e9c13c81dcc89"
+    },
+    {
+      "path": "modules/fidelity-r25/dossier-index.json",
+      "bytes": 70492,
+      "sha256": "df8ec791498216f39bf81f88ae2bdaa255e7f895ca85ab076e1106b6d1c74a45"
+    },
+    {
+      "path": "modules/fidelity-r25/dossier-link.js",
+      "bytes": 7858,
+      "sha256": "059644dbf0927762351836838c55457af218c38be40ebc6f8b09cc5aa0337a5c"
+    },
+    {
+      "path": "modules/fidelity-r25/index.html",
+      "bytes": 2817,
+      "sha256": "3319906662f8139e90893ab2ddc4e6d91ce06afb8a4ecd24d76afc5fef7642b8"
+    },
+    {
+      "path": "modules/fidelity-r25/models/bounded-archive.js",
+      "bytes": 1771,
+      "sha256": "d5d9ef93ec8973025aa941eca2665b583c153af1208077e49edf4906bf9b95b1"
+    },
+    {
+      "path": "modules/fidelity-r25/models/catalog.json",
+      "bytes": 1298098,
+      "sha256": "c99a08eacc5e6861c83b84bcae04b0e4a290763f4dd5dd1f72c891af8550ef58"
+    },
+    {
+      "path": "modules/fidelity-r25/models/index.html",
+      "bytes": 4888,
+      "sha256": "99e5541059e34f281b1613a5fa3fdedf8e4594c405810e8d3fb20d07aa1dfe76"
+    },
+    {
+      "path": "modules/fidelity-r25/models/style.css",
+      "bytes": 2850,
+      "sha256": "74865bbc39b2c9341a4303c2e863dcf6cc71faf72f1bfa468e9a6ad2f509e3a2"
+    },
+    {
+      "path": "modules/fidelity-r25/models/viewer.js",
+      "bytes": 34323,
+      "sha256": "254d8b1a3b8e2f585e0131468c370868ab1dc35cce0f3a85f9cababd16cdf04d"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/farfarello/model.fbx",
+      "bytes": 507868,
+      "sha256": "390fc6019019ca41ae3c9b5ed57800caff0f73515f518a2a16219af375e24a34"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/farfarello/source/evil-resource-page.html.gz",
+      "bytes": 6816,
+      "sha256": "fb083c68e25681ab8604a51ef107f3a9eba31b495609bcf70e272b8f3db52784"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/farfarello/source/material-bindings.json",
+      "bytes": 467813,
+      "sha256": "187cd8c54d9321dcac59542c73a73a926288ec881bbe22a1fff076d3a39d07c7"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/farfarello/source/model-page.html.gz",
+      "bytes": 10687,
+      "sha256": "04cebb9482db80f757b2b4e2d9443de6ded581631c130a9c862f3459dd6aecd9"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/farfarello/source/original.zip",
+      "bytes": 51272971,
+      "sha256": "2e2b508a9dd5ce779f3eff4c2a924954b49214705d5eac4226b454ae0f986da2"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/farfarello/textures/em1240_00_BM.png",
+      "bytes": 1754114,
+      "sha256": "45c8830354bae3f21088a4e287cedbceb3116cbdf408ad9fc33ce06e076967f9"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/farfarello/textures/em1240_00_MM.png",
+      "bytes": 1471612,
+      "sha256": "14183b09ddd5724186ca62e5719c8eb906d39b399feb139471f2e580fc65dc9c"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/farfarello/textures/em1240_00_NM.png",
+      "bytes": 2187163,
+      "sha256": "3fa4f7913b5b6bcc0b137934d7dccf4392b505cff3f4e91743f2c0a6eadc20d0"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/index.html",
+      "bytes": 5771,
+      "sha256": "f40941f0a7695d1cdaf6032a3e17b60a5a40fbb2dcec7de5b8f4a37ba73e242a"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/manifest.json",
+      "bytes": 923756,
+      "sha256": "ab520fadd59ff6116b9d67a79ce554c230065fac01d6af9ee67413464235215f"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/scagdead/em1401/model.fbx",
+      "bytes": 815516,
+      "sha256": "ca9755edf466c1ad11a87a68fa8c98c4406303d5b495767886a05f69400cff5a"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/scagdead/em1401/source/material-bindings.json",
+      "bytes": 16520,
+      "sha256": "72a6e81b903c453eaec322035d16ff1f1887b4abd7cbddb9220b3232f1d804ee"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/scagdead/em1401/textures/Chara002_DM_HQ.png",
+      "bytes": 5634,
+      "sha256": "587e42e8020d50853748eb66da0ee501d0e57887ea28221217ebaeffa546ce40"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/scagdead/em1401/textures/em1401_BM.png",
+      "bytes": 2129500,
+      "sha256": "f2b9d65812a4075aed641d150771478a30ec7b12fd81a10d4f9da65a59f62027"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/scagdead/em1401/textures/em1401_MM.png",
+      "bytes": 1628903,
+      "sha256": "0a4d2955716646321402b0be6dcaa7e1b3c721461be73215a1a3eccb42e4e03f"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/scagdead/em1401/textures/em1401_NM.png",
+      "bytes": 2236307,
+      "sha256": "e3d2000cae0a36e8fad306f8a9d3cdcfb04abbb458f842836b4ec68a56ef4d4b"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/scagdead/model.fbx",
+      "bytes": 892716,
+      "sha256": "fee462e7404091aadcd375cc8b2760c3735fd695f58782b5aed799e30a88a740"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/scagdead/om1706/model.fbx",
+      "bytes": 83692,
+      "sha256": "9347b306ebe0ef1e9e07dade33c69093c5a80abf385a958801d7caefddee1266"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/scagdead/om1706/source/material-bindings.json",
+      "bytes": 26077,
+      "sha256": "de08cfe300aa58f6b3edb255a2b8362b0f47e86ef6c9bfcd28abcf48f106d747"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/scagdead/om1706/textures/om1706_skin_BM.png",
+      "bytes": 35027,
+      "sha256": "90065a1ca019ea05aea18f98a80ac58b9d89b1098f4ee37b39948d4c4e93938f"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/scagdead/om1706/textures/om1706_skin_MM.png",
+      "bytes": 30376,
+      "sha256": "c83fd4c4208413755f224bcbaedbcfb83485cf4fc1a9576bdf9b8123bc813611"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/scagdead/om1706/textures/om1706_skin_NM.png",
+      "bytes": 30700,
+      "sha256": "fb51ca0d2fe4dfbb5a1b3671a6241fcd9b5de85372ea5b66c0edc9846a4090e5"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/scagdead/source/evil-resource-page.html.gz",
+      "bytes": 7069,
+      "sha256": "7b2534f8959163e0f1445e68c6157a962b56e4ac363a5ae3748a7cfde82d84b3"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/scagdead/source/material-bindings.json",
+      "bytes": 571019,
+      "sha256": "b92a71ce40a3cb0dab53a318fe6940a7623edf866bea771969bc86ffd730027e"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/scagdead/source/model-page.html.gz",
+      "bytes": 10681,
+      "sha256": "ae790a27ca72fa8c117437bbab17195fcef9112f46a1f1e18e4f346daadfa4d4"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/scagdead/source/original.zip",
+      "bytes": 70540768,
+      "sha256": "e94cc9e21d3aac264d7541b74c5ddb4193879678c4f0c9c52918bdcd2d4ed769"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/scagdead/textures/Chara002_DM_HQ.png",
+      "bytes": 5634,
+      "sha256": "587e42e8020d50853748eb66da0ee501d0e57887ea28221217ebaeffa546ce40"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/scagdead/textures/em1400_BM.png",
+      "bytes": 2098614,
+      "sha256": "ac0187e0126c170e046635135d3fb2ac79c252cd344bac939b81c6a3f2becd45"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/scagdead/textures/em1400_MM.png",
+      "bytes": 1583881,
+      "sha256": "2c62a61cfc4501895ae318c90f54a680b550ef8494dd03261c3c61a3ffe7b548"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/scagdead/textures/em1400_NM.png",
+      "bytes": 2234705,
+      "sha256": "304d6b6f0e0d82adc66c23eabb5d2461e87f21054f6efea4587cc742c71fc367"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/wall-blister/model.fbx",
+      "bytes": 1059580,
+      "sha256": "1387a67193a008002f18b0d13abb77c9184bd86ab5ac75163928e9ef2037c435"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/wall-blister/source/edition-scope-r23.html.gz",
+      "bytes": 27918,
+      "sha256": "d14171bd0d62aeeed9526fd9302b4b8a6d886ee8d8df6653ad6b9c53481bb142"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/wall-blister/source/evil-resource-page.html.gz",
+      "bytes": 8690,
+      "sha256": "30ed2000dc73f6142e6bec373dee8d654c2bac3ddeee6e0b1c9861eb9e6d9eee"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/wall-blister/source/material-bindings.json",
+      "bytes": 389637,
+      "sha256": "bd39922a08bcba4ffeecf723232095470b204c7f2bbae0f490272d1edc40e4f1"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/wall-blister/source/model-page.html.gz",
+      "bytes": 10575,
+      "sha256": "1b79d012e2393face409f7af66e689471000c4d17b93258ad35d69b3898518bc"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/wall-blister/source/original.zip",
+      "bytes": 54239972,
+      "sha256": "9f14ce930fa505e78873980df596b5e95d74ce7021d0a0b77daa1a3cf7c10184"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/wall-blister/textures/Chara002_DM_HQ.png",
+      "bytes": 5634,
+      "sha256": "587e42e8020d50853748eb66da0ee501d0e57887ea28221217ebaeffa546ce40"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/wall-blister/textures/em1410_BM.png",
+      "bytes": 1688775,
+      "sha256": "d312bf4a6f315eb1155e1ea7b8131d316f606735c41f76e79cd2a34d99243a42"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/wall-blister/textures/em1410_BM_alpha channel.png",
+      "bytes": 12894,
+      "sha256": "7486bd9abecd86336b440f245dc2f6e342df754a4742c7c37f2f2f8e91db6592"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/wall-blister/textures/em1410_BM_rgb.png",
+      "bytes": 1275059,
+      "sha256": "0de00c3e330591a76f51b22c43adcaedccd11b51fe30854ab5a0d5c21e849231"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/wall-blister/textures/em1410_MM.png",
+      "bytes": 29247,
+      "sha256": "6aaa7c5f495b2d6581bb3c99fb9d8c196a244afa40ac7256832c0aa1b3acd5e9"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/wall-blister/textures/em1410_NM.png",
+      "bytes": 2004795,
+      "sha256": "6184b724e6fd659defb5be4ca55e39e561dd72a0f8fe15f4b8ddc8ce617a5d04"
+    },
+    {
+      "path": "modules/fidelity-r25/persistence/bundle.js",
+      "bytes": 9755,
+      "sha256": "37c150971d66e40a73e6eeb1d9509deb9204f8bf2a999a2e7cf8b5027a368c51"
+    },
+    {
+      "path": "modules/fidelity-r25/persistence/index.html",
+      "bytes": 3798,
+      "sha256": "c9d6fad5ed86cbc2acc309648e06e879c83f02462ceaf65799ef44bc2a62f090"
+    },
+    {
+      "path": "modules/fidelity-r25/persistence/manifest.json",
+      "bytes": 4586,
+      "sha256": "ecdeb766b44daf45c73bc682290abd03713b910650850bf995b2c942bc701d3c"
+    },
+    {
+      "path": "modules/fidelity-r25/persistence/page.js",
+      "bytes": 9276,
+      "sha256": "022497dac5da3a58da1b2c634e43a385579968d33b7dac16ab38dcaa435963a8"
+    },
+    {
+      "path": "modules/fidelity-r25/persistence/style.css",
+      "bytes": 1094,
+      "sha256": "7bf4488e3c8f02de728712d82461538e0f1eac5a0679737f1a9a8aceba83ab50"
+    },
+    {
+      "path": "modules/fidelity-r25/progress.json",
+      "bytes": 19408,
+      "sha256": "8c12e34f30ccf1789c8a6654395efbcfe547c62d5f2e1d477566c32d9d15e29e"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/archives/asset-284057.zip",
+      "bytes": 467614,
+      "sha256": "5a9e3c983dc20e0eeb00a2995ce37b50f525052431f0494737ab1bccf5d0e81c"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/archives/asset-284058.zip",
+      "bytes": 463993,
+      "sha256": "05b18d44d7faa4bc49deaf658e00dcdbc3a6956fb599646a2e3c68dc20329e4c"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/archives/asset-284059.zip",
+      "bytes": 1338017,
+      "sha256": "9672304ebe3ce5dbc79d0e2f01de1268fcb88da15b4001aadcf40af8ef6538f5"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/archives/asset-304724.zip",
+      "bytes": 5893681,
+      "sha256": "76ded78caaeb305b97655d0f6139a9ebe6ce24a146f83c5aae05946dde4535f4"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/archives/asset-310867.zip",
+      "bytes": 9750889,
+      "sha256": "3e0e3206529b8cef0deaac519c0093327ece593face5223f208d2585197675e5"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/archives/asset-316460.zip",
+      "bytes": 6133364,
+      "sha256": "af503379aa8dddc2837a732f2a85af6cce290c313d05a450968689d8449b41c3"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/archives/asset-318469.zip",
+      "bytes": 14697165,
+      "sha256": "a8b0a86eacb5c423d53008ca9578674b764767617570f3a28803d2ba5a9b9584"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/evidence/asset-304724-6a2208c263-materials.json",
+      "bytes": 2868,
+      "sha256": "3418c56404de025cf497637f63cee268d6c088f03f432f173e3a6524ed999f2c"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/evidence/asset-310867-2fd12fc88d-materials.json",
+      "bytes": 9449,
+      "sha256": "78fea736ceba3420a83dd9d23f4744a4556b3aeb89e79263cd130d07b5dd5182"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/evidence/asset-316460-37d996241c-materials.json",
+      "bytes": 7093,
+      "sha256": "ce6b4f897c12edf2db481d0113c768ac94bbf71a30ed2f4caca5dba303da1736"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/evidence/asset-318469-073d23e49a-materials.json",
+      "bytes": 9886,
+      "sha256": "401dc7835080105b40e573ccf3ba403a5ad30b70ca313ef643c9db45e6d31d3b"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/evidence/asset-318469-abac9eeb49-materials.json",
+      "bytes": 900,
+      "sha256": "b6f8611644c8d2b13e38b02e878bae75ac18b321ec963e8d7735d08f9abe6023"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/manifest.json",
+      "bytes": 95255,
+      "sha256": "2e3c2f2c6a8cf48135d942b92c425e26fe6b102d73eb12331f7c6ecb64f21a0c"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-284057/Scene.mtl",
+      "bytes": 243,
+      "sha256": "037b2e2c0b93a549596d8866ba0b38d7ce737c41ef3a6dba091b9e9e7eb9d29b"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-284057/Scene.obj",
+      "bytes": 884747,
+      "sha256": "f2e28260c41c55d04ba245ee8ff02ce9e1fcbfa391fec3a89d726fe4b925524c"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-284057/salasala.png",
+      "bytes": 296386,
+      "sha256": "fb8b919229acf81571f996376f220ae7b7fc627fcab020934a6f89c029c1de67"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-284058/Scene.mtl",
+      "bytes": 607,
+      "sha256": "b9332275544d18290d8c08123252ba2fb75ec99252f1d4cf0323e08bac6f9950"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-284058/Scene.obj",
+      "bytes": 457145,
+      "sha256": "1b9e644f377f83be36eceeca25665eb50c83ab3d2bdf07bdc2c4d04507ea1847"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-284058/em1f00.png",
+      "bytes": 145705,
+      "sha256": "aaf32f0bd52b13d272c3c15b25dd89bd13be4dd40c62d5b166a5e510f11383ee"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-284058/em1f01.png",
+      "bytes": 126461,
+      "sha256": "7388200d5b4e667da2b9a758c32ee91776d356c9bfcb7ab289733e50cd112704"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-284058/em1f02.png",
+      "bytes": 126945,
+      "sha256": "496253dfee3924c9f4b5272537ad85183809c25dc783f815f2f73e71a2c1a9dc"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-284059/2b00.png",
+      "bytes": 134300,
+      "sha256": "e9eae924f9f2c5afae1661acc756dfd8be474e4a41b0a452821ea5aa650f7630"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-284059/2b01.png",
+      "bytes": 542186,
+      "sha256": "65a52b5ef14eede4bf8cb4777f077ad10cb04f401faf2e722714c2d95b7169cd"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-284059/2b02.png",
+      "bytes": 133192,
+      "sha256": "593e63c02c56f7347062357679debe5a07c279d7eaac372229008b9566138cc2"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-284059/2b03.png",
+      "bytes": 125653,
+      "sha256": "7dbfd33433204e9b74dc613297ecee815745cc3ccb6da82f4bddf0b6e23eb37b"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-284059/Scene.mtl",
+      "bytes": 782,
+      "sha256": "524b12255caebd9a4df89f72b9b1e9b4e9c23d5ee36dc7ee4f121dba08a16c05"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-284059/Scene.obj",
+      "bytes": 2295166,
+      "sha256": "4be663cc4e5ff4b28b89bc01cd765925886d54c95ed0d1f68999e00d4b5a617a"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-304724/Plaga C/Plaga C.FBX",
+      "bytes": 598960,
+      "sha256": "c53b66b90806448c4c4443c1c8368231122db1fef79c91199dada74baa426014"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-304724/Plaga C/em0b00_bm.png",
+      "bytes": 872870,
+      "sha256": "06f82d4f5978e2acadb195c6dd6810fa67b2f470eced9ead41aca4c60ddb1d22"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-304724/Plaga C/em0b00_mm.png",
+      "bytes": 142769,
+      "sha256": "4ec8237450478943242b8bb3d857d0e7e1cec52e0e70cb944fcf63a64056dea2"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-310867/Axe Executioner/Axe_Executioner.fbx",
+      "bytes": 939360,
+      "sha256": "f9efab4fc45f214637002b422aa080bbe49064ad0cee6e1f04a2109fb0826337"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-310867/Axe Executioner/em2000_00head_alpha.png",
+      "bytes": 42701,
+      "sha256": "310716685e1695f81a7515b078b38b4c6c40eb98330d8edc66485823db60aa8a"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-310867/Axe Executioner/em2000_00head_bm.png",
+      "bytes": 916955,
+      "sha256": "47f6748f424550c60597d3252e2dae8bbfd9162ca4bb9b03213d297197484133"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-310867/Axe Executioner/em2000_00head_mm.png",
+      "bytes": 136668,
+      "sha256": "7cdb72f8e7a17e64e551adc4100c981581fe503b6dc0f4628c5c470c6361a33b"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-310867/Axe Executioner/em2000_00head_nm.png",
+      "bytes": 762304,
+      "sha256": "0ade4639f71a00acbebc8cc021b92e75eadf476cfd261c4cb5d58897d0deb5c9"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-310867/Axe Executioner/em2000_01body_bm.png",
+      "bytes": 922570,
+      "sha256": "cd5ae1bf3c0f313195da534b834d23a3b77682223717bde56373dc706e4e3c4f"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-310867/Axe Executioner/em2000_01body_mm.png",
+      "bytes": 119718,
+      "sha256": "f1bf0a4974793c66fe51ccae2d156b81cc604c65d62cdd2b6018521e76c02fca"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-310867/Axe Executioner/em2000_01body_nm.png",
+      "bytes": 865059,
+      "sha256": "cfa519d18aebaded5fa453d20e706025a0e3ab476ebbb108552da35a01a508ed"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-310867/Axe Executioner/em2000_02epu_alpha.png",
+      "bytes": 12391,
+      "sha256": "723a1d7dd258c5496922134c14de2270a8368de7cbe460dbf6a8455355cefab0"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-310867/Axe Executioner/em2000_02epu_bm.png",
+      "bytes": 1762407,
+      "sha256": "0e93c7141cdbe921c9eed0be0e8b019df760bedd2406038d68aef177e2cc9be9"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-310867/Axe Executioner/em2000_02epu_mm.png",
+      "bytes": 227584,
+      "sha256": "c89ae761ffa7550f8db72b4a1f7c9d85d09627374b23a5a2300bbb587e1bcb03"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-310867/Axe Executioner/em2000_02epu_nm.png",
+      "bytes": 1299622,
+      "sha256": "30f7c368a06fd7fb7b060493d93e6e0893390392c5a3cd5c20e5d7772f727693"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-310867/Axe Executioner/em2000_03zubon_bm.png",
+      "bytes": 1017243,
+      "sha256": "e1bb315a9a945b26e38c7eb3c5ea8fcc99a4a559c7d84dab9d76c3cabc057397"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-310867/Axe Executioner/em2000_03zubon_mm.png",
+      "bytes": 57654,
+      "sha256": "50925291d80601f1303376ffd82b0daeb217165318dee81fe8db1f4d963d989e"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-310867/Axe Executioner/em2000_03zubon_nm.png",
+      "bytes": 956328,
+      "sha256": "ea2d549a1b4053a078ae5342c361247e69e9fbf1ad875f9ebbf3465ad746c3fe"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-316460/Chainsaw Majini/ChainsawMajini.fbx",
+      "bytes": 802128,
+      "sha256": "f0574219ff5e1f03e590c86cb471aa096a6f097d9ff1a23834faf5afce5def7e"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-316460/Chainsaw Majini/em20_002_bm.png",
+      "bytes": 764860,
+      "sha256": "6551f4fd7779f50e39bb429a31e93b2aff913bdf553681fe583c7d2d6305b1ef"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-316460/Chainsaw Majini/em20_002_mm.png",
+      "bytes": 107559,
+      "sha256": "fc9d70bbf61ba57624e2cda2a59caa0e554c7baf297e4660a0b7b7e088651b37"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-316460/Chainsaw Majini/em20_002_nm.png",
+      "bytes": 1011851,
+      "sha256": "e1dae2d190b481b619ca1e3cc3d969c789ece001b78c6b2fe5951aa2741216a4"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-316460/Chainsaw Majini/em20_005_bm.png",
+      "bytes": 509888,
+      "sha256": "6f78835d87c851e7584d7110a424dc4fd3018b17bcdec4a23d9042c104b7f9fd"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-316460/Chainsaw Majini/em20_005_mm.png",
+      "bytes": 65404,
+      "sha256": "50e48bde1192eba021ea9f7fbd8612fb8242a1ce3c629c5e8e08f5f4cb8c8925"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-316460/Chainsaw Majini/em20_005_nm.png",
+      "bytes": 480287,
+      "sha256": "d61d85675d2f30cb32dd5c97af5e781c2eb2cfddd87a3ae00ffafbb9694834fb"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-316460/Chainsaw Majini/em20_006_bm.png",
+      "bytes": 1159662,
+      "sha256": "62d6183f624456e700b953cdc1c61fce39cd712099e026264a986f6611aadcd2"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-316460/Chainsaw Majini/em20_006_mm.png",
+      "bytes": 32654,
+      "sha256": "88dd07999d29f52ab38f0a92772ecb2abf55beb17e8e1875164f9ac6b733edd7"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-316460/Chainsaw Majini/em20_006_nm.png",
+      "bytes": 1156621,
+      "sha256": "dc076a4a05555a36409eafe21b4d2183df4573740b76b0b23b1e6983af7d2973"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-316460/Chainsaw Majini/it0509_360_bm.png",
+      "bytes": 95347,
+      "sha256": "1e11ad374dcad206a4de2ec4a2799b997100487dfda7c5ff524bb8fc9da301de"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-316460/Chainsaw Majini/it0509_360_mm.png",
+      "bytes": 13791,
+      "sha256": "cf830f05e9218de5d2a78306f211fd96bcb32027b49b47b38a0d4c67803c4709"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-318469/Urboros Test Subject/Uroboros Test Subject.fbx",
+      "bytes": 2404512,
+      "sha256": "981d7ce357c678a8b2e8861b0f4c362f339da8e5786b0595c57e9e955117c847"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-318469/Urboros Test Subject/UroborosTestSubjectTale.fbx",
+      "bytes": 91584,
+      "sha256": "99b72a3b44eaa8d5fe362f6bbbd3d98513d438c21a9a2eb5d729c09f9d0dbe89"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-318469/Urboros Test Subject/em4000_0_bm.png",
+      "bytes": 1874229,
+      "sha256": "e9a75dc7213ff54b3feecd882f2fe1063944b5907fc3935a700930a01296a713"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-318469/Urboros Test Subject/em4000_0_mm.png",
+      "bytes": 75535,
+      "sha256": "d7389c141fcb3c662b071b28a26301119908909fb579d594cb64136a25d0e49b"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-318469/Urboros Test Subject/em4000_0_nm_hq.png",
+      "bytes": 2221247,
+      "sha256": "0795f5fe8a6f4f3e4251225ab48aea03377b758108858dc70e8dc5bfddeb9cf3"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-318469/Urboros Test Subject/em4000_1_bm.png",
+      "bytes": 1813812,
+      "sha256": "1b5966cf92d1bc8c85c117dee76bb477223899d0da1017e49803c18cf7036b4d"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-318469/Urboros Test Subject/em4000_1_mm.png",
+      "bytes": 56070,
+      "sha256": "0a09848dacb142bb3c9eed30ca5bf24edb9149984810caf511fbbc88f1ea8c56"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-318469/Urboros Test Subject/em4000_1_nm_hq.png",
+      "bytes": 2270772,
+      "sha256": "45146e680689298bdfb3fda3b5af7202aeff33a4cc0c51348660b0b99570e107"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-318469/Urboros Test Subject/em4000_2_bm.png",
+      "bytes": 493906,
+      "sha256": "4da3678750e47be6e627a0cfc95e4c11305ec56c8f0f87af3be30354002def13"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-318469/Urboros Test Subject/em4000_2_mm.png",
+      "bytes": 73206,
+      "sha256": "b303d235f86add562629e189e0696dfaf73f857610b7f3e6a215d251013344bd"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-318469/Urboros Test Subject/em4000_2_nm_hq.png",
+      "bytes": 597225,
+      "sha256": "a323f4c7ef492af641444f6a1cc6878f8660f21af1992536bcc591a542da1c4c"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-318469/Urboros Test Subject/em4000_3_bm.png",
+      "bytes": 90118,
+      "sha256": "647df8e334307725e74e24408aeb29f37b35da649d2cfe3a579ba41ccd4b7295"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-318469/Urboros Test Subject/em4000_3_mm.png",
+      "bytes": 7380,
+      "sha256": "52fe8377be3c9c41d8b67c56b328fc37ddb29fdc45e7ff9aa251827c0c0e3907"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-318469/Urboros Test Subject/em4000_3_nm_hq.png",
+      "bytes": 480069,
+      "sha256": "dc142b24a247f356f47f19cf655421d552f6641137c6b5f9f83bab849d7833b3"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-318469/Urboros Test Subject/em4000_4_bm.png",
+      "bytes": 144481,
+      "sha256": "b5e02c39344f1e103cb3d92e94ec1ec0261b8dee9dd62708168c4800154820a1"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-318469/Urboros Test Subject/em4000_4_mm.png",
+      "bytes": 7407,
+      "sha256": "83b8d2192389a99855b66358b175520a0eb0e0295d72f012331e002c3ed76193"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-318469/Urboros Test Subject/em4000_4_nm.png",
+      "bytes": 268283,
+      "sha256": "161e4f68c2fb6c057d75af94f515509e491a63072bd26a01a1f548b1bfb70517"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-318469/Urboros Test Subject/em4000_5_bm.png",
+      "bytes": 399489,
+      "sha256": "a32812b7e17e0596390bdb30b4cf67eaf945d8697c72abb5d53a9d2d18f54b7b"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-318469/Urboros Test Subject/em4000_5_mm.png",
+      "bytes": 20157,
+      "sha256": "eb6d83e37510d73cccc8b5679544fba8a9f53b043fe398c148643458d0a3a76e"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-318469/Urboros Test Subject/em4000_5_nm_hq.png",
+      "bytes": 514323,
+      "sha256": "204ef866080a0998cff310f9abfa69ab1d3ee162382dc06eb0e0b5b9ecd07abe"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-318469/Urboros Test Subject/em4001_0_bm.png",
+      "bytes": 105210,
+      "sha256": "03726bcb671bf2812bfdb6e72ac07952a0e7f0e8990906a2b3e9c36da80b5a87"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-318469/Urboros Test Subject/em4001_0_mm.png",
+      "bytes": 70587,
+      "sha256": "24b49c7debd62ea42ec8cdc7495b7fbf6441a9a98172dded5040a12533ebf4b7"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/models/asset-318469/Urboros Test Subject/em4001_0_nm_hq.png",
+      "bytes": 117971,
+      "sha256": "1980cd6d8b1a830d540b94edf5df3b60280634bb1aa364203331b79f9b9f1630"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/previews/asset-284057.png",
+      "bytes": 47453,
+      "sha256": "4ddefa512692fb2bc9ef941b4d0f767206789ee01d83704706b7dcc9f04719ac"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/previews/asset-284058.png",
+      "bytes": 42494,
+      "sha256": "37dedf1490ed82fe133eab31c8ff38147ddda934e5198557ae0dda479c93003f"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/previews/asset-284059.png",
+      "bytes": 47557,
+      "sha256": "3afe8337235c59a510a6a8336306f4b7fcdf173210560b8246d7f037d308ab1a"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/previews/asset-304724.png",
+      "bytes": 41343,
+      "sha256": "3e779f5772989870ce7f19de5ad259f8ce3fff39f5f588c8918b1fe026f9e5ff"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/previews/asset-310867.png",
+      "bytes": 84078,
+      "sha256": "1761e1c195c7a1d6abdbc1c9c6541293fb9ecb9f9012372247583d54ebdc6f34"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/previews/asset-316460.png",
+      "bytes": 26730,
+      "sha256": "6296b1002c5547148ea7469c50d4cc2411347b998ba1edcdff607c8220413b59"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/previews/asset-318469.png",
+      "bytes": 17940,
+      "sha256": "2e0ae88ae2130d0dabdabc08e70fb4cc329182bba0afe7b8eb56879c5b61abfd"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/sources/asset-284057-corroboration.html.txt",
+      "bytes": 32570,
+      "sha256": "9770d9646f3407a87893e38f106912f2f70be4b0782d7221b044c035fcbfe108"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/sources/asset-284057.html.txt",
+      "bytes": 34540,
+      "sha256": "86894b4f156b417b4bce64d57e700f4673f7325f10650fda52568440040acfe5"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/sources/asset-284058-corroboration.html.txt",
+      "bytes": 51786,
+      "sha256": "49bf1dbc77a56fc180f87e3f8e05378394ed80f5bb2355e9125258a7ddf21fdd"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/sources/asset-284058.html.txt",
+      "bytes": 33842,
+      "sha256": "d149d6f13448842752d4bfdb2470a79c8b38999c2be232532bd0af0e2edeb8a7"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/sources/asset-284059-corroboration.html.txt",
+      "bytes": 41442,
+      "sha256": "ac62d4fc98883899b2d9507618a5048c5855ff0598c3b09ca7492555801ec962"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/sources/asset-284059.html.txt",
+      "bytes": 34437,
+      "sha256": "f54f3318815f1e0fa956f9240d2d0f1e349be7673480281c0c93a28b01d459ae"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/sources/asset-304724-corroboration.html.txt",
+      "bytes": 74151,
+      "sha256": "08cf52a8b71adff71e6b8236dcd243972674feb83f08a2f202dacba9be919656"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/sources/asset-304724.html.txt",
+      "bytes": 33815,
+      "sha256": "f0bb70d8b4dd474c03764b59335147b6d120ad9b99153c9200200221b5f04667"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/sources/asset-310867-corroboration.html.txt",
+      "bytes": 39787,
+      "sha256": "9c5c812c081db1e0e254d5e5b4524f60d17a298963c9e5be6180d24108e5bb02"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/sources/asset-310867.html.txt",
+      "bytes": 34768,
+      "sha256": "ae53dfee4f9cf1d8838424f8abdb47676c6004fb80fff5e0f2545ecb3d3c108b"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/sources/asset-316460-corroboration.html.txt",
+      "bytes": 57948,
+      "sha256": "078eda6223ff02d9c31abad13f0603806ce657bf79b9a8e21018c0ecac6961cc"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/sources/asset-316460.html.txt",
+      "bytes": 34829,
+      "sha256": "46193b8a618172703ea11b7088a382813ea0cf8d53ff6c6b81a58449b6a6b611"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/sources/asset-318469-corroboration.html.txt",
+      "bytes": 40037,
+      "sha256": "97b405a62eb8e5659b19e6e930a74e0f29ae5da086b62bdbb678932c80e2538f"
+    },
+    {
+      "path": "modules/fidelity-r25/visual/sources/asset-318469.html.txt",
+      "bytes": 35108,
+      "sha256": "f34546d59c8fa9a8a690a0d04c3d7087445d0597cb9cdc6a0c64d48d45375a83"
+    }
+  ],
+  "module_bytes": 464748541,
+  "other_additions": [
+    {
+      "path": ".github/workflows/source-fidelity-r25.yml",
+      "bytes": 7853,
+      "sha256": "fe43cdbba08c3d8fe2d25c2c747a460ebb78ac3158396ecd140027a8fd7d7e7a"
+    },
+    {
+      "path": "docs/BOW_FIDELITE_R25.xlsx",
+      "bytes": 568721,
+      "sha256": "75b8466c795feac16f37f86357d7d9dd37a5ed6096c39cfd5c9e9dbabdd89eab"
+    },
+    {
+      "path": "docs/FIDELITE_R25.md",
+      "bytes": 9150,
+      "sha256": "fc3d3a8e15de333e0b3213fc7b91b925ab5463bb0162bb399d5571f40f2a526d"
+    },
+    {
+      "path": "docs/R25_ACCESS.md",
+      "bytes": 2221,
+      "sha256": "9df46209874fbe9795f6687b3d0dfb5cd42515f76e69cade4fdc882dc665c18f"
+    },
+    {
+      "path": "docs/R25_ACCESS_BROWSER.json",
+      "bytes": 35333,
+      "sha256": "987d0e6c1d81c7e632f5912404b012b811d994f27429464a5153828fb7f99cba"
+    },
+    {
+      "path": "docs/R25_AUDIO_BROWSER.json",
+      "bytes": 2120,
+      "sha256": "8c7dd535f65bd95648863e02cd056dcd56c8d4ad7cc5d3471fa179c7d741d830"
+    },
+    {
+      "path": "docs/R25_AUDIO_SOURCES.md",
+      "bytes": 5084,
+      "sha256": "09fc5472238808e14860d661a75d85b3544e2ed70667231274f5609eebf0cb01"
+    },
+    {
+      "path": "docs/R25_CANONICAL_BROWSER.json",
+      "bytes": 1602,
+      "sha256": "9a9a01f1e340cecfb0e7998a1261b130955b5b72d58011359e8db6f362479f8c"
+    },
+    {
+      "path": "docs/R25_CANONICAL_EVIDENCE.md",
+      "bytes": 5417,
+      "sha256": "580c3394f94d393971b895c7f4e55442f00f6d03037eb891090c3d8feb273315"
+    },
+    {
+      "path": "docs/R25_CANONICAL_VALIDATION.json",
+      "bytes": 1541,
+      "sha256": "020731ed3554447a2d0c79f475b207fdaa4282f140c1be73ac94a0abf9fd21f2"
+    },
+    {
+      "path": "docs/R25_CI.md",
+      "bytes": 4000,
+      "sha256": "f525428609f9126dfcedc4f29c39c4c751b1550d48875465d50ec9c936a38b2d"
+    },
+    {
+      "path": "docs/R25_CI_DIAGNOSTIC.json",
+      "bytes": 7179,
+      "sha256": "b7a0576bd0ebc6872f4da3db295d5f1cfccd8aa9e42a55a5c952fd5a75473360"
+    },
+    {
+      "path": "docs/R25_CI_R22_REGRESSION.json",
+      "bytes": 2151,
+      "sha256": "1230c2ca0edce3f624aaee217c2ad3716f76a2776f5a4f38a293c6b7fa7ac8d7"
+    },
+    {
+      "path": "docs/R25_CI_R23_REGRESSION.json",
+      "bytes": 87136,
+      "sha256": "92eb6de4739a9f1b3f2585fa8c6d2354f59a47d5017cf18d3704b909b7fd5037"
+    },
+    {
+      "path": "docs/R25_CI_R24_DASHBOARD_REGRESSION.json",
+      "bytes": 5461,
+      "sha256": "7a3c175890f9d57bae1ec01cc8b9215dbc098e2d8bbf8611a1929d90d9a7ac7c"
+    },
+    {
+      "path": "docs/R25_CI_REPRODUCTION.json",
+      "bytes": 557,
+      "sha256": "b5cbabf67d653d9eac7d83725b1843f2e95a9fe591b4bc5e10bf221f85d977a9"
+    },
+    {
+      "path": "docs/R25_DASHBOARD_BROWSER.json",
+      "bytes": 5467,
+      "sha256": "a21f408f975145be73d109efb3fb80f8037d2019880e1296e684e7b241b533a3"
+    },
+    {
+      "path": "docs/R25_FULL_MATCHES.json",
+      "bytes": 2960162,
+      "sha256": "08c89ed9612f3d953ec12d894662dbe0f87c02be6f499ca833640b581f500ce3"
+    },
+    {
+      "path": "docs/R25_HISTORICAL_TESTS.json",
+      "bytes": 2602,
+      "sha256": "a946823e0e16ffd0b1d1e87823f6eb158b21b5f65d438b24ce085804df9445c1"
+    },
+    {
+      "path": "docs/R25_INTEGRATION_TESTS.json",
+      "bytes": 2815,
+      "sha256": "eecfe086c5785188325d9d7e2fee459a6a449c4cf98d934c481737c03257fa14"
+    },
+    {
+      "path": "docs/R25_MOTION.md",
+      "bytes": 6597,
+      "sha256": "9051ce7ea34c9580c2f9b7294abf3862f32250bd64b511837e47c05fd94e037f"
+    },
+    {
+      "path": "docs/R25_MOTION_EVIDENCE.json",
+      "bytes": 12319,
+      "sha256": "3e36d60fed4e1d806e1f7549d35529cc5c9accf2b48552da50a539c2a51fcdbf"
+    },
+    {
+      "path": "docs/R25_MOTION_IMPORT_REQUEST.json",
+      "bytes": 25012,
+      "sha256": "d42be94ff2d1d119ea6dbef254e91b36448f503974643b6049c9f67f67df2754"
+    },
+    {
+      "path": "docs/R25_MOTION_SKELETON_TESTS.json",
+      "bytes": 103239,
+      "sha256": "56b70dcee9a329ce1278cbed0a9ca3e90e94f4637302ee2fb7b59f2a6f7c1965"
+    },
+    {
+      "path": "docs/R25_PERSISTENCE.md",
+      "bytes": 4835,
+      "sha256": "72a1f132afa6bd7cb19d4b230e1c75d94c09e3e4baa970692ffe807469907afc"
+    },
+    {
+      "path": "docs/R25_PERSISTENCE_BROWSER_TESTS.json",
+      "bytes": 3338,
+      "sha256": "6823a429d4d613f0a42fdfac14e0e889ea55d1348722b79782407de5cc56b89a"
+    },
+    {
+      "path": "docs/R25_PERSISTENCE_TESTS.json",
+      "bytes": 2415,
+      "sha256": "094f3265adee28019e3120f06577a246a077df17582551d202cbfa1ac9fe078d"
+    },
+    {
+      "path": "docs/R25_PYTHON_TESTS.json",
+      "bytes": 720,
+      "sha256": "025cd70beff4ac08dcf94f88d13cae8f6f70ca5fcd9b0f73b9c7cde4dfb9b99b"
+    },
+    {
+      "path": "docs/R25_READER.md",
+      "bytes": 5529,
+      "sha256": "3370ce17feedf8a605ee742b044b57ca660cc743dca056eafbf92d04d1f30426"
+    },
+    {
+      "path": "docs/R25_READER_ASSET_TESTS.json",
+      "bytes": 1532,
+      "sha256": "3baab49547acb71a14f034483d7dfc780ae636922268631f6e42b4c859429f64"
+    },
+    {
+      "path": "docs/R25_READER_BROWSER.json",
+      "bytes": 11834,
+      "sha256": "e45ffd0f41328b4376a0f228155546b53ba1dd29ac87fb52e7faf90c7eda64e6"
+    },
+    {
+      "path": "docs/R25_SOURCE_WHITESPACE.json",
+      "bytes": 1786,
+      "sha256": "36b3f72e65110a567673d1ca2090ff427e3009eb000e8af0dbdb29370ec09814"
+    },
+    {
+      "path": "docs/R25_STAGED_CONSERVATION.json",
+      "bytes": 266,
+      "sha256": "78333cc57a999f2e5c5b592a179280e8cba7024cdfbf94a1c05068eee1447599"
+    },
+    {
+      "path": "docs/R25_TRACKING.json",
+      "bytes": 598290,
+      "sha256": "3cd4a65c984ca3ff8241cc659792753e647d7040744121906e88614c9ec1924f"
+    },
+    {
+      "path": "docs/R25_VALIDATION.json",
+      "bytes": 4840,
+      "sha256": "b9a6b181ff10736e161da94d917f05c62f8619d32863db18963399d77035b59b"
+    },
+    {
+      "path": "docs/R25_VISUAL_IMPORT_REQUEST.json",
+      "bytes": 21165,
+      "sha256": "01770784d118989ac302e43b4cc8f7d54cc246a1649e3f417a6c1834c139816e"
+    },
+    {
+      "path": "docs/R25_VISUAL_NODE_TESTS.json",
+      "bytes": 8416,
+      "sha256": "1478e5207e5a1b28068b71b2273143d3374529d517c307945716a6aa8070804b"
+    },
+    {
+      "path": "docs/R25_VISUAL_SOURCES.md",
+      "bytes": 6035,
+      "sha256": "bca25900a789fdc115932cd6fb82e0576de4baef38ecc1dec778ab6b84dbd1b1"
+    },
+    {
+      "path": "docs/R25_VISUAL_TESTS.json",
+      "bytes": 1905,
+      "sha256": "9f62582815debc8fddcbc2f08593bbc7387299dd3753d4c71680ed194877a355"
+    },
+    {
+      "path": "scripts/audit-full-matches-r25.mjs",
+      "bytes": 9941,
+      "sha256": "746931024c733d59e1cdab56a62408ae12cf7275d444a735a7210ca183c066e5"
+    },
+    {
+      "path": "scripts/build-canonical-evidence-r25.py",
+      "bytes": 12667,
+      "sha256": "208b99316e6c8f0054ad4ec6ddc5e690ffc4c0bcddf4e75855300f17d775f599"
+    },
+    {
+      "path": "scripts/build-dossier-source-index-r25.py",
+      "bytes": 3884,
+      "sha256": "97945aed773c60fb0b277b6e66fade8e58fecfccfe532db7046a321209ca1002"
+    },
+    {
+      "path": "scripts/build-model-catalog-r25.py",
+      "bytes": 7429,
+      "sha256": "81d84b33b57e334eb5c99129985dca39a5b59faf32aa7fad2d63ebe7f094b779"
+    },
+    {
+      "path": "scripts/export-fidelity-progress-r25.py",
+      "bytes": 19378,
+      "sha256": "43bed0b83aa1c15111ee865947bfac7e25c4ae020a7052232c7ff59429a9ef82"
+    },
+    {
+      "path": "scripts/import-audio-archive-r25.py",
+      "bytes": 12231,
+      "sha256": "64fbd5d6528cb4cdb38fe2d510eeaf7d30c1204f7995a46d613899ea834379bd"
+    },
+    {
+      "path": "scripts/import-rigged-motion-r25.py",
+      "bytes": 13918,
+      "sha256": "c78d47c0813409396bdb4aeb21a7b4924327e4e1ac12784cfc9eb16a571e9454"
+    },
+    {
+      "path": "scripts/import-visual-rigs-r25.py",
+      "bytes": 14651,
+      "sha256": "3c771053d8a74f11335bf98a87570b027d80aa9b0221d09169f44a3b378ee6d5"
+    },
+    {
+      "path": "tests/browser-access-r25.mjs",
+      "bytes": 20919,
+      "sha256": "6344ef8adc13bae45af46af4920e7aa9dd266af5614c7d81fb4a391bd035237b"
+    },
+    {
+      "path": "tests/browser-audio-r25.mjs",
+      "bytes": 10183,
+      "sha256": "deba117973d4c7d547c968699c21656b7d16d2445542fde41a0027f22e8e0380"
+    },
+    {
+      "path": "tests/browser-canonical-r25.mjs",
+      "bytes": 7361,
+      "sha256": "ad5e43c0f4367e8fddeba8bd743d257300d3f5787e37cc706f4d30a90112fe71"
+    },
+    {
+      "path": "tests/browser-fidelity-dashboard-r25.mjs",
+      "bytes": 13991,
+      "sha256": "692c27ee4f0f4ce03c8740d3906c8761f4278eccba7f374d19fd530eaddea285"
+    },
+    {
+      "path": "tests/browser-models-r25.mjs",
+      "bytes": 15530,
+      "sha256": "09dd4d2c744e623c69b15f40a5b6a5abfbf41e134fe0804ec74e42b004fb20d2"
+    },
+    {
+      "path": "tests/browser-persistence-r25.mjs",
+      "bytes": 16000,
+      "sha256": "f1277c2bdd2005310bbd33346ae78d2be25a2223ab9e645ad9f308c3e8d9876f"
+    },
+    {
+      "path": "tests/ci-report-r25.mjs",
+      "bytes": 4313,
+      "sha256": "9c62f36af36c24bb564d923ab497518c932a545a58febed947d21ce964d612a0"
+    },
+    {
+      "path": "tests/test_audio_archive_r25.py",
+      "bytes": 7673,
+      "sha256": "c0558f13ded4a57cb6ee0cc3e00e6b5ba398859865db314efa8e4ff2e4eaa9bf"
+    },
+    {
+      "path": "tests/test_canonical_evidence_r25.py",
+      "bytes": 6776,
+      "sha256": "038ca001b738aaecd8b8f86727670be18f6e1c01a595258dfc45833685dac3dd"
+    },
+    {
+      "path": "tests/test_fidelity_export_r25.py",
+      "bytes": 15414,
+      "sha256": "1618db445142aebc722b03b701f48e9154468478f91abf64e83fc33930ef0ddc"
+    },
+    {
+      "path": "tests/test_rigged_motion_r25.py",
+      "bytes": 7610,
+      "sha256": "488880091ddfa09a2810776b36a39289f4c1dace4fb3ed9b90ecefd19043327c"
+    },
+    {
+      "path": "tests/test_source_catalog_r25.py",
+      "bytes": 4343,
+      "sha256": "c06fc13dff389a5519d33c27128e8a2ca330719698c864dd6fdb3509dfaf2dde"
+    },
+    {
+      "path": "tests/test_visual_rigs_r25.py",
+      "bytes": 10750,
+      "sha256": "fcbd510040e16369f811a377dfc7bb46e615bbee1943755eebd7d1f5f90fa4f7"
+    },
+    {
+      "path": "tests/verify-ci-report-r25.mjs",
+      "bytes": 2986,
+      "sha256": "81370d050d0ec84be9ed6f3f62e94d50cfafc1f7e073806bdd0baed61d21d1ac"
+    },
+    {
+      "path": "tests/verify-full-matches-r25.mjs",
+      "bytes": 7546,
+      "sha256": "2e173aaa20cebf93174c722e68fc2f6f9c3ddfda04f97dcb4f6b777949e1da1d"
+    },
+    {
+      "path": "tests/verify-model-reader-r25.mjs",
+      "bytes": 5518,
+      "sha256": "9caa4a140176606630be3934ffc4520e1f82e1e7a087df370c549c7d027c882b"
+    },
+    {
+      "path": "tests/verify-motion-skeletons-r25.mjs",
+      "bytes": 9811,
+      "sha256": "15ff55539be23921389fb49783fadaee658c50390db6cd1dd46aa7766be7be50"
+    },
+    {
+      "path": "tests/verify-persistence-r25.mjs",
+      "bytes": 11049,
+      "sha256": "a0d3641c800fa63fd59cd3e95989bb9ac95d0530083b1dd7d0012f4d0e2a5a54"
+    },
+    {
+      "path": "tests/verify-r25-integration.mjs",
+      "bytes": 11425,
+      "sha256": "16c737adb7d5bf67559e0c9eff9c631d69714d92376333081d30dbacb1a153a7"
+    },
+    {
+      "path": "tests/verify-visual-models-r25.mjs",
+      "bytes": 5655,
+      "sha256": "5a6081953aa9919276b126a7b1d96689e131e87307b20197da364332783a5bed"
+    }
+  ],
+  "workbook": {
+    "path": "docs/BOW_FIDELITE_R25.xlsx",
+    "bytes": 568721,
+    "sha256": "75b8466c795feac16f37f86357d7d9dd37a5ed6096c39cfd5c9e9dbabdd89eab"
+  },
+  "canonical_fidelity_certified": 0,
+  "open_workstreams": 17,
+  "policy": "Published asset and archive bytes remain intact. Missing textures, uncertain aliases, ports and action meanings are not filled by invented data."
+}

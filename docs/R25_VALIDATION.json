@@ -1,0 +1,150 @@
+{
+  "schema": "re.bow.parallel-validation-r25/1",
+  "release": "R25",
+  "baseline_commit": "259f9e255e10210cbdf481f5f1aec9abf8ba58f1",
+  "recorded_at_utc": "2026-10-24T02:37:13.560537+00:00",
+  "environment": {
+    "node": "22.16.0",
+    "chromium": "154.0.8037.57",
+    "virtualized": true,
+    "software_webgl": true
+  },
+  "historical": {
+    "passed": 605,
+    "failed": 0,
+    "exit_code": 0,
+    "isolated_copy": true,
+    "path": "docs/R25_HISTORICAL_TESTS.json"
+  },
+  "python": {
+    "passed": 50,
+    "failed": 0,
+    "exit_code": 0,
+    "focused_export_follow_up_passed": 12,
+    "path": "docs/R25_PYTHON_TESTS.json"
+  },
+  "targeted_node": {
+    "visual_source_models": 8,
+    "motion_scenes": 180,
+    "bounded_reader_and_optional_dom": 6,
+    "persistence": 13,
+    "full_match_report_and_real_replay_samples": 6,
+    "ci_report_helper": 5,
+    "integration": 9,
+    "failed": 0
+  },
+  "browser": {
+    "passed_groups": 55,
+    "failed": 0,
+    "reports": [
+      {
+        "path": "docs/R25_READER_BROWSER.json",
+        "passed_groups": 9,
+        "failed": 0
+      },
+      {
+        "path": "docs/R25_AUDIO_BROWSER.json",
+        "passed_groups": 7,
+        "failed": 0
+      },
+      {
+        "path": "docs/R25_CANONICAL_BROWSER.json",
+        "passed_groups": 5,
+        "failed": 0
+      },
+      {
+        "path": "docs/R25_PERSISTENCE_BROWSER_TESTS.json",
+        "passed_groups": 10,
+        "failed": 0
+      },
+      {
+        "path": "docs/R25_ACCESS_BROWSER.json",
+        "passed_groups": 18,
+        "failed": 0
+      },
+      {
+        "path": "docs/R25_DASHBOARD_BROWSER.json",
+        "passed_groups": 6,
+        "failed": 0
+      }
+    ]
+  },
+  "build": {
+    "command": "npm run build",
+    "exit_code": 0,
+    "scope": "Complete static site, including all R25 source assets and workbook."
+  },
+  "delivery": {
+    "open_workstreams": 17,
+    "catalogue_identities": 389,
+    "new_source_rows": 1021,
+    "historical_worksheets_preserved": 17,
+    "new_worksheets": 6,
+    "total_worksheets": 23,
+    "new_visual_references": 8,
+    "new_visual_archives": 7,
+    "independent_parts_in_new_visual_references": 1,
+    "cumulative_model_view_entries": 51,
+    "new_motion_subjects": 3,
+    "new_motion_rig_references": 5,
+    "new_keyed_files": 180,
+    "new_body_motions": 170,
+    "new_associated_object_motions": 9,
+    "new_keyed_poses": 1,
+    "unkeyed_base_references": 5,
+    "fbx_files_in_source_animation_folders": 185,
+    "cumulative_keyed_files": 228,
+    "documentary_wave_files": 708,
+    "publisher_assigned_audio_identities": 16,
+    "strictly_silent_files_excluded": 4,
+    "new_documentary_claims": 109,
+    "newly_reviewed_identities": 80,
+    "cumulative_reviewed_identities": 176
+  },
+  "full_match_recipe": {
+    "mirror_matches": 115,
+    "independent_reconstructions": 230,
+    "identities_with_damage_observed": 115,
+    "round_end_events": 239,
+    "round_resets": 124,
+    "match_end_events": 115,
+    "round_timer_seconds": 5,
+    "timer_endings": 115,
+    "knockouts": 0,
+    "finishers_enabled": false,
+    "art_fidelity_certified": false,
+    "scope": "Controlled short-timer B.O.W. mirrors; not all 13,225 pairs, official 60/99-second rules or original-game conclusions."
+  },
+  "ci": {
+    "historical_workflows_verified_success_at_commit": "dd288ab",
+    "new_r25_workflow": ".github/workflows/source-fidelity-r25.yml",
+    "new_r25_remote_execution_verified": false,
+    "vercel_status": "Deployment rate limited — retry in 24 hours.",
+    "evidence": "docs/R25_CI_DIAGNOSTIC.json"
+  },
+  "certification": {
+    "global_canonical_fidelity": 0,
+    "raw_capcom_package_equality": false,
+    "complete_combat_sprites": false,
+    "complete_movesets": false,
+    "independent_audio_listening": false,
+    "native_audio_bank": false,
+    "direct_primary_captures": 0,
+    "body_dimensions": false,
+    "physical_devices": false,
+    "physical_gamepads": false,
+    "screen_readers": false,
+    "complete_wcag": false
+  },
+  "resolved_validation_defects": [
+    "The optional Dossier enhancement now checks browser capabilities before constructing controllers or observers; historical DOM checks pass unchanged.",
+    "Evidence links are checked against the dashboard modules/docs boundary before workbook export.",
+    "The skip-link harness awaits the actual fragment navigation instead of reading the URL before navigation is committed."
+  ],
+  "scope_limits": [
+    "The source editions are explicit. Wall Blister HD/PC references do not assert presence on 3DS in 2012.",
+    "Associated-object motion and an unkeyed base are not additional body attacks.",
+    "Publisher-group audio attribution does not certify action, phase, listening or original bank bytes.",
+    "The 385 missing historical combat sprites and all unsatisfied workstream criteria remain open."
+  ]
+}

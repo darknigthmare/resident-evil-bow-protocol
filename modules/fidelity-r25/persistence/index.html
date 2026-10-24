@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="fr">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Vérifier une archive de replays · B.O.W.</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="../access/workbench.css">
+</head>
+<body><a class="skip" href="#main">Aller à la vérification</a><main id="main">
+  <nav aria-label="Navigation"><a href="../index.html">Suivi R25</a> · <a href="../../fidelity-r24/persistence/index.html">Replay individuel R24</a> · <a href="../../fidelity-r23/persistence/index.html">Inspecter les autres sauvegardes</a></nav>
+  <h1>Vérifier une archive de replays</h1>
+  <p>Ouvrez directement une archive ou une sauvegarde R19, choisissez ses replays et comparez leur résultat à deux reconstructions par leur moteur. Les fichiers et les sauvegardes du jeu restent intacts.</p>
+  <label for="replay">Replay, archive principale ou sauvegarde R19 (JSON, 32 Mio maximum)</label><input id="replay" type="file" accept=".json,application/json">
+  <p id="filename"></p>
+  <div class="actions"><button id="original" disabled>Conserver le fichier original</button><button id="archive" disabled>Extraire l’archive exacte</button></div>
+  <p id="status" role="status" aria-live="polite">Choisissez un fichier. Aucun replay ne démarre automatiquement.</p>
+  <section id="selection" hidden aria-labelledby="selection-title"><h2 id="selection-title">Replays du fichier</h2>
+    <p id="inventory" role="status"></p><p>Un lot contient au maximum 30 replays. Les contrats inconnus, entrées invalides et identifiants répétés restent visibles et ne sont pas sélectionnables.</p>
+    <div class="actions"><button id="select">Sélectionner jusqu’à 30 replays</button><button id="clear">Tout désélectionner</button><button id="verify" disabled>Vérifier la sélection</button><button id="cancel" disabled>Annuler le lot</button></div>
+    <fieldset id="records"><legend>Choisir les replays à reconstruire</legend><div id="rows"></div></fieldset>
+    <nav id="pages" class="actions" aria-label="Pages des replays" hidden><button id="previous" disabled>Entrées précédentes</button><p id="page-status" role="status"></p><button id="next">Entrées suivantes</button></nav>
+    <details id="backup-notes" hidden><summary>Inspection des autres groupes de sauvegarde</summary><p>Leur contenu ne participe pas à cette relecture. L’inspection structurelle ne certifie pas qu’une restauration serait valide.</p><ul id="issues"></ul></details>
+  </section>
+  <progress id="progress" max="100" value="0" hidden aria-label="Avancement du lot"></progress>
+  <section id="results" hidden aria-labelledby="results-title"><h2 id="results-title">Résultats du lot</h2><p id="verdict"></p><div id="outcomes"></div><button id="download">Télécharger le rapport</button><details><summary>Détail des vérifications</summary><pre id="report"></pre></details></section>
+  <section aria-labelledby="limits-title"><h2 id="limits-title">Portée des vérifications</h2><p>Les trois routes connues sont le moteur principal actuel, le vrai moteur avant R13 et l’expérimental R7. Chaque replay ouvre un nouvel espace isolé, puis celui-ci est détruit. Un résultat falsifié reste refusé même si d’autres replays du lot sont valides.</p><p>Le format R19 ne contient que l’archive des replays principaux. Le replay expérimental s’ouvre individuellement. Les banques audio, conclusions artistiques, anciens moteurs inconnus et restauration cloud restent à vérifier.</p></section>
+</main><script src="../../../src/save-center-r19.js"></script><script src="../../../src/replay-vault-r13.js"></script><script src="../../../src/catalog-replay-contract.js"></script><script type="module" src="page.js"></script></body></html>
