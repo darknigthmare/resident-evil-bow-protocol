@@ -1,0 +1,484 @@
+{
+  "summary": "17 chantiers avancés et toujours ouverts ; ressources originales vérifiables, limites par jeu et incarnation conservées.",
+  "statistics": [
+    {
+      "label": "chantiers toujours ouverts",
+      "value": 17,
+      "scope": "Aucune clôture sans preuve complète."
+    },
+    {
+      "label": "vues OBJ, dont 7 parties",
+      "value": 36,
+      "scope": "21 archives ; poses d’export, pas 36 sprites de combat."
+    },
+    {
+      "label": "mouvements après zéro",
+      "value": 47,
+      "scope": "48 FBX Sea Creeper = 47 mouvements + 1 pose fixe."
+    },
+    {
+      "label": "MP3 documentaires",
+      "value": 57,
+      "scope": "Famille Ganados ; zéro attribution par incarnation, zéro natif certifié."
+    }
+  ],
+  "resources": [
+    {
+      "title": "Modèles et textures",
+      "description": "36 vues OBJ, sept parties séparées incluses, un rig Tyrant publié et Sea Creeper ; jeux, supports et limites explicites.",
+      "href": "models/index.html",
+      "label": "Examiner les modèles"
+    },
+    {
+      "title": "Clés et scènes",
+      "description": "47 mouvements et une pose fixe Sea Creeper, avec les scènes originales R22/R23 conservées.",
+      "href": "motion/index.html",
+      "label": "Examiner les mouvements"
+    },
+    {
+      "title": "Références audio",
+      "description": "57 MP3 RE4 documentaires avec leurs libellés, sans attribution automatique à une incarnation.",
+      "href": "audio/index.html",
+      "label": "Écouter les références"
+    },
+    {
+      "title": "Citations et formes",
+      "description": "115 nouvelles assertions pour 78 identités ; sources, transcriptions et désaccords consultables.",
+      "href": "canonical/index.html",
+      "label": "Examiner les citations"
+    },
+    {
+      "title": "Replays et sauvegardes",
+      "description": "Reconstruction dans trois routes réelles, dont le moteur pré-R13 conservé depuis Git.",
+      "href": "persistence/index.html",
+      "label": "Vérifier un fichier"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "R20-09",
+      "title": "Rig par membre et animations",
+      "status": "EN COURS",
+      "historical_status": "À FAIRE",
+      "category": "sources",
+      "advances": [
+        "Sea Creeper : armature source pondérée, 34 cibles nommées dont la racine, neuf maillages et 48 FBX originaux ; 47 mouvements après zéro et une pose fixe.",
+        "Tyrant du remake GameCube : référence publiée à 34 articulations et 11 maillages pondérés, sans animation ; origine console de cette armature non certifiée."
+      ],
+      "remaining": [
+        "Membres et cycles complets des 389 incarnations ; attribution des actions, deux orientations et intégration de combat à vérifier."
+      ],
+      "evidence": [
+        {
+          "href": "models/index.html?id=rerev-sea-creeper",
+          "label": "Examiner le rig et ses clés"
+        },
+        {
+          "href": "../../docs/R24_MOTION.md",
+          "label": "Analyse des fichiers"
+        },
+        {
+          "href": "../../docs/R24_VISUAL_SOURCES.md",
+          "label": "Référence Tyrant"
+        }
+      ]
+    },
+    {
+      "id": "R20-10",
+      "title": "Étendre les sprites au catalogue",
+      "status": "EN COURS",
+      "historical_status": "À FAIRE",
+      "category": "sources",
+      "advances": [
+        "36 vues OBJ, dont sept parties indépendantes, conservées avec 21 archives originales, textures, notices et aperçus.",
+        "Les identités, plateformes et formes restent séparées ; les exports GameCube ne valident pas une incarnation PS1."
+      ],
+      "remaining": [
+        "Produire les 385 sprites de combat manquants du suivi historique, puis variantes, membres, orientations, mouvements et effets ; les vues 3D ne les remplacent pas."
+      ],
+      "evidence": [
+        {
+          "href": "models/index.html",
+          "label": "Bibliothèque 3D"
+        },
+        {
+          "href": "../../modules/fidelity-r24/visual/manifest.json",
+          "label": "Inventaire et empreintes"
+        }
+      ]
+    },
+    {
+      "id": "G-PERIMETRE",
+      "title": "Périmètre et alias",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "sources",
+      "advances": [
+        "115 nouvelles assertions pour 78 UID ; 77 identités nouvellement revues, soit 96 cumulées avec R23.",
+        "Quatre lacunes de périmètre documentées : U-8 Prime, Plagas, Novistadors et forme de Saddler ; acteurs et sujets restent distincts."
+      ],
+      "remaining": [
+        "Revue exhaustive des alias, DLC, modes, variantes et extensions ; aucune entrée absente du catalogue n’est ajoutée par supposition."
+      ],
+      "evidence": [
+        {
+          "href": "canonical/index.html",
+          "label": "Assertions et périmètre"
+        },
+        {
+          "href": "../../docs/R24_CANONICAL_EVIDENCE.md",
+          "label": "Portée documentaire"
+        }
+      ]
+    },
+    {
+      "id": "G-PREUVES",
+      "title": "Preuves et revue canonique",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "sources",
+      "advances": [
+        "88 sources citées, huit nouvelles copies ; les sources R23 et leurs 38 citations restent conservées.",
+        "14 rapprochements entre publications et 21 assertions citant une transcription de fichier du jeu ; zéro capture primaire directe et indépendance des observations primaires non établie."
+      ],
+      "remaining": [
+        "Captures originales et séquences horodatées pour chaque geste, forme et phase ; vérifier indépendamment les transcriptions secondaires."
+      ],
+      "evidence": [
+        {
+          "href": "canonical/index.html",
+          "label": "Citations et désaccords"
+        },
+        {
+          "href": "../../modules/fidelity-r24/canonical/manifest.json",
+          "label": "Index des preuves"
+        }
+      ]
+    },
+    {
+      "id": "G-COMMANDES",
+      "title": "Répertoire complet des commandes",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "sources",
+      "advances": [
+        "61 nouvelles assertions de gestes avec acteur, phase, polarité et citation conservés.",
+        "47 fichiers FBX de Sea Creeper varient après zéro ; BA/DM/SC restent des noms de fichiers, sans attribution arbitraire aux commandes."
+      ],
+      "remaining": [
+        "Répertoire officiel complet de chaque incarnation, attribution visuelle de chaque action et dépassement des dix slots lorsque nécessaire."
+      ],
+      "evidence": [
+        {
+          "href": "canonical/index.html",
+          "label": "Gestes documentés"
+        },
+        {
+          "href": "../../docs/R24_MOTION_POSITIVE_TIME.json",
+          "label": "Courbes réellement variables"
+        }
+      ]
+    },
+    {
+      "id": "G-MANCHES",
+      "title": "Fin de manche et résultat",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "sources",
+      "advances": [
+        "Les replays reconstruisent les fins de manches avec deux simulations et comparent dix champs des résultats du moteur courant.",
+        "Les fichiers à clés peuvent être examinés sans qualifier une pose ou un nom BA de victoire ou défaite."
+      ],
+      "remaining": [
+        "Gestes, dessins et sons officiels de victoire, défaite et égalité pour chaque incarnation ; aucune animation finale supplémentaire certifiée."
+      ],
+      "evidence": [
+        {
+          "href": "../../docs/R24_PERSISTENCE.md",
+          "label": "Résultats reconstruits"
+        },
+        {
+          "href": "models/index.html?id=rerev-sea-creeper",
+          "label": "Examiner les fichiers source"
+        }
+      ]
+    },
+    {
+      "id": "G-CINEMATIQUES",
+      "title": "Intros et outros",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "sources",
+      "advances": [
+        "Lecteur 3D avec inspection des clés sources, pause, pas par clé et caméra ; aucune clé inventée.",
+        "Les scènes R22 et Malacoda R23 restent accessibles ; Malacoda conserve son absence de cadence et son focus est corrigé."
+      ],
+      "remaining": [
+        "Séquences complètes, intros/outros et bande sonore attribuées par sujet ; pas de séquence déduite d’un fichier au nom ambigu."
+      ],
+      "evidence": [
+        {
+          "href": "motion/index.html",
+          "label": "Mouvements et scènes"
+        },
+        {
+          "href": "../../docs/R24_MOTION.md",
+          "label": "Limites des séquences"
+        }
+      ]
+    },
+    {
+      "id": "G-REPLAYS",
+      "title": "Compatibilité des replays",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "functions",
+      "advances": [
+        "Reconstruction effective dans trois routes : moteur principal courant, véritable moteur pré-R13 et expérimental R7.",
+        "24 scripts et HTML pré-R13 conservés à l’identique depuis Git ; deux simulations, contrats vérifiés, falsifications et interruptions éprouvées."
+      ],
+      "remaining": [
+        "Autres révisions et formats historiques, fidélité des conclusions artistiques et recette exhaustive des campagnes."
+      ],
+      "evidence": [
+        {
+          "href": "persistence/index.html",
+          "label": "Vérifier un replay"
+        },
+        {
+          "href": "../../docs/R24_PERSISTENCE_TESTS.json",
+          "label": "14 contrôles ciblés"
+        }
+      ]
+    },
+    {
+      "id": "G-SAUVES",
+      "title": "Sauvegardes et restauration",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "functions",
+      "advances": [
+        "Les moteurs de vérification travaillent dans des iframes à origine opaque et un stockage privé en mémoire.",
+        "Les fichiers originaux et sauvegardes témoins restent identiques ; annulation et réponses obsolètes sont contrôlées."
+      ],
+      "remaining": [
+        "Cloud, formats anciens inconnus, arrêt brutal et atomicité des restaurations ; aucun backend cloud ajouté."
+      ],
+      "evidence": [
+        {
+          "href": "../../docs/R24_PERSISTENCE.md",
+          "label": "Isolation et contrats"
+        },
+        {
+          "href": "../../docs/R24_PERSISTENCE_BROWSER_TESTS.json",
+          "label": "Contrôles navigateur"
+        }
+      ]
+    },
+    {
+      "id": "G-VICTIMES",
+      "title": "Compatibilité des conclusions",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "sources",
+      "advances": [
+        "Les résultats des replays connus sont reconstruits et vérifiés dans leurs moteurs, y compris les fins de manche.",
+        "19 nouvelles assertions de points faibles et 11 de formes précisent les contraintes documentaires ; la matrice R23 de 52 900 verdicts est conservée."
+      ],
+      "remaining": [
+        "Revue artistique et séquences finales de chaque association admissible ; la reconstruction du moteur ne certifie pas une animation canonique."
+      ],
+      "evidence": [
+        {
+          "href": "../../docs/R24_PERSISTENCE.md",
+          "label": "Reconstruction des résultats"
+        },
+        {
+          "href": "canonical/index.html",
+          "label": "Formes et points faibles"
+        },
+        {
+          "href": "../../docs/R23_CONCLUSIONS_MATRIX.json",
+          "label": "Matrice conservée"
+        }
+      ]
+    },
+    {
+      "id": "G-ECHELLE",
+      "title": "Dimensions et points faibles",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "sources",
+      "advances": [
+        "Quatre nouvelles assertions de dimensions et 19 de points faibles ; les bornes, sauts et dimensions corporelles gardent leur portée explicite.",
+        "Le lecteur cadre les maillages par leur boîte englobante sans changer les coordonnées sources ni attribuer de mètres aux unités du modèle."
+      ],
+      "remaining": [
+        "Mesures corporelles primaires, géants et aquatiques, différences d’incarnation et séparation de la collision ; zéro échelle corporelle certifiée."
+      ],
+      "evidence": [
+        {
+          "href": "canonical/index.html",
+          "label": "Dimensions citées"
+        },
+        {
+          "href": "../../docs/R24_CANONICAL_EVIDENCE.md",
+          "label": "Portée des mesures"
+        }
+      ]
+    },
+    {
+      "id": "G-RENDU",
+      "title": "Sprites, clips et asymétries",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "sources",
+      "advances": [
+        "38 entrées consultables : 36 OBJ dont sept parties, une référence FBX Tyrant et Sea Creeper avec ses fichiers à clés.",
+        "432 correspondances de topologie et UV permettent de réutiliser les matériaux du corps source sur les 48 scènes Sea Creeper ; aucune texture n’est attribuée au jugé."
+      ],
+      "remaining": [
+        "Sprites définitifs, membres et deux sens, asymétries, transformations, impacts et fins de manche du catalogue complet ; rendu du jeu original non certifié."
+      ],
+      "evidence": [
+        {
+          "href": "models/index.html",
+          "label": "Lecteur de modèles"
+        },
+        {
+          "href": "../../docs/R24_VISUAL_SOURCES.md",
+          "label": "Limites des exports"
+        },
+        {
+          "href": "../../docs/R24_MOTION.md",
+          "label": "Preuves des matériaux"
+        }
+      ]
+    },
+    {
+      "id": "G-PERF",
+      "title": "Performances sur appareils cibles",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "validation",
+      "advances": [
+        "1 000 navigations rapides puis 1 020 demandes réparties sur 180,653 secondes ; deux atlas vivants au maximum et nombre de nœuds stable après collecte.",
+        "Chargements des 38 références et 48 scènes contrôlés avec libération des ressources et une seule archive de mouvements en cache."
+      ],
+      "remaining": [
+        "Mesures sur appareils cibles, GPU physiques, longues sessions de combat et budget mémoire global ; les chiffres cloud ne les certifient pas."
+      ],
+      "evidence": [
+        {
+          "href": "../../docs/R24_ACCESS_PERFORMANCE.json",
+          "label": "Mesures et mémoire"
+        },
+        {
+          "href": "../../docs/R24_MODELS_BROWSER.json",
+          "label": "Ressources du lecteur 3D"
+        }
+      ]
+    },
+    {
+      "id": "G-ACCESS",
+      "title": "Accessibilité et appareils",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "validation",
+      "advances": [
+        "28 groupes vérifient 12 pages R23/R24, clavier, 320 px CSS, texte 200 %, contrastes échantillonnés et manette simulée.",
+        "Focus Malacoda corrigé aux extrémités, textes longs repliables et navigation à la manette facultative sans activation automatique."
+      ],
+      "remaining": [
+        "NVDA/VoiceOver, appareils tactiles et manettes physiques, contenus hors écran et conformité WCAG complète ; résultats axe incomplets conservés."
+      ],
+      "evidence": [
+        {
+          "href": "../../docs/R24_ACCESS_BROWSER.json",
+          "label": "Résultats des parcours"
+        },
+        {
+          "href": "../../docs/R24_ACCESS.md",
+          "label": "Corrections et limites"
+        }
+      ]
+    },
+    {
+      "id": "G-AUDIO",
+      "title": "Voix et sons par incarnation",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "sources",
+      "advances": [
+        "57 MP3 documentaires RE4 conservés avec libellés XML, provenance Git immuable, empreintes SHA-256 et objets Git vérifiés ; décodage navigateur contrôlé.",
+        "Lecteur sans autoplay ; les voix restent des références de famille Ganados et ne sont attribuées à aucune incarnation précise."
+      ],
+      "remaining": [
+        "Écoute sémantique indépendante, attribution locuteur/jeu/support/phase, comparaison aux banques originales, cris et mixage final ; zéro clip natif certifié."
+      ],
+      "evidence": [
+        {
+          "href": "audio/index.html",
+          "label": "Écouter les références"
+        },
+        {
+          "href": "../../docs/R24_AUDIO_SOURCES.md",
+          "label": "Provenance et limites"
+        }
+      ]
+    },
+    {
+      "id": "G-RECETTE",
+      "title": "Recette cumulative",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "validation",
+      "advances": [
+        "Contrôles ciblés des modèles, armatures, courbes, sources, MP3 et replay réel, avec corruptions, annulation et courses asynchrones.",
+        "Le classeur conserve les feuilles historiques à l’octet et détaille chaque nouvelle preuve ; tests locaux et limites matérielles figurent dans la recette."
+      ],
+      "remaining": [
+        "Toutes combinaisons de combat, animations, campagnes et validations artistiques sur appareils cibles ; les contrôles documentaires ne ferment pas la recette globale."
+      ],
+      "evidence": [
+        {
+          "href": "../../docs/R24_MODELS_BROWSER.json",
+          "label": "Lecture 3D"
+        },
+        {
+          "href": "../../docs/R24_PERSISTENCE_TESTS.json",
+          "label": "Replays"
+        },
+        {
+          "href": "../../docs/R24_ACCESS_BROWSER.json",
+          "label": "Parcours"
+        }
+      ]
+    },
+    {
+      "id": "G-LIVRAISON",
+      "title": "Livraisons et suivi",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "validation",
+      "advances": [
+        "Les 17 chantiers et 389 UID sont repris dans six nouvelles feuilles R24 ; les onze feuilles historiques restent conservées.",
+        "Export reproductible avec empreintes des entrées, catalogue vérifié et workflow CI dédié ; aucune clôture ni fidélité globale annoncée sans preuve."
+      ],
+      "remaining": [
+        "Revue humaine, exécution CI distante et livraisons suivantes ; tous les chantiers restent ouverts tant que leurs critères ne sont pas satisfaits."
+      ],
+      "evidence": [
+        {
+          "href": "../../docs/R24_TRACKING.json",
+          "label": "Suivi des 17 chantiers"
+        },
+        {
+          "href": "../../docs/FIDELITE_R24.md",
+          "label": "Livraison et reproduction"
+        }
+      ]
+    }
+  ],
+  "schema": "re.bow.fidelity-progress/1"
+}

@@ -1,0 +1,54 @@
+{
+  "schema": "re.bow.visual-validation-r25/1",
+  "manifestSha256": "2e3c2f2c6a8cf48135d942b92c425e26fe6b102d73eb12331f7c6ecb64f21a0c",
+  "counts": {
+    "archives": 7,
+    "modelViews": 8,
+    "objViews": 3,
+    "publishedRigReferences": 5,
+    "independentParts": 1,
+    "exactCatalogueIdentities": 3,
+    "candidateCatalogueIdentities": 4,
+    "unresolvedTextureReferences": 2,
+    "untexturedSourceMeshes": 9,
+    "animationClips": 0,
+    "catalogueFidelityCertified": 0
+  },
+  "moduleFiles": 101,
+  "recordedSourceAndEvidenceFiles": 100,
+  "recordedFileBytes": 76981880,
+  "pythonTests": {
+    "command": "python3 -m unittest discover -s tests -p 'test_visual_rigs_r25.py' -v",
+    "passed": 8,
+    "failed": 0,
+    "exitCode": 0
+  },
+  "nodeTests": {
+    "command": "node tests/verify-visual-models-r25.mjs",
+    "passed": 8,
+    "failed": 0,
+    "exitCode": 0,
+    "textureImagesStubbedOnlyForGeometryDecoding": true
+  },
+  "visualInspection": {
+    "sourceModelCapturesReviewed": 8,
+    "capturesDirectory": "qa-models-r25-browser/static/",
+    "finalCameraFramingReviewPending": false,
+    "finalCameraFramingReviewPassed": true,
+    "finalCameraCapturesReviewed": [
+      "re5-plaga-c-pc-published",
+      "re4-del-lago-pc-published",
+      "re5-uroboros-tale-pc-published"
+    ],
+    "physicalDevice": false
+  },
+  "sourceFilesRewritten": false,
+  "canonicalFidelityCertified": 0,
+  "limits": [
+    "Published community exports are not certified identical to raw Capcom packages.",
+    "Three RE4 references belong to the PC 2007 port; GameCube 2005 equivalence is not established.",
+    "Plaga C to Duvalia is a candidate relation, not a certified alias.",
+    "Nine native untextured meshes and two missing-image references remain explicit; no substitute texture is invented.",
+    "All five FBX references have zero varying curves; constant zero-time takes are not counted as motion."
+  ]
+}

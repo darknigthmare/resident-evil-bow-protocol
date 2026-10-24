@@ -1,0 +1,122 @@
+{
+  "schema": "re.bow.persistence-delivery/1",
+  "release": "R23",
+  "tasks": [
+    "G-SAUVES",
+    "G-REPLAYS"
+  ],
+  "status": "partial",
+  "entrypoint": "index.html",
+  "read_only": true,
+  "storage_reads": false,
+  "storage_writes": false,
+  "network_uploads": false,
+  "simulation_in_inspector": false,
+  "source_files": [
+    {
+      "path": "src/save-center-r19.js",
+      "bytes": 10791,
+      "sha256": "6a312bd65ea55fcfe272e4adc9add12ce51affb4a9d424f5bee9998b9952ccbf"
+    },
+    {
+      "path": "src/replay-vault-r13.js",
+      "bytes": 7600,
+      "sha256": "243cae05f698591d9665d09a1ed60a4c7c9f9d4dd20d2b384b8057cf619fed83"
+    },
+    {
+      "path": "src/unified-engine-v060.js",
+      "bytes": 85581,
+      "sha256": "e54bb7bec80396b5fe7d4883aeb93a11efcc013865b406c70d8d86a999d3a69c"
+    },
+    {
+      "path": "src/catalog-replay-r7.js",
+      "bytes": 5939,
+      "sha256": "8a6536128b5400c85ac1737000d5eb5f12715d554ffd102ca4a375240f22da50"
+    },
+    {
+      "path": "src/chronicles-core-v060.js",
+      "bytes": 9909,
+      "sha256": "d3f3d7afab085481152088739ef99a6389dece01848efaba49b451c6182fd5d9"
+    },
+    {
+      "path": "src/operation-vault-v061.js",
+      "bytes": 5533,
+      "sha256": "7c8c7d1fdc5a6f3959870e6eb708f61771f8f3a2f1f8d418802738b8a22f5729"
+    },
+    {
+      "path": "src/context-journal-v071.js",
+      "bytes": 6335,
+      "sha256": "7764ffac2fadf4f6534db598c5f3d2e9687c20d7b1adf9f65aaff7688df8f906"
+    },
+    {
+      "path": "src/runtime-contract.js",
+      "bytes": 221,
+      "sha256": "6566ab58194e7c07c7e531213aaf408c703e8bb9358c4899ea0f5913239afe8c"
+    },
+    {
+      "path": "src/catalog-replay-contract.js",
+      "bytes": 248,
+      "sha256": "2778547c459e6efcc95810e8c3dd1108449ca752adaf54f751406573b84ec934"
+    }
+  ],
+  "formats": [
+    {
+      "id": "re.bow.backup/1",
+      "coverage": "R19 transport exact inventory and checksum; nested replay records, internal slot checksum and same-revision divergence; other content requires its mode loader",
+      "known_storage_keys": 18,
+      "groups": 8
+    },
+    {
+      "id": "main-replay-r13",
+      "coverage": "Original R13 record validator, current/missing/different runtime contract; no playback certification"
+    },
+    {
+      "id": "main-replay-archive",
+      "coverage": "Bounded archive, per-record R13 validator, duplicate/conflicting ID detection"
+    },
+    {
+      "id": "re.bow.catalog-duel-replay/1",
+      "coverage": "Bounded R7 command structure, count/CPU input checks, compatibility digest; final state not reconstructed in inspector"
+    }
+  ],
+  "delivered": [
+    "Read-only browser inspector and original-byte file copy",
+    "Strict duplicate-key/depth/byte JSON checks",
+    "Side-by-side raw-value and replay-ID conflict comparison",
+    "12 targeted tests including fixtures produced and independently replayed by the actual main and experimental engines",
+    "4 Chromium browser groups including 1440/390px, zero storage access, no remote upload, byte-exact original download and stale-file read refusal"
+  ],
+  "validation": {
+    "unit_report": "../../../docs/R23_PERSISTENCE_TESTS.json",
+    "browser_report": "../../../docs/R23_PERSISTENCE_BROWSER_TESTS.json"
+  },
+  "remaining": [
+    "Unknown historical formats and their original engines are not certified",
+    "No cloud service or account synchronization is implemented",
+    "No crash-atomic multi-key restoration is claimed",
+    "Physical browsers, hardware, abrupt shutdown and long-session disk resilience remain untested",
+    "Game progression, settings and simulated replay state still require the mode loader"
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 2225,
+      "sha256": "0b3d2016fa16e6544c782914cc12da7ae02f133e0f8b1a8a62cf7018c5d8bcb5"
+    },
+    {
+      "path": "inspector.js",
+      "bytes": 12996,
+      "sha256": "feab31c9443584f50147aa089004ecd3e48e49b83d751f7809761cea7fa1c0d0"
+    },
+    {
+      "path": "page.js",
+      "bytes": 3887,
+      "sha256": "f09cf3dd43f399dc4c8469eeacdd47aab6cc5f694b133ba096dd475f9276f530"
+    },
+    {
+      "path": "style.css",
+      "bytes": 1322,
+      "sha256": "26687068b5640260dca127bef18faa599f44de42a354e218975ea0426fa478fc"
+    }
+  ]
+}

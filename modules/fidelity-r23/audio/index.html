@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Voix et sons d’origine — suivi R23</title>
+  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../../fidelity-r24/access/text-reflow.css">
+</head>
+<body>
+  <main>
+    <a href="../index.html">← Chantiers R23</a>
+    <h1>Voix et sons d’origine</h1>
+    <p>Aucun enregistrement natif n’a pu être vérifié et intégré dans ce lot. Les voix, cris et effets propres à chaque incarnation restent à documenter.</p>
+    <p id="summary" role="status">Chargement du relevé…</p>
+    <section aria-labelledby="sources-title">
+      <h2 id="sources-title">Sources consultées</h2>
+      <ul id="sources"></ul>
+    </section>
+    <section aria-labelledby="catalogue-title">
+      <h2 id="catalogue-title">Relevé par incarnation</h2>
+      <p>Les pages de référence du catalogue ont été vérifiées par empreinte. Aucun lien direct vers un fichier audio n’y a été trouvé. Ce constat ne prouve pas l’absence de sons dans les jeux.</p>
+      <label for="search">Rechercher une incarnation ou un jeu</label>
+      <input id="search" type="search" autocomplete="off" placeholder="Ex. Nemesis, Resident Evil 7">
+      <p id="results" aria-live="polite"></p>
+      <div class="table-wrap" tabindex="0" role="region" aria-label="Catalogue des références audio">
+        <table>
+          <caption>Sources du catalogue et sons restant à retrouver</caption>
+          <thead><tr><th scope="col">Incarnation</th><th scope="col">Jeu</th><th scope="col">Audio natif</th><th scope="col">Référence</th></tr></thead>
+          <tbody id="catalogue"></tbody>
+        </table>
+      </div>
+    </section>
+    <p><a href="manifest.json">Relevé des consultations</a> · <a href="catalogue.json">Catalogue et empreintes des pages</a></p>
+  </main>
+  <script src="status.js" defer></script>
+</body>
+</html>

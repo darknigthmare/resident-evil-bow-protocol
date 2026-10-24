@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; object-src 'none'; base-uri 'none'; media-src 'self' blob:">
+  <title>Sons publiés par créature — B.O.W. R25</title>
+  <link rel="stylesheet" href="../../fidelity-r24/audio/style.css">
+  <link rel="stylesheet" href="../../fidelity-r24/access/text-reflow.css">
+  <script defer src="player.js"></script>
+<link rel="stylesheet" href="../access/workbench.css">
+</head>
+<body>
+  <a class="skip" href="#player">Aller à la sélection</a>
+  <header>
+    <a href="../index.html">← Chantiers R25</a>
+    <p class="eyebrow">B.O.W. PROTOCOL / RÉFÉRENCES SONORES</p>
+    <h1>Les sons publiés, avec leur créature et leurs limites.</h1>
+    <p>Fichiers WAV du port PC de Revelations, conservés sans transformation. Les dossiers publiés permettent de les relier à des sujets du catalogue ; les actions et déclencheurs restent à vérifier.</p>
+    <p id="summary" role="status">Chargement du catalogue…</p>
+    <p><a href="../../fidelity-r24/audio/index.html">Références Ganados RE4 conservées</a> · <a id="publication" hidden>Page de la publication</a> · <a href="archives/revelations-enemies.zip" download>Archive originale</a></p>
+  </header>
+  <main id="player">
+    <label for="group">Groupe de la publication</label>
+    <select id="group" disabled><option value="all">Tous les groupes attribués</option></select>
+    <label for="search">Rechercher un nom source ou une incarnation</label>
+    <input id="search" type="search" disabled placeholder="Sea Creeper, em1200, Scagdead…">
+    <label for="clip">Fichier publié</label>
+    <select id="clip" disabled></select>
+    <p id="selection"></p>
+    <button id="prepare" type="button" disabled>Vérifier et charger le fichier</button>
+    <p id="status" role="status" aria-live="polite">La lecture nécessite une action explicite.</p>
+    <audio id="audio" controls preload="none" aria-label="Écouter le fichier sélectionné"></audio>
+    <p><a id="source" hidden>Groupe et archive de la publication</a> · <a id="identitySource" hidden>Référence de l’identité et du jeu</a></p>
+    <details>
+      <summary>Attribution, conservation et limites</summary>
+      <ul id="limitations"></ul>
+      <p>Les quatre placeholders strictement silencieux restent dans le ZIP original. Les autres groupes sans attribution assez précise ne sont pas ajoutés à ces incarnations.</p>
+      <a href="manifest.json">Catalogue et empreintes</a>
+    </details>
+  </main>
+</body>
+</html>

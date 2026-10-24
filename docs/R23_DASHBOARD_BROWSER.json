@@ -1,0 +1,158 @@
+{
+  "schema": "re.bow.fidelity-dashboard-browser/1",
+  "startedAt": "2026-10-23T21:19:25.864Z",
+  "completedAt": "2026-10-23T21:19:33.539Z",
+  "environment": {
+    "virtualized": true,
+    "headless": true,
+    "node": "v22.16.0",
+    "chromium": "154.0.8037.57"
+  },
+  "physicalDevices": false,
+  "passed": 5,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "All 17 workstreams, filters and source links at 1440px",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "touchEmulated": false,
+        "ids": [
+          "G-ACCESS",
+          "G-AUDIO",
+          "G-CINEMATIQUES",
+          "G-COMMANDES",
+          "G-ECHELLE",
+          "G-LIVRAISON",
+          "G-MANCHES",
+          "G-PERF",
+          "G-PERIMETRE",
+          "G-PREUVES",
+          "G-RECETTE",
+          "G-RENDU",
+          "G-REPLAYS",
+          "G-SAUVES",
+          "G-VICTIMES",
+          "R20-09",
+          "R20-10"
+        ],
+        "functionTasks": [
+          "G-REPLAYS",
+          "G-SAUVES"
+        ],
+        "resourceLinks": [
+          {
+            "label": "Examiner les vues",
+            "href": "http://127.0.0.1:5271/modules/fidelity-r23/visual/index.html"
+          },
+          {
+            "label": "Parcourir les images",
+            "href": "http://127.0.0.1:5271/modules/fidelity-r23/motion/index.html"
+          },
+          {
+            "label": "Chercher une incarnation",
+            "href": "http://127.0.0.1:5271/modules/fidelity-r23/canonical/index.html"
+          },
+          {
+            "label": "Inspecter un fichier",
+            "href": "http://127.0.0.1:5271/modules/fidelity-r23/persistence/index.html"
+          },
+          {
+            "label": "Consulter les sources audio",
+            "href": "http://127.0.0.1:5271/modules/fidelity-r23/audio/index.html"
+          }
+        ],
+        "totalResolvedReviewLinks": 34,
+        "emptyResultAnnounced": true
+      }
+    },
+    {
+      "name": "All 17 workstreams, filters and source links at 390px",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "touchEmulated": true,
+        "ids": [
+          "G-ACCESS",
+          "G-AUDIO",
+          "G-CINEMATIQUES",
+          "G-COMMANDES",
+          "G-ECHELLE",
+          "G-LIVRAISON",
+          "G-MANCHES",
+          "G-PERF",
+          "G-PERIMETRE",
+          "G-PREUVES",
+          "G-RECETTE",
+          "G-RENDU",
+          "G-REPLAYS",
+          "G-SAUVES",
+          "G-VICTIMES",
+          "R20-09",
+          "R20-10"
+        ],
+        "functionTasks": [
+          "G-REPLAYS",
+          "G-SAUVES"
+        ],
+        "resourceLinks": [
+          {
+            "label": "Examiner les vues",
+            "href": "http://127.0.0.1:5271/modules/fidelity-r23/visual/index.html"
+          },
+          {
+            "label": "Parcourir les images",
+            "href": "http://127.0.0.1:5271/modules/fidelity-r23/motion/index.html"
+          },
+          {
+            "label": "Chercher une incarnation",
+            "href": "http://127.0.0.1:5271/modules/fidelity-r23/canonical/index.html"
+          },
+          {
+            "label": "Inspecter un fichier",
+            "href": "http://127.0.0.1:5271/modules/fidelity-r23/persistence/index.html"
+          },
+          {
+            "label": "Consulter les sources audio",
+            "href": "http://127.0.0.1:5271/modules/fidelity-r23/audio/index.html"
+          }
+        ],
+        "totalResolvedReviewLinks": 34,
+        "emptyResultAnnounced": true
+      }
+    },
+    {
+      "name": "Keyboard skip link, named filters and visible focus",
+      "pass": true,
+      "detail": {
+        "skipLinkVisibleOnFocus": true,
+        "fragmentTarget": "#main",
+        "namedFilters": true,
+        "keyboardSearch": true,
+        "focusOutline": {
+          "style": "solid",
+          "width": "3px"
+        }
+      }
+    },
+    {
+      "name": "404 and malformed progress refuse incomplete data, then retry recovers",
+      "pass": true,
+      "detail": {
+        "notFoundRefused": true,
+        "sixteenTasksRefused": true,
+        "retryRestoredSeventeenTasks": true
+      }
+    },
+    {
+      "name": "Untrusted source text stays text and external review links are refused",
+      "pass": true,
+      "detail": {
+        "markupRenderedAsText": true,
+        "scriptNotExecuted": true,
+        "externalResourceLinkRefused": true
+      }
+    }
+  ]
+}

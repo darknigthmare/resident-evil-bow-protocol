@@ -1,0 +1,141 @@
+{
+  "schema": "re.bow.parallel-validation-r24/1",
+  "release": "R24",
+  "observed_at_utc": "2026-10-23T22:20:53.419732+00:00",
+  "environment": {
+    "node": "22.16.0",
+    "chromium": "154.0.8037.57",
+    "virtualized": true,
+    "software_webgl": true
+  },
+  "historical": {
+    "passed": 605,
+    "failed": 0,
+    "exit_code": 0,
+    "report": "docs/R24_HISTORICAL_TESTS.json",
+    "isolated_copy": true
+  },
+  "python": {
+    "command": "python3 -m unittest discover -s tests -p 'test_*r24.py' -v",
+    "passed": 41,
+    "failed": 0,
+    "exit_code": 0,
+    "suites": {
+      "audio_archive": 8,
+      "canonical_evidence": 8,
+      "fidelity_export": 11,
+      "rigged_motion": 7,
+      "visual_models": 7
+    }
+  },
+  "targeted_node": {
+    "source_transport": 3,
+    "native_scenes": 48,
+    "replay_reconstruction": 14,
+    "failed": 0
+  },
+  "browser": {
+    "passed_groups": 95,
+    "failed": 0,
+    "reports": [
+      {
+        "label": "Modèles OBJ et rig publié",
+        "path": "docs/R24_VISUAL_BROWSER.json",
+        "passed_groups": 38
+      },
+      {
+        "label": "Lecteur 3D",
+        "path": "docs/R24_MODELS_BROWSER.json",
+        "passed_groups": 6
+      },
+      {
+        "label": "Audio documentaire",
+        "path": "docs/R24_AUDIO_BROWSER.json",
+        "passed_groups": 5
+      },
+      {
+        "label": "Citations et attributions",
+        "path": "docs/R24_CANONICAL_VALIDATION.json",
+        "passed_groups": 4
+      },
+      {
+        "label": "Replays navigateur",
+        "path": "docs/R24_PERSISTENCE_BROWSER_TESTS.json",
+        "passed_groups": 6
+      },
+      {
+        "label": "Clavier, reflow et manette simulée",
+        "path": "docs/R24_ACCESS_BROWSER.json",
+        "passed_groups": 28
+      },
+      {
+        "label": "Ressources et charge cadencée",
+        "path": "docs/R24_ACCESS_PERFORMANCE.json",
+        "passed_groups": 2
+      },
+      {
+        "label": "Tableau de bord",
+        "path": "docs/R24_DASHBOARD_BROWSER.json",
+        "passed_groups": 6
+      }
+    ]
+  },
+  "legacy_browser_regressions": [
+    {
+      "path": "docs/R24_LEGACY_R22_BROWSER.json",
+      "passed": 8,
+      "failed": 0
+    },
+    {
+      "path": "docs/R24_LEGACY_R23_MOTION_BROWSER.json",
+      "passed": 5,
+      "failed": 0
+    }
+  ],
+  "build": {
+    "command": "npm run build",
+    "exit_code": 0,
+    "result": "115 spécimens, 389 références, 52 arènes ; build statique validé."
+  },
+  "ci": {
+    "workflow": ".github/workflows/source-fidelity-r24.yml",
+    "local_yaml_bash_and_paths_checked": true,
+    "remote_execution_verified": false
+  },
+  "delivery": {
+    "open_workstreams": 17,
+    "catalogue_identities": 389,
+    "source_rows": 274,
+    "historical_worksheets_preserved": 11,
+    "new_worksheets": 6,
+    "obj_views": 36,
+    "independent_parts_in_obj_views": 7,
+    "original_model_archives": 21,
+    "model_viewer_entries": 38,
+    "source_fbx_files": 48,
+    "positive_time_motions": 47,
+    "positive_time_poses": 1,
+    "documentary_mp3": 57,
+    "audio_exact_identity_assignments": 0,
+    "new_canonical_claims": 115,
+    "cumulative_reviewed_identities": 96
+  },
+  "certification": {
+    "canonical_fidelity_certified": 0,
+    "original_game_rendering": false,
+    "raw_capcom_package_equality": false,
+    "complete_combat_sprites": false,
+    "all_incarnation_movesets": false,
+    "audio_independent_listening": false,
+    "physical_devices": false,
+    "physical_gamepads": false,
+    "screen_readers": false,
+    "complete_wcag": false
+  },
+  "source_clock": "Native negative pre-roll preserved; source min-to-max span differs from playback at zero or later.",
+  "limits": [
+    "Published community exports and documentary audio are preserved byte for byte; their equality to original Capcom packages is not certified.",
+    "Console ports remain explicit and do not certify the corresponding PS1 incarnation.",
+    "All 17 workstreams remain open wherever their criteria lack direct evidence."
+  ]
+}

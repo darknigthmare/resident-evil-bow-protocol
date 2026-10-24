@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; object-src 'none'; base-uri 'none'">
+  <title>Comparer les preuves — B.O.W. R24</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="page.js"></script>
+<link rel="stylesheet" href="../access/text-reflow.css">
+</head>
+<body>
+  <a class="skip" href="#details">Aller à la fiche</a>
+  <header>
+    <a href="../index.html">← Chantiers R24</a>
+    <p class="eyebrow">B.O.W. PROTOCOL / CITATIONS ET RECOUPEMENTS</p>
+    <h1>Comparer les sources, garder la bonne incarnation.</h1>
+    <p>Des gestes, des formes et des dimensions documentés par jeu et par phase. Les fichiers en jeu sont transcrits sur un site tiers ; les extraits recoupés précisent ce que deux éditeurs confirment réellement.</p>
+    <p id="summary" class="summary" role="status">Chargement des preuves…</p>
+    <a href="../../fidelity-r23/canonical/index.html">Consulter les 389 identités et les références R23</a>
+  </header>
+  <main>
+    <section class="catalogue" aria-labelledby="catalogue-title">
+      <h2 id="catalogue-title">Nouvelles revues R24</h2>
+      <label for="search">Nom, UID, jeu ou citation</label>
+      <input id="search" type="search" placeholder="U-8, pinces, Crimson…" autocomplete="off">
+      <label for="filter">Preuves affichées</label>
+      <select id="filter">
+        <option value="all">Toutes les nouvelles revues</option>
+        <option value="corroborated">Énoncés recoupés entre éditeurs</option>
+        <option value="transcribed">Fichiers en jeu transcrits</option>
+        <option value="dimension">Dimensions avec leurs limites</option>
+        <option value="new">Identités non relues en R23</option>
+        <option value="scope">Écarts de périmètre documentés</option>
+      </select>
+      <p id="count" role="status" aria-live="polite"></p>
+      <ul id="results"></ul>
+    </section>
+    <article id="details" tabindex="-1" aria-labelledby="detail-title">
+      <h2 id="detail-title">Choisir une identité</h2>
+      <p>Le recoupement porte sur un énoncé précis. Il ne certifie ni un répertoire complet de commandes, ni des timings, ni un modèle à l’échelle.</p>
+    </article>
+  </main>
+  <footer>Les citations R23 sont conservées. Aucun paramètre de combat, taille de collision ou rig n’est modifié par ces revues.</footer>
+</body>
+</html>

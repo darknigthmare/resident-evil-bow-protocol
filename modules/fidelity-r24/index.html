@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#10191d">
+  <title>Sources et chantiers — B.O.W. Protocol</title>
+  <link rel="stylesheet" href="../fidelity-r23/style.css">
+  <link rel="stylesheet" href="access/gamepad.css">
+<link rel="stylesheet" href="access/text-reflow.css">
+</head>
+<body>
+  <a class="skip" href="#main">Aller au suivi</a>
+  <header><a href="../../index.html">☣ B.O.W. PROTOCOL</a><a href="../../codex.html">← Bestiaire</a></header>
+  <main id="main" data-r24-gamepad-root>
+    <p class="eyebrow">SOURCES VÉRIFIABLES · R24</p>
+    <h1>Sources et chantiers</h1>
+    <p class="intro">Examiner les ressources d’origine, les avancées et le travail restant pour chaque chantier du classeur.</p>
+    <p class="intro">Les références conservent leur jeu, leur forme et leurs limites. La fidélité complète demande encore les vues, gestes et sons propres à chaque incarnation.</p>
+    <div class="actions"><a class="button" href="../../docs/BOW_FIDELITE_R24.xlsx" download>Télécharger le classeur R24</a><a href="../../docs/FIDELITE_R24.md">Lire le détail de la livraison</a></div>
+    <p id="loadStatus" role="status">Chargement du suivi…</p>
+    <button id="retry" type="button" hidden>Réessayer</button>
+    <section id="statistics" class="statistics" aria-label="Avancement vérifié"></section>
+    <section aria-labelledby="resourcesTitle">
+      <h2 id="resourcesTitle">Examiner les ressources</h2>
+      <div id="resources" class="resources"></div>
+    </section>
+    <section aria-labelledby="tasksTitle">
+      <h2 id="tasksTitle">Les chantiers du classeur</h2>
+      <form id="filters" role="search">
+        <label>Rechercher un chantier<input id="search" type="search" placeholder="Animation, sons, sauvegardes…" disabled></label>
+        <label>Domaine<select id="category" disabled><option value="all">Tous les domaines</option><option value="sources">Sources et ressources</option><option value="functions">Sauvegardes et replays</option><option value="validation">Validation et livraison</option></select></label>
+      </form>
+      <p id="resultCount" role="status" aria-live="polite"></p>
+      <div id="tasks" class="tasks"></div>
+    </section>
+    <div data-r24-gamepad-ui></div>
+    <footer><a href="progress.json">Consulter le suivi détaillé</a><span>Les classeurs R22 et R23 restent conservés avec leurs preuves.</span></footer>
+  </main>
+  <script src="../../src/menu-navigation-r20.js"></script>
+  <script src="access/gamepad-navigation.js"></script>
+  <script src="../fidelity-r23/dashboard.js"></script>
+</body>
+</html>

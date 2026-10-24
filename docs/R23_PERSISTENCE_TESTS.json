@@ -1,0 +1,70 @@
+{
+  "schema": "re.bow.persistence-tests/1",
+  "passed": 12,
+  "failed": 0,
+  "scope": "Pure inspector with original validators and two real-engine fixtures. No cloud service, crash test, hardware validation or unknown historical engine certification.",
+  "checks": [
+    {
+      "name": "Strict JSON refuses ambiguous duplicate fields, invalid syntax and excessive nesting",
+      "pass": true
+    },
+    {
+      "name": "Transport inspection preserves exact original strings and inspects all 18 known keys",
+      "pass": true
+    },
+    {
+      "name": "Outer checksum damage, future formats and oversize documents are refused",
+      "pass": true
+    },
+    {
+      "name": "Historical UTF-16 value limits do not reject a valid Unicode backup as an 8 MiB byte overflow",
+      "pass": true,
+      "evidence": {
+        "nestedCharacters": 3000011,
+        "nestedUtf8Bytes": 9000011
+      }
+    },
+    {
+      "name": "A transport-readable but invalid nested replay is no longer mistaken for a valid game record",
+      "pass": true
+    },
+    {
+      "name": "Nested malformed JSON, repeated keys and internal checksum damage are visible",
+      "pass": true
+    },
+    {
+      "name": "Real Dossier slot envelopes retain their raw bytes and equal-revision divergence is flagged",
+      "pass": true
+    },
+    {
+      "name": "Invalid frame commands, excessive duration and duplicate replay IDs are refused",
+      "pass": true
+    },
+    {
+      "name": "Current, historical and missing replay contracts have distinct outcomes without playback claims",
+      "pass": true
+    },
+    {
+      "name": "Comparing copies reports raw-setting differences and conflicting replay IDs without choosing a winner",
+      "pass": true
+    },
+    {
+      "name": "Experimental replay produced by the real engine passes structure while simulation certification stays separate",
+      "pass": true,
+      "evidence": {
+        "fixtureFrames": 120,
+        "independentlyReplayedByOriginalEngine": true,
+        "inspectorRunsSimulation": false
+      }
+    },
+    {
+      "name": "A real main-match recording remains byte-identical after inspection and replays in its original current engine",
+      "pass": true,
+      "evidence": {
+        "recordedFrames": 250,
+        "independentlyReplayedByOriginalEngine": true,
+        "inspectorWrites": 0
+      }
+    }
+  ]
+}

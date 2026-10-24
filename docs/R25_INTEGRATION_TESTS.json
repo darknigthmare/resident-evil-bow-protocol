@@ -1,0 +1,94 @@
+{
+  "schema": "re.bow.cumulative-integration-r25/1",
+  "passed": 9,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "All historical open workstreams and all 389 incarnations remain in the cumulative tracker",
+      "pass": true,
+      "evidence": {
+        "openWorkstreams": 17,
+        "identities": 389,
+        "fidelityCertified": 0
+      }
+    },
+    {
+      "name": "The browser dashboard receives exactly the reviewed tracking content",
+      "pass": true,
+      "evidence": {
+        "proofInputsVerified": 27,
+        "resources": 5
+      }
+    },
+    {
+      "name": "Every workstream and resource evidence link resolves to an existing local file",
+      "pass": true,
+      "evidence": {
+        "resolvedProofLinks": 43
+      }
+    },
+    {
+      "name": "The cumulative reader includes all historical models and every new source entry without substituting candidate identities",
+      "pass": true,
+      "evidence": {
+        "historicalModels": 38,
+        "cumulativeModels": 51,
+        "exactSubjects": 11
+      }
+    },
+    {
+      "name": "Source file counts distinguish real nonnegative-time motion, fixed poses and unknown action meanings",
+      "pass": true,
+      "evidence": {
+        "sourceFiles": 228,
+        "positiveTimeMotions": 226,
+        "positiveTimePoses": 2,
+        "inferredActions": 0
+      }
+    },
+    {
+      "name": "Publisher audio groups remain distinct from independent listening and native-bank certification",
+      "pass": true,
+      "evidence": {
+        "publishedGroupClips": 708,
+        "publisherAssignedSubjects": 16,
+        "independentListening": 0,
+        "nativeBanksCertified": 0
+      }
+    },
+    {
+      "name": "New documentary claims retain their subjects, actors, phases and explicitly secondary certification scope",
+      "pass": true,
+      "evidence": {
+        "newClaims": 109,
+        "cumulativeReviewedSubjects": 176,
+        "completeMovesetsCertified": 0,
+        "directPrimaryCaptures": 0
+      }
+    },
+    {
+      "name": "All historical R24 worksheet XML and relationships remain byte-identical in the new workbook",
+      "pass": true,
+      "evidence": {
+        "historicalWorksheets": 17,
+        "addedWorksheets": 6,
+        "historicalWorksheetPartsPreserved": 22,
+        "baselineWorkbookUnchanged": true
+      }
+    },
+    {
+      "name": "Original engine, roster, art and planning files remain unchanged from the reviewed R24 commit",
+      "pass": true,
+      "evidence": {
+        "protectedTrees": [
+          "src",
+          "data",
+          "assets",
+          "docs/planning"
+        ],
+        "modifiedOriginalFiles": 0
+      }
+    }
+  ],
+  "scope": "Cross-module source attribution, tracker consistency and byte preservation. No complete art, audio, game behavior or physical-device certification."
+}

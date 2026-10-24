@@ -1,0 +1,70 @@
+{
+  "schema": "re.bow.model-view-browser/1",
+  "startedAt": "2026-10-23T22:13:38.551Z",
+  "completedAt": "2026-10-23T22:14:45.308Z",
+  "softwareRenderer": true,
+  "physicalDevices": false,
+  "nativeGameRenderingCertified": false,
+  "passed": 6,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "All published static variants and weighted Tyrant load without source changes",
+      "pass": true,
+      "detail": {
+        "models": 37,
+        "maximumTextures": 18,
+        "sourcesRewritten": false
+      }
+    },
+    {
+      "name": "48 source files distinguish 47 motions and one post-zero pose with native targets and bounded resources",
+      "pass": true,
+      "detail": {
+        "sourceFiles": 48,
+        "motions": 47,
+        "poses": 1,
+        "maximumTextures": 18,
+        "maximumGeometries": 9,
+        "archiveReads": 1,
+        "retargeting": false,
+        "softwareRenderer": true
+      }
+    },
+    {
+      "name": "Camera inspection, skin overlay and native movement controls at 1280px",
+      "pass": true,
+      "detail": {
+        "width": 1280,
+        "keyboard": true,
+        "reducedMotion": true,
+        "physicalDevice": false
+      }
+    },
+    {
+      "name": "Camera inspection, skin overlay and native movement controls at 390px",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "keyboard": true,
+        "reducedMotion": true,
+        "physicalDevice": false
+      }
+    },
+    {
+      "name": "Changed source bytes fail closed and a new load recovers",
+      "pass": true,
+      "detail": {
+        "changedSourceRefused": true,
+        "retryRecovered": true
+      }
+    },
+    {
+      "name": "A late previous model never replaces the selected identity",
+      "pass": true,
+      "detail": {
+        "staleResponseRejected": true
+      }
+    }
+  ]
+}

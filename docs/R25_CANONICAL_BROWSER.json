@@ -1,0 +1,61 @@
+{
+  "schema": "re.bow.canonical-browser-r25/1",
+  "startedAt": "2026-10-24T02:19:22.548Z",
+  "completedAt": "2026-10-24T02:19:26.337Z",
+  "passed": 5,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Eighty new identities, quotations and source links at 1440px",
+      "pass": true,
+      "detail": {
+        "newIdentities": 80,
+        "assertions": 109,
+        "corroboratedIdentities": 10,
+        "verifiedLocalCopies": 3,
+        "sourceTextInert": true
+      }
+    },
+    {
+      "name": "Eighty new identities, quotations and source links at 390px",
+      "pass": true,
+      "detail": {
+        "newIdentities": 80,
+        "assertions": 109,
+        "corroboratedIdentities": 10,
+        "verifiedLocalCopies": 3,
+        "sourceTextInert": true
+      }
+    },
+    {
+      "name": "Negative predicates and game modes retain their original scope",
+      "pass": true,
+      "detail": {
+        "negativeIdentities": 3,
+        "scopeGaps": 2,
+        "hdAndDirectorsCutRemainExplicit": true
+      }
+    },
+    {
+      "name": "Named source actors do not inherit the subject identity",
+      "pass": true,
+      "detail": {
+        "spotterIsDetector": true,
+        "hunterIsCalled": true,
+        "catalogueUnchanged": true
+      }
+    },
+    {
+      "name": "Markup stays inert and an incomplete or remote source index is refused",
+      "pass": true,
+      "detail": {
+        "markupIsText": true,
+        "missingIdentityRefused": true,
+        "remoteSnapshotRefused": true
+      }
+    }
+  ],
+  "primaryCapturesAdded": 0,
+  "completeMoveSetsCertified": 0,
+  "physicalDevices": false
+}

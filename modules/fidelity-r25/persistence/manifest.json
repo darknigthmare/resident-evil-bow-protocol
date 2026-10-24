@@ -1,0 +1,140 @@
+{
+  "schema": "re.bow.persistence-delivery/3",
+  "release": "R25",
+  "baseline_commit": "259f9e255e10210cbdf481f5f1aec9abf8ba58f1",
+  "tasks": [
+    "G-REPLAYS",
+    "G-SAUVES",
+    "G-MANCHES",
+    "G-VICTIMES",
+    "G-PERF",
+    "G-ACCESS"
+  ],
+  "entrypoint": "index.html",
+  "supported_containers": [
+    "main-replay-r13",
+    "catalog-replay-r7",
+    "main-replay-archive",
+    "backup-r19"
+  ],
+  "known_engine_routes": 3,
+  "reused_original_engine_sandbox": "../../fidelity-r24/persistence/sandbox.js",
+  "known_engine_index": "../../fidelity-r24/persistence/engines.json",
+  "limits": {
+    "file_bytes": 33554432,
+    "archive_utf16_characters": 8388608,
+    "inspected_records": 2048,
+    "batch_records": 30,
+    "rendered_rows_per_page": 100
+  },
+  "features": {
+    "original_file_byte_preservation": true,
+    "nested_archive_string_preservation": true,
+    "exact_replay_source_slices": true,
+    "unrepresentable_utf8_refused": true,
+    "duplicate_ids_all_refused": true,
+    "unknown_contracts_refused_before_launch": true,
+    "sequential_new_isolated_engine_per_record": true,
+    "independent_simulations_per_record": 2,
+    "individual_results_retained": true,
+    "immediate_cancel_during_pending_factory": true,
+    "late_results_cannot_replace_new_file": true,
+    "selection_retained_across_pages": true
+  },
+  "production_scope": {
+    "read_only": true,
+    "game_origin_storage_access": false,
+    "restoration": false,
+    "cloud_backend": false,
+    "physical_crash_certified": false,
+    "artistic_fidelity_certified": false
+  },
+  "validation": {
+    "node_passed": 13,
+    "node_failed": 0,
+    "node_report": "../../../docs/R25_PERSISTENCE_TESTS.json",
+    "browser_groups_passed": 10,
+    "browser_groups_failed": 0,
+    "browser_report": "../../../docs/R25_PERSISTENCE_BROWSER_TESTS.json"
+  },
+  "remaining": [
+    "Other historical engine contracts and formats",
+    "Cloud backups and atomic restoration in real storage",
+    "Physical crashes, target devices and real screen readers",
+    "Original Resident Evil art, audio and combat fidelity"
+  ],
+  "files": [
+    {
+      "path": "modules/fidelity-r25/persistence/bundle.js",
+      "bytes": 9755,
+      "sha256": "37c150971d66e40a73e6eeb1d9509deb9204f8bf2a999a2e7cf8b5027a368c51"
+    },
+    {
+      "path": "modules/fidelity-r25/persistence/index.html",
+      "bytes": 3798,
+      "sha256": "c9d6fad5ed86cbc2acc309648e06e879c83f02462ceaf65799ef44bc2a62f090"
+    },
+    {
+      "path": "modules/fidelity-r25/persistence/page.js",
+      "bytes": 9276,
+      "sha256": "022497dac5da3a58da1b2c634e43a385579968d33b7dac16ab38dcaa435963a8"
+    },
+    {
+      "path": "modules/fidelity-r25/persistence/style.css",
+      "bytes": 1094,
+      "sha256": "7bf4488e3c8f02de728712d82461538e0f1eac5a0679737f1a9a8aceba83ab50"
+    }
+  ],
+  "unchanged_dependencies": [
+    {
+      "path": "modules/fidelity-r23/persistence/inspector.js",
+      "bytes": 12996,
+      "sha256": "feab31c9443584f50147aa089004ecd3e48e49b83d751f7809761cea7fa1c0d0"
+    },
+    {
+      "path": "modules/fidelity-r24/persistence/sandbox.js",
+      "bytes": 6228,
+      "sha256": "0e9c76a5c67428669327347d3995eab6580564dbffa026aa5ffbfecd9f227cf1"
+    },
+    {
+      "path": "modules/fidelity-r24/persistence/bootstrap.js",
+      "bytes": 1485,
+      "sha256": "e3cb385be578dfa143e131dfebfbe000d0563b7bddfac8032e2d21d9cb623967"
+    },
+    {
+      "path": "modules/fidelity-r24/persistence/runner.js",
+      "bytes": 1279,
+      "sha256": "53b2b02084e8029e98b262079722143d04bb283d3f3317e69027cdf94e910dff"
+    },
+    {
+      "path": "modules/fidelity-r24/persistence/verifier.js",
+      "bytes": 7187,
+      "sha256": "3c9c71a3001d490f08e5313e017d83221a70571270008c1e4f37273eda62f735"
+    },
+    {
+      "path": "modules/fidelity-r24/persistence/engines.json",
+      "bytes": 556,
+      "sha256": "d99c7e4e93bf09fa9f85dc62a4ed1a9abba26066c2d1328e907a7ac03d9e03b1"
+    },
+    {
+      "path": "modules/fidelity-r24/persistence/manifest.json",
+      "bytes": 14121,
+      "sha256": "0e335e9ab156b6de83091cda8eeda2c214bde9bf976d13a7830b2a1838835067"
+    },
+    {
+      "path": "src/save-center-r19.js",
+      "bytes": 10791,
+      "sha256": "6a312bd65ea55fcfe272e4adc9add12ce51affb4a9d424f5bee9998b9952ccbf"
+    },
+    {
+      "path": "src/replay-vault-r13.js",
+      "bytes": 7600,
+      "sha256": "243cae05f698591d9665d09a1ed60a4c7c9f9d4dd20d2b384b8057cf619fed83"
+    },
+    {
+      "path": "src/catalog-replay-contract.js",
+      "bytes": 248,
+      "sha256": "2778547c459e6efcc95810e8c3dd1108449ca752adaf54f751406573b84ec934"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "schema": "re.bow.persistence-r25-browser-tests/1",
+  "passed": 10,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "R19 nested archive selection, exact extraction and actual two-engine reconstruction at 1440px",
+      "pass": true,
+      "evidence": {
+        "width": 1440,
+        "exactOriginal": true,
+        "exactNestedArchive": true,
+        "exactRecordSlice": true,
+        "engineRoutes": [
+          "main-current",
+          "main-pre-r13"
+        ],
+        "gameSavesUnchanged": true
+      }
+    },
+    {
+      "name": "R19 nested archive selection, exact extraction and actual two-engine reconstruction at 390px",
+      "pass": true,
+      "evidence": {
+        "width": 390,
+        "exactOriginal": true,
+        "exactNestedArchive": true,
+        "exactRecordSlice": true,
+        "engineRoutes": [
+          "main-current",
+          "main-pre-r13"
+        ],
+        "gameSavesUnchanged": true
+      }
+    },
+    {
+      "name": "Individual experimental replay retains its original state-digest verification",
+      "pass": true,
+      "evidence": {
+        "route": "catalog-current",
+        "digestCheckedByOriginalEngine": true
+      }
+    },
+    {
+      "name": "Unknown, invalid and duplicate records stay visible while a falsified result cannot pass with a valid neighbour",
+      "pass": true,
+      "evidence": {
+        "visibleRecords": 6,
+        "refusedBeforeLaunch": 4,
+        "independentlyVerified": 1,
+        "falsifiedOutcomeRefused": 1
+      }
+    },
+    {
+      "name": "Transport failures preserve the original and an empty backup never starts a replay",
+      "pass": true,
+      "evidence": {
+        "damagedOriginalPreserved": true,
+        "emptyArchiveNoPlayback": true
+      }
+    },
+    {
+      "name": "A 31-record archive is selectable in bounded batches and cannot launch an oversized selection",
+      "pass": true,
+      "evidence": {
+        "records": 31,
+        "batchLimit": 30,
+        "oversizedSelectionRefused": true
+      }
+    },
+    {
+      "name": "Large archives keep at most 100 rendered records and retain bounded selections across pages",
+      "pass": true,
+      "evidence": {
+        "inventory": 205,
+        "maxRenderedRows": 100,
+        "selectionAcrossPages": true,
+        "batchLimit": 30
+      }
+    },
+    {
+      "name": "Cancelling before the engine factory responds settles immediately and late work cannot replace another file",
+      "pass": true,
+      "evidence": {
+        "factoryCancellationImmediate": true,
+        "eventualFactoryCancelled": true,
+        "stalePublication": false
+      }
+    },
+    {
+      "name": "Cancellation tears down an active sandbox and leaves completed records separate",
+      "pass": true,
+      "evidence": {
+        "activeFrameRemoved": true,
+        "unstartedRecordsNotCertified": true
+      }
+    },
+    {
+      "name": "Keyboard skip link, named controls and 200 percent text at 320 CSS pixels remain usable",
+      "pass": true,
+      "evidence": {
+        "width": 320,
+        "fontPercent": 200,
+        "skipLink": true,
+        "keyboardSelection": true,
+        "physicalScreenReader": false
+      }
+    }
+  ],
+  "scope": "Local virtualized Chromium and original three B.O.W. engines. Physical crashes, hardware, cloud restoration and unknown historical contracts remain unverified."
+}
