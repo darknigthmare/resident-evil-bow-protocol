@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="fr">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Répéter une restauration · B.O.W.</title><link rel="stylesheet" href="style.css"></head>
+<body><a class="skip" href="#main">Aller à la restauration isolée</a><main id="main" tabindex="-1">
+<nav aria-label="Navigation"><a href="../index.html">Suivi R26</a> · <a href="../../fidelity-r25/persistence/index.html">Vérifier les replays</a></nav>
+<h1>Répéter une restauration</h1>
+<p>Importez une copie de départ et une sauvegarde R19 à comparer. La répétition conserve les valeurs brutes dans une base IndexedDB dédiée à cet atelier. Elle persiste après rechargement ; <strong>les sauvegardes du jeu et le cloud restent intacts.</strong></p>
+<p id="status" role="status" aria-live="polite">Ouverture de l’atelier isolé…</p>
+<section aria-labelledby="baseline-title"><h2 id="baseline-title">1. Copie de départ</h2>
+<label for="baseline">Sauvegarde R19 de départ (JSON, 32 Mio maximum)</label><input id="baseline" type="file" accept=".json,application/json">
+<p id="baseline-name"></p><label class="check"><input id="replace" type="checkbox"><span>Remplacer le contenu existant de cet atelier isolé</span></label>
+<button id="initialize" disabled>Importer dans l’atelier isolé</button>
+<p id="inventory"></p><div class="actions"><button id="export-current" disabled>Exporter l’état de l’atelier</button><button id="clear" disabled>Effacer cet atelier isolé</button></div>
+<label class="check"><input id="confirm-clear" type="checkbox"><span>Confirmer l’effacement de la seule base de répétition R26</span></label>
+</section>
+<section aria-labelledby="incoming-title"><h2 id="incoming-title">2. Sauvegarde à essayer</h2>
+<label for="incoming">Sauvegarde R19 à restaurer dans l’atelier (JSON, 32 Mio maximum)</label><input id="incoming" type="file" accept=".json,application/json">
+<p id="incoming-name"></p><fieldset id="groups" disabled><legend>Groupes à essayer</legend><div id="group-list"></div></fieldset>
+<button id="prepare" disabled>Prévisualiser les changements</button>
+</section>
+<section id="preview" hidden aria-labelledby="preview-title"><h2 id="preview-title">3. Prévisualisation</h2><p id="preview-summary"></p><ul id="changes"></ul>
+<button id="backup" disabled>Conserver la copie avant répétition</button>
+<label class="check"><input id="confirm" type="checkbox"><span>Appliquer ces changements uniquement à la base isolée de cet atelier</span></label>
+<div class="actions"><button id="apply" disabled>Valider la transaction isolée</button><button id="cancel">Annuler l’aperçu</button></div>
+</section>
+<section id="journal" hidden aria-labelledby="journal-title"><h2 id="journal-title">Journal conservé</h2><p id="journal-status"></p>
+<label class="check"><input id="confirm-rollback" type="checkbox"><span>Revenir à l’état exact qui précédait cette répétition</span></label><button id="rollback" disabled>Revenir avant la répétition</button><button id="receipt" disabled>Télécharger le constat</button></section>
+<section aria-labelledby="limits-title"><h2 id="limits-title">Portée</h2><p>Les clés autorisées et les contrôles de structure sont ceux du contrat R19. Les empreintes R19 détectent un dommage de transport ; elles ne prouvent pas l’auteur du fichier. La lisibilité extérieure ne valide pas les règles internes de chaque mode.</p><p>Valeurs et journal sont validés dans la même transaction IndexedDB. Une transaction interrompue avant sa validation laisse l’état précédent. Un autre onglet ou un aperçu périmé bloque le remplacement ; aucun mélange silencieux n’est autorisé.</p><p>Cette répétition ne certifie ni une panne physique, ni la durabilité du disque, ni une restauration réelle des anciennes sauvegardes, ni la fidélité des ressources Resident Evil. Pour vérifier des combats, exportez l’état puis ouvrez-le dans <a href="../../fidelity-r25/persistence/index.html">le vérificateur de replays et ses trois moteurs d’origine</a>.</p></section>
+</main><script src="../../../src/save-center-r19.js"></script><script type="module" src="page.js"></script></body></html>

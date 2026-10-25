@@ -1,0 +1,82 @@
+{
+  "schema": "re.bow.source-pose-sheet-browser/1",
+  "startedAtUtc": "2026-10-25T06:37:24.763Z",
+  "finishedAtUtc": "2026-10-25T06:37:31.554Z",
+  "passed": 8,
+  "failed": 0,
+  "originalGameSprites": 0,
+  "combatReadySprites": 0,
+  "physicalDeviceCertified": false,
+  "checks": [
+    {
+      "name": "All nine original-source-derived sheets load manually with exact model attribution",
+      "pass": true,
+      "detail": {
+        "sheets": 9,
+        "views": 72,
+        "combatReadySprites": 0,
+        "manualOnly": true
+      }
+    },
+    {
+      "name": "A real recalculation preserves eight distinct full-frame views from verified textures",
+      "pass": true,
+      "detail": {
+        "views": 8,
+        "distinctViews": 8,
+        "sourceTexturesVerified": true
+      }
+    },
+    {
+      "name": "Cancellation during delayed source loading leaves the page usable",
+      "pass": true,
+      "detail": {
+        "observedSourceRequests": 7,
+        "cancellation": true,
+        "previousSheetRetained": true
+      }
+    },
+    {
+      "name": "Corrupted stored PNG bytes are rejected without displaying an unverified image",
+      "pass": true,
+      "detail": {
+        "tamperingRejected": true
+      }
+    },
+    {
+      "name": "Corrupted OBJ bytes fail recalculation while the verified sheet remains available",
+      "pass": true,
+      "detail": {
+        "sourceHashFailureRejected": true,
+        "verifiedSheetRetained": true
+      }
+    },
+    {
+      "name": "Invalid resource paths and invented input kinds never leave the source pack",
+      "pass": true,
+      "detail": {
+        "rejectedCases": 3
+      }
+    },
+    {
+      "name": "Page lifecycle events release and reacquire the verified sheet without restarting a render",
+      "pass": true,
+      "detail": {
+        "simulatedLifecycleEvents": true,
+        "sheetReverified": true,
+        "automaticRender": false,
+        "nativeBfcacheCertified": false
+      }
+    },
+    {
+      "name": "Keyboard, narrow layouts and missing WebGL retain the verified inspection sheet",
+      "pass": true,
+      "detail": {
+        "viewport": 320,
+        "textPercent": 200,
+        "horizontalOverflow": false,
+        "webglFallback": true
+      }
+    }
+  ]
+}

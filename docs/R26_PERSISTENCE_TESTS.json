@@ -1,0 +1,55 @@
+{
+  "schema": "re.bow.persistence-r26-guard-tests/1",
+  "passed": 6,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Only the dedicated rehearsal database can be selected",
+      "pass": true,
+      "evidence": {
+        "deniedDatabaseNames": 4,
+        "databaseOpens": 0
+      }
+    },
+    {
+      "name": "Malformed, duplicate and checksum-damaged files fail before any database is opened",
+      "pass": true,
+      "evidence": {
+        "refusedInputs": 4,
+        "databaseOpens": 0
+      }
+    },
+    {
+      "name": "Malformed previews are refused before storage access",
+      "pass": true,
+      "evidence": {
+        "databaseOpens": 0
+      }
+    },
+    {
+      "name": "Pre-cancelled initialization never opens the database",
+      "pass": true,
+      "evidence": {
+        "databaseOpens": 0,
+        "abortPropagated": true
+      }
+    },
+    {
+      "name": "A storage policy refusal propagates and never falls back to game localStorage",
+      "pass": true,
+      "evidence": {
+        "refusedAttempts": 2,
+        "fallbackGameStorageAccesses": 0
+      }
+    },
+    {
+      "name": "A closed rehearsal refuses later work and foreign plans cannot be acknowledged",
+      "pass": true,
+      "evidence": {
+        "databaseOpens": 0,
+        "foreignPlansRefused": true
+      }
+    }
+  ],
+  "scope": "Original R19 contract and pre-storage isolation guards. Actual atomic commit/abort/rollback is exercised in browser-persistence-r26.mjs."
+}

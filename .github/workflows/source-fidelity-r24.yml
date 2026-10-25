@@ -29,16 +29,23 @@ jobs:
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: '22.16.0'
-      - name: Install pinned validation tools
-        timeout-minutes: 10
+      - name: Install pinned Python validation tools
+        timeout-minutes: 5
         run: |
           python3 -m venv "$RUNNER_TEMP/fidelity-r24-venv"
           "$RUNNER_TEMP/fidelity-r24-venv/bin/python" -m pip install --timeout 60 --retries 2 Pillow==12.3.0 openpyxl==3.1.5
-          npm install --no-audit --no-fund --no-save --package-lock=false --fetch-timeout=60000 --fetch-retries=2 playwright@1.64.1 @napi-rs/canvas@0.1.80 axe-core@4.14.0
+      - name: Install pinned Node validation tools
+        timeout-minutes: 7
+        run: npm install --no-audit --no-fund --no-save --package-lock=false --fetch-timeout=60000 --fetch-retries=2 --fetch-retry-mintimeout=1000 --fetch-retry-maxtimeout=10000 playwright@1.64.1 @napi-rs/canvas@0.1.80 axe-core@4.14.0
+      - name: Locate or install FFmpeg validation tools
+        timeout-minutes: 5
+        run: |
           if ! command -v ffprobe >/dev/null || ! command -v ffmpeg >/dev/null; then
-            sudo apt-get update
-            sudo apt-get install -y ffmpeg
+            sudo apt-get -o Acquire::Retries=2 -o Acquire::http::Timeout=60 -o Acquire::https::Timeout=60 update
+            sudo env DEBIAN_FRONTEND=noninteractive apt-get -o Acquire::Retries=2 -o Acquire::http::Timeout=60 -o Acquire::https::Timeout=60 install -y ffmpeg
           fi
+          ffprobe -version
+          ffmpeg -version
       - name: Reproduce the committed catalogue, scan and workbook before reports are regenerated
         run: |
           mkdir -p qa-fidelity-r24-ci
