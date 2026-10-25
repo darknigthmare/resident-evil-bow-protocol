@@ -1,0 +1,61 @@
+{
+  "schema": "re.bow.model-reader-transport-r25/1",
+  "passed": 6,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Small original archives retain the unchanged R24 length, hash and path guards",
+      "pass": true,
+      "detail": {
+        "legacyLimitUnchanged": 41943040
+      }
+    },
+    {
+      "name": "Oversized archive declarations and traversal are refused before any network call",
+      "pass": true,
+      "detail": {
+        "maximumBytes": 83886080,
+        "calls": 0
+      }
+    },
+    {
+      "name": "A large stream ending early or exceeding its declaration is refused and cancelled",
+      "pass": true,
+      "detail": {
+        "truncatedRefused": true,
+        "overrunCancelled": true
+      }
+    },
+    {
+      "name": "A complete original-sized stream above 40 MiB is accepted only with its exact SHA-256",
+      "pass": true,
+      "detail": {
+        "verifiedBytes": 42991616,
+        "changedDigestRefused": true
+      }
+    },
+    {
+      "name": "Large archives require a bounded streaming body",
+      "pass": true,
+      "detail": {
+        "unboundedFallbackRefused": true
+      }
+    },
+    {
+      "name": "Dossier header remains available when optional DOM or fetch capabilities are absent",
+      "pass": true,
+      "detail": [
+        {
+          "missing": "network",
+          "headerAvailable": true,
+          "optionalRequests": 0
+        },
+        {
+          "missing": "dom-after",
+          "headerAvailable": true,
+          "optionalRequests": 0
+        }
+      ]
+    }
+  ]
+}

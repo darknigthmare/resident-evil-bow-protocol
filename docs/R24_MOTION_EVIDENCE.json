@@ -1,0 +1,508 @@
+{
+  "schema": "re.bow.motion-evidence-r24/1",
+  "release": "R24",
+  "summary": {
+    "newIdentitiesWithSourceRig": 1,
+    "newSourceAnimationFiles": 48,
+    "newDirectAnimationFiles": 6,
+    "preservedArchiveAnimationFiles": 48,
+    "weightedSourceRigs": 1,
+    "sourceAnimationCurveCount": 14688,
+    "varyingSourceAnimationCurves": 5019,
+    "sourceKeyTimeEntries": 450621,
+    "sourceKeyInstantsAcrossClips": 3891,
+    "generatedKeyframes": 0,
+    "rigProductionFinalized": 0,
+    "canonicalFidelityCertified": 0,
+    "completeMoveSets": 0,
+    "finalCombatClipsCertified": 0,
+    "positiveTimeMotionFiles": 47,
+    "positiveTimePoseFiles": 1,
+    "varyingSourceNonnegativeAnimationCurves": 4596,
+    "sourceAnimationFileCountingScope": "48 FBX files with keyed curves, including47 varying after timezero and1 fixed pose whose only transition is a negative preroll/reference key. Not48distinct gameplay gestures."
+  },
+  "entries": [
+    {
+      "id": "rerev-sea-creeper",
+      "subjectId": "rerev-sea-creeper",
+      "game": "Resident Evil Revelations (2012)",
+      "sourcePlatform": "PC / Computer",
+      "manifest": "modules/fidelity-r24/motion/manifest.json",
+      "sourceArchive": {
+        "path": "sea-creeper/source/original.zip",
+        "sha256": "a04c0c942bd2aaf0a39a6b91d5849a5c81a93491fb4368908562b0fb70188783",
+        "bytes": 33776058,
+        "url": "https://models.spriters-resource.com/media/assets/273/461302.zip?updated=1755561550"
+      },
+      "model": {
+        "path": "sea-creeper/model.fbx",
+        "member": "em1200/em1200.fbx",
+        "sha256": "51218ff14033afe03ba648bf619e089aeff14f63baa878b7aa15cc0e56edeef7",
+        "bytes": 652012,
+        "format": "FBX-binary",
+        "version": 7400,
+        "boneCount": 34,
+        "boneNames": [
+          "bone255",
+          "bone0",
+          "bone1",
+          "bone2",
+          "bone3",
+          "bone4",
+          "bone5",
+          "bone6",
+          "bone7",
+          "bone8",
+          "bone9",
+          "bone10",
+          "bone11",
+          "bone12",
+          "bone13",
+          "bone14",
+          "bone15",
+          "bone16",
+          "bone17",
+          "bone18",
+          "bone19",
+          "bone20",
+          "bone21",
+          "bone22",
+          "bone23",
+          "bone24",
+          "bone25",
+          "bone26",
+          "bone27",
+          "bone28",
+          "bone29",
+          "bone30",
+          "bone31",
+          "bone32"
+        ],
+        "skinCount": 9,
+        "skinClusterCount": 306,
+        "skinWeightCount": 10144,
+        "invalidSkinWeights": 0,
+        "invalidSkinAssignments": 0,
+        "animationStacks": [],
+        "animationCurveCount": 0,
+        "varyingAnimationCurveCount": 0,
+        "invalidCurveValues": 0,
+        "keyTimeCount": 0,
+        "uniqueKeyTimeCount": 0,
+        "keyTimeStart": null,
+        "keyTimeEnd": null,
+        "ticksPerSecond": 46186158000,
+        "nativeKeyTimesTicks": [],
+        "durationSeconds": 0,
+        "animatedModelNames": [],
+        "geometryCount": 9,
+        "hasWeightedRig": true,
+        "hasNativeAnimationCurves": false,
+        "canonicalFidelityCertified": false
+      },
+      "sourceClipCount": 48,
+      "directClipCount": 6,
+      "sourceRigsPresent": true,
+      "rigFinalized": false,
+      "semanticActionVerified": false,
+      "fullScenePerClip": true,
+      "sourceRigBoneCount": 34,
+      "sourceClipLimbNodeCount": 33,
+      "animatedModelNamesCount": 34,
+      "geometryCountPerClip": 9,
+      "skinCountPerClip": 9,
+      "skinWeightsPerClip": 10144,
+      "sources": [
+        {
+          "url": "https://models.spriters-resource.com/pc_computer/residentevilrevelations/asset/461302/",
+          "path": "sea-creeper/source/model-page.html.gz",
+          "rawSha256": "1ed1e7f690bfffbd5d138323d59ff760ce4c2556debd86567e81635a9191f295",
+          "rawBytes": 37859,
+          "sha256": "9ee58385f94fe1b87b38e874e1c3a77248469bd0f8ab8ed18b3b29f53688b3e6",
+          "encoding": "gzip",
+          "role": "Game/subject attribution and originalZIP download link"
+        },
+        {
+          "url": "https://www.evilresource.com/resident-evil-revelations/enemies/sea-creeper",
+          "path": "sea-creeper/source/evil-resource-page.html.gz",
+          "rawSha256": "24dfd31d8d9d886d1c17cbc65d4804f8063e17f47b57adb58254a3ae9065c06f",
+          "rawBytes": 123064,
+          "sha256": "ddf0e3695da934a82a0b76a27ebe32ac69a001ee4103b8f3695c3ee04d3f854e",
+          "encoding": "gzip",
+          "role": "Independent secondary identification of Sea Creeper in Revelations; does not verify animation curves."
+        }
+      ],
+      "limitations": [
+        "Source is a community export attributed to PC Revelations, not an official raw game package.",
+        "BA/DM/SC filenames are preserved; their action meaning has not been individually certified.",
+        "Model transforms, skin weights, key times and native FBX bytes are preserved; no retargeted or invented keyframes.",
+        "No final sprite, combat integration, victory/defeat/capture mapping, real body dimensions or full canonical fidelity is certified.",
+        "47 files vary during playback at time zero or later. em1200_em1201_BA_1 changes only between a negative reference key and time zero; its nonnegative playback is a fixed pose, not another movement."
+      ],
+      "materialBindings": {
+        "path": "sea-creeper/source/material-bindings.json",
+        "sha256": "801384c29f41aabdd76fb42d71d6f5b2ee26ea324519ef0ac25c6921294906d3",
+        "bytes": 423837,
+        "bodyMember": "em1200/em1200.fbx",
+        "verifiedClips": 48,
+        "exactTopologyAndExpandedUvMatches": 432,
+        "arbitraryTextureMappings": false
+      },
+      "nativePreRollSeconds": 0.00020833332792045617,
+      "positiveTimeMotionFiles": 47,
+      "positiveTimePoseFiles": 1,
+      "positiveTimePoseFile": "em1200_em1201_BA_1"
+    }
+  ],
+  "movingImageResearch": {
+    "committedSnapshotScan": "docs/R24_MOTION_SCAN.json",
+    "summary": {
+      "sourceSnapshotsVerified": 389,
+      "uniqueRawPages": 386,
+      "catalogueIdentities": 389,
+      "uniqueCandidateUrls": 5,
+      "subjectCandidateUrls": 4,
+      "embeddedMediaReferences": 2
+    },
+    "blogFeed": {
+      "url": "https://blackjackrants.blogspot.com/feeds/posts/default/-/Resident%20Evil?alt=json&max-results=150",
+      "path": "modules/fidelity-r24/motion/research/blog-posts-feed.json.gz",
+      "rawSha256": "bdb9d6c09a2af489b6ed15ad484f0d48e2ddd7d48978f2b55b85de8e2e345ab5",
+      "posts": 23,
+      "newSubjectGifLinksBeyondKnownFour": 0
+    },
+    "additionalGalleryAttempts": [
+      {
+        "name": "hunter-gallery",
+        "url": "https://residentevil.fandom.com/wiki/Hunter_(%CE%B1_series)/gallery",
+        "error": "HTTP Error 402: Payment Required"
+      },
+      {
+        "name": "nemesis-gameplay",
+        "url": "https://residentevil.fandom.com/wiki/Nemesis-T_Type/gameplay",
+        "error": "HTTP Error 402: Payment Required"
+      },
+      {
+        "name": "regenerador-gallery",
+        "url": "https://residentevil.fandom.com/wiki/Regenerador/gallery",
+        "error": "HTTP Error 402: Payment Required"
+      }
+    ],
+    "searchEngineOutcome": "Bing pages returned HTTP200 but results were unrelated or insufficient to attribute native motions; no assets were accepted from those results.",
+    "scope": "R23 snapshots scanned with byte hashes; all23 blog feed posts searched; existing R21/R22 caches searched for literal GIF/media references. No additional timed raster clip accepted."
+  },
+  "validation": {
+    "pythonTests": 7,
+    "pythonPassed": 7,
+    "originalArchiveShaVerified": true,
+    "all48FbxParsed": true,
+    "all48HaveValidSkinWeights": true,
+    "all48NativeKeyTimesRecorded": true,
+    "allDirectMembersByteIdentical": true,
+    "sourceSnapshotScanReadOnlyCheckPassed": true,
+    "viewerValidation": "Separate root-owned FBX viewer validation; not asserted by this source import report.",
+    "commands": [
+      "python3 -m unittest discover -s tests -p test_rigged_motion_r24.py -v",
+      "python3 scripts/scan-source-motion-r24.py --check"
+    ],
+    "nativeMaterialBindingProof": {
+      "path": "modules/fidelity-r24/motion/sea-creeper/source/material-bindings.json",
+      "clipsChecked": 48,
+      "exactTopologyAndExpandedUvMatches": 432,
+      "nativeBodyMaterialAssignments": 9,
+      "arbitraryTextureMapping": false
+    },
+    "initialViewerCheck": {
+      "scope": "Initial source-export playback observations reported by the root viewer and its independent reviewer; final viewer report remains separate.",
+      "subjectId": "rerev-sea-creeper",
+      "clipId": "em1200_em1200_BA_1",
+      "weightedMeshes": 9,
+      "decodedTracks": 102,
+      "bonesWithChangedLocalPoseAt1s": 32,
+      "duplicateBoneMatricesCheckedAtInstants": 6,
+      "originalGameRenderingCertified": false
+    },
+    "all48HaveVaryingAnimationCurvesIncludingPreroll": true,
+    "positiveTimeClassification": {
+      "report": "docs/R24_MOTION_POSITIVE_TIME.json",
+      "motions": 47,
+      "fixedPoses": 1,
+      "fixedPoseId": "em1200_em1201_BA_1",
+      "fixedPoseVariationsAtNonnegativeTimes": 0,
+      "minimumMovingCurvesAbove1eMinus4ForOtherFiles": 33,
+      "classificationRegressionTestPassed": true
+    }
+  },
+  "files": [
+    {
+      "path": "modules/fidelity-r24/motion/index.html",
+      "bytes": 4352,
+      "sha256": "77d05c7dbab08c7c0d5fe7ce4ce49929bd883a94ea80aec606189b9637b7b5cd"
+    },
+    {
+      "path": "modules/fidelity-r24/motion/manifest.json",
+      "bytes": 253199,
+      "sha256": "326b4259ec20644fe21472abaada75eff5d7d5b54f65b03e490c905924d746f8"
+    },
+    {
+      "path": "modules/fidelity-r24/motion/research/blog-posts-feed.json.gz",
+      "bytes": 305718,
+      "sha256": "35781d7f61557fb8c97372c763d63e72e1cedd6aefa821062173fd39af3aac99"
+    },
+    {
+      "path": "modules/fidelity-r24/motion/sea-creeper/clips/em1200_em1200_BA_1.FBX",
+      "bytes": 1117952,
+      "sha256": "eb2af866af70f4ca9db702c999fe6b994e965bddee95d4e5ccabb090f04c48dd"
+    },
+    {
+      "path": "modules/fidelity-r24/motion/sea-creeper/clips/em1200_em1200_BA_31.FBX",
+      "bytes": 995968,
+      "sha256": "2974813be2a9cc98f3eeac980d2001c0c9847c90bb5f80752420cdab4f104da9"
+    },
+    {
+      "path": "modules/fidelity-r24/motion/sea-creeper/clips/em1200_em1200_BA_7.FBX",
+      "bytes": 1139152,
+      "sha256": "6cce99232a778fa0f02b0849656d9e807d06c49db7dd25e36d017a9048ac3de9"
+    },
+    {
+      "path": "modules/fidelity-r24/motion/sea-creeper/clips/em1200_em1200_DM_61.FBX",
+      "bytes": 1102432,
+      "sha256": "3a88a44f5f374ad13068f0d86d8b8ca56fd98d053336b93ba3a329663776047a"
+    },
+    {
+      "path": "modules/fidelity-r24/motion/sea-creeper/clips/em1200_em1200_SC_12.FBX",
+      "bytes": 1168352,
+      "sha256": "104d47a0c9407100a03e9bddc535c5fc08bdf8911490216be0bc2ff569e3a2c8"
+    },
+    {
+      "path": "modules/fidelity-r24/motion/sea-creeper/clips/em1200_em1200_SC_3.FBX",
+      "bytes": 1039920,
+      "sha256": "cf3c097cb2765d21a7c5af73394f32889bdf35ccaa55dc3d5b4e37e74b1934f3"
+    },
+    {
+      "path": "modules/fidelity-r24/motion/sea-creeper/model.fbx",
+      "bytes": 652012,
+      "sha256": "51218ff14033afe03ba648bf619e089aeff14f63baa878b7aa15cc0e56edeef7"
+    },
+    {
+      "path": "modules/fidelity-r24/motion/sea-creeper/source/evil-resource-page.html.gz",
+      "bytes": 8814,
+      "sha256": "ddf0e3695da934a82a0b76a27ebe32ac69a001ee4103b8f3695c3ee04d3f854e"
+    },
+    {
+      "path": "modules/fidelity-r24/motion/sea-creeper/source/material-bindings.json",
+      "bytes": 423837,
+      "sha256": "801384c29f41aabdd76fb42d71d6f5b2ee26ea324519ef0ac25c6921294906d3"
+    },
+    {
+      "path": "modules/fidelity-r24/motion/sea-creeper/source/model-page.html.gz",
+      "bytes": 10881,
+      "sha256": "9ee58385f94fe1b87b38e874e1c3a77248469bd0f8ab8ed18b3b29f53688b3e6"
+    },
+    {
+      "path": "modules/fidelity-r24/motion/sea-creeper/source/original.zip",
+      "bytes": 33776058,
+      "sha256": "a04c0c942bd2aaf0a39a6b91d5849a5c81a93491fb4368908562b0fb70188783"
+    },
+    {
+      "path": "modules/fidelity-r24/motion/sea-creeper/textures/Chara003_DM.png",
+      "bytes": 7878,
+      "sha256": "50594b9294fd0118c9ab2601de0b054d0a639f02b3a5e88601507f0da4ecd339"
+    },
+    {
+      "path": "modules/fidelity-r24/motion/sea-creeper/textures/em1200_BM.png",
+      "bytes": 1538912,
+      "sha256": "abd5ce78f943b9f7c885ef0a1f263c1215bae462e2cbe495192dbaac10610965"
+    },
+    {
+      "path": "modules/fidelity-r24/motion/sea-creeper/textures/em1200_MM.png",
+      "bytes": 1155168,
+      "sha256": "49569a02e118c476a435dcadfcd530883c1145fcfc3bed2bac4c870053c52d6d"
+    },
+    {
+      "path": "modules/fidelity-r24/motion/sea-creeper/textures/em1200_NM.png",
+      "bytes": 1705056,
+      "sha256": "52d5da9c8debe3c1c63a7bb93a3973f1ca12fa80bbf7570b38b7a63573fc711e"
+    }
+  ],
+  "taskAdvances": [
+    {
+      "id": "R20-09",
+      "status": "EN COURS",
+      "advance": "One sourced weighted Sea Creeper rig and48original animation FBX files preserved.",
+      "remaining": "Final rig validation, named action review, engine integration and coverage of other incarnations."
+    },
+    {
+      "id": "G-PREUVES",
+      "status": "EN COURS",
+      "advance": "Original archive, source pages, native curve times and hashes are available for verification.",
+      "remaining": "Primary in-game and independent per-action comparison."
+    },
+    {
+      "id": "G-COMMANDES",
+      "status": "EN COURS",
+      "advance": "48native source filenames and native keytimes inventoried; their meaning is not invented from BA/DM/SC prefixes.",
+      "remaining": "Map each file to an observed command/action and prove complete move sets."
+    },
+    {
+      "id": "G-MANCHES",
+      "status": "EN COURS",
+      "advance": "No source action is silently designated victory, defeat or draw.",
+      "remaining": "Exact art and sequence semantics for each result."
+    },
+    {
+      "id": "G-CINEMATIQUES",
+      "status": "EN COURS",
+      "advance": "New native animated rig sources can be reviewed independently of inherited presentation slots.",
+      "remaining": "Verified intro/outro mappings and original audio."
+    },
+    {
+      "id": "G-VICTIMES",
+      "status": "EN COURS",
+      "advance": "Native source motions are preserved without retargeting to another victim or body.",
+      "remaining": "Per-association contact, scale and final choreography review."
+    }
+  ],
+  "excludedRigCandidates": [
+    {
+      "candidateUid": "re5-chainsaw-majini",
+      "sourceSubjectLabel": "Chainsaw Majini",
+      "sourceGame": "Resident Evil 5 (2009)",
+      "sourcePlatform": "PC / Computer",
+      "sourcePage": {
+        "url": "https://models.spriters-resource.com/pc_computer/residentevil5/asset/316460/",
+        "sha256": "46193b8a618172703ea11b7088a382813ea0cf8d53ff6c6b81a58449b6a6b611",
+        "bytes": 34829
+      },
+      "archive": {
+        "requested_url": "https://models.spriters-resource.com/media/assets/313/316460.zip?updated=1755504373",
+        "effective_url": "https://models.spriters-resource.com/media/assets/313/316460.zip?updated=1755504373",
+        "http_status": 200,
+        "observed_at_utc": "2026-10-23T21:48:17.182254+00:00",
+        "bytes": 6133364,
+        "sha256": "af503379aa8dddc2837a732f2a85af6cce290c313d05a450968689d8449b41c3"
+      },
+      "nativeModel": {
+        "member": "Chainsaw Majini/ChainsawMajini.fbx",
+        "sha256": "f0574219ff5e1f03e590c86cb471aa096a6f097d9ff1a23834faf5afce5def7e",
+        "bytes": 802128,
+        "boneCount": 87,
+        "skinCount": 11,
+        "skinWeightCount": 10561,
+        "invalidSkinAssignments": 0,
+        "uniqueKeyTimes": 1,
+        "varyingAnimationCurves": 0,
+        "hasNativeAnimation": false
+      },
+      "materialReview": {
+        "meshCount": 11,
+        "meshesWithExplicitTextureConnections": 7,
+        "unmappedMeshes": [
+          {
+            "name": "mesh0",
+            "vertexCount": 48,
+            "polygonVertexCount": 144,
+            "sourceMaterial": "unknownmaterial"
+          },
+          {
+            "name": "mesh3",
+            "vertexCount": 131,
+            "polygonVertexCount": 378,
+            "sourceMaterial": "unknownmaterial"
+          },
+          {
+            "name": "mesh6",
+            "vertexCount": 167,
+            "polygonVertexCount": 465,
+            "sourceMaterial": "unknownmaterial"
+          },
+          {
+            "name": "mesh9",
+            "vertexCount": 236,
+            "polygonVertexCount": 516,
+            "sourceMaterial": "unknownmaterial"
+          }
+        ],
+        "unknownMaterialDiffuseRgb": [
+          0.800000011920929,
+          0.800000011920929,
+          0.800000011920929
+        ],
+        "unknownMaterialOpacity": 1,
+        "normalTextureBinding": "NormalMap",
+        "interpretation": "Source exports retain default gray unknownmaterial on several meshes. No absent texture link is inferred or repaired."
+      },
+      "deliveryStatus": "NOT_DELIVERED_SOURCE_REVIEW_OPEN",
+      "originalArchiveLocation": "/workspace/scratch/r24-motion/chainsaw-majini.zip",
+      "sourceAssetsCommitted": false,
+      "canonicalFidelityCertified": false
+    },
+    {
+      "candidateUid": "re5-executioner",
+      "sourceSubjectLabel": "Axe Executioner",
+      "sourceGame": "Resident Evil 5 (2009)",
+      "sourcePlatform": "PC / Computer",
+      "sourcePage": {
+        "url": "https://models.spriters-resource.com/pc_computer/residentevil5/asset/310867/",
+        "sha256": "ae53dfee4f9cf1d8838424f8abdb47676c6004fb80fff5e0f2545ecb3d3c108b",
+        "bytes": 34768
+      },
+      "archive": {
+        "requested_url": "https://models.spriters-resource.com/media/assets/308/310867.zip?updated=1755502931",
+        "effective_url": "https://models.spriters-resource.com/media/assets/308/310867.zip?updated=1755502931",
+        "http_status": 200,
+        "observed_at_utc": "2026-10-23T21:48:17.230817+00:00",
+        "bytes": 9750889,
+        "sha256": "3e0e3206529b8cef0deaac519c0093327ece593face5223f208d2585197675e5"
+      },
+      "nativeModel": {
+        "member": "Axe Executioner/Axe_Executioner.fbx",
+        "sha256": "f9efab4fc45f214637002b422aa080bbe49064ad0cee6e1f04a2109fb0826337",
+        "bytes": 939360,
+        "boneCount": 112,
+        "skinCount": 12,
+        "skinWeightCount": 12955,
+        "invalidSkinAssignments": 0,
+        "uniqueKeyTimes": 1,
+        "varyingAnimationCurves": 0,
+        "hasNativeAnimation": false
+      },
+      "materialReview": {
+        "meshCount": 12,
+        "meshesWithExplicitTextureConnections": 9,
+        "unmappedMeshes": [
+          {
+            "name": "mesh0",
+            "vertexCount": 354,
+            "polygonVertexCount": 1020,
+            "sourceMaterial": "unknownmaterial"
+          },
+          {
+            "name": "mesh5",
+            "vertexCount": 715,
+            "polygonVertexCount": 1980,
+            "sourceMaterial": "unknownmaterial"
+          },
+          {
+            "name": "mesh10",
+            "vertexCount": 84,
+            "polygonVertexCount": 216,
+            "sourceMaterial": "unknownmaterial"
+          }
+        ],
+        "unknownMaterialDiffuseRgb": [
+          0.800000011920929,
+          0.800000011920929,
+          0.800000011920929
+        ],
+        "unknownMaterialOpacity": 1,
+        "normalTextureBinding": "Bump",
+        "interpretation": "Source exports retain default gray unknownmaterial on several meshes. No absent texture link is inferred or repaired."
+      },
+      "deliveryStatus": "NOT_DELIVERED_SOURCE_REVIEW_OPEN",
+      "originalArchiveLocation": "/workspace/scratch/r24-motion/executioner.zip",
+      "sourceAssetsCommitted": false,
+      "canonicalFidelityCertified": false
+    }
+  ]
+}

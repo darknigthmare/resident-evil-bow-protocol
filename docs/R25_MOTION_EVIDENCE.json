@@ -1,0 +1,328 @@
+{
+  "schema": "re.bow.motion-delivery-evidence-r25/1",
+  "summary": {
+    "identities": 3,
+    "weightedSourceRigs": 5,
+    "sourceAnimationFiles": 180,
+    "directAnimationFiles": 0,
+    "sourceOriginalArchivePreserved": true,
+    "sourceBasePoseFiles": 5,
+    "sourceFbxFilesInAnimationFolders": 185,
+    "positiveTimeMotionFiles": 179,
+    "positiveTimePoseFiles": 1,
+    "bodyMotionFiles": 170,
+    "associatedObjectMotionFiles": 9,
+    "generatedKeyframes": 0,
+    "canonicalFidelityCertified": 0
+  },
+  "manifestSha256": "ab520fadd59ff6116b9d67a79ce554c230065fac01d6af9ee67413464235215f",
+  "sourceArchives": [
+    {
+      "path": "farfarello/source/original.zip",
+      "sha256": "2e2b508a9dd5ce779f3eff4c2a924954b49214705d5eac4226b454ae0f986da2",
+      "bytes": 51272971,
+      "url": "https://models.spriters-resource.com/media/assets/272/461196.zip?updated=1755561528"
+    },
+    {
+      "path": "wall-blister/source/original.zip",
+      "sha256": "9f14ce930fa505e78873980df596b5e95d74ce7021d0a0b77daa1a3cf7c10184",
+      "bytes": 54239972,
+      "url": "https://models.spriters-resource.com/media/assets/273/461258.zip?updated=1755561541"
+    },
+    {
+      "path": "scagdead/source/original.zip",
+      "sha256": "e94cc9e21d3aac264d7541b74c5ddb4193879678c4f0c9c52918bdcd2d4ed769",
+      "bytes": 70540768,
+      "url": "https://models.spriters-resource.com/media/assets/273/461257.zip?updated=1755561540"
+    }
+  ],
+  "nativeMaterialMeshMatches": 1499,
+  "skeletonTest": {
+    "path": "docs/R25_MOTION_SKELETON_TESTS.json",
+    "passed": 180,
+    "failed": 0,
+    "positiveTimeMotionFiles": 179,
+    "positiveTimePoseFiles": 1
+  },
+  "scopes": [
+    {
+      "id": "rerev-farfarello",
+      "subjectId": "rerev-farfarello",
+      "modelRole": "body",
+      "sourceEdition": "Port HD/PC (2013) ; présence et géométrie de la version 3DS (2012) non certifiées",
+      "keyedSceneFiles": 78,
+      "unkeyedBaseFiles": 1
+    },
+    {
+      "id": "rerev-wall-blister",
+      "subjectId": "rerev-wall-blister",
+      "modelRole": "body",
+      "sourceEdition": "Port HD/PC (2013) ; présence et géométrie de la version 3DS (2012) non certifiées",
+      "keyedSceneFiles": 39,
+      "unkeyedBaseFiles": 1
+    },
+    {
+      "id": "rerev-scagdead",
+      "subjectId": "rerev-scagdead",
+      "modelRole": "body",
+      "sourceEdition": "Port HD/PC (2013) ; présence et géométrie de la version 3DS (2012) non certifiées",
+      "keyedSceneFiles": 53,
+      "unkeyedBaseFiles": 1
+    },
+    {
+      "id": "rerev-scagdead-em1401-source",
+      "subjectId": "rerev-scagdead",
+      "modelRole": "body-variant",
+      "sourceEdition": "Port HD/PC (2013) ; présence et géométrie de la version 3DS (2012) non certifiées",
+      "keyedSceneFiles": 0,
+      "unkeyedBaseFiles": 1
+    },
+    {
+      "id": "rerev-scagdead-om1706-source",
+      "subjectId": "rerev-scagdead",
+      "modelRole": "associated-object",
+      "sourceEdition": "Port HD/PC (2013) ; présence et géométrie de la version 3DS (2012) non certifiées",
+      "keyedSceneFiles": 10,
+      "unkeyedBaseFiles": 1
+    }
+  ],
+  "bytesUnchanged": true,
+  "originalGameRigOriginCertified": false,
+  "canonicalFidelityCertified": 0,
+  "semanticActionAssignments": 0,
+  "combatIntegrated": false,
+  "excludedCandidates": [
+    {
+      "label": "Garrador",
+      "sourceGame": "Resident Evil The Mercenaries 3D",
+      "sourcePlatform": "Nintendo 3DS",
+      "reason": "Not assigned to RE4 campaign Garrador"
+    },
+    {
+      "label": "Ooze",
+      "archiveBytes": 136688510,
+      "reason": "Above the bounded 80 MiB archive limit; no substitute animation authored"
+    }
+  ],
+  "pythonTest": {
+    "command": "python3 -m unittest discover -s tests -p 'test_rigged_motion_r25.py' -v",
+    "passed": 9,
+    "failed": 0,
+    "exitCode": 0,
+    "observedDurationSeconds": 79.057
+  },
+  "files": [
+    {
+      "path": "modules/fidelity-r25/motion/farfarello/model.fbx",
+      "bytes": 507868,
+      "sha256": "390fc6019019ca41ae3c9b5ed57800caff0f73515f518a2a16219af375e24a34"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/farfarello/source/evil-resource-page.html.gz",
+      "bytes": 6816,
+      "sha256": "fb083c68e25681ab8604a51ef107f3a9eba31b495609bcf70e272b8f3db52784"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/farfarello/source/material-bindings.json",
+      "bytes": 467813,
+      "sha256": "187cd8c54d9321dcac59542c73a73a926288ec881bbe22a1fff076d3a39d07c7"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/farfarello/source/model-page.html.gz",
+      "bytes": 10687,
+      "sha256": "04cebb9482db80f757b2b4e2d9443de6ded581631c130a9c862f3459dd6aecd9"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/farfarello/source/original.zip",
+      "bytes": 51272971,
+      "sha256": "2e2b508a9dd5ce779f3eff4c2a924954b49214705d5eac4226b454ae0f986da2"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/farfarello/textures/em1240_00_BM.png",
+      "bytes": 1754114,
+      "sha256": "45c8830354bae3f21088a4e287cedbceb3116cbdf408ad9fc33ce06e076967f9"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/farfarello/textures/em1240_00_MM.png",
+      "bytes": 1471612,
+      "sha256": "14183b09ddd5724186ca62e5719c8eb906d39b399feb139471f2e580fc65dc9c"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/farfarello/textures/em1240_00_NM.png",
+      "bytes": 2187163,
+      "sha256": "3fa4f7913b5b6bcc0b137934d7dccf4392b505cff3f4e91743f2c0a6eadc20d0"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/index.html",
+      "bytes": 5771,
+      "sha256": "f40941f0a7695d1cdaf6032a3e17b60a5a40fbb2dcec7de5b8f4a37ba73e242a"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/manifest.json",
+      "bytes": 923756,
+      "sha256": "ab520fadd59ff6116b9d67a79ce554c230065fac01d6af9ee67413464235215f"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/scagdead/em1401/model.fbx",
+      "bytes": 815516,
+      "sha256": "ca9755edf466c1ad11a87a68fa8c98c4406303d5b495767886a05f69400cff5a"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/scagdead/em1401/source/material-bindings.json",
+      "bytes": 16520,
+      "sha256": "72a6e81b903c453eaec322035d16ff1f1887b4abd7cbddb9220b3232f1d804ee"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/scagdead/em1401/textures/Chara002_DM_HQ.png",
+      "bytes": 5634,
+      "sha256": "587e42e8020d50853748eb66da0ee501d0e57887ea28221217ebaeffa546ce40"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/scagdead/em1401/textures/em1401_BM.png",
+      "bytes": 2129500,
+      "sha256": "f2b9d65812a4075aed641d150771478a30ec7b12fd81a10d4f9da65a59f62027"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/scagdead/em1401/textures/em1401_MM.png",
+      "bytes": 1628903,
+      "sha256": "0a4d2955716646321402b0be6dcaa7e1b3c721461be73215a1a3eccb42e4e03f"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/scagdead/em1401/textures/em1401_NM.png",
+      "bytes": 2236307,
+      "sha256": "e3d2000cae0a36e8fad306f8a9d3cdcfb04abbb458f842836b4ec68a56ef4d4b"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/scagdead/model.fbx",
+      "bytes": 892716,
+      "sha256": "fee462e7404091aadcd375cc8b2760c3735fd695f58782b5aed799e30a88a740"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/scagdead/om1706/model.fbx",
+      "bytes": 83692,
+      "sha256": "9347b306ebe0ef1e9e07dade33c69093c5a80abf385a958801d7caefddee1266"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/scagdead/om1706/source/material-bindings.json",
+      "bytes": 26077,
+      "sha256": "de08cfe300aa58f6b3edb255a2b8362b0f47e86ef6c9bfcd28abcf48f106d747"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/scagdead/om1706/textures/om1706_skin_BM.png",
+      "bytes": 35027,
+      "sha256": "90065a1ca019ea05aea18f98a80ac58b9d89b1098f4ee37b39948d4c4e93938f"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/scagdead/om1706/textures/om1706_skin_MM.png",
+      "bytes": 30376,
+      "sha256": "c83fd4c4208413755f224bcbaedbcfb83485cf4fc1a9576bdf9b8123bc813611"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/scagdead/om1706/textures/om1706_skin_NM.png",
+      "bytes": 30700,
+      "sha256": "fb51ca0d2fe4dfbb5a1b3671a6241fcd9b5de85372ea5b66c0edc9846a4090e5"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/scagdead/source/evil-resource-page.html.gz",
+      "bytes": 7069,
+      "sha256": "7b2534f8959163e0f1445e68c6157a962b56e4ac363a5ae3748a7cfde82d84b3"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/scagdead/source/material-bindings.json",
+      "bytes": 571019,
+      "sha256": "b92a71ce40a3cb0dab53a318fe6940a7623edf866bea771969bc86ffd730027e"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/scagdead/source/model-page.html.gz",
+      "bytes": 10681,
+      "sha256": "ae790a27ca72fa8c117437bbab17195fcef9112f46a1f1e18e4f346daadfa4d4"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/scagdead/source/original.zip",
+      "bytes": 70540768,
+      "sha256": "e94cc9e21d3aac264d7541b74c5ddb4193879678c4f0c9c52918bdcd2d4ed769"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/scagdead/textures/Chara002_DM_HQ.png",
+      "bytes": 5634,
+      "sha256": "587e42e8020d50853748eb66da0ee501d0e57887ea28221217ebaeffa546ce40"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/scagdead/textures/em1400_BM.png",
+      "bytes": 2098614,
+      "sha256": "ac0187e0126c170e046635135d3fb2ac79c252cd344bac939b81c6a3f2becd45"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/scagdead/textures/em1400_MM.png",
+      "bytes": 1583881,
+      "sha256": "2c62a61cfc4501895ae318c90f54a680b550ef8494dd03261c3c61a3ffe7b548"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/scagdead/textures/em1400_NM.png",
+      "bytes": 2234705,
+      "sha256": "304d6b6f0e0d82adc66c23eabb5d2461e87f21054f6efea4587cc742c71fc367"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/wall-blister/model.fbx",
+      "bytes": 1059580,
+      "sha256": "1387a67193a008002f18b0d13abb77c9184bd86ab5ac75163928e9ef2037c435"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/wall-blister/source/edition-scope-r23.html.gz",
+      "bytes": 27918,
+      "sha256": "d14171bd0d62aeeed9526fd9302b4b8a6d886ee8d8df6653ad6b9c53481bb142"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/wall-blister/source/evil-resource-page.html.gz",
+      "bytes": 8690,
+      "sha256": "30ed2000dc73f6142e6bec373dee8d654c2bac3ddeee6e0b1c9861eb9e6d9eee"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/wall-blister/source/material-bindings.json",
+      "bytes": 389637,
+      "sha256": "bd39922a08bcba4ffeecf723232095470b204c7f2bbae0f490272d1edc40e4f1"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/wall-blister/source/model-page.html.gz",
+      "bytes": 10575,
+      "sha256": "1b79d012e2393face409f7af66e689471000c4d17b93258ad35d69b3898518bc"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/wall-blister/source/original.zip",
+      "bytes": 54239972,
+      "sha256": "9f14ce930fa505e78873980df596b5e95d74ce7021d0a0b77daa1a3cf7c10184"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/wall-blister/textures/Chara002_DM_HQ.png",
+      "bytes": 5634,
+      "sha256": "587e42e8020d50853748eb66da0ee501d0e57887ea28221217ebaeffa546ce40"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/wall-blister/textures/em1410_BM.png",
+      "bytes": 1688775,
+      "sha256": "d312bf4a6f315eb1155e1ea7b8131d316f606735c41f76e79cd2a34d99243a42"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/wall-blister/textures/em1410_BM_alpha channel.png",
+      "bytes": 12894,
+      "sha256": "7486bd9abecd86336b440f245dc2f6e342df754a4742c7c37f2f2f8e91db6592"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/wall-blister/textures/em1410_BM_rgb.png",
+      "bytes": 1275059,
+      "sha256": "0de00c3e330591a76f51b22c43adcaedccd11b51fe30854ab5a0d5c21e849231"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/wall-blister/textures/em1410_MM.png",
+      "bytes": 29247,
+      "sha256": "6aaa7c5f495b2d6581bb3c99fb9d8c196a244afa40ac7256832c0aa1b3acd5e9"
+    },
+    {
+      "path": "modules/fidelity-r25/motion/wall-blister/textures/em1410_NM.png",
+      "bytes": 2004795,
+      "sha256": "6184b724e6fd659defb5be4ca55e39e561dd72a0f8fe15f4b8ddc8ce617a5d04"
+    }
+  ],
+  "moduleFiles": 42,
+  "moduleBytes": 204344686
+}

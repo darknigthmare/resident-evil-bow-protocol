@@ -1,0 +1,92 @@
+{
+  "suite": "source-motion-native-dossiers-r22-http",
+  "startedAt": "2026-10-23T22:16:51.509Z",
+  "completedAt": "2026-10-23T22:17:06.361Z",
+  "passed": 8,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Native source pixels, frames and bounded cache at 1440px",
+      "pass": true,
+      "detail": {
+        "framesCompared": [
+          0,
+          13,
+          31,
+          32,
+          75,
+          149
+        ],
+        "durationMs": 6000,
+        "maximumAtlasCache": 2,
+        "reducedMotion": true
+      }
+    },
+    {
+      "name": "Native source pixels, frames and bounded cache at 390px",
+      "pass": true,
+      "detail": {
+        "framesCompared": [
+          0,
+          13,
+          31,
+          32,
+          75,
+          149
+        ],
+        "durationMs": 6000,
+        "maximumAtlasCache": 2,
+        "reducedMotion": true
+      }
+    },
+    {
+      "name": "Source clock keeps 40ms frame timing and manual pause",
+      "pass": true,
+      "detail": {
+        "positionMs": 244,
+        "frame": 6
+      }
+    },
+    {
+      "name": "Paused or hidden playback never resumes after delayed atlas loading",
+      "pass": true,
+      "detail": {
+        "manualPauseRetained": true,
+        "hiddenPauseRetained": true
+      }
+    },
+    {
+      "name": "Corrupt atlas bytes are refused and a new attempt recovers",
+      "pass": true,
+      "detail": {
+        "wrongHashRefused": true,
+        "retryRecovered": true
+      }
+    },
+    {
+      "name": "All 20 dossier images display the exact reviewed identity and dimensions",
+      "pass": true,
+      "detail": {
+        "images": 20,
+        "crossGameSubstitution": false
+      }
+    },
+    {
+      "name": "Scissor placeholder, uncovered identity restoration and exact motion link",
+      "pass": true,
+      "detail": {
+        "missingPhaseSuppressed": true,
+        "originalRestored": true,
+        "sourceLinkUnique": true
+      }
+    },
+    {
+      "name": "Delayed or failed native images cannot overwrite another dossier",
+      "pass": true,
+      "detail": {
+        "staleLoadRefused": true,
+        "failureDoesNotLeak": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Malacoda — images d’origine | B.O.W. Protocol</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="reader.js"></script>
+<link rel="stylesheet" href="../../fidelity-r24/access/text-reflow.css">
+</head>
+<body>
+  <main>
+    <a href="../index.html">← Chantiers de fidélité</a>
+    <h1>Malacoda — images d’origine</h1>
+    <p>Resident Evil Revelations (2012). Scène documentaire avec son décor et sa caméra.</p>
+    <p class="notice">Le GIF publié ne définit aucun délai entre ses 218 images. Explorez-les manuellement ; la cadence du jeu reste à documenter.</p>
+    <figure>
+      <canvas id="frame" width="420" height="242" role="img" aria-label="Scène de Malacoda, image source non encore chargée"></canvas>
+      <figcaption id="caption">Chargement de l’image d’origine…</figcaption>
+    </figure>
+    <fieldset disabled id="controls">
+      <legend>Parcourir les images</legend>
+      <div class="buttons">
+        <button type="button" id="first">Début</button>
+        <button type="button" id="previous">Image précédente</button>
+        <button type="button" id="next">Image suivante</button>
+        <button type="button" id="last">Fin</button>
+      </div>
+      <label for="position">Image source <output id="position-label" for="position">1 / 218</output></label>
+      <input type="range" id="position" min="0" max="217" value="0" step="1">
+    </fieldset>
+    <p id="status" role="status" aria-live="polite">Vérification de la source…</p>
+    <button type="button" id="retry" hidden>Réessayer le chargement</button>
+    <details>
+      <summary>Sources et portée</summary>
+      <p>Les 218 images composites sont conservées sans perte, dans leur ordre. Aucun mouvement, miroir, détourage ou son n’est ajouté.</p>
+      <p>Cette scène ne constitue pas un rig, un sprite de combat ni une animation de victoire ou de défaite.</p>
+      <ul>
+        <li><a href="https://blackjackrants.blogspot.com/2021/07/reviewing-monsters-resident-evil.html" rel="noreferrer">Article qui attribue le GIF à Malacoda dans Revelations</a></li>
+        <li><a href="https://www.evilresource.com/resident-evil-revelations/enemies/malacoda" rel="noreferrer">Malacoda et son contexte dans Revelations — Evil Resource</a></li>
+        <li><a href="malacoda/original.gif" download>Télécharger le GIF publié intact</a></li>
+        <li><a href="malacoda/manifest.json">Empreintes et limites des images</a></li>
+      </ul>
+      <p>L’attribution repose sur ces sources secondaires ; la plateforme exacte et la cadence d’origine ne sont pas certifiées.</p>
+    </details>
+  </main>
+<script src="../../fidelity-r24/access/focus-retention.js"></script>
+</body>
+</html>

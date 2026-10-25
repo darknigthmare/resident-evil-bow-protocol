@@ -1,0 +1,74 @@
+{
+  "schema": "re.bow.persistence-r25-tests/1",
+  "passed": 13,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "R19 backup and archive slices preserve all original Unicode text and record boundaries",
+      "pass": true,
+      "evidence": {
+        "records": 2,
+        "rawByteHashesUnchanged": true,
+        "unknownKeysRestored": 0
+      }
+    },
+    {
+      "name": "Unknown contracts stay visible and cannot enter a batch",
+      "pass": true
+    },
+    {
+      "name": "Repeated IDs refuse both copies rather than choosing by archive order",
+      "pass": true
+    },
+    {
+      "name": "Invalid records stay visible while independent valid archive entries remain selectable",
+      "pass": true
+    },
+    {
+      "name": "Malformed nested JSON, duplicate fields, transport damage and unsupported containers fail closed",
+      "pass": true
+    },
+    {
+      "name": "A nested unpaired UTF-16 surrogate cannot be silently replaced during exact UTF-8 extraction",
+      "pass": true
+    },
+    {
+      "name": "Limits cover file bytes, archive characters, collection size, batch count and duplicate selection",
+      "pass": true
+    },
+    {
+      "name": "Experimental replay is individual only and main archives never silently expand their format",
+      "pass": true
+    },
+    {
+      "name": "An unrelated damaged backup group is disclosed without inventing a restoration or hiding replay validation",
+      "pass": true
+    },
+    {
+      "name": "Sequential batch reconstructs real current, historical and experimental recordings with unchanged engines",
+      "pass": true,
+      "evidence": {
+        "routes": [
+          "main-current",
+          "main-pre-r13",
+          "catalog-current"
+        ],
+        "independentPasses": 6,
+        "maxConcurrentEngines": 1
+      }
+    },
+    {
+      "name": "Falsified outcome fails inside a mixed batch while another actual replay still verifies",
+      "pass": true
+    },
+    {
+      "name": "Cancelling a pending factory settles immediately and cancels its eventual task without stale results",
+      "pass": true
+    },
+    {
+      "name": "Cancelling an active engine tears it down and never advances to another selected replay",
+      "pass": true
+    }
+  ],
+  "scope": "Original R19/R13 validators, original three real engine routes and controlled batch cancellation. No game storage, cloud restoration or physical crash certification."
+}

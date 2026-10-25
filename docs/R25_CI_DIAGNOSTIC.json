@@ -1,0 +1,195 @@
+{
+  "schema": "re.bow.ci-diagnostic-r25/1",
+  "observed_at_utc": "2026-10-24T02:13:46.087336+00:00",
+  "pull_request": "https://github.com/darknigthmare/resident-evil-bow-protocol/pull/15",
+  "observed_head": "dd288abd32ff9573d38e281fbd9a7841f6faa760",
+  "remote_checks_green": false,
+  "observations": [
+    {
+      "workflow": "R22 original source fidelity",
+      "job_id": 120686233049,
+      "conclusion": "failure",
+      "failed_step": "Validate original frame pixels and dossier presentation",
+      "units_and_installation": "success",
+      "assertion_details_available": false,
+      "other_run_same_head": "success",
+      "head": "259f9e255e10210cbdf481f5f1aec9abf8ba58f1"
+    },
+    {
+      "workflow": "R23 parallel fidelity workstreams",
+      "job_id": 120686233399,
+      "conclusion": "failure",
+      "failed_step": "Exercise sources, keyboard navigation and local imports",
+      "workbook_units_and_installation": "success",
+      "assertion_details_available": false,
+      "head": "259f9e255e10210cbdf481f5f1aec9abf8ba58f1"
+    },
+    {
+      "workflow": "R24 source assets, replay verification and access",
+      "job_id": 120686146447,
+      "conclusion": "failure",
+      "failed_step": "Exercise all R24 browser suites, including software rendering, access and paced stress",
+      "workbook_units_skeletons_and_installation": "success",
+      "assertion_details_available": false,
+      "head": "259f9e255e10210cbdf481f5f1aec9abf8ba58f1"
+    },
+    {
+      "workflow": "R24 source assets, replay verification and access",
+      "job_id": 120686233195,
+      "conclusion": "cancelled",
+      "cancelled_step": "Install pinned validation tools",
+      "duration_minutes": 35,
+      "cause": "Job timeout during installation; browser tests did not execute.",
+      "head": "259f9e255e10210cbdf481f5f1aec9abf8ba58f1"
+    }
+  ],
+  "other_observed_successes": [
+    "B.O.W. Protocol QA",
+    "Audit R9 browser regressions",
+    "R10 intro and finisher browser regressions",
+    "R11 Lucas browser regressions",
+    "R12 flight browser regressions",
+    "R13 replay recovery browser regressions",
+    "R14 Baker rooms browser regressions",
+    "R15 Baker ambience browser regressions",
+    "R16-R17 audio and combat text regressions",
+    "R18 story and contextual text regressions",
+    "R19 save center browser regressions",
+    "R20 player interface and sprites browser regressions",
+    "Vercel deployment statuses"
+  ],
+  "diagnostic_access": {
+    "github_job_and_annotation_api": "available",
+    "results-receiver.actions.githubusercontent.com": "HTTP 403 through the configured proxy",
+    "productionresultssa7.blob.core.windows.net": "HTTP 403 through the configured proxy",
+    "bypass_attempted": false,
+    "signed_download_urls_saved_to_repository": false
+  },
+  "implemented_diagnostics": {
+    "bounded_install_step_minutes": 10,
+    "npm_fetch_timeout_ms": 60000,
+    "npm_fetch_retries": 2,
+    "python_versions": {
+      "Pillow": "12.3.0",
+      "openpyxl": "3.1.5"
+    },
+    "separate_named_browser_steps": [
+      "R23",
+      "R24"
+    ],
+    "annotation_helper": "tests/ci-report-r25.mjs",
+    "helper_tests": {
+      "path": "tests/verify-ci-report-r25.mjs",
+      "passed": 5,
+      "failed": 0
+    },
+    "unchanged_browser_assertions": true,
+    "original_failure_cause_claimed_fixed": false,
+    "r22_r23_harness_repairs_remotely_verified": true
+  },
+  "limits": [
+    "The initial failures and their job IDs remain recorded with the initial head.",
+    "R22 and R23 harness repairs are now remotely confirmed; source readers and native frame data remain unchanged.",
+    "The original R24 assertion failure details were inaccessible; its unchanged suites subsequently passed in both complete runs, without a claim about the original cause.",
+    "The R25 features remain uncommitted at this observation and require their own remote validation.",
+    "Passing CI does not certify original-game art, motion, audio or physical-device fidelity."
+  ],
+  "diagnostics_followup": {
+    "head": "3c785870156705c5e2c2ecd1d076a0897c335f96",
+    "annotations_remotely_verified": true,
+    "r22": {
+      "job_id": 120746886193,
+      "failed_check": "Source clock keeps 40ms frame timing and manual pause",
+      "failed_assertion": "state.positionMs >= 200 && state.positionMs <= 260",
+      "correction": "Pause the installed clock before navigation; advance exactly240ms, assert position240ms/frame6. Original reader and frame durations unchanged.",
+      "local_regression": {
+        "passed": 8,
+        "failed": 0,
+        "path": "docs/R25_CI_R22_REGRESSION.json"
+      },
+      "remote_regression_jobs": [
+        120748437212,
+        120748424381
+      ]
+    },
+    "r23": {
+      "job_ids": [
+        120746896757,
+        120746886231
+      ],
+      "failed_check": "Buffered seek preserves deliberate focus navigation and hidden-page pause",
+      "failed_assertion": "document.activeElement === document.body immediately after disabling the range",
+      "correction": "Require buffering and disabled range; allow initial focus only on that range or BODY, then blur the range deliberately to exercise the BODY branch. Keep strict Tab intent, later focus and hidden-page assertions.",
+      "local_regression": {
+        "passed": 7,
+        "failed": 0,
+        "path": "docs/R25_CI_R23_REGRESSION.json"
+      },
+      "controlled_focus_precondition": true,
+      "remote_regression_jobs": [
+        120748437487,
+        120748424184
+      ]
+    },
+    "r24": {
+      "job_ids": [
+        120748461605,
+        120748684555
+      ],
+      "state": "Both complete R24 jobs passed all provenance and browser steps, including paced stress.",
+      "conclusion_pending": false,
+      "conclusions": [
+        "SUCCESS",
+        "SUCCESS"
+      ],
+      "assertions_unchanged": true
+    },
+    "remote_repairs_verified": true
+  },
+  "initial_observed_head": "259f9e255e10210cbdf481f5f1aec9abf8ba58f1",
+  "initial_remote_checks_green": false,
+  "latest_remote_validation": {
+    "head": "dd288abd32ff9573d38e281fbd9a7841f6faa760",
+    "observed_at_utc": "2026-10-24T02:13:46.087336+00:00",
+    "r22_jobs": [
+      120748437212,
+      120748424381
+    ],
+    "r23_jobs": [
+      120748437487,
+      120748424184
+    ],
+    "r24_jobs": [
+      120748461605,
+      120748684555
+    ],
+    "r22_conclusions": [
+      "SUCCESS",
+      "SUCCESS"
+    ],
+    "r23_conclusions": [
+      "SUCCESS",
+      "SUCCESS"
+    ],
+    "r24_conclusions": [
+      "SUCCESS",
+      "SUCCESS"
+    ],
+    "scope": "R22/R23 harness repairs and unchanged R24 source/reader suites; the uncommitted R25 feature delivery is not included.",
+    "deployment_quota_distinct_from_workflow_success": true
+  },
+  "github_workflow_checks_green": true,
+  "deployment_statuses_green": false,
+  "deployment_statuses": [
+    {
+      "context": "Vercel – resident-evil-bow-protocol",
+      "state": "FAILURE",
+      "description": "Deployment rate limited — retry in 24 hours."
+    },
+    {
+      "context": "Vercel – resident-evil-bow-protocol-live",
+      "state": "FAILURE",
+      "description": "Deployment rate limited — retry in 24 hours."
+    }
+  ]
+}

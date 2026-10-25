@@ -1,0 +1,451 @@
+{
+  "summary": "Les 17 chantiers restent ouverts. Les ressources consultables et les critères restants sont détaillés ci-dessous.",
+  "statistics": [
+    {
+      "label": "chantiers suivis, tous ouverts",
+      "value": 17
+    },
+    {
+      "label": "nouvelles vues natives partielles",
+      "value": 7
+    },
+    {
+      "label": "images sources supplémentaires",
+      "value": 218
+    },
+    {
+      "label": "incarnations indexées",
+      "value": 389
+    }
+  ],
+  "resources": [
+    {
+      "title": "Vues natives",
+      "description": "Sept vignettes natives RE3 remake intégrées et deux variantes Wesker RE5 à comparer séparément.",
+      "href": "visual/index.html",
+      "label": "Examiner les vues"
+    },
+    {
+      "title": "Scène de Malacoda",
+      "description": "218 images originales de Revelations, sans cadence inventée.",
+      "href": "motion/index.html",
+      "label": "Parcourir les images"
+    },
+    {
+      "title": "Références et citations",
+      "description": "389 incarnations et 38 citations revues, avec leurs sources et limites.",
+      "href": "canonical/index.html",
+      "label": "Chercher une incarnation"
+    },
+    {
+      "title": "Sauvegardes et replays",
+      "description": "Inspecter et comparer des copies sans modifier le stockage du jeu.",
+      "href": "persistence/index.html",
+      "label": "Inspecter un fichier"
+    },
+    {
+      "title": "Voix et sons",
+      "description": "Recherche par incarnation et état des archives audio ; aucun son natif livré.",
+      "href": "audio/index.html",
+      "label": "Consulter les sources audio"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "R20-09",
+      "title": "Rig par membre et animations",
+      "status": "EN COURS",
+      "historical_status": "À FAIRE",
+      "category": "sources",
+      "advances": [
+        "218 images originales supplémentaires et atlas sans perte, consultables manuellement.",
+        "Les cadences absentes restent indéfinies ; aucun membre occulté ou rig n’est inventé."
+      ],
+      "remaining": [
+        "Tête, corps, membres indépendants et cycles complets par mouvement, deux orientations."
+      ],
+      "evidence": [
+        {
+          "href": "motion/index.html",
+          "label": "Examiner Malacoda"
+        },
+        {
+          "href": "visual/index.html",
+          "label": "Voir les vues natives"
+        }
+      ]
+    },
+    {
+      "id": "R20-10",
+      "title": "Étendre les sprites au catalogue",
+      "status": "EN COURS",
+      "historical_status": "À FAIRE",
+      "category": "sources",
+      "advances": [
+        "7 nouvelles vignettes natives revues et intégrées aux Dossiers exacts de RE3 remake.",
+        "Archive, atlas et recadrages conservés ; les portraits partiels restent distincts des sprites de combat."
+      ],
+      "remaining": [
+        "Produire les PNG des 385 identités restantes, puis variantes, membres, orientations, mouvements et effets."
+      ],
+      "evidence": [
+        {
+          "href": "visual/index.html",
+          "label": "Voir les vues natives"
+        }
+      ]
+    },
+    {
+      "id": "G-PERIMETRE",
+      "title": "Périmètre et alias",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "sources",
+      "advances": [
+        "389 incarnations recherchables avec titre et jeu de leurs pages sources.",
+        "Trois alias explicitement cités ; mentions supplémentaires distinguées pour 258 identités."
+      ],
+      "remaining": [
+        "Revue exhaustive des alias, DLC, modes, variantes et extensions."
+      ],
+      "evidence": [
+        {
+          "href": "canonical/index.html",
+          "label": "Lire les citations"
+        }
+      ]
+    },
+    {
+      "id": "G-PREUVES",
+      "title": "Preuves et revue canonique",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "sources",
+      "advances": [
+        "389 copies de pages conservées et vérifiables ; 38 citations revues pour 19 incarnations.",
+        "Vues RE3 remake et scène Malacoda reliées à plusieurs sources, avec limites et désaccords visibles."
+      ],
+      "remaining": [
+        "Relevés primaires et séquences horodatées de chaque geste, forme et phase."
+      ],
+      "evidence": [
+        {
+          "href": "canonical/index.html",
+          "label": "Lire les citations"
+        },
+        {
+          "href": "visual/index.html",
+          "label": "Voir les vues natives"
+        },
+        {
+          "href": "motion/index.html",
+          "label": "Examiner Malacoda"
+        }
+      ]
+    },
+    {
+      "id": "G-COMMANDES",
+      "title": "Répertoire complet des commandes",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "sources",
+      "advances": [
+        "19 descriptions de gestes citées dans leur contexte de jeu.",
+        "Aucun timing, dégât ou ensemble complet de commandes n’est déduit du texte seul."
+      ],
+      "remaining": [
+        "Relever tous les gestes officiels et dépasser dix slots lorsque nécessaire."
+      ],
+      "evidence": [
+        {
+          "href": "canonical/index.html",
+          "label": "Lire les citations"
+        }
+      ]
+    },
+    {
+      "id": "G-MANCHES",
+      "title": "Fin de manche et résultat",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "sources",
+      "advances": [
+        "Événements réels roundEnd, roundReset et matchEnd contrôlés pour les deux vainqueurs.",
+        "KO simultané vérifié comme manche nulle suivie d’une reprise ; aucun match nul terminal observé par les pas du moteur."
+      ],
+      "remaining": [
+        "Gestes et dessins finaux de victoire, défaite et égalité pour chaque incarnation."
+      ],
+      "evidence": [
+        {
+          "href": "motion/index.html",
+          "label": "Examiner Malacoda"
+        },
+        {
+          "href": "../../docs/R23_MOTION_EVIDENCE.json",
+          "label": "Portée des séquences"
+        },
+        {
+          "href": "../../docs/R23_CONCLUSIONS.md",
+          "label": "Consulter la matrice"
+        }
+      ]
+    },
+    {
+      "id": "G-CINEMATIQUES",
+      "title": "Intros et outros",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "sources",
+      "advances": [
+        "Une nouvelle scène originale de 218 images est consultable, avec décor et caméra conservés.",
+        "Le GIF ne définit aucune durée : navigation manuelle, sans cadence ni bande sonore inventée.",
+        "920 états de présentation et 1 840 côtés contrôlés ; les clips finaux restent indisponibles."
+      ],
+      "remaining": [
+        "Séquences de référence, clips définitifs et bande sonore par sujet."
+      ],
+      "evidence": [
+        {
+          "href": "motion/index.html",
+          "label": "Examiner Malacoda"
+        },
+        {
+          "href": "../../docs/R23_CONCLUSIONS.md",
+          "label": "Consulter la matrice"
+        }
+      ]
+    },
+    {
+      "id": "G-REPLAYS",
+      "title": "Compatibilité des replays",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "functions",
+      "advances": [
+        "Inspection du format principal R13, des archives de replays et du format expérimental R7.",
+        "Détection des contrats différents, commandes invalides et identifiants conflictuels ; deux fixtures relues par les vrais moteurs dans les tests."
+      ],
+      "remaining": [
+        "Compatibilité des formats historiques et validation exhaustive dans leur moteur d’origine."
+      ],
+      "evidence": [
+        {
+          "href": "persistence/index.html",
+          "label": "Inspecter une copie"
+        },
+        {
+          "href": "../../docs/R23_PERSISTENCE.md",
+          "label": "Formats couverts"
+        }
+      ]
+    },
+    {
+      "id": "G-SAUVES",
+      "title": "Sauvegardes et restauration",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "functions",
+      "advances": [
+        "Inspection de 18 clés et huit groupes, empreintes internes et copies de même révision divergentes.",
+        "Comparaison en lecture seule et copie du fichier original, sans choix automatique ni écriture du stockage."
+      ],
+      "remaining": [
+        "Cloud, formats anciens inconnus et résilience à un arrêt brutal ne sont pas garantis."
+      ],
+      "evidence": [
+        {
+          "href": "persistence/index.html",
+          "label": "Inspecter une copie"
+        }
+      ]
+    },
+    {
+      "id": "G-VICTIMES",
+      "title": "Compatibilité des conclusions",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "sources",
+      "advances": [
+        "13 225 paires et 52 900 verdicts de la politique réelle vérifiés, motifs exacts conservés.",
+        "2 141 paires compatibles avec un prototype ; aucune animation finale ni géométrie canonique certifiée."
+      ],
+      "remaining": [
+        "Revue artistique et séquences finales de chaque association admissible."
+      ],
+      "evidence": [
+        {
+          "href": "motion/index.html",
+          "label": "Examiner Malacoda"
+        },
+        {
+          "href": "../../docs/R23_MOTION_EVIDENCE.json",
+          "label": "Portée des conclusions"
+        },
+        {
+          "href": "../../docs/R23_CONCLUSIONS.md",
+          "label": "Consulter la matrice"
+        }
+      ]
+    },
+    {
+      "id": "G-ECHELLE",
+      "title": "Dimensions et points faibles",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "sources",
+      "advances": [
+        "Une longueur du Stinger est citée avec ses pinces et ses limites de source secondaire.",
+        "Quinze citations de points faibles gardent leurs négations ; le saut de Krauser ne devient pas sa taille."
+      ],
+      "remaining": [
+        "Mesures de référence documentées, géants et aquatiques, distinction taille réelle/collision."
+      ],
+      "evidence": [
+        {
+          "href": "canonical/index.html",
+          "label": "Lire les citations"
+        }
+      ]
+    },
+    {
+      "id": "G-RENDU",
+      "title": "Sprites, clips et asymétries",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "sources",
+      "advances": [
+        "Sept vignettes natives et 218 images de scène supplémentaires, conservées sans perte.",
+        "Les vues opposées, corps complets, rig et transitions non documentés restent manquants.",
+        "Deux variantes de Wesker Mercenaires RE5 conservées séparément pour comparaison, sans substitution de campagne."
+      ],
+      "remaining": [
+        "Deux sens, membres séparés, mouvements, transformations, impacts et fins de manche du catalogue complet."
+      ],
+      "evidence": [
+        {
+          "href": "visual/index.html",
+          "label": "Voir les vues natives"
+        },
+        {
+          "href": "motion/index.html",
+          "label": "Examiner Malacoda"
+        }
+      ]
+    },
+    {
+      "id": "G-PERF",
+      "title": "Performances sur appareils cibles",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "validation",
+      "advances": [
+        "Mesures réelles Chromium du chargement, des intervalles de frame, de la mémoire et de 40 changements d’image.",
+        "Cache borné à deux ressources ; les ralentissements observés restent dans le rapport."
+      ],
+      "remaining": [
+        "Mesures mémoire, temps de frame, chargement et longues sessions sur matériel cible."
+      ],
+      "evidence": [
+        {
+          "href": "../../docs/R23_ACCESS_PERF.md",
+          "label": "Parcours et mesures"
+        }
+      ]
+    },
+    {
+      "id": "G-ACCESS",
+      "title": "Accessibilité et appareils",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "validation",
+      "advances": [
+        "115 Dossiers au clavier et 115 en émulation tactile ; nom accessible et jeu exact vérifiés.",
+        "Focus de lecture conservé après chargement, déplacement volontaire respecté et réouvertures rapides corrigées."
+      ],
+      "remaining": [
+        "VoiceOver/NVDA réels, tactile et manettes physiques, parcours complets des 115 Dossiers."
+      ],
+      "evidence": [
+        {
+          "href": "../../docs/R23_ACCESS_PERF.md",
+          "label": "Parcours et mesures"
+        }
+      ]
+    },
+    {
+      "id": "G-AUDIO",
+      "title": "Voix et sons par incarnation",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "sources",
+      "advances": [
+        "371 documents sources audités pour 389 incarnations ; aucun lien audio direct exploitable.",
+        "Importeur de sons natifs prêt avec liaison à la page, jeu, forme, format et octets contrôlés ; refus du site de sons documenté."
+      ],
+      "remaining": [
+        "Cris, voix et sons spécifiques référencés, écoute matérielle et mixage final."
+      ],
+      "evidence": [
+        {
+          "href": "audio/index.html",
+          "label": "Consulter la recherche audio"
+        }
+      ]
+    },
+    {
+      "id": "G-RECETTE",
+      "title": "Recette cumulative",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "validation",
+      "advances": [
+        "Vérification des pixels, des provenances, des corruptions, des délais réseau et des formats de sauvegardes/replays.",
+        "Parcours sur les 115 Dossiers aux deux tailles et mesures conservées dans des rapports reproductibles.",
+        "Matrice exhaustive des conclusions et cinq groupes de contrôles du moteur et de la présentation."
+      ],
+      "remaining": [
+        "Toutes les combinaisons, gestes, séquences, campagnes et validations artistiques sur appareils cibles."
+      ],
+      "evidence": [
+        {
+          "href": "../../docs/R23_ACCESS_PERF.md",
+          "label": "Parcours et mesures"
+        },
+        {
+          "href": "../../docs/R23_PERSISTENCE_TESTS.json",
+          "label": "Tests des formats"
+        },
+        {
+          "href": "../../docs/R23_CONCLUSIONS.md",
+          "label": "Consulter la matrice"
+        }
+      ]
+    },
+    {
+      "id": "G-LIVRAISON",
+      "title": "Livraisons et suivi",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "validation",
+      "advances": [
+        "Centre de consultation R23, ressources et preuves livrés avec le classeur de suivi.",
+        "Export reproductible et CI R23 ajoutés ; les critères ouverts restent visibles."
+      ],
+      "remaining": [
+        "Revue humaine et livraisons futures ; résultats CI consultables sur la PR. Les lots globaux restent ouverts."
+      ],
+      "evidence": [
+        {
+          "href": "../../docs/FIDELITE_R23.md",
+          "label": "Détail de la livraison"
+        },
+        {
+          "href": "../../docs/BOW_FIDELITE_R22.xlsx",
+          "label": "Classeur historique R22"
+        }
+      ]
+    }
+  ],
+  "schema": "re.bow.fidelity-progress/1"
+}

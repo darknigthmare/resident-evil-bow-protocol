@@ -1,0 +1,484 @@
+{
+  "summary": "17 chantiers avancés et toujours ouverts ; nouveaux mouvements, sons, références et vérifications attribués avec leurs limites.",
+  "statistics": [
+    {
+      "label": "chantiers toujours ouverts",
+      "value": 17,
+      "scope": "Aucune clôture globale sans preuve."
+    },
+    {
+      "label": "nouvelles références visuelles",
+      "value": 8,
+      "scope": "Dont une partie ; candidats séparés, pas huit sprites de combat."
+    },
+    {
+      "label": "mouvements source, dont 9 d’objet",
+      "value": 179,
+      "scope": "170 corps + 9 objet ; une pose à clés et cinq bases sans clés séparées."
+    },
+    {
+      "label": "WAV classés par groupe publié",
+      "value": 708,
+      "scope": "16 UID PC/HD ; zéro écoute indépendante ou banque native certifiée."
+    }
+  ],
+  "resources": [
+    {
+      "title": "Modèles et matières",
+      "description": "51 références cumulatives, corps et parties ; modèles attribués et candidats séparés.",
+      "href": "models/index.html",
+      "label": "Examiner les modèles"
+    },
+    {
+      "title": "Mouvements et bases",
+      "description": "180 nouveaux fichiers à clés ; variantes, corps, objet associé et bases sans clés explicités.",
+      "href": "motion/index.html",
+      "label": "Examiner les mouvements"
+    },
+    {
+      "title": "Sons par sujet publié",
+      "description": "708 WAV non silencieux numériquement, classés sous 16 identités sans affectation aux actions de combat.",
+      "href": "audio/index.html",
+      "label": "Écouter les références"
+    },
+    {
+      "title": "Gestes, formes et éditions",
+      "description": "109 nouvelles assertions avec citations et limites, sans inventer un répertoire complet.",
+      "href": "canonical/index.html",
+      "label": "Examiner les citations"
+    },
+    {
+      "title": "Replays dans les archives",
+      "description": "Sélection et lot depuis les sauvegardes R19 et archives, avec les trois moteurs réels.",
+      "href": "persistence/index.html",
+      "label": "Vérifier les replays"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "R20-09",
+      "title": "Rig par membre et animations",
+      "status": "EN COURS",
+      "historical_status": "À FAIRE",
+      "category": "sources",
+      "advances": [
+        "Trois nouveaux sujets HD/PC : Farfarello, Wall Blister et Scagdead, avec cinq références pondérées dont une variante et un objet associé distincts.",
+        "180 fichiers à clés : 170 mouvements de corps, 9 mouvements d’objet et une pose fixe. Cinq bases sans clés sont conservées séparément."
+      ],
+      "remaining": [
+        "Rigs et cycles complets des 389 incarnations, attribution vérifiée de chaque action et intégration finale au combat."
+      ],
+      "evidence": [
+        {
+          "href": "models/index.html",
+          "label": "Examiner les armatures et mouvements"
+        },
+        {
+          "href": "../../docs/R25_MOTION.md",
+          "label": "Clés, matières et éditions"
+        }
+      ]
+    },
+    {
+      "id": "R20-10",
+      "title": "Étendre les sprites au catalogue",
+      "status": "EN COURS",
+      "historical_status": "À FAIRE",
+      "category": "sources",
+      "advances": [
+        "Huit nouvelles références depuis sept ZIP : trois OBJ et cinq FBX pondérés, dont une partie indépendante ; trois UID attribués et quatre candidats.",
+        "Chaînes, géométries, textures disponibles et aperçus publiés sont conservés. Les références PC de RE4 ne certifient pas les corps GameCube de 2005."
+      ],
+      "remaining": [
+        "Les 385 sprites de combat manquants du suivi historique, puis leurs membres, orientations, cycles et effets ; une référence 3D ne remplace pas ces sprites."
+      ],
+      "evidence": [
+        {
+          "href": "models/index.html",
+          "label": "Modèles cumulatifs"
+        },
+        {
+          "href": "../../docs/R25_VISUAL_SOURCES.md",
+          "label": "Attributions et candidats"
+        }
+      ]
+    },
+    {
+      "id": "G-PERIMETRE",
+      "title": "Périmètre et alias",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "sources",
+      "advances": [
+        "109 nouvelles assertions documentaires pour 80 UID, avec acteur, forme, mode et portée explicites.",
+        "Wall Blister est référencé dans l’édition HD/PC : sa présence dans la version 3DS de 2012 n’est pas affirmée. Les variantes Scagdead et son objet associé ne deviennent pas trois incarnations."
+      ],
+      "remaining": [
+        "Revue exhaustive des alias, modes, DLC et extensions ; corriger chaque ambiguïté de support ou de forme avec une preuve."
+      ],
+      "evidence": [
+        {
+          "href": "canonical/index.html",
+          "label": "Périmètre documentaire"
+        },
+        {
+          "href": "../../docs/R25_MOTION.md",
+          "label": "Portée HD/PC"
+        }
+      ]
+    },
+    {
+      "id": "G-PREUVES",
+      "title": "Preuves et revue canonique",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "sources",
+      "advances": [
+        "Les nouvelles citations sont vérifiées dans les copies de pages conservées ; source, négation, acteur et portée restent consultables.",
+        "Les archives, WAV, géométries, poids, clés et aperçus sont liés à leurs empreintes ; les recoupements entre éditeurs ne constituent pas des captures primaires indépendantes."
+      ],
+      "remaining": [
+        "Captures originales et séquences horodatées de chaque geste, phase et transformation ; comparaison indépendante aux paquets et banques bruts."
+      ],
+      "evidence": [
+        {
+          "href": "canonical/index.html",
+          "label": "Citations et recoupements"
+        },
+        {
+          "href": "../../modules/fidelity-r25/motion/manifest.json",
+          "label": "Sources des mouvements"
+        },
+        {
+          "href": "../../modules/fidelity-r25/audio/manifest.json",
+          "label": "Sources des sons"
+        }
+      ]
+    },
+    {
+      "id": "G-COMMANDES",
+      "title": "Répertoire complet des commandes",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "sources",
+      "advances": [
+        "Les 179 nouveaux fichiers réellement mobiles conservent leurs clés natives ; cinq bases sans clés et une pose fixe ne gonflent pas ce compte.",
+        "Les citations ajoutent des gestes documentés. Les noms BA, DM, SC et les noms WAV ne sont pas utilisés seuls pour attribuer une commande ou une attaque."
+      ],
+      "remaining": [
+        "Répertoire officiel complet, action identifiée par séquence et correspondance aux commandes ; dépasser dix slots lorsque le répertoire le demande."
+      ],
+      "evidence": [
+        {
+          "href": "motion/index.html",
+          "label": "Mouvements originaux"
+        },
+        {
+          "href": "canonical/index.html",
+          "label": "Gestes cités"
+        }
+      ]
+    },
+    {
+      "id": "G-MANCHES",
+      "title": "Fin de manche et résultat",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "sources",
+      "advances": [
+        "115 matchs miroirs sont joués avec vies normales et vrais inputs, puis reconstruits deux fois : 239 fins de manche, 124 reprises et 115 fins de match.",
+        "Tous les matchs de cette recette courte finissent au chrono de cinq secondes ; zéro KO et zéro conclusion artistique certifiée. Le chrono de test ne devient pas une règle officielle."
+      ],
+      "remaining": [
+        "Victoire, défaite, égalité et leurs séquences, dessins et sons officiels par incarnation ; recette KO et conclusions artistiques séparée."
+      ],
+      "evidence": [
+        {
+          "href": "../../docs/R25_FULL_MATCHES.json",
+          "label": "115 matchs et 230 reconstructions"
+        },
+        {
+          "href": "../../docs/FIDELITE_R25.md",
+          "label": "Recette et limites"
+        }
+      ]
+    },
+    {
+      "id": "G-CINEMATIQUES",
+      "title": "Intros et outros",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "sources",
+      "advances": [
+        "Le lecteur cumule 228 fichiers à clés, avec pause, pas par clé et recadrage de la pose courante, sans inventer de séquence absente.",
+        "Les scènes et corps associés restent séparés ; le lecteur conserve son temps lors d’une perte du contexte graphique et attend une action pour reprendre."
+      ],
+      "remaining": [
+        "Intros, outros et bande sonore complète par sujet ; attribution de l’action, de la phase et des raccords du jeu d’origine."
+      ],
+      "evidence": [
+        {
+          "href": "models/index.html",
+          "label": "Lecture des fichiers à clés"
+        },
+        {
+          "href": "../../docs/R25_MOTION.md",
+          "label": "Limites et bases sans clés"
+        }
+      ]
+    },
+    {
+      "id": "G-REPLAYS",
+      "title": "Compatibilité des replays",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "functions",
+      "advances": [
+        "Replays sélectionnables directement dans les archives et sauvegardes R19, avec lot limité à 30, trois moteurs réels et résultats séparés.",
+        "115 matchs réels supplémentaires produisent 230 reconstructions identiques ; doublons, contrats inconnus, falsifications et réponses périmées sont contrôlés."
+      ],
+      "remaining": [
+        "Autres révisions et contrats historiques, campagnes et conclusions artistiques ; ne pas lire un ancien contrat sous un moteur courant."
+      ],
+      "evidence": [
+        {
+          "href": "persistence/index.html",
+          "label": "Vérifier une archive de replays"
+        },
+        {
+          "href": "../../docs/R25_PERSISTENCE.md",
+          "label": "Formats et isolation"
+        },
+        {
+          "href": "../../docs/R25_FULL_MATCHES.json",
+          "label": "Recette de matchs"
+        }
+      ]
+    },
+    {
+      "id": "G-SAUVES",
+      "title": "Sauvegardes et restauration",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "functions",
+      "advances": [
+        "Le fichier de sauvegarde, l’archive imbriquée et les tranches JSON de chaque replay peuvent être conservés à l’octet, sans réécriture.",
+        "Annulation pendant une création lente ou une simulation active ; stockage du jeu inchangé et iframe à origine opaque réutilisé."
+      ],
+      "remaining": [
+        "Cloud, restauration atomique en stockage réel, formats inconnus et arrêt brutal ; aucune restauration ni backend cloud ajouté par ce lecteur."
+      ],
+      "evidence": [
+        {
+          "href": "../../docs/R25_PERSISTENCE.md",
+          "label": "Conservation exacte et limites"
+        },
+        {
+          "href": "../../docs/R25_PERSISTENCE_BROWSER_TESTS.json",
+          "label": "Imports, annulation et pagination"
+        }
+      ]
+    },
+    {
+      "id": "G-VICTIMES",
+      "title": "Compatibilité des conclusions",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "sources",
+      "advances": [
+        "Les 115 identités principales traversent chacune un match miroir complet avec dégâts observés et cycle de manches réel.",
+        "Les 115 miroirs ne sont pas 13 225 associations ; les finishers sont désactivés et aucune compatibilité artistique n’est déduite du résultat simulé."
+      ],
+      "remaining": [
+        "Toutes les associations admissibles et leurs conclusions finales ; revue morphologique, artistique et séquences d’origine."
+      ],
+      "evidence": [
+        {
+          "href": "../../docs/R25_FULL_MATCHES.json",
+          "label": "Couverture exacte des miroirs"
+        },
+        {
+          "href": "../../docs/R23_CONCLUSIONS_MATRIX.json",
+          "label": "Matrice de règles historique conservée"
+        }
+      ]
+    },
+    {
+      "id": "G-ECHELLE",
+      "title": "Dimensions et points faibles",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "sources",
+      "advances": [
+        "Le cadrage 3D tient compte du champ de vue, de l’aspect et de la profondeur ; il déplace la caméra sans transformer les coordonnées originales.",
+        "La partie Uroboros, la variante Scagdead et l’objet associé gardent leur rôle ; aucune unité du fichier ne devient une taille corporelle en mètres."
+      ],
+      "remaining": [
+        "Mesures primaires, tailles corporelles et collision, géants et aquatiques ; zéro échelle physique certifiée."
+      ],
+      "evidence": [
+        {
+          "href": "models/index.html",
+          "label": "Inspection et recadrage"
+        },
+        {
+          "href": "canonical/index.html",
+          "label": "Dimensions et portée des assertions"
+        }
+      ]
+    },
+    {
+      "id": "G-RENDU",
+      "title": "Sprites, clips et asymétries",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "sources",
+      "advances": [
+        "51 entrées cumulatives ; fichiers historiques inchangés, aperçu publié vérifié en repli lorsque le rendu 3D est indisponible.",
+        "Les textures manquantes du FBX Uroboros sont attestées par le SHA du modèle et laissées neutres. Aucun PNG n’est attribué au jugé ; les modèles candidats restent à part dans les Dossiers."
+      ],
+      "remaining": [
+        "Sprites définitifs, deux orientations, asymétries, mouvements, impacts et transformations de tout le catalogue ; rendu original du jeu non certifié."
+      ],
+      "evidence": [
+        {
+          "href": "models/index.html",
+          "label": "Lecteur et repli sans WebGL"
+        },
+        {
+          "href": "../../docs/R25_VISUAL_SOURCES.md",
+          "label": "Références de matières manquantes"
+        }
+      ]
+    },
+    {
+      "id": "G-PERF",
+      "title": "Performances sur appareils cibles",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "validation",
+      "advances": [
+        "Une seule archive de mouvements en cache, flux bornés à 80 MiB et membres FBX à 12 MiB ; les fichiers reçus sont vérifiés avant décodage.",
+        "Ressources graphiques libérées au départ de la page, contexte perdu/restauré éprouvé ; les sons se chargent par fichier avec un seul objet Blob actif."
+      ],
+      "remaining": [
+        "Appareils physiques, GPU cibles, budgets mémoire globaux et longues sessions de combat ; le rendu logiciel cloud ne les certifie pas."
+      ],
+      "evidence": [
+        {
+          "href": "../../docs/R25_READER_ASSET_TESTS.json",
+          "label": "Bornes et corruption"
+        },
+        {
+          "href": "../../docs/R25_READER_BROWSER.json",
+          "label": "Contexte et durée de vie des ressources"
+        }
+      ]
+    },
+    {
+      "id": "G-ACCESS",
+      "title": "Accessibilité et appareils",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "validation",
+      "advances": [
+        "Commandes caméra au clavier, nommage et avertissements accessibles, repli sans WebGL, lien d’évitement et navigation facultative à la manette.",
+        "Les Dossiers présentent séparément les modèles attribués, candidats, sons et citations, sans lecture automatique ni remplacement de l’image historique."
+      ],
+      "remaining": [
+        "Lecteurs d’écran réels, appareils tactiles et manettes physiques, contenus hors écran et conformité WCAG complète."
+      ],
+      "evidence": [
+        {
+          "href": "models/index.html",
+          "label": "Commandes accessibles"
+        },
+        {
+          "href": "../../docs/R25_ACCESS_BROWSER.json",
+          "label": "Parcours des pages et Dossiers"
+        }
+      ]
+    },
+    {
+      "id": "G-AUDIO",
+      "title": "Voix et sons par incarnation",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "sources",
+      "advances": [
+        "708 WAV non silencieux numériquement, répartis sous 16 UID et 17 groupes publiés ; les quatre fichiers muets restent uniquement dans la ZIP originale.",
+        "Les 819 WAV de l’archive sont audités ; 708 sont livrés individuellement avec SHA et décodage vérifié. Attribution par groupe publié PC/HD, zéro écoute sémantique indépendante et zéro banque native certifiée."
+      ],
+      "remaining": [
+        "Écoute indépendante, locuteur et action/phase, comparaison aux banques brutes, cris et mixage final ; ne pas affecter automatiquement ces sons au combat."
+      ],
+      "evidence": [
+        {
+          "href": "audio/index.html",
+          "label": "Écouter les fichiers publiés"
+        },
+        {
+          "href": "../../docs/R25_AUDIO_SOURCES.md",
+          "label": "Attribution, silences et éditions"
+        }
+      ]
+    },
+    {
+      "id": "G-RECETTE",
+      "title": "Recette cumulative",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "validation",
+      "advances": [
+        "115 cycles de matchs complets avec dégâts et deux relectures, contrôles des 180 scènes à clés sur les sommets pondérés et vérification des 708 décodages WAV.",
+        "Corruptions, limites de taille, annulations, contextes graphiques, liens locaux et conservation des feuilles historiques font l’objet de contrôles dédiés."
+      ],
+      "remaining": [
+        "Toutes les combinaisons, commandes, campagnes, KO, séquences artistiques et validations sur appareils cibles."
+      ],
+      "evidence": [
+        {
+          "href": "../../docs/R25_FULL_MATCHES.json",
+          "label": "Matchs complets à chrono court"
+        },
+        {
+          "href": "../../docs/R25_MOTION_SKELETON_TESTS.json",
+          "label": "Déformation des scènes"
+        },
+        {
+          "href": "../../docs/R25_AUDIO_BROWSER.json",
+          "label": "Sons et frontières de confiance"
+        }
+      ]
+    },
+    {
+      "id": "G-LIVRAISON",
+      "title": "Livraisons et suivi",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "validation",
+      "advances": [
+        "Les 17 chantiers et 389 UID sont repris dans six nouvelles feuilles, avec les 17 feuilles historiques conservées à l’octet.",
+        "Les anciennes défaillances de harnais sont corrigées sans assouplir leurs résultats : horloge exacte et précondition de focus contrôlée. Les workflows historiques passent au commit dd288ab ; les statuts Vercel restent limités par quota externe."
+      ],
+      "remaining": [
+        "Revue humaine et exécution CI de la nouvelle livraison ; tous les chantiers restent ouverts tant que leurs critères manquent de preuves."
+      ],
+      "evidence": [
+        {
+          "href": "../../docs/R25_TRACKING.json",
+          "label": "Suivi et empreintes"
+        },
+        {
+          "href": "../../docs/FIDELITE_R25.md",
+          "label": "Livraison et reproduction"
+        },
+        {
+          "href": "../../docs/R25_CI_DIAGNOSTIC.json",
+          "label": "Constats CI et quota Vercel"
+        }
+      ]
+    }
+  ],
+  "schema": "re.bow.fidelity-progress/1"
+}

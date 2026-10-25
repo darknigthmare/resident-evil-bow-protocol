@@ -1,0 +1,44 @@
+{
+  "schema": "re.bow.persistence-browser-tests/1",
+  "passed": 4,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Desktop and mobile imports stay local, avoid storage and render untrusted text safely",
+      "pass": true,
+      "evidence": {
+        "widths": [
+          1440,
+          390
+        ],
+        "storageAccess": 0,
+        "uploads": 0,
+        "injectedHTMLExecuted": false
+      }
+    },
+    {
+      "name": "Original-file download preserves every byte even when inspection refuses an ambiguous document",
+      "pass": true,
+      "evidence": {
+        "bytes": 20,
+        "downloadIdentical": true
+      }
+    },
+    {
+      "name": "Comparison flags a conflicting ID and does not select or install either replay",
+      "pass": true,
+      "evidence": {
+        "conflictDetected": true,
+        "automaticResolution": false
+      }
+    },
+    {
+      "name": "A delayed earlier read cannot replace the subsequently chosen file",
+      "pass": true,
+      "evidence": {
+        "latestSelectionRetained": true
+      }
+    }
+  ],
+  "scope": "Headless local Chromium on this cloud worker, not physical devices or screen-reader certification."
+}
