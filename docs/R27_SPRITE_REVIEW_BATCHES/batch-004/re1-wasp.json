@@ -1,0 +1,65 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "re1-wasp",
+  "reviewed_at_utc": "2026-10-25T08:37:47.212347+00:00",
+  "batch": "batch-004",
+  "image": "modules/fidelity-r27/sprites/generated/re1-wasp/idle-right.png",
+  "image_sha256": "1dff2f664df5814e45b1f36fb3364314f0d70148228fb50db08cf872de074fef",
+  "active_record": "modules/fidelity-r27/sprites/records/re1-wasp.json",
+  "active_record_sha256": "0f9daa06abf2dc22c1a39730372f5e698302a3b282792a10dab26df2d4f61124",
+  "used_references": [
+    {
+      "path": "assets/catalog/re1-wasp.png",
+      "sha256": "3a6e6218188e01162aad28f10730c7987b27b7715b8763280b4c0bd1dc11eeae",
+      "role": "portrait",
+      "declared_body_coverage": "unknown"
+    }
+  ],
+  "scope": "combatant-neutral-pose",
+  "source_complete_body_observed": true,
+  "generated_complete_body_observed": true,
+  "full_body_reviewed": true,
+  "observed_facing": "front",
+  "direction_eligible_for_neutral_pose": false,
+  "review_outcome": "whole-visible-body-presentation-pose-no-combat-idle",
+  "notes": "Whole insect source contains its head, four wings, abdomen tip and visible legs. Generated yellow/black pattern and wing arrangement remain coherent. The head/body pose is frontal; no directional combat admission.",
+  "manual_source_completeness_evidence": {
+    "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-004/re1-wasp-source-body-observation.json",
+    "sha256": "acc751d1686e5524a1ccbe2313485407fefd0475a43f2ebc8c23d72e8802f969",
+    "referencePath": "assets/catalog/re1-wasp.png",
+    "referenceSha256": "3a6e6218188e01162aad28f10730c7987b27b7715b8763280b4c0bd1dc11eeae",
+    "imageSha256": "1dff2f664df5814e45b1f36fb3364314f0d70148228fb50db08cf872de074fef",
+    "observedFacing": "front",
+    "scope": "Whole body visually observed in this source image and this generated pose only; no opposite view, geometry or original-game pose certification."
+  },
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "record_metadata_refresh": {
+    "prior_record_sha256": "f76ba193601c4fa417930da0f19dba860aaec46e6ec11e298683539fb2e0db24",
+    "current_record_sha256": "8f351ac5241c3a74ae32e536bd49287fcf866a8e724bb3fae09291ac90a043dd",
+    "checked_at_utc": "2026-10-25T09:14:23.447632+00:00",
+    "change_verified": "Only limitations explanatory text was qualified by existing SHA-bound body proof; original job limitations retained as jobLimitations. Exact prior bytes reconstructed and matched prior record SHA. No PNG, used source, review, facing, body, receipt or proof changed."
+  },
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.896889+00:00",
+    "prior_report_record_sha256": "8f351ac5241c3a74ae32e536bd49287fcf866a8e724bb3fae09291ac90a043dd",
+    "prior_direction_eligibility": false,
+    "pose_observation": {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re1-wasp.json",
+      "sha256": "ca6c3704ceb62f86df31c0d165f653ae8677168ea5deed99b943ce3f1a23a7fe"
+    },
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.890988+00:00"
+  },
+  "observed_pose_kind": "source-presentation",
+  "available_states": []
+}

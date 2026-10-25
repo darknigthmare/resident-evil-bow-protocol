@@ -187,6 +187,8 @@ try {
       dossierIndex.identities.find(item=>item.audioReferences.length), dossierIndex.identities.find(item=>item.audioCandidates.length)].filter(Boolean);let soundRequests=0;const checked=[];
     page.on('request',request=>{if(/\.(wav|mp3)(?:\?|$)/i.test(request.url()))soundRequests++;});
     try {
+      // Pin this historical Dossier fixture to R26; the R27 adapter is exercised by the R27 browser suite.
+      await page.route('**/fidelity-r27/dossier-link.js', route => route.fulfill({status:200, contentType:'text/javascript', body:'/* Historical R26 fixture. */'}));
       await page.goto(base+'/codex.html');await page.waitForFunction(()=>window.RE_DOSSIER_SOURCES_R26?.state().loaded);
       for(const entry of targets){
         const identity=await page.evaluate(id=>RE_DATA.catalog.find(item=>item.id===id),entry.id);
@@ -219,6 +221,7 @@ try {
     const entry=index.identities.find(item=>item.models.length);entry.models[0].label='<img src=x onerror="window.r26Injected=true">';
     await page.route('**/fidelity-r26/dossier-index.json',route=>route.fulfill({status:200,json:index}));
     try{
+      await page.route('**/fidelity-r27/dossier-link.js', route => route.fulfill({status:200, contentType:'text/javascript', body:'/* Historical R26 fixture. */'}));
       await page.goto(base+'/codex.html?id='+entry.id);await page.waitForFunction(()=>window.RE_DOSSIER_SOURCES_R26?.state().loaded);
       assert.equal(await page.evaluate(()=>Boolean(window.r26Injected)),false);assert.match(await page.locator('#detailSourceModelsR26').innerText(),/<img src=x/);
       entry.models[0].href='https://untrusted.example/collect';await page.reload();await page.waitForFunction(()=>window.RE_DOSSIER_SOURCES_R26?.state().loaded);

@@ -1,0 +1,46 @@
+{
+  "schema": "re.bow.combat-sprite-browser-r27/1",
+  "startedAt": "2026-10-25T07:36:03.493Z",
+  "completedAt": "2026-10-25T07:36:05.684Z",
+  "environment": {
+    "node": "v22.16.0",
+    "chromium": "154.0.8037.57",
+    "headless": true,
+    "physicalDevices": false
+  },
+  "passed": 1,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Actual Versus draws the supplied idle PNG while actor and replay data remain unchanged",
+      "pass": true,
+      "evidence": {
+        "sameState": true,
+        "id": "re1-cerberus",
+        "state": "idle",
+        "frame": 7,
+        "life": 10000,
+        "generatedDelta": 1,
+        "nonemptyPixels": true,
+        "diagnostics": {
+          "generatedDraws": 4,
+          "historicalDraws": 0,
+          "fallbacks": 4,
+          "installed": true,
+          "refusals": {
+            "direction-not-produced": 4
+          },
+          "statesSubstituted": [
+            "idle"
+          ],
+          "missingStatesSynthesized": 0,
+          "oppositeSidesMirrored": 0,
+          "collisionOrReplayDataChanged": false,
+          "contextualActorsCreated": 0
+        }
+      }
+    }
+  ],
+  "scope": "Actual reviewed generated Cerberus base pose plus existing R20 images; actual main/trial canvas, presentation, error/lifecycle and Dossier links. One idle/right view only; no attack/left-view/complete animation claim.",
+  "filteredTo": "Actual Versus"
+}

@@ -1,0 +1,46 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "recv-zombie-dog",
+  "reviewed_at_utc": "2026-10-25T08:18:51.912851+00:00",
+  "batch": "batch-003",
+  "image": "modules/fidelity-r27/sprites/generated/recv-zombie-dog/idle-right.png",
+  "image_sha256": "aab6a9ed3bb63c9ff175309e6d2a3c05ee14db01d9896939e4dbf13056e1ee73",
+  "active_record": "modules/fidelity-r27/sprites/records/recv-zombie-dog.json",
+  "active_record_sha256": "0796dbfc413d0b068dff1139bbe70948636c224e906b232288506cebfafd4d25",
+  "used_references": [
+    {
+      "path": "assets/catalog/recv-zombie-dog.png",
+      "sha256": "6d30c6c32401751c25deb57456cda9fe2979c43614edaaff9fb2e88dd15a9ba2",
+      "role": "portrait",
+      "declared_body_coverage": "unknown"
+    }
+  ],
+  "source_complete_body_observed": false,
+  "generated_complete_body_observed": false,
+  "full_body_reviewed": false,
+  "observed_facing": "left",
+  "direction_eligible_for_neutral_pose": false,
+  "review_outcome": "partial-source-no-body-admission",
+  "notes": "Source shows left-facing head, collar, partial trunk and one forelimb; its right body is cropped. The generated view retains that crop and visible collar/skull details. No whole-body promotion.",
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.930827+00:00",
+    "prior_report_record_sha256": "d6585812f9fb5f05b1a6a36cdd05292da3db7b59f07ed5ded91585f926c2feeb",
+    "prior_direction_eligibility": false,
+    "pose_observation": null,
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.920598+00:00"
+  },
+  "observed_pose_kind": "unknown",
+  "available_states": []
+}

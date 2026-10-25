@@ -1,0 +1,16 @@
+@import url('../../fidelity-r26/persistence/style.css');
+fieldset { min-width: 0; border: 1px solid #768c8b; padding: 1rem; }
+.record { display: flex; align-items: flex-start; gap: .75rem; border-top: 1px solid #57706e; padding: .9rem 0; }
+.record>div { min-width: 0; flex: 1; }
+.record label, .record strong, .record small { display: block; overflow-wrap: anywhere; }
+.record input { margin-top: .3rem; flex: 0 0 auto; }
+.record small { margin: .4rem 0; }
+.record button { max-width: 100%; }
+#source-digest, #report, .outcome { overflow-wrap: anywhere; }
+#report { white-space: pre-wrap; max-height: 30rem; overflow-y: auto; }
+.outcome { border-top: 1px solid #57706e; }
+progress { width: 100%; margin: 1rem 0; }
+summary:focus-visible { outline: 3px solid #fcdd92; outline-offset: 3px; }
+#pages { align-items: center; }
+#page-status { margin: 0; }
+@media (max-width: 500px) { main { padding: .7rem .5rem; } section { padding: .65rem .35rem; } .record { gap: .25rem; } fieldset { padding: .45rem .25rem; } }

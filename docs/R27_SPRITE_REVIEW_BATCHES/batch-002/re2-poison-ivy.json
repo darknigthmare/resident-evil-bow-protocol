@@ -1,0 +1,48 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "re2-poison-ivy",
+  "reviewed_at_utc": "2026-10-25T08:12:05.644679+00:00",
+  "batch": "batch-002",
+  "image": "modules/fidelity-r27/sprites/generated/re2-poison-ivy/idle-right.png",
+  "image_sha256": "5dc71dfd21ced0a1ac7cd1d11535caa173cc25778ecd7d7bec59dd7cb9ca8ec7",
+  "active_record": "modules/fidelity-r27/sprites/records/re2-poison-ivy.json",
+  "active_record_sha256": "d178528bd9e2bc252f6d6fe41a8f35375f2636282b073cafad1926485eeb9682",
+  "used_references": [
+    {
+      "path": "assets/specimens/re2-poison-ivy.png",
+      "sha256": "f50f500bd45463770426830d2d8e7894703141057416766e981510edf36ad54b",
+      "role": "full-body-reference"
+    }
+  ],
+  "source_complete_body_observed": true,
+  "generated_complete_body_observed": true,
+  "full_body_reviewed": true,
+  "observed_facing": "left",
+  "direction_eligible_for_neutral_pose": false,
+  "review_outcome": "whole-visible-body-presentation-pose-no-combat-idle",
+  "notes": "Whole dark plant body, red crown, purple opened flower, green tendrils and the visible green vapor from the used source remain coherent. Flower points left. The vapor belongs to the static reference pose; no gameplay trigger or idle-phase timing is certified.",
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.987627+00:00",
+    "prior_report_record_sha256": "e52b8e68fbed902cf1456c755f6807668e27ff9029c5101ab935eb19c6afb2c7",
+    "prior_direction_eligibility": true,
+    "pose_observation": {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re2-poison-ivy.json",
+      "sha256": "33f045575983329f276a3339d452700b06948365822356b8d062756fd4bbd0c2"
+    },
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.978515+00:00"
+  },
+  "observed_pose_kind": "source-presentation",
+  "available_states": []
+}

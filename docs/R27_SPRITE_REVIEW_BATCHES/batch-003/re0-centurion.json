@@ -1,0 +1,63 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "re0-centurion",
+  "reviewed_at_utc": "2026-10-25T08:18:50.373846+00:00",
+  "batch": "batch-003",
+  "image": "modules/fidelity-r27/sprites/generated/re0-centurion/idle-right.png",
+  "image_sha256": "a2dd84e812410496efbd34e7d5250964361fc9fa37764bdf29e696ad61813c06",
+  "active_record": "modules/fidelity-r27/sprites/records/re0-centurion.json",
+  "active_record_sha256": "b9d630595ce5325cd4d85d44c2598ab10a9df74888b640eb065007f831a9a7b1",
+  "used_references": [
+    {
+      "path": "modules/fidelity-r26/sprites/sheets/re0-centurion-gc-r26-1.png",
+      "sha256": "ebfd41549f274e9b773d5b50579e5260507391a105297f52fe8bf8d9aefc8eca",
+      "role": "source-model-render",
+      "declared_body_coverage": "complete"
+    },
+    {
+      "path": "modules/fidelity-r26/visual/previews/asset-287610.png",
+      "sha256": "d750f39c27e64ca13581c90689ab977cfefab37a0656fbb47cf30ab23604604a",
+      "role": "model-preview",
+      "declared_body_coverage": "unknown"
+    },
+    {
+      "path": "assets/catalog/re0-centurion.png",
+      "sha256": "48a51be6d56d3390cdb0209e7e52f5e16cc0864d91907b2d6fb98df95622063a",
+      "role": "portrait",
+      "declared_body_coverage": "unknown"
+    }
+  ],
+  "source_complete_body_observed": true,
+  "generated_complete_body_observed": true,
+  "full_body_reviewed": true,
+  "observed_facing": "left",
+  "direction_eligible_for_neutral_pose": true,
+  "review_outcome": "source-consistent-generated-static-neutral-base",
+  "notes": "The full model sheet and published model preview establish all visible body segments, legs and antennae. Generated head/antennae point down-left with tail upper-right. No exact segment count, physical scale, gait or gameplay idle phase is certified.",
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.938072+00:00",
+    "prior_report_record_sha256": "82168d2042739984a3e908ff547f684a0df59ab5ffb389eff86f946c07f0b5d5",
+    "prior_direction_eligibility": true,
+    "pose_observation": {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re0-centurion.json",
+      "sha256": "6b4a0915d634efe46970b92f5f57244feacda5da7b94a26b393c5d18b5a8eff3"
+    },
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.927879+00:00"
+  },
+  "observed_pose_kind": "neutral-base",
+  "available_states": [
+    "idle"
+  ]
+}

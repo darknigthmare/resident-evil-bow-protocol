@@ -1,0 +1,58 @@
+{
+  "schema": "re.bow.source-reference-selection-notes/1",
+  "scope": "R27 image_gen source selection; frozen jobs and source index remain unchanged.",
+  "entries": [
+    {
+      "id": "re7-jack-baker",
+      "rejectedReferences": [
+        {
+          "path": "assets/specimens/re7-jack-baker.png",
+          "sha256": "716e204f35a803c6abd4c57b38e44bb085da567a021f8145863c3c860a0ab516",
+          "reason": "Visual inspection shows a procedural polygon placeholder with a photographic head. The body is not a published anatomical reference and must not condition source-faithful generation."
+        }
+      ],
+      "selectedReferences": [
+        {
+          "path": "assets/catalog/re7-jack-baker.png",
+          "sha256": "0ae82d6d7970611877b8b6d7cd9929a9220c96b1bcb5a6e91dbf1633bb24cd5d",
+          "role": "portrait",
+          "bodyCoverage": "partial"
+        },
+        {
+          "path": "modules/source-motion-r22/media/native-portraits/re7-jack-baker.png",
+          "sha256": "0ae82d6d7970611877b8b6d7cd9929a9220c96b1bcb5a6e91dbf1633bb24cd5d",
+          "role": "portrait",
+          "bodyCoverage": "partial"
+        }
+      ],
+      "limitations": [
+        "Only the published head/upper-body portrait is supported.",
+        "Full body, lower clothing, combat equipment and exact scissor encounter appearance are not visually documented by these selected references.",
+        "Preserve the visible crop; no anatomical or combat-ready certification."
+      ]
+    },
+    {
+      "id": "re7-jack-baker-scissor",
+      "rejectedReferences": [
+        {
+          "path": "assets/specimens/re7-jack-baker-scissor.png",
+          "sha256": "0187008d9d8a98bdf4f6d6f68559a1fa76a29e2559513a9dd5082ea1a6f10617",
+          "reason": "Visual inspection shows a procedural polygon placeholder with a photographic head. The body is not a published anatomical reference and must not condition source-faithful generation."
+        }
+      ],
+      "selectedReferences": [
+        {
+          "path": "assets/catalog/re7-jack-baker-scissor.png",
+          "sha256": "0ae82d6d7970611877b8b6d7cd9929a9220c96b1bcb5a6e91dbf1633bb24cd5d",
+          "role": "portrait",
+          "bodyCoverage": "partial"
+        }
+      ],
+      "limitations": [
+        "Only the published head/upper-body portrait is supported.",
+        "Full body, lower clothing, combat equipment and exact scissor encounter appearance are not visually documented by these selected references.",
+        "Preserve the visible crop; no anatomical or combat-ready certification."
+      ]
+    }
+  ]
+}

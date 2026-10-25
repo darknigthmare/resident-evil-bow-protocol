@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Références d’apparence — B.O.W. Protocol</title>
+  <link rel="stylesheet" href="../../fidelity-r23/style.css">
+  <link rel="stylesheet" href="../../fidelity-r25/access/workbench.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Aller aux références</a>
+  <header><a href="../../../codex.html">← Bestiaire</a><a href="../index.html">Suivi R27</a></header>
+  <main id="main">
+    <p class="eyebrow">APPARENCES · SOURCES R27</p>
+    <h1>Références par incarnation</h1>
+    <p>Examiner les vues disponibles avant de produire un sprite. Un portrait, un corps complet et une vue de modèle gardent chacun leur portée.</p>
+    <form id="filters" role="search">
+      <label>Rechercher une incarnation<input id="search" type="search" disabled></label>
+      <label>Incarnation<select id="identity" disabled></select></label>
+      <label>Type de référence<select id="scope" disabled><option value="all">Toutes les références</option><option value="complete">Corps entier déclaré ou géométrie complète</option><option value="portrait">Portraits</option><option value="models">Vues de modèles</option></select></label>
+    </form>
+    <p id="status" role="status">Chargement des références…</p>
+    <button id="retry" type="button" hidden>Réessayer</button>
+    <section aria-labelledby="identityTitle"><h2 id="identityTitle">Incarnation</h2><p id="edition"></p><p id="metadataNote" hidden></p><div id="references" class="source-grid"></div></section>
+    <section aria-labelledby="modelsTitle"><h2 id="modelsTitle">Géométries publiées</h2><ul id="models"></ul></section>
+    <p>Ces références n’établissent ni les côtés cachés, ni les mouvements absents, ni une fidélité géométrique 1:1. Les planches dérivées restent des vues d’examen, sans certification comme sprites originaux ou finaux de combat.</p>
+    <p><a href="../../../docs/R27_SOURCES.md">Lire la provenance et les limites</a> · <a href="manifest.json">Consulter l’index détaillé</a></p>
+  </main>
+  <script type="module" src="page.js"></script>
+</body>
+</html>

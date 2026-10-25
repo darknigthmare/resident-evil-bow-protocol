@@ -1,0 +1,62 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "re3-brain-sucker",
+  "reviewed_at_utc": "2026-10-25T09:19:03.686804+00:00",
+  "batch": "batch-010",
+  "image": "modules/fidelity-r27/sprites/generated/re3-brain-sucker/idle-right.png",
+  "image_sha256": "d0c2f643508fd6af3d18db712510d5bd2bbd4835918b62454909dbcd2b4b607b",
+  "active_record": "modules/fidelity-r27/sprites/records/re3-brain-sucker.json",
+  "active_record_sha256": "bd71c8df54de78e67fc4343b89a4bf6faf6732a4cccfb7fba58db58a1ab35294",
+  "used_references": [
+    {
+      "path": "assets/catalog/re3-brain-sucker.png",
+      "sha256": "737cab8da6b20837b49401aec85b058ff5240447e8eb02437b331926703904ed",
+      "role": "portrait",
+      "declared_body_coverage": "unknown"
+    }
+  ],
+  "scope": "combatant-neutral-pose",
+  "source_complete_body_observed": true,
+  "generated_complete_body_observed": true,
+  "full_body_reviewed": true,
+  "observed_facing": "left",
+  "direction_eligible_for_neutral_pose": true,
+  "review_outcome": "source-consistent-generated-static-neutral-base",
+  "notes": "Native source and output contain the full visible insectoid body, raised support limbs, claws and paired mouth/head area pointing left. Exact-SHA manual source-body proof supports one oblique left-facing pose. No hidden surfaces, precise topology, original-game gait or scale is certified.",
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "visual_evidence": {
+    "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-010/contact-3.png",
+    "sha256": "318a5cb674d46314a96ff2fdb28c911c03e1fe020980703fb4ecd92705532a67",
+    "kind": "browser-contact-review-evidence",
+    "new_generated_sprite_count": 0
+  },
+  "source_completeness_evidence": {
+    "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-010/re3-brain-sucker-source-body-observation.json",
+    "sha256": "b0107f4e3adb2b4f7b9af577b6671c9bb8c9902c8d060237557f0389cb68c94d"
+  },
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.862680+00:00",
+    "prior_report_record_sha256": "d9c0301d5f67c0afbe3b6e769a590b3de23eb5adbfbf8f8c8812e60ed1f80a00",
+    "prior_direction_eligibility": true,
+    "pose_observation": {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re3-brain-sucker.json",
+      "sha256": "3ba9176c77946b88d6fa4f213952e720a89d25a27b50fe040a2dfb3cc9f7b3ef"
+    },
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.851919+00:00"
+  },
+  "observed_pose_kind": "neutral-base",
+  "available_states": [
+    "idle"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "revillage-samca",
+  "reviewed_at_utc": "2026-10-25T09:13:10.400254+00:00",
+  "batch": "batch-008",
+  "image": "modules/fidelity-r27/sprites/generated/revillage-samca/idle-right.png",
+  "image_sha256": "991da25dcc75a3a5a37ef534e5ca74007eb3fd8997110315fa41801f6d3c41bd",
+  "active_record": "modules/fidelity-r27/sprites/records/revillage-samca.json",
+  "active_record_sha256": "23336ccdcca6cf4fa1ddc432c5be3e077eff5a3c0b0fe766c5f0f88e7d7c1ec0",
+  "used_references": [
+    {
+      "path": "assets/specimens/revillage-samca.png",
+      "sha256": "ba9b4bc07eaab75b88f27f8a29f9fca1f7a11eaac647af731a9b0d3913252857",
+      "role": "full-body-reference",
+      "declared_body_coverage": "complete"
+    }
+  ],
+  "scope": "combatant-neutral-pose",
+  "source_complete_body_observed": false,
+  "generated_complete_body_observed": true,
+  "full_body_reviewed": false,
+  "observed_facing": "front",
+  "direction_eligible_for_neutral_pose": false,
+  "review_outcome": "visible-source-region-reviewed-body-not-admitted",
+  "notes": "Native reference inspection shows the extreme right wing tip touching the right image boundary without a verified terminal extent. The generated presentation gives this wing a margin but cannot establish the missing source geometry. Folded torso, draped clothing and visible wings are reviewed; whole wingspan and flight phases are held.",
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "visual_evidence": {
+    "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-008/contact-1.png",
+    "sha256": "18c1218f7b476339124b2f5abd7fceaa7225d80b5f164b59e57237890e50e2a3",
+    "kind": "browser-contact-review-evidence",
+    "new_generated_sprite_count": 0
+  },
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.907236+00:00",
+    "prior_report_record_sha256": "f62012239839e59a3661215e3226d588e171d812467a1a1f30964a83c7a5f925",
+    "prior_direction_eligibility": false,
+    "pose_observation": null,
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.900467+00:00"
+  },
+  "observed_pose_kind": "unknown",
+  "available_states": []
+}

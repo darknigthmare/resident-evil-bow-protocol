@@ -1,0 +1,48 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "re0-giant-bat",
+  "reviewed_at_utc": "2026-10-25T08:49:04.244510+00:00",
+  "batch": "batch-005",
+  "image": "modules/fidelity-r27/sprites/generated/re0-giant-bat/idle-right.png",
+  "image_sha256": "9320dc4fe46f768bf37ec7a111672b9d383d45727d2032384ce9ad1a5707b468",
+  "active_record": "modules/fidelity-r27/sprites/records/re0-giant-bat.json",
+  "active_record_sha256": "4e99df839b2a5f7d57be26875f34b25834e9bbe4a8b7f12f81017485b2476937",
+  "used_references": [
+    {
+      "path": "assets/catalog/re0-giant-bat.png",
+      "sha256": "b76a4090c39a51223436a33199903b46ca36cb11b80be7c99bfe28be25c882dd",
+      "role": "portrait",
+      "declared_body_coverage": "unknown"
+    }
+  ],
+  "scope": "combatant-neutral-pose",
+  "source_complete_body_observed": false,
+  "generated_complete_body_observed": false,
+  "full_body_reviewed": false,
+  "observed_facing": "front",
+  "direction_eligible_for_neutral_pose": false,
+  "review_outcome": "partial-source-no-body-admission",
+  "notes": "Source visibly cuts the outer left wing at the canvas edge; the generated wing silhouette is also edge-bound. Recognizable muzzle/body and spread wings do not establish the missing wing geometry or a complete flight pose.",
+  "manual_source_completeness_evidence": null,
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.790002+00:00",
+    "prior_report_record_sha256": "4233a2b780a406aa0dfe6a918fd198302a20b6d9da0abbba0340fa53affef44c",
+    "prior_direction_eligibility": false,
+    "pose_observation": null,
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.794068+00:00"
+  },
+  "observed_pose_kind": "unknown",
+  "available_states": []
+}

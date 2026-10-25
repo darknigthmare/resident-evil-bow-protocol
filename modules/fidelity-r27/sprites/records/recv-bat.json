@@ -1,0 +1,107 @@
+{
+  "id": "recv-bat",
+  "label": "Bat",
+  "incarnation": "Resident Evil CODE: Veronica (2000)",
+  "image": "modules/fidelity-r27/sprites/generated/recv-bat/idle-right.png",
+  "bytes": 840855,
+  "sha256": "8952f350e0df4ebcd1627a64c1d40776cddd38dd4e8aee3ea4b774d7e2414daa",
+  "format": "PNG",
+  "width": 1402,
+  "height": 1122,
+  "alpha": {
+    "channel": true,
+    "min": 0,
+    "max": 255,
+    "transparentPixels": 1152023,
+    "totalPixels": 1573044,
+    "transparentFraction": 0.7323526868924201,
+    "visibleThreshold": 16
+  },
+  "bounds": {
+    "x": 84,
+    "y": 16,
+    "width": 1292,
+    "height": 1087
+  },
+  "pivot": {
+    "x": 730.0,
+    "y": 1103
+  },
+  "decodedRgbaSha256": "9560832d31a012af8ca809b635088a0585e853bc50be0d8ab8aab6e33e10186a",
+  "sourceFacing": "left",
+  "canMirror": false,
+  "requestedState": "idle",
+  "animationFrames": 1,
+  "poseKind": "source-presentation",
+  "modularParts": false,
+  "combatIntegrated": false,
+  "canonicalFidelityCertified": false,
+  "reviewStatus": "visually-reviewed",
+  "fullBodyReviewed": true,
+  "completeBodyReferenceVerified": false,
+  "scope": "combatant-neutral-pose",
+  "openStates": [
+    "idle-cycle",
+    "walk",
+    "run",
+    "light",
+    "heavy",
+    "special",
+    "super",
+    "hurt",
+    "guard",
+    "knockdown",
+    "intro",
+    "victory",
+    "defeat",
+    "left-view"
+  ],
+  "limitations": [
+    "Generated interpretation, not an original game frame; geometric 1:1 remains unverified.",
+    "One neutral source-guided pose; no authored attack, opposite view or full animation cycle.",
+    "The original job lacked a complete-body declaration; the linked SHA-bound observation covers this visible source and generated pose only, without certifying other views or geometry."
+  ],
+  "provenance": {
+    "generator": "image_gen",
+    "prompt": "Create one independent transparent-background sprite for Bat, exact incarnation: Resident Evil CODE: Veronica (2000). Use only the attached local references for appearance. Preserve the documented anatomy, proportions, clothing, equipment, damage, materials and silhouette of this incarnation. Do not mix other games or forms. A single neutral idle/presentation pose, no text, labels, frame, floor, shadow backdrop, montage or duplicate bodies. Use a right-facing three-quarter view only where supported by the references; never mirror asymmetric details. Preserve the visible source crop if the full body is undocumented rather than inventing missing limbs or equipment. Faithful survival-horror pre-rendered appearance, with a clean alpha edge; no new stylization, decoration or generic monster substitution. This is a generated project asset, not a claim of being an official or geometrically exact original-game frame. Preserve the shown flying bat, wing membranes, pointed ears and source wing pose; do not add human or monster anatomy. Keep the CODE: Veronica 2000 low-poly texture style, not a photorealistic redesign. Keep this nonsexual and non-graphic, without added sexual anatomy, nudity, excessive blood or exaggerated injury. Do not amplify the source illustration's violence.",
+    "references": [
+      {
+        "path": "assets/catalog/recv-bat.png",
+        "role": "portrait",
+        "bytes": 62657,
+        "sha256": "3dc32e4cb52139ca544ebb064c832dbaa69b3417aeee17125f81b05740cabe6f",
+        "bodyCoverage": "unknown",
+        "sourceUrl": "https://www.evilresource.com/resident-evil-code-veronica/enemies/bat",
+        "exactIdentity": true
+      }
+    ],
+    "generationRecord": {
+      "id": "recv-bat",
+      "generator": "image_gen",
+      "prompt": "Create one independent transparent-background sprite for Bat, exact incarnation: Resident Evil CODE: Veronica (2000). Use only the attached local references for appearance. Preserve the documented anatomy, proportions, clothing, equipment, damage, materials and silhouette of this incarnation. Do not mix other games or forms. A single neutral idle/presentation pose, no text, labels, frame, floor, shadow backdrop, montage or duplicate bodies. Use a right-facing three-quarter view only where supported by the references; never mirror asymmetric details. Preserve the visible source crop if the full body is undocumented rather than inventing missing limbs or equipment. Faithful survival-horror pre-rendered appearance, with a clean alpha edge; no new stylization, decoration or generic monster substitution. This is a generated project asset, not a claim of being an official or geometrically exact original-game frame. Preserve the shown flying bat, wing membranes, pointed ears and source wing pose; do not add human or monster anatomy. Keep the CODE: Veronica 2000 low-poly texture style, not a photorealistic redesign. Keep this nonsexual and non-graphic, without added sexual anatomy, nudity, excessive blood or exaggerated injury. Do not amplify the source illustration's violence.",
+      "referenced_image_paths": [
+        "/workspace/resident-evil-bow-protocol/assets/catalog/recv-bat.png"
+      ],
+      "tool_output": "/workspace/generated_images/exec-8fc26cc6-bb5d-4b43-bb9a-f628e5b5b7ea.png",
+      "output_source": "image_gen tool local artifact",
+      "worker": "pipeline-gen",
+      "visual_review": "Source inspected before generation; output has not received a full-body combat admission."
+    },
+    "sourceBytesTransformed": false
+  },
+  "sourceCompletenessEvidence": {
+    "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-009/recv-bat-source-body-observation.json",
+    "sha256": "9384c3e4ba61b512d3f4c2c38b512f14bc1fe77bd3247f2e57f98913df9f8e66",
+    "referencePath": "assets/catalog/recv-bat.png",
+    "referenceSha256": "3dc32e4cb52139ca544ebb064c832dbaa69b3417aeee17125f81b05740cabe6f",
+    "imageSha256": "8952f350e0df4ebcd1627a64c1d40776cddd38dd4e8aee3ea4b774d7e2414daa",
+    "observedFacing": "left",
+    "scope": "Whole body visually observed in this source image and this generated pose only; no opposite view, geometry or original-game pose certification."
+  },
+  "jobLimitations": [
+    "Generated interpretation, not an original game frame; geometric 1:1 remains unverified.",
+    "One neutral source-guided pose; no authored attack, opposite view or full animation cycle.",
+    "No complete body reference has been verified; do not certify unseen anatomy or cropped regions."
+  ],
+  "availableStates": []
+}

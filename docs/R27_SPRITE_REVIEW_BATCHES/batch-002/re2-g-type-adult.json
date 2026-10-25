@@ -1,0 +1,50 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "re2-g-type-adult",
+  "reviewed_at_utc": "2026-10-25T08:12:05.261744+00:00",
+  "batch": "batch-002",
+  "image": "modules/fidelity-r27/sprites/generated/re2-g-type-adult/idle-right.png",
+  "image_sha256": "9fa95f727b72764a38c2c98b9816105508907b156fd37b5295710ab37915e0ec",
+  "active_record": "modules/fidelity-r27/sprites/records/re2-g-type-adult.json",
+  "active_record_sha256": "bff3da766600c2e1909589ed335d0cb1892d7b09e0e68729f81a4dd91531571d",
+  "used_references": [
+    {
+      "path": "assets/specimens/re2-g-type-adult.png",
+      "sha256": "633da241a79330860b93820fd59d002cec1251cdbdc05a452c7e004322a225ad",
+      "role": "full-body-reference"
+    }
+  ],
+  "source_complete_body_observed": true,
+  "generated_complete_body_observed": true,
+  "full_body_reviewed": true,
+  "observed_facing": "left",
+  "direction_eligible_for_neutral_pose": true,
+  "review_outcome": "source-consistent-generated-static-neutral-base",
+  "notes": "Complete bulky source body has its open maw pointing left, the large pale-veined arm on viewer right and back nodules retained. The source floor puddle is omitted from the transparent sprite; body extremities remain visible. No action timing or game idle-state certification.",
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.984588+00:00",
+    "prior_report_record_sha256": "960cdcce6899923185a6b9db3e354a61eba5cb17e635aa8eedd71a047bf650aa",
+    "prior_direction_eligibility": true,
+    "pose_observation": {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re2-g-type-adult.json",
+      "sha256": "f040c437fc31387f9bc210512540d0b65c814a7f9453f97fb89d823c61f5cf7a"
+    },
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.975516+00:00"
+  },
+  "observed_pose_kind": "neutral-base",
+  "available_states": [
+    "idle"
+  ]
+}

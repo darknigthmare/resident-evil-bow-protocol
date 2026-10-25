@@ -1,0 +1,77 @@
+{
+  "schema": "re.bow.persistence-r27-tests/1",
+  "passed": 8,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "A captured R26 revision preserves exact archive and record UTF-8 bytes without inventing original transport",
+      "pass": true,
+      "evidence": {
+        "archiveBytes": 2124,
+        "records": 2,
+        "sourceRevision": 2,
+        "originalTransportClaimed": false
+      }
+    },
+    {
+      "name": "Source revision changes and raw-value changes without a revision invalidate both extraction and verification",
+      "pass": true,
+      "evidence": {
+        "revisionChangeRefused": true,
+        "unversionedRawChangeRefused": true,
+        "enginesStarted": 0
+      }
+    },
+    {
+      "name": "A concurrent restore during verification keeps captured results but refuses a verdict for current storage",
+      "pass": true,
+      "evidence": {
+        "capturedRecordStillDetailed": true,
+        "currentSourceVerdictRefused": true
+      }
+    },
+    {
+      "name": "Selection is bounded and resolved against private records rather than caller-created values",
+      "pass": true,
+      "evidence": {
+        "badSelectionsRefused": 5,
+        "privateRowsPreserved": true,
+        "batchMaximum": 30
+      }
+    },
+    {
+      "name": "Unknown contracts and repeated IDs remain visible but never become executable",
+      "pass": true,
+      "evidence": {
+        "visibleRefusedRecords": 3,
+        "sourceBytesExtractableWithoutExecution": true
+      }
+    },
+    {
+      "name": "Missing source, malformed nested archive and an empty archive do not invent replays",
+      "pass": true,
+      "evidence": {
+        "uninitializedRefused": true,
+        "duplicateFieldsRefused": true,
+        "emptyArchivesRemainEmpty": true
+      }
+    },
+    {
+      "name": "Cancellation during an asynchronous factory settles without a stale publication and tears down the eventual engine",
+      "pass": true,
+      "evidence": {
+        "cancelledBeforeFactoryResolved": true,
+        "eventualEngineCancelled": true
+      }
+    },
+    {
+      "name": "Closing the bridge refuses later reads and never falls back to game storage",
+      "pass": true,
+      "evidence": {
+        "closedReadsRefused": 3,
+        "gameStorageTouched": false
+      }
+    }
+  ],
+  "scope": "Restored-revision bridge boundaries with original R19/R13 parsers and actual current/historical replay fixtures. Controlled engine tasks test invalidation and cancellation; real browser engine execution is recorded separately."
+}

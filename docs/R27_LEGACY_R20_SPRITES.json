@@ -1,0 +1,96 @@
+{
+  "suite": "sprite-presentation-r20-http",
+  "passed": 8,
+  "failed": 0,
+  "physicalDevices": false,
+  "checks": [
+    {
+      "name": "Selection displays the exact Tyrant and Nemesis incarnation with original canvas retained",
+      "width": 1440,
+      "pass": true,
+      "exactIds": true,
+      "combatStateCreated": false
+    },
+    {
+      "name": "Unsupported identities restore original portraits and simulated page restoration adds no duplicates",
+      "width": 1440,
+      "pass": true,
+      "originalIncarnationsPreserved": true,
+      "simulatedLifecycle": true
+    },
+    {
+      "name": "Four independent images load in the DEV viewer with real alpha and working controls",
+      "width": 1440,
+      "pass": true,
+      "realImages": 4,
+      "nativeControls": true
+    },
+    {
+      "name": "Selection displays the exact Tyrant and Nemesis incarnation with original canvas retained",
+      "width": 390,
+      "pass": true,
+      "exactIds": true,
+      "combatStateCreated": false
+    },
+    {
+      "name": "Unsupported identities restore original portraits and simulated page restoration adds no duplicates",
+      "width": 390,
+      "pass": true,
+      "originalIncarnationsPreserved": true,
+      "simulatedLifecycle": true
+    },
+    {
+      "name": "Four independent images load in the DEV viewer with real alpha and working controls",
+      "width": 390,
+      "pass": true,
+      "realImages": 4,
+      "nativeControls": true
+    },
+    {
+      "name": "Delayed image completion cannot overwrite a newer selection",
+      "width": 1440,
+      "pass": true,
+      "delayedNativeImage": true
+    },
+    {
+      "name": "Blocked PNG retains original canvas and permits retry after a new selection",
+      "width": 1440,
+      "pass": true,
+      "explicitNetworkFailure": true,
+      "fallbackAndRetry": true
+    }
+  ],
+  "executed_at_utc": "2026-10-25T09:52:11.693214+00:00",
+  "executedAdapterInputs": [
+    {
+      "path": "codex.html",
+      "sha256": "0824085dcdc1992f401a83c87440926816b4b04b7a897e3f15d99d32754269cb"
+    },
+    {
+      "path": "modules/versus.html",
+      "sha256": "39f8e2298a58e961b345cbeb6e20c36eb948b9efd5a8b522a992a51e8bef4386"
+    },
+    {
+      "path": "catalog-duel.html",
+      "sha256": "bb60c85513b26f07c82dae18bff66ce5c2b92cae86e5038e874468d6f48f05a4"
+    },
+    {
+      "path": "modules/fidelity-r27/dossier-link.js",
+      "sha256": "d6b01bf6c77558f62afc09a0e21ef807daf879848acf16e3998b9f397b7c119c"
+    },
+    {
+      "path": "modules/fidelity-r27/combat/sprite-runtime.js",
+      "sha256": "45d442252ae82a3745acc7643255460b13a6203522b0cc9ba58960118c53460b"
+    },
+    {
+      "path": "modules/fidelity-r27/combat/adapter.js",
+      "sha256": "ec1f22e69a7d9ecf3433e6238bc134a8af369ac146ec8d8a8e21c7aca6408d2d"
+    },
+    {
+      "path": "modules/fidelity-r27/combat/presentation.js",
+      "sha256": "d53120875a6d137f0cfedc4fa6254d48a7bb4cea13f410b3893548f7a504a9e0"
+    }
+  ],
+  "log_sha256": "8613d56550d523078b979e71f4bac242c62e16739bbd0d45b48225881152acde",
+  "scope": "Historical eight Chromium groups rerun in the isolated copy after final neutral-base/runtime guard freeze. Only the R27 presentation adapter is excluded in this R20 fixture; actual R27 runtime/combat adapter remains mounted. Original historical assertions unchanged; new R27 presentation/combat behavior has its own live tests."
+}

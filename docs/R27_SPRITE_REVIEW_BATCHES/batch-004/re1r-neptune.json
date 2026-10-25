@@ -1,0 +1,48 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "re1r-neptune",
+  "reviewed_at_utc": "2026-10-25T08:37:46.357657+00:00",
+  "batch": "batch-004",
+  "image": "modules/fidelity-r27/sprites/generated/re1r-neptune/idle-right.png",
+  "image_sha256": "0f1494bdc4ce6c53c779f489b931507ada3a567d39dac1fef4fe7a2d835534ff",
+  "active_record": "modules/fidelity-r27/sprites/records/re1r-neptune.json",
+  "active_record_sha256": "7197fa2b6002456856b57db4c6e4d8b721f51e76eef758ca6ceadf25877bd5bb",
+  "used_references": [
+    {
+      "path": "assets/catalog/re1r-neptune.png",
+      "sha256": "a0b8e33216cc272c791cfe087cb7631ecadd1eb774df8473b95e98d94cff965a",
+      "role": "portrait",
+      "declared_body_coverage": "unknown"
+    }
+  ],
+  "scope": "context-encounter",
+  "source_complete_body_observed": false,
+  "generated_complete_body_observed": true,
+  "full_body_reviewed": false,
+  "observed_facing": "right",
+  "direction_eligible_for_neutral_pose": false,
+  "review_outcome": "context-only-no-combat-admission",
+  "notes": "Source shows only a large shark head/partial trunk, cut at the frame edges. Generated tail and completed rear body are not established by this crop. Context scope also prevents combat admission.",
+  "manual_source_completeness_evidence": null,
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.892597+00:00",
+    "prior_report_record_sha256": "8ad8d8bca077a2ebd468c0b25c9e82c4d0624e0c046f85ca5ef5ebf3cfc078be",
+    "prior_direction_eligibility": false,
+    "pose_observation": null,
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.885691+00:00"
+  },
+  "observed_pose_kind": "unknown",
+  "available_states": []
+}

@@ -1,0 +1,109 @@
+{
+  "id": "re2-larvae",
+  "label": "Larvae",
+  "incarnation": "Resident Evil 2 (1998)",
+  "image": "modules/fidelity-r27/sprites/generated/re2-larvae/idle-right.png",
+  "bytes": 716163,
+  "sha256": "4d1c82ea6da8ebf031b286375af39427dec1b3d12d0b15af37c13067ffaabbbe",
+  "format": "PNG",
+  "width": 1402,
+  "height": 1122,
+  "alpha": {
+    "channel": true,
+    "min": 0,
+    "max": 255,
+    "transparentPixels": 1148444,
+    "totalPixels": 1573044,
+    "transparentFraction": 0.7300774803502,
+    "visibleThreshold": 16
+  },
+  "bounds": {
+    "x": 42,
+    "y": 322,
+    "width": 1313,
+    "height": 486
+  },
+  "pivot": {
+    "x": 698.5,
+    "y": 808
+  },
+  "decodedRgbaSha256": "868bc244afdc8b1b6cd6700edd28ea7a8ad674210c4a5092cec14f846ae113d0",
+  "sourceFacing": "left",
+  "canMirror": false,
+  "requestedState": "idle",
+  "animationFrames": 1,
+  "poseKind": "neutral-base",
+  "modularParts": false,
+  "combatIntegrated": false,
+  "canonicalFidelityCertified": false,
+  "reviewStatus": "visually-reviewed",
+  "fullBodyReviewed": true,
+  "completeBodyReferenceVerified": false,
+  "scope": "combatant-neutral-pose",
+  "openStates": [
+    "idle-cycle",
+    "walk",
+    "run",
+    "light",
+    "heavy",
+    "special",
+    "super",
+    "hurt",
+    "guard",
+    "knockdown",
+    "intro",
+    "victory",
+    "defeat",
+    "left-view"
+  ],
+  "limitations": [
+    "Generated interpretation, not an original game frame; geometric 1:1 remains unverified.",
+    "One neutral source-guided pose; no authored attack, opposite view or full animation cycle.",
+    "The original job lacked a complete-body declaration; the linked SHA-bound observation covers this visible source and generated pose only, without certifying other views or geometry."
+  ],
+  "provenance": {
+    "generator": "image_gen",
+    "prompt": "Create one independent transparent-background sprite for Larvae, exact incarnation: Resident Evil 2 (1998). Use only the attached local references for appearance. Preserve the documented anatomy, proportions, clothing, equipment, damage, materials and silhouette of this incarnation. Do not mix other games or forms. A single neutral idle/presentation pose, no text, labels, frame, floor, shadow backdrop, montage or duplicate bodies. Use a right-facing three-quarter view only where supported by the references; never mirror asymmetric details. Preserve the visible source crop if the full body is undocumented rather than inventing missing limbs or equipment. Faithful survival-horror pre-rendered appearance, with a clean alpha edge; no new stylization, decoration or generic monster substitution. This is a generated project asset, not a claim of being an official or geometrically exact original-game frame. Reproduce the shown cream-and-brown segmented larva, its source taper and side view. No head, legs or mutations beyond those visibly supported by the reference. Preserve the source illustration's style. Keep this nonsexual and non-graphic: no added sexual anatomy, nudity, excessive blood or exaggerated injury; do not amplify the source violence.",
+    "references": [
+      {
+        "path": "assets/catalog/re2-larvae.png",
+        "role": "portrait",
+        "bytes": 56912,
+        "sha256": "5dae1391bd57ec847bc80ad69b4633e3a9bf9efb3f9c95acde23ce5d05ca09ec",
+        "bodyCoverage": "unknown",
+        "sourceUrl": "https://www.evilresource.com/resident-evil-2/enemies/larvae",
+        "exactIdentity": true
+      }
+    ],
+    "generationRecord": {
+      "id": "re2-larvae",
+      "generator": "image_gen",
+      "prompt": "Create one independent transparent-background sprite for Larvae, exact incarnation: Resident Evil 2 (1998). Use only the attached local references for appearance. Preserve the documented anatomy, proportions, clothing, equipment, damage, materials and silhouette of this incarnation. Do not mix other games or forms. A single neutral idle/presentation pose, no text, labels, frame, floor, shadow backdrop, montage or duplicate bodies. Use a right-facing three-quarter view only where supported by the references; never mirror asymmetric details. Preserve the visible source crop if the full body is undocumented rather than inventing missing limbs or equipment. Faithful survival-horror pre-rendered appearance, with a clean alpha edge; no new stylization, decoration or generic monster substitution. This is a generated project asset, not a claim of being an official or geometrically exact original-game frame. Reproduce the shown cream-and-brown segmented larva, its source taper and side view. No head, legs or mutations beyond those visibly supported by the reference. Preserve the source illustration's style. Keep this nonsexual and non-graphic: no added sexual anatomy, nudity, excessive blood or exaggerated injury; do not amplify the source violence.",
+      "referenced_image_paths": [
+        "/workspace/resident-evil-bow-protocol/assets/catalog/re2-larvae.png"
+      ],
+      "tool_output": "/workspace/generated_images/exec-53fc2d9b-6b06-4e64-8a30-bb4abda0fb99.png",
+      "output_source": "image_gen tool local artifact",
+      "worker": "pipeline-gen",
+      "visual_review": "Primary reference inspected before generation; complete-body combat review remains pending."
+    },
+    "sourceBytesTransformed": false
+  },
+  "sourceCompletenessEvidence": {
+    "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-009/re2-larvae-source-body-observation.json",
+    "sha256": "eb78190570709ad39e221876b7256caa5352ab7012566526d43c3398248e4bbf",
+    "referencePath": "assets/catalog/re2-larvae.png",
+    "referenceSha256": "5dae1391bd57ec847bc80ad69b4633e3a9bf9efb3f9c95acde23ce5d05ca09ec",
+    "imageSha256": "4d1c82ea6da8ebf031b286375af39427dec1b3d12d0b15af37c13067ffaabbbe",
+    "observedFacing": "left",
+    "scope": "Whole body visually observed in this source image and this generated pose only; no opposite view, geometry or original-game pose certification."
+  },
+  "jobLimitations": [
+    "Generated interpretation, not an original game frame; geometric 1:1 remains unverified.",
+    "One neutral source-guided pose; no authored attack, opposite view or full animation cycle.",
+    "No complete body reference has been verified; do not certify unseen anatomy or cropped regions."
+  ],
+  "availableStates": [
+    "idle"
+  ]
+}

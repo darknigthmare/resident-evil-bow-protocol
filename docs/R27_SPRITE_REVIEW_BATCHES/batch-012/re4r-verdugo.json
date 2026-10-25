@@ -1,0 +1,61 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "re4r-verdugo",
+  "reviewed_at_utc": "2026-10-25T09:41:58.041260+00:00",
+  "batch": "batch-012",
+  "image": "modules/fidelity-r27/sprites/generated/re4r-verdugo/idle-right.png",
+  "image_sha256": "0e4700ce62fd4c198383aac856394a623e8facf6cf349a6b0b2ba728108d9324",
+  "active_record": "modules/fidelity-r27/sprites/records/re4r-verdugo.json",
+  "active_record_sha256": "cfe908f4d19eb2347e6babff452f7d741a9d0571c63cab84904d16fd4c81b197",
+  "used_references": [
+    {
+      "path": "assets/specimens/re4r-verdugo.png",
+      "sha256": "4f27d408f91c009f2de69137d72917d8f50f7168d1a9a2e7e1111f6af9fcd9bd",
+      "role": "full-body-reference",
+      "declared_body_coverage": "complete"
+    },
+    {
+      "path": "assets/catalog/re4r-verdugo.png",
+      "sha256": "f7c6d312e496ff8b55052cb63cb97ffe75c6ed2ec0c4d370f96931e4724020b7",
+      "role": "portrait",
+      "declared_body_coverage": "unknown"
+    }
+  ],
+  "scope": "combatant-neutral-pose",
+  "source_complete_body_observed": true,
+  "generated_complete_body_observed": true,
+  "full_body_reviewed": true,
+  "observed_facing": "right",
+  "observed_pose_kind": "neutral-base",
+  "direction_eligible_for_neutral_pose": true,
+  "review_outcome": "source-consistent-generated-static-neutral-base",
+  "notes": "The primary documents the complete tail loop/blade, head, both claws, segmented body and feet; secondary shows matching head/upper-shell detail. Native output inspection confirms all ends within margins in a three-quarter right-facing pose. One source-guided directional presentation only; tail articulation, hidden plates, exact geometry and attack phase remain open. Its static low ready stance is supported on both feet, with arms lowered and no extended strike or airborne limb; this supports a static neutral base without certifying original-game idle timing.",
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "visual_evidence": {
+    "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-012/contact-2.png",
+    "sha256": "1276c4add4afb59133aff79aab7cbb9c37bde026aaeb3f34c81d49cb4b8388bc",
+    "kind": "browser-contact-review-evidence",
+    "new_generated_sprite_count": 0
+  },
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.842871+00:00",
+    "prior_report_record_sha256": "cfe908f4d19eb2347e6babff452f7d741a9d0571c63cab84904d16fd4c81b197",
+    "prior_direction_eligibility": true,
+    "pose_observation": null,
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.833147+00:00"
+  },
+  "available_states": [
+    "idle"
+  ]
+}

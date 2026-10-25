@@ -67,7 +67,12 @@ jobs:
           "$RUNNER_TEMP/fidelity-r26-venv/bin/python" scripts/build-validation-summary-r26.py --check
           "$RUNNER_TEMP/fidelity-r26-venv/bin/python" scripts/build-fidelity-tracking-r26.py --check
           "$RUNNER_TEMP/fidelity-r26-venv/bin/python" scripts/build-persistence-manifest-r26.py --check
-          "$RUNNER_TEMP/fidelity-r26-venv/bin/python" scripts/audit-delivery-r26.py --check
+          # R26's strict publication ledger names its own historical HTML delta.
+          # Reproduce it at the published revision; R27's auditor protects the current delta.
+          R26_REVIEWED_TREE="$RUNNER_TEMP/fidelity-r26-published"
+          git worktree add --quiet --detach "$R26_REVIEWED_TREE" 826f7ed1811c48adc0609f97699eb32f629fc78a
+          trap 'git worktree remove --force "$R26_REVIEWED_TREE"' EXIT
+          "$RUNNER_TEMP/fidelity-r26-venv/bin/python" "$R26_REVIEWED_TREE/scripts/audit-delivery-r26.py" --check > qa-fidelity-r26-ci/published-delivery-check.json
           node tests/verify-r26-integration.mjs
       - name: Validate bounded imports, published provenance and export guards
         run: '"$RUNNER_TEMP/fidelity-r26-venv/bin/python" -m unittest discover -s tests -p "test_*r26.py" -v'

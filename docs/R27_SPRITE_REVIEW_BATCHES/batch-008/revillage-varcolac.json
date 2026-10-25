@@ -1,0 +1,56 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "revillage-varcolac",
+  "reviewed_at_utc": "2026-10-25T09:13:10.708258+00:00",
+  "batch": "batch-008",
+  "image": "modules/fidelity-r27/sprites/generated/revillage-varcolac/idle-right.png",
+  "image_sha256": "6d53c792c2a6efef20cc3a2b21c0cd342c9d283accf688e87b4986df2c1cdc7a",
+  "active_record": "modules/fidelity-r27/sprites/records/revillage-varcolac.json",
+  "active_record_sha256": "9fe97ed8e722b488f37e8acd9d05d6300a4d7534fd967d5a3a6ad8b0473643b6",
+  "used_references": [
+    {
+      "path": "assets/specimens/revillage-varcolac.png",
+      "sha256": "6b1fa95e3409d5afad07b3362578bc682a50608f8afe245fdfc4a1ccd45e0e2a",
+      "role": "full-body-reference",
+      "declared_body_coverage": "complete"
+    }
+  ],
+  "scope": "combatant-neutral-pose",
+  "source_complete_body_observed": true,
+  "generated_complete_body_observed": true,
+  "full_body_reviewed": true,
+  "observed_facing": "front",
+  "direction_eligible_for_neutral_pose": false,
+  "review_outcome": "whole-visible-body-presentation-pose-no-combat-idle",
+  "notes": "Whole crouched quadrupedal/humanoid figure, mane, open snout, long foreclaws and visible rear limbs fit within both images. Face and shoulders point toward the viewer with an oblique lean; no distinct left/right combat view is established.",
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "visual_evidence": {
+    "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-008/contact-1.png",
+    "sha256": "18c1218f7b476339124b2f5abd7fceaa7225d80b5f164b59e57237890e50e2a3",
+    "kind": "browser-contact-review-evidence",
+    "new_generated_sprite_count": 0
+  },
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.909409+00:00",
+    "prior_report_record_sha256": "f62834c2ff722c4a2eaaea3b8a51323891c81465d76e34b0ab9d9ecc35937fc8",
+    "prior_direction_eligibility": false,
+    "pose_observation": {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/revillage-varcolac.json",
+      "sha256": "286deb61e20a05437f13a44e1840513ae7b1efb92dafe5bf130cb1064cdc9465"
+    },
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.902877+00:00"
+  },
+  "observed_pose_kind": "source-presentation",
+  "available_states": []
+}

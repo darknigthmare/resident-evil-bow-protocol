@@ -1,0 +1,53 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "revillage-mutated-dimitrescu",
+  "reviewed_at_utc": "2026-10-25T09:13:11.036353+00:00",
+  "batch": "batch-008",
+  "image": "modules/fidelity-r27/sprites/generated/revillage-mutated-dimitrescu/idle-right.png",
+  "image_sha256": "8e40241d0d9e433b5fc5d9ec0ce6b00ec36fb60b767976f413727c935b19ff6c",
+  "active_record": "modules/fidelity-r27/sprites/records/revillage-mutated-dimitrescu.json",
+  "active_record_sha256": "a83fb4cae29bb54b5021bfb1ceed24bfb96dfa6df97ed23d35d807725e3852cb",
+  "used_references": [
+    {
+      "path": "assets/specimens/revillage-mutated-dimitrescu.png",
+      "sha256": "f8ebeb3dfbee20aca812d07e337d55264ef5566005862fbebb5feccaf4f6a23c",
+      "role": "full-body-reference",
+      "declared_body_coverage": "complete"
+    }
+  ],
+  "scope": "combatant-neutral-pose",
+  "source_complete_body_observed": false,
+  "generated_complete_body_observed": false,
+  "full_body_reviewed": false,
+  "observed_facing": "front",
+  "direction_eligible_for_neutral_pose": false,
+  "review_outcome": "visible-source-region-reviewed-body-not-admitted",
+  "notes": "The sole reference is a tightly cropped mutant head/upper mass: both outer wings, raised tendrils and lower creature are cut. Output remains a cropped upper view and adds some outer extension. No full dragon form, underside, legs or complete equipped silhouette is verified from this source.",
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "visual_evidence": {
+    "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-008/contact-2.png",
+    "sha256": "d8b3734271e7d17c866c4430a26ef3a1e8a9241216aef8c5a4565bbfba86ad61",
+    "kind": "browser-contact-review-evidence",
+    "new_generated_sprite_count": 0
+  },
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.915194+00:00",
+    "prior_report_record_sha256": "e098a9ca50cc0c2d9ded98f89f649e1aa2c9a3e9f519e0194358b260c4c84896",
+    "prior_direction_eligibility": false,
+    "pose_observation": null,
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.907083+00:00"
+  },
+  "observed_pose_kind": "unknown",
+  "available_states": []
+}

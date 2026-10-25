@@ -1,0 +1,46 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "re0-cerberus",
+  "reviewed_at_utc": "2026-10-25T08:18:51.028872+00:00",
+  "batch": "batch-003",
+  "image": "modules/fidelity-r27/sprites/generated/re0-cerberus/idle-right.png",
+  "image_sha256": "e875385fdad9d39762529578f488314138df384f60c883513a7de4123fdf2260",
+  "active_record": "modules/fidelity-r27/sprites/records/re0-cerberus.json",
+  "active_record_sha256": "08a9a8c838de0bac61917f37d281b5516ccce01622bb4db635e2f6289b6e742c",
+  "used_references": [
+    {
+      "path": "assets/catalog/re0-cerberus.png",
+      "sha256": "bc3b372c1649a5ad55cf955cdf7adce5a1885a1591e50b0eff90651920ab38a1",
+      "role": "portrait",
+      "declared_body_coverage": "unknown"
+    }
+  ],
+  "source_complete_body_observed": false,
+  "generated_complete_body_observed": false,
+  "full_body_reviewed": false,
+  "observed_facing": "front",
+  "direction_eligible_for_neutral_pose": false,
+  "review_outcome": "partial-source-no-body-admission",
+  "notes": "Source cuts the back/body and does not show all limbs. The generated front-facing running-looking crop still truncates the upper body and does not document the hidden hindquarters. Visible facial damage is source-guided; no whole-body or action-phase admission.",
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.935472+00:00",
+    "prior_report_record_sha256": "ec9494d02d10721395b30b5740882990ca4d6ad304bc7178afe2e54e1b40edb2",
+    "prior_direction_eligibility": false,
+    "pose_observation": null,
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.925685+00:00"
+  },
+  "observed_pose_kind": "unknown",
+  "available_states": []
+}

@@ -1,0 +1,70 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "re6-zombie",
+  "reviewed_at_utc": "2026-10-25T09:23:58.930140+00:00",
+  "batch": "batch-011",
+  "image": "modules/fidelity-r27/sprites/generated/re6-zombie/idle-right.png",
+  "image_sha256": "0afdbfe364a9d66a1810166a1b63de1ebb416fd4ab70d25cc0b99b9b2cab9a4f",
+  "active_record": "modules/fidelity-r27/sprites/records/re6-zombie.json",
+  "active_record_sha256": "e3540dc77e2ed3169ff3b2d1910227c390ec1fd9726d69894ad48ce585e1b4c4",
+  "used_references": [
+    {
+      "path": "assets/specimens/re6-zombie.png",
+      "sha256": "31c749b0849be650da4fe1f5db94ecc9e1c82a97935cafa07b80c23aeb627be7",
+      "role": "full-body-reference",
+      "declared_body_coverage": "complete"
+    }
+  ],
+  "scope": "combatant-neutral-pose",
+  "source_complete_body_observed": true,
+  "generated_complete_body_observed": true,
+  "full_body_reviewed": true,
+  "observed_facing": "front",
+  "direction_eligible_for_neutral_pose": false,
+  "review_outcome": "whole-visible-body-presentation-pose-no-combat-idle",
+  "notes": "Native source documents a whole foreshortened airborne/lunging zombie pose. Fresh corrective V2 restores its rounded front-leg contour, folded back leg/foot and reaching hands inside the image. V1 PNG and exact record remain archived and SHA-bound. Body extent is reviewed, but pose is frontal and airborne rather than a certified idle or directional combat frame.",
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "visual_evidence": {
+    "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-011/contact-1.png",
+    "sha256": "38c0015edbc12423b8eb6104a53706ebd5a655a0845a1e1813b4841d31552c61",
+    "kind": "browser-contact-review-evidence",
+    "new_generated_sprite_count": 0
+  },
+  "superseded_generation": {
+    "image": "modules/fidelity-r27/sprites/superseded/re6-zombie/8e5122a21505e992c9e12fe5ed92499b028e1f491974b83ca2c6e210669f6b28/idle-right.png",
+    "record": "modules/fidelity-r27/sprites/superseded/re6-zombie/8e5122a21505e992c9e12fe5ed92499b028e1f491974b83ca2c6e210669f6b28/sprite-record.json",
+    "sha256": "8e5122a21505e992c9e12fe5ed92499b028e1f491974b83ca2c6e210669f6b28",
+    "recordSha256": "46eabb5efa78e5208348c4cb5aa38d5b7494c4918023fa222f5b8c72488d07b4"
+  },
+  "actual_corrective_imagegen_generation": true,
+  "correction_reason": "V1 lengthened the source's strongly foreshortened front leg and clipped it at the lower canvas. A new image_gen call using only the original primary restored the source leg contour and occlusion with margins; no PNG editing.",
+  "corrective_visual_evidence": {
+    "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-011/zombie-correction.png",
+    "sha256": "c5b6fb946da8736de3fec24c0705fd87395ceae05b10042402b603beb1b714fa",
+    "kind": "browser-contact-review-evidence",
+    "new_generated_sprite_count": 0
+  },
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.955968+00:00",
+    "prior_report_record_sha256": "9d0618a831439b70be10b58c776dcb49bb3c191d1e830beaa77d61c69aea3ddb",
+    "prior_direction_eligibility": false,
+    "pose_observation": {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re6-zombie.json",
+      "sha256": "27d98ff3b4bb73dec917bbbbdbff9bc0a173f50b570664d04ad79552eb00a107"
+    },
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.945930+00:00"
+  },
+  "observed_pose_kind": "source-presentation",
+  "available_states": []
+}

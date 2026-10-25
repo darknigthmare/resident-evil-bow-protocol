@@ -1,0 +1,67 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "re1-adder",
+  "reviewed_at_utc": "2026-10-25T08:37:46.510518+00:00",
+  "batch": "batch-004",
+  "image": "modules/fidelity-r27/sprites/generated/re1-adder/idle-right.png",
+  "image_sha256": "04317268c97569d0d3402248ad20277149486b80407ec10463deb61d23231918",
+  "active_record": "modules/fidelity-r27/sprites/records/re1-adder.json",
+  "active_record_sha256": "8d7a645a82050a2dede8ceec6d8254f04a5e8b82822fd5a8d057a14401d85db3",
+  "used_references": [
+    {
+      "path": "assets/catalog/re1-adder.png",
+      "sha256": "4857942efbb46a5681994d2258acf0a6d324de9840a7d79d283afd72e2e95847",
+      "role": "portrait",
+      "declared_body_coverage": "unknown"
+    }
+  ],
+  "scope": "combatant-neutral-pose",
+  "source_complete_body_observed": true,
+  "generated_complete_body_observed": true,
+  "full_body_reviewed": true,
+  "observed_facing": "left",
+  "direction_eligible_for_neutral_pose": true,
+  "review_outcome": "source-consistent-generated-static-neutral-base",
+  "notes": "Actual catalog reference contains the complete red/pale snake from forked tongue/head to the tapered tail. Generated whole curved body remains coherent and head points left. Manual source-completeness evidence overrides no immutable job metadata; it records the actual visible source.",
+  "manual_source_completeness_evidence": {
+    "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-004/re1-adder-source-body-observation.json",
+    "sha256": "b9a5d4eda3d4360601d49c6366cd02e5b3e34476e79a78b6d7e650cb01cfc92a",
+    "referencePath": "assets/catalog/re1-adder.png",
+    "referenceSha256": "4857942efbb46a5681994d2258acf0a6d324de9840a7d79d283afd72e2e95847",
+    "imageSha256": "04317268c97569d0d3402248ad20277149486b80407ec10463deb61d23231918",
+    "observedFacing": "left",
+    "scope": "Whole body visually observed in this source image and this generated pose only; no opposite view, geometry or original-game pose certification."
+  },
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "record_metadata_refresh": {
+    "prior_record_sha256": "08d0b310de602d55a90646f2b1b6b81d57f23e487bbcf9e7cdcb3b9efda605f4",
+    "current_record_sha256": "e83999b3ae23f0c39f427d5c1bf3700adf072f3ac02ba6cd0c5e0f945a0ba400",
+    "checked_at_utc": "2026-10-25T09:14:23.444772+00:00",
+    "change_verified": "Only limitations explanatory text was qualified by existing SHA-bound body proof; original job limitations retained as jobLimitations. Exact prior bytes reconstructed and matched prior record SHA. No PNG, used source, review, facing, body, receipt or proof changed."
+  },
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.887607+00:00",
+    "prior_report_record_sha256": "e83999b3ae23f0c39f427d5c1bf3700adf072f3ac02ba6cd0c5e0f945a0ba400",
+    "prior_direction_eligibility": true,
+    "pose_observation": {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re1-adder.json",
+      "sha256": "d04332e0cf476841cbfacd7f77fe3378af433ed09fcd5b06eaa00a3827a75295"
+    },
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.880895+00:00"
+  },
+  "observed_pose_kind": "neutral-base",
+  "available_states": [
+    "idle"
+  ]
+}

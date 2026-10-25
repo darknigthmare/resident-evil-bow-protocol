@@ -1,0 +1,51 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "re4-el-gigante",
+  "reviewed_at_utc": "2026-10-25T08:49:03.207344+00:00",
+  "batch": "batch-005",
+  "image": "modules/fidelity-r27/sprites/generated/re4-el-gigante/idle-right.png",
+  "image_sha256": "7a74652cabc49f0a46082e67b381858d2a60abfe5d4ab06272377488fa465de7",
+  "active_record": "modules/fidelity-r27/sprites/records/re4-el-gigante.json",
+  "active_record_sha256": "787b8b840eaeaac25ce8f7f65667b990a5902af8f78783555fd2ad76dede8249",
+  "used_references": [
+    {
+      "path": "assets/specimens/re4-el-gigante.png",
+      "sha256": "49724b770e307b1f93ce8be468508d6298b63df1c412a0f063786e99bf0870d6",
+      "role": "full-body-reference",
+      "declared_body_coverage": "complete"
+    }
+  ],
+  "scope": "combatant-neutral-pose",
+  "source_complete_body_observed": true,
+  "generated_complete_body_observed": true,
+  "full_body_reviewed": true,
+  "observed_facing": "front",
+  "direction_eligible_for_neutral_pose": false,
+  "review_outcome": "whole-visible-body-presentation-pose-no-combat-idle",
+  "notes": "Complete crouched giant, dark shorts, hands and bare feet are present in both images. Unrelated ground figures in the source are appropriately absent from the one-entity sprite. The hunch remains frontal; no facing side or physical scale is certified.",
+  "manual_source_completeness_evidence": null,
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.784213+00:00",
+    "prior_report_record_sha256": "b3b9c375492ba4f6c583a4e8657fd9b58b86cdfdd0e2e8361ea2d7f079e39144",
+    "prior_direction_eligibility": false,
+    "pose_observation": {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re4-el-gigante.json",
+      "sha256": "7e9ce5608e8eb427755db5be2988a7e09e2a2157d326e56f219628085d89b5b5"
+    },
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.788203+00:00"
+  },
+  "observed_pose_kind": "source-presentation",
+  "available_states": []
+}

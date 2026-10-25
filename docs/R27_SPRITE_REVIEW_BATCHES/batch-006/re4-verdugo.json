@@ -1,0 +1,50 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "re4-verdugo",
+  "reviewed_at_utc": "2026-10-25T09:03:38.651977+00:00",
+  "batch": "batch-006",
+  "image": "modules/fidelity-r27/sprites/generated/re4-verdugo/idle-right.png",
+  "image_sha256": "2b9df4091aba6f5fb1c2fded600e086130ea773551be2692de887151f87f1f6e",
+  "active_record": "modules/fidelity-r27/sprites/records/re4-verdugo.json",
+  "active_record_sha256": "9767e8e6d87f8b3717feceddc990cf1f346ad7d5b53988584b6426f3fd72c534",
+  "used_references": [
+    {
+      "path": "assets/specimens/re4-verdugo.webp",
+      "sha256": "b17cc038a0adb07115d2891f9adf703141d401bed09e9aeb30d222b32735c11b",
+      "role": "full-body-reference",
+      "declared_body_coverage": "complete"
+    }
+  ],
+  "scope": "combatant-neutral-pose",
+  "source_complete_body_observed": true,
+  "generated_complete_body_observed": true,
+  "full_body_reviewed": true,
+  "observed_facing": "front",
+  "direction_eligible_for_neutral_pose": false,
+  "review_outcome": "whole-visible-body-presentation-pose-no-combat-idle",
+  "notes": "Complete dark humanoid with pale head/red eyes, claws and long scythed tail remains coherent with the primary source. Head/torso remain frontal-oblique without a clear side-facing admission; no reverse side or tail-action timing is certified.",
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.872873+00:00",
+    "prior_report_record_sha256": "1110fa5347c708eb5c3514d063b08ba1e5f4b1c65ca78cd052b078c99d28d45e",
+    "prior_direction_eligibility": false,
+    "pose_observation": {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re4-verdugo.json",
+      "sha256": "abbb548cb4878a190a87a44866e91e37a5d4420d169a8675edc7be2ad2f4f8de"
+    },
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.861888+00:00"
+  },
+  "observed_pose_kind": "source-presentation",
+  "available_states": []
+}

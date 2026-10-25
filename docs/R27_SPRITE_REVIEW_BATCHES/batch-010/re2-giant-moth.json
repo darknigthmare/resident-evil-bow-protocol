@@ -1,0 +1,53 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "re2-giant-moth",
+  "reviewed_at_utc": "2026-10-25T09:19:02.391810+00:00",
+  "batch": "batch-010",
+  "image": "modules/fidelity-r27/sprites/generated/re2-giant-moth/idle-right.png",
+  "image_sha256": "1fae5e519d79b18f164f780f46107a8bcaef402c34a2b1c90f95e13aa133fe1d",
+  "active_record": "modules/fidelity-r27/sprites/records/re2-giant-moth.json",
+  "active_record_sha256": "1a12bf9964b9e54515182ae1cdc71831ea1346983af441fb33127362212d2248",
+  "used_references": [
+    {
+      "path": "assets/catalog/re2-giant-moth.png",
+      "sha256": "8721d5429f80adb14419491fa6b2727b3762bed48a5e8a1e265d215d45ecc395",
+      "role": "portrait",
+      "declared_body_coverage": "unknown"
+    }
+  ],
+  "scope": "combatant-neutral-pose",
+  "source_complete_body_observed": false,
+  "generated_complete_body_observed": false,
+  "full_body_reviewed": false,
+  "observed_facing": "front",
+  "direction_eligible_for_neutral_pose": false,
+  "review_outcome": "visible-source-region-reviewed-body-not-admitted",
+  "notes": "Source cuts the lower abdomen and does not show complete legs or lower body. Output preserves the same abrupt lower edge despite enlarging antennae and wing detail. Whole moth silhouette, underside and wing-beat cycle remain unverified.",
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "visual_evidence": {
+    "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-010/contact-1.png",
+    "sha256": "b83e4320ce4dc45107b01205d4062964abb4bed685b260c78394a113f244f801",
+    "kind": "browser-contact-review-evidence",
+    "new_generated_sprite_count": 0
+  },
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.855315+00:00",
+    "prior_report_record_sha256": "3c6d9cc40288b0a58d038c9d2088849047014a0a1b84a20f4076ae6724b7bdb5",
+    "prior_direction_eligibility": false,
+    "pose_observation": null,
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.845885+00:00"
+  },
+  "observed_pose_kind": "unknown",
+  "available_states": []
+}

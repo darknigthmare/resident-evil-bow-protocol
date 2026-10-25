@@ -1,0 +1,53 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "revillage-soldat-panzer",
+  "reviewed_at_utc": "2026-10-25T09:10:49.107162+00:00",
+  "batch": "batch-007",
+  "image": "modules/fidelity-r27/sprites/generated/revillage-soldat-panzer/idle-right.png",
+  "image_sha256": "a7f84bc78a3c57ca2014fc21c34d08f9f3dafe02ea553e7bc524f8d2aa1dc13f",
+  "active_record": "modules/fidelity-r27/sprites/records/revillage-soldat-panzer.json",
+  "active_record_sha256": "db86787db49259ec43ecbe55e32b473524624b386060a6758dcdf9f1c41891e9",
+  "used_references": [
+    {
+      "path": "assets/specimens/revillage-soldat-panzer.png",
+      "sha256": "e0dc60f210ece6e19d947e0c094ea515c461825542a305b771bb58ad3cc06130",
+      "role": "full-body-reference",
+      "declared_body_coverage": "complete"
+    }
+  ],
+  "scope": "combatant-neutral-pose",
+  "source_complete_body_observed": false,
+  "generated_complete_body_observed": false,
+  "full_body_reviewed": false,
+  "observed_facing": "front",
+  "direction_eligible_for_neutral_pose": false,
+  "review_outcome": "visible-source-region-reviewed-body-not-admitted",
+  "notes": "The armored body is shown frontally, but the outer right drill reaches and clips the native source boundary. The generated outer drill also reaches its canvas edge. Complete equipped silhouette is therefore not verified despite the old complete-body declaration; armor mechanics and drill animations remain open.",
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "visual_evidence": {
+    "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-007/contact-2.png",
+    "sha256": "e749ddd82677ab778b2afa06103c5ba0854075dea868de2b57920296df5f67d1",
+    "kind": "browser-contact-review-evidence",
+    "new_generated_sprite_count": 0
+  },
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.739742+00:00",
+    "prior_report_record_sha256": "8f8292c4118e3c0259a67f09fb629f54d5ab6adc97e49844ab1680b8f7c5ba6d",
+    "prior_direction_eligibility": false,
+    "pose_observation": null,
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.743632+00:00"
+  },
+  "observed_pose_kind": "unknown",
+  "available_states": []
+}

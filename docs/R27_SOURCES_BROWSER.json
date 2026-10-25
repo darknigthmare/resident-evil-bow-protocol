@@ -1,0 +1,52 @@
+{
+  "schema": "re.bow.appearance-sources-browser-r27/1",
+  "passed": 5,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "All389 identities retain source scopes, original image dimensions and model candidates",
+      "pass": true,
+      "evidence": {
+        "identities": 389,
+        "partialPortraitNotPromoted": true,
+        "verifiedLurkerImages": 3,
+        "candidatesDistinct": true
+      }
+    },
+    {
+      "name": "Keyboard skip, narrow320px and actual200percent text retain readable references",
+      "pass": true,
+      "evidence": {
+        "width": 320,
+        "bodyFontPixels": 32,
+        "skipTarget": "#main",
+        "overflow": false
+      }
+    },
+    {
+      "name": "Corrupted source bytes are refused and source labels stay inert",
+      "pass": true,
+      "evidence": {
+        "corruptedBytesRefused": true,
+        "sourceTextInert": true
+      }
+    },
+    {
+      "name": "External resource manifests fail before image fetch and retry restores the exact index",
+      "pass": true,
+      "evidence": {
+        "foreignRequests": 0,
+        "retryRecovered": true
+      }
+    },
+    {
+      "name": "A delayed prior image cannot replace a newly selected incarnation",
+      "pass": true,
+      "evidence": {
+        "staleImageRejected": true,
+        "selected": "re0-lurker"
+      }
+    }
+  ],
+  "scope": "Existing source reference bytes and scope presentation; no generated sprite, anatomical1:1 or physical-device certification."
+}

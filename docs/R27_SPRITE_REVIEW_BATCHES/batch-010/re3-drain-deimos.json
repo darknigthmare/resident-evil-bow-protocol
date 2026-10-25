@@ -1,0 +1,60 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "re3-drain-deimos",
+  "reviewed_at_utc": "2026-10-25T09:19:03.869117+00:00",
+  "batch": "batch-010",
+  "image": "modules/fidelity-r27/sprites/generated/re3-drain-deimos/idle-right.png",
+  "image_sha256": "ee1175b548b8d65344bcc5068da119fa02fccc9e0570a15fd69c0f377bb0f76f",
+  "active_record": "modules/fidelity-r27/sprites/records/re3-drain-deimos.json",
+  "active_record_sha256": "d3340a2bf9b9e10436cb4a986ad9f45d30fd8c0823328b86e703b200c2492841",
+  "used_references": [
+    {
+      "path": "assets/catalog/re3-drain-deimos.png",
+      "sha256": "f9df359c3df62a23335cd414d00e15e2885c1320ccc33a49cfa363a1e46ee818",
+      "role": "portrait",
+      "declared_body_coverage": "unknown"
+    }
+  ],
+  "scope": "combatant-neutral-pose",
+  "source_complete_body_observed": true,
+  "generated_complete_body_observed": true,
+  "full_body_reviewed": true,
+  "observed_facing": "front",
+  "direction_eligible_for_neutral_pose": false,
+  "review_outcome": "whole-visible-body-presentation-pose-no-combat-idle",
+  "notes": "Whole raised hooked limbs, central front torso, bent lower limbs and visible claw tips have margins in native source and output. Manual exact-SHA proof supports the complete frontal visible pose. No left/right combat side or complete movement set is certified.",
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "visual_evidence": {
+    "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-010/contact-3.png",
+    "sha256": "318a5cb674d46314a96ff2fdb28c911c03e1fe020980703fb4ecd92705532a67",
+    "kind": "browser-contact-review-evidence",
+    "new_generated_sprite_count": 0
+  },
+  "source_completeness_evidence": {
+    "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-010/re3-drain-deimos-source-body-observation.json",
+    "sha256": "e20e907b6ca288a8126e5e0f7c642cfed7772c3d6e4cecc4b3c41500c3eaff4d"
+  },
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.864774+00:00",
+    "prior_report_record_sha256": "485573d42bf35c9512e1bd0ce1b753d026259d42fbe14aff209c1f36d13f2e62",
+    "prior_direction_eligibility": false,
+    "pose_observation": {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re3-drain-deimos.json",
+      "sha256": "e33bf1f76b72c7ac4c3cb809c58e90372008ee84250f618839ab3df33d7b294f"
+    },
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.853929+00:00"
+  },
+  "observed_pose_kind": "source-presentation",
+  "available_states": []
+}

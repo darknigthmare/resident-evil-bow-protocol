@@ -1,0 +1,58 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "re0-zombie",
+  "reviewed_at_utc": "2026-10-25T08:12:06.593771+00:00",
+  "batch": "batch-002",
+  "image": "modules/fidelity-r27/sprites/generated/re0-zombie/idle-right.png",
+  "image_sha256": "98515d3abae17bae15c6089055a5d2f694751c34a4b9c64f156f0251e08e9da2",
+  "active_record": "modules/fidelity-r27/sprites/records/re0-zombie.json",
+  "active_record_sha256": "d436c5c58c1300a4d84c9d97a528b62a9a76e94ecefc1a00fb5d7847c0276424",
+  "used_references": [
+    {
+      "path": "modules/fidelity-r26/sprites/sheets/re0-zombie-gc-r26-1.png",
+      "sha256": "c8b7d1acdc866f8d774e17fc5906bfaf78563c6ddad5d278caaf3a4f60e4abf3",
+      "role": "source-model-render"
+    },
+    {
+      "path": "modules/fidelity-r26/sprites/sheets/re0-zombie-gc-r26-2.png",
+      "sha256": "c793bb6dbaaa4a81de3c9283952ab0a55bbf042db76764d7fbd144726dd374f3",
+      "role": "source-model-render"
+    },
+    {
+      "path": "modules/fidelity-r26/visual/previews/asset-287609.png",
+      "sha256": "06c65588aa2f9840ee69e2f879e204fb02892c4aa985d5e7e0cb1a22ee9f0c24",
+      "role": "model-preview"
+    }
+  ],
+  "source_complete_body_observed": true,
+  "generated_complete_body_observed": true,
+  "full_body_reviewed": true,
+  "observed_facing": "front",
+  "direction_eligible_for_neutral_pose": false,
+  "review_outcome": "whole-visible-body-presentation-pose-no-combat-idle",
+  "notes": "The generated brown-suit zombie matches one documented full-body model variant in the used RE0 source sheets/preview, with complete head, clothing and feet. Its spread-arm bind/presentation stance is not certified as the game idle pose, and its overall frontal stance does not establish a side-facing combat view.",
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:14.002114+00:00",
+    "prior_report_record_sha256": "b382fe146a696cec81bc67bbf3f651e8f136daebf861371693cddd0d8c8ce9c4",
+    "prior_direction_eligibility": false,
+    "pose_observation": {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re0-zombie.json",
+      "sha256": "a309be8d1fcc5f2146cc5d0248e80c23de4d680b345f0d08ed5655588a07ba96"
+    },
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.991554+00:00"
+  },
+  "observed_pose_kind": "source-bind-pose",
+  "available_states": []
+}

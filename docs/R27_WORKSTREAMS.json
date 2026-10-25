@@ -1,0 +1,428 @@
+{
+  "tasks": [
+    {
+      "id": "R20-09",
+      "advances": [
+        "{new_keyed_files} nouveaux fichiers à clés : {new_motions} mouvements et {new_poses} poses comptés séparément.",
+        "Les poses générées gardent une seule image et aucun membre séparé ; elles ne constituent pas un rig ou un cycle de combat."
+      ],
+      "remaining": [
+        "Rigs et cycles complets des 389 incarnations, attribution vérifiée de chaque action et intégration finale au combat."
+      ],
+      "evidence": [
+        {
+          "href": "motion/manifest.json",
+          "label": "Clés et rôles sources"
+        },
+        {
+          "href": "sprites/index.html",
+          "label": "États réellement disponibles"
+        }
+      ]
+    },
+    {
+      "id": "R20-10",
+      "advances": [
+        "{generated_sprites} fichiers de pose obtenus pour 385 cibles ; {blocked_sprites} refus d’outil restent conservés sans image et {awaiting_sprites} demandes attendent encore un résultat.",
+        "{reviewed_sprites} fichiers revus visuellement, dont {full_body_reviewed} corps entiers revus et {neutral_base_combat_eligible} poses neutral-base admissibles au seul rendu idle ; les {context_targets} rencontres contextuelles restent séparées.",
+        "{body_raster_views} vues de référence issues de géométries sources pour {body_raster_subjects} UID restent séparées des 385 cibles image_gen, des pixels originaux et du rendu final de combat.",
+        "Préférence utilisateur : conserver les refus, fidélité prioritaire. Aucun variant édulcoré ne remplit artificiellement le compteur des fichiers générés."
+      ],
+      "remaining": [
+        "Demandes encore sans résultat : {awaiting_sprites} ; les {blocked_sprites} refus sont maintenus sans variante édulcorée. Restent les cycles complets, membres, orientations opposées et effets ; une pose ne clôture pas le chantier."
+      ],
+      "evidence": [
+        {
+          "href": "sprites/index.html",
+          "label": "Examiner les générations"
+        },
+        {
+          "href": "sprites/manifest.json",
+          "label": "Fichiers et limites"
+        },
+        {
+          "href": "sources/body-rasters/manifest.json",
+          "label": "Vues géométriques de référence séparées"
+        },
+        {
+          "href": "../../docs/R27_ROOT_TOOL_REFUSALS_PROVENANCE.json",
+          "label": "Provenance conservée des deux refus de l’agent principal"
+        }
+      ]
+    },
+    {
+      "id": "G-PERIMETRE",
+      "advances": [
+        "{claims} assertions supplémentaires pour {new_reviewed_subjects} nouvelles incarnations ; {cumulative_reviewed} revues au cumul, {still_unreviewed} sans revue canonique.",
+        "L’index distingue les corps, portraits, candidats, objets associés et rencontres contextuelles ; les éditions et les incertitudes restent explicites."
+      ],
+      "remaining": [
+        "Revue exhaustive des alias, modes, DLC et extensions ; corriger chaque ambiguïté de support ou de forme avec une preuve."
+      ],
+      "evidence": [
+        {
+          "href": "canonical/index.html",
+          "label": "Assertions et éditions"
+        },
+        {
+          "href": "sources/index.html",
+          "label": "Périmètre des références"
+        }
+      ]
+    },
+    {
+      "id": "G-PREUVES",
+      "advances": [
+        "{source_images} références d’image et {source_models} UID avec modèles attribués sont indexés avec leurs octets et empreintes.",
+        "Les prompts et la provenance des générations restent séparés des sources ; {source_metadata_drifts} écarts de métadonnées historiques et {source_metadata_absent} cas de métadonnées absentes sont signalés sans correction silencieuse des fichiers historiques."
+      ],
+      "remaining": [
+        "Captures originales et séquences horodatées de chaque geste, phase et transformation ; comparaison indépendante aux paquets et banques bruts."
+      ],
+      "evidence": [
+        {
+          "href": "sources/index.html",
+          "label": "Examiner les références"
+        },
+        {
+          "href": "sprites/manifest.json",
+          "label": "Provenance des générations"
+        },
+        {
+          "href": "sources/body-rasters/manifest.json",
+          "label": "Vues géométriques de référence séparées"
+        },
+        {
+          "href": "../../docs/R27_SOURCE_SELECTION_NOTES.json",
+          "label": "Références procédurales écartées avant génération"
+        },
+        {
+          "href": "../../docs/R27_SPRITE_REVIEW_BATCHES/index.json",
+          "label": "Index figé des 192 revues visuelles et de leurs empreintes"
+        }
+      ]
+    },
+    {
+      "id": "G-COMMANDES",
+      "advances": [
+        "Seules les poses neutral-base explicitement revues, complètes et orientées déclarent idle ; les poses de liaison, de présentation ou inconnues ne déclarent aucun état. Aucune attaque, garde ou chute n’est déduite.",
+        "Les mouvements sources et les nouvelles citations documentent des gestes sans attribuer une commande officielle à partir d’un nom technique de fichier."
+      ],
+      "remaining": [
+        "Répertoire officiel complet, action identifiée par séquence et correspondance aux commandes ; dépasser dix slots lorsque le répertoire le demande."
+      ],
+      "evidence": [
+        {
+          "href": "sprites/manifest.json",
+          "label": "États disponibles et manquants"
+        },
+        {
+          "href": "canonical/index.html",
+          "label": "Gestes documentés"
+        },
+        {
+          "href": "motion/manifest.json",
+          "label": "Mouvements natifs"
+        }
+      ]
+    },
+    {
+      "id": "G-MANCHES",
+      "advances": [
+        "Douze scénarios ciblés terminent avec les vies normales et 24 reconstructions identiques : dix KO et deux résultats au chrono.",
+        "Les deux cas R26 limités à 50 égalités terminent en trois manches après changement des seuls inputs ; l’ancienne preuve reste conservée."
+      ],
+      "remaining": [
+        "Victoire, défaite, égalité et leurs séquences, dessins et sons officiels par incarnation ; recette KO et conclusions artistiques séparée."
+      ],
+      "evidence": [
+        {
+          "href": "../../docs/R27_MATCHES.json",
+          "label": "Résultats observés"
+        },
+        {
+          "href": "../../docs/R27_MATCHES.md",
+          "label": "Règles et limites"
+        }
+      ]
+    },
+    {
+      "id": "G-CINEMATIQUES",
+      "advances": [
+        "Six scènes de conclusion de prototype sont observées par leurs commandes réelles : quatre directions, une variante cinématique et une fenêtre après deux victoires.",
+        "Le vérificateur de replay laisse explicitement finisherVerified à faux ; ces scènes ne deviennent pas des intros, outros ou fatalités officielles."
+      ],
+      "remaining": [
+        "Intros, outros et bande sonore complète par sujet ; attribution de l’action, de la phase et des raccords du jeu d’origine."
+      ],
+      "evidence": [
+        {
+          "href": "../../docs/R27_MATCHES.md",
+          "label": "Phases de prototype et frontière des replays"
+        },
+        {
+          "href": "motion/manifest.json",
+          "label": "Séquences sources non attribuées"
+        }
+      ]
+    },
+    {
+      "id": "G-REPLAYS",
+      "advances": [
+        "Les valeurs restaurées en base isolée peuvent être relues directement et vérifiées avec les moteurs courant et pré-R13 ; R7 garde un parcours de fichier séparé.",
+        "Les nouveaux matchs sont reconstruits deux fois ; la révision et les valeurs brutes sont contrôlées avant et après la vérification issue de la base restaurée."
+      ],
+      "remaining": [
+        "Autres révisions et contrats historiques, campagnes et conclusions artistiques ; ne pas lire un ancien contrat sous un moteur courant."
+      ],
+      "evidence": [
+        {
+          "href": "persistence/index.html",
+          "label": "Vérifier les valeurs restaurées"
+        },
+        {
+          "href": "../../docs/R27_MATCHES.json",
+          "label": "Replays supplémentaires"
+        }
+      ]
+    },
+    {
+      "id": "G-SAUVES",
+      "advances": [
+        "Le pont lit la base de répétition R26 sans écrire ses valeurs et refuse les changements de révision ou de contenu entre lecture et résultat.",
+        "Les archives et replays extraits gardent leurs valeurs exactes ; aucune restauration du stockage du jeu ni aucun service cloud ne sont ajoutés."
+      ],
+      "remaining": [
+        "Restauration du stockage réel du jeu, cloud et reprises après interruption hors de la base isolée ; l’outil R26 ne certifie pas ces usages."
+      ],
+      "evidence": [
+        {
+          "href": "persistence/index.html",
+          "label": "Pont de restauration isolée"
+        },
+        {
+          "href": "../../docs/R27_PERSISTENCE.md",
+          "label": "Concurrence et refus"
+        }
+      ]
+    },
+    {
+      "id": "G-VICTIMES",
+      "advances": [
+        "Les gardes de compatibilité refusent deux conclusions hors domaine : corps non revu et écart de gabarit.",
+        "Six conclusions autorisées restent des compatibilités de prototype ; le passage au clavier et l’expiration produisent des résultats ordinaires sans scène inventée."
+      ],
+      "remaining": [
+        "Toutes les associations admissibles et leurs conclusions finales ; revue morphologique, artistique et séquences d’origine."
+      ],
+      "evidence": [
+        {
+          "href": "../../docs/R27_MATCHES.json",
+          "label": "Choix et refus réellement exécutés"
+        },
+        {
+          "href": "../../docs/R27_MATCHES.md",
+          "label": "Portée anatomique non certifiée"
+        }
+      ]
+    },
+    {
+      "id": "G-ECHELLE",
+      "advances": [
+        "Les limites alpha et pivots des nouvelles images servent au placement de présentation, sans devenir des tailles corporelles ou collisions canoniques.",
+        "Les {source_body_refs} références historiques de corps entier restent distinctes des portraits et de la revue des fichiers générés."
+      ],
+      "remaining": [
+        "Mesures primaires, tailles corporelles et collision, géants et aquatiques ; zéro échelle physique certifiée."
+      ],
+      "evidence": [
+        {
+          "href": "sources/index.html",
+          "label": "Portée des vues corporelles"
+        },
+        {
+          "href": "sprites/manifest.json",
+          "label": "Limites et pivots mesurés"
+        },
+        {
+          "href": "sources/body-rasters/manifest.json",
+          "label": "Vues géométriques de référence séparées"
+        }
+      ]
+    },
+    {
+      "id": "G-RENDU",
+      "advances": [
+        "Les fichiers générés sont consultables séparément par incarnation, avec alpha, empreinte, revue, état et orientation réellement disponibles.",
+        "Le rendu idle exige une pose neutral-base explicitement observée, un corps entier et le côté disponible revus ; les poses T/de liaison, de présentation, inconnues, les vues partielles et les contextes restent exclus."
+      ],
+      "remaining": [
+        "Sprites définitifs, deux orientations, asymétries, mouvements, impacts et transformations de tout le catalogue ; rendu original du jeu non certifié."
+      ],
+      "evidence": [
+        {
+          "href": "sprites/index.html",
+          "label": "Galerie des poses"
+        },
+        {
+          "href": "../../docs/FIDELITE_R27.md",
+          "label": "Rendu et frontières de la livraison"
+        }
+      ]
+    },
+    {
+      "id": "G-PERF",
+      "advances": [
+        "La galerie charge la seule image sélectionnée et conserve les références originales sans chargement simultané des 385 poses.",
+        "Les mouvements et archives gardent leurs limites de décodage explicites ; les mesures cloud ne certifient pas les appareils physiques."
+      ],
+      "remaining": [
+        "Appareils physiques, GPU cibles, budgets mémoire globaux et longues sessions de combat ; le rendu logiciel cloud ne les certifie pas."
+      ],
+      "evidence": [
+        {
+          "href": "sprites/index.html",
+          "label": "Chargement d’une pose"
+        },
+        {
+          "href": "../../docs/R27_VALIDATION.json",
+          "label": "Résultats de performance et parcours"
+        }
+      ]
+    },
+    {
+      "id": "G-ACCESS",
+      "advances": [
+        "Les sept ateliers R27 disposent de parcours clavier, liens d’évitement et textes exposant l’incarnation et les limites de fidélité.",
+        "Le chargement, les erreurs et la sélection d’une pose restent annoncés ; les contenus générés ne remplacent pas leurs noms ou leurs preuves."
+      ],
+      "remaining": [
+        "Lecteurs d’écran réels, appareils tactiles et manettes physiques, contenus hors écran et conformité WCAG complète."
+      ],
+      "evidence": [
+        {
+          "href": "../../docs/R27_VALIDATION.json",
+          "label": "Recettes exécutées"
+        },
+        {
+          "href": "sprites/index.html",
+          "label": "Galerie et commandes"
+        }
+      ]
+    },
+    {
+      "id": "G-AUDIO",
+      "advances": [
+        "{audio_files} nouveaux WAV, {audio_distinct} contenus distincts par empreinte, classés sous {audio_subjects} incarnation par la publication de la même édition.",
+        "Les octets et canaux publiés sont conservés ; les noms de fichiers ne deviennent pas une attribution d’action ou une écoute sémantique indépendante."
+      ],
+      "remaining": [
+        "Écoute indépendante, locuteur et action/phase, comparaison aux banques brutes, cris et mixage final ; ne pas affecter automatiquement ces sons au combat."
+      ],
+      "evidence": [
+        {
+          "href": "audio/index.html",
+          "label": "Écouter la publication"
+        },
+        {
+          "href": "../../docs/R27_AUDIO.md",
+          "label": "Attribution et limites"
+        }
+      ]
+    },
+    {
+      "id": "G-RECETTE",
+      "advances": [
+        "La recette couvre les nouveaux fichiers générés, leurs références, la vérification des valeurs restaurées et les scénarios de conclusion.",
+        "Les régressions distinguent résultat de combat, métadonnées de finisher, corps complet revu et apparence originale non certifiée."
+      ],
+      "remaining": [
+        "Toutes les combinaisons, commandes, campagnes, KO, séquences artistiques et validations sur appareils cibles."
+      ],
+      "evidence": [
+        {
+          "href": "../../docs/R27_VALIDATION.json",
+          "label": "Résultats exécutés"
+        },
+        {
+          "href": "../../docs/R27_MATCH_TESTS.json",
+          "label": "Contrôles des matchs"
+        }
+      ]
+    },
+    {
+      "id": "G-LIVRAISON",
+      "advances": [
+        "Les 29 feuilles historiques de R26 sont préservées et six nouvelles feuilles suivent les 17 chantiers et les 389 incarnations.",
+        "Les compteurs proviennent des fichiers réellement livrés ; une tâche en attente ou un portrait n’est jamais compté comme une famille d’animations terminée.",
+        "La résolution des 385 tentatives est distincte de la production de 385 PNG ; les refus explicites ne sont ni supprimés ni remplacés par des placeholders."
+      ],
+      "remaining": [
+        "Revue humaine et exécution CI de la nouvelle livraison ; tous les chantiers restent ouverts tant que leurs critères manquent de preuves."
+      ],
+      "evidence": [
+        {
+          "href": "../../docs/R27_TRACKING.json",
+          "label": "Suivi structuré"
+        },
+        {
+          "href": "../../docs/FIDELITE_R27.md",
+          "label": "Livraison et reproduction"
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "href": "sprites/index.html",
+      "title": "Les 385 générations ciblées",
+      "description": "Fichiers réellement produits, revue, corps complet, contexte et états encore absents.",
+      "label": "Examiner les sprites"
+    },
+    {
+      "href": "sources/index.html",
+      "title": "Références d’apparence",
+      "description": "Images, corps, modèles attribués, candidats et écarts de métadonnées par incarnation.",
+      "label": "Examiner les sources"
+    },
+    {
+      "href": "motion/index.html",
+      "title": "Mouvements natifs",
+      "description": "Fichiers à clés, poses, rôles et archives sources ; attribution des actions conservée séparément.",
+      "label": "Examiner les mouvements"
+    },
+    {
+      "href": "audio/index.html",
+      "title": "Sons publiés",
+      "description": "Fichiers originaux par sujet publié, avec édition et limites.",
+      "label": "Écouter les sons"
+    },
+    {
+      "href": "canonical/index.html",
+      "title": "Gestes, formes et éditions",
+      "description": "Nouvelles assertions, sources citées et incarnations encore sans revue.",
+      "label": "Examiner les citations"
+    },
+    {
+      "href": "persistence/index.html",
+      "title": "Replays après restauration isolée",
+      "description": "Lecture des valeurs restaurées et vérification avec le moteur correspondant.",
+      "label": "Vérifier les replays restaurés"
+    }
+  ],
+  "additional_inputs": [
+    "docs/R27_MATCHES.json",
+    "docs/R27_MATCH_TESTS.json",
+    "modules/fidelity-r27/dossier-additions.json",
+    "docs/R27_SOURCE_SELECTION_NOTES.json",
+    "docs/R27_ROOT_TOOL_REFUSALS_PROVENANCE.json",
+    "docs/R27_SPRITE_REVIEW_BATCHES/index.json",
+    "docs/R27_SPRITE_REVIEW_BATCHES/integrity.json"
+  ],
+  "generation_preference": {
+    "user_choice": "Conserver les refus, fidélité prioritaire",
+    "preserve_tool_refusals": true,
+    "no_softened_variants_to_fill_counter": true,
+    "actual_files_and_blocked_attempts_counted_separately": true
+  }
+}

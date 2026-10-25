@@ -1,0 +1,79 @@
+{
+  "schema": "re.bow.audio-browser-r27/1",
+  "startedAt": "2026-10-25T07:19:39.894Z",
+  "completedAt": "2026-10-25T07:19:47.023Z",
+  "passed": 7,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Publisher groups, manual playback and labelled controls at 1440px",
+      "pass": true,
+      "detail": {
+        "clips": 330,
+        "identities": 1,
+        "zombieVoiceClips": 330,
+        "noAutoplay": true,
+        "volumeAndPause": true,
+        "physicalListening": false
+      }
+    },
+    {
+      "name": "Publisher groups, manual playback and labelled controls at 390px",
+      "pass": true,
+      "detail": {
+        "clips": 330,
+        "identities": 1,
+        "zombieVoiceClips": 330,
+        "noAutoplay": true,
+        "volumeAndPause": true,
+        "physicalListening": false
+      }
+    },
+    {
+      "name": "All 330 preserved WAVs match their hashes and decode to their exact sample counts",
+      "pass": true,
+      "detail": {
+        "decoded": 330,
+        "problems": [],
+        "playbackStarted": false,
+        "independentSemanticListening": false
+      }
+    },
+    {
+      "name": "Identity links filter only their known source group and reject an unknown incarnation",
+      "pass": true,
+      "detail": {
+        "zombieVoiceClips": 330,
+        "onlyPublishedVoiceGroup": true,
+        "unknownIdentityRefused": true
+      }
+    },
+    {
+      "name": "Changed source bytes fail before an audio URL is exposed",
+      "pass": true,
+      "detail": {
+        "corruptedSourceRefused": true,
+        "exposedAudioURLs": 0
+      }
+    },
+    {
+      "name": "Unsafe manifest paths and unsupported native certification cannot expose playback",
+      "pass": true,
+      "detail": {
+        "unsafePathRefused": true,
+        "unsupportedCertificationRefused": true
+      }
+    },
+    {
+      "name": "A late previous selection cannot replace the current sound",
+      "pass": true,
+      "detail": {
+        "staleSelectionRefused": true,
+        "liveAudioURLs": 1
+      }
+    }
+  ],
+  "independentSemanticListening": false,
+  "nativeGameBanksCertified": false,
+  "physicalAudioDevices": false
+}

@@ -1,0 +1,29 @@
+{
+  "schema": "re.bow.combat-sprite-browser-r27/1",
+  "startedAt": "2026-10-25T09:02:01.629Z",
+  "completedAt": "2026-10-25T09:02:04.770Z",
+  "environment": {
+    "node": "v22.16.0",
+    "chromium": "154.0.8037.57",
+    "headless": true,
+    "physicalDevices": false
+  },
+  "passed": 1,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Actual sprite manifests above two MiB remain bounded at four MiB in runtime and Dossiers",
+      "pass": true,
+      "evidence": {
+        "acceptedBytes": 3145728,
+        "refusedBytes": 5242880,
+        "boundBytes": 4194304,
+        "actualRecordsRetained": 155,
+        "fixtureScope": "Unchanged actual records plus explicit transport padding; no fake PNG or source metadata.",
+        "historicalFallbackRetained": true
+      }
+    }
+  ],
+  "scope": "Actual reviewed generated Cerberus base pose plus existing R20 images; actual main/trial canvas, presentation, error/lifecycle and Dossier links. One idle/right view only; no attack/left-view/complete animation claim.",
+  "filteredTo": "Actual sprite manifests"
+}

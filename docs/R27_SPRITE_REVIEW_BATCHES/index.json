@@ -1,0 +1,3777 @@
+{
+  "schema": "re.bow.sprite-review-index-r27/1",
+  "frozen_at_utc": "2026-10-25T10:05:32.489782+00:00",
+  "counts": {
+    "initial_requested_identities": 385,
+    "generated_png": 363,
+    "actual_tool_blocks": 22,
+    "visually_reviewed": 192,
+    "needs_visual_review": 171,
+    "full_body_reviewed": 82,
+    "idle_admitted": 22,
+    "pose_kinds": {
+      "neutral-base": 22,
+      "source-bind-pose": 2,
+      "source-presentation": 60,
+      "unknown": 279
+    },
+    "actual_corrective_generations": 4,
+    "manual_png_edits": 0,
+    "canonical_fidelity_certified": 0
+  },
+  "frozen_record_snapshot": {
+    "sha256": "3fc70e04204a0d1b23c3ffe0f93ace83e5683121b76a2ffad863929015e3672d",
+    "encoding": "SHA256 of UTF-8 JSON, ensure_ascii=false, separators comma/colon, sorted rows [UID, PNG SHA256, active record bytes SHA256]."
+  },
+  "frozen_tool_block_snapshot": {
+    "sha256": "8a32107ce7b5da440b529357c9080e1a32d6b8266b6888a85b400c5bdc79c482",
+    "encoding": "SHA256 of UTF-8 JSON, ensure_ascii=false, separators comma/colon, sorted rows [UID, failure record bytes SHA256]."
+  },
+  "scope": "Source-guided generated images with explicit review limits. Full body, actual facing and pose kind are independent observations. A single idle base image does not certify an original-game pose, exact geometry, hidden surfaces or a full animation set.",
+  "artifacts": [
+    {
+      "path": "docs/R27_SPRITE_REVIEW.json",
+      "sha256": "5405065b305931420d589c1deee266108a7274bff0959f83693419234849d857"
+    },
+    {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/integrity.json",
+      "sha256": "3cffaff99f69d394d0bb3c117aa132602d09d55f90b97b0662d69ebe1a7ca24a"
+    },
+    {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/index.json",
+      "sha256": "0c98d08e76c888aa5ff9de9d7548e6511198372e090fa3d0c70cb69fb7ed8cd8"
+    },
+    {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-002/index.json",
+      "sha256": "cfe2317635aacc44114760c7be0d89ee067fe4fed7293c4c2d8be83f20cf623c"
+    },
+    {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-003/index.json",
+      "sha256": "18f8fd84db77b052a356a5a18fae4792316ddb6a923806a01a4caa8234ae4258"
+    },
+    {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-004/index.json",
+      "sha256": "25405c493c05513523414cd893cdc0cbe0eca57ef0172ce76d9b69259ea91709"
+    },
+    {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-005/index.json",
+      "sha256": "28a0806a135fd086c1266b9d3cc74af6e81b4fc1fd4f101ef0e1f074f7344e68"
+    },
+    {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-006/index.json",
+      "sha256": "4b014e3bff41791efda17494fc2312fd4b3194016bb2271a62c72897fbe85fc5"
+    },
+    {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-007/index.json",
+      "sha256": "f35e4e82806539b530b839a28df18e305afe942c7052bd1824d2e54846e92f96"
+    },
+    {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-008/index.json",
+      "sha256": "37165070e7ce44b4fcf2d161104e60382ca01ee048e167047022c5ef96786247"
+    },
+    {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-009/index.json",
+      "sha256": "70d5828d1f5369a375825e4ec71b9f1ded6f5c4d4aa18c7627d68be17b0c5287"
+    },
+    {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-010/index.json",
+      "sha256": "62843454160b6e614c074866dd82d1a438daa0357f2225edf9b3229fa96948ca"
+    },
+    {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-011/index.json",
+      "sha256": "229825d1458228ef851232d40ad36e9040ba85c79de3361653e93e153d28096d"
+    },
+    {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-012/index.json",
+      "sha256": "72723a590bff97b6d874a3bc16e0552548972028fed93169e995aac5840895fd"
+    },
+    {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-013/index.json",
+      "sha256": "818da4ef0afd657a99f2f22bb0fef1867d54e4553a58c6d4e0678e4d79f2f38d"
+    },
+    {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-014/index.json",
+      "sha256": "901b17f547e95e83fabaf71ab76c225726602ed9b3895c4ce184b062c427a2e1"
+    },
+    {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-015/index.json",
+      "sha256": "58a084a01893c1f08273e34cbf8e74276f778024be9605aec556ecd24fdde8b3"
+    },
+    {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-016/index.json",
+      "sha256": "b75d181948d34827872796417674df3526965f1d1c22d3412cb837bb72b694f0"
+    },
+    {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/reviewer-ci-re1/summary.json",
+      "sha256": "464f434cbdaff44d747f2d7da827d98b49502ca06d16ed18b122d7fdb80b2731"
+    }
+  ],
+  "reviews": [
+    {
+      "uid": "re0-centurion",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-003/re0-centurion.json",
+        "sha256": "3e4003b8c157d9878328b09f1054801a1b0dab9e9202b5b3100315bd43353c63",
+        "entryUid": "re0-centurion"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re0-centurion/idle-right.png",
+      "image_sha256": "a2dd84e812410496efbd34e7d5250964361fc9fa37764bdf29e696ad61813c06",
+      "record": "modules/fidelity-r27/sprites/records/re0-centurion.json",
+      "record_sha256": "b9d630595ce5325cd4d85d44c2598ab10a9df74888b640eb065007f831a9a7b1",
+      "full_body_reviewed": true,
+      "observed_facing": "left",
+      "observed_pose_kind": "neutral-base",
+      "available_states": [
+        "idle"
+      ],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re0-centurion.json",
+        "sha256": "6b4a0915d634efe46970b92f5f57244feacda5da7b94a26b393c5d18b5a8eff3"
+      }
+    },
+    {
+      "uid": "re0-cerberus",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-003/re0-cerberus.json",
+        "sha256": "430646b7cf74b90cf10262a01e247dd58055a4abd6db506b3e9c2859d35d92ad",
+        "entryUid": "re0-cerberus"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re0-cerberus/idle-right.png",
+      "image_sha256": "e875385fdad9d39762529578f488314138df384f60c883513a7de4123fdf2260",
+      "record": "modules/fidelity-r27/sprites/records/re0-cerberus.json",
+      "record_sha256": "08a9a8c838de0bac61917f37d281b5516ccce01622bb4db635e2f6289b6e742c",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re0-crow",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-004/re0-crow.json",
+        "sha256": "29247baababad74244865ef366af78ea85f1819f84370241234484b8060a4b98",
+        "entryUid": "re0-crow"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re0-crow/idle-right.png",
+      "image_sha256": "bc30df8c37f292ce09705f25f120e38c1c68d61a56b0b8bb67881bf780fc337f",
+      "record": "modules/fidelity-r27/sprites/records/re0-crow.json",
+      "record_sha256": "28711f9cec1322afe25de90731cae4455001789f734386a1ddec3677c709469b",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "source_completeness_evidence": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-004/re0-crow-source-body-observation.json",
+        "sha256": "a8c28e759944ac8f62485b485ad6355bcec5e65cebea7a0be57eaa1ea2715447",
+        "referencePath": "assets/catalog/re0-crow.png",
+        "referenceSha256": "64da0ad45c9097c5763cc4aa0d9add464095ed51e2421772ffe1f4d11931daa0",
+        "imageSha256": "bc30df8c37f292ce09705f25f120e38c1c68d61a56b0b8bb67881bf780fc337f",
+        "observedFacing": "front",
+        "scope": "Whole body visually observed in this source image and this generated pose only; no opposite view, geometry or original-game pose certification."
+      },
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re0-crow.json",
+        "sha256": "8727c8eb4ded8c82625161694a41251c1635a1fe6e3377680320ae434ef2b23c"
+      }
+    },
+    {
+      "uid": "re0-eliminator",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-005/re0-eliminator.json",
+        "sha256": "81a2034d1a0d1cf3e0249899aaaefba6023c2bbc1670979d7e20aea36859e686",
+        "entryUid": "re0-eliminator"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re0-eliminator/idle-right.png",
+      "image_sha256": "aad5f2eb3158b5e1b2fb5f8f3748e6e839b562bd643dc0433bab4f8fe2251754",
+      "record": "modules/fidelity-r27/sprites/records/re0-eliminator.json",
+      "record_sha256": "e7c80ef52eb8a8b5f4735237813fbe61e6c667f73dcb5a1ec20c57050ccc8619",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re0-giant-bat",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-005/re0-giant-bat.json",
+        "sha256": "ca525066bb02acfb952419a77235d41767f8314975ce15316ab58b5db6d27265",
+        "entryUid": "re0-giant-bat"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re0-giant-bat/idle-right.png",
+      "image_sha256": "9320dc4fe46f768bf37ec7a111672b9d383d45727d2032384ce9ad1a5707b468",
+      "record": "modules/fidelity-r27/sprites/records/re0-giant-bat.json",
+      "record_sha256": "4e99df839b2a5f7d57be26875f34b25834e9bbe4a8b7f12f81017485b2476937",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re0-giant-spider",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-005/re0-giant-spider.json",
+        "sha256": "dbe2f639eb683f4836c8fe75045404ba4a93b7fa7e3e6c894649ca3ce92430e8",
+        "entryUid": "re0-giant-spider"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re0-giant-spider/idle-right.png",
+      "image_sha256": "7f01d0097ecfee949aa78e06395dfcb239708eec9ddc272763f24dd99b0db84c",
+      "record": "modules/fidelity-r27/sprites/records/re0-giant-spider.json",
+      "record_sha256": "b9bae506bd8bd7cb31a14d14ddd42e84d4d27bd56ae1fab2da58d90d70c784bf",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re0-hunter",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-003/re0-hunter.json",
+        "sha256": "0afc49aa997dd79fc731f5faa882ffbd4a721516c3c5f730ca2a5f084db58cd0",
+        "entryUid": "re0-hunter"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re0-hunter/idle-right.png",
+      "image_sha256": "5f0b4417f78f916049a8e9f0c37c0a7db836afca96032a6527b0325f98145eb1",
+      "record": "modules/fidelity-r27/sprites/records/re0-hunter.json",
+      "record_sha256": "f69143873f2e1c566b17eaf4306c1f5f2fb6b860a336c27c046f8f7f9ea07fe8",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re0-leech",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-005/re0-leech.json",
+        "sha256": "e3c4807222b5ac7b82bea997ed0969bbe6f4c59f653f10a887449c1e376d2087",
+        "entryUid": "re0-leech"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re0-leech/idle-right.png",
+      "image_sha256": "9ae41bcce4799a13215616170a08d63a9a9cba0a01843829ec388f3fe0f11399",
+      "record": "modules/fidelity-r27/sprites/records/re0-leech.json",
+      "record_sha256": "5ebaaef9e172b4a1b5118412587cb9956ded4968928ca15cf348011be216bfd5",
+      "full_body_reviewed": true,
+      "observed_facing": "left",
+      "observed_pose_kind": "neutral-base",
+      "available_states": [
+        "idle"
+      ],
+      "source_completeness_evidence": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-005/re0-leech-source-body-observation.json",
+        "sha256": "ecd4a8d90569c856b18ed232fd8ee56f8456bc0f5fbe51827384db0a29a634de",
+        "referencePath": "assets/catalog/re0-leech.png",
+        "referenceSha256": "58a73ae86ea4c68b0490ac55246a7265db619b1bf70a6b5b652c85e5cdc243d0",
+        "imageSha256": "9ae41bcce4799a13215616170a08d63a9a9cba0a01843829ec388f3fe0f11399",
+        "observedFacing": "left",
+        "scope": "Whole body visually observed in this source image and this generated pose only; no opposite view, geometry or original-game pose certification."
+      },
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re0-leech.json",
+        "sha256": "712a13281687c1f42bf465ee4460428041a2513032d237bf19eddc4a8f4636e9"
+      }
+    },
+    {
+      "uid": "re0-lurker",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-004/re0-lurker.json",
+        "sha256": "d665ec54265d599e5ef6c86eaf975c48238ecf9352d2337ff22ac8f62cbf7048",
+        "entryUid": "re0-lurker"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re0-lurker/idle-right.png",
+      "image_sha256": "5fbfbbca18d1d0406d06832923652546046dc2ceced16bd347cb0f70f8a176ac",
+      "record": "modules/fidelity-r27/sprites/records/re0-lurker.json",
+      "record_sha256": "9af44e01c000d2a4158459cb279dcd5d3214f814f5def6d8d9c5c546abcd5b53",
+      "full_body_reviewed": true,
+      "observed_facing": "right",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re0-lurker.json",
+        "sha256": "98fd749cd6b235b608243c00d17227d475c30945cb3a3babc98a6875ad13f029"
+      }
+    },
+    {
+      "uid": "re0-mimicry-marcus",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-003/re0-mimicry-marcus.json",
+        "sha256": "41343be27c32d6b28979bbe757c564ec3a686fea526af54013339ec41194c9df",
+        "entryUid": "re0-mimicry-marcus"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re0-mimicry-marcus/idle-right.png",
+      "image_sha256": "96017d59eff0e24194715225002e890903fe034482d36d022f726612729c3842",
+      "record": "modules/fidelity-r27/sprites/records/re0-mimicry-marcus.json",
+      "record_sha256": "3ee97b6be2bfd3ef7b4899705fa298ab9f63a6971e5ac198f279a12fe7dd3535",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re0-mimicry-marcus.json",
+        "sha256": "2d0dd2dc90c665b23c17a2dcd993d97270c37d54a532e8723ebc9d3038c8645e"
+      }
+    },
+    {
+      "uid": "re0-plague-crawler",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-005/re0-plague-crawler.json",
+        "sha256": "2d809e28d5876f648b8afcc6ac007c31b861075e5cec77fd56c42f2646af965a",
+        "entryUid": "re0-plague-crawler"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re0-plague-crawler/idle-right.png",
+      "image_sha256": "33623f53ca727d1354c7bc9626a36a082758360d183f01e6e504dd8c9358f4ac",
+      "record": "modules/fidelity-r27/sprites/records/re0-plague-crawler.json",
+      "record_sha256": "ae5cbd6494d135bb8a805c180390f362323ed9e85d88e58457ce2e7c67cc6375",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re0-proto-tyrant",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-004/re0-proto-tyrant.json",
+        "sha256": "3e991ca80a59c3f3be8f133a55b5680549c686560675b1df28a89e4f5c8030d6",
+        "entryUid": "re0-proto-tyrant"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re0-proto-tyrant/idle-right.png",
+      "image_sha256": "fe205f9219e7a74dab8d21a26ee66cbf385395f017ae7c099d9df9b3454910ee",
+      "record": "modules/fidelity-r27/sprites/records/re0-proto-tyrant.json",
+      "record_sha256": "4e33283b9468db3ad7f494d3135d0ac3f49f3d8be2722c8d2cd1b8858470ef63",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re0-proto-tyrant.json",
+        "sha256": "a60188772dc9f422f3d641207718dec2b7e205607db51b09f536d82c3f38d9e7"
+      }
+    },
+    {
+      "uid": "re0-queen-leech",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-006/re0-queen-leech.json",
+        "sha256": "687b973783062e695e350bb77422bc259ab5edc2504d0587de3eaa64cf6d2fdb",
+        "entryUid": "re0-queen-leech"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re0-queen-leech/idle-right.png",
+      "image_sha256": "b88571b7fe15959088d44899380d4ae31cd23ca159f0bc586949d354ba8629a9",
+      "record": "modules/fidelity-r27/sprites/records/re0-queen-leech.json",
+      "record_sha256": "d57019b49d99183ebb28e8d95df39198d3b3e42335d054fefdcb69e62a82d98c",
+      "full_body_reviewed": false,
+      "observed_facing": "unknown",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re0-queen-leech-second-form",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-006/re0-queen-leech-second-form.json",
+        "sha256": "b40235aea465bbc19b493d8060dc9e08b11f47eb6fd04ca51cf666f74cf29219",
+        "entryUid": "re0-queen-leech-second-form"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re0-queen-leech-second-form/idle-right.png",
+      "image_sha256": "080010bb6bcdbba8a6df2187801dcbb020b37aa4a835f5ae60bfa7168b31281e",
+      "record": "modules/fidelity-r27/sprites/records/re0-queen-leech-second-form.json",
+      "record_sha256": "a24868fbd41d35005d8157cd3828a98784d5440647a23f2d7e0c485b61f546b6",
+      "full_body_reviewed": false,
+      "observed_facing": "unknown",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re0-stinger",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-003/re0-stinger.json",
+        "sha256": "5da231b4bc11c3a5a5e196bcbc7a90800de2969ba88f82800cbdbee3b879e1c8",
+        "entryUid": "re0-stinger"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re0-stinger/idle-right.png",
+      "image_sha256": "1ae2df5ba844575a56dc86f42457eff653ff3d23fc8e435e1ba9eb07db0ff610",
+      "record": "modules/fidelity-r27/sprites/records/re0-stinger.json",
+      "record_sha256": "3d35026ab61ff3d474f4ae465759c38f368e0d4c66fbed6f09a1cf0db1dec31a",
+      "full_body_reviewed": true,
+      "observed_facing": "right",
+      "observed_pose_kind": "neutral-base",
+      "available_states": [
+        "idle"
+      ],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re0-stinger.json",
+        "sha256": "cb608ff5dcf1fdcb2034f87b1cdaafb9179b5aa69c6986f31a46a5ba314230e4"
+      }
+    },
+    {
+      "uid": "re0-zombie",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-002/re0-zombie.json",
+        "sha256": "8fd1946719c89647d94a3bc1ee00b27cfd9a2f46dc3594f47300fcc60f58a2e6",
+        "entryUid": "re0-zombie"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re0-zombie/idle-right.png",
+      "image_sha256": "98515d3abae17bae15c6089055a5d2f694751c34a4b9c64f156f0251e08e9da2",
+      "record": "modules/fidelity-r27/sprites/records/re0-zombie.json",
+      "record_sha256": "d436c5c58c1300a4d84c9d97a528b62a9a76e94ecefc1a00fb5d7847c0276424",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-bind-pose",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re0-zombie.json",
+        "sha256": "a309be8d1fcc5f2146cc5d0248e80c23de4d680b345f0d08ed5655588a07ba96"
+      }
+    },
+    {
+      "uid": "re1-adder",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-004/re1-adder.json",
+        "sha256": "8fc707f2b59eab9a2f30948aedcdb64df63a73b3cdd0d059724fd0ba1a347917",
+        "entryUid": "re1-adder"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re1-adder/idle-right.png",
+      "image_sha256": "04317268c97569d0d3402248ad20277149486b80407ec10463deb61d23231918",
+      "record": "modules/fidelity-r27/sprites/records/re1-adder.json",
+      "record_sha256": "8d7a645a82050a2dede8ceec6d8254f04a5e8b82822fd5a8d057a14401d85db3",
+      "full_body_reviewed": true,
+      "observed_facing": "left",
+      "observed_pose_kind": "neutral-base",
+      "available_states": [
+        "idle"
+      ],
+      "source_completeness_evidence": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-004/re1-adder-source-body-observation.json",
+        "sha256": "b9a5d4eda3d4360601d49c6366cd02e5b3e34476e79a78b6d7e650cb01cfc92a",
+        "referencePath": "assets/catalog/re1-adder.png",
+        "referenceSha256": "4857942efbb46a5681994d2258acf0a6d324de9840a7d79d283afd72e2e95847",
+        "imageSha256": "04317268c97569d0d3402248ad20277149486b80407ec10463deb61d23231918",
+        "observedFacing": "left",
+        "scope": "Whole body visually observed in this source image and this generated pose only; no opposite view, geometry or original-game pose certification."
+      },
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re1-adder.json",
+        "sha256": "d04332e0cf476841cbfacd7f77fe3378af433ed09fcd5b06eaa00a3827a75295"
+      }
+    },
+    {
+      "uid": "re1-black-tiger",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/reviewer-ci-re1/re1-black-tiger.json",
+        "sha256": "9cc90bfb8b74dbb1120f61812bea6fb2e1af2bc7eb306dc9e11e55739c688b52",
+        "entryUid": "re1-black-tiger"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re1-black-tiger/idle-right.png",
+      "image_sha256": "84850b10ac79e22c3c17bc0f95c7726f6f571c382ca8fd3215ff873d53136f70",
+      "record": "modules/fidelity-r27/sprites/records/re1-black-tiger.json",
+      "record_sha256": "36cbe62f59acc55c6febe9cae99550227e52325ee5f233fd9cba179d349f9cb6",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re1-cerberus",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW.json",
+        "sha256": "5405065b305931420d589c1deee266108a7274bff0959f83693419234849d857",
+        "entryUid": "re1-cerberus"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re1-cerberus/idle-right.png",
+      "image_sha256": "8ead8fcbbbc032b14f268010f56847aaf4ece7d764255223fd4c9a8a2b9ee2f1",
+      "record": "modules/fidelity-r27/sprites/records/re1-cerberus.json",
+      "record_sha256": "1a8f2af35eb878300aaf488edcc809e9baff8236236515afedae03481b1ccc40",
+      "full_body_reviewed": true,
+      "observed_facing": "right",
+      "observed_pose_kind": "neutral-base",
+      "available_states": [
+        "idle"
+      ],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re1-cerberus.json",
+        "sha256": "1718312015f751dacfc55c16ac884c5bd82bb42508e497c2ce08c399998a5b41"
+      }
+    },
+    {
+      "uid": "re1-chimera",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW.json",
+        "sha256": "5405065b305931420d589c1deee266108a7274bff0959f83693419234849d857",
+        "entryUid": "re1-chimera"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re1-chimera/idle-right.png",
+      "image_sha256": "b5839e5ea435c2106adcb7e0b79ab7549bec46dc282bb51f1ec5605b896312bb",
+      "record": "modules/fidelity-r27/sprites/records/re1-chimera.json",
+      "record_sha256": "861d3f3d3bf0b845db81e3a1dffcf1b3b4674c6dd293c1ffe495711f2aea62c6",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re1-chimera.json",
+        "sha256": "ca0dc89bd4f80721134195b382d15bfae11938512b87a8ead764bc117882b261"
+      }
+    },
+    {
+      "uid": "re1-crow",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-004/re1-crow.json",
+        "sha256": "8797d4a3e89bfecc6cb68942b74769bd222a01fb2789762c04b171acfc1cb456",
+        "entryUid": "re1-crow"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re1-crow/idle-right.png",
+      "image_sha256": "880675a22e5d5e15434ce6c30bbfbb6b1cbe37070cb6431d5fb4f1a67746e8cd",
+      "record": "modules/fidelity-r27/sprites/records/re1-crow.json",
+      "record_sha256": "2c904177e6c609af567a902e4934ac3f06c1ac1d853374378322cac43076dbd2",
+      "full_body_reviewed": true,
+      "observed_facing": "left",
+      "observed_pose_kind": "neutral-base",
+      "available_states": [
+        "idle"
+      ],
+      "source_completeness_evidence": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-004/re1-crow-source-body-observation.json",
+        "sha256": "ef3b52e4c0ca4c0da40f0cceb98c9d471ada956abcf52bc7d6c21ab8a7cd3902",
+        "referencePath": "assets/catalog/re1-crow.png",
+        "referenceSha256": "920f3f2473c703b565d9ecbe1ea16ea94a409cd4151958a561b38b012824cb7a",
+        "imageSha256": "880675a22e5d5e15434ce6c30bbfbb6b1cbe37070cb6431d5fb4f1a67746e8cd",
+        "observedFacing": "left",
+        "scope": "Whole body visually observed in this source image and this generated pose only; no opposite view, geometry or original-game pose certification."
+      },
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re1-crow.json",
+        "sha256": "bfc79deacc4f318d57654536b1c94e8cfd8b53ea36e3416754f8d670782c2ef3"
+      }
+    },
+    {
+      "uid": "re1-forest-speyer-zombie",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/reviewer-ci-re1/re1-forest-speyer-zombie.json",
+        "sha256": "164a6c2492a829587b0a3018fe0e40066e6ef9243e4240496072aff52b8ddf90",
+        "entryUid": "re1-forest-speyer-zombie"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re1-forest-speyer-zombie/idle-right.png",
+      "image_sha256": "7f33221f231efd80e2150cc5c76d76988db2b94f5939e7bda17cf1fb783e3363",
+      "record": "modules/fidelity-r27/sprites/records/re1-forest-speyer-zombie.json",
+      "record_sha256": "26383a05356574751d94699a0c032bcf932eaa2ac70ba42b707c040d91e6119e",
+      "full_body_reviewed": false,
+      "observed_facing": "unknown",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re1-hunter",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW.json",
+        "sha256": "5405065b305931420d589c1deee266108a7274bff0959f83693419234849d857",
+        "entryUid": "re1-hunter"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re1-hunter/idle-right.png",
+      "image_sha256": "4ac1baecd5db9179146e63d67382682287c0b4b1239d5de663a10921d878f518",
+      "record": "modules/fidelity-r27/sprites/records/re1-hunter.json",
+      "record_sha256": "0ef38c87c2cdacfd07517f53e521378c952d09a4bb06040bb7bf4c95e5014808",
+      "full_body_reviewed": true,
+      "observed_facing": "left",
+      "observed_pose_kind": "neutral-base",
+      "available_states": [
+        "idle"
+      ],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re1-hunter.json",
+        "sha256": "426d31bf08b5819ab79d25c61c4565106c8af17516fe62cab98c7f9fa7de777f"
+      }
+    },
+    {
+      "uid": "re1-monster-plant",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/reviewer-ci-re1/re1-monster-plant.json",
+        "sha256": "3a4eb1983ebe674dbe3a7dc6c4be0d12de9954916e1b4f55919ef17839b583d8",
+        "entryUid": "re1-monster-plant"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re1-monster-plant/idle-right.png",
+      "image_sha256": "31b52d5c43d0bca9714907ea31ffd95d34bac5132d122c1d626086b3330538ce",
+      "record": "modules/fidelity-r27/sprites/records/re1-monster-plant.json",
+      "record_sha256": "4d5c66211974c711c81d94cda9231d12d51e3736b08e4e91dccf3766db7f1cbf",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re1-neptune",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-004/re1-neptune.json",
+        "sha256": "f3be1f2f30736683b75b4f170ce8c3e883d1278fb77bcc89e67dc13d346dad94",
+        "entryUid": "re1-neptune"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re1-neptune/idle-right.png",
+      "image_sha256": "71802f5491d69e522771f017aa366272e0a7f7689a5876bee30a84b9d7eef3d8",
+      "record": "modules/fidelity-r27/sprites/records/re1-neptune.json",
+      "record_sha256": "49ee1e60c18cedfded4dae864426b3fdd7f2729a7ef8d4e569999f988e558f32",
+      "full_body_reviewed": false,
+      "observed_facing": "left",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re1-plant-42",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/reviewer-ci-re1/re1-plant-42.json",
+        "sha256": "b4a0231984d950f1c0121c3a2efb5edfd30a5dbacebf27d23241843b4d998ccc",
+        "entryUid": "re1-plant-42"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re1-plant-42/idle-right.png",
+      "image_sha256": "ac0dd0d60596c475d25c09eb88bab2a644a37ffb48086b8f30402687eafca182",
+      "record": "modules/fidelity-r27/sprites/records/re1-plant-42.json",
+      "record_sha256": "3848848ec465f8d4d2bef3dfd0e0313ddb1cbaefced9fd0b5e1ab322f04e71df",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re1-small-spider",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/reviewer-ci-re1/re1-small-spider.json",
+        "sha256": "96415e2004d6c95319645f0776c8d5ac6d89e27d508d6e27d877c997439acd04",
+        "entryUid": "re1-small-spider"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re1-small-spider/idle-right.png",
+      "image_sha256": "5fb65a9110780cd56e4ecb5c98145f4c18b334d3cb546d8bc7ddb52daeb2a900",
+      "record": "modules/fidelity-r27/sprites/records/re1-small-spider.json",
+      "record_sha256": "30c8a496af3e26ab1332ec735e96d60bde53eecffafbab6100c367e7e8a4fcbc",
+      "full_body_reviewed": true,
+      "observed_facing": "right",
+      "observed_pose_kind": "neutral-base",
+      "available_states": [
+        "idle"
+      ],
+      "source_completeness_evidence": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/reviewer-ci-re1/re1-small-spider-source-body-observation.json",
+        "sha256": "6c555b33655ef77a3191e041c9c8cfcca5e7cbf72e90096dda28db274aba2d2f",
+        "referencePath": "assets/catalog/re1-small-spider.png",
+        "referenceSha256": "c3a489f281d0c44e1ad88d3e91f383fd37cc8ed3a15adc7f0addefc55d7eaff7",
+        "imageSha256": "5fb65a9110780cd56e4ecb5c98145f4c18b334d3cb546d8bc7ddb52daeb2a900",
+        "observedFacing": "right",
+        "scope": "Whole body visually observed in this source image and this generated pose only; no opposite view, geometry or original-game pose certification."
+      }
+    },
+    {
+      "uid": "re1-tyrant",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/reviewer-ci-re1/re1-tyrant.json",
+        "sha256": "6922043298dcf553a6cbbeebb22106ca02114812320065e67228a38973ac6b15",
+        "entryUid": "re1-tyrant"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re1-tyrant/idle-right.png",
+      "image_sha256": "ddff45d3787f99ef7cd3e0f40e7929c299eb9f9cff88f4ae0958b95113f8d8fb",
+      "record": "modules/fidelity-r27/sprites/records/re1-tyrant.json",
+      "record_sha256": "109d310778e21e5067a62a7689ae49cb9c4b26cb74f9f70f5033ae61442e337a",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re1-wasp",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-004/re1-wasp.json",
+        "sha256": "613e5f47f9fa8fbbeb2d783ad6800b1611feb053a5f8ab80f5a7c8f090d75ee4",
+        "entryUid": "re1-wasp"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re1-wasp/idle-right.png",
+      "image_sha256": "1dff2f664df5814e45b1f36fb3364314f0d70148228fb50db08cf872de074fef",
+      "record": "modules/fidelity-r27/sprites/records/re1-wasp.json",
+      "record_sha256": "0f9daa06abf2dc22c1a39730372f5e698302a3b282792a10dab26df2d4f61124",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "source_completeness_evidence": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-004/re1-wasp-source-body-observation.json",
+        "sha256": "acc751d1686e5524a1ccbe2313485407fefd0475a43f2ebc8c23d72e8802f969",
+        "referencePath": "assets/catalog/re1-wasp.png",
+        "referenceSha256": "3a6e6218188e01162aad28f10730c7987b27b7715b8763280b4c0bd1dc11eeae",
+        "imageSha256": "1dff2f664df5814e45b1f36fb3364314f0d70148228fb50db08cf872de074fef",
+        "observedFacing": "front",
+        "scope": "Whole body visually observed in this source image and this generated pose only; no opposite view, geometry or original-game pose certification."
+      },
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re1-wasp.json",
+        "sha256": "ca6c3704ceb62f86df31c0d165f653ae8677168ea5deed99b943ce3f1a23a7fe"
+      }
+    },
+    {
+      "uid": "re1-web-spinner",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/reviewer-ci-re1/re1-web-spinner.json",
+        "sha256": "28e21e65fb6ead010af49c6c156f9bb57bfc1babc82918eacd1e0ddf41cbbd3b",
+        "entryUid": "re1-web-spinner"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re1-web-spinner/idle-right.png",
+      "image_sha256": "367cf50e2d4f5c36af9ddaff6bfdc76a5c86f51de4bf97c7d947f9afa7d32fed",
+      "record": "modules/fidelity-r27/sprites/records/re1-web-spinner.json",
+      "record_sha256": "3ef3bc67cd2094974bd9fc215a62dea85fd5044a1d7f15960d875eac71b1846f",
+      "full_body_reviewed": true,
+      "observed_facing": "right",
+      "observed_pose_kind": "neutral-base",
+      "available_states": [
+        "idle"
+      ],
+      "source_completeness_evidence": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/reviewer-ci-re1/re1-web-spinner-source-body-observation.json",
+        "sha256": "31f99927f27397a672c83f525e63e6f51102d838bad072e500195161ff662b4d",
+        "referencePath": "assets/catalog/re1-web-spinner.png",
+        "referenceSha256": "97fbd4d871e37632a1f88cab1184259e1eb81f39bc06b0fc8bdc2d8fbefd0777",
+        "imageSha256": "367cf50e2d4f5c36af9ddaff6bfdc76a5c86f51de4bf97c7d947f9afa7d32fed",
+        "observedFacing": "right",
+        "scope": "Whole body visually observed in this source image and this generated pose only; no opposite view, geometry or original-game pose certification."
+      }
+    },
+    {
+      "uid": "re1-yawn",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/reviewer-ci-re1/re1-yawn.json",
+        "sha256": "dce950d7ab4841a65eafab82921e6ea86c8fe40d37a06942443250c5fcbe103f",
+        "entryUid": "re1-yawn"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re1-yawn/idle-right.png",
+      "image_sha256": "83d3b7a7aaf831417664a379d57abb86c01a6e7e8f61b7b5e39d4480924044e6",
+      "record": "modules/fidelity-r27/sprites/records/re1-yawn.json",
+      "record_sha256": "3a3bb88812c0b673c07ba4345bfba894756d1bd612c6902aca526d53ee53f317",
+      "full_body_reviewed": false,
+      "observed_facing": "right",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re1-zombie",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/reviewer-ci-re1/re1-zombie.json",
+        "sha256": "5a595922f1042c856c295fae6ed6f0df78cbb835424970492412a59a19a4aa73",
+        "entryUid": "re1-zombie"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re1-zombie/idle-right.png",
+      "image_sha256": "d2d5155b61ff36786bf1362f5b57dcc3eae7dccd4ebc9240d6ce9b96f4a08e38",
+      "record": "modules/fidelity-r27/sprites/records/re1-zombie.json",
+      "record_sha256": "0c7a2868a3ffd2ce81d90d038a9f457598d081f4a09534f1006bf1f295da3069",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re1r-adder",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-004/re1r-adder.json",
+        "sha256": "3d0710350fbc3a0e4b7f54f5bd7ee5cb262bc3764cd1552e4dec16f97fa9bd88",
+        "entryUid": "re1r-adder"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re1r-adder/idle-right.png",
+      "image_sha256": "3d4858a352660c0cc8353d6deb0bb386b1d7bcbd7e4a98d2afa271f23d49acfe",
+      "record": "modules/fidelity-r27/sprites/records/re1r-adder.json",
+      "record_sha256": "39808f7574b10218281aac118590db1b2589b5bc862be7ced9bf1717c330b30a",
+      "full_body_reviewed": true,
+      "observed_facing": "right",
+      "observed_pose_kind": "neutral-base",
+      "available_states": [
+        "idle"
+      ],
+      "source_completeness_evidence": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-004/re1r-adder-source-body-observation.json",
+        "sha256": "6500de4d9d31a793085ae65672d96caa79c834b1697068b1aa78e4128f307e3f",
+        "referencePath": "assets/catalog/re1r-adder.png",
+        "referenceSha256": "6050dc9705184ad1999ec3217d1d013b488aa268a1158eb9deaa38a6b7d01fe0",
+        "imageSha256": "3d4858a352660c0cc8353d6deb0bb386b1d7bcbd7e4a98d2afa271f23d49acfe",
+        "observedFacing": "right",
+        "scope": "Whole body visually observed in this source image and this generated pose only; no opposite view, geometry or original-game pose certification."
+      },
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re1r-adder.json",
+        "sha256": "e3e84c410c3b456eb601614f6094fdefe60f3b5c34ef31e6cfe3ada8b44d2cf1"
+      }
+    },
+    {
+      "uid": "re1r-black-tiger",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/reviewer-ci-re1/re1r-black-tiger.json",
+        "sha256": "578108aa2c9e69ebe99bdc19f44332d574e89864cda2098ffccc098a21b3bfc7",
+        "entryUid": "re1r-black-tiger"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re1r-black-tiger/idle-right.png",
+      "image_sha256": "bb2bfab31036c7eb78c8477bb81e62fc14a4f0c46daa421baf9355c1bd8fb334",
+      "record": "modules/fidelity-r27/sprites/records/re1r-black-tiger.json",
+      "record_sha256": "5667ece62596d75948502077f5ee63f3685304cedda135600df1fa4ea49a2c1f",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re1r-cerberus",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-003/re1r-cerberus.json",
+        "sha256": "efdce10e9fdee23a715afba4722daa1fad664da100d425f94439117b195c9bec",
+        "entryUid": "re1r-cerberus"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re1r-cerberus/idle-right.png",
+      "image_sha256": "4aa6c3e4467902b22404cf04fe0a4eebd527533be72fb0232da4290a380e88ea",
+      "record": "modules/fidelity-r27/sprites/records/re1r-cerberus.json",
+      "record_sha256": "f798ee232e012a986cd70f5e100a9ce677c05d1b4723c86dbf757789875716ce",
+      "full_body_reviewed": false,
+      "observed_facing": "right",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re1r-chimera",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW.json",
+        "sha256": "5405065b305931420d589c1deee266108a7274bff0959f83693419234849d857",
+        "entryUid": "re1r-chimera"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re1r-chimera/idle-right.png",
+      "image_sha256": "2ddce2e0d2429ee71451302dfd6ef70b19ca9d9c50871d9e348fa3976d1efca7",
+      "record": "modules/fidelity-r27/sprites/records/re1r-chimera.json",
+      "record_sha256": "dc9cff4663abd417ae567d9e53da572fed6a04db0aa86f9efd06b4972eda91db",
+      "full_body_reviewed": true,
+      "observed_facing": "right",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re1r-chimera.json",
+        "sha256": "14b0ef463849628098688a74f0ab01ecf0afc529c0ae92bca3cb8727b179d8ef"
+      }
+    },
+    {
+      "uid": "re1r-crimson-head",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/reviewer-ci-re1/re1r-crimson-head.json",
+        "sha256": "96200ee93c6045278b238775c0e8c06b1f9d7a36781d060aff7f18fdc9b7337c",
+        "entryUid": "re1r-crimson-head"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re1r-crimson-head/idle-right.png",
+      "image_sha256": "f4ca48c94f8f00d58247f836802ba1e0b810982c1d45e9760808ef2f1be1236b",
+      "record": "modules/fidelity-r27/sprites/records/re1r-crimson-head.json",
+      "record_sha256": "174588149ef7034c44fc0d15cfb044dae4fcbfa0b0d95716907ee654fb53e54f",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re1r-crimson-head-prototype-1",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/reviewer-ci-re1/re1r-crimson-head-prototype-1.json",
+        "sha256": "08e1ad367b100e74bd7949c197ee9340a5ab9c7816d0f125bd22fe6e57269e9f",
+        "entryUid": "re1r-crimson-head-prototype-1"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re1r-crimson-head-prototype-1/idle-right.png",
+      "image_sha256": "730750b5fc3aa7195ab96f55f168a8746ace2f2a9bd734dc627026f73c479ee3",
+      "record": "modules/fidelity-r27/sprites/records/re1r-crimson-head-prototype-1.json",
+      "record_sha256": "03b1b2a3c985c163c6784dfc279a2b17a5b77d5ce4c991d1232b36c3f0ab8ea2",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re1r-crow",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-003/re1r-crow.json",
+        "sha256": "c3579eef6e01aed018cdf6bf16380ebbc57fb31683d590558c8c4ac432f471c1",
+        "entryUid": "re1r-crow"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re1r-crow/idle-right.png",
+      "image_sha256": "52d750f74f9413a55512a1320bd9704ee6617ec86eb2cb0974e6873bbc2bde91",
+      "record": "modules/fidelity-r27/sprites/records/re1r-crow.json",
+      "record_sha256": "dbeccad28e412b440b54fe9eb5ad382244e1bd28f2e2fac138bbb88713d4e1e2",
+      "full_body_reviewed": true,
+      "observed_facing": "left",
+      "observed_pose_kind": "neutral-base",
+      "available_states": [
+        "idle"
+      ],
+      "source_completeness_evidence": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-003/re1r-crow-source-body-observation.json",
+        "sha256": "f0f037f9d4369e6c56c5906d066a9b8712e3de136fa0497daeb153154338d614",
+        "referencePath": "assets/catalog/re1r-crow.png",
+        "referenceSha256": "da4680f003bb6b6277265b53411dc14c72f5423f4f06d984d10e919f24a1f9fe",
+        "imageSha256": "52d750f74f9413a55512a1320bd9704ee6617ec86eb2cb0974e6873bbc2bde91",
+        "observedFacing": "left",
+        "scope": "Whole body visually observed in this source image and this generated pose only; no opposite view, geometry or original-game pose certification."
+      },
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re1r-crow.json",
+        "sha256": "168f63bad833c027946a0d1f44069d6c2c2e35171ad7e6f7d82e4e8b517c2674"
+      }
+    },
+    {
+      "uid": "re1r-forest-speyer-zombie",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/reviewer-ci-re1/re1r-forest-speyer-zombie.json",
+        "sha256": "166b53717781a8dfb3c304ff4b577637f2970f78d5be0ebe7634d69b2a737da7",
+        "entryUid": "re1r-forest-speyer-zombie"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re1r-forest-speyer-zombie/idle-right.png",
+      "image_sha256": "a893aa6bdf9e2d7514b1a9c99d51277138acd3c9e5c4a0428ee78fa2596b6fab",
+      "record": "modules/fidelity-r27/sprites/records/re1r-forest-speyer-zombie.json",
+      "record_sha256": "6123d65747a1a9c3f1834d263cd982a93d948204ea1965b8bc6af923008b1ee9",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re1r-fountain-plant",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/reviewer-ci-re1/re1r-fountain-plant.json",
+        "sha256": "c789a7faf6722ba00a1d95a2e0c1b14e716b15b4da1cb65675cf40e91412ee41",
+        "entryUid": "re1r-fountain-plant"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re1r-fountain-plant/idle-right.png",
+      "image_sha256": "cb902d84b0afde76ec307333c892ba0c5b698c09129e7bcdc4cec352676ecc7c",
+      "record": "modules/fidelity-r27/sprites/records/re1r-fountain-plant.json",
+      "record_sha256": "c474f20e610c889ec532ba1633eceab582d70434d27fe3aa7b7625885e8cc155",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re1r-lisa-trevor",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-003/re1r-lisa-trevor.json",
+        "sha256": "769ff3112bec5738949ef690a82b883055ec7889b3aafb6a09b4da9cce5a0e73",
+        "entryUid": "re1r-lisa-trevor"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re1r-lisa-trevor/idle-right.png",
+      "image_sha256": "9e933b6b56931463aa2745fa18c16f96d14bccdecd249f6b58bba504b45a8e60",
+      "record": "modules/fidelity-r27/sprites/records/re1r-lisa-trevor.json",
+      "record_sha256": "ed54fe2938f1a3edb4c349ab42106ad470c4a5240c5d371b0ab8c32e1732eb79",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re1r-neptune",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-004/re1r-neptune.json",
+        "sha256": "29f4472063c2bcca104cd6f042df4738834373b58bcbbcffd310090ce9dea3cf",
+        "entryUid": "re1r-neptune"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re1r-neptune/idle-right.png",
+      "image_sha256": "0f1494bdc4ce6c53c779f489b931507ada3a567d39dac1fef4fe7a2d835534ff",
+      "record": "modules/fidelity-r27/sprites/records/re1r-neptune.json",
+      "record_sha256": "7197fa2b6002456856b57db4c6e4d8b721f51e76eef758ca6ceadf25877bd5bb",
+      "full_body_reviewed": false,
+      "observed_facing": "right",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re1r-plant-42",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/reviewer-ci-re1/re1r-plant-42.json",
+        "sha256": "be66839c0d01c148d7930f40725b8d365a88855a424755287d0e5fdbe60a218c",
+        "entryUid": "re1r-plant-42"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re1r-plant-42/idle-right.png",
+      "image_sha256": "1ef1509120780d3195356019afe6aef18d336aca2ee858e8c7242f7b855a2251",
+      "record": "modules/fidelity-r27/sprites/records/re1r-plant-42.json",
+      "record_sha256": "3328b6ea9dc38e3ca8ba1f2655153c8e7a45852314d401f571d5062335286770",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re1r-tyrant",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW.json",
+        "sha256": "5405065b305931420d589c1deee266108a7274bff0959f83693419234849d857",
+        "entryUid": "re1r-tyrant"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re1r-tyrant/idle-right.png",
+      "image_sha256": "b9aecdaa6bd4f3f1cab232706e6b230db8d71768bda18bf032ef5cc0258325bc",
+      "record": "modules/fidelity-r27/sprites/records/re1r-tyrant.json",
+      "record_sha256": "58592267546fdf1029d01338bceb3e8f44436869bee769dd6d161c70d50c7b39",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re1r-tyrant.json",
+        "sha256": "62c9872152dbb308745c31873c973bd3fa4bb0a0ceef0a5df16059bbb0af42fc"
+      }
+    },
+    {
+      "uid": "re1r-wasp",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-004/re1r-wasp.json",
+        "sha256": "06aee6d0f7a6328312f6a3072a0d37d0e4cbe559b9a89d02fa88917c65ff7efd",
+        "entryUid": "re1r-wasp"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re1r-wasp/idle-right.png",
+      "image_sha256": "4024708037881c8e3abfa1af75ff60c38050810205289c828bb53e5fc634c526",
+      "record": "modules/fidelity-r27/sprites/records/re1r-wasp.json",
+      "record_sha256": "e8bb1aa2496a5b8b8c6c19e1539c0ecac2c134681a5afdc41b9f9818ca47e157",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "source_completeness_evidence": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-004/re1r-wasp-source-body-observation.json",
+        "sha256": "80864f36a644e21658f5226d4c6ba4dc89d82eec45880cacb9bdd2a596cd70cc",
+        "referencePath": "assets/catalog/re1r-wasp.png",
+        "referenceSha256": "0dc50891066fd4f2fb09077e84740f2e07675321f7302ba8b9b62a04d2ee3002",
+        "imageSha256": "4024708037881c8e3abfa1af75ff60c38050810205289c828bb53e5fc634c526",
+        "observedFacing": "front",
+        "scope": "Whole body visually observed in this source image and this generated pose only; no opposite view, geometry or original-game pose certification."
+      },
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re1r-wasp.json",
+        "sha256": "63098846bc6cad80eca72517d1e543031f9db5c45e5a312cc396d8b1307f9bc4"
+      }
+    },
+    {
+      "uid": "re1r-web-spinner",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/reviewer-ci-re1/re1r-web-spinner.json",
+        "sha256": "e661eb5270febf586ea11e5a43a243ffdf7eb58b18218c6ad68de7ef5bdc12c7",
+        "entryUid": "re1r-web-spinner"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re1r-web-spinner/idle-right.png",
+      "image_sha256": "1fd0da9a576bd2bab9a81a071e7f6e9f82464ef617d0adc9d9e751a11c9895f2",
+      "record": "modules/fidelity-r27/sprites/records/re1r-web-spinner.json",
+      "record_sha256": "e644b08f25103356a05d06cc525e3c43c47fa1b783cf6e2eccec6a6d6d70f889",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re1r-yawn",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/reviewer-ci-re1/re1r-yawn.json",
+        "sha256": "8a85d9ab85424203f790da4287b109e45fb630bde98d4410d4f9565c729ad039",
+        "entryUid": "re1r-yawn"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re1r-yawn/idle-right.png",
+      "image_sha256": "5bc50c4da144c8775f644ec030be7b68bb5d2bb46cfade3a65dc1d991131df51",
+      "record": "modules/fidelity-r27/sprites/records/re1r-yawn.json",
+      "record_sha256": "3908925ae2ba5d499dcd748ed0e28241255dea496061a1e34f082b5239d24dd3",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re1r-zombie",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-003/re1r-zombie.json",
+        "sha256": "a9b1d526a4a11fcf77edb8efa277ffca54ab373d2c6c29d456f60f576ae2e51b",
+        "entryUid": "re1r-zombie"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re1r-zombie/idle-right.png",
+      "image_sha256": "f1109c95f279137712fa24756a428436f63f4b8439e56971011008b663d4ddc1",
+      "record": "modules/fidelity-r27/sprites/records/re1r-zombie.json",
+      "record_sha256": "f6b71bf12888f754a6c3971111cb86c549db087606ea686469c736e062452982",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re2-crow",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-004/re2-crow.json",
+        "sha256": "c27660cfd6a4dfe9d24c84c007e134573bbf006a3a5247130f2ceb7478d6dbac",
+        "entryUid": "re2-crow"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re2-crow/idle-right.png",
+      "image_sha256": "c7963341f664db646dd4ffd1791f1abf8f37e8a25b0d822a7fd1d55f4b161536",
+      "record": "modules/fidelity-r27/sprites/records/re2-crow.json",
+      "record_sha256": "568119576c0c3dfc0d60f0cb6892dc3763d2044e4193f8bda5d5095acf4f12d7",
+      "full_body_reviewed": false,
+      "observed_facing": "left",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re2-evolved-licker",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-010/re2-evolved-licker.json",
+        "sha256": "316e4cbafa3b7c8af11d289d1cb51f36f06fe01c836a4e9104f6ab67a8cd2fc0",
+        "entryUid": "re2-evolved-licker"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re2-evolved-licker/idle-right.png",
+      "image_sha256": "cedcd4d0cb7233e75711c39b417d1e98736c7caff91c01da04c2c341a353c3e9",
+      "record": "modules/fidelity-r27/sprites/records/re2-evolved-licker.json",
+      "record_sha256": "848f454c45a26af6e3759ff6d5a47cce2749c6787ed2503ffba68e329f7a3185",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re2-g",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-002/re2-g.json",
+        "sha256": "b3a7a486cfff146d6847f8626f76b0af233e64e4f386a34e4464b372be8beb2a",
+        "entryUid": "re2-g"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re2-g/idle-right.png",
+      "image_sha256": "1a4fd92913e09d70cc1f27bfa2c02cff4a48f3cedf6b6562916784506b700fd1",
+      "record": "modules/fidelity-r27/sprites/records/re2-g.json",
+      "record_sha256": "151d01cd519b18709adfb16635e71e640096e03b5b562e8c2348b6d2cc73cc40",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re2-g.json",
+        "sha256": "920c5044accbec9349c6a1a44c7b350597494530272376e6c0a3c4278c27b2a2"
+      }
+    },
+    {
+      "uid": "re2-g-fifth-form",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-010/re2-g-fifth-form.json",
+        "sha256": "a3f10048fad94e16911efdf6cbc1ed6a663de4fd2fb88525932b566b3eeeb97b",
+        "entryUid": "re2-g-fifth-form"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re2-g-fifth-form/idle-right.png",
+      "image_sha256": "d734a47b06b1c539b8f4d0cb1b06e4da2cf5866f2030a5b56490955d53fbc606",
+      "record": "modules/fidelity-r27/sprites/records/re2-g-fifth-form.json",
+      "record_sha256": "608df24f9f6faffefc1a748efc0fc7e4cb084254b40b627b515d02d4660438b7",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re2-g-fourth-form",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-002/re2-g-fourth-form.json",
+        "sha256": "dfbd52636046cfcd48f4cc9edfd5cb88561c98382287eb565b16beef9b1b19d1",
+        "entryUid": "re2-g-fourth-form"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re2-g-fourth-form/idle-right.png",
+      "image_sha256": "e7ae053ee46a96441e98cbbec5cff8c2cad0eb380ef101d073147db757c7d8a7",
+      "record": "modules/fidelity-r27/sprites/records/re2-g-fourth-form.json",
+      "record_sha256": "eed09dce2eecd2606392960b562772f1ac790c8c7527fb79655ef21bb3fd54f1",
+      "full_body_reviewed": true,
+      "observed_facing": "left",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re2-g-fourth-form.json",
+        "sha256": "d5a3cd715ff62933428ed36bb1c81113aabb7a6307c07b7fa9630df8199e60fd"
+      }
+    },
+    {
+      "uid": "re2-g-second-form",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-002/re2-g-second-form.json",
+        "sha256": "ac1008cd2bded99959d335f8a8e82cabf44962e1886b6dc1740f23e0a10fe19b",
+        "entryUid": "re2-g-second-form"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re2-g-second-form/idle-right.png",
+      "image_sha256": "b70aacc8290271184b12828bc0f7e08f3152b9351ffb7fa288dbe5763b24c509",
+      "record": "modules/fidelity-r27/sprites/records/re2-g-second-form.json",
+      "record_sha256": "d22e662edd580a763493b58fdd0cd0e84bddf82c53088428884591ccb44682c0",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re2-g-second-form.json",
+        "sha256": "677eec37e5c048ebf44a05abf0ca6c6af3323cd267b22f2686ecd3335b445877"
+      }
+    },
+    {
+      "uid": "re2-g-third-form",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-002/re2-g-third-form.json",
+        "sha256": "befe2f24ae2bf9a334adc3a872801eda20c228203e6ce918104ed1ea985f4ef2",
+        "entryUid": "re2-g-third-form"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re2-g-third-form/idle-right.png",
+      "image_sha256": "d02a04b78b3ba5267565f8387c10e3ecb4d2a2ef5be68a1258cf724671f8c3d9",
+      "record": "modules/fidelity-r27/sprites/records/re2-g-third-form.json",
+      "record_sha256": "570824f3d8664e72d536ae22a3ef887b73562fe7ccd3819417b1c5ed87aa8760",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re2-g-third-form.json",
+        "sha256": "c9fcaed0b40e795102cc8b98ee81eba01641a8603da4b543b1ab275104918cc1"
+      }
+    },
+    {
+      "uid": "re2-g-type-adult",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-002/re2-g-type-adult.json",
+        "sha256": "56782403e0cae310767b06d21a353914404304c1536ec7a43519f455a6e538ac",
+        "entryUid": "re2-g-type-adult"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re2-g-type-adult/idle-right.png",
+      "image_sha256": "9fa95f727b72764a38c2c98b9816105508907b156fd37b5295710ab37915e0ec",
+      "record": "modules/fidelity-r27/sprites/records/re2-g-type-adult.json",
+      "record_sha256": "bff3da766600c2e1909589ed335d0cb1892d7b09e0e68729f81a4dd91531571d",
+      "full_body_reviewed": true,
+      "observed_facing": "left",
+      "observed_pose_kind": "neutral-base",
+      "available_states": [
+        "idle"
+      ],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re2-g-type-adult.json",
+        "sha256": "f040c437fc31387f9bc210512540d0b65c814a7f9453f97fb89d823c61f5cf7a"
+      }
+    },
+    {
+      "uid": "re2-g-type-young",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-002/re2-g-type-young.json",
+        "sha256": "2ad37ee5fb0a3efe7ba535395c602d9e40f3a1168103d6c58fdf93c74d9b0ef8",
+        "entryUid": "re2-g-type-young"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re2-g-type-young/idle-right.png",
+      "image_sha256": "d677cddb158d7b53d3c47ec0ed6d174f7711c9184fd1ed3ed0b52fc7eb945452",
+      "record": "modules/fidelity-r27/sprites/records/re2-g-type-young.json",
+      "record_sha256": "cc266b1c215db4aa1d411cf78b2e75d8299321ce1143b47de934f2abccc6cb9e",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re2-g-type-young.json",
+        "sha256": "856821f528432637ca33fa7f97ef2fd9ed20d40806d37b0c1167c2a33fe94d53"
+      }
+    },
+    {
+      "uid": "re2-giant-alligator",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-010/re2-giant-alligator.json",
+        "sha256": "d4aeb32da396c5f63a334fcd712a6e9aa9b44e6e3a3fa27b12ceb27a687be0c7",
+        "entryUid": "re2-giant-alligator"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re2-giant-alligator/idle-right.png",
+      "image_sha256": "abe8a6b71b258da22dbf1f8a5d34f4b1768d4676b44dc925af8d125dc83bcb09",
+      "record": "modules/fidelity-r27/sprites/records/re2-giant-alligator.json",
+      "record_sha256": "534c1898376337468f3bb779ad06aff0797fed4b894a1c6b48b6d55d1e093af1",
+      "full_body_reviewed": false,
+      "observed_facing": "right",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re2-giant-moth",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-010/re2-giant-moth.json",
+        "sha256": "1bc09f829fad8ddbddbcc4de873d1d49077eb5f81f9f91ea68abf669375ec064",
+        "entryUid": "re2-giant-moth"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re2-giant-moth/idle-right.png",
+      "image_sha256": "1fae5e519d79b18f164f780f46107a8bcaef402c34a2b1c90f95e13aa133fe1d",
+      "record": "modules/fidelity-r27/sprites/records/re2-giant-moth.json",
+      "record_sha256": "1a12bf9964b9e54515182ae1cdc71831ea1346983af441fb33127362212d2248",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re2-giant-spider",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-005/re2-giant-spider.json",
+        "sha256": "507b79c946188067c85f66088496e2c8e24ec23a0645a9d9978f5cdba4e5f2aa",
+        "entryUid": "re2-giant-spider"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re2-giant-spider/idle-right.png",
+      "image_sha256": "9b8d7d0ab66b27bb50b918dc9defe47690d1152c1907c7c001b972d63c0b26a0",
+      "record": "modules/fidelity-r27/sprites/records/re2-giant-spider.json",
+      "record_sha256": "85066018ebd264be72307dc45b195292892e449b872fb322aa94f6c65b2804da",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re2-ivy",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-002/re2-ivy.json",
+        "sha256": "d01c1ad41fbcec13f6b03119faed87641214ec2de7dd0acc432efbef2fb1308a",
+        "entryUid": "re2-ivy"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re2-ivy/idle-right.png",
+      "image_sha256": "9ad5fc68e25f7a219e8ca0d8faf48fcf7d1a167421ccf3b9f1ece071085217af",
+      "record": "modules/fidelity-r27/sprites/records/re2-ivy.json",
+      "record_sha256": "0acea3b7343d810baf760e050a23df5e0cdcf5797d6acde9ca4f88323a74d8d5",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re2-ivy.json",
+        "sha256": "56341641356c53b50c759be873a20f197591c43937df3791f14f2b67326edb57"
+      }
+    },
+    {
+      "uid": "re2-large-roach",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-009/re2-large-roach.json",
+        "sha256": "b55eb6fe487f1d1034f83de9a6711cef8599814fd1928a7e8b42696232ef0e6c",
+        "entryUid": "re2-large-roach"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re2-large-roach/idle-right.png",
+      "image_sha256": "9a51ee66997d5eace9c3e0f215da6223cc9c9d88ae0a89c4cc68ff6ff104c384",
+      "record": "modules/fidelity-r27/sprites/records/re2-large-roach.json",
+      "record_sha256": "49915075d801e13785bc90697f79694dddc0db4a7c7667613779e490037d7a74",
+      "full_body_reviewed": true,
+      "observed_facing": "left",
+      "observed_pose_kind": "neutral-base",
+      "available_states": [
+        "idle"
+      ],
+      "source_completeness_evidence": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-009/re2-large-roach-source-body-observation.json",
+        "sha256": "1ddd87e4baa24e63244c4a7ba0856242ae081dd53cf75a266ad9ca864b4edf83",
+        "referencePath": "assets/catalog/re2-large-roach.png",
+        "referenceSha256": "08ddfd5febffadd1331a1f01a0db0e7c655494963d5f6419ac23675ca32a48eb",
+        "imageSha256": "9a51ee66997d5eace9c3e0f215da6223cc9c9d88ae0a89c4cc68ff6ff104c384",
+        "observedFacing": "left",
+        "scope": "Whole body visually observed in this source image and this generated pose only; no opposite view, geometry or original-game pose certification."
+      },
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re2-large-roach.json",
+        "sha256": "8d2321a7bd9086d283b6c63406973abe10d845da42e33d7e1542e335c1f661df"
+      }
+    },
+    {
+      "uid": "re2-larvae",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-009/re2-larvae.json",
+        "sha256": "0a8d4bdb4815a0f1ba0076f8639fc9c3224001fbda1cc69d1c0ac916f3f9ae6b",
+        "entryUid": "re2-larvae"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re2-larvae/idle-right.png",
+      "image_sha256": "4d1c82ea6da8ebf031b286375af39427dec1b3d12d0b15af37c13067ffaabbbe",
+      "record": "modules/fidelity-r27/sprites/records/re2-larvae.json",
+      "record_sha256": "662368bbb0889c3588e1e6888c1ec08e22b487e432ef22ee700df21e4804de1f",
+      "full_body_reviewed": true,
+      "observed_facing": "left",
+      "observed_pose_kind": "neutral-base",
+      "available_states": [
+        "idle"
+      ],
+      "source_completeness_evidence": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-009/re2-larvae-source-body-observation.json",
+        "sha256": "eb78190570709ad39e221876b7256caa5352ab7012566526d43c3398248e4bbf",
+        "referencePath": "assets/catalog/re2-larvae.png",
+        "referenceSha256": "5dae1391bd57ec847bc80ad69b4633e3a9bf9efb3f9c95acde23ce5d05ca09ec",
+        "imageSha256": "4d1c82ea6da8ebf031b286375af39427dec1b3d12d0b15af37c13067ffaabbbe",
+        "observedFacing": "left",
+        "scope": "Whole body visually observed in this source image and this generated pose only; no opposite view, geometry or original-game pose certification."
+      },
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re2-larvae.json",
+        "sha256": "9d4e49f32af50f252ff0cc9e2ddecef56402147a22cbfae5e19146e3a1a75826"
+      }
+    },
+    {
+      "uid": "re2-licker",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-002/re2-licker.json",
+        "sha256": "d50ab6a7040029b575f3bc1540d3e654396ffd4137b090b04f402a084762ec08",
+        "entryUid": "re2-licker"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re2-licker/idle-right.png",
+      "image_sha256": "3c52786311a477a4569adf3a7ee26d70ccf242f2abb0cd1ae423b51aa47aa15e",
+      "record": "modules/fidelity-r27/sprites/records/re2-licker.json",
+      "record_sha256": "8423e0d9ed0a9264181c1c3e81f56e3dcb727853c22165a4a690f1982ed3aacf",
+      "full_body_reviewed": true,
+      "observed_facing": "right",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re2-licker.json",
+        "sha256": "bb8ab17a6b808528b8af4588a14de2118b079d5883cf5933735af6d152aef269"
+      }
+    },
+    {
+      "uid": "re2-poison-ivy",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-002/re2-poison-ivy.json",
+        "sha256": "035e455776457ea838b5c85344dfc6ef2e85234578ccf84210f31534839217b0",
+        "entryUid": "re2-poison-ivy"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re2-poison-ivy/idle-right.png",
+      "image_sha256": "5dc71dfd21ced0a1ac7cd1d11535caa173cc25778ecd7d7bec59dd7cb9ca8ec7",
+      "record": "modules/fidelity-r27/sprites/records/re2-poison-ivy.json",
+      "record_sha256": "d178528bd9e2bc252f6d6fe41a8f35375f2636282b073cafad1926485eeb9682",
+      "full_body_reviewed": true,
+      "observed_facing": "left",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re2-poison-ivy.json",
+        "sha256": "33f045575983329f276a3339d452700b06948365822356b8d062756fd4bbd0c2"
+      }
+    },
+    {
+      "uid": "re2-tyrant",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-002/re2-tyrant.json",
+        "sha256": "25affe346911af05dbe5dea127401706dbf65775156446b2778b219b080041df",
+        "entryUid": "re2-tyrant"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re2-tyrant/idle-right.png",
+      "image_sha256": "52b53568768207e281846db6b25d87f83c871518bb20a37a327410eb638a9b8e",
+      "record": "modules/fidelity-r27/sprites/records/re2-tyrant.json",
+      "record_sha256": "8d086a98759d1dfd6fdb92fba3c4095124ce99dd8c2678d0cd15f2cbd5d26640",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re2-tyrant.json",
+        "sha256": "f4c188b7e392d9aafed8f8e752b724ec3a744a9f8206639aa13df06304463f57"
+      }
+    },
+    {
+      "uid": "re2-tyrant-mutation",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-002/re2-tyrant-mutation.json",
+        "sha256": "00ffb767d868b5e9ddcf0788e27a879fed595e9525791768fe26303e00cdc369",
+        "entryUid": "re2-tyrant-mutation"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re2-tyrant-mutation/idle-right.png",
+      "image_sha256": "ddc054d3e60f2896c168cdf8dffd705eae09bbfd28270ace32440311e4d9e1c7",
+      "record": "modules/fidelity-r27/sprites/records/re2-tyrant-mutation.json",
+      "record_sha256": "da7bd95c915906de8b7befb67ab4c09d7de29fd5ea5cbaaae1c0f232fa2e5022",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re2-tyrant-mutation.json",
+        "sha256": "e355509500efc8ff23b4d7c28e598e88aa63df10e69ebc1beb87adf669c1660e"
+      }
+    },
+    {
+      "uid": "re2-vines",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-010/re2-vines.json",
+        "sha256": "58e40b8dfd1117df44abe71d113354146eeafaf9902aecb3843ecbbf8104a99a",
+        "entryUid": "re2-vines"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re2-vines/idle-right.png",
+      "image_sha256": "e507efc90939090e3312c1f0ce1bb4c7556b00fd54c76e678122e439ccac5ab8",
+      "record": "modules/fidelity-r27/sprites/records/re2-vines.json",
+      "record_sha256": "077f41a64a4a00c1e64e504f4caeb6f3a2b8e69e9ea24e6209a8d04add3a345a",
+      "full_body_reviewed": false,
+      "observed_facing": "unknown",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re2-zombie-dog",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-010/re2-zombie-dog.json",
+        "sha256": "794861e61914a3fdce7fdf1ef43062638a2920a5d2ca1bfcbb60f0631eb8f16d",
+        "entryUid": "re2-zombie-dog"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re2-zombie-dog/idle-right.png",
+      "image_sha256": "68291d19d0e0491c8c8e95e70f3e40b5b041653a80ccc0113d9d0f278a6180f2",
+      "record": "modules/fidelity-r27/sprites/records/re2-zombie-dog.json",
+      "record_sha256": "2431054f201293e59e4f07a944e7c03e5c612e181c128dae637a3d307c9a294e",
+      "full_body_reviewed": false,
+      "observed_facing": "left",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re2r-alligator",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-010/re2r-alligator.json",
+        "sha256": "7a26595811a5e926a997df2270cf848b213e5cc8cf8b21a0fcf1fe0944a7343c",
+        "entryUid": "re2r-alligator"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re2r-alligator/idle-right.png",
+      "image_sha256": "794cb0ebff95a3e21cbf7d19f348f4abb9b3f5db6db72e0d4efbe0aebb79546f",
+      "record": "modules/fidelity-r27/sprites/records/re2r-alligator.json",
+      "record_sha256": "c6d90acfdb281397e676f44e2261e6d7a466774b5060ab3aba42797bf19cac78",
+      "full_body_reviewed": false,
+      "observed_facing": "right",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re2r-super-tyrant",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-004/re2r-super-tyrant.json",
+        "sha256": "dd6c1c2c1b1331401549f809f1b68a99e56896324d970981fabdca088c26b56e",
+        "entryUid": "re2r-super-tyrant"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re2r-super-tyrant/idle-right.png",
+      "image_sha256": "c4ab617e0fcaf060056476b45e9266cc0c18a0c76510f3597ec290d739d5a7c9",
+      "record": "modules/fidelity-r27/sprites/records/re2r-super-tyrant.json",
+      "record_sha256": "b9580ba7183eddd1d450ced8d85bb270e69e6571734e2636f4b181705f698a5f",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re3-brain-sucker",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-010/re3-brain-sucker.json",
+        "sha256": "9a494ebc45f0bce30fffa71f23955c8ace7903c443f82dba59e62f1d3de79522",
+        "entryUid": "re3-brain-sucker"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re3-brain-sucker/idle-right.png",
+      "image_sha256": "d0c2f643508fd6af3d18db712510d5bd2bbd4835918b62454909dbcd2b4b607b",
+      "record": "modules/fidelity-r27/sprites/records/re3-brain-sucker.json",
+      "record_sha256": "bd71c8df54de78e67fc4343b89a4bf6faf6732a4cccfb7fba58db58a1ab35294",
+      "full_body_reviewed": true,
+      "observed_facing": "left",
+      "observed_pose_kind": "neutral-base",
+      "available_states": [
+        "idle"
+      ],
+      "source_completeness_evidence": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-010/re3-brain-sucker-source-body-observation.json",
+        "sha256": "b0107f4e3adb2b4f7b9af577b6671c9bb8c9902c8d060237557f0389cb68c94d",
+        "referencePath": "assets/catalog/re3-brain-sucker.png",
+        "referenceSha256": "737cab8da6b20837b49401aec85b058ff5240447e8eb02437b331926703904ed",
+        "imageSha256": "d0c2f643508fd6af3d18db712510d5bd2bbd4835918b62454909dbcd2b4b607b",
+        "observedFacing": "left",
+        "scope": "Whole body visually observed in this source image and this generated pose only; no opposite view, geometry or original-game pose certification."
+      },
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re3-brain-sucker.json",
+        "sha256": "3ba9176c77946b88d6fa4f213952e720a89d25a27b50fe040a2dfb3cc9f7b3ef"
+      }
+    },
+    {
+      "uid": "re3-crow",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-009/re3-crow.json",
+        "sha256": "f05e12f946e56347f9fd407ea5701e6a555f22e3a0a5d815f0b50f13058c26d7",
+        "entryUid": "re3-crow"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re3-crow/idle-right.png",
+      "image_sha256": "0baf5b65c17eedd183bd7f0e8067995b23643c804e133bfe72589e9f82759404",
+      "record": "modules/fidelity-r27/sprites/records/re3-crow.json",
+      "record_sha256": "061e48d33362ed4f5722bb5707a0dd04e0a857635d06bf1ba2d4c46bd431be0b",
+      "full_body_reviewed": false,
+      "observed_facing": "left",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re3-drain-deimos",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-010/re3-drain-deimos.json",
+        "sha256": "c929a8fad7dd42a9ccc56278283ab524ac0d56c541513d85de9743c72df4ed0a",
+        "entryUid": "re3-drain-deimos"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re3-drain-deimos/idle-right.png",
+      "image_sha256": "ee1175b548b8d65344bcc5068da119fa02fccc9e0570a15fd69c0f377bb0f76f",
+      "record": "modules/fidelity-r27/sprites/records/re3-drain-deimos.json",
+      "record_sha256": "d3340a2bf9b9e10436cb4a986ad9f45d30fd8c0823328b86e703b200c2492841",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "source_completeness_evidence": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-010/re3-drain-deimos-source-body-observation.json",
+        "sha256": "e20e907b6ca288a8126e5e0f7c642cfed7772c3d6e4cecc4b3c41500c3eaff4d",
+        "referencePath": "assets/catalog/re3-drain-deimos.png",
+        "referenceSha256": "f9df359c3df62a23335cd414d00e15e2885c1320ccc33a49cfa363a1e46ee818",
+        "imageSha256": "ee1175b548b8d65344bcc5068da119fa02fccc9e0570a15fd69c0f377bb0f76f",
+        "observedFacing": "front",
+        "scope": "Whole body visually observed in this source image and this generated pose only; no opposite view, geometry or original-game pose certification."
+      },
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re3-drain-deimos.json",
+        "sha256": "e33bf1f76b72c7ac4c3cb809c58e90372008ee84250f618839ab3df33d7b294f"
+      }
+    },
+    {
+      "uid": "re3-giant-spider",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-010/re3-giant-spider.json",
+        "sha256": "03f27746d5e74a7e6cfb939583b85fff638f63cd5e0f34d1dd0b4731168c1855",
+        "entryUid": "re3-giant-spider"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re3-giant-spider/idle-right.png",
+      "image_sha256": "592bece6fe76ab37fb11526688f106130a71ccb7f8499dc5426b5e1ef7435582",
+      "record": "modules/fidelity-r27/sprites/records/re3-giant-spider.json",
+      "record_sha256": "d3ca397a5224bd1b049b742d1e653adb637ee5fc21d3f74b08bbca545f01f37f",
+      "full_body_reviewed": false,
+      "observed_facing": "unknown",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re3-grave-digger",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-010/re3-grave-digger.json",
+        "sha256": "3020d92a2175d2dbd2be2d475d2528511b592202e40bca81722da29195ad3833",
+        "entryUid": "re3-grave-digger"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re3-grave-digger/idle-right.png",
+      "image_sha256": "e14d45b906e41a47595ec1f7305ded43ec24ed3922cc6ee63926e8ee23ac2ccd",
+      "record": "modules/fidelity-r27/sprites/records/re3-grave-digger.json",
+      "record_sha256": "8e0de14d1417bbe9a9dfd6a60698b15658557fe1ab910f39190150d9cea0504c",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re3-hunter-beta",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-005/re3-hunter-beta.json",
+        "sha256": "f1143c835bb299db3264fb23b116405f6b04f37c68b1e3e6f28c5403f94fc992",
+        "entryUid": "re3-hunter-beta"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re3-hunter-beta/idle-right.png",
+      "image_sha256": "24e6feab1e124d9a354960de8397a56f1c425473281231afa86fa0bc89ca5a06",
+      "record": "modules/fidelity-r27/sprites/records/re3-hunter-beta.json",
+      "record_sha256": "dfda5ae77112eee369246e96d356b1363c9c77ef3106fe8b479588a249108a89",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re3-hunter-beta.json",
+        "sha256": "01f12e183bf435f7979c94d00c4d2b058685e53cdcfa3fe199a60465592ce10c"
+      }
+    },
+    {
+      "uid": "re3-hunter-gamma",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-005/re3-hunter-gamma.json",
+        "sha256": "ce7c4e2666d19fcaa127c079ee956f7396787ed46fe92ee3ec1e949668b962e0",
+        "entryUid": "re3-hunter-gamma"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re3-hunter-gamma/idle-right.png",
+      "image_sha256": "689008c0cc4710b5d51eae7fe32df8f5aad0d9de2c54427d7264b765c35fba49",
+      "record": "modules/fidelity-r27/sprites/records/re3-hunter-gamma.json",
+      "record_sha256": "caa68bb3dc71c9ba192bcbfa4b2a16c905ecc8ceb346301c60a3cc79e5ce850b",
+      "full_body_reviewed": true,
+      "observed_facing": "left",
+      "observed_pose_kind": "neutral-base",
+      "available_states": [
+        "idle"
+      ],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re3-hunter-gamma.json",
+        "sha256": "7418cfec79b0a0d09ffe3662a18c5a7e23e28074426bdf49b3f03d29768a095a"
+      }
+    },
+    {
+      "uid": "re3-sliding-worm",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-010/re3-sliding-worm.json",
+        "sha256": "1a257fbfd521c1a51fec5c62df3679767510433e8142083ecc002670911548ea",
+        "entryUid": "re3-sliding-worm"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re3-sliding-worm/idle-right.png",
+      "image_sha256": "0c0acb5d4832bfd818d300324aa7e723b29700119a84892d630f7b8660cd6655",
+      "record": "modules/fidelity-r27/sprites/records/re3-sliding-worm.json",
+      "record_sha256": "0ba3bfbb1783a09bca8c7b3d18e4a56cf50da3f24033c7de68e9deb5e18c6697",
+      "full_body_reviewed": false,
+      "observed_facing": "unknown",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re3-small-spider",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-009/re3-small-spider.json",
+        "sha256": "14d6345e368e8113b7998552a026ba73af9a167e4252f9755da7b2bf0893197b",
+        "entryUid": "re3-small-spider"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re3-small-spider/idle-right.png",
+      "image_sha256": "1d4e924398ef542fab0cc8eb051bc38bd9035f0d4cf325eabc9b722d5d6e0bf5",
+      "record": "modules/fidelity-r27/sprites/records/re3-small-spider.json",
+      "record_sha256": "32c6701b316fd2705dd73b18937fc2bb1ce611116b20eb90298fe5f4f5b0e19c",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "source_completeness_evidence": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-009/re3-small-spider-source-body-observation.json",
+        "sha256": "6b544e75a36fc29f8b3b137977b8f8007cc92ae2dd2cf333818f472b872129c8",
+        "referencePath": "assets/catalog/re3-small-spider.png",
+        "referenceSha256": "375ed168b5ea6e7745d8d7a3d188f5c3c7466c37623642da75f7cdb18daf9e3d",
+        "imageSha256": "1d4e924398ef542fab0cc8eb051bc38bd9035f0d4cf325eabc9b722d5d6e0bf5",
+        "observedFacing": "front",
+        "scope": "Whole body visually observed in this source image and this generated pose only; no opposite view, geometry or original-game pose certification."
+      },
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re3-small-spider.json",
+        "sha256": "1582e3288bc75edb472d8370a78ce6ea4785379c7408ee51961ac08a4c35c237"
+      }
+    },
+    {
+      "uid": "re3r-hunter-beta",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-003/re3r-hunter-beta.json",
+        "sha256": "aeb58af03ae36a519cda0e294b726824cbdcd8131c9be20bd30da4c44754961f",
+        "entryUid": "re3r-hunter-beta"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re3r-hunter-beta/idle-right.png",
+      "image_sha256": "cb8100c746055d84274d38cdf0485a83432b5d8099dc3242174b76c217f09f0a",
+      "record": "modules/fidelity-r27/sprites/records/re3r-hunter-beta.json",
+      "record_sha256": "5475e3a21f5af05fa692242af5d4f9cb58d6e88b071150080cc12efdb43001ca",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re3r-hunter-gamma",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW.json",
+        "sha256": "5405065b305931420d589c1deee266108a7274bff0959f83693419234849d857",
+        "entryUid": "re3r-hunter-gamma"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re3r-hunter-gamma/idle-right.png",
+      "image_sha256": "325933f1ca2cec35ced16e2eb12ac3f33f4adc0677baf3d07224d04e016f2f39",
+      "record": "modules/fidelity-r27/sprites/records/re3r-hunter-gamma.json",
+      "record_sha256": "3faea91c770b3d648527e45ac9b605c371e212356babed1bdb3c4dd178e97dc6",
+      "full_body_reviewed": true,
+      "observed_facing": "left",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re3r-hunter-gamma.json",
+        "sha256": "e79e02e775eab1fc801fe6b51b52bf8cf7e0586b1b10a3b2389b564991e1dd94"
+      }
+    },
+    {
+      "uid": "re3r-stage-2-nemesis",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW.json",
+        "sha256": "5405065b305931420d589c1deee266108a7274bff0959f83693419234849d857",
+        "entryUid": "re3r-stage-2-nemesis"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re3r-stage-2-nemesis/idle-right.png",
+      "image_sha256": "3f3e82ce29b1d4546171b9d8f70a8d6147a9ec1dea5f31f06101acab5e7d5cbf",
+      "record": "modules/fidelity-r27/sprites/records/re3r-stage-2-nemesis.json",
+      "record_sha256": "bb709242e9b837c44b371ab712bfa5ec8b8abfa4bc09b8cb7fe03ba827f06939",
+      "full_body_reviewed": false,
+      "observed_facing": "unknown",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re3r-stage-3-nemesis",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW.json",
+        "sha256": "5405065b305931420d589c1deee266108a7274bff0959f83693419234849d857",
+        "entryUid": "re3r-stage-3-nemesis"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re3r-stage-3-nemesis/idle-right.png",
+      "image_sha256": "6e48beffc08908cde3dd509aecd933d6a3326e3e89b1088d9bbb1036eeffb22c",
+      "record": "modules/fidelity-r27/sprites/records/re3r-stage-3-nemesis.json",
+      "record_sha256": "4f3a7a3dfc58d3bd7988d934e57f8e7bd2dd5a475b0de5fcd7cddbf921307d5f",
+      "full_body_reviewed": false,
+      "observed_facing": "unknown",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re3r-zombie-dog",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-003/re3r-zombie-dog.json",
+        "sha256": "81b7a94a3e8f87bf976395d7e2c57a6983bfcb2692534549d1b7bb35b8049b3c",
+        "entryUid": "re3r-zombie-dog"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re3r-zombie-dog/idle-right.png",
+      "image_sha256": "cefabb29455585745f521873f9c5e4eeafbf96c653265e307ba41a68b0813b5c",
+      "record": "modules/fidelity-r27/sprites/records/re3r-zombie-dog.json",
+      "record_sha256": "10a6ad28d612eeba8100342c40b35ba9d84bc4093b2de985989468ddae4efe9e",
+      "full_body_reviewed": false,
+      "observed_facing": "right",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re4-armadura",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-011/re4-armadura.json",
+        "sha256": "4dbb139eda4b7cac3e3001cb1cd107ee8cb75b7f01b82b689b72cd12d7ff5c06",
+        "entryUid": "re4-armadura"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re4-armadura/idle-right.png",
+      "image_sha256": "a5e91aba333b1b01a4dcf3ccdf48648826a70800b4a440531d604b50092c2124",
+      "record": "modules/fidelity-r27/sprites/records/re4-armadura.json",
+      "record_sha256": "3a9d1a2c16b5168bc7263ea5b8faa64bd8432579c72c5421d11f013e9653b78c",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re4-bitores-mendez-enemy",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-006/re4-bitores-mendez-enemy.json",
+        "sha256": "0f9037a08cb39b61a765d6270da86a3830da9f98b1c51fb0b9332d6bc23c5567",
+        "entryUid": "re4-bitores-mendez-enemy"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re4-bitores-mendez-enemy/idle-right.png",
+      "image_sha256": "7cf018fa8186760117532fa3642e20fbdedaf94725de1d0ef11ba7e6ce7fe782",
+      "record": "modules/fidelity-r27/sprites/records/re4-bitores-mendez-enemy.json",
+      "record_sha256": "e225fc977b03c62176b5350b016264c3138b28b57dda3c1f507ed061a2d092e0",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re4-bitores-mendez-enemy.json",
+        "sha256": "9e4664e4527d43ffbbb1a401369a2dfb9caeb91c78aed5b768170e8099706838"
+      }
+    },
+    {
+      "uid": "re4-bitores-mendez-mutated",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-016/re4-bitores-mendez-mutated.json",
+        "sha256": "876b74c38c38301a39a67ca91cc055cc7b438a46960ea1c516b9bbee799c57d0",
+        "entryUid": "re4-bitores-mendez-mutated"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re4-bitores-mendez-mutated/idle-right.png",
+      "image_sha256": "ab94b89487e395fd640948e1ea24bc7ac574d0f45b61e6557d729f90a7c725a4",
+      "record": "modules/fidelity-r27/sprites/records/re4-bitores-mendez-mutated.json",
+      "record_sha256": "a5ce282d7c237aed1930d05036cca7ee1eb5c6203d02fd6a981ebb6d5a9722e5",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": []
+    },
+    {
+      "uid": "re4-del-lago",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-011/re4-del-lago.json",
+        "sha256": "a7240eddf159fc6a2abb7d4bf07a31f3bcc33ebbeee39879824670cdee02170b",
+        "entryUid": "re4-del-lago"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re4-del-lago/idle-right.png",
+      "image_sha256": "2523f9f5a6a1339b3689f10615f137474361bc66cd7c3ab629cdb88fda76d107",
+      "record": "modules/fidelity-r27/sprites/records/re4-del-lago.json",
+      "record_sha256": "072dc3b14dd87ccf60bc7ef5a0babf17565b4b94c0ce0afbe42e4e857ec83c42",
+      "full_body_reviewed": false,
+      "observed_facing": "right",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re4-el-gigante",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-005/re4-el-gigante.json",
+        "sha256": "8ec34942c4f4dd5ef1d79b712d78bb6a0850644daa62cc0b65fd4be064864ed8",
+        "entryUid": "re4-el-gigante"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re4-el-gigante/idle-right.png",
+      "image_sha256": "7a74652cabc49f0a46082e67b381858d2a60abfe5d4ab06272377488fa465de7",
+      "record": "modules/fidelity-r27/sprites/records/re4-el-gigante.json",
+      "record_sha256": "787b8b840eaeaac25ce8f7f65667b990a5902af8f78783555fd2ad76dede8249",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re4-el-gigante.json",
+        "sha256": "7e9ce5608e8eb427755db5be2988a7e09e2a2157d326e56f219628085d89b5b5"
+      }
+    },
+    {
+      "uid": "re4-garrador",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-011/re4-garrador.json",
+        "sha256": "d8846fbcf5bd6434aacd6403a2b6780b8f6245e290507e0c74f28a169508c3ce",
+        "entryUid": "re4-garrador"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re4-garrador/idle-right.png",
+      "image_sha256": "56d21f4b446ed4ec31767a4d2f02e70b5161eda7068b2bc484e610288c5a37a6",
+      "record": "modules/fidelity-r27/sprites/records/re4-garrador.json",
+      "record_sha256": "5a50f7ed1e7138e57ce4389d5d7557f5087f18265533da5c9ae58ac030694333",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re4-iron-maiden",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-006/re4-iron-maiden.json",
+        "sha256": "2163c4874eac6b5d48d3e25fbbc23c3c46f0b328b87dcc068f3aed8be6417fbf",
+        "entryUid": "re4-iron-maiden"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re4-iron-maiden/idle-right.png",
+      "image_sha256": "e1842b0813eb09a906d5af57ae7939ee6c44c04373c9cb8987c2ca9b60d6eed7",
+      "record": "modules/fidelity-r27/sprites/records/re4-iron-maiden.json",
+      "record_sha256": "33658138b13d55dc9ebe58576028f856f1f5654534be2d6506a25000ff73900a",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re4-iron-maiden.json",
+        "sha256": "6ae71caacc136a54f10b744876e59054aac614d6b7517f4a0babc5ddca1f9f0e"
+      }
+    },
+    {
+      "uid": "re4-jack-krauser-enemy",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-011/re4-jack-krauser-enemy.json",
+        "sha256": "2a1b8e8fdb335fdb9af1f82b902e5d52f9143e15303b7e5344f7b3ae413b0e3b",
+        "entryUid": "re4-jack-krauser-enemy"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re4-jack-krauser-enemy/idle-right.png",
+      "image_sha256": "8d1d8408771432d101c85c21a606b984ffcc56fcbd374cba8fcc705665fcfcdb",
+      "record": "modules/fidelity-r27/sprites/records/re4-jack-krauser-enemy.json",
+      "record_sha256": "e0a03d804e1503d9b316a4126abcbe7f04501c17d4ad78d8473e85b3ee7bdb90",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re4-jj",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-011/re4-jj.json",
+        "sha256": "c42b9c572c9a58d8946ac91065e9cc8c0050fd27a3da9a97456e360704bb415d",
+        "entryUid": "re4-jj"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re4-jj/idle-right.png",
+      "image_sha256": "5defac3a1e3f8c03ecd6a69dc0bcb04b5cd95de4c91edcd61cad8102345afd1c",
+      "record": "modules/fidelity-r27/sprites/records/re4-jj.json",
+      "record_sha256": "a7d855addbe04ffc06491ab399416dc447c559cb3a7ddf653eb6da421514fd50",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re4-novistador",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-006/re4-novistador.json",
+        "sha256": "d4566dade62e245bbfd77cfb324840e4559fbbd7a5d19701bd9b4809b5114b83",
+        "entryUid": "re4-novistador"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re4-novistador/idle-right.png",
+      "image_sha256": "f7f45455f43a532ffcd4c475ad5e93ddbf413d61ed4de30c239032de1146a3a6",
+      "record": "modules/fidelity-r27/sprites/records/re4-novistador.json",
+      "record_sha256": "dec19a6f537117530ab246107641f5a9e7e26aee39eb017d3f107cbe609bd030",
+      "full_body_reviewed": true,
+      "observed_facing": "left",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re4-novistador.json",
+        "sha256": "6ba46f9e88822052a67c7f13ac95fdf5d7c21a935c056324e4cde1906fd15c99"
+      }
+    },
+    {
+      "uid": "re4-osmund-saddler-enemy",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-006/re4-osmund-saddler-enemy.json",
+        "sha256": "cdbd0b88f7aabe415a7d55127fb935edeea9522a04db79becaa3b5d5796b53a2",
+        "entryUid": "re4-osmund-saddler-enemy"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re4-osmund-saddler-enemy/idle-right.png",
+      "image_sha256": "e8caad2d206ec7d227d7bd40465c7b929266845216b10cc5838d6c914cb67bab",
+      "record": "modules/fidelity-r27/sprites/records/re4-osmund-saddler-enemy.json",
+      "record_sha256": "1115c73c164139ca60997f72f1485bffc06ea8383708fb244bc18355ab6a812e",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re4-osmund-saddler-enemy.json",
+        "sha256": "5f4396ffe24c7fc94f11b0a2d4a313d54e42d02dfdaad0e435124d671c6858cc"
+      }
+    },
+    {
+      "uid": "re4-regenerator",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-011/re4-regenerator.json",
+        "sha256": "14b958bdb52ba995ff136fd0d63f7628d03f3e6006e9bfdd2310e5cf42347f76",
+        "entryUid": "re4-regenerator"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re4-regenerator/idle-right.png",
+      "image_sha256": "77c5dae444eb16752435cc21b8ad3206290d6101d1aeef95a036fc5b94f7cf82",
+      "record": "modules/fidelity-r27/sprites/records/re4-regenerator.json",
+      "record_sha256": "516b1e2f76f8397b0721c532812a255bf9025fcae3a86595e5a1f76356cc67ff",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re4-u-3",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-006/re4-u-3.json",
+        "sha256": "56e93553c3d9638e496682573c13dbc5ba0233e0900fbbca79fad915bf11a689",
+        "entryUid": "re4-u-3"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re4-u-3/idle-right.png",
+      "image_sha256": "7c5a0891ad97ee8fb1f28aaeb9df3533c9f388b909837cd471210dfff658e918",
+      "record": "modules/fidelity-r27/sprites/records/re4-u-3.json",
+      "record_sha256": "fd7d6c027655acefe7e6d33cbc231cc7dc6bc6368e28cbed826b7b94ca68a736",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re4-verdugo",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-006/re4-verdugo.json",
+        "sha256": "6e3a35c465d4751df9f9b1844d65bc64fc5f121e85d6ab49c7c04f1ec1c8a9ad",
+        "entryUid": "re4-verdugo"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re4-verdugo/idle-right.png",
+      "image_sha256": "2b9df4091aba6f5fb1c2fded600e086130ea773551be2692de887151f87f1f6e",
+      "record": "modules/fidelity-r27/sprites/records/re4-verdugo.json",
+      "record_sha256": "9767e8e6d87f8b3717feceddc990cf1f346ad7d5b53988584b6426f3fd72c534",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re4-verdugo.json",
+        "sha256": "abbb548cb4878a190a87a44866e91e37a5d4420d169a8675edc7be2ad2f4f8de"
+      }
+    },
+    {
+      "uid": "re4r-armadura",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-012/re4r-armadura.json",
+        "sha256": "6a6932bed3540d9d1e55c74fdca6d37dc74257b4749bb837cbf9a5cf42b262c0",
+        "entryUid": "re4r-armadura"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re4r-armadura/idle-right.png",
+      "image_sha256": "6227866cdeda70eb554f2654ab4843f3751c2d2f9a93bef8ba1b67d567e87c87",
+      "record": "modules/fidelity-r27/sprites/records/re4r-armadura.json",
+      "record_sha256": "a3060a149df5e5944ef8bf2abe51157b49bbd1bf81755c0cfe2172a739a2622f",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re4r-bitores-mendez",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-011/re4r-bitores-mendez.json",
+        "sha256": "5df6da88016159c00cb0768c062c91835a925146ea3793074d3c07168edcbb69",
+        "entryUid": "re4r-bitores-mendez"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re4r-bitores-mendez/idle-right.png",
+      "image_sha256": "1645414b09f3669fee7c6dfc6de21a5d425f57aeadf340b41b8ae68e1862e707",
+      "record": "modules/fidelity-r27/sprites/records/re4r-bitores-mendez.json",
+      "record_sha256": "09fe4eecd530734e66d7f0ec6ef3dd2acbc3e4e0d0c08e289e4f4ee1dac3e7d2",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re4r-bitores-mendez.json",
+        "sha256": "141f0746a57faf90636b2dee4310ca0a407d05bf729126f2ac9b5d9e1f8df422"
+      }
+    },
+    {
+      "uid": "re4r-bitores-mendez-first-mutation",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-012/re4r-bitores-mendez-first-mutation.json",
+        "sha256": "97445206e42de78521ddd99f8eedd9307704be4ed56f5cb15868fe17f0da2101",
+        "entryUid": "re4r-bitores-mendez-first-mutation"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re4r-bitores-mendez-first-mutation/idle-right.png",
+      "image_sha256": "e2dfad0c935fd9a9692976495cdf2e06d132db9fe4fc2b5ac946ef983723dbe8",
+      "record": "modules/fidelity-r27/sprites/records/re4r-bitores-mendez-first-mutation.json",
+      "record_sha256": "5ad5828ea08f58bb46a224de3524cb2512649da36e09d9718bea6eba53d4a099",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re4r-colmillos",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-012/re4r-colmillos.json",
+        "sha256": "760849d3610c55026e5aa35822655c2a703eb2a9b62a681b481609d260d43adf",
+        "entryUid": "re4r-colmillos"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re4r-colmillos/idle-right.png",
+      "image_sha256": "1f720fb3f789e5908bc2d685c2dd16fae8febcfb172b7af6ebf59441c9ad8e93",
+      "record": "modules/fidelity-r27/sprites/records/re4r-colmillos.json",
+      "record_sha256": "d1d03eba20fb58313ce2d5c41648638ab90384abf838143f2847829dd3803815",
+      "full_body_reviewed": true,
+      "observed_facing": "left",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "source_completeness_evidence": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-012/re4r-colmillos-source-body-observation.json",
+        "sha256": "41f699af3b0bcb71563e0b0a5f85031d5b7ca325b689d55a71419c48918df67b",
+        "referencePath": "assets/catalog/re4r-colmillos.png",
+        "referenceSha256": "99525fafdeec7cbe39666452a2e7924b0dbf3d47f1491bf12e422316726eeabb",
+        "imageSha256": "1f720fb3f789e5908bc2d685c2dd16fae8febcfb172b7af6ebf59441c9ad8e93",
+        "observedFacing": "left",
+        "scope": "Whole body visually observed in this source image and this generated pose only; no opposite view, geometry or original-game pose certification."
+      }
+    },
+    {
+      "uid": "re4r-del-lago",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-011/re4r-del-lago.json",
+        "sha256": "0917661c6644dcf20d80c4641951e02c9aaf40e9f43802994493addb40e63eff",
+        "entryUid": "re4r-del-lago"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re4r-del-lago/idle-right.png",
+      "image_sha256": "e73acf3a413cb4235a16ff4713a9baa19b2e84c11383abbfa771393d60065423",
+      "record": "modules/fidelity-r27/sprites/records/re4r-del-lago.json",
+      "record_sha256": "4c657b035d904c748dd8acbebc8c119180a8df77c0b60625f562d6c1d636da21",
+      "full_body_reviewed": false,
+      "observed_facing": "right",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re4r-el-gigante",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-012/re4r-el-gigante.json",
+        "sha256": "d38d55b278e44c1fc8077b429cf2fc4e152fbd66e50f047ea0eb82c655dcf76f",
+        "entryUid": "re4r-el-gigante"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re4r-el-gigante/idle-right.png",
+      "image_sha256": "fa37579591f0d80c51fee03bb2759a4a23499481488fb45bd6f0ad115416dab5",
+      "record": "modules/fidelity-r27/sprites/records/re4r-el-gigante.json",
+      "record_sha256": "17918f08b73d66ceb99f30435fb3f0a3afe2ddb1866ca24938bd6ad53c4f0e54",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re4r-garrador",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-011/re4r-garrador.json",
+        "sha256": "64edbb0a8b0e61c6c3c8ba63cc6865cbe39992f08db2b82d3a875c94dd42536e",
+        "entryUid": "re4r-garrador"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re4r-garrador/idle-right.png",
+      "image_sha256": "433efef1b24fdb7a5df7154c89b32388b23c8847a87792d5b96805bebd742688",
+      "record": "modules/fidelity-r27/sprites/records/re4r-garrador.json",
+      "record_sha256": "4ec259c49342f6390031079e3af2b11b2e0daffc9bf660cec18b34d6e3da7118",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re4r-iron-maiden",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-012/re4r-iron-maiden.json",
+        "sha256": "4c6880e6586695a16d0f553f75e330436752d47f560c343fcc919cd8c6a0a58d",
+        "entryUid": "re4r-iron-maiden"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re4r-iron-maiden/idle-right.png",
+      "image_sha256": "f8a1e35afedccc28c30403d7b71dace9dbb1e9bc87d1613ddf32894271acbec5",
+      "record": "modules/fidelity-r27/sprites/records/re4r-iron-maiden.json",
+      "record_sha256": "dc848d2d7d3bf2a3fe9c84235d8c62ca6a21c6113a90d7abc62ae626f74a9380",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re4r-jack-krauser-mutated",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-012/re4r-jack-krauser-mutated.json",
+        "sha256": "cd2c9ae6df1c123b9d322850ab0ba4c463c697e647b62f66d48f39a9befa8e29",
+        "entryUid": "re4r-jack-krauser-mutated"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re4r-jack-krauser-mutated/idle-right.png",
+      "image_sha256": "73e6cd517355ef10752bba0013c4a9771a4ea1949210d896db16398ab1b421c5",
+      "record": "modules/fidelity-r27/sprites/records/re4r-jack-krauser-mutated.json",
+      "record_sha256": "b7a779657dec72ecc08a617a688cdc915bba038795bc67505dc3ee584a5dfa4a",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re4r-novistador",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-012/re4r-novistador.json",
+        "sha256": "065eb1be25557cdfabb889ad4c63094729d7077fa4009d9ca84f67f546a738c4",
+        "entryUid": "re4r-novistador"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re4r-novistador/idle-right.png",
+      "image_sha256": "7bc8ee399dc39d5bf40325990e2c2e74b84577ea8bc38be757560c969d58684f",
+      "record": "modules/fidelity-r27/sprites/records/re4r-novistador.json",
+      "record_sha256": "6eeda31ff0925fae1577a45e316551b9ee9ee5f3e7da89493528dbc6e961d3f8",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re4r-osmund-saddler-mutated",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-012/re4r-osmund-saddler-mutated.json",
+        "sha256": "f108360c45586834428d43dc38e74ad10f3686de7cb02b4cb27d6e81fd3a9138",
+        "entryUid": "re4r-osmund-saddler-mutated"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re4r-osmund-saddler-mutated/idle-right.png",
+      "image_sha256": "e8ba94a7787dba77abd3b9e99a248d025a1547bcbd3ac76bccc7ddd60ef3d407",
+      "record": "modules/fidelity-r27/sprites/records/re4r-osmund-saddler-mutated.json",
+      "record_sha256": "9f7f84966e3fd9f83cd298882df4ecfd954dc61e88e43d86adf12fde4dfef86e",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re4r-plaga",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-012/re4r-plaga.json",
+        "sha256": "8571f752c3710e1ea8843588b8ca4c751ee51aa712ef92cf92aa8888ca66cb82",
+        "entryUid": "re4r-plaga"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re4r-plaga/idle-right.png",
+      "image_sha256": "ce8cf63c4cd905026ea161dd92e7b9446fa2a5878c3aaef3a55fbc263fa95f4a",
+      "record": "modules/fidelity-r27/sprites/records/re4r-plaga.json",
+      "record_sha256": "146e385b93e4b44060c5243cb276c7eed1f8f3e5df067984f3fff40b873a4922",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": []
+    },
+    {
+      "uid": "re4r-ramon-salazar",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-011/re4r-ramon-salazar.json",
+        "sha256": "820572ed344230e478ba3995b951fdec8ab1fb4e26baf947ec9d5097fbd5481d",
+        "entryUid": "re4r-ramon-salazar"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re4r-ramon-salazar/idle-right.png",
+      "image_sha256": "af68aee080e2b88e6a988b7deadc7a188215b2879d37d255a0daf58d8c3b2adf",
+      "record": "modules/fidelity-r27/sprites/records/re4r-ramon-salazar.json",
+      "record_sha256": "4777f5b5d120009c01a5a20356039304853668296087a1f2b04d79ea85a373b5",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re4r-ramon-salazar.json",
+        "sha256": "b8af8cc2e416e1f05095b932523a79b8e0d5b10b358f86badbee2f37aeeb0be4"
+      }
+    },
+    {
+      "uid": "re4r-ramon-salazar-mutated",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-011/re4r-ramon-salazar-mutated.json",
+        "sha256": "edffe36f9ec5a84e5f831a69ad895d61d96b49a6abde71eed8cd4149b426bd8d",
+        "entryUid": "re4r-ramon-salazar-mutated"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re4r-ramon-salazar-mutated/idle-right.png",
+      "image_sha256": "a7cd31047431965edfb517e010d9752fe53d3a7cc2d1f30c7677c254f36817b2",
+      "record": "modules/fidelity-r27/sprites/records/re4r-ramon-salazar-mutated.json",
+      "record_sha256": "310079c3998e7639419bb68238f256f1b8640d9d73c498ffc4cc046dd5ac31ee",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re4r-regenerador",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-012/re4r-regenerador.json",
+        "sha256": "f472c4ce946d287cffc695391a568db1aa4952092f2573cb6cb277018ba37242",
+        "entryUid": "re4r-regenerador"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re4r-regenerador/idle-right.png",
+      "image_sha256": "7dc946c540e9ed8e5b63bfc2803cde9f41cb9c69964497012cce8848d05b238f",
+      "record": "modules/fidelity-r27/sprites/records/re4r-regenerador.json",
+      "record_sha256": "6a9fa73eefc5eb026a805c54d340b25e8e0b7fc8708ee77d9da8450c69ad6794",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re4r-verdugo",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-012/re4r-verdugo.json",
+        "sha256": "ec7dca10c59f1f70660d6b77eb79bccd8ae9f0e63789d51303867628ae5b84bb",
+        "entryUid": "re4r-verdugo"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re4r-verdugo/idle-right.png",
+      "image_sha256": "0e4700ce62fd4c198383aac856394a623e8facf6cf349a6b0b2ba728108d9324",
+      "record": "modules/fidelity-r27/sprites/records/re4r-verdugo.json",
+      "record_sha256": "cfe908f4d19eb2347e6babff452f7d741a9d0571c63cab84904d16fd4c81b197",
+      "full_body_reviewed": true,
+      "observed_facing": "right",
+      "observed_pose_kind": "neutral-base",
+      "available_states": [
+        "idle"
+      ]
+    },
+    {
+      "uid": "re5-adjule",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-014/re5-adjule.json",
+        "sha256": "fb31328272a4c26116661a8210fa20cf54a7b1dffb39a8c300be1fe605f262d4",
+        "entryUid": "re5-adjule"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re5-adjule/idle-right.png",
+      "image_sha256": "01dee3b5c7f3cea9b76ea450e8d96a4815cead5be2f4dda73d1578192a5d1227",
+      "record": "modules/fidelity-r27/sprites/records/re5-adjule.json",
+      "record_sha256": "80507c05e72b079d4d6655514cc6d03f8933328dcd06da58466ace92d6ae9f48",
+      "full_body_reviewed": false,
+      "observed_facing": "left",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re5-albert-wesker-enemy",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-005/re5-albert-wesker-enemy.json",
+        "sha256": "afbcf012c0e096ade1efdd919faf7a82809ba6c6f71c30bcd3160788a3a770bb",
+        "entryUid": "re5-albert-wesker-enemy"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re5-albert-wesker-enemy/idle-right.png",
+      "image_sha256": "3912cf81eff70a9fe212817f9d2d74f3853ed3573db73c9ac9ecf387a521d88a",
+      "record": "modules/fidelity-r27/sprites/records/re5-albert-wesker-enemy.json",
+      "record_sha256": "8855550f0c783e39c70fd4c918664a8a28e3105572f9bd9fc3ba6cb6e55bcdb9",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re5-albert-wesker-enemy.json",
+        "sha256": "b82f030775d3fbd2f92603bfa8bf0353deb48e19945582d91c8d826fdf9391d4"
+      }
+    },
+    {
+      "uid": "re5-bui-kichwa",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-014/re5-bui-kichwa.json",
+        "sha256": "a52af2dbb3d1f322f6bf52fa45f7e13ebde0a3af787e3367ac057d82997cc901",
+        "entryUid": "re5-bui-kichwa"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re5-bui-kichwa/idle-right.png",
+      "image_sha256": "ed834b13efe6520bd5ef4718e4d31f2ae9fdb749fffee7470262f272af95ec97",
+      "record": "modules/fidelity-r27/sprites/records/re5-bui-kichwa.json",
+      "record_sha256": "40e262b1fd79d46b1da29f4d4f4b60ab22c1b7104a9fdc31a5e06476370f1758",
+      "full_body_reviewed": true,
+      "observed_facing": "left",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "source_completeness_evidence": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-014/re5-bui-kichwa-source-body-observation.json",
+        "sha256": "cd231d2555aba18db9a7c9bfc7a7f343ff3e236d02f978fca03a1b01bff47e0a",
+        "referencePath": "assets/catalog/re5-bui-kichwa.png",
+        "referenceSha256": "a1eb3108998569ea27d7dba60cdd857ca9d74897b8dc7c5e33be68840105462f",
+        "imageSha256": "ed834b13efe6520bd5ef4718e4d31f2ae9fdb749fffee7470262f272af95ec97",
+        "observedFacing": "left",
+        "scope": "Whole body visually observed in this source image and this generated pose only; no opposite view, geometry or original-game pose certification."
+      }
+    },
+    {
+      "uid": "re5-cephalo",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-014/re5-cephalo.json",
+        "sha256": "589fe2701e7dc2578b404685e41e591469a0b560cc0cd0b6b8d2798c69a212e0",
+        "entryUid": "re5-cephalo"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re5-cephalo/idle-right.png",
+      "image_sha256": "9d8f8791af2de7edb4a15b7fee6255d9accf44fca533c411b43e13d067bc59e6",
+      "record": "modules/fidelity-r27/sprites/records/re5-cephalo.json",
+      "record_sha256": "6376536a9f299a0e7c24e41bcd92e5e74726dcf9389941691b25c068fd5be0eb",
+      "full_body_reviewed": false,
+      "observed_facing": "unknown",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re5-kipepeo",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-014/re5-kipepeo.json",
+        "sha256": "cfff6bd7a1a814f58ec4ba310776f7e571e64154c50fc87cac76e6f29fd3afc7",
+        "entryUid": "re5-kipepeo"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re5-kipepeo/idle-right.png",
+      "image_sha256": "661b9f64965e608366cd7b7715e798833e7a276bcbeb88941ad5cfc51ffb6afa",
+      "record": "modules/fidelity-r27/sprites/records/re5-kipepeo.json",
+      "record_sha256": "47e957754d2788506357d6f572638d6e93238899cc32030ca4be68de63817e90",
+      "full_body_reviewed": false,
+      "observed_facing": "unknown",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re5-licker-beta",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-014/re5-licker-beta.json",
+        "sha256": "57fd731a90ba5459d8b322ce4752349ca424acdebebc67ad3c90aa52bed0d8bb",
+        "entryUid": "re5-licker-beta"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re5-licker-beta/idle-right.png",
+      "image_sha256": "57abb05b2cfff53546096c4aee8180a2ae91f669abb8d5f406a80c004a52436d",
+      "record": "modules/fidelity-r27/sprites/records/re5-licker-beta.json",
+      "record_sha256": "f4ac0ab39058d6eede6353bcf26846ed76e6b162ca9ab96ed8d964a2225d725c",
+      "full_body_reviewed": false,
+      "observed_facing": "right",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re5-popokarimu",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-014/re5-popokarimu.json",
+        "sha256": "2a56e9f24018d4e0f0249c0471288a1808a699843ebe563922f440ab53a39e09",
+        "entryUid": "re5-popokarimu"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re5-popokarimu/idle-right.png",
+      "image_sha256": "03049feb7e191763508fae1c1dfa69cf743d86d2f4d5bed5c6eddcca5773b8f7",
+      "record": "modules/fidelity-r27/sprites/records/re5-popokarimu.json",
+      "record_sha256": "d9538478b2d10fc52a8d37f4b3cbaf6d934a330ff8a14e44fd673a4b1e6acb5d",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re5-reaper",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-014/re5-reaper.json",
+        "sha256": "9b01bab6794a7eccb6eadf5d7b7923d2a343cce42b08302824412592a8feecda",
+        "entryUid": "re5-reaper"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re5-reaper/idle-right.png",
+      "image_sha256": "06663c1f1720937a4f25faa5e195b73c604cf312160f0611f34a972972f873d7",
+      "record": "modules/fidelity-r27/sprites/records/re5-reaper.json",
+      "record_sha256": "9fdff4b8205b1773dd0d2d0873d451604139d96cb099ef5cdc709913dff77fc4",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re5-u-8",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-014/re5-u-8.json",
+        "sha256": "6201479b443912e247b7b55c5a4511a1a369a508ae0f73abcc4fa07640652ae6",
+        "entryUid": "re5-u-8"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re5-u-8/idle-right.png",
+      "image_sha256": "8ccd431dc936f37297a77170a96f629b89dc5d2004ecee891d7183848a425a16",
+      "record": "modules/fidelity-r27/sprites/records/re5-u-8.json",
+      "record_sha256": "b37082aac1affc3edd3e712454cd25a2a9a69f23f9f10b466c105089aec2e78b",
+      "full_body_reviewed": false,
+      "observed_facing": "unknown",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re6-lepotitsa",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-013/re6-lepotitsa.json",
+        "sha256": "dc5c7dc2b5c52fa66d7e7027e8506d4fef583e08812084e7656f1219366c7b3c",
+        "entryUid": "re6-lepotitsa"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re6-lepotitsa/idle-right.png",
+      "image_sha256": "47c9a8ff2a44d063caac772779d2224e95a272587ab919fe0aa0e86644915e87",
+      "record": "modules/fidelity-r27/sprites/records/re6-lepotitsa.json",
+      "record_sha256": "dd32c1e3887ee941949fe9f6ec694356e54aff4b6ea927d7273ebc09be042b32",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re6-napad",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-013/re6-napad.json",
+        "sha256": "5d532b293c08383876ba382972b853ad7226ee2662abf007a7317faa8fa57a8d",
+        "entryUid": "re6-napad"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re6-napad/idle-right.png",
+      "image_sha256": "3ada45730b9dd45d5297854845c582017267b7d707e5848711f66b2f643bb020",
+      "record": "modules/fidelity-r27/sprites/records/re6-napad.json",
+      "record_sha256": "25ce58d21977c060dd7b7e985e0bfde0b6b635989829a48bf0fe6cc8eb90cbb6",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re6-rasklapanje",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-013/re6-rasklapanje.json",
+        "sha256": "a9fe438738d9618369350ce03bfc757d8fac6aa89acb5fe6209431dc35ca4016",
+        "entryUid": "re6-rasklapanje"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re6-rasklapanje/idle-right.png",
+      "image_sha256": "cd9311874fdafa44e74dc254c5b45c18d707f596d5b1d93cd1ab5447675256a3",
+      "record": "modules/fidelity-r27/sprites/records/re6-rasklapanje.json",
+      "record_sha256": "68b955fddee6c68a9baeadae49deea1764b8c3b5e44067de9441f72947b87e66",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re6-strelat",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-008/re6-strelat.json",
+        "sha256": "ae4c9c2b3abbae7f75b701aff191293f2bea42f6e3d8a564a604b42a8a8fa8a2",
+        "entryUid": "re6-strelat"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re6-strelat/idle-right.png",
+      "image_sha256": "10ae8200964321dd9a0e0cba9e48ed51ee089779ac24bb6038b01eff46b6b4c1",
+      "record": "modules/fidelity-r27/sprites/records/re6-strelat.json",
+      "record_sha256": "068c3dd9a5f5cd5dbbfdc7c9ced9b6a68754b71a3eea64684cec4d0f01e04ceb",
+      "full_body_reviewed": true,
+      "observed_facing": "left",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re6-strelat.json",
+        "sha256": "e545add948aa77e362ac0d316692b1ca51c2d9ad0dd75033fb8de8177befc522"
+      }
+    },
+    {
+      "uid": "re6-ubistvo",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-013/re6-ubistvo.json",
+        "sha256": "c03fe22e904397c62f766bcf5090b7353477e2fee904c3aaed53af1c533c0950",
+        "entryUid": "re6-ubistvo"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re6-ubistvo/idle-right.png",
+      "image_sha256": "2e3e1362e84a543ec0b38eb97a0e9060ad8880d3445935f54e0e3075d4ed2aaf",
+      "record": "modules/fidelity-r27/sprites/records/re6-ubistvo.json",
+      "record_sha256": "0b2b600dc0a1ada579107981ae2e95c95be227d6eab18792b8f083bc46b90259",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re6-ustanak",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-008/re6-ustanak.json",
+        "sha256": "fa0e911cb23015eea5cc2d420279c590443b7759505edc1be385efbd55253c39",
+        "entryUid": "re6-ustanak"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re6-ustanak/idle-right.png",
+      "image_sha256": "d812489ee194b2fc17d98941e7a8d8870a33a317ab099cdb4e30eb6abfffc063",
+      "record": "modules/fidelity-r27/sprites/records/re6-ustanak.json",
+      "record_sha256": "162e19fc27c6e64735c3cf0c2c14fe031cce93c7bc7ae895e8b625e3ee1c7a0b",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re6-zombie",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-011/re6-zombie.json",
+        "sha256": "1e25e5943d18a209d5ca3675ccc0ed55e7237f41ae3c3122b119a58168269a4c",
+        "entryUid": "re6-zombie"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re6-zombie/idle-right.png",
+      "image_sha256": "0afdbfe364a9d66a1810166a1b63de1ebb416fd4ab70d25cc0b99b9b2cab9a4f",
+      "record": "modules/fidelity-r27/sprites/records/re6-zombie.json",
+      "record_sha256": "e3540dc77e2ed3169ff3b2d1910227c390ec1fd9726d69894ad48ce585e1b4c4",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re6-zombie.json",
+        "sha256": "27d98ff3b4bb73dec917bbbbdbff9bc0a173f50b570664d04ad79552eb00a107"
+      }
+    },
+    {
+      "uid": "re7-bug-swarm",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-013/re7-bug-swarm.json",
+        "sha256": "97786d4b74647eec39cef96e408eb94926b2fbf0c320fe6737e700aa412329c1",
+        "entryUid": "re7-bug-swarm"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re7-bug-swarm/idle-right.png",
+      "image_sha256": "b55b2395d3277c1749b94fb948f9a3ae6c96ea36f072f6c042c01018b6e2af65",
+      "record": "modules/fidelity-r27/sprites/records/re7-bug-swarm.json",
+      "record_sha256": "ffcca839ad50905117ab6f9d13c6ff4c9fa5d650181620dc05693a4c5381bd79",
+      "full_body_reviewed": false,
+      "observed_facing": "unknown",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re7-eveline-final",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-014/re7-eveline-final.json",
+        "sha256": "62158af4d2146dee0657d858329de42baa3aceb06ae5fa2973ee58b2e5848db9",
+        "entryUid": "re7-eveline-final"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re7-eveline-final/idle-right.png",
+      "image_sha256": "472fcf58f580945269f94f39de556dbce8992d292c15e315861dec25ab8ba2ff",
+      "record": "modules/fidelity-r27/sprites/records/re7-eveline-final.json",
+      "record_sha256": "31e542950d8198f8b341d5024b7ac5273798a6a76ccb7fd805ddbb7f1464889c",
+      "full_body_reviewed": false,
+      "observed_facing": "unknown",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re7-flying-bug",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-006/re7-flying-bug.json",
+        "sha256": "f935e3454fe27c3a20848a95d3f401452f200688780b05d73c975b920f5deba3",
+        "entryUid": "re7-flying-bug"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re7-flying-bug/idle-right.png",
+      "image_sha256": "5524844acd5ef52fe3fe4cf3538891d67b641d7eadb334a6498f0cabfd129663",
+      "record": "modules/fidelity-r27/sprites/records/re7-flying-bug.json",
+      "record_sha256": "a9751f8816e9eac7dd765e2499e4f5ddcd5525ccc7ed7f7262ae0e3a19f2423b",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re7-flying-bug.json",
+        "sha256": "96a0e85b481ebca77f198e6cd74c41d8484e18788217998c9d099f41dd8eb174"
+      }
+    },
+    {
+      "uid": "re7-fumer",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-014/re7-fumer.json",
+        "sha256": "02acd1b110574dc44bd6446f8927f0cc14ebc9ae59e48fdd8da2242b3aa666c0",
+        "entryUid": "re7-fumer"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re7-fumer/idle-right.png",
+      "image_sha256": "15386947cad3ffc874b89fdbe84f804dc86329ce34c64a523c28b97702755ec0",
+      "record": "modules/fidelity-r27/sprites/records/re7-fumer.json",
+      "record_sha256": "0857080b5321eddc35ac79125ff76f71d138921fcd8205604afb1a30594753a0",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": []
+    },
+    {
+      "uid": "re7-jack-baker",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-013/re7-jack-baker.json",
+        "sha256": "579357ae5efd795339bc338345f0abe1c149c5ead8ed838f833f4a327e716d57",
+        "entryUid": "re7-jack-baker"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re7-jack-baker/idle-right.png",
+      "image_sha256": "044cfcc76530c629c93f4ab3ad9a48f38cae900c9de435dc4933aee63ba1c0ec",
+      "record": "modules/fidelity-r27/sprites/records/re7-jack-baker.json",
+      "record_sha256": "2eea7cd3695c6c364004200f38b78eaf9df8a826d4ede1888ffb3e10332bd0fd",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re7-jack-baker-mutated",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-013/re7-jack-baker-mutated.json",
+        "sha256": "b13c29974b7f40f15856d5245591b3af78c4b04df3d6c72a63c97ead33470752",
+        "entryUid": "re7-jack-baker-mutated"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re7-jack-baker-mutated/idle-right.png",
+      "image_sha256": "842c4862c6c4ad80291e3628a333123c31ca0f8ac641a0b3e336033b9a677b4b",
+      "record": "modules/fidelity-r27/sprites/records/re7-jack-baker-mutated.json",
+      "record_sha256": "3b504c2da8c3cd1c04ab48029c000903972883a5776354119bc915e75fe52ba6",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re7-jack-baker-swamp-man",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-013/re7-jack-baker-swamp-man.json",
+        "sha256": "b7f2e0980a8903e7f97a05492cb5fd0d1fdacd411b616e5b45cd8dacdf1c3260",
+        "entryUid": "re7-jack-baker-swamp-man"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re7-jack-baker-swamp-man/idle-right.png",
+      "image_sha256": "079a172ab5e4a0d9e7655c5edf99b27a9e143e65eb2cf272d65bb13b1bf8e69e",
+      "record": "modules/fidelity-r27/sprites/records/re7-jack-baker-swamp-man.json",
+      "record_sha256": "4680b8cb3461bba0b6635bed0fd6024b82b76ee75ef584a6eb4ba1a52c626093",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re7-little-crawler",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-016/re7-little-crawler.json",
+        "sha256": "7883c6f884531224c68419fd4405b1ba6ff1d34ecdea1de4fbb4789584d9b0d3",
+        "entryUid": "re7-little-crawler"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re7-little-crawler/idle-right.png",
+      "image_sha256": "ca82ab3d19d983ba938968a82736a7b4724fa5029b5464c47111aceacbd641fc",
+      "record": "modules/fidelity-r27/sprites/records/re7-little-crawler.json",
+      "record_sha256": "4978b785afff92106350f8935da3cb8d0e81a0637addc8bb7b9a2cdd08f3fbc8",
+      "full_body_reviewed": true,
+      "observed_facing": "right",
+      "observed_pose_kind": "neutral-base",
+      "available_states": [
+        "idle"
+      ]
+    },
+    {
+      "uid": "re7-lucas-baker-mutated",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-014/re7-lucas-baker-mutated.json",
+        "sha256": "e4708c5200834350a5d448f8ca4c384eb0aa7d1f88ccc0fc96e4391ed0104210",
+        "entryUid": "re7-lucas-baker-mutated"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re7-lucas-baker-mutated/idle-right.png",
+      "image_sha256": "029ee61711f98a65f974e84ecaa60df2ae7ea4969c3ba84e8ceca79d7792380e",
+      "record": "modules/fidelity-r27/sprites/records/re7-lucas-baker-mutated.json",
+      "record_sha256": "f0a7a7f2ec8d5cfecf48e2014e84f2c543b8c59412bd725dc219284a49b6010c",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re7-mama-mold",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-016/re7-mama-mold.json",
+        "sha256": "13b938bc362bdf69282bbd316df8e3b0d363431c6e1b5b57505c7de9c2b1b647",
+        "entryUid": "re7-mama-mold"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re7-mama-mold/idle-right.png",
+      "image_sha256": "441833d6614e98ed7e5e5138fa478d76663fc84c496210daa50ab7813c98c63d",
+      "record": "modules/fidelity-r27/sprites/records/re7-mama-mold.json",
+      "record_sha256": "221f3434a5773c851a7319f93423362435b8d9758ff44ad3d57558d8b60c97ff",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": []
+    },
+    {
+      "uid": "re7-molded",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-006/re7-molded.json",
+        "sha256": "dc730ac1343ddeeabc1ca9ec7344fdf4f12f860f60df9735d199be0239658607",
+        "entryUid": "re7-molded"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re7-molded/idle-right.png",
+      "image_sha256": "529259cdee1b6faf4fb61e2fe04efccfd214ec681fac5cea67e8fdc9378be7dc",
+      "record": "modules/fidelity-r27/sprites/records/re7-molded.json",
+      "record_sha256": "70b0ae74cdb6c1d81289a80f944867bb5e3207549cea426295aac069de3db244",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re7-molded.json",
+        "sha256": "8b851b77b0a7535520f8bcfd1305b846d69ba09b5b07680d384c5867ef1a4ef1"
+      }
+    },
+    {
+      "uid": "re7-molded-crawler",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-008/re7-molded-crawler.json",
+        "sha256": "cb129bb892abc9c8e808eeb3891723c720a3fbea3896a9e2a1d03296ca955172",
+        "entryUid": "re7-molded-crawler"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re7-molded-crawler/idle-right.png",
+      "image_sha256": "c0434b9295aeac686ca5e3619c46e0ce0ed0f2d44bd63f5ddf9df66fcd295642",
+      "record": "modules/fidelity-r27/sprites/records/re7-molded-crawler.json",
+      "record_sha256": "f7972d4e82e273d7fba3d038d9402f2334066902fde7be913293a9d56d8754b8",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re7-molded-fat",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-006/re7-molded-fat.json",
+        "sha256": "17cf4a991363a69ec00baa825e9598c20f67bb3b045fafba1fcb8977ac1bdfac",
+        "entryUid": "re7-molded-fat"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re7-molded-fat/idle-right.png",
+      "image_sha256": "47a797d5ce5834059029527da74a3ec76bd7d99960091b15baba16eb5ef6b077",
+      "record": "modules/fidelity-r27/sprites/records/re7-molded-fat.json",
+      "record_sha256": "8aae443af0ec88f254ae2e5dbd269f27b01e727c18419a44aa40a5da3e5a88c1",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re7-molded-fat.json",
+        "sha256": "3a7d023e6cfec547309a0f70b229edbc1a415f4cbd1bb8552e831553ca36f100"
+      }
+    },
+    {
+      "uid": "re7-spider",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-013/re7-spider.json",
+        "sha256": "c6ed1a026564da9a15235a187c59f37bd69f5aa2761c423e407ce283433510d8",
+        "entryUid": "re7-spider"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/re7-spider/idle-right.png",
+      "image_sha256": "ffbc7334176516fc79865fdad2c866bbb44805e5c043bad27819806d86d50d76",
+      "record": "modules/fidelity-r27/sprites/records/re7-spider.json",
+      "record_sha256": "a7db8efd5823b0105290e40839cf3fe3bad0a3b3b8b5cbb6bbb8fb237fc89d41",
+      "full_body_reviewed": false,
+      "observed_facing": "unknown",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "recv-albinoid-adult",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW.json",
+        "sha256": "5405065b305931420d589c1deee266108a7274bff0959f83693419234849d857",
+        "entryUid": "recv-albinoid-adult"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/recv-albinoid-adult/idle-right.png",
+      "image_sha256": "124597eaceab6d8d5ca84a1216cc914db9af93f5f8ff23995d9512a615d87fb8",
+      "record": "modules/fidelity-r27/sprites/records/recv-albinoid-adult.json",
+      "record_sha256": "6d6d659a77b177df2431a53bbaf51995637e118504a77f555126a6677522dc0b",
+      "full_body_reviewed": true,
+      "observed_facing": "left",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/recv-albinoid-adult.json",
+        "sha256": "d7d95bacc2e0a8a7297458374fefce7651ec6dec833b54cd0d2f0df50a83b183"
+      }
+    },
+    {
+      "uid": "recv-alexia-ashford-third-form",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW.json",
+        "sha256": "5405065b305931420d589c1deee266108a7274bff0959f83693419234849d857",
+        "entryUid": "recv-alexia-ashford-third-form"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/recv-alexia-ashford-third-form/idle-right.png",
+      "image_sha256": "2df401b8828e780646160b04098a8af4293ad8c165e92d2ca5c0398ca126a151",
+      "record": "modules/fidelity-r27/sprites/records/recv-alexia-ashford-third-form.json",
+      "record_sha256": "2af9eff3ab40690574c319efbac9360204c18084592f11ed1df5076df9db4038",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/recv-alexia-ashford-third-form.json",
+        "sha256": "7342a1cd371d834f3777cc8672c1bf5832664619422768b71e236a8b78c7fd61"
+      }
+    },
+    {
+      "uid": "recv-ant",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-009/recv-ant.json",
+        "sha256": "a9e29f2c11d14f9933db9b06466330701c6c333c4b7786282183db89c45e996a",
+        "entryUid": "recv-ant"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/recv-ant/idle-right.png",
+      "image_sha256": "60af4204e55bcccecfa93b174d2417ab76fd92dd2992ae40148ae456369fdc64",
+      "record": "modules/fidelity-r27/sprites/records/recv-ant.json",
+      "record_sha256": "d8974f52d640d3d0b02567b89ad7b98d86fd36a85b80dd8519531abfbfc635cb",
+      "full_body_reviewed": false,
+      "observed_facing": "left",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "recv-bandersnatch",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW.json",
+        "sha256": "5405065b305931420d589c1deee266108a7274bff0959f83693419234849d857",
+        "entryUid": "recv-bandersnatch"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/recv-bandersnatch/idle-right.png",
+      "image_sha256": "31b46e38de40174744d130428c7f6c38ae1a45c645b4fe95f91beedc17eeb8b5",
+      "record": "modules/fidelity-r27/sprites/records/recv-bandersnatch.json",
+      "record_sha256": "e385a4b4c6b35cf1af73641486b50471d63fa3690821ae19747172cddfd70543",
+      "full_body_reviewed": true,
+      "observed_facing": "right",
+      "observed_pose_kind": "neutral-base",
+      "available_states": [
+        "idle"
+      ],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/recv-bandersnatch.json",
+        "sha256": "5742f81528bc7f433211460a2ddd851d831f6c42d08431e48efcac5110c3ad08"
+      }
+    },
+    {
+      "uid": "recv-bat",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-009/recv-bat.json",
+        "sha256": "2dfb40973597bce293bd5df921c61bf5af8f5fd75644068aa2cdfd89c5bc8f42",
+        "entryUid": "recv-bat"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/recv-bat/idle-right.png",
+      "image_sha256": "8952f350e0df4ebcd1627a64c1d40776cddd38dd4e8aee3ea4b774d7e2414daa",
+      "record": "modules/fidelity-r27/sprites/records/recv-bat.json",
+      "record_sha256": "0c9893bbb6b9ef9b56f8cded37a241be0b88556c2e758ddc7d4a3aaa794acc14",
+      "full_body_reviewed": true,
+      "observed_facing": "left",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "source_completeness_evidence": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-009/recv-bat-source-body-observation.json",
+        "sha256": "9384c3e4ba61b512d3f4c2c38b512f14bc1fe77bd3247f2e57f98913df9f8e66",
+        "referencePath": "assets/catalog/recv-bat.png",
+        "referenceSha256": "3dc32e4cb52139ca544ebb064c832dbaa69b3417aeee17125f81b05740cabe6f",
+        "imageSha256": "8952f350e0df4ebcd1627a64c1d40776cddd38dd4e8aee3ea4b774d7e2414daa",
+        "observedFacing": "left",
+        "scope": "Whole body visually observed in this source image and this generated pose only; no opposite view, geometry or original-game pose certification."
+      },
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/recv-bat.json",
+        "sha256": "8ece9dbdc5b9ec58370ac00d5ed07ea3ee22765aab771400d86b2a2b390d992f"
+      }
+    },
+    {
+      "uid": "recv-black-widow",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-009/recv-black-widow.json",
+        "sha256": "c0a95a9057147a73f021327be0bb7dc3a679a4bd91694c0db16cd94123eae54e",
+        "entryUid": "recv-black-widow"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/recv-black-widow/idle-right.png",
+      "image_sha256": "7f94e9d90bbe975abd3d6166360598a4f770736883a8b50a8353de30d3ea058e",
+      "record": "modules/fidelity-r27/sprites/records/recv-black-widow.json",
+      "record_sha256": "e92ba91dcab3876fff1708ccf2e028cbdf29c44c8628734598a8a8554837914f",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "recv-giant-black-widow",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-009/recv-giant-black-widow.json",
+        "sha256": "941d38713adfd759dad927d4108d013c30b91d4bb877b355e5f03eab5953c762",
+        "entryUid": "recv-giant-black-widow"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/recv-giant-black-widow/idle-right.png",
+      "image_sha256": "7cccc9e1583bd954d24c568e51ce8bb1e6b6ec1cd668b5ce127130cf9d027da9",
+      "record": "modules/fidelity-r27/sprites/records/recv-giant-black-widow.json",
+      "record_sha256": "c38806e0bc8d6354e572176fe67e6195713285797f7af1c721b6c40398aeddcb",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "recv-hunter",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-009/recv-hunter.json",
+        "sha256": "b94b486a804b7067eadb4ff788695d7fd05f948a9e5439d99f7df78c0162b5cc",
+        "entryUid": "recv-hunter"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/recv-hunter/idle-right.png",
+      "image_sha256": "bab035a0a3ca84b63ed80cf24a2be798aaa3b0fa4afd605824957c40bf20e62d",
+      "record": "modules/fidelity-r27/sprites/records/recv-hunter.json",
+      "record_sha256": "34cc4557971536acc6122c4be92b40818ce435ab2805c79c4dc3ff192f698b3e",
+      "full_body_reviewed": false,
+      "observed_facing": "left",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "recv-moth",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-009/recv-moth.json",
+        "sha256": "3d581d3b6bfeb0d9d0db0585139f3c2dc60bd9e2b1de658fcc6125cb8854216b",
+        "entryUid": "recv-moth"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/recv-moth/idle-right.png",
+      "image_sha256": "24727331cf3d293332ce0247d4bc1b1aa5ceb0c7dc57ebbf6f133a06f8d5d14a",
+      "record": "modules/fidelity-r27/sprites/records/recv-moth.json",
+      "record_sha256": "be7ef2a862c05ee421a4f6a3e355668bcbed65efc46c8020386e563a0a57d2ea",
+      "full_body_reviewed": false,
+      "observed_facing": "left",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "recv-nosferatu",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-009/recv-nosferatu.json",
+        "sha256": "84fb9648b912a85c07b84facef1a681bf283605ec8da06959e7c279bd3bb52e7",
+        "entryUid": "recv-nosferatu"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/recv-nosferatu/idle-right.png",
+      "image_sha256": "07699832e41c27a37768f27a7cf4c511e7bb94877b787f407fe7d695913fbe67",
+      "record": "modules/fidelity-r27/sprites/records/recv-nosferatu.json",
+      "record_sha256": "0da718652d9230abc918f708f156d53974e1c89bd70ccda7371b665d204724f7",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "recv-sweeper",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-009/recv-sweeper.json",
+        "sha256": "1aad1c39ccd9fa8d0474b64feb2a5717e80f0b890a4915eb6f05bf5cd8ddc618",
+        "entryUid": "recv-sweeper"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/recv-sweeper/idle-right.png",
+      "image_sha256": "16d7bb1429f5de824ef2227a572b812b0493f8412a59939948228ebba20e2a40",
+      "record": "modules/fidelity-r27/sprites/records/recv-sweeper.json",
+      "record_sha256": "79b5ab18174b73469a4f774792251c2ee0164d8f7fd99e025b9d15d9c0f59fad",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "recv-tentacle",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-006/recv-tentacle.json",
+        "sha256": "864130e2658dac4dff594b7e1ac327c8740073f14f757504da2137b503864f7d",
+        "entryUid": "recv-tentacle"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/recv-tentacle/idle-right.png",
+      "image_sha256": "a94528b2cd5d7ca3be1022046c6e255ad27ca47d942480495a8e99d4bcfbe980",
+      "record": "modules/fidelity-r27/sprites/records/recv-tentacle.json",
+      "record_sha256": "f54ee39700cb35b9ee61124384b0d1a44362760df53924d9f3b8e593dba149dc",
+      "full_body_reviewed": false,
+      "observed_facing": "right",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "recv-zombie-dog",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-003/recv-zombie-dog.json",
+        "sha256": "a320c5c3b97b403550056160f3da00175793da9229d2e96bf5537e17e682bdc3",
+        "entryUid": "recv-zombie-dog"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/recv-zombie-dog/idle-right.png",
+      "image_sha256": "aab6a9ed3bb63c9ff175309e6d2a3c05ee14db01d9896939e4dbf13056e1ee73",
+      "record": "modules/fidelity-r27/sprites/records/recv-zombie-dog.json",
+      "record_sha256": "0796dbfc413d0b068dff1139bbe70948636c224e906b232288506cebfafd4d25",
+      "full_body_reviewed": false,
+      "observed_facing": "left",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "reoutbreak-zombie",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-012/reoutbreak-zombie.json",
+        "sha256": "7ed7335a59d69d565d37b404fa671357877f1c304374472fb0c3bc38f72b3f1d",
+        "entryUid": "reoutbreak-zombie"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/reoutbreak-zombie/idle-right.png",
+      "image_sha256": "d55bac765fa677008e485d0b56060f5adbf14778337758431cf99ce8094731ed",
+      "record": "modules/fidelity-r27/sprites/records/reoutbreak-zombie.json",
+      "record_sha256": "944205edbcd69921d0a666c048a1f8094f022c5cdc004725cdb7d075389c853a",
+      "full_body_reviewed": true,
+      "observed_facing": "right",
+      "observed_pose_kind": "source-bind-pose",
+      "available_states": []
+    },
+    {
+      "uid": "rerev-draghignazzo",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-007/rerev-draghignazzo.json",
+        "sha256": "c8b62df637c3a1aa38bce852991b4db689a5d6783adfb56b1f27b9076822df86",
+        "entryUid": "rerev-draghignazzo"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/rerev-draghignazzo/idle-right.png",
+      "image_sha256": "63b5112f8adb0d5b93a471903f3c9d1523319c0cf39a8ee4fe8d3fbacbfd1192",
+      "record": "modules/fidelity-r27/sprites/records/rerev-draghignazzo.json",
+      "record_sha256": "bf57fc52f89ae6d7c5662b3e174fc736939ffc7b46eec7002ed29fac2440a93c",
+      "full_body_reviewed": false,
+      "observed_facing": "left",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "rerev-farfarello",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-007/rerev-farfarello.json",
+        "sha256": "535265d7746e46c92c003f9b06e438665117f8e0c51790058d20c43bee4b3cee",
+        "entryUid": "rerev-farfarello"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/rerev-farfarello/idle-right.png",
+      "image_sha256": "4bf6fbb4b0b70b724bb3e5b0f143baaebac32411d2bc223a0efaa8e2778a4ca6",
+      "record": "modules/fidelity-r27/sprites/records/rerev-farfarello.json",
+      "record_sha256": "3b4d5e6a3a095815e1541e84f8b8b53d20c5e174a55526fe7d507ada4a057943",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/rerev-farfarello.json",
+        "sha256": "a19084051e829b760b3f16bacec8f6ed87820af1d2ab63244ae2c778725e4f70"
+      }
+    },
+    {
+      "uid": "rerev-globster",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-007/rerev-globster.json",
+        "sha256": "1fc583f41e7afd6f8f2cefa0e2e6022fe67531889507127550f9906eba060ace",
+        "entryUid": "rerev-globster"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/rerev-globster/idle-right.png",
+      "image_sha256": "13821fd1b260cf3e7613d1a083c535c116d1e87819e6516c9ece903369af6069",
+      "record": "modules/fidelity-r27/sprites/records/rerev-globster.json",
+      "record_sha256": "ced24480e5a66598628cf251d00857bed1cd5db7bde467bdcdf2e55f0bde66e3",
+      "full_body_reviewed": true,
+      "observed_facing": "left",
+      "observed_pose_kind": "neutral-base",
+      "available_states": [
+        "idle"
+      ],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/rerev-globster.json",
+        "sha256": "1db3848e0003d91e5452362ea93b0f5261f3f914a3e9cfeb88ca89147948ae29"
+      }
+    },
+    {
+      "uid": "rerev-rachael-ooze",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-007/rerev-rachael-ooze.json",
+        "sha256": "783f92929431bde6e4d7edc555d5306228780e2e01189a720f45af7ffc033c14",
+        "entryUid": "rerev-rachael-ooze"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/rerev-rachael-ooze/idle-right.png",
+      "image_sha256": "30f2db76049fbdd3a09be5510b3948edcb5b61ad75a0463e44383cce7b0ce395",
+      "record": "modules/fidelity-r27/sprites/records/rerev-rachael-ooze.json",
+      "record_sha256": "728aec27b71e72fe43a956c06f412d366eba144a3781927817f2bda9e6f3756a",
+      "full_body_reviewed": true,
+      "observed_facing": "left",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/rerev-rachael-ooze.json",
+        "sha256": "d1ec9501bd9e27adcced974ea1f3fa5402a1514d9e71d4397f6c28bcd8ed5bf7"
+      }
+    },
+    {
+      "uid": "rerev-sea-creeper",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-008/rerev-sea-creeper.json",
+        "sha256": "68f16339a9f447d044192f49abca4de467d8987625de9d9767078c4c7e4e1d27",
+        "entryUid": "rerev-sea-creeper"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/rerev-sea-creeper/idle-right.png",
+      "image_sha256": "8a84d923136ce832215087e4ccab3e38b15bd8b258026f553ba6eb3e3bd1d2b9",
+      "record": "modules/fidelity-r27/sprites/records/rerev-sea-creeper.json",
+      "record_sha256": "fe7d2da9c536c7834adceff02bac6237ae66827e8807c7e25353f848cb191d79",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/rerev-sea-creeper.json",
+        "sha256": "7e2c1dd076dab3a916908c6f874caa3431823d539b8abba858ce712e76055791"
+      }
+    },
+    {
+      "uid": "rerev2-glasp",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-005/rerev2-glasp.json",
+        "sha256": "2dbe33f2bdb59cf665138612efad2c6a5e6f6f3633610db197c0af57b6844d92",
+        "entryUid": "rerev2-glasp"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/rerev2-glasp/idle-right.png",
+      "image_sha256": "15d28f5a1dfc665b05e046e3282e588fbaa07f0875b65b4e2c2fdd52c346358c",
+      "record": "modules/fidelity-r27/sprites/records/rerev2-glasp.json",
+      "record_sha256": "1146ab44b39e6c00bd4c81bb60809f93496c9188869112daceb58f685d3b233e",
+      "full_body_reviewed": true,
+      "observed_facing": "left",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/rerev2-glasp.json",
+        "sha256": "eb130e0241d9cce45e98467e3a02ed4c5dab506320920145ad17d755b3e50e48"
+      }
+    },
+    {
+      "uid": "rerev2-ironhead",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-005/rerev2-ironhead.json",
+        "sha256": "6ffb29b05f512c4755ff110ef343cef3e07f734e9d382f00b96d43c19adde098",
+        "entryUid": "rerev2-ironhead"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/rerev2-ironhead/idle-right.png",
+      "image_sha256": "4aa5dd0b7b272287e6c27a3d9c666930b9a972e38d6253e382b3b4aaed11bcb3",
+      "record": "modules/fidelity-r27/sprites/records/rerev2-ironhead.json",
+      "record_sha256": "bd54f815001bec2fbdc50642540e16558ce39dc9cb968faa5f671a619f425f59",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/rerev2-ironhead.json",
+        "sha256": "4217017dea0167768da2c57b7e58eb4a2e6f5f22cae3926018ac37ff69f410de"
+      }
+    },
+    {
+      "uid": "revillage-alcina-dimitrescu",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-014/revillage-alcina-dimitrescu.json",
+        "sha256": "0bf63d834d2d6783179306250c09de4b6b310f63b0913be535cb6e43dcc7bd37",
+        "entryUid": "revillage-alcina-dimitrescu"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/revillage-alcina-dimitrescu/idle-right.png",
+      "image_sha256": "77c7d58071518b2bce8227594ac46d549a559d21156c8cefbb18a9614f9abf52",
+      "record": "modules/fidelity-r27/sprites/records/revillage-alcina-dimitrescu.json",
+      "record_sha256": "9d546abaf27c82d5911fded3d88b234064f9308f400361923defe4ee3ecfb72d",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "revillage-baby",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-013/revillage-baby.json",
+        "sha256": "6f3ec413d31770e7915904e68a6485dcc488edf4b7f2b1199574a51c48064ee2",
+        "entryUid": "revillage-baby"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/revillage-baby/idle-right.png",
+      "image_sha256": "46a2485cf8d360542463d7e2e7481d3571a51792b85788e3477668d90a1fae94",
+      "record": "modules/fidelity-r27/sprites/records/revillage-baby.json",
+      "record_sha256": "36580a647c816b34afc7c325163d0717149ea66cd7cb5810824f8fb3260fc818",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "revillage-cassandra-dimitrescu",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-013/revillage-cassandra-dimitrescu.json",
+        "sha256": "03b8cc3bf38d24106785cdd0a2be6d15b7a762c22462fdbcae32e5a37617606b",
+        "entryUid": "revillage-cassandra-dimitrescu"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/revillage-cassandra-dimitrescu/idle-right.png",
+      "image_sha256": "a34e180ac4441f189eacbac10654310c5216b89c54af8d51e1bfe5b610bdea00",
+      "record": "modules/fidelity-r27/sprites/records/revillage-cassandra-dimitrescu.json",
+      "record_sha256": "eec1fbf5b5b96f14b2c0e4f7271337ce7f6be81ecb3f30a7f673a894f76dd2e0",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "revillage-daniela-dimitrescu",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-013/revillage-daniela-dimitrescu.json",
+        "sha256": "763eaacc2c49f2419929fcd8b7d27e7c73ce525287fca48fd9ad411a4a885272",
+        "entryUid": "revillage-daniela-dimitrescu"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/revillage-daniela-dimitrescu/idle-right.png",
+      "image_sha256": "a62bd55e16847a36afdddff8d5995edb71a6f4f30cff0f494c27bf954279cf73",
+      "record": "modules/fidelity-r27/sprites/records/revillage-daniela-dimitrescu.json",
+      "record_sha256": "440c45c3ef7d6bd84696691a0cb16baa055c94179133569089b58950eb2a0cd6",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "revillage-donna-angie",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-015/revillage-donna-angie.json",
+        "sha256": "caddddb9c1936fcb20b4c1345cd9635b870bef77510f8bcd05ac4c115b4cbf19",
+        "entryUid": "revillage-donna-angie"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/revillage-donna-angie/idle-right.png",
+      "image_sha256": "09a625b921c1a66d07a4a4b693a74561f0124aba9eb6f235b1ff4da5b13a44f8",
+      "record": "modules/fidelity-r27/sprites/records/revillage-donna-angie.json",
+      "record_sha256": "654aaf36e7e3f71f162c49be5d2441c124f8b3088e0ae9c09098d8912e4902dc",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": []
+    },
+    {
+      "uid": "revillage-hauler",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-007/revillage-hauler.json",
+        "sha256": "d7f85d70da98d16c65851a62a3383a1a21958e258b45f647e1ac88978f018d9c",
+        "entryUid": "revillage-hauler"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/revillage-hauler/idle-right.png",
+      "image_sha256": "14ac39ea43eee5b01ffdddcb6feb3cdbe04bb9fb026fe9a5a4f61f89ae6504ca",
+      "record": "modules/fidelity-r27/sprites/records/revillage-hauler.json",
+      "record_sha256": "5b0b88724933810e278c58302a1fa9a9d0e2391ee0bb9b39b80f6188823e840f",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/revillage-hauler.json",
+        "sha256": "7cce37fb4f775217ad0c57f4e82b8b76dfd3b650cf5fa157445f6d1bdc341f38"
+      }
+    },
+    {
+      "uid": "revillage-karl-heisenberg",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-015/revillage-karl-heisenberg.json",
+        "sha256": "5ef14992e1b9ac684b85874cc5a0bb064d43898b7c6a95762ca33a6748647127",
+        "entryUid": "revillage-karl-heisenberg"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/revillage-karl-heisenberg/idle-right.png",
+      "image_sha256": "7ece5877c5e9c8267d5067570485321fac5bafc3f996ba4a2a4c6c2549f19ec3",
+      "record": "modules/fidelity-r27/sprites/records/revillage-karl-heisenberg.json",
+      "record_sha256": "6687545b520e83a2a71e0674cb00f27b35698fad5cd56109527fdbf76f730cf7",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": []
+    },
+    {
+      "uid": "revillage-lycan-large",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-007/revillage-lycan-large.json",
+        "sha256": "1f3084927bc1002d6ce0aa3b8bb42a234145df016513a8c1cc9eb6870b38d643",
+        "entryUid": "revillage-lycan-large"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/revillage-lycan-large/idle-right.png",
+      "image_sha256": "cbb004b3f1f8f41c20c4efe38578762db8669b391218f81fedbd30a954ae463c",
+      "record": "modules/fidelity-r27/sprites/records/revillage-lycan-large.json",
+      "record_sha256": "10fd7e8d56ee96d2de90a33dc0c076a32873fc6396d34d0fbd9d67cd727e5547",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/revillage-lycan-large.json",
+        "sha256": "3a7c6da67cdcf5947b03a85bf94fe42b2dd24f59876e1be551544cea58b7adb7"
+      }
+    },
+    {
+      "uid": "revillage-moroaica",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-008/revillage-moroaica.json",
+        "sha256": "da7dcfb4e818b2860b1ab8a1382ac0a8a71906066a4462a6573917a6592f2a02",
+        "entryUid": "revillage-moroaica"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/revillage-moroaica/idle-right.png",
+      "image_sha256": "d10c07d28b46b03775eec649522e031bec6d406e68d77e95f5b9f606e833ce46",
+      "record": "modules/fidelity-r27/sprites/records/revillage-moroaica.json",
+      "record_sha256": "35fab67bf0548e99fd5799dc10e7f59e601f3d7aa86d64eff6416395cde52a9b",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/revillage-moroaica.json",
+        "sha256": "5c2d1577cf59d1d69744a9e192d904fdee011c3f3e9e9d69bbe441e84ae86d1b"
+      }
+    },
+    {
+      "uid": "revillage-mother-miranda",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-016/revillage-mother-miranda.json",
+        "sha256": "df8f870570f0c0b54c1062ffff764b1ba54808ed697dfbf9fed85474d74f2c6a",
+        "entryUid": "revillage-mother-miranda"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/revillage-mother-miranda/idle-right.png",
+      "image_sha256": "a01e90e735a2a74eda8d430a640f273c70486b66a0d8f01e83985c72dfe3778e",
+      "record": "modules/fidelity-r27/sprites/records/revillage-mother-miranda.json",
+      "record_sha256": "569b4d435e96ee4bbab2b9a2742e7012d3285a063913348311427fb35ad96f6f",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "revillage-mutated-dimitrescu",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-008/revillage-mutated-dimitrescu.json",
+        "sha256": "850afa2818c391e46d5ffb3e27d4603728fef85c0cc29bd30e639e080d609be2",
+        "entryUid": "revillage-mutated-dimitrescu"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/revillage-mutated-dimitrescu/idle-right.png",
+      "image_sha256": "8e40241d0d9e433b5fc5d9ec0ce6b00ec36fb60b767976f413727c935b19ff6c",
+      "record": "modules/fidelity-r27/sprites/records/revillage-mutated-dimitrescu.json",
+      "record_sha256": "a83fb4cae29bb54b5021bfb1ceed24bfb96dfa6df97ed23d35d807725e3852cb",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "revillage-mutated-heisenberg",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-008/revillage-mutated-heisenberg.json",
+        "sha256": "b81250b08e4387c106ea8c11f407cfa155869996581dd5818454e98ed409fa0e",
+        "entryUid": "revillage-mutated-heisenberg"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/revillage-mutated-heisenberg/idle-right.png",
+      "image_sha256": "0848e9e2ca99696669a9af2f22a97933896cb276bf22671bec38da0782ad20db",
+      "record": "modules/fidelity-r27/sprites/records/revillage-mutated-heisenberg.json",
+      "record_sha256": "90d83c20d8262980ada3bfddda0af648fd6288c9c3a8eddfdff54a8964205e5b",
+      "full_body_reviewed": false,
+      "observed_facing": "unknown",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "revillage-mutated-miranda",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-007/revillage-mutated-miranda.json",
+        "sha256": "a20a60df28c630cb5a1c21a3effad2b948bdced0fc4a504fc1e03702bdd18e69",
+        "entryUid": "revillage-mutated-miranda"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/revillage-mutated-miranda/idle-right.png",
+      "image_sha256": "0a569181928e8c1d9dde93634d12ad49d2a37145317144af524b189fbcc40c93",
+      "record": "modules/fidelity-r27/sprites/records/revillage-mutated-miranda.json",
+      "record_sha256": "d7d276354ee77a31df53af361be6d6fd6b84dafcd3c24ee9edd068a1ccb2999c",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "revillage-mutated-moreau",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-007/revillage-mutated-moreau.json",
+        "sha256": "b790d53f114c173d610a8a4204f144ee302f6f3f46940fcb33f04b85c6c7497d",
+        "entryUid": "revillage-mutated-moreau"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/revillage-mutated-moreau/idle-right.png",
+      "image_sha256": "d8ee59e05a292c2fdbe9d6fba502da36680ce03f0043d4acd7932b826530dfd0",
+      "record": "modules/fidelity-r27/sprites/records/revillage-mutated-moreau.json",
+      "record_sha256": "5e9f113ad5658ce803b95ce17501de30a365a94178ad9519311537ab8aaf2729",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "revillage-salvatore-moreau",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-015/revillage-salvatore-moreau.json",
+        "sha256": "b2a3d9403027578e81e7eea794873dbae76ea24f17857a782c0d377b4795a090",
+        "entryUid": "revillage-salvatore-moreau"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/revillage-salvatore-moreau/idle-right.png",
+      "image_sha256": "c89c4db96b990309ee2bc696c1fcfa942301821190df01975854712b6887393e",
+      "record": "modules/fidelity-r27/sprites/records/revillage-salvatore-moreau.json",
+      "record_sha256": "2ef691551806daa3cca3193221db7dac7f6456210fd6235075fc14ac68db4ef5",
+      "full_body_reviewed": true,
+      "observed_facing": "left",
+      "observed_pose_kind": "neutral-base",
+      "available_states": [
+        "idle"
+      ]
+    },
+    {
+      "uid": "revillage-salvatore-moreau-exposed",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-015/revillage-salvatore-moreau-exposed.json",
+        "sha256": "f36335b67a3ef7d539db64596179e71a99534b9cf03ff08ff1960bf2728d3bd3",
+        "entryUid": "revillage-salvatore-moreau-exposed"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/revillage-salvatore-moreau-exposed/idle-right.png",
+      "image_sha256": "f611efd91d63eca064c6d2ff0a511ef313e4da2341093be8ffee49a9c73c6213",
+      "record": "modules/fidelity-r27/sprites/records/revillage-salvatore-moreau-exposed.json",
+      "record_sha256": "c125a559ebfcda7bae8671b31d26c35ffb4030d8a6900a3c0d8efa9b7f439b24",
+      "full_body_reviewed": true,
+      "observed_facing": "left",
+      "observed_pose_kind": "neutral-base",
+      "available_states": [
+        "idle"
+      ]
+    },
+    {
+      "uid": "revillage-samca",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-008/revillage-samca.json",
+        "sha256": "8d3522574bf4b9a1f4f2eb23d7358cd93a3e6f0b009c4eedb85a763d241da5fe",
+        "entryUid": "revillage-samca"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/revillage-samca/idle-right.png",
+      "image_sha256": "991da25dcc75a3a5a37ef534e5ca74007eb3fd8997110315fa41801f6d3c41bd",
+      "record": "modules/fidelity-r27/sprites/records/revillage-samca.json",
+      "record_sha256": "23336ccdcca6cf4fa1ddc432c5be3e077eff5a3c0b0fe766c5f0f88e7d7c1ec0",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "revillage-soldat-eins",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-008/revillage-soldat-eins.json",
+        "sha256": "84fcc23d134ce5c7a1f0febdb01c36c800eff767e1b3402f7220780783df183e",
+        "entryUid": "revillage-soldat-eins"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/revillage-soldat-eins/idle-right.png",
+      "image_sha256": "da65dfdb8606242b51d4d64231a556b06d8b98816a6e378d83d2421ad7cb978b",
+      "record": "modules/fidelity-r27/sprites/records/revillage-soldat-eins.json",
+      "record_sha256": "0a997930b2b6a4fcad8707667f9439f4473bc90a29e13ce3cd9051eaa5f17884",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "revillage-soldat-jet",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-007/revillage-soldat-jet.json",
+        "sha256": "fd66360a36e0147749e110ed04a5ff268e79326762b5390025e457ff5be55e6f",
+        "entryUid": "revillage-soldat-jet"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/revillage-soldat-jet/idle-right.png",
+      "image_sha256": "f2dbdc2336e719cc6eede752a0407785b907a790672123512be2963022d73426",
+      "record": "modules/fidelity-r27/sprites/records/revillage-soldat-jet.json",
+      "record_sha256": "cfd3234e209b631b5853f170915d6b89d843dedcf033afc32814a11f568c24bb",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/revillage-soldat-jet.json",
+        "sha256": "aae7ce4447b981724a081b969dd78325a502556fcc99f241921e4e252e4d2100"
+      }
+    },
+    {
+      "uid": "revillage-soldat-panzer",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-007/revillage-soldat-panzer.json",
+        "sha256": "754ef123b1fcd5d7e7a55747c14142f563ea2eaba44717f79712a836b2d2866a",
+        "entryUid": "revillage-soldat-panzer"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/revillage-soldat-panzer/idle-right.png",
+      "image_sha256": "a7f84bc78a3c57ca2014fc21c34d08f9f3dafe02ea553e7bc524f8d2aa1dc13f",
+      "record": "modules/fidelity-r27/sprites/records/revillage-soldat-panzer.json",
+      "record_sha256": "db86787db49259ec43ecbe55e32b473524624b386060a6758dcdf9f1c41891e9",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "revillage-soldat-zwei",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-008/revillage-soldat-zwei.json",
+        "sha256": "19113d0a35d5efd2a7b702e0d2ecdfdc08ab67036c2b816114583a9f29ec70c0",
+        "entryUid": "revillage-soldat-zwei"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/revillage-soldat-zwei/idle-right.png",
+      "image_sha256": "7b7e2f759c3a4583b53b78210b6ef6838fdb05da9e2b90a58d5c5430af438667",
+      "record": "modules/fidelity-r27/sprites/records/revillage-soldat-zwei.json",
+      "record_sha256": "5b1ad100d566a2c60a0b32efa7765e8db79d986b1de8d9b3a542b878fdf7e1d2",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/revillage-soldat-zwei.json",
+        "sha256": "ebaa8bfbed52865103d40acffa522557d8234185d2f140b2f986a13d7cf6a007"
+      }
+    },
+    {
+      "uid": "revillage-sturm",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-007/revillage-sturm.json",
+        "sha256": "9c49aba5a30f3f0be9ddcf5e8e5ae9eeaea30d139ab6f55084eef0c48dbc0a9b",
+        "entryUid": "revillage-sturm"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/revillage-sturm/idle-right.png",
+      "image_sha256": "737123e6169b981cc4b9190c22eacf8322e78417f67f73da9085edb96f92b358",
+      "record": "modules/fidelity-r27/sprites/records/revillage-sturm.json",
+      "record_sha256": "0a1cd8858568f3c8f0389bf29a93023b366b7ff9f327ce7ed0956b151898c2d9",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/revillage-sturm.json",
+        "sha256": "ccd0d587179bbf12776dad0e76727cb69b24394e8891c70131f0240c8a2efd23"
+      }
+    },
+    {
+      "uid": "revillage-urias",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-008/revillage-urias.json",
+        "sha256": "3c3d08131cde66882d217613f25f0639b4db8885f104e53b7c8f1ff8fe1bf43e",
+        "entryUid": "revillage-urias"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/revillage-urias/idle-right.png",
+      "image_sha256": "008840980c0599235a6360c14e762b344355ccd9cf8137c7b8aede970a7dcea9",
+      "record": "modules/fidelity-r27/sprites/records/revillage-urias.json",
+      "record_sha256": "8988722e0494b08410756c95d30c591237574664b639c9d7adc936f96e09a2f7",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "revillage-urias-strajer",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-007/revillage-urias-strajer.json",
+        "sha256": "14ce4a3b87aa7fc7d10af33bac893420abde5ba9978213138c76667ea9be29c5",
+        "entryUid": "revillage-urias-strajer"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/revillage-urias-strajer/idle-right.png",
+      "image_sha256": "8f2f627100fa4a27b56777562eb9697f89d9294902fddc240aa8fc435d4584ee",
+      "record": "modules/fidelity-r27/sprites/records/revillage-urias-strajer.json",
+      "record_sha256": "c616c7c5571846886f448193585a4b9372c167f1e93bb71acd4b6d3bc6d55529",
+      "full_body_reviewed": false,
+      "observed_facing": "front",
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "revillage-varcolac",
+      "review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-008/revillage-varcolac.json",
+        "sha256": "14013fc4fecad0f222bb6c91fef2aba3f7beb58a49b6fd9ab89c305b5384b1c5",
+        "entryUid": "revillage-varcolac"
+      },
+      "image": "modules/fidelity-r27/sprites/generated/revillage-varcolac/idle-right.png",
+      "image_sha256": "6d53c792c2a6efef20cc3a2b21c0cd342c9d283accf688e87b4986df2c1cdc7a",
+      "record": "modules/fidelity-r27/sprites/records/revillage-varcolac.json",
+      "record_sha256": "9fe97ed8e722b488f37e8acd9d05d6300a4d7534fd967d5a3a6ad8b0473643b6",
+      "full_body_reviewed": true,
+      "observed_facing": "front",
+      "observed_pose_kind": "source-presentation",
+      "available_states": [],
+      "pose_review": {
+        "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/revillage-varcolac.json",
+        "sha256": "286deb61e20a05437f13a44e1840513ae7b1efb92dafe5bf130cb1064cdc9465"
+      }
+    }
+  ],
+  "blocked": [
+    {
+      "uid": "re2r-g-first-form",
+      "path": "modules/fidelity-r27/sprites/failures/re2r-g-first-form.json",
+      "sha256": "ba8cd13f2738f2683e2c32a2c9dad0d00e0f2cdd99b2660c86a3273c4686c131"
+    },
+    {
+      "uid": "re2r-zombie",
+      "path": "modules/fidelity-r27/sprites/failures/re2r-zombie.json",
+      "sha256": "62e9c38b51c0616e98b04a062b795049af2864ffac4a78014ee84fca29e55aa2"
+    },
+    {
+      "uid": "re3r-zombie",
+      "path": "modules/fidelity-r27/sprites/failures/re3r-zombie.json",
+      "sha256": "041f48296c305e8d46192efbc8c037d3d3b9c8c2a91e931cf154ffbd0736a170"
+    },
+    {
+      "uid": "re4r-bitores-mendez-second-mutation",
+      "path": "modules/fidelity-r27/sprites/failures/re4r-bitores-mendez-second-mutation.json",
+      "sha256": "d06bc562a0ccb015f5e3f1406d417dfee34bd50118606b88054fc56542341a56"
+    },
+    {
+      "uid": "re5-town-majini",
+      "path": "modules/fidelity-r27/sprites/failures/re5-town-majini.json",
+      "sha256": "19cea05d92ca34bb047b3c09f58a8286241452fdc873a825a2e3acb9ba9b69f2"
+    },
+    {
+      "uid": "re6-javo",
+      "path": "modules/fidelity-r27/sprites/failures/re6-javo.json",
+      "sha256": "00b4acfde32d023809ec346ea19dd4d969ffa92d0febd563696c091ed75ef92e"
+    },
+    {
+      "uid": "re7-jack-baker-scissor",
+      "path": "modules/fidelity-r27/sprites/failures/re7-jack-baker-scissor.json",
+      "sha256": "240665b6019755a200dc370db7408b76f15b56c2cd15bd35e9df6798bd844b96"
+    },
+    {
+      "uid": "re7-marguerite-baker-mutated",
+      "path": "modules/fidelity-r27/sprites/failures/re7-marguerite-baker-mutated.json",
+      "sha256": "49985ea17329b68169ef36eae69972b7893ad4ad3f131e357af6c8f7cb5f0f76"
+    },
+    {
+      "uid": "recv-alexia",
+      "path": "modules/fidelity-r27/sprites/failures/recv-alexia.json",
+      "sha256": "de11cbdc3b32abf0e6d437bca264cfa3fc80631416376abe83c5d67c6ff3aa93"
+    },
+    {
+      "uid": "recv-tyrant",
+      "path": "modules/fidelity-r27/sprites/failures/recv-tyrant.json",
+      "sha256": "e385c036b2a6bb478a4c0ae5b370f2734a1c0993533b23651dec61a78634747c"
+    },
+    {
+      "uid": "reoutbreak-regis-licker",
+      "path": "modules/fidelity-r27/sprites/failures/reoutbreak-regis-licker.json",
+      "sha256": "dd3237c40e52f81be463e5a6a197b110de569398643e5f4e95e47c1a58ccbe57"
+    },
+    {
+      "uid": "reoutbreak-thanatos",
+      "path": "modules/fidelity-r27/sprites/failures/reoutbreak-thanatos.json",
+      "sha256": "5b18c458b7955aab03920d317a681ff8d75981581d7440847a2af2af28bb70d7"
+    },
+    {
+      "uid": "reoutbreak2-zombie",
+      "path": "modules/fidelity-r27/sprites/failures/reoutbreak2-zombie.json",
+      "sha256": "8698e31bcd6793b43b2d38bfbdee8f0aec689313cfcd743bf63975936f343144"
+    },
+    {
+      "uid": "rerequiem-chef-zombie",
+      "path": "modules/fidelity-r27/sprites/failures/rerequiem-chef-zombie.json",
+      "sha256": "3bdb6346e1a141640c6e84edbdbb9fa5c895714c1868f209145ef2aa88217f0a"
+    },
+    {
+      "uid": "rerequiem-wrenwood-zombie",
+      "path": "modules/fidelity-r27/sprites/failures/rerequiem-wrenwood-zombie.json",
+      "sha256": "29b7942c9e413f49f4544f6e333bcaa2e8c80e6bb27c0719b3ddd89dbccc6df5"
+    },
+    {
+      "uid": "rerequiem-zombie-doctor",
+      "path": "modules/fidelity-r27/sprites/failures/rerequiem-zombie-doctor.json",
+      "sha256": "7a50a5b7a144a28275930121e231493086d01ad8856368c8ad69a26f20306054"
+    },
+    {
+      "uid": "rerequiem-zombie-patient",
+      "path": "modules/fidelity-r27/sprites/failures/rerequiem-zombie-patient.json",
+      "sha256": "92060e4e31b1e17e6ff7b44b5672e8e84091cc27efccef18f0973b7b1310b520"
+    },
+    {
+      "uid": "rerequiem-zombie-staff-member",
+      "path": "modules/fidelity-r27/sprites/failures/rerequiem-zombie-staff-member.json",
+      "sha256": "5efe2fdd62a319fa3de631d1cbdb88ab936df717804e0333cbd29bd604e1463f"
+    },
+    {
+      "uid": "rerev2-splasher",
+      "path": "modules/fidelity-r27/sprites/failures/rerev2-splasher.json",
+      "sha256": "98bc35b919a50f16d5a43adfbd633e439cd145aa74d32d58dd8b88724cd00380"
+    },
+    {
+      "uid": "revillage-bela-dimitrescu",
+      "path": "modules/fidelity-r27/sprites/failures/revillage-bela-dimitrescu.json",
+      "sha256": "b2fadec38f1e279c5ebece4eba9a1e4a3ff4054330ac1e48ffaeb34c66eafb34"
+    },
+    {
+      "uid": "revillage-lycan",
+      "path": "modules/fidelity-r27/sprites/failures/revillage-lycan.json",
+      "sha256": "520ae1073361703dd1407363cef3a1e557fc4faee0836489c436d731c4d67e66"
+    },
+    {
+      "uid": "revillage-urias-drac",
+      "path": "modules/fidelity-r27/sprites/failures/revillage-urias-drac.json",
+      "sha256": "30a18c29eab8be79ee067f103e155753bdd269bd74a0663c9c9937706f3d8d42"
+    }
+  ]
+}

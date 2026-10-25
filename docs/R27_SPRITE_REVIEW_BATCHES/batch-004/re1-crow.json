@@ -1,0 +1,67 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "re1-crow",
+  "reviewed_at_utc": "2026-10-25T08:37:46.791316+00:00",
+  "batch": "batch-004",
+  "image": "modules/fidelity-r27/sprites/generated/re1-crow/idle-right.png",
+  "image_sha256": "880675a22e5d5e15434ce6c30bbfbb6b1cbe37070cb6431d5fb4f1a67746e8cd",
+  "active_record": "modules/fidelity-r27/sprites/records/re1-crow.json",
+  "active_record_sha256": "2c904177e6c609af567a902e4934ac3f06c1ac1d853374378322cac43076dbd2",
+  "used_references": [
+    {
+      "path": "assets/catalog/re1-crow.png",
+      "sha256": "920f3f2473c703b565d9ecbe1ea16ea94a409cd4151958a561b38b012824cb7a",
+      "role": "portrait",
+      "declared_body_coverage": "unknown"
+    }
+  ],
+  "scope": "combatant-neutral-pose",
+  "source_complete_body_observed": true,
+  "generated_complete_body_observed": true,
+  "full_body_reviewed": true,
+  "observed_facing": "left",
+  "direction_eligible_for_neutral_pose": true,
+  "review_outcome": "source-consistent-generated-static-neutral-base",
+  "notes": "Whole perched bird, open beak, folded wings, tail and both feet are visible inside the actual source. Output retains them and points left. No original call, idle phase, flight cycle or opposite side is certified.",
+  "manual_source_completeness_evidence": {
+    "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-004/re1-crow-source-body-observation.json",
+    "sha256": "ef3b52e4c0ca4c0da40f0cceb98c9d471ada956abcf52bc7d6c21ab8a7cd3902",
+    "referencePath": "assets/catalog/re1-crow.png",
+    "referenceSha256": "920f3f2473c703b565d9ecbe1ea16ea94a409cd4151958a561b38b012824cb7a",
+    "imageSha256": "880675a22e5d5e15434ce6c30bbfbb6b1cbe37070cb6431d5fb4f1a67746e8cd",
+    "observedFacing": "left",
+    "scope": "Whole body visually observed in this source image and this generated pose only; no opposite view, geometry or original-game pose certification."
+  },
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "record_metadata_refresh": {
+    "prior_record_sha256": "071c5e94f3d469dd7dcd0497e354884f6ecc674236dfd9a5045c42abfdc0f881",
+    "current_record_sha256": "fd02dbe71778d0b648b1185643398cf61ed7bda6e5eb7bf6dc862233bcaaa597",
+    "checked_at_utc": "2026-10-25T09:14:23.446498+00:00",
+    "change_verified": "Only limitations explanatory text was qualified by existing SHA-bound body proof; original job limitations retained as jobLimitations. Exact prior bytes reconstructed and matched prior record SHA. No PNG, used source, review, facing, body, receipt or proof changed."
+  },
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.893663+00:00",
+    "prior_report_record_sha256": "fd02dbe71778d0b648b1185643398cf61ed7bda6e5eb7bf6dc862233bcaaa597",
+    "prior_direction_eligibility": true,
+    "pose_observation": {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re1-crow.json",
+      "sha256": "bfc79deacc4f318d57654536b1c94e8cfd8b53ea36e3416754f8d670782c2ef3"
+    },
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.886786+00:00"
+  },
+  "observed_pose_kind": "neutral-base",
+  "available_states": [
+    "idle"
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "id": "re0-crow",
+  "label": "Crow",
+  "incarnation": "Resident Evil 0 (2002)",
+  "image": "modules/fidelity-r27/sprites/generated/re0-crow/idle-right.png",
+  "bytes": 929114,
+  "sha256": "bc30df8c37f292ce09705f25f120e38c1c68d61a56b0b8bb67881bf780fc337f",
+  "format": "PNG",
+  "width": 1402,
+  "height": 1122,
+  "alpha": {
+    "channel": true,
+    "min": 0,
+    "max": 255,
+    "transparentPixels": 1060510,
+    "totalPixels": 1573044,
+    "transparentFraction": 0.6741769460994098,
+    "visibleThreshold": 16
+  },
+  "bounds": {
+    "x": 104,
+    "y": 30,
+    "width": 1222,
+    "height": 1062
+  },
+  "pivot": {
+    "x": 715.0,
+    "y": 1092
+  },
+  "decodedRgbaSha256": "c4ca6c822c2ecdbfd7796758e3a08fe170c21aece07a1069fbfc21fb115cd3b8",
+  "sourceFacing": "front",
+  "canMirror": false,
+  "requestedState": "idle",
+  "animationFrames": 1,
+  "poseKind": "source-presentation",
+  "modularParts": false,
+  "combatIntegrated": false,
+  "canonicalFidelityCertified": false,
+  "reviewStatus": "visually-reviewed",
+  "fullBodyReviewed": true,
+  "completeBodyReferenceVerified": false,
+  "scope": "combatant-neutral-pose",
+  "openStates": [
+    "idle-cycle",
+    "walk",
+    "run",
+    "light",
+    "heavy",
+    "special",
+    "super",
+    "hurt",
+    "guard",
+    "knockdown",
+    "intro",
+    "victory",
+    "defeat",
+    "left-view"
+  ],
+  "limitations": [
+    "Generated interpretation, not an original game frame; geometric 1:1 remains unverified.",
+    "One neutral source-guided pose; no authored attack, opposite view or full animation cycle.",
+    "The original job lacked a complete-body declaration; the linked SHA-bound observation covers this visible source and generated pose only, without certifying other views or geometry."
+  ],
+  "provenance": {
+    "generator": "image_gen",
+    "prompt": "Create one independent transparent-background sprite for Crow, exact incarnation: Resident Evil 0 (2002). Use only the attached local references for appearance. Preserve the documented anatomy, proportions, clothing, equipment, damage, materials and silhouette of this incarnation. Do not mix other games or forms. A single neutral idle/presentation pose, no text, labels, frame, floor, shadow backdrop, montage or duplicate bodies. Use a right-facing three-quarter view only where supported by the references; never mirror asymmetric details. Preserve the visible source crop if the full body is undocumented rather than inventing missing limbs or equipment. Faithful survival-horror pre-rendered appearance, with a clean alpha edge; no new stylization, decoration or generic monster substitution. This is a generated project asset, not a claim of being an official or geometrically exact original-game frame.",
+    "references": [
+      {
+        "path": "assets/catalog/re0-crow.png",
+        "role": "portrait",
+        "bytes": 60885,
+        "sha256": "64da0ad45c9097c5763cc4aa0d9add464095ed51e2421772ffe1f4d11931daa0",
+        "bodyCoverage": "unknown",
+        "sourceUrl": "https://www.evilresource.com/resident-evil-zero/enemies/crow",
+        "exactIdentity": true
+      }
+    ],
+    "generationRecord": {
+      "id": "re0-crow",
+      "generator": "image_gen",
+      "prompt": "Create one independent transparent-background sprite for Crow, exact incarnation: Resident Evil 0 (2002). Use only the attached local references for appearance. Preserve the documented anatomy, proportions, clothing, equipment, damage, materials and silhouette of this incarnation. Do not mix other games or forms. A single neutral idle/presentation pose, no text, labels, frame, floor, shadow backdrop, montage or duplicate bodies. Use a right-facing three-quarter view only where supported by the references; never mirror asymmetric details. Preserve the visible source crop if the full body is undocumented rather than inventing missing limbs or equipment. Faithful survival-horror pre-rendered appearance, with a clean alpha edge; no new stylization, decoration or generic monster substitution. This is a generated project asset, not a claim of being an official or geometrically exact original-game frame.",
+      "referenced_image_paths": [
+        "/workspace/resident-evil-bow-protocol/assets/catalog/re0-crow.png"
+      ],
+      "tool_output": "/workspace/generated_images/exec-6f0838f6-a011-4498-bbf2-e2076a051389.png",
+      "output_source": "image_gen tool local artifact",
+      "visual_review": "Not admitted: generated output awaits parent visual review; facing unknown."
+    },
+    "sourceBytesTransformed": false
+  },
+  "sourceCompletenessEvidence": {
+    "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-004/re0-crow-source-body-observation.json",
+    "sha256": "a8c28e759944ac8f62485b485ad6355bcec5e65cebea7a0be57eaa1ea2715447",
+    "referencePath": "assets/catalog/re0-crow.png",
+    "referenceSha256": "64da0ad45c9097c5763cc4aa0d9add464095ed51e2421772ffe1f4d11931daa0",
+    "imageSha256": "bc30df8c37f292ce09705f25f120e38c1c68d61a56b0b8bb67881bf780fc337f",
+    "observedFacing": "front",
+    "scope": "Whole body visually observed in this source image and this generated pose only; no opposite view, geometry or original-game pose certification."
+  },
+  "jobLimitations": [
+    "Generated interpretation, not an original game frame; geometric 1:1 remains unverified.",
+    "One neutral source-guided pose; no authored attack, opposite view or full animation cycle.",
+    "No complete body reference has been verified; do not certify unseen anatomy or cropped regions."
+  ],
+  "availableStates": []
+}
