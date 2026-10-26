@@ -1,0 +1,92 @@
+{
+  "schema": "re.bow.audio-python-r28/1",
+  "generatedAt": "2026-10-26T08:49:40.534076+00:00",
+  "command": "python -m unittest discover -s tests -p test_audio_archives_r28.py -v",
+  "exitCode": 0,
+  "passed": 9,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "test_archive_traversal_and_duplicate_members_rejected",
+      "pass": true
+    },
+    {
+      "name": "test_conservation_refuses_overwriting_different_bytes",
+      "pass": true
+    },
+    {
+      "name": "test_multiform_nemesis_and_host_parasite_are_not_exact_identity_assignments",
+      "pass": true
+    },
+    {
+      "name": "test_reconstruct_and_compare_all1450_extracted_wave_bytes",
+      "pass": true
+    },
+    {
+      "name": "test_sample_rates_and_channels_are_preserved_without_resampling",
+      "pass": true
+    },
+    {
+      "name": "test_segment_order_hashes_and_descriptors_reassemble_exact_original_zip",
+      "pass": true
+    },
+    {
+      "name": "test_silence_truncation_and_unexpected_pcm_are_distinct",
+      "pass": true
+    },
+    {
+      "name": "test_source_hash_context_and_source_set_cannot_be_substituted",
+      "pass": true
+    },
+    {
+      "name": "test_wrong_group_game_platform_and_unsupported_exact_forms_are_rejected",
+      "pass": true
+    }
+  ],
+  "observed_runner_seconds": 17.625,
+  "runner_log_sha256": "bd4f0374db790e6fb8d2a0342d3c57d6ee749ce5fe62eacaab4b1b0ff588b34e",
+  "manifest_sha256": "f63d53dd1bb17d2118dfabf0d27be9e55f0a28101690292cb6556f37b94d5088",
+  "input_hashes": [
+    {
+      "path": "scripts/import-audio-archives-r28.py",
+      "sha256": "5969de5454ebd0a2f0aa5a1c3eff268273bd244711de2c35e03816ae19d2925e"
+    },
+    {
+      "path": "tests/test_audio_archives_r28.py",
+      "sha256": "47bf783dcbb400de1c9aff30d2426b3735fe6bd1fe71d5817a9add056c88e998"
+    },
+    {
+      "path": "modules/fidelity-r28/audio/import-request.json",
+      "sha256": "515be9e0e28bf42c79e4300b0eab49e655bccd97a5e60bb09472f455db07a70e"
+    }
+  ],
+  "counts": {
+    "source_archives": 5,
+    "source_wave_files": 1450,
+    "documentary_clips": 1450,
+    "publisher_assigned_identities": 1,
+    "exact_subject_clips": 301,
+    "candidate_only_clips": 1149,
+    "candidate_identities": 4,
+    "distinct_published_file_contents_sha256": 1105,
+    "duplicate_published_file_contents": 345,
+    "contents_already_present_r24_r27": 50,
+    "publisher_groups": 5,
+    "independently_listened_clips": 0,
+    "certified_native_clips": 0,
+    "duration_seconds": 2294.809662981859,
+    "delivered_audio_bytes": 239869298,
+    "sample_rate_counts": {
+      "48000": 1446,
+      "44100": 4
+    },
+    "source_archive_bytes": 165484725
+  },
+  "reassembly_check": {
+    "asset": 475793,
+    "bytes": 81547052,
+    "sha256": "a4350cf78ada22e70e540c339e3fbc79eed2a426763f43dfdba96ab6522e9032",
+    "passed": true
+  },
+  "canonical_fidelity_certified": false
+}

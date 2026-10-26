@@ -1,0 +1,62 @@
+{
+  "schema": "re.bow.fidelity-reproduction-r28/1",
+  "passed": 4,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Tracking is identical across two independent hash seeds",
+      "pass": true,
+      "hashSeeds": [
+        17,
+        73
+      ]
+    },
+    {
+      "name": "All historical worksheet and relationship parts remain byte-exact",
+      "pass": true,
+      "parts": 44
+    },
+    {
+      "name": "A fresh actual export exactly reproduces the delivered workbook",
+      "pass": true,
+      "sha256": "368c78bd72bdf6ebd653e391762827684223ae78f2fc7ae5216994b8c8944167",
+      "worksheets": 42
+    },
+    {
+      "name": "Actual progress JSON is reproduced and baseline bytes remain unchanged",
+      "pass": true,
+      "baselineSha256": "4ab8fb229f6d58c25b9d769e9d47df1a0c84474da2e5f7d8a8425f8dba499753"
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "scripts/verify-fidelity-export-r28.py",
+      "sha256": "4e65379f28d3ac7fcaaa648ab3e004548ca2b905c13730a958ea926010eb83c8"
+    },
+    {
+      "path": "scripts/export-fidelity-progress-r28.py",
+      "sha256": "c222c4f5b07dcac8e6d9a4335ccf27ea3b8395f0857d3de164a179a47161280d"
+    },
+    {
+      "path": "scripts/build-fidelity-tracking-r28.py",
+      "sha256": "b65604a623036f4d1781e4b4e7d4456f1ea011a5969cb81effdbb4bf09bc090f"
+    },
+    {
+      "path": "docs/R28_TRACKING.json",
+      "sha256": "6e6a1ccf4130b2ba14b86ccf273d8a607f1bbe04f28d3b2d2069b67d56c47711"
+    },
+    {
+      "path": "docs/BOW_FIDELITE_R27.xlsx",
+      "sha256": "4ab8fb229f6d58c25b9d769e9d47df1a0c84474da2e5f7d8a8425f8dba499753"
+    },
+    {
+      "path": "docs/BOW_FIDELITE_R28.xlsx",
+      "sha256": "368c78bd72bdf6ebd653e391762827684223ae78f2fc7ae5216994b8c8944167"
+    },
+    {
+      "path": "modules/fidelity-r28/progress.json",
+      "sha256": "5e2a8c1f36ffa1a662b800ed1292675986869ecc384fa47ab4c97caa82638637"
+    }
+  ],
+  "scope": "Actual delivered workbook and progress, not synthetic fixtures; no historical input is rewritten."
+}

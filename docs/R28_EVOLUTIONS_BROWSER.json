@@ -1,0 +1,280 @@
+{
+  "schema": "re.bow.evolutions-browser-r28/1",
+  "startedAt": "2026-10-26T09:14:37.273Z",
+  "finishedAt": "2026-10-26T09:15:08.239Z",
+  "passed": 16,
+  "failed": 0,
+  "healthOrResourceOverrides": 0,
+  "physicalControllersCertified": false,
+  "physicalMobileCertified": false,
+  "canonicalGameplayValuesCertified": false,
+  "sourceFiles": [
+    {
+      "path": "modules/fidelity-r28/evolutions/index.html",
+      "sha256": "23ed1dd8860143a2cd8b93c9dbbfba074008691bfae1befb37e5a265f9d95304"
+    },
+    {
+      "path": "modules/fidelity-r28/evolutions/duel.js",
+      "sha256": "0ec13acbaeba2e3cbab2bd2242dd4c05035ce4c0966c956d422beae484e38d73"
+    },
+    {
+      "path": "modules/fidelity-r28/evolutions/selection.js",
+      "sha256": "dff8c67b753726609420170d7816850d38c0f6316fd60ee8f20bc34447a8d663"
+    },
+    {
+      "path": "modules/fidelity-r28/evolutions/styles.css",
+      "sha256": "8dc471ea12a1d47dda48a7281fc38ef72a237eb5b957a89b9b34dc9a6c4af82d"
+    },
+    {
+      "path": "modules/fidelity-r28/evolutions/engine.js",
+      "sha256": "88d15965d5fccc00c741f5dd7a68f0f4e100629e4fd80dddda76387f81615cd8"
+    },
+    {
+      "path": "modules/fidelity-r28/evolutions/replay.js",
+      "sha256": "2ad5aebbfa135ce2f00f82bea3234085e2107f6fe210cefd2d58f8328e4197b7"
+    },
+    {
+      "path": "modules/fidelity-r28/evolutions/graph.json",
+      "sha256": "8bcdf7d17b871889bcd6735c9d628067d1655685f1d75c29a103c160e5141a79"
+    },
+    {
+      "path": "modules/fidelity-r28/evolutions/contract.js",
+      "sha256": "ad4053134b4348bbb74ca7373e59e2192875abb4ccb658af21d10d32890c105d"
+    }
+  ],
+  "checks": [
+    {
+      "name": "Main selection groups exact incarnations and assigns an evolved form without starting combat",
+      "pass": true,
+      "evidence": {
+        "identitiesRetained": 115,
+        "families": 10,
+        "selected": "re2r-super-tyrant"
+      }
+    },
+    {
+      "name": "Classic trial keeps all 346 profiles and its historical replay schema while grouping forms",
+      "pass": true,
+      "evidence": {
+        "uid": "re2-tyrant-mutation",
+        "evolutionState": false,
+        "schema": "re.bow.catalog-duel-replay/1",
+        "link": "http://127.0.0.1:5728/modules/fidelity-r28/evolutions/index.html?uid=re2-tyrant-mutation&target=re3r-nemesis&stage=spencer_hall",
+        "unique": 346
+      }
+    },
+    {
+      "name": "Main grouped controls remain reachable at 320px with every text size doubled",
+      "pass": true,
+      "evidence": {
+        "overflow": false,
+        "hit": true,
+        "uid": "re2r-super-tyrant"
+      }
+    },
+    {
+      "name": "Evolution selector preserves all profiles and shows context forms under their exact base",
+      "pass": true,
+      "evidence": {
+        "options": 348,
+        "freeProfiles": 340,
+        "families": 15,
+        "contextFamilyForms": 7,
+        "runtimeHealthy": true
+      }
+    },
+    {
+      "name": "A natural fight reaches eligibility, stays in its base form, then the real button mutates without healing",
+      "pass": true,
+      "evidence": {
+        "naturalHealthAndMeter": true,
+        "stateOverrides": 0,
+        "before": {
+          "frame": 678,
+          "uid": "re2r-tyrant",
+          "life": 3910,
+          "meter": 36,
+          "history": 0,
+          "disabled": false
+        },
+        "after": {
+          "uid": "re2r-super-tyrant",
+          "life": 3910,
+          "meter": 1
+        },
+        "frames": 679,
+        "stateDigest": "68a1966d"
+      }
+    },
+    {
+      "name": "Replay seeks across the exact mutation and disables voluntary controls in read-only playback",
+      "pass": true,
+      "evidence": {
+        "start": "re2r-tyrant",
+        "before": "re2r-tyrant",
+        "after": "re2r-super-tyrant",
+        "controls": true,
+        "blocked": {
+          "ok": false,
+          "reason": "Lecture du replay : les évolutions enregistrées sont rejouées."
+        },
+        "digest": "68a1966d",
+        "expected": "68a1966d",
+        "rewound": "re2r-tyrant"
+      }
+    },
+    {
+      "name": "Corrupt replay is rejected before replacing the current fight",
+      "pass": true,
+      "evidence": {
+        "rejected": "Le résultat ne correspond pas aux commandes et évolutions rejouées.",
+        "same": true,
+        "frame": 10,
+        "replay": false
+      }
+    },
+    {
+      "name": "Pause cancels an accepted request before the next combat tick",
+      "pass": true,
+      "evidence": {
+        "accepted": {
+          "ok": true,
+          "reason": null
+        },
+        "pending": [
+          null,
+          null
+        ],
+        "uid": "re2r-tyrant",
+        "history": 0,
+        "paused": true
+      }
+    },
+    {
+      "name": "Keyboard V chooses the displayed form and repeated keydowns cannot duplicate a mutation",
+      "pass": true,
+      "evidence": {
+        "uid": "re2r-super-tyrant",
+        "history": 1,
+        "life": 3910,
+        "meter": 1
+      }
+    },
+    {
+      "name": "Focused hold buttons accept Space and Enter, release on keyup/focus loss/pause, and preserve another pointer",
+      "pass": true,
+      "evidence": {
+        "spaceAndEnterGuard": true,
+        "repeatDoesNotQueueExtraActions": true,
+        "keyupReleases": true,
+        "elementBlurReleases": true,
+        "windowBlurPausesAndClears": true,
+        "pointerHoldIndependent": true,
+        "simulatedAnimationClock": true
+      }
+    },
+    {
+      "name": "Keyboard jump buttons emit one edge per press and replay import/reset clears an unfinished hold",
+      "pass": true,
+      "evidence": {
+        "presses": [
+          {
+            "key": "Enter",
+            "jumpInputFrames": 1,
+            "nativeClicks": 0,
+            "playerJumps": 1
+          },
+          {
+            "key": "Space",
+            "jumpInputFrames": 1,
+            "nativeClicks": 0,
+            "playerJumps": 1
+          }
+        ],
+        "replayImportClearsLiveHold": true,
+        "localStorageUnchanged": true,
+        "simulatedAnimationClock": true,
+        "healthOrResourceOverrides": 0
+      }
+    },
+    {
+      "name": "Simulated standard controller Select uses a new press and ignores a held connection",
+      "pass": true,
+      "evidence": {
+        "first": [
+          null,
+          null
+        ],
+        "press": [
+          "re2r-super-tyrant",
+          null
+        ],
+        "uid": "re2r-super-tyrant",
+        "history": 1,
+        "physicalController": false,
+        "simulatedAnimationClock": true
+      }
+    },
+    {
+      "name": "Keyboard B voluntarily evolves the opponent during a naturally simulated CPU fight",
+      "pass": true,
+      "evidence": {
+        "before": {
+          "frame": 605,
+          "uid": "re2r-tyrant",
+          "life": 6320,
+          "meter": 46
+        },
+        "after": {
+          "frame": 606,
+          "uid": "re2r-super-tyrant",
+          "life": 6320,
+          "meter": 11
+        },
+        "history": [
+          {
+            "frame": 606,
+            "slot": 1,
+            "from": "re2r-tyrant",
+            "to": "re2r-super-tyrant",
+            "edgeId": "r28-evo-002",
+            "meterCost": 35
+          }
+        ],
+        "commands": [
+          "re2r-super-tyrant"
+        ]
+      }
+    },
+    {
+      "name": "A source-bound context URL is explicit and opens no fabricated free actor",
+      "pass": true,
+      "evidence": {
+        "uid": "re2r-tyrant",
+        "explicitContextFallback": true
+      }
+    },
+    {
+      "name": "Evolution mode keyboard and 200% text layout at 1280px",
+      "pass": true,
+      "evidence": {
+        "width": 1280,
+        "textScale": "200% of every computed element font size",
+        "overflow": false,
+        "keyboardOrder": true,
+        "physicalDevices": false
+      }
+    },
+    {
+      "name": "Evolution mode keyboard and 200% text layout at 320px",
+      "pass": true,
+      "evidence": {
+        "width": 320,
+        "textScale": "200% of every computed element font size",
+        "overflow": false,
+        "keyboardOrder": true,
+        "physicalDevices": false
+      }
+    }
+  ]
+}

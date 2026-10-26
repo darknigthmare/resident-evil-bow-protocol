@@ -23,6 +23,16 @@ async function test(name, run) {
   catch (error) { checks.push({name, pass: false, error: error.stack}); console.error('FAIL ' + name + ': ' + error.message); }
 }
 async function ready(page, route = '/modules/versus.html') {
+  // Exercise this historical suite with the actual immutable R27 loader. The
+  // current HTML and all its other scripts remain in place; R28 has its own suite.
+  for (const mount of ['**/modules/versus.html*', '**/catalog-duel.html*']) {
+    await page.route(mount, async intercepted => {
+      const response = await intercepted.fetch(), html = await response.text();
+      const current = 'fidelity-r28/combat/sprite-runtime.js';
+      assert.equal(html.split(current).length - 1, 1, 'Expected one current runtime mount before the historical fixture pin');
+      await intercepted.fulfill({response, body: html.replace(current, 'fidelity-r27/combat/sprite-runtime.js')});
+    });
+  }
   await page.goto(base + route, {waitUntil: 'domcontentloaded'});
   await page.waitForFunction(() => window.RE_COMBAT_SPRITES_R27?.state().loaded);
 }

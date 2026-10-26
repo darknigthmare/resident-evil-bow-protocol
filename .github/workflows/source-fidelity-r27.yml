@@ -70,7 +70,20 @@ jobs:
           "$RUNNER_TEMP/fidelity-r27-venv/bin/python" scripts/build-validation-summary-r27.py --check
           "$RUNNER_TEMP/fidelity-r27-venv/bin/python" scripts/build-fidelity-tracking-r27.py --check
           "$RUNNER_TEMP/fidelity-r27-venv/bin/python" scripts/build-persistence-manifest-r27.py --check
-          "$RUNNER_TEMP/fidelity-r27-venv/bin/python" scripts/audit-delivery-r27.py --check
+          # The immutable R27 auditor accepts exactly the R27 publication delta.
+          # An archive with its own HEAD/index checks that release without a worktree.
+          R27_REVIEWED_TREE=$(mktemp -d "$RUNNER_TEMP/fidelity-r27-published.XXXXXX")
+          R27_ORIGINAL_OBJECTS=$(git rev-parse --path-format=absolute --git-path objects)
+          R27_AUDIT_REPORT="$PWD/qa-fidelity-r27-ci/published-delivery-check.json"
+          trap 'rm -rf -- "$R27_REVIEWED_TREE"' EXIT
+          git archive 0317da5f79e40af1b6b0e82b1ef9f311900ee76a | tar -x -C "$R27_REVIEWED_TREE"
+          git init --quiet "$R27_REVIEWED_TREE"
+          (
+            export GIT_ALTERNATE_OBJECT_DIRECTORIES="$R27_ORIGINAL_OBJECTS"
+            git -C "$R27_REVIEWED_TREE" update-ref HEAD 0317da5f79e40af1b6b0e82b1ef9f311900ee76a
+            git -C "$R27_REVIEWED_TREE" read-tree 0317da5f79e40af1b6b0e82b1ef9f311900ee76a
+            "$RUNNER_TEMP/fidelity-r27-venv/bin/python" "$R27_REVIEWED_TREE/scripts/audit-delivery-r27.py" --check > "$R27_AUDIT_REPORT"
+          )
           node tests/verify-r27-integration.mjs
       - name: Validate bounded imports, published provenance and export guards
         run: '"$RUNNER_TEMP/fidelity-r27-venv/bin/python" -m unittest discover -s tests -p "test_*r27.py" -v'

@@ -1,0 +1,114 @@
+{
+  "schema": "re.bow.ci-definition-validation-r28/1",
+  "passed": 5,
+  "failed": 0,
+  "workflows": [
+    {
+      "path": ".github/workflows/source-fidelity-r27.yml",
+      "sha256": "012350cf3a5c76fd828df45306b52940a00d040721ac72c3249822383ef8ba30",
+      "jobs": 3,
+      "bash_blocks": 15,
+      "literal_command_paths": [
+        "scripts/audit-delivery-r27.py",
+        "scripts/build-canonical-evidence-r27.py",
+        "scripts/build-dossier-additions-r27.py",
+        "scripts/build-fidelity-tracking-r27.py",
+        "scripts/build-motion-catalog-r27.py",
+        "scripts/build-persistence-manifest-r27.py",
+        "scripts/build-source-appearance-index-r27.py",
+        "scripts/build-sprites-jobs-r27.py",
+        "scripts/build-validation-summary-r27.py",
+        "scripts/export-fidelity-progress-r27.py",
+        "scripts/import-generated-sprites-r27.py",
+        "tests/ci-report-r25.mjs",
+        "tests/verify-ci-report-r25.mjs",
+        "tests/verify-combat-sprites-r27.mjs",
+        "tests/verify-full-matches-r27.mjs",
+        "tests/verify-motion-skeletons-r27.mjs",
+        "tests/verify-persistence-r27.mjs",
+        "tests/verify-r27-integration.mjs"
+      ],
+      "browser_suites": [
+        "tests/browser-generated-sprites-r27.mjs",
+        "tests/browser-combat-sprites-r27.mjs",
+        "tests/browser-source-appearance-r27.mjs",
+        "tests/browser-motion-r27.mjs",
+        "tests/browser-audio-r27.mjs",
+        "tests/browser-canonical-r27.mjs",
+        "tests/browser-persistence-r27.mjs",
+        "tests/browser-fidelity-dashboard-r27.mjs",
+        "tests/browser-access-r27.mjs"
+      ],
+      "all_actions_pinned": true
+    },
+    {
+      "path": ".github/workflows/source-fidelity-r28.yml",
+      "sha256": "94f4c6a44e3ca1cc097d3cf744a008f44785fd689c8e5990d8a8f8474534d572",
+      "jobs": 3,
+      "bash_blocks": 16,
+      "literal_command_paths": [
+        "scripts/audit-delivery-r28.py",
+        "scripts/build-canonical-evidence-r28.py",
+        "scripts/build-dossier-additions-r28.py",
+        "scripts/build-evolutions-r28.py",
+        "scripts/build-fidelity-tracking-r28.py",
+        "scripts/build-sprite-overlay-r28.py",
+        "scripts/build-validation-summary-r28.py",
+        "scripts/import-audio-archives-r28.py",
+        "scripts/verify-body-sources-r28.py",
+        "scripts/verify-fidelity-export-r28.py",
+        "tests/ci-report-r25.mjs",
+        "tests/test_audio_archives_r28.py",
+        "tests/test_canonical_evidence_r28.py",
+        "tests/test_fidelity_export_r28.py",
+        "tests/test_sprite_overlay_r28.py",
+        "tests/verify-ci-report-r25.mjs",
+        "tests/verify-combat-sprites-r28.mjs",
+        "tests/verify-evolutions-r28.mjs",
+        "tests/verify-r28-integration.mjs"
+      ],
+      "browser_suites": [
+        "tests/browser-generated-sprites-r28.mjs",
+        "tests/browser-evolutions-r28.mjs",
+        "tests/browser-canonical-r28.mjs",
+        "tests/browser-audio-r28.mjs",
+        "tests/browser-fidelity-dashboard-r28.mjs",
+        "tests/browser-dossier-additions-r28.mjs"
+      ],
+      "all_actions_pinned": true
+    }
+  ],
+  "embedded_python_blocks_checked": 2,
+  "embedded_module_blocks_checked": 3,
+  "actual_local_checks": [
+    {
+      "name": "Published R27 Git archive, isolated HEAD/index and immutable auditor",
+      "pass": true,
+      "published_commit": "0317da5f79e40af1b6b0e82b1ef9f311900ee76a",
+      "module_files": 1295,
+      "module_bytes": 1017783745,
+      "git_worktrees_created": 0
+    },
+    {
+      "name": "Eleven R27 cross-module groups in the published archive",
+      "pass": true,
+      "passed": 11,
+      "failed": 0
+    },
+    {
+      "name": "Historical partial-reference browser case uses actual R27 loader",
+      "pass": true,
+      "passed": 1,
+      "failed": 0,
+      "report": "docs/R28_LEGACY_R27_SPRITES_FOLLOWUP.json"
+    }
+  ],
+  "fixture": {
+    "path": "tests/browser-combat-sprites-r27.mjs",
+    "sha256": "72bf77ad5aa60fceb7afda61a2ac78f33a8579af9c15653f0dec488ff80bd601",
+    "old_assertions_removed": 0,
+    "production_runtime_changed": false
+  },
+  "remote_ci_executed": false,
+  "scope": "Workflow syntax/paths, pinned tooling and selected actual compatibility checks. Fresh remote workflow execution remains separate; no full fidelity or physical device certification."
+}

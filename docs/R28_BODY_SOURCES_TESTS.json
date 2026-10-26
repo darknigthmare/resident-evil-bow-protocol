@@ -1,0 +1,63 @@
+{
+  "schema": "re.bow.source-body-validation-r28/1",
+  "complete": true,
+  "passed": 5,
+  "failed": 0,
+  "skipped": 0,
+  "testsRun": 5,
+  "command": "python scripts/verify-body-sources-r28.py",
+  "inputs": [
+    {
+      "path": "tests/test_body_sources_r28.py",
+      "sha256": "a6d9ca1c771bf0a5a269e93fcf72e682095c2d97fae8e2988baaa38a54879003"
+    },
+    {
+      "path": "scripts/import-body-sprites-r28.py",
+      "sha256": "efaaa8c0f7ab9830888f3ee9b5a9114d05f5363a8545b0929c81a2fa95b8be73"
+    },
+    {
+      "path": "scripts/render-source-body-rasters-r28.mjs",
+      "sha256": "622a00fbbe8a36c96fe11b8ada985f603238d6a8ac7329dc7b82e751076baa8e"
+    },
+    {
+      "path": "scripts/capture-body-sprite-review-r28.mjs",
+      "sha256": "fa672f85c549dc88bbf28051f2f879fa2559f7d3f1c1c9fd6700b496af33bb34"
+    },
+    {
+      "path": "modules/fidelity-r28/sources/body-rasters/manifest.json",
+      "sha256": "ffb19df6bf3479402215904e265234841aecb505f26cf23019d85ff085779739"
+    },
+    {
+      "path": "modules/fidelity-r28/sources/online-evidence.json",
+      "sha256": "356e980348721a2c6f0add3d1b705c09ed3d8ad44f9fba229b4d7f1ef6eb8f08"
+    },
+    {
+      "path": "modules/fidelity-r28/sprites/records/re1r-cerberus.json",
+      "sha256": "93d45630d3cd47f0c6be3d2975f80d1320616463211a83af09fb87b72cd06d26"
+    },
+    {
+      "path": "modules/fidelity-r28/sprites/records/re1r-lisa-trevor.json",
+      "sha256": "4a65dff58b8c281952a83b4396810a3e7dca289cdff7d05e51e3b2a3d0648309"
+    },
+    {
+      "path": "modules/fidelity-r28/sprites/records/rerev-scagdead.json",
+      "sha256": "9b271f8c68129d8c20b20030b2990434b899229d03aee34b77452cf88f3bac9d"
+    },
+    {
+      "path": "modules/fidelity-r28/sprites/records/rerev-wall-blister.json",
+      "sha256": "6654b2272b6c8a7f393512b98e22b9e060c48907a000b3e1a32be8b65a7484f0"
+    }
+  ],
+  "counts": {
+    "sourceModels": 8,
+    "sourceIdentities": 6,
+    "sourceReferencePngs": 32,
+    "freshPublisherPageCaptures": 6,
+    "selectedGeneratedFullBodyPngs": 4,
+    "newTargetIdentities": 0,
+    "combatIdleSprites": 0,
+    "originalGameSprites": 0,
+    "canonicalFidelityCertified": 0
+  },
+  "scope": "Every32 separate source PNG hash/alpha/clipping, source model/material/texture bytes, camera-only source poses, six publisher captures, four exact-UID generated body records and source/output reviews verified. Base/rest anatomy is visually complete; Lisa phase/equipment and Cerberus source accessory role remain open. No original-game geometry, exact animation, original equipment or original-game rendering certification."
+}

@@ -1,0 +1,61 @@
+{
+  "schema": "re.bow.canonical-validation-r28/1",
+  "started_at_utc": "2026-10-26T08:44:23.448492+00:00",
+  "finished_at_utc": "2026-10-26T08:44:24.279162+00:00",
+  "tests_run": 10,
+  "passed": 10,
+  "failed": 0,
+  "skipped": 0,
+  "summary": {
+    "catalogue_identities": 389,
+    "new_reviewed_claims": 42,
+    "identities_with_new_claims": 33,
+    "newly_reviewed_identities": 33,
+    "cumulative_reviewed_identities": 389,
+    "cumulative_reviewed_identities_r23_r24_r25_r26_r27": 356,
+    "remaining_without_reviewed_documentary_claims": 0,
+    "claim_type_counts": {
+      "scope": 18,
+      "move": 18,
+      "form": 6
+    },
+    "encounter_scoped_location_claims": 40,
+    "commentary_form_claims": 2,
+    "negated_claims": 2,
+    "sources_used": 33,
+    "new_source_snapshots": 33,
+    "reused_source_snapshots": 1,
+    "scope_gaps_documented": 18,
+    "independently_corroborated_claims": 0,
+    "distinct_publisher_cross_checks": 0,
+    "independent_primary_corroborations": 0,
+    "claims_with_transcribed_in_game_evidence": 0,
+    "direct_primary_captures": 0,
+    "complete_move_sets": 0,
+    "certified_body_scales": 0,
+    "canonical_fidelity_certified": 0
+  },
+  "sources": [
+    {
+      "path": "scripts/build-canonical-evidence-r28.py",
+      "sha256": "aa570e3d61ce98e8efd0b49cede6fb6afb00ffac1fec910323b22d3ab6c9093a"
+    },
+    {
+      "path": "tests/test_canonical_evidence_r28.py",
+      "sha256": "a28861017bbeb3c531324307476e909135c2a21ce9b4f94dd03191e38b303179"
+    },
+    {
+      "path": "modules/fidelity-r28/canonical/manifest.json",
+      "sha256": "043af398832e8e8afbcab3dd725a32a8c40121d5e24d301566c02149ce16a243"
+    },
+    {
+      "path": "modules/fidelity-r28/canonical/captures.json",
+      "sha256": "dacce83a4325ccb8cb0e92a76087c0963466073ff0a044f8eabfa098683a7af1"
+    },
+    {
+      "path": "modules/fidelity-r28/canonical/curation.json",
+      "sha256": "f7cf38def7a0ccd9093c28783fc770de1541e242d68b228dd526c3d4f3e6c965"
+    }
+  ],
+  "failures": []
+}
