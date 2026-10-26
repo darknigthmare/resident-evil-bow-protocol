@@ -1,0 +1,227 @@
+{
+  "schema": "re.bow.model-reader-r26-browser/1",
+  "startedAt": "2026-10-25T06:32:40.681Z",
+  "completedAt": "2026-10-25T06:38:17.289Z",
+  "softwareRenderer": true,
+  "physicalDevices": false,
+  "originalGameRenderingCertified": false,
+  "catalogueEntries": 66,
+  "passed": 12,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Every static source and published weighted rig loads with explicit incomplete materials",
+      "pass": true,
+      "detail": {
+        "models": 10,
+        "maximumTextures": 8,
+        "incomplete": [],
+        "sourceBytesRewritten": false,
+        "details": [
+          {
+            "id": "re0-lurker-gc-r26-1",
+            "meshes": 1,
+            "bones": 0,
+            "skins": 0,
+            "textured": 1
+          },
+          {
+            "id": "re0-zombie-gc-r26-1",
+            "meshes": 1,
+            "bones": 0,
+            "skins": 0,
+            "textured": 1
+          },
+          {
+            "id": "re0-zombie-gc-r26-2",
+            "meshes": 1,
+            "bones": 0,
+            "skins": 0,
+            "textured": 1
+          },
+          {
+            "id": "re0-centurion-gc-r26-1",
+            "meshes": 1,
+            "bones": 0,
+            "skins": 0,
+            "textured": 1
+          },
+          {
+            "id": "re0-stinger-gc-r26-1",
+            "meshes": 1,
+            "bones": 0,
+            "skins": 0,
+            "textured": 1
+          },
+          {
+            "id": "re0-proto-tyrant-gc-r26-1",
+            "meshes": 1,
+            "bones": 0,
+            "skins": 0,
+            "textured": 1
+          },
+          {
+            "id": "reoutbreak-zombie-uss-a-ps2-r26",
+            "meshes": 1,
+            "bones": 0,
+            "skins": 0,
+            "textured": 1
+          },
+          {
+            "id": "reoutbreak-zombie-uss-b-ps2-r26",
+            "meshes": 1,
+            "bones": 0,
+            "skins": 0,
+            "textured": 1
+          },
+          {
+            "id": "reoutbreak-zombie-uss-c-ps2-r26",
+            "meshes": 1,
+            "bones": 0,
+            "skins": 0,
+            "textured": 1
+          },
+          {
+            "id": "rerev-tricorne-ooze-wp1c00-source",
+            "meshes": 4,
+            "bones": 2,
+            "skins": 4,
+            "textured": 4
+          }
+        ]
+      }
+    },
+    {
+      "name": "All source motion files retain their targets, positive-time classification and a single archive cache",
+      "pass": true,
+      "detail": {
+        "rigEntries": [
+          {
+            "id": "rerev-chunk-ooze",
+            "files": 121
+          },
+          {
+            "id": "rerev-tricorne-ooze",
+            "files": 112
+          },
+          {
+            "id": "rerev-tricorne-ooze-om120a-source",
+            "files": 1
+          },
+          {
+            "id": "rerev-pincer-ooze",
+            "files": 124
+          },
+          {
+            "id": "rerev-pincer-ooze-om120a-source",
+            "files": 1
+          }
+        ],
+        "sourceSubjectUids": [
+          "rerev-chunk-ooze",
+          "rerev-tricorne-ooze",
+          "rerev-pincer-ooze"
+        ],
+        "sourceFiles": 359,
+        "motions": 352,
+        "poses": 7,
+        "maximumCache": 85352847,
+        "maximumTextures": 16,
+        "retargeting": false
+      }
+    },
+    {
+      "name": "Canvas and semantic camera controls work by keyboard at 1280px",
+      "pass": true,
+      "detail": {
+        "width": 1280,
+        "keyboard": true,
+        "reducedMotion": true
+      }
+    },
+    {
+      "name": "Canvas and semantic camera controls work by keyboard at 390px",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "keyboard": true,
+        "reducedMotion": true
+      }
+    },
+    {
+      "name": "Unavailable WebGL retains verified publisher preview and source links without downloading geometry",
+      "pass": true,
+      "detail": {
+        "source": "re2-g-stage1-gamecube",
+        "previewHashVerified": true,
+        "geometryRequests": 0,
+        "automaticPlayback": false
+      }
+    },
+    {
+      "name": "A corrupt fallback preview is refused and an explicit retry recovers it",
+      "pass": true,
+      "detail": {
+        "changedPreviewRefused": true,
+        "retryRecovered": true
+      }
+    },
+    {
+      "name": "Real WebGL context loss releases the scene and recovery preserves time without autoplay",
+      "pass": true,
+      "detail": {
+        "extension": "WEBGL_lose_context",
+        "timePreserved": 2.075000047683716,
+        "automaticPlayback": false
+      }
+    },
+    {
+      "name": "Changed geometry and delayed previous responses cannot replace a verified selection",
+      "pass": true,
+      "detail": {
+        "changedSourceRefused": true,
+        "retryRecovered": true,
+        "staleResponseRefused": true
+      }
+    },
+    {
+      "name": "Prepared source position links reopen the exact file, time and pause state",
+      "pass": true,
+      "detail": {
+        "sourceSha256": "1efcafced3bf74bdb4b7d693885282553a969c29c5c523005d171f572e15a062",
+        "nativeTime": 2.075000047683716,
+        "restoredInPause": true
+      }
+    },
+    {
+      "name": "Stale or hostile position links show the source from its beginning with a clear refusal",
+      "pass": true,
+      "detail": {
+        "staleHashRefused": true,
+        "noUnverifiedSeek": true
+      }
+    },
+    {
+      "name": "Optional publisher comparison is hash-verified, independent of motion and released on selection",
+      "pass": true,
+      "detail": {
+        "originalPreviewVerified": true,
+        "noAutomaticPlayback": true,
+        "changedImageRefused": true,
+        "blobReleased": true
+      }
+    },
+    {
+      "name": "Leaving the page releases GPU objects and archive cache; returning stays paused",
+      "pass": true,
+      "detail": {
+        "actualNavigation": true,
+        "gpuDisposed": true,
+        "archiveCacheReleased": true,
+        "automaticPlayback": false,
+        "lifecycleRecordedInPrivateTestContext": true,
+        "productionReaderStorageAccess": false
+      }
+    }
+  ]
+}

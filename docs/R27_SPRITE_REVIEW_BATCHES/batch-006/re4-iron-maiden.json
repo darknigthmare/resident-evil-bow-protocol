@@ -1,0 +1,56 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "re4-iron-maiden",
+  "reviewed_at_utc": "2026-10-25T09:03:38.201017+00:00",
+  "batch": "batch-006",
+  "image": "modules/fidelity-r27/sprites/generated/re4-iron-maiden/idle-right.png",
+  "image_sha256": "e1842b0813eb09a906d5af57ae7939ee6c44c04373c9cb8987c2ca9b60d6eed7",
+  "active_record": "modules/fidelity-r27/sprites/records/re4-iron-maiden.json",
+  "active_record_sha256": "33658138b13d55dc9ebe58576028f856f1f5654534be2d6506a25000ff73900a",
+  "used_references": [
+    {
+      "path": "assets/specimens/re4-iron-maiden.png",
+      "sha256": "36e3ea48ac98978a928a74f88ad9a9066ce3fe33b9559f328ad69273b2358aab",
+      "role": "full-body-reference",
+      "declared_body_coverage": "complete"
+    },
+    {
+      "path": "assets/catalog/re4-iron-maiden.png",
+      "sha256": "da45338a48626e2c58bf916a6b64c3dc4f341c5c7322c92ac0da46cb0f6d8680",
+      "role": "portrait",
+      "declared_body_coverage": "unknown"
+    }
+  ],
+  "scope": "combatant-neutral-pose",
+  "source_complete_body_observed": true,
+  "generated_complete_body_observed": true,
+  "full_body_reviewed": true,
+  "observed_facing": "front",
+  "direction_eligible_for_neutral_pose": false,
+  "review_outcome": "whole-visible-body-presentation-pose-no-combat-idle",
+  "notes": "Complete narrow gray body, distributed spines, tilted head, long fingers and feet are retained from the primary reference. Frontal pose does not establish a left/right view; no spike timing or attack phase is certified.",
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.880898+00:00",
+    "prior_report_record_sha256": "09715cf9d67cfab940d31e7bb493e41e0bb46ef88b823bdc909b86598abdcc17",
+    "prior_direction_eligibility": false,
+    "pose_observation": {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re4-iron-maiden.json",
+      "sha256": "6ae71caacc136a54f10b744876e59054aac614d6b7517f4a0babc5ddca1f9f0e"
+    },
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.873530+00:00"
+  },
+  "observed_pose_kind": "source-presentation",
+  "available_states": []
+}

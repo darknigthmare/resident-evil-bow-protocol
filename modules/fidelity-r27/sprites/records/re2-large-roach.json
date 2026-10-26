@@ -1,0 +1,110 @@
+{
+  "id": "re2-large-roach",
+  "label": "Large Roach",
+  "incarnation": "Resident Evil 2 (1998)",
+  "image": "modules/fidelity-r27/sprites/generated/re2-large-roach/idle-right.png",
+  "bytes": 1064066,
+  "sha256": "9a51ee66997d5eace9c3e0f215da6223cc9c9d88ae0a89c4cc68ff6ff104c384",
+  "format": "PNG",
+  "width": 1402,
+  "height": 1122,
+  "alpha": {
+    "channel": true,
+    "min": 0,
+    "max": 255,
+    "transparentPixels": 1057558,
+    "totalPixels": 1573044,
+    "transparentFraction": 0.6723003298064135,
+    "visibleThreshold": 16
+  },
+  "bounds": {
+    "x": 18,
+    "y": 74,
+    "width": 1364,
+    "height": 1034
+  },
+  "pivot": {
+    "x": 700.0,
+    "y": 1108
+  },
+  "decodedRgbaSha256": "7fd28e6f8bee3f9bb961434e1e48acdb8f240b519bf453a9a17a3431d44380ec",
+  "sourceFacing": "left",
+  "canMirror": false,
+  "requestedState": "idle",
+  "animationFrames": 1,
+  "poseKind": "neutral-base",
+  "modularParts": false,
+  "combatIntegrated": false,
+  "canonicalFidelityCertified": false,
+  "reviewStatus": "visually-reviewed",
+  "fullBodyReviewed": true,
+  "completeBodyReferenceVerified": false,
+  "scope": "combatant-neutral-pose",
+  "openStates": [
+    "idle-cycle",
+    "walk",
+    "run",
+    "light",
+    "heavy",
+    "special",
+    "super",
+    "hurt",
+    "guard",
+    "knockdown",
+    "intro",
+    "victory",
+    "defeat",
+    "left-view"
+  ],
+  "limitations": [
+    "Generated interpretation, not an original game frame; geometric 1:1 remains unverified.",
+    "One neutral source-guided pose; no authored attack, opposite view or full animation cycle.",
+    "The original job lacked a complete-body declaration; the linked SHA-bound observation covers this visible source and generated pose only, without certifying other views or geometry."
+  ],
+  "provenance": {
+    "generator": "image_gen",
+    "prompt": "Create one independent transparent-background sprite for Large Roach, exact incarnation: Resident Evil 2 (1998). Use only the attached local references for appearance. Preserve the documented anatomy, proportions, clothing, equipment, damage, materials and silhouette of this incarnation. Do not mix other games or forms. A single neutral idle/presentation pose, no text, labels, frame, floor, shadow backdrop, montage or duplicate bodies. Use a right-facing three-quarter view only where supported by the references; never mirror asymmetric details. Preserve the visible source crop if the full body is undocumented rather than inventing missing limbs or equipment. Faithful survival-horror pre-rendered appearance, with a clean alpha edge; no new stylization, decoration or generic monster substitution. This is a generated project asset, not a claim of being an official or geometrically exact original-game frame.\nPreserve the exact original-era render or illustration style, texture detail and visible source pose; do not modernize, resculpt or redesign it. Retain the visible source crop exactly; no imagined hidden body regions or missing appendages. Do not add new gore, injuries, actions involving harm or scenery.",
+    "references": [
+      {
+        "path": "assets/catalog/re2-large-roach.png",
+        "role": "portrait",
+        "bytes": 90489,
+        "sha256": "08ddfd5febffadd1331a1f01a0db0e7c655494963d5f6419ac23675ca32a48eb",
+        "bodyCoverage": "unknown",
+        "sourceUrl": "https://www.evilresource.com/resident-evil-2/enemies/large-roach",
+        "exactIdentity": true
+      }
+    ],
+    "generationRecord": {
+      "id": "re2-large-roach",
+      "generator": "image_gen",
+      "prompt": "Create one independent transparent-background sprite for Large Roach, exact incarnation: Resident Evil 2 (1998). Use only the attached local references for appearance. Preserve the documented anatomy, proportions, clothing, equipment, damage, materials and silhouette of this incarnation. Do not mix other games or forms. A single neutral idle/presentation pose, no text, labels, frame, floor, shadow backdrop, montage or duplicate bodies. Use a right-facing three-quarter view only where supported by the references; never mirror asymmetric details. Preserve the visible source crop if the full body is undocumented rather than inventing missing limbs or equipment. Faithful survival-horror pre-rendered appearance, with a clean alpha edge; no new stylization, decoration or generic monster substitution. This is a generated project asset, not a claim of being an official or geometrically exact original-game frame.\nPreserve the exact original-era render or illustration style, texture detail and visible source pose; do not modernize, resculpt or redesign it. Retain the visible source crop exactly; no imagined hidden body regions or missing appendages. Do not add new gore, injuries, actions involving harm or scenery.",
+      "referenced_image_paths": [
+        "/workspace/resident-evil-bow-protocol/assets/catalog/re2-large-roach.png"
+      ],
+      "transparent_background": true,
+      "tool_output": "/workspace/generated_images/exec-72f2f062-ca11-45e8-b435-fc40e6e6ce87.png",
+      "output_source": "image_gen tool local artifact",
+      "visual_review": "Reference inspected before generation; generated output remains unreviewed, facing unknown and full-body admission false.",
+      "worker": "audio-gen"
+    },
+    "sourceBytesTransformed": false
+  },
+  "sourceCompletenessEvidence": {
+    "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-009/re2-large-roach-source-body-observation.json",
+    "sha256": "1ddd87e4baa24e63244c4a7ba0856242ae081dd53cf75a266ad9ca864b4edf83",
+    "referencePath": "assets/catalog/re2-large-roach.png",
+    "referenceSha256": "08ddfd5febffadd1331a1f01a0db0e7c655494963d5f6419ac23675ca32a48eb",
+    "imageSha256": "9a51ee66997d5eace9c3e0f215da6223cc9c9d88ae0a89c4cc68ff6ff104c384",
+    "observedFacing": "left",
+    "scope": "Whole body visually observed in this source image and this generated pose only; no opposite view, geometry or original-game pose certification."
+  },
+  "jobLimitations": [
+    "Generated interpretation, not an original game frame; geometric 1:1 remains unverified.",
+    "One neutral source-guided pose; no authored attack, opposite view or full animation cycle.",
+    "No complete body reference has been verified; do not certify unseen anatomy or cropped regions."
+  ],
+  "availableStates": [
+    "idle"
+  ]
+}

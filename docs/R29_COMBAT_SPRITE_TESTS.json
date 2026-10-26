@@ -1,0 +1,94 @@
+{
+  "schema": "re.bow.combat-sprite-tests-r29/1",
+  "passed": 8,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "All363 active identities normalize with four legacy actors and three compatible API names",
+      "pass": true,
+      "evidence": {
+        "active": 363,
+        "legacy": 4,
+        "documentaryVariantsNotRegistered": 4,
+        "aliasesIdentical": true
+      }
+    },
+    {
+      "name": "An actual admitted static idle draws only its produced side and verifies bytes first",
+      "pass": true,
+      "evidence": {
+        "id": "re1-cerberus",
+        "sha256": "8ead8fcbbbc032b14f268010f56847aaf4ece7d764255223fd4c9a8a2b9ee2f1",
+        "producedSide": "right",
+        "mirrored": false
+      }
+    },
+    {
+      "name": "Alcina equipment gap and complete Ant context stay excluded despite neutral whole anatomy",
+      "pass": true,
+      "evidence": {
+        "wholeNeutralPoseDoesNotCertifyEquipment": true,
+        "contextActorCreated": false,
+        "unqualifiedPNGRequests": 0,
+        "archivedPC2013BodiesRetainedWithEditionGap": 2
+      }
+    },
+    {
+      "name": "Every actual R29 replacement decodes but its source bind presentation cannot become combat idle",
+      "pass": true,
+      "evidence": {
+        "actualNewPNGs": 5,
+        "onePoseOnly": true,
+        "newCombatStates": 0
+      }
+    },
+    {
+      "name": "Documentary editions cannot be smuggled into active records even if flags are removed",
+      "pass": true,
+      "evidence": {
+        "explicitFlagsAndReservedPathRefused": true,
+        "targetSpritesReplaced": 0
+      }
+    },
+    {
+      "name": "Corruption never becomes drawable and releases the untrusted Blob",
+      "pass": true,
+      "evidence": {
+        "corruptPNGRefused": true,
+        "blobLeaks": 0
+      }
+    },
+    {
+      "name": "Initial pageshow and retry share one registry transaction despite documentary duplicate subject IDs",
+      "pass": true,
+      "evidence": {
+        "concurrentLifecycleEvents": 4,
+        "registryRequests": 1,
+        "duplicateActors": 0
+      }
+    },
+    {
+      "name": "Opaque historical replay frames do not install or fetch the R29 registry",
+      "pass": true,
+      "evidence": {
+        "opaqueReplayPreserved": true,
+        "spriteFetches": 0
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "path": "tests/verify-combat-sprites-r29.mjs",
+      "sha256": "4611169359b33bee2d5c2297e20e9720be6d31b382e3c8233a7d11acb41ab55f"
+    },
+    {
+      "path": "modules/fidelity-r29/combat/sprite-runtime.js",
+      "sha256": "099a4205b79cc3aaa7fe30d45174c9e8c90673a9d97974fb6326eacdd7276e54"
+    },
+    {
+      "path": "modules/fidelity-r29/sprites/manifest.json",
+      "sha256": "73322a476fafa1ec22da666d9e4a12df0a3342cc40f19186c78c694851c0339e"
+    }
+  ],
+  "scope": "Actual active PNG decode/draw, source edition and explicit appearance gates; no original-game cycles, world scales or global 1:1 certification."
+}

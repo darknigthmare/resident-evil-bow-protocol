@@ -1,0 +1,468 @@
+{
+  "summary": "Les 17 chantiers restent ouverts ; les ajouts R26 et leurs preuves sont distincts de la fidélité finale.",
+  "statistics": [
+    {
+      "label": "chantiers toujours ouverts",
+      "value": 17,
+      "scope": "Aucune clôture sans preuve complète."
+    },
+    {
+      "label": "nouvelles références visuelles",
+      "value": 9,
+      "scope": "Modèles documentaires ; sprites de combat finaux non certifiés."
+    },
+    {
+      "label": "nouveaux fichiers réellement mobiles",
+      "value": 352,
+      "scope": "7 pose(s) à clés séparée(s), action non attribuée."
+    },
+    {
+      "label": "fichiers audio classés par publication",
+      "value": 1031,
+      "scope": "4 UID, 646 contenus distincts ; zéro banque native certifiée."
+    }
+  ],
+  "resources": [
+    {
+      "href": "models/index.html",
+      "title": "Modèles et mouvements",
+      "description": "Lecteur cumulatif, clés natives et observations reproductibles.",
+      "label": "Examiner les modèles"
+    },
+    {
+      "href": "sprites/index.html",
+      "title": "Vues d’orientation",
+      "description": "Planches dérivées de modèles sources ; pas des sprites finaux certifiés.",
+      "label": "Examiner les orientations"
+    },
+    {
+      "href": "audio/index.html",
+      "title": "Sons par publication",
+      "description": "Fichiers originaux classés avec leurs éditions et limites.",
+      "label": "Écouter les sons"
+    },
+    {
+      "href": "canonical/index.html",
+      "title": "Gestes, formes et éditions",
+      "description": "Nouvelles citations attribuées et limites documentaires.",
+      "label": "Examiner les citations"
+    },
+    {
+      "href": "persistence/index.html",
+      "title": "Restaurer en environnement isolé",
+      "description": "Préparation, transaction et retour arrière dans une base locale séparée du jeu.",
+      "label": "Essayer la restauration"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "R20-09",
+      "title": "Rig par membre et animations",
+      "status": "EN COURS",
+      "historical_status": "À FAIRE",
+      "category": "sources",
+      "advances": [
+        "6 références d’armature supplémentaires ; 352 fichiers réellement mobiles, 7 pose(s) à clés comptées séparément.",
+        "Les modèles, poids, temps et courbes sources restent liés à leur archive exacte ; aucune attaque n’est attribuée à partir du seul nom de fichier."
+      ],
+      "remaining": [
+        "Rigs et cycles complets des 389 incarnations, attribution vérifiée de chaque action et intégration finale au combat."
+      ],
+      "evidence": [
+        {
+          "href": "models/index.html",
+          "label": "Examiner les armatures"
+        },
+        {
+          "href": "../../docs/R26_MOTION.md",
+          "label": "Provenance et déformation"
+        }
+      ]
+    },
+    {
+      "id": "R20-10",
+      "title": "Étendre les sprites au catalogue",
+      "status": "EN COURS",
+      "historical_status": "À FAIRE",
+      "category": "sources",
+      "advances": [
+        "9 références visuelles supplémentaires, avec édition et correspondance au catalogue explicites.",
+        "Un outil de planches d’orientation dérive ses vues des ressources sources ; ces vues ne sont pas certifiées comme sprites du jeu original."
+      ],
+      "remaining": [
+        "Les 385 sprites de combat manquants du suivi historique, puis leurs membres, orientations, cycles et effets ; une référence 3D ne remplace pas ces sprites."
+      ],
+      "evidence": [
+        {
+          "href": "sprites/index.html",
+          "label": "Examiner les orientations"
+        },
+        {
+          "href": "../../docs/R26_VISUAL.md",
+          "label": "Ressources et portée"
+        }
+      ]
+    },
+    {
+      "id": "G-PERIMETRE",
+      "title": "Périmètre et alias",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "sources",
+      "advances": [
+        "110 assertions documentaires supplémentaires pour 99 incarnations ; les acteurs et éditions sont conservés.",
+        "Les candidats et objets associés restent distincts des corps attribués ; une publication d’un port ne certifie pas une autre édition."
+      ],
+      "remaining": [
+        "Revue exhaustive des alias, modes, DLC et extensions ; corriger chaque ambiguïté de support ou de forme avec une preuve."
+      ],
+      "evidence": [
+        {
+          "href": "canonical/index.html",
+          "label": "Consulter les assertions"
+        },
+        {
+          "href": "../../docs/R26_CANONICAL.md",
+          "label": "Périmètre de la revue"
+        }
+      ]
+    },
+    {
+      "id": "G-PREUVES",
+      "title": "Preuves et revue canonique",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "sources",
+      "advances": [
+        "Les nouvelles archives et ressources sont conservées avec leurs empreintes ; les citations sont contrôlées dans les copies de sources documentées.",
+        "Les liens du lecteur conservent la référence du modèle, du clip et de leur empreinte pour reproduire une observation."
+      ],
+      "remaining": [
+        "Captures originales et séquences horodatées de chaque geste, phase et transformation ; comparaison indépendante aux paquets et banques bruts."
+      ],
+      "evidence": [
+        {
+          "href": "models/index.html",
+          "label": "Reprendre une observation"
+        },
+        {
+          "href": "canonical/index.html",
+          "label": "Examiner les citations"
+        }
+      ]
+    },
+    {
+      "id": "G-COMMANDES",
+      "title": "Répertoire complet des commandes",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "sources",
+      "advances": [
+        "352 nouveaux mouvements conservent leurs clés natives et leur domaine temporel ; leurs actions restent à attribuer par séquence vérifiée.",
+        "Les citations complètent les gestes documentés sans convertir un nom technique de clip en commande officielle."
+      ],
+      "remaining": [
+        "Répertoire officiel complet, action identifiée par séquence et correspondance aux commandes ; dépasser dix slots lorsque le répertoire le demande."
+      ],
+      "evidence": [
+        {
+          "href": "motion/index.html",
+          "label": "Examiner les clés sources"
+        },
+        {
+          "href": "canonical/index.html",
+          "label": "Gestes documentés"
+        }
+      ]
+    },
+    {
+      "id": "G-MANCHES",
+      "title": "Fin de manche et résultat",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "sources",
+      "advances": [
+        "La recette R26 élargit les matchs complets aux adversaires distincts et aux KO obtenus avec les vies normales et des inputs réels.",
+        "Les événements de fin de manche, reprise et fin de match sont conservés avec les relectures ; les séquences artistiques restent à réaliser."
+      ],
+      "remaining": [
+        "Victoire, défaite, égalité et leurs séquences, dessins et sons officiels par incarnation ; recette KO et conclusions artistiques séparée."
+      ],
+      "evidence": [
+        {
+          "href": "../../docs/R26_MATCHES.json",
+          "label": "Résultats exacts des matchs"
+        },
+        {
+          "href": "../../docs/R26_MATCHES.json",
+          "label": "Recette et limites enregistrées"
+        }
+      ]
+    },
+    {
+      "id": "G-CINEMATIQUES",
+      "title": "Intros et outros",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "sources",
+      "advances": [
+        "Le lecteur cumulatif permet de retrouver une pose et un instant dans les fichiers originaux supplémentaires.",
+        "L’aperçu publié peut servir de comparaison ; aucune intro, outro ou correspondance sonore absente des sources n’est créée."
+      ],
+      "remaining": [
+        "Intros, outros et bande sonore complète par sujet ; attribution de l’action, de la phase et des raccords du jeu d’origine."
+      ],
+      "evidence": [
+        {
+          "href": "models/index.html",
+          "label": "Comparer les vues sources"
+        },
+        {
+          "href": "../../docs/R26_READER.md",
+          "label": "Lecture et liens reproductibles"
+        }
+      ]
+    },
+    {
+      "id": "G-REPLAYS",
+      "title": "Compatibilité des replays",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "functions",
+      "advances": [
+        "Les nouveaux matchs entre sujets distincts sont reconstruits avec le moteur exact et vérifiés deux fois.",
+        "La restauration isolée conserve les valeurs R19 exactes, avec export des états avant et après et refus des contrats incompatibles."
+      ],
+      "remaining": [
+        "Autres révisions et contrats historiques, campagnes et conclusions artistiques ; ne pas lire un ancien contrat sous un moteur courant."
+      ],
+      "evidence": [
+        {
+          "href": "persistence/index.html",
+          "label": "Essayer la restauration isolée"
+        },
+        {
+          "href": "../../docs/R26_MATCHES.json",
+          "label": "Couverture des matchs"
+        }
+      ]
+    },
+    {
+      "id": "G-SAUVES",
+      "title": "Sauvegardes et restauration",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "functions",
+      "advances": [
+        "Une restauration de sauvegarde R19 peut être préparée puis appliquée dans une base IndexedDB isolée avec journal transactionnel.",
+        "Annulation et retour arrière vérifient l’état attendu ; le stockage du jeu et les services cloud ne sont pas restaurés par cet outil."
+      ],
+      "remaining": [
+        "Restauration du stockage réel du jeu, cloud et reprises après interruption hors de la base isolée ; l’outil R26 ne certifie pas ces usages."
+      ],
+      "evidence": [
+        {
+          "href": "persistence/index.html",
+          "label": "Préparer une restauration isolée"
+        },
+        {
+          "href": "../../docs/R26_PERSISTENCE.md",
+          "label": "Atomicité et limites"
+        }
+      ]
+    },
+    {
+      "id": "G-VICTIMES",
+      "title": "Compatibilité des conclusions",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "sources",
+      "advances": [
+        "La recette ajoute des paires de sujets distincts aux 115 miroirs historiques, avec résultats et dommages observés.",
+        "Les KO de simulation ne certifient pas la compatibilité anatomique ou artistique des conclusions."
+      ],
+      "remaining": [
+        "Toutes les associations admissibles et leurs conclusions finales ; revue morphologique, artistique et séquences d’origine."
+      ],
+      "evidence": [
+        {
+          "href": "../../docs/R26_MATCHES.json",
+          "label": "Paires réellement exécutées"
+        },
+        {
+          "href": "../../docs/R23_CONCLUSIONS_MATRIX.json",
+          "label": "Matrice historique"
+        }
+      ]
+    },
+    {
+      "id": "G-ECHELLE",
+      "title": "Dimensions et points faibles",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "sources",
+      "advances": [
+        "Les nouvelles géométries conservent leurs coordonnées sources ; le cadrage et les vues d’orientation ne deviennent pas des mesures en mètres.",
+        "Les citations de points faibles restent liées au sujet et à la phase concernés."
+      ],
+      "remaining": [
+        "Mesures primaires, tailles corporelles et collision, géants et aquatiques ; zéro échelle physique certifiée."
+      ],
+      "evidence": [
+        {
+          "href": "models/index.html",
+          "label": "Géométries et cadrage"
+        },
+        {
+          "href": "canonical/index.html",
+          "label": "Points faibles et portée"
+        }
+      ]
+    },
+    {
+      "id": "G-RENDU",
+      "title": "Sprites, clips et asymétries",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "sources",
+      "advances": [
+        "Le lecteur cumulatif propose 66 références avec modèle, matières, aperçu et empreintes contrôlables.",
+        "Les planches d’orientation facilitent l’examen des asymétries sans remplacer automatiquement les sprites de combat historiques."
+      ],
+      "remaining": [
+        "Sprites définitifs, deux orientations, asymétries, mouvements, impacts et transformations de tout le catalogue ; rendu original du jeu non certifié."
+      ],
+      "evidence": [
+        {
+          "href": "sprites/index.html",
+          "label": "Examiner les deux côtés"
+        },
+        {
+          "href": "models/index.html",
+          "label": "Examiner les modèles"
+        }
+      ]
+    },
+    {
+      "id": "G-PERF",
+      "title": "Performances sur appareils cibles",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "validation",
+      "advances": [
+        "Le lecteur conserve des chargements bornés et une seule archive de mouvements en cache ; les nouvelles limites sont éprouvées contre les archives livrées.",
+        "La restauration utilise des transactions et ferme ses connexions ; les contrôles cloud ne certifient pas les appareils physiques."
+      ],
+      "remaining": [
+        "Appareils physiques, GPU cibles, budgets mémoire globaux et longues sessions de combat ; le rendu logiciel cloud ne les certifie pas."
+      ],
+      "evidence": [
+        {
+          "href": "../../docs/R26_READER.md",
+          "label": "Chargement et durée de vie"
+        },
+        {
+          "href": "../../docs/R26_PERSISTENCE.md",
+          "label": "Stockage isolé"
+        }
+      ]
+    },
+    {
+      "id": "G-ACCESS",
+      "title": "Accessibilité et appareils",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "validation",
+      "advances": [
+        "Les nouveaux parcours gardent commandes clavier, noms accessibles, repli sans WebGL et liens vers leurs preuves.",
+        "Les liens du Dossier rejoignent les ressources cumulatives en conservant candidats, attributions et absence de lecture automatique."
+      ],
+      "remaining": [
+        "Lecteurs d’écran réels, appareils tactiles et manettes physiques, contenus hors écran et conformité WCAG complète."
+      ],
+      "evidence": [
+        {
+          "href": "../../docs/R26_ACCESS.md",
+          "label": "Parcours et résultats"
+        },
+        {
+          "href": "models/index.html",
+          "label": "Commandes du lecteur"
+        }
+      ]
+    },
+    {
+      "id": "G-AUDIO",
+      "title": "Voix et sons par incarnation",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "sources",
+      "advances": [
+        "1031 nouveaux fichiers sonores, 646 contenus distincts, classés sous 4 UID par les publications de la même édition.",
+        "Les fichiers sont conservés à l’octet ; l’écoute sémantique indépendante, les actions et les banques natives restent non certifiées."
+      ],
+      "remaining": [
+        "Écoute indépendante, locuteur et action/phase, comparaison aux banques brutes, cris et mixage final ; ne pas affecter automatiquement ces sons au combat."
+      ],
+      "evidence": [
+        {
+          "href": "audio/index.html",
+          "label": "Écouter les publications"
+        },
+        {
+          "href": "../../docs/R26_AUDIO.md",
+          "label": "Sources et limites"
+        }
+      ]
+    },
+    {
+      "id": "G-RECETTE",
+      "title": "Recette cumulative",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "validation",
+      "advances": [
+        "La recette ajoute mouvements, sons, transactions de stockage et matchs entre sujets distincts avec contrôles de corruption et de reconstruction.",
+        "Les preuves distinguent exécution cloud, jeux sources et critères artistiques encore ouverts."
+      ],
+      "remaining": [
+        "Toutes les combinaisons, commandes, campagnes, KO, séquences artistiques et validations sur appareils cibles."
+      ],
+      "evidence": [
+        {
+          "href": "../../docs/R26_VALIDATION.json",
+          "label": "Résultats exécutés"
+        },
+        {
+          "href": "../../docs/R26_MATCHES.json",
+          "label": "Recette des matchs"
+        }
+      ]
+    },
+    {
+      "id": "G-LIVRAISON",
+      "title": "Livraisons et suivi",
+      "status": "EN COURS",
+      "historical_status": "EN COURS",
+      "category": "validation",
+      "advances": [
+        "Le suivi conserve les 17 chantiers et 389 incarnations ; les 23 feuilles historiques R25 sont préservées dans le classeur R26.",
+        "Les outils reproductibles relient les compteurs aux manifestes et exposent les contrôles de livraison sans transformer une référence en clôture."
+      ],
+      "remaining": [
+        "Revue humaine et exécution CI de la nouvelle livraison ; tous les chantiers restent ouverts tant que leurs critères manquent de preuves."
+      ],
+      "evidence": [
+        {
+          "href": "../../docs/R26_TRACKING.json",
+          "label": "Suivi R26 structuré"
+        },
+        {
+          "href": "../../docs/FIDELITE_R26.md",
+          "label": "Livraison et reproduction"
+        }
+      ]
+    }
+  ],
+  "schema": "re.bow.fidelity-progress/1"
+}

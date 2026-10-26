@@ -1,0 +1,99 @@
+{
+  "schema": "re.bow.native-frame-browser-r29/1",
+  "startedAt": "2026-10-26T09:57:13.828Z",
+  "completedAt": "2026-10-26T09:57:23.196Z",
+  "passed": 7,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "All24 actual source scenes retain exact UID and idle is never implied",
+      "pass": true,
+      "detail": {
+        "scenes": 24,
+        "exactIdentities": 6,
+        "autoplay": false,
+        "blobUrls": 1,
+        "combatStatesAssigned": 0
+      }
+    },
+    {
+      "name": "Keyboard frame stepping, voluntary playback and page lifecycle preserve one image",
+      "pass": true,
+      "detail": {
+        "nativeKeyboardActivation": true,
+        "explicitPlay": true,
+        "simulatedLifecycle": true,
+        "duplicateUrls": false
+      }
+    },
+    {
+      "name": "320px and doubled computed text retain visible reachable controls",
+      "pass": true,
+      "detail": {
+        "width": 320,
+        "everyComputedFontDoubled": true,
+        "horizontalOverflow": false,
+        "keyboardReachable": true
+      }
+    },
+    {
+      "name": "Changed PNG bytes are refused before any image URL or download",
+      "pass": true,
+      "detail": {
+        "corruptImageRefused": true,
+        "downloadExposed": false,
+        "blobUrls": 0
+      }
+    },
+    {
+      "name": "Action promotion, associated objects, mirroring and external frame paths are refused",
+      "pass": true,
+      "detail": {
+        "hostileAttributionsRefused": 5,
+        "fabricatedCombatState": false
+      }
+    },
+    {
+      "name": "A late previous frame cannot replace a newly selected subject",
+      "pass": true,
+      "detail": {
+        "selected": "rerev-chunk-ooze--em1030_em1000_BA_1",
+        "stalePreviousFrameInstalled": false,
+        "blobUrls": 1
+      }
+    },
+    {
+      "name": "All384 exported frame payloads verify and decode, and an unknown UID stays explicit",
+      "pass": true,
+      "detail": {
+        "decodedSourceFrames": 384,
+        "unrelatedIdentitySubstituted": false
+      }
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "modules/fidelity-r29/motion/index.html",
+      "sha256": "d833b23a9f44315f3b2fd44e27d1c3dfbb5da76cf4e211f0389154392b0c1139"
+    },
+    {
+      "path": "modules/fidelity-r29/motion/page.js",
+      "sha256": "9b0142e1c063540ec3cf29fb5b23771c3a57d14b496bbc323366d7f48ba20384"
+    },
+    {
+      "path": "modules/fidelity-r29/motion/style.css",
+      "sha256": "f5cfaded5e040447e5b91273639ae76cd36a347dbb7d08024ab1054b4e77382c"
+    },
+    {
+      "path": "modules/fidelity-r29/motion/manifest.json",
+      "sha256": "e0f4541c4af486d6990fc41ec19b05f70626eb7d5b866171710df644a8002267"
+    },
+    {
+      "path": "tests/browser-native-frames-r29.mjs",
+      "sha256": "ab32fe9bbb9e571a78685fa5ef96b49c84af982d318a8dcbe0d0de3cf2f16742"
+    }
+  ],
+  "physicalDevicesCertified": false,
+  "autoplay": false,
+  "originalGameFramesCertified": false
+}

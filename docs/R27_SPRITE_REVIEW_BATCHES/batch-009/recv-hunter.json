@@ -1,0 +1,53 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "recv-hunter",
+  "reviewed_at_utc": "2026-10-25T09:16:57.893554+00:00",
+  "batch": "batch-009",
+  "image": "modules/fidelity-r27/sprites/generated/recv-hunter/idle-right.png",
+  "image_sha256": "bab035a0a3ca84b63ed80cf24a2be798aaa3b0fa4afd605824957c40bf20e62d",
+  "active_record": "modules/fidelity-r27/sprites/records/recv-hunter.json",
+  "active_record_sha256": "34cc4557971536acc6122c4be92b40818ce435ab2805c79c4dc3ff192f698b3e",
+  "used_references": [
+    {
+      "path": "assets/catalog/recv-hunter.png",
+      "sha256": "063313f94aaf42228fdb5a29c2bc831a0d852196101f2e29351279d0ee6b4ffa",
+      "role": "portrait",
+      "declared_body_coverage": "unknown"
+    }
+  ],
+  "scope": "combatant-neutral-pose",
+  "source_complete_body_observed": false,
+  "generated_complete_body_observed": true,
+  "full_body_reviewed": false,
+  "observed_facing": "left",
+  "direction_eligible_for_neutral_pose": false,
+  "review_outcome": "visible-source-region-reviewed-body-not-admitted",
+  "notes": "Catalog source is a crouched upper-body crop, cutting hands, legs and right side. Generated output completes the full crouching Hunter with claws and feet that are not wholly visible in the source. Upper scales/head remain recognizable, but those unseen body completions are not admitted.",
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "visual_evidence": {
+    "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-009/contact-4.png",
+    "sha256": "9aef2e758799070f6b667c2f3d05efe1d6047852ce431d6ef06b0b6c361021d1",
+    "kind": "browser-contact-review-evidence",
+    "new_generated_sprite_count": 0
+  },
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.770541+00:00",
+    "prior_report_record_sha256": "f27ec342bacec2effac8add0540b0fdec6b602c5afd15584662d07d8cf594813",
+    "prior_direction_eligibility": false,
+    "pose_observation": null,
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.775404+00:00"
+  },
+  "observed_pose_kind": "unknown",
+  "available_states": []
+}

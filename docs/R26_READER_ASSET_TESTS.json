@@ -1,0 +1,86 @@
+{
+  "schema": "re.bow.model-reader-transport-r26/1",
+  "passed": 9,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Small original archives retain the unchanged R24 length, hash and path guards",
+      "pass": true,
+      "detail": {
+        "legacyLimitUnchanged": 41943040
+      }
+    },
+    {
+      "name": "Oversized archive declarations and traversal are refused before any network call",
+      "pass": true,
+      "detail": {
+        "maximumBytes": 100663296,
+        "calls": 0
+      }
+    },
+    {
+      "name": "A large stream ending early or exceeding its declaration is refused and cancelled",
+      "pass": true,
+      "detail": {
+        "truncatedRefused": true,
+        "overrunCancelled": true
+      }
+    },
+    {
+      "name": "A complete original-sized stream above 40 MiB is accepted only with its exact SHA-256",
+      "pass": true,
+      "detail": {
+        "verifiedBytes": 42991616,
+        "changedDigestRefused": true
+      }
+    },
+    {
+      "name": "Large archives require a bounded streaming body",
+      "pass": true,
+      "detail": {
+        "unboundedFallbackRefused": true
+      }
+    },
+    {
+      "name": "Dossier header remains available when optional DOM or fetch capabilities are absent",
+      "pass": true,
+      "detail": [
+        {
+          "missing": "network",
+          "headerAvailable": true,
+          "optionalRequests": 0
+        },
+        {
+          "missing": "dom-after",
+          "headerAvailable": true,
+          "optionalRequests": 0
+        }
+      ]
+    },
+    {
+      "name": "Source position links round-trip native floating-point time without action aliases or autoplay",
+      "pass": true,
+      "detail": {
+        "nativeTime": 0.016666666666666666,
+        "sourceHashBound": true,
+        "automaticPlayback": false
+      }
+    },
+    {
+      "name": "Changed hashes, duplicate parameters, wrong clips and invalid/out-of-range positions are refused",
+      "pass": true,
+      "detail": {
+        "rejected": 9,
+        "unknownTimesNeverApplied": true
+      }
+    },
+    {
+      "name": "Aborting a streamed archive cancels its reader before bytes can be accepted",
+      "pass": true,
+      "detail": {
+        "cancelled": true,
+        "accepted": false
+      }
+    }
+  ]
+}

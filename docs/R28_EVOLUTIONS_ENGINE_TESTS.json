@@ -1,0 +1,114 @@
+{
+  "schema": "re.bow.evolution-engine-tests/1",
+  "release": "R28",
+  "generatedAt": "2026-10-26T08:15:45.445Z",
+  "pass": true,
+  "checks": [
+    {
+      "name": "15 source-scoped families, acyclic forward forms and incarnation separation",
+      "pass": true,
+      "detail": {
+        "families": 15,
+        "forms": 42,
+        "playableEdges": 17,
+        "contextEdges": 9,
+        "sourceQuotes": 24
+      }
+    },
+    {
+      "name": "exact-source compatibility contract binds every engine, profile and graph input",
+      "pass": true
+    },
+    {
+      "name": "legacy CQC globals and ordinary combat are byte-for-byte behavior preserved",
+      "pass": true
+    },
+    {
+      "name": "eligibility queries have no side effects and full-health forms never change automatically",
+      "pass": true
+    },
+    {
+      "name": "frame, health, meter, neutral ground and active object conditions each block independently",
+      "pass": true
+    },
+    {
+      "name": "explicit request changes actual fighter profile at the next tick without healing or clearing harms",
+      "pass": true
+    },
+    {
+      "name": "all 17 admitted edges switch to exact UID and preserve finite spent resource capacity",
+      "pass": true,
+      "detail": {
+        "transitions": 17
+      }
+    },
+    {
+      "name": "giant, rooted and scene-bound phases cannot be manufactured as free duel actors",
+      "pass": true
+    },
+    {
+      "name": "no cross-incarnation links, reverse mutation, skip-a-form or equipment-as-mutation",
+      "pass": true
+    },
+    {
+      "name": "successful recovery consumes exactly 24 ticks and rejects attack/jump while remaining hittable",
+      "pass": true
+    },
+    {
+      "name": "revalidated queue cancellation and opponent objects do not permit stale commands",
+      "pass": true
+    },
+    {
+      "name": "simultaneous voluntary mutations keep actor identity, physics and both meter costs",
+      "pass": true
+    },
+    {
+      "name": "round reset keeps evolved profile while legacy engine resets life under ordinary round rules",
+      "pass": true
+    },
+    {
+      "name": "natural human duel reaches eligibility and records a real voluntary mutation without state overrides",
+      "pass": true,
+      "detail": {
+        "mutationFrame": 679,
+        "frames": 1136,
+        "digest": "11012315",
+        "complete": true,
+        "winner": 1,
+        "life": [
+          0,
+          10000
+        ]
+      }
+    },
+    {
+      "name": "replay seek before/after mutation reconstructs exact UID, history and final result",
+      "pass": true
+    },
+    {
+      "name": "corrupted mutation, health injection, wrong engine, invalid run and wrong digest fail closed",
+      "pass": true
+    },
+    {
+      "name": "R28 and preserved R7 replay parsers reject each other without touching original records",
+      "pass": true
+    },
+    {
+      "name": "CPU spectator and second-slot mutation requests remain manual and reproducible",
+      "pass": true,
+      "detail": {
+        "slot": 1,
+        "to": "re2-tyrant-mutation"
+      }
+    }
+  ],
+  "counts": {
+    "groups": 18,
+    "passed": 18,
+    "failed": 0
+  },
+  "notes": [
+    "Synthetic boundary fixtures test rule safety; separate natural replay scenario changes no actor state.",
+    "No official transformation frames, physical controllers or 1:1 world scales certified."
+  ]
+}

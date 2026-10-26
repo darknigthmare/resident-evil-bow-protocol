@@ -1,0 +1,115 @@
+{
+  "schema": "re.bow.persistence-r27-browser-tests/1",
+  "passed": 9,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Restored archive directly reaches both exact main engines without a save round trip at 1440px",
+      "pass": true,
+      "evidence": {
+        "width": 1440,
+        "sourceRevision": 2,
+        "exactNestedArchive": true,
+        "exactRecordSlice": true,
+        "engines": [
+          "main-current",
+          "main-pre-r13"
+        ],
+        "independentReconstructions": 4,
+        "gameStorageUnchanged": true,
+        "maximumSimultaneousDownloadBlobs": 1
+      }
+    },
+    {
+      "name": "Restored archive directly reaches both exact main engines without a save round trip at 390px",
+      "pass": true,
+      "evidence": {
+        "width": 390,
+        "sourceRevision": 2,
+        "exactNestedArchive": true,
+        "exactRecordSlice": true,
+        "engines": [
+          "main-current",
+          "main-pre-r13"
+        ],
+        "independentReconstructions": 4,
+        "gameStorageUnchanged": true,
+        "maximumSimultaneousDownloadBlobs": 1
+      }
+    },
+    {
+      "name": "A second tab changing the isolated revision refuses launch and requires an explicit reload",
+      "pass": true,
+      "evidence": {
+        "staleLaunchRefused": true,
+        "sourceRevisionAfterReload": 2,
+        "automaticReplayLaunches": 0
+      }
+    },
+    {
+      "name": "A restore while the actual engine loads invalidates the current-source verdict while preserving captured reconstruction details",
+      "pass": true,
+      "evidence": {
+        "actualEnginePasses": 2,
+        "capturedResultRetained": true,
+        "currentSourceVerdictRefused": true
+      }
+    },
+    {
+      "name": "Invalid records stay visible and an outcome falsification cannot pass beside a valid restored replay",
+      "pass": true,
+      "evidence": {
+        "visibleRecords": 6,
+        "refusedBeforeLaunch": 4,
+        "falsifiedOutcomeRefused": true,
+        "independentValidReplayRetained": true
+      }
+    },
+    {
+      "name": "Pagination keeps at most100 rows and selections remain bounded across pages",
+      "pass": true,
+      "evidence": {
+        "records": 205,
+        "renderedPageLimit": 100,
+        "maximumSelectedToRun": 30,
+        "staleSelectionsNotLost": true
+      }
+    },
+    {
+      "name": "Keyboard, hostile labels and200percent text at320pixels remain usable without markup injection",
+      "pass": true,
+      "evidence": {
+        "width": 320,
+        "textPercent": 200,
+        "keyboardSelection": true,
+        "hostileLabelsInert": true,
+        "physicalDevices": false
+      }
+    },
+    {
+      "name": "Missing or denied IndexedDB has a readable refusal and no fallback to game storage",
+      "pass": true,
+      "evidence": [
+        {
+          "denied": false,
+          "fallbackWrites": 0
+        },
+        {
+          "denied": true,
+          "fallbackWrites": 0
+        }
+      ]
+    },
+    {
+      "name": "Page departure cancels the pending engine and a persisted return requires another explicit source read",
+      "pass": true,
+      "evidence": {
+        "departureCancelsSandbox": true,
+        "capturedBytesReleased": true,
+        "persistedReturnNeedsExplicitRead": true,
+        "physicalBfCacheCertified": false
+      }
+    }
+  ],
+  "scope": "Real Chromium IndexedDB restore→replay bridge with original current/pre-R13 engine sandboxes; revision and raw-value fences, exact extraction, cancellation and reflow. No game/cloud restoration, physical device or original-game art certification."
+}

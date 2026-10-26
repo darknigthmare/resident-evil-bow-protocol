@@ -18,11 +18,19 @@ async function selection() {
   await page.goto(base + '/modules/versus.html', { waitUntil: 'networkidle' });
   await page.waitForFunction(() => window.RE_COMBAT && window.RE_SPRITE_PRESENTATION_R20);
 }
+// Keep this historical presentation fixture on R20. R27 presentation is checked live in its own suite.
+async function legacyContext(options) {
+  const context = await browser.newContext(options);
+  await context.route('**/fidelity-r27/combat/presentation.js', route => route.fulfill({
+    status: 200, contentType: 'text/javascript', body: '/* Historical R20 presentation fixture. */'
+  }));
+  return context;
+}
 try {
   for (let n = 0; n < 80; n++) { try { if ((await fetch(base + '/dev-sprites.html')).ok) break; } catch {} await new Promise(resolve => setTimeout(resolve, 100)); }
   browser = await chromium.launch({ headless: true, ...(process.env.CHROME_BIN ? { executablePath: process.env.CHROME_BIN } : {}), args: ['--no-sandbox'] });
   for (const width of [1440, 390]) {
-    const context = await browser.newContext({ viewport: { width, height: 1000 }, reducedMotion: 'reduce' });
+    const context = await legacyContext({ viewport: { width, height: 1000 }, reducedMotion: 'reduce' });
     page = await context.newPage(); const errors = []; page.on('pageerror', error => errors.push(error.message));
     await test('Selection displays the exact Tyrant and Nemesis incarnation with original canvas retained', width, async () => {
       await selection();
@@ -69,7 +77,7 @@ try {
     });
     await context.close();
   }
-  const context = await browser.newContext({ viewport: { width: 1440, height: 1000 } }); page = await context.newPage();
+  const context = await legacyContext({ viewport: { width: 1440, height: 1000 } }); page = await context.newPage();
   await test('Delayed image completion cannot overwrite a newer selection', 1440, async () => {
     let release, requested;
     const requestSeen = new Promise(resolve => { requested = resolve; });
@@ -99,7 +107,7 @@ try {
     return { delayedNativeImage: true };
   });
   await context.close();
-  const failureContext = await browser.newContext({ viewport: { width: 1440, height: 1000 } }); page = await failureContext.newPage();
+  const failureContext = await legacyContext({ viewport: { width: 1440, height: 1000 } }); page = await failureContext.newPage();
   await test('Blocked PNG retains original canvas and permits retry after a new selection', 1440, async () => {
     await page.route('**/assets/sprites/bow/re2r-tyrant/idle-right.png', route => route.abort());
     await selection(); await page.evaluate(() => RE_COMBAT.select('re2r-tyrant', 're1-hunter'));

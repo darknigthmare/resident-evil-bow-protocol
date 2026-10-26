@@ -1,0 +1,54 @@
+{
+  "schema": "re.bow.published-check-plan-r29/1",
+  "directories": [],
+  "commands": [
+    [
+      "{python}",
+      "scripts/build-sprite-overlay-r28.py",
+      "--check"
+    ],
+    [
+      "{python}",
+      "scripts/build-evolutions-r28.py",
+      "--check"
+    ],
+    [
+      "{python}",
+      "scripts/build-canonical-evidence-r28.py",
+      "--check"
+    ],
+    [
+      "{python}",
+      "scripts/import-audio-archives-r28.py",
+      "--check"
+    ],
+    [
+      "{python}",
+      "scripts/build-dossier-additions-r28.py",
+      "--check"
+    ],
+    [
+      "{python}",
+      "scripts/build-validation-summary-r28.py",
+      "--check"
+    ],
+    [
+      "{python}",
+      "scripts/build-fidelity-tracking-r28.py",
+      "--check"
+    ],
+    [
+      "{python}",
+      "scripts/verify-fidelity-export-r28.py"
+    ],
+    [
+      "{python}",
+      "scripts/audit-delivery-r28.py",
+      "--check"
+    ],
+    [
+      "node",
+      "tests/verify-r28-integration.mjs"
+    ]
+  ]
+}

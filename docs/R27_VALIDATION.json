@@ -1,0 +1,193 @@
+{
+  "schema": "re.bow.validation-r27/1",
+  "complete": true,
+  "provisional": false,
+  "generation_snapshot": {
+    "targetIdentities": 385,
+    "generatedSprites": 363,
+    "pendingSprites": 22,
+    "generationBlockedSprites": 22,
+    "attemptedIdentities": 385,
+    "awaitingOutputIdentities": 0,
+    "fullBodyReviewedSprites": 82,
+    "neutralBaseCombatEligibleSprites": 22
+  },
+  "target_generation_complete": false,
+  "target_generation_attempts_complete": true,
+  "generation_preference": "Conserver les refus, fidélité prioritaire",
+  "checks": [
+    {
+      "label": "Export et frontières du classeur",
+      "result": "17 réussis, 0 échec(s)",
+      "scope": "Feuilles historiques, compteurs généré/en attente/revu, contextes et horloges natives.",
+      "path": "docs/R27_EXPORT_TESTS.json"
+    },
+    {
+      "label": "Fichiers des sprites",
+      "result": "18 réussis, 0 échec(s)",
+      "scope": "Jobs, octets PNG, alpha, provenance et refus des statuts inventés.",
+      "path": "docs/R27_SPRITES_TESTS.json"
+    },
+    {
+      "label": "Galerie des sprites",
+      "result": "6 réussis, 0 échec(s)",
+      "scope": "Une seule image chargée, sélection, erreurs, clavier et texte agrandi.",
+      "path": "docs/R27_SPRITES_BROWSER.json"
+    },
+    {
+      "label": "Contrats du rendu idle",
+      "result": "9 réussis, 0 échec(s)",
+      "scope": "Corps complet revu, pose neutral-base, état et orientation exacts ; aucune pose de liaison ou partielle substituée au combat.",
+      "path": "docs/R27_COMBAT_TESTS.json"
+    },
+    {
+      "label": "Rendu idle en navigateur",
+      "result": "15 réussis, 0 échec(s)",
+      "scope": "Intégration réelle de la pose disponible, retrait et repli ; pas de cycle complet certifié.",
+      "path": "docs/R27_COMBAT_BROWSER.json"
+    },
+    {
+      "label": "Ajouts sourcés des Dossiers",
+      "result": "3 réussis, 0 échec(s)",
+      "scope": "389 UID, nouveaux sons et citations liés à leurs manifestes ; index R26 conservé et totaux refusés si inventés.",
+      "path": "docs/R27_DOSSIER_ADDITIONS_TESTS.json"
+    },
+    {
+      "label": "Borne mesurée du registre de sprites",
+      "result": "1 réussis, 0 échec(s)",
+      "scope": "Suivi ciblé du plafond 4 MiB : transport réel de 3 MiB accepté et 5 MiB refusé ; limites d’image et cache conservées.",
+      "path": "docs/R27_COMBAT_BOUNDS_FOLLOWUP.json"
+    },
+    {
+      "label": "Index des références d’apparence",
+      "result": "8 réussis, 0 échec(s)",
+      "scope": "389 identités, images attribuées, corps et candidats séparés ; dérives historiques explicites.",
+      "path": "docs/R27_SOURCES_TESTS.json"
+    },
+    {
+      "label": "Références dans le navigateur",
+      "result": "5 réussis, 0 échec(s)",
+      "scope": "Sources par incarnation, preuves locales, reflow et aucun remplacement inventé.",
+      "path": "docs/R27_SOURCES_BROWSER.json"
+    },
+    {
+      "label": "Vues de référence géométriques séparées",
+      "result": "4 réussis, 0 échec(s)",
+      "scope": "16 rendus natifs de référence pour quatre UID ; zéro sprite image_gen, original ou final de combat.",
+      "path": "docs/R27_SOURCE_BODY_RASTERS_TESTS.json"
+    },
+    {
+      "label": "Import des mouvements",
+      "result": "8 réussis, 0 échec(s)",
+      "scope": "Scènes et archives originales, parties de ZIP liées au SHA global, bases séparées.",
+      "path": "docs/R27_MOTION_EVIDENCE.json"
+    },
+    {
+      "label": "Déformation des mouvements",
+      "result": "120 réussis, 0 échec(s)",
+      "scope": "Clés, matrices et sommets pondérés natifs ; gestes non attribués par leurs noms.",
+      "path": "docs/R27_MOTION_SKELETON_TESTS.json"
+    },
+    {
+      "label": "Lecteur des mouvements",
+      "result": "5 réussis, 0 échec(s)",
+      "scope": "Clips directs bornés ; pas de relèvement du plafond du lecteur historique.",
+      "path": "docs/R27_MOTION_BROWSER.json"
+    },
+    {
+      "label": "Fichiers audio publiés",
+      "result": "9 réussis, 0 échec(s)",
+      "scope": "WAV et archive exacts ; contenus SHA distincts et absence de réattribution sémantique.",
+      "path": "docs/R27_AUDIO_TESTS.json"
+    },
+    {
+      "label": "Lecteur audio",
+      "result": "7 réussis, 0 échec(s)",
+      "scope": "Décodage, refus, changement de sélection et absence de lecture automatique.",
+      "path": "docs/R27_AUDIO_BROWSER.json"
+    },
+    {
+      "label": "Citations documentaires",
+      "result": "9 réussis, 0 échec(s)",
+      "scope": "Nouvelles incarnations, citations, formes et acteurs ; zéro capture primaire inventée.",
+      "path": "docs/R27_CANONICAL_VALIDATION.json"
+    },
+    {
+      "label": "Parcours des citations",
+      "result": "5 réussis, 0 échec(s)",
+      "scope": "Catalogue, filtre et portée des assertions citées.",
+      "path": "docs/R27_CANONICAL_BROWSER.json"
+    },
+    {
+      "label": "Contrats du pont de restauration",
+      "result": "8 réussis, 0 échec(s)",
+      "scope": "Lecture exacte et révision de la base isolée ; aucune écriture du stockage du jeu.",
+      "path": "docs/R27_PERSISTENCE_TESTS.json"
+    },
+    {
+      "label": "Pont de restauration en navigateur",
+      "result": "9 réussis, 0 échec(s)",
+      "scope": "IndexedDB réel, refus des réponses périmées et vérification par le moteur correspondant.",
+      "path": "docs/R27_PERSISTENCE_BROWSER_TESTS.json"
+    },
+    {
+      "label": "Matchs et conclusions de prototype",
+      "result": "9 réussis, 0 échec(s)",
+      "scope": "12 matchs, 24 reconstructions ; deux anciennes tentatives débloquées, scènes artistiques hors certification.",
+      "path": "docs/R27_MATCH_TESTS.json"
+    },
+    {
+      "label": "Suivi des chantiers",
+      "result": "6 réussis, 0 échec(s)",
+      "scope": "17 chantiers, compteurs des manifestes, filtres, textes inertes et preuves locales.",
+      "path": "docs/R27_DASHBOARD_BROWSER.json"
+    },
+    {
+      "label": "Accessibilité des sept ateliers",
+      "result": "22 réussis, 0 échec(s)",
+      "scope": "Clavier, reflow et audits automatisés ; appareils physiques et lecteurs d’écran non certifiés.",
+      "path": "docs/R27_ACCESS_BROWSER.json"
+    },
+    {
+      "label": "Présentation historique R20",
+      "result": "8 réussis, 0 échec(s)",
+      "scope": "Copie isolée ; adaptateur R27 de présentation explicitement exclu, assertions R20 intactes.",
+      "path": "docs/R27_LEGACY_R20_SPRITES.json"
+    },
+    {
+      "label": "Accessibilité historique R25",
+      "result": "18 réussis, 0 échec(s)",
+      "scope": "Copie isolée ; anciens adaptateurs figés et contrôles stricts des Dossiers R25.",
+      "path": "docs/R27_LEGACY_R25_ACCESS.json"
+    },
+    {
+      "label": "Accessibilité historique R26",
+      "result": "22 réussis, 0 échec(s)",
+      "scope": "Copie isolée ; R27 exclu de la seule fixture historique, lecteur R26 contrôlé intégralement.",
+      "path": "docs/R27_LEGACY_R26_ACCESS.json"
+    },
+    {
+      "label": "Contrôles historiques",
+      "result": "605 réussis, 0 échec(s)",
+      "scope": "Contrats et assertions historiques exécutés avec les adaptateurs R27 installés.",
+      "path": "docs/R27_HISTORICAL_TESTS.json"
+    }
+  ],
+  "totals": {
+    "python_tests": 76,
+    "targeted_node_checks": 146,
+    "browser_groups": 80,
+    "targeted_browser_followup_groups": 1,
+    "historical_assertions": 605,
+    "isolated_legacy_browser_groups": 48
+  },
+  "pending_reports": [],
+  "failed_reports": [],
+  "post_export_evidence": [
+    "docs/R27_INTEGRATION_TESTS.json",
+    "docs/R27_REPRODUCTION.json",
+    "docs/R27_SOURCE_ADDITIONS.json"
+  ],
+  "scope": "Résultats effectivement exécutés ; les rapports absents restent en attente. Exécution cloud sans certification des appareils physiques, cycles complets ou fidélité 1:1 globale.",
+  "canonical_fidelity_certified": 0
+}

@@ -1,0 +1,67 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "re0-leech",
+  "reviewed_at_utc": "2026-10-25T08:49:04.371141+00:00",
+  "batch": "batch-005",
+  "image": "modules/fidelity-r27/sprites/generated/re0-leech/idle-right.png",
+  "image_sha256": "9ae41bcce4799a13215616170a08d63a9a9cba0a01843829ec388f3fe0f11399",
+  "active_record": "modules/fidelity-r27/sprites/records/re0-leech.json",
+  "active_record_sha256": "5ebaaef9e172b4a1b5118412587cb9956ded4968928ca15cf348011be216bfd5",
+  "used_references": [
+    {
+      "path": "assets/catalog/re0-leech.png",
+      "sha256": "58a73ae86ea4c68b0490ac55246a7265db619b1bf70a6b5b652c85e5cdc243d0",
+      "role": "portrait",
+      "declared_body_coverage": "unknown"
+    }
+  ],
+  "scope": "combatant-neutral-pose",
+  "source_complete_body_observed": true,
+  "generated_complete_body_observed": true,
+  "full_body_reviewed": true,
+  "observed_facing": "left",
+  "direction_eligible_for_neutral_pose": true,
+  "review_outcome": "source-consistent-generated-static-neutral-base",
+  "notes": "Actual catalog image contains the complete small leech: dark mouth at left, pale dorsal patch, golden patterned body and tapered right tail. Generated image retains this whole silhouette. Manual SHA-bound source observation supports body admission despite unknown job coverage; no original movement phase or physical size is certified.",
+  "manual_source_completeness_evidence": {
+    "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-005/re0-leech-source-body-observation.json",
+    "sha256": "ecd4a8d90569c856b18ed232fd8ee56f8456bc0f5fbe51827384db0a29a634de",
+    "referencePath": "assets/catalog/re0-leech.png",
+    "referenceSha256": "58a73ae86ea4c68b0490ac55246a7265db619b1bf70a6b5b652c85e5cdc243d0",
+    "imageSha256": "9ae41bcce4799a13215616170a08d63a9a9cba0a01843829ec388f3fe0f11399",
+    "observedFacing": "left",
+    "scope": "Whole body visually observed in this source image and this generated pose only; no opposite view, geometry or original-game pose certification."
+  },
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "record_metadata_refresh": {
+    "prior_record_sha256": "968cec6da328a29eda6e336d640e1bd3513054d598281bef66af27a0a7d7c3ad",
+    "current_record_sha256": "32b512234791fd26fa036b391a1fe19324b936a04d478b0b36971aedde736faf",
+    "checked_at_utc": "2026-10-25T09:14:23.442194+00:00",
+    "change_verified": "Only limitations explanatory text was qualified by existing SHA-bound body proof; original job limitations retained as jobLimitations. Exact prior bytes reconstructed and matched prior record SHA. No PNG, used source, review, facing, body, receipt or proof changed."
+  },
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.798371+00:00",
+    "prior_report_record_sha256": "32b512234791fd26fa036b391a1fe19324b936a04d478b0b36971aedde736faf",
+    "prior_direction_eligibility": true,
+    "pose_observation": {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re0-leech.json",
+      "sha256": "712a13281687c1f42bf465ee4460428041a2513032d237bf19eddc4a8f4636e9"
+    },
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.802447+00:00"
+  },
+  "observed_pose_kind": "neutral-base",
+  "available_states": [
+    "idle"
+  ]
+}

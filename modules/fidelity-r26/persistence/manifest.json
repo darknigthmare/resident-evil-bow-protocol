@@ -1,0 +1,89 @@
+{
+  "schema": "re.bow.persistence-rehearsal-catalog/1",
+  "release": "R26",
+  "title": "Répétition atomique de restauration dans un atelier isolé",
+  "href": "persistence/index.html",
+  "storage": {
+    "api": "IndexedDB",
+    "database": "re.bow.restore-rehearsal.r26",
+    "version": 1,
+    "stores": [
+      "values",
+      "meta"
+    ],
+    "gameLocalStorageWritten": false,
+    "cloudBackend": false,
+    "userActionRequired": true
+  },
+  "features": [
+    "R19 baseline import",
+    "selected-group preview",
+    "exact raw-key copy",
+    "atomic values-and-journal commit",
+    "durable reload",
+    "explicit exact rollback",
+    "stale-state refusal",
+    "R19 export",
+    "explicit isolated clear"
+  ],
+  "journalStates": [
+    "committed",
+    "rolled-back"
+  ],
+  "originalDependencies": [
+    {
+      "path": "src/save-center-r19.js",
+      "bytes": 10791,
+      "sha256": "6a312bd65ea55fcfe272e4adc9add12ce51affb4a9d424f5bee9998b9952ccbf"
+    },
+    {
+      "path": "modules/fidelity-r23/persistence/inspector.js",
+      "bytes": 12996,
+      "sha256": "feab31c9443584f50147aa089004ecd3e48e49b83d751f7809761cea7fa1c0d0"
+    }
+  ],
+  "implementation": [
+    {
+      "path": "modules/fidelity-r26/persistence/index.html",
+      "bytes": 4236,
+      "sha256": "8a2cd9baa90698d07bc33d61efaf59f8baae382b09378d0aaefc9df2c09a5f43"
+    },
+    {
+      "path": "modules/fidelity-r26/persistence/style.css",
+      "bytes": 1337,
+      "sha256": "8d9bfb7d7d8d0d61dd505350b79427a3c1150f23470450053866dd2c12f39874"
+    },
+    {
+      "path": "modules/fidelity-r26/persistence/page.js",
+      "bytes": 8647,
+      "sha256": "653264e462b2002da7ac0d01a8f2b71bd93e8b7eb777e41ba89f06351b5a55bd"
+    },
+    {
+      "path": "modules/fidelity-r26/persistence/restore.js",
+      "bytes": 9901,
+      "sha256": "a29ecb7c732e2d6a63f10342d97e0dffe8d4e4785036bcbb439a5a81cb99fc4b"
+    }
+  ],
+  "validation": {
+    "browserScript": "tests/browser-persistence-r26.mjs",
+    "report": "docs/R26_PERSISTENCE_BROWSER_TESTS.json",
+    "partialWriteAbortTested": true,
+    "durableReloadTested": true,
+    "physicalCrashCertified": false,
+    "gameRestoreCertified": false,
+    "nativeGameFidelityCertified": false
+  },
+  "limits": {
+    "fileBytes": 33554432,
+    "rawValueUtf16Units": 8388608,
+    "totalRawUtf16Units": 12582912,
+    "strictJsonDepth": 96,
+    "journalHistory": 1
+  },
+  "notes": [
+    "Original R19 validation and raw strings are retained; exported R19 container metadata is newly authored.",
+    "R19 FNV transport checksum is not authentication.",
+    "Atomicity is observed in virtualized Chromium IndexedDB; physical disk durability and cloud restoration are unverified.",
+    "R25 replay reader and its three exact historical engine routes remain available via a link; no engine is copied or changed."
+  ]
+}

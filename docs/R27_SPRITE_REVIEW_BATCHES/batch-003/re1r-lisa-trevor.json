@@ -1,0 +1,52 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "re1r-lisa-trevor",
+  "reviewed_at_utc": "2026-10-25T08:18:50.673304+00:00",
+  "batch": "batch-003",
+  "image": "modules/fidelity-r27/sprites/generated/re1r-lisa-trevor/idle-right.png",
+  "image_sha256": "9e933b6b56931463aa2745fa18c16f96d14bccdecd249f6b58bba504b45a8e60",
+  "active_record": "modules/fidelity-r27/sprites/records/re1r-lisa-trevor.json",
+  "active_record_sha256": "ed54fe2938f1a3edb4c349ab42106ad470c4a5240c5d371b0ab8c32e1732eb79",
+  "used_references": [
+    {
+      "path": "modules/fidelity-r24/visual/previews/asset-287623.png",
+      "sha256": "d9fb0482e067e2eabf2e03c2e45562e1d36bca517e97b67781ca9d0529fe90ef",
+      "role": "model-preview",
+      "declared_body_coverage": "unknown"
+    },
+    {
+      "path": "assets/catalog/re1r-lisa-trevor.png",
+      "sha256": "dee0766576789e8691d5f4ac6528464d58d8d23a2597c4dd06ab4ba18a7e273a",
+      "role": "portrait",
+      "declared_body_coverage": "unknown"
+    }
+  ],
+  "source_complete_body_observed": false,
+  "generated_complete_body_observed": true,
+  "full_body_reviewed": false,
+  "observed_facing": "front",
+  "direction_eligible_for_neutral_pose": false,
+  "review_outcome": "partial-source-no-body-admission",
+  "notes": "The used model preview is a face crop and the other reference is an upper-body/tentacle view. The generated lower body and complete draped silhouette are not documented by these images; layered head-like skin details are not treated as proof of unseen anatomy. No body or side admission.",
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.941940+00:00",
+    "prior_report_record_sha256": "8ce16ac453ff84b825b106a8e36d74098b0c848f663ec3e324c90816d34fc38c",
+    "prior_direction_eligibility": false,
+    "pose_observation": null,
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.931531+00:00"
+  },
+  "observed_pose_kind": "unknown",
+  "available_states": []
+}

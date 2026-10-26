@@ -1,0 +1,73 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "re1r-crow",
+  "reviewed_at_utc": "2026-10-25T08:18:50.873328+00:00",
+  "batch": "batch-003",
+  "image": "modules/fidelity-r27/sprites/generated/re1r-crow/idle-right.png",
+  "image_sha256": "52d750f74f9413a55512a1320bd9704ee6617ec86eb2cb0974e6873bbc2bde91",
+  "active_record": "modules/fidelity-r27/sprites/records/re1r-crow.json",
+  "active_record_sha256": "dbeccad28e412b440b54fe9eb5ad382244e1bd28f2e2fac138bbb88713d4e1e2",
+  "used_references": [
+    {
+      "path": "assets/catalog/re1r-crow.png",
+      "sha256": "da4680f003bb6b6277265b53411dc14c72f5423f4f06d984d10e919f24a1f9fe",
+      "role": "portrait",
+      "declared_body_coverage": "unknown"
+    }
+  ],
+  "source_complete_body_observed": true,
+  "generated_complete_body_observed": true,
+  "full_body_reviewed": true,
+  "observed_facing": "left",
+  "direction_eligible_for_neutral_pose": true,
+  "review_outcome": "source-consistent-generated-static-neutral-base",
+  "notes": "Although the immutable job labels its only used reference bodyCoverage=unknown, the actual source visibly contains the whole folded-wing bird, tail and both feet with margins. Generated left-looking bird retains those parts coherently. Current importer cannot promote the body flag without a used complete-body declaration; held for SHA-bound manual source-completeness evidence integration, not falsely called a crop. Follow-up: explicit SHA-bound source-completeness evidence was validated by the importer; body and left-facing admission are now allowed without changing the immutable job declaration.",
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "complete_body_reference_review": {
+    "path": "assets/catalog/re1r-crow.png",
+    "sha256": "da4680f003bb6b6277265b53411dc14c72f5423f4f06d984d10e919f24a1f9fe",
+    "observed_complete": true,
+    "method": "Source and generated output visually compared; source contains head, folded wings, tail, two legs and feet inside the canvas.",
+    "evidence": "docs/R27_SPRITE_REVIEW_BATCHES/batch-003/contact-2.png",
+    "importer_override_applied": true
+  },
+  "admission_followup": {
+    "at_utc": "2026-10-25T08:28:08.985131+00:00",
+    "previous_record_sha256": "07e593668ad2b81db8d6fe84c5e5b02ba8add58b59e154a88653b824922fa0de",
+    "source_completeness_evidence": "docs/R27_SPRITE_REVIEW_BATCHES/batch-003/re1r-crow-source-body-observation.json",
+    "source_completeness_evidence_sha256": "f0f037f9d4369e6c56c5906d066a9b8712e3de136fa0497daeb153154338d614",
+    "immutable_job_changed": false,
+    "png_bytes_changed": false
+  },
+  "record_metadata_refresh": {
+    "prior_record_sha256": "5c8e0a2d9357ffd3f524992a36b504b6dc87f4915b6a35ee19a1c3af22c15c54",
+    "current_record_sha256": "55e367e3daa077e992db89ec6bdbbf11832a810fa9c109acee66f93976de79c2",
+    "checked_at_utc": "2026-10-25T09:14:23.455005+00:00",
+    "change_verified": "Only limitations explanatory text was qualified by existing SHA-bound body proof; original job limitations retained as jobLimitations. Exact prior bytes reconstructed and matched prior record SHA. No PNG, used source, review, facing, body, receipt or proof changed."
+  },
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.949220+00:00",
+    "prior_report_record_sha256": "55e367e3daa077e992db89ec6bdbbf11832a810fa9c109acee66f93976de79c2",
+    "prior_direction_eligibility": true,
+    "pose_observation": {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re1r-crow.json",
+      "sha256": "168f63bad833c027946a0d1f44069d6c2c2e35171ad7e6f7d82e4e8b517c2674"
+    },
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.939159+00:00"
+  },
+  "observed_pose_kind": "neutral-base",
+  "available_states": [
+    "idle"
+  ]
+}

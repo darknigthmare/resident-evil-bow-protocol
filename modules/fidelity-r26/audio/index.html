@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; object-src 'none'; base-uri 'none'; media-src 'self' blob:">
+  <title>Sons publiés par créature — B.O.W. R26</title>
+  <link rel="stylesheet" href="../../fidelity-r24/audio/style.css">
+  <link rel="stylesheet" href="../../fidelity-r24/access/text-reflow.css">
+  <script defer src="player.js"></script>
+<link rel="stylesheet" href="../../fidelity-r25/access/workbench.css">
+</head>
+<body>
+  <a class="skip" href="#player">Aller à la sélection</a>
+  <header>
+    <a href="../index.html">← Chantiers R26</a>
+    <p class="eyebrow">B.O.W. PROTOCOL / RÉFÉRENCES SONORES</p>
+    <h1>Les sons publiés, avec leur créature et leurs limites.</h1>
+    <p>Fichiers WAV publiés pour Resident Evil 3 Remake sur PC, conservés sans transformation. Les sections Voices et Sound Effects restent séparées. Les noms numériques ne prouvent pas les actions, phases ou déclencheurs ; les banques WEM brutes restent à comparer.</p>
+    <p id="summary" role="status">Chargement du catalogue…</p>
+    <p><a href="../../fidelity-r25/audio/index.html">Références Revelations R25 conservées</a> · <a id="publication" hidden>Page de la publication</a> · <a id="archive" hidden download>Archive originale de la sélection</a></p>
+  </header>
+  <main id="player">
+    <label for="group">Groupe de la publication</label>
+    <select id="group" disabled><option value="all">Tous les groupes attribués</option></select>
+    <label for="search">Rechercher un nom source ou une incarnation</label>
+    <input id="search" type="search" disabled placeholder="Hunter, em35, Zombie Dog…">
+    <label for="clip">Fichier publié</label>
+    <select id="clip" disabled></select>
+    <p id="selection"></p>
+    <button id="prepare" type="button" disabled>Vérifier et charger le fichier</button>
+    <p id="status" role="status" aria-live="polite">La lecture nécessite une action explicite.</p>
+    <audio id="audio" controls preload="none" aria-label="Écouter le fichier sélectionné"></audio>
+    <p><a id="source" hidden>Groupe et archive de la publication</a> · <a id="identitySource" hidden>Référence de l’identité et du jeu</a></p>
+    <details>
+      <summary>Attribution, conservation et limites</summary>
+      <ul id="limitations"></ul>
+      <p>Les deux fichiers stéréo restent stéréo ; les autres restent mono. Les éventuels placeholders PCM nuls restent dans les ZIP. Hunter Gamma est relié au sujet publié, sans attribution à l’état de gueule ouverte du libellé du catalogue.</p>
+      <a href="manifest.json">Catalogue et empreintes</a>
+    </details>
+  </main>
+</body>
+</html>

@@ -1,0 +1,115 @@
+{
+  "schema": "re.bow.restored-replay-catalog/1",
+  "release": "R27",
+  "title": "Replays de la restauration isolée",
+  "href": "persistence/index.html",
+  "bridgeSchema": "re.bow.restored-replay-bridge/1",
+  "source": {
+    "database": "re.bow.restore-rehearsal.r26",
+    "readOnly": true,
+    "gameLocalStorageRead": false,
+    "gameLocalStorageWritten": false,
+    "originalR19TransportClaimed": false,
+    "rawNestedArchivePreserved": true,
+    "sourceRevisionAndValuesCheckedBeforeAndAfter": true,
+    "cloudBackend": false
+  },
+  "engineRoutes": [
+    "main-current",
+    "main-pre-r13"
+  ],
+  "individualExperimentalR7": {
+    "inR19Archive": false,
+    "reader": "../fidelity-r25/persistence/index.html"
+  },
+  "bounds": {
+    "sourceTransportBytes": 33554432,
+    "batchRecords": 30,
+    "renderedRows": 100,
+    "activeDownloadBlobs": 1
+  },
+  "features": [
+    "explicit isolated revision read",
+    "exact nested archive extraction",
+    "exact replay source slices",
+    "private record selection",
+    "two original-engine passes",
+    "before/after source invalidation",
+    "unknown-contract and duplicate-ID refusal",
+    "bounded pagination",
+    "cancel and page-departure cleanup"
+  ],
+  "originalDependencies": [
+    {
+      "path": "src/save-center-r19.js",
+      "bytes": 10791,
+      "sha256": "6a312bd65ea55fcfe272e4adc9add12ce51affb4a9d424f5bee9998b9952ccbf"
+    },
+    {
+      "path": "src/replay-vault-r13.js",
+      "bytes": 7600,
+      "sha256": "243cae05f698591d9665d09a1ed60a4c7c9f9d4dd20d2b384b8057cf619fed83"
+    },
+    {
+      "path": "src/catalog-replay-contract.js",
+      "bytes": 248,
+      "sha256": "2778547c459e6efcc95810e8c3dd1108449ca752adaf54f751406573b84ec934"
+    },
+    {
+      "path": "modules/fidelity-r23/persistence/inspector.js",
+      "bytes": 12996,
+      "sha256": "feab31c9443584f50147aa089004ecd3e48e49b83d751f7809761cea7fa1c0d0"
+    },
+    {
+      "path": "modules/fidelity-r24/persistence/engines.json",
+      "bytes": 556,
+      "sha256": "d99c7e4e93bf09fa9f85dc62a4ed1a9abba26066c2d1328e907a7ac03d9e03b1"
+    },
+    {
+      "path": "modules/fidelity-r24/persistence/sandbox.js",
+      "bytes": 6228,
+      "sha256": "0e9c76a5c67428669327347d3995eab6580564dbffa026aa5ffbfecd9f227cf1"
+    },
+    {
+      "path": "modules/fidelity-r25/persistence/bundle.js",
+      "bytes": 9755,
+      "sha256": "37c150971d66e40a73e6eeb1d9509deb9204f8bf2a999a2e7cf8b5027a368c51"
+    },
+    {
+      "path": "modules/fidelity-r26/persistence/restore.js",
+      "bytes": 9901,
+      "sha256": "a29ecb7c732e2d6a63f10342d97e0dffe8d4e4785036bcbb439a5a81cb99fc4b"
+    },
+    {
+      "path": "modules/fidelity-r26/persistence/style.css",
+      "bytes": 1337,
+      "sha256": "8d9bfb7d7d8d0d61dd505350b79427a3c1150f23470450053866dd2c12f39874"
+    }
+  ],
+  "implementation": [
+    {
+      "path": "modules/fidelity-r27/persistence/index.html",
+      "bytes": 4136,
+      "sha256": "ea21f46bff0ba7c55344ee8dd2e762e39bababd3bc4ea8257adfb40f5a759ad3"
+    },
+    {
+      "path": "modules/fidelity-r27/persistence/style.css",
+      "bytes": 1008,
+      "sha256": "8a78dfd0acd6f1a9d55024d9d9e523747d602aeb8dfa3b19867dc4ec8e4e1df8"
+    },
+    {
+      "path": "modules/fidelity-r27/persistence/bridge.js",
+      "bytes": 6105,
+      "sha256": "658733cd5a838170f7040ec85870bd0606d1fdf3beaa6ac5b327d38147837bd6"
+    },
+    {
+      "path": "modules/fidelity-r27/persistence/page.js",
+      "bytes": 9524,
+      "sha256": "0799143324b0d614827182818afca9491037245701b3eb939d9b131d4341b417"
+    }
+  ],
+  "canonicalFidelityCertified": false,
+  "gameRestorationCertified": false,
+  "physicalCrashDurabilityCertified": false,
+  "newEngineCopies": 0
+}

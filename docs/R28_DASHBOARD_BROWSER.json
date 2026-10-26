@@ -1,0 +1,86 @@
+{
+  "schema": "re.bow.dashboard-browser-r28/1",
+  "startedAt": "2026-10-26T09:02:01.250Z",
+  "finishedAt": "2026-10-26T09:02:07.575Z",
+  "passed": 4,
+  "failed": 0,
+  "sourceFiles": [
+    {
+      "path": "modules/fidelity-r28/index.html",
+      "sha256": "85045a61e4042a36d6efc6284e1471d7e9e7f830bd9663ae1d611eb95d7a36a9"
+    },
+    {
+      "path": "modules/fidelity-r28/progress.json",
+      "sha256": "5e2a8c1f36ffa1a662b800ed1292675986869ecc384fa47ab4c97caa82638637"
+    },
+    {
+      "path": "modules/fidelity-r23/dashboard.js",
+      "sha256": "ba18725f61cfcd52239d43a906d790b9c4c249e19603a5eb0c5b6b8865b11523"
+    }
+  ],
+  "checks": [
+    {
+      "name": "All 17 criteria, local proofs and doubled text at 1280px",
+      "pass": true,
+      "detail": {
+        "width": 1280,
+        "criteria": 17,
+        "resolvedLocalLinks": 38,
+        "statistics": [
+          363,
+          363,
+          106,
+          32,
+          4,
+          17,
+          32,
+          257,
+          389,
+          1450,
+          17
+        ],
+        "everyComputedFontDoubled": true
+      }
+    },
+    {
+      "name": "All 17 criteria, local proofs and doubled text at 320px",
+      "pass": true,
+      "detail": {
+        "width": 320,
+        "criteria": 17,
+        "resolvedLocalLinks": 38,
+        "statistics": [
+          363,
+          363,
+          106,
+          32,
+          4,
+          17,
+          32,
+          257,
+          389,
+          1450,
+          17
+        ],
+        "everyComputedFontDoubled": true
+      }
+    },
+    {
+      "name": "A missing progress response stays explicit and retry loads the real file",
+      "pass": true,
+      "detail": {
+        "explicitError": true,
+        "retry": true
+      }
+    },
+    {
+      "name": "Proof text is inert and a remote evidence link is refused",
+      "pass": true,
+      "detail": {
+        "textInert": true,
+        "remoteProofRefused": true
+      }
+    }
+  ],
+  "physicalDevicesCertified": false
+}

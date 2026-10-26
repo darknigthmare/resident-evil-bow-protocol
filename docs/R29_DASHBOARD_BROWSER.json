@@ -1,0 +1,68 @@
+{
+  "schema": "re.bow.dashboard-browser-r29/1",
+  "startedAt": "2026-10-26T11:00:17.220Z",
+  "completedAt": "2026-10-26T11:00:32.887Z",
+  "passed": 3,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "All17 open criteria, local proofs and doubled text at 1280px",
+      "pass": true,
+      "evidence": {
+        "width": 1280,
+        "criteria": 17,
+        "exactCounters": true,
+        "resolvedProofs": 30,
+        "everyComputedFontDoubled": true
+      }
+    },
+    {
+      "name": "All17 open criteria, local proofs and doubled text at 320px",
+      "pass": true,
+      "evidence": {
+        "width": 320,
+        "criteria": 17,
+        "exactCounters": true,
+        "resolvedProofs": 30,
+        "everyComputedFontDoubled": true
+      }
+    },
+    {
+      "name": "Missing progress retries and remote evidence is rejected while markup stays inert",
+      "pass": true,
+      "evidence": {
+        "retry": true,
+        "markupInert": true,
+        "remoteProofRefused": true
+      }
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "tests/browser-fidelity-r29.mjs",
+      "sha256": "497e1ca7556018c8e067fc825c1dccd6bde11e57e2d33b38312ab8d49579ee72"
+    },
+    {
+      "path": "modules/fidelity-r29/progress.json",
+      "sha256": "022574f9a1169c9d9af155594e2daad6ac7fea36c8b16619baee0c465e71e37f"
+    },
+    {
+      "path": "modules/fidelity-r29/dossier-additions.json",
+      "sha256": "0c01feb7b220153f8439dd1cff3747d713e9fd357b7329832d8e1e35d3ab31b8"
+    },
+    {
+      "path": "modules/fidelity-r29/index.html",
+      "sha256": "2b38d7efc4c6e2745f7c53ff9fa85c26806e07a873cb9ab042ea147c7d5e4528"
+    },
+    {
+      "path": "modules/fidelity-r29/dossier-link.js",
+      "sha256": "2e14a82bd6c3d09861e9fc8e2fd676375620f8b2c574052de845cf7a1af2e7f3"
+    },
+    {
+      "path": "codex.html",
+      "sha256": "c4295cc320fa3d0e07245b950a0a0e11cb41da1753f83829c265cf033ac640dc"
+    }
+  ],
+  "physicalDevicesCertified": false,
+  "assignedNativeCombatCycles": 0
+}

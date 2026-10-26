@@ -1,0 +1,53 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "re3-hunter-gamma",
+  "reviewed_at_utc": "2026-10-25T08:49:03.636906+00:00",
+  "batch": "batch-005",
+  "image": "modules/fidelity-r27/sprites/generated/re3-hunter-gamma/idle-right.png",
+  "image_sha256": "689008c0cc4710b5d51eae7fe32df8f5aad0d9de2c54427d7264b765c35fba49",
+  "active_record": "modules/fidelity-r27/sprites/records/re3-hunter-gamma.json",
+  "active_record_sha256": "caa68bb3dc71c9ba192bcbfa4b2a16c905ecc8ceb346301c60a3cc79e5ce850b",
+  "used_references": [
+    {
+      "path": "assets/specimens/re3-hunter-gamma.png",
+      "sha256": "325c19a8d1b3ad393b84534f1f1ea249b120919806eea049ac0044b4df025acb",
+      "role": "full-body-reference",
+      "declared_body_coverage": "complete"
+    }
+  ],
+  "scope": "combatant-neutral-pose",
+  "source_complete_body_observed": true,
+  "generated_complete_body_observed": true,
+  "full_body_reviewed": true,
+  "observed_facing": "left",
+  "direction_eligible_for_neutral_pose": true,
+  "review_outcome": "source-consistent-generated-static-neutral-base",
+  "notes": "The complete blue/black classic RE3 frog-humanoid retains its broad protruding head, red mouth, webbed feet and visible hands. Mouth/head project left from the rear body mass. The remake petal-maw form is not mixed into this incarnation.",
+  "manual_source_completeness_evidence": null,
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.787955+00:00",
+    "prior_report_record_sha256": "89619d8abdf8308fe4f89abedec828aa58b89826d7cf4167d9d9b6db43056764",
+    "prior_direction_eligibility": true,
+    "pose_observation": {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re3-hunter-gamma.json",
+      "sha256": "7418cfec79b0a0d09ffe3662a18c5a7e23e28074426bdf49b3f03d29768a095a"
+    },
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.792184+00:00"
+  },
+  "observed_pose_kind": "neutral-base",
+  "available_states": [
+    "idle"
+  ]
+}

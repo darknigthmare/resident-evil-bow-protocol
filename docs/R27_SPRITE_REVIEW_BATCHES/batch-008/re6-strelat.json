@@ -1,0 +1,56 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "re6-strelat",
+  "reviewed_at_utc": "2026-10-25T09:13:10.256394+00:00",
+  "batch": "batch-008",
+  "image": "modules/fidelity-r27/sprites/generated/re6-strelat/idle-right.png",
+  "image_sha256": "10ae8200964321dd9a0e0cba9e48ed51ee089779ac24bb6038b01eff46b6b4c1",
+  "active_record": "modules/fidelity-r27/sprites/records/re6-strelat.json",
+  "active_record_sha256": "068c3dd9a5f5cd5dbbfdc7c9ced9b6a68754b71a3eea64684cec4d0f01e04ceb",
+  "used_references": [
+    {
+      "path": "assets/specimens/re6-strelat.png",
+      "sha256": "8432f18ef15a654b21d9025e7f3cd978dc3b525009558d8b5ab9ec787a052553",
+      "role": "full-body-reference",
+      "declared_body_coverage": "complete"
+    }
+  ],
+  "scope": "combatant-neutral-pose",
+  "source_complete_body_observed": true,
+  "generated_complete_body_observed": true,
+  "full_body_reviewed": true,
+  "observed_facing": "left",
+  "direction_eligible_for_neutral_pose": false,
+  "review_outcome": "whole-visible-body-presentation-pose-no-combat-idle",
+  "notes": "Whole primary and output show the lizard head pointing screen left, the full recurved forked tail, back spines and visible limbs/claws with margins. One airborne/presentation source pose only; projectile animation, landing, hidden limb surfaces and exact original-game phase are unverified.",
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "visual_evidence": {
+    "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-008/contact-1.png",
+    "sha256": "18c1218f7b476339124b2f5abd7fceaa7225d80b5f164b59e57237890e50e2a3",
+    "kind": "browser-contact-review-evidence",
+    "new_generated_sprite_count": 0
+  },
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.906105+00:00",
+    "prior_report_record_sha256": "c0dfeed4db752e0e7ab2d5cbdcdc11f3b35c6e08252d2edc2d92c763a55c2aef",
+    "prior_direction_eligibility": true,
+    "pose_observation": {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re6-strelat.json",
+      "sha256": "e545add948aa77e362ac0d316692b1ca51c2d9ad0dd75033fb8de8177befc522"
+    },
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.899287+00:00"
+  },
+  "observed_pose_kind": "source-presentation",
+  "available_states": []
+}

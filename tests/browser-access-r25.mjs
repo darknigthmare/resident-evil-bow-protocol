@@ -187,6 +187,9 @@ try {
       dossierIndex.identities.find(item=>item.audio)].filter(Boolean);let soundRequests=0;const checked=[];
     page.on('request',request=>{if(/\.(wav|mp3)(?:\?|$)/i.test(request.url()))soundRequests++;});
     try {
+      // Pin this historical Dossier fixture to its R25 adapter; R26 is exercised by browser-access-r26.mjs.
+      await page.route('**/fidelity-r26/dossier-link.js', route => route.fulfill({status:200, contentType:'text/javascript', body:'/* Historical R25 fixture. */'}));
+      await page.route('**/fidelity-r27/dossier-link.js', route => route.fulfill({status:200, contentType:'text/javascript', body:'/* Historical R25 fixture; R27 is checked independently. */'}));
       await page.goto(base+'/codex.html');await page.waitForFunction(()=>window.RE_DOSSIER_SOURCES_R25?.state().loaded);
       for(const entry of targets){
         const identity=await page.evaluate(id=>RE_DATA.catalog.find(item=>item.id===id),entry.id);
@@ -219,6 +222,8 @@ try {
     const entry=index.identities.find(item=>item.models.length);entry.models[0].label='<img src=x onerror="window.r25Injected=true">';
     await page.route('**/fidelity-r25/dossier-index.json',route=>route.fulfill({status:200,json:index}));
     try{
+      await page.route('**/fidelity-r26/dossier-link.js', route => route.fulfill({status:200, contentType:'text/javascript', body:'/* Historical R25 fixture. */'}));
+      await page.route('**/fidelity-r27/dossier-link.js', route => route.fulfill({status:200, contentType:'text/javascript', body:'/* Historical R25 fixture; R27 is checked independently. */'}));
       await page.goto(base+'/codex.html?id='+entry.id);await page.waitForFunction(()=>window.RE_DOSSIER_SOURCES_R25?.state().loaded);
       assert.equal(await page.evaluate(()=>Boolean(window.r25Injected)),false);assert.match(await page.locator('#detailSourceModelsR25').innerText(),/<img src=x/);
       entry.models[0].href='https://untrusted.example/collect';await page.reload();await page.waitForFunction(()=>window.RE_DOSSIER_SOURCES_R25?.state().loaded);

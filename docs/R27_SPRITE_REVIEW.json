@@ -1,0 +1,597 @@
+{
+  "schema": "re.bow.generated-sprite-visual-review-r27/1",
+  "reviewed_at_utc": "2026-10-25T07:58:41.074956+00:00",
+  "scope": "First ten completed root-batch UID plus the pilot. Exact used references and actual generated PNGs visually inspected in browser contact sheets; Gamma, Albinoid, Tyrant and remake Chimera also inspected individually. Local reference comparison only; no primary original-game capture or geometric certification.",
+  "summary": {
+    "reviewed_identities": 11,
+    "full_body_reviewed": 9,
+    "direction_eligible_neutral_poses": 3,
+    "right_facing": 2,
+    "left_facing": 1,
+    "frontal_not_side_admitted": 3,
+    "partial_source_not_admitted": 2,
+    "corrective_generations": 1,
+    "pngs_manually_edited": 0,
+    "canonical_fidelity_certified": 0,
+    "directional_presentation_poses_not_idle_admitted": 3
+  },
+  "entries": [
+    {
+      "uid": "re1-cerberus",
+      "image": "modules/fidelity-r27/sprites/generated/re1-cerberus/idle-right.png",
+      "image_sha256": "8ead8fcbbbc032b14f268010f56847aaf4ece7d764255223fd4c9a8a2b9ee2f1",
+      "active_record": "modules/fidelity-r27/sprites/records/re1-cerberus.json",
+      "active_record_sha256": "1a8f2af35eb878300aaf488edcc809e9baff8236236515afedae03481b1ccc40",
+      "used_references": [
+        {
+          "path": "assets/specimens/re1-cerberus.webp",
+          "sha256": "0e5ff5e671131d3efada93ad702fb5d612aee3091a74cf7fba58029d3d3a3474",
+          "role": "full-body-reference"
+        }
+      ],
+      "source_complete_body_observed": true,
+      "generated_complete_body_observed": true,
+      "observed_facing": "right",
+      "full_body_reviewed": true,
+      "direction_eligible_for_neutral_pose": true,
+      "review_outcome": "source-consistent-generated-static-neutral-base",
+      "notes": "Black/tan canid, exposed red facial/chest tissue, elongated ears and all four paws remain coherent with the used full-body source. Generated pose is a right-facing three-quarter interpretation; no hidden-side or geometric certification.",
+      "canonical_fidelity_certified": false,
+      "opposite_view_reviewed": false,
+      "combat_animation_set_reviewed": false,
+      "pose_contract_review": {
+        "checked_at_utc": "2026-10-25T09:47:13.696486+00:00",
+        "prior_report_record_sha256": "06315602b1253e56cc9753e8e7077ac51cf88ff02b3337fb255805e1b3da1743",
+        "prior_direction_eligibility": true,
+        "pose_observation": {
+          "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re1-cerberus.json",
+          "sha256": "1718312015f751dacfc55c16ac884c5bd82bb42508e497c2ce08c399998a5b41"
+        },
+        "changed_record_fields_verified": [
+          "poseKind",
+          "requestedState",
+          "availableStates"
+        ],
+        "source_png_and_generation_provenance_unchanged": true,
+        "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+        "last_verified_at_utc": "2026-10-25T09:48:01.549380+00:00"
+      },
+      "observed_pose_kind": "neutral-base",
+      "available_states": [
+        "idle"
+      ]
+    },
+    {
+      "uid": "re3r-hunter-gamma",
+      "image": "modules/fidelity-r27/sprites/generated/re3r-hunter-gamma/idle-right.png",
+      "image_sha256": "325933f1ca2cec35ced16e2eb12ac3f33f4adc0677baf3d07224d04e016f2f39",
+      "active_record": "modules/fidelity-r27/sprites/records/re3r-hunter-gamma.json",
+      "active_record_sha256": "3faea91c770b3d648527e45ac9b605c371e212356babed1bdb3c4dd178e97dc6",
+      "used_references": [
+        {
+          "path": "assets/specimens/re3r-hunter-gamma.png",
+          "sha256": "0e16235e26ddf5879476746364d69babd6e94da3b8024bed184357fd18ccf183",
+          "role": "full-body-reference"
+        }
+      ],
+      "source_complete_body_observed": true,
+      "generated_complete_body_observed": true,
+      "observed_facing": "left",
+      "full_body_reviewed": true,
+      "direction_eligible_for_neutral_pose": false,
+      "review_outcome": "whole-visible-body-presentation-pose-no-combat-idle",
+      "notes": "V2 uses only the complete opened-maw primary source. Single red petal maw, gray folded back, tail and visible extremities are retained; the unsupported conventional jaw from V1 is gone. No closed-maw phase is mixed into this admission.",
+      "canonical_fidelity_certified": false,
+      "opposite_view_reviewed": false,
+      "combat_animation_set_reviewed": false,
+      "superseded_review": {
+        "image": "modules/fidelity-r27/sprites/superseded/re3r-hunter-gamma/d6f10de014078fb9b328830cff6e24aa530efe0c8e98968ad9e0848bd0a24c16/idle-right.png",
+        "image_sha256": "d6f10de014078fb9b328830cff6e24aa530efe0c8e98968ad9e0848bd0a24c16",
+        "record": "modules/fidelity-r27/sprites/superseded/re3r-hunter-gamma/d6f10de014078fb9b328830cff6e24aa530efe0c8e98968ad9e0848bd0a24c16/sprite-record.json",
+        "record_sha256": "2a8a99dd9ae0efe81aad900b853987e32129b0e776dcc054755ba8158927a1cf",
+        "outcome": "rejected-for-anatomy-mismatch",
+        "reason": "V1 added a second conventional toothed jaw on the gray folded back while retaining the opened petal maw. V2 was regenerated with image_gen from only the primary full-body source; no manual PNG editing."
+      },
+      "pose_contract_review": {
+        "checked_at_utc": "2026-10-25T09:47:13.698464+00:00",
+        "prior_report_record_sha256": "203b68479d183cdcab07b94509d4f506f9c770fc86b9aacaf13d1f83d2da6433",
+        "prior_direction_eligibility": true,
+        "pose_observation": {
+          "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re3r-hunter-gamma.json",
+          "sha256": "e79e02e775eab1fc801fe6b51b52bf8cf7e0586b1b10a3b2389b564991e1dd94"
+        },
+        "changed_record_fields_verified": [
+          "poseKind",
+          "requestedState",
+          "availableStates"
+        ],
+        "source_png_and_generation_provenance_unchanged": true,
+        "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+        "last_verified_at_utc": "2026-10-25T09:48:01.552240+00:00"
+      },
+      "observed_pose_kind": "source-presentation",
+      "available_states": []
+    },
+    {
+      "uid": "re3r-stage-2-nemesis",
+      "image": "modules/fidelity-r27/sprites/generated/re3r-stage-2-nemesis/idle-right.png",
+      "image_sha256": "3f3e82ce29b1d4546171b9d8f70a8d6147a9ec1dea5f31f06101acab5e7d5cbf",
+      "active_record": "modules/fidelity-r27/sprites/records/re3r-stage-2-nemesis.json",
+      "active_record_sha256": "bb709242e9b837c44b371ab712bfa5ec8b8abfa4bc09b8cb7fe03ba827f06939",
+      "used_references": [
+        {
+          "path": "assets/specimens/re3r-stage-2-nemesis.png",
+          "sha256": "7a0f1dbcb68e1784a2687f5c1c43f61d606b3d7c4d3b372f25ed3098eacfe1b4",
+          "role": "full-body-reference"
+        },
+        {
+          "path": "assets/catalog/re3r-stage-2-nemesis.png",
+          "sha256": "567c7fb0e62308047e8e65d8deb6d9106b931a6481a4842b0224175dfd5a5c62",
+          "role": "portrait"
+        }
+      ],
+      "source_complete_body_observed": false,
+      "generated_complete_body_observed": null,
+      "observed_facing": "unknown",
+      "full_body_reviewed": false,
+      "direction_eligible_for_neutral_pose": false,
+      "review_outcome": "partial-source-no-combat-admission",
+      "notes": "Both used images crop the creature at their canvas edges. The generated silhouette extrapolates lower/hidden anatomy; complete body and direction cannot be admitted from these sources despite the legacy complete-body flag.",
+      "canonical_fidelity_certified": false,
+      "opposite_view_reviewed": false,
+      "combat_animation_set_reviewed": false,
+      "pose_contract_review": {
+        "checked_at_utc": "2026-10-25T09:47:13.702832+00:00",
+        "prior_report_record_sha256": "cf5d576be10bdd32bc554a5acdf14fa6a05bc203f6912f8d9334f1b7279ba8e1",
+        "prior_direction_eligibility": false,
+        "pose_observation": null,
+        "changed_record_fields_verified": [
+          "poseKind",
+          "requestedState",
+          "availableStates"
+        ],
+        "source_png_and_generation_provenance_unchanged": true,
+        "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+        "last_verified_at_utc": "2026-10-25T09:48:01.559409+00:00"
+      },
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re3r-stage-3-nemesis",
+      "image": "modules/fidelity-r27/sprites/generated/re3r-stage-3-nemesis/idle-right.png",
+      "image_sha256": "6e48beffc08908cde3dd509aecd933d6a3326e3e89b1088d9bbb1036eeffb22c",
+      "active_record": "modules/fidelity-r27/sprites/records/re3r-stage-3-nemesis.json",
+      "active_record_sha256": "4f3a7a3dfc58d3bd7988d934e57f8e7bd2dd5a475b0de5fcd7cddbf921307d5f",
+      "used_references": [
+        {
+          "path": "assets/specimens/re3r-stage-3-nemesis.png",
+          "sha256": "580b1424d928113808d7fc9cac581903e92aa2939c252f822eee3c385d6f1f34",
+          "role": "full-body-reference"
+        },
+        {
+          "path": "assets/catalog/re3r-stage-3-nemesis.png",
+          "sha256": "50e567c167cc78b328c708603a905662dc43214c004793b94a8ccba8cd363a7b",
+          "role": "portrait"
+        }
+      ],
+      "source_complete_body_observed": false,
+      "generated_complete_body_observed": null,
+      "observed_facing": "unknown",
+      "full_body_reviewed": false,
+      "direction_eligible_for_neutral_pose": false,
+      "review_outcome": "partial-source-no-combat-admission",
+      "notes": "Both used images are clipped views of a larger wall-bound mass. The generated output supplies bounded silhouette/tentacle extensions not established by those crops. Remains presentation-only pending fuller evidence.",
+      "canonical_fidelity_certified": false,
+      "opposite_view_reviewed": false,
+      "combat_animation_set_reviewed": false,
+      "pose_contract_review": {
+        "checked_at_utc": "2026-10-25T09:47:13.706664+00:00",
+        "prior_report_record_sha256": "4b0239a30891cb3e127cb8d0748c4343ca736318c5247e0eb587c949c66c0916",
+        "prior_direction_eligibility": false,
+        "pose_observation": null,
+        "changed_record_fields_verified": [
+          "poseKind",
+          "requestedState",
+          "availableStates"
+        ],
+        "source_png_and_generation_provenance_unchanged": true,
+        "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+        "last_verified_at_utc": "2026-10-25T09:48:01.565213+00:00"
+      },
+      "observed_pose_kind": "unknown",
+      "available_states": []
+    },
+    {
+      "uid": "re1r-chimera",
+      "image": "modules/fidelity-r27/sprites/generated/re1r-chimera/idle-right.png",
+      "image_sha256": "2ddce2e0d2429ee71451302dfd6ef70b19ca9d9c50871d9e348fa3976d1efca7",
+      "active_record": "modules/fidelity-r27/sprites/records/re1r-chimera.json",
+      "active_record_sha256": "dc9cff4663abd417ae567d9e53da572fed6a04db0aa86f9efd06b4972eda91db",
+      "used_references": [
+        {
+          "path": "assets/specimens/re1r-chimera.png",
+          "sha256": "e0035a770dd991b0110bd48ea8fec2fc671775e4ab7ec449c93e448138931c82",
+          "role": "full-body-reference"
+        },
+        {
+          "path": "assets/catalog/re1r-chimera.png",
+          "sha256": "7285eff1985e75a094575d8c8c4cd7690278538512c6d5296c0adfb3b72e0a50",
+          "role": "portrait"
+        }
+      ],
+      "source_complete_body_observed": true,
+      "generated_complete_body_observed": true,
+      "observed_facing": "right",
+      "full_body_reviewed": true,
+      "direction_eligible_for_neutral_pose": false,
+      "review_outcome": "whole-visible-body-presentation-pose-no-combat-idle",
+      "notes": "Whole insect-humanoid body, hooked upper limb, ribbed exposed torso and both lower limbs are visible in source and output. Generated head/torso turn clearly toward the screen right; visible limbs remain coherent, with no opposite-side or animation claim.",
+      "canonical_fidelity_certified": false,
+      "opposite_view_reviewed": false,
+      "combat_animation_set_reviewed": false,
+      "pose_contract_review": {
+        "checked_at_utc": "2026-10-25T09:47:13.708799+00:00",
+        "prior_report_record_sha256": "41d257c002d2cfe1b8987ec31ed061c9101af08f5a9799f43e103fb26abbedaf",
+        "prior_direction_eligibility": true,
+        "pose_observation": {
+          "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re1r-chimera.json",
+          "sha256": "14b0ef463849628098688a74f0ab01ecf0afc529c0ae92bca3cb8727b179d8ef"
+        },
+        "changed_record_fields_verified": [
+          "poseKind",
+          "requestedState",
+          "availableStates"
+        ],
+        "source_png_and_generation_provenance_unchanged": true,
+        "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+        "last_verified_at_utc": "2026-10-25T09:48:01.581892+00:00"
+      },
+      "observed_pose_kind": "source-presentation",
+      "available_states": []
+    },
+    {
+      "uid": "re1r-tyrant",
+      "image": "modules/fidelity-r27/sprites/generated/re1r-tyrant/idle-right.png",
+      "image_sha256": "b9aecdaa6bd4f3f1cab232706e6b230db8d71768bda18bf032ef5cc0258325bc",
+      "active_record": "modules/fidelity-r27/sprites/records/re1r-tyrant.json",
+      "active_record_sha256": "58592267546fdf1029d01338bceb3e8f44436869bee769dd6d161c70d50c7b39",
+      "used_references": [
+        {
+          "path": "assets/specimens/re1r-tyrant.webp",
+          "sha256": "fff324e122d0da3b75b456be5dc19dc06e0fcfffd49f1752ae38a8f93f4fac15",
+          "role": "full-body-reference"
+        },
+        {
+          "path": "modules/fidelity-r24/visual/previews/asset-571038.png",
+          "sha256": "1cb95e111ca31faebde285613fad64b33b0382b71b5ad670df8c771dfa8393d2",
+          "role": "model-preview"
+        },
+        {
+          "path": "assets/catalog/re1r-tyrant.png",
+          "sha256": "c376ff9a5f8bc824eabeff398024e336a0539c252d990e2f039cf0767fe86105",
+          "role": "portrait"
+        }
+      ],
+      "source_complete_body_observed": true,
+      "generated_complete_body_observed": true,
+      "observed_facing": "front",
+      "full_body_reviewed": true,
+      "direction_eligible_for_neutral_pose": false,
+      "review_outcome": "whole-visible-body-presentation-pose-no-combat-idle",
+      "notes": "Whole body, exposed heart, uneven torso tissue and the enlarged clawed arm retain their source side. Head turns somewhat right but torso and feet remain predominantly frontal; conservative front classification avoids treating this as a certified right-facing view.",
+      "canonical_fidelity_certified": false,
+      "opposite_view_reviewed": false,
+      "combat_animation_set_reviewed": false,
+      "pose_contract_review": {
+        "checked_at_utc": "2026-10-25T09:47:13.710667+00:00",
+        "prior_report_record_sha256": "46ecd557b51a778cc67d823e0b9d2fded68ba6b7ef10464f03835be9a5ae8de4",
+        "prior_direction_eligibility": false,
+        "pose_observation": {
+          "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re1r-tyrant.json",
+          "sha256": "62c9872152dbb308745c31873c973bd3fa4bb0a0ceef0a5df16059bbb0af42fc"
+        },
+        "changed_record_fields_verified": [
+          "poseKind",
+          "requestedState",
+          "availableStates"
+        ],
+        "source_png_and_generation_provenance_unchanged": true,
+        "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+        "last_verified_at_utc": "2026-10-25T09:48:01.641635+00:00"
+      },
+      "observed_pose_kind": "source-presentation",
+      "available_states": []
+    },
+    {
+      "uid": "recv-bandersnatch",
+      "image": "modules/fidelity-r27/sprites/generated/recv-bandersnatch/idle-right.png",
+      "image_sha256": "31b46e38de40174744d130428c7f6c38ae1a45c645b4fe95f91beedc17eeb8b5",
+      "active_record": "modules/fidelity-r27/sprites/records/recv-bandersnatch.json",
+      "active_record_sha256": "e385a4b4c6b35cf1af73641486b50471d63fa3690821ae19747172cddfd70543",
+      "used_references": [
+        {
+          "path": "assets/specimens/recv-bandersnatch.png",
+          "sha256": "08ab8205051d053daf9ecead5591d7601b7c9011becdc947e2dd65e1f3a960fc",
+          "role": "full-body-reference"
+        },
+        {
+          "path": "assets/catalog/recv-bandersnatch.png",
+          "sha256": "c7675bf1fbf978488e5fc15c9aa4550c0fdb5cc4174adb2c7587e99f747f75ef",
+          "role": "portrait"
+        }
+      ],
+      "source_complete_body_observed": true,
+      "generated_complete_body_observed": true,
+      "observed_facing": "right",
+      "full_body_reviewed": true,
+      "direction_eligible_for_neutral_pose": true,
+      "review_outcome": "source-consistent-generated-static-neutral-base",
+      "notes": "Full orange/brown body, green tissue markings, reduced arm and very long curved arm remain visible and on their source sides. The hunched body and head clearly face screen right.",
+      "canonical_fidelity_certified": false,
+      "opposite_view_reviewed": false,
+      "combat_animation_set_reviewed": false,
+      "pose_contract_review": {
+        "checked_at_utc": "2026-10-25T09:47:13.712489+00:00",
+        "prior_report_record_sha256": "b29ef7bca36d1779490abab3f6fab647204ab62579e8526bd54b1b5db773a1c0",
+        "prior_direction_eligibility": true,
+        "pose_observation": {
+          "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/recv-bandersnatch.json",
+          "sha256": "5742f81528bc7f433211460a2ddd851d831f6c42d08431e48efcac5110c3ad08"
+        },
+        "changed_record_fields_verified": [
+          "poseKind",
+          "requestedState",
+          "availableStates"
+        ],
+        "source_png_and_generation_provenance_unchanged": true,
+        "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+        "last_verified_at_utc": "2026-10-25T09:48:01.654622+00:00"
+      },
+      "observed_pose_kind": "neutral-base",
+      "available_states": [
+        "idle"
+      ]
+    },
+    {
+      "uid": "recv-albinoid-adult",
+      "image": "modules/fidelity-r27/sprites/generated/recv-albinoid-adult/idle-right.png",
+      "image_sha256": "124597eaceab6d8d5ca84a1216cc914db9af93f5f8ff23995d9512a615d87fb8",
+      "active_record": "modules/fidelity-r27/sprites/records/recv-albinoid-adult.json",
+      "active_record_sha256": "6d6d659a77b177df2431a53bbaf51995637e118504a77f555126a6677522dc0b",
+      "used_references": [
+        {
+          "path": "assets/specimens/recv-albinoid-adult.png",
+          "sha256": "82738eda8484db07c8163f45732819f5181784c8c75b9a0db0bc2ae517ee7f19",
+          "role": "full-body-reference"
+        },
+        {
+          "path": "assets/catalog/recv-albinoid-adult.png",
+          "sha256": "d5f9668746ea2b1765f7427c42c335577c40b5391b7bdced759195ae1fcfd431",
+          "role": "portrait"
+        }
+      ],
+      "source_complete_body_observed": true,
+      "generated_complete_body_observed": true,
+      "observed_facing": "left",
+      "full_body_reviewed": true,
+      "direction_eligible_for_neutral_pose": false,
+      "review_outcome": "whole-visible-body-presentation-pose-no-combat-idle",
+      "notes": "The full primary reference has margins around all visible extremities (alpha bounds17,16–687,520 in700x529). Four limbs, pink body, dorsal spines and long tail remain coherent. Head is on screen left and tail on screen right; no mirrored right view is declared.",
+      "canonical_fidelity_certified": false,
+      "opposite_view_reviewed": false,
+      "combat_animation_set_reviewed": false,
+      "pose_contract_review": {
+        "checked_at_utc": "2026-10-25T09:47:13.714249+00:00",
+        "prior_report_record_sha256": "7b4a0b80fad0805e77f4cddc09ed52aceb69850f01459f51b2568020e9d770ed",
+        "prior_direction_eligibility": true,
+        "pose_observation": {
+          "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/recv-albinoid-adult.json",
+          "sha256": "d7d95bacc2e0a8a7297458374fefce7651ec6dec833b54cd0d2f0df50a83b183"
+        },
+        "changed_record_fields_verified": [
+          "poseKind",
+          "requestedState",
+          "availableStates"
+        ],
+        "source_png_and_generation_provenance_unchanged": true,
+        "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+        "last_verified_at_utc": "2026-10-25T09:48:01.679639+00:00"
+      },
+      "observed_pose_kind": "source-presentation",
+      "available_states": []
+    },
+    {
+      "uid": "recv-alexia-ashford-third-form",
+      "image": "modules/fidelity-r27/sprites/generated/recv-alexia-ashford-third-form/idle-right.png",
+      "image_sha256": "2df401b8828e780646160b04098a8af4293ad8c165e92d2ca5c0398ca126a151",
+      "active_record": "modules/fidelity-r27/sprites/records/recv-alexia-ashford-third-form.json",
+      "active_record_sha256": "2af9eff3ab40690574c319efbac9360204c18084592f11ed1df5076df9db4038",
+      "used_references": [
+        {
+          "path": "assets/specimens/recv-alexia-ashford-third-form.png",
+          "sha256": "74fec74f241f7edd3d69d17a27844ab7320af87f83bf213aca200a3739f9fc6b",
+          "role": "full-body-reference"
+        },
+        {
+          "path": "assets/catalog/recv-alexia-ashford-third-form.png",
+          "sha256": "b94aaebb322d4fcb81228857771d9cccad267a0a2021f7b7b8c45812ad0071da",
+          "role": "portrait"
+        }
+      ],
+      "source_complete_body_observed": true,
+      "generated_complete_body_observed": true,
+      "observed_facing": "front",
+      "full_body_reviewed": true,
+      "direction_eligible_for_neutral_pose": false,
+      "review_outcome": "whole-visible-body-presentation-pose-no-combat-idle",
+      "notes": "Wing tips, segmented insect body and curled tail are fully visible in the primary reference and generated output. The wide wing/body pose is frontal and does not establish a left/right combat-facing view.",
+      "canonical_fidelity_certified": false,
+      "opposite_view_reviewed": false,
+      "combat_animation_set_reviewed": false,
+      "pose_contract_review": {
+        "checked_at_utc": "2026-10-25T09:47:13.715764+00:00",
+        "prior_report_record_sha256": "2226a54931d8c2e7b8e009444724cffd315c87d041f89436f623d48f17143972",
+        "prior_direction_eligibility": false,
+        "pose_observation": {
+          "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/recv-alexia-ashford-third-form.json",
+          "sha256": "7342a1cd371d834f3777cc8672c1bf5832664619422768b71e236a8b78c7fd61"
+        },
+        "changed_record_fields_verified": [
+          "poseKind",
+          "requestedState",
+          "availableStates"
+        ],
+        "source_png_and_generation_provenance_unchanged": true,
+        "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+        "last_verified_at_utc": "2026-10-25T09:48:01.699720+00:00"
+      },
+      "observed_pose_kind": "source-presentation",
+      "available_states": []
+    },
+    {
+      "uid": "re1-hunter",
+      "image": "modules/fidelity-r27/sprites/generated/re1-hunter/idle-right.png",
+      "image_sha256": "4ac1baecd5db9179146e63d67382682287c0b4b1239d5de663a10921d878f518",
+      "active_record": "modules/fidelity-r27/sprites/records/re1-hunter.json",
+      "active_record_sha256": "0ef38c87c2cdacfd07517f53e521378c952d09a4bb06040bb7bf4c95e5014808",
+      "used_references": [
+        {
+          "path": "assets/specimens/re1-hunter.png",
+          "sha256": "b43683846ac20c65482b10f77dc466068bbc1c4dd326038a47f234778a85e8cb",
+          "role": "full-body-reference"
+        },
+        {
+          "path": "assets/catalog/re1-hunter.png",
+          "sha256": "91051a40c4d572b8dcb94be7d43d67445ded771b8f5bd0ea7ce09a6607911e6b",
+          "role": "portrait"
+        }
+      ],
+      "source_complete_body_observed": true,
+      "generated_complete_body_observed": true,
+      "observed_facing": "left",
+      "full_body_reviewed": true,
+      "direction_eligible_for_neutral_pose": true,
+      "review_outcome": "source-consistent-generated-static-neutral-base",
+      "notes": "Full green scaly classic-game body, crouched posture and clawed extremities remain coherent with the used source. Head and torso are directed toward screen left. No horizontal mirroring is authorized.",
+      "canonical_fidelity_certified": false,
+      "opposite_view_reviewed": false,
+      "combat_animation_set_reviewed": false,
+      "pose_contract_review": {
+        "checked_at_utc": "2026-10-25T09:47:13.718005+00:00",
+        "prior_report_record_sha256": "862d9d2734ec153a8983ecc1f6fea782f3ed33a8f6363a11f824f53596b8b20e",
+        "prior_direction_eligibility": true,
+        "pose_observation": {
+          "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re1-hunter.json",
+          "sha256": "426d31bf08b5819ab79d25c61c4565106c8af17516fe62cab98c7f9fa7de777f"
+        },
+        "changed_record_fields_verified": [
+          "poseKind",
+          "requestedState",
+          "availableStates"
+        ],
+        "source_png_and_generation_provenance_unchanged": true,
+        "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+        "last_verified_at_utc": "2026-10-25T09:48:01.709241+00:00"
+      },
+      "observed_pose_kind": "neutral-base",
+      "available_states": [
+        "idle"
+      ]
+    },
+    {
+      "uid": "re1-chimera",
+      "image": "modules/fidelity-r27/sprites/generated/re1-chimera/idle-right.png",
+      "image_sha256": "b5839e5ea435c2106adcb7e0b79ab7549bec46dc282bb51f1ec5605b896312bb",
+      "active_record": "modules/fidelity-r27/sprites/records/re1-chimera.json",
+      "active_record_sha256": "861d3f3d3bf0b845db81e3a1dffcf1b3b4674c6dd293c1ffe495711f2aea62c6",
+      "used_references": [
+        {
+          "path": "assets/specimens/re1-chimera.png",
+          "sha256": "ee9c0850c94113efa84dba9176d089a528d6c498611607c2133e7522880b41ed",
+          "role": "full-body-reference"
+        },
+        {
+          "path": "assets/catalog/re1-chimera.png",
+          "sha256": "0df48d9f4b5a3b581b4d44c494f623797eef4fa0073049a32ea1902282ad4d01",
+          "role": "portrait"
+        }
+      ],
+      "source_complete_body_observed": true,
+      "generated_complete_body_observed": true,
+      "observed_facing": "front",
+      "full_body_reviewed": true,
+      "direction_eligible_for_neutral_pose": false,
+      "review_outcome": "whole-visible-body-presentation-pose-no-combat-idle",
+      "notes": "Whole dark hairy body, red limb tissue, pale chest marking and insectoid head are retained from the complete classic-game source. The stance remains frontal; do not label the idle-right filename as orientation proof.",
+      "canonical_fidelity_certified": false,
+      "opposite_view_reviewed": false,
+      "combat_animation_set_reviewed": false,
+      "pose_contract_review": {
+        "checked_at_utc": "2026-10-25T09:47:13.720525+00:00",
+        "prior_report_record_sha256": "a83fcd86d2c3452d2ef9e500bdc64499fcfc5c4c62cecd892c7a1f6a210b0b1e",
+        "prior_direction_eligibility": false,
+        "pose_observation": {
+          "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re1-chimera.json",
+          "sha256": "ca0dc89bd4f80721134195b382d15bfae11938512b87a8ead764bc117882b261"
+        },
+        "changed_record_fields_verified": [
+          "poseKind",
+          "requestedState",
+          "availableStates"
+        ],
+        "source_png_and_generation_provenance_unchanged": true,
+        "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+        "last_verified_at_utc": "2026-10-25T09:48:01.715301+00:00"
+      },
+      "observed_pose_kind": "source-presentation",
+      "available_states": []
+    }
+  ],
+  "visual_evidence": [
+    {
+      "path": "docs/R27_SPRITE_REVIEW_IMAGES/contact-1.png",
+      "sha256": "899b7829e1fe33f62ad984cfc9803733fcc74a530075e86befd7478a84bb839c",
+      "kind": "browser-contact-sheet-review-evidence",
+      "new_sprite_count": 0
+    },
+    {
+      "path": "docs/R27_SPRITE_REVIEW_IMAGES/contact-2.png",
+      "sha256": "7be8b5353df99ec64791680ac5c64ad8638125bfe89a0bc052b88d39a63ccabc",
+      "kind": "browser-contact-sheet-review-evidence",
+      "new_sprite_count": 0
+    },
+    {
+      "path": "docs/R27_SPRITE_REVIEW_IMAGES/contact-3.png",
+      "sha256": "5b4a5a627f325c0655454d9d0e19bab217dd6ffd2bc897dccd27efe5424760cb",
+      "kind": "browser-contact-sheet-review-evidence",
+      "new_sprite_count": 0
+    },
+    {
+      "path": "docs/R27_SPRITE_REVIEW_IMAGES/contact-gamma-correction.png",
+      "sha256": "38f18d53516c7824a634fe65a44714d648a321b0001c106c65e3e459db6c607f",
+      "kind": "browser-contact-sheet-review-evidence",
+      "new_sprite_count": 0
+    }
+  ],
+  "manifest_rebuild_deferred": true,
+  "limits": [
+    "A complete 2D body does not prove hidden geometry, exact scale, original shader or source-game idle phase.",
+    "Filename idle-right.png is a job convention; actual facing metadata controls eligibility.",
+    "No mirroring, opposite-view or complete combat-cycle claim follows from this review.",
+    "Nemesis stages 2 and 3 legacy complete-body declarations are overridden by the actual cropped references."
+  ],
+  "summary_before_pose_contract_review": {
+    "reviewed_identities": 11,
+    "full_body_reviewed": 9,
+    "direction_eligible_neutral_poses": 6,
+    "right_facing": 3,
+    "left_facing": 3,
+    "frontal_not_side_admitted": 3,
+    "partial_source_not_admitted": 2,
+    "corrective_generations": 1,
+    "pngs_manually_edited": 0,
+    "canonical_fidelity_certified": 0
+  },
+  "pose_contract_reviewed_at_utc": "2026-10-25T09:48:01.991755+00:00"
+}

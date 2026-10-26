@@ -1,0 +1,112 @@
+{
+  "schema": "re.bow.persistence-r26-browser-tests/1",
+  "passed": 10,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Selective atomic restore, exact raw values and explicit rollback at 1440px",
+      "pass": true,
+      "evidence": {
+        "width": 1440,
+        "changedKeys": 3,
+        "valuesExact": true,
+        "durableJournalAfterReload": true,
+        "selectiveGroups": [
+          "audio",
+          "dojo"
+        ],
+        "gameStorageUnchanged": true
+      }
+    },
+    {
+      "name": "Selective atomic restore, exact raw values and explicit rollback at 390px",
+      "pass": true,
+      "evidence": {
+        "width": 390,
+        "changedKeys": 3,
+        "valuesExact": true,
+        "durableJournalAfterReload": true,
+        "selectiveGroups": [
+          "audio",
+          "dojo"
+        ],
+        "gameStorageUnchanged": true
+      }
+    },
+    {
+      "name": "Original R19 validation rejects damaged transport, unknown keys and un-restorable selected groups",
+      "pass": true,
+      "evidence": {
+        "refusedInputs": 10,
+        "stateUnchanged": true
+      }
+    },
+    {
+      "name": "Foreign, cancelled, used and unacknowledged plans cannot write; stale second tabs refuse before replacing",
+      "pass": true,
+      "evidence": {
+        "refusedPlans": 5,
+        "staleSnapshotPreserved": true
+      }
+    },
+    {
+      "name": "Real IndexedDB abort after three queued writes rolls back values and journal together",
+      "pass": true,
+      "evidence": {
+        "rejected": true,
+        "writes": 3,
+        "sameBeforeAfter": true,
+        "sameAfterRestart": true,
+        "failedUiPlanInvalidated": true,
+        "retryRequiredNewPreviewBackupAndConfirmation": true,
+        "explicitRetryCommitted": true
+      }
+    },
+    {
+      "name": "Pre-aborted operation and refused storage policy never publish a commit",
+      "pass": true,
+      "evidence": {
+        "preAbortRefused": true,
+        "storagePolicyRefused": true,
+        "stateUnchanged": true
+      }
+    },
+    {
+      "name": "Rollback refuses concurrent raw value changes without overwriting another writer",
+      "pass": true,
+      "evidence": {
+        "externalWriterValuePreserved": true,
+        "falseRollbackNotRecorded": true
+      }
+    },
+    {
+      "name": "Abandoning preview, explicit clear and stale clear preserve isolation boundaries",
+      "pass": true,
+      "evidence": {
+        "clearExplicit": true,
+        "staleClearRefused": true,
+        "cancelledPreviewWrites": 0
+      }
+    },
+    {
+      "name": "Keyboard and 200 percent text at 320 CSS pixels; hostile metadata stays inert",
+      "pass": true,
+      "evidence": {
+        "width": 320,
+        "textPercent": 200,
+        "keyboardSelection": true,
+        "hostileMetadataInert": true,
+        "realScreenReader": false
+      }
+    },
+    {
+      "name": "Missing IndexedDB provides a readable refusal with no fallback to game storage",
+      "pass": true,
+      "evidence": {
+        "unavailableRefused": true,
+        "fallbackGameStorageWrites": 0
+      }
+    }
+  ],
+  "scope": "Real Chromium IndexedDB atomic transactions, partial-write abort and durable reload; original R19 validation. Isolated rehearsal only; no game storage, cloud or physical crash certification."
+}

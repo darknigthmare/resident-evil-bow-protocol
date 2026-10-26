@@ -1,0 +1,255 @@
+name: R28 reviewed bodies, voluntary evolutions and source evidence
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main, 'codex/**']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: source-fidelity-r28-${{ github.ref }}
+  cancel-in-progress: true
+defaults:
+  run:
+    shell: bash
+jobs:
+  provenance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: '3.12'
+      - name: Install pinned local evidence tools
+        timeout-minutes: 5
+        run: |
+          python3 -m venv "$RUNNER_TEMP/fidelity-r28-venv"
+          "$RUNNER_TEMP/fidelity-r28-venv/bin/python" -m pip install --timeout 60 --retries 2 Pillow==12.3.0 openpyxl==3.1.5 lxml==6.1.1
+          npm install --no-audit --no-fund --no-save --package-lock=false --fetch-timeout=60000 --fetch-retries=2 @napi-rs/canvas@0.1.80
+      - name: Reproduce the published local inputs before regenerating their bound reports
+        run: |
+          mkdir -p qa-fidelity-r28-ci
+          "$RUNNER_TEMP/fidelity-r28-venv/bin/python" scripts/run-published-release-r29.py --commit 9bcb3535189ffa7b21f08f733be2f1afeb73b984 --evidence qa-fidelity-r28-ci/published-release --plan scripts/ci-r29/plans/r28-publication.json
+      - name: Invalidate the previous test reports before this execution
+        run: |
+          rm -f docs/R28_EXPORT_TESTS.json docs/R28_SPRITES_TESTS.json docs/R28_BODY_SOURCES_TESTS.json docs/R28_CANONICAL_VALIDATION.json docs/R28_AUDIO_TESTS.json docs/R28_COMBAT_SPRITE_TESTS.json docs/R28_EVOLUTIONS_ENGINE_TESTS.json
+          touch qa-fidelity-r28-ci/test-execution-started
+      - name: Execute the body, sprite, workbook and canonical Python suites
+        run: |
+          "$RUNNER_TEMP/fidelity-r28-venv/bin/python" tests/test_fidelity_export_r28.py
+          "$RUNNER_TEMP/fidelity-r28-venv/bin/python" tests/test_sprite_overlay_r28.py
+          "$RUNNER_TEMP/fidelity-r28-venv/bin/python" scripts/verify-body-sources-r28.py
+          "$RUNNER_TEMP/fidelity-r28-venv/bin/python" tests/test_canonical_evidence_r28.py
+      - name: Execute the archive suite and write its actual runner results
+        run: |
+          "$RUNNER_TEMP/fidelity-r28-venv/bin/python" - <<'PY'
+          import hashlib
+          import io
+          import json
+          from pathlib import Path
+          import unittest
+
+          root = Path.cwd()
+          checks = []
+          class EvidenceResult(unittest.TextTestResult):
+              def addSuccess(self, test):
+                  super().addSuccess(test)
+                  checks.append({'name': test.id(), 'pass': True})
+              def addFailure(self, test, error):
+                  super().addFailure(test, error)
+                  checks.append({'name': test.id(), 'pass': False, 'error': self._exc_info_to_string(error, test)})
+              def addError(self, test, error):
+                  super().addError(test, error)
+                  checks.append({'name': test.id(), 'pass': False, 'error': self._exc_info_to_string(error, test)})
+          stream = io.StringIO()
+          suite = unittest.defaultTestLoader.discover('tests', pattern='test_audio_archives_r28.py')
+          result = unittest.TextTestRunner(stream=stream, verbosity=2, resultclass=EvidenceResult).run(suite)
+          log = stream.getvalue()
+          print(log, end='')
+          (root / 'qa-fidelity-r28-ci/audio-tests.log').write_text(log)
+          paths = ['tests/test_audio_archives_r28.py', 'scripts/import-audio-archives-r28.py',
+                   'modules/fidelity-r28/audio/import-request.json', 'modules/fidelity-r28/audio/manifest.json']
+          failures = len(result.failures) + len(result.errors)
+          report = {'schema': 're.bow.audio-python-ci-r28/1', 'passed': result.testsRun - failures - len(result.skipped),
+                    'failed': failures, 'skipped': len(result.skipped), 'run': result.testsRun, 'checks': checks,
+                    'inputs': [{'path': path, 'sha256': hashlib.sha256((root / path).read_bytes()).hexdigest()} for path in paths],
+                    'scope': 'Actual local archive, waveform, attribution and hostile-input tests; no semantic listening or native-bank certification.'}
+          (root / 'docs/R28_AUDIO_TESTS.json').write_text(json.dumps(report, indent=2) + '\n')
+          raise SystemExit(0 if result.testsRun > 0 and result.wasSuccessful() and not result.skipped else 1)
+          PY
+      - name: Execute current renderer, voluntary evolution and replay boundaries
+        run: |
+          node tests/verify-combat-sprites-r28.mjs
+          node tests/verify-evolutions-r28.mjs
+          node tests/verify-ci-report-r25.mjs
+      - name: Require newly executed nonempty reports with no failures
+        run: |
+          node --input-type=module - <<'JS'
+          import assert from 'node:assert/strict';
+          import fs from 'node:fs';
+          const names=['R28_EXPORT_TESTS.json','R28_SPRITES_TESTS.json','R28_BODY_SOURCES_TESTS.json',
+            'R28_CANONICAL_VALIDATION.json','R28_AUDIO_TESTS.json','R28_COMBAT_SPRITE_TESTS.json','R28_EVOLUTIONS_ENGINE_TESTS.json'];
+          for(const name of names){
+            const file='docs/'+name;assert(fs.existsSync(file),'Missing executed report: '+file);
+            const report=JSON.parse(fs.readFileSync(file,'utf8'));
+            const passed=report.passed??report.counts?.passed, failed=report.failed??report.counts?.failed;
+            assert(Number.isInteger(passed)&&passed>0,'No tests executed: '+file);
+            assert.equal(failed,0,file);assert.notEqual(report.pass,false,file);assert.equal(report.skipped??0,0,file);
+          }
+          JS
+      - name: Keep the original engine and content assertions active
+        run: npm run verify > qa-fidelity-r28-ci/historical-verify.log
+      - name: Preserve only reports from this execution
+        if: always()
+        run: |
+          mkdir -p qa-fidelity-r28-ci
+          if [[ -f qa-fidelity-r28-ci/test-execution-started ]]; then
+            for report in R28_EXPORT_TESTS R28_SPRITES_TESTS R28_BODY_SOURCES_TESTS R28_CANONICAL_VALIDATION R28_AUDIO_TESTS R28_COMBAT_SPRITE_TESTS R28_EVOLUTIONS_ENGINE_TESTS; do
+              if [[ -f "docs/$report.json" ]]; then
+                cp "docs/$report.json" "qa-fidelity-r28-ci/$report.json"
+              fi
+            done
+          fi
+          node tests/ci-report-r25.mjs qa-fidelity-r28-ci
+      - name: Upload executed provenance evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: fidelity-r28-provenance-${{ github.run_id }}
+          path: qa-fidelity-r28-ci/
+          if-no-files-found: warn
+          retention-days: 14
+  browser:
+    needs: provenance
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        include:
+          - suite: sprites
+            script: tests/browser-generated-sprites-r28.mjs
+            evidence: qa-generated-sprites-r28
+            report: docs/R28_SPRITES_BROWSER.json
+          - suite: evolutions
+            script: tests/browser-evolutions-r28.mjs
+            evidence: qa-evolutions-r28
+            report: docs/R28_EVOLUTIONS_BROWSER.json
+          - suite: canonical
+            script: tests/browser-canonical-r28.mjs
+            evidence: qa-canonical-r28
+            report: docs/R28_CANONICAL_BROWSER.json
+          - suite: audio
+            script: tests/browser-audio-r28.mjs
+            evidence: qa-audio-r28-browser
+            report: docs/R28_AUDIO_BROWSER.json
+          - suite: dashboard
+            script: tests/browser-fidelity-dashboard-r28.mjs
+            evidence: qa-r28-dashboard
+            report: docs/R28_DASHBOARD_BROWSER.json
+          - suite: dossier
+            script: tests/browser-dossier-additions-r28.mjs
+            evidence: qa-dossier-additions-r28
+            report: docs/R28_DOSSIER_BROWSER.json
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+          ref: 9bcb3535189ffa7b21f08f733be2f1afeb73b984
+      - name: Invalidate the selected report before installing or executing tools
+        run: |
+          mkdir -p '${{ matrix.evidence }}'
+          rm -f '${{ matrix.report }}'
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - name: Install pinned browser validation tools
+        timeout-minutes: 10
+        run: npm install --no-audit --no-fund --no-save --package-lock=false --fetch-timeout=60000 --fetch-retries=2 playwright@1.64.1 @napi-rs/canvas@0.1.80 axe-core@4.14.0
+      - name: Locate Chromium
+        run: |
+          if command -v google-chrome >/dev/null; then
+            echo "CHROME_BIN=$(command -v google-chrome)" >> "$GITHUB_ENV"
+          else
+            npx playwright install --with-deps chromium
+            node --input-type=module -e "import {chromium} from 'playwright'; console.log('CHROME_BIN=' + chromium.executablePath())" >> "$GITHUB_ENV"
+          fi
+      - name: Exercise the complete selected current R28 flow
+        run: node '${{ matrix.script }}'
+      - name: Require an actual completed report and publish annotations
+        if: always()
+        run: |
+          if [[ -f '${{ matrix.report }}' ]]; then
+            cp '${{ matrix.report }}' '${{ matrix.evidence }}/executed-report.json'
+          fi
+          node tests/ci-report-r25.mjs '${{ matrix.evidence }}'
+          node --input-type=module - '${{ matrix.report }}' <<'JS'
+          import assert from 'node:assert/strict';
+          import fs from 'node:fs';
+          const file=process.argv[2];assert(fs.existsSync(file),'This job did not produce its browser report: '+file);
+          const report=JSON.parse(fs.readFileSync(file,'utf8'));
+          assert(Number.isInteger(report.passed)&&report.passed>0,'No browser groups executed');
+          assert.equal(report.failed,0,file);assert.equal(report.skipped??0,0,file);
+          JS
+      - name: Upload executed browser evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: fidelity-r28-${{ matrix.suite }}-${{ github.run_id }}
+          path: ${{ matrix.evidence }}/
+          if-no-files-found: warn
+          retention-days: 14
+  build:
+    needs: provenance
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+          ref: 9bcb3535189ffa7b21f08f733be2f1afeb73b984
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - name: Build the complete static delivery
+        run: |
+          mkdir -p qa-fidelity-r28-build
+          npm run build > qa-fidelity-r28-build/build.log
+      - name: Verify every published R28 source byte in the actual distribution
+        run: |
+          node --input-type=module - <<'JS'
+          import assert from 'node:assert/strict';
+          import fs from 'node:fs';
+          import {createHash} from 'node:crypto';
+          const sha=value=>createHash('sha256').update(value).digest('hex');
+          const ledger=JSON.parse(fs.readFileSync('docs/R28_SOURCE_ADDITIONS.json','utf8'));
+          assert(ledger.files.length>0,'The R28 source ledger must be populated');
+          let bytes=0;
+          for(const entry of ledger.files){
+            assert(entry.path.startsWith('modules/fidelity-r28/'),entry.path);
+            const original=fs.readFileSync(entry.path), delivered=fs.readFileSync('dist/'+entry.path);
+            assert.equal(original.length,entry.bytes,entry.path);assert.equal(sha(original),entry.sha256,entry.path);
+            assert(delivered.equals(original),entry.path);bytes+=original.length;
+          }
+          const mounts=['modules/versus.html','catalog-duel.html','codex.html','docs/BOW_FIDELITE_R28.xlsx'];
+          for(const file of mounts)assert(fs.readFileSync('dist/'+file).equals(fs.readFileSync(file)),file);
+          const report={schema:'re.bow.build-ci-r28/1',passed:2,failed:0,moduleFiles:ledger.files.length,moduleBytes:bytes,exactMounts:mounts};
+          fs.writeFileSync('qa-fidelity-r28-build/distribution-check.json',JSON.stringify(report,null,2)+'\n');
+          JS
+      - name: Upload actual build evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: fidelity-r28-build-${{ github.run_id }}
+          path: qa-fidelity-r28-build/
+          if-no-files-found: warn
+          retention-days: 14

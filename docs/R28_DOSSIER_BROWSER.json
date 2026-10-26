@@ -1,0 +1,135 @@
+{
+  "schema": "re.bow.dossier-additions-browser-r28/1",
+  "startedAt": "2026-10-26T09:12:42.843Z",
+  "completedAt": "2026-10-26T09:12:53.089Z",
+  "passed": 6,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Exact revised body opens its R28 gallery while old sources remain at 1280px",
+      "pass": true,
+      "evidence": {
+        "r28": {
+          "loaded": true,
+          "failed": false,
+          "id": "re1r-cerberus",
+          "sprite": true,
+          "fullBody": true,
+          "revisedBody": true,
+          "canonical": 0,
+          "assignedAudio": 0,
+          "candidateAudio": 0
+        },
+        "retained": true,
+        "text": "Références de cette incarnation · R28Examiner le nouveau corps complet R28Corps visible revu dans cette pose. Cette présentation ne déclare aucun état d’attente de combat. Animations complètes et fidélité 1:1 restent à vérifier.Des détails d’apparence ou d’équipement restent à confronter aux références. La galerie conserve ces limites.",
+        "links": [
+          "http://127.0.0.1:5778/modules/fidelity-r28/sprites/index.html?identity=re1r-cerberus"
+        ],
+        "audio": 0
+      }
+    },
+    {
+      "name": "Exact revised body opens its R28 gallery while old sources remain at 320px",
+      "pass": true,
+      "evidence": {
+        "r28": {
+          "loaded": true,
+          "failed": false,
+          "id": "re1r-cerberus",
+          "sprite": true,
+          "fullBody": true,
+          "revisedBody": true,
+          "canonical": 0,
+          "assignedAudio": 0,
+          "candidateAudio": 0
+        },
+        "retained": true,
+        "text": "Références de cette incarnation · R28Examiner le nouveau corps complet R28Corps visible revu dans cette pose. Cette présentation ne déclare aucun état d’attente de combat. Animations complètes et fidélité 1:1 restent à vérifier.Des détails d’apparence ou d’équipement restent à confronter aux références. La galerie conserve ces limites.",
+        "links": [
+          "http://127.0.0.1:5778/modules/fidelity-r28/sprites/index.html?identity=re1r-cerberus"
+        ],
+        "audio": 0
+      }
+    },
+    {
+      "name": "Licker retains an exact 301-clip publisher group and its R28 documentary route",
+      "pass": true,
+      "evidence": {
+        "assignedClips": 301,
+        "canonicalClaims": 1,
+        "exactCanonicalViewerReached": true,
+        "autoplay": false
+      }
+    },
+    {
+      "name": "Nemesis forms and the NE-alpha parasite keep candidate-only audio with explicit host limits",
+      "pass": true,
+      "evidence": {
+        "identities": [
+          {
+            "uid": "re3r-nemesis",
+            "candidateClips": 1005,
+            "assignedClips": 0
+          },
+          {
+            "uid": "re3r-stage-2-nemesis",
+            "candidateClips": 1005,
+            "assignedClips": 0
+          },
+          {
+            "uid": "re3r-stage-3-nemesis",
+            "candidateClips": 1005,
+            "assignedClips": 0
+          },
+          {
+            "uid": "re3r-ne-alpha-parasite",
+            "candidateClips": 144,
+            "assignedClips": 0
+          }
+        ],
+        "candidateAssociationsAreNotDistinctFiles": true
+      }
+    },
+    {
+      "name": "A delayed index binds the latest real Dossier selection and never restores the previous identity",
+      "pass": true,
+      "evidence": {
+        "latestUid": "re3r-nemesis",
+        "delayedIndex": true,
+        "noStaleAttribution": true
+      }
+    },
+    {
+      "name": "A forged exact Nemesis attribution is refused while preserved Dossier data remain reachable",
+      "pass": true,
+      "evidence": {
+        "forgedExactAttributionRefused": true,
+        "previousSourcesPreserved": true
+      }
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "codex.html",
+      "sha256": "5c1d1916ed37f087aef8e12f8ddb70bc070839b06fdcc771ec77ff346624e887"
+    },
+    {
+      "path": "modules/fidelity-r28/dossier-additions.json",
+      "sha256": "0b96f9b3044361059b2a889ba1adb159bdf99108a1cefc4f7317bccd7ecddd0c"
+    },
+    {
+      "path": "modules/fidelity-r28/dossier-link.js",
+      "sha256": "d8dfee965825d082d7f8cf3c6ab629ba3ca19963f960bdedaec95f2858f783dc"
+    },
+    {
+      "path": "scripts/build-dossier-additions-r28.py",
+      "sha256": "fa5c251ad5bbd6965f35aecf4ca95fc1444c0be0572d66f1a24ae710fa25f8b9"
+    },
+    {
+      "path": "tests/browser-dossier-additions-r28.mjs",
+      "sha256": "115db97ee0a0e0c8bb21cb5fdab330547f62c5935e3a3ba8a86ea61b945aed85"
+    }
+  ],
+  "autoplay": false,
+  "candidateAudioPromoted": false
+}

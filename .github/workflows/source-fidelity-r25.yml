@@ -78,7 +78,8 @@ jobs:
       - name: Reconstruct archive selections with the original engines
         run: node tests/verify-persistence-r25.mjs
       - name: Verify all 115 recorded match outcomes and targeted original-engine replay regressions
-        run: node tests/verify-full-matches-r25.mjs > qa-fidelity-r25-ci/full-match-tests.log
+        run: |
+          python3 scripts/run-published-release-r29.py --commit 300dc0169d83382189cd6c8889cb4f7368f1e8a5 --evidence qa-fidelity-r25-ci/published-matches -- node tests/verify-full-matches-r25.mjs
       - name: Preserve executed provenance and integration evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02

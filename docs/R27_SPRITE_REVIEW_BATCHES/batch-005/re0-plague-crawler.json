@@ -1,0 +1,48 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "re0-plague-crawler",
+  "reviewed_at_utc": "2026-10-25T08:49:04.111420+00:00",
+  "batch": "batch-005",
+  "image": "modules/fidelity-r27/sprites/generated/re0-plague-crawler/idle-right.png",
+  "image_sha256": "33623f53ca727d1354c7bc9626a36a082758360d183f01e6e504dd8c9358f4ac",
+  "active_record": "modules/fidelity-r27/sprites/records/re0-plague-crawler.json",
+  "active_record_sha256": "ae5cbd6494d135bb8a805c180390f362323ed9e85d88e58457ce2e7c67cc6375",
+  "used_references": [
+    {
+      "path": "assets/catalog/re0-plague-crawler.png",
+      "sha256": "345c5406b0f49aa391ca09f6df1be38b15d16f39afb092f270fd3b60451f0dbb",
+      "role": "portrait",
+      "declared_body_coverage": "unknown"
+    }
+  ],
+  "scope": "combatant-neutral-pose",
+  "source_complete_body_observed": false,
+  "generated_complete_body_observed": true,
+  "full_body_reviewed": false,
+  "observed_facing": "front",
+  "direction_eligible_for_neutral_pose": false,
+  "review_outcome": "partial-source-no-body-admission",
+  "notes": "The used source cuts lower/peripheral limbs. Generated limb endings extend beyond the documented crop, so whole-body admission stays false; visible head, mouth structures and ribbed body remain reference-guided.",
+  "manual_source_completeness_evidence": null,
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.778082+00:00",
+    "prior_report_record_sha256": "7926316ac34d5ec605fbe8e7706c7a1eb8fcce13b3408e5275c546791dcb0d73",
+    "prior_direction_eligibility": false,
+    "pose_observation": null,
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.781058+00:00"
+  },
+  "observed_pose_kind": "unknown",
+  "available_states": []
+}

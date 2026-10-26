@@ -1,0 +1,51 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "re5-albert-wesker-enemy",
+  "reviewed_at_utc": "2026-10-25T08:49:03.811831+00:00",
+  "batch": "batch-005",
+  "image": "modules/fidelity-r27/sprites/generated/re5-albert-wesker-enemy/idle-right.png",
+  "image_sha256": "3912cf81eff70a9fe212817f9d2d74f3853ed3573db73c9ac9ecf387a521d88a",
+  "active_record": "modules/fidelity-r27/sprites/records/re5-albert-wesker-enemy.json",
+  "active_record_sha256": "8855550f0c783e39c70fd4c918664a8a28e3105572f9bd9fc3ba6cb6e55bcdb9",
+  "used_references": [
+    {
+      "path": "assets/specimens/re5-albert-wesker-enemy.png",
+      "sha256": "66f68977207dd79e9ba760c05a0a9db08a576d695527cb9db13277ea76401cd3",
+      "role": "full-body-reference",
+      "declared_body_coverage": "complete"
+    }
+  ],
+  "scope": "combatant-neutral-pose",
+  "source_complete_body_observed": true,
+  "generated_complete_body_observed": true,
+  "full_body_reviewed": true,
+  "observed_facing": "front",
+  "direction_eligible_for_neutral_pose": false,
+  "review_outcome": "whole-visible-body-presentation-pose-no-combat-idle",
+  "notes": "Whole black coat, sunglasses, gloves, boots and raised hand match the documented source form. Body is frontal with a small head turn; this does not establish a left/right gameplay view or a different mutated form.",
+  "manual_source_completeness_evidence": null,
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.797529+00:00",
+    "prior_report_record_sha256": "81483ff534d4dfe3cfe635b86a5a4a8ef8dfa707e0e12f817ca0f50a561ec76d",
+    "prior_direction_eligibility": false,
+    "pose_observation": {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re5-albert-wesker-enemy.json",
+      "sha256": "b82f030775d3fbd2f92603bfa8bf0353deb48e19945582d91c8d826fdf9391d4"
+    },
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.801563+00:00"
+  },
+  "observed_pose_kind": "source-presentation",
+  "available_states": []
+}

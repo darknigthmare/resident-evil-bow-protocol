@@ -1,0 +1,53 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "re4-jj",
+  "reviewed_at_utc": "2026-10-25T09:24:00.227441+00:00",
+  "batch": "batch-011",
+  "image": "modules/fidelity-r27/sprites/generated/re4-jj/idle-right.png",
+  "image_sha256": "5defac3a1e3f8c03ecd6a69dc0bcb04b5cd95de4c91edcd61cad8102345afd1c",
+  "active_record": "modules/fidelity-r27/sprites/records/re4-jj.json",
+  "active_record_sha256": "a7d855addbe04ffc06491ab399416dc447c559cb3a7ddf653eb6da421514fd50",
+  "used_references": [
+    {
+      "path": "assets/catalog/re4-jj.png",
+      "sha256": "8a6344490095304b2301f6c309982cd171bde0ad37ec70341fa13ba702a5d319",
+      "role": "portrait",
+      "declared_body_coverage": "unknown"
+    }
+  ],
+  "scope": "combatant-neutral-pose",
+  "source_complete_body_observed": false,
+  "generated_complete_body_observed": false,
+  "full_body_reviewed": false,
+  "observed_facing": "front",
+  "direction_eligible_for_neutral_pose": false,
+  "review_outcome": "visible-source-region-reviewed-body-not-admitted",
+  "notes": "Catalog crop cuts the lower body and rear gun/ammunition extent. Generated output retains an upper-body fragment, red beret and large visible barrel cluster. Complete body, entire gun and firing cycle remain unverified.",
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "visual_evidence": {
+    "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-011/contact-4.png",
+    "sha256": "55712871f4a4da994d1e5bf17bfced7b636d5c4e81c9e5c4408dabd931d7ca59",
+    "kind": "browser-contact-review-evidence",
+    "new_generated_sprite_count": 0
+  },
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.966666+00:00",
+    "prior_report_record_sha256": "b6b36d84cd2b4d63e638e1d9c7bf77e37927f72c38d8b1596e846f5a4db70c87",
+    "prior_direction_eligibility": false,
+    "pose_observation": null,
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.957328+00:00"
+  },
+  "observed_pose_kind": "unknown",
+  "available_states": []
+}

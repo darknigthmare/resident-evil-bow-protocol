@@ -1,0 +1,56 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "revillage-sturm",
+  "reviewed_at_utc": "2026-10-25T09:10:48.759988+00:00",
+  "batch": "batch-007",
+  "image": "modules/fidelity-r27/sprites/generated/revillage-sturm/idle-right.png",
+  "image_sha256": "737123e6169b981cc4b9190c22eacf8322e78417f67f73da9085edb96f92b358",
+  "active_record": "modules/fidelity-r27/sprites/records/revillage-sturm.json",
+  "active_record_sha256": "0a1cd8858568f3c8f0389bf29a93023b366b7ff9f327ce7ed0956b151898c2d9",
+  "used_references": [
+    {
+      "path": "assets/specimens/revillage-sturm.png",
+      "sha256": "3e6d6a7453045375f18c05df4a322ea329f2ee06fce85bf82e719b1f222a9c9c",
+      "role": "full-body-reference",
+      "declared_body_coverage": "complete"
+    }
+  ],
+  "scope": "combatant-neutral-pose",
+  "source_complete_body_observed": true,
+  "generated_complete_body_observed": true,
+  "full_body_reviewed": true,
+  "observed_facing": "front",
+  "direction_eligible_for_neutral_pose": false,
+  "review_outcome": "whole-visible-body-presentation-pose-no-combat-idle",
+  "notes": "The primary and output show the full machine/propeller assembly, strapped torso, trousers and both boots. Front-facing presentation with all visible blades retained; rotating phases, rear engine structure and attack cycle remain unverified.",
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "visual_evidence": {
+    "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-007/contact-1.png",
+    "sha256": "ca9aeee0c1f98ec6c34033d0860d9bb871760cd4964d8a62e9dae55e41a9c9e7",
+    "kind": "browser-contact-review-evidence",
+    "new_generated_sprite_count": 0
+  },
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.735990+00:00",
+    "prior_report_record_sha256": "8e9eff18b5d9e26c3dcd9e2a6c0f5b937b513b71f9925c0f6417debb7ed6d75f",
+    "prior_direction_eligibility": false,
+    "pose_observation": {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/revillage-sturm.json",
+      "sha256": "ccd0d587179bbf12776dad0e76727cb69b24394e8891c70131f0240c8a2efd23"
+    },
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.739894+00:00"
+  },
+  "observed_pose_kind": "source-presentation",
+  "available_states": []
+}

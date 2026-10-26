@@ -1,0 +1,51 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "re0-proto-tyrant",
+  "reviewed_at_utc": "2026-10-25T08:37:45.935460+00:00",
+  "batch": "batch-004",
+  "image": "modules/fidelity-r27/sprites/generated/re0-proto-tyrant/idle-right.png",
+  "image_sha256": "fe205f9219e7a74dab8d21a26ee66cbf385395f017ae7c099d9df9b3454910ee",
+  "active_record": "modules/fidelity-r27/sprites/records/re0-proto-tyrant.json",
+  "active_record_sha256": "4e33283b9468db3ad7f494d3135d0ac3f49f3d8be2722c8d2cd1b8858470ef63",
+  "used_references": [
+    {
+      "path": "assets/specimens/re0-proto-tyrant.png",
+      "sha256": "2be37f7473611e2e169667fec7da0a3e8142dc2354cc268b89938373398d9229",
+      "role": "full-body-reference",
+      "declared_body_coverage": "complete"
+    }
+  ],
+  "scope": "combatant-neutral-pose",
+  "source_complete_body_observed": true,
+  "generated_complete_body_observed": true,
+  "full_body_reviewed": true,
+  "observed_facing": "front",
+  "direction_eligible_for_neutral_pose": false,
+  "review_outcome": "whole-visible-body-presentation-pose-no-combat-idle",
+  "notes": "The full primary source and output retain both feet, long asymmetric clawed arm, exposed red chest tissue and the backward-leaning head/body pose. Body remains predominantly frontal; no horizontal side admission.",
+  "manual_source_completeness_evidence": null,
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.899749+00:00",
+    "prior_report_record_sha256": "855adb3e949a10fcda519c52af057d799ff269ef1324de2f8af8edbb08a97799",
+    "prior_direction_eligibility": false,
+    "pose_observation": {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re0-proto-tyrant.json",
+      "sha256": "a60188772dc9f422f3d641207718dec2b7e205607db51b09f536d82c3f38d9e7"
+    },
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.894097+00:00"
+  },
+  "observed_pose_kind": "source-presentation",
+  "available_states": []
+}

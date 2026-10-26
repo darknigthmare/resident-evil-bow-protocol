@@ -1,0 +1,82 @@
+{
+  "schema": "re.bow.audio-browser-r28/1",
+  "startedAt": "2026-10-26T09:20:40.814Z",
+  "completedAt": "2026-10-26T09:21:04.630Z",
+  "passed": 7,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Publisher groups, manual playback and labelled controls at 1440px",
+      "pass": true,
+      "detail": {
+        "clips": 1450,
+        "identities": 1,
+        "lickerVoiceClips": 301,
+        "noAutoplay": true,
+        "volumeAndPause": true,
+        "physicalListening": false
+      }
+    },
+    {
+      "name": "Publisher groups, manual playback and labelled controls at 320px",
+      "pass": true,
+      "detail": {
+        "clips": 1450,
+        "identities": 1,
+        "lickerVoiceClips": 301,
+        "noAutoplay": true,
+        "volumeAndPause": true,
+        "physicalListening": false
+      }
+    },
+    {
+      "name": "All 1450 preserved WAVs match their hashes and decode to their exact sample counts",
+      "pass": true,
+      "detail": {
+        "decoded": 1450,
+        "problems": [],
+        "playbackStarted": false,
+        "independentSemanticListening": false
+      }
+    },
+    {
+      "name": "Candidate forms stay explicit and filter their published groups without exact phase assignment",
+      "pass": true,
+      "detail": {
+        "lickerExactSubjectClips": 301,
+        "nemesisCandidateClips": 1005,
+        "neTypeCandidateClips": 144,
+        "noPhasePromotion": true,
+        "unknownIdentityRefused": true
+      }
+    },
+    {
+      "name": "Changed source bytes fail before an audio URL is exposed",
+      "pass": true,
+      "detail": {
+        "corruptedSourceRefused": true,
+        "exposedAudioURLs": 0
+      }
+    },
+    {
+      "name": "Unsafe manifest paths and unsupported native certification cannot expose playback",
+      "pass": true,
+      "detail": {
+        "unsafePathRefused": true,
+        "unsupportedCertificationRefused": true,
+        "candidatePhasePromotionRefused": true
+      }
+    },
+    {
+      "name": "A late previous selection cannot replace the current sound",
+      "pass": true,
+      "detail": {
+        "staleSelectionRefused": true,
+        "liveAudioURLs": 1
+      }
+    }
+  ],
+  "independentSemanticListening": false,
+  "nativeGameBanksCertified": false,
+  "physicalAudioDevices": false
+}

@@ -1,0 +1,7 @@
+# R26 — diagnostic de l’installation CI R24
+
+Au commit `300dc0169d83382189cd6c8889cb4f7368f1e8a5`, le job de PR R24 [`120756439594`](https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/40055164522/job/120756439594) a atteint la limite de dix minutes de l’étape « Install pinned validation tools ». Les tests de ce job ont ensuite été ignorés. L’annotation GitHub constitue la preuve disponible ; le téléchargement des logs par `gh run view --log-failed` est refusé par l’hôte des résultats. Aucun contournement réseau n’a été utilisé.
+
+L’étape combinait Python, npm et une installation conditionnelle FFmpeg. La cause précise entre ces trois sous-commandes reste donc inconnue. La modification R26 les sépare en trois étapes nommées, avec limites de cinq, sept et cinq minutes. Les tentatives npm conservent leurs versions et leur délai de connexion ; leur attente entre essais est bornée à dix secondes. APT reçoit des délais et tentatives explicites. Les versions Python/Node et tous les contrôles du workflow sont conservés.
+
+Les 17 blocs Bash du workflow sont syntaxiquement valides et le YAML se charge. Cela ne prouve pas que le réseau du prochain runner installera les paquets : seule son exécution distante le montrera. Les autres résultats GitHub observés et les limites du constat sont conservés dans `R26_CI_DIAGNOSTIC.json`. Les statuts Vercel restent un circuit de déploiement distinct.

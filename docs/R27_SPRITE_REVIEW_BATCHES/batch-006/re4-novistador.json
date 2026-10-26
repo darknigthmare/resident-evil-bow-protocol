@@ -1,0 +1,50 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "re4-novistador",
+  "reviewed_at_utc": "2026-10-25T09:03:38.356794+00:00",
+  "batch": "batch-006",
+  "image": "modules/fidelity-r27/sprites/generated/re4-novistador/idle-right.png",
+  "image_sha256": "f7f45455f43a532ffcd4c475ad5e93ddbf413d61ed4de30c239032de1146a3a6",
+  "active_record": "modules/fidelity-r27/sprites/records/re4-novistador.json",
+  "active_record_sha256": "dec19a6f537117530ab246107641f5a9e7e26aee39eb017d3f107cbe609bd030",
+  "used_references": [
+    {
+      "path": "assets/specimens/re4-novistador.png",
+      "sha256": "7ca4df945aa0342495e7bfcd80e964655f9ca733452f8193556ba2574bfbf284",
+      "role": "full-body-reference",
+      "declared_body_coverage": "complete"
+    }
+  ],
+  "scope": "combatant-neutral-pose",
+  "source_complete_body_observed": true,
+  "generated_complete_body_observed": true,
+  "full_body_reviewed": true,
+  "observed_facing": "left",
+  "direction_eligible_for_neutral_pose": false,
+  "review_outcome": "whole-visible-body-presentation-pose-no-combat-idle",
+  "notes": "Whole insectoid source and output show the visible hooked limbs, four-wing arrangement and extended abdomen with the head to screen left. One left-facing source-guided pose only; no invisibility or flight-cycle certification.",
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.871374+00:00",
+    "prior_report_record_sha256": "c41c891606f2b6196c54c8c1282a39945f710e439652ff3b992112cdd156f774",
+    "prior_direction_eligibility": true,
+    "pose_observation": {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re4-novistador.json",
+      "sha256": "6ba46f9e88822052a67c7f13ac95fdf5d7c21a935c056324e4cde1906fd15c99"
+    },
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.860321+00:00"
+  },
+  "observed_pose_kind": "source-presentation",
+  "available_states": []
+}

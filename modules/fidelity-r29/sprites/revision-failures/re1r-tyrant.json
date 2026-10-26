@@ -1,0 +1,56 @@
+{
+  "schema": "re.bow.generated-sprite-revision-failure-r29/1",
+  "id": "re1r-tyrant",
+  "generator": "image_gen",
+  "status": "BLOCKED_BY_TOOL",
+  "revisionOnly": true,
+  "existingActiveSpritePreserved": true,
+  "retryPerformed": false,
+  "request": {
+    "uid": "re1r-tyrant",
+    "prompt": "Create ONE complete full-body transparent-background sprite of the exact Tyrant T-002 native model shown in these four source views: Resident Evil remake, Nintendo GameCube2002. Reproduce the first front view's arm-spread source bind pose and source proportions, with the whole head, both arms, complete giant asymmetric claw, torso, both legs and entire feet all framed with a clear margin. The other three images show the sides and back of the same model; preserve the correct claw side, the exact chest and surface patterns and asymmetry without mirroring. Do not borrow the PlayStation1996 Tyrant, Super Tyrant or another phase. Preserve the reference's modest existing surface detail without adding injuries, blood, sexual features or equipment. Keep source model material colors and low-poly survival-horror rendering as closely as visible. No new styling, generic monster substitution, second body, montage, text, frame, floor, scenery or background shadow. This is a generated source bind-pose presentation, not an official sprite, native gameplay action or certified exact game rendering.",
+    "referenced_image_paths": [
+      "/workspace/resident-evil-bow-protocol/modules/fidelity-r29/sources/body-rasters/re1r-tyrant-gamecube/source-0.png",
+      "/workspace/resident-evil-bow-protocol/modules/fidelity-r29/sources/body-rasters/re1r-tyrant-gamecube/source-90.png",
+      "/workspace/resident-evil-bow-protocol/modules/fidelity-r29/sources/body-rasters/re1r-tyrant-gamecube/source-180.png",
+      "/workspace/resident-evil-bow-protocol/modules/fidelity-r29/sources/body-rasters/re1r-tyrant-gamecube/source-270.png"
+    ],
+    "transparent_background": true,
+    "capturedRepositoryRoot": "/workspace/resident-evil-bow-protocol",
+    "observedFacing": "front",
+    "observedPoseKind": "source-bind-pose",
+    "sourceVariantLabel": "Tyrant T-002 \u2014 mod\u00e8le natif du remake GameCube",
+    "knownAppearanceGaps": [],
+    "equipmentCompletenessReviewed": false,
+    "notes": "Four exact GameCube remake T-002 source views document the entire body and its asymmetrical claw. The generated front body retains the arm-spread bind pose and source asymmetry. This does not certify the PlayStation1996 incarnation, the native game shader, a neutral action or the original combat animation.",
+    "reviewed": false,
+    "sourceCompleteBodyObserved": false,
+    "generatedCompleteBodyObserved": false
+  },
+  "actualToolError": {
+    "message": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 2c18d790-d180-4b85-88a2-6a0ff1823695. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+    "name": null
+  },
+  "preservedActiveSprite": {
+    "image": "modules/fidelity-r27/sprites/generated/re1r-tyrant/idle-right.png",
+    "sha256": "b9aecdaa6bd4f3f1cab232706e6b230db8d71768bda18bf032ef5cc0258325bc"
+  },
+  "references": [
+    {
+      "path": "modules/fidelity-r29/sources/body-rasters/re1r-tyrant-gamecube/source-0.png",
+      "sha256": "064953945768c3490fdf5fc2a75cdeb07e9e8a470f07ec40fd3a2ccd2352b7f7"
+    },
+    {
+      "path": "modules/fidelity-r29/sources/body-rasters/re1r-tyrant-gamecube/source-90.png",
+      "sha256": "0eea03bf38024a24039531227883927c91552c8344f1429eae5774be0737d52d"
+    },
+    {
+      "path": "modules/fidelity-r29/sources/body-rasters/re1r-tyrant-gamecube/source-180.png",
+      "sha256": "ee06222194f3c3f31224c47813807f5a0df32ac1ba3a52c4b384542358cc524f"
+    },
+    {
+      "path": "modules/fidelity-r29/sources/body-rasters/re1r-tyrant-gamecube/source-270.png",
+      "sha256": "b794349228627067367d8add89cabded1140495cb69bb388d21202bdbabfc37b"
+    }
+  ]
+}

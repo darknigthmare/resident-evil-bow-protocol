@@ -1,0 +1,53 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "re2-tyrant",
+  "reviewed_at_utc": "2026-10-25T08:12:06.276531+00:00",
+  "batch": "batch-002",
+  "image": "modules/fidelity-r27/sprites/generated/re2-tyrant/idle-right.png",
+  "image_sha256": "52b53568768207e281846db6b25d87f83c871518bb20a37a327410eb638a9b8e",
+  "active_record": "modules/fidelity-r27/sprites/records/re2-tyrant.json",
+  "active_record_sha256": "8d086a98759d1dfd6fdb92fba3c4095124ce99dd8c2678d0cd15f2cbd5d26640",
+  "used_references": [
+    {
+      "path": "assets/specimens/re2-tyrant.png",
+      "sha256": "52c68f8052f04dbbd6e1ae4224193cbb6678853b0c2a15015d0f4cb3be843da6",
+      "role": "full-body-reference"
+    },
+    {
+      "path": "assets/catalog/re2-tyrant.png",
+      "sha256": "7cb1c38386bfadb7ddf346a43821c0666ceaec6a842628cbaf0ccc0703df59d6",
+      "role": "portrait"
+    }
+  ],
+  "source_complete_body_observed": true,
+  "generated_complete_body_observed": true,
+  "full_body_reviewed": true,
+  "observed_facing": "front",
+  "direction_eligible_for_neutral_pose": false,
+  "review_outcome": "whole-visible-body-presentation-pose-no-combat-idle",
+  "notes": "The complete green coat, straps, belt, gloves, boots and pale head retain their visible source arrangement. Torso and feet remain frontal; no right-facing admission.",
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.996203+00:00",
+    "prior_report_record_sha256": "f41ef3ca4419c53d7f1caf8e671d18568cf2be61d1a287f1b86679f272e89cf1",
+    "prior_direction_eligibility": false,
+    "pose_observation": {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re2-tyrant.json",
+      "sha256": "f4c188b7e392d9aafed8f8e752b724ec3a744a9f8206639aa13df06304463f57"
+    },
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.986539+00:00"
+  },
+  "observed_pose_kind": "source-presentation",
+  "available_states": []
+}

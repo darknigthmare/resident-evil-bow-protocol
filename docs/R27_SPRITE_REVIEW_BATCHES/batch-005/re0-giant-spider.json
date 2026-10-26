@@ -1,0 +1,48 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "re0-giant-spider",
+  "reviewed_at_utc": "2026-10-25T08:49:04.729625+00:00",
+  "batch": "batch-005",
+  "image": "modules/fidelity-r27/sprites/generated/re0-giant-spider/idle-right.png",
+  "image_sha256": "7f01d0097ecfee949aa78e06395dfcb239708eec9ddc272763f24dd99b0db84c",
+  "active_record": "modules/fidelity-r27/sprites/records/re0-giant-spider.json",
+  "active_record_sha256": "b9bae506bd8bd7cb31a14d14ddd42e84d4d27bd56ae1fab2da58d90d70c784bf",
+  "used_references": [
+    {
+      "path": "assets/catalog/re0-giant-spider.png",
+      "sha256": "93673288533326f46ae27c6c8d2a4dfa042569a8b4168d66e25ef0af0b42347b",
+      "role": "portrait",
+      "declared_body_coverage": "unknown"
+    }
+  ],
+  "scope": "combatant-neutral-pose",
+  "source_complete_body_observed": false,
+  "generated_complete_body_observed": false,
+  "full_body_reviewed": false,
+  "observed_facing": "front",
+  "direction_eligible_for_neutral_pose": false,
+  "review_outcome": "partial-source-no-body-admission",
+  "notes": "The reference cuts outer legs at left and right edges; the output is similarly edge-bound. Front fangs, eye cluster and hairy body remain visible-source interpretations only, not a complete limb/body admission.",
+  "manual_source_completeness_evidence": null,
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.792529+00:00",
+    "prior_report_record_sha256": "26957216a2bc52dfac2c898654151a8cceb8d3d438afa798d56482cdb88e8f1a",
+    "prior_direction_eligibility": false,
+    "pose_observation": null,
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.796021+00:00"
+  },
+  "observed_pose_kind": "unknown",
+  "available_states": []
+}

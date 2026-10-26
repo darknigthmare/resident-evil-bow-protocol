@@ -1,0 +1,451 @@
+{
+  "release": "R28",
+  "summary": "363 poses actives revues, quatre versions corporelles étendues à partir de sources attribuées et 17 évolutions volontaires jouables ; 22 refus conservés et 17 chantiers ouverts.",
+  "tasks": [
+    {
+      "id": "R20-09",
+      "title": "Rig par membre et animations",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Les 32 nouvelles vues géométriques restent des poses de référence de huit modèles pour six UID ; aucun clip, rig final ou nouveau cycle de combat n’est déduit."
+      ],
+      "remaining": [
+        "Rigs et cycles complets des 389 incarnations, attribution vérifiée de chaque action et intégration finale au combat."
+      ],
+      "evidence": [
+        {
+          "href": "sources/body-rasters/manifest.json",
+          "label": "Vues des modèles sources"
+        }
+      ],
+      "previous_evidence": {
+        "path": "docs/R27_TRACKING.json",
+        "workstreamId": "R20-09"
+      },
+      "r28_new_implementation": false
+    },
+    {
+      "id": "R20-10",
+      "title": "Étendre les sprites au catalogue",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Les 363 poses actives ont maintenant toutes une revue visuelle : 171 revues supplémentaires, 106 corps anatomiques entiers revus et 32 poses neutres admissibles au seul idle.",
+        "Quatre fichiers partiels sont remplacés à partir de vues du modèle de la même incarnation ; les versions précédentes R27 sont conservées. Les refus restent à 22 et les identités cibles à 385."
+      ],
+      "remaining": [
+        "257 corps ne disposent pas d’une qualification conjointe source/génération, dont 215 combattants et 42 rencontres ; les 22 refus sont conservés.",
+        "Cycles complets, membres, deux orientations, gestes, effets, équipements et phases encore non vérifiés."
+      ],
+      "evidence": [
+        {
+          "href": "sprites/manifest.json",
+          "label": "Registre des poses R28"
+        },
+        {
+          "href": "sprites/body-gaps.json",
+          "label": "Corps et apparences encore incomplets"
+        }
+      ],
+      "previous_evidence": {
+        "path": "docs/R27_TRACKING.json",
+        "workstreamId": "R20-10"
+      },
+      "r28_new_implementation": true
+    },
+    {
+      "id": "G-PERIMETRE",
+      "title": "Périmètre et alias",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Les 15 familles regroupent 42 formes de la même incarnation. Le sélecteur du mode expose 348 identités, dont 340 ouvertes au duel libre et huit choix de rencontre retenus.",
+        "33 incarnations supplémentaires disposent d’une revue documentaire ; 389 au cumul. Cette couverture inclut les localisations et contextes et ne certifie aucun répertoire complet."
+      ],
+      "remaining": [
+        "Revue exhaustive des alias, modes, DLC et extensions ; corriger chaque ambiguïté de support ou de forme avec une preuve."
+      ],
+      "evidence": [
+        {
+          "href": "evolutions/graph.json",
+          "label": "Familles, formes et éditions"
+        },
+        {
+          "href": "canonical/index.html",
+          "label": "Couverture documentaire cumulative"
+        }
+      ],
+      "previous_evidence": {
+        "path": "docs/R27_TRACKING.json",
+        "workstreamId": "G-PERIMETRE"
+      },
+      "r28_new_implementation": true
+    },
+    {
+      "id": "G-PREUVES",
+      "title": "Preuves et revue canonique",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Six pages de publication ont été consultées à nouveau sur Internet et leurs réponses brutes sont conservées. Les 32 vues dérivées sont liées à huit modèles et six UID ; les 24 citations de transformations restent des preuves secondaires attribuées.",
+        "42 nouvelles citations sont liées à leurs captures ; localisations, variantes et acteurs restent distingués des gestes, des timings et des captures primaires."
+      ],
+      "remaining": [
+        "Captures originales et séquences horodatées de chaque geste, phase et transformation ; comparaison indépendante aux paquets et banques bruts."
+      ],
+      "evidence": [
+        {
+          "href": "sources/online-evidence.json",
+          "label": "Réponses Internet conservées"
+        },
+        {
+          "href": "evolutions/graph.json",
+          "label": "Citations des transitions"
+        },
+        {
+          "href": "canonical/manifest.json",
+          "label": "Citations et contexte exacts"
+        }
+      ],
+      "previous_evidence": {
+        "path": "docs/R27_TRACKING.json",
+        "workstreamId": "G-PREUVES"
+      },
+      "r28_new_implementation": true
+    },
+    {
+      "id": "G-COMMANDES",
+      "title": "Répertoire complet des commandes",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Le mode R28 ajoute 17 mutations volontaires : choix de la forme, vie ≤ 70 %, jauge ≥ 35, après 120 ticks, posture neutre au sol. Les coûts et délais sont des règles originales de ce mode."
+      ],
+      "remaining": [
+        "Répertoire officiel complet, action identifiée par séquence et correspondance aux commandes ; dépasser dix slots lorsque le répertoire le demande."
+      ],
+      "evidence": [
+        {
+          "href": "evolutions/index.html",
+          "label": "Mode jouable avec évolutions"
+        },
+        {
+          "href": "../../docs/R28_EVOLUTIONS_ENGINE.md",
+          "label": "Conditions et moteur"
+        }
+      ],
+      "previous_evidence": {
+        "path": "docs/R27_TRACKING.json",
+        "workstreamId": "G-COMMANDES"
+      },
+      "r28_new_implementation": true
+    },
+    {
+      "id": "G-MANCHES",
+      "title": "Fin de manche et résultat",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Le scénario naturel Tyrant RE2 remake contre Nemesis RE3 remake se transforme à F679 puis termine par KO dans la recette du moteur R28 ; le replay reconstruit ce résultat."
+      ],
+      "remaining": [
+        "Victoire, défaite, égalité et leurs séquences, dessins et sons officiels par incarnation ; recette KO et conclusions artistiques séparée."
+      ],
+      "evidence": [
+        {
+          "href": "../../docs/R28_EVOLUTIONS_ENGINE_TESTS.json",
+          "label": "Match et KO naturels avec évolution"
+        }
+      ],
+      "previous_evidence": {
+        "path": "docs/R27_TRACKING.json",
+        "workstreamId": "G-MANCHES"
+      },
+      "r28_new_implementation": true
+    },
+    {
+      "id": "G-CINEMATIQUES",
+      "title": "Intros et outros",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "La mutation remplace l’identité et le profil au tick enregistré, avec une récupération vulnérable de 24 ticks ; aucune cinématique de transformation originale n’est produite."
+      ],
+      "remaining": [
+        "Intros, outros et bande sonore complète par sujet ; attribution de l’action, de la phase et des raccords du jeu d’origine."
+      ],
+      "evidence": [
+        {
+          "href": "../../docs/R28_EVOLUTIONS_UI.md",
+          "label": "Portée de la présentation"
+        }
+      ],
+      "previous_evidence": {
+        "path": "docs/R27_TRACKING.json",
+        "workstreamId": "G-CINEMATIQUES"
+      },
+      "r28_new_implementation": false
+    },
+    {
+      "id": "G-REPLAYS",
+      "title": "Compatibilité des replays",
+      "category": "functions",
+      "status": "EN COURS",
+      "advances": [
+        "Un schéma R28 séparé enregistre les demandes volontaires au tick exact. La relecture reconstruit l’avant/après, refuse les données altérées et désactive les commandes de mutation. Les anciens formats restent séparés."
+      ],
+      "remaining": [
+        "Autres révisions et contrats historiques, campagnes et conclusions artistiques ; ne pas lire un ancien contrat sous un moteur courant."
+      ],
+      "evidence": [
+        {
+          "href": "../../docs/R28_EVOLUTIONS_ENGINE_TESTS.json",
+          "label": "Replays reconstruits"
+        },
+        {
+          "href": "../../docs/R28_EVOLUTIONS_BROWSER.json",
+          "label": "Avant et après la mutation"
+        }
+      ],
+      "previous_evidence": {
+        "path": "docs/R27_TRACKING.json",
+        "workstreamId": "G-REPLAYS"
+      },
+      "r28_new_implementation": true
+    },
+    {
+      "id": "G-SAUVES",
+      "title": "Sauvegardes et restauration",
+      "category": "functions",
+      "status": "EN COURS",
+      "advances": [
+        "Les replays R28 sont exportés volontairement comme fichiers. Les sauvegardes et la base de répétition R27 restent dans leur périmètre historique ; aucune reprise de campagne supplémentaire n’est validée."
+      ],
+      "remaining": [
+        "Restauration du stockage réel du jeu, cloud et reprises après interruption hors de la base isolée ; l’outil R26 ne certifie pas ces usages."
+      ],
+      "evidence": [
+        {
+          "href": "../../docs/R28_EVOLUTIONS_UI.md",
+          "label": "Fichiers R28 hors progression"
+        }
+      ],
+      "previous_evidence": {
+        "path": "docs/R27_TRACKING.json",
+        "workstreamId": "G-SAUVES"
+      },
+      "r28_new_implementation": false
+    },
+    {
+      "id": "G-VICTIMES",
+      "title": "Compatibilité des conclusions",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Les formes retenues pour leur rencontre particulière restent visibles dans leur famille et accessibles par leur dossier. Neuf transitions contextuelles ne sont pas ouvertes au duel libre ni contournées par un saut de phase."
+      ],
+      "remaining": [
+        "Toutes les associations admissibles et leurs conclusions finales ; revue morphologique, artistique et séquences d’origine."
+      ],
+      "evidence": [
+        {
+          "href": "evolutions/graph.json",
+          "label": "Transitions et rencontres retenues"
+        }
+      ],
+      "previous_evidence": {
+        "path": "docs/R27_TRACKING.json",
+        "workstreamId": "G-VICTIMES"
+      },
+      "r28_new_implementation": true
+    },
+    {
+      "id": "G-ECHELLE",
+      "title": "Dimensions et points faibles",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Les 32 rendus conservent les bornes de la géométrie sélectionnée et les accessoires exportés dans les sources. Anatomie, équipement, phase et taille physique demeurent des qualifications distinctes."
+      ],
+      "remaining": [
+        "Mesures primaires, tailles corporelles et collision, géants et aquatiques ; zéro échelle physique certifiée."
+      ],
+      "evidence": [
+        {
+          "href": "sources/body-rasters/manifest.json",
+          "label": "Bornes et recettes de caméra"
+        },
+        {
+          "href": "../../docs/R28_BODY_SOURCES.md",
+          "label": "Anatomie, accessoires et phases"
+        }
+      ],
+      "previous_evidence": {
+        "path": "docs/R27_TRACKING.json",
+        "workstreamId": "G-ECHELLE"
+      },
+      "r28_new_implementation": true
+    },
+    {
+      "id": "G-RENDU",
+      "title": "Sprites, clips et asymétries",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Les 32 poses neutres admissibles peuvent être utilisées dans le rendu idle vérifié. Les quatre nouveaux corps complets sont des poses de liaison ou de présentation, sans nouvel idle.",
+        "Lisa Trevor conserve des lacunes d’accessoires et de phase tentaculaire ; Cerberus conserve une incertitude sur un élément de chaîne. Une anatomie entière ne certifie pas l’apparence complète."
+      ],
+      "remaining": [
+        "Sprites définitifs, deux orientations, asymétries, mouvements, impacts et transformations de tout le catalogue ; rendu original du jeu non certifié."
+      ],
+      "evidence": [
+        {
+          "href": "sprites/index.html",
+          "label": "Galerie des poses revues"
+        },
+        {
+          "href": "sprites/body-gaps.json",
+          "label": "Apparences encore ouvertes"
+        }
+      ],
+      "previous_evidence": {
+        "path": "docs/R27_TRACKING.json",
+        "workstreamId": "G-RENDU"
+      },
+      "r28_new_implementation": true
+    },
+    {
+      "id": "G-PERF",
+      "title": "Performances sur appareils cibles",
+      "category": "validation",
+      "status": "EN COURS",
+      "advances": [
+        "Le chargeur de sprites R28 conserve ses limites d’image, de cache et de transport ; une initialisation unique par cycle empêche la course entre chargement et pageshow. La galerie charge la pose sélectionnée."
+      ],
+      "remaining": [
+        "Appareils physiques, GPU cibles, budgets mémoire globaux et longues sessions de combat ; le rendu logiciel cloud ne les certifie pas."
+      ],
+      "evidence": [
+        {
+          "href": "../../docs/R28_COMBAT_SPRITE_TESTS.json",
+          "label": "Chargeur et bornes"
+        },
+        {
+          "href": "../../docs/R28_SPRITES_BROWSER.json",
+          "label": "Parcours de galerie"
+        }
+      ],
+      "previous_evidence": {
+        "path": "docs/R27_TRACKING.json",
+        "workstreamId": "G-PERF"
+      },
+      "r28_new_implementation": true
+    },
+    {
+      "id": "G-ACCESS",
+      "title": "Accessibilité et appareils",
+      "category": "validation",
+      "status": "EN COURS",
+      "advances": [
+        "Les contrôles d’évolution affichent les conditions, la santé et la jauge actuelles ; les boutons compacts restent au-dessus de l’arène. Les touches V/B et une pression Select de manette simulée déclenchent les choix volontaires.",
+        "La sélection principale et le mode ont été vérifiés à 320 px avec chaque taille de texte calculée doublée, ainsi qu’à 1280 px pour le mode ; les manettes physiques restent sans certification."
+      ],
+      "remaining": [
+        "Lecteurs d’écran réels, appareils tactiles et manettes physiques, contenus hors écran et conformité WCAG complète."
+      ],
+      "evidence": [
+        {
+          "href": "../../docs/R28_EVOLUTIONS_BROWSER.json",
+          "label": "Clavier, reflow et manette simulée"
+        }
+      ],
+      "previous_evidence": {
+        "path": "docs/R27_TRACKING.json",
+        "workstreamId": "G-ACCESS"
+      },
+      "r28_new_implementation": true
+    },
+    {
+      "id": "G-AUDIO",
+      "title": "Voix et sons par incarnation",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "1450 fichiers WAV publiés, 1105 contenus SHA distincts et 345 doublons de publication. 50 contenus sont déjà présents dans les versions antérieures.",
+        "301 clips appartiennent au groupe publié Licker de RE3 remake ; 1149 clips restent candidats NE-α/Nemesis pour quatre UID. Aucun son de mutation, geste ou locuteur individuel n’est affecté automatiquement au combat."
+      ],
+      "remaining": [
+        "Écoute indépendante, locuteur et action/phase, comparaison aux banques brutes, cris et mixage final ; ne pas affecter automatiquement ces sons au combat."
+      ],
+      "evidence": [
+        {
+          "href": "audio/index.html",
+          "label": "Écoute volontaire et attributions séparées"
+        },
+        {
+          "href": "../../docs/R28_AUDIO.md",
+          "label": "Archives, doublons et limites"
+        }
+      ],
+      "previous_evidence": {
+        "path": "docs/R27_TRACKING.json",
+        "workstreamId": "G-AUDIO"
+      },
+      "r28_new_implementation": true
+    },
+    {
+      "id": "G-RECETTE",
+      "title": "Recette cumulative",
+      "category": "validation",
+      "status": "EN COURS",
+      "advances": [
+        "Les rapports R28 vérifient les remplacements corporels, les 363 revues, les admissions de pose, les évolutions volontaires et leurs replays. Les résultats historiques ne sont pas recomptés comme exécutés en R28."
+      ],
+      "remaining": [
+        "Toutes les combinaisons, commandes, campagnes, KO, séquences artistiques et validations sur appareils cibles."
+      ],
+      "evidence": [
+        {
+          "href": "../../docs/R28_VALIDATION.json",
+          "label": "Rapports R28 réellement exécutés"
+        }
+      ],
+      "previous_evidence": {
+        "path": "docs/R27_TRACKING.json",
+        "workstreamId": "G-RECETTE"
+      },
+      "r28_new_implementation": true
+    },
+    {
+      "id": "G-LIVRAISON",
+      "title": "Livraisons et suivi",
+      "category": "validation",
+      "status": "EN COURS",
+      "advances": [
+        "Les 35 feuilles R27 sont conservées octet pour octet dans leurs parties XML et relations. Sept feuilles R28 suivent les 17 chantiers, 389 identités, transformations, références corporelles et recettes.",
+        "Les compteurs distinguent 363 identités avec PNG actif, quatre nouvelles versions, 22 refus et aucune nouvelle identité cible. Les 17 chantiers restent ouverts."
+      ],
+      "remaining": [
+        "Revue humaine et exécution CI de la nouvelle livraison ; tous les chantiers restent ouverts tant que leurs critères manquent de preuves."
+      ],
+      "evidence": [
+        {
+          "href": "../../docs/R28_TRACKING.json",
+          "label": "Suivi R28 reproductible"
+        }
+      ],
+      "previous_evidence": {
+        "path": "docs/R27_TRACKING.json",
+        "workstreamId": "G-LIVRAISON"
+      },
+      "r28_new_implementation": true
+    }
+  ],
+  "generation_preference": {
+    "user_choice": "Conserver les refus, fidélité prioritaire",
+    "preserve_tool_refusals": true,
+    "no_softened_variants_to_fill_counter": true,
+    "actual_files_and_blocked_attempts_counted_separately": true
+  }
+}

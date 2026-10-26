@@ -1,0 +1,614 @@
+{
+  "schema": "re.bow.ci-recovery-r29/1",
+  "passed": 4,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "The actual unchanged R24 browser suite reproduces the opaque-URL failure and passes with the selection fix",
+      "pass": true
+    },
+    {
+      "name": "R28 XLSX reproduction fails with the alternate XML writer and passes with pinned lxml6.1.1",
+      "pass": true
+    },
+    {
+      "name": "All24 original R27/R28 publication commands pass on their exact published snapshots",
+      "pass": true
+    },
+    {
+      "name": "All24 original fixed-source match assertion groups pass on their exact published snapshots",
+      "pass": true
+    }
+  ],
+  "observed_remote_commit": "9bcb3535189ffa7b21f08f733be2f1afeb73b984",
+  "observed_remote_failures": [
+    {
+      "id": 121494263293,
+      "name": "provenance",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/40299697940/job/121494263293"
+    },
+    {
+      "id": 121494262817,
+      "name": "provenance",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/40299697883/job/121494262817"
+    },
+    {
+      "id": 121494262124,
+      "name": "verify",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/40299697736/job/121494262124"
+    },
+    {
+      "id": 121494262072,
+      "name": "provenance",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/40299697658/job/121494262072"
+    },
+    {
+      "id": 121494199809,
+      "name": "provenance",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/40299678388/job/121494199809"
+    },
+    {
+      "id": 121494198918,
+      "name": "verify",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/40299678264/job/121494198918"
+    },
+    {
+      "id": 121494198904,
+      "name": "provenance",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/40299678270/job/121494198904"
+    },
+    {
+      "id": 121494198892,
+      "name": "provenance",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/40299678185/job/121494198892"
+    },
+    {
+      "id": 121494198639,
+      "name": "provenance",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/40299678166/job/121494198639"
+    }
+  ],
+  "opaque_replay_before": {
+    "schema": "re.bow.persistence-r24-browser-tests/1",
+    "passed": 5,
+    "failed": 1,
+    "checks": [
+      {
+        "name": "Actual principal replay is reconstructed twice in an opaque sandbox on desktop and mobile with unchanged game saves",
+        "pass": false,
+        "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   \"Uncaught TypeError: Failed to construct 'URL': Invalid URL\"\n+ ]\n- []\n\n    at file:///workspace/scratch/r29-ci-release-9bcb/tests/browser-persistence-r24.mjs:31:119\n    at async test (file:///workspace/scratch/r29-ci-release-9bcb/tests/browser-persistence-r24.mjs:13:57)\n    at async file:///workspace/scratch/r29-ci-release-9bcb/tests/browser-persistence-r24.mjs:21:3"
+      },
+      {
+        "name": "Experimental replay verifies its stored state digest with the actual R7 browser engine",
+        "pass": true,
+        "evidence": {
+          "frames": 360,
+          "storedDigestVerified": true
+        }
+      },
+      {
+        "name": "A falsified principal result and experimental state digest are rejected after real reconstruction",
+        "pass": true
+      },
+      {
+        "name": "An older replay contract is preserved and refused without launching under current rules",
+        "pass": true
+      },
+      {
+        "name": "A genuine pre-R13 recording selects its frozen original engine and reconstructs its own outcome",
+        "pass": true,
+        "evidence": {
+          "sourceCommit": "31671fecf53a26d81f77d2cb13a5ff61f15ef363",
+          "contract": "87b735420800aa6fc6f1f252e9991bca0ee307107b13e5ed81192d50389cfcb2",
+          "commandFrames": 250
+        }
+      },
+      {
+        "name": "Cancellation tears down a pending sandbox and delayed loading cannot publish a stale result",
+        "pass": true
+      }
+    ],
+    "scope": "Local headless Chromium with original current source engines. No cloud backend, physical crash or unknown historical engine certification."
+  },
+  "opaque_replay_after": {
+    "schema": "re.bow.persistence-r24-browser-tests/1",
+    "passed": 6,
+    "failed": 0,
+    "checks": [
+      {
+        "name": "Actual principal replay is reconstructed twice in an opaque sandbox on desktop and mobile with unchanged game saves",
+        "pass": true,
+        "evidence": {
+          "widths": [
+            1440,
+            390
+          ],
+          "opaqueOrigin": true,
+          "gameStorageUnchanged": true,
+          "replays": 2
+        }
+      },
+      {
+        "name": "Experimental replay verifies its stored state digest with the actual R7 browser engine",
+        "pass": true,
+        "evidence": {
+          "frames": 360,
+          "storedDigestVerified": true
+        }
+      },
+      {
+        "name": "A falsified principal result and experimental state digest are rejected after real reconstruction",
+        "pass": true
+      },
+      {
+        "name": "An older replay contract is preserved and refused without launching under current rules",
+        "pass": true
+      },
+      {
+        "name": "A genuine pre-R13 recording selects its frozen original engine and reconstructs its own outcome",
+        "pass": true,
+        "evidence": {
+          "sourceCommit": "31671fecf53a26d81f77d2cb13a5ff61f15ef363",
+          "contract": "87b735420800aa6fc6f1f252e9991bca0ee307107b13e5ed81192d50389cfcb2",
+          "commandFrames": 250
+        }
+      },
+      {
+        "name": "Cancellation tears down a pending sandbox and delayed loading cannot publish a stale result",
+        "pass": true
+      }
+    ],
+    "scope": "Local headless Chromium with original current source engines. No cloud backend, physical crash or unknown historical engine certification."
+  },
+  "xml_writer_before": {
+    "method": "OPENPYXL_LXML=False selects the same stdlib writer as an installation without optional lxml",
+    "passed": 2,
+    "failed": 1,
+    "checks": [
+      {
+        "name": "Tracking is identical across two independent hash seeds",
+        "pass": true,
+        "hashSeeds": [
+          17,
+          73
+        ]
+      },
+      {
+        "name": "All historical worksheet and relationship parts remain byte-exact",
+        "pass": true,
+        "parts": 44
+      },
+      {
+        "name": "Actual export reproduction",
+        "pass": false,
+        "error": "Actual workbook is not reproducible from its inputs"
+      }
+    ]
+  },
+  "published_executions": [
+    {
+      "case": "r27-publication",
+      "schema": "re.bow.published-assertions-r29/1",
+      "published_commit": "0317da5f79e40af1b6b0e82b1ef9f311900ee76a",
+      "plan": {
+        "path": "scripts/ci-r29/plans/r27-publication.json",
+        "sha256": "5738d1e742df83c4c23e4edd8ca264b07176dc56e623aad2a5c4bdf10174ec4f"
+      },
+      "executions": [
+        {
+          "command": [
+            "/workspace/scratch/r29-ci-python-minimal/bin/python",
+            "scripts/build-source-appearance-index-r27.py",
+            "--check"
+          ],
+          "exit_code": 0,
+          "executed_assertions": null,
+          "log": "command-00.log",
+          "log_sha256": "7768ad8054b8f7a337711c20ba27303a5ef131261f2d9dc5ff0036cbcd74b6fe"
+        },
+        {
+          "command": [
+            "/workspace/scratch/r29-ci-python-minimal/bin/python",
+            "scripts/build-motion-catalog-r27.py",
+            "--check"
+          ],
+          "exit_code": 0,
+          "executed_assertions": null,
+          "log": "command-01.log",
+          "log_sha256": "117187a2c4c0f1703f04c5816cd1a44bd12b1a2465c7a38dd7f98ff59e2af1a8"
+        },
+        {
+          "command": [
+            "/workspace/scratch/r29-ci-python-minimal/bin/python",
+            "scripts/build-canonical-evidence-r27.py",
+            "--check"
+          ],
+          "exit_code": 0,
+          "executed_assertions": null,
+          "log": "command-02.log",
+          "log_sha256": "518383feb3c9f6a1a02243db56dafa8c4c32c4a1d9c39f6bb09e8148d5c26e38"
+        },
+        {
+          "command": [
+            "/workspace/scratch/r29-ci-python-minimal/bin/python",
+            "scripts/build-dossier-additions-r27.py",
+            "--check"
+          ],
+          "exit_code": 0,
+          "executed_assertions": null,
+          "log": "command-03.log",
+          "log_sha256": "6dee0b47cff5378015c2309acd05cefec424f714c881a9dbd15c10fdf0c85a6a"
+        },
+        {
+          "command": [
+            "/workspace/scratch/r29-ci-python-minimal/bin/python",
+            "scripts/build-sprites-jobs-r27.py",
+            "--check"
+          ],
+          "exit_code": 0,
+          "executed_assertions": null,
+          "log": "command-04.log",
+          "log_sha256": "3d5933c1c46bade4acae00f2cd8e8a3f934bb17d0507cb404d5e98e3948e3c2d"
+        },
+        {
+          "command": [
+            "/workspace/scratch/r29-ci-python-minimal/bin/python",
+            "scripts/import-generated-sprites-r27.py",
+            "--check"
+          ],
+          "exit_code": 0,
+          "executed_assertions": null,
+          "log": "command-05.log",
+          "log_sha256": "c94b0670c46c6329655166658e8ccc93dfb4a27c03c6b02df896867648a83417"
+        },
+        {
+          "command": [
+            "/workspace/scratch/r29-ci-python-minimal/bin/python",
+            "scripts/export-fidelity-progress-r27.py",
+            "--tracking",
+            "docs/R27_TRACKING.json",
+            "--baseline",
+            "docs/BOW_FIDELITE_R26.xlsx",
+            "--output",
+            "qa-fidelity-r27-ci/BOW_FIDELITE_R27.xlsx",
+            "--progress",
+            "qa-fidelity-r27-ci/R27_PROGRESS.json"
+          ],
+          "exit_code": 0,
+          "executed_assertions": null,
+          "log": "command-06.log",
+          "log_sha256": "092238b72b16d58b2869f292ded00a0c37d5b94ea0c59f33aeb8fa5b20535b5e"
+        },
+        {
+          "command": [
+            "cmp",
+            "qa-fidelity-r27-ci/R27_PROGRESS.json",
+            "modules/fidelity-r27/progress.json"
+          ],
+          "exit_code": 0,
+          "executed_assertions": null,
+          "log": "command-07.log",
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "command": [
+            "/workspace/scratch/r29-ci-python-minimal/bin/python",
+            "-c",
+            "import importlib.util\nimport json\nfrom pathlib import Path\nfrom openpyxl import load_workbook\n\nroot = Path.cwd()\nspec = importlib.util.spec_from_file_location('export_r27', root / 'scripts/export-fidelity-progress-r27.py')\nexporter = importlib.util.module_from_spec(spec)\nspec.loader.exec_module(exporter)\nexpected = load_workbook(root / 'docs/BOW_FIDELITE_R27.xlsx')\nactual = load_workbook(root / 'qa-fidelity-r27-ci/BOW_FIDELITE_R27.xlsx')\ntry:\n    assert actual.sheetnames == expected.sheetnames\n    for name in expected.sheetnames:\n        assert exporter.worksheet_state(actual[name]) == exporter.worksheet_state(expected[name]), name\n    result = {'reproduced_sheets': len(expected.sheetnames), 'progress_bytes_equal': True,\n              'scope': 'Values, formulas, styles, links, comments, merged cells and frozen panes; ZIP timestamps excluded.'}\n    (root / 'qa-fidelity-r27-ci/workbook-check.json').write_text(json.dumps(result, indent=2) + '\\n')\nfinally:\n    actual.close()\n    expected.close()\n"
+          ],
+          "exit_code": 0,
+          "executed_assertions": null,
+          "log": "command-08.log",
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "command": [
+            "/workspace/scratch/r29-ci-python-minimal/bin/python",
+            "scripts/build-validation-summary-r27.py",
+            "--check"
+          ],
+          "exit_code": 0,
+          "executed_assertions": null,
+          "log": "command-09.log",
+          "log_sha256": "9dfdbf2d1047ca8519bf0135a201fc686b04fcfe4c1f57f11f70a7955164c374"
+        },
+        {
+          "command": [
+            "/workspace/scratch/r29-ci-python-minimal/bin/python",
+            "scripts/build-fidelity-tracking-r27.py",
+            "--check"
+          ],
+          "exit_code": 0,
+          "executed_assertions": null,
+          "log": "command-10.log",
+          "log_sha256": "2ca2cceda923250789b080d594907d675728c60a0d849303d050de2da4f92ed6"
+        },
+        {
+          "command": [
+            "/workspace/scratch/r29-ci-python-minimal/bin/python",
+            "scripts/build-persistence-manifest-r27.py",
+            "--check"
+          ],
+          "exit_code": 0,
+          "executed_assertions": null,
+          "log": "command-11.log",
+          "log_sha256": "bf2fe7562969989db3bf84b3d6ff72e6ec76f7fcb7322e6a672cc08707b51771"
+        },
+        {
+          "command": [
+            "/workspace/scratch/r29-ci-python-minimal/bin/python",
+            "scripts/audit-delivery-r27.py",
+            "--check"
+          ],
+          "exit_code": 0,
+          "executed_assertions": null,
+          "log": "command-12.log",
+          "log_sha256": "41c8eba1bcf99ec80dae11bdd6bbd520c88ec8d3040ff1f82d10a166b513e84e"
+        },
+        {
+          "command": [
+            "node",
+            "tests/verify-r27-integration.mjs"
+          ],
+          "exit_code": 0,
+          "executed_assertions": {
+            "passed": 11,
+            "failed": 0
+          },
+          "log": "command-13.log",
+          "log_sha256": "89bef08d02cfd55574429032e77c8b84af0c40a4293f80e0351ea2da7addee2a"
+        }
+      ],
+      "exit_code": 0,
+      "duration_seconds": 78.593,
+      "log_sha256": "e2a23ded78f0ead505e1b7df40dca92cda975d4a3966c126ab342234b257a397",
+      "runner_sha256": "0c452dfe4a21591c6237a634f1efad0b45feb0ac1079950deaabee94afb3f568",
+      "git_archive_with_original_head_and_index": true,
+      "historical_assertions_modified": false,
+      "calling_checkout_sources_modified": false,
+      "scope": "The published release and its recorded source hashes; current release tests remain separate."
+    },
+    {
+      "case": "r28-publication",
+      "schema": "re.bow.published-assertions-r29/1",
+      "published_commit": "9bcb3535189ffa7b21f08f733be2f1afeb73b984",
+      "plan": {
+        "path": "scripts/ci-r29/plans/r28-publication.json",
+        "sha256": "dbed7912355898678927ea056ac72c8af446941c761e7a3077466db6355329fe"
+      },
+      "executions": [
+        {
+          "command": [
+            "/workspace/scratch/r29-ci-python-minimal/bin/python",
+            "scripts/build-sprite-overlay-r28.py",
+            "--check"
+          ],
+          "exit_code": 0,
+          "executed_assertions": null,
+          "log": "command-00.log",
+          "log_sha256": "3f4bf33b54a55af23b534efadb85657d9025a3c7fdbd897728491b3c7a4ca61b"
+        },
+        {
+          "command": [
+            "/workspace/scratch/r29-ci-python-minimal/bin/python",
+            "scripts/build-evolutions-r28.py",
+            "--check"
+          ],
+          "exit_code": 0,
+          "executed_assertions": null,
+          "log": "command-01.log",
+          "log_sha256": "1cfae3ad2ea422ccacfc4652c36cd60ac4fff7f05e4c93b278d87929c69798e4"
+        },
+        {
+          "command": [
+            "/workspace/scratch/r29-ci-python-minimal/bin/python",
+            "scripts/build-canonical-evidence-r28.py",
+            "--check"
+          ],
+          "exit_code": 0,
+          "executed_assertions": null,
+          "log": "command-02.log",
+          "log_sha256": "131f24bc13f2900da642a49c588a1684d4992982fff7fb0adc0c715d28203824"
+        },
+        {
+          "command": [
+            "/workspace/scratch/r29-ci-python-minimal/bin/python",
+            "scripts/import-audio-archives-r28.py",
+            "--check"
+          ],
+          "exit_code": 0,
+          "executed_assertions": null,
+          "log": "command-03.log",
+          "log_sha256": "6e5bd4b0b5b8f1ed30221877d1adf7fcc41d8c725a52e42086db3942175d8ed8"
+        },
+        {
+          "command": [
+            "/workspace/scratch/r29-ci-python-minimal/bin/python",
+            "scripts/build-dossier-additions-r28.py",
+            "--check"
+          ],
+          "exit_code": 0,
+          "executed_assertions": null,
+          "log": "command-04.log",
+          "log_sha256": "9344541235c6f4c4ee0a431a2fcf7e97fb385f87a9623fec15327a474f74c645"
+        },
+        {
+          "command": [
+            "/workspace/scratch/r29-ci-python-minimal/bin/python",
+            "scripts/build-validation-summary-r28.py",
+            "--check"
+          ],
+          "exit_code": 0,
+          "executed_assertions": null,
+          "log": "command-05.log",
+          "log_sha256": "46116b3bc356710324e3bab468ce4f81ef99da0f1f4b2019c13de9c054d22bf8"
+        },
+        {
+          "command": [
+            "/workspace/scratch/r29-ci-python-minimal/bin/python",
+            "scripts/build-fidelity-tracking-r28.py",
+            "--check"
+          ],
+          "exit_code": 0,
+          "executed_assertions": null,
+          "log": "command-06.log",
+          "log_sha256": "f94fee14e7ee50b9fb72eb3a4f65ad0128d7359c3ffdf0146f2c24ad71753849"
+        },
+        {
+          "command": [
+            "/workspace/scratch/r29-ci-python-minimal/bin/python",
+            "scripts/verify-fidelity-export-r28.py"
+          ],
+          "exit_code": 0,
+          "executed_assertions": {
+            "passed": 4,
+            "failed": 0
+          },
+          "log": "command-07.log",
+          "log_sha256": "a51467efbca58b091b4c3c1d7bfd987663eae9b812bb0dd7f9c8207425704506"
+        },
+        {
+          "command": [
+            "/workspace/scratch/r29-ci-python-minimal/bin/python",
+            "scripts/audit-delivery-r28.py",
+            "--check"
+          ],
+          "exit_code": 0,
+          "executed_assertions": null,
+          "log": "command-08.log",
+          "log_sha256": "ace26383c5a565c7ff38ae89781a8a1542a5c6a5a9be33f2df6adec3e77680a1"
+        },
+        {
+          "command": [
+            "node",
+            "tests/verify-r28-integration.mjs"
+          ],
+          "exit_code": 0,
+          "executed_assertions": {
+            "passed": 8,
+            "failed": 0
+          },
+          "log": "command-09.log",
+          "log_sha256": "c34de02eb3648a9a7a1f4f7588ae8533ef2d85245e1f422b2e9a8dab992ace39"
+        }
+      ],
+      "exit_code": 0,
+      "duration_seconds": 92.414,
+      "log_sha256": "e3768c9843c4881e8863cd26cd018af6b2ab5e08bb681c1f8a86b367ab80f6d9",
+      "runner_sha256": "0c452dfe4a21591c6237a634f1efad0b45feb0ac1079950deaabee94afb3f568",
+      "git_archive_with_original_head_and_index": true,
+      "historical_assertions_modified": false,
+      "calling_checkout_sources_modified": false,
+      "scope": "The published release and its recorded source hashes; current release tests remain separate."
+    },
+    {
+      "case": "r25-matches",
+      "schema": "re.bow.published-assertions-r29/1",
+      "published_commit": "300dc0169d83382189cd6c8889cb4f7368f1e8a5",
+      "plan": null,
+      "executions": [
+        {
+          "command": [
+            "node",
+            "tests/verify-full-matches-r25.mjs"
+          ],
+          "exit_code": 0,
+          "executed_assertions": {
+            "passed": 6,
+            "failed": 0
+          },
+          "log": "command-00.log",
+          "log_sha256": "113ed901e3e6a49c58617a25a72cb34127debd4732d742bbfc672bde0340e916"
+        }
+      ],
+      "exit_code": 0,
+      "duration_seconds": 25.529,
+      "log_sha256": "113ed901e3e6a49c58617a25a72cb34127debd4732d742bbfc672bde0340e916",
+      "runner_sha256": "0c452dfe4a21591c6237a634f1efad0b45feb0ac1079950deaabee94afb3f568",
+      "git_archive_with_original_head_and_index": true,
+      "historical_assertions_modified": false,
+      "calling_checkout_sources_modified": false,
+      "scope": "The published release and its recorded source hashes; current release tests remain separate."
+    },
+    {
+      "case": "r26-matches",
+      "schema": "re.bow.published-assertions-r29/1",
+      "published_commit": "826f7ed1811c48adc0609f97699eb32f629fc78a",
+      "plan": null,
+      "executions": [
+        {
+          "command": [
+            "node",
+            "tests/verify-full-matches-r26.mjs"
+          ],
+          "exit_code": 0,
+          "executed_assertions": {
+            "passed": 9,
+            "failed": 0
+          },
+          "log": "command-00.log",
+          "log_sha256": "72af8c18bab333503efd32b8ae2ba4ef0a3be1d1aedf1e37dffd96f66211569a"
+        }
+      ],
+      "exit_code": 0,
+      "duration_seconds": 148.142,
+      "log_sha256": "72af8c18bab333503efd32b8ae2ba4ef0a3be1d1aedf1e37dffd96f66211569a",
+      "runner_sha256": "0c452dfe4a21591c6237a634f1efad0b45feb0ac1079950deaabee94afb3f568",
+      "git_archive_with_original_head_and_index": true,
+      "historical_assertions_modified": false,
+      "calling_checkout_sources_modified": false,
+      "scope": "The published release and its recorded source hashes; current release tests remain separate."
+    },
+    {
+      "case": "r27-matches",
+      "schema": "re.bow.published-assertions-r29/1",
+      "published_commit": "0317da5f79e40af1b6b0e82b1ef9f311900ee76a",
+      "plan": null,
+      "executions": [
+        {
+          "command": [
+            "node",
+            "tests/verify-full-matches-r27.mjs"
+          ],
+          "exit_code": 0,
+          "executed_assertions": {
+            "passed": 9,
+            "failed": 0
+          },
+          "log": "command-00.log",
+          "log_sha256": "8288fc940e9d7ed8a26b87b011a5fa7a96487c49f8083991eb4fa9ccd86c616d"
+        }
+      ],
+      "exit_code": 0,
+      "duration_seconds": 56.944,
+      "log_sha256": "8288fc940e9d7ed8a26b87b011a5fa7a96487c49f8083991eb4fa9ccd86c616d",
+      "runner_sha256": "0c452dfe4a21591c6237a634f1efad0b45feb0ac1079950deaabee94afb3f568",
+      "git_archive_with_original_head_and_index": true,
+      "historical_assertions_modified": false,
+      "calling_checkout_sources_modified": false,
+      "scope": "The published release and its recorded source hashes; current release tests remain separate."
+    }
+  ],
+  "original_report_files_changed": false,
+  "historical_assertions_weakened": false,
+  "current_release_browser_report": "docs/R29_SELECTION_BROWSER.json",
+  "scope": "Local reproduction and corrections for observed R28 CI failures; historical execution counts are separate from current R29 tests; no future remote CI or deployment success claimed.",
+  "sourceFiles": [
+    {
+      "path": "scripts/run-published-release-r29.py",
+      "sha256": "0c452dfe4a21591c6237a634f1efad0b45feb0ac1079950deaabee94afb3f568"
+    },
+    {
+      "path": "scripts/ci-r29/plans/r27-publication.json",
+      "sha256": "5738d1e742df83c4c23e4edd8ca264b07176dc56e623aad2a5c4bdf10174ec4f"
+    },
+    {
+      "path": "scripts/ci-r29/plans/r28-publication.json",
+      "sha256": "dbed7912355898678927ea056ac72c8af446941c761e7a3077466db6355329fe"
+    },
+    {
+      "path": "modules/fidelity-r29/evolutions/selection.js",
+      "sha256": "5eecc3c6424eedc25c347f9dbbcba011104c0e9af894b06eca5913009b8e02ee"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "re4r-iron-maiden",
+  "reviewed_at_utc": "2026-10-25T09:41:58.027073+00:00",
+  "batch": "batch-012",
+  "image": "modules/fidelity-r27/sprites/generated/re4r-iron-maiden/idle-right.png",
+  "image_sha256": "f8a1e35afedccc28c30403d7b71dace9dbb1e9bc87d1613ddf32894271acbec5",
+  "active_record": "modules/fidelity-r27/sprites/records/re4r-iron-maiden.json",
+  "active_record_sha256": "dc848d2d7d3bf2a3fe9c84235d8c62ca6a21c6113a90d7abc62ae626f74a9380",
+  "used_references": [
+    {
+      "path": "assets/specimens/re4r-iron-maiden.png",
+      "sha256": "df89fb60b9501fa974fca6c2621cc19637faf57bf5e00fb0046e0852271bd824",
+      "role": "full-body-reference",
+      "declared_body_coverage": "complete"
+    }
+  ],
+  "scope": "combatant-neutral-pose",
+  "source_complete_body_observed": false,
+  "generated_complete_body_observed": false,
+  "full_body_reviewed": false,
+  "observed_facing": "front",
+  "observed_pose_kind": "unknown",
+  "direction_eligible_for_neutral_pose": false,
+  "review_outcome": "visible-source-region-reviewed-body-not-admitted",
+  "notes": "The primary is a torso crop with black triangular extraction artifacts and many crossing spike lines. The generated upper-body interpretation retains cropped exterior spikes and lower torso. Complete body and exact spike count, topology or expansion phase are not verified from this source.",
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "visual_evidence": {
+    "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-012/contact-1.png",
+    "sha256": "97acd5db142799a7e139b272160a4ade2f4732f045b4691a1efb1ff13cd0f1d5",
+    "kind": "browser-contact-review-evidence",
+    "new_generated_sprite_count": 0
+  },
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.807549+00:00",
+    "prior_report_record_sha256": "dc848d2d7d3bf2a3fe9c84235d8c62ca6a21c6113a90d7abc62ae626f74a9380",
+    "prior_direction_eligibility": false,
+    "pose_observation": null,
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.809203+00:00"
+  },
+  "available_states": []
+}

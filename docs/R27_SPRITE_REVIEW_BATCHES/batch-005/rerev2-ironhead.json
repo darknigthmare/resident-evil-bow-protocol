@@ -1,0 +1,51 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "rerev2-ironhead",
+  "reviewed_at_utc": "2026-10-25T08:49:03.360429+00:00",
+  "batch": "batch-005",
+  "image": "modules/fidelity-r27/sprites/generated/rerev2-ironhead/idle-right.png",
+  "image_sha256": "4aa5dd0b7b272287e6c27a3d9c666930b9a972e38d6253e382b3b4aaed11bcb3",
+  "active_record": "modules/fidelity-r27/sprites/records/rerev2-ironhead.json",
+  "active_record_sha256": "bd54f815001bec2fbdc50642540e16558ce39dc9cb968faa5f671a619f425f59",
+  "used_references": [
+    {
+      "path": "assets/specimens/rerev2-ironhead.png",
+      "sha256": "7088f43882833697d324e7fe986da23d9655918848d26399288a8aa0a3472de9",
+      "role": "full-body-reference",
+      "declared_body_coverage": "complete"
+    }
+  ],
+  "scope": "combatant-neutral-pose",
+  "source_complete_body_observed": true,
+  "generated_complete_body_observed": true,
+  "full_body_reviewed": true,
+  "observed_facing": "front",
+  "direction_eligible_for_neutral_pose": false,
+  "review_outcome": "whole-visible-body-presentation-pose-no-combat-idle",
+  "notes": "Whole clothed humanoid, metal helmet, raised weapon and large arm-mounted equipment stay on their source sides. Overall stance/helmet view is frontal-oblique without a clear horizontal direction. No equipment rig or action phase is certified.",
+  "manual_source_completeness_evidence": null,
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.785768+00:00",
+    "prior_report_record_sha256": "9f9f11de62f11099ced6e209f5b5898d7758ffc798b327bcb5ec8e80df4bec4f",
+    "prior_direction_eligibility": false,
+    "pose_observation": {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/rerev2-ironhead.json",
+      "sha256": "4217017dea0167768da2c57b7e58eb4a2e6f5f22cae3926018ac37ff69f410de"
+    },
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.790236+00:00"
+  },
+  "observed_pose_kind": "source-presentation",
+  "available_states": []
+}

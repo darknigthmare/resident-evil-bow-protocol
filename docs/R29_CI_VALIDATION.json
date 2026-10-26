@@ -1,0 +1,209 @@
+{
+  "schema": "re.bow.ci-definition-validation-r29/1",
+  "passed": 5,
+  "failed": 0,
+  "counts": {
+    "workflows": 5,
+    "bash_blocks": 77,
+    "python_blocks": 3,
+    "javascript_blocks": 6
+  },
+  "checks": [
+    {
+      "name": "All actual workflows parse with required events and read-only permissions",
+      "pass": true
+    },
+    {
+      "name": "All embedded Bash, Python and JavaScript blocks compile without executing tests",
+      "pass": true
+    },
+    {
+      "name": "Every literal test, source-check and matrix script path exists",
+      "pass": true
+    },
+    {
+      "name": "Frozen R27/R28 browser/build sources and XML writer toolchain are explicit",
+      "pass": true
+    },
+    {
+      "name": "All 24 explicit historical publication commands remain present",
+      "pass": true
+    }
+  ],
+  "workflows": [
+    {
+      "path": ".github/workflows/source-fidelity-r25.yml",
+      "jobs": 3,
+      "bash_blocks": 15,
+      "literal_script_paths": [
+        "scripts/build-canonical-evidence-r25.py",
+        "scripts/build-dossier-source-index-r25.py",
+        "scripts/build-model-catalog-r25.py",
+        "scripts/export-fidelity-progress-r25.py",
+        "scripts/run-published-release-r29.py",
+        "tests/browser-access-r25.mjs",
+        "tests/browser-audio-r25.mjs",
+        "tests/browser-canonical-r25.mjs",
+        "tests/browser-fidelity-dashboard-r25.mjs",
+        "tests/browser-models-r25.mjs",
+        "tests/browser-persistence-r25.mjs",
+        "tests/ci-report-r25.mjs",
+        "tests/verify-ci-report-r25.mjs",
+        "tests/verify-full-matches-r25.mjs",
+        "tests/verify-model-reader-r25.mjs",
+        "tests/verify-motion-skeletons-r25.mjs",
+        "tests/verify-persistence-r25.mjs",
+        "tests/verify-r25-integration.mjs",
+        "tests/verify-visual-models-r25.mjs"
+      ],
+      "all_actions_pinned": true
+    },
+    {
+      "path": ".github/workflows/source-fidelity-r26.yml",
+      "jobs": 3,
+      "bash_blocks": 15,
+      "literal_script_paths": [
+        "scripts/build-canonical-evidence-r26.py",
+        "scripts/build-dossier-source-index-r26.py",
+        "scripts/build-fidelity-tracking-r26.py",
+        "scripts/build-model-catalog-r26.py",
+        "scripts/build-persistence-manifest-r26.py",
+        "scripts/build-validation-summary-r26.py",
+        "scripts/export-fidelity-progress-r26.py",
+        "scripts/run-published-release-r29.py",
+        "tests/browser-access-r26.mjs",
+        "tests/browser-audio-r26.mjs",
+        "tests/browser-canonical-r26.mjs",
+        "tests/browser-fidelity-dashboard-r26.mjs",
+        "tests/browser-models-r26.mjs",
+        "tests/browser-persistence-r26.mjs",
+        "tests/browser-sprites-r26.mjs",
+        "tests/ci-report-r25.mjs",
+        "tests/verify-ci-report-r25.mjs",
+        "tests/verify-full-matches-r26.mjs",
+        "tests/verify-model-reader-r26.mjs",
+        "tests/verify-motion-skeletons-r26.mjs",
+        "tests/verify-persistence-r26.mjs",
+        "tests/verify-r26-integration.mjs",
+        "tests/verify-visual-models-r26.mjs"
+      ],
+      "all_actions_pinned": true
+    },
+    {
+      "path": ".github/workflows/source-fidelity-r27.yml",
+      "jobs": 3,
+      "bash_blocks": 15,
+      "literal_script_paths": [
+        "scripts/run-published-release-r29.py",
+        "tests/browser-access-r27.mjs",
+        "tests/browser-audio-r27.mjs",
+        "tests/browser-canonical-r27.mjs",
+        "tests/browser-combat-sprites-r27.mjs",
+        "tests/browser-fidelity-dashboard-r27.mjs",
+        "tests/browser-generated-sprites-r27.mjs",
+        "tests/browser-motion-r27.mjs",
+        "tests/browser-persistence-r27.mjs",
+        "tests/browser-source-appearance-r27.mjs",
+        "tests/ci-report-r25.mjs",
+        "tests/verify-ci-report-r25.mjs",
+        "tests/verify-combat-sprites-r27.mjs",
+        "tests/verify-full-matches-r27.mjs",
+        "tests/verify-motion-skeletons-r27.mjs",
+        "tests/verify-persistence-r27.mjs"
+      ],
+      "all_actions_pinned": true
+    },
+    {
+      "path": ".github/workflows/source-fidelity-r28.yml",
+      "jobs": 3,
+      "bash_blocks": 16,
+      "literal_script_paths": [
+        "scripts/import-audio-archives-r28.py",
+        "scripts/run-published-release-r29.py",
+        "scripts/verify-body-sources-r28.py",
+        "tests/browser-audio-r28.mjs",
+        "tests/browser-canonical-r28.mjs",
+        "tests/browser-dossier-additions-r28.mjs",
+        "tests/browser-evolutions-r28.mjs",
+        "tests/browser-fidelity-dashboard-r28.mjs",
+        "tests/browser-generated-sprites-r28.mjs",
+        "tests/ci-report-r25.mjs",
+        "tests/test_audio_archives_r28.py",
+        "tests/test_canonical_evidence_r28.py",
+        "tests/test_fidelity_export_r28.py",
+        "tests/test_sprite_overlay_r28.py",
+        "tests/verify-ci-report-r25.mjs",
+        "tests/verify-combat-sprites-r28.mjs",
+        "tests/verify-evolutions-r28.mjs"
+      ],
+      "all_actions_pinned": true
+    },
+    {
+      "path": ".github/workflows/source-fidelity-r29.yml",
+      "jobs": 3,
+      "bash_blocks": 16,
+      "literal_script_paths": [
+        "scripts/audit-delivery-r29.py",
+        "scripts/build-dossier-additions-r29.py",
+        "scripts/build-sprite-overlay-r29.py",
+        "scripts/fidelity-progress-r29.py",
+        "scripts/prepare-native-frames-r29.py",
+        "scripts/validate-fidelity-ci-r29.py",
+        "scripts/verify-body-sources-r29.py",
+        "scripts/verify-revelations-bodies-r29.py",
+        "tests/browser-fidelity-r29.mjs",
+        "tests/browser-generated-sprites-r29.mjs",
+        "tests/browser-native-frames-r29.mjs",
+        "tests/browser-selection-boundaries-r29.mjs",
+        "tests/ci-report-r25.mjs",
+        "tests/test_fidelity_r29.py",
+        "tests/test_native_frames_r29.py",
+        "tests/test_sprite_overlay_r29.py",
+        "tests/verify-ci-report-r25.mjs",
+        "tests/verify-combat-sprites-r29.mjs",
+        "tests/verify-native-frames-r29.mjs",
+        "tests/verify-r29-integration.mjs"
+      ],
+      "all_actions_pinned": true
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": ".github/workflows/source-fidelity-r25.yml",
+      "sha256": "07d2d2794b0c314cb141c0582d1ebefc49ddf55d11f2250ddacf9a9b7d117d34"
+    },
+    {
+      "path": ".github/workflows/source-fidelity-r26.yml",
+      "sha256": "daf369149efd7e04211d455afff4d96cb8e4b62d9419690211aacb83afbcbc25"
+    },
+    {
+      "path": ".github/workflows/source-fidelity-r27.yml",
+      "sha256": "353c2b55ccdf9319c49e072044d7a8248529cbd4ac3167673aead7961984c61a"
+    },
+    {
+      "path": ".github/workflows/source-fidelity-r28.yml",
+      "sha256": "805692a224f37efe231ed23fd44ee031d6d1c6fa9e651459c645d578b807c375"
+    },
+    {
+      "path": ".github/workflows/source-fidelity-r29.yml",
+      "sha256": "b93c33362f7c8cc8c5f792bffdd237bc49253db816b2af1e2e3eec7d54b8d5b4"
+    },
+    {
+      "path": "scripts/ci-r29/plans/r27-publication.json",
+      "sha256": "5738d1e742df83c4c23e4edd8ca264b07176dc56e623aad2a5c4bdf10174ec4f"
+    },
+    {
+      "path": "scripts/ci-r29/plans/r28-publication.json",
+      "sha256": "dbed7912355898678927ea056ac72c8af446941c761e7a3077466db6355329fe"
+    },
+    {
+      "path": "scripts/run-published-release-r29.py",
+      "sha256": "0c452dfe4a21591c6237a634f1efad0b45feb0ac1079950deaabee94afb3f568"
+    },
+    {
+      "path": "scripts/validate-fidelity-ci-r29.py",
+      "sha256": "fa9e05607fb15d81c407412d3de5b3851efc75a41e403223b3b4c8b5d5315770"
+    }
+  ],
+  "scope": "Parsed workflow definitions and compiled command blocks; remote Actions execution is not claimed."
+}

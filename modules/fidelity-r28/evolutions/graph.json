@@ -1,0 +1,939 @@
+{
+  "schema": "re.bow.evolution-graph/1",
+  "release": "R28",
+  "canonicalFidelityCertified": false,
+  "conditionsAreAuthored": true,
+  "conditionsLabel": "35 points de jauge · vie ≤ 70 % · 120 ticks · posture neutre au sol · 24 ticks de récupération. Règles adaptées au duel.",
+  "families": [
+    {
+      "id": "re2-tyrant",
+      "baseUid": "re2-tyrant",
+      "label": "TYRANT T-103 · 1998",
+      "game": "Resident Evil 2 (1998)",
+      "forms": [
+        "re2-tyrant",
+        "re2-tyrant-mutation"
+      ]
+    },
+    {
+      "id": "re2r-tyrant",
+      "baseUid": "re2r-tyrant",
+      "label": "TYRANT T-103 · 2019",
+      "game": "Resident Evil 2 remake (2019)",
+      "forms": [
+        "re2r-tyrant",
+        "re2r-super-tyrant"
+      ]
+    },
+    {
+      "id": "re2-g-family",
+      "baseUid": "re2-g",
+      "label": "WILLIAM BIRKIN · G · 1998",
+      "game": "Resident Evil 2 (1998)",
+      "forms": [
+        "re2-g",
+        "re2-g-second-form",
+        "re2-g-third-form",
+        "re2-g-fourth-form",
+        "re2-g-fifth-form"
+      ]
+    },
+    {
+      "id": "re2r-g-first-form-family",
+      "baseUid": "re2r-g-first-form",
+      "label": "WILLIAM BIRKIN · G · 2019",
+      "game": "Resident Evil 2 remake (2019)",
+      "forms": [
+        "re2r-g-first-form",
+        "re2r-g-second-form",
+        "re2r-g-third-form",
+        "re2r-g-fourth-form",
+        "re2r-g-fifth-form"
+      ]
+    },
+    {
+      "id": "re3-nemesis",
+      "baseUid": "re3-nemesis",
+      "label": "NEMESIS · 1999",
+      "game": "Resident Evil 3: Nemesis (1999)",
+      "forms": [
+        "re3-nemesis",
+        "re3-nemesis-second-form",
+        "re3-nemesis-third-form"
+      ]
+    },
+    {
+      "id": "re3r-nemesis",
+      "baseUid": "re3r-nemesis",
+      "label": "NEMESIS · 2020",
+      "game": "Resident Evil 3 remake (2020)",
+      "forms": [
+        "re3r-nemesis",
+        "re3r-stage-2-nemesis",
+        "re3r-stage-3-nemesis"
+      ]
+    },
+    {
+      "id": "re4-mendez",
+      "baseUid": "re4-bitores-mendez-enemy",
+      "label": "BITORES MÉNDEZ · 2005",
+      "game": "Resident Evil 4 (2005)",
+      "forms": [
+        "re4-bitores-mendez-enemy",
+        "re4-bitores-mendez-mutated"
+      ]
+    },
+    {
+      "id": "re4r-mendez",
+      "baseUid": "re4r-bitores-mendez",
+      "label": "BITORES MÉNDEZ · 2023",
+      "game": "Resident Evil 4 remake (2023)",
+      "forms": [
+        "re4r-bitores-mendez",
+        "re4r-bitores-mendez-first-mutation",
+        "re4r-bitores-mendez-second-mutation"
+      ]
+    },
+    {
+      "id": "re4r-krauser",
+      "baseUid": "re4r-jack-krauser",
+      "label": "JACK KRAUSER · 2023",
+      "game": "Resident Evil 4 remake (2023)",
+      "forms": [
+        "re4r-jack-krauser",
+        "re4r-jack-krauser-mutated"
+      ]
+    },
+    {
+      "id": "re5-wesker",
+      "baseUid": "re5-albert-wesker-enemy",
+      "label": "ALBERT WESKER · 2009",
+      "game": "Resident Evil 5 (2009)",
+      "forms": [
+        "re5-albert-wesker-enemy",
+        "re5-uroboros-albert-wesker"
+      ]
+    },
+    {
+      "id": "reoutbreak2-tyrant",
+      "baseUid": "reoutbreak2-tyrant",
+      "label": "TYRANT T-0400TP · OUTBREAK FILE #2",
+      "game": "Resident Evil Outbreak File #2 (2004)",
+      "forms": [
+        "reoutbreak2-tyrant",
+        "reoutbreak2-tyrant-r"
+      ]
+    },
+    {
+      "id": "re7-marguerite",
+      "baseUid": "re7-marguerite-baker",
+      "label": "MARGUERITE BAKER · RE7",
+      "game": "Resident Evil 7 Biohazard (2017)",
+      "forms": [
+        "re7-marguerite-baker",
+        "re7-marguerite-baker-mutated"
+      ]
+    },
+    {
+      "id": "re7-lucas",
+      "baseUid": "re7-lucas-baker",
+      "label": "LUCAS BAKER · RE7 / NOT A HERO",
+      "game": "Resident Evil 7 Biohazard (2017)",
+      "forms": [
+        "re7-lucas-baker",
+        "re7-lucas-baker-mutated"
+      ]
+    },
+    {
+      "id": "re7-jack",
+      "baseUid": "re7-jack-baker",
+      "label": "JACK BAKER · RE7 / END OF ZOE",
+      "game": "Resident Evil 7 Biohazard (2017)",
+      "forms": [
+        "re7-jack-baker",
+        "re7-jack-baker-scissor",
+        "re7-jack-baker-mutated",
+        "re7-jack-baker-swamp-man"
+      ]
+    },
+    {
+      "id": "recv-alexia",
+      "baseUid": "recv-alexia",
+      "label": "ALEXIA ASHFORD · CODE: VERONICA",
+      "game": "Resident Evil CODE: Veronica (2000)",
+      "forms": [
+        "recv-alexia",
+        "recv-alexia-ashford-second-form",
+        "recv-alexia-ashford-third-form"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "r28-evo-001",
+      "familyId": "re2-tyrant",
+      "from": "re2-tyrant",
+      "to": "re2-tyrant-mutation",
+      "kind": "mutation",
+      "playable": true,
+      "conditions": {
+        "meterCost": 35,
+        "maxLifeRatio": 0.7,
+        "minimumFrame": 120,
+        "recoveryFrames": 24
+      },
+      "sourceIds": [
+        "R28-EVO-S001"
+      ],
+      "boundary": "Identité et succession documentées ; coût, seuil et choix manuel adaptés au duel."
+    },
+    {
+      "id": "r28-evo-002",
+      "familyId": "re2r-tyrant",
+      "from": "re2r-tyrant",
+      "to": "re2r-super-tyrant",
+      "kind": "mutation",
+      "playable": true,
+      "conditions": {
+        "meterCost": 35,
+        "maxLifeRatio": 0.7,
+        "minimumFrame": 120,
+        "recoveryFrames": 24
+      },
+      "sourceIds": [
+        "R28-EVO-S002"
+      ],
+      "boundary": "Identité et succession documentées ; coût, seuil et choix manuel adaptés au duel."
+    },
+    {
+      "id": "r28-evo-003",
+      "familyId": "re2-g-family",
+      "from": "re2-g",
+      "to": "re2-g-second-form",
+      "kind": "mutation",
+      "playable": true,
+      "conditions": {
+        "meterCost": 35,
+        "maxLifeRatio": 0.7,
+        "minimumFrame": 120,
+        "recoveryFrames": 24
+      },
+      "sourceIds": [
+        "R28-EVO-S003"
+      ],
+      "boundary": "Identité et succession documentées ; coût, seuil et choix manuel adaptés au duel."
+    },
+    {
+      "id": "r28-evo-004",
+      "familyId": "re2-g-family",
+      "from": "re2-g-second-form",
+      "to": "re2-g-third-form",
+      "kind": "mutation",
+      "playable": true,
+      "conditions": {
+        "meterCost": 35,
+        "maxLifeRatio": 0.7,
+        "minimumFrame": 120,
+        "recoveryFrames": 24
+      },
+      "sourceIds": [
+        "R28-EVO-S004"
+      ],
+      "boundary": "Identité et succession documentées ; coût, seuil et choix manuel adaptés au duel."
+    },
+    {
+      "id": "r28-evo-005",
+      "familyId": "re2-g-family",
+      "from": "re2-g-third-form",
+      "to": "re2-g-fourth-form",
+      "kind": "mutation",
+      "playable": true,
+      "conditions": {
+        "meterCost": 35,
+        "maxLifeRatio": 0.7,
+        "minimumFrame": 120,
+        "recoveryFrames": 24
+      },
+      "sourceIds": [
+        "R28-EVO-S005"
+      ],
+      "boundary": "Identité et succession documentées ; coût, seuil et choix manuel adaptés au duel."
+    },
+    {
+      "id": "r28-evo-006",
+      "familyId": "re2-g-family",
+      "from": "re2-g-fourth-form",
+      "to": "re2-g-fifth-form",
+      "kind": "mutation",
+      "playable": false,
+      "conditions": {
+        "meterCost": 35,
+        "maxLifeRatio": 0.7,
+        "minimumFrame": 120,
+        "recoveryFrames": 24
+      },
+      "sourceIds": [
+        "R28-EVO-S006"
+      ],
+      "boundary": "Cinquième forme liée au train : rencontre de contexte."
+    },
+    {
+      "id": "r28-evo-007",
+      "familyId": "re2r-g-first-form-family",
+      "from": "re2r-g-first-form",
+      "to": "re2r-g-second-form",
+      "kind": "mutation",
+      "playable": true,
+      "conditions": {
+        "meterCost": 35,
+        "maxLifeRatio": 0.7,
+        "minimumFrame": 120,
+        "recoveryFrames": 24
+      },
+      "sourceIds": [
+        "R28-EVO-S007"
+      ],
+      "boundary": "Identité et succession documentées ; coût, seuil et choix manuel adaptés au duel."
+    },
+    {
+      "id": "r28-evo-008",
+      "familyId": "re2r-g-first-form-family",
+      "from": "re2r-g-second-form",
+      "to": "re2r-g-third-form",
+      "kind": "mutation",
+      "playable": true,
+      "conditions": {
+        "meterCost": 35,
+        "maxLifeRatio": 0.7,
+        "minimumFrame": 120,
+        "recoveryFrames": 24
+      },
+      "sourceIds": [
+        "R28-EVO-S008"
+      ],
+      "boundary": "Identité et succession documentées ; coût, seuil et choix manuel adaptés au duel."
+    },
+    {
+      "id": "r28-evo-009",
+      "familyId": "re2r-g-first-form-family",
+      "from": "re2r-g-third-form",
+      "to": "re2r-g-fourth-form",
+      "kind": "mutation",
+      "playable": true,
+      "conditions": {
+        "meterCost": 35,
+        "maxLifeRatio": 0.7,
+        "minimumFrame": 120,
+        "recoveryFrames": 24
+      },
+      "sourceIds": [
+        "R28-EVO-S009"
+      ],
+      "boundary": "Identité et succession documentées ; coût, seuil et choix manuel adaptés au duel."
+    },
+    {
+      "id": "r28-evo-010",
+      "familyId": "re2r-g-first-form-family",
+      "from": "re2r-g-fourth-form",
+      "to": "re2r-g-fifth-form",
+      "kind": "mutation",
+      "playable": false,
+      "conditions": {
+        "meterCost": 35,
+        "maxLifeRatio": 0.7,
+        "minimumFrame": 120,
+        "recoveryFrames": 24
+      },
+      "sourceIds": [
+        "R28-EVO-S010"
+      ],
+      "boundary": "Cinquième forme liée au train : rencontre de contexte."
+    },
+    {
+      "id": "r28-evo-011",
+      "familyId": "re3-nemesis",
+      "from": "re3-nemesis",
+      "to": "re3-nemesis-second-form",
+      "kind": "mutation",
+      "playable": true,
+      "conditions": {
+        "meterCost": 35,
+        "maxLifeRatio": 0.7,
+        "minimumFrame": 120,
+        "recoveryFrames": 24
+      },
+      "sourceIds": [
+        "R28-EVO-S011"
+      ],
+      "boundary": "Identité et succession documentées ; coût, seuil et choix manuel adaptés au duel."
+    },
+    {
+      "id": "r28-evo-012",
+      "familyId": "re3-nemesis",
+      "from": "re3-nemesis-second-form",
+      "to": "re3-nemesis-third-form",
+      "kind": "mutation",
+      "playable": false,
+      "conditions": {
+        "meterCost": 35,
+        "maxLifeRatio": 0.7,
+        "minimumFrame": 120,
+        "recoveryFrames": 24
+      },
+      "sourceIds": [
+        "R28-EVO-S012"
+      ],
+      "boundary": "Dernière forme liée à son arène : rencontre de contexte."
+    },
+    {
+      "id": "r28-evo-013",
+      "familyId": "re4-mendez",
+      "from": "re4-bitores-mendez-enemy",
+      "to": "re4-bitores-mendez-mutated",
+      "kind": "mutation",
+      "playable": true,
+      "conditions": {
+        "meterCost": 35,
+        "maxLifeRatio": 0.7,
+        "minimumFrame": 120,
+        "recoveryFrames": 24
+      },
+      "sourceIds": [
+        "R28-EVO-S013"
+      ],
+      "boundary": "Comparaison secondaire explicitement avec le jeu original ; profils 2005 séparés du remake."
+    },
+    {
+      "id": "r28-evo-014",
+      "familyId": "re4r-mendez",
+      "from": "re4r-bitores-mendez",
+      "to": "re4r-bitores-mendez-first-mutation",
+      "kind": "mutation",
+      "playable": true,
+      "conditions": {
+        "meterCost": 35,
+        "maxLifeRatio": 0.7,
+        "minimumFrame": 120,
+        "recoveryFrames": 24
+      },
+      "sourceIds": [
+        "R28-EVO-S013"
+      ],
+      "boundary": "Identité et succession documentées ; coût, seuil et choix manuel adaptés au duel."
+    },
+    {
+      "id": "r28-evo-015",
+      "familyId": "re4r-mendez",
+      "from": "re4r-bitores-mendez-first-mutation",
+      "to": "re4r-bitores-mendez-second-mutation",
+      "kind": "mutation",
+      "playable": false,
+      "conditions": {
+        "meterCost": 35,
+        "maxLifeRatio": 0.7,
+        "minimumFrame": 120,
+        "recoveryFrames": 24
+      },
+      "sourceIds": [
+        "R28-EVO-S014"
+      ],
+      "boundary": "Fiche indexée sans description de la transition : phase suspendue gardée hors mutation libre."
+    },
+    {
+      "id": "r28-evo-016",
+      "familyId": "re4r-krauser",
+      "from": "re4r-jack-krauser",
+      "to": "re4r-jack-krauser-mutated",
+      "kind": "mutation",
+      "playable": true,
+      "conditions": {
+        "meterCost": 35,
+        "maxLifeRatio": 0.7,
+        "minimumFrame": 120,
+        "recoveryFrames": 24
+      },
+      "sourceIds": [
+        "R28-EVO-S015"
+      ],
+      "boundary": "Identité et succession documentées ; coût, seuil et choix manuel adaptés au duel."
+    },
+    {
+      "id": "r28-evo-017",
+      "familyId": "re5-wesker",
+      "from": "re5-albert-wesker-enemy",
+      "to": "re5-uroboros-albert-wesker",
+      "kind": "mutation",
+      "playable": true,
+      "conditions": {
+        "meterCost": 35,
+        "maxLifeRatio": 0.7,
+        "minimumFrame": 120,
+        "recoveryFrames": 24
+      },
+      "sourceIds": [
+        "R28-EVO-S016"
+      ],
+      "boundary": "Le récit implique PG67A/W puis Uroboros ; le seuil et le choix sont propres à cette simulation."
+    },
+    {
+      "id": "r28-evo-018",
+      "familyId": "reoutbreak2-tyrant",
+      "from": "reoutbreak2-tyrant",
+      "to": "reoutbreak2-tyrant-r",
+      "kind": "mutation",
+      "playable": true,
+      "conditions": {
+        "meterCost": 35,
+        "maxLifeRatio": 0.7,
+        "minimumFrame": 120,
+        "recoveryFrames": 24
+      },
+      "sourceIds": [
+        "R28-EVO-S017"
+      ],
+      "boundary": "Identité et succession documentées ; coût, seuil et choix manuel adaptés au duel."
+    },
+    {
+      "id": "r28-evo-019",
+      "familyId": "re7-marguerite",
+      "from": "re7-marguerite-baker",
+      "to": "re7-marguerite-baker-mutated",
+      "kind": "mutation",
+      "playable": true,
+      "conditions": {
+        "meterCost": 35,
+        "maxLifeRatio": 0.7,
+        "minimumFrame": 120,
+        "recoveryFrames": 24
+      },
+      "sourceIds": [
+        "R28-EVO-S018"
+      ],
+      "boundary": "Identité et succession documentées ; coût, seuil et choix manuel adaptés au duel."
+    },
+    {
+      "id": "r28-evo-020",
+      "familyId": "re7-lucas",
+      "from": "re7-lucas-baker",
+      "to": "re7-lucas-baker-mutated",
+      "kind": "mutation",
+      "playable": true,
+      "conditions": {
+        "meterCost": 35,
+        "maxLifeRatio": 0.7,
+        "minimumFrame": 120,
+        "recoveryFrames": 24
+      },
+      "sourceIds": [
+        "R28-EVO-S019"
+      ],
+      "boundary": "La mutation appartient à Not a Hero ; le passage entre profils est une règle de duel, pas une séquence historique immédiate."
+    },
+    {
+      "id": "r28-evo-021",
+      "familyId": "re7-jack",
+      "from": "re7-jack-baker",
+      "to": "re7-jack-baker-mutated",
+      "kind": "mutation",
+      "playable": false,
+      "conditions": {
+        "meterCost": 35,
+        "maxLifeRatio": 0.7,
+        "minimumFrame": 120,
+        "recoveryFrames": 24
+      },
+      "sourceIds": [
+        "R28-EVO-S020"
+      ],
+      "boundary": "Masse géante liée à sa rencontre ; la scie est un équipement humain, pas une mutation intermédiaire."
+    },
+    {
+      "id": "r28-evo-022",
+      "familyId": "re7-jack",
+      "from": "re7-jack-baker-scissor",
+      "to": "re7-jack-baker-mutated",
+      "kind": "mutation",
+      "playable": false,
+      "conditions": {
+        "meterCost": 35,
+        "maxLifeRatio": 0.7,
+        "minimumFrame": 120,
+        "recoveryFrames": 24
+      },
+      "sourceIds": [
+        "R28-EVO-S020"
+      ],
+      "boundary": "Masse géante liée à sa rencontre ; la scie est un équipement humain, pas une mutation intermédiaire."
+    },
+    {
+      "id": "r28-evo-023",
+      "familyId": "recv-alexia",
+      "from": "recv-alexia",
+      "to": "recv-alexia-ashford-second-form",
+      "kind": "mutation",
+      "playable": false,
+      "conditions": {
+        "meterCost": 35,
+        "maxLifeRatio": 0.7,
+        "minimumFrame": 120,
+        "recoveryFrames": 24
+      },
+      "sourceIds": [
+        "R28-EVO-S021"
+      ],
+      "boundary": "Deuxième phase enracinée, gardée dans les rencontres de contexte."
+    },
+    {
+      "id": "r28-evo-024",
+      "familyId": "recv-alexia",
+      "from": "recv-alexia-ashford-second-form",
+      "to": "recv-alexia-ashford-third-form",
+      "kind": "mutation",
+      "playable": false,
+      "conditions": {
+        "meterCost": 35,
+        "maxLifeRatio": 0.7,
+        "minimumFrame": 120,
+        "recoveryFrames": 24
+      },
+      "sourceIds": [
+        "R28-EVO-S022"
+      ],
+      "boundary": "Transition depuis une rencontre enracinée non simulée comme marcheur libre."
+    },
+    {
+      "id": "r28-evo-025",
+      "familyId": "re3r-nemesis",
+      "from": "re3r-nemesis",
+      "to": "re3r-stage-2-nemesis",
+      "kind": "mutation",
+      "playable": true,
+      "conditions": {
+        "meterCost": 35,
+        "maxLifeRatio": 0.7,
+        "minimumFrame": 120,
+        "recoveryFrames": 24
+      },
+      "sourceIds": [
+        "R28-EVO-S023"
+      ],
+      "boundary": "Première mutation mobile du remake2020 ; ne pas confondre avec les formes1999. Seuils adaptés au duel."
+    },
+    {
+      "id": "r28-evo-026",
+      "familyId": "re3r-nemesis",
+      "from": "re3r-stage-2-nemesis",
+      "to": "re3r-stage-3-nemesis",
+      "kind": "mutation",
+      "playable": false,
+      "conditions": {
+        "meterCost": 35,
+        "maxLifeRatio": 0.7,
+        "minimumFrame": 120,
+        "recoveryFrames": 24
+      },
+      "sourceIds": [
+        "R28-EVO-S024"
+      ],
+      "boundary": "Mutations du remake2020 seulement. Dernière masse ancrée dans sa salle, hors mutation libre."
+    }
+  ],
+  "contextOnlyUids": [
+    "re1-monster-plant",
+    "re1-neptune",
+    "re1-plant-42",
+    "re1r-fountain-plant",
+    "re1r-lisa-trevor",
+    "re1r-neptune",
+    "re1r-plant-42",
+    "re2-g-fifth-form",
+    "re2-giant-alligator",
+    "re2-vines",
+    "re2r-alligator",
+    "re2r-g-fifth-form",
+    "re3-nemesis-third-form",
+    "re3-nicholai-ginovaef-helicopter",
+    "re3r-stage-3-nemesis",
+    "re4-del-lago",
+    "re4-las-plagas",
+    "re4-ramon-salazar-enemy",
+    "re4r-bitores-mendez-second-mutation",
+    "re4r-osmund-saddler",
+    "re4r-plaga",
+    "re4r-ramon-salazar-mutated",
+    "re4r-zealot-staff",
+    "re5-motorcycle-majini",
+    "re6-brzak",
+    "re6-carla-radames",
+    "re6-chrysalid",
+    "re6-derek-simmons",
+    "re6-gnezdo",
+    "re6-haos",
+    "re6-oko",
+    "re7-bug-swarm",
+    "re7-jack-baker-mutated",
+    "re7-spider",
+    "recv-alexia-ashford-second-form",
+    "recv-ant",
+    "recv-tentacle",
+    "reoutbreak-neptune",
+    "reoutbreak2-alligator",
+    "reoutbreak2-evil-shade",
+    "rerequiem-blister-borne",
+    "rerequiem-plant-43",
+    "rerequiem-the-children",
+    "rerequiem-the-girl",
+    "rerequiem-titan-spinner",
+    "rerev-chunk-ooze",
+    "rerev-malacoda",
+    "rerev2-sploder",
+    "revillage-baby"
+  ],
+  "sources": [
+    {
+      "id": "R28-EVO-S001",
+      "url": "https://www.evilresource.com/resident-evil-2/enemies/tyrant-mutation",
+      "snapshot": "modules/fidelity-r23/canonical/snapshots/8830b36b21cb7c6f2169a669.html.gz",
+      "snapshotSha256": "7a1caf9c3602b2692c6533f8dc5b816f2201ca34c6a8fc2fad12df0ed7d9dc6f",
+      "rawSha256": "c92327bbee93a9be0b9c4cd2e9d863844a00722ad58e2828214eb029a6f79343",
+      "classification": "secondary-community-reference",
+      "excerpt": "With its limiter destroyed, there's nothing stopping this Tyrant from undergoing a mutation to reveal its true self.",
+      "directPrimaryCapture": false
+    },
+    {
+      "id": "R28-EVO-S002",
+      "url": "https://www.evilresource.com/resident-evil-2-remake/enemies/super-tyrant",
+      "snapshot": "modules/fidelity-r23/canonical/snapshots/3ca474fad855240764466e50.html.gz",
+      "snapshotSha256": "82e896632f4af7d233e22904af0b9439c7838ec813b99965d753fe34a7faf43c",
+      "rawSha256": "17034b6b5cfddc5318bf7fdee2769ee2009dae86f59295d318e1f775962aef74",
+      "classification": "secondary-community-reference",
+      "excerpt": "The injuries it suffered may appear to have damaged it significantly, but unfortunately they triggered an underlying mutation that allowed the Tyrant to enter a state that can best be described as a \"berserker\".",
+      "directPrimaryCapture": false
+    },
+    {
+      "id": "R28-EVO-S003",
+      "url": "https://www.evilresource.com/resident-evil-2/enemies/g-second-form",
+      "snapshot": "modules/fidelity-r23/canonical/snapshots/460ab6739f8813915958d9a8.html.gz",
+      "snapshotSha256": "3b19a1e33cc860b1de50a64d276ff784dcad794e4c76d3c6609b5ed39bf6c80a",
+      "rawSha256": "25d261e72ac37654b57aedf00eb8607939572db170cc97dba601b0a3db221f0e",
+      "classification": "secondary-community-reference",
+      "excerpt": "All the damage you caused it in the first battle finally catches up with it, and the G-Virus inside its body has no choice but to mutate.",
+      "directPrimaryCapture": false
+    },
+    {
+      "id": "R28-EVO-S004",
+      "url": "https://www.evilresource.com/resident-evil-2/enemies/g-third-form",
+      "snapshot": "modules/fidelity-r23/canonical/snapshots/e82055c9ab6d7e2c7a996608.html.gz",
+      "snapshotSha256": "13eeb882fdbda814e7cf9b5e6bda36d9ed94fbfd5a6193a87635674e6c55024b",
+      "rawSha256": "f5cb575d172e227b01198d07f10cfd76ab288db83de57b46f6ceadcf1d3af02b",
+      "classification": "secondary-community-reference",
+      "excerpt": "Once again the battle-damage it sustained forces the G-Virus to undergo more mutation.",
+      "directPrimaryCapture": false
+    },
+    {
+      "id": "R28-EVO-S005",
+      "url": "https://www.evilresource.com/resident-evil-2/enemies/g-fourth-form",
+      "snapshot": "modules/fidelity-r23/canonical/snapshots/5f5f4d3ec7d21b1871d1a7cd.html.gz",
+      "snapshotSha256": "b3b18d8e5f463515ef93389998c238802392589814e24770c062ae856e2ac870",
+      "rawSha256": "de3c73ff271c43ba8a0be34e15506dc966552780ca44f39a7baa904e938c246e",
+      "classification": "secondary-community-reference",
+      "excerpt": "The fourth mutation of the creature known as G, formally William Birkin .",
+      "directPrimaryCapture": false
+    },
+    {
+      "id": "R28-EVO-S006",
+      "url": "https://www.evilresource.com/resident-evil-2/enemies/g-fifth-form",
+      "snapshot": "modules/fidelity-r23/canonical/snapshots/9395ae2593475a481a1ec5c4.html.gz",
+      "snapshotSha256": "3bff38be568eb029dd073dd4a83f71db44a18c9d356a4486560eda6b7d741d56",
+      "rawSha256": "80b6f77716e3d2f90ce583b34577396e0031321e18efe3d47376d3ff8483003c",
+      "classification": "secondary-community-reference",
+      "excerpt": "The fifth mutation of the creature known as G, formally William Birkin .",
+      "directPrimaryCapture": false
+    },
+    {
+      "id": "R28-EVO-S007",
+      "url": "https://www.evilresource.com/resident-evil-2-remake/enemies/g-second-form",
+      "snapshot": "modules/fidelity-r23/canonical/snapshots/df297eb9747dcb4cb5cce861.html.gz",
+      "snapshotSha256": "034286dab1bd33cabc8094c63f4ac797c8c400249207a9424db5d61115413469",
+      "rawSha256": "1dbe2de226020f89f418bf3d8b0c2647107b490ac89ea488430a462c625e4c21",
+      "classification": "secondary-community-reference",
+      "excerpt": "This is the secondary mutation of the G-Virus infected William Birkin.",
+      "directPrimaryCapture": false
+    },
+    {
+      "id": "R28-EVO-S008",
+      "url": "https://www.evilresource.com/resident-evil-2-remake/enemies/g-third-form",
+      "snapshot": "modules/fidelity-r23/canonical/snapshots/9959b03ce36120226af48d88.html.gz",
+      "snapshotSha256": "1707706823b284584f9854591c3d9e90e8c8370433634b982ab9b586857b1de7",
+      "rawSha256": "db3b137fd49d3e195491771ba353b096399b3f62e716004a6a5adbba6baaaf27",
+      "classification": "secondary-community-reference",
+      "excerpt": "This is the third mutation of the G-Virus infected William Birkin.",
+      "directPrimaryCapture": false
+    },
+    {
+      "id": "R28-EVO-S009",
+      "url": "https://www.evilresource.com/resident-evil-2-remake/enemies/g-fourth-form",
+      "snapshot": "modules/fidelity-r23/canonical/snapshots/ba944649cccfe6d69d29eaa4.html.gz",
+      "snapshotSha256": "49126baa8600c0198631e7713a9251d19d141d3b9b80577e1c4987fe4c9fa004",
+      "rawSha256": "95a33add623d36a320d6df5820a1b8914141db0522158fccafcc98e0b34644da",
+      "classification": "secondary-community-reference",
+      "excerpt": "This is the fourth mutation of the G-Virus infected William Birkin.",
+      "directPrimaryCapture": false
+    },
+    {
+      "id": "R28-EVO-S010",
+      "url": "https://www.evilresource.com/resident-evil-2-remake/enemies/g-fifth-form",
+      "snapshot": "modules/fidelity-r23/canonical/snapshots/0f96e7c02405632e1c5b0ff3.html.gz",
+      "snapshotSha256": "6dead495c203326073cb1dec3e4e9f407b48af24b84fd0f83136edcbe8dd7dc5",
+      "rawSha256": "6395ec81372b56b146368f1ea17a89fedc5a1347eeef14672755ab6bdf054f48",
+      "classification": "secondary-community-reference",
+      "excerpt": "This is the final mutation of the G-Virus infected William Birkin.",
+      "directPrimaryCapture": false
+    },
+    {
+      "id": "R28-EVO-S011",
+      "url": "https://www.evilresource.com/resident-evil-3-nemesis/enemies/nemesis-second-form",
+      "snapshot": "modules/fidelity-r23/canonical/snapshots/c97efbe0c2e30830cefd875a.html.gz",
+      "snapshotSha256": "c29c973b70da50b0d21e2f93cce8aa8558d0002852c1afcd5de060e8c944287d",
+      "rawSha256": "788170ad378d42e64134122690d55c56516171103dbdce3e3c3b03c922810fd5",
+      "classification": "secondary-community-reference",
+      "excerpt": "In this form Nemesis has lost his protective armour, including his limiter.",
+      "directPrimaryCapture": false
+    },
+    {
+      "id": "R28-EVO-S012",
+      "url": "https://www.evilresource.com/resident-evil-3-nemesis/enemies/nemesis-third-form",
+      "snapshot": "modules/fidelity-r23/canonical/snapshots/69879d6a7faea6130e5de782.html.gz",
+      "snapshotSha256": "dfc8d85e6c7e429f70efeffa576c7fbeb349c6e137ac8b0452444d21a94ac577",
+      "rawSha256": "594005d6bf79d85a0285a0a32dae08bc1cc10aab76a2d948cab8e80ab5ce8312",
+      "classification": "secondary-community-reference",
+      "excerpt": "It is now a massive blob-like creature capable of spitting acid.",
+      "directPrimaryCapture": false
+    },
+    {
+      "id": "R28-EVO-S013",
+      "url": "https://blackjackrants.blogspot.com/2023/10/reviewing-monsters-resident-evil-4.html",
+      "snapshot": "modules/fidelity-r23/canonical/snapshots/62729f0eb6ce1a8735eb3a0a.html.gz",
+      "snapshotSha256": "13350be5418ae873e18acec33f4cfd2350e739b788d4a17d7fe5abf089003dc3",
+      "rawSha256": "b8096cc0c6603cf50990d148755270064f95f29c2ab000e24930fecb597e3106",
+      "classification": "secondary-commentary",
+      "excerpt": "Of course, just like the original game, Mendez would eventually be transformed by the Plagas and I love the update here.",
+      "directPrimaryCapture": false
+    },
+    {
+      "id": "R28-EVO-S014",
+      "url": "https://www.evilresource.com/resident-evil-4-remake/enemies/bitores-mendez-second-mutation",
+      "snapshot": "modules/fidelity-r23/canonical/snapshots/41934d694faf6d5565be70b7.html.gz",
+      "snapshotSha256": "29afbcf99ddc113f2ece89bda299989a1b5a2596237907fdc4d551603c8f50d8",
+      "rawSha256": "3a52caba19cc1badad46da7bada9776425f0bafed1b1a9c7bba201a2eb642003",
+      "classification": "secondary-community-reference",
+      "excerpt": "Bitores Méndez (Second Mutation) (Resident Evil 4 Remake)",
+      "directPrimaryCapture": false
+    },
+    {
+      "id": "R28-EVO-S015",
+      "url": "https://blackjackrants.blogspot.com/2023/10/reviewing-monsters-resident-evil-4.html",
+      "snapshot": "modules/fidelity-r23/canonical/snapshots/62729f0eb6ce1a8735eb3a0a.html.gz",
+      "snapshotSha256": "13350be5418ae873e18acec33f4cfd2350e739b788d4a17d7fe5abf089003dc3",
+      "rawSha256": "b8096cc0c6603cf50990d148755270064f95f29c2ab000e24930fecb597e3106",
+      "classification": "secondary-commentary",
+      "excerpt": "The remake gives us something a bit nicer, where Krauser keeps 90% of his body, but both his arms have transformed into blades or crab claws, and those are really large claws.",
+      "directPrimaryCapture": false
+    },
+    {
+      "id": "R28-EVO-S016",
+      "url": "https://www.evilresource.com/resident-evil-5/enemies/uroboros-albert-wesker",
+      "snapshot": "modules/fidelity-r23/canonical/snapshots/5fe637e84565a29f31a5435f.html.gz",
+      "snapshotSha256": "10e43a035606cc11337ce342fbc3ec37e050f72f4018e54be94f2886c7e29339",
+      "rawSha256": "01d4dc82b5155339c87b1c42b9938d79a56bc61a27939741233ed351980bf417",
+      "classification": "secondary-community-reference",
+      "excerpt": "When Wesker's original superhuman abilities were weakened through an overdose of the drug PG67A/W , he took the Uroboros Virus into his own body in a last resort to defeat Chris and Sheva .",
+      "directPrimaryCapture": false
+    },
+    {
+      "id": "R28-EVO-S017",
+      "url": "https://www.evilresource.com/resident-evil-outbreak-file-2/enemies/tyrant-r",
+      "snapshot": "modules/fidelity-r23/canonical/snapshots/1e424796039772ae622d99ef.html.gz",
+      "snapshotSha256": "cf1c6206e8a4f074b69a6c386ac35153757244ae262b849579c6658aa3c38fea",
+      "rawSha256": "a15f54bbb7a0029830ff4ed328b1a5a38a6dc58531c87597f63b4d08d054445d",
+      "classification": "secondary-community-reference",
+      "excerpt": "It undergoes this mutation when it receives a certain amount of damage.",
+      "directPrimaryCapture": false
+    },
+    {
+      "id": "R28-EVO-S018",
+      "url": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+      "snapshot": "modules/fidelity-r23/canonical/snapshots/a4ea6324c56b56e36d7b4b19.html.gz",
+      "snapshotSha256": "3b728775c92536d932d27f3d9e0dab36bc9bc3c9b75bd0c57125a9c17a35288c",
+      "rawSha256": "3b702078e4fe76b7958a224ba990e0249e0d83e57cfc40b27e0b7ce21f884408",
+      "classification": "secondary-community-reference",
+      "excerpt": "When she begins her level proper as her mutated form, she goes around and really shows off that her monster concept is an 'insect hive queen', sending swarms and swarms of those aforementioned bug monsters at you.",
+      "directPrimaryCapture": false
+    },
+    {
+      "id": "R28-EVO-S019",
+      "url": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+      "snapshot": "modules/fidelity-r23/canonical/snapshots/a4ea6324c56b56e36d7b4b19.html.gz",
+      "snapshotSha256": "3b728775c92536d932d27f3d9e0dab36bc9bc3c9b75bd0c57125a9c17a35288c",
+      "rawSha256": "3b702078e4fe76b7958a224ba990e0249e0d83e57cfc40b27e0b7ce21f884408",
+      "classification": "secondary-community-reference",
+      "excerpt": "Eventually, Lucas transforms into... a frankly very bland-looking 'monster mode'",
+      "directPrimaryCapture": false
+    },
+    {
+      "id": "R28-EVO-S020",
+      "url": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+      "snapshot": "modules/fidelity-r23/canonical/snapshots/a4ea6324c56b56e36d7b4b19.html.gz",
+      "snapshotSha256": "3b728775c92536d932d27f3d9e0dab36bc9bc3c9b75bd0c57125a9c17a35288c",
+      "rawSha256": "3b702078e4fe76b7958a224ba990e0249e0d83e57cfc40b27e0b7ce21f884408",
+      "classification": "secondary-community-reference",
+      "excerpt": "his final battle in the base game ends up turning Jack into a writhing mass of black fungal matter around the size of a small car",
+      "directPrimaryCapture": false
+    },
+    {
+      "id": "R28-EVO-S021",
+      "url": "https://www.evilresource.com/resident-evil-code-veronica/enemies/alexia-ashford-second-form",
+      "snapshot": "modules/fidelity-r23/canonical/snapshots/406ebba73d22fe64e0b166be.html.gz",
+      "snapshotSha256": "f2472daaa432bd5508cc150e93f729d7f43b23823da3e4c35ae4032a622c7034",
+      "rawSha256": "633cadd01cff170969ba4268f42e6dac5350579c3c0cce5052f1b7e45ff808ed",
+      "classification": "secondary-community-reference",
+      "excerpt": "Continuing the evolutionary process, the second form of Alexia has started to display the characteristics of the ant DNA in the T-Veronica virus.",
+      "directPrimaryCapture": false
+    },
+    {
+      "id": "R28-EVO-S022",
+      "url": "https://www.evilresource.com/resident-evil-code-veronica/enemies/alexia-ashford-third-form",
+      "snapshot": "modules/fidelity-r23/canonical/snapshots/a67cf272ecd68f70659e6b0d.html.gz",
+      "snapshotSha256": "c887ca8bf654d0711aadb75a089034e846518fa6ae77fd749621b48dbdcf4e5e",
+      "rawSha256": "1bda597ad2288785c96d79dd5f94cbdd1afb8d72136f5e28f8d5beb1cd03a4d9",
+      "classification": "secondary-community-reference",
+      "excerpt": "She mutates into this form once enough damage has been dealt to her previous form.",
+      "directPrimaryCapture": false
+    },
+    {
+      "id": "R28-EVO-S023",
+      "url": "https://blackjackrants.blogspot.com/2020/10/reviewing-monsters-resident-evil-3.html",
+      "snapshot": "modules/fidelity-r23/canonical/snapshots/ddd885a7039f1a8c1fd98cab.html.gz",
+      "snapshotSha256": "5dc940c1b8d90537500426e530b2fb6823bc07a8d991cceba47e4627c10620b3",
+      "rawSha256": "b54f9b0c1547e02a638276ca81c282ad4d90b1fe0abf27d1a4d08b46607e2694",
+      "classification": "secondary-commentary",
+      "excerpt": "made its first mutation turn him into a giant, ghoulish dinosaur-sized goliath with bone spikes, exposed bone and whatnot.",
+      "directPrimaryCapture": false
+    },
+    {
+      "id": "R28-EVO-S024",
+      "url": "https://blackjackrants.blogspot.com/2020/10/reviewing-monsters-resident-evil-3.html",
+      "snapshot": "modules/fidelity-r23/canonical/snapshots/ddd885a7039f1a8c1fd98cab.html.gz",
+      "snapshotSha256": "5dc940c1b8d90537500426e530b2fb6823bc07a8d991cceba47e4627c10620b3",
+      "rawSha256": "b54f9b0c1547e02a638276ca81c282ad4d90b1fe0abf27d1a4d08b46607e2694",
+      "classification": "secondary-commentary",
+      "excerpt": "And then it opens up like a flower, sends out tendrils to stick itself to parts of the final boss battle room, and its two gigantic car-sized claw-arms emerge out of the giant petal-like tumour-body while the center Nemesis body remains more or less a similar size.",
+      "directPrimaryCapture": false
+    }
+  ],
+  "gaps": [
+    "Graphe limité aux liens examinés ; aucune certification exhaustive de toutes les mutations de la franchise.",
+    "Les changements narratifs, équipements et sauts de scénario ne sont pas automatiquement des mutations libres.",
+    "Apparences et mouvements emploient les profils existants ; aucune nouvelle animation officielle de transformation."
+  ]
+}

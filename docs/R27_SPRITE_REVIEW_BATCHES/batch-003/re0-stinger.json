@@ -1,0 +1,51 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "re0-stinger",
+  "reviewed_at_utc": "2026-10-25T08:18:49.954543+00:00",
+  "batch": "batch-003",
+  "image": "modules/fidelity-r27/sprites/generated/re0-stinger/idle-right.png",
+  "image_sha256": "1ae2df5ba844575a56dc86f42457eff653ff3d23fc8e435e1ba9eb07db0ff610",
+  "active_record": "modules/fidelity-r27/sprites/records/re0-stinger.json",
+  "active_record_sha256": "3d35026ab61ff3d474f4ae465759c38f368e0d4c66fbed6f09a1cf0db1dec31a",
+  "used_references": [
+    {
+      "path": "modules/fidelity-r26/sprites/sheets/re0-stinger-gc-r26-1.png",
+      "sha256": "f3fac946281e2992aea6e7899ca021c215a940a53b38c05a183cc7cb64f52486",
+      "role": "source-model-render",
+      "declared_body_coverage": "complete"
+    }
+  ],
+  "source_complete_body_observed": true,
+  "generated_complete_body_observed": true,
+  "full_body_reviewed": true,
+  "observed_facing": "right",
+  "direction_eligible_for_neutral_pose": true,
+  "review_outcome": "source-consistent-generated-static-neutral-base",
+  "notes": "The used eight-view model sheet shows the whole scorpion from all sampled orientations. The generated single body faces right with its tail arch, stinger, claws and visible legs retained. No manual mirror, original renderer or gait is certified.",
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.932103+00:00",
+    "prior_report_record_sha256": "1221d02a516f8c15c960b1f2ade0f28f0e1d4b0285b275cee9d7d37f263d467f",
+    "prior_direction_eligibility": true,
+    "pose_observation": {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re0-stinger.json",
+      "sha256": "cb608ff5dcf1fdcb2034f87b1cdaafb9179b5aa69c6986f31a46a5ba314230e4"
+    },
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.921802+00:00"
+  },
+  "observed_pose_kind": "neutral-base",
+  "available_states": [
+    "idle"
+  ]
+}

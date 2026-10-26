@@ -1,0 +1,79 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "re0-lurker",
+  "reviewed_at_utc": "2026-10-25T08:37:45.780730+00:00",
+  "batch": "batch-004",
+  "image": "modules/fidelity-r27/sprites/generated/re0-lurker/idle-right.png",
+  "image_sha256": "5fbfbbca18d1d0406d06832923652546046dc2ceced16bd347cb0f70f8a176ac",
+  "active_record": "modules/fidelity-r27/sprites/records/re0-lurker.json",
+  "active_record_sha256": "9af44e01c000d2a4158459cb279dcd5d3214f814f5def6d8d9c5c546abcd5b53",
+  "used_references": [
+    {
+      "path": "modules/fidelity-r26/sprites/sheets/re0-lurker-gc-r26-1.png",
+      "sha256": "7e8851d9984bdc60a3cb65a9e7f170043e771c441349edabceb33d8472739778",
+      "role": "source-model-render",
+      "declared_body_coverage": "complete"
+    }
+  ],
+  "scope": "combatant-neutral-pose",
+  "source_complete_body_observed": true,
+  "generated_complete_body_observed": true,
+  "full_body_reviewed": true,
+  "observed_facing": "right",
+  "direction_eligible_for_neutral_pose": false,
+  "review_outcome": "whole-visible-body-presentation-pose-no-combat-idle",
+  "notes": "Corrective V2 removes the unsupported healthy glossy black frog eye from V1. Enlarged inspection of the verified native model shows a blunt mottled head with degenerated skin-covered eye regions; the source sheet also documents the straight tongue and visible clawed limbs. V2 retains those source features in a right-facing whole-body view. No original game shader, geometric or idle-phase certification.",
+  "manual_source_completeness_evidence": null,
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "superseded_review": {
+    "image": "modules/fidelity-r27/sprites/superseded/re0-lurker/de8114ebf884880712743800f69ffd6a90405b980a7427afc80e2f02c0a2b8e3/idle-right.png",
+    "image_sha256": "de8114ebf884880712743800f69ffd6a90405b980a7427afc80e2f02c0a2b8e3",
+    "record": "modules/fidelity-r27/sprites/superseded/re0-lurker/de8114ebf884880712743800f69ffd6a90405b980a7427afc80e2f02c0a2b8e3/sprite-record.json",
+    "record_sha256": "51c9fdaaaf106804727911006a68481f99aedb7c34af8b554563d69f15a77555",
+    "outcome": "unsupported-head-detail-corrected",
+    "reason": "V1 added a prominent glossy healthy frog eye not corroborated by the native model detail. A fresh image_gen V2 from the sole original model sheet removes that invented globe; no bitmap editing."
+  },
+  "additional_visual_inspection": [
+    {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-004/lurker-native-model-detail.png",
+      "sha256": "a69d04faaf61af2ef0c00b25994dc68384a7e86a7aada907217cc942ca3c06e9",
+      "kind": "native-model-inspection",
+      "new_generated_sprite_count": 0
+    },
+    {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-004/lurker-native-three-quarter.png",
+      "sha256": "60bc30f4cbaf1b36ddc5c2dcebe6b65536fbfaad0a65287c68e339ff89b9b91f",
+      "kind": "native-model-inspection",
+      "new_generated_sprite_count": 0
+    }
+  ],
+  "documentary_context": {
+    "path": "modules/fidelity-r23/canonical/snapshots/c8c757315db33e10f76f57c0.html.gz",
+    "sha256": "0df3a9dfc69c10678f466ae60b8367bd25610c57700b4f06c45e89722a2014b7",
+    "excerpt": "Their eyes and ears have devolved greatly in this form, but their ability to sense prey has been evolved to an almost supernatural level.",
+    "scope": "Secondary enemy text only; does not alone prove a complete absence of eyes. Native-model visual correspondence was the correction basis."
+  },
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.898563+00:00",
+    "prior_report_record_sha256": "da8a9d34cb76eb005541f709b501ca191540e0bb88cf816e36d8b3a5521daf96",
+    "prior_direction_eligibility": true,
+    "pose_observation": {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re0-lurker.json",
+      "sha256": "98fd749cd6b235b608243c00d17227d475c30945cb3a3babc98a6875ad13f029"
+    },
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.892769+00:00"
+  },
+  "observed_pose_kind": "source-presentation",
+  "available_states": []
+}

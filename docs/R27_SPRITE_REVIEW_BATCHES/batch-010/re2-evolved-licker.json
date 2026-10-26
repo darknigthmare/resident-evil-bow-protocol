@@ -1,0 +1,53 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "re2-evolved-licker",
+  "reviewed_at_utc": "2026-10-25T09:19:02.107114+00:00",
+  "batch": "batch-010",
+  "image": "modules/fidelity-r27/sprites/generated/re2-evolved-licker/idle-right.png",
+  "image_sha256": "cedcd4d0cb7233e75711c39b417d1e98736c7caff91c01da04c2c341a353c3e9",
+  "active_record": "modules/fidelity-r27/sprites/records/re2-evolved-licker.json",
+  "active_record_sha256": "848f454c45a26af6e3759ff6d5a47cce2749c6787ed2503ffba68e329f7a3185",
+  "used_references": [
+    {
+      "path": "assets/catalog/re2-evolved-licker.png",
+      "sha256": "cf87ef8517d60a791bd683f15ea12166ca7e4d84f2bbbfbfe1ce248872313d42",
+      "role": "portrait",
+      "declared_body_coverage": "unknown"
+    }
+  ],
+  "scope": "combatant-neutral-pose",
+  "source_complete_body_observed": false,
+  "generated_complete_body_observed": false,
+  "full_body_reviewed": false,
+  "observed_facing": "front",
+  "direction_eligible_for_neutral_pose": false,
+  "review_outcome": "visible-source-region-reviewed-body-not-admitted",
+  "notes": "Catalog crop cuts the lower legs/claws and right exterior body. Generated output keeps truncated appendages while emphasizing the exposed head and blade-like limbs. Whole body and clear directional side remain unverified.",
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "visual_evidence": {
+    "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-010/contact-1.png",
+    "sha256": "b83e4320ce4dc45107b01205d4062964abb4bed685b260c78394a113f244f801",
+    "kind": "browser-contact-review-evidence",
+    "new_generated_sprite_count": 0
+  },
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.848341+00:00",
+    "prior_report_record_sha256": "820a8413b6fbabf8b4aa608a7966f07b1ea3701c6fb64f27c1cdc3d8d3efbaa7",
+    "prior_direction_eligibility": false,
+    "pose_observation": null,
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.838937+00:00"
+  },
+  "observed_pose_kind": "unknown",
+  "available_states": []
+}

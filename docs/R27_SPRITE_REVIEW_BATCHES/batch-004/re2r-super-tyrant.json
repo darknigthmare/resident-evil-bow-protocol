@@ -1,0 +1,54 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "re2r-super-tyrant",
+  "reviewed_at_utc": "2026-10-25T08:37:45.780012+00:00",
+  "batch": "batch-004",
+  "image": "modules/fidelity-r27/sprites/generated/re2r-super-tyrant/idle-right.png",
+  "image_sha256": "c4ab617e0fcaf060056476b45e9266cc0c18a0c76510f3597ec290d739d5a7c9",
+  "active_record": "modules/fidelity-r27/sprites/records/re2r-super-tyrant.json",
+  "active_record_sha256": "b9580ba7183eddd1d450ced8d85bb270e69e6571734e2636f4b181705f698a5f",
+  "used_references": [
+    {
+      "path": "assets/specimens/re2r-super-tyrant.png",
+      "sha256": "dd4d4e49775878355890cf97ea4987eb90c449e0c2776114d9438a3ca71efae6",
+      "role": "full-body-reference",
+      "declared_body_coverage": "complete"
+    },
+    {
+      "path": "assets/catalog/re2r-super-tyrant.png",
+      "sha256": "9f2f9eb1c6b34ff8dc86d9fc067067a05e3da3190f761617788317224e5c07bb",
+      "role": "portrait",
+      "declared_body_coverage": "unknown"
+    }
+  ],
+  "scope": "combatant-neutral-pose",
+  "source_complete_body_observed": false,
+  "generated_complete_body_observed": false,
+  "full_body_reviewed": false,
+  "observed_facing": "front",
+  "direction_eligible_for_neutral_pose": false,
+  "review_outcome": "partial-source-no-body-admission",
+  "notes": "The two actual used sources are only a bust, despite the legacy full-body label. The output preserves that bust crop; no complete legs or whole body are documented. No body or facing-side admission.",
+  "manual_source_completeness_evidence": null,
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.895858+00:00",
+    "prior_report_record_sha256": "4528986edf39cfda9f4c81ff667e665650e5d889355a4ccaf1f3626aa1aefb9e",
+    "prior_direction_eligibility": false,
+    "pose_observation": null,
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.890112+00:00"
+  },
+  "observed_pose_kind": "unknown",
+  "available_states": []
+}

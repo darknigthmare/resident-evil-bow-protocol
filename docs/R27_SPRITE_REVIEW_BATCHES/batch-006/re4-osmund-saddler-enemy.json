@@ -1,0 +1,50 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "re4-osmund-saddler-enemy",
+  "reviewed_at_utc": "2026-10-25T09:03:38.513143+00:00",
+  "batch": "batch-006",
+  "image": "modules/fidelity-r27/sprites/generated/re4-osmund-saddler-enemy/idle-right.png",
+  "image_sha256": "e8caad2d206ec7d227d7bd40465c7b929266845216b10cc5838d6c914cb67bab",
+  "active_record": "modules/fidelity-r27/sprites/records/re4-osmund-saddler-enemy.json",
+  "active_record_sha256": "1115c73c164139ca60997f72f1485bffc06ea8383708fb244bc18355ab6a812e",
+  "used_references": [
+    {
+      "path": "assets/specimens/re4-osmund-saddler-enemy.webp",
+      "sha256": "be987212b1a94b2958e170a27415f763c4f2fa05486c203afd674bce61d9ab57",
+      "role": "full-body-reference",
+      "declared_body_coverage": "complete"
+    }
+  ],
+  "scope": "combatant-neutral-pose",
+  "source_complete_body_observed": true,
+  "generated_complete_body_observed": true,
+  "full_body_reviewed": true,
+  "observed_facing": "front",
+  "direction_eligible_for_neutral_pose": false,
+  "review_outcome": "whole-visible-body-presentation-pose-no-combat-idle",
+  "notes": "Whole robed human form, gold ornament, staff and outstretched hand remain on their source sides. Pose faces the camera and does not establish a horizontal combat-facing view or later mutation.",
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.879049+00:00",
+    "prior_report_record_sha256": "5fb9e26cbf35ee3e90eeb2e7477c940bc10dc0c032f49caf71a0f9dc73ced27b",
+    "prior_direction_eligibility": false,
+    "pose_observation": {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re4-osmund-saddler-enemy.json",
+      "sha256": "5f4396ffe24c7fc94f11b0a2d4a313d54e42d02dfdaad0e435124d671c6858cc"
+    },
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.871644+00:00"
+  },
+  "observed_pose_kind": "source-presentation",
+  "available_states": []
+}

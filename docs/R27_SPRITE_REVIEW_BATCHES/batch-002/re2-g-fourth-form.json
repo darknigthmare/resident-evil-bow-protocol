@@ -1,0 +1,48 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "re2-g-fourth-form",
+  "reviewed_at_utc": "2026-10-25T08:12:06.125784+00:00",
+  "batch": "batch-002",
+  "image": "modules/fidelity-r27/sprites/generated/re2-g-fourth-form/idle-right.png",
+  "image_sha256": "e7ae053ee46a96441e98cbbec5cff8c2cad0eb380ef101d073147db757c7d8a7",
+  "active_record": "modules/fidelity-r27/sprites/records/re2-g-fourth-form.json",
+  "active_record_sha256": "eed09dce2eecd2606392960b562772f1ac790c8c7527fb79655ef21bb3fd54f1",
+  "used_references": [
+    {
+      "path": "assets/specimens/re2-g-fourth-form.png",
+      "sha256": "01c9f0a8b9aad49eb570b81e7f299fb98069ed2ed2366ae4a4b49f31fa74347a",
+      "role": "full-body-reference"
+    }
+  ],
+  "source_complete_body_observed": true,
+  "generated_complete_body_observed": true,
+  "full_body_reviewed": true,
+  "observed_facing": "left",
+  "direction_eligible_for_neutral_pose": false,
+  "review_outcome": "whole-visible-body-presentation-pose-no-combat-idle",
+  "notes": "The full source has margins around its visible limbs and the left-pointing jaw. Generated jaw spikes, pale head, orange shoulder eyes, dark hindquarters and visible clawed limbs remain coherent. No original attack phase, exact spike count or geometric equality is certified.",
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.993770+00:00",
+    "prior_report_record_sha256": "35a262860b759268f0f44dd5c89480e07395f11d295ec260f52c521dff9abed5",
+    "prior_direction_eligibility": true,
+    "pose_observation": {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/re2-g-fourth-form.json",
+      "sha256": "d5a3cd715ff62933428ed36bb1c81113aabb7a6307c07b7fa9630df8199e60fd"
+    },
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.984260+00:00"
+  },
+  "observed_pose_kind": "source-presentation",
+  "available_states": []
+}

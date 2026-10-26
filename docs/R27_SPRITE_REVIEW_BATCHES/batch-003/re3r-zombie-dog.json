@@ -1,0 +1,46 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "re3r-zombie-dog",
+  "reviewed_at_utc": "2026-10-25T08:18:51.382490+00:00",
+  "batch": "batch-003",
+  "image": "modules/fidelity-r27/sprites/generated/re3r-zombie-dog/idle-right.png",
+  "image_sha256": "cefabb29455585745f521873f9c5e4eeafbf96c653265e307ba41a68b0813b5c",
+  "active_record": "modules/fidelity-r27/sprites/records/re3r-zombie-dog.json",
+  "active_record_sha256": "10a6ad28d612eeba8100342c40b35ba9d84bc4093b2de985989468ddae4efe9e",
+  "used_references": [
+    {
+      "path": "assets/catalog/re3r-zombie-dog.png",
+      "sha256": "6bc3f1120fba4e760785ac44d3133acddaf2cdbd554a3d9391a08eb5ea4fcbe7",
+      "role": "portrait",
+      "declared_body_coverage": "unknown"
+    }
+  ],
+  "source_complete_body_observed": false,
+  "generated_complete_body_observed": false,
+  "full_body_reviewed": false,
+  "observed_facing": "right",
+  "direction_eligible_for_neutral_pose": false,
+  "review_outcome": "partial-source-no-body-admission",
+  "notes": "Only the head, trunk and upper legs are documented in the cropped reference. Generated image preserves a crop rather than completing feet. Right-looking pose is visible but full-body admission remains false.",
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.945881+00:00",
+    "prior_report_record_sha256": "f0401cb354b1b704ca7fef36af461cfa3228fec1c8d59bbb2e3359b345ffa2b1",
+    "prior_direction_eligibility": false,
+    "pose_observation": null,
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.935418+00:00"
+  },
+  "observed_pose_kind": "unknown",
+  "available_states": []
+}

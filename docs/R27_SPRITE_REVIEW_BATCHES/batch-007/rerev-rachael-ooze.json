@@ -1,0 +1,56 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "rerev-rachael-ooze",
+  "reviewed_at_utc": "2026-10-25T09:10:50.452370+00:00",
+  "batch": "batch-007",
+  "image": "modules/fidelity-r27/sprites/generated/rerev-rachael-ooze/idle-right.png",
+  "image_sha256": "30f2db76049fbdd3a09be5510b3948edcb5b61ad75a0463e44383cce7b0ce395",
+  "active_record": "modules/fidelity-r27/sprites/records/rerev-rachael-ooze.json",
+  "active_record_sha256": "728aec27b71e72fe43a956c06f412d366eba144a3781927817f2bda9e6f3756a",
+  "used_references": [
+    {
+      "path": "assets/specimens/rerev-rachael-ooze.png",
+      "sha256": "1a0250d5d371f49e86d3b2928c10b3d1fd913992692ef7bd7f988864e943419e",
+      "role": "full-body-reference",
+      "declared_body_coverage": "complete"
+    }
+  ],
+  "scope": "combatant-neutral-pose",
+  "source_complete_body_observed": true,
+  "generated_complete_body_observed": true,
+  "full_body_reviewed": true,
+  "observed_facing": "left",
+  "direction_eligible_for_neutral_pose": false,
+  "review_outcome": "whole-visible-body-presentation-pose-no-combat-idle",
+  "notes": "Both images show the whole transformed figure: head opening points to screen left, the raised long claws, curved torso, asymmetric leg material and both boot/foot ends remain inside the frame. Only this source-guided left-facing pose is admitted; voice, attack timing, hidden anatomy and exact animation phase remain open.",
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "visual_evidence": {
+    "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-007/contact-4.png",
+    "sha256": "6e8024148c2771700f98defdcbea38d1b567702820b9322f194403fb1fcf8658",
+    "kind": "browser-contact-review-evidence",
+    "new_generated_sprite_count": 0
+  },
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.751840+00:00",
+    "prior_report_record_sha256": "29e5925298d2051fb5d4136dc6355a8005bf0d449ad50c3ff9e3bbf797d180e5",
+    "prior_direction_eligibility": true,
+    "pose_observation": {
+      "path": "docs/R27_SPRITE_REVIEW_BATCHES/pose-kind-audit/rerev-rachael-ooze.json",
+      "sha256": "d1ec9501bd9e27adcced974ea1f3fa5402a1514d9e71d4397f6c28bcd8ed5bf7"
+    },
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.756401+00:00"
+  },
+  "observed_pose_kind": "source-presentation",
+  "available_states": []
+}

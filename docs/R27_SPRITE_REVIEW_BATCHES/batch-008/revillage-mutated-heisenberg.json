@@ -1,0 +1,53 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "revillage-mutated-heisenberg",
+  "reviewed_at_utc": "2026-10-25T09:13:11.240953+00:00",
+  "batch": "batch-008",
+  "image": "modules/fidelity-r27/sprites/generated/revillage-mutated-heisenberg/idle-right.png",
+  "image_sha256": "0848e9e2ca99696669a9af2f22a97933896cb276bf22671bec38da0782ad20db",
+  "active_record": "modules/fidelity-r27/sprites/records/revillage-mutated-heisenberg.json",
+  "active_record_sha256": "90d83c20d8262980ada3bfddda0af648fd6288c9c3a8eddfdff54a8964205e5b",
+  "used_references": [
+    {
+      "path": "assets/specimens/revillage-mutated-heisenberg.png",
+      "sha256": "62d54bcfe184f6d6397a6560218920d722cd51c7dd22c32812b3381167772930",
+      "role": "full-body-reference",
+      "declared_body_coverage": "complete"
+    }
+  ],
+  "scope": "combatant-neutral-pose",
+  "source_complete_body_observed": false,
+  "generated_complete_body_observed": false,
+  "full_body_reviewed": false,
+  "observed_facing": "unknown",
+  "direction_eligible_for_neutral_pose": false,
+  "review_outcome": "visible-source-region-reviewed-body-not-admitted",
+  "notes": "The native source is a close crop of the machine mutant, with exterior machinery cut at top, left, right and bottom. The generated output retains a comparable machinery fragment rather than a documented complete body. Compound machine orientation and missing appendage extents remain unknown; no combat body is admitted.",
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "visual_evidence": {
+    "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-008/contact-2.png",
+    "sha256": "d8b3734271e7d17c866c4430a26ef3a1e8a9241216aef8c5a4565bbfba86ad61",
+    "kind": "browser-contact-review-evidence",
+    "new_generated_sprite_count": 0
+  },
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.919756+00:00",
+    "prior_report_record_sha256": "3bd46ecc48453929d6e6da62cea51e9d6cb0f8b8edb3dbbab5e8bfa7db89ee44",
+    "prior_direction_eligibility": false,
+    "pose_observation": null,
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.909818+00:00"
+  },
+  "observed_pose_kind": "unknown",
+  "available_states": []
+}

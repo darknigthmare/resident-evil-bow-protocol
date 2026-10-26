@@ -1,0 +1,128 @@
+{
+  "schema": "re.bow.sprite-review-delivery-r28/1",
+  "baseline": {
+    "path": "modules/fidelity-r27/sprites/manifest.json",
+    "sha256": "6b670561d0464fca696155e9126fb34ced3e333ddacb0bb465a50697f2d947f9"
+  },
+  "effectiveManifest": {
+    "path": "modules/fidelity-r28/sprites/manifest.json",
+    "sha256": "33666554018e56009884dc58e4c874f1caf4a8e42cd260c9a39c6d3f84d2a6f9"
+  },
+  "bodyQueue": {
+    "path": "modules/fidelity-r28/sprites/body-gaps.json",
+    "sha256": "4a8fd266a051592be5c61cd00e5f17420c8bae51473109d4b7e3ae23c29c901b"
+  },
+  "visualReviewIndex": {
+    "path": "docs/R28_SPRITE_REVIEW/index.json",
+    "sha256": "b7a66bd0e9e0baaeec6d7bbd358076a6fbac3baf6ffb012c5e75ce9cb7378e86"
+  },
+  "runtime": {
+    "path": "modules/fidelity-r28/combat/sprite-runtime.js",
+    "sha256": "cbb106a55ff365c9307481d453bc065bcab907a36bf8af0d1eb2d5e32097d5f7"
+  },
+  "counts": {
+    "targetIdentities": 385,
+    "generatedSprites": 363,
+    "pendingSprites": 22,
+    "visuallyReviewedSprites": 363,
+    "fullBodyReviewedSprites": 106,
+    "neutralBaseSprites": 32,
+    "neutralBaseCombatEligibleSprites": 32,
+    "sourceBindPoseSprites": 6,
+    "sourcePresentationSprites": 219,
+    "unknownPoseSprites": 106,
+    "generationBlockedSprites": 22,
+    "recordedGenerationFailures": 22,
+    "originalGameSprites": 0,
+    "completeCombatAnimationSets": 0,
+    "canonicalFidelityCertified": 0,
+    "newVisualReviews": 171,
+    "replacedSprites": 4,
+    "newTargetIdentities": 0
+  },
+  "sourceAndGeneratedBodyNotJointlyQualified": 257,
+  "combatantBodiesPending": 215,
+  "contextBodiesNotQualified": 42,
+  "knownAppearanceGaps": [
+    {
+      "id": "re1r-cerberus",
+      "imageSha256": "4fe539d9f739b47063078d30dd2d1b12da7948095ffa0f7a5db0bb636bae5fab",
+      "gaps": [
+        "The detached chain-like source-export object is preserved, but its anatomical/equipment role and original-game attachment are not certified."
+      ]
+    },
+    {
+      "id": "re1r-lisa-trevor",
+      "imageSha256": "8254c4e8668355531cc647e0d327723d9d0383022d292c40b6474dfbca661a01",
+      "gaps": [
+        "Detached lateral accessories visible in other native-model views are omitted from this front output; complete equipment appearance remains unresolved.",
+        "The separate tentacle-reveal phase represented by the historical portrait is not completed by this base/rest model."
+      ]
+    }
+  ],
+  "validation": [
+    {
+      "path": "docs/R28_SPRITES_TESTS.json",
+      "sha256": "0c5fd34f0eef437f4206dc27d3cccf5acae5a23187e178da8a566f9ba3dd0e11",
+      "passed": 12,
+      "failed": 0
+    },
+    {
+      "path": "docs/R28_COMBAT_SPRITE_TESTS.json",
+      "sha256": "f55b5abcbf01dfb95f2cbd1bec5fe5fb5d31d72c8d7a41721fdc0350ea72ff0e",
+      "passed": 12,
+      "failed": 0
+    },
+    {
+      "path": "docs/R28_SPRITES_BROWSER.json",
+      "sha256": "9b59bfefe84024c868e4b7dc6b6ec69d7896de7ed9177a2d2de828a2837f5b14",
+      "passed": 7,
+      "failed": 0
+    }
+  ],
+  "historicalPngBytesChanged": false,
+  "historicalR27MetadataChanged": false,
+  "toolRefusalsRetried": false,
+  "missingAnimationStatesSynthesized": 0,
+  "oppositeSidesMirrored": 0,
+  "wholeBodyReplacements": [
+    {
+      "id": "re1r-cerberus",
+      "path": "modules/fidelity-r28/sprites/generated/re1r-cerberus/full-body.png",
+      "sha256": "4fe539d9f739b47063078d30dd2d1b12da7948095ffa0f7a5db0bb636bae5fab",
+      "scope": "combatant-neutral-pose",
+      "poseKind": "source-presentation",
+      "availableStates": []
+    },
+    {
+      "id": "re1r-lisa-trevor",
+      "path": "modules/fidelity-r28/sprites/generated/re1r-lisa-trevor/full-body.png",
+      "sha256": "8254c4e8668355531cc647e0d327723d9d0383022d292c40b6474dfbca661a01",
+      "scope": "context-encounter",
+      "poseKind": "source-bind-pose",
+      "availableStates": []
+    },
+    {
+      "id": "rerev-scagdead",
+      "path": "modules/fidelity-r28/sprites/generated/rerev-scagdead/full-body.png",
+      "sha256": "b700bc39e54d2d3e6f0f2e5e45a95147b29a39bd2cdd09f5c32574eebe1ef86e",
+      "scope": "combatant-neutral-pose",
+      "poseKind": "source-bind-pose",
+      "availableStates": []
+    },
+    {
+      "id": "rerev-wall-blister",
+      "path": "modules/fidelity-r28/sprites/generated/rerev-wall-blister/full-body.png",
+      "sha256": "cf01c30b1be0531b5e92e589e6acd0ba3c81374e54b0e2f8313f34cbbd9b0c19",
+      "scope": "combatant-neutral-pose",
+      "poseKind": "source-bind-pose",
+      "availableStates": []
+    }
+  ],
+  "limitations": [
+    "Full visible anatomical body does not certify all accessories, opposite views, original-game poses or geometry.",
+    "Lisa remains a context encounter; its omitted side accessories and uncompleted tentacle phase remain explicitly open.",
+    "All four R28 replacements are bind/presentation poses, with no newly produced idle or combat cycle.",
+    "The171 new visual reviews add10 admissible static idle sides, independently of4 body replacements."
+  ]
+}

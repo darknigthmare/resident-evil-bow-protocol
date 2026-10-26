@@ -1,0 +1,53 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "re4-regenerator",
+  "reviewed_at_utc": "2026-10-25T09:24:00.071324+00:00",
+  "batch": "batch-011",
+  "image": "modules/fidelity-r27/sprites/generated/re4-regenerator/idle-right.png",
+  "image_sha256": "77c5dae444eb16752435cc21b8ad3206290d6101d1aeef95a036fc5b94f7cf82",
+  "active_record": "modules/fidelity-r27/sprites/records/re4-regenerator.json",
+  "active_record_sha256": "516b1e2f76f8397b0721c532812a255bf9025fcae3a86595e5a1f76356cc67ff",
+  "used_references": [
+    {
+      "path": "assets/catalog/re4-regenerator.png",
+      "sha256": "5435e29952f5bcf7e7011ac7a2c0d0a0951cb9cf60397a244f4c7c4458a0e3e1",
+      "role": "portrait",
+      "declared_body_coverage": "unknown"
+    }
+  ],
+  "scope": "combatant-neutral-pose",
+  "source_complete_body_observed": false,
+  "generated_complete_body_observed": false,
+  "full_body_reviewed": false,
+  "observed_facing": "front",
+  "direction_eligible_for_neutral_pose": false,
+  "review_outcome": "visible-source-region-reviewed-body-not-admitted",
+  "notes": "Catalog reference contains the head, torso and partial arms only. Output remains cut below the waist and before hands. No complete limbs, body stance, regeneration phase or hidden parasites are verified.",
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "visual_evidence": {
+    "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-011/contact-3.png",
+    "sha256": "183dbe71771bdd5dac4f5cc3ca0475cc48190067a71d26697c1069f2700c3c1f",
+    "kind": "browser-contact-review-evidence",
+    "new_generated_sprite_count": 0
+  },
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.973093+00:00",
+    "prior_report_record_sha256": "c3496d008a1814b8232600e4752a99dd7cf36a1b8b2026a723eb7a366d827df2",
+    "prior_direction_eligibility": false,
+    "pose_observation": null,
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.962301+00:00"
+  },
+  "observed_pose_kind": "unknown",
+  "available_states": []
+}

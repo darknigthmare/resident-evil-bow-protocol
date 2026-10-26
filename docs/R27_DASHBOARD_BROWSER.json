@@ -1,0 +1,209 @@
+{
+  "schema": "re.bow.fidelity-dashboard-browser/1",
+  "startedAt": "2026-10-25T10:09:33.062Z",
+  "completedAt": "2026-10-25T10:09:38.837Z",
+  "environment": {
+    "virtualized": true,
+    "headless": true,
+    "node": "v22.16.0",
+    "chromium": "154.0.8037.57"
+  },
+  "physicalDevices": false,
+  "passed": 6,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "All 17 workstreams, filters and source links at 1440px",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "touchEmulated": false,
+        "ids": [
+          "G-ACCESS",
+          "G-AUDIO",
+          "G-CINEMATIQUES",
+          "G-COMMANDES",
+          "G-ECHELLE",
+          "G-LIVRAISON",
+          "G-MANCHES",
+          "G-PERF",
+          "G-PERIMETRE",
+          "G-PREUVES",
+          "G-RECETTE",
+          "G-RENDU",
+          "G-REPLAYS",
+          "G-SAUVES",
+          "G-VICTIMES",
+          "R20-09",
+          "R20-10"
+        ],
+        "functionTasks": [
+          "G-REPLAYS",
+          "G-SAUVES"
+        ],
+        "resourceLinks": [
+          {
+            "label": "Examiner les sprites",
+            "href": "http://127.0.0.1:5691/modules/fidelity-r27/sprites/index.html"
+          },
+          {
+            "label": "Examiner les sources",
+            "href": "http://127.0.0.1:5691/modules/fidelity-r27/sources/index.html"
+          },
+          {
+            "label": "Examiner les mouvements",
+            "href": "http://127.0.0.1:5691/modules/fidelity-r27/motion/index.html"
+          },
+          {
+            "label": "Écouter les sons",
+            "href": "http://127.0.0.1:5691/modules/fidelity-r27/audio/index.html"
+          },
+          {
+            "label": "Examiner les citations",
+            "href": "http://127.0.0.1:5691/modules/fidelity-r27/canonical/index.html"
+          },
+          {
+            "label": "Vérifier les replays restaurés",
+            "href": "http://127.0.0.1:5691/modules/fidelity-r27/persistence/index.html"
+          }
+        ],
+        "totalResolvedReviewLinks": 50,
+        "emptyResultAnnounced": true,
+        "catalogueIdentities": 389,
+        "sourceRows": 1715,
+        "sourceStatistics": [
+          363,
+          82,
+          22,
+          330,
+          356
+        ]
+      }
+    },
+    {
+      "name": "All 17 workstreams, filters and source links at 390px",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "touchEmulated": true,
+        "ids": [
+          "G-ACCESS",
+          "G-AUDIO",
+          "G-CINEMATIQUES",
+          "G-COMMANDES",
+          "G-ECHELLE",
+          "G-LIVRAISON",
+          "G-MANCHES",
+          "G-PERF",
+          "G-PERIMETRE",
+          "G-PREUVES",
+          "G-RECETTE",
+          "G-RENDU",
+          "G-REPLAYS",
+          "G-SAUVES",
+          "G-VICTIMES",
+          "R20-09",
+          "R20-10"
+        ],
+        "functionTasks": [
+          "G-REPLAYS",
+          "G-SAUVES"
+        ],
+        "resourceLinks": [
+          {
+            "label": "Examiner les sprites",
+            "href": "http://127.0.0.1:5691/modules/fidelity-r27/sprites/index.html"
+          },
+          {
+            "label": "Examiner les sources",
+            "href": "http://127.0.0.1:5691/modules/fidelity-r27/sources/index.html"
+          },
+          {
+            "label": "Examiner les mouvements",
+            "href": "http://127.0.0.1:5691/modules/fidelity-r27/motion/index.html"
+          },
+          {
+            "label": "Écouter les sons",
+            "href": "http://127.0.0.1:5691/modules/fidelity-r27/audio/index.html"
+          },
+          {
+            "label": "Examiner les citations",
+            "href": "http://127.0.0.1:5691/modules/fidelity-r27/canonical/index.html"
+          },
+          {
+            "label": "Vérifier les replays restaurés",
+            "href": "http://127.0.0.1:5691/modules/fidelity-r27/persistence/index.html"
+          }
+        ],
+        "totalResolvedReviewLinks": 50,
+        "emptyResultAnnounced": true,
+        "catalogueIdentities": 389,
+        "sourceRows": 1715,
+        "sourceStatistics": [
+          363,
+          82,
+          22,
+          330,
+          356
+        ]
+      }
+    },
+    {
+      "name": "Bestiary retains one visible current sources link after header setup at 1440/390px",
+      "pass": true,
+      "detail": {
+        "routes": [
+          {
+            "width": 1440,
+            "touchEmulated": false,
+            "sourceLinks": 1,
+            "headerReadyBeforeClick": true,
+            "target": "http://127.0.0.1:5691/modules/fidelity-r27/index.html",
+            "workstreams": 17
+          },
+          {
+            "width": 390,
+            "touchEmulated": true,
+            "sourceLinks": 1,
+            "headerReadyBeforeClick": true,
+            "target": "http://127.0.0.1:5691/modules/fidelity-r27/index.html",
+            "workstreams": 17
+          }
+        ],
+        "physicalDevices": false
+      }
+    },
+    {
+      "name": "Keyboard skip link, named filters and visible focus",
+      "pass": true,
+      "detail": {
+        "skipLinkVisibleOnFocus": true,
+        "fragmentTarget": "#main",
+        "namedFilters": true,
+        "keyboardSearch": true,
+        "focusOutline": {
+          "style": "solid",
+          "width": "3px"
+        }
+      }
+    },
+    {
+      "name": "404 and malformed progress refuse incomplete data, then retry recovers",
+      "pass": true,
+      "detail": {
+        "notFoundRefused": true,
+        "sixteenTasksRefused": true,
+        "retryRestoredSeventeenTasks": true
+      }
+    },
+    {
+      "name": "Untrusted source text stays text and external review links are refused",
+      "pass": true,
+      "detail": {
+        "markupRenderedAsText": true,
+        "scriptNotExecuted": true,
+        "externalResourceLinkRefused": true
+      }
+    }
+  ]
+}

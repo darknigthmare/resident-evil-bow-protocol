@@ -1,0 +1,109 @@
+{
+  "id": "re0-leech",
+  "label": "Leech",
+  "incarnation": "Resident Evil 0 (2002)",
+  "image": "modules/fidelity-r27/sprites/generated/re0-leech/idle-right.png",
+  "bytes": 728019,
+  "sha256": "9ae41bcce4799a13215616170a08d63a9a9cba0a01843829ec388f3fe0f11399",
+  "format": "PNG",
+  "width": 1402,
+  "height": 1122,
+  "alpha": {
+    "channel": true,
+    "min": 0,
+    "max": 255,
+    "transparentPixels": 1220133,
+    "totalPixels": 1573044,
+    "transparentFraction": 0.7756509035983736,
+    "visibleThreshold": 16
+  },
+  "bounds": {
+    "x": 62,
+    "y": 353,
+    "width": 1294,
+    "height": 513
+  },
+  "pivot": {
+    "x": 709.0,
+    "y": 866
+  },
+  "decodedRgbaSha256": "eb627210ed144b7a8712b620d0f31a29ce5135b1956e6ef797438330a52038a5",
+  "sourceFacing": "left",
+  "canMirror": false,
+  "requestedState": "idle",
+  "animationFrames": 1,
+  "poseKind": "neutral-base",
+  "modularParts": false,
+  "combatIntegrated": false,
+  "canonicalFidelityCertified": false,
+  "reviewStatus": "visually-reviewed",
+  "fullBodyReviewed": true,
+  "completeBodyReferenceVerified": false,
+  "scope": "combatant-neutral-pose",
+  "openStates": [
+    "idle-cycle",
+    "walk",
+    "run",
+    "light",
+    "heavy",
+    "special",
+    "super",
+    "hurt",
+    "guard",
+    "knockdown",
+    "intro",
+    "victory",
+    "defeat",
+    "left-view"
+  ],
+  "limitations": [
+    "Generated interpretation, not an original game frame; geometric 1:1 remains unverified.",
+    "One neutral source-guided pose; no authored attack, opposite view or full animation cycle.",
+    "The original job lacked a complete-body declaration; the linked SHA-bound observation covers this visible source and generated pose only, without certifying other views or geometry."
+  ],
+  "provenance": {
+    "generator": "image_gen",
+    "prompt": "Create one independent transparent-background sprite for Leech, exact incarnation: Resident Evil 0 (2002). Use only the attached local references for appearance. Preserve the documented anatomy, proportions, clothing, equipment, damage, materials and silhouette of this incarnation. Do not mix other games or forms. A single neutral idle/presentation pose, no text, labels, frame, floor, shadow backdrop, montage or duplicate bodies. Use a right-facing three-quarter view only where supported by the references; never mirror asymmetric details. Preserve the visible source crop if the full body is undocumented rather than inventing missing limbs or equipment. Faithful survival-horror pre-rendered appearance, with a clean alpha edge; no new stylization, decoration or generic monster substitution. This is a generated project asset, not a claim of being an official or geometrically exact original-game frame. Preserve only the small brown-gold segmented leech's visible side view and tapered silhouette; no extra appendages or another mutation. Keep the source game's original visual style and make this nonsexual and non-graphic: no added sexual anatomy, nudity, excessive blood or exaggerated injury; do not amplify source violence.",
+    "references": [
+      {
+        "path": "assets/catalog/re0-leech.png",
+        "role": "portrait",
+        "bytes": 60684,
+        "sha256": "58a73ae86ea4c68b0490ac55246a7265db619b1bf70a6b5b652c85e5cdc243d0",
+        "bodyCoverage": "unknown",
+        "sourceUrl": "https://www.evilresource.com/resident-evil-zero/enemies/leech",
+        "exactIdentity": true
+      }
+    ],
+    "generationRecord": {
+      "id": "re0-leech",
+      "generator": "image_gen",
+      "prompt": "Create one independent transparent-background sprite for Leech, exact incarnation: Resident Evil 0 (2002). Use only the attached local references for appearance. Preserve the documented anatomy, proportions, clothing, equipment, damage, materials and silhouette of this incarnation. Do not mix other games or forms. A single neutral idle/presentation pose, no text, labels, frame, floor, shadow backdrop, montage or duplicate bodies. Use a right-facing three-quarter view only where supported by the references; never mirror asymmetric details. Preserve the visible source crop if the full body is undocumented rather than inventing missing limbs or equipment. Faithful survival-horror pre-rendered appearance, with a clean alpha edge; no new stylization, decoration or generic monster substitution. This is a generated project asset, not a claim of being an official or geometrically exact original-game frame. Preserve only the small brown-gold segmented leech's visible side view and tapered silhouette; no extra appendages or another mutation. Keep the source game's original visual style and make this nonsexual and non-graphic: no added sexual anatomy, nudity, excessive blood or exaggerated injury; do not amplify source violence.",
+      "referenced_image_paths": [
+        "/workspace/resident-evil-bow-protocol/assets/catalog/re0-leech.png"
+      ],
+      "tool_output": "/workspace/generated_images/exec-78329e58-3da5-4859-8d7f-67e5cc5acf8c.png",
+      "output_source": "image_gen tool local artifact",
+      "worker": "pipeline-gen",
+      "visual_review": "Primary source inspected. Generated reinterpretation has not been admitted as a reviewed complete combat body."
+    },
+    "sourceBytesTransformed": false
+  },
+  "sourceCompletenessEvidence": {
+    "path": "docs/R27_SPRITE_REVIEW_BATCHES/batch-005/re0-leech-source-body-observation.json",
+    "sha256": "ecd4a8d90569c856b18ed232fd8ee56f8456bc0f5fbe51827384db0a29a634de",
+    "referencePath": "assets/catalog/re0-leech.png",
+    "referenceSha256": "58a73ae86ea4c68b0490ac55246a7265db619b1bf70a6b5b652c85e5cdc243d0",
+    "imageSha256": "9ae41bcce4799a13215616170a08d63a9a9cba0a01843829ec388f3fe0f11399",
+    "observedFacing": "left",
+    "scope": "Whole body visually observed in this source image and this generated pose only; no opposite view, geometry or original-game pose certification."
+  },
+  "jobLimitations": [
+    "Generated interpretation, not an original game frame; geometric 1:1 remains unverified.",
+    "One neutral source-guided pose; no authored attack, opposite view or full animation cycle.",
+    "No complete body reference has been verified; do not certify unseen anatomy or cropped regions."
+  ],
+  "availableStates": [
+    "idle"
+  ]
+}

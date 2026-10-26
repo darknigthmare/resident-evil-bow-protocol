@@ -1,0 +1,162 @@
+{
+  "schema": "re.bow.generated-sprite-gallery-tests-r28/1",
+  "startedAt": "2026-10-26T09:14:22.809Z",
+  "completedAt": "2026-10-26T09:14:34.134Z",
+  "browser": "154.0.8037.57",
+  "passed": 8,
+  "failed": 0,
+  "generatedFilesInExecutedManifest": 363,
+  "pendingInExecutedManifest": 22,
+  "sourceFiles": [
+    {
+      "path": "modules/fidelity-r28/sprites/index.html",
+      "sha256": "c36e358c211a8870477a5f4b1dc487dba15863410f8c00d98a66d659739ab473"
+    },
+    {
+      "path": "modules/fidelity-r28/sprites/page.js",
+      "sha256": "0c23211bdf1e2196b779498a985287e76463fad4f4b54251f7419b3ebe560b79"
+    },
+    {
+      "path": "modules/fidelity-r28/sprites/style.css",
+      "sha256": "f41ed1fc68bbdf81be7388936a9813065186e632daa96db2abada44cd28bc3cd"
+    },
+    {
+      "path": "modules/fidelity-r28/sprites/manifest.json",
+      "sha256": "33666554018e56009884dc58e4c874f1caf4a8e42cd260c9a39c6d3f84d2a6f9"
+    }
+  ],
+  "checks": [
+    {
+      "name": "All385UIDremainpagedandfilterablewithonegeneratedimageatmost",
+      "pass": true,
+      "evidence": {
+        "catalogueUID": 385,
+        "textPageSize": 24,
+        "generated": 363,
+        "pending": 22,
+        "requests": 1,
+        "physicalDevice": false
+      }
+    },
+    {
+      "name": "DeepLinkselectsexactgeneratedUIDwithverifiedPNGalphaandnameddownload",
+      "pass": true,
+      "evidence": {
+        "id": "re0-bat",
+        "sha256": "5c2919204d4eadf9a83e87be02d5fc55519a3c773bdf220ee796d62bb46353a4",
+        "dimensions": {
+          "width": 1402,
+          "height": 1122
+        },
+        "alpha": {
+          "transparent": 1174103,
+          "visible": 380986
+        },
+        "states": [],
+        "canonicalFidelityCertified": false
+      }
+    },
+    {
+      "name": "FournewcompletebodyartifactsreplaceexactUIDswithoutclaimingidleorremovingappearancegaps",
+      "pass": true,
+      "evidence": {
+        "replacements": [
+          {
+            "id": "re1r-cerberus",
+            "sha256": "4fe539d9f739b47063078d30dd2d1b12da7948095ffa0f7a5db0bb636bae5fab",
+            "poseKind": "source-presentation",
+            "sourceFacing": "right"
+          },
+          {
+            "id": "re1r-lisa-trevor",
+            "sha256": "8254c4e8668355531cc647e0d327723d9d0383022d292c40b6474dfbca661a01",
+            "poseKind": "source-bind-pose",
+            "sourceFacing": "front"
+          },
+          {
+            "id": "rerev-scagdead",
+            "sha256": "b700bc39e54d2d3e6f0f2e5e45a95147b29a39bd2cdd09f5c32574eebe1ef86e",
+            "poseKind": "source-bind-pose",
+            "sourceFacing": "front"
+          },
+          {
+            "id": "rerev-wall-blister",
+            "sha256": "cf01c30b1be0531b5e92e589e6acd0ba3c81374e54b0e2f8313f34cbbd9b0c19",
+            "poseKind": "source-bind-pose",
+            "sourceFacing": "front"
+          }
+        ],
+        "newTargetIdentities": 0,
+        "idleCapabilitiesAdded": 0,
+        "appearanceGapsRemainVisible": true
+      }
+    },
+    {
+      "name": "Keyboardselectionkeepsitsresultfocuswithoutstealingfilterorlifecyclefocus",
+      "pass": true,
+      "evidence": {
+        "selectedUid": "re1-adder",
+        "keyboardSelectionFocusRetained": true,
+        "sequentialTabRetained": true,
+        "initialFocusNotStolen": true,
+        "filterFocusNotStolen": true,
+        "simulatedLifecycle": true
+      }
+    },
+    {
+      "name": "CorruptedPNGisrefusedbeforebeingdisplayedorofferedfordownload",
+      "pass": true,
+      "evidence": {
+        "corruptionRefused": true,
+        "blobUrls": 0,
+        "downloadHidden": true
+      }
+    },
+    {
+      "name": "ChangingtoapendingUIDcancelsadelayedgeneratedimagewithoutsubstitution",
+      "pass": true,
+      "evidence": {
+        "pending": "re3r-zombie",
+        "previousImageCannotLeak": true,
+        "placeholderPortraits": 0
+      }
+    },
+    {
+      "name": "Malformedregistryfailsclosedandmanualrefreshrecoverswithtextstayinginert",
+      "pass": true,
+      "evidence": {
+        "duplicateRegistryRefused": true,
+        "externalImageRefused": true,
+        "refreshRecovered": true,
+        "textInert": true
+      }
+    },
+    {
+      "name": "KeyboardmobiletextreflowandpagehidekeeponlyonespriteBlobalive",
+      "pass": true,
+      "evidence": {
+        "widths": [
+          {
+            "width": 1280,
+            "textPercent": 100,
+            "overflow": false
+          },
+          {
+            "width": 390,
+            "textPercent": 100,
+            "overflow": false
+          },
+          {
+            "width": 320,
+            "textPercent": 200,
+            "overflow": false
+          }
+        ],
+        "simulatedLifecycle": true,
+        "physicalDevices": false,
+        "maximumBlobUrls": 1
+      }
+    }
+  ],
+  "scope": "Actual generated PNG gallery and failure boundaries; no game-frame, complete-animation or physical-device certification."
+}

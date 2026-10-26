@@ -1,0 +1,56 @@
+{
+  "schema": "re.bow.sprite-visual-review-r27/1",
+  "uid": "re4-u-3",
+  "reviewed_at_utc": "2026-10-25T09:03:37.877106+00:00",
+  "batch": "batch-006",
+  "image": "modules/fidelity-r27/sprites/generated/re4-u-3/idle-right.png",
+  "image_sha256": "7c5a0891ad97ee8fb1f28aaeb9df3533c9f388b909837cd471210dfff658e918",
+  "active_record": "modules/fidelity-r27/sprites/records/re4-u-3.json",
+  "active_record_sha256": "fd7d6c027655acefe7e6d33cbc231cc7dc6bc6368e28cbed826b7b94ca68a736",
+  "used_references": [
+    {
+      "path": "assets/specimens/re4-u-3.webp",
+      "sha256": "93e70aef915497ca0684b42a0ce2b2573226abdf3b75558f3894094fa8a108a6",
+      "role": "full-body-reference",
+      "declared_body_coverage": "complete"
+    }
+  ],
+  "scope": "combatant-neutral-pose",
+  "source_complete_body_observed": false,
+  "generated_complete_body_observed": false,
+  "full_body_reviewed": false,
+  "observed_facing": "front",
+  "direction_eligible_for_neutral_pose": false,
+  "review_outcome": "corrected-upper-anatomy-boundary-extent-unconfirmed",
+  "notes": "V2 restores the entire raised upper head and both long scythe appendages omitted by V1 while retaining the lower head/tongue and connected limbs. Only the primary compound-creature source was used. Pose is frontal/oblique; the leftmost support-foot tip touches the source/output canvas edge, so complete body extent is not confirmed and no side/body admission follows.",
+  "manual_png_edits": false,
+  "canonical_fidelity_certified": false,
+  "opposite_view_reviewed": false,
+  "combat_animation_set_reviewed": false,
+  "manifest_rebuild_deferred": true,
+  "superseded_review": {
+    "image": "modules/fidelity-r27/sprites/superseded/re4-u-3/bd93f530ba51683cd7686db6648b075f0f70587ba54434a2187510bfb1f1870a/idle-right.png",
+    "image_sha256": "bd93f530ba51683cd7686db6648b075f0f70587ba54434a2187510bfb1f1870a",
+    "record": "modules/fidelity-r27/sprites/superseded/re4-u-3/bd93f530ba51683cd7686db6648b075f0f70587ba54434a2187510bfb1f1870a/sprite-record.json",
+    "record_sha256": "e8f80c475ac77b5370a4a1f6def00b17fb705ca9573d5ea35e9143bf915e4e69",
+    "outcome": "missing-upper-head-and-scythes-corrected",
+    "reason": "V1 omitted the upper head and paired long scythe appendages, replacing the raised neck with a blunt stump. A fresh image_gen V2 from only the primary reference restores those connected parts. Original V1 PNG and record are byte-preserved."
+  },
+  "body_extent_uncertainty": "The leftmost support-foot tip lies at the source and generated frame boundary; whole extent is not certified merely because all major compound structures are visible.",
+  "pose_contract_review": {
+    "checked_at_utc": "2026-10-25T09:47:13.884764+00:00",
+    "prior_report_record_sha256": "a7e37f80b2ef2447ddb388a7e5b7d424b1a24196fef86e8f017e82110e1cbae2",
+    "prior_direction_eligibility": false,
+    "pose_observation": null,
+    "changed_record_fields_verified": [
+      "poseKind",
+      "requestedState",
+      "availableStates"
+    ],
+    "source_png_and_generation_provenance_unchanged": true,
+    "scope": "Pose kind is separate from visible complete body and actual facing. Only explicitly reviewed neutral-base whole combatants with a left/right view expose one static idle image. No original-game timing, geometric fidelity or full animation certification.",
+    "last_verified_at_utc": "2026-10-25T09:48:01.877874+00:00"
+  },
+  "observed_pose_kind": "unknown",
+  "available_states": []
+}

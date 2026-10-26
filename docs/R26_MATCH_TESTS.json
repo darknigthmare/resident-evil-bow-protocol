@@ -1,0 +1,111 @@
+{
+  "schema": "re.bow.full-match-tests-r26/1",
+  "passed": 9,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "115 distinct cross-pairs cover every main identity on both sides with seven reciprocal samples",
+      "pass": true,
+      "evidence": {
+        "rotationalPairs": 115,
+        "reciprocalPairs": 7,
+        "totalOrderedPairs": 122,
+        "allPossiblePairs": 13225
+      }
+    },
+    {
+      "name": "Recorded full-life outcomes and replay hashes match the exact scenario scope",
+      "pass": true,
+      "evidence": {
+        "mainIdentities": 115,
+        "scenariosAttempted": 133,
+        "rotationalCrossPairs": 115,
+        "reciprocalSamples": 7,
+        "tiedRoundScenarios": 5,
+        "cpuOpponentScenarios": 6,
+        "uniqueOrderedPairs": 122,
+        "verifiedCompleteMatches": 131,
+        "refused": 2,
+        "expectedBoundedDraws": 2,
+        "unexpectedRefusals": 0,
+        "verifiedReplayReconstructions": 262,
+        "withObservedDamage": 131,
+        "koEndings": 128,
+        "timerEndings": 3,
+        "tiedRounds": 3,
+        "roundEndEvents": 137,
+        "roundResetEvents": 6,
+        "matchEndEvents": 131,
+        "certifiedArtisticFinishers": 0,
+        "certifiedCompleteMovesets": 0
+      }
+    },
+    {
+      "name": "All three first-round ties award no win and reset normally before a completed two-win match",
+      "pass": true,
+      "evidence": {
+        "scenarios": [
+          "tie-reset-001",
+          "tie-reset-058",
+          "tie-reset-078"
+        ],
+        "tiedRounds": 3
+      }
+    },
+    {
+      "name": "The two retained short-timer draws stay incomplete and bounded without fabricated winners",
+      "pass": true,
+      "evidence": {
+        "scenarios": [
+          "tie-reset-115",
+          "tie-reset-005"
+        ],
+        "boundedFramesEach": 24000,
+        "tiedRoundsEach": 50,
+        "resetsEach": 49,
+        "fullReplaysVerified": 0
+      }
+    },
+    {
+      "name": "Every reviewed engine, replay fixture and roster retains its exact recorded bytes",
+      "pass": true
+    },
+    {
+      "name": "Falsified pair coverage, tie winner, life override, replay bytes and KO statistics are rejected",
+      "pass": true
+    },
+    {
+      "name": "KO, reciprocal, tied-reset and seeded CPU captures each reconstruct twice again in the original engine",
+      "pass": true,
+      "evidence": {
+        "scenarios": [
+          "cross-001",
+          "reverse-001",
+          "tie-reset-001",
+          "cpu-001"
+        ],
+        "additionalReplayReconstructions": 8
+      }
+    },
+    {
+      "name": "Incomplete excerpts claim no winner while tampered results, contracts and durations fail original-engine replay validation",
+      "pass": true,
+      "evidence": {
+        "incompleteExcerpt": "tie-reset-115",
+        "excerptFrames": 24000,
+        "excerptReconstructions": 2,
+        "resultClaimed": false,
+        "tamperedRecordsRejected": 3
+      }
+    },
+    {
+      "name": "Normal-life tied-round recovery reproduces the full adaptive keyboard stream without state injection",
+      "pass": true,
+      "evidence": {
+        "scenario": "tie-reset-001",
+        "commandDigest": "9486daaab1448b6548caa504d5fb5d61fd2e650273645ee1ece8668d5547d974",
+        "noDirectStateMutation": true
+      }
+    }
+  ]
+}

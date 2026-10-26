@@ -1,0 +1,168 @@
+name: R27 generated sprites, source scope and restored replays
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main, 'codex/**']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: source-fidelity-r27-${{ github.ref }}
+  cancel-in-progress: true
+defaults:
+  run:
+    shell: bash
+jobs:
+  provenance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: '3.12'
+      - name: Install pinned Python evidence tools
+        timeout-minutes: 5
+        run: |
+          python3 -m venv "$RUNNER_TEMP/fidelity-r27-venv"
+          "$RUNNER_TEMP/fidelity-r27-venv/bin/python" -m pip install --timeout 60 --retries 2 Pillow==12.3.0 openpyxl==3.1.5 lxml==6.1.1
+      - name: Install the canvas tool required by original replay fixtures
+        timeout-minutes: 5
+        run: npm install --no-audit --no-fund --no-save --package-lock=false --fetch-timeout=60000 --fetch-retries=2 @napi-rs/canvas@0.1.80
+      - name: Reproduce frozen source catalogue and workbook before evidence reports are regenerated
+        run: |
+          mkdir -p qa-fidelity-r27-ci
+          "$RUNNER_TEMP/fidelity-r27-venv/bin/python" scripts/run-published-release-r29.py --commit 0317da5f79e40af1b6b0e82b1ef9f311900ee76a --evidence qa-fidelity-r27-ci/published-release --plan scripts/ci-r29/plans/r27-publication.json
+      - name: Validate bounded imports, published provenance and export guards
+        run: '"$RUNNER_TEMP/fidelity-r27-venv/bin/python" -m unittest discover -s tests -p "test_*r27.py" -v'
+      - name: Validate CI diagnostic boundaries
+        run: node tests/verify-ci-report-r25.mjs
+      - name: Validate exact reviewed idle capabilities without promoting partial or contextual bodies
+        run: node tests/verify-combat-sprites-r27.mjs
+      - name: Validate all new source skeletons and positive-time deformation
+        run: node tests/verify-motion-skeletons-r27.mjs > qa-fidelity-r27-ci/motion-skeletons.json
+      - name: Reconstruct archive selections with the original engines
+        run: node tests/verify-persistence-r27.mjs
+      - name: Verify changed real input, prototype conclusions and scoped combat replays
+        run: |
+          python3 scripts/run-published-release-r29.py --commit 0317da5f79e40af1b6b0e82b1ef9f311900ee76a --evidence qa-fidelity-r27-ci/published-matches -- node tests/verify-full-matches-r27.mjs
+      - name: Preserve executed provenance and integration evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: fidelity-r27-provenance-${{ github.run_id }}
+          path: |
+            qa-fidelity-r27-ci/
+            docs/R27_*TEST*.json
+            docs/R27_MATCHES.json
+          if-no-files-found: warn
+          retention-days: 14
+  browser:
+    needs: provenance
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        include:
+          - suite: sprites
+            script: tests/browser-generated-sprites-r27.mjs
+            evidence: qa-generated-sprites-r27
+            report: docs/R27_SPRITES_BROWSER.json
+          - suite: combat
+            script: tests/browser-combat-sprites-r27.mjs
+            evidence: qa-combat-sprites-r27
+            report: docs/R27_COMBAT_BROWSER.json
+          - suite: sources
+            script: tests/browser-source-appearance-r27.mjs
+            evidence: qa-source-appearance-r27
+            report: docs/R27_SOURCES_BROWSER.json
+          - suite: motion
+            script: tests/browser-motion-r27.mjs
+            evidence: qa-motion-r27-browser
+            report: docs/R27_MOTION_BROWSER.json
+          - suite: audio
+            script: tests/browser-audio-r27.mjs
+            evidence: qa-audio-r27-browser
+            report: docs/R27_AUDIO_BROWSER.json
+          - suite: canonical
+            script: tests/browser-canonical-r27.mjs
+            evidence: qa-canonical-r27
+            report: docs/R27_CANONICAL_BROWSER.json
+          - suite: persistence
+            script: tests/browser-persistence-r27.mjs
+            evidence: qa-persistence-r27-browser
+            report: docs/R27_PERSISTENCE_BROWSER_TESTS.json
+          - suite: dashboard
+            script: tests/browser-fidelity-dashboard-r27.mjs
+            evidence: qa-fidelity-r27-dashboard
+            report: docs/R27_DASHBOARD_BROWSER.json
+          - suite: access
+            script: tests/browser-access-r27.mjs
+            evidence: qa-access-r27
+            report: docs/R27_ACCESS_BROWSER.json
+    env:
+      AXE_CORE_PATH: ${{ github.workspace }}/node_modules/axe-core/axe.min.js
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+          ref: 0317da5f79e40af1b6b0e82b1ef9f311900ee76a
+          fetch-depth: 0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - name: Install pinned browser validation tools
+        timeout-minutes: 10
+        run: npm install --no-audit --no-fund --no-save --package-lock=false --fetch-timeout=60000 --fetch-retries=2 playwright@1.64.1 @napi-rs/canvas@0.1.80 axe-core@4.14.0
+      - name: Locate Chromium
+        run: |
+          if command -v google-chrome >/dev/null; then
+            echo "CHROME_BIN=$(command -v google-chrome)" >> "$GITHUB_ENV"
+          else
+            npx playwright install --with-deps chromium
+            node --input-type=module -e "import {chromium} from 'playwright'; console.log('CHROME_BIN=' + chromium.executablePath())" >> "$GITHUB_ENV"
+          fi
+      - name: Prepare fresh evidence for the selected suite
+        run: |
+          mkdir -p '${{ matrix.evidence }}'
+          rm -f '${{ matrix.report }}'
+      - name: Exercise the complete selected source flow
+        run: node '${{ matrix.script }}'
+      - name: Publish completed failures as GitHub annotations
+        if: always()
+        run: |
+          if [[ -f '${{ matrix.report }}' ]]; then
+            cp '${{ matrix.report }}' '${{ matrix.evidence }}/executed-report.json'
+          fi
+          node tests/ci-report-r25.mjs '${{ matrix.evidence }}'
+      - name: Preserve executed browser evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: fidelity-r27-${{ matrix.suite }}-${{ github.run_id }}
+          path: ${{ matrix.evidence }}/
+          if-no-files-found: warn
+          retention-days: 14
+  build:
+    needs: provenance
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+          ref: 0317da5f79e40af1b6b0e82b1ef9f311900ee76a
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - name: Build the complete static delivery
+        run: npm run build

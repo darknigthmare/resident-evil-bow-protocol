@@ -8,8 +8,10 @@ import {chromium} from 'playwright';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const codex = fs.readFileSync(path.join(root, 'codex.html'), 'utf8');
-const expectedWorkbench = codex.includes('<script src="modules/fidelity-r25/dossier-link.js"></script>')
-  ? '/modules/fidelity-r25/index.html' : '/modules/fidelity-r25/index.html';
+// The header always points to the latest installed adapter; historical dashboards stay independently checked.
+const installedAdapters = [...codex.matchAll(/<script src="modules\/fidelity-r(\d+)\/dossier-link\.js"><\/script>/g)].map(match => Number(match[1]));
+const currentRelease = Math.max(24, ...installedAdapters);
+const expectedWorkbench = '/modules/fidelity-r' + currentRelease + '/index.html';
 const output = path.join(root, 'qa-fidelity-r25-dashboard');
 fs.mkdirSync(output, {recursive: true});
 const expected = JSON.parse(fs.readFileSync(path.join(root, 'docs/R20_TRACKING.json'))).tasks.filter(item => item.status !== 'VALIDÉ').map(item => item.id).sort();

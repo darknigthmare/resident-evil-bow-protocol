@@ -1,0 +1,127 @@
+{
+  "schema": "re.bow.combat-sprite-contract-r28/1",
+  "passed": 12,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Actual generated Cerberus and four frozen R20 identities retain immutable metadata",
+      "pass": true,
+      "evidence": {
+        "actualGeneratedIdentity": "re1-cerberus",
+        "actualHistoricalIdentities": 4,
+        "metadataFrozen": true,
+        "actualProducedMetadataNormalized": 363,
+        "pendingSpritesNotSynthesized": 22
+      }
+    },
+    {
+      "name": "Actual PNG is SHA and dimension verified before an exact idle draw, without reflection",
+      "pass": true,
+      "evidence": {
+        "bytes": 1164620,
+        "sha256": "8ead8fcbbbc032b14f268010f56847aaf4ece7d764255223fd4c9a8a2b9ee2f1",
+        "oneFrame": true,
+        "noMirror": true
+      }
+    },
+    {
+      "name": "Attack, opposite side and incomplete-body metadata refuse draws without image requests",
+      "pass": true,
+      "evidence": {
+        "unknownStatesSynthesized": 0,
+        "leftViewFabricated": false,
+        "partialBodyNotPromoted": true
+      }
+    },
+    {
+      "name": "Visual review remains an independent gate and front references never become right views",
+      "pass": true,
+      "evidence": {
+        "reviewStatusSeparate": true,
+        "sourceFacingPreserved": "front",
+        "contextualIllustrationNotAnActor": true,
+        "wholeBodyRightBindPoseNotIdle": true,
+        "reviewedBindPoseStillLoadableForPresentation": true
+      }
+    },
+    {
+      "name": "Hostile or duplicate manifest data fails closed while frozen R20 remains available",
+      "pass": true,
+      "evidence": {
+        "invalidManifestsRejected": 7,
+        "manifestBoundBytes": 4194304,
+        "overlargeHeaderRefused": true,
+        "oversizedStreamWithLyingHeaderRefused": true,
+        "historicalFallbackRetained": true
+      }
+    },
+    {
+      "name": "Corruption and unexpected decoded dimensions never become drawable and release Blobs",
+      "pass": true,
+      "evidence": {
+        "corruptedBytesRefused": true,
+        "decodedSizeRefused": true,
+        "retainedBlobs": 0
+      }
+    },
+    {
+      "name": "Concurrent requests share one decode and the actual five PNGs respect a four-image cache",
+      "pass": true,
+      "evidence": {
+        "sharedConcurrentDecode": true,
+        "actualImagesDecoded": 5,
+        "maximumDecodedImages": 4
+      }
+    },
+    {
+      "name": "Page departure cancels pending images and opaque replay sandboxes perform no sprite work",
+      "pass": true,
+      "evidence": {
+        "pendingLoadAborted": true,
+        "cacheReleased": true,
+        "opaqueOriginNetworkRequests": 0
+      }
+    },
+    {
+      "name": "Actual renderer globals wrap reversibly and every non-idle actor delegates without state writes",
+      "pass": true,
+      "evidence": {
+        "declaredIdleIntegrated": true,
+        "unsupportedPosesDelegated": 11,
+        "actorUnchanged": true,
+        "rendererRestored": true
+      }
+    },
+    {
+      "name": "Fouractual source-complete replacements decode but their bind/presentation poses never become idle",
+      "pass": true,
+      "evidence": {
+        "actualReplacementPNGsDecoded": 4,
+        "poseGatePreserved": true,
+        "oppositeSidesSynthesized": 0,
+        "newTargetIdentities": 0
+      }
+    },
+    {
+      "name": "Initial pageshow and simultaneous retry share a single registry transaction",
+      "pass": true,
+      "evidence": {
+        "initialPageshowRaces": 4,
+        "singleManifestRequest": true,
+        "duplicateUIDErrors": 0
+      }
+    },
+    {
+      "name": "All171SHA-bound R28 reviews expose only10new static neutral sides and preserve22refusals",
+      "pass": true,
+      "evidence": {
+        "reviewed171": true,
+        "newNeutralSidePoses": 10,
+        "refusals": 22,
+        "completeButUnsupportedLowerBodiesNotAdmitted": 4,
+        "oppositeSideMirrored": false
+      }
+    }
+  ],
+  "scope": "Actual generated Cerberus PNG and four actual R20 files; immutable registry and strict idle/facing/full-body gates. No original-game animation or global fidelity certification."
+}

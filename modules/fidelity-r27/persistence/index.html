@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="fr">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Relire les replays restaurés · B.O.W.</title><link rel="stylesheet" href="style.css"></head>
+<body><a class="skip" href="#main">Aller aux replays de l’atelier</a>
+<main id="main" tabindex="-1">
+  <nav aria-label="Navigation"><a href="../index.html">Suivi R27</a> · <a href="../../fidelity-r26/persistence/index.html">Préparer une restauration isolée</a> · <a href="../../fidelity-r25/persistence/index.html">Ouvrir un fichier de replay</a></nav>
+  <h1>Relire les replays restaurés</h1>
+  <p>Retrouvez les replays présents dans la base isolée de l’atelier R26, sans exporter puis réimporter sa sauvegarde. Choisissez les combats à reconstruire : <strong>aucune relecture ne démarre automatiquement et le stockage du jeu reste intact.</strong></p>
+  <button id="load" disabled>Lire la révision de l’atelier isolé</button>
+  <p id="status" role="status" aria-live="polite">Préparation du lecteur local…</p>
+  <section id="source" hidden aria-labelledby="source-title"><h2 id="source-title">Révision capturée</h2><p id="source-description"></p><details><summary>Consulter l’empreinte de l’archive</summary><p id="source-digest"></p></details><button id="archive" disabled>Extraire l’archive exacte</button></section>
+  <section id="selection" hidden aria-labelledby="selection-title">
+    <h2 id="selection-title">Replays de cette révision</h2><p id="inventory" role="status"></p>
+    <p>Choisissez jusqu’à 30 replays. Les contrats inconnus, entrées endommagées et identifiants répétés restent visibles, sans être exécutés.</p>
+    <div class="actions"><button id="select" disabled>Sélectionner jusqu’à 30 replays</button><button id="clear" disabled>Tout désélectionner</button><button id="verify" disabled>Vérifier la sélection (0)</button><button id="cancel" disabled>Annuler la relecture</button></div>
+    <fieldset id="records" disabled><legend>Replays à reconstruire deux fois</legend><div id="rows"></div></fieldset>
+    <nav id="pages" class="actions" aria-label="Pages des replays" hidden><button id="previous" disabled>Entrées précédentes</button><p id="page-status" role="status"></p><button id="next" disabled>Entrées suivantes</button></nav>
+  </section>
+  <progress id="progress" hidden max="100" value="0" aria-label="Avancement de la relecture"></progress>
+  <section id="results" hidden aria-labelledby="results-title"><h2 id="results-title">Résultat de la capture</h2><p id="verdict"></p><div id="outcomes"></div><button id="download">Télécharger le rapport lié à la révision</button><details><summary>Détail des vérifications</summary><pre id="report"></pre></details></section>
+  <section aria-labelledby="scope-title"><h2 id="scope-title">Portée</h2><p>La lecture utilise un instantané cohérent de la base IndexedDB R26. Sa révision et ses valeurs brutes sont contrôlées avant et après le lot. Si un autre onglet restaure, revient en arrière ou efface cette base, le verdict n’est plus attribué à l’état courant : rechargez la révision.</p><p>Les replays principaux actuels et ceux du moteur historique avant R13 sont envoyés à leur moteur exact, dans un espace isolé détruit après usage. Le format R19 ne contient pas de replay expérimental R7 individuel ; celui-ci reste disponible dans <a href="../../fidelity-r25/persistence/index.html">le lecteur de fichiers et ses trois moteurs</a>.</p><p>Les extractions gardent les octets UTF-8 de l’archive imbriquée et des tranches de replay. L’enveloppe R19 d’origine n’est pas conservée par la base ; elle n’est pas revendiquée comme fichier original. Cette page n’écrit ni la base isolée ni le stockage du jeu, ne restaure pas le cloud et ne certifie aucun contenu artistique.</p></section>
+</main>
+<script src="../../../src/save-center-r19.js"></script><script src="../../../src/replay-vault-r13.js"></script><script src="../../../src/catalog-replay-contract.js"></script><script type="module" src="page.js"></script>
+</body></html>

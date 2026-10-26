@@ -1,0 +1,179 @@
+name: R26 cumulative sources, archives and reader access
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main, 'codex/**']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: source-fidelity-r26-${{ github.ref }}
+  cancel-in-progress: true
+defaults:
+  run:
+    shell: bash
+jobs:
+  provenance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - name: Install pinned Python evidence tools
+        timeout-minutes: 5
+        run: |
+          python3 -m venv "$RUNNER_TEMP/fidelity-r26-venv"
+          "$RUNNER_TEMP/fidelity-r26-venv/bin/python" -m pip install --timeout 60 --retries 2 Pillow==12.3.0 openpyxl==3.1.5
+      - name: Install the canvas tool required by original replay fixtures
+        timeout-minutes: 5
+        run: npm install --no-audit --no-fund --no-save --package-lock=false --fetch-timeout=60000 --fetch-retries=2 @napi-rs/canvas@0.1.80
+      - name: Reproduce frozen source catalogue and workbook before evidence reports are regenerated
+        run: |
+          mkdir -p qa-fidelity-r26-ci
+          "$RUNNER_TEMP/fidelity-r26-venv/bin/python" scripts/build-model-catalog-r26.py --check > qa-fidelity-r26-ci/catalogue-check.json
+          "$RUNNER_TEMP/fidelity-r26-venv/bin/python" scripts/build-dossier-source-index-r26.py --check > qa-fidelity-r26-ci/dossier-index-check.json
+          "$RUNNER_TEMP/fidelity-r26-venv/bin/python" scripts/build-canonical-evidence-r26.py --check > qa-fidelity-r26-ci/canonical-check.json
+          "$RUNNER_TEMP/fidelity-r26-venv/bin/python" scripts/export-fidelity-progress-r26.py --tracking docs/R26_TRACKING.json --baseline docs/BOW_FIDELITE_R25.xlsx --output qa-fidelity-r26-ci/BOW_FIDELITE_R26.xlsx --progress qa-fidelity-r26-ci/R26_PROGRESS.json
+          cmp qa-fidelity-r26-ci/R26_PROGRESS.json modules/fidelity-r26/progress.json
+          "$RUNNER_TEMP/fidelity-r26-venv/bin/python" - <<'PY'
+          import importlib.util
+          import json
+          from pathlib import Path
+          from openpyxl import load_workbook
+
+          root = Path.cwd()
+          spec = importlib.util.spec_from_file_location('export_r26', root / 'scripts/export-fidelity-progress-r26.py')
+          exporter = importlib.util.module_from_spec(spec)
+          spec.loader.exec_module(exporter)
+          expected = load_workbook(root / 'docs/BOW_FIDELITE_R26.xlsx')
+          actual = load_workbook(root / 'qa-fidelity-r26-ci/BOW_FIDELITE_R26.xlsx')
+          try:
+              assert actual.sheetnames == expected.sheetnames
+              for name in expected.sheetnames:
+                  assert exporter.worksheet_state(actual[name]) == exporter.worksheet_state(expected[name]), name
+              result = {'reproduced_sheets': len(expected.sheetnames), 'progress_bytes_equal': True,
+                        'scope': 'Values, formulas, styles, links, comments, merged cells and frozen panes; ZIP timestamps excluded.'}
+              (root / 'qa-fidelity-r26-ci/workbook-check.json').write_text(json.dumps(result, indent=2) + '\n')
+          finally:
+              actual.close()
+              expected.close()
+          PY
+          "$RUNNER_TEMP/fidelity-r26-venv/bin/python" scripts/build-validation-summary-r26.py --check
+          "$RUNNER_TEMP/fidelity-r26-venv/bin/python" scripts/build-fidelity-tracking-r26.py --check
+          "$RUNNER_TEMP/fidelity-r26-venv/bin/python" scripts/build-persistence-manifest-r26.py --check
+          # R26's strict publication ledger names its own historical HTML delta.
+          # Reproduce it at the published revision; R27's auditor protects the current delta.
+          R26_REVIEWED_TREE="$RUNNER_TEMP/fidelity-r26-published"
+          git worktree add --quiet --detach "$R26_REVIEWED_TREE" 826f7ed1811c48adc0609f97699eb32f629fc78a
+          trap 'git worktree remove --force "$R26_REVIEWED_TREE"' EXIT
+          "$RUNNER_TEMP/fidelity-r26-venv/bin/python" "$R26_REVIEWED_TREE/scripts/audit-delivery-r26.py" --check > qa-fidelity-r26-ci/published-delivery-check.json
+          node tests/verify-r26-integration.mjs
+      - name: Validate bounded imports, published provenance and export guards
+        run: '"$RUNNER_TEMP/fidelity-r26-venv/bin/python" -m unittest discover -s tests -p "test_*r26.py" -v'
+      - name: Validate CI diagnostic boundaries
+        run: node tests/verify-ci-report-r25.mjs
+      - name: Validate bounded source archive streaming and integrity
+        run: node tests/verify-model-reader-r26.mjs
+      - name: Decode every new published model and native texture reference
+        run: node tests/verify-visual-models-r26.mjs
+      - name: Validate all new source skeletons and positive-time deformation
+        run: node tests/verify-motion-skeletons-r26.mjs > qa-fidelity-r26-ci/motion-skeletons.json
+      - name: Reconstruct archive selections with the original engines
+        run: node tests/verify-persistence-r26.mjs
+      - name: Verify all recorded normal-life match outcomes and targeted original-engine replay regressions
+        run: |
+          python3 scripts/run-published-release-r29.py --commit 826f7ed1811c48adc0609f97699eb32f629fc78a --evidence qa-fidelity-r26-ci/published-matches -- node tests/verify-full-matches-r26.mjs
+      - name: Preserve executed provenance and integration evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: fidelity-r26-provenance-${{ github.run_id }}
+          path: |
+            qa-fidelity-r26-ci/
+            docs/R26_*TEST*.json
+            docs/R26_MATCHES.json
+          if-no-files-found: warn
+          retention-days: 14
+  browser:
+    needs: provenance
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        include:
+          - suite: models
+            script: tests/browser-models-r26.mjs
+            evidence: qa-models-r26-browser
+          - suite: audio
+            script: tests/browser-audio-r26.mjs
+            evidence: qa-audio-r26-browser
+          - suite: canonical
+            script: tests/browser-canonical-r26.mjs
+            evidence: qa-canonical-r26
+          - suite: persistence
+            script: tests/browser-persistence-r26.mjs
+            evidence: qa-persistence-r26-browser
+          - suite: dashboard
+            script: tests/browser-fidelity-dashboard-r26.mjs
+            evidence: qa-fidelity-r26-dashboard
+          - suite: sprites
+            script: tests/browser-sprites-r26.mjs
+            evidence: qa-sprites-r26-browser
+          - suite: access
+            script: tests/browser-access-r26.mjs
+            evidence: qa-access-r26
+    env:
+      AXE_CORE_PATH: ${{ github.workspace }}/node_modules/axe-core/axe.min.js
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - name: Install pinned browser validation tools
+        timeout-minutes: 10
+        run: npm install --no-audit --no-fund --no-save --package-lock=false --fetch-timeout=60000 --fetch-retries=2 playwright@1.64.1 @napi-rs/canvas@0.1.80 axe-core@4.14.0
+      - name: Locate Chromium
+        run: |
+          if command -v google-chrome >/dev/null; then
+            echo "CHROME_BIN=$(command -v google-chrome)" >> "$GITHUB_ENV"
+          else
+            npx playwright install --with-deps chromium
+            node --input-type=module -e "import {chromium} from 'playwright'; console.log('CHROME_BIN=' + chromium.executablePath())" >> "$GITHUB_ENV"
+          fi
+      - name: Exercise the complete selected source flow
+        run: node '${{ matrix.script }}'
+      - name: Publish completed failures as GitHub annotations
+        if: always()
+        run: node tests/ci-report-r25.mjs '${{ matrix.evidence }}'
+      - name: Preserve executed browser evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: fidelity-r26-${{ matrix.suite }}-${{ github.run_id }}
+          path: ${{ matrix.evidence }}/
+          if-no-files-found: warn
+          retention-days: 14
+  build:
+    needs: provenance
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - name: Build the complete static delivery
+        run: npm run build
