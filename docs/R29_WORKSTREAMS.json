@@ -1,0 +1,356 @@
+{
+  "release": "R29",
+  "summary": "5 versions corporelles R29, 106 poses requalifiées et 384 images natives documentées ; 17 chantiers ouverts.",
+  "tasks": [
+    {
+      "id": "R20-09",
+      "title": "Rig par membre et animations",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "24 scènes sources donnent 384 images de clés natives et 24 vues de pose. Les gestes restent non attribués et aucun cycle de combat n’est admis."
+      ],
+      "remaining": [
+        "Rigs et cycles complets des 389 incarnations, attribution vérifiée de chaque action et intégration finale au combat."
+      ],
+      "evidence": [
+        {
+          "href": "motion/index.html",
+          "label": "Images des clés natives"
+        }
+      ],
+      "r29_new_implementation": true
+    },
+    {
+      "id": "R20-10",
+      "title": "Étendre les sprites au catalogue",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "5 versions corporelles sont remplacées en R29 ; 106 poses existantes sont requalifiées. Les 363 identités actives et 22 refus restent distincts.",
+        "Le cumul compte 112 corps anatomiques revus et 32 attentes statiques admissibles.",
+        "4 variantes documentaires d’une autre édition restent séparées des PNG actifs et des corps cibles à compléter.",
+        "1 refus de révision sont conservés séparément des 22 cibles historiquement refusées ; ils ne produisent aucun nouveau PNG."
+      ],
+      "remaining": [
+        "211 corps de combattants et 40 contextes restent conjointement non qualifiés ; les 22 refus sont conservés.",
+        "Équipements, autres phases, deux orientations et cycles complets de combat encore non vérifiés."
+      ],
+      "evidence": [
+        {
+          "href": "sprites/index.html",
+          "label": "Poses et versions R29"
+        }
+      ],
+      "r29_new_implementation": true
+    },
+    {
+      "id": "G-PERIMETRE",
+      "title": "Périmètre et alias",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Acquis R28 conservés dans leur recette d’origine."
+      ],
+      "remaining": [
+        "Revue exhaustive des alias, modes, DLC et extensions ; corriger chaque ambiguïté de support ou de forme avec une preuve."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r28/evolutions/graph.json",
+          "label": "Familles, formes et éditions · R28"
+        },
+        {
+          "href": "../fidelity-r28/canonical/index.html",
+          "label": "Couverture documentaire cumulative · R28"
+        }
+      ],
+      "r29_new_implementation": false
+    },
+    {
+      "id": "G-PREUVES",
+      "title": "Preuves et revue canonique",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Les Dossiers exposent les seules vues locales du sujet : 6 modèles attribués. Les empreintes, éditions, variantes et équipements restent lisibles séparément.",
+        "Les sources candidates de mauvaise phase ou édition gardent leur statut hors production."
+      ],
+      "remaining": [
+        "Captures originales et séquences horodatées de chaque geste, phase et transformation ; comparaison indépendante aux paquets et banques bruts."
+      ],
+      "evidence": [
+        {
+          "href": "dossier-additions.json",
+          "label": "Références par UID"
+        },
+        {
+          "href": "research/appearance-source-screening.json",
+          "label": "Sources hors production : phase et édition"
+        }
+      ],
+      "r29_new_implementation": true
+    },
+    {
+      "id": "G-COMMANDES",
+      "title": "Répertoire complet des commandes",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Les commandes et évolutions R28 restent dans leur contrat conservé. Les clips BA/DM et autres codes sources ne sont pas promus en gestes officiels à partir de leur nom."
+      ],
+      "remaining": [
+        "Répertoire officiel complet, action identifiée par séquence et correspondance aux commandes ; dépasser dix slots lorsque le répertoire le demande."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r28/evolutions/graph.json",
+          "label": "Évolutions conservées"
+        }
+      ],
+      "r29_new_implementation": true
+    },
+    {
+      "id": "G-MANCHES",
+      "title": "Fin de manche et résultat",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Acquis R28 conservés dans leur recette d’origine."
+      ],
+      "remaining": [
+        "Victoire, défaite, égalité et leurs séquences, dessins et sons officiels par incarnation ; recette KO et conclusions artistiques séparée."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r28/../../docs/R28_EVOLUTIONS_ENGINE_TESTS.json",
+          "label": "Match et KO naturels avec évolution · R28"
+        }
+      ],
+      "r29_new_implementation": false
+    },
+    {
+      "id": "G-CINEMATIQUES",
+      "title": "Intros et outros",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Acquis R28 conservés dans leur recette d’origine."
+      ],
+      "remaining": [
+        "Intros, outros et bande sonore complète par sujet ; attribution de l’action, de la phase et des raccords du jeu d’origine."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r28/../../docs/R28_EVOLUTIONS_UI.md",
+          "label": "Portée de la présentation · R28"
+        }
+      ],
+      "r29_new_implementation": false
+    },
+    {
+      "id": "G-REPLAYS",
+      "title": "Compatibilité des replays",
+      "category": "functions",
+      "status": "EN COURS",
+      "advances": [
+        "Acquis R28 conservés dans leur recette d’origine."
+      ],
+      "remaining": [
+        "Autres révisions et contrats historiques, campagnes et conclusions artistiques ; ne pas lire un ancien contrat sous un moteur courant."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r28/../../docs/R28_EVOLUTIONS_ENGINE_TESTS.json",
+          "label": "Replays reconstruits · R28"
+        },
+        {
+          "href": "../fidelity-r28/../../docs/R28_EVOLUTIONS_BROWSER.json",
+          "label": "Avant et après la mutation · R28"
+        }
+      ],
+      "r29_new_implementation": false
+    },
+    {
+      "id": "G-SAUVES",
+      "title": "Sauvegardes et restauration",
+      "category": "functions",
+      "status": "EN COURS",
+      "advances": [
+        "Acquis R28 conservés dans leur recette d’origine."
+      ],
+      "remaining": [
+        "Restauration du stockage réel du jeu, cloud et reprises après interruption hors de la base isolée ; l’outil R26 ne certifie pas ces usages."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r28/../../docs/R28_EVOLUTIONS_UI.md",
+          "label": "Fichiers R28 hors progression · R28"
+        }
+      ],
+      "r29_new_implementation": false
+    },
+    {
+      "id": "G-VICTIMES",
+      "title": "Compatibilité des conclusions",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Acquis R28 conservés dans leur recette d’origine."
+      ],
+      "remaining": [
+        "Toutes les associations admissibles et leurs conclusions finales ; revue morphologique, artistique et séquences d’origine."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r28/evolutions/graph.json",
+          "label": "Transitions et rencontres retenues · R28"
+        }
+      ],
+      "r29_new_implementation": false
+    },
+    {
+      "id": "G-ECHELLE",
+      "title": "Dimensions et points faibles",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Les caméras et unités des modèles sources restent documentées ; les limites de rendu ne deviennent pas des dimensions physiques de combat."
+      ],
+      "remaining": [
+        "Mesures primaires, tailles corporelles et collision, géants et aquatiques ; zéro échelle physique certifiée."
+      ],
+      "evidence": [
+        {
+          "href": "dossier-additions.json",
+          "label": "Vues et périmètres des modèles"
+        }
+      ],
+      "r29_new_implementation": true
+    },
+    {
+      "id": "G-RENDU",
+      "title": "Sprites, clips et asymétries",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Les requalifications de pose et les nouvelles versions conservent leurs corps, côté et état réellement produits. Les images natives ne sont pas intégrées comme attaques ou déplacements."
+      ],
+      "remaining": [
+        "Sprites définitifs, deux orientations, asymétries, mouvements, impacts et transformations de tout le catalogue ; rendu original du jeu non certifié."
+      ],
+      "evidence": [
+        {
+          "href": "sprites/manifest.json",
+          "label": "Qualifications actuelles"
+        }
+      ],
+      "r29_new_implementation": true
+    },
+    {
+      "id": "G-PERF",
+      "title": "Performances sur appareils cibles",
+      "category": "validation",
+      "status": "EN COURS",
+      "advances": [
+        "Le registre de poses et les nouvelles preuves natives gardent leurs bornes de transport et de décodage. Le Codex ne charge aucune vue corporelle PNG automatiquement."
+      ],
+      "remaining": [
+        "Appareils physiques, GPU cibles, budgets mémoire globaux et longues sessions de combat ; le rendu logiciel cloud ne les certifie pas."
+      ],
+      "evidence": [
+        {
+          "href": "motion/index.html",
+          "label": "Lecteur des images sources"
+        }
+      ],
+      "r29_new_implementation": true
+    },
+    {
+      "id": "G-ACCESS",
+      "title": "Accessibilité et appareils",
+      "category": "validation",
+      "status": "EN COURS",
+      "advances": [
+        "Le suivi et les Dossiers R29 exposent les identités exactes, liens locaux et critères ouverts ; la recette distingue les parcours navigateur des appareils physiques."
+      ],
+      "remaining": [
+        "Lecteurs d’écran réels, appareils tactiles et manettes physiques, contenus hors écran et conformité WCAG complète."
+      ],
+      "evidence": [
+        {
+          "href": "index.html",
+          "label": "Suivi central R29"
+        }
+      ],
+      "r29_new_implementation": true
+    },
+    {
+      "id": "G-AUDIO",
+      "title": "Voix et sons par incarnation",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Acquis R28 conservés dans leur recette d’origine."
+      ],
+      "remaining": [
+        "Écoute indépendante, locuteur et action/phase, comparaison aux banques brutes, cris et mixage final ; ne pas affecter automatiquement ces sons au combat."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r28/audio/index.html",
+          "label": "Écoute volontaire et attributions séparées · R28"
+        },
+        {
+          "href": "../fidelity-r28/../../docs/R28_AUDIO.md",
+          "label": "Archives, doublons et limites · R28"
+        }
+      ],
+      "r29_new_implementation": false
+    },
+    {
+      "id": "G-RECETTE",
+      "title": "Recette cumulative",
+      "category": "validation",
+      "status": "EN COURS",
+      "advances": [
+        "Les rapports exécutés R29 vérifient les nouveaux corps, requalifications, clés et déformations natives, sélecteurs, Dossiers et export. Les recettes historiques restent séparées."
+      ],
+      "remaining": [
+        "Toutes les combinaisons, commandes, campagnes, KO, séquences artistiques et validations sur appareils cibles."
+      ],
+      "evidence": [
+        {
+          "href": "../../docs/R29_VALIDATION.json",
+          "label": "Rapports exécutés"
+        }
+      ],
+      "r29_new_implementation": true
+    },
+    {
+      "id": "G-LIVRAISON",
+      "title": "Livraisons et suivi",
+      "category": "validation",
+      "status": "EN COURS",
+      "advances": [
+        "Les 42 feuilles R28 et leurs relations sont conservées. Sept nouvelles feuilles suivent les 17 chantiers, les 389 identités et les images natives ; aucun chantier n’est clôturé automatiquement."
+      ],
+      "remaining": [
+        "Revue humaine et exécution CI de la nouvelle livraison ; tous les chantiers restent ouverts tant que leurs critères manquent de preuves."
+      ],
+      "evidence": [
+        {
+          "href": "../../docs/R29_TRACKING.json",
+          "label": "Suivi structuré R29"
+        }
+      ],
+      "r29_new_implementation": true
+    }
+  ],
+  "generation_preference": {
+    "user_choice": "Conserver les refus, fidélité prioritaire",
+    "preserve_tool_refusals": true,
+    "no_softened_variants_to_fill_counter": true,
+    "actual_files_and_blocked_attempts_counted_separately": true
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "schema": "re.bow.source-body-validation-r29/1",
+  "complete": true,
+  "passed": 8,
+  "failed": 0,
+  "skipped": 0,
+  "testsRun": 8,
+  "command": "python scripts/verify-body-sources-r29.py",
+  "inputs": [
+    {
+      "path": "tests/test_body_sources_r29.py",
+      "sha256": "0a2786765bfc85d5eeb162984d90bcd94aee9ca8ce2f199c6609c7b7f6575724"
+    },
+    {
+      "path": "scripts/import-body-sprites-r29.py",
+      "sha256": "4d91cf569c470c96f8cd3779233c78c7daa3cb678aabacf9ff078d7a4e99e256"
+    },
+    {
+      "path": "scripts/import-native-body-models-r29.py",
+      "sha256": "3239ea4ca1126618a211c11074b7d7217ecff3bec5c6e65a89ae393c6e9a5b44"
+    },
+    {
+      "path": "scripts/render-source-body-rasters-r29.mjs",
+      "sha256": "3526cf9efce18dda39d5565141bfc02a4c6a9f072de0d53cf6ed376dacb386f1"
+    },
+    {
+      "path": "scripts/capture-body-sprite-review-r29.mjs",
+      "sha256": "d8cf06467236f79c26f9554e0692b4f1061cf9b56edcf680d99581d8a2dd9929"
+    },
+    {
+      "path": "modules/fidelity-r29/sources/body-rasters/renderer.js",
+      "sha256": "ff3af2bf61ef3b0d0884a635113c6342b9099e21259bcc9ef11fbd131fd46158"
+    },
+    {
+      "path": "modules/fidelity-r29/sources/body-rasters/manifest.json",
+      "sha256": "1168c1bc9768f5d71c3d1b75f5873f280d06a38367cfc4f591d94ffd530aa01c"
+    },
+    {
+      "path": "modules/fidelity-r29/sources/body-rasters/online-evidence.json",
+      "sha256": "6535982981308b82a0b2779f00d14c18cfc4bcb760465a8bc8caeec5250c1af9"
+    },
+    {
+      "path": "modules/fidelity-r29/sources/native-models/catalog.json",
+      "sha256": "5a70b41e233afbee181d0ea4f94b54f285637d381080c5a94999608ff6b2c3d7"
+    },
+    {
+      "path": "docs/R29_BODY_RENDER_REQUEST.json",
+      "sha256": "77a771807fd84041b7f45f0eb3f5c6093a880b03416e3d4aab70f1776405198a"
+    },
+    {
+      "path": "docs/R29_NATIVE_BODY_IMPORT_REQUEST.json",
+      "sha256": "8a512af7dc58f8ac71ad3210bdbda301d1f667c2d3dc703fe789e5840f1f870d"
+    },
+    {
+      "path": "modules/fidelity-r29/sprites/revision-failures/re1r-tyrant.json",
+      "sha256": "0c8bf232a3de6ef01448d566998c4468d6d9c41eafca488bef2dc89772d89954"
+    },
+    {
+      "path": "modules/fidelity-r29/sprites/records/re0-zombie.json",
+      "sha256": "0621dfa19800ab375dcf17006f7dac1e39991f2df0328af2336ea5fcffa6240e"
+    },
+    {
+      "path": "modules/fidelity-r29/sources/generation-requests/re0-zombie.json",
+      "sha256": "21cfe5a04d5830db5d290ff28e68a316560db6bf4ec420d42f528081ff603365"
+    },
+    {
+      "path": "docs/R29_BODY_VISUAL_EVIDENCE/re0-zombie.json",
+      "sha256": "ee2553dfcc7143691608ed664a14bcf67523f5493fe0baf2bce80565aec28e89"
+    },
+    {
+      "path": "modules/fidelity-r29/sprites/records/re0-mimicry-marcus.json",
+      "sha256": "66cb84f94e718a4960e40da3c85e2d0c9d9e34834907fc75f416c0e11c7313a6"
+    },
+    {
+      "path": "modules/fidelity-r29/sources/generation-requests/re0-mimicry-marcus.json",
+      "sha256": "c5597e1da2da04ba8e76720ca3bcc33d90942f2f881c4de9035fc425fc5fcb22"
+    },
+    {
+      "path": "docs/R29_BODY_VISUAL_EVIDENCE/re0-mimicry-marcus.json",
+      "sha256": "39404bc32c54b5bada2d081473a38c8222cac90e39c5a383cef1f66d276b058b"
+    }
+  ],
+  "counts": {
+    "primarySourceModels": 3,
+    "primarySourceIdentities": 3,
+    "primarySourceReferencePngs": 12,
+    "newNativeSourceArchives": 1,
+    "freshOnlineCaptures": 6,
+    "primaryGenerationRequests": 3,
+    "primarySelectedGeneratedFullBodyPngs": 2,
+    "primaryRevisionToolRefusals": 1,
+    "initial385TargetRefusalsPreserved": 22,
+    "primaryBodiesAlreadyWholeInR28": 2,
+    "primaryNewlyClosedBodyGaps": 0,
+    "primaryCombatIdleSpritesAdded": 0,
+    "newTargetIdentities": 0,
+    "originalGameSprites": 0,
+    "canonicalFidelityCertified": 0
+  },
+  "scope": "Primary RE0/GameCube source bodies and shared R29 importer/renderer contract: source/model/material/texture/archive bytes;12 camera views and six Internet captures; two actual generation outputs and SHA-bound manual source/output body observations; one actual Tyrant revision refusal; negative admission tests; metadata-only documentary routing and appearance-gap idle gate fixtures. Other workers\u2019 generated bodies and edition variants have separate overlay/source reports; no exact original-game rendering or full animation certification."
+}

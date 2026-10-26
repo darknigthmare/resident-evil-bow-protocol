@@ -1,0 +1,906 @@
+{
+  "schema": "re.bow.source-body-reference-raster-addendum/1",
+  "release": "R29",
+  "request": {
+    "path": "docs/R29_REVELATIONS_BODY_RENDER_REQUEST.json",
+    "sha256": "06cf2689053cd382a15b1f550c516caa40d6a2867e7b3a48c7b41fcb3ed98ede"
+  },
+  "renderRecipe": {
+    "path": "modules/fidelity-r29/sources/body-rasters/renderer.js",
+    "sha256": "ff3af2bf61ef3b0d0884a635113c6342b9099e21259bcc9ef11fbd131fd46158"
+  },
+  "frozenPreviousReleasesChanged": false,
+  "counts": {
+    "identities": 3,
+    "sourceBodyModels": 3,
+    "renderedReferenceImages": 12,
+    "imageGenSprites": 0,
+    "originalGameSprites": 0,
+    "combatReadySprites": 0
+  },
+  "environment": {
+    "browser": "154.0.8037.57",
+    "backend": "Headless Chromium/software SwiftShader",
+    "physicalDeviceCertified": false
+  },
+  "limits": [
+    "Separate camera views of the retained attributed source models; vertices, transforms and poses unchanged.",
+    "Orbit angles are source-coordinate views, not a certification of canonical front/left/right, physical scale or an animation action.",
+    "Rendering and lighting belong to this reference recipe; original-game rendering and material interpretation remain uncertified.",
+    "Models from other ports, candidate identities and partial source components cannot be promoted as complete exact-incarnation bodies."
+  ],
+  "entries": [
+    {
+      "id": "re5-chainsaw-majini",
+      "modelId": "re5-chainsaw-majini-pc-published",
+      "sourcePage": "https://models.spriters-resource.com/pc_computer/residentevil5/asset/316460/",
+      "sourceEdition": "Resident Evil 5 (2009)",
+      "platform": "PC / Computer",
+      "sourceCatalog": {
+        "path": "modules/fidelity-r26/models/catalog.json",
+        "bytes": 3045959,
+        "sha256": "540c5583c6388f92dea9e1f12b6040ba757b6bf56b27c18743d8c5ffdcc2c715"
+      },
+      "sourceBase": "../../fidelity-r25/visual/",
+      "model": {
+        "path": "models/asset-316460/Chainsaw Majini/ChainsawMajini.fbx",
+        "member": "Chainsaw Majini/ChainsawMajini.fbx",
+        "bytes": 802128,
+        "sha256": "f0574219ff5e1f03e590c86cb471aa096a6f097d9ff1a23834faf5afce5def7e"
+      },
+      "materials": null,
+      "textures": [
+        {
+          "path": "models/asset-316460/Chainsaw Majini/em20_002_bm.png",
+          "member": "Chainsaw Majini/em20_002_bm.png",
+          "bytes": 764860,
+          "sha256": "6551f4fd7779f50e39bb429a31e93b2aff913bdf553681fe583c7d2d6305b1ef"
+        },
+        {
+          "path": "models/asset-316460/Chainsaw Majini/em20_002_nm.png",
+          "member": "Chainsaw Majini/em20_002_nm.png",
+          "bytes": 1011851,
+          "sha256": "e1dae2d190b481b619ca1e3cc3d969c789ece001b78c6b2fe5951aa2741216a4"
+        },
+        {
+          "path": "models/asset-316460/Chainsaw Majini/em20_002_mm.png",
+          "member": "Chainsaw Majini/em20_002_mm.png",
+          "bytes": 107559,
+          "sha256": "fc9d70bbf61ba57624e2cda2a59caa0e554c7baf297e4660a0b7b7e088651b37"
+        },
+        {
+          "path": "models/asset-316460/Chainsaw Majini/em20_006_bm.png",
+          "member": "Chainsaw Majini/em20_006_bm.png",
+          "bytes": 1159662,
+          "sha256": "62d6183f624456e700b953cdc1c61fce39cd712099e026264a986f6611aadcd2"
+        },
+        {
+          "path": "models/asset-316460/Chainsaw Majini/em20_006_nm.png",
+          "member": "Chainsaw Majini/em20_006_nm.png",
+          "bytes": 1156621,
+          "sha256": "dc076a4a05555a36409eafe21b4d2183df4573740b76b0b23b1e6983af7d2973"
+        },
+        {
+          "path": "models/asset-316460/Chainsaw Majini/em20_006_mm.png",
+          "member": "Chainsaw Majini/em20_006_mm.png",
+          "bytes": 32654,
+          "sha256": "88dd07999d29f52ab38f0a92772ecb2abf55beb17e8e1875164f9ac6b733edd7"
+        },
+        {
+          "path": "models/asset-316460/Chainsaw Majini/em20_005_bm.png",
+          "member": "Chainsaw Majini/em20_005_bm.png",
+          "bytes": 509888,
+          "sha256": "6f78835d87c851e7584d7110a424dc4fd3018b17bcdec4a23d9042c104b7f9fd"
+        },
+        {
+          "path": "models/asset-316460/Chainsaw Majini/em20_005_nm.png",
+          "member": "Chainsaw Majini/em20_005_nm.png",
+          "bytes": 480287,
+          "sha256": "d61d85675d2f30cb32dd5c97af5e781c2eb2cfddd87a3ae00ffafbb9694834fb"
+        },
+        {
+          "path": "models/asset-316460/Chainsaw Majini/em20_005_mm.png",
+          "member": "Chainsaw Majini/em20_005_mm.png",
+          "bytes": 65404,
+          "sha256": "50e48bde1192eba021ea9f7fbd8612fb8242a1ce3c629c5e8e08f5f4cb8c8925"
+        },
+        {
+          "path": "models/asset-316460/Chainsaw Majini/it0509_360_bm.png",
+          "member": "Chainsaw Majini/it0509_360_bm.png",
+          "bytes": 95347,
+          "sha256": "1e11ad374dcad206a4de2ec4a2799b997100487dfda7c5ff524bb8fc9da301de"
+        },
+        {
+          "path": "models/asset-316460/Chainsaw Majini/it0509_360_mm.png",
+          "member": "Chainsaw Majini/it0509_360_mm.png",
+          "bytes": 13791,
+          "sha256": "cf830f05e9218de5d2a78306f211fd96bcb32027b49b47b38a0d4c67803c4709"
+        }
+      ],
+      "sourcePoseScope": "Published rest/base pose only; no native action name or neutral combat idle inferred.",
+      "equipmentScope": "Body only; chainsaw mesh absent. Weapon completeness remains open.",
+      "sourceVariantScope": "Original published PCChainsawMajini body source bindpose.",
+      "geometryScope": "published-weighted-rig-reference",
+      "recipe": {
+        "projection": "orthographic",
+        "cameraUp": [
+          0,
+          1,
+          0
+        ],
+        "angles": [
+          0,
+          90,
+          180,
+          270
+        ],
+        "cellSize": 768,
+        "cameraOrbitOnly": true,
+        "geometryMirrored": false,
+        "modelTransformsChanged": false,
+        "poseChanged": false,
+        "sourceUnitsConvertedToMeters": false,
+        "bounds": {
+          "min": [
+            -35.846863582917884,
+            0.04299582914490328,
+            -7.1893892054293635
+          ],
+          "max": [
+            35.765165939645485,
+            72.99328432970431,
+            8.25071858021971
+          ]
+        },
+        "lighting": {
+          "ambientIntensity": 2,
+          "directionalIntensity": 2,
+          "directionalPosition": [
+            1,
+            2,
+            3
+          ],
+          "nativeGameLightingCertified": false
+        },
+        "renderMaterialMode": "published-materials",
+        "sourceMaterialsBytesRewritten": false,
+        "originalGameMaterialCertified": false,
+        "sourceCatalog": {
+          "path": "modules/fidelity-r26/models/catalog.json",
+          "bytes": 3045959,
+          "sha256": "540c5583c6388f92dea9e1f12b6040ba757b6bf56b27c18743d8c5ffdcc2c715"
+        },
+        "library": "Three.js0.180.0",
+        "outputColorSpace": "sRGB",
+        "alpha": true
+      },
+      "views": [
+        {
+          "angle": 0,
+          "width": 768,
+          "height": 768,
+          "occupiedPixels": 49209,
+          "edgePixels": 0,
+          "rgbaSha256": "d1b9550855af96c84a6cc31268dd1d41a3991f0af790d639cae9382e42ab2d9c",
+          "cameraPosition": [
+            -0.04084882163619952,
+            61.33050069428464,
+            207.30033647789543
+          ],
+          "cameraTarget": [
+            -0.04084882163619952,
+            36.518140079424604,
+            0.530664687395173
+          ],
+          "path": "re5-chainsaw-majini-pc-published/source-0.png",
+          "bytes": 142842,
+          "sha256": "fb7e1a734b4fd74b19bc41f18c5fe2b4386c030b532f5dfb33f8bca7dcb9ceba"
+        },
+        {
+          "angle": 90,
+          "width": 768,
+          "height": 768,
+          "occupiedPixels": 27160,
+          "edgePixels": 0,
+          "rgbaSha256": "aefbabc31635af927b50889f494a793701d408886a8883321b3e2227a75b1ea1",
+          "cameraPosition": [
+            206.72882296886408,
+            61.33050069428464,
+            0.5306646873951857
+          ],
+          "cameraTarget": [
+            -0.04084882163619952,
+            36.518140079424604,
+            0.530664687395173
+          ],
+          "path": "re5-chainsaw-majini-pc-published/source-90.png",
+          "bytes": 85984,
+          "sha256": "bed0218bb3cbcb6515722744d67abdec03e55062f6c05918092232d4116343cb"
+        },
+        {
+          "angle": 180,
+          "width": 768,
+          "height": 768,
+          "occupiedPixels": 49056,
+          "edgePixels": 0,
+          "rgbaSha256": "777fe77407c56dd1bbe795f7a0bcf03c82a81589de37ac8051f5633a1e6a35bd",
+          "cameraPosition": [
+            -0.0408488216361742,
+            61.33050069428464,
+            -206.2390071031051
+          ],
+          "cameraTarget": [
+            -0.04084882163619952,
+            36.518140079424604,
+            0.530664687395173
+          ],
+          "path": "re5-chainsaw-majini-pc-published/source-180.png",
+          "bytes": 128810,
+          "sha256": "48c66e76053d4f4bf0984e8ec6382f42e159f857c54a5db76c90ade9025bb308"
+        },
+        {
+          "angle": 270,
+          "width": 768,
+          "height": 768,
+          "occupiedPixels": 27158,
+          "edgePixels": 0,
+          "rgbaSha256": "f8d80a742e0e7e66eb84e92031446244cfca151676a3797ea9c2466b2a1c9dc5",
+          "cameraPosition": [
+            -206.81052061213646,
+            61.33050069428464,
+            0.5306646873951351
+          ],
+          "cameraTarget": [
+            -0.04084882163619952,
+            36.518140079424604,
+            0.530664687395173
+          ],
+          "path": "re5-chainsaw-majini-pc-published/source-270.png",
+          "bytes": 86324,
+          "sha256": "2a837ea4a3285e7abe4830e2312bbd01c8e0b32c64006b8fe1a37574bd6bb842"
+        }
+      ],
+      "classification": "derived-exact-source-geometry-reference",
+      "originalGameSprite": false,
+      "generatedWithImageGen": false,
+      "combatReady": false,
+      "canonicalFidelityCertified": false,
+      "anatomicalCompletenessIndependentlyCertified": false
+    },
+    {
+      "id": "re5-executioner",
+      "modelId": "re5-executioner-pc-published",
+      "sourcePage": "https://models.spriters-resource.com/pc_computer/residentevil5/asset/310867/",
+      "sourceEdition": "Resident Evil 5 (2009)",
+      "platform": "PC / Computer",
+      "sourceCatalog": {
+        "path": "modules/fidelity-r26/models/catalog.json",
+        "bytes": 3045959,
+        "sha256": "540c5583c6388f92dea9e1f12b6040ba757b6bf56b27c18743d8c5ffdcc2c715"
+      },
+      "sourceBase": "../../fidelity-r25/visual/",
+      "model": {
+        "path": "models/asset-310867/Axe Executioner/Axe_Executioner.fbx",
+        "member": "Axe Executioner/Axe_Executioner.fbx",
+        "bytes": 939360,
+        "sha256": "f9efab4fc45f214637002b422aa080bbe49064ad0cee6e1f04a2109fb0826337"
+      },
+      "materials": null,
+      "textures": [
+        {
+          "path": "models/asset-310867/Axe Executioner/em2000_03zubon_bm.png",
+          "member": "Axe Executioner/em2000_03zubon_bm.png",
+          "bytes": 1017243,
+          "sha256": "e1bb315a9a945b26e38c7eb3c5ea8fcc99a4a559c7d84dab9d76c3cabc057397"
+        },
+        {
+          "path": "models/asset-310867/Axe Executioner/em2000_03zubon_nm.png",
+          "member": "Axe Executioner/em2000_03zubon_nm.png",
+          "bytes": 956328,
+          "sha256": "ea2d549a1b4053a078ae5342c361247e69e9fbf1ad875f9ebbf3465ad746c3fe"
+        },
+        {
+          "path": "models/asset-310867/Axe Executioner/em2000_03zubon_mm.png",
+          "member": "Axe Executioner/em2000_03zubon_mm.png",
+          "bytes": 57654,
+          "sha256": "50925291d80601f1303376ffd82b0daeb217165318dee81fe8db1f4d963d989e"
+        },
+        {
+          "path": "models/asset-310867/Axe Executioner/em2000_00head_bm.png",
+          "member": "Axe Executioner/em2000_00head_bm.png",
+          "bytes": 916955,
+          "sha256": "47f6748f424550c60597d3252e2dae8bbfd9162ca4bb9b03213d297197484133"
+        },
+        {
+          "path": "models/asset-310867/Axe Executioner/em2000_00head_nm.png",
+          "member": "Axe Executioner/em2000_00head_nm.png",
+          "bytes": 762304,
+          "sha256": "0ade4639f71a00acbebc8cc021b92e75eadf476cfd261c4cb5d58897d0deb5c9"
+        },
+        {
+          "path": "models/asset-310867/Axe Executioner/em2000_00head_alpha.png",
+          "member": "Axe Executioner/em2000_00head_alpha.png",
+          "bytes": 42701,
+          "sha256": "310716685e1695f81a7515b078b38b4c6c40eb98330d8edc66485823db60aa8a"
+        },
+        {
+          "path": "models/asset-310867/Axe Executioner/em2000_00head_mm.png",
+          "member": "Axe Executioner/em2000_00head_mm.png",
+          "bytes": 136668,
+          "sha256": "7cdb72f8e7a17e64e551adc4100c981581fe503b6dc0f4628c5c470c6361a33b"
+        },
+        {
+          "path": "models/asset-310867/Axe Executioner/em2000_02epu_bm.png",
+          "member": "Axe Executioner/em2000_02epu_bm.png",
+          "bytes": 1762407,
+          "sha256": "0e93c7141cdbe921c9eed0be0e8b019df760bedd2406038d68aef177e2cc9be9"
+        },
+        {
+          "path": "models/asset-310867/Axe Executioner/em2000_02epu_nm.png",
+          "member": "Axe Executioner/em2000_02epu_nm.png",
+          "bytes": 1299622,
+          "sha256": "30f7c368a06fd7fb7b060493d93e6e0893390392c5a3cd5c20e5d7772f727693"
+        },
+        {
+          "path": "models/asset-310867/Axe Executioner/em2000_02epu_alpha.png",
+          "member": "Axe Executioner/em2000_02epu_alpha.png",
+          "bytes": 12391,
+          "sha256": "723a1d7dd258c5496922134c14de2270a8368de7cbe460dbf6a8455355cefab0"
+        },
+        {
+          "path": "models/asset-310867/Axe Executioner/em2000_02epu_mm.png",
+          "member": "Axe Executioner/em2000_02epu_mm.png",
+          "bytes": 227584,
+          "sha256": "c89ae761ffa7550f8db72b4a1f7c9d85d09627374b23a5a2300bbb587e1bcb03"
+        },
+        {
+          "path": "models/asset-310867/Axe Executioner/em2000_01body_bm.png",
+          "member": "Axe Executioner/em2000_01body_bm.png",
+          "bytes": 922570,
+          "sha256": "cd5ae1bf3c0f313195da534b834d23a3b77682223717bde56373dc706e4e3c4f"
+        },
+        {
+          "path": "models/asset-310867/Axe Executioner/em2000_01body_nm.png",
+          "member": "Axe Executioner/em2000_01body_nm.png",
+          "bytes": 865059,
+          "sha256": "cfa519d18aebaded5fa453d20e706025a0e3ab476ebbb108552da35a01a508ed"
+        },
+        {
+          "path": "models/asset-310867/Axe Executioner/em2000_01body_mm.png",
+          "member": "Axe Executioner/em2000_01body_mm.png",
+          "bytes": 119718,
+          "sha256": "f1bf0a4974793c66fe51ccae2d156b81cc604c65d62cdd2b6018521e76c02fca"
+        }
+      ],
+      "sourcePoseScope": "Published rest/base pose only; no native action name or neutral combat idle inferred.",
+      "equipmentScope": "Body only; axe mesh absent. Weapon completeness remains open.",
+      "sourceVariantScope": "Original published PCExecutioner body source bindpose.",
+      "geometryScope": "published-weighted-rig-reference",
+      "recipe": {
+        "projection": "orthographic",
+        "cameraUp": [
+          0,
+          1,
+          0
+        ],
+        "angles": [
+          0,
+          90,
+          180,
+          270
+        ],
+        "cellSize": 768,
+        "cameraOrbitOnly": true,
+        "geometryMirrored": false,
+        "modelTransformsChanged": false,
+        "poseChanged": false,
+        "sourceUnitsConvertedToMeters": false,
+        "bounds": {
+          "min": [
+            -35.81130602430457,
+            -0.007489987195180603,
+            -12.123485407456458
+          ],
+          "max": [
+            35.81130602430457,
+            74.11131297635688,
+            8.18902058700051
+          ]
+        },
+        "lighting": {
+          "ambientIntensity": 2,
+          "directionalIntensity": 2,
+          "directionalPosition": [
+            1,
+            2,
+            3
+          ],
+          "nativeGameLightingCertified": false
+        },
+        "renderMaterialMode": "published-materials",
+        "sourceMaterialsBytesRewritten": false,
+        "originalGameMaterialCertified": false,
+        "sourceCatalog": {
+          "path": "modules/fidelity-r26/models/catalog.json",
+          "bytes": 3045959,
+          "sha256": "540c5583c6388f92dea9e1f12b6040ba757b6bf56b27c18743d8c5ffdcc2c715"
+        },
+        "library": "Three.js0.180.0",
+        "outputColorSpace": "sRGB",
+        "alpha": true
+      },
+      "views": [
+        {
+          "angle": 0,
+          "width": 768,
+          "height": 768,
+          "occupiedPixels": 72852,
+          "edgePixels": 0,
+          "rgbaSha256": "67013f38894744d57d4cf090c418e7e095d0192bb30de4d0ca18126f1867701a",
+          "cameraPosition": [
+            0,
+            62.26447226038486,
+            208.1374406381388
+          ],
+          "cameraTarget": [
+            0,
+            37.05191149458085,
+            -1.9672324102279743
+          ],
+          "path": "re5-executioner-pc-published/source-0.png",
+          "bytes": 197052,
+          "sha256": "c10b200bca62242d1ff27cfd5f75c477de03c5aa2b820c83970edd745696803d"
+        },
+        {
+          "angle": 90,
+          "width": 768,
+          "height": 768,
+          "occupiedPixels": 45721,
+          "edgePixels": 0,
+          "rgbaSha256": "585472a29703ab7b98025899ab7578ea14c451ea9bd32735b3cbebebc2ffa6a5",
+          "cameraPosition": [
+            210.10467304836678,
+            62.26447226038486,
+            -1.9672324102279615
+          ],
+          "cameraTarget": [
+            0,
+            37.05191149458085,
+            -1.9672324102279743
+          ],
+          "path": "re5-executioner-pc-published/source-90.png",
+          "bytes": 127123,
+          "sha256": "f8c871c72654d157ba10df4a68a23af1b94c96d754c761a2795eaabba21f3ad6"
+        },
+        {
+          "angle": 180,
+          "width": 768,
+          "height": 768,
+          "occupiedPixels": 71933,
+          "edgePixels": 0,
+          "rgbaSha256": "e3cab0ff559254849a10933f5bae3711d13973720738096dd6f8d8e16e518591",
+          "cameraPosition": [
+            2.5730401533458353e-14,
+            62.26447226038486,
+            -212.07190545859476
+          ],
+          "cameraTarget": [
+            0,
+            37.05191149458085,
+            -1.9672324102279743
+          ],
+          "path": "re5-executioner-pc-published/source-180.png",
+          "bytes": 181098,
+          "sha256": "f896e50f228510010c2e5dc6481a3820993a5e95f23392ff5eef24b5f0cb3e04"
+        },
+        {
+          "angle": 270,
+          "width": 768,
+          "height": 768,
+          "occupiedPixels": 46000,
+          "edgePixels": 0,
+          "rgbaSha256": "5ce2ef255611b67b595d4f66835da0df8d5c8b5e1453270491634b95a5a79480",
+          "cameraPosition": [
+            -210.10467304836678,
+            62.26447226038486,
+            -1.967232410228013
+          ],
+          "cameraTarget": [
+            0,
+            37.05191149458085,
+            -1.9672324102279743
+          ],
+          "path": "re5-executioner-pc-published/source-270.png",
+          "bytes": 123569,
+          "sha256": "5620814ed64dabd585519c0249b34affb615dd0a5292f516f72234cf3d536d72"
+        }
+      ],
+      "classification": "derived-exact-source-geometry-reference",
+      "originalGameSprite": false,
+      "generatedWithImageGen": false,
+      "combatReady": false,
+      "canonicalFidelityCertified": false,
+      "anatomicalCompletenessIndependentlyCertified": false
+    },
+    {
+      "id": "re5-jill-valentine-enemy",
+      "modelId": "re5-jill-battle-suit-pc-r29",
+      "sourcePage": "https://models.spriters-resource.com/pc_computer/residentevil5/asset/310863/",
+      "sourceEdition": "Resident Evil 5 PC / Computer, community-published Battle Suit model; no raw Capcom package or console geometry identity certified.",
+      "platform": "PC / Computer",
+      "sourceCatalog": {
+        "path": "modules/fidelity-r29/sources/revelations-body-rasters/catalog.json",
+        "bytes": 12100,
+        "sha256": "9546905de5c1251262f86ecdea12c19fca20636315f322a4e37c1e02a3f0247f"
+      },
+      "sourceBase": "./",
+      "model": {
+        "path": "models/asset-310863/Jill Valentine Battle Suit/JillValentineBattleSuit.obj",
+        "bytes": 1236795,
+        "sha256": "363efb8cefd69d139530f332a709b91b7eaaf7a97413ad5bf11f55edde37b213",
+        "member": "Jill Valentine Battle Suit/JillValentineBattleSuit.obj"
+      },
+      "materials": {
+        "path": "models/asset-310863/Jill Valentine Battle Suit/JillValentineBattleSuit.mtl",
+        "bytes": 4767,
+        "sha256": "6ee0fdbc3b683d62690eddf01558d9a30317795988cca2ad71db0323c83da917",
+        "member": "Jill Valentine Battle Suit/JillValentineBattleSuit.mtl"
+      },
+      "textures": [
+        {
+          "path": "models/asset-310863/Jill Valentine Battle Suit/pl0800_01face_bmout.png",
+          "bytes": 1461163,
+          "sha256": "8262d7c02de5c456f51802d26830d0b3bac5b8cff4bcec0a24469cde03208c04",
+          "member": "Jill Valentine Battle Suit/pl0800_01face_bmout.png"
+        },
+        {
+          "path": "models/asset-310863/Jill Valentine Battle Suit/pl0800_01face_mmout.png",
+          "bytes": 153186,
+          "sha256": "7abd76bc4b8cb92b720b29cd374f434bf070a82e7fa79d041a892a1343ec1d88",
+          "member": "Jill Valentine Battle Suit/pl0800_01face_mmout.png"
+        },
+        {
+          "path": "models/asset-310863/Jill Valentine Battle Suit/pl0800_01face_nmout.png",
+          "bytes": 289755,
+          "sha256": "7db09d579a4c09932dd414f387af95fb350efc2663539b6b2a6d78129ac09256",
+          "member": "Jill Valentine Battle Suit/pl0800_01face_nmout.png"
+        },
+        {
+          "path": "models/asset-310863/Jill Valentine Battle Suit/pl0800_02matuge_bmout.png",
+          "bytes": 17499,
+          "sha256": "685efd7eb089a9c8fb502160bcabd8358eaf656f86887db634fdc02d37bcdd79",
+          "member": "Jill Valentine Battle Suit/pl0800_02matuge_bmout.png"
+        },
+        {
+          "path": "models/asset-310863/Jill Valentine Battle Suit/pl0800_02matuge_bmout_alpha.png",
+          "bytes": 13751,
+          "sha256": "d8c33515708ed3b09beac32a0ab375a738b9a93add5f692366b60e41ed8cc725",
+          "member": "Jill Valentine Battle Suit/pl0800_02matuge_bmout_alpha.png"
+        },
+        {
+          "path": "models/asset-310863/Jill Valentine Battle Suit/pl0800_04body_bmout.png",
+          "bytes": 1337059,
+          "sha256": "47d48360a420110621945301e5a035401369872399656c766044cbc9e8ee7630",
+          "member": "Jill Valentine Battle Suit/pl0800_04body_bmout.png"
+        },
+        {
+          "path": "models/asset-310863/Jill Valentine Battle Suit/pl0800_04body_mmout.png",
+          "bytes": 193957,
+          "sha256": "0acd04459a32797ea10ce2f62e5194f5ab21b8a1f8031df2ed4e38d219f33649",
+          "member": "Jill Valentine Battle Suit/pl0800_04body_mmout.png"
+        },
+        {
+          "path": "models/asset-310863/Jill Valentine Battle Suit/pl0800_04body_nmout.png",
+          "bytes": 421187,
+          "sha256": "ae2ea5b871bfe41798bc0d6dbbc2435c3bff833c5084df2fd35b99f0ede4b572",
+          "member": "Jill Valentine Battle Suit/pl0800_04body_nmout.png"
+        },
+        {
+          "path": "models/asset-310863/Jill Valentine Battle Suit/pl0800_05arm_bmout.png",
+          "bytes": 327844,
+          "sha256": "b8b982011a9c0da27fc18d23471d255c4a75a1d672e5fd68292f45700ac42bf2",
+          "member": "Jill Valentine Battle Suit/pl0800_05arm_bmout.png"
+        },
+        {
+          "path": "models/asset-310863/Jill Valentine Battle Suit/pl0800_05arm_mmout.png",
+          "bytes": 33727,
+          "sha256": "b5bc4592432538ebf49e4e00bbe12360816b548a3905a9c8024b62b2f18b9790",
+          "member": "Jill Valentine Battle Suit/pl0800_05arm_mmout.png"
+        },
+        {
+          "path": "models/asset-310863/Jill Valentine Battle Suit/pl0800_05arm_nmout.png",
+          "bytes": 456626,
+          "sha256": "f7e4d9cfed9289553a849ff809cead1c4e184763640bbb2767f6328c1563877c",
+          "member": "Jill Valentine Battle Suit/pl0800_05arm_nmout.png"
+        },
+        {
+          "path": "models/asset-310863/Jill Valentine Battle Suit/pl0800_06boots_bmout.png",
+          "bytes": 100186,
+          "sha256": "6e1c20e9e2901dfc354d26637e4dded1fcefc53951dcfc871ca09fda379f0d22",
+          "member": "Jill Valentine Battle Suit/pl0800_06boots_bmout.png"
+        },
+        {
+          "path": "models/asset-310863/Jill Valentine Battle Suit/pl0800_06boots_mmout.png",
+          "bytes": 32208,
+          "sha256": "705e56da308ded926feef617a0f0f2fe2d14318b34784ad74e58ca66110c95da",
+          "member": "Jill Valentine Battle Suit/pl0800_06boots_mmout.png"
+        },
+        {
+          "path": "models/asset-310863/Jill Valentine Battle Suit/pl0800_06boots_nmout.png",
+          "bytes": 88481,
+          "sha256": "f4a0142c887653be4997cc456563cf70141cb5bdca7ed387554f65b19b732604",
+          "member": "Jill Valentine Battle Suit/pl0800_06boots_nmout.png"
+        },
+        {
+          "path": "models/asset-310863/Jill Valentine Battle Suit/pl0800_07leg_bmout.png",
+          "bytes": 636504,
+          "sha256": "4e81a3d329ba9687b5fc7613e26418e02dfd2524c1c21c345cb7195014d22b97",
+          "member": "Jill Valentine Battle Suit/pl0800_07leg_bmout.png"
+        },
+        {
+          "path": "models/asset-310863/Jill Valentine Battle Suit/pl0800_07leg_mmout.png",
+          "bytes": 78288,
+          "sha256": "482da998bc27dfc6068a265c8bd59f1aa02be0aa40cbca704199997eeddb04c3",
+          "member": "Jill Valentine Battle Suit/pl0800_07leg_mmout.png"
+        },
+        {
+          "path": "models/asset-310863/Jill Valentine Battle Suit/pl0800_07leg_nmout.png",
+          "bytes": 192551,
+          "sha256": "746bf502ab4f4f1097882f492e8234840d7342734af131e4cde2b83a70487a68",
+          "member": "Jill Valentine Battle Suit/pl0800_07leg_nmout.png"
+        },
+        {
+          "path": "models/asset-310863/Jill Valentine Battle Suit/pl0800_08gntrt_bmout.png",
+          "bytes": 142112,
+          "sha256": "1410cc8e99443fd3b7948e83b2844c47492f77b48ef5384498ef40ef3f61cc85",
+          "member": "Jill Valentine Battle Suit/pl0800_08gntrt_bmout.png"
+        },
+        {
+          "path": "models/asset-310863/Jill Valentine Battle Suit/pl0800_08gntrt_mmout.png",
+          "bytes": 19624,
+          "sha256": "994bed52e5f5ff8f59c897264224b80021c1072af3449a1b11b52b8ad98abc05",
+          "member": "Jill Valentine Battle Suit/pl0800_08gntrt_mmout.png"
+        },
+        {
+          "path": "models/asset-310863/Jill Valentine Battle Suit/pl0800_08gntrt_nmout.png",
+          "bytes": 220566,
+          "sha256": "63d3771e007c5a08092be0dfb2afde5ae40945f0454b3eeb5ce0cfcd88b146b3",
+          "member": "Jill Valentine Battle Suit/pl0800_08gntrt_nmout.png"
+        },
+        {
+          "path": "models/asset-310863/Jill Valentine Battle Suit/pl0800_09chest_bmout.png",
+          "bytes": 557069,
+          "sha256": "f5bab35fbdb6f79e9750b79bd9815b5e7a46b053d95974185d629c7b134ff166",
+          "member": "Jill Valentine Battle Suit/pl0800_09chest_bmout.png"
+        },
+        {
+          "path": "models/asset-310863/Jill Valentine Battle Suit/pl0800_09chest_mmout.png",
+          "bytes": 46667,
+          "sha256": "9b648d57ba05342b287709f732f3210ba6cee52abf6517f7660f1c97c21c3e83",
+          "member": "Jill Valentine Battle Suit/pl0800_09chest_mmout.png"
+        },
+        {
+          "path": "models/asset-310863/Jill Valentine Battle Suit/pl0800_09chest_nmout.png",
+          "bytes": 456699,
+          "sha256": "7feead9a2ef02850d27880c71d1553629bd2aecdea7f0aab9102f9ef9d4cbcbc",
+          "member": "Jill Valentine Battle Suit/pl0800_09chest_nmout.png"
+        },
+        {
+          "path": "models/asset-310863/Jill Valentine Battle Suit/pl0800_11hand_bmout.png",
+          "bytes": 779274,
+          "sha256": "c840d6369936d2136abb719f460c1aa05727e454ae5a504a0721b8b1805a713e",
+          "member": "Jill Valentine Battle Suit/pl0800_11hand_bmout.png"
+        },
+        {
+          "path": "models/asset-310863/Jill Valentine Battle Suit/pl0800_11hand_mmout.png",
+          "bytes": 881,
+          "sha256": "b2064d6e28627e862a3cbeb0d236770b85d4e3459527d64273027aed9fdfbbf9",
+          "member": "Jill Valentine Battle Suit/pl0800_11hand_mmout.png"
+        },
+        {
+          "path": "models/asset-310863/Jill Valentine Battle Suit/pl0800_11hand_nmout.png",
+          "bytes": 251271,
+          "sha256": "8de8e409ea3130e5f6413ab148eeb3eb6b0271ba77967dc8273cec67a9e99469",
+          "member": "Jill Valentine Battle Suit/pl0800_11hand_nmout.png"
+        },
+        {
+          "path": "models/asset-310863/Jill Valentine Battle Suit/pl0800_12hair_bmout.png",
+          "bytes": 1301468,
+          "sha256": "24bcb03c57a6fa27291ca71fd827470ed60d189a51515292004a926398b10daf",
+          "member": "Jill Valentine Battle Suit/pl0800_12hair_bmout.png"
+        },
+        {
+          "path": "models/asset-310863/Jill Valentine Battle Suit/pl0800_12hair_bmout_alpha.png",
+          "bytes": 374642,
+          "sha256": "d05e3b952fca154cab1be07ef0aa8a3bc20981be0dffc91e958f5aa9afe72909",
+          "member": "Jill Valentine Battle Suit/pl0800_12hair_bmout_alpha.png"
+        },
+        {
+          "path": "models/asset-310863/Jill Valentine Battle Suit/pl0800_12hair_mmout.png",
+          "bytes": 244845,
+          "sha256": "453c65eed738d981d16e3509aab65d287e1afa3453be6a1bea526af3817c723b",
+          "member": "Jill Valentine Battle Suit/pl0800_12hair_mmout.png"
+        },
+        {
+          "path": "models/asset-310863/Jill Valentine Battle Suit/pl0800_12hair_nmout.png",
+          "bytes": 105559,
+          "sha256": "cbaf70edbc8effad32d6e1d5beb85769101510e47fb3e1debea75c76c9249754",
+          "member": "Jill Valentine Battle Suit/pl0800_12hair_nmout.png"
+        },
+        {
+          "path": "models/asset-310863/Jill Valentine Battle Suit/pl0800_13belt_bmout.png",
+          "bytes": 329873,
+          "sha256": "b16e26379083e18aec65768d7afe7c6b47ad87e119e7f26c9c837ab929cc95d9",
+          "member": "Jill Valentine Battle Suit/pl0800_13belt_bmout.png"
+        },
+        {
+          "path": "models/asset-310863/Jill Valentine Battle Suit/pl0800_13belt_mmout.png",
+          "bytes": 46388,
+          "sha256": "80a4a831a1088849069a304a9fdb13dacde55bb0169d05f6fdd3fb24499f9b64",
+          "member": "Jill Valentine Battle Suit/pl0800_13belt_mmout.png"
+        },
+        {
+          "path": "models/asset-310863/Jill Valentine Battle Suit/pl0800_13belt_nmout.png",
+          "bytes": 101477,
+          "sha256": "79dc5b82dac89a32b98706d20f2e4437df46979dc14a2b475da4022499fd6e73",
+          "member": "Jill Valentine Battle Suit/pl0800_13belt_nmout.png"
+        },
+        {
+          "path": "models/asset-310863/Jill Valentine Battle Suit/pl0800_14hex_dmout.png",
+          "bytes": 5085,
+          "sha256": "27d69f919d73551019dbdeaa346b3e638702f6760fefd38277efde8b169cfdc4",
+          "member": "Jill Valentine Battle Suit/pl0800_14hex_dmout.png"
+        }
+      ],
+      "sourcePoseScope": "Published rest/base pose only; no native action name or neutral combat idle inferred.",
+      "equipmentScope": "The published Battle Suit body has no visible P30 chest-control device. It cannot complete the P30-controlled encounter appearance without that separately verified equipment.",
+      "sourceVariantScope": "Battle Suit clothing/body variant only, not a certified P30-controlled boss phase. No P30 device is invented or attached.",
+      "geometryScope": "published-static-body-export",
+      "recipe": {
+        "projection": "orthographic",
+        "cameraUp": [
+          0,
+          1,
+          0
+        ],
+        "angles": [
+          0,
+          90,
+          180,
+          270
+        ],
+        "cellSize": 768,
+        "cameraOrbitOnly": true,
+        "geometryMirrored": false,
+        "modelTransformsChanged": false,
+        "poseChanged": false,
+        "sourceUnitsConvertedToMeters": false,
+        "bounds": {
+          "min": [
+            -77.38749694824219,
+            -0.003800000064074993,
+            -15.170599937438965
+          ],
+          "max": [
+            77.38500213623047,
+            169.87159729003906,
+            18.77359962463379
+          ]
+        },
+        "lighting": {
+          "ambientIntensity": 2,
+          "directionalIntensity": 2,
+          "directionalPosition": [
+            1,
+            2,
+            3
+          ],
+          "nativeGameLightingCertified": false
+        },
+        "renderMaterialMode": "published-materials",
+        "sourceMaterialsBytesRewritten": false,
+        "originalGameMaterialCertified": false,
+        "sourceCatalog": {
+          "path": "modules/fidelity-r29/sources/revelations-body-rasters/catalog.json",
+          "bytes": 12100,
+          "sha256": "9546905de5c1251262f86ecdea12c19fca20636315f322a4e37c1e02a3f0247f"
+        },
+        "library": "Three.js0.180.0",
+        "outputColorSpace": "sRGB",
+        "alpha": true
+      },
+      "views": [
+        {
+          "angle": 0,
+          "width": 768,
+          "height": 768,
+          "occupiedPixels": 45071,
+          "edgePixels": 0,
+          "rgbaSha256": "14c3a3e020d403bd884819d4d1b293e91158da07e1358a610e335f37bb6943ae",
+          "cameraPosition": [
+            -0.001247406005859375,
+            140.68646468321606,
+            466.4062168288355
+          ],
+          "cameraTarget": [
+            -0.001247406005859375,
+            84.9338986449875,
+            1.801499843597412
+          ],
+          "path": "re5-jill-battle-suit-pc-r29/source-0.png",
+          "bytes": 124326,
+          "sha256": "e744c65733868205ea2f1e6574a55275cd2c3bf0ecb030dd46efa29c1ac8e400"
+        },
+        {
+          "angle": 90,
+          "width": 768,
+          "height": 768,
+          "occupiedPixels": 26491,
+          "edgePixels": 0,
+          "rgbaSha256": "e2c48c39800d439d148aaafa40e04c7f6d0f71c1e2a8dcd5969e7d72b35ab18c",
+          "cameraPosition": [
+            464.60346957923224,
+            140.68646468321606,
+            1.8014998435974405
+          ],
+          "cameraTarget": [
+            -0.001247406005859375,
+            84.9338986449875,
+            1.801499843597412
+          ],
+          "path": "re5-jill-battle-suit-pc-r29/source-90.png",
+          "bytes": 81839,
+          "sha256": "12d6343bcc0de470d691d2f3c04648116a066c2e5e608d2db763dc186f66ba25"
+        },
+        {
+          "angle": 180,
+          "width": 768,
+          "height": 768,
+          "occupiedPixels": 44600,
+          "edgePixels": 0,
+          "rgbaSha256": "5d28742aa2155830cad919f9198ec63bf9a0977d7417e74035f3b1b6a7bf2acb",
+          "cameraPosition": [
+            -0.0012474060058024774,
+            140.68646468321606,
+            -462.8032171416407
+          ],
+          "cameraTarget": [
+            -0.001247406005859375,
+            84.9338986449875,
+            1.801499843597412
+          ],
+          "path": "re5-jill-battle-suit-pc-r29/source-180.png",
+          "bytes": 117974,
+          "sha256": "d6606904b6a5d743a4f98bfabcaa24b8ff3a1c7c49f7623eaf7b5881c57dbdd4"
+        },
+        {
+          "angle": 270,
+          "width": 768,
+          "height": 768,
+          "occupiedPixels": 26525,
+          "edgePixels": 0,
+          "rgbaSha256": "8b946a635b5400a3510e32b81b651d042de063d4ac806a4f7d201dc3350f306c",
+          "cameraPosition": [
+            -464.60596439124396,
+            140.68646468321606,
+            1.8014998435973268
+          ],
+          "cameraTarget": [
+            -0.001247406005859375,
+            84.9338986449875,
+            1.801499843597412
+          ],
+          "path": "re5-jill-battle-suit-pc-r29/source-270.png",
+          "bytes": 80351,
+          "sha256": "66dea16e40b21538278cf24a6211db91c35abb7a2e79e4e2851d5312aa932976"
+        }
+      ],
+      "classification": "derived-exact-source-geometry-reference",
+      "originalGameSprite": false,
+      "generatedWithImageGen": false,
+      "combatReady": false,
+      "canonicalFidelityCertified": false,
+      "anatomicalCompletenessIndependentlyCertified": false
+    }
+  ]
+}

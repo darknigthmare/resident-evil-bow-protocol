@@ -1,0 +1,230 @@
+name: R29 complete-body sources, native frames and replay boundaries
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main, 'codex/**']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: source-fidelity-r29-${{ github.ref }}
+  cancel-in-progress: true
+defaults:
+  run:
+    shell: bash
+jobs:
+  provenance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: '3.12'
+      - name: Install the verified source and XML writer tools
+        timeout-minutes: 5
+        run: |
+          python3 -m venv "$RUNNER_TEMP/fidelity-r29-venv"
+          "$RUNNER_TEMP/fidelity-r29-venv/bin/python" -m pip install --timeout 60 --retries 2 Pillow==12.3.0 openpyxl==3.1.5 lxml==6.1.1 PyYAML==6.0.3
+          npm install --no-audit --no-fund --no-save --package-lock=false --fetch-timeout=60000 --fetch-retries=2 @napi-rs/canvas@0.1.80
+      - name: Reproduce delivered R29 inputs before refreshing their reports
+        run: |
+          mkdir -p qa-fidelity-r29-ci
+          "$RUNNER_TEMP/fidelity-r29-venv/bin/python" scripts/validate-fidelity-ci-r29.py > qa-fidelity-r29-ci/ci-definition-check.json
+          "$RUNNER_TEMP/fidelity-r29-venv/bin/python" scripts/build-sprite-overlay-r29.py --check > qa-fidelity-r29-ci/sprite-check.json
+          "$RUNNER_TEMP/fidelity-r29-venv/bin/python" scripts/prepare-native-frames-r29.py --check > qa-fidelity-r29-ci/native-input-check.json
+          "$RUNNER_TEMP/fidelity-r29-venv/bin/python" scripts/build-dossier-additions-r29.py --check > qa-fidelity-r29-ci/dossier-check.json
+          "$RUNNER_TEMP/fidelity-r29-venv/bin/python" scripts/fidelity-progress-r29.py check > qa-fidelity-r29-ci/progress-check.json
+          "$RUNNER_TEMP/fidelity-r29-venv/bin/python" scripts/fidelity-progress-r29.py reproduce > qa-fidelity-r29-ci/workbook-check.json
+          cp docs/R29_REPRODUCTION.json qa-fidelity-r29-ci/executed-workbook-report.json
+          "$RUNNER_TEMP/fidelity-r29-venv/bin/python" scripts/audit-delivery-r29.py --check > qa-fidelity-r29-ci/delivery-check.json
+          rm -f docs/R29_INTEGRATION_TESTS.json
+          node tests/verify-r29-integration.mjs > qa-fidelity-r29-ci/integration-check.log
+          cp docs/R29_INTEGRATION_TESTS.json qa-fidelity-r29-ci/executed-integration-report.json
+      - name: Invalidate previous current-source test reports
+        run: |
+          rm -f docs/R29_EXPORT_TESTS.json docs/R29_SPRITES_TESTS.json docs/R29_NATIVE_FRAMES_TESTS.json docs/R29_COMBAT_SPRITE_TESTS.json docs/R29_NATIVE_FRAME_RIG_TESTS.json docs/R29_BODY_SOURCES_TESTS.json docs/R29_REVELATIONS_BODY_TESTS.json
+          touch qa-fidelity-r29-ci/test-execution-started
+      - name: Execute actual export, pose and native-frame Python assertions
+        run: |
+          "$RUNNER_TEMP/fidelity-r29-venv/bin/python" tests/test_fidelity_r29.py
+          "$RUNNER_TEMP/fidelity-r29-venv/bin/python" tests/test_sprite_overlay_r29.py
+          "$RUNNER_TEMP/fidelity-r29-venv/bin/python" tests/test_native_frames_r29.py
+      - name: Execute source-body provenance assertions
+        run: |
+          "$RUNNER_TEMP/fidelity-r29-venv/bin/python" scripts/verify-body-sources-r29.py
+          "$RUNNER_TEMP/fidelity-r29-venv/bin/python" scripts/verify-revelations-bodies-r29.py
+      - name: Reconstruct actual geometry and validate current static admission
+        run: |
+          node tests/verify-native-frames-r29.mjs
+          node tests/verify-combat-sprites-r29.mjs
+          node tests/verify-ci-report-r25.mjs
+      - name: Require fresh executed nonempty current reports
+        run: |
+          node --input-type=module - <<'JS'
+          import assert from 'node:assert/strict';
+          import fs from 'node:fs';
+          const names=['R29_EXPORT_TESTS.json','R29_SPRITES_TESTS.json','R29_NATIVE_FRAMES_TESTS.json',
+            'R29_COMBAT_SPRITE_TESTS.json','R29_NATIVE_FRAME_RIG_TESTS.json','R29_BODY_SOURCES_TESTS.json','R29_REVELATIONS_BODY_TESTS.json'];
+          for(const name of names){
+            const file='docs/'+name;assert(fs.existsSync(file),'Missing executed report: '+file);
+            const report=JSON.parse(fs.readFileSync(file,'utf8'));
+            const passed=report.passed??report.counts?.passed,failed=report.failed??report.counts?.failed;
+            assert(Number.isInteger(passed)&&passed>0,'No current tests executed: '+file);
+            assert.equal(failed,0,file);assert.equal(report.skipped??0,0,file);assert.notEqual(report.pass,false,file);
+          }
+          JS
+      - name: Keep the original current engine and UI assertions active
+        run: npm run verify > qa-fidelity-r29-ci/current-historical-verify.log
+      - name: Preserve only reports generated by this execution
+        if: always()
+        run: |
+          mkdir -p qa-fidelity-r29-ci
+          if [[ -f qa-fidelity-r29-ci/test-execution-started ]]; then
+            for report in R29_EXPORT_TESTS R29_SPRITES_TESTS R29_NATIVE_FRAMES_TESTS R29_COMBAT_SPRITE_TESTS R29_NATIVE_FRAME_RIG_TESTS R29_BODY_SOURCES_TESTS R29_REVELATIONS_BODY_TESTS; do
+              if [[ -f "docs/$report.json" ]]; then
+                cp "docs/$report.json" "qa-fidelity-r29-ci/$report.json"
+              fi
+            done
+          fi
+          node tests/ci-report-r25.mjs qa-fidelity-r29-ci
+      - name: Upload executed current provenance evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: fidelity-r29-provenance-${{ github.run_id }}
+          path: qa-fidelity-r29-ci/
+          if-no-files-found: warn
+          retention-days: 14
+  browser:
+    needs: provenance
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        include:
+          - suite: sprites
+            script: tests/browser-generated-sprites-r29.mjs
+            evidence: qa-generated-sprites-r29
+            report: docs/R29_SPRITES_BROWSER.json
+            secondary_report: ''
+          - suite: native-frames
+            script: tests/browser-native-frames-r29.mjs
+            evidence: qa-native-frames-r29
+            report: docs/R29_NATIVE_FRAMES_BROWSER.json
+            secondary_report: ''
+          - suite: selection-replays
+            script: tests/browser-selection-boundaries-r29.mjs
+            evidence: qa-selection-r29
+            report: docs/R29_SELECTION_BROWSER.json
+            secondary_report: ''
+          - suite: fidelity-and-dossiers
+            script: tests/browser-fidelity-r29.mjs
+            evidence: qa-fidelity-r29
+            report: docs/R29_DASHBOARD_BROWSER.json
+            secondary_report: docs/R29_DOSSIER_BROWSER.json
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Invalidate the selected report before installing tools
+        run: |
+          mkdir -p '${{ matrix.evidence }}'
+          rm -f '${{ matrix.report }}'
+          if [[ -n '${{ matrix.secondary_report }}' ]]; then
+            rm -f '${{ matrix.secondary_report }}'
+          fi
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - name: Install pinned browser validation tools
+        timeout-minutes: 10
+        run: npm install --no-audit --no-fund --no-save --package-lock=false --fetch-timeout=60000 --fetch-retries=2 playwright@1.64.1 @napi-rs/canvas@0.1.80
+      - name: Locate Chromium
+        run: |
+          if command -v google-chrome >/dev/null; then
+            echo "CHROME_BIN=$(command -v google-chrome)" >> "$GITHUB_ENV"
+          else
+            npx playwright install --with-deps chromium
+            node --input-type=module -e "import {chromium} from 'playwright'; console.log('CHROME_BIN=' + chromium.executablePath())" >> "$GITHUB_ENV"
+          fi
+      - name: Exercise the selected actual current-source flow
+        run: node '${{ matrix.script }}'
+      - name: Require an actual completed report and publish annotations
+        if: always()
+        run: |
+          node --input-type=module - '${{ matrix.report }}' '${{ matrix.secondary_report }}' <<'JS'
+          import assert from 'node:assert/strict';
+          import fs from 'node:fs';
+          for(const file of process.argv.slice(2).filter(Boolean)){
+            assert(fs.existsSync(file),'This execution produced no report: '+file);
+            const report=JSON.parse(fs.readFileSync(file,'utf8'));
+            assert(Number.isInteger(report.passed)&&report.passed>0,'No browser groups executed');
+            assert.equal(report.failed,0,file);assert.equal(report.skipped??0,0,file);
+          }
+          JS
+          cp '${{ matrix.report }}' '${{ matrix.evidence }}/executed-report.json'
+          if [[ -n '${{ matrix.secondary_report }}' ]]; then
+            cp '${{ matrix.secondary_report }}' '${{ matrix.evidence }}/executed-secondary-report.json'
+          fi
+          node tests/ci-report-r25.mjs '${{ matrix.evidence }}'
+      - name: Upload executed current browser evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: fidelity-r29-${{ matrix.suite }}-${{ github.run_id }}
+          path: ${{ matrix.evidence }}/
+          if-no-files-found: warn
+          retention-days: 14
+  build:
+    needs: provenance
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - name: Build the complete current static delivery
+        run: |
+          mkdir -p qa-fidelity-r29-build
+          npm run build > qa-fidelity-r29-build/build.log
+      - name: Verify all current R29 source bytes in the actual distribution
+        run: |
+          node --input-type=module - <<'JS'
+          import assert from 'node:assert/strict';
+          import fs from 'node:fs';
+          import {createHash} from 'node:crypto';
+          const sha=value=>createHash('sha256').update(value).digest('hex');
+          const ledger=JSON.parse(fs.readFileSync('docs/R29_SOURCE_ADDITIONS.json','utf8'));
+          assert(ledger.files.length>0,'No R29 delivery sources recorded');let bytes=0;
+          for(const entry of ledger.files){
+            assert(entry.path.startsWith('modules/fidelity-r29/'),entry.path);
+            const original=fs.readFileSync(entry.path),delivered=fs.readFileSync('dist/'+entry.path);
+            assert.equal(original.length,entry.bytes,entry.path);assert.equal(sha(original),entry.sha256,entry.path);
+            assert(delivered.equals(original),entry.path);bytes+=original.length;
+          }
+          const mounts=['modules/versus.html','catalog-duel.html','codex.html','docs/BOW_FIDELITE_R29.xlsx'];
+          for(const file of mounts)assert(fs.readFileSync('dist/'+file).equals(fs.readFileSync(file)),file);
+          fs.writeFileSync('qa-fidelity-r29-build/distribution-check.json',JSON.stringify({schema:'re.bow.build-ci-r29/1',
+            passed:2,failed:0,moduleFiles:ledger.files.length,moduleBytes:bytes,exactMounts:mounts},null,2)+'\n');
+          JS
+      - name: Upload actual current build evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: fidelity-r29-build-${{ github.run_id }}
+          path: qa-fidelity-r29-build/
+          if-no-files-found: warn
+          retention-days: 14

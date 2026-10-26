@@ -25,28 +25,19 @@ jobs:
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: '22.16.0'
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: '3.12'
       - name: Install pinned local evidence tools
         timeout-minutes: 5
         run: |
           python3 -m venv "$RUNNER_TEMP/fidelity-r28-venv"
-          "$RUNNER_TEMP/fidelity-r28-venv/bin/python" -m pip install --timeout 60 --retries 2 Pillow==12.3.0 openpyxl==3.1.5
+          "$RUNNER_TEMP/fidelity-r28-venv/bin/python" -m pip install --timeout 60 --retries 2 Pillow==12.3.0 openpyxl==3.1.5 lxml==6.1.1
           npm install --no-audit --no-fund --no-save --package-lock=false --fetch-timeout=60000 --fetch-retries=2 @napi-rs/canvas@0.1.80
       - name: Reproduce the published local inputs before regenerating their bound reports
         run: |
           mkdir -p qa-fidelity-r28-ci
-          "$RUNNER_TEMP/fidelity-r28-venv/bin/python" scripts/build-sprite-overlay-r28.py --check > qa-fidelity-r28-ci/sprites-check.json
-          "$RUNNER_TEMP/fidelity-r28-venv/bin/python" scripts/build-evolutions-r28.py --check > qa-fidelity-r28-ci/evolutions-check.json
-          "$RUNNER_TEMP/fidelity-r28-venv/bin/python" scripts/build-canonical-evidence-r28.py --check > qa-fidelity-r28-ci/canonical-check.json
-          "$RUNNER_TEMP/fidelity-r28-venv/bin/python" scripts/import-audio-archives-r28.py --check > qa-fidelity-r28-ci/audio-check.json
-          "$RUNNER_TEMP/fidelity-r28-venv/bin/python" scripts/build-dossier-additions-r28.py --check > qa-fidelity-r28-ci/dossier-check.json
-          "$RUNNER_TEMP/fidelity-r28-venv/bin/python" scripts/build-validation-summary-r28.py --check > qa-fidelity-r28-ci/published-validation-check.json
-          "$RUNNER_TEMP/fidelity-r28-venv/bin/python" scripts/build-fidelity-tracking-r28.py --check > qa-fidelity-r28-ci/published-tracking-check.json
-          "$RUNNER_TEMP/fidelity-r28-venv/bin/python" scripts/verify-fidelity-export-r28.py > qa-fidelity-r28-ci/workbook-check.json
-          cp docs/R28_REPRODUCTION.json qa-fidelity-r28-ci/executed-workbook-report.json
-          "$RUNNER_TEMP/fidelity-r28-venv/bin/python" scripts/audit-delivery-r28.py --check > qa-fidelity-r28-ci/delivery-check.json
-          rm -f docs/R28_INTEGRATION_TESTS.json
-          node tests/verify-r28-integration.mjs > qa-fidelity-r28-ci/integration-check.log
-          cp docs/R28_INTEGRATION_TESTS.json qa-fidelity-r28-ci/executed-integration-report.json
+          "$RUNNER_TEMP/fidelity-r28-venv/bin/python" scripts/run-published-release-r29.py --commit 9bcb3535189ffa7b21f08f733be2f1afeb73b984 --evidence qa-fidelity-r28-ci/published-release --plan scripts/ci-r29/plans/r28-publication.json
       - name: Invalidate the previous test reports before this execution
         run: |
           rm -f docs/R28_EXPORT_TESTS.json docs/R28_SPRITES_TESTS.json docs/R28_BODY_SOURCES_TESTS.json docs/R28_CANONICAL_VALIDATION.json docs/R28_AUDIO_TESTS.json docs/R28_COMBAT_SPRITE_TESTS.json docs/R28_EVOLUTIONS_ENGINE_TESTS.json
@@ -173,6 +164,7 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           persist-credentials: false
+          ref: 9bcb3535189ffa7b21f08f733be2f1afeb73b984
       - name: Invalidate the selected report before installing or executing tools
         run: |
           mkdir -p '${{ matrix.evidence }}'
@@ -224,6 +216,7 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           persist-credentials: false
+          ref: 9bcb3535189ffa7b21f08f733be2f1afeb73b984
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: '22.16.0'

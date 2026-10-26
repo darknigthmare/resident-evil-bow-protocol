@@ -1,0 +1,98 @@
+{
+  "schema": "re.bow.native-frame-contact-observations-r29/1",
+  "reviewIndex": {
+    "path": "docs/R29_NATIVE_FRAME_REVIEW/index.json",
+    "sha256": "a60f75da0f15d7f4b4d27cc2d7dc7b49203a536647785dd6daba8db327d65d54"
+  },
+  "reviewedSampleIndices": [
+    0,
+    5,
+    10,
+    15
+  ],
+  "reviewedNativeFrameSamples": 96,
+  "reviewedSourceScenes": 24,
+  "completeAnimationCyclesReviewed": 0,
+  "actionAssignments": 0,
+  "canonicalFidelityCertified": false,
+  "observations": [
+    {
+      "contact": {
+        "path": "docs/R29_NATIVE_FRAME_REVIEW/contact-01.png",
+        "sha256": "ab172adbefe76337fe5ce01b862e9a5446ef624c715d677c9daf9f2268747a08"
+      },
+      "sourceScenes": [
+        "rerev-ooze--em1000_em1000_BA_1",
+        "rerev-chunk-ooze--em1030_em1000_BA_1",
+        "rerev-tricorne-ooze--em1020_em1000_BA_1",
+        "rerev-pincer-ooze--em1010_em1000_BA_1"
+      ],
+      "note": "Bodies remain wholly within the fixed camera; visible limb and torso poses change, with source rotations preserved. No neutral-idle action is assigned."
+    },
+    {
+      "contact": {
+        "path": "docs/R29_NATIVE_FRAME_REVIEW/contact-02.png",
+        "sha256": "6310ca47f4bd9d0c789d4769174480984c8a495be453ddfeb4eb491abdd8e376"
+      },
+      "sourceScenes": [
+        "rerev-farfarello--em1240_em1230_BA_1",
+        "rerev-wall-blister--em1410_em1410_BA_0",
+        "rerev-ooze--em1000_em1000_BA_20",
+        "rerev-ooze--em1000_em1000_DM_24"
+      ],
+      "note": "Farfarello and WallBlister show source limb/torso variation; Ooze BA20/DM24 show different body poses and root travel. No attack, walk or damage meaning is certified."
+    },
+    {
+      "contact": {
+        "path": "docs/R29_NATIVE_FRAME_REVIEW/contact-03.png",
+        "sha256": "625a7b06bd645d1f12eb4bc991d61ffad0e01da7bd9363404d09d573ff6a1e07"
+      },
+      "sourceScenes": [
+        "rerev-ooze--em1000_em1000_UZm_1",
+        "rerev-chunk-ooze--em1030_em1000_BA_20",
+        "rerev-chunk-ooze--em1030_em1000_DM_24",
+        "rerev-chunk-ooze--em1030_em1000_BA_101"
+      ],
+      "note": "Ooze UZm1 and Chunk samples visibly change torso/limb positions; Chunk BA101 includes a low/horizontal body pose between upright samples, without per-frame camera reframing."
+    },
+    {
+      "contact": {
+        "path": "docs/R29_NATIVE_FRAME_REVIEW/contact-04.png",
+        "sha256": "1c0d2018e0f272b8f508d9f98109f4418eca48fbf1cdd3430b9a5da818125651"
+      },
+      "sourceScenes": [
+        "rerev-tricorne-ooze--em1020_em1000_BA_20",
+        "rerev-tricorne-ooze--em1020_em1000_DM_24",
+        "rerev-tricorne-ooze--em1020_em1000_BA_101",
+        "rerev-pincer-ooze--em1010_em1000_BA_20"
+      ],
+      "note": "Tricorne and Pincer source limb/body poses change, including horizontal intermediate Tricorne BA101 poses; the source root movement remains visible."
+    },
+    {
+      "contact": {
+        "path": "docs/R29_NATIVE_FRAME_REVIEW/contact-05.png",
+        "sha256": "aa7d9685fdfe61196ee0d13ffc7c946655f5e791c59b1a21206abafa33701f2d"
+      },
+      "sourceScenes": [
+        "rerev-pincer-ooze--em1010_em1000_DM_24",
+        "rerev-pincer-ooze--em1010_em1000_UZm_1",
+        "rerev-farfarello--em1240_em1230_DM_24",
+        "rerev-farfarello--em1240_em1230_BA_101"
+      ],
+      "note": "Pincer and Farfarello DM24 show visible body-pose changes. Farfarello BA101 has very small raster occupancy because the fixed camera includes its large sampled source trajectory; anatomy detail is held."
+    },
+    {
+      "contact": {
+        "path": "docs/R29_NATIVE_FRAME_REVIEW/contact-06.png",
+        "sha256": "b11ce679a2d4f007a10aadb02fcace37b5cd14e4514f81806cef10c39bd61389"
+      },
+      "sourceScenes": [
+        "rerev-farfarello--em1240_em1230_DM_1",
+        "rerev-wall-blister--em1410_em1410_BA_20",
+        "rerev-wall-blister--em1410_em1410_BA_101",
+        "rerev-wall-blister--em1410_em1410_BA_102"
+      ],
+      "note": "Farfarello DM1 and WallBlister BA20 show different native body poses. WallBlister BA101/102 have very small raster occupancy for large source travel; no detailed body or gameplay-action admission follows."
+    }
+  ]
+}

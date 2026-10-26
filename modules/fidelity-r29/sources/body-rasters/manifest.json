@@ -1,0 +1,655 @@
+{
+  "schema": "re.bow.source-body-reference-raster-addendum/1",
+  "release": "R29",
+  "request": {
+    "path": "docs/R29_BODY_RENDER_REQUEST.json",
+    "sha256": "77a771807fd84041b7f45f0eb3f5c6093a880b03416e3d4aab70f1776405198a"
+  },
+  "renderRecipe": {
+    "path": "modules/fidelity-r29/sources/body-rasters/renderer.js",
+    "sha256": "ff3af2bf61ef3b0d0884a635113c6342b9099e21259bcc9ef11fbd131fd46158"
+  },
+  "frozenPreviousReleasesChanged": false,
+  "counts": {
+    "identities": 3,
+    "sourceBodyModels": 3,
+    "renderedReferenceImages": 12,
+    "imageGenSprites": 0,
+    "originalGameSprites": 0,
+    "combatReadySprites": 0
+  },
+  "environment": {
+    "browser": "154.0.8037.57",
+    "backend": "Headless Chromium/software SwiftShader",
+    "physicalDeviceCertified": false
+  },
+  "limits": [
+    "Separate camera views of the retained attributed source models; vertices, transforms and poses unchanged.",
+    "Orbit angles are source-coordinate views, not a certification of canonical front/left/right, physical scale or an animation action.",
+    "Rendering and lighting belong to this reference recipe; original-game rendering and material interpretation remain uncertified.",
+    "Models from other ports, candidate identities and partial source components cannot be promoted as complete exact-incarnation bodies."
+  ],
+  "entries": [
+    {
+      "id": "re0-zombie",
+      "modelId": "re0-zombie-gc-r26-2",
+      "sourcePage": "https://www.models-resource.com/gamecube/residentevil0/asset/287609/",
+      "sourceEdition": "GameCube 2002",
+      "platform": "GameCube",
+      "sourceCatalog": {
+        "path": "modules/fidelity-r26/models/catalog.json",
+        "bytes": 3045959,
+        "sha256": "540c5583c6388f92dea9e1f12b6040ba757b6bf56b27c18743d8c5ffdcc2c715"
+      },
+      "sourceBase": "../visual/",
+      "model": {
+        "path": "models/asset-287609/Zombie/Zombie2/Zombie_2.obj",
+        "member": "Zombie/Zombie2/Zombie_2.obj",
+        "bytes": 286668,
+        "sha256": "ab9a7e846e1cc4a5109d95d3ebcfb9e802143465a59a4dd3941ac892749cf1ab"
+      },
+      "materials": {
+        "path": "models/asset-287609/Zombie/Zombie2/Zombie_2.mtl",
+        "member": "Zombie/Zombie2/Zombie_2.mtl",
+        "bytes": 1171,
+        "sha256": "c4e568aa0d737e848656a8b4522d46148cb8dae5eb057250f7691b9b4a2fccdd"
+      },
+      "textures": [
+        {
+          "path": "models/asset-287609/Zombie/Zombie1/t0071_1.png",
+          "member": "Zombie/Zombie1/t0071_1.png",
+          "bytes": 48261,
+          "sha256": "0bbf844ba0d8ba0eb9d88103c79a86abc69f5cc7790a926fbd304dfd8ccbf0d2"
+        },
+        {
+          "path": "models/asset-287609/Zombie/Zombie1/t0045_0.png",
+          "member": "Zombie/Zombie1/t0045_0.png",
+          "bytes": 103658,
+          "sha256": "6d228bede01fb5109eb1b3b70c9f7d77ded5c739cd50644c3205c585a320d6ac"
+        },
+        {
+          "path": "models/asset-287609/Zombie/Zombie1/t0046_1.png",
+          "member": "Zombie/Zombie1/t0046_1.png",
+          "bytes": 193877,
+          "sha256": "7259cbe2d2a9fe945cd1f6ba5f8f196b638d3b5714fa810f356ce60018a54a16"
+        },
+        {
+          "path": "models/asset-287609/Zombie/Zombie1/t0047_0.png",
+          "member": "Zombie/Zombie1/t0047_0.png",
+          "bytes": 131887,
+          "sha256": "104a5724fdcdc903d881e503c0b468330e76fd5002e1fe1770029dae45b1b257"
+        },
+        {
+          "path": "models/asset-287609/Zombie/Zombie2/t0245_2.png",
+          "member": "Zombie/Zombie2/t0245_2.png",
+          "bytes": 35068,
+          "sha256": "87d1a6b620915d3547d78851e8e770928f7bb6f987ed435288596368f812b83b"
+        }
+      ],
+      "sourcePoseScope": "Published rest/base pose only; no native action name or neutral combat idle inferred.",
+      "equipmentScope": "Published whole body and retained source rest pose; equipment interpretation and native-game rendering are not independently certified.",
+      "sourceVariantScope": "The second published RE0 zombie model, wearing the long coat; no other zombie outfit is completed.",
+      "geometryScope": "published-body-variant",
+      "recipe": {
+        "projection": "orthographic",
+        "cameraUp": [
+          0,
+          1,
+          0
+        ],
+        "angles": [
+          0,
+          90,
+          180,
+          270
+        ],
+        "cellSize": 768,
+        "cameraOrbitOnly": true,
+        "geometryMirrored": false,
+        "modelTransformsChanged": false,
+        "poseChanged": false,
+        "sourceUnitsConvertedToMeters": false,
+        "bounds": {
+          "min": [
+            -8.694300651550293,
+            0.007813000120222569,
+            -1.7490220069885254
+          ],
+          "max": [
+            8.694416046142578,
+            18.3505859375,
+            2.145508050918579
+          ]
+        },
+        "lighting": {
+          "ambientIntensity": 2,
+          "directionalIntensity": 2,
+          "directionalPosition": [
+            1,
+            2,
+            3
+          ],
+          "nativeGameLightingCertified": false
+        },
+        "renderMaterialMode": "unlit-source-albedo",
+        "sourceMaterialsBytesRewritten": false,
+        "originalGameMaterialCertified": false,
+        "sourceCatalog": {
+          "path": "modules/fidelity-r26/models/catalog.json",
+          "bytes": 3045959,
+          "sha256": "540c5583c6388f92dea9e1f12b6040ba757b6bf56b27c18743d8c5ffdcc2c715"
+        },
+        "library": "Three.js0.180.0",
+        "outputColorSpace": "sRGB",
+        "alpha": true
+      },
+      "views": [
+        {
+          "angle": 0,
+          "width": 768,
+          "height": 768,
+          "occupiedPixels": 56691,
+          "edgePixels": 0,
+          "rgbaSha256": "f203578ffa0d7c88b8c2affa327a329c87110dd1852f54a521577fd77b963a45",
+          "cameraPosition": [
+            0.000057697296142578125,
+            15.316784331237496,
+            51.34478354219324
+          ],
+          "cameraTarget": [
+            0.000057697296142578125,
+            9.179199468810111,
+            0.19824302196502686
+          ],
+          "path": "re0-zombie-gc-r26-2/source-0.png",
+          "bytes": 149070,
+          "sha256": "610893a8367cefcd5a3297022724d609576327475db9a4348056443d52723698"
+        },
+        {
+          "angle": 90,
+          "width": 768,
+          "height": 768,
+          "occupiedPixels": 32049,
+          "edgePixels": 0,
+          "rgbaSha256": "1774d12089d036f2ff251d04d1b0b6fbf2ef9275be0ee677e6c95ad598b9bdfc",
+          "cameraPosition": [
+            51.14659821752436,
+            15.316784331237496,
+            0.19824302196503
+          ],
+          "cameraTarget": [
+            0.000057697296142578125,
+            9.179199468810111,
+            0.19824302196502686
+          ],
+          "path": "re0-zombie-gc-r26-2/source-90.png",
+          "bytes": 92522,
+          "sha256": "f7f7820d59b143e0d3692b71534ac90a23baaf81d05850ee7b96a4661787a8d3"
+        },
+        {
+          "angle": 180,
+          "width": 768,
+          "height": 768,
+          "occupiedPixels": 56102,
+          "edgePixels": 0,
+          "rgbaSha256": "bac65699ecefc98871445088e18a094c098449d6660cd06836927a636676e9bd",
+          "cameraPosition": [
+            0.00005769729614884177,
+            15.316784331237496,
+            -50.94829749826319
+          ],
+          "cameraTarget": [
+            0.000057697296142578125,
+            9.179199468810111,
+            0.19824302196502686
+          ],
+          "path": "re0-zombie-gc-r26-2/source-180.png",
+          "bytes": 143300,
+          "sha256": "ffd95a6961e7a5c12a0d3012328e7cbfdc44f0461a588948cc4b536ccc263d42"
+        },
+        {
+          "angle": 270,
+          "width": 768,
+          "height": 768,
+          "occupiedPixels": 31833,
+          "edgePixels": 0,
+          "rgbaSha256": "c37892b178d10f14433e6c6593d4985c8c26bb05c832d6bcb5d10595319e523d",
+          "cameraPosition": [
+            -51.14648282293207,
+            15.316784331237496,
+            0.19824302196501745
+          ],
+          "cameraTarget": [
+            0.000057697296142578125,
+            9.179199468810111,
+            0.19824302196502686
+          ],
+          "path": "re0-zombie-gc-r26-2/source-270.png",
+          "bytes": 90544,
+          "sha256": "64261e7479feb9893793182c675429747db75d84bbc90e899ba59356987c26e9"
+        }
+      ],
+      "classification": "derived-exact-source-geometry-reference",
+      "originalGameSprite": false,
+      "generatedWithImageGen": false,
+      "combatReady": false,
+      "canonicalFidelityCertified": false,
+      "anatomicalCompletenessIndependentlyCertified": false
+    },
+    {
+      "id": "re1r-tyrant",
+      "modelId": "re1r-tyrant-gamecube",
+      "sourcePage": "https://models.spriters-resource.com/gamecube/residentevil/asset/571038/",
+      "sourceEdition": "Resident Evil remake (2002)",
+      "platform": "GameCube",
+      "sourceCatalog": {
+        "path": "modules/fidelity-r26/models/catalog.json",
+        "bytes": 3045959,
+        "sha256": "540c5583c6388f92dea9e1f12b6040ba757b6bf56b27c18743d8c5ffdcc2c715"
+      },
+      "sourceBase": "../../fidelity-r24/visual/",
+      "model": {
+        "path": "models/asset-571038/Tyrant.obj",
+        "sha256": "f8d77938c72e3966d38fca99b25b84d7774d579c803f7a619f0f024551ed586b",
+        "bytes": 1063750
+      },
+      "materials": {
+        "path": "models/asset-571038/Tyrant.mtl",
+        "sha256": "640ffa11a9a7b6adfee501f1757e8cf7bfb6c262e200cc00a776990c04bdc278",
+        "bytes": 777
+      },
+      "textures": [
+        {
+          "path": "models/asset-571038/Tex/012.png",
+          "sha256": "a14e4a81cb9d59b046d8005e47246f7217ebcb4cca97d7922447a88ccb312024",
+          "bytes": 126534
+        },
+        {
+          "path": "models/asset-571038/Tex/008.png",
+          "sha256": "797de43009ea1bc8efb38e33db0b1678d00f2d807544e3affbe97284f663b559",
+          "bytes": 113742
+        },
+        {
+          "path": "models/asset-571038/Tex/002.png",
+          "sha256": "7dd1d71bf29ac7eee6d697a58ecaf7eccaa42622267fd4918e2b9a13775f471c",
+          "bytes": 88703
+        },
+        {
+          "path": "models/asset-571038/Tex/004.png",
+          "sha256": "4ee85ab88f0f0c65fcb1b9ba08f1fcaecd2103c3127eefbb926f9c9f9c5fdef1",
+          "bytes": 100744
+        },
+        {
+          "path": "models/asset-571038/Tex/006.png",
+          "sha256": "eef59d0c27f6a2cd01d09a2f61350215bda937132e1819cafd1c03b60d072500",
+          "bytes": 99602
+        },
+        {
+          "path": "models/asset-571038/Tex/000.png",
+          "sha256": "e631fbb1d34d1c714c77bc8cb425750d8f700a371a08ad7fa22eff961dea55f4",
+          "bytes": 127268
+        },
+        {
+          "path": "models/asset-571038/Tex/010.png",
+          "sha256": "94b62835252870f2baa27fb2dc0efff57273f096cee675aa9f489ee4e10c16f4",
+          "bytes": 98882
+        }
+      ],
+      "sourcePoseScope": "Published rest/base pose only; no native action name or neutral combat idle inferred.",
+      "equipmentScope": "Published whole body and retained source rest pose; equipment interpretation and native-game rendering are not independently certified.",
+      "sourceVariantScope": "The published GameCube remake T-002 base model, not the PlayStation1996 incarnation.",
+      "geometryScope": "static-mesh-export",
+      "recipe": {
+        "projection": "orthographic",
+        "cameraUp": [
+          0,
+          1,
+          0
+        ],
+        "angles": [
+          0,
+          90,
+          180,
+          270
+        ],
+        "cellSize": 768,
+        "cameraOrbitOnly": true,
+        "geometryMirrored": false,
+        "modelTransformsChanged": false,
+        "poseChanged": false,
+        "sourceUnitsConvertedToMeters": false,
+        "bounds": {
+          "min": [
+            -12.251250267028809,
+            0.032499998807907104,
+            -2.456249952316284
+          ],
+          "max": [
+            16.778749465942383,
+            25.821250915527344,
+            2.841249942779541
+          ]
+        },
+        "lighting": {
+          "ambientIntensity": 2,
+          "directionalIntensity": 2,
+          "directionalPosition": [
+            1,
+            2,
+            3
+          ],
+          "nativeGameLightingCertified": false
+        },
+        "renderMaterialMode": "unlit-source-albedo",
+        "sourceMaterialsBytesRewritten": false,
+        "originalGameMaterialCertified": false,
+        "sourceCatalog": {
+          "path": "modules/fidelity-r26/models/catalog.json",
+          "bytes": 3045959,
+          "sha256": "540c5583c6388f92dea9e1f12b6040ba757b6bf56b27c18743d8c5ffdcc2c715"
+        },
+        "library": "Three.js0.180.0",
+        "outputColorSpace": "sRGB",
+        "alpha": true
+      },
+      "views": [
+        {
+          "angle": 0,
+          "width": 768,
+          "height": 768,
+          "occupiedPixels": 44197,
+          "edgePixels": 0,
+          "rgbaSha256": "a06a1e1a88d5d44e068a9686150abd17ab84a17923daa3753ee729ea0f5270b2",
+          "cameraPosition": [
+            2.263749599456787,
+            22.33249984135478,
+            78.57270319679127
+          ],
+          "cameraTarget": [
+            2.263749599456787,
+            12.926875457167625,
+            0.19249999523162842
+          ],
+          "path": "re1r-tyrant-gamecube/source-0.png",
+          "bytes": 143041,
+          "sha256": "064953945768c3490fdf5fc2a75cdeb07e9e8a470f07ec40fd3a2ccd2352b7f7"
+        },
+        {
+          "angle": 90,
+          "width": 768,
+          "height": 768,
+          "occupiedPixels": 23206,
+          "edgePixels": 0,
+          "rgbaSha256": "2fb0165719792fff6cc38adc51d84677fda42f2728c6352396128104641de058",
+          "cameraPosition": [
+            80.64395280101643,
+            22.33249984135478,
+            0.19249999523163322
+          ],
+          "cameraTarget": [
+            2.263749599456787,
+            12.926875457167625,
+            0.19249999523162842
+          ],
+          "path": "re1r-tyrant-gamecube/source-90.png",
+          "bytes": 80912,
+          "sha256": "0eea03bf38024a24039531227883927c91552c8344f1429eae5774be0737d52d"
+        },
+        {
+          "angle": 180,
+          "width": 768,
+          "height": 768,
+          "occupiedPixels": 44093,
+          "edgePixels": 0,
+          "rgbaSha256": "65c9452f72920382ba44d6457f11d025804f48bc7f0666273802a9aa108a8033",
+          "cameraPosition": [
+            2.263749599456797,
+            22.33249984135478,
+            -78.18770320632801
+          ],
+          "cameraTarget": [
+            2.263749599456787,
+            12.926875457167625,
+            0.19249999523162842
+          ],
+          "path": "re1r-tyrant-gamecube/source-180.png",
+          "bytes": 139170,
+          "sha256": "ee06222194f3c3f31224c47813807f5a0df32ac1ba3a52c4b384542358cc524f"
+        },
+        {
+          "angle": 270,
+          "width": 768,
+          "height": 768,
+          "occupiedPixels": 23073,
+          "edgePixels": 0,
+          "rgbaSha256": "80d2e919bc749da23b7d5f908478d3a6c2132e042d904778681483187ab015f1",
+          "cameraPosition": [
+            -76.11645360210285,
+            22.33249984135478,
+            0.192499995231614
+          ],
+          "cameraTarget": [
+            2.263749599456787,
+            12.926875457167625,
+            0.19249999523162842
+          ],
+          "path": "re1r-tyrant-gamecube/source-270.png",
+          "bytes": 83092,
+          "sha256": "b794349228627067367d8add89cabded1140495cb69bb388d21202bdbabfc37b"
+        }
+      ],
+      "classification": "derived-exact-source-geometry-reference",
+      "originalGameSprite": false,
+      "generatedWithImageGen": false,
+      "combatReady": false,
+      "canonicalFidelityCertified": false,
+      "anatomicalCompletenessIndependentlyCertified": false
+    },
+    {
+      "id": "re0-mimicry-marcus",
+      "modelId": "re0-mimicry-marcus-gc-r29",
+      "sourcePage": "https://www.models-resource.com/gamecube/residentevil0/asset/287607/",
+      "sourceEdition": "Resident Evil 0 — GameCube",
+      "platform": "GameCube",
+      "sourceCatalog": {
+        "path": "modules/fidelity-r29/sources/native-models/catalog.json",
+        "bytes": 5357,
+        "sha256": "5a70b41e233afbee181d0ea4f94b54f285637d381080c5a94999608ff6b2c3d7"
+      },
+      "sourceBase": "./",
+      "model": {
+        "path": "models/asset-287607/LeachMonster/LeachMonster.obj",
+        "member": "LeachMonster/LeachMonster.obj",
+        "bytes": 413030,
+        "sha256": "6a077316554800c541f37263f0eaf30a52a281aac0c226eb9296491591426d48"
+      },
+      "materials": {
+        "path": "models/asset-287607/LeachMonster/LeachMonster.mtl",
+        "member": "LeachMonster/LeachMonster.mtl",
+        "bytes": 758,
+        "sha256": "ec2bb92f1fa53ec3eee800c3183e7252e7b2ec783b190befe399638e40d0a928"
+      },
+      "textures": [
+        {
+          "path": "models/asset-287607/LeachMonster/t0030_0.png",
+          "member": "LeachMonster/t0030_0.png",
+          "bytes": 243964,
+          "sha256": "9f427dc2cb6ada20ab4f9f2d1fb63ac8333853d0fcca5b08a869620c9ada54f1"
+        },
+        {
+          "path": "models/asset-287607/LeachMonster/t0030_1.png",
+          "member": "LeachMonster/t0030_1.png",
+          "bytes": 28317,
+          "sha256": "8af31b7985ea0015f506dc0f28027ec6c4c28b674d69d44b9e140574f39828dd"
+        },
+        {
+          "path": "models/asset-287607/LeachMonster/t0068_0.png",
+          "member": "LeachMonster/t0068_0.png",
+          "bytes": 227023,
+          "sha256": "9748fe91505146408049b6f808498a4ef2e42b4d3409add587874e0e7cfc36e7"
+        },
+        {
+          "path": "models/asset-287607/LeachMonster/t0068_3.png",
+          "member": "LeachMonster/t0068_3.png",
+          "bytes": 123106,
+          "sha256": "0841aaa4591a9d8be7e2be1df4614e129bde36fb17fb07df7ba05eeb9bb05a18"
+        },
+        {
+          "path": "models/asset-287607/LeachMonster/t0135_1.png",
+          "member": "LeachMonster/t0135_1.png",
+          "bytes": 4511,
+          "sha256": "511506064d6d274e01750b8e5e2a7c82a81cf10461bfe2d45bf23d0234d9a486"
+        }
+      ],
+      "sourcePoseScope": "Published rest/base pose only; no native action name or neutral combat idle inferred.",
+      "equipmentScope": "The selected native leech-body model has no independently assigned equipment. Other forms and source material interpretation remain uncertified.",
+      "sourceVariantScope": "Mimicry Marcus leech-body variant from the GameCube RE0 model, not a clothed human imitation or queen phase.",
+      "geometryScope": "published-body-reference",
+      "recipe": {
+        "projection": "orthographic",
+        "cameraUp": [
+          0,
+          1,
+          0
+        ],
+        "angles": [
+          0,
+          90,
+          180,
+          270
+        ],
+        "cellSize": 768,
+        "cameraOrbitOnly": true,
+        "geometryMirrored": false,
+        "modelTransformsChanged": false,
+        "poseChanged": false,
+        "sourceUnitsConvertedToMeters": false,
+        "bounds": {
+          "min": [
+            -9.14111614227295,
+            -0.032715000212192535,
+            -1.7211910486221313
+          ],
+          "max": [
+            9.26611042022705,
+            17.87109375,
+            1.9140629768371582
+          ]
+        },
+        "lighting": {
+          "ambientIntensity": 2,
+          "directionalIntensity": 2,
+          "directionalPosition": [
+            1,
+            2,
+            3
+          ],
+          "nativeGameLightingCertified": false
+        },
+        "renderMaterialMode": "unlit-source-albedo",
+        "sourceMaterialsBytesRewritten": false,
+        "originalGameMaterialCertified": false,
+        "sourceCatalog": {
+          "path": "modules/fidelity-r29/sources/native-models/catalog.json",
+          "bytes": 5357,
+          "sha256": "5a70b41e233afbee181d0ea4f94b54f285637d381080c5a94999608ff6b2c3d7"
+        },
+        "library": "Three.js0.180.0",
+        "outputColorSpace": "sRGB",
+        "alpha": true
+      },
+      "views": [
+        {
+          "angle": 0,
+          "width": 768,
+          "height": 768,
+          "occupiedPixels": 43743,
+          "edgePixels": 0,
+          "rgbaSha256": "ed4719e5226a8ae49aad684880b2d03226ffc9aa11cc697a46d2fbf3fdb2cc0e",
+          "cameraPosition": [
+            0.06249713897705078,
+            15.143419120706561,
+            51.96501717921299
+          ],
+          "cameraTarget": [
+            0.06249713897705078,
+            8.919189374893904,
+            0.09643596410751343
+          ],
+          "path": "re0-mimicry-marcus-gc-r29/source-0.png",
+          "bytes": 137264,
+          "sha256": "94c8f8c15ea7f3d3ba61e2ceaf7e5249f285ea205bf437824525c548f370fce1"
+        },
+        {
+          "angle": 90,
+          "width": 768,
+          "height": 768,
+          "occupiedPixels": 23976,
+          "edgePixels": 0,
+          "rgbaSha256": "af27ea4d0b681026d7540ccf2e7126dad03c89eca421b37d2f84464dfbfdba86",
+          "cameraPosition": [
+            51.93107835408253,
+            15.143419120706561,
+            0.0964359641075166
+          ],
+          "cameraTarget": [
+            0.06249713897705078,
+            8.919189374893904,
+            0.09643596410751343
+          ],
+          "path": "re0-mimicry-marcus-gc-r29/source-90.png",
+          "bytes": 84048,
+          "sha256": "1a77c6dde1ea46a11d14b6c5fe16bc5e88f160da60634370d8b34381c88ec559"
+        },
+        {
+          "angle": 180,
+          "width": 768,
+          "height": 768,
+          "occupiedPixels": 43202,
+          "edgePixels": 0,
+          "rgbaSha256": "5cab5310b9d3fd553a94e48207d73a61fbc499a00696f6d6d234bdecdc1d13b0",
+          "cameraPosition": [
+            0.06249713897705713,
+            15.143419120706561,
+            -51.772145250997966
+          ],
+          "cameraTarget": [
+            0.06249713897705078,
+            8.919189374893904,
+            0.09643596410751343
+          ],
+          "path": "re0-mimicry-marcus-gc-r29/source-180.png",
+          "bytes": 134144,
+          "sha256": "22e8b3f125451bef9e307335844cb49fa73236837a27693d97f386c25ba8c86c"
+        },
+        {
+          "angle": 270,
+          "width": 768,
+          "height": 768,
+          "occupiedPixels": 24093,
+          "edgePixels": 0,
+          "rgbaSha256": "7fa54b7f53c9f90e2201a202b6f598653b372de2a88539eac3748e3555c56435",
+          "cameraPosition": [
+            -51.80608407612843,
+            15.143419120706561,
+            0.0964359641075039
+          ],
+          "cameraTarget": [
+            0.06249713897705078,
+            8.919189374893904,
+            0.09643596410751343
+          ],
+          "path": "re0-mimicry-marcus-gc-r29/source-270.png",
+          "bytes": 83330,
+          "sha256": "a14537e77fbc16f64161a697aa388a4675c9422c78b5f81ab0602c347fdcdc4e"
+        }
+      ],
+      "classification": "derived-exact-source-geometry-reference",
+      "originalGameSprite": false,
+      "generatedWithImageGen": false,
+      "combatReady": false,
+      "canonicalFidelityCertified": false,
+      "anatomicalCompletenessIndependentlyCertified": false
+    }
+  ]
+}

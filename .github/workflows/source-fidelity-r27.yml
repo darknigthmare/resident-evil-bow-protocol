@@ -25,66 +25,21 @@ jobs:
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: '22.16.0'
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: '3.12'
       - name: Install pinned Python evidence tools
         timeout-minutes: 5
         run: |
           python3 -m venv "$RUNNER_TEMP/fidelity-r27-venv"
-          "$RUNNER_TEMP/fidelity-r27-venv/bin/python" -m pip install --timeout 60 --retries 2 Pillow==12.3.0 openpyxl==3.1.5
+          "$RUNNER_TEMP/fidelity-r27-venv/bin/python" -m pip install --timeout 60 --retries 2 Pillow==12.3.0 openpyxl==3.1.5 lxml==6.1.1
       - name: Install the canvas tool required by original replay fixtures
         timeout-minutes: 5
         run: npm install --no-audit --no-fund --no-save --package-lock=false --fetch-timeout=60000 --fetch-retries=2 @napi-rs/canvas@0.1.80
       - name: Reproduce frozen source catalogue and workbook before evidence reports are regenerated
         run: |
           mkdir -p qa-fidelity-r27-ci
-          "$RUNNER_TEMP/fidelity-r27-venv/bin/python" scripts/build-source-appearance-index-r27.py --check > qa-fidelity-r27-ci/appearance-check.json
-          "$RUNNER_TEMP/fidelity-r27-venv/bin/python" scripts/build-motion-catalog-r27.py --check > qa-fidelity-r27-ci/motion-catalogue-check.json
-          "$RUNNER_TEMP/fidelity-r27-venv/bin/python" scripts/build-canonical-evidence-r27.py --check > qa-fidelity-r27-ci/canonical-check.json
-          "$RUNNER_TEMP/fidelity-r27-venv/bin/python" scripts/build-dossier-additions-r27.py --check > qa-fidelity-r27-ci/dossier-additions-check.json
-          "$RUNNER_TEMP/fidelity-r27-venv/bin/python" scripts/build-sprites-jobs-r27.py --check > qa-fidelity-r27-ci/sprite-jobs-check.json
-          "$RUNNER_TEMP/fidelity-r27-venv/bin/python" scripts/import-generated-sprites-r27.py --check > qa-fidelity-r27-ci/generated-sprites-check.json
-          "$RUNNER_TEMP/fidelity-r27-venv/bin/python" scripts/export-fidelity-progress-r27.py --tracking docs/R27_TRACKING.json --baseline docs/BOW_FIDELITE_R26.xlsx --output qa-fidelity-r27-ci/BOW_FIDELITE_R27.xlsx --progress qa-fidelity-r27-ci/R27_PROGRESS.json
-          cmp qa-fidelity-r27-ci/R27_PROGRESS.json modules/fidelity-r27/progress.json
-          "$RUNNER_TEMP/fidelity-r27-venv/bin/python" - <<'PY'
-          import importlib.util
-          import json
-          from pathlib import Path
-          from openpyxl import load_workbook
-
-          root = Path.cwd()
-          spec = importlib.util.spec_from_file_location('export_r27', root / 'scripts/export-fidelity-progress-r27.py')
-          exporter = importlib.util.module_from_spec(spec)
-          spec.loader.exec_module(exporter)
-          expected = load_workbook(root / 'docs/BOW_FIDELITE_R27.xlsx')
-          actual = load_workbook(root / 'qa-fidelity-r27-ci/BOW_FIDELITE_R27.xlsx')
-          try:
-              assert actual.sheetnames == expected.sheetnames
-              for name in expected.sheetnames:
-                  assert exporter.worksheet_state(actual[name]) == exporter.worksheet_state(expected[name]), name
-              result = {'reproduced_sheets': len(expected.sheetnames), 'progress_bytes_equal': True,
-                        'scope': 'Values, formulas, styles, links, comments, merged cells and frozen panes; ZIP timestamps excluded.'}
-              (root / 'qa-fidelity-r27-ci/workbook-check.json').write_text(json.dumps(result, indent=2) + '\n')
-          finally:
-              actual.close()
-              expected.close()
-          PY
-          "$RUNNER_TEMP/fidelity-r27-venv/bin/python" scripts/build-validation-summary-r27.py --check
-          "$RUNNER_TEMP/fidelity-r27-venv/bin/python" scripts/build-fidelity-tracking-r27.py --check
-          "$RUNNER_TEMP/fidelity-r27-venv/bin/python" scripts/build-persistence-manifest-r27.py --check
-          # The immutable R27 auditor accepts exactly the R27 publication delta.
-          # An archive with its own HEAD/index checks that release without a worktree.
-          R27_REVIEWED_TREE=$(mktemp -d "$RUNNER_TEMP/fidelity-r27-published.XXXXXX")
-          R27_ORIGINAL_OBJECTS=$(git rev-parse --path-format=absolute --git-path objects)
-          R27_AUDIT_REPORT="$PWD/qa-fidelity-r27-ci/published-delivery-check.json"
-          trap 'rm -rf -- "$R27_REVIEWED_TREE"' EXIT
-          git archive 0317da5f79e40af1b6b0e82b1ef9f311900ee76a | tar -x -C "$R27_REVIEWED_TREE"
-          git init --quiet "$R27_REVIEWED_TREE"
-          (
-            export GIT_ALTERNATE_OBJECT_DIRECTORIES="$R27_ORIGINAL_OBJECTS"
-            git -C "$R27_REVIEWED_TREE" update-ref HEAD 0317da5f79e40af1b6b0e82b1ef9f311900ee76a
-            git -C "$R27_REVIEWED_TREE" read-tree 0317da5f79e40af1b6b0e82b1ef9f311900ee76a
-            "$RUNNER_TEMP/fidelity-r27-venv/bin/python" "$R27_REVIEWED_TREE/scripts/audit-delivery-r27.py" --check > "$R27_AUDIT_REPORT"
-          )
-          node tests/verify-r27-integration.mjs
+          "$RUNNER_TEMP/fidelity-r27-venv/bin/python" scripts/run-published-release-r29.py --commit 0317da5f79e40af1b6b0e82b1ef9f311900ee76a --evidence qa-fidelity-r27-ci/published-release --plan scripts/ci-r29/plans/r27-publication.json
       - name: Validate bounded imports, published provenance and export guards
         run: '"$RUNNER_TEMP/fidelity-r27-venv/bin/python" -m unittest discover -s tests -p "test_*r27.py" -v'
       - name: Validate CI diagnostic boundaries
@@ -96,7 +51,8 @@ jobs:
       - name: Reconstruct archive selections with the original engines
         run: node tests/verify-persistence-r27.mjs
       - name: Verify changed real input, prototype conclusions and scoped combat replays
-        run: node tests/verify-full-matches-r27.mjs > qa-fidelity-r27-ci/full-match-tests.log
+        run: |
+          python3 scripts/run-published-release-r29.py --commit 0317da5f79e40af1b6b0e82b1ef9f311900ee76a --evidence qa-fidelity-r27-ci/published-matches -- node tests/verify-full-matches-r27.mjs
       - name: Preserve executed provenance and integration evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -159,6 +115,7 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           persist-credentials: false
+          ref: 0317da5f79e40af1b6b0e82b1ef9f311900ee76a
           fetch-depth: 0
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
@@ -203,6 +160,7 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           persist-credentials: false
+          ref: 0317da5f79e40af1b6b0e82b1ef9f311900ee76a
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: '22.16.0'

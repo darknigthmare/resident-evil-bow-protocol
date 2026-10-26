@@ -1,0 +1,120 @@
+{
+  "schema": "re.bow.selection-boundaries-browser-r29/1",
+  "startedAt": "2026-10-26T10:53:55.470Z",
+  "finishedAt": "2026-10-26T10:54:05.810Z",
+  "passed": 5,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Normal HTTP main selector remains active and launches the exact selected form in R29",
+      "pass": true,
+      "evidence": {
+        "alias": true,
+        "state": {
+          "families": 15,
+          "mainMounted": true,
+          "groupedOptions": 115
+        },
+        "selected": "re2r-super-tyrant",
+        "launch": "http://127.0.0.1:5779/modules/fidelity-r29/evolutions/index.html?uid=re2r-super-tyrant&target=re1r-tyrant",
+        "combat": null
+      }
+    },
+    {
+      "name": "Normal HTTP classic duel retains 346 profiles and sends exact actors and stage to R29",
+      "pass": true,
+      "evidence": {
+        "options": 346,
+        "subject": "re2r-super-tyrant",
+        "target": "re3r-nemesis",
+        "stage": "spencer_hall",
+        "launch": "http://127.0.0.1:5779/modules/fidelity-r29/evolutions/index.html?uid=re2r-super-tyrant&target=re3r-nemesis&stage=spencer_hall",
+        "replaySchema": "re.bow.catalog-duel-replay/1"
+      }
+    },
+    {
+      "name": "R29 mode uses the real selection API with the preserved evolution engine",
+      "pass": true,
+      "evidence": {
+        "family": "re2r-tyrant",
+        "families": 15,
+        "uid": "re2r-tyrant",
+        "target": "re3r-nemesis",
+        "choices": [
+          "re2r-super-tyrant"
+        ]
+      }
+    },
+    {
+      "name": "The current R29 mode naturally mutates without healing and replays the exact chosen tick",
+      "pass": true,
+      "evidence": {
+        "before": {
+          "frame": 678,
+          "uid": "re2r-tyrant",
+          "life": 3910,
+          "meter": 36,
+          "ready": true
+        },
+        "after": {
+          "frame": 679,
+          "uid": "re2r-super-tyrant",
+          "life": 3910,
+          "meter": 1
+        },
+        "replayBefore": "re2r-tyrant",
+        "replayAfter": "re2r-super-tyrant",
+        "digest": "68a1966d",
+        "recordedDigest": "68a1966d",
+        "frames": 679,
+        "actorStateOverrides": 0
+      }
+    },
+    {
+      "name": "Actual principal replay reconstructs twice in an opaque srcdoc without launchers or URL errors",
+      "pass": true,
+      "evidence": {
+        "passes": 2,
+        "opaqueOrigin": "null",
+        "isolatedStorage": true,
+        "pageErrors": 0
+      }
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "modules/fidelity-r29/evolutions/selection.js",
+      "sha256": "5eecc3c6424eedc25c347f9dbbcba011104c0e9af894b06eca5913009b8e02ee"
+    },
+    {
+      "path": "tests/browser-selection-boundaries-r29.mjs",
+      "sha256": "9f049142ff75cb86367195fd2294be656a753b63aaf66c58ca7bb3b43d2900da"
+    },
+    {
+      "path": "modules/versus.html",
+      "sha256": "fbe80a280bc9d12429e738f04658748e6dbb3e19decbafacd0d3e5a028517247"
+    },
+    {
+      "path": "catalog-duel.html",
+      "sha256": "b29e0e3f5a866d22c9a570fe416975169a7fa02c07a505a537c7767ab05738db"
+    },
+    {
+      "path": "modules/fidelity-r29/evolutions/index.html",
+      "sha256": "e9928b21321f6f54e4e8b7291ff3ae470aa43dda3018aca508c3b6aacb687e67"
+    },
+    {
+      "path": "modules/fidelity-r29/combat/sprite-runtime.js",
+      "sha256": "099a4205b79cc3aaa7fe30d45174c9e8c90673a9d97974fb6326eacdd7276e54"
+    },
+    {
+      "path": "modules/fidelity-r29/sprites/manifest.json",
+      "sha256": "73322a476fafa1ec22da666d9e4a12df0a3342cc40f19186c78c694851c0339e"
+    },
+    {
+      "path": "modules/fidelity-r28/evolutions/contract.json",
+      "sha256": "441e4dbf4a40d613d143541f582c258d895845874b2bd265df4b3dda9212d38d"
+    }
+  ],
+  "preservedLegacyEngines": true,
+  "storedGameDataWrittenByVerifier": false
+}

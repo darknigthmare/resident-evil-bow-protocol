@@ -1,0 +1,209 @@
+{
+  "schema": "re.bow.generated-sprite-gallery-tests-r29/1",
+  "sourceFiles": [
+    {
+      "path": "modules/fidelity-r29/sprites/page.js",
+      "sha256": "bf7baa24a5e6efe31848d5665907abce35b5d0f3b2e68cfcbb26dd6061f6dc72"
+    },
+    {
+      "path": "modules/fidelity-r29/sprites/index.html",
+      "sha256": "e610364d1704b259cd3ef819182b3b982c59cf0003a5ad9f4f1b4b400f2cf10d"
+    },
+    {
+      "path": "modules/fidelity-r29/sprites/style.css",
+      "sha256": "80450fcc01309c0473404a7e3c555ea415ce68fb68beedb77d7d54ba8cdb0bbd"
+    },
+    {
+      "path": "modules/fidelity-r29/sprites/manifest.json",
+      "sha256": "73322a476fafa1ec22da666d9e4a12df0a3342cc40f19186c78c694851c0339e"
+    },
+    {
+      "path": "tests/browser-generated-sprites-r29.mjs",
+      "sha256": "79eb9e5573840250bb75095867181e01845473010765a25ac48b59167a284358"
+    }
+  ],
+  "startedAt": "2026-10-26T10:53:05.534Z",
+  "completedAt": "2026-10-26T10:53:22.829Z",
+  "browser": "154.0.8037.57",
+  "passed": 12,
+  "failed": 0,
+  "generatedFilesInExecutedManifest": 363,
+  "pendingInExecutedManifest": 22,
+  "checks": [
+    {
+      "name": "All385UIDremainpagedandfilterablewithonegeneratedimageatmost",
+      "pass": true,
+      "evidence": {
+        "catalogueUID": 385,
+        "textPageSize": 24,
+        "generated": 363,
+        "pending": 22,
+        "requests": 1,
+        "physicalDevice": false
+      }
+    },
+    {
+      "name": "DeepLinkselectsexactgeneratedUIDwithverifiedPNGalphaandnameddownload",
+      "pass": true,
+      "evidence": {
+        "id": "re0-bat",
+        "sha256": "5c2919204d4eadf9a83e87be02d5fc55519a3c773bdf220ee796d62bb46353a4",
+        "dimensions": {
+          "width": 1402,
+          "height": 1122
+        },
+        "alpha": {
+          "transparent": 1174103,
+          "visible": 380986
+        },
+        "states": [],
+        "canonicalFidelityCertified": false
+      }
+    },
+    {
+      "name": "EveryactualnewbodyreplacesexactUIDwithoutclaimingidleorclosingexplicitappearancegaps",
+      "pass": true,
+      "evidence": {
+        "replacements": [
+          {
+            "id": "re0-mimicry-marcus",
+            "sha256": "0af676e332b7bc957fc8fec8a0f6b8332ea51c295fa796aed5a57382295aaf18",
+            "poseKind": "source-bind-pose",
+            "sourceFacing": "front"
+          },
+          {
+            "id": "re0-zombie",
+            "sha256": "6101565739f2c620d6ff2fb19e2b149255ff9cc466df8ce58709c0b176abdf94",
+            "poseKind": "source-bind-pose",
+            "sourceFacing": "front"
+          },
+          {
+            "id": "re5-chainsaw-majini",
+            "sha256": "b7dc349d89689fa1e8ad307e8f8c3f8bd4a4ef4995798a55326cd0f3a568597f",
+            "poseKind": "source-bind-pose",
+            "sourceFacing": "front"
+          },
+          {
+            "id": "re5-executioner",
+            "sha256": "25bfcb5b3ca727b1e86eda5f5366f13d93814af97a8999298da2391c0e48548c",
+            "poseKind": "source-bind-pose",
+            "sourceFacing": "front"
+          },
+          {
+            "id": "re5-jill-valentine-enemy",
+            "sha256": "aabe2c70a89602bfdf15aa02d4c23984870571a3d20910641baee389256b423d",
+            "poseKind": "source-bind-pose",
+            "sourceFacing": "front"
+          }
+        ],
+        "newTargetIdentities": 0,
+        "idleCapabilitiesAdded": 0,
+        "appearanceGapsRemainVisible": true
+      }
+    },
+    {
+      "name": "FourdocumentaryHDPCviewsareoptionalexactUIDchoicesandneverreplace2012defaults",
+      "pass": true,
+      "evidence": {
+        "documentaryChoices": 4,
+        "activeTargetPopulation": 363,
+        "preservedPending": 22,
+        "defaultStill2012": true,
+        "oneBlobOnly": true
+      }
+    },
+    {
+      "name": "DocumentarytargetpromotionandwrongUIDdeeplinksfailbeforeanimageisdisplayed",
+      "pass": true,
+      "evidence": {
+        "documentaryPromotionRefused": true,
+        "wrongSubjectDeepLinkRefused": true
+      }
+    },
+    {
+      "name": "NeutralAlcinaequipmentcropstaysvisiblebutnotdeclaredcombatidle",
+      "pass": true,
+      "evidence": {
+        "wholeNeutralAnatomy": true,
+        "croppedEquipmentHeld": true,
+        "archivedPC2013BodiesExplicitlyLabelled": 2
+      }
+    },
+    {
+      "name": "ArefusedrevisionretainsitsactualactivePNGandseparateprooflink",
+      "pass": true,
+      "evidence": {
+        "id": "re1r-tyrant",
+        "preservedSha256": "b9aecdaa6bd4f3f1cab232706e6b230db8d71768bda18bf032ef5cc0258325bc",
+        "missingTargetsRemain22": true
+      }
+    },
+    {
+      "name": "Keyboardselectionkeepsitsresultfocuswithoutstealingfilterorlifecyclefocus",
+      "pass": true,
+      "evidence": {
+        "selectedUid": "re1-adder",
+        "keyboardSelectionFocusRetained": true,
+        "sequentialTabRetained": true,
+        "initialFocusNotStolen": true,
+        "filterFocusNotStolen": true,
+        "simulatedLifecycle": true
+      }
+    },
+    {
+      "name": "CorruptedPNGisrefusedbeforebeingdisplayedorofferedfordownload",
+      "pass": true,
+      "evidence": {
+        "corruptionRefused": true,
+        "blobUrls": 0,
+        "downloadHidden": true
+      }
+    },
+    {
+      "name": "ChangingtoapendingUIDcancelsadelayedgeneratedimagewithoutsubstitution",
+      "pass": true,
+      "evidence": {
+        "pending": "re3r-zombie",
+        "previousImageCannotLeak": true,
+        "placeholderPortraits": 0
+      }
+    },
+    {
+      "name": "Malformedregistryfailsclosedandmanualrefreshrecoverswithtextstayinginert",
+      "pass": true,
+      "evidence": {
+        "duplicateRegistryRefused": true,
+        "externalImageRefused": true,
+        "refreshRecovered": true,
+        "textInert": true
+      }
+    },
+    {
+      "name": "KeyboardmobiletextreflowandpagehidekeeponlyonespriteBlobalive",
+      "pass": true,
+      "evidence": {
+        "widths": [
+          {
+            "width": 1280,
+            "textPercent": 100,
+            "overflow": false
+          },
+          {
+            "width": 390,
+            "textPercent": 100,
+            "overflow": false
+          },
+          {
+            "width": 320,
+            "textPercent": 200,
+            "overflow": false
+          }
+        ],
+        "simulatedLifecycle": true,
+        "physicalDevices": false,
+        "maximumBlobUrls": 1
+      }
+    }
+  ],
+  "scope": "Actual generated PNG gallery and failure boundaries; no game-frame, complete-animation or physical-device certification."
+}

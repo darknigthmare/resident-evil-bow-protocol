@@ -1,0 +1,51 @@
+{
+  "schema": "re.bow.native-frame-delivery-r29/1",
+  "manifest": {
+    "path": "modules/fidelity-r29/motion/manifest.json",
+    "sha256": "e0f4541c4af486d6990fc41ec19b05f70626eb7d5b866171710df644a8002267"
+  },
+  "counts": {
+    "subjects": 6,
+    "nativeScenes": 24,
+    "nativeRenderedFrames": 384,
+    "nativePoseReferenceViews": 24,
+    "actionAssignedScenes": 0,
+    "admittedCombatCycles": 0,
+    "originalGameFrames": 0
+  },
+  "moduleFileCount": 439,
+  "moduleBytes": 41224186,
+  "independentlyReconstructedNativeSamples": 384,
+  "visuallyInspectedNativeSamples": 96,
+  "visuallyInspectedSourceScenes": 24,
+  "reports": [
+    {
+      "path": "docs/R29_NATIVE_FRAMES_TESTS.json",
+      "sha256": "8382f6f45a1a770402d7de0edd71c950b07661e0a08c51fe4edb1127ade6d1db",
+      "passed": 6,
+      "failed": 0
+    },
+    {
+      "path": "docs/R29_NATIVE_FRAME_RIG_TESTS.json",
+      "sha256": "7fbea6a1a36770a41afbf7f5d527d1e2f41aed2fe37a4f27e983ab8a4013ef55",
+      "passed": 24,
+      "failed": 0
+    },
+    {
+      "path": "docs/R29_NATIVE_FRAMES_BROWSER.json",
+      "sha256": "5812208ac6087fb67b5aaf92a09e95e19bc32305e804f57d26dbd141b7ff1abe",
+      "passed": 7,
+      "failed": 0
+    }
+  ],
+  "sourceFilesRewritten": false,
+  "newImagegenTargetIdentities": 0,
+  "gameReplayOrPhysicsChanged": false,
+  "limitations": [
+    "Sparse source-derived observations, no assigned actions or admitted combat cycles.",
+    "PC/HD2013 edition; Nintendo3DS2012 geometry and motion equivalence unverified.",
+    "Fixed camera over union of16 native-key samples; large source travel can make body details too small to qualify.",
+    "Native source weights/transforms/units retained; measurement rounding1e-4source units does not quantize rendered geometry.",
+    "FBX SpecularFactor texture channel unsupported inThree.js; native-game material/lighting not certified."
+  ]
+}

@@ -1,0 +1,147 @@
+/* Exact-UID R29 deltas; native reference frames never imply a combat cycle. */
+(function (root) {
+  'use strict';
+  const doc = root.document, source = doc?.currentScript?.src;
+  if (!source || root.RE_DOSSIER_ADDITIONS_R29) return;
+  const base = new URL('./', source);
+  function header() {
+    const holder = doc.querySelector?.('.global-header'); if (!holder) return;
+    let item = doc.getElementById('fidelityR23Link');
+    if (!item) { item = doc.createElement('a'); item.id = 'fidelityR23Link'; item.className = 'quiet-link'; }
+    item.href = new URL('index.html', base).href; item.textContent = 'Sources et chantiers';
+    (holder.querySelector('.r20-header-nav') || holder).append(item);
+  }
+  if (doc.readyState === 'loading') doc.addEventListener('DOMContentLoaded', header, {once: true}); else header();
+  const actions = doc.getElementById('detailActions'), dialog = doc.getElementById('specimenDialog');
+  if (!actions || !dialog || typeof actions.after !== 'function' || typeof root.fetch !== 'function'
+      || typeof root.AbortController !== 'function' || typeof root.MutationObserver !== 'function') return;
+  const known = new Set((root.RE_DATA?.catalog || []).map(item => item.id)), entries = new Map();
+  const state = {loaded: false, failed: false, id: null, spriteChange: false, pixelRevision: false, heldForAppearanceGaps: false, documentaryVariants: 0, bodyModels: 0, nativeFrames: 0};
+  const host = doc.createElement('section'); host.id = 'detailAdditionsR29'; host.hidden = true;
+  host.setAttribute('aria-label', 'Nouvelles références R29 de cette incarnation'); actions.after(host);
+  const style = doc.createElement('style'); style.textContent = '#detailAdditionsR29{border-top:1px solid #7f997d;margin-top:1rem;padding-top:1rem;overflow-wrap:anywhere}#detailAdditionsR29[hidden]{display:none}#detailAdditionsR29 h3{font-size:1rem;color:#ecdda8}#detailAdditionsR29 p{font-size:.9rem;line-height:1.6;color:#d6e0ce}#detailAdditionsR29 a{display:inline-flex;align-items:center;min-height:44px;color:#daf1d2;text-decoration:underline;overflow-wrap:anywhere}#detailAdditionsR29 a:focus-visible{outline:3px solid #f2d97d;outline-offset:3px}'; doc.head.append(style);
+  let controller = null, ticket = 0;
+  function identity() {
+    for (const item of actions.querySelectorAll('a[href]')) {
+      const url = new URL(item.href, root.location.href); if (url.origin !== root.location.origin) continue;
+      const uid = /\/modules\/versus\.html$/.test(url.pathname) ? url.searchParams.get('uid')
+        : /\/(?:catalog|catalog-encounter)\.html$/.test(url.pathname) ? url.searchParams.get('id') : null;
+      if (known.has(uid)) return uid;
+    }
+    return null;
+  }
+  function paragraph(text) { const item = doc.createElement('p'); item.textContent = text; return item; }
+  function link(label, path, uid, parameter = 'identity') {
+    const item = doc.createElement('a'), url = new URL(path, base); url.searchParams.set(parameter, uid);
+    item.href = url.href; item.textContent = label; return item;
+  }
+  function sync() {
+    const id = identity(); Object.assign(state, {id, spriteChange: false, pixelRevision: false, heldForAppearanceGaps: false, documentaryVariants: 0, bodyModels: 0, nativeFrames: 0});
+    host.replaceChildren(); host.hidden = true;
+    if (!dialog.open || !known.has(id) || !state.loaded || state.failed) return;
+    const row = entries.get(id); if (!row) return;
+    if (!row.spriteChange && !row.bodyModels && !row.nativeClips.length && !row.documentaryVariants.length) return;
+    const title = doc.createElement('h3'); title.textContent = 'Corps et séquences sources · R29'; host.append(title);
+    const pose = row.spriteChange;
+    if (pose) {
+      state.spriteChange = true; state.pixelRevision = pose.pixelRevision;
+      state.heldForAppearanceGaps = pose.poseKind === 'neutral-base' && pose.knownAppearanceGaps.length > 0;
+      host.append(link(pose.pixelRevision ? 'Examiner la nouvelle version du corps' : 'Examiner la pose requalifiée', 'sprites/index.html', id));
+      host.append(paragraph(pose.fullBodyReviewed ? 'Corps anatomique entier observé dans cette pose. ' + (pose.availableStates.includes('idle') ? 'Cette vue est admissible à l’attente statique.' : state.heldForAppearanceGaps ? 'La pose neutre reste retenue pour ses lacunes d’apparence.' : 'La pose reste une référence de présentation.') : 'La région visible est revue ; la qualification du corps entier reste ouverte.'));
+      if (pose.knownAppearanceGaps.length || !pose.equipmentCompletenessReviewed) host.append(paragraph('Les accessoires, les autres phases et les détails d’apparence gardent leurs critères de vérification dans la galerie.'));
+      if (pose.scope === 'context-encounter') host.append(paragraph('Cette incarnation conserve son périmètre de rencontre contextuelle.'));
+    }
+    if (row.bodyModels) {
+      state.bodyModels = row.bodyModels;
+      const details = doc.createElement('details'), summary = doc.createElement('summary');
+      summary.textContent = 'Références corporelles attribuées (' + row.bodyModels + ' modèles, ' + row.bodyViews + ' vues)'; details.append(summary);
+      details.append(paragraph('Vues dérivées du modèle attribué et de sa pose de base ; elles conservent le périmètre de la variante et des accessoires indiqués.'));
+      for (const source of row.bodySources) {
+        details.append(paragraph(source.id + ' · ' + source.sourceEdition + '. ' + source.variant + ' ' + source.equipmentScope));
+        for (const view of source.views) {
+          const row = doc.createElement('p'), item = doc.createElement('a'); item.href = new URL(view.path, base).href;
+          item.textContent = (view.angle === null ? 'Vue source' : 'Vue ' + view.angle + '°') + ' · SHA-256 ' + view.sha256.slice(0, 12); row.append(item); details.append(row);
+        }
+      }
+      host.append(details);
+    }
+    if (row.nativeClips.length) {
+      state.nativeFrames = row.nativeClips.reduce((sum, clip) => sum + clip.frameCount, 0);
+      host.append(link('Examiner les images des mouvements sources (' + state.nativeFrames + ')', 'motion/index.html', id, 'id'));
+      host.append(paragraph('Versions sources : ' + [...new Set(row.nativeClips.map(clip => clip.sourceEdition))].join(' ; ')));
+      host.append(paragraph('Images rendues depuis les clés et matériaux du modèle source. Le geste reste non attribué ; ces images ne déclarent aucun cycle de combat jouable ou rendu original certifié.'));
+    }
+    state.documentaryVariants = row.documentaryVariants.length;
+    for (const variant of row.documentaryVariants) {
+      const item = link('Interprétation documentaire · ' + variant.sourceEdition, 'sprites/index.html', id);
+      const url = new URL(item.href); url.searchParams.set('variant', variant.variantId); item.href = url.href;
+      host.append(item, paragraph('Édition cible : ' + variant.targetIncarnation + '. Cette variante reste une référence d’une autre édition ; elle ne remplace pas le PNG actif et ne valide pas le corps de l’incarnation cible.'));
+    }
+    host.hidden = false;
+  }
+  function validate(value) {
+    if (value.schema !== 're.bow.dossier-additions-r29/1' || value.canonicalFidelityCertified !== false || !Array.isArray(value.identities) || value.identities.length !== 389) throw Error('Index R29 incompatible');
+    const result = new Map(), integer = number => Number.isSafeInteger(number) && number >= 0 && number < 100000;
+    for (const row of value.identities) {
+      if (!known.has(row.id) || result.has(row.id) || typeof row.activeSourceBodyObserved !== 'boolean' || !integer(row.bodyModels) || !integer(row.bodyViews) || !Array.isArray(row.bodySources) || row.bodySources.length !== row.bodyModels || row.bodySources.length > 64 || !Array.isArray(row.nativeClips) || row.nativeClips.length > 128 || !Array.isArray(row.documentaryVariants) || row.documentaryVariants.length > 32) throw Error('Identité R29 incompatible');
+      const variants = new Set();
+      for (const variant of row.documentaryVariants) {
+        if (!variant || typeof variant.variantId !== 'string' || !variant.variantId.startsWith(row.id + '-') || variant.variantId.length > 200 || variants.has(variant.variantId)
+            || ![variant.sourceEdition, variant.targetIncarnation].every(item => typeof item === 'string' && item.length > 0 && item.length <= 10000)
+            || variant.admittedTargetEdition !== false || variant.targetFullBodyReviewed !== false || !Array.isArray(variant.availableStates) || variant.availableStates.length) throw Error('Édition documentaire promue hors périmètre');
+        variants.add(variant.variantId);
+      }
+      let views = 0;
+      for (const source of row.bodySources) {
+        if (!source || typeof source.id !== 'string' || source.id.length > 200 || ![source.sourceEdition, source.variant, source.equipmentScope].every(item => typeof item === 'string' && item.length <= 10000) || !Array.isArray(source.views) || source.views.length > 32) throw Error('Référence corporelle R29 incompatible');
+        for (const view of source.views) {
+          if (!view || view.angle !== null && !Number.isFinite(view.angle) || typeof view.path !== 'string'
+              || !/^(?:sources\/(?:body-rasters|revelations-body-rasters)|motion)\/[a-zA-Z0-9_./-]+\.png$/.test(view.path)
+              || view.path.split('/').some(part => !part || part === '.' || part === '..')
+              || !/^[a-f0-9]{64}$/.test(view.sha256) || !Number.isSafeInteger(view.bytes) || view.bytes < 1 || view.bytes > 16 * 1024 * 1024) throw Error('Vue corporelle R29 hors périmètre');
+          views++;
+        }
+      }
+      if (views !== row.bodyViews) throw Error('Compteur de vues R29 incompatible');
+      const pose = row.spriteChange;
+      if (pose !== null && (!pose || typeof pose.fullBodyReviewed !== 'boolean' || typeof pose.pixelRevision !== 'boolean'
+          || typeof pose.completeBodyReferenceVerified !== 'boolean' || typeof pose.equipmentCompletenessReviewed !== 'boolean'
+          || typeof pose.sourceBodyObserved !== 'boolean' || pose.sourceBodyObserved !== row.activeSourceBodyObserved
+          || !['neutral-base', 'source-bind-pose', 'source-presentation', 'unknown'].includes(pose.poseKind)
+          || !['left', 'right', 'front', 'unknown'].includes(pose.sourceFacing)
+          || !['combatant-neutral-pose', 'context-encounter'].includes(pose.scope)
+          || !Array.isArray(pose.knownAppearanceGaps) || pose.knownAppearanceGaps.some(item => typeof item !== 'string' || item.length > 10000)
+          || !Array.isArray(pose.availableStates) || pose.availableStates.length > 1 || pose.availableStates.some(item => item !== 'idle')
+          || pose.knownAppearanceGaps.length > 0 && pose.availableStates.length > 0
+          || pose.availableStates.includes('idle') && (!pose.fullBodyReviewed || !pose.sourceBodyObserved || pose.poseKind !== 'neutral-base' || !['left', 'right'].includes(pose.sourceFacing) || pose.scope !== 'combatant-neutral-pose'))) throw Error('Portée de pose R29 incompatible');
+      const seen = new Set();
+      for (const clip of row.nativeClips) {
+        if (!clip || typeof clip.id !== 'string' || clip.id.length > 200 || seen.has(clip.id) || typeof clip.clipId !== 'string' || clip.clipId.length > 200
+            || typeof clip.sourceEdition !== 'string' || !clip.sourceEdition || clip.sourceEdition.length > 10000
+            || !integer(clip.frameCount) || clip.frameCount < 1 || clip.actionIdentity !== 'unassigned' || !Array.isArray(clip.availableCombatStates) || clip.availableCombatStates.length) throw Error('Images sources mal attribuées');
+        seen.add(clip.id);
+      }
+      result.set(row.id, row);
+    }
+    return result;
+  }
+  async function load() {
+    const token = ++ticket; controller?.abort(); controller = new root.AbortController();
+    try {
+      const response = await root.fetch(new URL('dossier-additions.json', base), {signal: controller.signal, credentials: 'same-origin'});
+      if (!response.ok || Number(response.headers.get('content-length')) > 512 * 1024 || !response.body?.getReader) throw Error('Index R29 indisponible');
+      const reader = response.body.getReader(), chunks = []; let length = 0;
+      try { while (true) { const part = await reader.read(); if (part.done) break; length += part.value.length; if (length > 512 * 1024) throw Error('Index R29 trop volumineux'); chunks.push(part.value); } }
+      catch (error) { await reader.cancel().catch(() => {}); throw error; } finally { reader.releaseLock(); }
+      const bytes = new Uint8Array(length); let offset = 0; for (const chunk of chunks) { bytes.set(chunk, offset); offset += chunk.length; }
+      const next = validate(JSON.parse(new TextDecoder().decode(bytes))); if (token !== ticket) return;
+      entries.clear(); for (const [id, row] of next) entries.set(id, row); state.failed = false;
+    } catch (error) { if (token !== ticket || error.name === 'AbortError') return; state.failed = true; entries.clear(); }
+    state.loaded = true; sync();
+  }
+  new root.MutationObserver(sync).observe(actions, {childList: true}); new root.MutationObserver(sync).observe(dialog, {attributes: true, attributeFilter: ['open']});
+  dialog.addEventListener('close', sync);
+  root.addEventListener('pagehide', () => { ticket++; controller?.abort(); host.replaceChildren(); host.hidden = true; });
+  root.addEventListener('pageshow', event => { if (event.persisted) { if (!state.loaded || state.failed) load(); else sync(); } });
+  root.RE_DOSSIER_ADDITIONS_R29 = Object.freeze({state: () => ({...state}), sync}); load();
+})(globalThis);

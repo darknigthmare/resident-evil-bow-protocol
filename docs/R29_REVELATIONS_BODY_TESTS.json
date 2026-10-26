@@ -1,0 +1,342 @@
+{
+  "schema": "re.bow.revelations-body-validation-r29/1",
+  "passed": 8,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Retained source catalog, geometry, materials and textures",
+      "pass": true,
+      "detail": {
+        "sourceBodies": 3,
+        "verifiedModelMaterialTextureFiles": 63
+      }
+    },
+    {
+      "name": "Twelve decoded full-source camera views without clipped source edges",
+      "pass": true,
+      "detail": {
+        "cameraViews": 12,
+        "sourceGeometryEdited": false
+      }
+    },
+    {
+      "name": "Actual web responses and both new source ZIP extractions",
+      "pass": true,
+      "detail": {
+        "capturedResponses": 13,
+        "newArchivesComparedByteForByte": [
+          "asset-310863.zip",
+          "asset-316421.zip"
+        ]
+      }
+    },
+    {
+      "name": "Three exact-PC body versions preserve equipment and pose limits",
+      "pass": true,
+      "detail": {
+        "newEffectiveBodyVersions": 3,
+        "newTargetIdentities": 0,
+        "newIdleStates": 0
+      }
+    },
+    {
+      "name": "Four HD/PC variants never replace original 2012 catalogue targets",
+      "pass": true,
+      "detail": {
+        "documentaryHdPcVariants": 4,
+        "original2012TargetsCompletedByThoseVariants": 0
+      }
+    },
+    {
+      "name": "All seven PNGs, real tool receipts and reference bytes agree",
+      "pass": true,
+      "detail": {
+        "actualGeneratedPngs": 7,
+        "generatedBytes": 6424062,
+        "manualBitmapEdits": 0
+      }
+    },
+    {
+      "name": "Seven observed source/output contacts are SHA-bound to the actual PNGs",
+      "pass": true,
+      "detail": {
+        "shaBoundSourceOutputComparisons": 7,
+        "originalGamePosesCertified": 0
+      }
+    },
+    {
+      "name": "Separate equipment does not imply attachment and refusals stay untouched",
+      "pass": true,
+      "detail": {
+        "newEquipmentSources": 1,
+        "guessedAttachments": 0,
+        "preservedHistoricalRefusalsRetried": 0,
+        "clippedFirstOutputRetained": true
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "path": "docs/R29_BODY_VISUAL_EVIDENCE/re5-chainsaw-majini.json",
+      "sha256": "334a3fe3b93435b4cae26d624b280acb839e209f5216ef84d71ae070ff26833e"
+    },
+    {
+      "path": "docs/R29_BODY_VISUAL_EVIDENCE/re5-chainsaw-majini.png",
+      "sha256": "de2d765523d79075a29f1c137f8929e1416e0ef517fee8db038abe3a418d12db"
+    },
+    {
+      "path": "docs/R29_BODY_VISUAL_EVIDENCE/re5-executioner.json",
+      "sha256": "8c597b31bb79bae79c71554924f6610bee1369ccd59cbf8202aa546ea05f112d"
+    },
+    {
+      "path": "docs/R29_BODY_VISUAL_EVIDENCE/re5-executioner.png",
+      "sha256": "22984c4b7414e462cd74d3d404dc88042bcc32457217248b432311f7ac9ef0d6"
+    },
+    {
+      "path": "docs/R29_BODY_VISUAL_EVIDENCE/re5-jill-valentine-enemy.json",
+      "sha256": "a5f50bb359e9ada6f1bb5f0289c6efcd5fce4c028dbf0fe816e7aa04df3aeae4"
+    },
+    {
+      "path": "docs/R29_BODY_VISUAL_EVIDENCE/re5-jill-valentine-enemy.png",
+      "sha256": "d9a463bd8d03642b9370fc5721bcc3c98cdf2a38f5f2f14a843970e5b42c891d"
+    },
+    {
+      "path": "docs/R29_BODY_VISUAL_EVIDENCE/rerev-chunk-ooze.json",
+      "sha256": "019dc6cc025cc0f0104f98af236b2f8a077438900b1f3aab83e57ea9c1a1ed5c"
+    },
+    {
+      "path": "docs/R29_BODY_VISUAL_EVIDENCE/rerev-chunk-ooze.png",
+      "sha256": "6a66cc4c88abbfc188933c231392978a6fa45b711aa468093493ee945db59168"
+    },
+    {
+      "path": "docs/R29_BODY_VISUAL_EVIDENCE/rerev-ooze.json",
+      "sha256": "16a3ef339e5ef21d07cf1167be9335c441dfdee92b6855b827a782e73f6bbf97"
+    },
+    {
+      "path": "docs/R29_BODY_VISUAL_EVIDENCE/rerev-ooze.png",
+      "sha256": "695a5ecf5e05f08582f52fd810c143334a2b0f89234d46bedee08d049c53cdf1"
+    },
+    {
+      "path": "docs/R29_BODY_VISUAL_EVIDENCE/rerev-pincer-ooze.json",
+      "sha256": "f0355350e661bd7d303b859099e09220f5498b6e5a1ad880cbd04088d49d7ed0"
+    },
+    {
+      "path": "docs/R29_BODY_VISUAL_EVIDENCE/rerev-pincer-ooze.png",
+      "sha256": "2c133dd3de9de026eee6fdfd73ee27c5e2354a9f50d91436f6c243b6edca88e3"
+    },
+    {
+      "path": "docs/R29_BODY_VISUAL_EVIDENCE/rerev-tricorne-ooze.json",
+      "sha256": "696934ebb1d308184f17092ae96af31ba325eb93f8ad33fdae8c07b6134000a5"
+    },
+    {
+      "path": "docs/R29_BODY_VISUAL_EVIDENCE/rerev-tricorne-ooze.png",
+      "sha256": "1f26a0e769e3e62ce8a67dcbec3d9b1be18bda7e807e4f81b8b1d0a51b351daa"
+    },
+    {
+      "path": "modules/fidelity-r27/sources/body-rasters/re5-chainsaw-majini/source-0.png",
+      "sha256": "dd19f49634daf202401542cde1d5ee452de7816f4a7f37f26a16b795cb644f10"
+    },
+    {
+      "path": "modules/fidelity-r27/sources/body-rasters/re5-chainsaw-majini/source-180.png",
+      "sha256": "1ca49608263da80db129e113a10218f57e56b538f6ed8e1cf065f988d0704b54"
+    },
+    {
+      "path": "modules/fidelity-r27/sources/body-rasters/re5-chainsaw-majini/source-270.png",
+      "sha256": "db4c9d484492532f7465795a5c6a57cedffaf106d8d590258fb0bbb4b6446dda"
+    },
+    {
+      "path": "modules/fidelity-r27/sources/body-rasters/re5-chainsaw-majini/source-90.png",
+      "sha256": "3a3443e9838a0a9d5ff131cbbcd88b4d5aa7821542a7d8942ce6a8cdbab7eae7"
+    },
+    {
+      "path": "modules/fidelity-r27/sources/body-rasters/re5-executioner/source-0.png",
+      "sha256": "7055bdf43c1e425e4738887234e01ea2b02f0b6558990af4e11cf4daf497e51e"
+    },
+    {
+      "path": "modules/fidelity-r27/sources/body-rasters/re5-executioner/source-180.png",
+      "sha256": "8ece70718f30b8463ce7e4709d68973873c815c669e761ffacc16c6682db800d"
+    },
+    {
+      "path": "modules/fidelity-r27/sources/body-rasters/re5-executioner/source-270.png",
+      "sha256": "041f1619e2a78755529505534906b3bb3c4ff1e85c4b6204c1645d56148bdf3f"
+    },
+    {
+      "path": "modules/fidelity-r27/sources/body-rasters/re5-executioner/source-90.png",
+      "sha256": "bf0add78bf74425770dc28a0782ee76008e05a8f6dea00566b35aa74e44de4e7"
+    },
+    {
+      "path": "modules/fidelity-r29/motion/sequences/rerev-chunk-ooze--em1030_em1000_BA_1/pose-0.png",
+      "sha256": "3b82427b95ecf5f14475f428bfa4b2bb265207a5ffa60a70488a14daac083076"
+    },
+    {
+      "path": "modules/fidelity-r29/motion/sequences/rerev-chunk-ooze--em1030_em1000_BA_1/pose-180.png",
+      "sha256": "4e54056da3933a567567bc418ec31f3150929ffb4b5165026c3a7ceaeaafbca1"
+    },
+    {
+      "path": "modules/fidelity-r29/motion/sequences/rerev-chunk-ooze--em1030_em1000_BA_1/pose-270.png",
+      "sha256": "b878ea1c5bd7a749a1f7ab940b82509a4c328477eab061af2bd9ed11154bade4"
+    },
+    {
+      "path": "modules/fidelity-r29/motion/sequences/rerev-chunk-ooze--em1030_em1000_BA_1/pose-90.png",
+      "sha256": "da690429c6332c5b588280f91a102eb7d0b173b038d488208104bb65ca165593"
+    },
+    {
+      "path": "modules/fidelity-r29/motion/sequences/rerev-ooze--em1000_em1000_BA_1/pose-0.png",
+      "sha256": "95e2d2fdcab7f16dcfa7d3665eac5d6818d65f0db873018f9fedb0dc85783f6c"
+    },
+    {
+      "path": "modules/fidelity-r29/motion/sequences/rerev-ooze--em1000_em1000_BA_1/pose-180.png",
+      "sha256": "a9fc46b5b01c56c7702affe6ff39c19012b9947dbfc99787ecee764860521d17"
+    },
+    {
+      "path": "modules/fidelity-r29/motion/sequences/rerev-ooze--em1000_em1000_BA_1/pose-270.png",
+      "sha256": "effcf783c3ffeb7c92a187aeff082d5111aa786ffabdff6510dcfe0ec77c3d09"
+    },
+    {
+      "path": "modules/fidelity-r29/motion/sequences/rerev-ooze--em1000_em1000_BA_1/pose-90.png",
+      "sha256": "f47f6b732eb97ba852d4eaee058737e5917901ab073c069b6d125c9c14974799"
+    },
+    {
+      "path": "modules/fidelity-r29/motion/sequences/rerev-pincer-ooze--em1010_em1000_BA_1/pose-0.png",
+      "sha256": "56348baa505eeb8e55b2a125ec92abb30afa77ca6207daef2c5e2c2ac3e0718d"
+    },
+    {
+      "path": "modules/fidelity-r29/motion/sequences/rerev-pincer-ooze--em1010_em1000_BA_1/pose-180.png",
+      "sha256": "783defdd9cefb379fb6bfbce24be1dd0571742e8fe8c872a400d4e5222a0def2"
+    },
+    {
+      "path": "modules/fidelity-r29/motion/sequences/rerev-pincer-ooze--em1010_em1000_BA_1/pose-270.png",
+      "sha256": "7242eae946266e7d4aad6c071a6fa3538e3ab737cdb13099f44477c65d277f6b"
+    },
+    {
+      "path": "modules/fidelity-r29/motion/sequences/rerev-pincer-ooze--em1010_em1000_BA_1/pose-90.png",
+      "sha256": "e931a87696fb06551cbb24787d6262d732dad005145a1c890b019334b0493580"
+    },
+    {
+      "path": "modules/fidelity-r29/motion/sequences/rerev-tricorne-ooze--em1020_em1000_BA_1/pose-0.png",
+      "sha256": "6f127743ae8b67b41ccea6db606a20e3fd42d7203e782ad58904604d2097f3f4"
+    },
+    {
+      "path": "modules/fidelity-r29/motion/sequences/rerev-tricorne-ooze--em1020_em1000_BA_1/pose-180.png",
+      "sha256": "489dddc0d3bf8538b7b5e076e25812c0187bcff88ece87d6c83a8e5c31ee6cd5"
+    },
+    {
+      "path": "modules/fidelity-r29/motion/sequences/rerev-tricorne-ooze--em1020_em1000_BA_1/pose-270.png",
+      "sha256": "82d5b7e9e4e8219c6e265352a6d1152d494b59ae967f1d6f764c80dab8e16dea"
+    },
+    {
+      "path": "modules/fidelity-r29/motion/sequences/rerev-tricorne-ooze--em1020_em1000_BA_1/pose-90.png",
+      "sha256": "7598cee3f20558d1686a3303c306ac2cf1661eec03aa0f21449cd7de380d2c4d"
+    },
+    {
+      "path": "modules/fidelity-r29/sources/revelations-body-rasters/catalog.json",
+      "sha256": "9546905de5c1251262f86ecdea12c19fca20636315f322a4e37c1e02a3f0247f"
+    },
+    {
+      "path": "modules/fidelity-r29/sources/revelations-body-rasters/equipment-inspection.json",
+      "sha256": "5aa754f5ad24320aeaf8a2d731c2ff993c2a978dd8c4235304e68a58653e6826"
+    },
+    {
+      "path": "modules/fidelity-r29/sources/revelations-body-rasters/evidence/jill-p30-enemy.png",
+      "sha256": "74c27de4cf6470532862d370ebca2973586cd5d61dcb2cc9325d3e047a30bec5"
+    },
+    {
+      "path": "modules/fidelity-r29/sources/revelations-body-rasters/manifest.json",
+      "sha256": "d4755e90542d61fa37256e09063c372c3c10a76634490b657d3fc4da67022490"
+    },
+    {
+      "path": "modules/fidelity-r29/sources/revelations-body-rasters/online-evidence.json",
+      "sha256": "27dae5573d3f7e5315f981c4d754b4706ba88d0a891b5a8178233b95a7a2d2c0"
+    },
+    {
+      "path": "modules/fidelity-r29/sources/revelations-body-rasters/re5-jill-battle-suit-pc-r29/source-0.png",
+      "sha256": "e744c65733868205ea2f1e6574a55275cd2c3bf0ecb030dd46efa29c1ac8e400"
+    },
+    {
+      "path": "modules/fidelity-r29/sources/revelations-body-rasters/re5-jill-battle-suit-pc-r29/source-180.png",
+      "sha256": "d6606904b6a5d743a4f98bfabcaa24b8ff3a1c7c49f7623eaf7b5881c57dbdd4"
+    },
+    {
+      "path": "modules/fidelity-r29/sources/revelations-body-rasters/re5-jill-battle-suit-pc-r29/source-270.png",
+      "sha256": "66dea16e40b21538278cf24a6211db91c35abb7a2e79e4e2851d5312aa932976"
+    },
+    {
+      "path": "modules/fidelity-r29/sources/revelations-body-rasters/re5-jill-battle-suit-pc-r29/source-90.png",
+      "sha256": "12d6343bcc0de470d691d2f3c04648116a066c2e5e608d2db763dc186f66ba25"
+    },
+    {
+      "path": "modules/fidelity-r29/sources/revelations-generation/previous-output/re5-chainsaw-majini-clipped-v1.png",
+      "sha256": "1c915bc0b138ed91982a312c33aeab5d1cdfa04c18e287da2dff63afeda6487b"
+    },
+    {
+      "path": "modules/fidelity-r29/sources/revelations-generation/re5-chainsaw-majini.json",
+      "sha256": "866a3638b1f514178be7840a2533cca106ff09872115bf2beaa8442d9a071368"
+    },
+    {
+      "path": "modules/fidelity-r29/sources/revelations-generation/re5-executioner.json",
+      "sha256": "cbe7113bb632215e17a80a639d9be87fee2123eeb85fa83749ca6b1e5993855b"
+    },
+    {
+      "path": "modules/fidelity-r29/sources/revelations-generation/re5-jill-valentine-enemy.json",
+      "sha256": "bd06c82269c1b0c648897f12a5dea86d6ff32e6b036d7f2cdab92cb662a31327"
+    },
+    {
+      "path": "modules/fidelity-r29/sources/revelations-generation/rerev-chunk-ooze.json",
+      "sha256": "0bc985f25aca135e6b6a5e548ffc753e24fe661a042c8c63a354b0cca5ddd37d"
+    },
+    {
+      "path": "modules/fidelity-r29/sources/revelations-generation/rerev-ooze.json",
+      "sha256": "d97b76657dbf72d5fa149e32a051f48c8fdecbeabca6d516c13d9a92de1bf17b"
+    },
+    {
+      "path": "modules/fidelity-r29/sources/revelations-generation/rerev-pincer-ooze.json",
+      "sha256": "4938500700bd3f12760b2f30b277f0bd9924551b80e5a62851abb7eb9f954d12"
+    },
+    {
+      "path": "modules/fidelity-r29/sources/revelations-generation/rerev-tricorne-ooze.json",
+      "sha256": "dc511ae860b3f86e60fa2c612e6fad7f4c7c8b2dfc7950121001ba5fcee43fb9"
+    },
+    {
+      "path": "modules/fidelity-r29/sprites/documentary-variants/records/rerev-chunk-ooze.json",
+      "sha256": "865a7c5a1ea24ee57926c2b2af79f8a71902b9b297706aaaa7319ab9eda7b2e8"
+    },
+    {
+      "path": "modules/fidelity-r29/sprites/documentary-variants/records/rerev-ooze.json",
+      "sha256": "5759ddbbb5f279d2b931f4c62359b97feca87a75a9f18b6862adb9c6b4cb68d2"
+    },
+    {
+      "path": "modules/fidelity-r29/sprites/documentary-variants/records/rerev-pincer-ooze.json",
+      "sha256": "8198998b643a301705df8dd4e12d9a35560020664ab826e9c7feea22a5bcfe13"
+    },
+    {
+      "path": "modules/fidelity-r29/sprites/documentary-variants/records/rerev-tricorne-ooze.json",
+      "sha256": "8a9ec18c7db1575c07ca2363bf5641875a247fe245bfabf6036915dca9bfb66e"
+    },
+    {
+      "path": "modules/fidelity-r29/sprites/records/re5-chainsaw-majini.json",
+      "sha256": "f5b6ad9af1588f251a10b227ce2cf5eeb1bec40313a418ad152a6d071d6954d8"
+    },
+    {
+      "path": "modules/fidelity-r29/sprites/records/re5-executioner.json",
+      "sha256": "e71cecffc8f6081e6592c480768e7decde744ccf27a55b45a6a459568ff6e803"
+    },
+    {
+      "path": "modules/fidelity-r29/sprites/records/re5-jill-valentine-enemy.json",
+      "sha256": "7ae26e2db63e4c781d901cf979f4ef8f6f0a72e2fbfbd4e85a28e0aa5b106b1c"
+    },
+    {
+      "path": "scripts/verify-revelations-bodies-r29.py",
+      "sha256": "beec1560858c23fc3b4175a65954402165b84050a26e93c2b5251d5f7663833d"
+    }
+  ],
+  "counts": {
+    "effectiveExactPcBodyVersions": 3,
+    "documentaryHdPcVariants": 4,
+    "newGeneratedPngs": 7,
+    "sourceCameraViews": 12,
+    "newIdleStates": 0,
+    "sourceEquipmentAttachmentsCertified": 0,
+    "canonicalFidelityCertified": 0
+  },
+  "scope": "Actual retained source files and observed body images; no original-game render, equipment attachment, complete animation or 3DS/HD equivalence certified."
+}
