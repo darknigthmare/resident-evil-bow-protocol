@@ -1,0 +1,122 @@
+{
+  "schema": "re.bow.performance-access-r31/1",
+  "release": "R31",
+  "taskIds": [
+    "G-PERF",
+    "G-ACCESS"
+  ],
+  "managedImages": {
+    "pixelLimit": 33554432,
+    "assetLimit": 64,
+    "pendingLimit": 12,
+    "readers": [
+      "native",
+      "avatars",
+      "generated"
+    ],
+    "pendingDecodesIncluded": true,
+    "existingSourceFilesRewritten": false,
+    "corruptionNegativeCacheSeparatedFromBudgetWait": true,
+    "releaseNotifiesWaitingReaders": true,
+    "invisibleAndPendingImagesReleasedOnPagehide": true,
+    "totalBrowserOrGpuMemoryMeasured": false
+  },
+  "timing": {
+    "voluntary": true,
+    "maximumDurationMs": 60000,
+    "callbackSampleLimit": 7200,
+    "longTaskSampleLimit": 256,
+    "interruptedWhenHidden": true,
+    "physicalDisplayFpsCertified": false
+  },
+  "matchSummary": {
+    "userRequestedOnly": true,
+    "usesExistingPauseAndFocusDialog": true,
+    "fields": [
+      "phase",
+      "round",
+      "life",
+      "guard",
+      "meter",
+      "resource",
+      "wins",
+      "evolution reasons"
+    ],
+    "automaticAnnouncements": false,
+    "actorOrReplayWrites": false
+  },
+  "validation": [
+    {
+      "path": "docs/R31_PERFORMANCE_ACCESS_TESTS.json",
+      "bytes": 3905,
+      "sha256": "319b23da90f818b8d9fe411b580379a9baa91717e1b25e3cb782aba18a84ed59",
+      "passed": 12,
+      "failed": 0
+    },
+    {
+      "path": "docs/R31_NATIVE_RUNTIME_TESTS.json",
+      "bytes": 4118,
+      "sha256": "e05bc47826772a3dc473e5b5491baaed5986da48244850c4f135845f654cf3e8",
+      "passed": 13,
+      "failed": 0
+    },
+    {
+      "path": "docs/R31_PERFORMANCE_ACCESS_BROWSER.json",
+      "bytes": 11823,
+      "sha256": "c099bf7c40c6b462bbc04f4617ac66c6bc7a178a750791d89fd4a4f85cf656d3",
+      "passed": 8,
+      "failed": 0
+    }
+  ],
+  "files": [
+    {
+      "path": "modules/fidelity-r31/performance/image-budget.js",
+      "bytes": 3855,
+      "sha256": "e7a3a2039c9c666475fdfe118bc1fece445891d0213bbe20e75fece248cebce2"
+    },
+    {
+      "path": "modules/fidelity-r31/performance/monitor.js",
+      "bytes": 3881,
+      "sha256": "503e992e70900d0afd1b49c8d9f8acec9bbb881095d341095ead9c1bd4e24cc0"
+    },
+    {
+      "path": "modules/fidelity-r31/performance/index.html",
+      "bytes": 1632,
+      "sha256": "f5203c8c79dec250093a7c3a9e55d7def1e83859c7b29eff3b6e564824dcfdc2"
+    },
+    {
+      "path": "modules/fidelity-r31/performance/page.js",
+      "bytes": 2903,
+      "sha256": "5ecb06d9051608f99ddc3f7a1d6410073d129f07b1dc66ce6d765005e1b9a9c3"
+    },
+    {
+      "path": "modules/fidelity-r31/performance/style.css",
+      "bytes": 1156,
+      "sha256": "41acdde8c1eacee61d48f2b9580e98ec7f67211336b661a024e6456f805e4cc6"
+    },
+    {
+      "path": "modules/fidelity-r31/access/match-summary.js",
+      "bytes": 6104,
+      "sha256": "f2b04b703adaef7d0154e48e2ec7b28f29d24c57800b20d73a8d93ad081b4cdd"
+    },
+    {
+      "path": "modules/fidelity-r31/combat/native-runtime.js",
+      "bytes": 23264,
+      "sha256": "0e0be612903c65108d5dd3d691b3f074bcb619364812f82f3242b391f704bb36"
+    },
+    {
+      "path": "modules/fidelity-r31/combat/native-adapter.js",
+      "bytes": 9645,
+      "sha256": "4dea6bfc84bd1c79a63ff90e701327976ed3d85a26f34ad386959f0fb6d09392"
+    },
+    {
+      "path": "modules/fidelity-r31/selection/avatars.js",
+      "bytes": 25188,
+      "sha256": "f0e70109be3310c13155c512767eacf60f28d0f48082752200a3b03de215ec1a"
+    }
+  ],
+  "scope": "Participating image readers, measured browser callbacks and keyboard/automated accessibility of the current interface.",
+  "physicalDeviceCertified": false,
+  "screenReaderHardwareCertified": false,
+  "canonicalFidelityCertified": false
+}

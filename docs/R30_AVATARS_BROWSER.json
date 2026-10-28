@@ -1,0 +1,619 @@
+{
+  "schema": "re.bow.selection-avatars-browser-r30/1",
+  "startedAt": "2026-10-28T08:09:32.434Z",
+  "finishedAt": "2026-10-28T08:09:49.809Z",
+  "browser": "/usr/bin/chromium",
+  "scope": "Actual HTTP game mounts; source avatars do not certify original game 2D combat frames or idles.",
+  "inputs": [
+    {
+      "path": "modules/fidelity-r30/selection/avatars.js",
+      "sha256": "c7963e20a232fbca37beeb9c276a3f58b4ba1fbcd6f9567a8511d37aa43c5efc"
+    },
+    {
+      "path": "modules/fidelity-r30/selection/avatars.css",
+      "sha256": "f6ec8dd1f39686a8e4b013a966d448e0c79d336b72dfb5338bf7061cd57883cd"
+    },
+    {
+      "path": "modules/fidelity-r30/selection/manifest.json",
+      "sha256": "32fc768c8a91616a37ed7f67d767c4e916ac1ddf0567bca60c3f62dca4d91b8c"
+    },
+    {
+      "path": "modules/versus.html",
+      "sha256": "6a9615f493910bb249750c76b9858a7d1aaadab9999fe81309da0c9cd2019d9f"
+    },
+    {
+      "path": "catalog-duel.html",
+      "sha256": "a93e587b8b56bf9026f5693df54ad9fc59e70768a47cef9e5e069afc2972b441"
+    },
+    {
+      "path": "modules/fidelity-r30/evolutions/index.html",
+      "sha256": "9d752e4b0e70525682185b0dc13e201488e90d3b0453f6f3ea02655ba9fb6136"
+    },
+    {
+      "path": "tests/browser-selection-avatars-r30.mjs",
+      "sha256": "13650e90b7ba4dda6bfffb1f5f8024899851397cbd9a6f2821e7651f8082b2c6"
+    }
+  ],
+  "passed": 10,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Main selector shows SHA-verified source avatars and retains all 115 fighters",
+      "pass": true,
+      "evidence": {
+        "status": {
+          "loaded": true,
+          "failed": false,
+          "active": true,
+          "avatars": 388,
+          "nativeMenuThumbnails": 7,
+          "nativeModelRenders": 7,
+          "missing": 1,
+          "loadedImages": 18,
+          "cachedImages": 18,
+          "loadingImages": 0,
+          "queuedImages": 0,
+          "bindings": 20,
+          "rememberedErrors": 0
+        },
+        "fighters": 115,
+        "state": null,
+        "cards": [
+          {
+            "uid": "re1-cerberus",
+            "avatar": "re1-cerberus",
+            "visible": true
+          },
+          {
+            "uid": "re1r-tyrant",
+            "avatar": "re1r-tyrant",
+            "visible": true
+          },
+          {
+            "uid": "re2-tyrant",
+            "avatar": "re2-tyrant",
+            "visible": true
+          },
+          {
+            "uid": "re2r-tyrant",
+            "avatar": "re2r-tyrant",
+            "visible": true
+          },
+          {
+            "uid": "re3r-nemesis",
+            "avatar": "re3r-nemesis",
+            "visible": true
+          },
+          {
+            "uid": "re4-bitores-mendez-enemy",
+            "avatar": "re4-bitores-mendez-enemy",
+            "visible": true
+          },
+          {
+            "uid": "re4-verdugo",
+            "avatar": "re4-verdugo",
+            "visible": true
+          },
+          {
+            "uid": "re4-u-3",
+            "avatar": "re4-u-3",
+            "visible": true
+          },
+          {
+            "uid": "re4-osmund-saddler-enemy",
+            "avatar": "re4-osmund-saddler-enemy",
+            "visible": true
+          },
+          {
+            "uid": "re5-albert-wesker-enemy",
+            "avatar": "re5-albert-wesker-enemy",
+            "visible": true
+          },
+          {
+            "uid": "re7-molded",
+            "avatar": "re7-molded",
+            "visible": true
+          },
+          {
+            "uid": "re7-molded-fat",
+            "avatar": "re7-molded-fat",
+            "visible": true
+          },
+          {
+            "uid": "re7-flying-bug",
+            "avatar": "re7-flying-bug",
+            "visible": true
+          },
+          {
+            "uid": "re7-mama-mold",
+            "avatar": "re7-mama-mold",
+            "visible": true
+          },
+          {
+            "uid": "re7-little-crawler",
+            "avatar": "re7-little-crawler",
+            "visible": true
+          },
+          {
+            "uid": "revillage-lycan",
+            "avatar": "revillage-lycan",
+            "visible": true
+          },
+          {
+            "uid": "revillage-lycan-large",
+            "avatar": "revillage-lycan-large",
+            "visible": true
+          },
+          {
+            "uid": "revillage-varcolac",
+            "avatar": "revillage-varcolac",
+            "visible": true
+          }
+        ],
+        "writes": []
+      }
+    },
+    {
+      "name": "Main exact-form choice updates the native avatar and preserves family selection",
+      "pass": true,
+      "evidence": {
+        "selected": "re3r-hunter-gamma",
+        "avatar": "native-model-render",
+        "launch": "http://127.0.0.1:5892/modules/fidelity-r30/evolutions/index.html?uid=re3r-hunter-gamma&target=re1r-tyrant",
+        "families": {
+          "families": 15,
+          "mainMounted": true,
+          "groupedOptions": 115
+        },
+        "record": {
+          "id": "re3r-hunter-gamma",
+          "label": "Hunter γ — gueule ouverte",
+          "game": "Resident Evil 3 remake (2020)",
+          "image": "modules/fidelity-r30/native/new-sources/views/re3r-hunter-gamma-pc-r30/camera-0.png",
+          "width": 512,
+          "height": 512,
+          "bytes": 96374,
+          "sha256": "91ec4e97367b7797a439bea5bf04c421cac9e5d51333186c15be535dc0dfc79f",
+          "format": "PNG",
+          "sourceKind": "native-model-render",
+          "sourcePage": "https://models.spriters-resource.com/pc_computer/residentevil3remake/asset/540001/",
+          "sourceImage": "https://models.spriters-resource.com/pc_computer/residentevil3remake/asset/540001/",
+          "sourceEdition": "PC (2020), export publié de Hunter γ ; pose et matériaux du jeu non certifiés",
+          "targetIncarnation": "Resident Evil 3 remake (2020)",
+          "nativeAssetCertified": false,
+          "derivedNativeModelRender": true,
+          "originalGame2DFrame": false,
+          "targetEditionMatched": true,
+          "canonicalFidelityCertified": false,
+          "imageEditedByR30": false,
+          "selectionOnly": true,
+          "combatAnimationAssigned": false,
+          "crop": {
+            "x": 134,
+            "y": 129,
+            "width": 244,
+            "height": 254
+          },
+          "provenance": [
+            {
+              "kind": "native-model-render-derived-not-original-game-2d-frame",
+              "renders": {
+                "path": "modules/fidelity-r30/native/new-sources/renders.json",
+                "bytes": 214942,
+                "sha256": "094d5cba43ebb1175be3f3abd04724dde211cb7f32b88b070692d4ef1c2dc252"
+              },
+              "modelId": "re3r-hunter-gamma-pc-r30",
+              "sourceCatalog": {
+                "path": "modules/fidelity-r30/native/new-sources/catalog.json",
+                "bytes": 110547,
+                "sha256": "0e045836ede9bd56c9d52f1fc8cb53899aff9f9505588d315fc9b73f48e8a1f8"
+              },
+              "view": {
+                "pivot": {
+                  "x": 256,
+                  "y": 383.1426014641342
+                },
+                "bounds": {
+                  "x": 134,
+                  "y": 129,
+                  "width": 244,
+                  "height": 254
+                },
+                "angle": 0,
+                "width": 512,
+                "height": 512,
+                "occupiedPixels": 30828,
+                "edgePixels": 0,
+                "rgbaSha256": "37e791d9ea8a96459ce21d772b705bfcf916cb691f68e6ec726ea978f6a866ef",
+                "cameraPosition": [
+                  0,
+                  1.2204140201210976,
+                  10.010644787409651
+                ],
+                "cameraTarget": [
+                  0,
+                  1.2204140201210976,
+                  0.48040705919265747
+                ],
+                "path": "modules/fidelity-r30/native/new-sources/views/re3r-hunter-gamma-pc-r30/camera-0.png",
+                "bytes": 96374,
+                "sha256": "91ec4e97367b7797a439bea5bf04c421cac9e5d51333186c15be535dc0dfc79f"
+              },
+              "sourceBase": "../../../../",
+              "model": {
+                "path": "modules/fidelity-r30/native/new-sources/models/asset-540001/Hunter γ.obj",
+                "bytes": 8117444,
+                "sha256": "acf44b676237e25f92d51171c3dab5cc9e81e95e8e82d573338e3be47941f36b",
+                "member": "Hunter γ.obj"
+              },
+              "textures": [
+                {
+                  "path": "modules/fidelity-r30/native/new-sources/models/asset-540001/Textures/em3400_Body00_ALBM.png",
+                  "bytes": 7790506,
+                  "sha256": "71fe6a725de815bbca9dd9c9541ae31dc3c0bb1ad1479592df231082fd0357a3",
+                  "member": "Textures/em3400_Body00_ALBM.png"
+                },
+                {
+                  "path": "modules/fidelity-r30/native/new-sources/models/asset-540001/Textures/em3400_Mouth_ALBM.png",
+                  "bytes": 8115183,
+                  "sha256": "5f4f5f5f52438e87d90a1f5a1d0be005bb74a50af4f50021bce7e343d1a2b3a0",
+                  "member": "Textures/em3400_Mouth_ALBM.png"
+                }
+              ],
+              "recipe": {
+                "projection": "orthographic",
+                "cameraUp": [
+                  0,
+                  1,
+                  0
+                ],
+                "angles": [
+                  0,
+                  90,
+                  180,
+                  270
+                ],
+                "cellSize": 512,
+                "cameraOrbitOnly": true,
+                "geometryMirrored": false,
+                "modelTransformsChanged": false,
+                "poseChanged": false,
+                "sourceUnitsConvertedToMeters": false,
+                "bounds": {
+                  "min": [
+                    -1.2200469970703125,
+                    -0.05754999816417694,
+                    -1.1179929971694946
+                  ],
+                  "max": [
+                    1.2200469970703125,
+                    2.498378038406372,
+                    2.0788071155548096
+                  ]
+                },
+                "lighting": {
+                  "ambientIntensity": 2,
+                  "directionalIntensity": 2,
+                  "directionalPosition": [
+                    1,
+                    2,
+                    3
+                  ],
+                  "nativeGameLightingCertified": false
+                },
+                "renderMaterialMode": "unlit-source-albedo",
+                "sourceMaterialsBytesRewritten": false,
+                "originalGameMaterialCertified": false,
+                "sourceCatalog": {
+                  "path": "modules/fidelity-r30/native/new-sources/catalog.json",
+                  "bytes": 110547,
+                  "sha256": "0e045836ede9bd56c9d52f1fc8cb53899aff9f9505588d315fc9b73f48e8a1f8"
+                },
+                "library": "Three.js0.180.0",
+                "outputColorSpace": "sRGB",
+                "alpha": true
+              },
+              "sourceFilesRewritten": false,
+              "targetGameMatched": true,
+              "poseUsedAsCombatIdle": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Classic visual picker preserves 346 profiles and selects the exact form with keyboard focus",
+      "pass": true,
+      "evidence": {
+        "before": {
+          "options": 346,
+          "groups": 16,
+          "status": {
+            "loaded": true,
+            "failed": false,
+            "active": true,
+            "avatars": 388,
+            "nativeMenuThumbnails": 7,
+            "nativeModelRenders": 7,
+            "missing": 1,
+            "loadedImages": 2,
+            "cachedImages": 2,
+            "loadingImages": 0,
+            "queuedImages": 0,
+            "bindings": 2,
+            "rememberedErrors": 0
+          }
+        },
+        "subject": "re2r-super-tyrant",
+        "activeUid": "re2r-super-tyrant",
+        "pressed": "true",
+        "groups": 16,
+        "record": "re.bow.catalog-duel-replay/1",
+        "writes": [],
+        "status": {
+          "loaded": true,
+          "failed": false,
+          "active": true,
+          "avatars": 388,
+          "nativeMenuThumbnails": 7,
+          "nativeModelRenders": 7,
+          "missing": 1,
+          "loadedImages": 5,
+          "cachedImages": 5,
+          "loadingImages": 0,
+          "queuedImages": 0,
+          "bindings": 5,
+          "rememberedErrors": 0
+        }
+      }
+    },
+    {
+      "name": "Evolution picker retains 15 families, selectable forms and disabled contextual encounters",
+      "pass": true,
+      "evidence": {
+        "families": 15,
+        "options": 348,
+        "disabled": [
+          "re2-g-fifth-form",
+          "re2r-g-fifth-form",
+          "re3-nemesis-third-form",
+          "re3r-stage-3-nemesis",
+          "re4r-bitores-mendez-second-mutation",
+          "re7-jack-baker-mutated",
+          "recv-alexia-ashford-second-form",
+          "re4r-ramon-salazar-mutated"
+        ],
+        "selection": "re2r-super-tyrant",
+        "actor": "re2r-super-tyrant",
+        "grid": [
+          "re2r-tyrant",
+          "re2r-super-tyrant"
+        ],
+        "writes": []
+      }
+    },
+    {
+      "name": "The unverified scissor-saw composite stays hidden with an explicit missing source",
+      "pass": true,
+      "evidence": {
+        "missing": [
+          "re7-jack-baker-scissor"
+        ],
+        "uid": "re7-jack-baker-scissor",
+        "text": "Vue source à documenter",
+        "oldCanvas": "hidden",
+        "image": null
+      }
+    },
+    {
+      "name": "Corrupt source bytes never become a displayed source avatar",
+      "pass": true,
+      "evidence": {
+        "status": {
+          "loaded": true,
+          "failed": false,
+          "active": true,
+          "avatars": 388,
+          "nativeMenuThumbnails": 7,
+          "nativeModelRenders": 7,
+          "missing": 1,
+          "loadedImages": 17,
+          "cachedImages": 17,
+          "loadingImages": 0,
+          "queuedImages": 0,
+          "bindings": 20,
+          "rememberedErrors": 1
+        },
+        "displayed": 0,
+        "state": null
+      }
+    },
+    {
+      "name": "An invalid generated/external reference rejects the registry without altering the original selector",
+      "pass": true,
+      "evidence": {
+        "status": {
+          "loaded": false,
+          "failed": true,
+          "active": true,
+          "avatars": 0,
+          "nativeMenuThumbnails": 0,
+          "nativeModelRenders": 0,
+          "missing": 0,
+          "loadedImages": 0,
+          "cachedImages": 0,
+          "loadingImages": 0,
+          "queuedImages": 0,
+          "bindings": 0,
+          "rememberedErrors": 0
+        },
+        "fighters": 115,
+        "avatars": 0,
+        "state": null
+      }
+    },
+    {
+      "name": "Visible paging and pagehide/pageshow stay bounded and resume exact portraits",
+      "pass": true,
+      "evidence": {
+        "before": {
+          "loaded": true,
+          "failed": false,
+          "active": true,
+          "avatars": 388,
+          "nativeMenuThumbnails": 7,
+          "nativeModelRenders": 7,
+          "missing": 1,
+          "loadedImages": 107,
+          "cachedImages": 31,
+          "loadingImages": 3,
+          "queuedImages": 4,
+          "bindings": 9,
+          "rememberedErrors": 0
+        },
+        "hidden": {
+          "loaded": true,
+          "failed": false,
+          "active": false,
+          "avatars": 388,
+          "nativeMenuThumbnails": 7,
+          "nativeModelRenders": 7,
+          "missing": 1,
+          "loadedImages": 110,
+          "cachedImages": 0,
+          "loadingImages": 3,
+          "queuedImages": 0,
+          "bindings": 9,
+          "rememberedErrors": 0
+        },
+        "after": {
+          "status": {
+            "loaded": true,
+            "failed": false,
+            "active": true,
+            "avatars": 388,
+            "nativeMenuThumbnails": 7,
+            "nativeModelRenders": 7,
+            "missing": 1,
+            "loadedImages": 119,
+            "cachedImages": 9,
+            "loadingImages": 0,
+            "queuedImages": 0,
+            "bindings": 9,
+            "rememberedErrors": 0
+          },
+          "cards": [
+            {
+              "uid": "re5-ndesu",
+              "avatar": "re5-ndesu"
+            },
+            {
+              "uid": "re5-irving",
+              "avatar": "re5-irving"
+            },
+            {
+              "uid": "re5-u-8",
+              "avatar": "re5-u-8"
+            },
+            {
+              "uid": "re5-uroboros",
+              "avatar": "re5-uroboros"
+            },
+            {
+              "uid": "re5-uroboros-mkono",
+              "avatar": "re5-uroboros-mkono"
+            },
+            {
+              "uid": "re5-uroboros-aheri",
+              "avatar": "re5-uroboros-aheri"
+            },
+            {
+              "uid": "re5-uroboros-albert-wesker",
+              "avatar": "re5-uroboros-albert-wesker"
+            }
+          ],
+          "writes": []
+        }
+      }
+    },
+    {
+      "name": "Suspending during image decoding releases all slots and pageshow can decode again",
+      "pass": true,
+      "evidence": {
+        "scope": "Controlled pending decoder, real fetch/SHA path; no historical pre-fix run is claimed.",
+        "before": {
+          "loaded": true,
+          "failed": false,
+          "active": true,
+          "avatars": 388,
+          "nativeMenuThumbnails": 7,
+          "nativeModelRenders": 7,
+          "missing": 1,
+          "loadedImages": 0,
+          "cachedImages": 3,
+          "loadingImages": 3,
+          "queuedImages": 16,
+          "bindings": 20,
+          "rememberedErrors": 0
+        },
+        "hidden": {
+          "status": {
+            "loaded": true,
+            "failed": false,
+            "active": false,
+            "avatars": 388,
+            "nativeMenuThumbnails": 7,
+            "nativeModelRenders": 7,
+            "missing": 1,
+            "loadedImages": 0,
+            "cachedImages": 0,
+            "loadingImages": 0,
+            "queuedImages": 0,
+            "bindings": 20,
+            "rememberedErrors": 0
+          },
+          "decodes": 5
+        },
+        "after": {
+          "status": {
+            "loaded": true,
+            "failed": false,
+            "active": true,
+            "avatars": 388,
+            "nativeMenuThumbnails": 7,
+            "nativeModelRenders": 7,
+            "missing": 1,
+            "loadedImages": 0,
+            "cachedImages": 3,
+            "loadingImages": 3,
+            "queuedImages": 16,
+            "bindings": 20,
+            "rememberedErrors": 0
+          },
+          "decodes": 10
+        }
+      }
+    },
+    {
+      "name": "320pixel and 200percent text classic picker keeps native portraits, controls and focus visible",
+      "pass": true,
+      "evidence": {
+        "width": 320,
+        "overflow": false,
+        "pickerOverflow": false,
+        "focused": "re3r-hunter-gamma",
+        "source": "native-model-render",
+        "imageSize": [
+          {
+            "width": 512,
+            "height": 512
+          },
+          {
+            "width": 450,
+            "height": 360
+          }
+        ]
+      }
+    }
+  ]
+}

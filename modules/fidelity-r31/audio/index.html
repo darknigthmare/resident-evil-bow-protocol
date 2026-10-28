@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Voix et sons — R31 · B.O.W. Protocol</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="#main" class="skip">Aller à l’écoute</a>
+  <header><a href="../index.html">← Suivi R31</a><a href="../../../codex.html">Dossiers</a><a href="../../fidelity-r28/audio/index.html">Bibliothèque audio antérieure</a></header>
+  <main id="main" tabindex="-1">
+    <h1>Voix et sons — R31</h1>
+    <p>Extraits publiés de Dr. Salvador / Bella Sisters, Alexander Ashford, Alexia Ashford et Steve Burnside. Chaque groupe conserve son édition source. L’incarnation, la phase et le geste de chaque extrait restent à confirmer à l’écoute et dans une séquence du jeu.</p>
+    <p id="summary" role="status" aria-live="polite">Chargement de la bibliothèque…</p>
+    <section aria-labelledby="listenHeading">
+      <h2 id="listenHeading">Choisir un extrait</h2>
+      <div class="filters">
+        <label>Incarnation candidate<select id="identity"><option value="">Toutes les incarnations candidates</option></select></label>
+        <label>Groupe publié<select id="group"><option value="">Tous les groupes</option></select></label>
+        <label>Rechercher un nom de fichier<input id="search" type="search" maxlength="160" autocomplete="off"></label>
+      </div>
+      <label class="wide">Extrait<select id="clip" size="7" aria-describedby="candidateScope"></select></label>
+      <p id="candidateScope" class="scope"></p>
+      <dl id="facts"></dl>
+      <div class="actions"><button type="button" id="prepare" disabled>CHARGER L’EXTRAIT</button><button type="button" id="clear" disabled>LIBÉRER L’EXTRAIT</button><a id="source" href="#" hidden>Page du groupe publié</a></div>
+      <audio id="audio" controls preload="none" aria-label="Écouter l’extrait choisi"></audio>
+      <p id="playStatus" role="status" aria-live="polite">La lecture commence seulement depuis les commandes du lecteur.</p>
+    </section>
+    <section aria-labelledby="reviewHeading">
+      <h2 id="reviewHeading">Notes d’écoute personnelles</h2>
+      <p>Ces notes restent dans la page jusqu’à leur export. Elles ne modifient ni le combat ni les attributions de la bibliothèque.</p>
+      <form id="reviewForm">
+        <label class="check"><input id="heard" type="checkbox"> J’ai écouté cet extrait</label>
+        <div class="filters">
+          <label>Incarnation envisagée<select id="reviewIdentity"><option value="">À déterminer</option></select></label>
+          <label>Voix ou locuteur envisagé<input id="speaker" maxlength="160"></label>
+          <label>Phase envisagée<input id="phase" maxlength="160"></label>
+          <label>Geste ou événement envisagé<input id="action" maxlength="160"></label>
+        </div>
+        <label>Observation et référence de la séquence<textarea id="note" rows="4" maxlength="2000"></textarea></label>
+        <button type="submit" id="saveNote" disabled>CONSERVER CETTE NOTE DANS LA PAGE</button>
+      </form>
+      <p id="noteStatus" role="status" aria-live="polite">Aucune note personnelle conservée.</p>
+      <div class="actions"><button id="export" type="button" disabled>EXPORTER LES NOTES</button><label class="import">IMPORTER DES NOTES JSON<input id="import" type="file" accept="application/json,.json"></label></div>
+      <p id="importStatus" role="status" aria-live="polite"></p>
+    </section>
+    <details><summary>Origine et limites de ces ressources</summary><div id="provenance"></div><p>Les fichiers audio et leurs archives publiées sont conservés exactement. Les empreintes de fichiers et de PCM mesurent des octets ; elles ne certifient pas une voix, un geste ou une phase. Les groupes PC2007 et Code:Veronica X sur PS2 ne prouvent pas une équivalence avec les cibles GameCube2005 et Dreamcast2000.</p><p>Aucune écoute indépendante, attribution d’action, banque Capcom brute ou synchronisation finale de combat n’est certifiée par cette livraison.</p></details>
+    <noscript>Cette bibliothèque a besoin de JavaScript pour vérifier et préparer les fichiers audio.</noscript>
+  </main>
+  <script type="module" src="player.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "schema": "re.bow.fidelity-reproduction-r30/1",
+  "passed": 3,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Tracking is stable across independent Python hash seeds",
+      "pass": true
+    },
+    {
+      "name": "Actual R30 workbook reproduces exactly",
+      "pass": true,
+      "sha256": "64a30879388887b9b0660799266b143ffcf5461fc4cb2d46c6f3ec38b46d30bc"
+    },
+    {
+      "name": "Progress matches and R29 baseline remains byte-exact",
+      "pass": true
+    }
+  ]
+}

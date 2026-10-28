@@ -1,0 +1,35 @@
+test_binary_fbx_axis_declarations_match_retained_sources (__main__.NativeOtherR30.test_binary_fbx_axis_declarations_match_retained_sources) ... ok
+test_elevated_portraits_are_distinct_from_flat_combat_cameras (__main__.NativeOtherR30.test_elevated_portraits_are_distinct_from_flat_combat_cameras) ... ok
+test_every_native_png_decodes_and_has_uncropped_alpha_bounds (__main__.NativeOtherR30.test_every_native_png_decodes_and_has_uncropped_alpha_bounds) ... ok
+test_independent_full_mesh_reconstruction_covers_all_native_motion (__main__.NativeOtherR30.test_independent_full_mesh_reconstruction_covers_all_native_motion) ... ERROR
+test_manifest_reproduces_from_actual_reviewed_source_inputs (__main__.NativeOtherR30.test_manifest_reproduces_from_actual_reviewed_source_inputs) ... ok
+test_missing_native_texture_has_no_fabricated_replacement (__main__.NativeOtherR30.test_missing_native_texture_has_no_fabricated_replacement) ... ok
+test_motion_is_every_native_sixty_hz_sample_for_the_full_duration (__main__.NativeOtherR30.test_motion_is_every_native_sixty_hz_sample_for_the_full_duration) ... ok
+test_motion_source_studies_are_not_promoted_to_grounded_idle (__main__.NativeOtherR30.test_motion_source_studies_are_not_promoted_to_grounded_idle) ... ok
+test_source_meshes_materials_and_textures_are_retained (__main__.NativeOtherR30.test_source_meshes_materials_and_textures_are_retained) ... ok
+test_t_poses_detached_equipment_and_candidate_ports_remain_held (__main__.NativeOtherR30.test_t_poses_detached_equipment_and_candidate_ports_remain_held) ... ok
+test_thirty_source_pages_are_actual_sha_bound_successful_captures (__main__.NativeOtherR30.test_thirty_source_pages_are_actual_sha_bound_successful_captures) ... ok
+test_two_real_opposing_static_stances_do_not_become_animated_idles (__main__.NativeOtherR30.test_two_real_opposing_static_stances_do_not_become_animated_idles) ... ok
+
+======================================================================
+ERROR: test_independent_full_mesh_reconstruction_covers_all_native_motion (__main__.NativeOtherR30.test_independent_full_mesh_reconstruction_covers_all_native_motion)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/bow-published-r29-55fpl029/tests/test_native_other_r30.py", line 155, in test_independent_full_mesh_reconstruction_covers_all_native_motion
+    report = read('docs/R30_NATIVE_OTHER_MOTION_RIG_TESTS.json')
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/bow-published-r29-55fpl029/tests/test_native_other_r30.py", line 19, in read
+    return json.loads((ROOT / path).read_text())
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/bow-published-r29-55fpl029/docs/R30_NATIVE_OTHER_MOTION_RIG_TESTS.json'
+
+----------------------------------------------------------------------
+Ran 12 tests in 1.203s
+
+FAILED (errors=1)

@@ -1,0 +1,137 @@
+{
+  "schema": "re.bow.native-runtime-tests-r30/1",
+  "observedAt": "2026-10-28T08:04:10.928Z",
+  "fixtureScope": "Synthetic admission and timeline metadata exercise runtime gates against actual retained PNG bytes. Fixtures are not asset reviews, original-game idles, or delivered animations.",
+  "inputs": [
+    {
+      "path": "modules/fidelity-r30/combat/native-runtime.js",
+      "sha256": "6c8abb4f5ba8b356b1575bf488b53c3cee3d6b49ba75fc671f266587d26a1613"
+    },
+    {
+      "path": "modules/fidelity-r30/combat/native-adapter.js",
+      "sha256": "5a91064092bbcdd4183f589c25eaab40f68d9220a961a6cc41c6841421b251d7"
+    },
+    {
+      "path": "tests/verify-native-runtime-r30.mjs",
+      "sha256": "230803afb8398fe94b580bfcb84b2b3ee8df5b7243129a12246a040089683cd0"
+    }
+  ],
+  "total": 13,
+  "passed": 13,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Opaque contexts do not fetch and R29 generated APIs remain unchanged",
+      "pass": true,
+      "evidence": {
+        "opaqueRequests": 0,
+        "generatedAliasesPreserved": 3
+      }
+    },
+    {
+      "name": "Index-to-lot SHA binding rejects changed manifests atomically",
+      "pass": true,
+      "evidence": {
+        "changedLotRegistered": false
+      }
+    },
+    {
+      "name": "Bounded index transport refuses an oversized body",
+      "pass": true,
+      "evidence": {
+        "maximumIndexBytes": 65536
+      }
+    },
+    {
+      "name": "Exact static neutral poses draw their actual produced side without claiming animation",
+      "pass": true,
+      "evidence": {
+        "syntheticPositiveAdmissionFixture": true,
+        "actualPNG": "3b23d3dbb4374f4e35b4ade4717994611a5cb2e7bf50c512ccaf7cea5bc336b5",
+        "idleAnimationClaimed": false
+      }
+    },
+    {
+      "name": "Bind poses, context poses, appearance gaps and documentary editions cannot silently become combat",
+      "pass": true,
+      "evidence": {
+        "independentAdmissionGates": 6,
+        "rejectedPNGsDownloaded": 0
+      }
+    },
+    {
+      "name": "Smooth source scenes remain studies until action and complete-loop proofs are present",
+      "pass": true,
+      "evidence": {
+        "sequenceAdmissionGates": 5,
+        "sparseScenesPromoted": 0
+      }
+    },
+    {
+      "name": "Native frame choice follows deterministic combat seconds and never wall clock",
+      "pass": true,
+      "evidence": {
+        "seconds": [
+          0.25,
+          1.25
+        ],
+        "frame": 15,
+        "syntheticEligibilityFixtureOnly": true
+      }
+    },
+    {
+      "name": "Reduced motion freezes native playback while explicit preview seeks remain available",
+      "pass": true,
+      "evidence": {
+        "combatFrame": 0,
+        "explicitPreviewFrame": 15
+      }
+    },
+    {
+      "name": "Observed neutral source variants require explicit per-UID opt-in and never certify source semantics",
+      "pass": true,
+      "evidence": {
+        "defaultPromotion": false,
+        "optionalObservedLoop": true,
+        "originalGameActionCertified": false,
+        "persistedSettings": 0
+      }
+    },
+    {
+      "name": "Byte corruption and decoder dimension changes cannot draw a native image",
+      "pass": true,
+      "evidence": {
+        "corruptPNGDrawn": false,
+        "wrongDimensionsDrawn": false
+      }
+    },
+    {
+      "name": "A rolling decoded cache stays bounded and pagehide revokes all blobs",
+      "pass": true,
+      "evidence": {
+        "loadedImages": 40,
+        "maximumCached": 32,
+        "maximumPixels": 4718592,
+        "liveURLsAfterHide": 0
+      }
+    },
+    {
+      "name": "The additive adapter keeps actor/replay state untouched and restores the prior renderer",
+      "pass": true,
+      "evidence": {
+        "frozenActorPreserved": true,
+        "nonidleFallbacks": 1,
+        "priorRendererRestored": true
+      }
+    },
+    {
+      "name": "The adapter honors the existing main-engine reduceMotion spelling as well as reducedMotion",
+      "pass": true,
+      "evidence": {
+        "legacySetting": "reduceMotion",
+        "currentSetting": "reducedMotion",
+        "frozenNativeFrame": 0
+      }
+    }
+  ]
+}

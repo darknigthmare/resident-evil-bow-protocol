@@ -1,0 +1,143 @@
+{
+  "schema": "re.bow.published-assertions-r29/1",
+  "published_commit": "12cdd7e38b5785cb9fbbb3fe3dff8d0f7f41fa24",
+  "plan": {
+    "path": "qa-r31-ci-diagnosis/r30-reordered-plan.json",
+    "sha256": "e699c247ce6d15a6c2d86df00b20bcadd17e39cda81bdd550632aa4d83539eec"
+  },
+  "executions": [
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-c",
+        "from pathlib import Path\nfor name in ['EXPORT_TESTS', 'NATIVE_REVELATIONS_TESTS', 'NATIVE_OTHER_TESTS', 'NEW_NATIVE_TESTS', 'AVATARS_TESTS', 'NATIVE_RUNTIME_TESTS', 'NATIVE_REVELATIONS_RIG_TESTS', 'NATIVE_OTHER_MOTION_RIG_TESTS', 'INTEGRATION_TESTS']:\n Path(\"docs/R30_\"+name+\".json\").unlink(missing_ok=True)\n"
+      ],
+      "exit_code": 0,
+      "executed_assertions": null,
+      "log": "command-00.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "tests/test_fidelity_r30.py"
+      ],
+      "exit_code": 0,
+      "executed_assertions": null,
+      "log": "command-01.log",
+      "log_sha256": "d5bf17ae9ec5bf37c7f770c32ff95a0534dd5eb33f7892c4b0b34d76f7076ba5"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "tests/test_native_revelations_r30.py"
+      ],
+      "exit_code": 0,
+      "executed_assertions": null,
+      "log": "command-02.log",
+      "log_sha256": "751848b98b1fcd77f9104563768b39b76ba991140aeb5ebd6b9b0050d2731922"
+    },
+    {
+      "command": [
+        "node",
+        "tests/verify-native-other-motion-r30.mjs"
+      ],
+      "exit_code": 0,
+      "executed_assertions": {
+        "passed": 2,
+        "failed": 0
+      },
+      "log": "command-03.log",
+      "log_sha256": "483274a43a1b4ef0009a9c8281cd42dd3e389d69caec05fde769037ef3e8b16b"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "tests/test_native_other_r30.py"
+      ],
+      "exit_code": 0,
+      "executed_assertions": null,
+      "log": "command-04.log",
+      "log_sha256": "470c168ea14db6e92df5b1b248296c4fe3db7c4b3d33f8d220949aaf4e0002ab"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "scripts/verify-new-native-sources-r30.py"
+      ],
+      "exit_code": 0,
+      "executed_assertions": {
+        "passed": 9,
+        "failed": 0
+      },
+      "log": "command-05.log",
+      "log_sha256": "8a8a71a5c9577d7170e03a228d5f1a8f3d5aa534ad22d49252df37146d59cc77"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "scripts/verify-selection-avatars-r30.py"
+      ],
+      "exit_code": 0,
+      "executed_assertions": null,
+      "log": "command-06.log",
+      "log_sha256": "3c9d795e0c44b03b25e9c6d48a5986301840930b0a657fbe9fa115c3499a8936"
+    },
+    {
+      "command": [
+        "node",
+        "tests/verify-native-runtime-r30.mjs"
+      ],
+      "exit_code": 0,
+      "executed_assertions": null,
+      "log": "command-07.log",
+      "log_sha256": "3b80cd1fed2159acd192c00d8273e212555be8e1fe9455be75c6298bfb14affe"
+    },
+    {
+      "command": [
+        "node",
+        "tests/verify-native-revelations-r30.mjs"
+      ],
+      "exit_code": 0,
+      "executed_assertions": {
+        "passed": 6,
+        "failed": 0
+      },
+      "log": "command-08.log",
+      "log_sha256": "94819166b2c816c64923ecf26aaef7ce342a11dc95f2ad4dd4fa843b6471cf69"
+    },
+    {
+      "command": [
+        "node",
+        "tests/verify-r30-integration.mjs"
+      ],
+      "exit_code": 0,
+      "executed_assertions": {
+        "passed": 9,
+        "failed": 0
+      },
+      "log": "command-09.log",
+      "log_sha256": "7edb5a5cb9b5b72c3f35a6126836fc76c8c84602fc1e15da07f9837c4264fae0"
+    },
+    {
+      "command": [
+        "node",
+        "--input-type=module",
+        "-e",
+        "import assert from 'node:assert/strict';import fs from 'node:fs';const names=['EXPORT_TESTS','NATIVE_REVELATIONS_TESTS','NATIVE_OTHER_TESTS','NEW_NATIVE_TESTS','AVATARS_TESTS','NATIVE_RUNTIME_TESTS','NATIVE_REVELATIONS_RIG_TESTS','NATIVE_OTHER_MOTION_RIG_TESTS','INTEGRATION_TESTS'];for(const name of names){const file='docs/R30_'+name+'.json',report=JSON.parse(fs.readFileSync(file));assert(Number.isInteger(report.passed)&&report.passed>0,file);assert.equal(report.failed,0,file);assert.equal(report.skipped??0,0,file);}"
+      ],
+      "exit_code": 1,
+      "executed_assertions": null,
+      "log": "command-10.log",
+      "log_sha256": "a68995113334b4bb87949f648bc3310746195b5f2220ac8c2817eec803b674ee"
+    }
+  ],
+  "exit_code": 1,
+  "duration_seconds": 58.776,
+  "log_sha256": "f55c39b57cb429625a211a11e08508b05c4a37926904f43e9d56af46fdf5617d",
+  "runner_sha256": "0c452dfe4a21591c6237a634f1efad0b45feb0ac1079950deaabee94afb3f568",
+  "git_archive_with_original_head_and_index": true,
+  "historical_assertions_modified": false,
+  "calling_checkout_sources_modified": false,
+  "scope": "The published release and its recorded source hashes; current release tests remain separate."
+}

@@ -1,0 +1,135 @@
+{
+  "schema": "re.bow.native-other-motion-rig-tests-r30/1",
+  "passed": 2,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "rerev-sea-creeper",
+      "pass": true,
+      "reconstructedFrames": 151,
+      "orientedPngs": 302,
+      "measurements": {
+        "sourceBodyHeight": 232.00780153755085,
+        "endpointToFirstRms": 0.033327516064439615,
+        "playbackSeamRms": 2.5514215251113153,
+        "maximumAdjacentRms": 5.914219586492211,
+        "endpointToFirstBodyHeightRatio": 0.00014364825597920896,
+        "playbackSeamBodyHeightRatio": 0.010997136769551103,
+        "playbackSeamToMaximumAdjacentRatio": 0.43140459832412,
+        "bottomFivePercentSourceVertexCount": 76,
+        "maximumBottomSliceHorizontalDrift": 66.14924524157654,
+        "maximumBottomSliceVerticalDrift": 35.236645500135864,
+        "bottomSliceDriftScope": "Fixed vertices lying in the first-pose bottom5percent of sourceheight; an anatomical foot-contact approximation, not bone semantics or original collision.",
+        "nativeMovingBoneCount": 33,
+        "nativeMovingBones": [
+          "bone0",
+          "bone1",
+          "bone10",
+          "bone11",
+          "bone12",
+          "bone13",
+          "bone14",
+          "bone15",
+          "bone16",
+          "bone17",
+          "bone18",
+          "bone19",
+          "bone2",
+          "bone20",
+          "bone21",
+          "bone22",
+          "bone23",
+          "bone24",
+          "bone25",
+          "bone26",
+          "bone27",
+          "bone28",
+          "bone29",
+          "bone3",
+          "bone30",
+          "bone31",
+          "bone32",
+          "bone4",
+          "bone5",
+          "bone6",
+          "bone7",
+          "bone8",
+          "bone9"
+        ],
+        "maxBoneTranslationDelta": 72.47230071179779
+      }
+    },
+    {
+      "name": "rerev-scagdead",
+      "pass": true,
+      "reconstructedFrames": 140,
+      "orientedPngs": 280,
+      "measurements": {
+        "sourceBodyHeight": 285.2756281925948,
+        "endpointToFirstRms": 2.665706538657497,
+        "playbackSeamRms": 11.357331682064292,
+        "maximumAdjacentRms": 19.551814929267717,
+        "endpointToFirstBodyHeightRatio": 0.009344319231006407,
+        "playbackSeamBodyHeightRatio": 0.03981178397194431,
+        "playbackSeamToMaximumAdjacentRatio": 0.5808837554544949,
+        "bottomFivePercentSourceVertexCount": 351,
+        "maximumBottomSliceHorizontalDrift": 155.6978045866722,
+        "maximumBottomSliceVerticalDrift": 175.36883298020288,
+        "bottomSliceDriftScope": "Fixed vertices lying in the first-pose bottom5percent of sourceheight; an anatomical foot-contact approximation, not bone semantics or original collision.",
+        "nativeMovingBoneCount": 30,
+        "nativeMovingBones": [
+          "bone0",
+          "bone1",
+          "bone10",
+          "bone11",
+          "bone12",
+          "bone13",
+          "bone14",
+          "bone15",
+          "bone16",
+          "bone17",
+          "bone18",
+          "bone19",
+          "bone2",
+          "bone20",
+          "bone21",
+          "bone22",
+          "bone23",
+          "bone24",
+          "bone25",
+          "bone26",
+          "bone27",
+          "bone28",
+          "bone29",
+          "bone3",
+          "bone4",
+          "bone5",
+          "bone6",
+          "bone7",
+          "bone8",
+          "bone9"
+        ],
+        "maxBoneTranslationDelta": 116.20954904273928
+      }
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "tests/verify-native-other-motion-r30.mjs",
+      "sha256": "487e24053ec29b68c9e6ca85ee8dd78d39ccfdde5d2d518622e18d79d06a226b"
+    },
+    {
+      "path": "modules/fidelity-r30/native/other-games/motion-manifest.json",
+      "sha256": "010c6151769f93f3c4be8f8238a14f3db03c4adbd6c91ff3e1734fe8e4db5253"
+    },
+    {
+      "path": "modules/fidelity-r30/native/revelations/renderer.js",
+      "sha256": "19e9422bac94998dfd4e4c4aff00727f142c9f9d1497babb88788932feab518c"
+    },
+    {
+      "path": "modules/fidelity-r30/native/other-games/motion-inputs.json",
+      "sha256": "080b3dd0e21c98d79175756c49c9533b7fceb1b0d9ed95d57a753519179133bc"
+    }
+  ],
+  "scope": "Independent full-mesh reconstruction of every native60Hz export time and endpoint, multi-bone motion, actual last-frame-to-first seam, source/material/texture bytes, opposing source cameras. Quantized hashes measure1e-4native units only; geometry unmodified. Measurements do not certify the source action label, anatomical contacts or original engine presentation."
+}

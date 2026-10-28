@@ -1,0 +1,71 @@
+{
+  "schema": "re.bow.native-new-browser-tests-r30/1",
+  "release": "R30",
+  "passed": 4,
+  "failed": 0,
+  "actualRepeatedPngs": 16,
+  "groups": [
+    {
+      "name": "re2-tyrant-gamecube",
+      "result": "PASS",
+      "actualRepeatedPngs": 4,
+      "byteEquality": true
+    },
+    {
+      "name": "re3-hunter-beta-gamecube",
+      "result": "PASS",
+      "actualRepeatedPngs": 4,
+      "byteEquality": true
+    },
+    {
+      "name": "re2-g-type-adult-gamecube-r30",
+      "result": "PASS",
+      "actualRepeatedPngs": 4,
+      "byteEquality": true
+    },
+    {
+      "name": "re3r-hunter-gamma-pc-r30",
+      "result": "PASS",
+      "actualRepeatedPngs": 4,
+      "byteEquality": true
+    }
+  ],
+  "scope": "Four actual source-model render reruns; all sixteen delivered PNG files compared byte for byte. The remaining 136 images are decoded and source-bound by the Python suite.",
+  "inputs": [
+    {
+      "path": "modules/fidelity-r30/native/new-sources/catalog.json",
+      "bytes": 110547,
+      "sha256": "0e045836ede9bd56c9d52f1fc8cb53899aff9f9505588d315fc9b73f48e8a1f8"
+    },
+    {
+      "path": "modules/fidelity-r30/native/new-sources/renders.json",
+      "bytes": 214942,
+      "sha256": "094d5cba43ebb1175be3f3abd04724dde211cb7f32b88b070692d4ef1c2dc252"
+    },
+    {
+      "path": "modules/fidelity-r30/native/new-sources/manifest.json",
+      "bytes": 656412,
+      "sha256": "5f72814259927801af1b10d17a874155ca0b4510a826f2a7d94db022376dce26"
+    },
+    {
+      "path": "modules/fidelity-r30/native/new-sources/renderer.js",
+      "bytes": 8570,
+      "sha256": "30ce43c72d74dc5df85c6841df0c6367bcc37b165ea75306e78f4667ebff7399"
+    },
+    {
+      "path": "modules/fidelity-r30/native/new-sources/render.html",
+      "bytes": 429,
+      "sha256": "5dd1fbc7f2f51b38b62ac489a82ebfaa1ca7d017dcc0630760ff3e614784a110"
+    },
+    {
+      "path": "scripts/render-new-native-sources-r30.mjs",
+      "bytes": 4466,
+      "sha256": "5f2bb45bc540fa92cf888a2d114ff6173ced6db0924167135372708da24843a0"
+    }
+  ],
+  "environment": {
+    "chromium": "154.0.8037.57",
+    "backend": "software SwiftShader",
+    "library": "Three.js 0.180.0"
+  }
+}

@@ -1,0 +1,357 @@
+{
+  "schema": "re.bow.performance-access-browser-r31/1",
+  "startedAt": "2026-10-28T10:19:49.053Z",
+  "finishedAt": "2026-10-28T10:20:02.158Z",
+  "passed": 8,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "All three actual combat mounts coordinate native, generated and portrait PNG credits",
+      "pass": true,
+      "detail": {
+        "mounts": [
+          {
+            "route": "/modules/versus.html",
+            "assets": {
+              "nativeId": "rerev-ooze--em1000_em1000_BA_1--right",
+              "generatedId": "re0-stinger"
+            },
+            "owners": {
+              "generated": {
+                "pixels": 4718936,
+                "assets": 3,
+                "pending": 0
+              },
+              "avatars": {
+                "pixels": 3454160,
+                "assets": 18,
+                "pending": 0
+              },
+              "native": {
+                "pixels": 3686400,
+                "assets": 1,
+                "pending": 0
+              }
+            },
+            "reservedPixels": 11859496
+          },
+          {
+            "route": "/catalog-duel.html",
+            "assets": {
+              "nativeId": "rerev-ooze--em1000_em1000_BA_1--right",
+              "generatedId": "re0-stinger"
+            },
+            "owners": {
+              "avatars": {
+                "pixels": 2268000,
+                "assets": 14,
+                "pending": 0
+              },
+              "native": {
+                "pixels": 3686400,
+                "assets": 1,
+                "pending": 0
+              },
+              "generated": {
+                "pixels": 1573538,
+                "assets": 1,
+                "pending": 0
+              }
+            },
+            "reservedPixels": 7527938
+          },
+          {
+            "route": "/modules/fidelity-r31/evolutions/index.html",
+            "assets": {
+              "nativeId": "rerev-ooze--em1000_em1000_BA_1--right",
+              "generatedId": "re0-stinger"
+            },
+            "owners": {
+              "avatars": {
+                "pixels": 2106000,
+                "assets": 13,
+                "pending": 0
+              },
+              "generated": {
+                "pixels": 3146402,
+                "assets": 2,
+                "pending": 0
+              },
+              "native": {
+                "pixels": 3686400,
+                "assets": 1,
+                "pending": 0
+              }
+            },
+            "reservedPixels": 8938802
+          }
+        ],
+        "measuredScope": "Participating readers only; existing canvases, browser and GPU memory remain unmeasured."
+      }
+    },
+    {
+      "name": "Real images evicted by a32MP pressure reservation recover after release without negative-cache retries",
+      "pass": true,
+      "detail": {
+        "actualReaderEvictions": 16,
+        "fullReservedPixels": 33554432,
+        "nativeAndGeneratedRecoveryMs": 26.099999994039536,
+        "portraitAutoRecovery": true,
+        "final": {
+          "limits": {
+            "pixels": 33554432,
+            "assets": 64,
+            "pending": 12
+          },
+          "reservations": 26,
+          "evictions": 16,
+          "refusals": 2,
+          "peakPixels": 33554432,
+          "peakAssets": 16,
+          "reservedPixels": 6393938,
+          "estimatedRgbaBytes": 25575752,
+          "assets": 9,
+          "pending": 1,
+          "pendingPixels": 162000,
+          "owners": {
+            "avatars": {
+              "pixels": 1134000,
+              "assets": 7,
+              "pending": 1
+            },
+            "generated": {
+              "pixels": 1573538,
+              "assets": 1,
+              "pending": 0
+            },
+            "native": {
+              "pixels": 3686400,
+              "assets": 1,
+              "pending": 0
+            }
+          },
+          "scope": "Participating generated poses, native atlases and selection portraits only; other canvases, engine art, GPU textures and browser allocations are unmeasured.",
+          "physicalDeviceCertified": false,
+          "globalMemoryCertified": false
+        },
+        "pressureIsFaultInjection": true,
+        "pressureReservationStayedPendingUntilRelease": true
+      }
+    },
+    {
+      "name": "Page lifecycle releases ready and controlled pending native decode credits then resumes actual PNG loading",
+      "pass": true,
+      "detail": {
+        "pendingPixelsBeforeHide": 3686400,
+        "reservedAfterHide": 0,
+        "decodedAgainAfterShow": true,
+        "simulatedPendingDecodeAndLifecycle": true
+      }
+    },
+    {
+      "name": "The real combat summary uses R17 pause, exact actor values and evolution reasons without replay mutation",
+      "pass": true,
+      "detail": {
+        "actorsCompared": 2,
+        "exactEvolutionReasons": [
+          [
+            {
+              "label": "SUPER TYRANT — T-103 LIBÉRÉ",
+              "available": false,
+              "reason": "Vie requise : 70 % ou moins."
+            }
+          ],
+          [
+            {
+              "label": "NEMESIS — STADE 2",
+              "available": false,
+              "reason": "Vie requise : 70 % ou moins."
+            }
+          ]
+        ],
+        "frame": 180,
+        "replayPreserved": true,
+        "pausedDialogFocusAndEscape": true
+      }
+    },
+    {
+      "name": "A voluntary one-second monitor observes callbacks while paused engine state and replay stay identical",
+      "pass": true,
+      "detail": {
+        "schema": "re.bow.browser-session-r31/1",
+        "durationMs": 1000.5999999940395,
+        "reason": "duration",
+        "callbackIntervals": 60,
+        "medianCallbackMs": 16.699999999999932,
+        "p95CallbackMs": 16.700000000000045,
+        "longestCallbackMs": 16.799999999999955,
+        "longTasksSupported": true,
+        "longTasks": 0,
+        "longTaskTotalMs": 0,
+        "sameEngineSession": true,
+        "observedEngineTicks": 0,
+        "managedImages": {
+          "limits": {
+            "pixels": 33554432,
+            "assets": 64,
+            "pending": 12
+          },
+          "reservations": 3,
+          "evictions": 0,
+          "refusals": 0,
+          "peakPixels": 1896864,
+          "peakAssets": 3,
+          "reservedPixels": 1896864,
+          "estimatedRgbaBytes": 7587456,
+          "assets": 3,
+          "pending": 0,
+          "pendingPixels": 0,
+          "owners": {
+            "avatars": {
+              "pixels": 324000,
+              "assets": 2,
+              "pending": 0
+            },
+            "generated": {
+              "pixels": 1572864,
+              "assets": 1,
+              "pending": 0
+            }
+          },
+          "scope": "Participating generated poses, native atlases and selection portraits only; other canvases, engine art, GPU textures and browser allocations are unmeasured.",
+          "physicalDeviceCertified": false,
+          "globalMemoryCertified": false
+        },
+        "nativeRenderer": {
+          "nativeStaticDraws": 0,
+          "nativeAnimatedDraws": 0,
+          "generatedOrProceduralFallbacks": 12,
+          "installed": true,
+          "reasons": {
+            "native-not-admitted": 12
+          },
+          "collisionOrReplayDataChanged": false,
+          "originalEngineChanged": false,
+          "inventedAnimations": 0
+        },
+        "physicalDeviceCertified": false,
+        "gpuAllocationsMeasured": false,
+        "scope": "RequestAnimationFrame intervals and supported long tasks in this browser session; not physical display FPS or total browser/GPU memory.",
+        "statePreserved": true,
+        "replayPreserved": true,
+        "storagePreserved": true
+      }
+    },
+    {
+      "name": "The actual performance page measures only after a click and exports the observed iframe session",
+      "pass": true,
+      "detail": {
+        "autostart": false,
+        "voluntaryManualStop": true,
+        "exportedEqualsObservedReport": true,
+        "callbackIntervals": 62,
+        "iframeHasRunningCombat": false
+      }
+    },
+    {
+      "name": "New performance controls pass axe4.14 and320px reflow with actual root text doubled",
+      "pass": true,
+      "detail": {
+        "width": 320,
+        "rootTextPixels": 32,
+        "keyboardSelectRetained": true,
+        "axe": {
+          "violations": [],
+          "incomplete": [],
+          "passes": 38
+        },
+        "frameScopeExcluded": "Embedded old game is checked separately."
+      }
+    },
+    {
+      "name": "The new paused summary region remains accessible at320px with its real text doubled",
+      "pass": true,
+      "detail": {
+        "width": 320,
+        "actualSummaryTextBefore": 14,
+        "actualSummaryTextAfter": 28,
+        "scopedAxe": {
+          "violations": [],
+          "incomplete": [],
+          "passes": 28
+        },
+        "physicalScreenReaderCertified": false
+      }
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "tests/browser-performance-access-r31.mjs",
+      "sha256": "bf4c59ab631deeb9408b1a4e7c62724512a0e904c94104de84b62e8948f2569e"
+    },
+    {
+      "path": "modules/fidelity-r31/performance/image-budget.js",
+      "sha256": "e7a3a2039c9c666475fdfe118bc1fece445891d0213bbe20e75fece248cebce2"
+    },
+    {
+      "path": "modules/fidelity-r31/performance/monitor.js",
+      "sha256": "503e992e70900d0afd1b49c8d9f8acec9bbb881095d341095ead9c1bd4e24cc0"
+    },
+    {
+      "path": "modules/fidelity-r31/performance/index.html",
+      "sha256": "f5203c8c79dec250093a7c3a9e55d7def1e83859c7b29eff3b6e564824dcfdc2"
+    },
+    {
+      "path": "modules/fidelity-r31/performance/page.js",
+      "sha256": "5ecb06d9051608f99ddc3f7a1d6410073d129f07b1dc66ce6d765005e1b9a9c3"
+    },
+    {
+      "path": "modules/fidelity-r31/performance/style.css",
+      "sha256": "41acdde8c1eacee61d48f2b9580e98ec7f67211336b661a024e6456f805e4cc6"
+    },
+    {
+      "path": "modules/fidelity-r31/access/match-summary.js",
+      "sha256": "f2b04b703adaef7d0154e48e2ec7b28f29d24c57800b20d73a8d93ad081b4cdd"
+    },
+    {
+      "path": "modules/fidelity-r31/combat/generated-runtime.js",
+      "sha256": "d03a03c3fb68f686c41812d9b051ca2240c4bbba9eba64a4deadf16d4412162e"
+    },
+    {
+      "path": "modules/fidelity-r31/combat/native-runtime.js",
+      "sha256": "0e0be612903c65108d5dd3d691b3f074bcb619364812f82f3242b391f704bb36"
+    },
+    {
+      "path": "modules/fidelity-r31/selection/avatars.js",
+      "sha256": "f0e70109be3310c13155c512767eacf60f28d0f48082752200a3b03de215ec1a"
+    },
+    {
+      "path": "modules/fidelity-r31/sprites/manifest.json",
+      "sha256": "6b4df5ec5509bf661c0417d34e31038d9efd4bc5ccf719090edbbb2d94d77880"
+    },
+    {
+      "path": "modules/fidelity-r30/native/manifest.json",
+      "sha256": "542d0cf097bbc9c938f81de19fdff431a2b3e5b3d78b06250833810f0dece778"
+    },
+    {
+      "path": "modules/fidelity-r30/selection/manifest.json",
+      "sha256": "32fc768c8a91616a37ed7f67d767c4e916ac1ddf0567bca60c3f62dca4d91b8c"
+    },
+    {
+      "path": "modules/versus.html",
+      "sha256": "464c81cd73251969d03fb41d35b17485717aa5d41e768e9ff9b1aa4daa46e0ac"
+    },
+    {
+      "path": "catalog-duel.html",
+      "sha256": "7fa670ae6229953043999919709b2cd06f35618319efcf656ff459a4acd89140"
+    },
+    {
+      "path": "modules/fidelity-r31/evolutions/index.html",
+      "sha256": "e86aebbcf22f14617b4744ae6fd17d2274e4b63f794079f45cc5774e36e32260"
+    }
+  ],
+  "physicalDeviceCertified": false,
+  "physicalScreenReaderCertified": false,
+  "gpuMemoryCertified": false,
+  "scope": "Actual three combat mounts and decoded participating readers, controlled pressure and decode cancellation, real paused summary and replay preservation, voluntary session callbacks, targeted axe4.14 and320px actual text200%. Synthetic pressure/lifecycle branches do not certify real devices or total browser/GPU memory."
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "re.bow.ci-recovery-r30/1",
+  "passed": 2,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Unchanged R25 access assertions execute against published source",
+      "pass": true,
+      "publishedCommit": "300dc0169d83382189cd6c8889cb4f7368f1e8a5",
+      "passed": 18,
+      "failed": 0,
+      "logSha256": "5db4e939adfa3cedab5e3ce2eb3bd5d7f1a831682fc87234322b335923c17890"
+    },
+    {
+      "name": "Unchanged R26 access assertions execute against published source",
+      "pass": true,
+      "publishedCommit": "826f7ed1811c48adc0609f97699eb32f629fc78a",
+      "passed": 22,
+      "failed": 0,
+      "logSha256": "059269f41c849b568dd6258f2b630bcc5b588114b3c53c5ef26be4ab4091735f"
+    }
+  ],
+  "remoteDiagnosis": {
+    "head": "06910922109445ef387414874d09add2839e70a8",
+    "failedCheckIds": [
+      121547993997,
+      121546106131
+    ],
+    "source": "GitHub check-run annotations API",
+    "cause": "Historical R25/R26 Dossier tests expected their release link while the current R29 loader correctly exposes the latest release link."
+  },
+  "changes": [
+    "R25/R26 historical browser jobs retain their published source snapshots.",
+    "R29 jobs retain the published R29 source snapshot and conservation scope.",
+    "New R30 jobs execute the current native sprites, avatars and playback boundaries."
+  ],
+  "sourceFiles": [
+    {
+      "path": ".github/workflows/source-fidelity-r25.yml",
+      "sha256": "97556c256ce0e1178787e055c4dff8dcca5356e01c6a47be27ed604c3132d4ef"
+    },
+    {
+      "path": ".github/workflows/source-fidelity-r26.yml",
+      "sha256": "363ee7c78fae45505ab4bdf024c03eaf1661248b3a10164e3f7b1ead2b49c56e"
+    },
+    {
+      "path": ".github/workflows/source-fidelity-r29.yml",
+      "sha256": "f275c54c8432b6f1dc42b82788d458a8ee5c3c866e03562e6c40b7eca40f6d51"
+    }
+  ],
+  "scope": "40 historical browser assertions actually executed unchanged locally; no remote green CI claim."
+}

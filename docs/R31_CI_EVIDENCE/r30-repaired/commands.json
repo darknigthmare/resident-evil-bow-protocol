@@ -1,0 +1,56 @@
+{
+  "schema": "re.bow.published-check-plan-r29/1",
+  "directories": [
+    "qa-fidelity-r30-ci"
+  ],
+  "commands": [
+    [
+      "{python}",
+      "-c",
+      "from pathlib import Path\nfor name in ['EXPORT_TESTS', 'NATIVE_REVELATIONS_TESTS', 'NATIVE_OTHER_TESTS', 'NEW_NATIVE_TESTS', 'AVATARS_TESTS', 'NATIVE_RUNTIME_TESTS', 'NATIVE_REVELATIONS_RIG_TESTS', 'NATIVE_OTHER_MOTION_RIG_TESTS', 'INTEGRATION_TESTS']:\n Path(\"docs/R30_\"+name+\".json\").unlink(missing_ok=True)\n"
+    ],
+    [
+      "{python}",
+      "-c",
+      "import hashlib\nimport io\nimport json\nfrom pathlib import Path\nimport unittest\n\nroot = Path.cwd()\nchecks = []\nclass EvidenceResult(unittest.TextTestResult):\n    def addSuccess(self, test):\n        super().addSuccess(test)\n        checks.append({'name': test.id(), 'pass': True})\n    def addFailure(self, test, error):\n        super().addFailure(test, error)\n        checks.append({'name': test.id(), 'pass': False, 'error': self._exc_info_to_string(error, test)})\n    def addError(self, test, error):\n        super().addError(test, error)\n        checks.append({'name': test.id(), 'pass': False, 'error': self._exc_info_to_string(error, test)})\nstream = io.StringIO()\nsuite = unittest.defaultTestLoader.discover('tests', pattern='test_fidelity_r30.py')\nresult = unittest.TextTestRunner(stream=stream, verbosity=2, resultclass=EvidenceResult).run(suite)\nlog = stream.getvalue()\nprint(log, end='')\n(root / 'qa-fidelity-r30-ci/export-tests.log').write_text(log)\nfiles = ['tests/test_fidelity_r30.py', 'scripts/fidelity-progress-r30.py',\n         'scripts/export-fidelity-progress-r28.py', 'scripts/export-fidelity-progress-r27.py',\n         'scripts/export-source-evidence-r21.py']\nfailed = len(result.failures) + len(result.errors)\nreport = {'schema': 're.bow.export-python-ci-r30/1',\n          'passed': result.testsRun - failed - len(result.skipped), 'failed': failed,\n          'skipped': len(result.skipped), 'run': result.testsRun, 'checks': checks,\n          'sourceFiles': [{'path': name, 'sha256': hashlib.sha256((root / name).read_bytes()).hexdigest()} for name in files],\n          'scope': 'Actual unchanged published R30 export assertions, with a fresh result written by the CI runner.'}\n(root / 'docs/R30_EXPORT_TESTS.json').write_text(json.dumps(report, indent=2) + '\\n')\nprint(json.dumps({'passed': report['passed'], 'failed': report['failed']}))\nraise SystemExit(0 if result.testsRun > 0 and result.wasSuccessful() and not result.skipped else 1)\n"
+    ],
+    [
+      "{python}",
+      "tests/test_native_revelations_r30.py"
+    ],
+    [
+      "node",
+      "tests/verify-native-other-motion-r30.mjs"
+    ],
+    [
+      "{python}",
+      "tests/test_native_other_r30.py"
+    ],
+    [
+      "{python}",
+      "scripts/verify-new-native-sources-r30.py"
+    ],
+    [
+      "{python}",
+      "scripts/verify-selection-avatars-r30.py"
+    ],
+    [
+      "node",
+      "tests/verify-native-runtime-r30.mjs"
+    ],
+    [
+      "node",
+      "tests/verify-native-revelations-r30.mjs"
+    ],
+    [
+      "node",
+      "tests/verify-r30-integration.mjs"
+    ],
+    [
+      "node",
+      "--input-type=module",
+      "-e",
+      "import assert from 'node:assert/strict';import fs from 'node:fs';const names=['EXPORT_TESTS','NATIVE_REVELATIONS_TESTS','NATIVE_OTHER_TESTS','NEW_NATIVE_TESTS','AVATARS_TESTS','NATIVE_RUNTIME_TESTS','NATIVE_REVELATIONS_RIG_TESTS','NATIVE_OTHER_MOTION_RIG_TESTS','INTEGRATION_TESTS'];for(const name of names){const file='docs/R30_'+name+'.json',report=JSON.parse(fs.readFileSync(file));assert(Number.isInteger(report.passed)&&report.passed>0,file);assert.equal(report.failed,0,file);assert.equal(report.skipped??0,0,file);}"
+    ]
+  ]
+}

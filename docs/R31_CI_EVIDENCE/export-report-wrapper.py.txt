@@ -1,0 +1,36 @@
+import hashlib
+import io
+import json
+from pathlib import Path
+import unittest
+
+root = Path.cwd()
+checks = []
+class EvidenceResult(unittest.TextTestResult):
+    def addSuccess(self, test):
+        super().addSuccess(test)
+        checks.append({'name': test.id(), 'pass': True})
+    def addFailure(self, test, error):
+        super().addFailure(test, error)
+        checks.append({'name': test.id(), 'pass': False, 'error': self._exc_info_to_string(error, test)})
+    def addError(self, test, error):
+        super().addError(test, error)
+        checks.append({'name': test.id(), 'pass': False, 'error': self._exc_info_to_string(error, test)})
+stream = io.StringIO()
+suite = unittest.defaultTestLoader.discover('tests', pattern='test_fidelity_r30.py')
+result = unittest.TextTestRunner(stream=stream, verbosity=2, resultclass=EvidenceResult).run(suite)
+log = stream.getvalue()
+print(log, end='')
+(root / 'qa-fidelity-r30-ci/export-tests.log').write_text(log)
+files = ['tests/test_fidelity_r30.py', 'scripts/fidelity-progress-r30.py',
+         'scripts/export-fidelity-progress-r28.py', 'scripts/export-fidelity-progress-r27.py',
+         'scripts/export-source-evidence-r21.py']
+failed = len(result.failures) + len(result.errors)
+report = {'schema': 're.bow.export-python-ci-r30/1',
+          'passed': result.testsRun - failed - len(result.skipped), 'failed': failed,
+          'skipped': len(result.skipped), 'run': result.testsRun, 'checks': checks,
+          'sourceFiles': [{'path': name, 'sha256': hashlib.sha256((root / name).read_bytes()).hexdigest()} for name in files],
+          'scope': 'Actual unchanged published R30 export assertions, with a fresh result written by the CI runner.'}
+(root / 'docs/R30_EXPORT_TESTS.json').write_text(json.dumps(report, indent=2) + '\n')
+print(json.dumps({'passed': report['passed'], 'failed': report['failed']}))
+raise SystemExit(0 if result.testsRun > 0 and result.wasSuccessful() and not result.skipped else 1)

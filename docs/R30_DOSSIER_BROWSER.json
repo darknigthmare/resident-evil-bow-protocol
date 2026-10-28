@@ -1,0 +1,101 @@
+{
+  "schema": "re.bow.dossier-browser-r30/1",
+  "startedAt": "2026-10-28T08:13:46.664Z",
+  "completedAt": "2026-10-28T08:13:55.181Z",
+  "passed": 6,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Native evidence keeps its UID, editions and separately qualified idle count without preloading frames",
+      "pass": true,
+      "evidence": {
+        "uid": "re3r-hunter-gamma",
+        "nativeFrames": 4,
+        "combatStances": 0,
+        "verifiedIdleCycles": 0,
+        "automaticNativePngRequests": 0
+      }
+    },
+    {
+      "name": "Selection portrait links retain exact source bytes and never qualify full body or movement",
+      "pass": true,
+      "evidence": {
+        "uid": "re3r-zombie",
+        "exactAvatarSha256": "cb8658a907b492ff5254be352ba3f4b7905748cfa0ecbaa4b7d4b5fca58b2ced",
+        "inferredBodyOrAnimation": false,
+        "currentHeader": "R30"
+      }
+    },
+    {
+      "name": "Observed source-edition loops remain voluntary variants with no certified target idle",
+      "pass": true,
+      "evidence": {
+        "sourceNeutralFamilies": 5,
+        "playableOptionalVariants": 4,
+        "heldContext": "rerev-chunk-ooze",
+        "qualifiedTargetIdleCycles": 0,
+        "voluntaryScopeExplicit": true
+      }
+    },
+    {
+      "name": "Missing portraits and another UID cannot inherit previous native details",
+      "pass": true,
+      "evidence": {
+        "heldUID": "re7-jack-baker-scissor",
+        "previousUIDCleared": true,
+        "noGuessedPortrait": true
+      }
+    },
+    {
+      "name": "Remote portraits, duplicate identities and excessive indexes fail while historical sources remain",
+      "pass": true,
+      "evidence": {
+        "remoteImageRefused": true,
+        "duplicateIdentityRefused": true,
+        "contextPromotionRefused": true,
+        "streamedIndexLimit": 524288,
+        "historicalSourcesRetained": true
+      }
+    },
+    {
+      "name": "Source links retain keyboard focus and reflow at 320px with doubled text",
+      "pass": true,
+      "evidence": {
+        "uid": "re3r-hunter-gamma",
+        "keyboardFocus": true,
+        "everyComputedFontDoubled": true
+      }
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "tests/browser-fidelity-r30.mjs",
+      "sha256": "27b9fc04dbaf2689b11d0c29ed5e5b69bcc1d874cf94dabd053c78a61314716e"
+    },
+    {
+      "path": "modules/fidelity-r30/progress.json",
+      "sha256": "0bd385e25523cc9e6accded0b3d7f8ad7092f9eca5819925bec5de25764be8e2"
+    },
+    {
+      "path": "modules/fidelity-r30/dossier-additions.json",
+      "sha256": "4c9a3bf6bde01f0ae4223123aca5fd2381a7f58050597844a96a108923c375f9"
+    },
+    {
+      "path": "modules/fidelity-r30/selection/manifest.json",
+      "sha256": "32fc768c8a91616a37ed7f67d767c4e916ac1ddf0567bca60c3f62dca4d91b8c"
+    },
+    {
+      "path": "modules/fidelity-r30/index.html",
+      "sha256": "1b7ce37a61f3a9290f3eb44dd9cbc009001116652d1598492fe1bb0a10a4aeb4"
+    },
+    {
+      "path": "modules/fidelity-r30/dossier-link.js",
+      "sha256": "6e472b66073fabb50355509f2f142bca2432a35c183c8a687ab877a8090e04a4"
+    },
+    {
+      "path": "codex.html",
+      "sha256": "3dca3ed062f65715372f9bb84874770b025b7a7cd6650df50270553dfed136b1"
+    }
+  ],
+  "physicalDevicesCertified": false
+}

@@ -1,0 +1,106 @@
+{
+  "schema": "re.bow.generated-runtime-tests-r31/1",
+  "passed": 9,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "All367 defaults and four API aliases preserve explicit voluntary source variants",
+      "pass": true,
+      "evidence": {
+        "defaults": 367,
+        "initialImageRequests": 0,
+        "newSourceVariantDefault": false
+      }
+    },
+    {
+      "name": "Opaque contexts and oversized manifests fail without generated-image requests",
+      "pass": true,
+      "evidence": {
+        "opaqueFetches": 0,
+        "maximumManifestBytes": 4194304
+      }
+    },
+    {
+      "name": "Two complete frontal presentations remain unavailable as side combat idle",
+      "pass": true,
+      "evidence": {
+        "sourcePresentations": 2,
+        "extraCombatIdleStates": 0
+      }
+    },
+    {
+      "name": "Explicit same-edition pose draws one actual right-side PNG without mirroring or animation",
+      "pass": true,
+      "evidence": {
+        "actualPng": "28d5b5ba514a58f8e89533ee502491e1d15b709eec3e3bcc2d0faa9852fe79f5",
+        "frames": 1,
+        "missingSidesSynthesized": 0
+      }
+    },
+    {
+      "name": "Wrong edition, changed target, automatic promotion or appearance gaps reject source variants",
+      "pass": true,
+      "evidence": {
+        "independentVariantScopeGates": 5
+      }
+    },
+    {
+      "name": "Corrupted PNGs are negative-cached as errors until an explicit retry",
+      "pass": true,
+      "evidence": {
+        "failedBytesDrawn": 0,
+        "explicitRecovery": true
+      }
+    },
+    {
+      "name": "Shared-budget pressure is deferred without a15second error cache or repeated downloads",
+      "pass": true,
+      "evidence": {
+        "busyIsNotCorruption": true,
+        "repeatedBusyDownloads": 0,
+        "automaticResumeOnReleasedCredit": true
+      }
+    },
+    {
+      "name": "Pagehide aborts pending image decode, releases shared credit and allows pageshow reload",
+      "pass": true,
+      "evidence": {
+        "pendingDecodeCancelled": true,
+        "creditReleased": true,
+        "bfcacheReentry": true
+      }
+    },
+    {
+      "name": "The frozen original adapter changes presentation while preserving actor data and other-state fallback",
+      "pass": true,
+      "evidence": {
+        "frozenActorUnchanged": true,
+        "originalAdapterByteSource": "modules/fidelity-r27/combat/adapter.js",
+        "otherStateFallback": true
+      }
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "modules/fidelity-r31/combat/generated-runtime.js",
+      "sha256": "d03a03c3fb68f686c41812d9b051ca2240c4bbba9eba64a4deadf16d4412162e"
+    },
+    {
+      "path": "modules/fidelity-r31/performance/image-budget.js",
+      "sha256": "e7a3a2039c9c666475fdfe118bc1fece445891d0213bbe20e75fece248cebce2"
+    },
+    {
+      "path": "modules/fidelity-r27/combat/adapter.js",
+      "sha256": "ec1f22e69a7d9ecf3433e6238bc134a8af369ac146ec8d8a8e21c7aca6408d2d"
+    },
+    {
+      "path": "tests/verify-generated-sprites-r31.mjs",
+      "sha256": "57b997f61f371b210e0453746bfe96012b0ce76b8bd54ecdd673240152e9f3b1"
+    },
+    {
+      "path": "modules/fidelity-r31/sprites/manifest.json",
+      "sha256": "6b4df5ec5509bf661c0417d34e31038d9efd4bc5ccf719090edbbb2d94d77880"
+    }
+  ],
+  "scope": "ActualR31sourcebodyPNG byte transport/decoding, explicit same-edition static variant, unchanged legacy/defaults, real shared32Mpixelbroker and pendingdecode lifecycle. No native animation or physical-device certification."
+}

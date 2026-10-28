@@ -1,0 +1,84 @@
+{
+  "schema": "re.bow.audio-source-tests-r31/1",
+  "passed": 12,
+  "failed": 0,
+  "skipped": 0,
+  "checks": [
+    {
+      "name": "__main__.AudioSourceTests.test_01_all_audio_is_byte_identical_to_published_archive_members",
+      "pass": true
+    },
+    {
+      "name": "__main__.AudioSourceTests.test_02_all_pcm_sources_decode_completely_without_silence_placeholders",
+      "pass": true
+    },
+    {
+      "name": "__main__.AudioSourceTests.test_03_actual_vorbis_streams_decode_with_retained_source_parameters",
+      "pass": true
+    },
+    {
+      "name": "__main__.AudioSourceTests.test_04_file_and_pcm_dedup_are_distinct_and_never_semantic_counts",
+      "pass": true
+    },
+    {
+      "name": "__main__.AudioSourceTests.test_05_publisher_pages_bind_actual_group_game_and_member_names",
+      "pass": true
+    },
+    {
+      "name": "__main__.AudioSourceTests.test_06_original_edition_and_phase_uncertainties_do_not_become_combat_audio",
+      "pass": true
+    },
+    {
+      "name": "__main__.AudioSourceTests.test_07_identity_context_is_separate_from_sound_action_proof",
+      "pass": true
+    },
+    {
+      "name": "__main__.AudioSourceTests.test_08_empty_publication_listings_are_retained_without_claiming_game_audio_absence",
+      "pass": true
+    },
+    {
+      "name": "__main__.AudioSourceTests.test_09_archive_traversal_absolute_and_case_collision_are_rejected",
+      "pass": true
+    },
+    {
+      "name": "__main__.AudioSourceTests.test_10_symlinks_and_declared_expansion_bombs_are_rejected",
+      "pass": true
+    },
+    {
+      "name": "__main__.AudioSourceTests.test_11_truncated_pcm_and_wrong_riff_extents_fail_closed",
+      "pass": true
+    },
+    {
+      "name": "__main__.AudioSourceTests.test_12_manifest_rebuild_uses_only_pinned_evidence_and_matches_exactly",
+      "pass": true
+    }
+  ],
+  "inputs": [
+    {
+      "path": "tests/test_audio_sources_r31.py",
+      "bytes": 9946,
+      "sha256": "c3e6475fb9192604cd8a97a5db2e4d152e7e5ae4d2b90bfccd0a97fbe190fff1"
+    },
+    {
+      "path": "scripts/import-audio-sources-r31.py",
+      "bytes": 20362,
+      "sha256": "d959f483b3cf4ded7ea9c85f6efcf2202a597a643004e1b4fe59b34664ef8e6e"
+    },
+    {
+      "path": "modules/fidelity-r31/audio/manifest.json",
+      "bytes": 438082,
+      "sha256": "f7c1fc43e8ac06b5efbbafc46fddc2448de6bc4f161897ba6c25da9c9ca91860"
+    },
+    {
+      "path": "modules/fidelity-r31/audio/import-request.json",
+      "bytes": 15938,
+      "sha256": "5e408204443fbba113c335cda5ea88d408825abbec3013c7edd47ac1aac8b781"
+    },
+    {
+      "path": "modules/fidelity-r31/audio/decoded-probes.json",
+      "bytes": 172620,
+      "sha256": "edfa1d43fb3836a7f4524ec1ac44dcb1bd2796a085a7ae3138dbd17f816b2e59"
+    }
+  ],
+  "scope": "218original archive members,201PCMfiles,17actualVorbis decodes,sourceedition/phase gates,dedup,screening and hostile archive boundaries. No semantic listening certification."
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "re.bow.fidelity-lot-r31/1",
+  "release": "R31",
+  "id": "persistence",
+  "taskIds": [
+    "G-REPLAYS",
+    "G-SAUVES"
+  ],
+  "summary": "Restauration des vraies clés du jeu avec journal de reprise/retour et lecture des replays R28 dans leur moteur source exact.",
+  "advances": [
+    "Restauration sélective du stockage réel reconnu par R19, aperçu, copie préalable et confirmation explicites.",
+    "Journal IndexedDB avant/après lié par SHA-256 avant la première écriture, reprise idempotente et retour exact après interruption ou rechargement.",
+    "Verrou inter-onglets, valeurs extérieures conservées, refus des quotas, journaux altérés et aperçus périmés.",
+    "Replays avec évolutions R28 : neuf fichiers du contrat original vérifiés par SHA, origine opaque sans stockage partagé, résultat validé et deux reconstructions identiques.",
+    "Routes principales actuelle et avant R13, et duel R7, conservées sans conversion du moteur."
+  ],
+  "remaining": [
+    "Synchronisation ou restauration cloud : aucun service distant ni compte configuré.",
+    "Pannes physiques, interruptions du système d’exploitation et appareils physiques hors du navigateur cloud restent non certifiés.",
+    "Autres contrats historiques non publiés, reprises de campagne et conclusions artistiques ne sont pas validés par la relecture de commandes.",
+    "Le localStorage du jeu ne fournit pas de transaction globale entre onglets non coopérants ; fermer les autres onglets et conserver le fichier avant restauration."
+  ],
+  "manifests": [
+    {
+      "path": "modules/fidelity-r31/persistence/manifest.json",
+      "bytes": 4358,
+      "sha256": "32a3f27dbf17b0e5069faae87a246185997756ae1daa526940d3930640fef59f"
+    }
+  ],
+  "resources": [
+    {
+      "path": "modules/fidelity-r31/persistence/index.html",
+      "label": "Restaurer le jeu avec reprise et retour"
+    },
+    {
+      "path": "modules/fidelity-r31/replay/index.html",
+      "label": "Relecture R13, R7 et évolutions R28"
+    },
+    {
+      "path": "docs/R31_PERSISTENCE.md",
+      "label": "Fonctions, reprise et limites"
+    },
+    {
+      "path": "docs/R31_PERSISTENCE_TESTS.json",
+      "label": "Tests de stockage et de contrats"
+    },
+    {
+      "path": "docs/R31_PERSISTENCE_BROWSER.json",
+      "label": "Recette navigateur réelle et rechargement"
+    }
+  ],
+  "identities": [],
+  "counts": {
+    "allowlistedGameKeys": 18,
+    "retainedUndoJournals": 1,
+    "originalReplayRoutes": 4,
+    "newEvolutionReplayRoutes": 1,
+    "nodeTestGroups": 11,
+    "browserGroups": 9,
+    "cloudEndpoints": 0,
+    "nativeOriginalGameFidelityCertified": 0
+  },
+  "canonicalFidelityCertified": false
+}

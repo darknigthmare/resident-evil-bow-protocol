@@ -1,0 +1,168 @@
+{
+  "schema": "re.bow.motion-browser-r31/1",
+  "observedAtUTC": "2026-10-28T10:09:09.913Z",
+  "passed": 10,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "The real six-subject source library starts paused without loading the catalogue images",
+      "pass": true,
+      "detail": {
+        "nativeClips": 8,
+        "worldSequences": 16,
+        "initialImageRequests": 1,
+        "autoplay": false
+      }
+    },
+    {
+      "name": "Manual native-time positions equal actual PNG pixels across atlas boundaries and playback advances many distinct frames",
+      "pass": true,
+      "detail": {
+        "pixelComparedNativePositions": [
+          0,
+          24,
+          25,
+          53,
+          107
+        ],
+        "distinctPaintedFramesObserved": 75,
+        "pausedFrame": 78,
+        "cache": {
+          "loading": 0,
+          "queued": 0,
+          "cached": 4,
+          "decodedPixels": 14745600,
+          "limits": {
+            "manifestBytes": 16777216,
+            "imageBytes": 8388608,
+            "imagePixels": 4194304,
+            "decodedImages": 4,
+            "decodedPixels": 16777216,
+            "concurrentImages": 2
+          }
+        }
+      }
+    },
+    {
+      "name": "Root-follow inspection preserves each source clip while revealing both genuine camera sides",
+      "pass": true,
+      "detail": {
+        "nativeRootFollowClips": 2,
+        "actualSides": 4,
+        "rootFollowPixelComparisons": 12,
+        "originalWorldSequencesRetained": true,
+        "combatAssignment": false
+      }
+    },
+    {
+      "name": "The actual repertoire covers all389 identities and keeps3460 authored commands separate from original behaviors",
+      "pass": true,
+      "detail": {
+        "identities": 389,
+        "adaptedCommands": 3460,
+        "prototypeValuesChanged": false,
+        "contextIdentityPromoted": false,
+        "localStorageWrites": 0
+      }
+    },
+    {
+      "name": "Both source pages reflow at320px and200percent text while native keyboard controls remain usable",
+      "pass": true,
+      "detail": {
+        "viewport": 320,
+        "rootTextPercent": 200,
+        "realKeyboardNativeEndpoints": true,
+        "voluntaryPlaybackOnly": true
+      }
+    },
+    {
+      "name": "A corrupted native atlas is rejected by SHA before canvas display",
+      "pass": true,
+      "detail": {
+        "corruptAtlasDisplayed": false,
+        "error": "Empreinte PNG divergente."
+      }
+    },
+    {
+      "name": "Forged external frame paths fail before requesting any native PNG",
+      "pass": true,
+      "detail": {
+        "externalRequests": 0,
+        "nativePNGsRequested": 0
+      }
+    },
+    {
+      "name": "Pagehide releases actual pending decode slots and pageshow resumes source reading",
+      "pass": true,
+      "detail": {
+        "decodeHeldForBoundaryTest": true,
+        "hiddenLoadingSlots": 0,
+        "sourceReadingResumed": true
+      }
+    },
+    {
+      "name": "Pagehide during the first manifest request can resume without a stale error or disabled reader",
+      "pass": true,
+      "detail": {
+        "firstRequestInterrupted": true,
+        "sourceManifestResumed": true,
+        "staleErrorOrDisabledControls": false
+      }
+    },
+    {
+      "name": "Repertoire source labels stay inert and external canonical targets are refused",
+      "pass": true,
+      "detail": {
+        "inertLabels": true,
+        "externalSourceLinkRefused": true
+      }
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "tests/browser-motion-commands-r31.mjs",
+      "sha256": "e243855020fe2f5da68e6fe9a8143cf85a614e1d513352bb7c00ece92daca532"
+    },
+    {
+      "path": "modules/fidelity-r31/motion/index.html",
+      "sha256": "f6503899e639913cde028587cf14f23cea3cd399b00de94d3b25d72002712d26"
+    },
+    {
+      "path": "modules/fidelity-r31/motion/page.js",
+      "sha256": "4b671c33c025605d63c01f98ddf511e4a6de8b285d0d92f8ae0614b3734f307d"
+    },
+    {
+      "path": "modules/fidelity-r31/motion/reader.js",
+      "sha256": "49f258b7a3df81faf3dcbe85e6f8aeb21e69dc6e4b04719f5b1c279bad36bc43"
+    },
+    {
+      "path": "modules/fidelity-r31/motion/style.css",
+      "sha256": "9606ea6f181ebfbadf13287d99d4f39462df6dc73201ae03e4cf10bf8d70c1aa"
+    },
+    {
+      "path": "modules/fidelity-r31/motion/manifest.json",
+      "sha256": "d256888e487fc3e931739b47496d58ef71490f0e9d8dd59541d6b8eab444b173"
+    },
+    {
+      "path": "modules/fidelity-r31/motion/root-follow-manifest.json",
+      "sha256": "0bbc69ea86427b34d6b75f486cc6bf1d5c84114e5a3a6f8ba9f1ed5b57b68269"
+    },
+    {
+      "path": "modules/fidelity-r31/commands/index.html",
+      "sha256": "ac84169d1da04aa510a905db3f82e4126ce0b70343629568cf625f095bb51bf5"
+    },
+    {
+      "path": "modules/fidelity-r31/commands/page.js",
+      "sha256": "36c5c513d7e45aa4ade6ec599606f41ba15708d10d6c5b0e4679cb7dbca33527"
+    },
+    {
+      "path": "modules/fidelity-r31/commands/style.css",
+      "sha256": "86ee1c5462a3476a751cadab094371be4bacf86621af7a700740886ccd2bd828"
+    },
+    {
+      "path": "modules/fidelity-r31/commands/manifest.json",
+      "sha256": "049dce3094ee8a3713e094e529eec30407f98e4d2b59df383a0c070260538c49"
+    }
+  ],
+  "scope": "Actual source data, native PNG/atlas pixels, manual/playback timeline, root-follow inspection, all-UID read-only command audit, mobile keyboard/reflow and source transport/lifecycle failure boundaries. No original-game action or physical-device FPS certification."
+}

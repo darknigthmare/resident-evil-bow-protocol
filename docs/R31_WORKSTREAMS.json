@@ -1,0 +1,793 @@
+{
+  "release": "R31",
+  "summary": "7/7 lots livrés dans leur périmètre ; 17 chantiers attribués et toujours ouverts ; 389 incarnations reliées aux preuves et audits R31. Les médias et leurs qualifications restent distincts ; fidélité globale 1:1 non certifiée.",
+  "tasks": [
+    {
+      "id": "R20-09",
+      "title": "Rig par membre et animations",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Lot motion · responsable : r31_motion_commands.",
+        "Huit scènes natives supplémentaires sont rendues intégralement à60Hz dans deux projections réelles :2016 images,16 références de fin. Les200 vues de contact ont été inspectées.",
+        "Deux scènes à forte translation possèdent248 images d’inspection supplémentaires : seule la caméra suit la vraie racine, la trajectoire native et les vues fixes sont conservées."
+      ],
+      "remaining": [
+        "389 incarnations sans idle natif complet vérifié.",
+        "Attribution des gestes, continuité native, équipements, orientations et édition cible restent vérifiés séparément.",
+        "Aucun nouveau cycle idle cible ni nouvelle action de combat attribuée ; l’édition PC/HD2013 reste distincte de3DS2012.",
+        "Les gestes complets de toutes les autres incarnations, objets et partenaires restent à sourcer."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r30/index.html",
+          "label": "Acquis antérieurs et critères R30"
+        },
+        {
+          "href": "motion/delivery.json",
+          "label": "Livraison et limites du lot motion"
+        },
+        {
+          "href": "motion/index.html",
+          "label": "Mouvements natifs complets et caméras"
+        },
+        {
+          "href": "commands/index.html",
+          "label": "Répertoires par incarnation"
+        },
+        {
+          "href": "motion/review/observations.json",
+          "label": "Observations des gestes et limites"
+        }
+      ],
+      "r30_new_implementation": true,
+      "owner": "r31_motion_commands",
+      "lotId": "motion",
+      "deliveryState": "LIVRÉ PARTIEL",
+      "r31_new_implementation": true
+    },
+    {
+      "id": "R20-10",
+      "title": "Étendre les sprites au catalogue",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Lot sprites · responsable : r31_sprites_generation.",
+        "Trois sorties image_gen sans retouche : Lucas muté et Donna/Angie frontaux, plus NakedZombieGameCube2002 en pose 2D droite adaptée.",
+        "Deux revues de silhouette visible complètent le registre généré (112→114), avec la pointe fine de Lucas maintenue en lacune ; aucune animation idle originale ajoutée.",
+        "Une nouvelle archive native de ZombieRemake et quatre vues à768pixels sont liées à leur édition, sources et empreintes ; la pose de liaison reste distincte de la pose adaptée.",
+        "Le lecteur conserve les variantes volontaires, la direction réellement produite, les replis et les acteurs/replays ; le budget partagé reprend les chargements sans traiter la pression mémoire comme une corruption."
+      ],
+      "remaining": [
+        "211 corps de combattants et 40 contextes restent conjointement non qualifiés ; les 22 refus sont conservés.",
+        "Équipements, autres phases, deux orientations et cycles complets de combat encore non vérifiés.",
+        "La pointe supérieure de Lucas à alpha faible reste incertaine ; les détails de texture générés ne sont pas des texels originaux certifiés.",
+        "Les deux présentations frontales ne fournissent pas des idles latéraux. La variante Zombie ne fournit qu’un côté droit et une image statique ; les autres orientations et gestes restent ouverts.",
+        "Le costume Zombie initial n’est pas remplacé par défaut ; une variante complète ne qualifie pas automatiquement toutes les variantes de l’identité.",
+        "Les22refus de génération historiques et le refus de révision Tyrant sont conservés sans nouvel essai. Corps cachés, équipements et autres incarnations sans source complète restent à compléter."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r30/index.html",
+          "label": "Acquis antérieurs et critères R30"
+        },
+        {
+          "href": "sprites/delivery.json",
+          "label": "Livraison et limites du lot sprites"
+        },
+        {
+          "href": "sprites/index.html",
+          "label": "Illustrations et références R31"
+        },
+        {
+          "href": "../../docs/R31_SPRITES.md",
+          "label": "Portée des trois images et mode volontaire"
+        },
+        {
+          "href": "../../docs/R31_SPRITES_TESTS.json",
+          "label": "Provenance, silhouettes et archive native"
+        },
+        {
+          "href": "../../docs/R31_GENERATED_RUNTIME_TESTS.json",
+          "label": "Lecteur, variantes et budget partagé"
+        }
+      ],
+      "r30_new_implementation": true,
+      "owner": "r31_sprites_generation",
+      "lotId": "sprites",
+      "deliveryState": "LIVRÉ PARTIEL",
+      "r31_new_implementation": true
+    },
+    {
+      "id": "G-PERIMETRE",
+      "title": "Périmètre et alias",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Lot canonical · responsable : r31_canonical_scale.",
+        "G-PERIMETRE : quatre décisions liées aux sources distinguent Plaga C/Duvalia, les Gamma de 1999 et 2020, le document Scarmiglione HD et un désaccord taxonomique Malacoda.",
+        "G-PREUVES : 29 réponses HTTP 200 conservées par SHA, 20 faits nouveaux et 10 faits antérieurs non recomptés ; chaque citation est vérifiée dans le texte capturé.",
+        "G-ECHELLE : trois contraintes interrogables par partie et phase ; la larve Malacoda d’environ 1 cm constitue un nouveau fait dimensionnel, les bornes U-8 antérieures restent identifiées.",
+        "G-VICTIMES : six règles vérifient le jeu, la phase, l’environnement, le rôle et les conditions ; aucune des 389 victimes arbitraires du catalogue ne reçoit une conclusion automatique."
+      ],
+      "remaining": [
+        "Revue exhaustive des alias, modes, DLC et extensions ; corriger chaque ambiguïté de support ou de forme avec une preuve.",
+        "Captures primaires directes, gestes horodatés et correspondances aux banques originales restent à produire.",
+        "Plaga C→Duvalia et équivalence des éditions retenues restent non prouvés.",
+        "Aucune taille de collision physique n’est certifiée ; une mesure larvale ou une borne textuelle ne dimensionne pas un boss.",
+        "Aucune conclusion animée ni compatibilité universelle entre victimes n’est déclarée."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r30/index.html",
+          "label": "Acquis antérieurs et critères R30"
+        },
+        {
+          "href": "canonical/delivery.json",
+          "label": "Livraison et limites du lot canonical"
+        },
+        {
+          "href": "canonical/index.html",
+          "label": "Examiner phases, dimensions et conclusions sourcées"
+        },
+        {
+          "href": "canonical/query.js",
+          "label": "Requêtes conditionnelles sans modification du gameplay"
+        },
+        {
+          "href": "../../docs/R31_CANONICAL.md",
+          "label": "Méthode canonique, unités et conclusions conditionnelles"
+        },
+        {
+          "href": "../../docs/R31_CANONICAL_TESTS.json",
+          "label": "14 tests Python réellement exécutés"
+        }
+      ],
+      "r30_new_implementation": false,
+      "owner": "r31_canonical_scale",
+      "lotId": "canonical",
+      "deliveryState": "LIVRÉ PARTIEL",
+      "r31_new_implementation": true
+    },
+    {
+      "id": "G-PREUVES",
+      "title": "Preuves et revue canonique",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Lot canonical · responsable : r31_canonical_scale.",
+        "G-PERIMETRE : quatre décisions liées aux sources distinguent Plaga C/Duvalia, les Gamma de 1999 et 2020, le document Scarmiglione HD et un désaccord taxonomique Malacoda.",
+        "G-PREUVES : 29 réponses HTTP 200 conservées par SHA, 20 faits nouveaux et 10 faits antérieurs non recomptés ; chaque citation est vérifiée dans le texte capturé.",
+        "G-ECHELLE : trois contraintes interrogables par partie et phase ; la larve Malacoda d’environ 1 cm constitue un nouveau fait dimensionnel, les bornes U-8 antérieures restent identifiées.",
+        "G-VICTIMES : six règles vérifient le jeu, la phase, l’environnement, le rôle et les conditions ; aucune des 389 victimes arbitraires du catalogue ne reçoit une conclusion automatique."
+      ],
+      "remaining": [
+        "Captures originales et séquences horodatées de chaque geste, phase et transformation ; comparaison indépendante aux paquets et banques bruts.",
+        "Captures primaires directes, gestes horodatés et correspondances aux banques originales restent à produire.",
+        "Plaga C→Duvalia et équivalence des éditions retenues restent non prouvés.",
+        "Aucune taille de collision physique n’est certifiée ; une mesure larvale ou une borne textuelle ne dimensionne pas un boss.",
+        "Aucune conclusion animée ni compatibilité universelle entre victimes n’est déclarée."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r30/index.html",
+          "label": "Acquis antérieurs et critères R30"
+        },
+        {
+          "href": "canonical/delivery.json",
+          "label": "Livraison et limites du lot canonical"
+        },
+        {
+          "href": "canonical/index.html",
+          "label": "Examiner phases, dimensions et conclusions sourcées"
+        },
+        {
+          "href": "canonical/query.js",
+          "label": "Requêtes conditionnelles sans modification du gameplay"
+        },
+        {
+          "href": "../../docs/R31_CANONICAL.md",
+          "label": "Méthode canonique, unités et conclusions conditionnelles"
+        },
+        {
+          "href": "../../docs/R31_CANONICAL_TESTS.json",
+          "label": "14 tests Python réellement exécutés"
+        }
+      ],
+      "r30_new_implementation": true,
+      "owner": "r31_canonical_scale",
+      "lotId": "canonical",
+      "deliveryState": "LIVRÉ PARTIEL",
+      "r31_new_implementation": true
+    },
+    {
+      "id": "G-COMMANDES",
+      "title": "Répertoire complet des commandes",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Lot motion · responsable : r31_motion_commands.",
+        "Le répertoire exact-UID couvre389 identités et distingue 3460 commandes adaptées existantes, les comportements documentaires et huit gestes natifs observés.",
+        "Les correspondances entre scènes sources et boutons officiels ne sont pas inventées."
+      ],
+      "remaining": [
+        "Répertoire officiel complet, action identifiée par séquence et correspondance aux commandes ; dépasser dix slots lorsque le répertoire le demande.",
+        "Inventaires originaux exhaustifs, gestes et timings certifiés par incarnation ; liens aux commandes et répertoires dépassant dix slots si nécessaire."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r30/index.html",
+          "label": "Acquis antérieurs et critères R30"
+        },
+        {
+          "href": "motion/delivery.json",
+          "label": "Livraison et limites du lot motion"
+        },
+        {
+          "href": "motion/index.html",
+          "label": "Mouvements natifs complets et caméras"
+        },
+        {
+          "href": "commands/index.html",
+          "label": "Répertoires par incarnation"
+        },
+        {
+          "href": "motion/review/observations.json",
+          "label": "Observations des gestes et limites"
+        }
+      ],
+      "r30_new_implementation": false,
+      "owner": "r31_motion_commands",
+      "lotId": "motion",
+      "deliveryState": "LIVRÉ PARTIEL",
+      "r31_new_implementation": true
+    },
+    {
+      "id": "G-MANCHES",
+      "title": "Fin de manche et résultat",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Lot motion · responsable : r31_motion_commands.",
+        "Une scène Ooze montre un corps couché puis un aplatissement ; l’observation est distinguée d’une mort ou d’une défaite confirmée.",
+        "Le répertoire garde victoire/défaite originales non certifiées ; les séquences ne modifient pas le calcul des résultats ni les replays."
+      ],
+      "remaining": [
+        "Victoire, défaite, égalité et leurs séquences, dessins et sons officiels par incarnation ; recette KO et conclusions artistiques séparée.",
+        "Preuve causale de victoire/défaite/égalité, rôle exact des scènes et sons finaux par incarnation avant affectation aux résultats."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r30/index.html",
+          "label": "Acquis antérieurs et critères R30"
+        },
+        {
+          "href": "motion/delivery.json",
+          "label": "Livraison et limites du lot motion"
+        },
+        {
+          "href": "motion/index.html",
+          "label": "Mouvements natifs complets et caméras"
+        },
+        {
+          "href": "commands/index.html",
+          "label": "Répertoires par incarnation"
+        },
+        {
+          "href": "motion/review/observations.json",
+          "label": "Observations des gestes et limites"
+        }
+      ],
+      "r30_new_implementation": false,
+      "owner": "r31_motion_commands",
+      "lotId": "motion",
+      "deliveryState": "LIVRÉ PARTIEL",
+      "r31_new_implementation": true
+    },
+    {
+      "id": "G-CINEMATIQUES",
+      "title": "Intros et outros",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Lot motion · responsable : r31_motion_commands.",
+        "Les premiers et derniers instants des huit scènes sont conservés et comparables dans le lecteur ; les scènes aériennes gardent leur trajectoire source.",
+        "Aucune scène n’est classée intro/outro depuis un nom BA/DM/UZ, ni raccord cinématique fabriqué."
+      ],
+      "remaining": [
+        "Intros, outros et bande sonore complète par sujet ; attribution de l’action, de la phase et des raccords du jeu d’origine.",
+        "Vidéos ou captures du jeu d’origine identifiant le rôle intro/outro, raccords, environnement, partenaires et bande sonore."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r30/index.html",
+          "label": "Acquis antérieurs et critères R30"
+        },
+        {
+          "href": "motion/delivery.json",
+          "label": "Livraison et limites du lot motion"
+        },
+        {
+          "href": "motion/index.html",
+          "label": "Mouvements natifs complets et caméras"
+        },
+        {
+          "href": "commands/index.html",
+          "label": "Répertoires par incarnation"
+        },
+        {
+          "href": "motion/review/observations.json",
+          "label": "Observations des gestes et limites"
+        }
+      ],
+      "r30_new_implementation": false,
+      "owner": "r31_motion_commands",
+      "lotId": "motion",
+      "deliveryState": "LIVRÉ PARTIEL",
+      "r31_new_implementation": true
+    },
+    {
+      "id": "G-REPLAYS",
+      "title": "Compatibilité des replays",
+      "category": "functions",
+      "status": "EN COURS",
+      "advances": [
+        "Lot persistence · responsable : r31_replays_saves.",
+        "Restauration sélective du stockage réel reconnu par R19, aperçu, copie préalable et confirmation explicites.",
+        "Journal IndexedDB avant/après lié par SHA-256 avant la première écriture, reprise idempotente et retour exact après interruption ou rechargement.",
+        "Verrou inter-onglets, valeurs extérieures conservées, refus des quotas, journaux altérés et aperçus périmés.",
+        "Replays avec évolutions R28 : neuf fichiers du contrat original vérifiés par SHA, origine opaque sans stockage partagé, résultat validé et deux reconstructions identiques.",
+        "Routes principales actuelle et avant R13, et duel R7, conservées sans conversion du moteur."
+      ],
+      "remaining": [
+        "Autres révisions et contrats historiques, campagnes et conclusions artistiques ; ne pas lire un ancien contrat sous un moteur courant.",
+        "Synchronisation ou restauration cloud : aucun service distant ni compte configuré.",
+        "Pannes physiques, interruptions du système d’exploitation et appareils physiques hors du navigateur cloud restent non certifiés.",
+        "Autres contrats historiques non publiés, reprises de campagne et conclusions artistiques ne sont pas validés par la relecture de commandes.",
+        "Le localStorage du jeu ne fournit pas de transaction globale entre onglets non coopérants ; fermer les autres onglets et conserver le fichier avant restauration."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r30/index.html",
+          "label": "Acquis antérieurs et critères R30"
+        },
+        {
+          "href": "persistence/delivery.json",
+          "label": "Livraison et limites du lot persistence"
+        },
+        {
+          "href": "persistence/index.html",
+          "label": "Restaurer le jeu avec reprise et retour"
+        },
+        {
+          "href": "replay/index.html",
+          "label": "Relecture R13, R7 et évolutions R28"
+        },
+        {
+          "href": "../../docs/R31_PERSISTENCE.md",
+          "label": "Fonctions, reprise et limites"
+        },
+        {
+          "href": "../../docs/R31_PERSISTENCE_TESTS.json",
+          "label": "Tests de stockage et de contrats"
+        }
+      ],
+      "r30_new_implementation": false,
+      "owner": "r31_replays_saves",
+      "lotId": "persistence",
+      "deliveryState": "LIVRÉ PARTIEL",
+      "r31_new_implementation": true
+    },
+    {
+      "id": "G-SAUVES",
+      "title": "Sauvegardes et restauration",
+      "category": "functions",
+      "status": "EN COURS",
+      "advances": [
+        "Lot persistence · responsable : r31_replays_saves.",
+        "Restauration sélective du stockage réel reconnu par R19, aperçu, copie préalable et confirmation explicites.",
+        "Journal IndexedDB avant/après lié par SHA-256 avant la première écriture, reprise idempotente et retour exact après interruption ou rechargement.",
+        "Verrou inter-onglets, valeurs extérieures conservées, refus des quotas, journaux altérés et aperçus périmés.",
+        "Replays avec évolutions R28 : neuf fichiers du contrat original vérifiés par SHA, origine opaque sans stockage partagé, résultat validé et deux reconstructions identiques.",
+        "Routes principales actuelle et avant R13, et duel R7, conservées sans conversion du moteur."
+      ],
+      "remaining": [
+        "Restauration du stockage réel du jeu, cloud et reprises après interruption hors de la base isolée ; l’outil R26 ne certifie pas ces usages.",
+        "Synchronisation ou restauration cloud : aucun service distant ni compte configuré.",
+        "Pannes physiques, interruptions du système d’exploitation et appareils physiques hors du navigateur cloud restent non certifiés.",
+        "Autres contrats historiques non publiés, reprises de campagne et conclusions artistiques ne sont pas validés par la relecture de commandes.",
+        "Le localStorage du jeu ne fournit pas de transaction globale entre onglets non coopérants ; fermer les autres onglets et conserver le fichier avant restauration."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r30/index.html",
+          "label": "Acquis antérieurs et critères R30"
+        },
+        {
+          "href": "persistence/delivery.json",
+          "label": "Livraison et limites du lot persistence"
+        },
+        {
+          "href": "persistence/index.html",
+          "label": "Restaurer le jeu avec reprise et retour"
+        },
+        {
+          "href": "replay/index.html",
+          "label": "Relecture R13, R7 et évolutions R28"
+        },
+        {
+          "href": "../../docs/R31_PERSISTENCE.md",
+          "label": "Fonctions, reprise et limites"
+        },
+        {
+          "href": "../../docs/R31_PERSISTENCE_TESTS.json",
+          "label": "Tests de stockage et de contrats"
+        }
+      ],
+      "r30_new_implementation": false,
+      "owner": "r31_replays_saves",
+      "lotId": "persistence",
+      "deliveryState": "LIVRÉ PARTIEL",
+      "r31_new_implementation": true
+    },
+    {
+      "id": "G-VICTIMES",
+      "title": "Compatibilité des conclusions",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Lot canonical · responsable : r31_canonical_scale.",
+        "G-PERIMETRE : quatre décisions liées aux sources distinguent Plaga C/Duvalia, les Gamma de 1999 et 2020, le document Scarmiglione HD et un désaccord taxonomique Malacoda.",
+        "G-PREUVES : 29 réponses HTTP 200 conservées par SHA, 20 faits nouveaux et 10 faits antérieurs non recomptés ; chaque citation est vérifiée dans le texte capturé.",
+        "G-ECHELLE : trois contraintes interrogables par partie et phase ; la larve Malacoda d’environ 1 cm constitue un nouveau fait dimensionnel, les bornes U-8 antérieures restent identifiées.",
+        "G-VICTIMES : six règles vérifient le jeu, la phase, l’environnement, le rôle et les conditions ; aucune des 389 victimes arbitraires du catalogue ne reçoit une conclusion automatique."
+      ],
+      "remaining": [
+        "Toutes les associations admissibles et leurs conclusions finales ; revue morphologique, artistique et séquences d’origine.",
+        "Captures primaires directes, gestes horodatés et correspondances aux banques originales restent à produire.",
+        "Plaga C→Duvalia et équivalence des éditions retenues restent non prouvés.",
+        "Aucune taille de collision physique n’est certifiée ; une mesure larvale ou une borne textuelle ne dimensionne pas un boss.",
+        "Aucune conclusion animée ni compatibilité universelle entre victimes n’est déclarée."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r30/index.html",
+          "label": "Acquis antérieurs et critères R30"
+        },
+        {
+          "href": "canonical/delivery.json",
+          "label": "Livraison et limites du lot canonical"
+        },
+        {
+          "href": "canonical/index.html",
+          "label": "Examiner phases, dimensions et conclusions sourcées"
+        },
+        {
+          "href": "canonical/query.js",
+          "label": "Requêtes conditionnelles sans modification du gameplay"
+        },
+        {
+          "href": "../../docs/R31_CANONICAL.md",
+          "label": "Méthode canonique, unités et conclusions conditionnelles"
+        },
+        {
+          "href": "../../docs/R31_CANONICAL_TESTS.json",
+          "label": "14 tests Python réellement exécutés"
+        }
+      ],
+      "r30_new_implementation": false,
+      "owner": "r31_canonical_scale",
+      "lotId": "canonical",
+      "deliveryState": "LIVRÉ PARTIEL",
+      "r31_new_implementation": true
+    },
+    {
+      "id": "G-ECHELLE",
+      "title": "Dimensions et points faibles",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Lot canonical · responsable : r31_canonical_scale.",
+        "G-PERIMETRE : quatre décisions liées aux sources distinguent Plaga C/Duvalia, les Gamma de 1999 et 2020, le document Scarmiglione HD et un désaccord taxonomique Malacoda.",
+        "G-PREUVES : 29 réponses HTTP 200 conservées par SHA, 20 faits nouveaux et 10 faits antérieurs non recomptés ; chaque citation est vérifiée dans le texte capturé.",
+        "G-ECHELLE : trois contraintes interrogables par partie et phase ; la larve Malacoda d’environ 1 cm constitue un nouveau fait dimensionnel, les bornes U-8 antérieures restent identifiées.",
+        "G-VICTIMES : six règles vérifient le jeu, la phase, l’environnement, le rôle et les conditions ; aucune des 389 victimes arbitraires du catalogue ne reçoit une conclusion automatique."
+      ],
+      "remaining": [
+        "Mesures primaires, tailles corporelles et collision, géants et aquatiques ; zéro échelle physique certifiée.",
+        "Captures primaires directes, gestes horodatés et correspondances aux banques originales restent à produire.",
+        "Plaga C→Duvalia et équivalence des éditions retenues restent non prouvés.",
+        "Aucune taille de collision physique n’est certifiée ; une mesure larvale ou une borne textuelle ne dimensionne pas un boss.",
+        "Aucune conclusion animée ni compatibilité universelle entre victimes n’est déclarée."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r30/index.html",
+          "label": "Acquis antérieurs et critères R30"
+        },
+        {
+          "href": "canonical/delivery.json",
+          "label": "Livraison et limites du lot canonical"
+        },
+        {
+          "href": "canonical/index.html",
+          "label": "Examiner phases, dimensions et conclusions sourcées"
+        },
+        {
+          "href": "canonical/query.js",
+          "label": "Requêtes conditionnelles sans modification du gameplay"
+        },
+        {
+          "href": "../../docs/R31_CANONICAL.md",
+          "label": "Méthode canonique, unités et conclusions conditionnelles"
+        },
+        {
+          "href": "../../docs/R31_CANONICAL_TESTS.json",
+          "label": "14 tests Python réellement exécutés"
+        }
+      ],
+      "r30_new_implementation": false,
+      "owner": "r31_canonical_scale",
+      "lotId": "canonical",
+      "deliveryState": "LIVRÉ PARTIEL",
+      "r31_new_implementation": true
+    },
+    {
+      "id": "G-RENDU",
+      "title": "Sprites, clips et asymétries",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Lot sprites · responsable : r31_sprites_generation.",
+        "Trois sorties image_gen sans retouche : Lucas muté et Donna/Angie frontaux, plus NakedZombieGameCube2002 en pose 2D droite adaptée.",
+        "Deux revues de silhouette visible complètent le registre généré (112→114), avec la pointe fine de Lucas maintenue en lacune ; aucune animation idle originale ajoutée.",
+        "Une nouvelle archive native de ZombieRemake et quatre vues à768pixels sont liées à leur édition, sources et empreintes ; la pose de liaison reste distincte de la pose adaptée.",
+        "Le lecteur conserve les variantes volontaires, la direction réellement produite, les replis et les acteurs/replays ; le budget partagé reprend les chargements sans traiter la pression mémoire comme une corruption."
+      ],
+      "remaining": [
+        "Sprites définitifs, deux orientations, asymétries, mouvements, impacts et transformations de tout le catalogue ; rendu original du jeu non certifié.",
+        "La pointe supérieure de Lucas à alpha faible reste incertaine ; les détails de texture générés ne sont pas des texels originaux certifiés.",
+        "Les deux présentations frontales ne fournissent pas des idles latéraux. La variante Zombie ne fournit qu’un côté droit et une image statique ; les autres orientations et gestes restent ouverts.",
+        "Le costume Zombie initial n’est pas remplacé par défaut ; une variante complète ne qualifie pas automatiquement toutes les variantes de l’identité.",
+        "Les22refus de génération historiques et le refus de révision Tyrant sont conservés sans nouvel essai. Corps cachés, équipements et autres incarnations sans source complète restent à compléter."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r30/index.html",
+          "label": "Acquis antérieurs et critères R30"
+        },
+        {
+          "href": "sprites/delivery.json",
+          "label": "Livraison et limites du lot sprites"
+        },
+        {
+          "href": "sprites/index.html",
+          "label": "Illustrations et références R31"
+        },
+        {
+          "href": "../../docs/R31_SPRITES.md",
+          "label": "Portée des trois images et mode volontaire"
+        },
+        {
+          "href": "../../docs/R31_SPRITES_TESTS.json",
+          "label": "Provenance, silhouettes et archive native"
+        },
+        {
+          "href": "../../docs/R31_GENERATED_RUNTIME_TESTS.json",
+          "label": "Lecteur, variantes et budget partagé"
+        }
+      ],
+      "r30_new_implementation": true,
+      "owner": "r31_sprites_generation",
+      "lotId": "sprites",
+      "deliveryState": "LIVRÉ PARTIEL",
+      "r31_new_implementation": true
+    },
+    {
+      "id": "G-PERF",
+      "title": "Performances sur appareils cibles",
+      "category": "validation",
+      "status": "EN COURS",
+      "advances": [
+        "Lot validation · responsable : root.",
+        "Un budget de32millions de pixels inclut les réservations en décodage des lecteurs natifs, portraits et poses générées.",
+        "Les évictions et refus de budget reprennent au retour de capacité ; la corruption reste refusée et tous les chargements se libèrent au changement de page.",
+        "Une mesure volontaire exporte les intervalles de callbacks et tâches longues observés dans cette session, avec échantillons bornés.",
+        "Le bilan demandé par le joueur lit les vies, ressources, furie et conditions d’évolution dans le vrai acteur ; pause, focus et replays restent gérés par le dialogue existant.",
+        "Trois montages réels, pression/libération, interruption, annulations, clavier, axe et320px avec texte doublé sont exercés par les tests."
+      ],
+      "remaining": [
+        "Appareils physiques, GPU cibles, budgets mémoire globaux et longues sessions de combat ; le rendu logiciel cloud ne les certifie pas.",
+        "Appareils physiques et lecteurs d’écran réels non exercés ; conformité WCAG globale non certifiée.",
+        "Mémoire des autres rendus, du navigateur et du GPU non mesurée ; longues sessions sur appareils cibles encore à tester."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r30/index.html",
+          "label": "Acquis antérieurs et critères R30"
+        },
+        {
+          "href": "validation/delivery.json",
+          "label": "Livraison et limites du lot validation"
+        },
+        {
+          "href": "performance/index.html",
+          "label": "Mesurer et exporter une session de navigateur"
+        },
+        {
+          "href": "../../docs/R31_PERFORMANCE_ACCESS_BROWSER.json",
+          "label": "Recette réelle des trois montages"
+        },
+        {
+          "href": "../../docs/R31_PERFORMANCE_ACCESS_TESTS.json",
+          "label": "Bornes, interruptions et lecture des acteurs"
+        }
+      ],
+      "r30_new_implementation": true,
+      "owner": "root",
+      "lotId": "validation",
+      "deliveryState": "LIVRÉ PARTIEL",
+      "r31_new_implementation": true
+    },
+    {
+      "id": "G-ACCESS",
+      "title": "Accessibilité et appareils",
+      "category": "validation",
+      "status": "EN COURS",
+      "advances": [
+        "Lot validation · responsable : root.",
+        "Un budget de32millions de pixels inclut les réservations en décodage des lecteurs natifs, portraits et poses générées.",
+        "Les évictions et refus de budget reprennent au retour de capacité ; la corruption reste refusée et tous les chargements se libèrent au changement de page.",
+        "Une mesure volontaire exporte les intervalles de callbacks et tâches longues observés dans cette session, avec échantillons bornés.",
+        "Le bilan demandé par le joueur lit les vies, ressources, furie et conditions d’évolution dans le vrai acteur ; pause, focus et replays restent gérés par le dialogue existant.",
+        "Trois montages réels, pression/libération, interruption, annulations, clavier, axe et320px avec texte doublé sont exercés par les tests."
+      ],
+      "remaining": [
+        "Lecteurs d’écran réels, appareils tactiles et manettes physiques, contenus hors écran et conformité WCAG complète.",
+        "Appareils physiques et lecteurs d’écran réels non exercés ; conformité WCAG globale non certifiée.",
+        "Mémoire des autres rendus, du navigateur et du GPU non mesurée ; longues sessions sur appareils cibles encore à tester."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r30/index.html",
+          "label": "Acquis antérieurs et critères R30"
+        },
+        {
+          "href": "validation/delivery.json",
+          "label": "Livraison et limites du lot validation"
+        },
+        {
+          "href": "performance/index.html",
+          "label": "Mesurer et exporter une session de navigateur"
+        },
+        {
+          "href": "../../docs/R31_PERFORMANCE_ACCESS_BROWSER.json",
+          "label": "Recette réelle des trois montages"
+        },
+        {
+          "href": "../../docs/R31_PERFORMANCE_ACCESS_TESTS.json",
+          "label": "Bornes, interruptions et lecture des acteurs"
+        }
+      ],
+      "r30_new_implementation": true,
+      "owner": "root",
+      "lotId": "validation",
+      "deliveryState": "LIVRÉ PARTIEL",
+      "r31_new_implementation": true
+    },
+    {
+      "id": "G-AUDIO",
+      "title": "Voix et sons par incarnation",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Lot audio · responsable : r31_audio_sources.",
+        "Quatre nouveaux groupes publiés acquis et vérifiés : 218 fichiers audio nouveaux par empreinte, 216 mesures PCM distinctes, sans transformation des sources.",
+        "Sept identités candidates disposent de références et d’un lecteur filtré ; les éditions PC2007 et CODE: Veronica X PS2 restent explicitement séparées des cibles originales.",
+        "Les notes d’écoute s’exportent et se réimportent avec les empreintes de la bibliothèque et de chaque extrait ; aucun son n’est affecté au combat et aucune sauvegarde du jeu n’est écrite.",
+        "Dix publications vides ont été vérifiées et archivées sans prétendre à une absence de sons dans les jeux."
+      ],
+      "remaining": [
+        "Écoute indépendante, locuteur et action/phase, comparaison aux banques brutes, cris et mixage final ; ne pas affecter automatiquement ces sons au combat.",
+        "Écoute indépendante de chaque fichier, locuteur et incarnation exacte, phase et geste à retrouver dans une séquence originale.",
+        "Comparer les banques natives brutes et les éditions cibles ; le groupe publié ne certifie pas le rattachement d’un fichier à une forme.",
+        "Valider les déclencheurs, synchronisation et mixage final avant toute affectation automatique au combat."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r30/index.html",
+          "label": "Acquis antérieurs et critères R30"
+        },
+        {
+          "href": "audio/delivery.json",
+          "label": "Livraison et limites du lot audio"
+        },
+        {
+          "href": "audio/index.html",
+          "label": "Écoute et notes personnelles R31"
+        },
+        {
+          "href": "../../docs/R31_AUDIO.md",
+          "label": "Périmètre des nouvelles sources audio"
+        },
+        {
+          "href": "../../docs/R31_AUDIO_SOURCE_TESTS.json",
+          "label": "R31_AUDIO_SOURCE_TESTS.json"
+        },
+        {
+          "href": "../../docs/R31_AUDIO_LISTENING_TESTS.json",
+          "label": "R31_AUDIO_LISTENING_TESTS.json"
+        }
+      ],
+      "r30_new_implementation": false,
+      "owner": "r31_audio_sources",
+      "lotId": "audio",
+      "deliveryState": "LIVRÉ PARTIEL",
+      "r31_new_implementation": true
+    },
+    {
+      "id": "G-RECETTE",
+      "title": "Recette cumulative",
+      "category": "validation",
+      "status": "EN COURS",
+      "advances": [
+        "Les 17 chantiers sont attribués à 7 lots distincts, avec état de livraison, preuves et critères restants.",
+        "Les 56 feuilles R30 et leurs relations sont conservées ; sept feuilles R31 suivent les nouveaux lots et les 389 UID.",
+        "La recette ne compte que les rapports réellement exécutés, sans échec ni empreinte périmée."
+      ],
+      "remaining": [
+        "Toutes les combinaisons, commandes, campagnes, KO, séquences artistiques et validations sur appareils cibles."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r30/index.html",
+          "label": "Acquis antérieurs et critères R30"
+        },
+        {
+          "href": "../../docs/R31_VALIDATION.json",
+          "label": "Recette R31 par périmètre"
+        }
+      ],
+      "r30_new_implementation": true,
+      "owner": "r31_excel_validation",
+      "lotId": "tracking",
+      "deliveryState": "LIVRÉ PARTIEL",
+      "r31_new_implementation": true
+    },
+    {
+      "id": "G-LIVRAISON",
+      "title": "Livraisons et suivi",
+      "category": "validation",
+      "status": "EN COURS",
+      "advances": [
+        "Les 17 chantiers sont attribués à 7 lots distincts, avec état de livraison, preuves et critères restants.",
+        "Les 56 feuilles R30 et leurs relations sont conservées ; sept feuilles R31 suivent les nouveaux lots et les 389 UID.",
+        "La recette ne compte que les rapports réellement exécutés, sans échec ni empreinte périmée."
+      ],
+      "remaining": [
+        "Revue humaine et exécution CI de la nouvelle livraison ; tous les chantiers restent ouverts tant que leurs critères manquent de preuves."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r30/index.html",
+          "label": "Acquis antérieurs et critères R30"
+        },
+        {
+          "href": "../../docs/R31_VALIDATION.json",
+          "label": "Recette R31 par périmètre"
+        }
+      ],
+      "r30_new_implementation": true,
+      "owner": "r31_excel_validation",
+      "lotId": "tracking",
+      "deliveryState": "LIVRÉ PARTIEL",
+      "r31_new_implementation": true
+    }
+  ],
+  "generation_preference": {
+    "user_choice": "Conserver les refus, fidélité prioritaire",
+    "preserve_tool_refusals": true,
+    "no_softened_variants_to_fill_counter": true,
+    "actual_files_and_blocked_attempts_counted_separately": true
+  }
+}

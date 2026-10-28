@@ -1,0 +1,217 @@
+name: R31 all open fidelity workstreams, generated bodies and real restore
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main, 'codex/**']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: source-fidelity-r31-${{ github.ref }}
+  cancel-in-progress: true
+defaults:
+  run:
+    shell: bash
+jobs:
+  provenance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: '3.12'
+      - name: Install pinned source and worksheet verification tools
+        run: |
+          python3 -m venv "$RUNNER_TEMP/fidelity-r31-venv"
+          "$RUNNER_TEMP/fidelity-r31-venv/bin/python" -m pip install --timeout 60 --retries 2 Pillow==12.3.0 openpyxl==3.1.5 lxml==6.1.1 PyYAML==6.0.3
+          npm install --no-audit --no-fund --no-save --package-lock=false --fetch-timeout=60000 --fetch-retries=2 @napi-rs/canvas@0.1.80
+          if ! command -v ffmpeg >/dev/null || ! command -v ffprobe >/dev/null; then sudo apt-get update; sudo apt-get install --yes ffmpeg; fi
+      - name: Reproduce delivered source lots, reports and workbook before refresh
+        run: |
+          mkdir -p qa-fidelity-r31-ci
+          "$RUNNER_TEMP/fidelity-r31-venv/bin/python" scripts/validate-fidelity-ci-r31.py
+          "$RUNNER_TEMP/fidelity-r31-venv/bin/python" scripts/build-sprites-r31.py --check
+          "$RUNNER_TEMP/fidelity-r31-venv/bin/python" scripts/build-motion-repertoire-r31.py --check
+          "$RUNNER_TEMP/fidelity-r31-venv/bin/python" scripts/pack-native-motion-r31.py --check
+          "$RUNNER_TEMP/fidelity-r31-venv/bin/python" scripts/build-canonical-r31.py --check
+          "$RUNNER_TEMP/fidelity-r31-venv/bin/python" scripts/build-persistence-r31.py --check
+          "$RUNNER_TEMP/fidelity-r31-venv/bin/python" scripts/build-validation-r31.py --check
+          "$RUNNER_TEMP/fidelity-r31-venv/bin/python" scripts/import-audio-sources-r31.py --check
+          "$RUNNER_TEMP/fidelity-r31-venv/bin/python" scripts/fidelity-progress-r31.py check
+          "$RUNNER_TEMP/fidelity-r31-venv/bin/python" scripts/fidelity-progress-r31.py reproduce
+          "$RUNNER_TEMP/fidelity-r31-venv/bin/python" scripts/audit-delivery-r31.py --check
+          touch qa-fidelity-r31-ci/integration-started
+          rm -f docs/R31_INTEGRATION_TESTS.json
+          node tests/verify-r31-integration.mjs
+          cp docs/R31_REPRODUCTION.json qa-fidelity-r31-ci/executed-reproduction.json
+      - name: Execute fresh source, generated-art, query, recovery and runtime assertions
+        run: |
+          touch qa-fidelity-r31-ci/fresh-tests-started
+          rm -f docs/R31_EXPORT_TESTS.json docs/R31_SPRITES_TESTS.json docs/R31_MOTION_TESTS.json docs/R31_CANONICAL_TESTS.json docs/R31_AUDIO_SOURCE_TESTS.json docs/R31_GENERATED_RUNTIME_TESTS.json docs/R31_MOTION_RIG_TESTS.json docs/R31_CANONICAL_QUERY_TESTS.json docs/R31_PERSISTENCE_TESTS.json docs/R31_AUDIO_LISTENING_TESTS.json docs/R31_NATIVE_RUNTIME_TESTS.json docs/R31_PERFORMANCE_ACCESS_TESTS.json
+          "$RUNNER_TEMP/fidelity-r31-venv/bin/python" tests/test_fidelity_r31.py
+          "$RUNNER_TEMP/fidelity-r31-venv/bin/python" tests/test_generated_sprites_r31.py
+          "$RUNNER_TEMP/fidelity-r31-venv/bin/python" tests/test_motion_commands_r31.py
+          "$RUNNER_TEMP/fidelity-r31-venv/bin/python" tests/test_canonical_r31.py
+          "$RUNNER_TEMP/fidelity-r31-venv/bin/python" tests/test_audio_sources_r31.py
+          node tests/verify-generated-sprites-r31.mjs
+          node tests/verify-native-motion-r31.mjs
+          node tests/verify-canonical-r31.mjs
+          node tests/verify-persistence-r31.mjs
+          node tests/verify-audio-listening-r31.mjs
+          node tests/verify-native-runtime-r31.mjs
+          node tests/verify-performance-access-r31.mjs
+      - name: Require every current source report to be freshly executed
+        run: |
+          node --input-type=module - <<'JS'
+          import assert from 'node:assert/strict';
+          import fs from 'node:fs';
+          const names=['EXPORT_TESTS','SPRITES_TESTS','MOTION_TESTS','CANONICAL_TESTS','AUDIO_SOURCE_TESTS','GENERATED_RUNTIME_TESTS','MOTION_RIG_TESTS','CANONICAL_QUERY_TESTS','PERSISTENCE_TESTS','AUDIO_LISTENING_TESTS','NATIVE_RUNTIME_TESTS','PERFORMANCE_ACCESS_TESTS','INTEGRATION_TESTS'];
+          for(const name of names){
+            const file='docs/R31_'+name+'.json',report=JSON.parse(fs.readFileSync(file));
+            assert(Number.isInteger(report.passed)&&report.passed>0,file);
+            assert.equal(report.failed,0,file);assert.equal(report.skipped??0,0,file);
+          }
+          JS
+      - name: Keep every original current engine and UI assertion active
+        run: npm run verify > qa-fidelity-r31-ci/current-engine-ui.log
+      - name: Publish diagnostics from this execution only
+        if: always()
+        run: |
+          mkdir -p qa-fidelity-r31-ci
+          if [[ -f qa-fidelity-r31-ci/fresh-tests-started ]]; then
+            for name in EXPORT_TESTS SPRITES_TESTS MOTION_TESTS CANONICAL_TESTS AUDIO_SOURCE_TESTS GENERATED_RUNTIME_TESTS MOTION_RIG_TESTS CANONICAL_QUERY_TESTS PERSISTENCE_TESTS AUDIO_LISTENING_TESTS NATIVE_RUNTIME_TESTS PERFORMANCE_ACCESS_TESTS; do
+              if [[ -f "docs/R31_$name.json" ]]; then cp "docs/R31_$name.json" qa-fidelity-r31-ci/; fi
+            done
+          fi
+          if [[ -f qa-fidelity-r31-ci/integration-started && -f docs/R31_INTEGRATION_TESTS.json ]]; then cp docs/R31_INTEGRATION_TESTS.json qa-fidelity-r31-ci/; fi
+          node tests/ci-report-r25.mjs qa-fidelity-r31-ci
+      - name: Upload actual current source results
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: fidelity-r31-provenance-${{ github.run_id }}
+          path: |
+            qa-fidelity-r31-ci/
+          if-no-files-found: warn
+          retention-days: 14
+  browser:
+    needs: provenance
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        include:
+          - suite: sprites
+            script: tests/browser-generated-sprites-r31.mjs
+            argument: ''
+            report: docs/R31_SPRITES_BROWSER.json
+            secondary_report: ''
+          - suite: motion-commands
+            script: tests/browser-motion-commands-r31.mjs
+            argument: ''
+            report: docs/R31_MOTION_BROWSER.json
+            secondary_report: ''
+          - suite: canonical
+            script: tests/browser-canonical-r31.mjs
+            argument: ''
+            report: docs/R31_CANONICAL_BROWSER.json
+            secondary_report: ''
+          - suite: restore-replays
+            script: tests/browser-persistence-r31.mjs
+            argument: ''
+            report: docs/R31_PERSISTENCE_BROWSER.json
+            secondary_report: ''
+          - suite: audio
+            script: tests/browser-audio-r31.mjs
+            argument: ''
+            report: docs/R31_AUDIO_BROWSER.json
+            secondary_report: ''
+          - suite: performance-access
+            script: tests/browser-performance-access-r31.mjs
+            argument: ''
+            report: docs/R31_PERFORMANCE_ACCESS_BROWSER.json
+            secondary_report: ''
+          - suite: tracking-dossiers
+            script: tests/browser-fidelity-r31.mjs
+            argument: ''
+            report: docs/R31_DASHBOARD_BROWSER.json
+            secondary_report: docs/R31_DOSSIER_BROWSER.json
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - name: Install pinned browser verification tools
+        run: npm install --no-audit --no-fund --no-save --package-lock=false --fetch-timeout=60000 --fetch-retries=2 playwright@1.64.1 @napi-rs/canvas@0.1.80 @puppeteer/browsers@2.10.10
+      - name: Install the recorded native rendering browser version
+        run: |
+          node --input-type=module - <<'JS'
+          import fs from 'node:fs';
+          import path from 'node:path';
+          import {install,Browser} from '@puppeteer/browsers';
+          const browser=await install({browser:Browser.CHROME,buildId:'154.0.8037.57',
+            cacheDir:path.join(process.env.RUNNER_TEMP,'fidelity-r31-chrome')});
+          fs.appendFileSync(process.env.GITHUB_ENV,'CHROME_BIN='+browser.executablePath+'\n');
+          JS
+      - name: Run the current source browser checks
+        run: |
+          rm -f '${{ matrix.report }}'
+          if [[ -n '${{ matrix.secondary_report }}' ]]; then rm -f '${{ matrix.secondary_report }}'; fi
+          node '${{ matrix.script }}' ${{ matrix.argument }}
+          node --input-type=module - '${{ matrix.report }}' '${{ matrix.secondary_report }}' <<'JS'
+          import assert from 'node:assert/strict';
+          import fs from 'node:fs';
+          for(const file of process.argv.slice(2).filter(Boolean)){
+            const report=JSON.parse(fs.readFileSync(file));
+            assert(Number.isInteger(report.passed)&&report.passed>0,file);assert.equal(report.failed,0,file);
+          }
+          JS
+      - name: Preserve executed browser evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: fidelity-r31-${{ matrix.suite }}-${{ github.run_id }}
+          path: |
+            ${{ matrix.report }}
+            ${{ matrix.secondary_report }}
+            qa-*r31*/
+          if-no-files-found: warn
+          retention-days: 14
+  build:
+    needs: provenance
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - name: Build and compare the complete current static delivery
+        run: |
+          npm run build
+          node --input-type=module - <<'JS'
+          import assert from 'node:assert/strict';
+          import fs from 'node:fs';
+          import path from 'node:path';
+          function visit(folder){for(const entry of fs.readdirSync(folder,{withFileTypes:true})){
+            const file=path.join(folder,entry.name);if(entry.isDirectory())visit(file);
+            else assert(fs.readFileSync(file).equals(fs.readFileSync(path.join('dist',file))),file);
+          }}
+          visit('modules/fidelity-r31');
+          for(const file of ['modules/versus.html','catalog-duel.html','codex.html','saves.html','docs/BOW_FIDELITE_R31.xlsx'])
+            assert(fs.readFileSync(file).equals(fs.readFileSync(path.join('dist',file))),file);
+          JS

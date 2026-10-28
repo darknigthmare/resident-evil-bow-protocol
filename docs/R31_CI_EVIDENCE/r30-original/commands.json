@@ -1,0 +1,49 @@
+{
+  "schema": "re.bow.published-check-plan-r29/1",
+  "directories": [
+    "qa-fidelity-r30-ci"
+  ],
+  "commands": [
+    [
+      "{python}",
+      "-c",
+      "from pathlib import Path\nfor name in ['EXPORT_TESTS', 'NATIVE_REVELATIONS_TESTS', 'NATIVE_OTHER_TESTS', 'NEW_NATIVE_TESTS', 'AVATARS_TESTS', 'NATIVE_RUNTIME_TESTS', 'NATIVE_REVELATIONS_RIG_TESTS', 'NATIVE_OTHER_MOTION_RIG_TESTS', 'INTEGRATION_TESTS']:\n Path(\"docs/R30_\"+name+\".json\").unlink(missing_ok=True)\n"
+    ],
+    [
+      "{python}",
+      "tests/test_fidelity_r30.py"
+    ],
+    [
+      "{python}",
+      "tests/test_native_revelations_r30.py"
+    ],
+    [
+      "{python}",
+      "tests/test_native_other_r30.py"
+    ],
+    [
+      "{python}",
+      "scripts/verify-new-native-sources-r30.py"
+    ],
+    [
+      "{python}",
+      "scripts/verify-selection-avatars-r30.py"
+    ],
+    [
+      "node",
+      "tests/verify-native-runtime-r30.mjs"
+    ],
+    [
+      "node",
+      "tests/verify-native-revelations-r30.mjs"
+    ],
+    [
+      "node",
+      "tests/verify-native-other-motion-r30.mjs"
+    ],
+    [
+      "node",
+      "tests/verify-r30-integration.mjs"
+    ]
+  ]
+}

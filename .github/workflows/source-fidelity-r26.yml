@@ -136,6 +136,8 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           persist-credentials: false
+          # Historical assertions retain their published source and link targets.
+          ref: 826f7ed1811c48adc0609f97699eb32f629fc78a
           fetch-depth: 0
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:

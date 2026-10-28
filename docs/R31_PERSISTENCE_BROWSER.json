@@ -1,0 +1,168 @@
+{
+  "schema": "re.bow.persistence-browser-r31/1",
+  "passed": 9,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Real selective restore, durable undo and local backup at 1280px",
+      "pass": true,
+      "detail": {
+        "width": 1280,
+        "selectedGroups": [
+          "audio",
+          "dojo"
+        ],
+        "realGameKeyChanges": 3,
+        "exactUndoAfterReload": true,
+        "foreignValueKept": true,
+        "rootTextResize": null
+      }
+    },
+    {
+      "name": "Real selective restore, durable undo and local backup at 320px",
+      "pass": true,
+      "detail": {
+        "width": 320,
+        "selectedGroups": [
+          "audio",
+          "dojo"
+        ],
+        "realGameKeyChanges": 3,
+        "exactUndoAfterReload": true,
+        "foreignValueKept": true,
+        "rootTextResize": "200%"
+      }
+    },
+    {
+      "name": "The real save centre exposes one additive recovery link without replacing the R19 controls",
+      "pass": true,
+      "detail": {
+        "realSaveCentreMount": true,
+        "originalR19ControlsPreserved": true,
+        "allowlistedKeys": 18
+      }
+    },
+    {
+      "name": "An uncertain real localStorage write survives reload and resumes only after explicit choice",
+      "pass": true,
+      "detail": {
+        "fault": "after-localStorage-before-progress-confirmation",
+        "reloadWroteNothing": true,
+        "resumeUserInvoked": true,
+        "exactUndo": true
+      }
+    },
+    {
+      "name": "An outside game write blocks durable undo and preserves the changed value",
+      "pass": true,
+      "detail": {
+        "outsideWriterValuePreserved": true,
+        "rollbackRefusedBeforeWrites": true
+      }
+    },
+    {
+      "name": "Real Web Locks deny a second restoration tab before its journal or game writes",
+      "pass": true,
+      "detail": {
+        "nativeWebLockUsed": true,
+        "secondTabWriteCount": 0
+      }
+    },
+    {
+      "name": "Evolution replay routes to SHA-pinned original R28 sources in an opaque storage-isolated sandbox",
+      "pass": true,
+      "detail": {
+        "frames": 1136,
+        "mutationRecorded": true,
+        "digest": "11012315",
+        "sourceFilesVerified": 9,
+        "twoExactReconstructions": true,
+        "isolatedStorageWrites": 0
+      }
+    },
+    {
+      "name": "Corrupted stored result, wrong evolution contract and changed engine bytes never certify a replay",
+      "pass": true,
+      "detail": {
+        "storedDigestRefused": true,
+        "unknownContractRefused": true,
+        "changedSourceShaRefusedBeforeIframe": true
+      }
+    },
+    {
+      "name": "Main current, historical pre-R13 and catalogue replay routes retain their original engine contracts",
+      "pass": true,
+      "detail": {
+        "routes": [
+          {
+            "kind": "main-r13",
+            "contract": "612953ce952cdd2bd6b5dd21a489bc961c2bfcc3ff1321d15528e341f34ee67d",
+            "engineId": "main-current"
+          },
+          {
+            "kind": "main-r13",
+            "contract": "87b735420800aa6fc6f1f252e9991bca0ee307107b13e5ed81192d50389cfcb2",
+            "engineId": "main-pre-r13"
+          },
+          {
+            "kind": "catalog-r7",
+            "contract": "7481cce1dabb7aab981422cd28448648476e60737991e764783118ae038e2ca0",
+            "engineId": "catalog-current"
+          }
+        ],
+        "engineContractsNotMigrated": true
+      }
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "modules/fidelity-r31/persistence/index.html",
+      "sha256": "f68aae7994e0d855917174d4cc2e78585040b2e34b1766b1b5e66426eb326236"
+    },
+    {
+      "path": "modules/fidelity-r31/persistence/page.js",
+      "sha256": "6a817e9bbb7035c0eb0e476cee9c225fba561ce8dce1f5b0402d78a6652f062b"
+    },
+    {
+      "path": "modules/fidelity-r31/persistence/restore.js",
+      "sha256": "eea96d028d097b4f57351c88d4a0a4db53af6a2002b634fed6de9fec23b161ec"
+    },
+    {
+      "path": "modules/fidelity-r31/persistence/journal.js",
+      "sha256": "31692ad9cfb947bcff34430ee1fff322c39274cfe2b6decb8f657309ded8c7cd"
+    },
+    {
+      "path": "modules/fidelity-r31/persistence/style.css",
+      "sha256": "730260a1b61885fe088b80580e1489d07ec3ec47c870f748fab9dd4158e3f59f"
+    },
+    {
+      "path": "modules/fidelity-r31/replay/index.html",
+      "sha256": "80846151eef2166648ce734760a8989086f1820773837b1a0fdf1e07d6f9dd65"
+    },
+    {
+      "path": "modules/fidelity-r31/replay/page.js",
+      "sha256": "0dd1e92426305267925ab0344ea624b2453d94bee3503babe937021bfdc5be72"
+    },
+    {
+      "path": "modules/fidelity-r31/replay/verify.js",
+      "sha256": "e8d6bdebab913491b72985f855747bd899916452d6777199f8abc92e79c6013d"
+    },
+    {
+      "path": "src/save-center-r19.js",
+      "sha256": "6a312bd65ea55fcfe272e4adc9add12ce51affb4a9d424f5bee9998b9952ccbf"
+    },
+    {
+      "path": "modules/fidelity-r28/evolutions/contract.json",
+      "sha256": "441e4dbf4a40d613d143541f582c258d895845874b2bd265df4b3dda9212d38d"
+    },
+    {
+      "path": "modules/versus.html",
+      "sha256": "464c81cd73251969d03fb41d35b17485717aa5d41e768e9ff9b1aa4daa46e0ac"
+    },
+    {
+      "path": "tests/browser-persistence-r31.mjs",
+      "sha256": "d6b892411f7f19d5212ae7526944f3e3797575583ff14b09829fdbb810bf727a"
+    }
+  ],
+  "scope": "Actual isolated Chromium localStorage and IndexedDB, real restore UI, durable interrupted journal/reload, explicit resume/undo, Web Locks, exact original replay engines and opaque iframe storage isolation. No live user profile accessed; no cloud or physical disk failure certification."
+}

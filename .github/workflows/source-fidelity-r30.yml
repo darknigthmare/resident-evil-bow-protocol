@@ -1,0 +1,224 @@
+name: R30 native 2D sprites, complete motion loops and selection avatars
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main, 'codex/**']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: source-fidelity-r30-${{ github.ref }}
+  cancel-in-progress: true
+defaults:
+  run:
+    shell: bash
+jobs:
+  provenance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+          # Keep published R30 source assertions and conservation scope intact.
+          ref: 12cdd7e38b5785cb9fbbb3fe3dff8d0f7f41fa24
+          fetch-depth: 0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: '3.12'
+      - name: Install pinned source and worksheet verification tools
+        run: |
+          python3 -m venv "$RUNNER_TEMP/fidelity-r30-venv"
+          "$RUNNER_TEMP/fidelity-r30-venv/bin/python" -m pip install --timeout 60 --retries 2 Pillow==12.3.0 openpyxl==3.1.5 lxml==6.1.1 PyYAML==6.0.3
+          npm install --no-audit --no-fund --no-save --package-lock=false --fetch-timeout=60000 --fetch-retries=2 @napi-rs/canvas@0.1.80
+      - name: Check the delivered source bindings and retained workbook before refreshing reports
+        run: |
+          mkdir -p qa-fidelity-r30-ci
+          "$RUNNER_TEMP/fidelity-r30-venv/bin/python" scripts/validate-fidelity-ci-r30.py
+          "$RUNNER_TEMP/fidelity-r30-venv/bin/python" scripts/build-native-index-r30.py --check
+          "$RUNNER_TEMP/fidelity-r30-venv/bin/python" scripts/build-selection-avatars-r30.py --check
+          "$RUNNER_TEMP/fidelity-r30-venv/bin/python" scripts/fidelity-progress-r30.py check
+          "$RUNNER_TEMP/fidelity-r30-venv/bin/python" scripts/fidelity-progress-r30.py reproduce
+          "$RUNNER_TEMP/fidelity-r30-venv/bin/python" scripts/audit-delivery-r30.py --check
+          cp docs/R30_REPRODUCTION.json qa-fidelity-r30-ci/executed-reproduction.json
+      - name: Execute fresh source, identity, image and export assertions
+        run: |
+          rm -f docs/R30_EXPORT_TESTS.json docs/R30_NATIVE_REVELATIONS_TESTS.json docs/R30_NATIVE_OTHER_TESTS.json docs/R30_NEW_NATIVE_TESTS.json docs/R30_AVATARS_TESTS.json docs/R30_NATIVE_RUNTIME_TESTS.json docs/R30_NATIVE_REVELATIONS_RIG_TESTS.json docs/R30_NATIVE_OTHER_MOTION_RIG_TESTS.json docs/R30_INTEGRATION_TESTS.json
+          "$RUNNER_TEMP/fidelity-r30-venv/bin/python" - <<'PY'
+          import hashlib
+          import io
+          import json
+          from pathlib import Path
+          import unittest
+
+          root = Path.cwd()
+          checks = []
+          class EvidenceResult(unittest.TextTestResult):
+              def addSuccess(self, test):
+                  super().addSuccess(test)
+                  checks.append({'name': test.id(), 'pass': True})
+              def addFailure(self, test, error):
+                  super().addFailure(test, error)
+                  checks.append({'name': test.id(), 'pass': False, 'error': self._exc_info_to_string(error, test)})
+              def addError(self, test, error):
+                  super().addError(test, error)
+                  checks.append({'name': test.id(), 'pass': False, 'error': self._exc_info_to_string(error, test)})
+          stream = io.StringIO()
+          suite = unittest.defaultTestLoader.discover('tests', pattern='test_fidelity_r30.py')
+          result = unittest.TextTestRunner(stream=stream, verbosity=2, resultclass=EvidenceResult).run(suite)
+          log = stream.getvalue()
+          print(log, end='')
+          (root / 'qa-fidelity-r30-ci/export-tests.log').write_text(log)
+          files = ['tests/test_fidelity_r30.py', 'scripts/fidelity-progress-r30.py',
+                   'scripts/export-fidelity-progress-r28.py', 'scripts/export-fidelity-progress-r27.py',
+                   'scripts/export-source-evidence-r21.py']
+          failed = len(result.failures) + len(result.errors)
+          report = {'schema': 're.bow.export-python-ci-r30/1',
+                    'passed': result.testsRun - failed - len(result.skipped), 'failed': failed,
+                    'skipped': len(result.skipped), 'run': result.testsRun, 'checks': checks,
+                    'sourceFiles': [{'path': name, 'sha256': hashlib.sha256((root / name).read_bytes()).hexdigest()} for name in files],
+                    'scope': 'Actual unchanged published R30 export assertions, with a fresh result written by the CI runner.'}
+          (root / 'docs/R30_EXPORT_TESTS.json').write_text(json.dumps(report, indent=2) + '\n')
+          print(json.dumps({'passed': report['passed'], 'failed': report['failed']}))
+          raise SystemExit(0 if result.testsRun > 0 and result.wasSuccessful() and not result.skipped else 1)
+          PY
+          "$RUNNER_TEMP/fidelity-r30-venv/bin/python" tests/test_native_revelations_r30.py
+          node tests/verify-native-other-motion-r30.mjs
+          "$RUNNER_TEMP/fidelity-r30-venv/bin/python" tests/test_native_other_r30.py
+          "$RUNNER_TEMP/fidelity-r30-venv/bin/python" scripts/verify-new-native-sources-r30.py
+          "$RUNNER_TEMP/fidelity-r30-venv/bin/python" scripts/verify-selection-avatars-r30.py
+          node tests/verify-native-runtime-r30.mjs
+          node tests/verify-native-revelations-r30.mjs
+          node tests/verify-r30-integration.mjs
+      - name: Require nonempty freshly executed reports
+        run: |
+          node --input-type=module - <<'JS'
+          import assert from 'node:assert/strict';
+          import fs from 'node:fs';
+          const names=['EXPORT_TESTS','NATIVE_REVELATIONS_TESTS','NATIVE_OTHER_TESTS','NEW_NATIVE_TESTS','AVATARS_TESTS',
+            'NATIVE_RUNTIME_TESTS','NATIVE_REVELATIONS_RIG_TESTS','NATIVE_OTHER_MOTION_RIG_TESTS','INTEGRATION_TESTS'];
+          for(const name of names){
+            const file='docs/R30_'+name+'.json',report=JSON.parse(fs.readFileSync(file));
+            assert(Number.isInteger(report.passed)&&report.passed>0,file);
+            assert.equal(report.failed,0,file);assert.equal(report.skipped??0,0,file);
+          }
+          JS
+      - name: Exercise all original current engine and UI assertions
+        run: npm run verify > qa-fidelity-r30-ci/current-engine-ui.log
+      - name: Upload actual current source results
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: fidelity-r30-provenance-${{ github.run_id }}
+          path: |
+            qa-fidelity-r30-ci/
+            docs/R30_*TESTS.json
+            docs/R30_CI_VALIDATION.json
+          if-no-files-found: warn
+          retention-days: 14
+  browser:
+    needs: provenance
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        include:
+          - suite: native-combat
+            script: tests/browser-native-runtime-r30.mjs
+            argument: ''
+            report: docs/R30_NATIVE_RUNTIME_BROWSER.json
+            secondary_report: ''
+          - suite: selection-avatars
+            script: tests/browser-selection-avatars-r30.mjs
+            argument: ''
+            report: docs/R30_AVATARS_BROWSER.json
+            secondary_report: ''
+          - suite: tracking-dossiers
+            script: tests/browser-fidelity-r30.mjs
+            argument: ''
+            report: docs/R30_DASHBOARD_BROWSER.json
+            secondary_report: docs/R30_DOSSIER_BROWSER.json
+          - suite: native-model-rerender
+            script: scripts/render-new-native-sources-r30.mjs
+            argument: '--verify'
+            report: docs/R30_NEW_NATIVE_BROWSER.json
+            secondary_report: ''
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+          # Keep published R30 source assertions and conservation scope intact.
+          ref: 12cdd7e38b5785cb9fbbb3fe3dff8d0f7f41fa24
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - name: Install pinned browser verification tools
+        run: npm install --no-audit --no-fund --no-save --package-lock=false --fetch-timeout=60000 --fetch-retries=2 playwright@1.64.1 @napi-rs/canvas@0.1.80 @puppeteer/browsers@2.10.10
+      - name: Install the recorded native rendering browser version
+        run: |
+          node --input-type=module - <<'JS'
+          import fs from 'node:fs';
+          import path from 'node:path';
+          import {install,Browser} from '@puppeteer/browsers';
+          const browser=await install({browser:Browser.CHROME,buildId:'154.0.8037.57',
+            cacheDir:path.join(process.env.RUNNER_TEMP,'fidelity-r30-chrome')});
+          fs.appendFileSync(process.env.GITHUB_ENV,'CHROME_BIN='+browser.executablePath+'\n');
+          JS
+      - name: Run the current source browser checks
+        run: |
+          rm -f '${{ matrix.report }}'
+          if [[ -n '${{ matrix.secondary_report }}' ]]; then rm -f '${{ matrix.secondary_report }}'; fi
+          node '${{ matrix.script }}' ${{ matrix.argument }}
+          node --input-type=module - '${{ matrix.report }}' '${{ matrix.secondary_report }}' <<'JS'
+          import assert from 'node:assert/strict';
+          import fs from 'node:fs';
+          for(const file of process.argv.slice(2).filter(Boolean)){
+            const report=JSON.parse(fs.readFileSync(file));
+            assert(Number.isInteger(report.passed)&&report.passed>0,file);assert.equal(report.failed,0,file);
+          }
+          JS
+      - name: Preserve executed browser evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: fidelity-r30-${{ matrix.suite }}-${{ github.run_id }}
+          path: |
+            ${{ matrix.report }}
+            ${{ matrix.secondary_report }}
+            qa-*r30*/
+          if-no-files-found: warn
+          retention-days: 14
+  build:
+    needs: provenance
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+          # Keep published R30 source assertions and conservation scope intact.
+          ref: 12cdd7e38b5785cb9fbbb3fe3dff8d0f7f41fa24
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - name: Build and compare the complete current static delivery
+        run: |
+          npm run build
+          node --input-type=module - <<'JS'
+          import assert from 'node:assert/strict';
+          import fs from 'node:fs';
+          import path from 'node:path';
+          function visit(folder){for(const entry of fs.readdirSync(folder,{withFileTypes:true})){
+            const file=path.join(folder,entry.name);if(entry.isDirectory())visit(file);
+            else assert(fs.readFileSync(file).equals(fs.readFileSync(path.join('dist',file))),file);
+          }}
+          visit('modules/fidelity-r30');
+          for(const file of ['modules/versus.html','catalog-duel.html','codex.html','docs/BOW_FIDELITE_R30.xlsx'])
+            assert(fs.readFileSync(file).equals(fs.readFileSync(path.join('dist',file))),file);
+          JS
