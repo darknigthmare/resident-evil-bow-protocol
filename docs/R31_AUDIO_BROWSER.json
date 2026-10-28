@@ -1,0 +1,160 @@
+{
+  "schema": "re.bow.audio-browser-tests-r31/1",
+  "passed": 9,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Initial library exposes218source files without any sound request, autoplay or game-storage write",
+      "pass": true,
+      "evidence": {
+        "publishedFiles": 218,
+        "candidateIdentities": 7,
+        "initialAudioRequests": 0,
+        "autoplay": false,
+        "gameStorageWrites": 0
+      }
+    },
+    {
+      "name": "All seven exact-UID queries keep shared groups and source editions candidate-only",
+      "pass": true,
+      "evidence": {
+        "observed": [
+          {
+            "id": "re4-dr-salvador",
+            "candidateFiles": 17
+          },
+          {
+            "id": "re4-bella-sisters",
+            "candidateFiles": 17
+          },
+          {
+            "id": "recv-nosferatu",
+            "candidateFiles": 5
+          },
+          {
+            "id": "recv-alexia",
+            "candidateFiles": 25
+          },
+          {
+            "id": "recv-alexia-ashford-second-form",
+            "candidateFiles": 25
+          },
+          {
+            "id": "recv-alexia-ashford-third-form",
+            "candidateFiles": 25
+          },
+          {
+            "id": "recv-mutated-steve",
+            "candidateFiles": 171
+          }
+        ],
+        "exactPhaseAssignments": 0
+      }
+    },
+    {
+      "name": "Real PCM and Vorbis bytes prepare in the browser while playback stays voluntary",
+      "pass": true,
+      "evidence": {
+        "observed": [
+          {
+            "format": "ogg",
+            "sourceSha256": "1ba4c282c2d865213db0ab8c6c548a635e64e23bac4fe50f8655ae2f2dc2f05e",
+            "browserDuration": 1.559719,
+            "paused": true
+          },
+          {
+            "format": "wav",
+            "sourceSha256": "2fdf6855f59fb4c12e80d1a34565711f954148582b48f2a3465237fbdb49efae",
+            "browserDuration": 4.168667,
+            "paused": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "Personal listening notes export and reimport actual SHA-bound files with inert text",
+      "pass": true,
+      "evidence": {
+        "downloadedBytes": 646,
+        "userReportedNotes": 1,
+        "inertText": true,
+        "combatAttributionChanged": false
+      }
+    },
+    {
+      "name": "Incorrect-source and oversized note imports preserve current notes atomically",
+      "pass": true,
+      "evidence": {
+        "wrongSourceRejected": true,
+        "byteLimit": 262144,
+        "oldNotesRetained": true
+      }
+    },
+    {
+      "name": "A corrupted real audio file fails SHA validation and never becomes playable",
+      "pass": true,
+      "evidence": {
+        "actualCorruptedSource": "1ba4c282c2d865213db0ab8c6c548a635e64e23bac4fe50f8655ae2f2dc2f05e",
+        "unverifiedAudioPrepared": false
+      }
+    },
+    {
+      "name": "Page lifecycle releases prepared URLs and cancels an in-flight source without blocking retry",
+      "pass": true,
+      "evidence": {
+        "preparedUrlReleased": true,
+        "pendingSourceCancelled": true,
+        "retryPrepared": true,
+        "lifecycleEventsDispatched": true
+      }
+    },
+    {
+      "name": "Keyboard and expanded provenance reflow at320pixels with200percent root text",
+      "pass": true,
+      "evidence": {
+        "viewport": 320,
+        "rootTextPercent": 200,
+        "keyboardSkipWorks": true,
+        "overflow": {
+          "document": false,
+          "controls": []
+        }
+      }
+    },
+    {
+      "name": "Unknown incarnation links fail closed without loading an unrelated voice",
+      "pass": true,
+      "evidence": {
+        "unrelatedIdentityRejected": true,
+        "sourceRequests": 0
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "path": "tests/browser-audio-r31.mjs",
+      "sha256": "de5f5fe3fcfd1548153b2ca068532ebc4d5a2290e5e669a86d66887f45eccdb8"
+    },
+    {
+      "path": "modules/fidelity-r31/audio/index.html",
+      "sha256": "1fc3cdd9fa17a4363adef6400b2255a88fef2b2665b66ee0b67cb4450a28932d"
+    },
+    {
+      "path": "modules/fidelity-r31/audio/style.css",
+      "sha256": "52bd1bb1ffd635237b204f35abae4fb3f9d6288b4fa3a9f0f4d68dd53396086c"
+    },
+    {
+      "path": "modules/fidelity-r31/audio/player.js",
+      "sha256": "5a2510daa4a8c94c26e028cb2cedaa62c2b48fcd11052ae6f7ba3015f0639d29"
+    },
+    {
+      "path": "modules/fidelity-r31/audio/review-format.js",
+      "sha256": "0fc5a0904d92482d2c518770f3f824690cfa58edb5a49af408a3df441944ebdb"
+    },
+    {
+      "path": "modules/fidelity-r31/audio/manifest.json",
+      "sha256": "f7c1fc43e8ac06b5efbbafc46fddc2448de6bc4f161897ba6c25da9c9ca91860"
+    }
+  ],
+  "scope": "Actual218file library, realPCM/Vorbis preparations, voluntaryplayback, user-note downloads/imports, corruptsourceSHA, lifecycle and320px200percent reflow. No physical listening or original-game action certification."
+}

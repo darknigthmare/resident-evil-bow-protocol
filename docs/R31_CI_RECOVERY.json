@@ -1,0 +1,564 @@
+{
+  "schema": "re.bow.ci-recovery-r31/1",
+  "passed": 2,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Repaired R30 CI order and real export-report runner execute all original tests with nine fresh reports",
+      "pass": true,
+      "publishedCommit": "12cdd7e38b5785cb9fbbb3fe3dff8d0f7f41fa24",
+      "commands": 11,
+      "pythonAssertions": 46,
+      "nativeNodeGroups": 21,
+      "integrationGroups": 9,
+      "freshPositiveReports": 9,
+      "logSha256": "a1424c9a6bf102b2ce78bb0a7b14733b8a23125d6d49a9ea1d2543a65561533d"
+    },
+    {
+      "name": "All three unchanged R20 browser suites pass on their published final review source",
+      "pass": true,
+      "publishedCommit": "545b10d17c49fcca47a03281bf1099a26c7b1ce1",
+      "browserAssertions": 41,
+      "suites": [
+        {
+          "name": "menu",
+          "passed": 17
+        },
+        {
+          "name": "player-shell",
+          "passed": 16
+        },
+        {
+          "name": "sprites",
+          "passed": 8
+        }
+      ],
+      "logSha256": "a4063dface30166fa2cde1c9f10159bd8d160449817f4607433a92cc9ffac0f1"
+    }
+  ],
+  "remoteFailuresObserved": [
+    {
+      "jobId": 122733810030,
+      "runId": 40664008918,
+      "head": "12cdd7e38b5785cb9fbbb3fe3dff8d0f7f41fa24",
+      "job": "provenance",
+      "failedStep": 7,
+      "step": "Execute fresh source, identity, image and export assertions"
+    },
+    {
+      "jobId": 122733810333,
+      "runId": 40664008808,
+      "head": "12cdd7e38b5785cb9fbbb3fe3dff8d0f7f41fa24",
+      "job": "browser",
+      "failedStep": 6,
+      "step": "Run npm run verify:r20:http"
+    }
+  ],
+  "reproducedCauses": [
+    {
+      "id": "R30_RIG_REPORT_DEPENDENCY",
+      "evidence": "docs/R31_CI_EVIDENCE/r30-original/command-03.txt",
+      "cause": "The CI deleted the independent native-motion proof before the Python consumer, then generated it only later.",
+      "repair": "Run verify-native-other-motion-r30.mjs before test_native_other_r30.py; retain the exact assertions."
+    },
+    {
+      "id": "R30_EXPORT_REPORT_NOT_WRITTEN",
+      "evidence": "docs/R31_CI_EVIDENCE/r30-reordered/command-10.txt",
+      "cause": "The published export unittest script ends with unittest.main() and never rewrites the removed R30_EXPORT_TESTS.json.",
+      "repair": "Use the real unittest runner wrapper to execute unchanged tests and record fresh passed/failed/checks/sourceFiles before the original fresh-report requirement."
+    },
+    {
+      "id": "R20_CANVAS_FIXTURE_PREDATES_AVATARS",
+      "evidence": "docs/R31_CI_EVIDENCE/r20-current-r30/command-00.txt",
+      "cause": "The historical unsupported-sprite fixture expects an original visible canvas, while R30 intentionally hides that canvas behind a selected exact-UID avatar.",
+      "repair": "Run the historical job against its final published R20 source545b10d; current R31 native/avatar/generated-mount browser suites remain separate."
+    }
+  ],
+  "logDownload": {
+    "result": "Azure Blob redirect returned403 under configured network policy; this path was stopped.",
+    "signedRedirectUrlsRetained": false,
+    "bypassAttempted": false
+  },
+  "localEnvironment": {
+    "node": "22.16.0",
+    "python": "3.12.14",
+    "Pillow": "12.3.0",
+    "openpyxl": "3.1.5",
+    "lxml": "6.1.1",
+    "PyYAML": "6.0.3",
+    "browser": "Chromium154.0.8037.57 Debian13"
+  },
+  "evidence": [
+    {
+      "id": "r30-original",
+      "expectedFailure": true,
+      "publishedCommit": "12cdd7e38b5785cb9fbbb3fe3dff8d0f7f41fa24",
+      "exitCode": 1,
+      "files": [
+        {
+          "path": "docs/R31_CI_EVIDENCE/r30-original/execution.json",
+          "bytes": 2429,
+          "sha256": "a22a10cd6dd399b05151164047a6f49fb121f15039c7168968dcf591a86bf2fe"
+        },
+        {
+          "path": "docs/R31_CI_EVIDENCE/r30-original/command-00.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "docs/R31_CI_EVIDENCE/r30-original/command-01.txt",
+          "bytes": 110,
+          "sha256": "6e86a4b0cc4e595bdf8f106fc9544ad4309863530e8138ac013a0e834b072939"
+        },
+        {
+          "path": "docs/R31_CI_EVIDENCE/r30-original/command-02.txt",
+          "bytes": 1235,
+          "sha256": "30af07735731665952593546c969271edb957b2ac7ba521177893ec403ea4f44"
+        },
+        {
+          "path": "docs/R31_CI_EVIDENCE/r30-original/command-03.txt",
+          "bytes": 3459,
+          "sha256": "21dc74a39c704ec5419bd5d95078b99917a99608141140f06c3e7cf7dbcee6c7"
+        },
+        {
+          "path": "docs/R31_CI_EVIDENCE/r30-original/commands.json",
+          "bytes": 1149,
+          "sha256": "bf4c88378276c0b12805822edc86816981b7721e32f1704f57ace3b5e1787f70"
+        }
+      ]
+    },
+    {
+      "id": "r30-reordered",
+      "expectedFailure": true,
+      "publishedCommit": "12cdd7e38b5785cb9fbbb3fe3dff8d0f7f41fa24",
+      "exitCode": 1,
+      "files": [
+        {
+          "path": "docs/R31_CI_EVIDENCE/r30-reordered/execution.json",
+          "bytes": 5248,
+          "sha256": "5439979ad18a20ac1435e023aa261b2e6bc4df53b657dcb2f2a546959cb53f33"
+        },
+        {
+          "path": "docs/R31_CI_EVIDENCE/r30-reordered/command-00.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "docs/R31_CI_EVIDENCE/r30-reordered/command-01.txt",
+          "bytes": 110,
+          "sha256": "d5bf17ae9ec5bf37c7f770c32ff95a0534dd5eb33f7892c4b0b34d76f7076ba5"
+        },
+        {
+          "path": "docs/R31_CI_EVIDENCE/r30-reordered/command-02.txt",
+          "bytes": 1235,
+          "sha256": "751848b98b1fcd77f9104563768b39b76ba991140aeb5ebd6b9b0050d2731922"
+        },
+        {
+          "path": "docs/R31_CI_EVIDENCE/r30-reordered/command-03.txt",
+          "bytes": 3772,
+          "sha256": "483274a43a1b4ef0009a9c8281cd42dd3e389d69caec05fde769037ef3e8b16b"
+        },
+        {
+          "path": "docs/R31_CI_EVIDENCE/r30-reordered/command-04.txt",
+          "bytes": 1983,
+          "sha256": "470c168ea14db6e92df5b1b248296c4fe3db7c4b3d33f8d220949aaf4e0002ab"
+        },
+        {
+          "path": "docs/R31_CI_EVIDENCE/r30-reordered/command-05.txt",
+          "bytes": 1437,
+          "sha256": "8a8a71a5c9577d7170e03a228d5f1a8f3d5aa534ad22d49252df37146d59cc77"
+        },
+        {
+          "path": "docs/R31_CI_EVIDENCE/r30-reordered/command-06.txt",
+          "bytes": 1084,
+          "sha256": "3c9d795e0c44b03b25e9c6d48a5986301840930b0a657fbe9fa115c3499a8936"
+        },
+        {
+          "path": "docs/R31_CI_EVIDENCE/r30-reordered/command-07.txt",
+          "bytes": 1100,
+          "sha256": "3b80cd1fed2159acd192c00d8273e212555be8e1fe9455be75c6298bfb14affe"
+        },
+        {
+          "path": "docs/R31_CI_EVIDENCE/r30-reordered/command-08.txt",
+          "bytes": 9638,
+          "sha256": "94819166b2c816c64923ecf26aaef7ce342a11dc95f2ad4dd4fa843b6471cf69"
+        },
+        {
+          "path": "docs/R31_CI_EVIDENCE/r30-reordered/command-09.txt",
+          "bytes": 796,
+          "sha256": "7edb5a5cb9b5b72c3f35a6126836fc76c8c84602fc1e15da07f9837c4264fae0"
+        },
+        {
+          "path": "docs/R31_CI_EVIDENCE/r30-reordered/command-10.txt",
+          "bytes": 707,
+          "sha256": "a68995113334b4bb87949f648bc3310746195b5f2220ac8c2817eec803b674ee"
+        },
+        {
+          "path": "docs/R31_CI_EVIDENCE/r30-reordered/commands.json",
+          "bytes": 1748,
+          "sha256": "e699c247ce6d15a6c2d86df00b20bcadd17e39cda81bdd550632aa4d83539eec"
+        }
+      ]
+    },
+    {
+      "id": "r30-repaired",
+      "expectedFailure": false,
+      "publishedCommit": "12cdd7e38b5785cb9fbbb3fe3dff8d0f7f41fa24",
+      "exitCode": 0,
+      "files": [
+        {
+          "path": "docs/R31_CI_EVIDENCE/r30-repaired/execution.json",
+          "bytes": 7278,
+          "sha256": "ced0dad4e1ff3b948e28a1b6e25b35d2f364d96e944db00572b07bf0b0d4a3de"
+        },
+        {
+          "path": "docs/R31_CI_EVIDENCE/r30-repaired/command-00.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "docs/R31_CI_EVIDENCE/r30-repaired/command-01.txt",
+          "bytes": 1955,
+          "sha256": "9135eebc13fdf604827bc116c3ef3ec987747cd3bc620e62eb14783e4b3c1a5e"
+        },
+        {
+          "path": "docs/R31_CI_EVIDENCE/r30-repaired/command-02.txt",
+          "bytes": 1235,
+          "sha256": "04a49a83e99dde2c40ec04d36a58f09fd4f813ed8503d13c46ab97fda33ef6fc"
+        },
+        {
+          "path": "docs/R31_CI_EVIDENCE/r30-repaired/command-03.txt",
+          "bytes": 3772,
+          "sha256": "483274a43a1b4ef0009a9c8281cd42dd3e389d69caec05fde769037ef3e8b16b"
+        },
+        {
+          "path": "docs/R31_CI_EVIDENCE/r30-repaired/command-04.txt",
+          "bytes": 1983,
+          "sha256": "2e5c5d76f1fb7d6b6a006ef3c84491c0581a3404cdacf010d0ea481686b25dbe"
+        },
+        {
+          "path": "docs/R31_CI_EVIDENCE/r30-repaired/command-05.txt",
+          "bytes": 1437,
+          "sha256": "a1c9151886a461d5583a93bd8281f0e41d00e8ab701846d0e68730736016633a"
+        },
+        {
+          "path": "docs/R31_CI_EVIDENCE/r30-repaired/command-06.txt",
+          "bytes": 1084,
+          "sha256": "c4b2d3980655ca448acc7860030d9553b372bdc7310dfa1945d5ca6eaacae5b2"
+        },
+        {
+          "path": "docs/R31_CI_EVIDENCE/r30-repaired/command-07.txt",
+          "bytes": 1100,
+          "sha256": "3b80cd1fed2159acd192c00d8273e212555be8e1fe9455be75c6298bfb14affe"
+        },
+        {
+          "path": "docs/R31_CI_EVIDENCE/r30-repaired/command-08.txt",
+          "bytes": 9638,
+          "sha256": "94819166b2c816c64923ecf26aaef7ce342a11dc95f2ad4dd4fa843b6471cf69"
+        },
+        {
+          "path": "docs/R31_CI_EVIDENCE/r30-repaired/command-09.txt",
+          "bytes": 796,
+          "sha256": "7edb5a5cb9b5b72c3f35a6126836fc76c8c84602fc1e15da07f9837c4264fae0"
+        },
+        {
+          "path": "docs/R31_CI_EVIDENCE/r30-repaired/command-10.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "docs/R31_CI_EVIDENCE/r30-repaired/commands.json",
+          "bytes": 3730,
+          "sha256": "5ff2941d58aab230fd0c0c663448e23947ab4ebaa3d41da1daafef2ba4a29c74"
+        }
+      ]
+    },
+    {
+      "id": "r20-current-r30",
+      "expectedFailure": true,
+      "publishedCommit": "12cdd7e38b5785cb9fbbb3fe3dff8d0f7f41fa24",
+      "exitCode": 1,
+      "files": [
+        {
+          "path": "docs/R31_CI_EVIDENCE/r20-current-r30/execution.json",
+          "bytes": 941,
+          "sha256": "0dfac0fbc08156a821b21b94ebf8399436ad5da6904313412b968555991143a3"
+        },
+        {
+          "path": "docs/R31_CI_EVIDENCE/r20-current-r30/command-00.txt",
+          "bytes": 3428,
+          "sha256": "419735837a616a38cfabad319250575b6d47a6a459b3747efe886f671d879f91"
+        }
+      ]
+    },
+    {
+      "id": "r20-published",
+      "expectedFailure": false,
+      "publishedCommit": "545b10d17c49fcca47a03281bf1099a26c7b1ce1",
+      "exitCode": 0,
+      "files": [
+        {
+          "path": "docs/R31_CI_EVIDENCE/r20-published/execution.json",
+          "bytes": 941,
+          "sha256": "a903d62267cfdc0fe910815a623cbf0ada5fc30bd868ffa325424623df486d83"
+        },
+        {
+          "path": "docs/R31_CI_EVIDENCE/r20-published/command-00.txt",
+          "bytes": 3710,
+          "sha256": "a4063dface30166fa2cde1c9f10159bd8d160449817f4607433a92cc9ffac0f1"
+        }
+      ]
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": ".github/workflows/source-fidelity-r30.yml",
+      "bytes": 11518,
+      "sha256": "9e26dcce387ecf4a50c41fa2e44f21b746b0a838a3a58d5c879cd25627ebcceb"
+    },
+    {
+      "path": ".github/workflows/interface-r20-browser.yml",
+      "bytes": 1473,
+      "sha256": "24be7d6b13519cddca730c649e0c38ecddb4da380138b94fb22e093b4d452bc2"
+    },
+    {
+      "path": "scripts/run-published-release-r29.py",
+      "bytes": 6676,
+      "sha256": "0c452dfe4a21591c6237a634f1efad0b45feb0ac1079950deaabee94afb3f568"
+    },
+    {
+      "path": "tests/test_fidelity_r30.py",
+      "bytes": 14047,
+      "sha256": "8ef45cbaf77824573e018a79512326f3abeb41c29e89d798b1255d129101364b"
+    },
+    {
+      "path": "tests/test_native_revelations_r30.py",
+      "bytes": 12693,
+      "sha256": "943151a7cd764fdfd70633e7feaaf617f446443d0257c73b51c0b5a24c9ed340"
+    },
+    {
+      "path": "tests/test_native_other_r30.py",
+      "bytes": 13548,
+      "sha256": "8d084bd364fe2bdbf9eab11c3e8adb8c6dcab42c048ffc514565dd1c0ba86bf6"
+    },
+    {
+      "path": "scripts/verify-new-native-sources-r30.py",
+      "bytes": 2314,
+      "sha256": "21e95e272a2661c335b6e2dc3f426a5eae36660ffb819973419a86b81716b108"
+    },
+    {
+      "path": "scripts/verify-selection-avatars-r30.py",
+      "bytes": 2684,
+      "sha256": "d10b706efd2d4d72953cbcd3cf8112f4b96e96290b7c24dd451434a922cd1ce0"
+    },
+    {
+      "path": "tests/verify-native-runtime-r30.mjs",
+      "bytes": 16501,
+      "sha256": "230803afb8398fe94b580bfcb84b2b3ee8df5b7243129a12246a040089683cd0"
+    },
+    {
+      "path": "tests/verify-native-revelations-r30.mjs",
+      "bytes": 9283,
+      "sha256": "39aee651d934b464b7ff58f7c077c51a72d754a8b4b11a0e4e737d33fcdae28d"
+    },
+    {
+      "path": "tests/verify-native-other-motion-r30.mjs",
+      "bytes": 9336,
+      "sha256": "487e24053ec29b68c9e6ca85ee8dd78d39ccfdde5d2d518622e18d79d06a226b"
+    },
+    {
+      "path": "tests/verify-r30-integration.mjs",
+      "bytes": 10861,
+      "sha256": "bc0cdc944f2067a8ae50bd038f0f28ae52533e10360cb7cb57b117f3ec03a137"
+    },
+    {
+      "path": "docs/R31_CI_EVIDENCE/r30-original/execution.json",
+      "bytes": 2429,
+      "sha256": "a22a10cd6dd399b05151164047a6f49fb121f15039c7168968dcf591a86bf2fe"
+    },
+    {
+      "path": "docs/R31_CI_EVIDENCE/r30-original/command-00.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/R31_CI_EVIDENCE/r30-original/command-01.txt",
+      "bytes": 110,
+      "sha256": "6e86a4b0cc4e595bdf8f106fc9544ad4309863530e8138ac013a0e834b072939"
+    },
+    {
+      "path": "docs/R31_CI_EVIDENCE/r30-original/command-02.txt",
+      "bytes": 1235,
+      "sha256": "30af07735731665952593546c969271edb957b2ac7ba521177893ec403ea4f44"
+    },
+    {
+      "path": "docs/R31_CI_EVIDENCE/r30-original/command-03.txt",
+      "bytes": 3459,
+      "sha256": "21dc74a39c704ec5419bd5d95078b99917a99608141140f06c3e7cf7dbcee6c7"
+    },
+    {
+      "path": "docs/R31_CI_EVIDENCE/r30-original/commands.json",
+      "bytes": 1149,
+      "sha256": "bf4c88378276c0b12805822edc86816981b7721e32f1704f57ace3b5e1787f70"
+    },
+    {
+      "path": "docs/R31_CI_EVIDENCE/r30-reordered/execution.json",
+      "bytes": 5248,
+      "sha256": "5439979ad18a20ac1435e023aa261b2e6bc4df53b657dcb2f2a546959cb53f33"
+    },
+    {
+      "path": "docs/R31_CI_EVIDENCE/r30-reordered/command-00.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/R31_CI_EVIDENCE/r30-reordered/command-01.txt",
+      "bytes": 110,
+      "sha256": "d5bf17ae9ec5bf37c7f770c32ff95a0534dd5eb33f7892c4b0b34d76f7076ba5"
+    },
+    {
+      "path": "docs/R31_CI_EVIDENCE/r30-reordered/command-02.txt",
+      "bytes": 1235,
+      "sha256": "751848b98b1fcd77f9104563768b39b76ba991140aeb5ebd6b9b0050d2731922"
+    },
+    {
+      "path": "docs/R31_CI_EVIDENCE/r30-reordered/command-03.txt",
+      "bytes": 3772,
+      "sha256": "483274a43a1b4ef0009a9c8281cd42dd3e389d69caec05fde769037ef3e8b16b"
+    },
+    {
+      "path": "docs/R31_CI_EVIDENCE/r30-reordered/command-04.txt",
+      "bytes": 1983,
+      "sha256": "470c168ea14db6e92df5b1b248296c4fe3db7c4b3d33f8d220949aaf4e0002ab"
+    },
+    {
+      "path": "docs/R31_CI_EVIDENCE/r30-reordered/command-05.txt",
+      "bytes": 1437,
+      "sha256": "8a8a71a5c9577d7170e03a228d5f1a8f3d5aa534ad22d49252df37146d59cc77"
+    },
+    {
+      "path": "docs/R31_CI_EVIDENCE/r30-reordered/command-06.txt",
+      "bytes": 1084,
+      "sha256": "3c9d795e0c44b03b25e9c6d48a5986301840930b0a657fbe9fa115c3499a8936"
+    },
+    {
+      "path": "docs/R31_CI_EVIDENCE/r30-reordered/command-07.txt",
+      "bytes": 1100,
+      "sha256": "3b80cd1fed2159acd192c00d8273e212555be8e1fe9455be75c6298bfb14affe"
+    },
+    {
+      "path": "docs/R31_CI_EVIDENCE/r30-reordered/command-08.txt",
+      "bytes": 9638,
+      "sha256": "94819166b2c816c64923ecf26aaef7ce342a11dc95f2ad4dd4fa843b6471cf69"
+    },
+    {
+      "path": "docs/R31_CI_EVIDENCE/r30-reordered/command-09.txt",
+      "bytes": 796,
+      "sha256": "7edb5a5cb9b5b72c3f35a6126836fc76c8c84602fc1e15da07f9837c4264fae0"
+    },
+    {
+      "path": "docs/R31_CI_EVIDENCE/r30-reordered/command-10.txt",
+      "bytes": 707,
+      "sha256": "a68995113334b4bb87949f648bc3310746195b5f2220ac8c2817eec803b674ee"
+    },
+    {
+      "path": "docs/R31_CI_EVIDENCE/r30-reordered/commands.json",
+      "bytes": 1748,
+      "sha256": "e699c247ce6d15a6c2d86df00b20bcadd17e39cda81bdd550632aa4d83539eec"
+    },
+    {
+      "path": "docs/R31_CI_EVIDENCE/r30-repaired/execution.json",
+      "bytes": 7278,
+      "sha256": "ced0dad4e1ff3b948e28a1b6e25b35d2f364d96e944db00572b07bf0b0d4a3de"
+    },
+    {
+      "path": "docs/R31_CI_EVIDENCE/r30-repaired/command-00.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/R31_CI_EVIDENCE/r30-repaired/command-01.txt",
+      "bytes": 1955,
+      "sha256": "9135eebc13fdf604827bc116c3ef3ec987747cd3bc620e62eb14783e4b3c1a5e"
+    },
+    {
+      "path": "docs/R31_CI_EVIDENCE/r30-repaired/command-02.txt",
+      "bytes": 1235,
+      "sha256": "04a49a83e99dde2c40ec04d36a58f09fd4f813ed8503d13c46ab97fda33ef6fc"
+    },
+    {
+      "path": "docs/R31_CI_EVIDENCE/r30-repaired/command-03.txt",
+      "bytes": 3772,
+      "sha256": "483274a43a1b4ef0009a9c8281cd42dd3e389d69caec05fde769037ef3e8b16b"
+    },
+    {
+      "path": "docs/R31_CI_EVIDENCE/r30-repaired/command-04.txt",
+      "bytes": 1983,
+      "sha256": "2e5c5d76f1fb7d6b6a006ef3c84491c0581a3404cdacf010d0ea481686b25dbe"
+    },
+    {
+      "path": "docs/R31_CI_EVIDENCE/r30-repaired/command-05.txt",
+      "bytes": 1437,
+      "sha256": "a1c9151886a461d5583a93bd8281f0e41d00e8ab701846d0e68730736016633a"
+    },
+    {
+      "path": "docs/R31_CI_EVIDENCE/r30-repaired/command-06.txt",
+      "bytes": 1084,
+      "sha256": "c4b2d3980655ca448acc7860030d9553b372bdc7310dfa1945d5ca6eaacae5b2"
+    },
+    {
+      "path": "docs/R31_CI_EVIDENCE/r30-repaired/command-07.txt",
+      "bytes": 1100,
+      "sha256": "3b80cd1fed2159acd192c00d8273e212555be8e1fe9455be75c6298bfb14affe"
+    },
+    {
+      "path": "docs/R31_CI_EVIDENCE/r30-repaired/command-08.txt",
+      "bytes": 9638,
+      "sha256": "94819166b2c816c64923ecf26aaef7ce342a11dc95f2ad4dd4fa843b6471cf69"
+    },
+    {
+      "path": "docs/R31_CI_EVIDENCE/r30-repaired/command-09.txt",
+      "bytes": 796,
+      "sha256": "7edb5a5cb9b5b72c3f35a6126836fc76c8c84602fc1e15da07f9837c4264fae0"
+    },
+    {
+      "path": "docs/R31_CI_EVIDENCE/r30-repaired/command-10.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/R31_CI_EVIDENCE/r30-repaired/commands.json",
+      "bytes": 3730,
+      "sha256": "5ff2941d58aab230fd0c0c663448e23947ab4ebaa3d41da1daafef2ba4a29c74"
+    },
+    {
+      "path": "docs/R31_CI_EVIDENCE/r20-current-r30/execution.json",
+      "bytes": 941,
+      "sha256": "0dfac0fbc08156a821b21b94ebf8399436ad5da6904313412b968555991143a3"
+    },
+    {
+      "path": "docs/R31_CI_EVIDENCE/r20-current-r30/command-00.txt",
+      "bytes": 3428,
+      "sha256": "419735837a616a38cfabad319250575b6d47a6a459b3747efe886f671d879f91"
+    },
+    {
+      "path": "docs/R31_CI_EVIDENCE/r20-published/execution.json",
+      "bytes": 941,
+      "sha256": "a903d62267cfdc0fe910815a623cbf0ada5fc30bd868ffa325424623df486d83"
+    },
+    {
+      "path": "docs/R31_CI_EVIDENCE/r20-published/command-00.txt",
+      "bytes": 3710,
+      "sha256": "a4063dface30166fa2cde1c9f10159bd8d160449817f4607433a92cc9ffac0f1"
+    },
+    {
+      "path": "docs/R31_CI_EVIDENCE/export-report-wrapper.py.txt",
+      "bytes": 1959,
+      "sha256": "5de1617b465bca7e83a1e02e3a46c264031ebc8eb3683bedd1f20aa2888c82cc"
+    }
+  ],
+  "historicalTestSourcesModified": false,
+  "assertionsWeakened": false,
+  "remoteGreenClaimed": false,
+  "scope": "Two independently executed local recovery runs on exact published Git snapshots. Expected pre-fix failures are retained as diagnostics, not current validation failures. No green remote CI or physical-device certification is claimed."
+}

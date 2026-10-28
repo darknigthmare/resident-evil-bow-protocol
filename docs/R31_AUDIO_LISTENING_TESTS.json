@@ -1,0 +1,80 @@
+{
+  "schema": "re.bow.audio-listening-tests-r31/1",
+  "passed": 8,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Actual published library passes without gaining an exact target or action claim",
+      "pass": true,
+      "evidence": {
+        "publishedClips": 218,
+        "candidateIdentities": 7
+      }
+    },
+    {
+      "name": "Portable personal notes round-trip while their source assignment stays uncertified",
+      "pass": true,
+      "evidence": {
+        "userReportedNotes": 1,
+        "sourceActionWritten": false
+      }
+    },
+    {
+      "name": "Wrong manifest revision and wrong clip bytes are rejected",
+      "pass": true,
+      "evidence": {
+        "independentSourceBindings": 2
+      }
+    },
+    {
+      "name": "Unknown clips, unrelated incarnations and duplicate notes cannot enter an import",
+      "pass": true,
+      "evidence": {
+        "rejectedCases": 3
+      }
+    },
+    {
+      "name": "An import cannot claim certification, combat assignment or add executable fields",
+      "pass": true,
+      "evidence": {
+        "promotionAndExtraFieldsRejected": 3
+      }
+    },
+    {
+      "name": "Script-like listening text remains plain data with strict field length bounds",
+      "pass": true,
+      "evidence": {
+        "inertTextPreserved": true
+      }
+    },
+    {
+      "name": "Unsafe audio paths and external publisher links fail before any audio request",
+      "pass": true,
+      "evidence": {
+        "rejectedLibraryChanges": 6
+      }
+    },
+    {
+      "name": "A failed proposed import leaves existing personal notes intact",
+      "pass": true,
+      "evidence": {
+        "failedImportAtomic": true
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "path": "tests/verify-audio-listening-r31.mjs",
+      "sha256": "46c51740d85205c9928e5310718589acf13ee92dd76df209a063a690ebdfdbf0"
+    },
+    {
+      "path": "modules/fidelity-r31/audio/review-format.js",
+      "sha256": "0fc5a0904d92482d2c518770f3f824690cfa58edb5a49af408a3df441944ebdb"
+    },
+    {
+      "path": "modules/fidelity-r31/audio/manifest.json",
+      "sha256": "f7c1fc43e8ac06b5efbbafc46fddc2448de6bc4f161897ba6c25da9c9ca91860"
+    }
+  ],
+  "scope": "Actual library and hostile portable-note documents; positive notes are user reports only, never a canonical source action review."
+}

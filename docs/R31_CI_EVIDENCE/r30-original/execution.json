@@ -1,0 +1,59 @@
+{
+  "schema": "re.bow.published-assertions-r29/1",
+  "published_commit": "12cdd7e38b5785cb9fbbb3fe3dff8d0f7f41fa24",
+  "plan": {
+    "path": "qa-r31-ci-diagnosis/r30-step7-plan.json",
+    "sha256": "bf4c88378276c0b12805822edc86816981b7721e32f1704f57ace3b5e1787f70"
+  },
+  "executions": [
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-c",
+        "from pathlib import Path\nfor name in ['EXPORT_TESTS', 'NATIVE_REVELATIONS_TESTS', 'NATIVE_OTHER_TESTS', 'NEW_NATIVE_TESTS', 'AVATARS_TESTS', 'NATIVE_RUNTIME_TESTS', 'NATIVE_REVELATIONS_RIG_TESTS', 'NATIVE_OTHER_MOTION_RIG_TESTS', 'INTEGRATION_TESTS']:\n Path(\"docs/R30_\"+name+\".json\").unlink(missing_ok=True)\n"
+      ],
+      "exit_code": 0,
+      "executed_assertions": null,
+      "log": "command-00.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "tests/test_fidelity_r30.py"
+      ],
+      "exit_code": 0,
+      "executed_assertions": null,
+      "log": "command-01.log",
+      "log_sha256": "6e86a4b0cc4e595bdf8f106fc9544ad4309863530e8138ac013a0e834b072939"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "tests/test_native_revelations_r30.py"
+      ],
+      "exit_code": 0,
+      "executed_assertions": null,
+      "log": "command-02.log",
+      "log_sha256": "30af07735731665952593546c969271edb957b2ac7ba521177893ec403ea4f44"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "tests/test_native_other_r30.py"
+      ],
+      "exit_code": 1,
+      "executed_assertions": null,
+      "log": "command-03.log",
+      "log_sha256": "21dc74a39c704ec5419bd5d95078b99917a99608141140f06c3e7cf7dbcee6c7"
+    }
+  ],
+  "exit_code": 1,
+  "duration_seconds": 33.793,
+  "log_sha256": "b097aa396f3fc586b3908ad59909830842ba0cd57e0598acedfb700a97c367fb",
+  "runner_sha256": "0c452dfe4a21591c6237a634f1efad0b45feb0ac1079950deaabee94afb3f568",
+  "git_archive_with_original_head_and_index": true,
+  "historical_assertions_modified": false,
+  "calling_checkout_sources_modified": false,
+  "scope": "The published release and its recorded source hashes; current release tests remain separate."
+}

@@ -1,0 +1,127 @@
+{
+  "schema": "re.bow.performance-access-unit-r31/1",
+  "passed": 12,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Separate reader caches share one actual reservation cap",
+      "pass": true,
+      "detail": {
+        "syntheticPixelReservations": true,
+        "readers": 3,
+        "managedLimitPixels": 33554432
+      }
+    },
+    {
+      "name": "Pending decodes remain reserved and cannot be silently evicted",
+      "pass": true,
+      "detail": {
+        "pendingCreditsCounted": true,
+        "laterReservationRecovers": true
+      }
+    },
+    {
+      "name": "Invalid reservations never allocate credit and owner names cannot alter prototypes",
+      "pass": true,
+      "detail": {
+        "invalidCountsRefused": 6,
+        "prototypeCollisionHandled": true
+      }
+    },
+    {
+      "name": "LRU touches protect live artwork while stale leases cannot free newer assets",
+      "pass": true,
+      "detail": {
+        "usedNativeArtRetained": true,
+        "staleLeaseCannotReleaseReplacement": true
+      }
+    },
+    {
+      "name": "Asset count is bounded even for tiny images and eviction failures do not leak credit",
+      "pass": true,
+      "detail": {
+        "maximumAssets": 64,
+        "failingCleanupCreditsReleased": true
+      }
+    },
+    {
+      "name": "Pagehide clears pending and ready credits and a restored page can reserve again",
+      "pass": true,
+      "detail": {
+        "pendingAndReadyReleased": 2,
+        "resumed": true
+      }
+    },
+    {
+      "name": "Capacity notifications are coalesced after releases and do not create reservation eviction loops",
+      "pass": true,
+      "detail": {
+        "releaseListenerCoalesced": true,
+        "evictionReloadLoopPrevented": true
+      }
+    },
+    {
+      "name": "Voluntary timing observes callbacks without modifying a frozen engine",
+      "pass": true,
+      "detail": {
+        "virtualClockFixture": true,
+        "physicalFpsClaimed": false,
+        "frozenEngineUnchanged": true
+      }
+    },
+    {
+      "name": "Hidden and interrupted timing runs stop and release all observation handles",
+      "pass": true,
+      "detail": {
+        "backgroundMeasurementsPrevented": true,
+        "partialRunRetained": true
+      }
+    },
+    {
+      "name": "Timing samples and long-task observations stay bounded during very high callback rates",
+      "pass": true,
+      "detail": {
+        "virtualCallbacks": 20000,
+        "retainedIntervals": 7200,
+        "retainedLongTasks": 256
+      }
+    },
+    {
+      "name": "Combat snapshot reads exact actor resources and evolution reasons without writing actors",
+      "pass": true,
+      "detail": {
+        "frozenActorsUnchanged": true,
+        "actualResourceLabel": "MUNITIONS",
+        "evolutionReasonReadOnly": true
+      }
+    },
+    {
+      "name": "No match and nonfinite actor data produce bounded readable snapshots",
+      "pass": true,
+      "detail": {
+        "emptyStateSupported": true,
+        "labelsBounded": 300,
+        "nonfiniteValuesExcluded": true
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "path": "modules/fidelity-r31/performance/image-budget.js",
+      "sha256": "e7a3a2039c9c666475fdfe118bc1fece445891d0213bbe20e75fece248cebce2"
+    },
+    {
+      "path": "modules/fidelity-r31/performance/monitor.js",
+      "sha256": "503e992e70900d0afd1b49c8d9f8acec9bbb881095d341095ead9c1bd4e24cc0"
+    },
+    {
+      "path": "modules/fidelity-r31/access/match-summary.js",
+      "sha256": "f2b04b703adaef7d0154e48e2ec7b28f29d24c57800b20d73a8d93ad081b4cdd"
+    },
+    {
+      "path": "tests/verify-performance-access-r31.mjs",
+      "sha256": "cfe5eb80d96f619082ad5ffe44e32b51ee13c9543d1cf9938bd26ec48df000ae"
+    }
+  ],
+  "scope": "Actual shared reservation, observer lifecycle and read-only snapshot code. Synthetic pixel/timing fixtures verify bounds, not physical-device performance or real screen-reader certification."
+}

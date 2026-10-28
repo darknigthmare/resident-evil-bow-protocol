@@ -1,0 +1,141 @@
+{
+  "schema": "re.bow.generated-source-body-browser-r31/1",
+  "passed": 5,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "The actual three generated PNGs retain alpha, exact dimensions and truthful single-image provenance",
+      "pass": true,
+      "evidence": {
+        "images": [
+          {
+            "id": "re7-lucas-baker-mutated",
+            "variant": null,
+            "width": 1723,
+            "height": 913,
+            "sha": "c52ea3e524fed6230118d609bc8434f6e52790575c02892287acaff44e52d414",
+            "zero": 1024022,
+            "visible": 510644
+          },
+          {
+            "id": "revillage-donna-angie",
+            "variant": null,
+            "width": 1024,
+            "height": 1536,
+            "sha": "f358dc1a2ace967020be08d8ebea11fb7aac762449f9f7609d7b4d45cce0bd5c",
+            "zero": 717382,
+            "visible": 840194
+          },
+          {
+            "id": "re1r-zombie",
+            "variant": "re1r-zombie-naked-gc-2002-right",
+            "width": 1024,
+            "height": 1536,
+            "sha": "28d5b5ba514a58f8e89533ee502491e1d15b709eec3e3bcc2d0faa9852fe79f5",
+            "zero": 1276042,
+            "visible": 274673
+          }
+        ],
+        "initialImageRequests": 1,
+        "totalProducedImageRequests": 3,
+        "generatedNotNative": true
+      }
+    },
+    {
+      "name": "Current main, classic and evolution pages load the new generated registry without default costume promotion",
+      "pass": true,
+      "evidence": {
+        "actualMounts": [
+          "/modules/versus.html",
+          "/catalog-duel.html",
+          "/modules/fidelity-r31/evolutions/index.html"
+        ],
+        "defaultSourceVariantPromotions": 0
+      }
+    },
+    {
+      "name": "Voluntary same-edition static pose draws in a natural real duel without modifying actor, replay or saved keys",
+      "pass": true,
+      "evidence": {
+        "uid": "re1r-zombie",
+        "frame": 1,
+        "state": "idle",
+        "selected": "re1r-zombie-naked-gc-2002-right",
+        "sha": "28d5b5ba514a58f8e89533ee502491e1d15b709eec3e3bcc2d0faa9852fe79f5",
+        "generatedDraws": 1,
+        "actorPreserved": true,
+        "replayPreserved": true,
+        "storage": "{}",
+        "animated": false,
+        "frames": 1,
+        "oppositeSideNotInvented": true
+      }
+    },
+    {
+      "name": "Keyboard selection and actual200percent text remain usable at320px without masking overflow",
+      "pass": true,
+      "evidence": {
+        "viewport": {
+          "width": 320,
+          "scroll": 320,
+          "detail": 296,
+          "detailWidth": 296
+        },
+        "keyboardFocusRetained": true,
+        "actualTextResize": "200%"
+      }
+    },
+    {
+      "name": "Corrupted actual PNG bytes are refused before display and leave provenance text available",
+      "pass": true,
+      "evidence": {
+        "alteredImageDrawn": false,
+        "corruptionRecorded": true,
+        "sourceLinksRetained": true
+      }
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "tests/browser-generated-sprites-r31.mjs",
+      "sha256": "203bad0581ac8b39fe5735eae8c48662669f43bc1f6e065b3f9ba92847b97d41"
+    },
+    {
+      "path": "modules/fidelity-r31/sprites/manifest.json",
+      "sha256": "6b4df5ec5509bf661c0417d34e31038d9efd4bc5ccf719090edbbb2d94d77880"
+    },
+    {
+      "path": "modules/fidelity-r31/sprites/index.html",
+      "sha256": "ffc233a8765d128fde14f41e15b58481b496d5c5a9915833d842a68dd24ecd78"
+    },
+    {
+      "path": "modules/fidelity-r31/sprites/page.js",
+      "sha256": "8aadabb00b8c7879f7db7b5e63e54a8b25bf18610842a19facb83e68a1e92cd6"
+    },
+    {
+      "path": "modules/fidelity-r31/sprites/style.css",
+      "sha256": "bc63a4d8de3d93b508586f835d891e9b58cd5166746f06fb045451a4c4ca9352"
+    },
+    {
+      "path": "modules/fidelity-r31/combat/generated-runtime.js",
+      "sha256": "d03a03c3fb68f686c41812d9b051ca2240c4bbba9eba64a4deadf16d4412162e"
+    },
+    {
+      "path": "modules/fidelity-r31/performance/image-budget.js",
+      "sha256": "e7a3a2039c9c666475fdfe118bc1fece445891d0213bbe20e75fece248cebce2"
+    },
+    {
+      "path": "modules/versus.html",
+      "sha256": "464c81cd73251969d03fb41d35b17485717aa5d41e768e9ff9b1aa4daa46e0ac"
+    },
+    {
+      "path": "catalog-duel.html",
+      "sha256": "7fa670ae6229953043999919709b2cd06f35618319efcf656ff459a4acd89140"
+    },
+    {
+      "path": "modules/fidelity-r31/evolutions/index.html",
+      "sha256": "e86aebbcf22f14617b4744ae6fd17d2274e4b63f794079f45cc5774e36e32260"
+    }
+  ],
+  "scope": "Real Chromium, three actual image_gen outputs, exact same-edition voluntary static pose in real duel, unchanged actor/replay/saved keys, three current mounts,320px actual200%text and corruption. Static images do not certify original idle animation or physical-device rendering."
+}

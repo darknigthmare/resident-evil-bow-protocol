@@ -1,0 +1,54 @@
+{
+  "schema": "re.bow.audio-delivery-r31/1",
+  "moduleFiles": 251,
+  "moduleBytes": 98329828,
+  "counts": {
+    "sourceArchives": 4,
+    "publishedAudioFiles": 218,
+    "distinctPublishedFilesBySha256": 218,
+    "distinctDecodedPcmMeasurements": 216,
+    "newPublishedFileHashesVsR24R28": 218,
+    "nonzeroAudioFiles": 218,
+    "candidateCatalogueIdentities": 7,
+    "exactTargetEditionAttributedFiles": 0,
+    "independentlyListenedFiles": 0,
+    "actionAssignedFiles": 0,
+    "combatAssignedFiles": 0,
+    "screenedEmptyPublicationListings": 10
+  },
+  "reports": [
+    {
+      "path": "docs/R31_AUDIO_SOURCE_TESTS.json",
+      "bytes": 2910,
+      "sha256": "1e9db53c698b852b5345a14ff07d87ba3821ec570e4ca6570319f26db1cab077"
+    },
+    {
+      "path": "docs/R31_AUDIO_LISTENING_TESTS.json",
+      "bytes": 2300,
+      "sha256": "5736d3501fd83f119228b6efef57cc0a858e20efd4f86429ee425d55150efa4c"
+    },
+    {
+      "path": "docs/R31_AUDIO_BROWSER.json",
+      "bytes": 4853,
+      "sha256": "62ae4de538f41785b49c31efc3ffdb4b838f8cb1da76d87d498d01a96f213528"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "scripts/import-audio-sources-r31.py",
+      "bytes": 20362,
+      "sha256": "d959f483b3cf4ded7ea9c85f6efcf2202a597a643004e1b4fe59b34664ef8e6e"
+    },
+    {
+      "path": "modules/fidelity-r31/audio/manifest.json",
+      "bytes": 438082,
+      "sha256": "f7c1fc43e8ac06b5efbbafc46fddc2448de6bc4f161897ba6c25da9c9ca91860"
+    },
+    {
+      "path": "modules/fidelity-r31/audio/delivery.json",
+      "bytes": 9602,
+      "sha256": "b96ee27d2dd348e1b417ebfbdf6ff74775e0bd8ca2346a84b0cdcdf090e4145d"
+    }
+  ],
+  "scope": "Publication bytes preserved. All group, edition, phase and listening limitations remain explicit; user notes never assign combat audio."
+}

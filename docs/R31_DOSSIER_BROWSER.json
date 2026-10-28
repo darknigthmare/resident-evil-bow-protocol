@@ -1,0 +1,105 @@
+{
+  "schema": "re.bow.dossier-browser-r31/1",
+  "passed": 5,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Actual lot artifacts stay exact-UID and retain editions without loading media",
+      "pass": true,
+      "evidence": {
+        "uid": "re1r-zombie",
+        "linkedArtifacts": 7,
+        "lots": [
+          "sprites",
+          "motion"
+        ],
+        "automaticallyLoadedMedia": 0
+      }
+    },
+    {
+      "name": "A documentary-only identity does not acquire another form’s media and old source cards remain available",
+      "pass": true,
+      "evidence": {
+        "uid": "re3r-zombie",
+        "actualDocumentaryArtifacts": 1,
+        "inventedMedia": 0,
+        "originalSourceHostRetained": true,
+        "newestHeaderLink": true
+      }
+    },
+    {
+      "name": "Current proof card fits the actual dialog and remains keyboard accessible at 1280px",
+      "pass": true,
+      "evidence": {
+        "uid": "re1r-zombie",
+        "width": 1280,
+        "everyComputedFontDoubled": true,
+        "dialogContentFits": true,
+        "keyboardFocusRetained": true
+      }
+    },
+    {
+      "name": "Current proof card fits the actual dialog and remains keyboard accessible at 320px",
+      "pass": true,
+      "evidence": {
+        "uid": "re1r-zombie",
+        "width": 320,
+        "everyComputedFontDoubled": true,
+        "dialogContentFits": true,
+        "keyboardFocusRetained": true
+      }
+    },
+    {
+      "name": "Corrupt proof routes, mismatched UID coverage and oversized transport fail without hiding older evidence",
+      "pass": true,
+      "evidence": [
+        {
+          "kind": "external",
+          "failedClosed": true,
+          "olderHostRetained": true
+        },
+        {
+          "kind": "duplicate",
+          "failedClosed": true,
+          "olderHostRetained": true
+        },
+        {
+          "kind": "oversized",
+          "failedClosed": true,
+          "olderHostRetained": true
+        }
+      ]
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "tests/browser-fidelity-r31.mjs",
+      "sha256": "adf0d7bc53fbbc60cdfaa7ae69248545375d208c49639254c0692e7e9a4f23db"
+    },
+    {
+      "path": "modules/fidelity-r31/index.html",
+      "sha256": "80690bba70df23d0aaf87802f253a819d11c58d3299e32120105dbe221ece24f"
+    },
+    {
+      "path": "modules/fidelity-r31/dashboard.js",
+      "sha256": "dedee4432be1d0e684f161e89490329c89556ea3bb299d7ac93188d2927e2705"
+    },
+    {
+      "path": "modules/fidelity-r31/dossier-link.js",
+      "sha256": "06b8ac003697f49c790cbb5e5a19005a44daa66a7b7bdf5b5b43cb6d35c6fff2"
+    },
+    {
+      "path": "modules/fidelity-r31/progress.json",
+      "sha256": "0083e4c59e90eb7a0436d8c9da5d21fe2e95825f13d5b750245c0f917fa05e15"
+    },
+    {
+      "path": "modules/fidelity-r31/dossier-additions.json",
+      "sha256": "522c7760cccf4497035c5c1686c8e25ba5564addd14140efc0f4c7f194e4f31e"
+    },
+    {
+      "path": "codex.html",
+      "sha256": "3a935335377d5f566b45aed4c084a0127db27355fe009d007b921281966c0775"
+    }
+  ],
+  "scope": "Actual current R31 dashboard ownership and exact-UID source links, real HTTP, source hashes, bounded failures and dialog reflow; no physical-device or global1:1 certification."
+}

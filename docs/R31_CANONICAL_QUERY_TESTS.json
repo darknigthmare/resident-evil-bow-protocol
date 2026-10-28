@@ -1,0 +1,143 @@
+{
+  "schema": "re.bow.canonical-query-tests-r31/1",
+  "passed": 16,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "All17 exact subjects expose only their own source facts and constraints",
+      "pass": true,
+      "detail": {
+        "subjects": 17,
+        "borrowedFacts": 0
+      }
+    },
+    {
+      "name": "Validated documentary data remains deeply immutable",
+      "pass": true,
+      "detail": {
+        "deepFrozen": true
+      }
+    },
+    {
+      "name": "Documented larval length converts1cm to0.01m while preserving approximation",
+      "pass": true,
+      "detail": {
+        "centimetres": 1,
+        "approximateMetres": 0.01
+      }
+    },
+    {
+      "name": "The larval source cannot size an adult boss or a different body part",
+      "pass": true,
+      "detail": {
+        "rejectedScaleTransfers": 3
+      }
+    },
+    {
+      "name": "A textual lower bound remains a bound and never becomes collision calibration",
+      "pass": true,
+      "detail": {
+        "lowerBoundMeters": 3,
+        "collisionAdmission": false
+      }
+    },
+    {
+      "name": "The vague U8 body height has no fabricated numeric value",
+      "pass": true,
+      "detail": {
+        "numericHeightAssigned": false
+      }
+    },
+    {
+      "name": "Every documented conclusion matches only with all original-context conditions",
+      "pass": true,
+      "detail": {
+        "documentedContextQueries": 6,
+        "gameplayAssignments": 0
+      }
+    },
+    {
+      "name": "Conclusions reject original versus remake and unrelated subjects",
+      "pass": true,
+      "detail": {
+        "wrongEditionOrSubjectRejected": 2
+      }
+    },
+    {
+      "name": "Every arbitrary BOW catalogue victim remains unsupported without pair-specific proof",
+      "pass": true,
+      "detail": {
+        "explicitVictimQueriesRejected": 2334
+      }
+    },
+    {
+      "name": "A human worker report does not certify giant or aquatic victim morphology",
+      "pass": true,
+      "detail": {
+        "unsupportedMorphologies": 3
+      }
+    },
+    {
+      "name": "Missing phase, environment, role or action conditions fail closed",
+      "pass": true,
+      "detail": {
+        "independentContextGates": 4
+      }
+    },
+    {
+      "name": "Swallow attempts and impalement do not silently become guaranteed instant deaths",
+      "pass": true,
+      "detail": {
+        "unjustifiedInstantDeaths": 0
+      }
+    },
+    {
+      "name": "Held PlagaC alias, HD-only document and taxonomy conflict stay explicit",
+      "pass": true,
+      "detail": {
+        "heldDecisions": 4
+      }
+    },
+    {
+      "name": "Cross-subject conclusions and promoted alias metadata are invalid inputs",
+      "pass": true,
+      "detail": {
+        "forgedPromotionsRejected": 2
+      }
+    },
+    {
+      "name": "Untrusted publisher URLs and direct-primary claims cannot enter the viewer",
+      "pass": true,
+      "detail": {
+        "unverifiedSourceFormsRejected": 3
+      }
+    },
+    {
+      "name": "Queries leave the full source data and caller request objects unchanged",
+      "pass": true,
+      "detail": {
+        "sourceWrites": 0,
+        "callerWrites": 0
+      }
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "tests/verify-canonical-r31.mjs",
+      "sha256": "86c63c4637c3ce585bebb3bf0e3fbf5c930ce0168c7f4cbd7508cac99ead1250"
+    },
+    {
+      "path": "modules/fidelity-r31/canonical/query.js",
+      "sha256": "baf1c7006bf55fa0f90acb45b19b183d8c76f6ae3f44b4ae65bd60aded7e84ca"
+    },
+    {
+      "path": "modules/fidelity-r31/canonical/manifest.json",
+      "sha256": "3fbe8866dc01ef6b8cb7ed6eaf7c5da9827462364f9f072c3c5b430747d868df"
+    },
+    {
+      "path": "data/roster.json",
+      "sha256": "e1aba741cea7e34ee653c0fc1d7c92b666182f03f2b00d5b72421c4c93ca1dc0"
+    }
+  ],
+  "scope": "Conditional source facts and dimensions, all389 catalogue victims against six constrained rules, alias/edition gates and immutable data. No original-game animation, timing or physical collision certification."
+}

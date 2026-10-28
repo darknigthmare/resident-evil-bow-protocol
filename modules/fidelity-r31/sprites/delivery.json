@@ -1,0 +1,184 @@
+{
+  "schema": "re.bow.fidelity-lot-r31/1",
+  "release": "R31",
+  "id": "sprites",
+  "taskIds": [
+    "R20-10",
+    "G-RENDU"
+  ],
+  "summary": "Trois PNG réellement générés : deux présentations corporelles revues et une variante 2D statique volontaire, avec une nouvelle source native et ses quatre vues.",
+  "advances": [
+    "Trois sorties image_gen sans retouche : Lucas muté et Donna/Angie frontaux, plus NakedZombieGameCube2002 en pose 2D droite adaptée.",
+    "Deux revues de silhouette visible complètent le registre généré (112→114), avec la pointe fine de Lucas maintenue en lacune ; aucune animation idle originale ajoutée.",
+    "Une nouvelle archive native de ZombieRemake et quatre vues à768pixels sont liées à leur édition, sources et empreintes ; la pose de liaison reste distincte de la pose adaptée.",
+    "Le lecteur conserve les variantes volontaires, la direction réellement produite, les replis et les acteurs/replays ; le budget partagé reprend les chargements sans traiter la pression mémoire comme une corruption."
+  ],
+  "remaining": [
+    "La pointe supérieure de Lucas à alpha faible reste incertaine ; les détails de texture générés ne sont pas des texels originaux certifiés.",
+    "Les deux présentations frontales ne fournissent pas des idles latéraux. La variante Zombie ne fournit qu’un côté droit et une image statique ; les autres orientations et gestes restent ouverts.",
+    "Le costume Zombie initial n’est pas remplacé par défaut ; une variante complète ne qualifie pas automatiquement toutes les variantes de l’identité.",
+    "Les22refus de génération historiques et le refus de révision Tyrant sont conservés sans nouvel essai. Corps cachés, équipements et autres incarnations sans source complète restent à compléter."
+  ],
+  "manifests": [
+    {
+      "path": "modules/fidelity-r31/sprites/manifest.json",
+      "bytes": 2360463,
+      "sha256": "6b4df5ec5509bf661c0417d34e31038d9efd4bc5ccf719090edbbb2d94d77880"
+    },
+    {
+      "path": "modules/fidelity-r31/sprites/sources/catalog.json",
+      "bytes": 1745,
+      "sha256": "1578690e8dadf0eb1a29b2636d8814ee8e31234e562abac622ffb05cc5085dda"
+    },
+    {
+      "path": "modules/fidelity-r31/sprites/sources/renders.json",
+      "bytes": 6782,
+      "sha256": "1926e2381baace9e03826956ca018f98dbd8803ffc3c8ab7d678c93f27b01f9f"
+    },
+    {
+      "path": "modules/fidelity-r31/sprites/sources/new-native-acquisition.json",
+      "bytes": 674,
+      "sha256": "c5f3d5084451c9356537f8297bb2885a1ff8c984f681ee2823182e54c056978e"
+    }
+  ],
+  "resources": [
+    {
+      "path": "modules/fidelity-r31/sprites/index.html",
+      "label": "Illustrations et références R31"
+    },
+    {
+      "path": "docs/R31_SPRITES.md",
+      "label": "Portée des trois images et mode volontaire"
+    },
+    {
+      "path": "docs/R31_SPRITES_TESTS.json",
+      "label": "Provenance, silhouettes et archive native"
+    },
+    {
+      "path": "docs/R31_GENERATED_RUNTIME_TESTS.json",
+      "label": "Lecteur, variantes et budget partagé"
+    },
+    {
+      "path": "docs/R31_SPRITES_BROWSER.json",
+      "label": "Galerie et vrais montages de combat"
+    }
+  ],
+  "identities": [
+    {
+      "id": "re7-lucas-baker-mutated",
+      "summary": "Présentation frontale revue ; la pointe haute à alpha faible reste explicitement non qualifiée.",
+      "artifacts": [
+        {
+          "path": "modules/fidelity-r31/sprites/generated/re7-lucas-baker-mutated/full-body.png",
+          "bytes": 1688473,
+          "sha256": "c52ea3e524fed6230118d609bc8434f6e52790575c02892287acaff44e52d414",
+          "label": "Mutated Lucas — documented frontal source presentation",
+          "kind": "generated-source-body-presentation",
+          "sourceEdition": "Resident Evil 7 Biohazard (2017) — Not a Hero"
+        },
+        {
+          "path": "modules/fidelity-r31/sprites/review/re7-lucas-baker-mutated.json",
+          "bytes": 2955,
+          "sha256": "a74ea6a6c2fce8a48c1103f1ab5154c38f7b333a53e3ed0c683d8906ea50b6c9",
+          "label": "Observation corporelle et limites",
+          "kind": "source-output-visual-review",
+          "sourceEdition": "Resident Evil 7 Biohazard (2017) — Not a Hero"
+        }
+      ]
+    },
+    {
+      "id": "revillage-donna-angie",
+      "summary": "Paire frontale assise revue, silhouette visible complète ; aucune posture latérale ou animation inférée.",
+      "artifacts": [
+        {
+          "path": "modules/fidelity-r31/sprites/generated/revillage-donna-angie/full-body.png",
+          "bytes": 2225268,
+          "sha256": "f358dc1a2ace967020be08d8ebea11fb7aac762449f9f7609d7b4d45cce0bd5c",
+          "label": "Donna and Angie — paired seated frontal source presentation",
+          "kind": "generated-source-body-presentation",
+          "sourceEdition": "Resident Evil Village (2021)"
+        },
+        {
+          "path": "modules/fidelity-r31/sprites/review/revillage-donna-angie.json",
+          "bytes": 2325,
+          "sha256": "0107163915adc3eeaa32e483a0ce2c121a8441e67c433969ba7d1469f19c9a75",
+          "label": "Observation corporelle et limites",
+          "kind": "source-output-visual-review",
+          "sourceEdition": "Resident Evil Village (2021)"
+        }
+      ]
+    },
+    {
+      "id": "re1r-zombie",
+      "summary": "Variante GameCube2002 depuis quatre vues natives ; choix volontaire, pose droite statique générée, costume initial conservé.",
+      "artifacts": [
+        {
+          "path": "modules/fidelity-r31/sprites/same-edition-variants/re1r-zombie/naked-gc-2002-right.png",
+          "bytes": 1570447,
+          "sha256": "28d5b5ba514a58f8e89533ee502491e1d15b709eec3e3bcc2d0faa9852fe79f5",
+          "label": "NakedZombie — GameCube 2002, generated right-facing 2D neutral adaptation",
+          "kind": "generated-same-edition-static-variant",
+          "sourceEdition": "Resident Evil remake (2002) — GameCube NakedZombie source variant"
+        },
+        {
+          "path": "modules/fidelity-r31/sprites/review/re1r-zombie.json",
+          "bytes": 3309,
+          "sha256": "ddf344e95eb14ddd915a8449613805051c7edd45a3b34f4d24da0adf679ef607",
+          "label": "Observation corporelle et limites",
+          "kind": "source-output-visual-review",
+          "sourceEdition": "Resident Evil remake (2002) — GameCube NakedZombie source variant"
+        },
+        {
+          "path": "modules/fidelity-r31/sprites/sources/views/re1r-zombie-naked-gc-r31/source-0.png",
+          "bytes": 132397,
+          "sha256": "7833d5dd2768a87e395976fdf6a7aca7bcae91ef688bab43605e46fc24475edd",
+          "label": "Modèle natif — caméra 0°",
+          "kind": "derived-native-body-reference-view",
+          "sourceEdition": "Resident Evil remake (2002) — GameCube NakedZombie source variant"
+        },
+        {
+          "path": "modules/fidelity-r31/sprites/sources/views/re1r-zombie-naked-gc-r31/source-90.png",
+          "bytes": 82766,
+          "sha256": "079c75e094ad3ee0c79445b30d6aa19f76878876a406ce901a31e58342910fda",
+          "label": "Modèle natif — caméra 90°",
+          "kind": "derived-native-body-reference-view",
+          "sourceEdition": "Resident Evil remake (2002) — GameCube NakedZombie source variant"
+        },
+        {
+          "path": "modules/fidelity-r31/sprites/sources/views/re1r-zombie-naked-gc-r31/source-180.png",
+          "bytes": 130596,
+          "sha256": "edefd10fdd4cb6af02815b3511b6a398c567932e291fe8430dd9bd6fe41c680e",
+          "label": "Modèle natif — caméra 180°",
+          "kind": "derived-native-body-reference-view",
+          "sourceEdition": "Resident Evil remake (2002) — GameCube NakedZombie source variant"
+        },
+        {
+          "path": "modules/fidelity-r31/sprites/sources/views/re1r-zombie-naked-gc-r31/source-270.png",
+          "bytes": 81906,
+          "sha256": "e6705ba2b02edd30defb389f2cad2552a90afa8087b6955fec181caf16f0bb38",
+          "label": "Modèle natif — caméra 270°",
+          "kind": "derived-native-body-reference-view",
+          "sourceEdition": "Resident Evil remake (2002) — GameCube NakedZombie source variant"
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "newGeneratedPngs": 3,
+    "activePixelRevisions": 2,
+    "newSameEditionStaticVariants": 1,
+    "newVisibleFullBodyReviews": 2,
+    "newActiveBodiesWithoutKnownAppearanceGaps": 1,
+    "effectiveGeneratedTargetIdentities": 363,
+    "effectiveFullBodyReviewedSprites": 114,
+    "preservedInitialTargetRefusals": 22,
+    "preservedFailedRevisions": 1,
+    "newNativeReferenceModels": 1,
+    "newNativeReferenceViews": 4,
+    "newNativeCombatSprites": 0,
+    "newOriginalIdleAnimations": 0,
+    "newOriginalGameFrames": 0,
+    "manualArtEdits": 0
+  },
+  "canonicalFidelityCertified": false
+}

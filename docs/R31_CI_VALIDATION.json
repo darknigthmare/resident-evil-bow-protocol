@@ -1,0 +1,72 @@
+{
+  "schema": "re.bow.ci-validation-r31/1",
+  "passed": 5,
+  "failed": 0,
+  "counts": {
+    "workflows": 8,
+    "bash_blocks": 99,
+    "python_blocks": 4,
+    "javascript_blocks": 14
+  },
+  "checks": [
+    {
+      "name": "All eight workflows parse with pinned actions, read-only permissions and existing script paths",
+      "pass": true
+    },
+    {
+      "name": "All actual Bash, Python and JavaScript workflow blocks compile",
+      "pass": true
+    },
+    {
+      "name": "Historical link, source-hash and conservation assertions retain their exact published snapshots",
+      "pass": true
+    },
+    {
+      "name": "Current R31 provenance executes all source, generation, persistence, performance, access and original engine assertions",
+      "pass": true
+    },
+    {
+      "name": "Current head has seven independently executed current browser suites",
+      "pass": true
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": ".github/workflows/source-fidelity-r25.yml",
+      "sha256": "97556c256ce0e1178787e055c4dff8dcca5356e01c6a47be27ed604c3132d4ef"
+    },
+    {
+      "path": ".github/workflows/source-fidelity-r26.yml",
+      "sha256": "363ee7c78fae45505ab4bdf024c03eaf1661248b3a10164e3f7b1ead2b49c56e"
+    },
+    {
+      "path": ".github/workflows/source-fidelity-r27.yml",
+      "sha256": "353c2b55ccdf9319c49e072044d7a8248529cbd4ac3167673aead7961984c61a"
+    },
+    {
+      "path": ".github/workflows/source-fidelity-r28.yml",
+      "sha256": "805692a224f37efe231ed23fd44ee031d6d1c6fa9e651459c645d578b807c375"
+    },
+    {
+      "path": ".github/workflows/source-fidelity-r29.yml",
+      "sha256": "f275c54c8432b6f1dc42b82788d458a8ee5c3c866e03562e6c40b7eca40f6d51"
+    },
+    {
+      "path": ".github/workflows/source-fidelity-r30.yml",
+      "sha256": "9e26dcce387ecf4a50c41fa2e44f21b746b0a838a3a58d5c879cd25627ebcceb"
+    },
+    {
+      "path": ".github/workflows/source-fidelity-r31.yml",
+      "sha256": "2a667000bb1f983edd0f0b38fd98cb0caece8ec666d0d3bbd072e5c6642d92df"
+    },
+    {
+      "path": ".github/workflows/interface-r20-browser.yml",
+      "sha256": "24be7d6b13519cddca730c649e0c38ecddb4da380138b94fb22e093b4d452bc2"
+    },
+    {
+      "path": "scripts/validate-fidelity-ci-r31.py",
+      "sha256": "1f63c4d604a647d169507f0761b57f849f86b70ff86f8c02e66524bec70e80de"
+    }
+  ],
+  "scope": "Actual local workflow parsing and command compilation. Remote Actions execution is separate."
+}

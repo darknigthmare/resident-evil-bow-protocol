@@ -1,0 +1,136 @@
+{
+  "schema": "re.bow.persistence-contract-r31/1",
+  "release": "R31",
+  "taskIds": [
+    "G-REPLAYS",
+    "G-SAUVES"
+  ],
+  "storage": {
+    "realGameValuesRestored": true,
+    "allowlistContract": {
+      "path": "src/save-center-r19.js",
+      "bytes": 10791,
+      "sha256": "6a312bd65ea55fcfe272e4adc9add12ce51affb4a9d424f5bee9998b9952ccbf"
+    },
+    "originalBackupFormat": "re.bow.backup/1",
+    "allowlistedKeys": 18,
+    "journal": {
+      "schema": "re.bow.real-restore-journal-r31/1",
+      "database": "re.bow.real-restore.r31",
+      "stores": [
+        "payload",
+        "meta"
+      ],
+      "history": 1,
+      "checksum": "SHA-256",
+      "durableBeforeFirstGameWrite": true,
+      "automaticResume": false,
+      "gameLocalStorageAtomic": false,
+      "explicitResumeAndUndo": true,
+      "interTabLock": "Web Locks, exclusive and ifAvailable",
+      "outsideWriterValuesOverwritten": false
+    }
+  },
+  "replay": {
+    "schemas": [
+      "R13 main replay",
+      "re.bow.catalog-duel-replay/1",
+      "re.bow.evolution-duel-replay/1"
+    ],
+    "mainContracts": [
+      "612953ce952cdd2bd6b5dd21a489bc961c2bfcc3ff1321d15528e341f34ee67d",
+      "87b735420800aa6fc6f1f252e9991bca0ee307107b13e5ed81192d50389cfcb2"
+    ],
+    "legacyRoutes": {
+      "path": "modules/fidelity-r24/persistence/engines.json",
+      "bytes": 556,
+      "sha256": "d99c7e4e93bf09fa9f85dc62a4ed1a9abba26066c2d1328e907a7ac03d9e03b1"
+    },
+    "evolutionRuntimeContract": "a4bf5c42ebd70c803e99412113ce5e30a1b52ffb56cb7e5143fd75f2d5c63893",
+    "evolutionSourceManifest": {
+      "path": "modules/fidelity-r28/evolutions/contract.json",
+      "bytes": 1470,
+      "sha256": "441e4dbf4a40d613d143541f582c258d895845874b2bd265df4b3dda9212d38d"
+    },
+    "evolutionNativeSourceFiles": 9,
+    "passes": 2,
+    "opaqueOrigin": true,
+    "sharedGameStorageAccess": false,
+    "engineMigration": false
+  },
+  "files": [
+    {
+      "path": "modules/fidelity-r31/persistence/index.html",
+      "bytes": 4316,
+      "sha256": "f68aae7994e0d855917174d4cc2e78585040b2e34b1766b1b5e66426eb326236"
+    },
+    {
+      "path": "modules/fidelity-r31/persistence/journal.js",
+      "bytes": 3838,
+      "sha256": "31692ad9cfb947bcff34430ee1fff322c39274cfe2b6decb8f657309ded8c7cd"
+    },
+    {
+      "path": "modules/fidelity-r31/persistence/link.js",
+      "bytes": 748,
+      "sha256": "6d81f350e292cd3c3947455bfeddf86b9d6d2fe73f8ea6b4fd15844562b55310"
+    },
+    {
+      "path": "modules/fidelity-r31/persistence/page.js",
+      "bytes": 8699,
+      "sha256": "6a817e9bbb7035c0eb0e476cee9c225fba561ce8dce1f5b0402d78a6652f062b"
+    },
+    {
+      "path": "modules/fidelity-r31/persistence/restore.js",
+      "bytes": 10722,
+      "sha256": "eea96d028d097b4f57351c88d4a0a4db53af6a2002b634fed6de9fec23b161ec"
+    },
+    {
+      "path": "modules/fidelity-r31/persistence/style.css",
+      "bytes": 1826,
+      "sha256": "730260a1b61885fe088b80580e1489d07ec3ec47c870f748fab9dd4158e3f59f"
+    },
+    {
+      "path": "modules/fidelity-r31/replay/index.html",
+      "bytes": 1980,
+      "sha256": "80846151eef2166648ce734760a8989086f1820773837b1a0fdf1e07d6f9dd65"
+    },
+    {
+      "path": "modules/fidelity-r31/replay/page.js",
+      "bytes": 3193,
+      "sha256": "0dd1e92426305267925ab0344ea624b2453d94bee3503babe937021bfdc5be72"
+    },
+    {
+      "path": "modules/fidelity-r31/replay/verify.js",
+      "bytes": 8084,
+      "sha256": "e8d6bdebab913491b72985f855747bd899916452d6777199f8abc92e79c6013d"
+    }
+  ],
+  "validation": [
+    {
+      "path": "docs/R31_PERSISTENCE_TESTS.json",
+      "bytes": 3974,
+      "sha256": "5a0956c78d189ae8a48fd39384425f5e94d7d9bc659b20b5902cdee42746b280",
+      "script": "tests/verify-persistence-r31.mjs",
+      "passed": 11,
+      "failed": 0
+    },
+    {
+      "path": "docs/R31_PERSISTENCE_BROWSER.json",
+      "bytes": 5545,
+      "sha256": "b5352cd577ee30d61fd2ffcd1eee363833bb6731524ac1c5d8c52fcbb7bc2e34",
+      "script": "tests/browser-persistence-r31.mjs",
+      "passed": 9,
+      "failed": 0
+    }
+  ],
+  "limits": {
+    "backupFileBytes": 33554432,
+    "evolutionReplayBytes": 4194304,
+    "journalPayloadBytes": 71303168,
+    "cloudSyncConfigured": false,
+    "physicalDiskCrashCertified": false,
+    "allHistoricalReplayContractsCertified": false,
+    "nativeGameFidelityCertified": false
+  },
+  "canonicalFidelityCertified": false
+}

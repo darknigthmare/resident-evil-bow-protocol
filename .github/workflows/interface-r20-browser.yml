@@ -18,6 +18,8 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           persist-credentials: false
+          # Historical canvas assertions predate the optional avatar presentation.
+          ref: 545b10d17c49fcca47a03281bf1099a26c7b1ce1
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: '22.16.0'

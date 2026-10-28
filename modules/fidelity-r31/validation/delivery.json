@@ -1,0 +1,53 @@
+{
+  "schema": "re.bow.fidelity-lot-r31/1",
+  "release": "R31",
+  "id": "validation",
+  "taskIds": [
+    "G-PERF",
+    "G-ACCESS"
+  ],
+  "summary": "Budget commun des lecteurs d’images, mesures volontaires et bilan textuel exact du combat dans le dialogue existant.",
+  "advances": [
+    "Un budget de32millions de pixels inclut les réservations en décodage des lecteurs natifs, portraits et poses générées.",
+    "Les évictions et refus de budget reprennent au retour de capacité ; la corruption reste refusée et tous les chargements se libèrent au changement de page.",
+    "Une mesure volontaire exporte les intervalles de callbacks et tâches longues observés dans cette session, avec échantillons bornés.",
+    "Le bilan demandé par le joueur lit les vies, ressources, furie et conditions d’évolution dans le vrai acteur ; pause, focus et replays restent gérés par le dialogue existant.",
+    "Trois montages réels, pression/libération, interruption, annulations, clavier, axe et320px avec texte doublé sont exercés par les tests."
+  ],
+  "remaining": [
+    "Appareils physiques et lecteurs d’écran réels non exercés ; conformité WCAG globale non certifiée.",
+    "Mémoire des autres rendus, du navigateur et du GPU non mesurée ; longues sessions sur appareils cibles encore à tester."
+  ],
+  "manifests": [
+    {
+      "path": "modules/fidelity-r31/validation/manifest.json",
+      "bytes": 3650,
+      "sha256": "c1a53a87ad9b39194fb445a163093b245e1547065d07f4947e52716c63bc9114"
+    }
+  ],
+  "resources": [
+    {
+      "path": "modules/fidelity-r31/performance/index.html",
+      "label": "Mesurer et exporter une session de navigateur"
+    },
+    {
+      "path": "docs/R31_PERFORMANCE_ACCESS_BROWSER.json",
+      "label": "Recette réelle des trois montages"
+    },
+    {
+      "path": "docs/R31_PERFORMANCE_ACCESS_TESTS.json",
+      "label": "Bornes, interruptions et lecture des acteurs"
+    }
+  ],
+  "identities": [],
+  "counts": {
+    "managedPixelLimit": 33554432,
+    "participatingReaderFamilies": 3,
+    "unitTestGroups": 25,
+    "actualBrowserGroups": 8,
+    "physicalDevicesCertified": 0,
+    "screenReaderHardwareCertified": 0,
+    "globalGpuMemoryCertified": 0
+  },
+  "canonicalFidelityCertified": false
+}

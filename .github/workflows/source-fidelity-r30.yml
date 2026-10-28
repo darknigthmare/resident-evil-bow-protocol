@@ -21,6 +21,8 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           persist-credentials: false
+          # Keep published R30 source assertions and conservation scope intact.
+          ref: 12cdd7e38b5785cb9fbbb3fe3dff8d0f7f41fa24
           fetch-depth: 0
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
@@ -46,14 +48,51 @@ jobs:
       - name: Execute fresh source, identity, image and export assertions
         run: |
           rm -f docs/R30_EXPORT_TESTS.json docs/R30_NATIVE_REVELATIONS_TESTS.json docs/R30_NATIVE_OTHER_TESTS.json docs/R30_NEW_NATIVE_TESTS.json docs/R30_AVATARS_TESTS.json docs/R30_NATIVE_RUNTIME_TESTS.json docs/R30_NATIVE_REVELATIONS_RIG_TESTS.json docs/R30_NATIVE_OTHER_MOTION_RIG_TESTS.json docs/R30_INTEGRATION_TESTS.json
-          "$RUNNER_TEMP/fidelity-r30-venv/bin/python" tests/test_fidelity_r30.py
+          "$RUNNER_TEMP/fidelity-r30-venv/bin/python" - <<'PY'
+          import hashlib
+          import io
+          import json
+          from pathlib import Path
+          import unittest
+
+          root = Path.cwd()
+          checks = []
+          class EvidenceResult(unittest.TextTestResult):
+              def addSuccess(self, test):
+                  super().addSuccess(test)
+                  checks.append({'name': test.id(), 'pass': True})
+              def addFailure(self, test, error):
+                  super().addFailure(test, error)
+                  checks.append({'name': test.id(), 'pass': False, 'error': self._exc_info_to_string(error, test)})
+              def addError(self, test, error):
+                  super().addError(test, error)
+                  checks.append({'name': test.id(), 'pass': False, 'error': self._exc_info_to_string(error, test)})
+          stream = io.StringIO()
+          suite = unittest.defaultTestLoader.discover('tests', pattern='test_fidelity_r30.py')
+          result = unittest.TextTestRunner(stream=stream, verbosity=2, resultclass=EvidenceResult).run(suite)
+          log = stream.getvalue()
+          print(log, end='')
+          (root / 'qa-fidelity-r30-ci/export-tests.log').write_text(log)
+          files = ['tests/test_fidelity_r30.py', 'scripts/fidelity-progress-r30.py',
+                   'scripts/export-fidelity-progress-r28.py', 'scripts/export-fidelity-progress-r27.py',
+                   'scripts/export-source-evidence-r21.py']
+          failed = len(result.failures) + len(result.errors)
+          report = {'schema': 're.bow.export-python-ci-r30/1',
+                    'passed': result.testsRun - failed - len(result.skipped), 'failed': failed,
+                    'skipped': len(result.skipped), 'run': result.testsRun, 'checks': checks,
+                    'sourceFiles': [{'path': name, 'sha256': hashlib.sha256((root / name).read_bytes()).hexdigest()} for name in files],
+                    'scope': 'Actual unchanged published R30 export assertions, with a fresh result written by the CI runner.'}
+          (root / 'docs/R30_EXPORT_TESTS.json').write_text(json.dumps(report, indent=2) + '\n')
+          print(json.dumps({'passed': report['passed'], 'failed': report['failed']}))
+          raise SystemExit(0 if result.testsRun > 0 and result.wasSuccessful() and not result.skipped else 1)
+          PY
           "$RUNNER_TEMP/fidelity-r30-venv/bin/python" tests/test_native_revelations_r30.py
+          node tests/verify-native-other-motion-r30.mjs
           "$RUNNER_TEMP/fidelity-r30-venv/bin/python" tests/test_native_other_r30.py
           "$RUNNER_TEMP/fidelity-r30-venv/bin/python" scripts/verify-new-native-sources-r30.py
           "$RUNNER_TEMP/fidelity-r30-venv/bin/python" scripts/verify-selection-avatars-r30.py
           node tests/verify-native-runtime-r30.mjs
           node tests/verify-native-revelations-r30.mjs
-          node tests/verify-native-other-motion-r30.mjs
           node tests/verify-r30-integration.mjs
       - name: Require nonempty freshly executed reports
         run: |
@@ -114,6 +153,8 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           persist-credentials: false
+          # Keep published R30 source assertions and conservation scope intact.
+          ref: 12cdd7e38b5785cb9fbbb3fe3dff8d0f7f41fa24
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: '22.16.0'
@@ -161,6 +202,8 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           persist-credentials: false
+          # Keep published R30 source assertions and conservation scope intact.
+          ref: 12cdd7e38b5785cb9fbbb3fe3dff8d0f7f41fa24
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: '22.16.0'

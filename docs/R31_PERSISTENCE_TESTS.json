@@ -1,0 +1,122 @@
+{
+  "schema": "re.bow.persistence-tests-r31/1",
+  "passed": 11,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Inspection, preview and raw export never write game values or durable journals",
+      "pass": true,
+      "detail": {
+        "gameWrites": 0,
+        "journalWrites": 0,
+        "exactRawBackup": true
+      }
+    },
+    {
+      "name": "Foreign, cancelled and unacknowledged plans cannot replace real game values",
+      "pass": true,
+      "detail": {
+        "refusedPlans": 4,
+        "gameWrites": 0
+      }
+    },
+    {
+      "name": "Selected game groups restore exact raw bytes only after a durable before/after journal exists",
+      "pass": true,
+      "detail": {
+        "actualAllowlistedChanges": 3,
+        "journalBeforeFirstGameWrite": true,
+        "nonselectedAndForeignValuesPreserved": true
+      }
+    },
+    {
+      "name": "An interrupted write before cursor confirmation is resumed idempotently by a new restorer",
+      "pass": true,
+      "detail": {
+        "newRestorerRecoveredDurableJournal": true,
+        "alreadyWrittenValueNotWrittenTwice": true
+      }
+    },
+    {
+      "name": "Explicit undo after a completed restore survives a new page instance and preserves raw whitespace",
+      "pass": true,
+      "detail": {
+        "exactPreRestoreValuesRecovered": true,
+        "terminalJournalExplicitlyRemoved": true
+      }
+    },
+    {
+      "name": "Outside changes block both resume and undo without overwriting another writer",
+      "pass": true,
+      "detail": {
+        "conflictingValuePreserved": true,
+        "recoveryGameWrites": 0
+      }
+    },
+    {
+      "name": "Journal quota failure prevents the first game write; storage quota retains a recoverable journal",
+      "pass": true,
+      "detail": {
+        "journalFailureGameWrites": 0,
+        "quotaRefusalPreservedRecovery": true
+      }
+    },
+    {
+      "name": "Damaged journal SHA, unsupported storage keys and duplicate JSON keys are rejected before writes",
+      "pass": true,
+      "detail": {
+        "damagedJournalRejected": true,
+        "invalidImportsRejected": 4
+      }
+    },
+    {
+      "name": "Web Locks denial, stale previews and aborts cannot silently commit another restore",
+      "pass": true,
+      "detail": {
+        "lockDeniedWithoutWrites": true,
+        "stalePreviewRefusedBeforeJournal": true,
+        "abortExplicitlyRecoverable": true
+      }
+    },
+    {
+      "name": "Delayed IndexedDB opening, page close/resume and version changes never reuse a closed connection",
+      "pass": true,
+      "detail": {
+        "delayedOpenings": 3,
+        "restartedReadsSucceeded": 2,
+        "staleClosedConnectionsReused": 0
+      }
+    },
+    {
+      "name": "The replay gateway separates R28 from R7/R13 and refuses unknown evolution contracts or duplicate JSON",
+      "pass": true,
+      "detail": {
+        "distinctRoutes": 3,
+        "originalEvolutionContractOnly": true
+      }
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "src/save-center-r19.js",
+      "sha256": "6a312bd65ea55fcfe272e4adc9add12ce51affb4a9d424f5bee9998b9952ccbf"
+    },
+    {
+      "path": "modules/fidelity-r31/persistence/restore.js",
+      "sha256": "eea96d028d097b4f57351c88d4a0a4db53af6a2002b634fed6de9fec23b161ec"
+    },
+    {
+      "path": "modules/fidelity-r31/persistence/journal.js",
+      "sha256": "31692ad9cfb947bcff34430ee1fff322c39274cfe2b6decb8f657309ded8c7cd"
+    },
+    {
+      "path": "modules/fidelity-r31/replay/verify.js",
+      "sha256": "e8d6bdebab913491b72985f855747bd899916452d6777199f8abc92e79c6013d"
+    },
+    {
+      "path": "tests/verify-persistence-r31.mjs",
+      "sha256": "565cbdb3fd0fd539c43d41ccedd40aa7a27f473eecacec1665b9b0c6287e7268"
+    }
+  ],
+  "scope": "Real allowlisted game values in isolated memory fixtures; durable journal/real browser storage, reload and opaque replay source verification are tested separately in the browser suite. No cloud or physical-device recovery certification."
+}
