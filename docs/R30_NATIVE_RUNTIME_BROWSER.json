@@ -1,0 +1,153 @@
+{
+  "schema": "re.bow.native-runtime-browser-r30/1",
+  "startedAt": "2026-10-28T08:06:17.201Z",
+  "finishedAt": "2026-10-28T08:06:26.846Z",
+  "browser": "Chromium headless",
+  "physicalDevice": false,
+  "inputs": [
+    {
+      "path": "modules/fidelity-r30/native/manifest.json",
+      "sha256": "542d0cf097bbc9c938f81de19fdff431a2b3e5b3d78b06250833810f0dece778"
+    },
+    {
+      "path": "modules/fidelity-r30/native/revelations/manifest.json",
+      "sha256": "5c8abf74b06e23ab4f6956680121a081f95fee8923447c211f84e1bed25a481c"
+    },
+    {
+      "path": "modules/fidelity-r30/native/other-games/manifest.json",
+      "sha256": "387bf1ecb4608978a7836d4fb040dc8032c66d2d5a0953ba33d34332e97a92de"
+    },
+    {
+      "path": "modules/fidelity-r30/native/new-sources/manifest.json",
+      "sha256": "5f72814259927801af1b10d17a874155ca0b4510a826f2a7d94db022376dce26"
+    },
+    {
+      "path": "modules/fidelity-r30/combat/native-runtime.js",
+      "sha256": "6c8abb4f5ba8b356b1575bf488b53c3cee3d6b49ba75fc671f266587d26a1613"
+    },
+    {
+      "path": "modules/fidelity-r30/combat/native-adapter.js",
+      "sha256": "5a91064092bbcdd4183f589c25eaab40f68d9220a961a6cc41c6841421b251d7"
+    },
+    {
+      "path": "modules/fidelity-r30/native/index.html",
+      "sha256": "4c341b38d09302e1218be252e427611f0f7fdae1875dbe20690d93306e08d1c8"
+    },
+    {
+      "path": "modules/fidelity-r30/native/page.js",
+      "sha256": "f11977f2cc794aed0e7ab0084287d23b4fe3c95fb9307a84b56b060f06e39513"
+    },
+    {
+      "path": "modules/fidelity-r30/native/style.css",
+      "sha256": "9634d5b7d5bb938cf34367247770bc866bbaa3c72a0a4eb7a489d79df30f5df3"
+    },
+    {
+      "path": "tests/browser-native-runtime-r30.mjs",
+      "sha256": "33953da18487a5d499adc749df8b55c9b90b42b5597523be5b4d42c797216ad0"
+    },
+    {
+      "path": "modules/versus.html",
+      "sha256": "6a9615f493910bb249750c76b9858a7d1aaadab9999fe81309da0c9cd2019d9f"
+    },
+    {
+      "path": "catalog-duel.html",
+      "sha256": "a93e587b8b56bf9026f5693df54ad9fc59e70768a47cef9e5e069afc2972b441"
+    },
+    {
+      "path": "modules/fidelity-r30/evolutions/index.html",
+      "sha256": "9d752e4b0e70525682185b0dc13e201488e90d3b0453f6f3ea02655ba9fb6136"
+    }
+  ],
+  "total": 7,
+  "passed": 7,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Native preview decodes the actual atlas and reproduces the selected PNG pixels",
+      "pass": true,
+      "evidence": {
+        "width": 384,
+        "height": 384,
+        "rgbaSha256": "e25ca51a30857aecd961aaca887e22cebd61a0e671b51bc19edb327997af4095",
+        "selected": "rerev-ooze--em1000_em1000_BA_1--right",
+        "playing": false,
+        "options": 220,
+        "edition": "Port HD/PC (2013) ; la géométrie et les mouvements de la version 3DS (2012) ne sont pas certifiés"
+      }
+    },
+    {
+      "name": "Full native playback crosses atlas cells smoothly while maintaining a bounded rolling cache",
+      "pass": true,
+      "evidence": {
+        "nominalSourceSampleRate": 60,
+        "actualDistinctObservedFrames": 68,
+        "maximumFrame": 68,
+        "cache": 4,
+        "decodedPixels": 14745600,
+        "benchmarkScope": "Headless functional sampling only; no physical-device frame-rate certification."
+      }
+    },
+    {
+      "name": "Main, classic and voluntary-evolution mounts preserve default source editions and old runtime APIs",
+      "pass": true,
+      "evidence": {
+        "mounts": [
+          "/modules/versus.html",
+          "/catalog-duel.html",
+          "/modules/fidelity-r30/evolutions/index.html"
+        ],
+        "controlsPerMount": 1,
+        "documentaryEditionDefaultPromotions": 0,
+        "generatedAliasesPreserved": true
+      }
+    },
+    {
+      "name": "Explicit native source-variant selection animates idle artwork using the actual duel clock without changing replay data",
+      "pass": true,
+      "evidence": {
+        "selectedVariant": "rerev-ooze--pc-hd2013-neutral",
+        "expectedVariant": "rerev-ooze--pc-hd2013-neutral",
+        "uid": "rerev-ooze",
+        "frame": 1,
+        "actorPreserved": true,
+        "replayPreserved": true,
+        "nativeAnimatedDraws": 1,
+        "idleState": "idle",
+        "action": "observed-neutral-loop",
+        "sourceActionCertified": false,
+        "sourceEdition": "Port HD/PC (2013) ; la géométrie et les mouvements de la version 3DS (2012) ne sont pas certifiés",
+        "persistedAcrossReload": false
+      }
+    },
+    {
+      "name": "The actual exact-edition native stance remains static and preserves attack fallback",
+      "pass": true,
+      "evidence": {
+        "id": "re0-stinger--native-re0-stinger-gc-r26-1--90",
+        "uid": "re0-stinger",
+        "neutralDraws": 1,
+        "animatedDraws": 0,
+        "attackFallbacks": 1
+      }
+    },
+    {
+      "name": "Unknown deep links fail explicitly and small-screen preview remains readable with keyboard seek",
+      "pass": true,
+      "evidence": {
+        "scrollWidth": 320,
+        "width": 320,
+        "frame": 1,
+        "playing": false,
+        "focused": "seek"
+      }
+    },
+    {
+      "name": "Actual PNG corruption is refused and pagehide releases all decoded source images",
+      "pass": true,
+      "evidence": {
+        "corruptAtlasDisplayed": false,
+        "cachedAfterHide": 0
+      }
+    }
+  ]
+}

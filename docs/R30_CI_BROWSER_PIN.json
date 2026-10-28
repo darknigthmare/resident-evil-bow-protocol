@@ -1,0 +1,12 @@
+{
+  "schema": "re.bow.ci-native-browser-r30/1",
+  "version": "154.0.8037.57",
+  "localBrowser": "Chromium154.0.8037.57 Debian13",
+  "ciBrowser": "Chrome for Testing154.0.8037.57",
+  "metadataSource": "https://api.github.com/repos/GoogleChromeLabs/chrome-for-testing/contents/data/known-good-versions-with-downloads.json",
+  "metadataResponseSha256": "4c40031592c73211ad406d5d063a887422a27fd0c84d7f527502385400979160",
+  "linux64Download": "https://storage.googleapis.com/chrome-for-testing-public/154.0.8037.57/linux64/chrome-linux64.zip",
+  "installer": "@puppeteer/browsers@2.10.10",
+  "reason": "Native rerender comparisons retain exact PNG bytes; selecting the latest host browser or the bundled Playwright156 would change the renderer version.",
+  "scope": "Public version/download metadata verified; local tests used installed Chromium154, remote Chrome for Testing execution remains for Actions."
+}

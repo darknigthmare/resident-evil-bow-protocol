@@ -1,0 +1,64 @@
+{
+  "schema": "re.bow.ci-validation-r30/1",
+  "passed": 5,
+  "failed": 0,
+  "counts": {
+    "workflows": 6,
+    "bash_blocks": 86,
+    "python_blocks": 3,
+    "javascript_blocks": 10
+  },
+  "checks": [
+    {
+      "name": "All six workflows parse with pinned actions, read-only permissions and existing script paths",
+      "pass": true
+    },
+    {
+      "name": "All actual Bash, Python and JavaScript workflow blocks compile",
+      "pass": true
+    },
+    {
+      "name": "Historical link, source-hash and conservation assertions retain their exact published snapshots",
+      "pass": true
+    },
+    {
+      "name": "Current R30 provenance executes all three source lots, avatars, runtime, integration and original engine assertions",
+      "pass": true
+    },
+    {
+      "name": "Current head has four independently executed browser suites including actual native rerenders",
+      "pass": true
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": ".github/workflows/source-fidelity-r25.yml",
+      "sha256": "97556c256ce0e1178787e055c4dff8dcca5356e01c6a47be27ed604c3132d4ef"
+    },
+    {
+      "path": ".github/workflows/source-fidelity-r26.yml",
+      "sha256": "363ee7c78fae45505ab4bdf024c03eaf1661248b3a10164e3f7b1ead2b49c56e"
+    },
+    {
+      "path": ".github/workflows/source-fidelity-r27.yml",
+      "sha256": "353c2b55ccdf9319c49e072044d7a8248529cbd4ac3167673aead7961984c61a"
+    },
+    {
+      "path": ".github/workflows/source-fidelity-r28.yml",
+      "sha256": "805692a224f37efe231ed23fd44ee031d6d1c6fa9e651459c645d578b807c375"
+    },
+    {
+      "path": ".github/workflows/source-fidelity-r29.yml",
+      "sha256": "f275c54c8432b6f1dc42b82788d458a8ee5c3c866e03562e6c40b7eca40f6d51"
+    },
+    {
+      "path": ".github/workflows/source-fidelity-r30.yml",
+      "sha256": "0b0ae5c0fe2c268d01f5c7015edfdea51351b166092d2d79642d63bbec5e2c62"
+    },
+    {
+      "path": "scripts/validate-fidelity-ci-r30.py",
+      "sha256": "7fbebe7c9a5c6d0d2f0a9dcab0ee5258a28f33be506d1bed01dcc07bfdd8b15d"
+    }
+  ],
+  "scope": "Actual local workflow parsing and command compilation. Remote Actions execution is separate."
+}

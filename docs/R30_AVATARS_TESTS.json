@@ -1,0 +1,107 @@
+{
+  "schema": "re.bow.selection-avatars-tests-r30/1",
+  "startedAt": "2026-10-28T08:09:32.075547+00:00",
+  "finishedAt": "2026-10-28T08:09:35.392003+00:00",
+  "scope": "Actual retained portrait and source-model byte provenance, exact-UID partition and reproduction. Source reference portraits do not certify raw game asset authenticity, hidden anatomy or animation.",
+  "testsRun": 6,
+  "passed": 6,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "test_selection_avatars_r30.SelectionAvatarTests.test_all_actual_images_are_sha_bound_decoded_and_unedited",
+      "pass": true
+    },
+    {
+      "name": "test_selection_avatars_r30.SelectionAvatarTests.test_all_builder_inputs_are_current",
+      "pass": true
+    },
+    {
+      "name": "test_selection_avatars_r30.SelectionAvatarTests.test_full_catalogue_partition_and_no_generated_fallback",
+      "pass": true
+    },
+    {
+      "name": "test_selection_avatars_r30.SelectionAvatarTests.test_manifest_reproduces_from_retained_sources",
+      "pass": true
+    },
+    {
+      "name": "test_selection_avatars_r30.SelectionAvatarTests.test_named_index_only_portraits_have_35_actual_page_captures",
+      "pass": true
+    },
+    {
+      "name": "test_selection_avatars_r30.SelectionAvatarTests.test_native_2d_thumbnails_are_separate_from_derived_model_views",
+      "pass": true
+    }
+  ],
+  "counts": {
+    "catalogueIdentities": 389,
+    "avatars": 388,
+    "missing": 1,
+    "nativeMenuThumbnails": 7,
+    "nativeModelRenders": 7,
+    "reviewedSecondaryReferences": 20,
+    "documentedSecondaryReferences": 354,
+    "generatedAvatars": 0
+  },
+  "inputs": [
+    {
+      "path": "data/asset-sources.json",
+      "sha256": "bd7e0f920302c564c1509dc59886b38707549165d13c6ecab61261f8684b1ec4"
+    },
+    {
+      "path": "data/catalog-portraits.json",
+      "sha256": "e4c5dd2a70a9269ba371c7af8251384e9e85178943bd7a1f656f206adacb94c1"
+    },
+    {
+      "path": "modules/fidelity-r23/visual/manifest.json",
+      "sha256": "799a298e9ffd1ea6898864773ec20915a42ba3a1a507332a75904ac46c779938"
+    },
+    {
+      "path": "modules/fidelity-r27/sprites/jobs.json",
+      "sha256": "4cebee5e2c5d1f992fadfc5f4bdf36e89df59f146af7e5b3ae065e8e6bfd4f88"
+    },
+    {
+      "path": "modules/fidelity-r30/native/new-sources/renders.json",
+      "sha256": "094d5cba43ebb1175be3f3abd04724dde211cb7f32b88b070692d4ef1c2dc252"
+    },
+    {
+      "path": "modules/fidelity-r30/native/other-games/portrait-renders.json",
+      "sha256": "8f22cbdd5eed281b4b639e6b1fb1e691f89be06ee32503d71a5c06e0fce5e03a"
+    },
+    {
+      "path": "modules/fidelity-r30/native/other-games/renders.json",
+      "sha256": "7b7f0e0399b258118aca6444fc21f8c252ceaa14f8b98d9b635bc528e5b92953"
+    },
+    {
+      "path": "modules/fidelity-r30/selection/avatars.css",
+      "sha256": "f6ec8dd1f39686a8e4b013a966d448e0c79d336b72dfb5338bf7061cd57883cd"
+    },
+    {
+      "path": "modules/fidelity-r30/selection/avatars.js",
+      "sha256": "c7963e20a232fbca37beeb9c276a3f58b4ba1fbcd6f9567a8511d37aa43c5efc"
+    },
+    {
+      "path": "modules/fidelity-r30/selection/manifest.json",
+      "sha256": "32fc768c8a91616a37ed7f67d767c4e916ac1ddf0567bca60c3f62dca4d91b8c"
+    },
+    {
+      "path": "modules/fidelity-r30/selection/source-pages.json",
+      "sha256": "eacf5895d19c5e9d66e653700521314c07feddd9517192e56c68e9f2b040c087"
+    },
+    {
+      "path": "modules/source-motion-r22/native-portraits.json",
+      "sha256": "6b4e9715dfaa981d2df5f92a081c54f598fd8ce1e89b435cc8d5cb119f9a1d34"
+    },
+    {
+      "path": "scripts/build-selection-avatars-r30.py",
+      "sha256": "0604525cabcc1d55f45b9a16e891c78db47081c3ffc35f69a617d2cc3cf7ecd7"
+    },
+    {
+      "path": "scripts/verify-selection-avatars-r30.py",
+      "sha256": "d10b706efd2d4d72953cbcd3cf8112f4b96e96290b7c24dd451434a922cd1ce0"
+    },
+    {
+      "path": "tests/test_selection_avatars_r30.py",
+      "sha256": "9a5d1c1efc6029888122192f9179aa244aa87e6847f9c1fbc043f075ae3b5920"
+    }
+  ]
+}

@@ -21,6 +21,8 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           persist-credentials: false
+          # Historical assertions retain their published source and link targets.
+          ref: 06910922109445ef387414874d09add2839e70a8
           fetch-depth: 0
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
@@ -136,6 +138,8 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           persist-credentials: false
+          # Historical assertions retain their published source and link targets.
+          ref: 06910922109445ef387414874d09add2839e70a8
       - name: Invalidate the selected report before installing tools
         run: |
           mkdir -p '${{ matrix.evidence }}'
@@ -193,6 +197,8 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           persist-credentials: false
+          # Historical assertions retain their published source and link targets.
+          ref: 06910922109445ef387414874d09add2839e70a8
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: '22.16.0'

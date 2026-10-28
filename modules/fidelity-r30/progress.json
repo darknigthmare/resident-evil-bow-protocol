@@ -1,0 +1,453 @@
+{
+  "summary": "388 avatars exact-UID, 204 vues natives et 16 séquences fluides complètes ; 5 familles de boucles neutres sources observées, dont 4 variantes optionnelles jouables. 0 idles natifs qualifiés pour la cible ; 17 chantiers ouverts.",
+  "statistics": [
+    {
+      "label": "avatars attribués à leur UID",
+      "value": 388,
+      "scope": "Images sources de sélection, distinctes des corps et animations."
+    },
+    {
+      "label": "vignettes de menu natives extraites",
+      "value": 7,
+      "scope": "Sous-ensemble des avatars ; les références secondaires restent distinguées."
+    },
+    {
+      "label": "avatars dérivés de modèles natifs exacts",
+      "value": 7,
+      "scope": "Projection nouvelle du modèle source, distincte d’une image 2D originale extraite du jeu."
+    },
+    {
+      "label": "avatars encore ouverts",
+      "value": 1,
+      "scope": "Chaque manque reste explicite par incarnation."
+    },
+    {
+      "label": "vues statiques natives dérivées",
+      "value": 204,
+      "scope": "Les poses de base non combattantes restent des références."
+    },
+    {
+      "label": "postures natives de combat admissibles",
+      "value": 4,
+      "scope": "Édition, corps entier, pose combattante et côté qualifiés."
+    },
+    {
+      "label": "séquences natives fluides complètes",
+      "value": 16,
+      "scope": "Durée source complète à 30 images/s au moins ; geste et boucle qualifiés séparément."
+    },
+    {
+      "label": "images natives dérivées livrées",
+      "value": 3314,
+      "scope": "Rendus des sources, distincts des images originales du moteur du jeu."
+    },
+    {
+      "label": "idles natifs complets vérifiés",
+      "value": 0,
+      "scope": "Geste idle et continuité vérifiés, admissibles pour la bonne édition."
+    },
+    {
+      "label": "familles de boucles neutres sources observées",
+      "value": 5,
+      "scope": "Boucles revues de l’édition source ; attribution originale du geste non certifiée, édition cible non admise."
+    },
+    {
+      "label": "variantes neutres optionnelles jouables",
+      "value": 4,
+      "scope": "Activation volontaire sur les acteurs existants ; les rencontres contextuelles ne deviennent pas des combattants."
+    },
+    {
+      "label": "incarnations sans idle natif qualifié",
+      "value": 389,
+      "scope": "Une pose statique ne réduit pas ce manque."
+    },
+    {
+      "label": "incarnations sans posture native admissible",
+      "value": 387,
+      "scope": "Les variantes d’une autre édition restent séparées."
+    },
+    {
+      "label": "entrées d’édition distincte non admises",
+      "value": 180,
+      "scope": "Aucune promotion silencieuse vers l’édition cible."
+    },
+    {
+      "label": "chantiers ouverts",
+      "value": 17,
+      "scope": "Aucune clôture automatique par présence de fichiers."
+    }
+  ],
+  "resources": [
+    {
+      "href": "native/index.html",
+      "title": "Sprites et mouvements natifs",
+      "label": "Comparer les sources et leurs qualifications"
+    },
+    {
+      "href": "selection/manifest.json",
+      "title": "Avatars de sélection",
+      "label": "Consulter les portraits attribués par UID"
+    },
+    {
+      "href": "../../docs/BOW_FIDELITE_R29.xlsx",
+      "title": "Historique R29",
+      "label": "Conserver les 49 feuilles antérieures"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "R20-09",
+      "title": "Rig par membre et animations",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "16 séquences natives complètes et fluides, 3314 images dérivées. 0 idles natifs complets qualifiés.",
+        "5 familles de boucles neutres sont observées dans l’édition source, dont 4 variantes activables volontairement sur des acteurs existants. Les contextes ne deviennent pas jouables ; l’action originale et l’édition cible restent non certifiées.",
+        "389 incarnations sans idle natif complet qualifié restent explicitement ouvertes."
+      ],
+      "remaining": [
+        "389 incarnations sans idle natif complet vérifié.",
+        "Attribution des gestes, continuité native, équipements, orientations et édition cible restent vérifiés séparément."
+      ],
+      "evidence": [
+        {
+          "href": "native/index.html",
+          "label": "Séquences natives et qualifications"
+        }
+      ],
+      "r30_new_implementation": true
+    },
+    {
+      "id": "R20-10",
+      "title": "Étendre les sprites au catalogue",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "204 vues natives dérivées ; 4 postures de combat admissibles. 388 avatars exact-UID documentés.",
+        "Les 363 images générées R29, les 22 refus historiques et le refus de révision Tyrant restent conservés séparément des nouvelles sources natives."
+      ],
+      "remaining": [
+        "211 corps de combattants et 40 contextes restent conjointement non qualifiés ; les 22 refus sont conservés.",
+        "Équipements, autres phases, deux orientations et cycles complets de combat encore non vérifiés."
+      ],
+      "evidence": [
+        {
+          "href": "native/manifest.json",
+          "label": "Registre natif R30"
+        },
+        {
+          "href": "selection/manifest.json",
+          "label": "Avatars par incarnation"
+        }
+      ],
+      "r30_new_implementation": true
+    },
+    {
+      "id": "G-PERIMETRE",
+      "title": "Périmètre et alias",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Acquis antérieurs conservés dans leur périmètre documenté."
+      ],
+      "remaining": [
+        "Revue exhaustive des alias, modes, DLC et extensions ; corriger chaque ambiguïté de support ou de forme avec une preuve."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r29/../fidelity-r28/evolutions/graph.json",
+          "label": "Familles, formes et éditions · R28 · historique R29"
+        },
+        {
+          "href": "../fidelity-r29/../fidelity-r28/canonical/index.html",
+          "label": "Couverture documentaire cumulative · R28 · historique R29"
+        }
+      ],
+      "r30_new_implementation": false
+    },
+    {
+      "id": "G-PREUVES",
+      "title": "Preuves et revue canonique",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Les nouveaux manifestes relient chaque UID aux fichiers, empreintes, édition et observations réellement fournis."
+      ],
+      "remaining": [
+        "Captures originales et séquences horodatées de chaque geste, phase et transformation ; comparaison indépendante aux paquets et banques bruts."
+      ],
+      "evidence": [
+        {
+          "href": "native/manifest.json",
+          "label": "Fichiers et périmètres des lots natifs"
+        },
+        {
+          "href": "selection/manifest.json",
+          "label": "Origines des portraits"
+        }
+      ],
+      "r30_new_implementation": true
+    },
+    {
+      "id": "G-COMMANDES",
+      "title": "Répertoire complet des commandes",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Acquis antérieurs conservés dans leur périmètre documenté."
+      ],
+      "remaining": [
+        "Répertoire officiel complet, action identifiée par séquence et correspondance aux commandes ; dépasser dix slots lorsque le répertoire le demande."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r29/../fidelity-r28/evolutions/graph.json",
+          "label": "Évolutions conservées · historique R29"
+        }
+      ],
+      "r30_new_implementation": false
+    },
+    {
+      "id": "G-MANCHES",
+      "title": "Fin de manche et résultat",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Acquis antérieurs conservés dans leur périmètre documenté."
+      ],
+      "remaining": [
+        "Victoire, défaite, égalité et leurs séquences, dessins et sons officiels par incarnation ; recette KO et conclusions artistiques séparée."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r29/../fidelity-r28/../../docs/R28_EVOLUTIONS_ENGINE_TESTS.json",
+          "label": "Match et KO naturels avec évolution · R28 · historique R29"
+        }
+      ],
+      "r30_new_implementation": false
+    },
+    {
+      "id": "G-CINEMATIQUES",
+      "title": "Intros et outros",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Acquis antérieurs conservés dans leur périmètre documenté."
+      ],
+      "remaining": [
+        "Intros, outros et bande sonore complète par sujet ; attribution de l’action, de la phase et des raccords du jeu d’origine."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r29/../fidelity-r28/../../docs/R28_EVOLUTIONS_UI.md",
+          "label": "Portée de la présentation · R28 · historique R29"
+        }
+      ],
+      "r30_new_implementation": false
+    },
+    {
+      "id": "G-REPLAYS",
+      "title": "Compatibilité des replays",
+      "category": "functions",
+      "status": "EN COURS",
+      "advances": [
+        "Acquis antérieurs conservés dans leur périmètre documenté."
+      ],
+      "remaining": [
+        "Autres révisions et contrats historiques, campagnes et conclusions artistiques ; ne pas lire un ancien contrat sous un moteur courant."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r29/../fidelity-r28/../../docs/R28_EVOLUTIONS_ENGINE_TESTS.json",
+          "label": "Replays reconstruits · R28 · historique R29"
+        },
+        {
+          "href": "../fidelity-r29/../fidelity-r28/../../docs/R28_EVOLUTIONS_BROWSER.json",
+          "label": "Avant et après la mutation · R28 · historique R29"
+        }
+      ],
+      "r30_new_implementation": false
+    },
+    {
+      "id": "G-SAUVES",
+      "title": "Sauvegardes et restauration",
+      "category": "functions",
+      "status": "EN COURS",
+      "advances": [
+        "Acquis antérieurs conservés dans leur périmètre documenté."
+      ],
+      "remaining": [
+        "Restauration du stockage réel du jeu, cloud et reprises après interruption hors de la base isolée ; l’outil R26 ne certifie pas ces usages."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r29/../fidelity-r28/../../docs/R28_EVOLUTIONS_UI.md",
+          "label": "Fichiers R28 hors progression · R28 · historique R29"
+        }
+      ],
+      "r30_new_implementation": false
+    },
+    {
+      "id": "G-VICTIMES",
+      "title": "Compatibilité des conclusions",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Acquis antérieurs conservés dans leur périmètre documenté."
+      ],
+      "remaining": [
+        "Toutes les associations admissibles et leurs conclusions finales ; revue morphologique, artistique et séquences d’origine."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r29/../fidelity-r28/evolutions/graph.json",
+          "label": "Transitions et rencontres retenues · R28 · historique R29"
+        }
+      ],
+      "r30_new_implementation": false
+    },
+    {
+      "id": "G-ECHELLE",
+      "title": "Dimensions et points faibles",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Acquis antérieurs conservés dans leur périmètre documenté."
+      ],
+      "remaining": [
+        "Mesures primaires, tailles corporelles et collision, géants et aquatiques ; zéro échelle physique certifiée."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r29/dossier-additions.json",
+          "label": "Vues et périmètres des modèles · historique R29"
+        }
+      ],
+      "r30_new_implementation": false
+    },
+    {
+      "id": "G-RENDU",
+      "title": "Sprites, clips et asymétries",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "La projection 2D des modèles et courbes natifs garde un cadrage fixe. Les séquences non attribuées et variantes d’édition restent documentaires."
+      ],
+      "remaining": [
+        "Sprites définitifs, deux orientations, asymétries, mouvements, impacts et transformations de tout le catalogue ; rendu original du jeu non certifié."
+      ],
+      "evidence": [
+        {
+          "href": "native/index.html",
+          "label": "Examiner les postures et mouvements"
+        },
+        {
+          "href": "combat/native-runtime.js",
+          "label": "Contrat du rendu natif"
+        }
+      ],
+      "r30_new_implementation": true
+    },
+    {
+      "id": "G-PERF",
+      "title": "Performances sur appareils cibles",
+      "category": "validation",
+      "status": "EN COURS",
+      "advances": [
+        "Les images et animations sont chargées dans les bornes du lecteur ; les résultats appareils physiques gardent leurs critères propres."
+      ],
+      "remaining": [
+        "Appareils physiques, GPU cibles, budgets mémoire globaux et longues sessions de combat ; le rendu logiciel cloud ne les certifie pas."
+      ],
+      "evidence": [
+        {
+          "href": "combat/native-runtime.js",
+          "label": "Chargement borné des images et animations"
+        }
+      ],
+      "r30_new_implementation": true
+    },
+    {
+      "id": "G-ACCESS",
+      "title": "Accessibilité et appareils",
+      "category": "validation",
+      "status": "EN COURS",
+      "advances": [
+        "Les avatars de sélection conservent leur identité et leur rôle de portrait ; les groupes et commandes existants restent soumis à la recette navigateur."
+      ],
+      "remaining": [
+        "Lecteurs d’écran réels, appareils tactiles et manettes physiques, contenus hors écran et conformité WCAG complète."
+      ],
+      "evidence": [
+        {
+          "href": "selection/manifest.json",
+          "label": "Identités et portraits de sélection"
+        }
+      ],
+      "r30_new_implementation": true
+    },
+    {
+      "id": "G-AUDIO",
+      "title": "Voix et sons par incarnation",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Acquis antérieurs conservés dans leur périmètre documenté."
+      ],
+      "remaining": [
+        "Écoute indépendante, locuteur et action/phase, comparaison aux banques brutes, cris et mixage final ; ne pas affecter automatiquement ces sons au combat."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r29/../fidelity-r28/audio/index.html",
+          "label": "Écoute volontaire et attributions séparées · R28 · historique R29"
+        },
+        {
+          "href": "../fidelity-r29/../fidelity-r28/../../docs/R28_AUDIO.md",
+          "label": "Archives, doublons et limites · R28 · historique R29"
+        }
+      ],
+      "r30_new_implementation": false
+    },
+    {
+      "id": "G-RECETTE",
+      "title": "Recette cumulative",
+      "category": "validation",
+      "status": "EN COURS",
+      "advances": [
+        "Les recettes R30 distinguent fichiers, admission au combat, lecture fluide, sélection et conservation historique."
+      ],
+      "remaining": [
+        "Toutes les combinaisons, commandes, campagnes, KO, séquences artistiques et validations sur appareils cibles."
+      ],
+      "evidence": [
+        {
+          "href": "../../docs/R30_VALIDATION.json",
+          "label": "Recette R30 par périmètre"
+        }
+      ],
+      "r30_new_implementation": true
+    },
+    {
+      "id": "G-LIVRAISON",
+      "title": "Livraisons et suivi",
+      "category": "validation",
+      "status": "EN COURS",
+      "advances": [
+        "Les 49 feuilles R29 et leurs relations sont conservées ; sept feuilles R30 distinguent les avatars, poses natives et vrais cycles idle."
+      ],
+      "remaining": [
+        "Revue humaine et exécution CI de la nouvelle livraison ; tous les chantiers restent ouverts tant que leurs critères manquent de preuves."
+      ],
+      "evidence": [
+        {
+          "href": "index.html",
+          "label": "Suivi des 17 chantiers R30"
+        }
+      ],
+      "r30_new_implementation": true
+    }
+  ],
+  "schema": "re.bow.fidelity-progress/1",
+  "release": "R30"
+}

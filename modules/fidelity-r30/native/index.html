@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sprites et mouvements natifs — R30</title><link rel="stylesheet" href="style.css"></head>
+<body><a class="skip" href="#nativeStage">Aller au mouvement</a><header><a href="../index.html">← SUIVI R30</a><a href="../../../modules/versus.html">SÉLECTION</a></header>
+<main><h1>Sprites et mouvements natifs en 2D</h1><p>Vues rendues depuis les modèles et les courbes natifs publiés. Les éditions, les poses statiques et les séquences complètes sont indiquées pour chaque sujet.</p>
+<p id="status" role="status" aria-live="polite">Vérification des lots natifs…</p><button id="retry" type="button" hidden>Réessayer</button>
+<label for="subject">Sujet, vue et mouvement</label><select id="subject" disabled></select>
+<section aria-labelledby="sequenceHeading"><h2 id="sequenceHeading">Vue native dérivée</h2><p id="edition"></p><p id="qualification"></p>
+<div class="stage" id="nativeStage"><canvas id="frame" width="384" height="384" role="img" aria-label="Vue native du sujet sélectionné"></canvas></div>
+<p id="position" aria-live="off"></p><p id="assetStatus" role="status" aria-live="polite"></p>
+<div class="controls"><button id="previous" type="button" disabled>Image précédente</button><button id="play" type="button" disabled>Lire le mouvement complet</button><button id="next" type="button" disabled>Image suivante</button></div>
+<label for="seek">Image du mouvement</label><input id="seek" type="range" min="0" max="0" value="0" step="1" disabled>
+<label class="loop"><input id="loop" type="checkbox"> Répéter la séquence source</label>
+<p><a id="dossier">Dossier du sujet</a><span id="sourceHolder" hidden> · <a id="source" target="_blank" rel="noopener noreferrer">Publication source</a></span></p>
+<details><summary>Informations sur la fidélité</summary><p id="scope"></p><p>La caméra reste fixe pendant le mouvement. Les images ne sont pas retournées en miroir. La lecture est volontaire et s’arrête en quittant cette page. Le rendu dérivé ne certifie pas l’éclairage, les collisions ni les timings du moteur d’origine.</p></details>
+</section></main><script src="../combat/native-runtime.js"></script><script type="module" src="page.js"></script></body></html>
