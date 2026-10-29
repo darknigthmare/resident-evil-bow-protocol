@@ -39,8 +39,8 @@ export function runGuardCases(snapshot, {writeReport = true, origin = 'supplied 
   test('The reviewed current files and historical command split are accepted', () => {
     const result = validateSnapshot(snapshot);
     assert.equal(result.published_baseline, BASE_COMMIT);
-    assert.equal(result.modified.length, 16);
-    assert.equal(result.added.length, Object.keys(R32_FILES).length - 16 -
+    assert.equal(result.modified.length, 17);
+    assert.equal(result.added.length, Object.keys(R32_FILES).length - 17 -
       (snapshot.current.has('docs/GAMEDEV_APPLIED_R32.json') ? 0 : 1));
   });
   rejected('An unrelated engine change is refused', fixture => {
@@ -107,6 +107,18 @@ export function runGuardCases(snapshot, {writeReport = true, origin = 'supplied 
     const file = 'modules/fidelity-r28/evolutions/duel.js';
     fixture.current.set(file, fixture.baseline.get(file));
   }, /Only the reviewed evolution focus and numpad boundaries/);
+  rejected('The gallery selection browser regression must remain present', fixture => {
+    fixture.changes = fixture.changes.filter(value => value.file !== 'tests/browser-sprite-gallery-r32.mjs');
+    fixture.current.delete('tests/browser-sprite-gallery-r32.mjs');
+  }, /Missing required R32 change/);
+  rejected('Unrelated changes to the gallery controller are refused', fixture => {
+    const file = 'modules/fidelity-r31/sprites/page.js';
+    fixture.current.set(file, fixture.current.get(file) + '\nwindow.unreviewedGallery=true;\n');
+  }, /Only the reviewed gallery selection and initialization boundaries/);
+  rejected('The original gallery races cannot replace the correction', fixture => {
+    const file = 'modules/fidelity-r31/sprites/page.js';
+    fixture.current.set(file, fixture.baseline.get(file));
+  }, /Only the reviewed gallery selection and initialization boundaries/);
   rejected('The original lifecycle defect cannot be delivered unchanged', fixture => {
     fixture.current.set('modules/fidelity-r31/performance/page.js',
       fixture.baseline.get('modules/fidelity-r31/performance/page.js'));

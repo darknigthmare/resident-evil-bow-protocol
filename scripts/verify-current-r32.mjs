@@ -33,6 +33,7 @@ export const R32_FILES = Object.freeze({
   'modules/fidelity-r31/motion/page.js': 'M',
   'modules/fidelity-r31/audio/style.css': 'M',
   'modules/fidelity-r31/sprites/style.css': 'M',
+  'modules/fidelity-r31/sprites/page.js': 'M',
   'package.json': 'M',
   '.github/workflows/ci.yml': 'M',
   '.github/workflows/source-fidelity-r23.yml': 'M',
@@ -57,6 +58,7 @@ export const R32_FILES = Object.freeze({
   'tests/browser-reflow-r32.mjs': 'A',
   'tests/browser-motion-input-r32.mjs': 'A',
   'tests/browser-evolution-input-r32.mjs': 'A',
+  'tests/browser-sprite-gallery-r32.mjs': 'A',
   '.github/workflows/gamedev-r32.yml': 'A',
 });
 const OPTIONAL = new Set(['docs/GAMEDEV_APPLIED_R32.json']);
@@ -128,6 +130,29 @@ export function expectedMotion(baseline) {
   return source;
 }
 
+export function expectedGallery(baseline) {
+  let source = baseline;
+  source = replaceOnce(source,
+    "let entries=[],selected=null,generation=0,visible=true;\n",
+    "let entries=[],selected=null,generation=0,visible=true,initialization=0;\n", "gallery initialization owner");
+  source = replaceOnce(source,
+    " const token=++generation;selected=key;state.selected=entry.id;state.variant=entry.variantId||null;state.displayed=null;\n",
+    " const token=++generation;selected=key;state.selected=entry.id;state.variant=entry.variantId||null;state.displayed=null;state.failed=false;state.frames=0;\n", "gallery fresh selection state");
+  source = replaceOnce(source,
+    " catch(error){if(token===generation&&visible){state.failed=true;$('message').textContent='Image refusée ou indisponible : '+error.message;}}\n",
+    " catch(error){if(token!==generation||!visible)return;state.failed=true;$('message').textContent='Image refusée ou indisponible : '+error.message;}\n", "gallery stale rejection boundary");
+  source = replaceOnce(source,
+    "try{\n if(!api||!await api.ready())throw Error('Registre R31 indisponible');\n",
+    "async function initialize(){\n const token=++initialization;state.failed=false;\n $('message').textContent='Chargement des illustrations…';\n try{\n const ready=api&&await api.ready();if(token!==initialization||!visible)return;\n if(!ready)throw Error('Registre R31 indisponible');\n", "gallery restartable registry");
+  source = replaceOnce(source,
+    "}catch(error){state.failed=true;$('message').textContent='Chargement refusé : '+error.message;}\n",
+    " }catch(error){if(token!==initialization||!visible)return;state.failed=true;$('message').textContent='Chargement refusé : '+error.message;}\n}\n", "gallery stale initialization boundary");
+  source = replaceOnce(source,
+    "addEventListener('pagehide',()=>{visible=false;generation++;});addEventListener('pageshow',()=>{if(!visible){visible=true;if(selected)choose(selected);}});\n",
+    "addEventListener('pagehide',()=>{visible=false;generation++;initialization++;});addEventListener('pageshow',()=>{if(!visible){visible=true;if(state.ready&&selected)choose(selected);else initialize();}});\nawait initialize();\n", "gallery early lifecycle listeners");
+  return source;
+}
+
 export function historicalCommand(evidence, command) {
   return 'python3 scripts/run-published-release-r29.py --commit ' + BASE_COMMIT +
     ' --evidence qa-gamedev-r32/' + evidence +
@@ -170,6 +195,7 @@ export function expectedPackage(baseline) {
     'node tests/browser-reflow-r32.mjs',
     'node tests/browser-motion-input-r32.mjs',
     'node tests/browser-evolution-input-r32.mjs',
+    'node tests/browser-sprite-gallery-r32.mjs',
   ].join(' && ');
   return {...baseline, scripts};
 }
@@ -362,6 +388,8 @@ export function validateSnapshot({baseline, current, changes}) {
     'Only the reviewed evolution focus and numpad boundaries are permitted');
   assert.equal(current.get('modules/fidelity-r31/motion/page.js'), expectedMotion(baseline.get('modules/fidelity-r31/motion/page.js')),
     'Only the reviewed motion keyboard boundaries are permitted');
+  assert.equal(current.get('modules/fidelity-r31/sprites/page.js'), expectedGallery(baseline.get('modules/fidelity-r31/sprites/page.js')),
+    'Only the reviewed gallery selection and initialization boundaries are permitted');
   assert.notEqual(current.get('modules/fidelity-r31/performance/page.js'),
     baseline.get('modules/fidelity-r31/performance/page.js'), 'The lifecycle fix must be delivered');
   for (const file of Object.keys(R32_FILES).filter(value => value.startsWith('.github/workflows/'))) {
@@ -375,10 +403,10 @@ export function validateSnapshot({baseline, current, changes}) {
     added: changes.filter(value => value.status === 'A').map(value => value.file).sort(),
     assertions: [
       'Only explicitly reviewed R32 paths changed; old tests, data, assets, reports and replay contracts retain published bytes.',
-      'Input, menu, motion, evolution focus/numpad and two heading style changes match the reviewed baseline transformations; catalogue controls/focus match the reviewed R32 source hash.',
+      'Input, menu, motion, evolution focus/numpad, gallery lifecycle and two heading style changes match the reviewed baseline transformations; catalogue controls/focus match the reviewed R32 source hash.',
       'All 38 remaining original npm verify commands stay on current, in their original order.',
       'Both npm preservation suites and the R25/R26 frozen integration suites run unchanged on the exact published R31 snapshot.',
-      'All eight R32 browser suites, the unchanged R28 evolution regression and unchanged R31 browser recipes stay current; R31 provenance/build use the published snapshot.',
+      'All nine R32 browser suites, the unchanged R28 evolution regression and unchanged R31 browser recipes stay current; R31 provenance/build use the published snapshot.',
     ],
     scope: 'Source and pipeline integrity. Behavioural results are reported by their separate executed suites.',
   };

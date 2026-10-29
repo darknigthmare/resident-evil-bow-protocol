@@ -117,6 +117,8 @@ Le lecteur de mouvements R31 applique également cette distinction : lecture/pau
 
 Le mode Combat avec évolutions possède son propre contrôleur de page et deux lecteurs de manette : commandes de combat/Start et évolution/Select. Une correction du catalogue doit donc être vérifiée séparément sur ce montage. La recette `tests/browser-evolution-input-r32.mjs` couvre le retour de focus, les boutons et les évolutions volontaires, puis rejoue l'ancienne recette R28 intacte sur le code courant en conservant son ancien rapport. Les contrats scellés du moteur restent distincts de ce contrôleur d'interface.
 
+La galerie d'illustrations a deux attentes distinctes : la préparation du registre et le chargement du choix courant. Chacune doit être invalidée à la sortie de page ; une réponse dépassée, réussie ou refusée, ne doit plus modifier l'image, le message ou le lien de la sélection active. La recette `tests/browser-sprite-gallery-r32.mjs` contrôle ces courses, l'état de reprise et les activations natives ; les anciens tests R31 continuent de vérifier les médias réels séparément.
+
 ## 6. Utilisation lors des prochains travaux
 
 1. Partir de la version courante et de la demande précise, puis sélectionner les guides pertinents.

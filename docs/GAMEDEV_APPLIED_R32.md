@@ -115,6 +115,41 @@ La même commande rejoue aussi les **16 groupes de `tests/browser-evolutions-r28
 
 Les résultats effectifs appartiennent aux rapports CI du commit livré. Les comptes ci-dessus décrivent les critères de la recette avant son exécution, sans annoncer un succès anticipé. La garde complète autorise désormais **16 fichiers modifiés et 17 ajouts** par rapport à R31 ; ses **37 cas** conservent les refus de changements hors périmètre et ajoutent la protection du contrôleur Évolutions et de sa recette.
 
+## Complément R32 — sélection et reprise de la galerie d'illustrations
+
+La référence de départ est `1250b586509fb45de1a3d8efd24c73739733e418`. Ses **35 exécutions GitHub Actions sont terminées avec succès**, dont les [110 groupes comportementaux et 37 cas de garde R32](https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/40907338688) et la [QA générale avec build](https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/40907354609). Ces preuves concernent cette référence antérieure, pas le nouveau complément.
+
+### Défauts reproduits et correction
+
+Le guide `game-ui-ux` conduit ici à maintenir ensemble le choix affiché, son état et son lien. Dans `modules/fidelity-r31/sprites/page.js`, le rejet tardif d'un ancien chargement pouvait remettre son identité dans l'adresse alors qu'une autre illustration était déjà affichée. Le même effet était possible après une sortie de page. Une erreur restait également inscrite dans `state.failed` après un nouveau choix réussi, et `frames` conservait une image alors que la zone venait d'être vidée.
+
+La galerie n'installait enfin ses événements de sortie et de retour qu'après les attentes initiales. Une interruption pendant la préparation du registre ou le premier chargement pouvait donc laisser la page sans reprise. Le correctif installe ces événements avant les attentes, rend l'initialisation relançable et lui attribue un compteur distinct de celui des sélections. Un ancien résultat ne peut plus publier son état après une nouvelle initialisation.
+
+La modification fonctionnelle est limitée à **13 lignes ajoutées et 7 supprimées** du contrôleur. Une nouvelle sélection remet l'état d'erreur et le nombre d'images à zéro ; le succès ou l'échec dépassé quitte la fonction avant toute modification de l'adresse. Une erreur courante reste signalée avec ses références. Au retour, la page reprend le choix prêt ou relance la préparation encore incomplète.
+
+Le registre de décodage, son budget, les PNG, le manifeste, les variantes volontaires, le moteur et les replays ne sont pas modifiés. Une revue indépendante a vérifié l'ordre des événements du registre et la compatibilité des consommateurs existants.
+
+### Vérification locale exécutée
+
+La nouvelle recette `tests/browser-sprite-gallery-r32.mjs` sert les vrais HTML, CSS et contrôleur de galerie, et les métadonnées du manifeste inchangé. Seule la réponse du contrôleur change entre les phases avant et après. Son témoin provient du commit exact `1250b586`, avec empreinte SHA-256 imposée.
+
+| Recette | Avant : réussis / défauts attendus | Après : réussis / échecs |
+| --- | ---: | ---: |
+| Sélections asynchrones, reprise et commandes de galerie | **5 / 6** | **11 / 0** |
+| Garde complète du périmètre R32 | — | **40 / 0** |
+
+Résultat Chromium exécuté le 29 octobre 2026 : `complete: true`, aucune erreur de page, aucune ressource manquante et aucune modification de `localStorage` observées. Environnement local : Node `24.22.1`, Playwright `1.62.1`, Chromium `153.0.8010.0`. La garde est exécutée sur le vrai diff Git comparé à R31.
+
+Les six témoins négatifs couvrent le rejet dépassé, le rejet masqué, l'état sans image pendant un nouveau chargement, le nettoyage d'une erreur et les deux interruptions initiales. Les cinq contrôles préservés couvrent le succès tardif, l'erreur courante avec provenance, le rechargement d'un lien de variante et les commandes natives à 1280 et 390 px. Une nouvelle tentative sur le même choix et une ancienne préparation terminant après la reprise gagnante sont également contrôlées.
+
+La recette existante `tests/browser-generated-sprites-r31.mjs`, exécutée intacte sur ce même contrôleur local, a également passé **5 groupes sur 5 avec les trois PNG réels** : dimensions/alpha, variantes volontaires, montage des trois pages de combat, rendu dans un duel naturel, clavier à 320 px avec texte à 200 % et refus d'un PNG corrompu. Son rapport frais est conservé dans `qa-gamedev-r32/sprites-existing-local/report.json` ; le rapport historique a été restauré à ses octets exacts après exécution.
+
+Les promesses du registre et les images de 1 pixel sont des fixtures explicites ; les événements `pagehide/pageshow` sont synthétiques. La recette prouve les limites du contrôleur, sans certifier une restauration BFCache réelle, le décodage des PNG d'origine ou la fidélité artistique. Les commandes clavier/souris sont des événements fiables de Chromium. Un chargement manquant ou un délai dépassé ne peut pas être accepté comme défaut témoin.
+
+Rapport courant : `qa-gamedev-r32/sprite-gallery.json`. La recette est la neuvième commande bloquante de `npm run verify:r32:http`. L'ancienne recette `browser-generated-sprites-r31.mjs` reste inchangée et courante dans le workflow R31. Aucun nouvel archivage n'est ajouté. La garde autorise exactement **17 fichiers modifiés et 18 ajouts**, et compare les six transformations du contrôleur aux octets R31.
+
+Les résultats CI du nouveau commit doivent être lus sur sa propre exécution. Les résultats locaux ci-dessus ne sont pas attribués à l'environnement CI épinglé.
+
 ## Conservation des versions publiées et validation courante
 
 Les anciennes validations R19/R20 et R31 imposent des empreintes de sources publiées. R32 ne remplace ni leurs empreintes attendues, ni leurs rapports par de faux résultats actualisés.
@@ -122,11 +157,11 @@ Les anciennes validations R19/R20 et R31 imposent des empreintes de sources publ
 - `npm run verify:current` exécute d'abord la garde R32, ses cas négatifs, puis les **38 autres commandes originales** de `npm run verify` dans leur ordre et la nouvelle suite d'entrées.
 - `npm run verify:historical:r31` exécute les deux suites originales de conservation R19/R20 sur une archive Git du commit publié R31, avec leurs assertions intactes.
 - `npm run verify` exige les deux étapes. Les entrées dédiées aux sauvegardes et à R20 exposent également ce partage.
-- `npm run verify:r32` contrôle le périmètre courant et les entrées ; `npm run verify:r32:http` exécute les huit recettes R32 sur les fichiers courants, dont les commandes et le focus du catalogue, la lecture des mouvements au clavier et les entrées Évolutions. Cette dernière rejoue aussi les 16 groupes de l'ancienne recette navigateur Évolutions, inchangée, sur le checkout courant.
+- `npm run verify:r32` contrôle le périmètre courant et les entrées ; `npm run verify:r32:http` exécute les neuf recettes R32 sur les fichiers courants, dont les commandes et le focus du catalogue, la lecture des mouvements au clavier, les entrées Évolutions et la sélection de galerie. La recette Évolutions rejoue aussi les 16 groupes de l'ancienne recette navigateur Évolutions, inchangée, sur le checkout courant.
 - Le workflow R31 conserve ses audits de provenance et son build sur le commit publié explicitement fixé. Ses sept anciennes recettes navigateur sont exécutées, avec leurs assertions intactes, sur la révision courante : elles vérifient notamment les corrections de reflow avec les vrais médias. Les libellés distinguent ces deux périmètres. La dépendance `axe-core` est installée explicitement comme dans les autres workflows d'accessibilité.
 - R23/R24 continuent leurs vérifications courantes et exécutent leur seule assertion de conservation R20 sur l'archive publiée. R28 exécute `npm run verify` avant de régénérer ses rapports de travail.
 - Les suites d'intégration R25/R26 contiennent elles aussi une assertion imposant l'identité des sources historiques. Elles sont exécutées intégralement sur l'archive publiée, avec leurs assertions intactes. La garde R32 s'exécute avant les générateurs de ces workflows et vérifie que tous leurs autres fichiers restent inchangés. Les autres recettes de ces workflows sont conservées. Les nouveaux journaux du runner sont publiés comme preuves d'archive ; leurs JSON historiques ne sont pas présentés comme de nouveaux résultats.
 
-La garde `scripts/verify-current-r32.mjs` compare l'ensemble du diff à R31. Elle refuse tout chemin inattendu, suppression, renommage, modification de données, d'assets, d'anciens tests ou de preuves historiques. Les transformations des commandes, du menu, du lecteur de mouvements et du contrôleur Évolutions sont bornées aux hunks relus ; le contrôleur catalogue doit correspondre à l'empreinte de sa nouvelle source R32 relue. Cette empreinte ne remplace aucun manifeste historique. Les commandes de vérification, références d'archives et workflows sont contrôlés exactement. Les tests de faute modifient uniquement des copies en mémoire.
+La garde `scripts/verify-current-r32.mjs` compare l'ensemble du diff à R31. Elle refuse tout chemin inattendu, suppression, renommage, modification de données, d'assets, d'anciens tests ou de preuves historiques. Les transformations des commandes, du menu, du lecteur de mouvements, du contrôleur Évolutions et de la galerie sont bornées aux hunks relus ; le contrôleur catalogue doit correspondre à l'empreinte de sa nouvelle source R32 relue. Cette empreinte ne remplace aucun manifeste historique. Les commandes de vérification, références d'archives et workflows sont contrôlés exactement. Les tests de faute modifient uniquement des copies en mémoire.
 
 Cette révision corrige les interactions décrites. Les critères artistiques et de fidélité encore ouverts dans R31 restent ouverts. Le commit de la branche et les exécutions GitHub Actions constituent la référence pour l'état d'intégration ; le présent document ne prétend pas que la branche a été fusionnée ou déployée.

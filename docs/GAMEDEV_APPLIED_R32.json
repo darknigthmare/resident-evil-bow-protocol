@@ -5530,6 +5530,548 @@
       "guardCases": 37,
       "additionalArchivedSuites": 0
     },
-    "noCombatRuleOrReplayContractChange": true
+    "noCombatRuleOrReplayContractChange": true,
+    "completedCi": {
+      "commit": "1250b586509fb45de1a3d8efd24c73739733e418",
+      "allEvents": {
+        "total": 35,
+        "success": 35
+      },
+      "r32Push": {
+        "runId": 40907338688,
+        "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/40907338688",
+        "behavioralPassed": 110,
+        "guardPassed": 37
+      },
+      "r32PullRequest": {
+        "runId": 40907354618,
+        "conclusion": "success"
+      },
+      "generalQaPullRequest": {
+        "runId": 40907354609,
+        "verify": "success",
+        "build": "success"
+      },
+      "scope": "Observed on the exact prior head; not attributed to its successor."
+    }
+  },
+  "spriteGalleryFollowUp": {
+    "baseCommit": "1250b586509fb45de1a3d8efd24c73739733e418",
+    "runtimePath": "modules/fidelity-r31/sprites/page.js",
+    "guides": [
+      "game-ui-ux"
+    ],
+    "controllerDelta": {
+      "additions": 13,
+      "deletions": 7,
+      "exactTransformations": 6
+    },
+    "sourceSha256": {
+      "before": "8aadabb00b8c7879f7db7b5e63e54a8b25bf18610842a19facb83e68a1e92cd6",
+      "after": "79390613050cc180f20f5c39b09970b505e9d6f3f9805dadc71e32fe0db7fced"
+    },
+    "localBrowser": {
+      "schema": "re.bow.sprite-gallery-browser-r32/1",
+      "observedAtUTC": "2026-10-29T17:14:39.049Z",
+      "browserVersion": "153.0.8010.0",
+      "nodeVersion": "v24.22.1",
+      "playwrightVersion": "1.62.1",
+      "baselineCommit": "1250b586509fb45de1a3d8efd24c73739733e418",
+      "baselineControllerSha256": "8aadabb00b8c7879f7db7b5e63e54a8b25bf18610842a19facb83e68a1e92cd6",
+      "currentControllerSha256": "79390613050cc180f20f5c39b09970b505e9d6f3f9805dadc71e32fe0db7fced",
+      "baselineRead": "explicit file with pinned SHA-256",
+      "passed": 11,
+      "failed": 0,
+      "complete": true,
+      "before": {
+        "passed": 5,
+        "failed": 6
+      },
+      "after": {
+        "passed": 11,
+        "failed": 0
+      },
+      "expectedBeforeFailures": [
+        "late-rejection-keeps-current-link",
+        "hidden-rejection-keeps-current-link",
+        "pending-selection-has-no-displayed-frame",
+        "new-selection-clears-prior-error",
+        "first-load-interruption-retries-on-return",
+        "initial-registry-interruption-restarts-preparation"
+      ],
+      "unexpectedBefore": [],
+      "setupError": null,
+      "pageErrors": [],
+      "invariantErrors": [],
+      "missingResources": [],
+      "checks": [
+        {
+          "phase": "before",
+          "name": "late-rejection-keeps-current-link",
+          "width": 1280,
+          "pass": false,
+          "expectedBaselineDefect": true,
+          "error": "AssertionError [ERR_ASSERTION]: A stale rejection replaced the selected illustration URL\n+ actual - expected\n\n+ 'http://127.0.0.1:43119/modules/fidelity-r31/sprites/index.html?identity=revillage-donna-angie'\n- 'http://127.0.0.1:43119/modules/fidelity-r31/sprites/index.html?identity=re1r-zombie&variant=re1r-zombie-naked-gc-2002-right'\n\n    at Object.run (file:///tmp/bow-r32-next/tests/browser-sprite-gallery-r32.mjs:130:14)\n    at async one (file:///tmp/bow-r32-next/tests/browser-sprite-gallery-r32.mjs:261:20)\n    at async file:///tmp/bow-r32-next/tests/browser-sprite-gallery-r32.mjs:284:39",
+          "observed": {
+            "url": "http://127.0.0.1:43119/modules/fidelity-r31/sprites/index.html?identity=revillage-donna-angie",
+            "state": {
+              "ready": true,
+              "failed": false,
+              "selected": "re1r-zombie",
+              "variant": "re1r-zombie-naked-gc-2002-right",
+              "displayed": "28d5b5ba514a58f8e89533ee502491e1d15b709eec3e3bcc2d0faa9852fe79f5",
+              "frames": 1,
+              "animated": false
+            },
+            "message": "PNG vérifié et affiché ; une seule image, sans animation.",
+            "requests": [
+              {
+                "id": "re7-lucas-baker-mutated",
+                "key": "re7-lucas-baker-mutated",
+                "outcome": "resolve"
+              },
+              {
+                "id": "revillage-donna-angie",
+                "key": "revillage-donna-angie",
+                "outcome": "reject"
+              },
+              {
+                "id": "re1r-zombie",
+                "key": "re1r-zombie-naked-gc-2002-right",
+                "outcome": "resolve"
+              }
+            ]
+          }
+        },
+        {
+          "phase": "before",
+          "name": "late-success-keeps-current-selection",
+          "width": 1280,
+          "pass": true,
+          "detail": {
+            "order": [
+              "old pending",
+              "new resolved",
+              "old resolved"
+            ],
+            "selectionPreserved": true
+          }
+        },
+        {
+          "phase": "before",
+          "name": "hidden-rejection-keeps-current-link",
+          "width": 1280,
+          "pass": false,
+          "expectedBaselineDefect": true,
+          "error": "AssertionError [ERR_ASSERTION]: A hidden rejection changed the gallery URL\n+ actual - expected\n\n+ 'http://127.0.0.1:43119/modules/fidelity-r31/sprites/index.html?identity=revillage-donna-angie'\n- 'http://127.0.0.1:43119/modules/fidelity-r31/sprites/index.html?identity=re7-lucas-baker-mutated'\n\n    at Object.run (file:///tmp/bow-r32-next/tests/browser-sprite-gallery-r32.mjs:145:14)\n    at async one (file:///tmp/bow-r32-next/tests/browser-sprite-gallery-r32.mjs:261:20)\n    at async file:///tmp/bow-r32-next/tests/browser-sprite-gallery-r32.mjs:284:39",
+          "observed": {
+            "url": "http://127.0.0.1:43119/modules/fidelity-r31/sprites/index.html?identity=revillage-donna-angie",
+            "state": {
+              "ready": true,
+              "failed": false,
+              "selected": "revillage-donna-angie",
+              "variant": null,
+              "displayed": null,
+              "frames": 1,
+              "animated": false
+            },
+            "message": "Vérification et chargement de l’image…",
+            "requests": [
+              {
+                "id": "re7-lucas-baker-mutated",
+                "key": "re7-lucas-baker-mutated",
+                "outcome": "resolve"
+              },
+              {
+                "id": "revillage-donna-angie",
+                "key": "revillage-donna-angie",
+                "outcome": "reject"
+              }
+            ]
+          }
+        },
+        {
+          "phase": "before",
+          "name": "pending-selection-has-no-displayed-frame",
+          "width": 1280,
+          "pass": false,
+          "expectedBaselineDefect": true,
+          "error": "AssertionError [ERR_ASSERTION]: A pending selection still reported a displayed frame\n\n1 !== 0\n\n    at Object.run (file:///tmp/bow-r32-next/tests/browser-sprite-gallery-r32.mjs:155:14)\n    at async one (file:///tmp/bow-r32-next/tests/browser-sprite-gallery-r32.mjs:261:20)\n    at async file:///tmp/bow-r32-next/tests/browser-sprite-gallery-r32.mjs:284:39",
+          "observed": {
+            "url": "http://127.0.0.1:43119/modules/fidelity-r31/sprites/index.html?identity=re7-lucas-baker-mutated",
+            "state": {
+              "ready": true,
+              "failed": false,
+              "selected": "revillage-donna-angie",
+              "variant": null,
+              "displayed": null,
+              "frames": 1,
+              "animated": false
+            },
+            "message": "Vérification et chargement de l’image…",
+            "requests": [
+              {
+                "id": "re7-lucas-baker-mutated",
+                "key": "re7-lucas-baker-mutated",
+                "outcome": "resolve"
+              },
+              {
+                "id": "revillage-donna-angie",
+                "key": "revillage-donna-angie",
+                "outcome": "pending"
+              }
+            ]
+          }
+        },
+        {
+          "phase": "before",
+          "name": "new-selection-clears-prior-error",
+          "width": 1280,
+          "pass": false,
+          "expectedBaselineDefect": true,
+          "error": "AssertionError [ERR_ASSERTION]: A new selection retained the prior image failure\n\ntrue !== false\n\n    at Object.run (file:///tmp/bow-r32-next/tests/browser-sprite-gallery-r32.mjs:163:14)\n    at async one (file:///tmp/bow-r32-next/tests/browser-sprite-gallery-r32.mjs:261:20)\n    at async file:///tmp/bow-r32-next/tests/browser-sprite-gallery-r32.mjs:284:39",
+          "observed": {
+            "url": "http://127.0.0.1:43119/modules/fidelity-r31/sprites/index.html?identity=revillage-donna-angie",
+            "state": {
+              "ready": true,
+              "failed": true,
+              "selected": "re1r-zombie",
+              "variant": "re1r-zombie-naked-gc-2002-right",
+              "displayed": null,
+              "frames": 1,
+              "animated": false
+            },
+            "message": "Vérification et chargement de l’image…",
+            "requests": [
+              {
+                "id": "re7-lucas-baker-mutated",
+                "key": "re7-lucas-baker-mutated",
+                "outcome": "resolve"
+              },
+              {
+                "id": "revillage-donna-angie",
+                "key": "revillage-donna-angie",
+                "outcome": "reject"
+              },
+              {
+                "id": "re1r-zombie",
+                "key": "re1r-zombie-naked-gc-2002-right",
+                "outcome": "pending"
+              }
+            ]
+          }
+        },
+        {
+          "phase": "before",
+          "name": "first-load-interruption-retries-on-return",
+          "width": 1280,
+          "pass": false,
+          "expectedBaselineDefect": true,
+          "error": "AssertionError [ERR_ASSERTION]: Returning after an interrupted first load did not retry the illustration\n\n1 !== 2\n\n    at Object.run (file:///tmp/bow-r32-next/tests/browser-sprite-gallery-r32.mjs:178:14)\n    at async one (file:///tmp/bow-r32-next/tests/browser-sprite-gallery-r32.mjs:261:20)\n    at async file:///tmp/bow-r32-next/tests/browser-sprite-gallery-r32.mjs:284:39",
+          "observed": {
+            "url": "http://127.0.0.1:43119/modules/fidelity-r31/sprites/index.html?identity=re7-lucas-baker-mutated",
+            "state": {
+              "ready": true,
+              "failed": true,
+              "selected": "re7-lucas-baker-mutated",
+              "variant": null,
+              "displayed": null,
+              "frames": 0,
+              "animated": false
+            },
+            "message": "Image refusée ou indisponible : Controlled gallery image failure",
+            "requests": [
+              {
+                "id": "re7-lucas-baker-mutated",
+                "key": "re7-lucas-baker-mutated",
+                "outcome": "reject"
+              }
+            ]
+          }
+        },
+        {
+          "phase": "before",
+          "name": "initial-registry-interruption-restarts-preparation",
+          "width": 1280,
+          "pass": false,
+          "expectedBaselineDefect": true,
+          "error": "AssertionError [ERR_ASSERTION]: Returning after an interrupted registry preparation did not retry initialization\n\n1 !== 2\n\n    at Object.run (file:///tmp/bow-r32-next/tests/browser-sprite-gallery-r32.mjs:193:14)\n    at async one (file:///tmp/bow-r32-next/tests/browser-sprite-gallery-r32.mjs:261:20)\n    at async file:///tmp/bow-r32-next/tests/browser-sprite-gallery-r32.mjs:284:39",
+          "observed": {
+            "url": "http://127.0.0.1:43119/modules/fidelity-r31/sprites/index.html",
+            "state": {
+              "ready": false,
+              "failed": true,
+              "selected": null,
+              "variant": null,
+              "displayed": null,
+              "frames": 0,
+              "animated": false
+            },
+            "message": "Chargement refusé : Registre R31 indisponible",
+            "requests": []
+          }
+        },
+        {
+          "phase": "before",
+          "name": "current-error-retains-provenance-and-selection",
+          "width": 1280,
+          "pass": true,
+          "detail": {
+            "currentFailureReported": true,
+            "provenanceAvailable": true
+          }
+        },
+        {
+          "phase": "before",
+          "name": "variant-link-reloads-the-same-selection",
+          "width": 390,
+          "pass": true,
+          "detail": {
+            "querySelection": "re1r-zombie-naked-gc-2002-right",
+            "reloadPreserved": true
+          }
+        },
+        {
+          "phase": "before",
+          "name": "native-keyboard-and-mouse-1280",
+          "width": 1280,
+          "pass": true,
+          "detail": {
+            "trustedClicks": 3,
+            "keyboardFocusRetained": true,
+            "spaceActivatesOnRelease": true
+          }
+        },
+        {
+          "phase": "before",
+          "name": "native-keyboard-and-mouse-390",
+          "width": 390,
+          "pass": true,
+          "detail": {
+            "trustedClicks": 3,
+            "keyboardFocusRetained": true,
+            "spaceActivatesOnRelease": true
+          }
+        },
+        {
+          "phase": "after",
+          "name": "late-rejection-keeps-current-link",
+          "width": 1280,
+          "pass": true,
+          "detail": {
+            "order": [
+              "old pending",
+              "new resolved",
+              "old rejected"
+            ],
+            "selectionPreserved": true
+          }
+        },
+        {
+          "phase": "after",
+          "name": "late-success-keeps-current-selection",
+          "width": 1280,
+          "pass": true,
+          "detail": {
+            "order": [
+              "old pending",
+              "new resolved",
+              "old resolved"
+            ],
+            "selectionPreserved": true
+          }
+        },
+        {
+          "phase": "after",
+          "name": "hidden-rejection-keeps-current-link",
+          "width": 1280,
+          "pass": true,
+          "detail": {
+            "lifecycle": "explicit synthetic pagehide/pageshow",
+            "resumedSelection": "revillage-donna-angie"
+          }
+        },
+        {
+          "phase": "after",
+          "name": "pending-selection-has-no-displayed-frame",
+          "width": 1280,
+          "pass": true,
+          "detail": {
+            "framesWhilePending": 0,
+            "framesAfterDisplay": 1
+          }
+        },
+        {
+          "phase": "after",
+          "name": "new-selection-clears-prior-error",
+          "width": 1280,
+          "pass": true,
+          "detail": {
+            "errorVisibleBeforeSelection": true,
+            "errorClearedAtSelection": true,
+            "sameSelectionRetry": true,
+            "recovered": true
+          }
+        },
+        {
+          "phase": "after",
+          "name": "first-load-interruption-retries-on-return",
+          "width": 1280,
+          "pass": true,
+          "detail": {
+            "lifecycle": "explicit synthetic pagehide/pageshow during initial await",
+            "requests": 2,
+            "recovered": true
+          }
+        },
+        {
+          "phase": "after",
+          "name": "initial-registry-interruption-restarts-preparation",
+          "width": 1280,
+          "pass": true,
+          "detail": {
+            "lifecycle": "explicit synthetic pagehide/pageshow during initial registry await",
+            "preparations": 3,
+            "cancelledPreparation": false,
+            "stalePreparationIgnored": true,
+            "recovered": true
+          }
+        },
+        {
+          "phase": "after",
+          "name": "current-error-retains-provenance-and-selection",
+          "width": 1280,
+          "pass": true,
+          "detail": {
+            "currentFailureReported": true,
+            "provenanceAvailable": true
+          }
+        },
+        {
+          "phase": "after",
+          "name": "variant-link-reloads-the-same-selection",
+          "width": 390,
+          "pass": true,
+          "detail": {
+            "querySelection": "re1r-zombie-naked-gc-2002-right",
+            "reloadPreserved": true
+          }
+        },
+        {
+          "phase": "after",
+          "name": "native-keyboard-and-mouse-1280",
+          "width": 1280,
+          "pass": true,
+          "detail": {
+            "trustedClicks": 3,
+            "keyboardFocusRetained": true,
+            "spaceActivatesOnRelease": true
+          }
+        },
+        {
+          "phase": "after",
+          "name": "native-keyboard-and-mouse-390",
+          "width": 390,
+          "pass": true,
+          "detail": {
+            "trustedClicks": 3,
+            "keyboardFocusRetained": true,
+            "spaceActivatesOnRelease": true
+          }
+        }
+      ],
+      "inputs": {
+        "before": [
+          {
+            "path": "modules/fidelity-r31/combat/generated-runtime.js",
+            "sha256": "a84063a71de46596ef80dae96f5a98cdae49c11d81422514c9d05ae4565c9a3f",
+            "fixture": true
+          },
+          {
+            "path": "modules/fidelity-r31/performance/image-budget.js",
+            "sha256": "e7a3a2039c9c666475fdfe118bc1fece445891d0213bbe20e75fece248cebce2",
+            "fixture": false
+          },
+          {
+            "path": "modules/fidelity-r31/sprites/index.html",
+            "sha256": "ffc233a8765d128fde14f41e15b58481b496d5c5a9915833d842a68dd24ecd78",
+            "fixture": false
+          },
+          {
+            "path": "modules/fidelity-r31/sprites/page.js",
+            "sha256": "8aadabb00b8c7879f7db7b5e63e54a8b25bf18610842a19facb83e68a1e92cd6",
+            "fixture": false
+          },
+          {
+            "path": "modules/fidelity-r31/sprites/style.css",
+            "sha256": "1cf82a8ed82bda09e87cc287921ebc21fdccea1c477bc33260286888e34214c4",
+            "fixture": false
+          }
+        ],
+        "after": [
+          {
+            "path": "modules/fidelity-r31/combat/generated-runtime.js",
+            "sha256": "a84063a71de46596ef80dae96f5a98cdae49c11d81422514c9d05ae4565c9a3f",
+            "fixture": true
+          },
+          {
+            "path": "modules/fidelity-r31/performance/image-budget.js",
+            "sha256": "e7a3a2039c9c666475fdfe118bc1fece445891d0213bbe20e75fece248cebce2",
+            "fixture": false
+          },
+          {
+            "path": "modules/fidelity-r31/sprites/index.html",
+            "sha256": "ffc233a8765d128fde14f41e15b58481b496d5c5a9915833d842a68dd24ecd78",
+            "fixture": false
+          },
+          {
+            "path": "modules/fidelity-r31/sprites/page.js",
+            "sha256": "79390613050cc180f20f5c39b09970b505e9d6f3f9805dadc71e32fe0db7fced",
+            "fixture": false
+          },
+          {
+            "path": "modules/fidelity-r31/sprites/style.css",
+            "sha256": "1cf82a8ed82bda09e87cc287921ebc21fdccea1c477bc33260286888e34214c4",
+            "fixture": false
+          }
+        ]
+      },
+      "manifestSha256": "6b4df5ec5509bf661c0417d34e31038d9efd4bc5ccf719090edbbb2d94d77880",
+      "registryFixtureSha256": "a84063a71de46596ef80dae96f5a98cdae49c11d81422514c9d05ae4565c9a3f",
+      "testSourceSha256": "6a0231ca94a882a8e1f994e70a5d8c4b941c66a1e168af57cfe56519f23bf96b",
+      "scope": "Actual gallery HTML, CSS and page controller; metadata comes from the unchanged R31 manifest. The registry API, asynchronous outcomes and decoded one-pixel images are explicit fixtures. Trusted Chromium mouse and native keyboard activation at1280/390px. Synthetic pagehide/pageshow test controller boundaries, not actual BFCache eligibility. Before and after differ only in the page-controller response. No original image provenance, visual fidelity, physical device, real registry budget, combat or replay certification. The unchanged R31 browser recipe separately covers actual media in CI."
+    },
+    "localGuard": {
+      "passed": 40,
+      "failed": 0,
+      "origin": "actual Git worktree compared with published R31"
+    },
+    "independentReview": "Selection and initialization ownership, real registry event ordering, existing consumers and historical pipeline constraints reviewed; no blocking issue identified.",
+    "reviewedScope": {
+      "modified": 17,
+      "added": 18
+    },
+    "preservation": {
+      "oldBrowserTestsUnchanged": true,
+      "newHistoricalArchives": 0,
+      "gameRulesAndReplayContractsUnchanged": true,
+      "imagesAndRegistryUnchanged": true
+    },
+    "ci": "The ninth R32 browser command is blocking on current sources. Read actual results from the successor commit's workflow; local results use the explicitly recorded local environment.",
+    "existingCurrentBrowser": {
+      "test": "tests/browser-generated-sprites-r31.mjs",
+      "testUnchanged": true,
+      "passed": 5,
+      "failed": 0,
+      "currentControllerSha256": "79390613050cc180f20f5c39b09970b505e9d6f3f9805dadc71e32fe0db7fced",
+      "environment": {
+        "node": "24.22.1",
+        "playwright": "1.62.1",
+        "chromium": "153.0.8010.0"
+      },
+      "report": "qa-gamedev-r32/sprites-existing-local/report.json",
+      "historicalReportRestoredExactly": true,
+      "scope": "Three actual PNGs, exact dimensions/alpha, current combat mounts, voluntary pose in natural duel with unchanged actor/replay/storage, native keyboard320px text200%, corrupted PNG refused. Separate from the fixture race recipe."
+    }
   }
 }
