@@ -39,8 +39,8 @@ export function runGuardCases(snapshot, {writeReport = true, origin = 'supplied 
   test('The reviewed current files and historical command split are accepted', () => {
     const result = validateSnapshot(snapshot);
     assert.equal(result.published_baseline, BASE_COMMIT);
-    assert.equal(result.modified.length, 13);
-    assert.equal(result.added.length, Object.keys(R32_FILES).length - 13 -
+    assert.equal(result.modified.length, 14);
+    assert.equal(result.added.length, Object.keys(R32_FILES).length - 14 -
       (snapshot.current.has('docs/GAMEDEV_APPLIED_R32.json') ? 0 : 1));
   });
   rejected('An unrelated engine change is refused', fixture => {
@@ -67,10 +67,23 @@ export function runGuardCases(snapshot, {writeReport = true, origin = 'supplied 
     fixture.changes = fixture.changes.filter(value => value.file !== 'tests/browser-input-r32.mjs');
     fixture.current.delete('tests/browser-input-r32.mjs');
   }, /Missing required R32 change/);
+  for (const file of ['tests/browser-catalog-controls-r32.mjs', 'tests/browser-catalog-focus-r32.mjs']) {
+    rejected('The delivered catalogue regression must remain present: ' + file, fixture => {
+      fixture.changes = fixture.changes.filter(value => value.file !== file);
+      fixture.current.delete(file);
+    }, /Missing required R32 change/);
+  }
   rejected('Unrelated edits inside the approved input file are refused', fixture => {
     fixture.current.set('src/trial-input-v071.js', fixture.current.get('src/trial-input-v071.js') +
       '\nwindow.unreviewedInputChange=true;\n');
   }, /Only the reviewed opposite-direction resolution/);
+  rejected('Unrelated edits inside the approved catalogue controller are refused', fixture => {
+    fixture.current.set('src/catalog-duel-v070.js', fixture.current.get('src/catalog-duel-v070.js') +
+      '\nwindow.unreviewedCatalogueChange=true;\n');
+  }, /Only the reviewed catalogue controls and focus revision/);
+  rejected('The original keyboard and focus defects cannot replace the catalogue correction', fixture => {
+    fixture.current.set('src/catalog-duel-v070.js', fixture.baseline.get('src/catalog-duel-v070.js'));
+  }, /Only the reviewed catalogue controls and focus revision/);
   rejected('Unrelated edits inside the approved menu file are refused', fixture => {
     fixture.current.set('src/game-menu-r20.js', fixture.current.get('src/game-menu-r20.js') +
       '\nwindow.unreviewedMenuChange=true;\n');

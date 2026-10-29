@@ -2,6 +2,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
+import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 
@@ -10,6 +11,8 @@ export const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '
 const GUARD = 'node scripts/verify-current-r32.mjs';
 const GUARD_TEST = 'node tests/verify-current-guard-r32.mjs';
 const INPUT_TEST = 'node tests/verify-input-r32.mjs';
+// Reviewed R32 page-controller bytes; no historical manifest or contract is rewritten.
+const CATALOG_SOURCE_SHA256 = '5ebfaa1c2c67afbf57ef62dabec5f54372b2fcf5ec855f7d83f53abbcf87c456';
 const ARCHIVED_COMMANDS = [
   'node tests/verify-save-center-r19.mjs',
   'node tests/verify-preservation-r20.mjs',
@@ -23,6 +26,7 @@ export const HISTORICAL_PLAN = Object.freeze({
 // changing a historical manifest/hash is never a way to admit new source bytes.
 export const R32_FILES = Object.freeze({
   'src/trial-input-v071.js': 'M',
+  'src/catalog-duel-v070.js': 'M',
   'src/game-menu-r20.js': 'M',
   'modules/fidelity-r31/performance/page.js': 'M',
   'modules/fidelity-r31/audio/style.css': 'M',
@@ -44,6 +48,8 @@ export const R32_FILES = Object.freeze({
   'tests/r32-historical-plan.json': 'A',
   'tests/verify-input-r32.mjs': 'A',
   'tests/browser-input-r32.mjs': 'A',
+  'tests/browser-catalog-controls-r32.mjs': 'A',
+  'tests/browser-catalog-focus-r32.mjs': 'A',
   'tests/browser-menu-input-r32.mjs': 'A',
   'tests/browser-performance-lifecycle-r32.mjs': 'A',
   'tests/browser-reflow-r32.mjs': 'A',
@@ -115,6 +121,8 @@ export function expectedPackage(baseline) {
   scripts['verify:r32'] = [GUARD, GUARD_TEST, INPUT_TEST].join(' && ');
   scripts['verify:r32:http'] = [
     'node tests/browser-input-r32.mjs',
+    'node tests/browser-catalog-controls-r32.mjs',
+    'node tests/browser-catalog-focus-r32.mjs',
     'node tests/browser-menu-input-r32.mjs',
     'node tests/browser-performance-lifecycle-r32.mjs',
     'node tests/browser-reflow-r32.mjs',
@@ -298,6 +306,8 @@ export function validateSnapshot({baseline, current, changes}) {
     'Both original historical suites must run unchanged on published R31');
   assert.equal(current.get('src/trial-input-v071.js'), expectedInput(baseline.get('src/trial-input-v071.js')),
     'Only the reviewed opposite-direction resolution is permitted in trial input');
+  assert.equal(createHash('sha256').update(current.get('src/catalog-duel-v070.js')).digest('hex'),
+    CATALOG_SOURCE_SHA256, 'Only the reviewed catalogue controls and focus revision is permitted');
   assert.equal(current.get('src/game-menu-r20.js'), expectedMenu(baseline.get('src/game-menu-r20.js')),
     'Only the reviewed held confirmation/back filter is permitted in the menu');
   for (const file of ['modules/fidelity-r31/audio/style.css', 'modules/fidelity-r31/sprites/style.css']) {
@@ -317,10 +327,10 @@ export function validateSnapshot({baseline, current, changes}) {
     added: changes.filter(value => value.status === 'A').map(value => value.file).sort(),
     assertions: [
       'Only explicitly reviewed R32 paths changed; old tests, data, assets, reports and replay contracts retain published bytes.',
-      'Input, menu and two heading style changes match the reviewed baseline transformations.',
+      'Input, menu and two heading style changes match the reviewed baseline transformations; catalogue controls/focus match the reviewed R32 source hash.',
       'All 38 remaining original npm verify commands stay on current, in their original order.',
       'Both npm preservation suites and the R25/R26 frozen integration suites run unchanged on the exact published R31 snapshot.',
-      'All four R32 browser suites and unchanged R31 browser recipes stay current; R31 provenance/build use the published snapshot.',
+      'All six R32 browser suites and unchanged R31 browser recipes stay current; R31 provenance/build use the published snapshot.',
     ],
     scope: 'Source and pipeline integrity. Behavioural results are reported by their separate executed suites.',
   };

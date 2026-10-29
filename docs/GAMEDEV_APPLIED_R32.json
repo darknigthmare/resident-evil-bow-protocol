@@ -2231,5 +2231,3085 @@
       "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/40885728416"
     },
     "scope": "Successful runs for the runtime commit. A subsequent CI-only adjustment archives the complete R25/R26 integration suites because their source-freeze assertions predate R32. The new workflow execution is reported separately; these successful runs are not relabeled with another commit."
+  },
+  "catalogControlsFollowUp": {
+    "baseCommit": "fb3ba2fc533b395ac7951356a15468cce7d9af93",
+    "completedCiAtBase": {
+      "pullRequestWorkflows": 23,
+      "pushWorkflowRuns": 12,
+      "totalSuccessfulRuns": 35,
+      "allRunsUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions?query=branch%3Acodex%2Fgamedev-guidance-20261029",
+      "r31Run": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/40887097290",
+      "r31CurrentBrowserGroups": 57,
+      "scope": "All 35 runs of the exact base commit completed successfully. These results do not validate a subsequent commit."
+    },
+    "runtimePath": "src/catalog-duel-v070.js",
+    "runtimeSha256": "5ebfaa1c2c67afbf57ef62dabec5f54372b2fcf5ec855f7d83f53abbcf87c456",
+    "environment": {
+      "node": "24.22.1",
+      "playwright": "1.62.1",
+      "chrome": "156.0.8078.73"
+    },
+    "suites": [
+      {
+        "name": "Catalogue buttons and keyboard ownership",
+        "script": "tests/browser-catalog-controls-r32.mjs",
+        "scriptSha256": "a11df567db59bc4dbedde172da2999b39d4773ce9073ded954bd6a568f264732",
+        "before": {
+          "schema": "re.bow.catalog-controls-r32/1",
+          "browserVersion": "156.0.8078.73",
+          "passed": 0,
+          "failed": 30,
+          "checks": [
+            {
+              "name": "1280 left accepts Enter once per press and releases",
+              "pass": false,
+              "error": "AssertionError [ERR_ASSERTION]: left did not reach the real recorded combat input\n    at file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:104:13\n    at async test (file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:38:23)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:97:9"
+            },
+            {
+              "name": "1280 left accepts Space once per press and releases",
+              "pass": false,
+              "error": "AssertionError [ERR_ASSERTION]: left did not reach the real recorded combat input\n    at file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:104:13\n    at async test (file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:38:23)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:97:9"
+            },
+            {
+              "name": "1280 right accepts Enter once per press and releases",
+              "pass": false,
+              "error": "AssertionError [ERR_ASSERTION]: right did not reach the real recorded combat input\n    at file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:104:13\n    at async test (file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:38:23)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:97:9"
+            },
+            {
+              "name": "1280 right accepts Space once per press and releases",
+              "pass": false,
+              "error": "AssertionError [ERR_ASSERTION]: right did not reach the real recorded combat input\n    at file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:104:13\n    at async test (file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:38:23)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:97:9"
+            },
+            {
+              "name": "1280 down accepts Enter once per press and releases",
+              "pass": false,
+              "error": "AssertionError [ERR_ASSERTION]: down did not reach the real recorded combat input\n    at file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:104:13\n    at async test (file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:38:23)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:97:9"
+            },
+            {
+              "name": "1280 down accepts Space once per press and releases",
+              "pass": false,
+              "error": "AssertionError [ERR_ASSERTION]: down did not reach the real recorded combat input\n    at file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:104:13\n    at async test (file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:38:23)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:97:9"
+            },
+            {
+              "name": "1280 guard accepts Enter once per press and releases",
+              "pass": false,
+              "error": "AssertionError [ERR_ASSERTION]: guard did not reach the real recorded combat input\n    at file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:104:13\n    at async test (file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:38:23)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:97:9"
+            },
+            {
+              "name": "1280 guard accepts Space once per press and releases",
+              "pass": false,
+              "error": "AssertionError [ERR_ASSERTION]: guard did not reach the real recorded combat input\n    at file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:104:13\n    at async test (file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:38:23)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:97:9"
+            },
+            {
+              "name": "1280 jump accepts Enter once per press and releases",
+              "pass": false,
+              "error": "AssertionError [ERR_ASSERTION]: jump did not reach the real recorded combat input\n    at file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:104:13\n    at async test (file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:38:23)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:97:9"
+            },
+            {
+              "name": "1280 jump accepts Space once per press and releases",
+              "pass": false,
+              "error": "AssertionError [ERR_ASSERTION]: jump did not reach the real recorded combat input\n    at file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:104:13\n    at async test (file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:38:23)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:97:9"
+            },
+            {
+              "name": "1280 dash accepts Enter once per press and releases",
+              "pass": false,
+              "error": "AssertionError [ERR_ASSERTION]: dash did not reach the real recorded combat input\n    at file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:104:13\n    at async test (file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:38:23)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:97:9"
+            },
+            {
+              "name": "1280 dash accepts Space once per press and releases",
+              "pass": false,
+              "error": "AssertionError [ERR_ASSERTION]: dash did not reach the real recorded combat input\n    at file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:104:13\n    at async test (file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:38:23)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:97:9"
+            },
+            {
+              "name": "390 left accepts Enter once per press and releases",
+              "pass": false,
+              "error": "AssertionError [ERR_ASSERTION]: left did not reach the real recorded combat input\n    at file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:104:13\n    at async test (file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:38:23)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:97:9"
+            },
+            {
+              "name": "390 left accepts Space once per press and releases",
+              "pass": false,
+              "error": "AssertionError [ERR_ASSERTION]: left did not reach the real recorded combat input\n    at file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:104:13\n    at async test (file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:38:23)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:97:9"
+            },
+            {
+              "name": "390 right accepts Enter once per press and releases",
+              "pass": false,
+              "error": "AssertionError [ERR_ASSERTION]: right did not reach the real recorded combat input\n    at file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:104:13\n    at async test (file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:38:23)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:97:9"
+            },
+            {
+              "name": "390 right accepts Space once per press and releases",
+              "pass": false,
+              "error": "AssertionError [ERR_ASSERTION]: right did not reach the real recorded combat input\n    at file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:104:13\n    at async test (file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:38:23)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:97:9"
+            },
+            {
+              "name": "390 down accepts Enter once per press and releases",
+              "pass": false,
+              "error": "AssertionError [ERR_ASSERTION]: down did not reach the real recorded combat input\n    at file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:104:13\n    at async test (file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:38:23)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:97:9"
+            },
+            {
+              "name": "390 down accepts Space once per press and releases",
+              "pass": false,
+              "error": "AssertionError [ERR_ASSERTION]: down did not reach the real recorded combat input\n    at file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:104:13\n    at async test (file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:38:23)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:97:9"
+            },
+            {
+              "name": "390 guard accepts Enter once per press and releases",
+              "pass": false,
+              "error": "AssertionError [ERR_ASSERTION]: guard did not reach the real recorded combat input\n    at file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:104:13\n    at async test (file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:38:23)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:97:9"
+            },
+            {
+              "name": "390 guard accepts Space once per press and releases",
+              "pass": false,
+              "error": "AssertionError [ERR_ASSERTION]: guard did not reach the real recorded combat input\n    at file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:104:13\n    at async test (file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:38:23)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:97:9"
+            },
+            {
+              "name": "390 jump accepts Enter once per press and releases",
+              "pass": false,
+              "error": "AssertionError [ERR_ASSERTION]: jump did not reach the real recorded combat input\n    at file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:104:13\n    at async test (file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:38:23)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:97:9"
+            },
+            {
+              "name": "390 jump accepts Space once per press and releases",
+              "pass": false,
+              "error": "AssertionError [ERR_ASSERTION]: jump did not reach the real recorded combat input\n    at file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:104:13\n    at async test (file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:38:23)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:97:9"
+            },
+            {
+              "name": "390 dash accepts Enter once per press and releases",
+              "pass": false,
+              "error": "AssertionError [ERR_ASSERTION]: dash did not reach the real recorded combat input\n    at file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:104:13\n    at async test (file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:38:23)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:97:9"
+            },
+            {
+              "name": "390 dash accepts Space once per press and releases",
+              "pass": false,
+              "error": "AssertionError [ERR_ASSERTION]: dash did not reach the real recorded combat input\n    at file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:104:13\n    at async test (file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:38:23)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:97:9"
+            },
+            {
+              "name": "Keyboard release preserves an independent pointer hold, and pointer release clears it",
+              "pass": false,
+              "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\nfalse !== true\n\n    at file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:128:72\n    at async test (file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:38:23)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:125:5"
+            },
+            {
+              "name": "Changing the focused element releases a keyboard hold before keyup",
+              "pass": false,
+              "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\nfalse !== true\n\n    at file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:139:37\n    at async test (file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:38:23)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:136:5"
+            },
+            {
+              "name": "Pause and reset discard an unfinished button hold without accepting key repeat as a new press",
+              "pass": false,
+              "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\nfalse !== true\n\n    at file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:148:72\n    at async test (file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:38:23)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:145:5"
+            },
+            {
+              "name": "Replay installation clears a live hold and leaves disabled controls unable to change recorded input",
+              "pass": false,
+              "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\nfalse !== true\n\n    at file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:166:37\n    at async test (file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:38:23)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:163:5"
+            },
+            {
+              "name": "Main and numpad Enter remain independent holds on the same guard button",
+              "pass": false,
+              "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\nfalse !== true\n\n    at file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:191:16\n    at async test (file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:38:23)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:187:5"
+            },
+            {
+              "name": "Native Tab navigation reaches an actionable hold button from the live arena",
+              "pass": false,
+              "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert((await snapshot(page)).x < before.x)\n\n    at file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:208:9\n    at async test (file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:38:23)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-controls-r32.mjs:199:5"
+            }
+          ],
+          "browserErrors": [],
+          "missingCode": [],
+          "unavailableOptionalData": [
+            "assets/sprites/bow/manifest.json"
+          ],
+          "controllerSource": {
+            "path": "qa-gamedev-r32/catalog-duel-v070.before-controls-r32.js",
+            "sha256": "de8cc86638ceb1a4996b891c61fb1db9d90b0a0599b42f4653fbb4e736ae0c3d"
+          },
+          "inputs": [
+            {
+              "path": "catalog-duel.html",
+              "sha256": "7fa670ae6229953043999919709b2cd06f35618319efcf656ff459a4acd89140"
+            },
+            {
+              "path": "modules/fidelity-r27/combat/adapter.js",
+              "sha256": "ec1f22e69a7d9ecf3433e6238bc134a8af369ac146ec8d8a8e21c7aca6408d2d"
+            },
+            {
+              "path": "modules/fidelity-r27/combat/presentation.js",
+              "sha256": "d53120875a6d137f0cfedc4fa6254d48a7bb4cea13f410b3893548f7a504a9e0"
+            },
+            {
+              "path": "modules/fidelity-r28/evolutions/data.js",
+              "sha256": "2e6981813c3b68a93084917d48cb51b9b42f9d108d6baba89effa7ca5979980f"
+            },
+            {
+              "path": "modules/fidelity-r28/evolutions/styles.css",
+              "sha256": "8dc471ea12a1d47dda48a7281fc38ef72a237eb5b957a89b9b34dc9a6c4af82d"
+            },
+            {
+              "path": "modules/fidelity-r30/native/manifest.json",
+              "sha256": "542d0cf097bbc9c938f81de19fdff431a2b3e5b3d78b06250833810f0dece778"
+            },
+            {
+              "path": "modules/fidelity-r30/native/new-sources/manifest.json",
+              "sha256": "5f72814259927801af1b10d17a874155ca0b4510a826f2a7d94db022376dce26"
+            },
+            {
+              "path": "modules/fidelity-r30/native/other-games/manifest.json",
+              "sha256": "387bf1ecb4608978a7836d4fb040dc8032c66d2d5a0953ba33d34332e97a92de"
+            },
+            {
+              "path": "modules/fidelity-r30/native/revelations/manifest.json",
+              "sha256": "5c8abf74b06e23ab4f6956680121a081f95fee8923447c211f84e1bed25a481c"
+            },
+            {
+              "path": "modules/fidelity-r30/selection/avatars.css",
+              "sha256": "f6ec8dd1f39686a8e4b013a966d448e0c79d336b72dfb5338bf7061cd57883cd"
+            },
+            {
+              "path": "modules/fidelity-r30/selection/manifest.json",
+              "sha256": "32fc768c8a91616a37ed7f67d767c4e916ac1ddf0567bca60c3f62dca4d91b8c"
+            },
+            {
+              "path": "modules/fidelity-r31/access/match-summary.js",
+              "sha256": "f2b04b703adaef7d0154e48e2ec7b28f29d24c57800b20d73a8d93ad081b4cdd"
+            },
+            {
+              "path": "modules/fidelity-r31/combat/generated-runtime.js",
+              "sha256": "d03a03c3fb68f686c41812d9b051ca2240c4bbba9eba64a4deadf16d4412162e"
+            },
+            {
+              "path": "modules/fidelity-r31/combat/native-adapter.js",
+              "sha256": "4dea6bfc84bd1c79a63ff90e701327976ed3d85a26f34ad386959f0fb6d09392"
+            },
+            {
+              "path": "modules/fidelity-r31/combat/native-runtime.js",
+              "sha256": "0e0be612903c65108d5dd3d691b3f074bcb619364812f82f3242b391f704bb36"
+            },
+            {
+              "path": "modules/fidelity-r31/evolutions/selection.js",
+              "sha256": "29c2ecf62047f73117e9080abf8113a8adcb5cc4fb08b4c01cce1aeeaeddd036"
+            },
+            {
+              "path": "modules/fidelity-r31/performance/image-budget.js",
+              "sha256": "e7a3a2039c9c666475fdfe118bc1fece445891d0213bbe20e75fece248cebce2"
+            },
+            {
+              "path": "modules/fidelity-r31/performance/monitor.js",
+              "sha256": "503e992e70900d0afd1b49c8d9f8acec9bbb881095d341095ead9c1bd4e24cc0"
+            },
+            {
+              "path": "modules/fidelity-r31/selection/avatars.js",
+              "sha256": "f0e70109be3310c13155c512767eacf60f28d0f48082752200a3b03de215ec1a"
+            },
+            {
+              "path": "src/baker-ambience-r15.js",
+              "sha256": "ffb355735f83c8f18589cd02b4daef519105287848343dc5eb5a50907df7a86a"
+            },
+            {
+              "path": "src/baker-stages-r14.js",
+              "sha256": "2735c502a55bf54964bfe6a61be4d7eeee09d6c9b24c1acf164fe9d084b878fb"
+            },
+            {
+              "path": "src/catalog-duel-v070.js",
+              "servedFrom": "qa-gamedev-r32/catalog-duel-v070.before-controls-r32.js",
+              "sha256": "de8cc86638ceb1a4996b891c61fb1db9d90b0a0599b42f4653fbb4e736ae0c3d"
+            },
+            {
+              "path": "src/catalog-expansion-data.js",
+              "sha256": "c33d05f4139ee9832990903289bf0edd5c16c54ccb678b6e81b0e13d75a0cce4"
+            },
+            {
+              "path": "src/catalog-replay-contract.js",
+              "sha256": "2778547c459e6efcc95810e8c3dd1108449ca752adaf54f751406573b84ec934"
+            },
+            {
+              "path": "src/catalog-replay-r7.js",
+              "sha256": "8a6536128b5400c85ac1737000d5eb5f12715d554ffd102ca4a375240f22da50"
+            },
+            {
+              "path": "src/catalog-trial-adapter.js",
+              "sha256": "2804ad111b5ee44e959ee2f12c604275193691e803f819a704950ca89fa502b7"
+            },
+            {
+              "path": "src/combat-audio-v060.js",
+              "sha256": "c40377240c4093b99154b01b713706829fc33ad324f581d77f4ceb2a816659ea"
+            },
+            {
+              "path": "src/combat-cues-r6.js",
+              "sha256": "7b24fb33b1ee04fa76301685efc468273eb564fa9d4c8141b59a70430894124d"
+            },
+            {
+              "path": "src/combat-foundation-v060.js",
+              "sha256": "4c2aa12007670a1535d4c467db115a148161a4ab08778be17d4ef4f44e95ba82"
+            },
+            {
+              "path": "src/combat-text-panel-r17.js",
+              "sha256": "45eebba4cbfb2a9517615d86111b1b12565c09b668bb5179e70896f6049fefb5"
+            },
+            {
+              "path": "src/combat-text-r17.js",
+              "sha256": "952d6254e5897dd36deb93a8cd96fa7d8f50898d9ba238492b9d4880a31d23c5"
+            },
+            {
+              "path": "src/directional-art.js",
+              "sha256": "50d15c95c4c5e402543dad18a6163746315af27605f701ea8777d6f57cb6ba2f"
+            },
+            {
+              "path": "src/fighter-directions.js",
+              "sha256": "3787d48622665d1fd8a33ed2f48f2887e1409c9dd312b11c16e031989f2ceb4e"
+            },
+            {
+              "path": "src/interface-preferences-r20.js",
+              "sha256": "79e4655dcff4674e9447c7473a4a2db77fdc5ff31c370bc331d5c74e6d83ea35"
+            },
+            {
+              "path": "src/match-sequences-r8.js",
+              "sha256": "4659ab336463951c5a269dac71321beb77c288a77ddc9036961b58e310fdb368"
+            },
+            {
+              "path": "src/platform-safety-r9.js",
+              "sha256": "c22d658049085e8e2c051dd0a15d2028ffaadd20cd5c343144a075340abe471d"
+            },
+            {
+              "path": "src/player-shell-r20.js",
+              "sha256": "97621067c2878bb193fb4b2d30c7ff903e0ceaf7ec17d7b33858ff90521732f4"
+            },
+            {
+              "path": "src/re-data.js",
+              "sha256": "090cf6e14a5ddf73291bcc443db1500e1810911beb926b4b4e26f9b0160b355a"
+            },
+            {
+              "path": "src/re-renderer.js",
+              "sha256": "fbd24f06be8c246356ba47715dce9bf80fdb75f2eb3e1648819611e8d0f6850c"
+            },
+            {
+              "path": "src/re5-scenes-v060.js",
+              "sha256": "759f94aad96616e2bdab18b6ce998b2d185e8f9f0703f875c26980727de7bb49"
+            },
+            {
+              "path": "src/spatial-weakpoints-v072.js",
+              "sha256": "046cb41f2536b9d51204d01f27b9dc4a55472fb916ace2f1d8dfebe9c1b80ff7"
+            },
+            {
+              "path": "src/stage-dynamics-r6.js",
+              "sha256": "448bd71890918de9841637c86bb9b2c7c6c991195d0e07472f2a1275a0fb49a5"
+            },
+            {
+              "path": "src/trial-audio-panel-r16.js",
+              "sha256": "d9dfcb150e1589f7597384c045c23c500d4c7198b149124d6bf1e8fbff79687a"
+            },
+            {
+              "path": "src/trial-audio-r16.js",
+              "sha256": "970c5e67baff72acee5e30568d3ac603ee5fa944a8d7c8dbf988d30e98874f4e"
+            },
+            {
+              "path": "src/trial-input-v071.js",
+              "sha256": "d8be0edc198e1c91c3022b40c8831d2f8b3623fdada820ce0253683b96a9379c"
+            },
+            {
+              "path": "src/trial-intro-r10.js",
+              "sha256": "39bffdd5ed97cd920b46aff6e5955556965c13300257e782f75f2ece4d896781"
+            },
+            {
+              "path": "src/trial-text-panel-r17.js",
+              "sha256": "3b8a74765979ed07955994a2266c6ec312e740d5fdf3016d183e8b6987d3c000"
+            },
+            {
+              "path": "styles/bow-v073.css",
+              "sha256": "4c17dce0fe045df56a348d3696e37163808fcba35474cbec6f920d5dbcd7c402"
+            },
+            {
+              "path": "styles/catalog-v070.css",
+              "sha256": "aedfe25902f1d4c48cd858513d38f57e1ffb56dc73da5dbe812ac976e108135b"
+            },
+            {
+              "path": "styles/combat-text-r17.css",
+              "sha256": "925c97c037cdb96d79c6baebb1bf758a919d076c7c3e8015fca417340f2ffd20"
+            },
+            {
+              "path": "styles/journal-v071.css",
+              "sha256": "dd00ba4cac1ed9881fd21794c4547b6f8fed49f9ff0464ac211c16f15ed5161d"
+            },
+            {
+              "path": "styles/player-shell-r20.css",
+              "sha256": "87c68eb441075530b6b81a150a2c303f6351f2298732d12de891807a08286443"
+            },
+            {
+              "path": "styles/replay-r7.css",
+              "sha256": "08c3ef3f1f63a18ffd3bc43050d1a7571d3b9d49fd005b35e4d0136bd3f98507"
+            },
+            {
+              "path": "styles/trial-audio-r16.css",
+              "sha256": "20ec128850c8c9d1d73999065e54071ab93464e929a9c1490e0685340847eb04"
+            }
+          ],
+          "testSource": {
+            "path": "tests/browser-catalog-controls-r32.mjs",
+            "sha256": "a11df567db59bc4dbedde172da2999b39d4773ce9073ded954bd6a568f264732"
+          },
+          "scope": "Delivered catalogue HTML, controller, automatic RAF loop, real combat and deterministic replay validation. Trusted Chromium keyboard and mouse at 1280/390 px; pause/reset isolation cases explicitly use DOM/API activation. Raster artwork uses a one-pixel fixture. No physical-device, real assistive-technology or artistic-fidelity certification."
+        },
+        "after": {
+          "schema": "re.bow.catalog-controls-r32/1",
+          "browserVersion": "156.0.8078.73",
+          "passed": 30,
+          "failed": 0,
+          "checks": [
+            {
+              "name": "1280 left accepts Enter once per press and releases",
+              "pass": true,
+              "detail": {
+                "width": 1280,
+                "action": "left",
+                "key": "Enter",
+                "inputFrames": 11,
+                "trustedKeyboard": true,
+                "nativeDuplicateClicks": 0,
+                "frames": 35,
+                "verifiedReplayRoundTrip": true,
+                "localStorageUnchanged": true
+              }
+            },
+            {
+              "name": "1280 left accepts Space once per press and releases",
+              "pass": true,
+              "detail": {
+                "width": 1280,
+                "action": "left",
+                "key": "Space",
+                "inputFrames": 8,
+                "trustedKeyboard": true,
+                "nativeDuplicateClicks": 0,
+                "frames": 24,
+                "verifiedReplayRoundTrip": true,
+                "localStorageUnchanged": true
+              }
+            },
+            {
+              "name": "1280 right accepts Enter once per press and releases",
+              "pass": true,
+              "detail": {
+                "width": 1280,
+                "action": "right",
+                "key": "Enter",
+                "inputFrames": 9,
+                "trustedKeyboard": true,
+                "nativeDuplicateClicks": 0,
+                "frames": 23,
+                "verifiedReplayRoundTrip": true,
+                "localStorageUnchanged": true
+              }
+            },
+            {
+              "name": "1280 right accepts Space once per press and releases",
+              "pass": true,
+              "detail": {
+                "width": 1280,
+                "action": "right",
+                "key": "Space",
+                "inputFrames": 13,
+                "trustedKeyboard": true,
+                "nativeDuplicateClicks": 0,
+                "frames": 36,
+                "verifiedReplayRoundTrip": true,
+                "localStorageUnchanged": true
+              }
+            },
+            {
+              "name": "1280 down accepts Enter once per press and releases",
+              "pass": true,
+              "detail": {
+                "width": 1280,
+                "action": "down",
+                "key": "Enter",
+                "inputFrames": 7,
+                "trustedKeyboard": true,
+                "nativeDuplicateClicks": 0,
+                "frames": 27,
+                "verifiedReplayRoundTrip": true,
+                "localStorageUnchanged": true
+              }
+            },
+            {
+              "name": "1280 down accepts Space once per press and releases",
+              "pass": true,
+              "detail": {
+                "width": 1280,
+                "action": "down",
+                "key": "Space",
+                "inputFrames": 15,
+                "trustedKeyboard": true,
+                "nativeDuplicateClicks": 0,
+                "frames": 36,
+                "verifiedReplayRoundTrip": true,
+                "localStorageUnchanged": true
+              }
+            },
+            {
+              "name": "1280 guard accepts Enter once per press and releases",
+              "pass": true,
+              "detail": {
+                "width": 1280,
+                "action": "guard",
+                "key": "Enter",
+                "inputFrames": 6,
+                "trustedKeyboard": true,
+                "nativeDuplicateClicks": 0,
+                "frames": 25,
+                "verifiedReplayRoundTrip": true,
+                "localStorageUnchanged": true
+              }
+            },
+            {
+              "name": "1280 guard accepts Space once per press and releases",
+              "pass": true,
+              "detail": {
+                "width": 1280,
+                "action": "guard",
+                "key": "Space",
+                "inputFrames": 9,
+                "trustedKeyboard": true,
+                "nativeDuplicateClicks": 0,
+                "frames": 29,
+                "verifiedReplayRoundTrip": true,
+                "localStorageUnchanged": true
+              }
+            },
+            {
+              "name": "1280 jump accepts Enter once per press and releases",
+              "pass": true,
+              "detail": {
+                "width": 1280,
+                "action": "jump",
+                "key": "Enter",
+                "inputFrames": 1,
+                "trustedKeyboard": true,
+                "nativeDuplicateClicks": 0,
+                "frames": 23,
+                "verifiedReplayRoundTrip": true,
+                "localStorageUnchanged": true
+              }
+            },
+            {
+              "name": "1280 jump accepts Space once per press and releases",
+              "pass": true,
+              "detail": {
+                "width": 1280,
+                "action": "jump",
+                "key": "Space",
+                "inputFrames": 1,
+                "trustedKeyboard": true,
+                "nativeDuplicateClicks": 0,
+                "frames": 19,
+                "verifiedReplayRoundTrip": true,
+                "localStorageUnchanged": true
+              }
+            },
+            {
+              "name": "1280 dash accepts Enter once per press and releases",
+              "pass": true,
+              "detail": {
+                "width": 1280,
+                "action": "dash",
+                "key": "Enter",
+                "inputFrames": 1,
+                "trustedKeyboard": true,
+                "nativeDuplicateClicks": 0,
+                "frames": 21,
+                "verifiedReplayRoundTrip": true,
+                "localStorageUnchanged": true
+              }
+            },
+            {
+              "name": "1280 dash accepts Space once per press and releases",
+              "pass": true,
+              "detail": {
+                "width": 1280,
+                "action": "dash",
+                "key": "Space",
+                "inputFrames": 1,
+                "trustedKeyboard": true,
+                "nativeDuplicateClicks": 0,
+                "frames": 19,
+                "verifiedReplayRoundTrip": true,
+                "localStorageUnchanged": true
+              }
+            },
+            {
+              "name": "390 left accepts Enter once per press and releases",
+              "pass": true,
+              "detail": {
+                "width": 390,
+                "action": "left",
+                "key": "Enter",
+                "inputFrames": 7,
+                "trustedKeyboard": true,
+                "nativeDuplicateClicks": 0,
+                "frames": 21,
+                "verifiedReplayRoundTrip": true,
+                "localStorageUnchanged": true
+              }
+            },
+            {
+              "name": "390 left accepts Space once per press and releases",
+              "pass": true,
+              "detail": {
+                "width": 390,
+                "action": "left",
+                "key": "Space",
+                "inputFrames": 8,
+                "trustedKeyboard": true,
+                "nativeDuplicateClicks": 0,
+                "frames": 22,
+                "verifiedReplayRoundTrip": true,
+                "localStorageUnchanged": true
+              }
+            },
+            {
+              "name": "390 right accepts Enter once per press and releases",
+              "pass": true,
+              "detail": {
+                "width": 390,
+                "action": "right",
+                "key": "Enter",
+                "inputFrames": 8,
+                "trustedKeyboard": true,
+                "nativeDuplicateClicks": 0,
+                "frames": 21,
+                "verifiedReplayRoundTrip": true,
+                "localStorageUnchanged": true
+              }
+            },
+            {
+              "name": "390 right accepts Space once per press and releases",
+              "pass": true,
+              "detail": {
+                "width": 390,
+                "action": "right",
+                "key": "Space",
+                "inputFrames": 8,
+                "trustedKeyboard": true,
+                "nativeDuplicateClicks": 0,
+                "frames": 24,
+                "verifiedReplayRoundTrip": true,
+                "localStorageUnchanged": true
+              }
+            },
+            {
+              "name": "390 down accepts Enter once per press and releases",
+              "pass": true,
+              "detail": {
+                "width": 390,
+                "action": "down",
+                "key": "Enter",
+                "inputFrames": 7,
+                "trustedKeyboard": true,
+                "nativeDuplicateClicks": 0,
+                "frames": 19,
+                "verifiedReplayRoundTrip": true,
+                "localStorageUnchanged": true
+              }
+            },
+            {
+              "name": "390 down accepts Space once per press and releases",
+              "pass": true,
+              "detail": {
+                "width": 390,
+                "action": "down",
+                "key": "Space",
+                "inputFrames": 7,
+                "trustedKeyboard": true,
+                "nativeDuplicateClicks": 0,
+                "frames": 24,
+                "verifiedReplayRoundTrip": true,
+                "localStorageUnchanged": true
+              }
+            },
+            {
+              "name": "390 guard accepts Enter once per press and releases",
+              "pass": true,
+              "detail": {
+                "width": 390,
+                "action": "guard",
+                "key": "Enter",
+                "inputFrames": 7,
+                "trustedKeyboard": true,
+                "nativeDuplicateClicks": 0,
+                "frames": 16,
+                "verifiedReplayRoundTrip": true,
+                "localStorageUnchanged": true
+              }
+            },
+            {
+              "name": "390 guard accepts Space once per press and releases",
+              "pass": true,
+              "detail": {
+                "width": 390,
+                "action": "guard",
+                "key": "Space",
+                "inputFrames": 6,
+                "trustedKeyboard": true,
+                "nativeDuplicateClicks": 0,
+                "frames": 15,
+                "verifiedReplayRoundTrip": true,
+                "localStorageUnchanged": true
+              }
+            },
+            {
+              "name": "390 jump accepts Enter once per press and releases",
+              "pass": true,
+              "detail": {
+                "width": 390,
+                "action": "jump",
+                "key": "Enter",
+                "inputFrames": 1,
+                "trustedKeyboard": true,
+                "nativeDuplicateClicks": 0,
+                "frames": 22,
+                "verifiedReplayRoundTrip": true,
+                "localStorageUnchanged": true
+              }
+            },
+            {
+              "name": "390 jump accepts Space once per press and releases",
+              "pass": true,
+              "detail": {
+                "width": 390,
+                "action": "jump",
+                "key": "Space",
+                "inputFrames": 1,
+                "trustedKeyboard": true,
+                "nativeDuplicateClicks": 0,
+                "frames": 24,
+                "verifiedReplayRoundTrip": true,
+                "localStorageUnchanged": true
+              }
+            },
+            {
+              "name": "390 dash accepts Enter once per press and releases",
+              "pass": true,
+              "detail": {
+                "width": 390,
+                "action": "dash",
+                "key": "Enter",
+                "inputFrames": 1,
+                "trustedKeyboard": true,
+                "nativeDuplicateClicks": 0,
+                "frames": 19,
+                "verifiedReplayRoundTrip": true,
+                "localStorageUnchanged": true
+              }
+            },
+            {
+              "name": "390 dash accepts Space once per press and releases",
+              "pass": true,
+              "detail": {
+                "width": 390,
+                "action": "dash",
+                "key": "Space",
+                "inputFrames": 1,
+                "trustedKeyboard": true,
+                "nativeDuplicateClicks": 0,
+                "frames": 21,
+                "verifiedReplayRoundTrip": true,
+                "localStorageUnchanged": true
+              }
+            },
+            {
+              "name": "Keyboard release preserves an independent pointer hold, and pointer release clears it",
+              "pass": true,
+              "detail": {
+                "independentPointerAndKeyboard": true,
+                "frames": 30,
+                "verifiedReplayRoundTrip": true,
+                "localStorageUnchanged": true
+              }
+            },
+            {
+              "name": "Changing the focused element releases a keyboard hold before keyup",
+              "pass": true,
+              "detail": {
+                "elementBlurReleases": true,
+                "frames": 17,
+                "verifiedReplayRoundTrip": true,
+                "localStorageUnchanged": true
+              }
+            },
+            {
+              "name": "Pause and reset discard an unfinished button hold without accepting key repeat as a new press",
+              "pass": true,
+              "detail": {
+                "pauseClears": true,
+                "resetClears": true,
+                "repeatIgnoredAfterReset": true,
+                "frames": 15,
+                "verifiedReplayRoundTrip": true,
+                "localStorageUnchanged": true
+              }
+            },
+            {
+              "name": "Replay installation clears a live hold and leaves disabled controls unable to change recorded input",
+              "pass": true,
+              "detail": {
+                "disabledReplayControls": 6,
+                "importedDuringLiveHold": true,
+                "replayInputUnchanged": true,
+                "resetReleases": true,
+                "frames": 8,
+                "verifiedReplayRoundTrip": true,
+                "localStorageUnchanged": true
+              }
+            },
+            {
+              "name": "Main and numpad Enter remain independent holds on the same guard button",
+              "pass": true,
+              "detail": {
+                "numpadEnterSupported": true,
+                "independentKeyboardSources": true,
+                "frames": 27,
+                "verifiedReplayRoundTrip": true,
+                "localStorageUnchanged": true
+              }
+            },
+            {
+              "name": "Native Tab navigation reaches an actionable hold button from the live arena",
+              "pass": true,
+              "detail": {
+                "trustedTabNavigation": true,
+                "frames": 18,
+                "verifiedReplayRoundTrip": true,
+                "localStorageUnchanged": true
+              }
+            }
+          ],
+          "browserErrors": [],
+          "missingCode": [],
+          "unavailableOptionalData": [
+            "assets/sprites/bow/manifest.json"
+          ],
+          "controllerSource": {
+            "path": "src/catalog-duel-v070.js",
+            "sha256": "5ebfaa1c2c67afbf57ef62dabec5f54372b2fcf5ec855f7d83f53abbcf87c456"
+          },
+          "inputs": [
+            {
+              "path": "catalog-duel.html",
+              "sha256": "7fa670ae6229953043999919709b2cd06f35618319efcf656ff459a4acd89140"
+            },
+            {
+              "path": "modules/fidelity-r27/combat/adapter.js",
+              "sha256": "ec1f22e69a7d9ecf3433e6238bc134a8af369ac146ec8d8a8e21c7aca6408d2d"
+            },
+            {
+              "path": "modules/fidelity-r27/combat/presentation.js",
+              "sha256": "d53120875a6d137f0cfedc4fa6254d48a7bb4cea13f410b3893548f7a504a9e0"
+            },
+            {
+              "path": "modules/fidelity-r28/evolutions/data.js",
+              "sha256": "2e6981813c3b68a93084917d48cb51b9b42f9d108d6baba89effa7ca5979980f"
+            },
+            {
+              "path": "modules/fidelity-r28/evolutions/styles.css",
+              "sha256": "8dc471ea12a1d47dda48a7281fc38ef72a237eb5b957a89b9b34dc9a6c4af82d"
+            },
+            {
+              "path": "modules/fidelity-r30/native/manifest.json",
+              "sha256": "542d0cf097bbc9c938f81de19fdff431a2b3e5b3d78b06250833810f0dece778"
+            },
+            {
+              "path": "modules/fidelity-r30/native/new-sources/manifest.json",
+              "sha256": "5f72814259927801af1b10d17a874155ca0b4510a826f2a7d94db022376dce26"
+            },
+            {
+              "path": "modules/fidelity-r30/native/other-games/manifest.json",
+              "sha256": "387bf1ecb4608978a7836d4fb040dc8032c66d2d5a0953ba33d34332e97a92de"
+            },
+            {
+              "path": "modules/fidelity-r30/native/revelations/manifest.json",
+              "sha256": "5c8abf74b06e23ab4f6956680121a081f95fee8923447c211f84e1bed25a481c"
+            },
+            {
+              "path": "modules/fidelity-r30/selection/avatars.css",
+              "sha256": "f6ec8dd1f39686a8e4b013a966d448e0c79d336b72dfb5338bf7061cd57883cd"
+            },
+            {
+              "path": "modules/fidelity-r30/selection/manifest.json",
+              "sha256": "32fc768c8a91616a37ed7f67d767c4e916ac1ddf0567bca60c3f62dca4d91b8c"
+            },
+            {
+              "path": "modules/fidelity-r31/access/match-summary.js",
+              "sha256": "f2b04b703adaef7d0154e48e2ec7b28f29d24c57800b20d73a8d93ad081b4cdd"
+            },
+            {
+              "path": "modules/fidelity-r31/combat/generated-runtime.js",
+              "sha256": "d03a03c3fb68f686c41812d9b051ca2240c4bbba9eba64a4deadf16d4412162e"
+            },
+            {
+              "path": "modules/fidelity-r31/combat/native-adapter.js",
+              "sha256": "4dea6bfc84bd1c79a63ff90e701327976ed3d85a26f34ad386959f0fb6d09392"
+            },
+            {
+              "path": "modules/fidelity-r31/combat/native-runtime.js",
+              "sha256": "0e0be612903c65108d5dd3d691b3f074bcb619364812f82f3242b391f704bb36"
+            },
+            {
+              "path": "modules/fidelity-r31/evolutions/selection.js",
+              "sha256": "29c2ecf62047f73117e9080abf8113a8adcb5cc4fb08b4c01cce1aeeaeddd036"
+            },
+            {
+              "path": "modules/fidelity-r31/performance/image-budget.js",
+              "sha256": "e7a3a2039c9c666475fdfe118bc1fece445891d0213bbe20e75fece248cebce2"
+            },
+            {
+              "path": "modules/fidelity-r31/performance/monitor.js",
+              "sha256": "503e992e70900d0afd1b49c8d9f8acec9bbb881095d341095ead9c1bd4e24cc0"
+            },
+            {
+              "path": "modules/fidelity-r31/selection/avatars.js",
+              "sha256": "f0e70109be3310c13155c512767eacf60f28d0f48082752200a3b03de215ec1a"
+            },
+            {
+              "path": "src/baker-ambience-r15.js",
+              "sha256": "ffb355735f83c8f18589cd02b4daef519105287848343dc5eb5a50907df7a86a"
+            },
+            {
+              "path": "src/baker-stages-r14.js",
+              "sha256": "2735c502a55bf54964bfe6a61be4d7eeee09d6c9b24c1acf164fe9d084b878fb"
+            },
+            {
+              "path": "src/catalog-duel-v070.js",
+              "sha256": "5ebfaa1c2c67afbf57ef62dabec5f54372b2fcf5ec855f7d83f53abbcf87c456"
+            },
+            {
+              "path": "src/catalog-expansion-data.js",
+              "sha256": "c33d05f4139ee9832990903289bf0edd5c16c54ccb678b6e81b0e13d75a0cce4"
+            },
+            {
+              "path": "src/catalog-replay-contract.js",
+              "sha256": "2778547c459e6efcc95810e8c3dd1108449ca752adaf54f751406573b84ec934"
+            },
+            {
+              "path": "src/catalog-replay-r7.js",
+              "sha256": "8a6536128b5400c85ac1737000d5eb5f12715d554ffd102ca4a375240f22da50"
+            },
+            {
+              "path": "src/catalog-trial-adapter.js",
+              "sha256": "2804ad111b5ee44e959ee2f12c604275193691e803f819a704950ca89fa502b7"
+            },
+            {
+              "path": "src/combat-audio-v060.js",
+              "sha256": "c40377240c4093b99154b01b713706829fc33ad324f581d77f4ceb2a816659ea"
+            },
+            {
+              "path": "src/combat-cues-r6.js",
+              "sha256": "7b24fb33b1ee04fa76301685efc468273eb564fa9d4c8141b59a70430894124d"
+            },
+            {
+              "path": "src/combat-foundation-v060.js",
+              "sha256": "4c2aa12007670a1535d4c467db115a148161a4ab08778be17d4ef4f44e95ba82"
+            },
+            {
+              "path": "src/combat-text-panel-r17.js",
+              "sha256": "45eebba4cbfb2a9517615d86111b1b12565c09b668bb5179e70896f6049fefb5"
+            },
+            {
+              "path": "src/combat-text-r17.js",
+              "sha256": "952d6254e5897dd36deb93a8cd96fa7d8f50898d9ba238492b9d4880a31d23c5"
+            },
+            {
+              "path": "src/directional-art.js",
+              "sha256": "50d15c95c4c5e402543dad18a6163746315af27605f701ea8777d6f57cb6ba2f"
+            },
+            {
+              "path": "src/fighter-directions.js",
+              "sha256": "3787d48622665d1fd8a33ed2f48f2887e1409c9dd312b11c16e031989f2ceb4e"
+            },
+            {
+              "path": "src/interface-preferences-r20.js",
+              "sha256": "79e4655dcff4674e9447c7473a4a2db77fdc5ff31c370bc331d5c74e6d83ea35"
+            },
+            {
+              "path": "src/match-sequences-r8.js",
+              "sha256": "4659ab336463951c5a269dac71321beb77c288a77ddc9036961b58e310fdb368"
+            },
+            {
+              "path": "src/platform-safety-r9.js",
+              "sha256": "c22d658049085e8e2c051dd0a15d2028ffaadd20cd5c343144a075340abe471d"
+            },
+            {
+              "path": "src/player-shell-r20.js",
+              "sha256": "97621067c2878bb193fb4b2d30c7ff903e0ceaf7ec17d7b33858ff90521732f4"
+            },
+            {
+              "path": "src/re-data.js",
+              "sha256": "090cf6e14a5ddf73291bcc443db1500e1810911beb926b4b4e26f9b0160b355a"
+            },
+            {
+              "path": "src/re-renderer.js",
+              "sha256": "fbd24f06be8c246356ba47715dce9bf80fdb75f2eb3e1648819611e8d0f6850c"
+            },
+            {
+              "path": "src/re5-scenes-v060.js",
+              "sha256": "759f94aad96616e2bdab18b6ce998b2d185e8f9f0703f875c26980727de7bb49"
+            },
+            {
+              "path": "src/spatial-weakpoints-v072.js",
+              "sha256": "046cb41f2536b9d51204d01f27b9dc4a55472fb916ace2f1d8dfebe9c1b80ff7"
+            },
+            {
+              "path": "src/stage-dynamics-r6.js",
+              "sha256": "448bd71890918de9841637c86bb9b2c7c6c991195d0e07472f2a1275a0fb49a5"
+            },
+            {
+              "path": "src/trial-audio-panel-r16.js",
+              "sha256": "d9dfcb150e1589f7597384c045c23c500d4c7198b149124d6bf1e8fbff79687a"
+            },
+            {
+              "path": "src/trial-audio-r16.js",
+              "sha256": "970c5e67baff72acee5e30568d3ac603ee5fa944a8d7c8dbf988d30e98874f4e"
+            },
+            {
+              "path": "src/trial-input-v071.js",
+              "sha256": "d8be0edc198e1c91c3022b40c8831d2f8b3623fdada820ce0253683b96a9379c"
+            },
+            {
+              "path": "src/trial-intro-r10.js",
+              "sha256": "39bffdd5ed97cd920b46aff6e5955556965c13300257e782f75f2ece4d896781"
+            },
+            {
+              "path": "src/trial-text-panel-r17.js",
+              "sha256": "3b8a74765979ed07955994a2266c6ec312e740d5fdf3016d183e8b6987d3c000"
+            },
+            {
+              "path": "styles/bow-v073.css",
+              "sha256": "4c17dce0fe045df56a348d3696e37163808fcba35474cbec6f920d5dbcd7c402"
+            },
+            {
+              "path": "styles/catalog-v070.css",
+              "sha256": "aedfe25902f1d4c48cd858513d38f57e1ffb56dc73da5dbe812ac976e108135b"
+            },
+            {
+              "path": "styles/combat-text-r17.css",
+              "sha256": "925c97c037cdb96d79c6baebb1bf758a919d076c7c3e8015fca417340f2ffd20"
+            },
+            {
+              "path": "styles/journal-v071.css",
+              "sha256": "dd00ba4cac1ed9881fd21794c4547b6f8fed49f9ff0464ac211c16f15ed5161d"
+            },
+            {
+              "path": "styles/player-shell-r20.css",
+              "sha256": "87c68eb441075530b6b81a150a2c303f6351f2298732d12de891807a08286443"
+            },
+            {
+              "path": "styles/replay-r7.css",
+              "sha256": "08c3ef3f1f63a18ffd3bc43050d1a7571d3b9d49fd005b35e4d0136bd3f98507"
+            },
+            {
+              "path": "styles/trial-audio-r16.css",
+              "sha256": "20ec128850c8c9d1d73999065e54071ab93464e929a9c1490e0685340847eb04"
+            }
+          ],
+          "testSource": {
+            "path": "tests/browser-catalog-controls-r32.mjs",
+            "sha256": "a11df567db59bc4dbedde172da2999b39d4773ce9073ded954bd6a568f264732"
+          },
+          "scope": "Delivered catalogue HTML, controller, automatic RAF loop, real combat and deterministic replay validation. Trusted Chromium keyboard and mouse at 1280/390 px; pause/reset isolation cases explicitly use DOM/API activation. Raster artwork uses a one-pixel fixture. No physical-device, real assistive-technology or artistic-fidelity certification."
+        }
+      },
+      {
+        "name": "Catalogue focus, gamepad pause and BFCache",
+        "script": "tests/browser-catalog-focus-r32.mjs",
+        "scriptSha256": "25f0ea4efecb7ef98d42a1ea2c2ac52ee71399c5d7747be9ced39738a710ecfa",
+        "before": {
+          "schema": "re.bow.catalog-focus-browser-r32/1",
+          "observedAtUTC": "2026-10-29T15:00:02.381Z",
+          "browserVersion": "156.0.8078.73",
+          "passed": 4,
+          "failed": 3,
+          "checks": [
+            {
+              "name": "A trusted visible-window blur pauses the duel and Start cannot resume it in the background",
+              "pass": false,
+              "error": "AssertionError [ERR_ASSERTION]: Start resumed a visible but unfocused duel\n\nfalse !== true\n\n    at file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-focus-r32.mjs:144:12\n    at async test (file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-focus-r32.mjs:126:20)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-focus-r32.mjs:139:3",
+              "observed": {
+                "paused": false,
+                "frame": 12,
+                "hidden": false,
+                "focused": false,
+                "samples": 40,
+                "startHeld": true,
+                "events": [
+                  {
+                    "type": "pageshow",
+                    "trusted": true,
+                    "persisted": false,
+                    "hidden": false,
+                    "focused": true,
+                    "code": null,
+                    "target": null
+                  },
+                  {
+                    "type": "pointerdown",
+                    "trusted": true,
+                    "persisted": null,
+                    "hidden": false,
+                    "focused": true,
+                    "code": null,
+                    "target": "trialStart"
+                  },
+                  {
+                    "type": "focus",
+                    "trusted": true,
+                    "persisted": null,
+                    "hidden": false,
+                    "focused": true,
+                    "code": null,
+                    "target": "trialStart"
+                  },
+                  {
+                    "type": "blur",
+                    "trusted": true,
+                    "persisted": null,
+                    "hidden": false,
+                    "focused": true,
+                    "code": null,
+                    "target": "trialStart"
+                  },
+                  {
+                    "type": "focus",
+                    "trusted": true,
+                    "persisted": null,
+                    "hidden": false,
+                    "focused": true,
+                    "code": null,
+                    "target": "trialCanvas"
+                  },
+                  {
+                    "type": "pointerdown",
+                    "trusted": true,
+                    "persisted": null,
+                    "hidden": false,
+                    "focused": true,
+                    "code": null,
+                    "target": "trialIntroSkip"
+                  },
+                  {
+                    "type": "blur",
+                    "trusted": true,
+                    "persisted": null,
+                    "hidden": false,
+                    "focused": true,
+                    "code": null,
+                    "target": "trialCanvas"
+                  },
+                  {
+                    "type": "focus",
+                    "trusted": true,
+                    "persisted": null,
+                    "hidden": false,
+                    "focused": true,
+                    "code": null,
+                    "target": "trialIntroSkip"
+                  },
+                  {
+                    "type": "blur",
+                    "trusted": true,
+                    "persisted": null,
+                    "hidden": false,
+                    "focused": true,
+                    "code": null,
+                    "target": "trialIntroSkip"
+                  },
+                  {
+                    "type": "focus",
+                    "trusted": true,
+                    "persisted": null,
+                    "hidden": false,
+                    "focused": true,
+                    "code": null,
+                    "target": "trialCanvas"
+                  },
+                  {
+                    "type": "blur",
+                    "trusted": true,
+                    "persisted": null,
+                    "hidden": false,
+                    "focused": false,
+                    "code": null,
+                    "target": "trialCanvas"
+                  },
+                  {
+                    "type": "blur",
+                    "trusted": true,
+                    "persisted": null,
+                    "hidden": false,
+                    "focused": false,
+                    "code": null,
+                    "target": null
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Holding Start through a trusted focus return requires release and a new press before resuming",
+              "pass": false,
+              "error": "AssertionError [ERR_ASSERTION]: Held Start resumed during the focus transition\n\nfalse !== true\n\n    at file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-focus-r32.mjs:152:12\n    at async test (file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-focus-r32.mjs:126:20)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-focus-r32.mjs:148:3",
+              "observed": {
+                "paused": false,
+                "frame": 21,
+                "hidden": false,
+                "focused": true,
+                "samples": 46,
+                "startHeld": true,
+                "events": [
+                  {
+                    "type": "pageshow",
+                    "trusted": true,
+                    "persisted": false,
+                    "hidden": false,
+                    "focused": true,
+                    "code": null,
+                    "target": null
+                  },
+                  {
+                    "type": "pointerdown",
+                    "trusted": true,
+                    "persisted": null,
+                    "hidden": false,
+                    "focused": true,
+                    "code": null,
+                    "target": "trialStart"
+                  },
+                  {
+                    "type": "focus",
+                    "trusted": true,
+                    "persisted": null,
+                    "hidden": false,
+                    "focused": true,
+                    "code": null,
+                    "target": "trialStart"
+                  },
+                  {
+                    "type": "blur",
+                    "trusted": true,
+                    "persisted": null,
+                    "hidden": false,
+                    "focused": true,
+                    "code": null,
+                    "target": "trialStart"
+                  },
+                  {
+                    "type": "focus",
+                    "trusted": true,
+                    "persisted": null,
+                    "hidden": false,
+                    "focused": true,
+                    "code": null,
+                    "target": "trialCanvas"
+                  },
+                  {
+                    "type": "pointerdown",
+                    "trusted": true,
+                    "persisted": null,
+                    "hidden": false,
+                    "focused": true,
+                    "code": null,
+                    "target": "trialIntroSkip"
+                  },
+                  {
+                    "type": "blur",
+                    "trusted": true,
+                    "persisted": null,
+                    "hidden": false,
+                    "focused": true,
+                    "code": null,
+                    "target": "trialCanvas"
+                  },
+                  {
+                    "type": "focus",
+                    "trusted": true,
+                    "persisted": null,
+                    "hidden": false,
+                    "focused": true,
+                    "code": null,
+                    "target": "trialIntroSkip"
+                  },
+                  {
+                    "type": "blur",
+                    "trusted": true,
+                    "persisted": null,
+                    "hidden": false,
+                    "focused": true,
+                    "code": null,
+                    "target": "trialIntroSkip"
+                  },
+                  {
+                    "type": "focus",
+                    "trusted": true,
+                    "persisted": null,
+                    "hidden": false,
+                    "focused": true,
+                    "code": null,
+                    "target": "trialCanvas"
+                  },
+                  {
+                    "type": "blur",
+                    "trusted": true,
+                    "persisted": null,
+                    "hidden": false,
+                    "focused": false,
+                    "code": null,
+                    "target": "trialCanvas"
+                  },
+                  {
+                    "type": "blur",
+                    "trusted": true,
+                    "persisted": null,
+                    "hidden": false,
+                    "focused": false,
+                    "code": null,
+                    "target": null
+                  },
+                  {
+                    "type": "focus",
+                    "trusted": true,
+                    "persisted": null,
+                    "hidden": false,
+                    "focused": true,
+                    "code": null,
+                    "target": null
+                  },
+                  {
+                    "type": "focus",
+                    "trusted": true,
+                    "persisted": null,
+                    "hidden": false,
+                    "focused": true,
+                    "code": null,
+                    "target": "trialCanvas"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Keyboard movement held before a trusted blur is cleared before voluntary resume",
+              "pass": true,
+              "detail": {
+                "trustedKeyboard": true,
+                "trustedBlurAndFocus": true,
+                "staleRightInputCleared": true,
+                "replayValidated": true,
+                "resumedFrames": 7
+              }
+            },
+            {
+              "name": "A captured pointer hold is cleared by a trusted blur before voluntary resume",
+              "pass": true,
+              "detail": {
+                "trustedPointer": true,
+                "trustedBlurAndFocus": true,
+                "staleRightInputCleared": true,
+                "replayValidated": true,
+                "resumedFrames": 7
+              }
+            },
+            {
+              "name": "CPU mode still pauses and resumes once per fresh Start press despite per-tick input clearing",
+              "pass": true,
+              "detail": {
+                "padIsFixture": true,
+                "freshPresses": 3,
+                "pauseResumePause": true,
+                "heldPressDidNotRepeat": true,
+                "cpuReplayValidated": true
+              }
+            },
+            {
+              "name": "Synthetic hidden/visible boundaries preserve pause and require a new Start press",
+              "pass": true,
+              "detail": {
+                "syntheticVisibilityEvents": true,
+                "hiddenPropertyFixture": true,
+                "automaticResume": false,
+                "freshStartResumed": true
+              }
+            },
+            {
+              "name": "Real BFCache restoration retains the duel in pause and rebases a Start press made before navigation",
+              "pass": false,
+              "error": "AssertionError [ERR_ASSERTION]: An unseen Start edge resumed a restored document\n\nfalse !== true\n\n    at file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-focus-r32.mjs:232:12\n    at async test (file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-focus-r32.mjs:126:20)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-catalog-focus-r32.mjs:217:3",
+              "observed": {
+                "paused": false,
+                "frame": 24,
+                "hidden": false,
+                "focused": true,
+                "samples": 44,
+                "startHeld": true,
+                "events": [
+                  {
+                    "type": "pageshow",
+                    "trusted": true,
+                    "persisted": false,
+                    "hidden": false,
+                    "focused": true,
+                    "code": null,
+                    "target": null
+                  },
+                  {
+                    "type": "pointerdown",
+                    "trusted": true,
+                    "persisted": null,
+                    "hidden": false,
+                    "focused": true,
+                    "code": null,
+                    "target": "trialStart"
+                  },
+                  {
+                    "type": "focus",
+                    "trusted": true,
+                    "persisted": null,
+                    "hidden": false,
+                    "focused": true,
+                    "code": null,
+                    "target": "trialStart"
+                  },
+                  {
+                    "type": "blur",
+                    "trusted": true,
+                    "persisted": null,
+                    "hidden": false,
+                    "focused": true,
+                    "code": null,
+                    "target": "trialStart"
+                  },
+                  {
+                    "type": "focus",
+                    "trusted": true,
+                    "persisted": null,
+                    "hidden": false,
+                    "focused": true,
+                    "code": null,
+                    "target": "trialCanvas"
+                  },
+                  {
+                    "type": "pointerdown",
+                    "trusted": true,
+                    "persisted": null,
+                    "hidden": false,
+                    "focused": true,
+                    "code": null,
+                    "target": "trialIntroSkip"
+                  },
+                  {
+                    "type": "blur",
+                    "trusted": true,
+                    "persisted": null,
+                    "hidden": false,
+                    "focused": true,
+                    "code": null,
+                    "target": "trialCanvas"
+                  },
+                  {
+                    "type": "focus",
+                    "trusted": true,
+                    "persisted": null,
+                    "hidden": false,
+                    "focused": true,
+                    "code": null,
+                    "target": "trialIntroSkip"
+                  },
+                  {
+                    "type": "blur",
+                    "trusted": true,
+                    "persisted": null,
+                    "hidden": false,
+                    "focused": true,
+                    "code": null,
+                    "target": "trialIntroSkip"
+                  },
+                  {
+                    "type": "focus",
+                    "trusted": true,
+                    "persisted": null,
+                    "hidden": false,
+                    "focused": true,
+                    "code": null,
+                    "target": "trialCanvas"
+                  },
+                  {
+                    "type": "pagehide",
+                    "trusted": true,
+                    "persisted": true,
+                    "hidden": false,
+                    "focused": true,
+                    "code": null,
+                    "target": null
+                  },
+                  {
+                    "type": "visibilitychange",
+                    "trusted": true,
+                    "persisted": null,
+                    "hidden": true,
+                    "focused": true,
+                    "code": null,
+                    "target": null
+                  },
+                  {
+                    "type": "visibilitychange",
+                    "trusted": true,
+                    "persisted": null,
+                    "hidden": false,
+                    "focused": true,
+                    "code": null,
+                    "target": null
+                  },
+                  {
+                    "type": "pageshow",
+                    "trusted": true,
+                    "persisted": true,
+                    "hidden": false,
+                    "focused": true,
+                    "code": null,
+                    "target": null
+                  }
+                ]
+              }
+            }
+          ],
+          "browserErrors": [],
+          "missingCode": [],
+          "unavailableOptionalData": [
+            "assets/sprites/bow/manifest.json"
+          ],
+          "sourceOverride": "qa-gamedev-r32/catalog-focus-before-source.js",
+          "inputs": [
+            {
+              "path": "catalog-duel.html",
+              "sha256": "7fa670ae6229953043999919709b2cd06f35618319efcf656ff459a4acd89140"
+            },
+            {
+              "path": "modules/fidelity-r27/combat/adapter.js",
+              "sha256": "ec1f22e69a7d9ecf3433e6238bc134a8af369ac146ec8d8a8e21c7aca6408d2d"
+            },
+            {
+              "path": "modules/fidelity-r27/combat/presentation.js",
+              "sha256": "d53120875a6d137f0cfedc4fa6254d48a7bb4cea13f410b3893548f7a504a9e0"
+            },
+            {
+              "path": "modules/fidelity-r28/evolutions/data.js",
+              "sha256": "2e6981813c3b68a93084917d48cb51b9b42f9d108d6baba89effa7ca5979980f"
+            },
+            {
+              "path": "modules/fidelity-r28/evolutions/styles.css",
+              "sha256": "8dc471ea12a1d47dda48a7281fc38ef72a237eb5b957a89b9b34dc9a6c4af82d"
+            },
+            {
+              "path": "modules/fidelity-r30/native/manifest.json",
+              "sha256": "542d0cf097bbc9c938f81de19fdff431a2b3e5b3d78b06250833810f0dece778"
+            },
+            {
+              "path": "modules/fidelity-r30/native/new-sources/manifest.json",
+              "sha256": "5f72814259927801af1b10d17a874155ca0b4510a826f2a7d94db022376dce26"
+            },
+            {
+              "path": "modules/fidelity-r30/native/other-games/manifest.json",
+              "sha256": "387bf1ecb4608978a7836d4fb040dc8032c66d2d5a0953ba33d34332e97a92de"
+            },
+            {
+              "path": "modules/fidelity-r30/native/revelations/manifest.json",
+              "sha256": "5c8abf74b06e23ab4f6956680121a081f95fee8923447c211f84e1bed25a481c"
+            },
+            {
+              "path": "modules/fidelity-r30/selection/avatars.css",
+              "sha256": "f6ec8dd1f39686a8e4b013a966d448e0c79d336b72dfb5338bf7061cd57883cd"
+            },
+            {
+              "path": "modules/fidelity-r30/selection/manifest.json",
+              "sha256": "32fc768c8a91616a37ed7f67d767c4e916ac1ddf0567bca60c3f62dca4d91b8c"
+            },
+            {
+              "path": "modules/fidelity-r31/access/match-summary.js",
+              "sha256": "f2b04b703adaef7d0154e48e2ec7b28f29d24c57800b20d73a8d93ad081b4cdd"
+            },
+            {
+              "path": "modules/fidelity-r31/combat/generated-runtime.js",
+              "sha256": "d03a03c3fb68f686c41812d9b051ca2240c4bbba9eba64a4deadf16d4412162e"
+            },
+            {
+              "path": "modules/fidelity-r31/combat/native-adapter.js",
+              "sha256": "4dea6bfc84bd1c79a63ff90e701327976ed3d85a26f34ad386959f0fb6d09392"
+            },
+            {
+              "path": "modules/fidelity-r31/combat/native-runtime.js",
+              "sha256": "0e0be612903c65108d5dd3d691b3f074bcb619364812f82f3242b391f704bb36"
+            },
+            {
+              "path": "modules/fidelity-r31/evolutions/selection.js",
+              "sha256": "29c2ecf62047f73117e9080abf8113a8adcb5cc4fb08b4c01cce1aeeaeddd036"
+            },
+            {
+              "path": "modules/fidelity-r31/performance/image-budget.js",
+              "sha256": "e7a3a2039c9c666475fdfe118bc1fece445891d0213bbe20e75fece248cebce2"
+            },
+            {
+              "path": "modules/fidelity-r31/performance/monitor.js",
+              "sha256": "503e992e70900d0afd1b49c8d9f8acec9bbb881095d341095ead9c1bd4e24cc0"
+            },
+            {
+              "path": "modules/fidelity-r31/selection/avatars.js",
+              "sha256": "f0e70109be3310c13155c512767eacf60f28d0f48082752200a3b03de215ec1a"
+            },
+            {
+              "path": "src/baker-ambience-r15.js",
+              "sha256": "ffb355735f83c8f18589cd02b4daef519105287848343dc5eb5a50907df7a86a"
+            },
+            {
+              "path": "src/baker-stages-r14.js",
+              "sha256": "2735c502a55bf54964bfe6a61be4d7eeee09d6c9b24c1acf164fe9d084b878fb"
+            },
+            {
+              "path": "src/catalog-duel-v070.js",
+              "sha256": "de8cc86638ceb1a4996b891c61fb1db9d90b0a0599b42f4653fbb4e736ae0c3d"
+            },
+            {
+              "path": "src/catalog-expansion-data.js",
+              "sha256": "c33d05f4139ee9832990903289bf0edd5c16c54ccb678b6e81b0e13d75a0cce4"
+            },
+            {
+              "path": "src/catalog-replay-contract.js",
+              "sha256": "2778547c459e6efcc95810e8c3dd1108449ca752adaf54f751406573b84ec934"
+            },
+            {
+              "path": "src/catalog-replay-r7.js",
+              "sha256": "8a6536128b5400c85ac1737000d5eb5f12715d554ffd102ca4a375240f22da50"
+            },
+            {
+              "path": "src/catalog-trial-adapter.js",
+              "sha256": "2804ad111b5ee44e959ee2f12c604275193691e803f819a704950ca89fa502b7"
+            },
+            {
+              "path": "src/combat-audio-v060.js",
+              "sha256": "c40377240c4093b99154b01b713706829fc33ad324f581d77f4ceb2a816659ea"
+            },
+            {
+              "path": "src/combat-cues-r6.js",
+              "sha256": "7b24fb33b1ee04fa76301685efc468273eb564fa9d4c8141b59a70430894124d"
+            },
+            {
+              "path": "src/combat-foundation-v060.js",
+              "sha256": "4c2aa12007670a1535d4c467db115a148161a4ab08778be17d4ef4f44e95ba82"
+            },
+            {
+              "path": "src/combat-text-panel-r17.js",
+              "sha256": "45eebba4cbfb2a9517615d86111b1b12565c09b668bb5179e70896f6049fefb5"
+            },
+            {
+              "path": "src/combat-text-r17.js",
+              "sha256": "952d6254e5897dd36deb93a8cd96fa7d8f50898d9ba238492b9d4880a31d23c5"
+            },
+            {
+              "path": "src/directional-art.js",
+              "sha256": "50d15c95c4c5e402543dad18a6163746315af27605f701ea8777d6f57cb6ba2f"
+            },
+            {
+              "path": "src/fighter-directions.js",
+              "sha256": "3787d48622665d1fd8a33ed2f48f2887e1409c9dd312b11c16e031989f2ceb4e"
+            },
+            {
+              "path": "src/interface-preferences-r20.js",
+              "sha256": "79e4655dcff4674e9447c7473a4a2db77fdc5ff31c370bc331d5c74e6d83ea35"
+            },
+            {
+              "path": "src/match-sequences-r8.js",
+              "sha256": "4659ab336463951c5a269dac71321beb77c288a77ddc9036961b58e310fdb368"
+            },
+            {
+              "path": "src/platform-safety-r9.js",
+              "sha256": "c22d658049085e8e2c051dd0a15d2028ffaadd20cd5c343144a075340abe471d"
+            },
+            {
+              "path": "src/player-shell-r20.js",
+              "sha256": "97621067c2878bb193fb4b2d30c7ff903e0ceaf7ec17d7b33858ff90521732f4"
+            },
+            {
+              "path": "src/re-data.js",
+              "sha256": "090cf6e14a5ddf73291bcc443db1500e1810911beb926b4b4e26f9b0160b355a"
+            },
+            {
+              "path": "src/re-renderer.js",
+              "sha256": "fbd24f06be8c246356ba47715dce9bf80fdb75f2eb3e1648819611e8d0f6850c"
+            },
+            {
+              "path": "src/re5-scenes-v060.js",
+              "sha256": "759f94aad96616e2bdab18b6ce998b2d185e8f9f0703f875c26980727de7bb49"
+            },
+            {
+              "path": "src/spatial-weakpoints-v072.js",
+              "sha256": "046cb41f2536b9d51204d01f27b9dc4a55472fb916ace2f1d8dfebe9c1b80ff7"
+            },
+            {
+              "path": "src/stage-dynamics-r6.js",
+              "sha256": "448bd71890918de9841637c86bb9b2c7c6c991195d0e07472f2a1275a0fb49a5"
+            },
+            {
+              "path": "src/trial-audio-panel-r16.js",
+              "sha256": "d9dfcb150e1589f7597384c045c23c500d4c7198b149124d6bf1e8fbff79687a"
+            },
+            {
+              "path": "src/trial-audio-r16.js",
+              "sha256": "970c5e67baff72acee5e30568d3ac603ee5fa944a8d7c8dbf988d30e98874f4e"
+            },
+            {
+              "path": "src/trial-input-v071.js",
+              "sha256": "d8be0edc198e1c91c3022b40c8831d2f8b3623fdada820ce0253683b96a9379c"
+            },
+            {
+              "path": "src/trial-intro-r10.js",
+              "sha256": "39bffdd5ed97cd920b46aff6e5955556965c13300257e782f75f2ece4d896781"
+            },
+            {
+              "path": "src/trial-text-panel-r17.js",
+              "sha256": "3b8a74765979ed07955994a2266c6ec312e740d5fdf3016d183e8b6987d3c000"
+            },
+            {
+              "path": "styles/bow-v073.css",
+              "sha256": "4c17dce0fe045df56a348d3696e37163808fcba35474cbec6f920d5dbcd7c402"
+            },
+            {
+              "path": "styles/catalog-v070.css",
+              "sha256": "aedfe25902f1d4c48cd858513d38f57e1ffb56dc73da5dbe812ac976e108135b"
+            },
+            {
+              "path": "styles/combat-text-r17.css",
+              "sha256": "925c97c037cdb96d79c6baebb1bf758a919d076c7c3e8015fca417340f2ffd20"
+            },
+            {
+              "path": "styles/journal-v071.css",
+              "sha256": "dd00ba4cac1ed9881fd21794c4547b6f8fed49f9ff0464ac211c16f15ed5161d"
+            },
+            {
+              "path": "styles/player-shell-r20.css",
+              "sha256": "87c68eb441075530b6b81a150a2c303f6351f2298732d12de891807a08286443"
+            },
+            {
+              "path": "styles/replay-r7.css",
+              "sha256": "08c3ef3f1f63a18ffd3bc43050d1a7571d3b9d49fd005b35e4d0136bd3f98507"
+            },
+            {
+              "path": "styles/trial-audio-r16.css",
+              "sha256": "20ec128850c8c9d1d73999065e54071ab93464e929a9c1490e0685340847eb04"
+            },
+            {
+              "path": "tests/browser-catalog-focus-r32.mjs",
+              "sha256": "25f0ea4efecb7ef98d42a1ea2c2ac52ee71399c5d7747be9ced39738a710ecfa"
+            }
+          ],
+          "scope": "Delivered catalogue HTML, controllers, combat engine, replay validation and automatic RAF loop. Browser-generated visible blur/focus with focus emulation explicitly disabled, trusted keyboard/pointer events, actual BFCache restoration, and separately labelled synthetic visibility boundaries. Standard gamepad and raster images are explicit fixtures; no physical controller, touch-device, or visual-fidelity certification."
+        },
+        "after": {
+          "schema": "re.bow.catalog-focus-browser-r32/1",
+          "observedAtUTC": "2026-10-29T15:00:33.453Z",
+          "browserVersion": "156.0.8078.73",
+          "passed": 7,
+          "failed": 0,
+          "checks": [
+            {
+              "name": "A trusted visible-window blur pauses the duel and Start cannot resume it in the background",
+              "pass": true,
+              "detail": {
+                "trustedBlur": true,
+                "pageStayedVisible": true,
+                "pausedFrame": 7,
+                "backgroundStartIgnored": true,
+                "padIsFixture": true
+              }
+            },
+            {
+              "name": "Holding Start through a trusted focus return requires release and a new press before resuming",
+              "pass": true,
+              "detail": {
+                "trustedBlurAndFocus": true,
+                "heldStartDidNotResume": true,
+                "releaseThenNewPressResumed": true,
+                "pausedFrame": 8,
+                "resumedFrame": 12
+              }
+            },
+            {
+              "name": "Keyboard movement held before a trusted blur is cleared before voluntary resume",
+              "pass": true,
+              "detail": {
+                "trustedKeyboard": true,
+                "trustedBlurAndFocus": true,
+                "staleRightInputCleared": true,
+                "replayValidated": true,
+                "resumedFrames": 7
+              }
+            },
+            {
+              "name": "A captured pointer hold is cleared by a trusted blur before voluntary resume",
+              "pass": true,
+              "detail": {
+                "trustedPointer": true,
+                "trustedBlurAndFocus": true,
+                "staleRightInputCleared": true,
+                "replayValidated": true,
+                "resumedFrames": 7
+              }
+            },
+            {
+              "name": "CPU mode still pauses and resumes once per fresh Start press despite per-tick input clearing",
+              "pass": true,
+              "detail": {
+                "padIsFixture": true,
+                "freshPresses": 3,
+                "pauseResumePause": true,
+                "heldPressDidNotRepeat": true,
+                "cpuReplayValidated": true
+              }
+            },
+            {
+              "name": "Synthetic hidden/visible boundaries preserve pause and require a new Start press",
+              "pass": true,
+              "detail": {
+                "syntheticVisibilityEvents": true,
+                "hiddenPropertyFixture": true,
+                "automaticResume": false,
+                "freshStartResumed": true
+              }
+            },
+            {
+              "name": "Real BFCache restoration retains the duel in pause and rebases a Start press made before navigation",
+              "pass": true,
+              "detail": {
+                "sameDocumentRestored": true,
+                "trustedPersistedPageShow": true,
+                "heldStartDidNotResume": true,
+                "pausedFrame": 7,
+                "newStartRequired": true,
+                "browserVisibilityLifecycle": true
+              }
+            }
+          ],
+          "browserErrors": [],
+          "missingCode": [],
+          "unavailableOptionalData": [
+            "assets/sprites/bow/manifest.json"
+          ],
+          "sourceOverride": null,
+          "inputs": [
+            {
+              "path": "catalog-duel.html",
+              "sha256": "7fa670ae6229953043999919709b2cd06f35618319efcf656ff459a4acd89140"
+            },
+            {
+              "path": "modules/fidelity-r27/combat/adapter.js",
+              "sha256": "ec1f22e69a7d9ecf3433e6238bc134a8af369ac146ec8d8a8e21c7aca6408d2d"
+            },
+            {
+              "path": "modules/fidelity-r27/combat/presentation.js",
+              "sha256": "d53120875a6d137f0cfedc4fa6254d48a7bb4cea13f410b3893548f7a504a9e0"
+            },
+            {
+              "path": "modules/fidelity-r28/evolutions/data.js",
+              "sha256": "2e6981813c3b68a93084917d48cb51b9b42f9d108d6baba89effa7ca5979980f"
+            },
+            {
+              "path": "modules/fidelity-r28/evolutions/styles.css",
+              "sha256": "8dc471ea12a1d47dda48a7281fc38ef72a237eb5b957a89b9b34dc9a6c4af82d"
+            },
+            {
+              "path": "modules/fidelity-r30/native/manifest.json",
+              "sha256": "542d0cf097bbc9c938f81de19fdff431a2b3e5b3d78b06250833810f0dece778"
+            },
+            {
+              "path": "modules/fidelity-r30/native/new-sources/manifest.json",
+              "sha256": "5f72814259927801af1b10d17a874155ca0b4510a826f2a7d94db022376dce26"
+            },
+            {
+              "path": "modules/fidelity-r30/native/other-games/manifest.json",
+              "sha256": "387bf1ecb4608978a7836d4fb040dc8032c66d2d5a0953ba33d34332e97a92de"
+            },
+            {
+              "path": "modules/fidelity-r30/native/revelations/manifest.json",
+              "sha256": "5c8abf74b06e23ab4f6956680121a081f95fee8923447c211f84e1bed25a481c"
+            },
+            {
+              "path": "modules/fidelity-r30/selection/avatars.css",
+              "sha256": "f6ec8dd1f39686a8e4b013a966d448e0c79d336b72dfb5338bf7061cd57883cd"
+            },
+            {
+              "path": "modules/fidelity-r30/selection/manifest.json",
+              "sha256": "32fc768c8a91616a37ed7f67d767c4e916ac1ddf0567bca60c3f62dca4d91b8c"
+            },
+            {
+              "path": "modules/fidelity-r31/access/match-summary.js",
+              "sha256": "f2b04b703adaef7d0154e48e2ec7b28f29d24c57800b20d73a8d93ad081b4cdd"
+            },
+            {
+              "path": "modules/fidelity-r31/combat/generated-runtime.js",
+              "sha256": "d03a03c3fb68f686c41812d9b051ca2240c4bbba9eba64a4deadf16d4412162e"
+            },
+            {
+              "path": "modules/fidelity-r31/combat/native-adapter.js",
+              "sha256": "4dea6bfc84bd1c79a63ff90e701327976ed3d85a26f34ad386959f0fb6d09392"
+            },
+            {
+              "path": "modules/fidelity-r31/combat/native-runtime.js",
+              "sha256": "0e0be612903c65108d5dd3d691b3f074bcb619364812f82f3242b391f704bb36"
+            },
+            {
+              "path": "modules/fidelity-r31/evolutions/selection.js",
+              "sha256": "29c2ecf62047f73117e9080abf8113a8adcb5cc4fb08b4c01cce1aeeaeddd036"
+            },
+            {
+              "path": "modules/fidelity-r31/performance/image-budget.js",
+              "sha256": "e7a3a2039c9c666475fdfe118bc1fece445891d0213bbe20e75fece248cebce2"
+            },
+            {
+              "path": "modules/fidelity-r31/performance/monitor.js",
+              "sha256": "503e992e70900d0afd1b49c8d9f8acec9bbb881095d341095ead9c1bd4e24cc0"
+            },
+            {
+              "path": "modules/fidelity-r31/selection/avatars.js",
+              "sha256": "f0e70109be3310c13155c512767eacf60f28d0f48082752200a3b03de215ec1a"
+            },
+            {
+              "path": "src/baker-ambience-r15.js",
+              "sha256": "ffb355735f83c8f18589cd02b4daef519105287848343dc5eb5a50907df7a86a"
+            },
+            {
+              "path": "src/baker-stages-r14.js",
+              "sha256": "2735c502a55bf54964bfe6a61be4d7eeee09d6c9b24c1acf164fe9d084b878fb"
+            },
+            {
+              "path": "src/catalog-duel-v070.js",
+              "sha256": "5ebfaa1c2c67afbf57ef62dabec5f54372b2fcf5ec855f7d83f53abbcf87c456"
+            },
+            {
+              "path": "src/catalog-expansion-data.js",
+              "sha256": "c33d05f4139ee9832990903289bf0edd5c16c54ccb678b6e81b0e13d75a0cce4"
+            },
+            {
+              "path": "src/catalog-replay-contract.js",
+              "sha256": "2778547c459e6efcc95810e8c3dd1108449ca752adaf54f751406573b84ec934"
+            },
+            {
+              "path": "src/catalog-replay-r7.js",
+              "sha256": "8a6536128b5400c85ac1737000d5eb5f12715d554ffd102ca4a375240f22da50"
+            },
+            {
+              "path": "src/catalog-trial-adapter.js",
+              "sha256": "2804ad111b5ee44e959ee2f12c604275193691e803f819a704950ca89fa502b7"
+            },
+            {
+              "path": "src/combat-audio-v060.js",
+              "sha256": "c40377240c4093b99154b01b713706829fc33ad324f581d77f4ceb2a816659ea"
+            },
+            {
+              "path": "src/combat-cues-r6.js",
+              "sha256": "7b24fb33b1ee04fa76301685efc468273eb564fa9d4c8141b59a70430894124d"
+            },
+            {
+              "path": "src/combat-foundation-v060.js",
+              "sha256": "4c2aa12007670a1535d4c467db115a148161a4ab08778be17d4ef4f44e95ba82"
+            },
+            {
+              "path": "src/combat-text-panel-r17.js",
+              "sha256": "45eebba4cbfb2a9517615d86111b1b12565c09b668bb5179e70896f6049fefb5"
+            },
+            {
+              "path": "src/combat-text-r17.js",
+              "sha256": "952d6254e5897dd36deb93a8cd96fa7d8f50898d9ba238492b9d4880a31d23c5"
+            },
+            {
+              "path": "src/directional-art.js",
+              "sha256": "50d15c95c4c5e402543dad18a6163746315af27605f701ea8777d6f57cb6ba2f"
+            },
+            {
+              "path": "src/fighter-directions.js",
+              "sha256": "3787d48622665d1fd8a33ed2f48f2887e1409c9dd312b11c16e031989f2ceb4e"
+            },
+            {
+              "path": "src/interface-preferences-r20.js",
+              "sha256": "79e4655dcff4674e9447c7473a4a2db77fdc5ff31c370bc331d5c74e6d83ea35"
+            },
+            {
+              "path": "src/match-sequences-r8.js",
+              "sha256": "4659ab336463951c5a269dac71321beb77c288a77ddc9036961b58e310fdb368"
+            },
+            {
+              "path": "src/platform-safety-r9.js",
+              "sha256": "c22d658049085e8e2c051dd0a15d2028ffaadd20cd5c343144a075340abe471d"
+            },
+            {
+              "path": "src/player-shell-r20.js",
+              "sha256": "97621067c2878bb193fb4b2d30c7ff903e0ceaf7ec17d7b33858ff90521732f4"
+            },
+            {
+              "path": "src/re-data.js",
+              "sha256": "090cf6e14a5ddf73291bcc443db1500e1810911beb926b4b4e26f9b0160b355a"
+            },
+            {
+              "path": "src/re-renderer.js",
+              "sha256": "fbd24f06be8c246356ba47715dce9bf80fdb75f2eb3e1648819611e8d0f6850c"
+            },
+            {
+              "path": "src/re5-scenes-v060.js",
+              "sha256": "759f94aad96616e2bdab18b6ce998b2d185e8f9f0703f875c26980727de7bb49"
+            },
+            {
+              "path": "src/spatial-weakpoints-v072.js",
+              "sha256": "046cb41f2536b9d51204d01f27b9dc4a55472fb916ace2f1d8dfebe9c1b80ff7"
+            },
+            {
+              "path": "src/stage-dynamics-r6.js",
+              "sha256": "448bd71890918de9841637c86bb9b2c7c6c991195d0e07472f2a1275a0fb49a5"
+            },
+            {
+              "path": "src/trial-audio-panel-r16.js",
+              "sha256": "d9dfcb150e1589f7597384c045c23c500d4c7198b149124d6bf1e8fbff79687a"
+            },
+            {
+              "path": "src/trial-audio-r16.js",
+              "sha256": "970c5e67baff72acee5e30568d3ac603ee5fa944a8d7c8dbf988d30e98874f4e"
+            },
+            {
+              "path": "src/trial-input-v071.js",
+              "sha256": "d8be0edc198e1c91c3022b40c8831d2f8b3623fdada820ce0253683b96a9379c"
+            },
+            {
+              "path": "src/trial-intro-r10.js",
+              "sha256": "39bffdd5ed97cd920b46aff6e5955556965c13300257e782f75f2ece4d896781"
+            },
+            {
+              "path": "src/trial-text-panel-r17.js",
+              "sha256": "3b8a74765979ed07955994a2266c6ec312e740d5fdf3016d183e8b6987d3c000"
+            },
+            {
+              "path": "styles/bow-v073.css",
+              "sha256": "4c17dce0fe045df56a348d3696e37163808fcba35474cbec6f920d5dbcd7c402"
+            },
+            {
+              "path": "styles/catalog-v070.css",
+              "sha256": "aedfe25902f1d4c48cd858513d38f57e1ffb56dc73da5dbe812ac976e108135b"
+            },
+            {
+              "path": "styles/combat-text-r17.css",
+              "sha256": "925c97c037cdb96d79c6baebb1bf758a919d076c7c3e8015fca417340f2ffd20"
+            },
+            {
+              "path": "styles/journal-v071.css",
+              "sha256": "dd00ba4cac1ed9881fd21794c4547b6f8fed49f9ff0464ac211c16f15ed5161d"
+            },
+            {
+              "path": "styles/player-shell-r20.css",
+              "sha256": "87c68eb441075530b6b81a150a2c303f6351f2298732d12de891807a08286443"
+            },
+            {
+              "path": "styles/replay-r7.css",
+              "sha256": "08c3ef3f1f63a18ffd3bc43050d1a7571d3b9d49fd005b35e4d0136bd3f98507"
+            },
+            {
+              "path": "styles/trial-audio-r16.css",
+              "sha256": "20ec128850c8c9d1d73999065e54071ab93464e929a9c1490e0685340847eb04"
+            },
+            {
+              "path": "tests/browser-catalog-focus-r32.mjs",
+              "sha256": "25f0ea4efecb7ef98d42a1ea2c2ac52ee71399c5d7747be9ced39738a710ecfa"
+            }
+          ],
+          "scope": "Delivered catalogue HTML, controllers, combat engine, replay validation and automatic RAF loop. Browser-generated visible blur/focus with focus emulation explicitly disabled, trusted keyboard/pointer events, actual BFCache restoration, and separately labelled synthetic visibility boundaries. Standard gamepad and raster images are explicit fixtures; no physical controller, touch-device, or visual-fidelity certification."
+        }
+      }
+    ],
+    "totals": {
+      "before": {
+        "passed": 4,
+        "failed": 33
+      },
+      "after": {
+        "passed": 37,
+        "failed": 0
+      }
+    },
+    "existingRegressionSuites": [
+      {
+        "name": "v071",
+        "script": "tests/verify-v071.mjs",
+        "passed": 22,
+        "failed": 0,
+        "scope": "Context-state exercises, controlled DOM and actual combat input tests; no physical-device or canon certification.",
+        "executedReportSha256": "7a7139d5e6dbab08020d683998ff3e55b15d1a6452b9beaba96ef5d867d4bb43",
+        "checks": [
+          {
+            "name": "Production definitions include only reviewed R6 changes; annex unchanged",
+            "pass": true,
+            "detail": {
+              "main": 115,
+              "experimental": 231,
+              "contextual": 43
+            }
+          },
+          {
+            "name": "Cocoon cannot be bypassed with advance; only destroyed integrity succeeds",
+            "pass": true
+          },
+          {
+            "name": "Swarm succeeds only after density reaches zero, not through a generic progress button",
+            "pass": true
+          },
+          {
+            "name": "Explosion is consumed exactly once and an unavoided rupture is a failure",
+            "pass": true
+          },
+          {
+            "name": "Plant and phase goals cannot be advanced without their countermeasure window",
+            "pass": true
+          },
+          {
+            "name": "Water and vehicle progression is gated by recovery instead of a continuously open exit",
+            "pass": true
+          },
+          {
+            "name": "All 43 contextual profiles complete through ordinary actions with no injected health or result",
+            "pass": true,
+            "detail": {
+              "completed": 43,
+              "models": 9
+            }
+          },
+          {
+            "name": "All 43 sessions restore the exact paused frame and continue identically",
+            "pass": true,
+            "detail": {
+              "restored": 43
+            }
+          },
+          {
+            "name": "Malformed timelines, unknown IDs, extra terminal commands and impossible states are rejected",
+            "pass": true
+          },
+          {
+            "name": "Snapshot edits cannot change a live session or forge a restored health value",
+            "pass": true
+          },
+          {
+            "name": "Dual-slot recovery preserves the good copy after a damaged latest write",
+            "pass": true
+          },
+          {
+            "name": "A stale tab cannot overwrite a newer checkpoint without explicit adoption",
+            "pass": true
+          },
+          {
+            "name": "Unavailable storage and refused imports leave existing progression data untouched",
+            "pass": true
+          },
+          {
+            "name": "Completion register contains unique contextual successes, not attempt counters or campaign credits",
+            "pass": true
+          },
+          {
+            "name": "Keyboard attacks and jump are edge-triggered; taps survive release before the simulation tick",
+            "pass": true
+          },
+          {
+            "name": "Touch holds retain other fingers and released jump never repeats while held",
+            "pass": true
+          },
+          {
+            "name": "Directional specials follow facing and all ten command slots remain accessible",
+            "pass": true
+          },
+          {
+            "name": "Sparse/disconnected/policy-blocked gamepads are safe and held buttons do not become repeated attacks",
+            "pass": true
+          },
+          {
+            "name": "Context page resumes an exact saved frame in pause without altering campaign slots",
+            "pass": true
+          },
+          {
+            "name": "Context focus/visibility loss pauses the clock and unknown links do not silently restore another record",
+            "pass": true
+          },
+          {
+            "name": "An asynchronous import cannot replace a selection made while the file was being read",
+            "pass": true
+          },
+          {
+            "name": "Duel pause clears a pending button attack and browser focus loss cannot leave movement latched",
+            "pass": true
+          }
+        ],
+        "historicalReportRestored": true
+      },
+      {
+        "name": "v073",
+        "script": "tests/verify-v073.mjs",
+        "passed": 19,
+        "failed": 0,
+        "scope": "Real engine and controlled DOM lifecycle events; native Canvas. Not physical-device or canonical-animation certification.",
+        "executedReportSha256": "25e33cfd727997b60bfa3890ad50031d88c80ff3bd90fdf5c43b99845f0a97de",
+        "checks": [
+          {
+            "name": "Fast returning projectiles hit before clearing the outgoing-pass marker",
+            "pass": true
+          },
+          {
+            "name": "Turning while still overlapping a target cannot produce an immediate second hit",
+            "pass": true
+          },
+          {
+            "name": "Both return directions hit narrow and wide targets without a distance threshold",
+            "pass": true,
+            "detail": {
+              "cases": 4
+            }
+          },
+          {
+            "name": "An outward crossing and later return each hit once in a real projectile trajectory",
+            "pass": true
+          },
+          {
+            "name": "A diagonal crossing of a deeper core cannot pierce the earlier body contact",
+            "pass": true
+          },
+          {
+            "name": "A vertical projectile can hit the upper core at the first body contact",
+            "pass": true
+          },
+          {
+            "name": "A shot starting inside the body cannot borrow a deeper critical later in its segment",
+            "pass": true
+          },
+          {
+            "name": "Front and rear zones remain reachable from their intended incoming sides",
+            "pass": true,
+            "detail": {
+              "surfaceZones": 7
+            }
+          },
+          {
+            "name": "Combo escape knockback follows return flight instead of original shooter facing",
+            "pass": true
+          },
+          {
+            "name": "Last impact records the first surface point and a clipped trajectory",
+            "pass": true
+          },
+          {
+            "name": "Reset clears diagnostic contacts and draw never changes combat state",
+            "pass": true
+          },
+          {
+            "name": "Controlled input replay preserves contact telemetry and complete combat state",
+            "pass": true,
+            "detail": {
+              "frames": 2200
+            }
+          },
+          {
+            "name": "laboratory.html: share links recreate a paused validated scenario without save data",
+            "pass": true
+          },
+          {
+            "name": "laboratory.html: persisted pageshow restores exactly one paused animation loop",
+            "pass": true
+          },
+          {
+            "name": "catalog-laboratory.html: share links recreate a paused validated scenario without save data",
+            "pass": true
+          },
+          {
+            "name": "catalog-laboratory.html: persisted pageshow restores exactly one paused animation loop",
+            "pass": true
+          },
+          {
+            "name": "Experimental duel returns from page cache paused with no ghost attack or double loop",
+            "pass": true
+          },
+          {
+            "name": "Context page returns from cache at the same frame and can resume its saved journal",
+            "pass": true
+          },
+          {
+            "name": "Main R6 edits explicit; annex/context remain unchanged from v0.7.2",
+            "pass": true,
+            "detail": {
+              "main": 115,
+              "experimental": 231,
+              "contextual": 43
+            }
+          }
+        ],
+        "historicalReportRestored": true
+      },
+      {
+        "name": "replay-r7",
+        "script": "tests/verify-catalog-replay-r7.mjs",
+        "passed": 24,
+        "failed": 0,
+        "scope": "Actual CQC engine in VM plus controlled DOM; not physical device or browser certification.",
+        "executedReportSha256": "02800f9c7c8df534a62ece23c20ce736c713bb771ebfb082c6a11944afed5249",
+        "checks": [
+          {
+            "name": "Empty recordings validate and exports do not expose mutable internal commands",
+            "pass": true
+          },
+          {
+            "name": "Human commands reproduce full state, actual AI RNG and transient contacts",
+            "pass": true,
+            "detail": {
+              "frames": 1257,
+              "commands": 138
+            }
+          },
+          {
+            "name": "Complete CPU duels replay until the identical terminal state without imported health",
+            "pass": true,
+            "detail": {
+              "completedDuels": 6
+            }
+          },
+          {
+            "name": "Every one of 346 stable/experimental selections preserves identity in replay",
+            "pass": true,
+            "detail": {
+              "selections": 346
+            }
+          },
+          {
+            "name": "All 52 stages and unsigned seed extremes retain exact setup",
+            "pass": true,
+            "detail": {
+              "configurations": 104
+            }
+          },
+          {
+            "name": "Replay seek backward reconstructs RNG, life, resources and object state exactly",
+            "pass": true
+          },
+          {
+            "name": "Replay speed/chunk size changes presentation only, never simulation outcome",
+            "pass": true
+          },
+          {
+            "name": "Malformed JSON and oversized UTF-8 payloads fail before a replay is constructed",
+            "pass": true
+          },
+          {
+            "name": "Version/contract mismatches and unknown identities or stage paths are rejected",
+            "pass": true
+          },
+          {
+            "name": "Unexpected health/profile fields and prototype pollution keys cannot be imported",
+            "pass": true
+          },
+          {
+            "name": "Seed, frame count, mask and slot boundaries reject negative/fractional/out-of-range values",
+            "pass": true
+          },
+          {
+            "name": "Truncated blocks and commands added after terminal time are rejected",
+            "pass": true
+          },
+          {
+            "name": "Checksum tampering and altered human commands cannot preserve a valid result",
+            "pass": true
+          },
+          {
+            "name": "CPU files reject hidden manual inputs instead of changing deterministic AI decisions",
+            "pass": true
+          },
+          {
+            "name": "Replay end is immutable, and invalid seek/count arguments do not advance state",
+            "pass": true
+          },
+          {
+            "name": "Recording step after terminal completion cannot append extra input frames",
+            "pass": true
+          },
+          {
+            "name": "Starting or resuming a duel transfers focus from the button to the keyboard arena",
+            "pass": true
+          },
+          {
+            "name": "Editing form fields or using browser modifier shortcuts never triggers a combat attack",
+            "pass": true
+          },
+          {
+            "name": "A bad replay import leaves the current running match, setup and playback mode intact",
+            "pass": true
+          },
+          {
+            "name": "UI imports a valid replay paused, gates human commands and exposes step/seek/exit",
+            "pass": true
+          },
+          {
+            "name": "Pause and cache restoration keep one loop, no held movement and no phantom attack",
+            "pass": true
+          },
+          {
+            "name": "An asynchronous import cannot replace a different subject chosen in the meantime",
+            "pass": true
+          },
+          {
+            "name": "No replay/session action writes storage or sends a campaign result message",
+            "pass": true
+          },
+          {
+            "name": "R7 profiles/annex/art preserved; only the documented R8 controller/contract successor is allowed",
+            "pass": true
+          }
+        ],
+        "historicalReportRestored": true
+      }
+    ],
+    "directionInputBrowserRegression": {
+      "schema": "re.bow.input-browser-r32/1",
+      "browserVersion": "156.0.8078.73",
+      "passed": 12,
+      "failed": 0,
+      "checks": [
+        {
+          "width": 1440,
+          "scenario": "neutral",
+          "pass": true,
+          "expected": "special",
+          "actual": "special",
+          "engineStarts": 1,
+          "frames": 2,
+          "trustedKeyboard": true,
+          "verifiedReplayRoundTrip": true
+        },
+        {
+          "width": 1440,
+          "scenario": "left",
+          "pass": true,
+          "expected": "specialBack",
+          "actual": "specialBack",
+          "engineStarts": 1,
+          "frames": 3,
+          "trustedKeyboard": true,
+          "verifiedReplayRoundTrip": true
+        },
+        {
+          "width": 1440,
+          "scenario": "right",
+          "pass": true,
+          "expected": "specialForward",
+          "actual": "specialForward",
+          "engineStarts": 1,
+          "frames": 1,
+          "trustedKeyboard": true,
+          "verifiedReplayRoundTrip": true
+        },
+        {
+          "width": 1440,
+          "scenario": "opposite",
+          "pass": true,
+          "expected": "special",
+          "actual": "special",
+          "engineStarts": 1,
+          "frames": 17,
+          "trustedKeyboard": true,
+          "verifiedReplayRoundTrip": true
+        },
+        {
+          "width": 1440,
+          "scenario": "opposite-and-down",
+          "pass": true,
+          "expected": "specialDown",
+          "actual": "specialDown",
+          "engineStarts": 1,
+          "frames": 3,
+          "trustedKeyboard": true,
+          "verifiedReplayRoundTrip": true
+        },
+        {
+          "width": 1440,
+          "scenario": "release-left",
+          "pass": true,
+          "expected": "specialForward",
+          "actual": "specialForward",
+          "engineStarts": 1,
+          "frames": 1,
+          "trustedKeyboard": true,
+          "verifiedReplayRoundTrip": true
+        },
+        {
+          "width": 390,
+          "scenario": "neutral",
+          "pass": true,
+          "expected": "special",
+          "actual": "special",
+          "engineStarts": 1,
+          "frames": 2,
+          "trustedKeyboard": true,
+          "verifiedReplayRoundTrip": true
+        },
+        {
+          "width": 390,
+          "scenario": "left",
+          "pass": true,
+          "expected": "specialBack",
+          "actual": "specialBack",
+          "engineStarts": 1,
+          "frames": 1,
+          "trustedKeyboard": true,
+          "verifiedReplayRoundTrip": true
+        },
+        {
+          "width": 390,
+          "scenario": "right",
+          "pass": true,
+          "expected": "specialForward",
+          "actual": "specialForward",
+          "engineStarts": 1,
+          "frames": 3,
+          "trustedKeyboard": true,
+          "verifiedReplayRoundTrip": true
+        },
+        {
+          "width": 390,
+          "scenario": "opposite",
+          "pass": true,
+          "expected": "special",
+          "actual": "special",
+          "engineStarts": 1,
+          "frames": 1,
+          "trustedKeyboard": true,
+          "verifiedReplayRoundTrip": true
+        },
+        {
+          "width": 390,
+          "scenario": "opposite-and-down",
+          "pass": true,
+          "expected": "specialDown",
+          "actual": "specialDown",
+          "engineStarts": 1,
+          "frames": 2,
+          "trustedKeyboard": true,
+          "verifiedReplayRoundTrip": true
+        },
+        {
+          "width": 390,
+          "scenario": "release-left",
+          "pass": true,
+          "expected": "specialForward",
+          "actual": "specialForward",
+          "engineStarts": 1,
+          "frames": 3,
+          "trustedKeyboard": true,
+          "verifiedReplayRoundTrip": true
+        }
+      ],
+      "browserErrors": [],
+      "missingCode": [],
+      "unavailableOptionalData": [
+        "assets/sprites/bow/manifest.json"
+      ],
+      "inputs": [
+        {
+          "path": "catalog-duel.html",
+          "sha256": "7fa670ae6229953043999919709b2cd06f35618319efcf656ff459a4acd89140"
+        },
+        {
+          "path": "modules/fidelity-r27/combat/adapter.js",
+          "sha256": "ec1f22e69a7d9ecf3433e6238bc134a8af369ac146ec8d8a8e21c7aca6408d2d"
+        },
+        {
+          "path": "modules/fidelity-r27/combat/presentation.js",
+          "sha256": "d53120875a6d137f0cfedc4fa6254d48a7bb4cea13f410b3893548f7a504a9e0"
+        },
+        {
+          "path": "modules/fidelity-r28/evolutions/data.js",
+          "sha256": "2e6981813c3b68a93084917d48cb51b9b42f9d108d6baba89effa7ca5979980f"
+        },
+        {
+          "path": "modules/fidelity-r28/evolutions/styles.css",
+          "sha256": "8dc471ea12a1d47dda48a7281fc38ef72a237eb5b957a89b9b34dc9a6c4af82d"
+        },
+        {
+          "path": "modules/fidelity-r30/native/manifest.json",
+          "sha256": "542d0cf097bbc9c938f81de19fdff431a2b3e5b3d78b06250833810f0dece778"
+        },
+        {
+          "path": "modules/fidelity-r30/native/new-sources/manifest.json",
+          "sha256": "5f72814259927801af1b10d17a874155ca0b4510a826f2a7d94db022376dce26"
+        },
+        {
+          "path": "modules/fidelity-r30/native/other-games/manifest.json",
+          "sha256": "387bf1ecb4608978a7836d4fb040dc8032c66d2d5a0953ba33d34332e97a92de"
+        },
+        {
+          "path": "modules/fidelity-r30/native/revelations/manifest.json",
+          "sha256": "5c8abf74b06e23ab4f6956680121a081f95fee8923447c211f84e1bed25a481c"
+        },
+        {
+          "path": "modules/fidelity-r30/selection/avatars.css",
+          "sha256": "f6ec8dd1f39686a8e4b013a966d448e0c79d336b72dfb5338bf7061cd57883cd"
+        },
+        {
+          "path": "modules/fidelity-r30/selection/manifest.json",
+          "sha256": "32fc768c8a91616a37ed7f67d767c4e916ac1ddf0567bca60c3f62dca4d91b8c"
+        },
+        {
+          "path": "modules/fidelity-r31/access/match-summary.js",
+          "sha256": "f2b04b703adaef7d0154e48e2ec7b28f29d24c57800b20d73a8d93ad081b4cdd"
+        },
+        {
+          "path": "modules/fidelity-r31/combat/generated-runtime.js",
+          "sha256": "d03a03c3fb68f686c41812d9b051ca2240c4bbba9eba64a4deadf16d4412162e"
+        },
+        {
+          "path": "modules/fidelity-r31/combat/native-adapter.js",
+          "sha256": "4dea6bfc84bd1c79a63ff90e701327976ed3d85a26f34ad386959f0fb6d09392"
+        },
+        {
+          "path": "modules/fidelity-r31/combat/native-runtime.js",
+          "sha256": "0e0be612903c65108d5dd3d691b3f074bcb619364812f82f3242b391f704bb36"
+        },
+        {
+          "path": "modules/fidelity-r31/evolutions/selection.js",
+          "sha256": "29c2ecf62047f73117e9080abf8113a8adcb5cc4fb08b4c01cce1aeeaeddd036"
+        },
+        {
+          "path": "modules/fidelity-r31/performance/image-budget.js",
+          "sha256": "e7a3a2039c9c666475fdfe118bc1fece445891d0213bbe20e75fece248cebce2"
+        },
+        {
+          "path": "modules/fidelity-r31/performance/monitor.js",
+          "sha256": "503e992e70900d0afd1b49c8d9f8acec9bbb881095d341095ead9c1bd4e24cc0"
+        },
+        {
+          "path": "modules/fidelity-r31/selection/avatars.js",
+          "sha256": "f0e70109be3310c13155c512767eacf60f28d0f48082752200a3b03de215ec1a"
+        },
+        {
+          "path": "src/baker-ambience-r15.js",
+          "sha256": "ffb355735f83c8f18589cd02b4daef519105287848343dc5eb5a50907df7a86a"
+        },
+        {
+          "path": "src/baker-stages-r14.js",
+          "sha256": "2735c502a55bf54964bfe6a61be4d7eeee09d6c9b24c1acf164fe9d084b878fb"
+        },
+        {
+          "path": "src/catalog-duel-v070.js",
+          "sha256": "5ebfaa1c2c67afbf57ef62dabec5f54372b2fcf5ec855f7d83f53abbcf87c456"
+        },
+        {
+          "path": "src/catalog-expansion-data.js",
+          "sha256": "c33d05f4139ee9832990903289bf0edd5c16c54ccb678b6e81b0e13d75a0cce4"
+        },
+        {
+          "path": "src/catalog-replay-contract.js",
+          "sha256": "2778547c459e6efcc95810e8c3dd1108449ca752adaf54f751406573b84ec934"
+        },
+        {
+          "path": "src/catalog-replay-r7.js",
+          "sha256": "8a6536128b5400c85ac1737000d5eb5f12715d554ffd102ca4a375240f22da50"
+        },
+        {
+          "path": "src/catalog-trial-adapter.js",
+          "sha256": "2804ad111b5ee44e959ee2f12c604275193691e803f819a704950ca89fa502b7"
+        },
+        {
+          "path": "src/combat-audio-v060.js",
+          "sha256": "c40377240c4093b99154b01b713706829fc33ad324f581d77f4ceb2a816659ea"
+        },
+        {
+          "path": "src/combat-cues-r6.js",
+          "sha256": "7b24fb33b1ee04fa76301685efc468273eb564fa9d4c8141b59a70430894124d"
+        },
+        {
+          "path": "src/combat-foundation-v060.js",
+          "sha256": "4c2aa12007670a1535d4c467db115a148161a4ab08778be17d4ef4f44e95ba82"
+        },
+        {
+          "path": "src/combat-text-panel-r17.js",
+          "sha256": "45eebba4cbfb2a9517615d86111b1b12565c09b668bb5179e70896f6049fefb5"
+        },
+        {
+          "path": "src/combat-text-r17.js",
+          "sha256": "952d6254e5897dd36deb93a8cd96fa7d8f50898d9ba238492b9d4880a31d23c5"
+        },
+        {
+          "path": "src/directional-art.js",
+          "sha256": "50d15c95c4c5e402543dad18a6163746315af27605f701ea8777d6f57cb6ba2f"
+        },
+        {
+          "path": "src/fighter-directions.js",
+          "sha256": "3787d48622665d1fd8a33ed2f48f2887e1409c9dd312b11c16e031989f2ceb4e"
+        },
+        {
+          "path": "src/interface-preferences-r20.js",
+          "sha256": "79e4655dcff4674e9447c7473a4a2db77fdc5ff31c370bc331d5c74e6d83ea35"
+        },
+        {
+          "path": "src/match-sequences-r8.js",
+          "sha256": "4659ab336463951c5a269dac71321beb77c288a77ddc9036961b58e310fdb368"
+        },
+        {
+          "path": "src/platform-safety-r9.js",
+          "sha256": "c22d658049085e8e2c051dd0a15d2028ffaadd20cd5c343144a075340abe471d"
+        },
+        {
+          "path": "src/player-shell-r20.js",
+          "sha256": "97621067c2878bb193fb4b2d30c7ff903e0ceaf7ec17d7b33858ff90521732f4"
+        },
+        {
+          "path": "src/re-data.js",
+          "sha256": "090cf6e14a5ddf73291bcc443db1500e1810911beb926b4b4e26f9b0160b355a"
+        },
+        {
+          "path": "src/re-renderer.js",
+          "sha256": "fbd24f06be8c246356ba47715dce9bf80fdb75f2eb3e1648819611e8d0f6850c"
+        },
+        {
+          "path": "src/re5-scenes-v060.js",
+          "sha256": "759f94aad96616e2bdab18b6ce998b2d185e8f9f0703f875c26980727de7bb49"
+        },
+        {
+          "path": "src/spatial-weakpoints-v072.js",
+          "sha256": "046cb41f2536b9d51204d01f27b9dc4a55472fb916ace2f1d8dfebe9c1b80ff7"
+        },
+        {
+          "path": "src/stage-dynamics-r6.js",
+          "sha256": "448bd71890918de9841637c86bb9b2c7c6c991195d0e07472f2a1275a0fb49a5"
+        },
+        {
+          "path": "src/trial-audio-panel-r16.js",
+          "sha256": "d9dfcb150e1589f7597384c045c23c500d4c7198b149124d6bf1e8fbff79687a"
+        },
+        {
+          "path": "src/trial-audio-r16.js",
+          "sha256": "970c5e67baff72acee5e30568d3ac603ee5fa944a8d7c8dbf988d30e98874f4e"
+        },
+        {
+          "path": "src/trial-input-v071.js",
+          "sha256": "d8be0edc198e1c91c3022b40c8831d2f8b3623fdada820ce0253683b96a9379c"
+        },
+        {
+          "path": "src/trial-intro-r10.js",
+          "sha256": "39bffdd5ed97cd920b46aff6e5955556965c13300257e782f75f2ece4d896781"
+        },
+        {
+          "path": "src/trial-text-panel-r17.js",
+          "sha256": "3b8a74765979ed07955994a2266c6ec312e740d5fdf3016d183e8b6987d3c000"
+        },
+        {
+          "path": "styles/bow-v073.css",
+          "sha256": "4c17dce0fe045df56a348d3696e37163808fcba35474cbec6f920d5dbcd7c402"
+        },
+        {
+          "path": "styles/catalog-v070.css",
+          "sha256": "aedfe25902f1d4c48cd858513d38f57e1ffb56dc73da5dbe812ac976e108135b"
+        },
+        {
+          "path": "styles/combat-text-r17.css",
+          "sha256": "925c97c037cdb96d79c6baebb1bf758a919d076c7c3e8015fca417340f2ffd20"
+        },
+        {
+          "path": "styles/journal-v071.css",
+          "sha256": "dd00ba4cac1ed9881fd21794c4547b6f8fed49f9ff0464ac211c16f15ed5161d"
+        },
+        {
+          "path": "styles/player-shell-r20.css",
+          "sha256": "87c68eb441075530b6b81a150a2c303f6351f2298732d12de891807a08286443"
+        },
+        {
+          "path": "styles/replay-r7.css",
+          "sha256": "08c3ef3f1f63a18ffd3bc43050d1a7571d3b9d49fd005b35e4d0136bd3f98507"
+        },
+        {
+          "path": "styles/trial-audio-r16.css",
+          "sha256": "20ec128850c8c9d1d73999065e54071ab93464e929a9c1490e0685340847eb04"
+        },
+        {
+          "path": "tests/browser-input-r32.mjs",
+          "sha256": "c98a167ec2c2eca8d4e832aabe4aafedfd471cfe2c30978b7b07441009d8c609"
+        }
+      ],
+      "scope": "Delivered catalogue HTML, controllers, combat engine, automatic RAF loop and replay validation. Trusted Chromium keyboard at desktop and narrow viewports. Raster artwork uses a one-pixel fixture; this is not visual-fidelity, physical-device or touch certification. Unit cases separately cover both facings and mixed input devices."
+    },
+    "directionInputVmRegression": {
+      "schema": "re.bow.input-r32/1",
+      "passed": 7,
+      "failed": 0,
+      "checks": [
+        {
+          "name": "keyboard: neutral, opposing directions, crouch and both facings match combat",
+          "pass": true,
+          "detail": {
+            "directionCases": 8,
+            "facings": 2,
+            "combinations": 16,
+            "syntheticDevice": false
+          }
+        },
+        {
+          "name": "pointers: neutral, opposing directions, crouch and both facings match combat",
+          "pass": true,
+          "detail": {
+            "directionCases": 8,
+            "facings": 2,
+            "combinations": 16,
+            "syntheticDevice": true
+          }
+        },
+        {
+          "name": "standard-gamepad: neutral, opposing directions, crouch and both facings match combat",
+          "pass": true,
+          "detail": {
+            "directionCases": 8,
+            "facings": 2,
+            "combinations": 16,
+            "syntheticDevice": true
+          }
+        },
+        {
+          "name": "Opposed directions across keyboard, pointer and gamepad resolve neutrally",
+          "pass": true,
+          "detail": {
+            "devicePairs": 3,
+            "facings": 2
+          }
+        },
+        {
+          "name": "Releasing one opposite direction restores the surviving direction and respects a facing change",
+          "pass": true,
+          "detail": {
+            "leftAliasesIndependent": true,
+            "facingReadAtConsumption": true
+          }
+        },
+        {
+          "name": "Repeated keydowns cannot repeat a special, and clear removes pending actions and held sources",
+          "pass": true,
+          "detail": {
+            "noOperatingSystemRepeat": true,
+            "pendingActionCleared": true
+          }
+        },
+        {
+          "name": "Guard, throw escape, jump and dash retain their original action semantics",
+          "pass": true,
+          "detail": {
+            "heldGuardPreserved": true,
+            "discreteActionsConsumedOnce": true
+          }
+        }
+      ],
+      "inputs": [
+        {
+          "path": "src/trial-input-v071.js",
+          "sha256": "d8be0edc198e1c91c3022b40c8831d2f8b3623fdada820ce0253683b96a9379c"
+        },
+        {
+          "path": "src/combat-foundation-v060.js",
+          "sha256": "4c2aa12007670a1535d4c467db115a148161a4ab08778be17d4ef4f44e95ba82"
+        },
+        {
+          "path": "tests/verify-input-r32.mjs",
+          "sha256": "9d484f04044a2251f6380b4b8d109bead117c20b5c82dd7d7a11ca8b7688a6ed"
+        }
+      ],
+      "scope": "Real trial-input and combat direction resolver in Node VM. Device events are fixtures; physical controllers and a full browser match are separate checks."
+    },
+    "sourceScope": {
+      "schema": "re.bow.current-scope-r32/1",
+      "published_baseline": "413b89bfafc18abc55be1404ff77bdaf573b1334",
+      "modified": [
+        ".github/workflows/ci.yml",
+        ".github/workflows/source-fidelity-r23.yml",
+        ".github/workflows/source-fidelity-r24.yml",
+        ".github/workflows/source-fidelity-r25.yml",
+        ".github/workflows/source-fidelity-r26.yml",
+        ".github/workflows/source-fidelity-r28.yml",
+        ".github/workflows/source-fidelity-r31.yml",
+        "modules/fidelity-r31/audio/style.css",
+        "modules/fidelity-r31/performance/page.js",
+        "modules/fidelity-r31/sprites/style.css",
+        "package.json",
+        "src/catalog-duel-v070.js",
+        "src/game-menu-r20.js",
+        "src/trial-input-v071.js"
+      ],
+      "added": [
+        ".github/workflows/gamedev-r32.yml",
+        "AGENTS.md",
+        "docs/GAMEDEV_APPLIED_R32.json",
+        "docs/GAMEDEV_APPLIED_R32.md",
+        "docs/GAMEDEV_GUIDANCE.md",
+        "scripts/verify-current-r32.mjs",
+        "tests/browser-catalog-controls-r32.mjs",
+        "tests/browser-catalog-focus-r32.mjs",
+        "tests/browser-input-r32.mjs",
+        "tests/browser-menu-input-r32.mjs",
+        "tests/browser-performance-lifecycle-r32.mjs",
+        "tests/browser-reflow-r32.mjs",
+        "tests/r32-historical-plan.json",
+        "tests/verify-current-guard-r32.mjs",
+        "tests/verify-input-r32.mjs"
+      ],
+      "assertions": [
+        "Only explicitly reviewed R32 paths changed; old tests, data, assets, reports and replay contracts retain published bytes.",
+        "Input, menu and two heading style changes match the reviewed baseline transformations; catalogue controls/focus match the reviewed R32 source hash.",
+        "All 38 remaining original npm verify commands stay on current, in their original order.",
+        "Both npm preservation suites and the R25/R26 frozen integration suites run unchanged on the exact published R31 snapshot.",
+        "All six R32 browser suites and unchanged R31 browser recipes stay current; R31 provenance/build use the published snapshot."
+      ],
+      "scope": "Source and pipeline integrity. Behavioural results are reported by their separate executed suites."
+    },
+    "sourceGuard": {
+      "schema": "re.bow.current-guard-tests-r32/1",
+      "baseline": "413b89bfafc18abc55be1404ff77bdaf573b1334",
+      "input": "actual Git worktree compared with published R31",
+      "passed": 32,
+      "failed": 0,
+      "cases": [
+        {
+          "name": "The reviewed current files and historical command split are accepted",
+          "pass": true
+        },
+        {
+          "name": "An unrelated engine change is refused",
+          "pass": true
+        },
+        {
+          "name": "An extra change to a historical test is refused",
+          "pass": true
+        },
+        {
+          "name": "A regenerated historical delivery report is not accepted as new source evidence",
+          "pass": true
+        },
+        {
+          "name": "An undeclared new file is refused",
+          "pass": true
+        },
+        {
+          "name": "Deleting an approved source file is refused",
+          "pass": true
+        },
+        {
+          "name": "A rename cannot hide behind the approved source path",
+          "pass": true
+        },
+        {
+          "name": "The full browser input test must be present",
+          "pass": true
+        },
+        {
+          "name": "The delivered catalogue regression must remain present: tests/browser-catalog-controls-r32.mjs",
+          "pass": true
+        },
+        {
+          "name": "The delivered catalogue regression must remain present: tests/browser-catalog-focus-r32.mjs",
+          "pass": true
+        },
+        {
+          "name": "Unrelated edits inside the approved input file are refused",
+          "pass": true
+        },
+        {
+          "name": "Unrelated edits inside the approved catalogue controller are refused",
+          "pass": true
+        },
+        {
+          "name": "The original keyboard and focus defects cannot replace the catalogue correction",
+          "pass": true
+        },
+        {
+          "name": "Unrelated edits inside the approved menu file are refused",
+          "pass": true
+        },
+        {
+          "name": "The original lifecycle defect cannot be delivered unchanged",
+          "pass": true
+        },
+        {
+          "name": "Unrelated style changes in the approved audio stylesheet are refused",
+          "pass": true
+        },
+        {
+          "name": "Unrelated style changes in the approved sprites stylesheet are refused",
+          "pass": true
+        },
+        {
+          "name": "The primary verify alias cannot omit current assertions",
+          "pass": true
+        },
+        {
+          "name": "An original current engine suite cannot be dropped",
+          "pass": true
+        },
+        {
+          "name": "The archival command cannot substitute another commit",
+          "pass": true
+        },
+        {
+          "name": "Both original historical suites are mandatory in the archive plan",
+          "pass": true
+        },
+        {
+          "name": "A command that only prints success cannot replace a historical assertion",
+          "pass": true
+        },
+        {
+          "name": "R31 archives cannot silently follow main or the submitted branch",
+          "pass": true
+        },
+        {
+          "name": "R31 browser assertions must exercise the current source",
+          "pass": true
+        },
+        {
+          "name": "An original R31 browser recipe cannot be replaced by the new focused test",
+          "pass": true
+        },
+        {
+          "name": "R23 must keep its original preservation suite on the published snapshot",
+          "pass": true
+        },
+        {
+          "name": "R25 frozen integration must use the exact published R31 snapshot",
+          "pass": true
+        },
+        {
+          "name": "R26 frozen integration must use the exact published R31 snapshot",
+          "pass": true
+        },
+        {
+          "name": "Current scope verification cannot be postponed after R28 report refresh",
+          "pass": true
+        },
+        {
+          "name": "The current browser workflow cannot omit its executed suites",
+          "pass": true
+        },
+        {
+          "name": "The new browser suites cannot be made nonblocking",
+          "pass": true
+        },
+        {
+          "name": "A package version change cannot invalidate old replay contracts unnoticed",
+          "pass": true
+        }
+      ],
+      "scope": "Source/pipeline guard fault injection only. Fixtures are changed in memory; historical files are never rewritten."
+    },
+    "replayContracts": {
+      "packageVersion": "0.7.3",
+      "catalogDigest": "7481cce1dabb7aab981422cd28448648476e60737991e764783118ae038e2ca0",
+      "runtimeDigest": "612953ce952cdd2bd6b5dd21a489bc961c2bfcc3ff1321d15528e341f34ee67d",
+      "unchanged": true
+    },
+    "independentReview": {
+      "runtimeReviewed": true,
+      "newTestsReviewed": true,
+      "additionalHistoricalSuitesMovedToArchive": false
+    },
+    "scope": "Catalogue page input and interruption handling only. Real browser events, automatic RAF and combat/replay execution. Standard pad and raster artwork are explicit fixtures; synthetic visibility is labelled separately from trusted focus and actual BFCache. No physical hardware, assistive-technology or visual-fidelity certification."
   }
 }

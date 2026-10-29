@@ -4,6 +4,8 @@
 const D=root.RE_DATA,C=root.CQCCombat060,E=root.RE_CATALOG_EXPANSION,R=root.RE_CATALOG_REPLAY;
 const $=id=>document.getElementById(id),canvas=$('trialCanvas'),ctx=canvas.getContext('2d'),controls=root.RE_TRIAL_INPUT.create();
 let s=null,live=null,replay=null,paused=true,last=0,acc=0,pending=null,raf=null,stage=D.stages[0],dirty=true,ioTicket=0;
+const buttonHoldsR32=new Map();
+let focusedR32=document.hasFocus?.()??true,rebasePadR32=true;
 const introR10=root.RE_TRIAL_INTRO.create();let suppressPadR10=false;
 const introActiveR10=()=>introR10.snapshot().active;
 const FINAL_TICKS_R9=600;let finalStateR9=null,finalTickR9=0,finalPausedR9=true;
@@ -16,7 +18,17 @@ $('trialSubject').value=D.fighters.some(f=>f.uid===requested)?requested:E.fighte
 $('trialTarget').value=D.fighters.some(f=>f.uid===params.get('target'))?params.get('target'):'re3r-nemesis';
 $('trialStage').value=D.stages.some(st=>st.id===params.get('stage'))?params.get('stage'):D.stages[0].id;
 function focusArena(){canvas.focus?.({preventScroll:true});}
-function clear(){controls.clear();pending=null;acc=0;last=0;}
+function releaseButtonHoldsR32(button){for(const [code,hold]of buttonHoldsR32)if(!button||hold.button===button){controls.pointer(hold.id,hold.action,false);buttonHoldsR32.delete(code);}}
+function clear(){releaseButtonHoldsR32();controls.clear();pending=null;acc=0;last=0;}
+function suspendInputR32(){focusedR32=false;rebasePadR32=true;pause();}
+function restoreInputR32(){focusedR32=document.hasFocus?.()??true;rebasePadR32=true;acc=0;last=0;}
+function samplePadR32(){
+ const pad=controls.samplePad();
+ // Returning focus must establish a baseline before a held Start can resume play.
+ if(!focusedR32||document.hidden){rebasePadR32=true;return{...pad,held:{},edges:[]};}
+ if(rebasePadR32){rebasePadR32=false;return{...pad,held:{},edges:[]};}
+ return pad;
+}
 function status(message){$('trialReplayStatus').textContent=message;}
 function configuration(){return{uid:$('trialSubject').value,target:$('trialTarget').value,stage:$('trialStage').value,mode:$('trialMode').value,seed:7070};}
 function rebuildMoves(){
@@ -53,7 +65,7 @@ function tick(count=1,pad){
  const autoplayR9=!paused;
  if(!Number.isInteger(count)||count<0||count>R.MAX_FRAMES)throw Error('Avance invalide.');
  if(introActiveR10()){for(let n=0;n<count&&introActiveR10();n++)introR10.step();if(!introActiveR10())finishIntroR10(false);dirty=true;return s;}
- pad??=controls.samplePad();
+ pad??=samplePadR32();
  if(suppressPadR10){const neutral=!Object.values(pad.held||{}).some(Boolean)&&!(pad.edges||[]).length;if(neutral)suppressPadR10=false;else pad={held:{},edges:[]};}
  for(let n=0;n<count;n++){
   if(replay){if(replay.ended())break;s=replay.tick(1);}
@@ -93,7 +105,7 @@ function installReplay(value){
  $('trialResult').textContent='REPLAY VÉRIFIÉ · départ en pause à la frame 0.';status('Commandes et empreinte vérifiées · pas de santé importée ni de récompense.');rebuildMoves();dirty=true;draw();return true;
 }
 function loop(now){
- const dt=last?Math.max(0,Math.min(100,now-last)):0;last=now;const pad=controls.samplePad();
+ const dt=last?Math.max(0,Math.min(100,now-last)):0;last=now;const pad=samplePadR32();
  if(presentationActiveR9()){const speed=Number($('trialSpeed').value);advancePresentationR9(dt*([.25,.5,1,2].includes(speed)?speed:1));}
  if(!document.hidden&&pad.edges.includes('pause'))togglePause();
  if(introActiveR10()){advanceIntroR10(dt,Number($('trialSpeed').value));if(dirty)draw();raf=requestAnimationFrame(loop);return;}
@@ -117,10 +129,21 @@ root.addEventListener('keydown',e=>{
  if(e.code==='Enter'&&introActiveR10()&&e.target===canvas&&!e.repeat){e.preventDefault();skipIntroR10();return;}
  if(controls.controlled(e.code)){e.preventDefault();if(!paused&&!replay&&!introActiveR10())controls.key(e.code,true,e.repeat);}
 });
-root.addEventListener('keyup',e=>controls.key(e.code,false));
-for(const b of document.querySelectorAll('[data-hold]')){b.addEventListener('pointerdown',e=>{e.preventDefault();if(!paused&&!replay&&!introActiveR10())controls.pointer(e.pointerId,b.dataset.hold,true);b.setPointerCapture?.(e.pointerId);});for(const event of ['pointerup','pointercancel','lostpointercapture'])b.addEventListener(event,e=>controls.pointer(e.pointerId,b.dataset.hold,false));}
-root.addEventListener('blur',pause);document.addEventListener('visibilitychange',()=>{if(document.hidden)pause();});
-root.addEventListener('pagehide',()=>{ioTicket++;pause();cancelAnimationFrame(raf);raf=null;});root.addEventListener('pageshow',e=>{if(e.persisted&&raf===null){pause();draw();raf=requestAnimationFrame(loop);}});
+root.addEventListener('keyup',e=>{const hold=buttonHoldsR32.get(e.code);if(hold){e.preventDefault();controls.pointer(hold.id,hold.action,false);buttonHoldsR32.delete(e.code);}controls.key(e.code,false);});
+for(const b of document.querySelectorAll('[data-hold]')){
+ b.addEventListener('pointerdown',e=>{e.preventDefault();if(!paused&&!replay&&!introActiveR10())controls.pointer(e.pointerId,b.dataset.hold,true);b.setPointerCapture?.(e.pointerId);});
+ for(const event of ['pointerup','pointercancel','lostpointercapture'])b.addEventListener(event,e=>controls.pointer(e.pointerId,b.dataset.hold,false));
+ b.addEventListener('keydown',e=>{
+  if(!['Space','Enter','NumpadEnter'].includes(e.code))return;
+  e.preventDefault();
+  if(e.ctrlKey||e.altKey||e.metaKey||e.repeat||buttonHoldsR32.has(e.code)||b.disabled||paused||replay||introActiveR10()||s.finished||document.hidden)return;
+  const hold={id:'r32-button-key:'+e.code,action:b.dataset.hold,button:b};buttonHoldsR32.set(e.code,hold);controls.pointer(hold.id,hold.action,true);
+ });
+ b.addEventListener('blur',()=>releaseButtonHoldsR32(b));
+}
+root.addEventListener('blur',suspendInputR32);root.addEventListener('focus',restoreInputR32);
+document.addEventListener('visibilitychange',()=>{if(document.hidden)suspendInputR32();else restoreInputR32();});
+root.addEventListener('pagehide',()=>{ioTicket++;suspendInputR32();cancelAnimationFrame(raf);raf=null;});root.addEventListener('pageshow',e=>{if(e.persisted&&raf===null){pause();restoreInputR32();draw();raf=requestAnimationFrame(loop);}});
 root.addEventListener('re:assetstatus',()=>dirty=true);
 root.RE_CATALOG_DUEL=Object.freeze({reset,tick,startPresented:startPresentedR10,skipIntro:skipIntroR10,getIntro:introR10.snapshot,advanceIntro:advanceIntroR10,advancePresentation:advancePresentationR9,getPresentation:()=>({frame:finalTickR9,paused:finalPausedR9,active:presentationActiveR9(),max:FINAL_TICKS_R9,description:presentationActiveR9()?root.RE_MATCH_SEQUENCES.describe(s,s.winner===-1?0:s.winner,{finalTick:finalTickR9}):null}),getState:()=>s,isPaused:()=>paused,progression:false,exportReplay,installReplay,isReplay:()=>!!replay});
 reset(false);if(requested&&!D.fighters.some(f=>f.uid===requested))status('IDENTIFIANT INCONNU : premier essai affiché explicitement.');raf=requestAnimationFrame(loop);

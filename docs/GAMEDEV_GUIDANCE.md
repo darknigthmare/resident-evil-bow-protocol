@@ -25,7 +25,7 @@ Le [router amont][router] et sa [référence pour moteurs personnalisés][custom
 | --- | --- |
 | Exécution et build statique | `package.json`, `scripts/dev.mjs`, `scripts/build.mjs` |
 | Montage du Versus et de ses surcouches | `modules/versus.html`, `catalog-duel.html`, `modules/fidelity-r28/evolutions/index.html` |
-| Entrées, boucle de combat, profils IA et replays | `src/unified-engine-v060.js`, `src/combat-foundation-v060.js` |
+| Entrées, boucle de combat, profils IA et replays | `src/unified-engine-v060.js`, `src/combat-foundation-v060.js`, `src/catalog-duel-v070.js`, `src/trial-input-v071.js` |
 | Présentation et cadrage | `src/re-renderer.js`, `src/combat-camera-v060.js`, `src/fighter-directions.js` |
 | Contacts et points faibles | `src/lab-contact-v073.js`, `src/spatial-weakpoints-v072.js` |
 | Menus, navigation et préférences | `src/game-menu-r20.js`, `src/menu-navigation-r20.js`, `src/interface-preferences-r20.js` |
@@ -110,6 +110,8 @@ Certaines recettes écrivent des rapports ou produisent des captures. Les lancer
 Depuis R32, `npm run verify` exige les 38 commandes originales qui restent sur la version courante, les nouveaux contrôles R32 et les deux suites de conservation exécutées sur l’archive publiée R31. `npm run verify:r32:http` vérifie les nouvelles interactions dans le navigateur. Le workflow R31 distingue les audits de provenance et de build sur le commit publié R31, et ses anciennes recettes navigateur exécutées sur la révision courante. Une preuve d’archive ne constitue pas une preuve d’exécution de R32. Voir [le détail et les limites de cette transition](GAMEDEV_APPLIED_R32.md). La sélection de commandes doit suivre les responsabilités réellement modifiées.
 
 Pour les ajouts documentaires de cette intégration, les contrôles requis sont les liens, les chemins, la cohérence des consignes et le diff limité à `AGENTS.md` et ce document. Les tests de gameplay existants restent disponibles et les workflows GitHub gardent leurs déclencheurs actuels.
+
+Le complément R32 du duel catalogue ajoute deux recettes à `npm run verify:r32:http` : les boutons de commande au clavier et la suspension/reprise des entrées à la perte de focus. Pour une commande maintenue, vérifier séparément l'appui, le relâchement, le changement de focus, l'interruption et la coexistence des appareils. Une activation native du bouton ne prouve pas que le moteur a reçu l'action : contrôler aussi l'état simulé et le replay enregistré.
 
 ## 6. Utilisation lors des prochains travaux
 
