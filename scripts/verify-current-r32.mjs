@@ -29,6 +29,7 @@ export const R32_FILES = Object.freeze({
   'src/catalog-duel-v070.js': 'M',
   'src/game-menu-r20.js': 'M',
   'modules/fidelity-r31/performance/page.js': 'M',
+  'modules/fidelity-r31/motion/page.js': 'M',
   'modules/fidelity-r31/audio/style.css': 'M',
   'modules/fidelity-r31/sprites/style.css': 'M',
   'package.json': 'M',
@@ -53,6 +54,7 @@ export const R32_FILES = Object.freeze({
   'tests/browser-menu-input-r32.mjs': 'A',
   'tests/browser-performance-lifecycle-r32.mjs': 'A',
   'tests/browser-reflow-r32.mjs': 'A',
+  'tests/browser-motion-input-r32.mjs': 'A',
   '.github/workflows/gamedev-r32.yml': 'A',
 });
 const OPTIONAL = new Set(['docs/GAMEDEV_APPLIED_R32.json']);
@@ -84,6 +86,15 @@ export function expectedMenu(baseline) {
     "    if (event.repeat && (event.key === 'Escape' || (confirmation && (!boot.hidden || event.target?.closest?.('button,a[href]'))))) {\n" +
     '      event.preventDefault(); return;\n' +
     '    }\n', 'menu repeat filter');
+}
+
+export function expectedMotion(baseline) {
+  let source = baseline;
+  source = replaceOnce(source, "byId('canvas').addEventListener('keydown', event => {\n",
+    "byId('play').addEventListener('keydown', event => {\n  if (event.defaultPrevented || event.ctrlKey || event.altKey || event.metaKey) return;\n  if (event.repeat && ['Enter', ' '].includes(event.key)) event.preventDefault();\n});\nbyId('canvas').addEventListener('keydown', event => {\n  if (event.defaultPrevented || event.ctrlKey || event.altKey || event.metaKey) return;\n", 'motion keyboard boundary 1');
+  source = replaceOnce(source, "  event.preventDefault(); if (event.key === ' ') {play(); return;} stop();",
+    "  event.preventDefault(); if (event.key === ' ') {if (!event.repeat) play(); return;} stop();", 'motion keyboard boundary 2');
+  return source;
 }
 
 export function historicalCommand(evidence, command) {
@@ -126,6 +137,7 @@ export function expectedPackage(baseline) {
     'node tests/browser-menu-input-r32.mjs',
     'node tests/browser-performance-lifecycle-r32.mjs',
     'node tests/browser-reflow-r32.mjs',
+    'node tests/browser-motion-input-r32.mjs',
   ].join(' && ');
   return {...baseline, scripts};
 }
@@ -314,6 +326,8 @@ export function validateSnapshot({baseline, current, changes}) {
     assert.equal(current.get(file), expectedReflow(file, baseline.get(file)),
       'Only the reviewed heading wrapping change is permitted: ' + file);
   }
+  assert.equal(current.get('modules/fidelity-r31/motion/page.js'), expectedMotion(baseline.get('modules/fidelity-r31/motion/page.js')),
+    'Only the reviewed motion keyboard boundaries are permitted');
   assert.notEqual(current.get('modules/fidelity-r31/performance/page.js'),
     baseline.get('modules/fidelity-r31/performance/page.js'), 'The lifecycle fix must be delivered');
   for (const file of Object.keys(R32_FILES).filter(value => value.startsWith('.github/workflows/'))) {
@@ -330,7 +344,7 @@ export function validateSnapshot({baseline, current, changes}) {
       'Input, menu and two heading style changes match the reviewed baseline transformations; catalogue controls/focus match the reviewed R32 source hash.',
       'All 38 remaining original npm verify commands stay on current, in their original order.',
       'Both npm preservation suites and the R25/R26 frozen integration suites run unchanged on the exact published R31 snapshot.',
-      'All six R32 browser suites and unchanged R31 browser recipes stay current; R31 provenance/build use the published snapshot.',
+      'All seven R32 browser suites and unchanged R31 browser recipes stay current; R31 provenance/build use the published snapshot.',
     ],
     scope: 'Source and pipeline integrity. Behavioural results are reported by their separate executed suites.',
   };

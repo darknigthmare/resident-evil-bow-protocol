@@ -39,8 +39,8 @@ export function runGuardCases(snapshot, {writeReport = true, origin = 'supplied 
   test('The reviewed current files and historical command split are accepted', () => {
     const result = validateSnapshot(snapshot);
     assert.equal(result.published_baseline, BASE_COMMIT);
-    assert.equal(result.modified.length, 14);
-    assert.equal(result.added.length, Object.keys(R32_FILES).length - 14 -
+    assert.equal(result.modified.length, 15);
+    assert.equal(result.added.length, Object.keys(R32_FILES).length - 15 -
       (snapshot.current.has('docs/GAMEDEV_APPLIED_R32.json') ? 0 : 1));
   });
   rejected('An unrelated engine change is refused', fixture => {
@@ -88,6 +88,13 @@ export function runGuardCases(snapshot, {writeReport = true, origin = 'supplied 
     fixture.current.set('src/game-menu-r20.js', fixture.current.get('src/game-menu-r20.js') +
       '\nwindow.unreviewedMenuChange=true;\n');
   }, /Only the reviewed held confirmation/);
+  rejected('The motion keyboard browser regression must remain present', fixture => {
+    fixture.changes = fixture.changes.filter(value => value.file !== 'tests/browser-motion-input-r32.mjs');
+    fixture.current.delete('tests/browser-motion-input-r32.mjs');
+  }, /Missing required R32 change/);
+  rejected('Unrelated changes to the motion reader are refused', fixture => {
+    fixture.current.set('modules/fidelity-r31/motion/page.js', fixture.current.get('modules/fidelity-r31/motion/page.js') + '\nwindow.unreviewedMotion=true;\n');
+  }, /Only the reviewed motion keyboard boundaries/);
   rejected('The original lifecycle defect cannot be delivered unchanged', fixture => {
     fixture.current.set('modules/fidelity-r31/performance/page.js',
       fixture.baseline.get('modules/fidelity-r31/performance/page.js'));

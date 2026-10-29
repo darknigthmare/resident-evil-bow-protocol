@@ -113,6 +113,8 @@ Pour les ajouts documentaires de cette intégration, les contrôles requis sont 
 
 Le complément R32 du duel catalogue ajoute deux recettes à `npm run verify:r32:http` : les boutons de commande au clavier et la suspension/reprise des entrées à la perte de focus. Pour une commande maintenue, vérifier séparément l'appui, le relâchement, le changement de focus, l'interruption et la coexistence des appareils. Une activation native du bouton ne prouve pas que le moteur a reçu l'action : contrôler aussi l'état simulé et le replay enregistré.
 
+Le lecteur de mouvements R31 applique également cette distinction : lecture/pause est une action ponctuelle, tandis que le parcours image par image conserve les répétitions. Sa recette `tests/browser-motion-input-r32.mjs` vérifie la première activation native, les répétitions et les raccourcis réservés, avec les médias réels en CI.
+
 ## 6. Utilisation lors des prochains travaux
 
 1. Partir de la version courante et de la demande précise, puis sélectionner les guides pertinents.

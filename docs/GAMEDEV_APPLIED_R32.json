@@ -5311,5 +5311,103 @@
       "additionalHistoricalSuitesMovedToArchive": false
     },
     "scope": "Catalogue page input and interruption handling only. Real browser events, automatic RAF and combat/replay execution. Standard pad and raster artwork are explicit fixtures; synthetic visibility is labelled separately from trusted focus and actual BFCache. No physical hardware, assistive-technology or visual-fidelity certification."
+  },
+  "motionInputFollowUp": {
+    "baseCommit": "7c777b8f29292e0eded224cda2abc06ae8796bc9",
+    "runtimePath": "modules/fidelity-r31/motion/page.js",
+    "priorCommitCi": {
+      "r32": {
+        "run": 40897591190,
+        "job": 123530824887,
+        "conclusion": "success",
+        "behavioralGroups": 74,
+        "guardCases": 32
+      },
+      "generalQaAndBuild": {
+        "run": 40897591377,
+        "job": 123530825635,
+        "conclusion": "success"
+      },
+      "scope": "These completed results apply only to the exact base commit."
+    },
+    "prepublication": {
+      "localExecutorAvailable": false,
+      "syntaxParsedInV8": true,
+      "scopeChecks": {
+        "syntaxParsed": true,
+        "motionMatchesR31Transform": true,
+        "packageMatchesGuardPolicy": true,
+        "scope": {
+          "M": 15,
+          "A": 16
+        },
+        "browserExecuted": false
+      },
+      "behavioralFixture": {
+        "runtime": "V8",
+        "actualPageControllerExecuted": true,
+        "fixtures": [
+          "DOM",
+          "manifest",
+          "image loading",
+          "entry validator",
+          "clock",
+          "requestAnimationFrame"
+        ],
+        "spaceBefore": [
+          false,
+          true,
+          false,
+          true,
+          false
+        ],
+        "spaceAfter": [
+          false,
+          true,
+          true,
+          true,
+          true
+        ],
+        "repeatedRightArrowFrames": [
+          1,
+          2,
+          3
+        ],
+        "modifiedCanvasShortcutsBefore": "Consumed and handled",
+        "modifiedCanvasShortcutsAfter": "Ignored without consuming",
+        "consumedCanvasShortcutBefore": "Handled",
+        "consumedCanvasShortcutAfter": "Ignored",
+        "nativeButtonClickSynthesisExecuted": false,
+        "scope": "Actual controller with simulated browser dependencies. This is not a browser or native-image execution."
+      }
+    },
+    "browserRecipe": {
+      "script": "tests/browser-motion-input-r32.mjs",
+      "requiredBefore": {
+        "passed": 4,
+        "knownDefects": 6
+      },
+      "requiredAfter": {
+        "passed": 10,
+        "failed": 0
+      },
+      "viewports": [
+        1280,
+        390
+      ],
+      "resources": "Original repository HTML, reader, manifests and SHA-verified decoded atlases",
+      "baselineOverride": "Only the controller bytes from the exact base commit are substituted in the HTTP response.",
+      "expectedFailureReasonRequired": true,
+      "report": "qa-gamedev-r32/motion-input.json",
+      "resultAuthority": "Executed GitHub Actions run for the delivered commit; targets in this object are not preclaimed results."
+    },
+    "reviewedScope": {
+      "modified": 15,
+      "added": 16,
+      "browserSuites": 7,
+      "guardCases": 34,
+      "additionalArchivedSuites": 0
+    },
+    "noCombatRuleOrReplayContractChange": true
   }
 }
