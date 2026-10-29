@@ -1,0 +1,2213 @@
+{
+  "schema": "re.bow.gamedev-applied-r32/1",
+  "baselineCommit": "413b89bfafc18abc55be1404ff77bdaf573b1334",
+  "catalogCommit": "19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9",
+  "environment": {
+    "node": "v24.22.1",
+    "playwright": "1.62.1",
+    "chrome": "156.0.8078.73",
+    "sourceCheckout": "sparse text-only local copy; raster fixtures in browser suites"
+  },
+  "suites": [
+    {
+      "name": "input",
+      "command": "node tests/verify-input-r32.mjs",
+      "before": {
+        "schema": "re.bow.input-r32/1",
+        "passed": 2,
+        "failed": 5,
+        "checks": [
+          {
+            "name": "keyboard: neutral, opposing directions, crouch and both facings match combat",
+            "pass": false,
+            "error": "AssertionError [ERR_ASSERTION]: opposite, facing -1\n+ actual - expected\n\n+ 'specialBack'\n- 'special'\n          ^\n\n    at verifyResult (file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/verify-input-r32.mjs:36:10)\n    at file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/verify-input-r32.mjs:55:7\n    at test (file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/verify-input-r32.mjs:13:47)\n    at file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/verify-input-r32.mjs:41:3\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)"
+          },
+          {
+            "name": "pointers: neutral, opposing directions, crouch and both facings match combat",
+            "pass": false,
+            "error": "AssertionError [ERR_ASSERTION]: opposite, facing -1\n+ actual - expected\n\n+ 'specialBack'\n- 'special'\n          ^\n\n    at verifyResult (file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/verify-input-r32.mjs:36:10)\n    at file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/verify-input-r32.mjs:55:7\n    at test (file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/verify-input-r32.mjs:13:47)\n    at file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/verify-input-r32.mjs:41:3\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)"
+          },
+          {
+            "name": "standard-gamepad: neutral, opposing directions, crouch and both facings match combat",
+            "pass": false,
+            "error": "AssertionError [ERR_ASSERTION]: opposite, facing -1\n+ actual - expected\n\n+ 'specialBack'\n- 'special'\n          ^\n\n    at verifyResult (file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/verify-input-r32.mjs:36:10)\n    at file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/verify-input-r32.mjs:55:7\n    at test (file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/verify-input-r32.mjs:13:47)\n    at file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/verify-input-r32.mjs:41:3\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)"
+          },
+          {
+            "name": "Opposed directions across keyboard, pointer and gamepad resolve neutrally",
+            "pass": false,
+            "error": "AssertionError [ERR_ASSERTION]: opposite, facing -1\n+ actual - expected\n\n+ 'specialBack'\n- 'special'\n          ^\n\n    at verifyResult (file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/verify-input-r32.mjs:36:10)\n    at file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/verify-input-r32.mjs:69:5\n    at test (file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/verify-input-r32.mjs:13:47)\n    at file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/verify-input-r32.mjs:61:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)"
+          },
+          {
+            "name": "Releasing one opposite direction restores the surviving direction and respects a facing change",
+            "pass": false,
+            "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'specialForward'\n- 'special'\n          ^\n\n    at file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/verify-input-r32.mjs:75:39\n    at test (file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/verify-input-r32.mjs:13:47)\n    at file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/verify-input-r32.mjs:73:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)"
+          },
+          {
+            "name": "Repeated keydowns cannot repeat a special, and clear removes pending actions and held sources",
+            "pass": true,
+            "detail": {
+              "noOperatingSystemRepeat": true,
+              "pendingActionCleared": true
+            }
+          },
+          {
+            "name": "Guard, throw escape, jump and dash retain their original action semantics",
+            "pass": true,
+            "detail": {
+              "heldGuardPreserved": true,
+              "discreteActionsConsumedOnce": true
+            }
+          }
+        ],
+        "inputs": [
+          {
+            "path": "src/trial-input-v071.js",
+            "sha256": "82daf67ee0bfc092cbe90e4ac9368ac9bf496e1d908524d27d1827212322ce3b"
+          },
+          {
+            "path": "src/combat-foundation-v060.js",
+            "sha256": "4c2aa12007670a1535d4c467db115a148161a4ab08778be17d4ef4f44e95ba82"
+          },
+          {
+            "path": "tests/verify-input-r32.mjs",
+            "sha256": "9d484f04044a2251f6380b4b8d109bead117c20b5c82dd7d7a11ca8b7688a6ed"
+          }
+        ],
+        "scope": "Real trial-input and combat direction resolver in Node VM. Device events are fixtures; physical controllers and a full browser match are separate checks."
+      },
+      "after": {
+        "schema": "re.bow.input-r32/1",
+        "passed": 7,
+        "failed": 0,
+        "checks": [
+          {
+            "name": "keyboard: neutral, opposing directions, crouch and both facings match combat",
+            "pass": true,
+            "detail": {
+              "directionCases": 8,
+              "facings": 2,
+              "combinations": 16,
+              "syntheticDevice": false
+            }
+          },
+          {
+            "name": "pointers: neutral, opposing directions, crouch and both facings match combat",
+            "pass": true,
+            "detail": {
+              "directionCases": 8,
+              "facings": 2,
+              "combinations": 16,
+              "syntheticDevice": true
+            }
+          },
+          {
+            "name": "standard-gamepad: neutral, opposing directions, crouch and both facings match combat",
+            "pass": true,
+            "detail": {
+              "directionCases": 8,
+              "facings": 2,
+              "combinations": 16,
+              "syntheticDevice": true
+            }
+          },
+          {
+            "name": "Opposed directions across keyboard, pointer and gamepad resolve neutrally",
+            "pass": true,
+            "detail": {
+              "devicePairs": 3,
+              "facings": 2
+            }
+          },
+          {
+            "name": "Releasing one opposite direction restores the surviving direction and respects a facing change",
+            "pass": true,
+            "detail": {
+              "leftAliasesIndependent": true,
+              "facingReadAtConsumption": true
+            }
+          },
+          {
+            "name": "Repeated keydowns cannot repeat a special, and clear removes pending actions and held sources",
+            "pass": true,
+            "detail": {
+              "noOperatingSystemRepeat": true,
+              "pendingActionCleared": true
+            }
+          },
+          {
+            "name": "Guard, throw escape, jump and dash retain their original action semantics",
+            "pass": true,
+            "detail": {
+              "heldGuardPreserved": true,
+              "discreteActionsConsumedOnce": true
+            }
+          }
+        ],
+        "inputs": [
+          {
+            "path": "src/trial-input-v071.js",
+            "sha256": "d8be0edc198e1c91c3022b40c8831d2f8b3623fdada820ce0253683b96a9379c"
+          },
+          {
+            "path": "src/combat-foundation-v060.js",
+            "sha256": "4c2aa12007670a1535d4c467db115a148161a4ab08778be17d4ef4f44e95ba82"
+          },
+          {
+            "path": "tests/verify-input-r32.mjs",
+            "sha256": "9d484f04044a2251f6380b4b8d109bead117c20b5c82dd7d7a11ca8b7688a6ed"
+          }
+        ],
+        "scope": "Real trial-input and combat direction resolver in Node VM. Device events are fixtures; physical controllers and a full browser match are separate checks."
+      }
+    },
+    {
+      "name": "browser-input",
+      "command": "node tests/browser-input-r32.mjs",
+      "before": {
+        "schema": "re.bow.input-browser-r32/1",
+        "browserVersion": "156.0.8078.73",
+        "passed": 10,
+        "failed": 2,
+        "checks": [
+          {
+            "width": 1440,
+            "scenario": "neutral",
+            "pass": true,
+            "expected": "special",
+            "actual": "special",
+            "engineStarts": 1,
+            "frames": 1,
+            "trustedKeyboard": true,
+            "verifiedReplayRoundTrip": true
+          },
+          {
+            "width": 1440,
+            "scenario": "left",
+            "pass": true,
+            "expected": "specialBack",
+            "actual": "specialBack",
+            "engineStarts": 1,
+            "frames": 2,
+            "trustedKeyboard": true,
+            "verifiedReplayRoundTrip": true
+          },
+          {
+            "width": 1440,
+            "scenario": "right",
+            "pass": true,
+            "expected": "specialForward",
+            "actual": "specialForward",
+            "engineStarts": 1,
+            "frames": 3,
+            "trustedKeyboard": true,
+            "verifiedReplayRoundTrip": true
+          },
+          {
+            "width": 1440,
+            "scenario": "opposite",
+            "pass": false,
+            "error": "AssertionError [ERR_ASSERTION]: Actual recorded input differs\n+ actual - expected\n\n  [\n    {\n      count: 1,\n+     slot: 'specialForward'\n-     slot: 'special'\n    }\n  ]\n\n    at file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-input-r32.mjs:76:18"
+          },
+          {
+            "width": 1440,
+            "scenario": "opposite-and-down",
+            "pass": true,
+            "expected": "specialDown",
+            "actual": "specialDown",
+            "engineStarts": 1,
+            "frames": 3,
+            "trustedKeyboard": true,
+            "verifiedReplayRoundTrip": true
+          },
+          {
+            "width": 1440,
+            "scenario": "release-left",
+            "pass": true,
+            "expected": "specialForward",
+            "actual": "specialForward",
+            "engineStarts": 1,
+            "frames": 3,
+            "trustedKeyboard": true,
+            "verifiedReplayRoundTrip": true
+          },
+          {
+            "width": 390,
+            "scenario": "neutral",
+            "pass": true,
+            "expected": "special",
+            "actual": "special",
+            "engineStarts": 1,
+            "frames": 2,
+            "trustedKeyboard": true,
+            "verifiedReplayRoundTrip": true
+          },
+          {
+            "width": 390,
+            "scenario": "left",
+            "pass": true,
+            "expected": "specialBack",
+            "actual": "specialBack",
+            "engineStarts": 1,
+            "frames": 3,
+            "trustedKeyboard": true,
+            "verifiedReplayRoundTrip": true
+          },
+          {
+            "width": 390,
+            "scenario": "right",
+            "pass": true,
+            "expected": "specialForward",
+            "actual": "specialForward",
+            "engineStarts": 1,
+            "frames": 8,
+            "trustedKeyboard": true,
+            "verifiedReplayRoundTrip": true
+          },
+          {
+            "width": 390,
+            "scenario": "opposite",
+            "pass": false,
+            "error": "AssertionError [ERR_ASSERTION]: Actual recorded input differs\n+ actual - expected\n\n  [\n    {\n      count: 1,\n+     slot: 'specialForward'\n-     slot: 'special'\n    }\n  ]\n\n    at file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-input-r32.mjs:76:18"
+          },
+          {
+            "width": 390,
+            "scenario": "opposite-and-down",
+            "pass": true,
+            "expected": "specialDown",
+            "actual": "specialDown",
+            "engineStarts": 1,
+            "frames": 3,
+            "trustedKeyboard": true,
+            "verifiedReplayRoundTrip": true
+          },
+          {
+            "width": 390,
+            "scenario": "release-left",
+            "pass": true,
+            "expected": "specialForward",
+            "actual": "specialForward",
+            "engineStarts": 1,
+            "frames": 6,
+            "trustedKeyboard": true,
+            "verifiedReplayRoundTrip": true
+          }
+        ],
+        "browserErrors": [],
+        "missingCode": [],
+        "unavailableOptionalData": [
+          "assets/sprites/bow/manifest.json"
+        ],
+        "inputs": [
+          {
+            "path": "catalog-duel.html",
+            "sha256": "7fa670ae6229953043999919709b2cd06f35618319efcf656ff459a4acd89140"
+          },
+          {
+            "path": "modules/fidelity-r27/combat/adapter.js",
+            "sha256": "ec1f22e69a7d9ecf3433e6238bc134a8af369ac146ec8d8a8e21c7aca6408d2d"
+          },
+          {
+            "path": "modules/fidelity-r27/combat/presentation.js",
+            "sha256": "d53120875a6d137f0cfedc4fa6254d48a7bb4cea13f410b3893548f7a504a9e0"
+          },
+          {
+            "path": "modules/fidelity-r28/evolutions/data.js",
+            "sha256": "2e6981813c3b68a93084917d48cb51b9b42f9d108d6baba89effa7ca5979980f"
+          },
+          {
+            "path": "modules/fidelity-r28/evolutions/styles.css",
+            "sha256": "8dc471ea12a1d47dda48a7281fc38ef72a237eb5b957a89b9b34dc9a6c4af82d"
+          },
+          {
+            "path": "modules/fidelity-r30/native/manifest.json",
+            "sha256": "542d0cf097bbc9c938f81de19fdff431a2b3e5b3d78b06250833810f0dece778"
+          },
+          {
+            "path": "modules/fidelity-r30/native/new-sources/manifest.json",
+            "sha256": "5f72814259927801af1b10d17a874155ca0b4510a826f2a7d94db022376dce26"
+          },
+          {
+            "path": "modules/fidelity-r30/native/other-games/manifest.json",
+            "sha256": "387bf1ecb4608978a7836d4fb040dc8032c66d2d5a0953ba33d34332e97a92de"
+          },
+          {
+            "path": "modules/fidelity-r30/native/revelations/manifest.json",
+            "sha256": "5c8abf74b06e23ab4f6956680121a081f95fee8923447c211f84e1bed25a481c"
+          },
+          {
+            "path": "modules/fidelity-r30/selection/avatars.css",
+            "sha256": "f6ec8dd1f39686a8e4b013a966d448e0c79d336b72dfb5338bf7061cd57883cd"
+          },
+          {
+            "path": "modules/fidelity-r30/selection/manifest.json",
+            "sha256": "32fc768c8a91616a37ed7f67d767c4e916ac1ddf0567bca60c3f62dca4d91b8c"
+          },
+          {
+            "path": "modules/fidelity-r31/access/match-summary.js",
+            "sha256": "f2b04b703adaef7d0154e48e2ec7b28f29d24c57800b20d73a8d93ad081b4cdd"
+          },
+          {
+            "path": "modules/fidelity-r31/combat/generated-runtime.js",
+            "sha256": "d03a03c3fb68f686c41812d9b051ca2240c4bbba9eba64a4deadf16d4412162e"
+          },
+          {
+            "path": "modules/fidelity-r31/combat/native-adapter.js",
+            "sha256": "4dea6bfc84bd1c79a63ff90e701327976ed3d85a26f34ad386959f0fb6d09392"
+          },
+          {
+            "path": "modules/fidelity-r31/combat/native-runtime.js",
+            "sha256": "0e0be612903c65108d5dd3d691b3f074bcb619364812f82f3242b391f704bb36"
+          },
+          {
+            "path": "modules/fidelity-r31/evolutions/selection.js",
+            "sha256": "29c2ecf62047f73117e9080abf8113a8adcb5cc4fb08b4c01cce1aeeaeddd036"
+          },
+          {
+            "path": "modules/fidelity-r31/performance/image-budget.js",
+            "sha256": "e7a3a2039c9c666475fdfe118bc1fece445891d0213bbe20e75fece248cebce2"
+          },
+          {
+            "path": "modules/fidelity-r31/performance/monitor.js",
+            "sha256": "503e992e70900d0afd1b49c8d9f8acec9bbb881095d341095ead9c1bd4e24cc0"
+          },
+          {
+            "path": "modules/fidelity-r31/selection/avatars.js",
+            "sha256": "f0e70109be3310c13155c512767eacf60f28d0f48082752200a3b03de215ec1a"
+          },
+          {
+            "path": "src/baker-ambience-r15.js",
+            "sha256": "ffb355735f83c8f18589cd02b4daef519105287848343dc5eb5a50907df7a86a"
+          },
+          {
+            "path": "src/baker-stages-r14.js",
+            "sha256": "2735c502a55bf54964bfe6a61be4d7eeee09d6c9b24c1acf164fe9d084b878fb"
+          },
+          {
+            "path": "src/catalog-duel-v070.js",
+            "sha256": "de8cc86638ceb1a4996b891c61fb1db9d90b0a0599b42f4653fbb4e736ae0c3d"
+          },
+          {
+            "path": "src/catalog-expansion-data.js",
+            "sha256": "c33d05f4139ee9832990903289bf0edd5c16c54ccb678b6e81b0e13d75a0cce4"
+          },
+          {
+            "path": "src/catalog-replay-contract.js",
+            "sha256": "2778547c459e6efcc95810e8c3dd1108449ca752adaf54f751406573b84ec934"
+          },
+          {
+            "path": "src/catalog-replay-r7.js",
+            "sha256": "8a6536128b5400c85ac1737000d5eb5f12715d554ffd102ca4a375240f22da50"
+          },
+          {
+            "path": "src/catalog-trial-adapter.js",
+            "sha256": "2804ad111b5ee44e959ee2f12c604275193691e803f819a704950ca89fa502b7"
+          },
+          {
+            "path": "src/combat-audio-v060.js",
+            "sha256": "c40377240c4093b99154b01b713706829fc33ad324f581d77f4ceb2a816659ea"
+          },
+          {
+            "path": "src/combat-cues-r6.js",
+            "sha256": "7b24fb33b1ee04fa76301685efc468273eb564fa9d4c8141b59a70430894124d"
+          },
+          {
+            "path": "src/combat-foundation-v060.js",
+            "sha256": "4c2aa12007670a1535d4c467db115a148161a4ab08778be17d4ef4f44e95ba82"
+          },
+          {
+            "path": "src/combat-text-panel-r17.js",
+            "sha256": "45eebba4cbfb2a9517615d86111b1b12565c09b668bb5179e70896f6049fefb5"
+          },
+          {
+            "path": "src/combat-text-r17.js",
+            "sha256": "952d6254e5897dd36deb93a8cd96fa7d8f50898d9ba238492b9d4880a31d23c5"
+          },
+          {
+            "path": "src/directional-art.js",
+            "sha256": "50d15c95c4c5e402543dad18a6163746315af27605f701ea8777d6f57cb6ba2f"
+          },
+          {
+            "path": "src/fighter-directions.js",
+            "sha256": "3787d48622665d1fd8a33ed2f48f2887e1409c9dd312b11c16e031989f2ceb4e"
+          },
+          {
+            "path": "src/interface-preferences-r20.js",
+            "sha256": "79e4655dcff4674e9447c7473a4a2db77fdc5ff31c370bc331d5c74e6d83ea35"
+          },
+          {
+            "path": "src/match-sequences-r8.js",
+            "sha256": "4659ab336463951c5a269dac71321beb77c288a77ddc9036961b58e310fdb368"
+          },
+          {
+            "path": "src/platform-safety-r9.js",
+            "sha256": "c22d658049085e8e2c051dd0a15d2028ffaadd20cd5c343144a075340abe471d"
+          },
+          {
+            "path": "src/player-shell-r20.js",
+            "sha256": "97621067c2878bb193fb4b2d30c7ff903e0ceaf7ec17d7b33858ff90521732f4"
+          },
+          {
+            "path": "src/re-data.js",
+            "sha256": "090cf6e14a5ddf73291bcc443db1500e1810911beb926b4b4e26f9b0160b355a"
+          },
+          {
+            "path": "src/re-renderer.js",
+            "sha256": "fbd24f06be8c246356ba47715dce9bf80fdb75f2eb3e1648819611e8d0f6850c"
+          },
+          {
+            "path": "src/re5-scenes-v060.js",
+            "sha256": "759f94aad96616e2bdab18b6ce998b2d185e8f9f0703f875c26980727de7bb49"
+          },
+          {
+            "path": "src/spatial-weakpoints-v072.js",
+            "sha256": "046cb41f2536b9d51204d01f27b9dc4a55472fb916ace2f1d8dfebe9c1b80ff7"
+          },
+          {
+            "path": "src/stage-dynamics-r6.js",
+            "sha256": "448bd71890918de9841637c86bb9b2c7c6c991195d0e07472f2a1275a0fb49a5"
+          },
+          {
+            "path": "src/trial-audio-panel-r16.js",
+            "sha256": "d9dfcb150e1589f7597384c045c23c500d4c7198b149124d6bf1e8fbff79687a"
+          },
+          {
+            "path": "src/trial-audio-r16.js",
+            "sha256": "970c5e67baff72acee5e30568d3ac603ee5fa944a8d7c8dbf988d30e98874f4e"
+          },
+          {
+            "path": "src/trial-input-v071.js",
+            "sha256": "82daf67ee0bfc092cbe90e4ac9368ac9bf496e1d908524d27d1827212322ce3b"
+          },
+          {
+            "path": "src/trial-intro-r10.js",
+            "sha256": "39bffdd5ed97cd920b46aff6e5955556965c13300257e782f75f2ece4d896781"
+          },
+          {
+            "path": "src/trial-text-panel-r17.js",
+            "sha256": "3b8a74765979ed07955994a2266c6ec312e740d5fdf3016d183e8b6987d3c000"
+          },
+          {
+            "path": "styles/bow-v073.css",
+            "sha256": "4c17dce0fe045df56a348d3696e37163808fcba35474cbec6f920d5dbcd7c402"
+          },
+          {
+            "path": "styles/catalog-v070.css",
+            "sha256": "aedfe25902f1d4c48cd858513d38f57e1ffb56dc73da5dbe812ac976e108135b"
+          },
+          {
+            "path": "styles/combat-text-r17.css",
+            "sha256": "925c97c037cdb96d79c6baebb1bf758a919d076c7c3e8015fca417340f2ffd20"
+          },
+          {
+            "path": "styles/journal-v071.css",
+            "sha256": "dd00ba4cac1ed9881fd21794c4547b6f8fed49f9ff0464ac211c16f15ed5161d"
+          },
+          {
+            "path": "styles/player-shell-r20.css",
+            "sha256": "87c68eb441075530b6b81a150a2c303f6351f2298732d12de891807a08286443"
+          },
+          {
+            "path": "styles/replay-r7.css",
+            "sha256": "08c3ef3f1f63a18ffd3bc43050d1a7571d3b9d49fd005b35e4d0136bd3f98507"
+          },
+          {
+            "path": "styles/trial-audio-r16.css",
+            "sha256": "20ec128850c8c9d1d73999065e54071ab93464e929a9c1490e0685340847eb04"
+          },
+          {
+            "path": "tests/browser-input-r32.mjs",
+            "sha256": "c98a167ec2c2eca8d4e832aabe4aafedfd471cfe2c30978b7b07441009d8c609"
+          }
+        ],
+        "scope": "Delivered catalogue HTML, controllers, combat engine, automatic RAF loop and replay validation. Trusted Chromium keyboard at desktop and narrow viewports. Raster artwork uses a one-pixel fixture; this is not visual-fidelity, physical-device or touch certification. Unit cases separately cover both facings and mixed input devices."
+      },
+      "after": {
+        "schema": "re.bow.input-browser-r32/1",
+        "browserVersion": "156.0.8078.73",
+        "passed": 12,
+        "failed": 0,
+        "checks": [
+          {
+            "width": 1440,
+            "scenario": "neutral",
+            "pass": true,
+            "expected": "special",
+            "actual": "special",
+            "engineStarts": 1,
+            "frames": 2,
+            "trustedKeyboard": true,
+            "verifiedReplayRoundTrip": true
+          },
+          {
+            "width": 1440,
+            "scenario": "left",
+            "pass": true,
+            "expected": "specialBack",
+            "actual": "specialBack",
+            "engineStarts": 1,
+            "frames": 2,
+            "trustedKeyboard": true,
+            "verifiedReplayRoundTrip": true
+          },
+          {
+            "width": 1440,
+            "scenario": "right",
+            "pass": true,
+            "expected": "specialForward",
+            "actual": "specialForward",
+            "engineStarts": 1,
+            "frames": 3,
+            "trustedKeyboard": true,
+            "verifiedReplayRoundTrip": true
+          },
+          {
+            "width": 1440,
+            "scenario": "opposite",
+            "pass": true,
+            "expected": "special",
+            "actual": "special",
+            "engineStarts": 1,
+            "frames": 2,
+            "trustedKeyboard": true,
+            "verifiedReplayRoundTrip": true
+          },
+          {
+            "width": 1440,
+            "scenario": "opposite-and-down",
+            "pass": true,
+            "expected": "specialDown",
+            "actual": "specialDown",
+            "engineStarts": 1,
+            "frames": 3,
+            "trustedKeyboard": true,
+            "verifiedReplayRoundTrip": true
+          },
+          {
+            "width": 1440,
+            "scenario": "release-left",
+            "pass": true,
+            "expected": "specialForward",
+            "actual": "specialForward",
+            "engineStarts": 1,
+            "frames": 9,
+            "trustedKeyboard": true,
+            "verifiedReplayRoundTrip": true
+          },
+          {
+            "width": 390,
+            "scenario": "neutral",
+            "pass": true,
+            "expected": "special",
+            "actual": "special",
+            "engineStarts": 1,
+            "frames": 1,
+            "trustedKeyboard": true,
+            "verifiedReplayRoundTrip": true
+          },
+          {
+            "width": 390,
+            "scenario": "left",
+            "pass": true,
+            "expected": "specialBack",
+            "actual": "specialBack",
+            "engineStarts": 1,
+            "frames": 2,
+            "trustedKeyboard": true,
+            "verifiedReplayRoundTrip": true
+          },
+          {
+            "width": 390,
+            "scenario": "right",
+            "pass": true,
+            "expected": "specialForward",
+            "actual": "specialForward",
+            "engineStarts": 1,
+            "frames": 1,
+            "trustedKeyboard": true,
+            "verifiedReplayRoundTrip": true
+          },
+          {
+            "width": 390,
+            "scenario": "opposite",
+            "pass": true,
+            "expected": "special",
+            "actual": "special",
+            "engineStarts": 1,
+            "frames": 1,
+            "trustedKeyboard": true,
+            "verifiedReplayRoundTrip": true
+          },
+          {
+            "width": 390,
+            "scenario": "opposite-and-down",
+            "pass": true,
+            "expected": "specialDown",
+            "actual": "specialDown",
+            "engineStarts": 1,
+            "frames": 1,
+            "trustedKeyboard": true,
+            "verifiedReplayRoundTrip": true
+          },
+          {
+            "width": 390,
+            "scenario": "release-left",
+            "pass": true,
+            "expected": "specialForward",
+            "actual": "specialForward",
+            "engineStarts": 1,
+            "frames": 1,
+            "trustedKeyboard": true,
+            "verifiedReplayRoundTrip": true
+          }
+        ],
+        "browserErrors": [],
+        "missingCode": [],
+        "unavailableOptionalData": [
+          "assets/sprites/bow/manifest.json"
+        ],
+        "inputs": [
+          {
+            "path": "catalog-duel.html",
+            "sha256": "7fa670ae6229953043999919709b2cd06f35618319efcf656ff459a4acd89140"
+          },
+          {
+            "path": "modules/fidelity-r27/combat/adapter.js",
+            "sha256": "ec1f22e69a7d9ecf3433e6238bc134a8af369ac146ec8d8a8e21c7aca6408d2d"
+          },
+          {
+            "path": "modules/fidelity-r27/combat/presentation.js",
+            "sha256": "d53120875a6d137f0cfedc4fa6254d48a7bb4cea13f410b3893548f7a504a9e0"
+          },
+          {
+            "path": "modules/fidelity-r28/evolutions/data.js",
+            "sha256": "2e6981813c3b68a93084917d48cb51b9b42f9d108d6baba89effa7ca5979980f"
+          },
+          {
+            "path": "modules/fidelity-r28/evolutions/styles.css",
+            "sha256": "8dc471ea12a1d47dda48a7281fc38ef72a237eb5b957a89b9b34dc9a6c4af82d"
+          },
+          {
+            "path": "modules/fidelity-r30/native/manifest.json",
+            "sha256": "542d0cf097bbc9c938f81de19fdff431a2b3e5b3d78b06250833810f0dece778"
+          },
+          {
+            "path": "modules/fidelity-r30/native/new-sources/manifest.json",
+            "sha256": "5f72814259927801af1b10d17a874155ca0b4510a826f2a7d94db022376dce26"
+          },
+          {
+            "path": "modules/fidelity-r30/native/other-games/manifest.json",
+            "sha256": "387bf1ecb4608978a7836d4fb040dc8032c66d2d5a0953ba33d34332e97a92de"
+          },
+          {
+            "path": "modules/fidelity-r30/native/revelations/manifest.json",
+            "sha256": "5c8abf74b06e23ab4f6956680121a081f95fee8923447c211f84e1bed25a481c"
+          },
+          {
+            "path": "modules/fidelity-r30/selection/avatars.css",
+            "sha256": "f6ec8dd1f39686a8e4b013a966d448e0c79d336b72dfb5338bf7061cd57883cd"
+          },
+          {
+            "path": "modules/fidelity-r30/selection/manifest.json",
+            "sha256": "32fc768c8a91616a37ed7f67d767c4e916ac1ddf0567bca60c3f62dca4d91b8c"
+          },
+          {
+            "path": "modules/fidelity-r31/access/match-summary.js",
+            "sha256": "f2b04b703adaef7d0154e48e2ec7b28f29d24c57800b20d73a8d93ad081b4cdd"
+          },
+          {
+            "path": "modules/fidelity-r31/combat/generated-runtime.js",
+            "sha256": "d03a03c3fb68f686c41812d9b051ca2240c4bbba9eba64a4deadf16d4412162e"
+          },
+          {
+            "path": "modules/fidelity-r31/combat/native-adapter.js",
+            "sha256": "4dea6bfc84bd1c79a63ff90e701327976ed3d85a26f34ad386959f0fb6d09392"
+          },
+          {
+            "path": "modules/fidelity-r31/combat/native-runtime.js",
+            "sha256": "0e0be612903c65108d5dd3d691b3f074bcb619364812f82f3242b391f704bb36"
+          },
+          {
+            "path": "modules/fidelity-r31/evolutions/selection.js",
+            "sha256": "29c2ecf62047f73117e9080abf8113a8adcb5cc4fb08b4c01cce1aeeaeddd036"
+          },
+          {
+            "path": "modules/fidelity-r31/performance/image-budget.js",
+            "sha256": "e7a3a2039c9c666475fdfe118bc1fece445891d0213bbe20e75fece248cebce2"
+          },
+          {
+            "path": "modules/fidelity-r31/performance/monitor.js",
+            "sha256": "503e992e70900d0afd1b49c8d9f8acec9bbb881095d341095ead9c1bd4e24cc0"
+          },
+          {
+            "path": "modules/fidelity-r31/selection/avatars.js",
+            "sha256": "f0e70109be3310c13155c512767eacf60f28d0f48082752200a3b03de215ec1a"
+          },
+          {
+            "path": "src/baker-ambience-r15.js",
+            "sha256": "ffb355735f83c8f18589cd02b4daef519105287848343dc5eb5a50907df7a86a"
+          },
+          {
+            "path": "src/baker-stages-r14.js",
+            "sha256": "2735c502a55bf54964bfe6a61be4d7eeee09d6c9b24c1acf164fe9d084b878fb"
+          },
+          {
+            "path": "src/catalog-duel-v070.js",
+            "sha256": "de8cc86638ceb1a4996b891c61fb1db9d90b0a0599b42f4653fbb4e736ae0c3d"
+          },
+          {
+            "path": "src/catalog-expansion-data.js",
+            "sha256": "c33d05f4139ee9832990903289bf0edd5c16c54ccb678b6e81b0e13d75a0cce4"
+          },
+          {
+            "path": "src/catalog-replay-contract.js",
+            "sha256": "2778547c459e6efcc95810e8c3dd1108449ca752adaf54f751406573b84ec934"
+          },
+          {
+            "path": "src/catalog-replay-r7.js",
+            "sha256": "8a6536128b5400c85ac1737000d5eb5f12715d554ffd102ca4a375240f22da50"
+          },
+          {
+            "path": "src/catalog-trial-adapter.js",
+            "sha256": "2804ad111b5ee44e959ee2f12c604275193691e803f819a704950ca89fa502b7"
+          },
+          {
+            "path": "src/combat-audio-v060.js",
+            "sha256": "c40377240c4093b99154b01b713706829fc33ad324f581d77f4ceb2a816659ea"
+          },
+          {
+            "path": "src/combat-cues-r6.js",
+            "sha256": "7b24fb33b1ee04fa76301685efc468273eb564fa9d4c8141b59a70430894124d"
+          },
+          {
+            "path": "src/combat-foundation-v060.js",
+            "sha256": "4c2aa12007670a1535d4c467db115a148161a4ab08778be17d4ef4f44e95ba82"
+          },
+          {
+            "path": "src/combat-text-panel-r17.js",
+            "sha256": "45eebba4cbfb2a9517615d86111b1b12565c09b668bb5179e70896f6049fefb5"
+          },
+          {
+            "path": "src/combat-text-r17.js",
+            "sha256": "952d6254e5897dd36deb93a8cd96fa7d8f50898d9ba238492b9d4880a31d23c5"
+          },
+          {
+            "path": "src/directional-art.js",
+            "sha256": "50d15c95c4c5e402543dad18a6163746315af27605f701ea8777d6f57cb6ba2f"
+          },
+          {
+            "path": "src/fighter-directions.js",
+            "sha256": "3787d48622665d1fd8a33ed2f48f2887e1409c9dd312b11c16e031989f2ceb4e"
+          },
+          {
+            "path": "src/interface-preferences-r20.js",
+            "sha256": "79e4655dcff4674e9447c7473a4a2db77fdc5ff31c370bc331d5c74e6d83ea35"
+          },
+          {
+            "path": "src/match-sequences-r8.js",
+            "sha256": "4659ab336463951c5a269dac71321beb77c288a77ddc9036961b58e310fdb368"
+          },
+          {
+            "path": "src/platform-safety-r9.js",
+            "sha256": "c22d658049085e8e2c051dd0a15d2028ffaadd20cd5c343144a075340abe471d"
+          },
+          {
+            "path": "src/player-shell-r20.js",
+            "sha256": "97621067c2878bb193fb4b2d30c7ff903e0ceaf7ec17d7b33858ff90521732f4"
+          },
+          {
+            "path": "src/re-data.js",
+            "sha256": "090cf6e14a5ddf73291bcc443db1500e1810911beb926b4b4e26f9b0160b355a"
+          },
+          {
+            "path": "src/re-renderer.js",
+            "sha256": "fbd24f06be8c246356ba47715dce9bf80fdb75f2eb3e1648819611e8d0f6850c"
+          },
+          {
+            "path": "src/re5-scenes-v060.js",
+            "sha256": "759f94aad96616e2bdab18b6ce998b2d185e8f9f0703f875c26980727de7bb49"
+          },
+          {
+            "path": "src/spatial-weakpoints-v072.js",
+            "sha256": "046cb41f2536b9d51204d01f27b9dc4a55472fb916ace2f1d8dfebe9c1b80ff7"
+          },
+          {
+            "path": "src/stage-dynamics-r6.js",
+            "sha256": "448bd71890918de9841637c86bb9b2c7c6c991195d0e07472f2a1275a0fb49a5"
+          },
+          {
+            "path": "src/trial-audio-panel-r16.js",
+            "sha256": "d9dfcb150e1589f7597384c045c23c500d4c7198b149124d6bf1e8fbff79687a"
+          },
+          {
+            "path": "src/trial-audio-r16.js",
+            "sha256": "970c5e67baff72acee5e30568d3ac603ee5fa944a8d7c8dbf988d30e98874f4e"
+          },
+          {
+            "path": "src/trial-input-v071.js",
+            "sha256": "d8be0edc198e1c91c3022b40c8831d2f8b3623fdada820ce0253683b96a9379c"
+          },
+          {
+            "path": "src/trial-intro-r10.js",
+            "sha256": "39bffdd5ed97cd920b46aff6e5955556965c13300257e782f75f2ece4d896781"
+          },
+          {
+            "path": "src/trial-text-panel-r17.js",
+            "sha256": "3b8a74765979ed07955994a2266c6ec312e740d5fdf3016d183e8b6987d3c000"
+          },
+          {
+            "path": "styles/bow-v073.css",
+            "sha256": "4c17dce0fe045df56a348d3696e37163808fcba35474cbec6f920d5dbcd7c402"
+          },
+          {
+            "path": "styles/catalog-v070.css",
+            "sha256": "aedfe25902f1d4c48cd858513d38f57e1ffb56dc73da5dbe812ac976e108135b"
+          },
+          {
+            "path": "styles/combat-text-r17.css",
+            "sha256": "925c97c037cdb96d79c6baebb1bf758a919d076c7c3e8015fca417340f2ffd20"
+          },
+          {
+            "path": "styles/journal-v071.css",
+            "sha256": "dd00ba4cac1ed9881fd21794c4547b6f8fed49f9ff0464ac211c16f15ed5161d"
+          },
+          {
+            "path": "styles/player-shell-r20.css",
+            "sha256": "87c68eb441075530b6b81a150a2c303f6351f2298732d12de891807a08286443"
+          },
+          {
+            "path": "styles/replay-r7.css",
+            "sha256": "08c3ef3f1f63a18ffd3bc43050d1a7571d3b9d49fd005b35e4d0136bd3f98507"
+          },
+          {
+            "path": "styles/trial-audio-r16.css",
+            "sha256": "20ec128850c8c9d1d73999065e54071ab93464e929a9c1490e0685340847eb04"
+          },
+          {
+            "path": "tests/browser-input-r32.mjs",
+            "sha256": "c98a167ec2c2eca8d4e832aabe4aafedfd471cfe2c30978b7b07441009d8c609"
+          }
+        ],
+        "scope": "Delivered catalogue HTML, controllers, combat engine, automatic RAF loop and replay validation. Trusted Chromium keyboard at desktop and narrow viewports. Raster artwork uses a one-pixel fixture; this is not visual-fidelity, physical-device or touch certification. Unit cases separately cover both facings and mixed input devices."
+      }
+    },
+    {
+      "name": "menu",
+      "command": "node tests/browser-menu-input-r32.mjs",
+      "before": {
+        "schema": "re.bow.menu-input-browser-r32/1",
+        "passed": 4,
+        "failed": 3,
+        "browserVersion": "156.0.8078.73",
+        "checks": [
+          {
+            "name": "Held Enter leaves the boot screen once and requires a fresh press to open modes",
+            "pass": false,
+            "error": "AssertionError [ERR_ASSERTION]: {\"view\":\"modes\",\"bootHidden\":true,\"focusedId\":\"\",\"focusedTag\":\"A\",\"pathname\":\"/index.html\",\"events\":[{\"key\":\"Enter\",\"repeat\":false,\"trusted\":true},{\"key\":\"Enter\",\"repeat\":true,\"trusted\":true}]}\n\n'modes' !== 'home'\n\n    at view (file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/browser-menu-input-r32.mjs:38:10)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/browser-menu-input-r32.mjs:66:76\n    at async test (file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/browser-menu-input-r32.mjs:55:44)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/browser-menu-input-r32.mjs:63:3",
+            "observed": {
+              "view": "modes",
+              "bootHidden": true,
+              "focusedId": "",
+              "focusedTag": "A",
+              "pathname": "/index.html",
+              "events": [
+                {
+                  "key": "Enter",
+                  "repeat": false,
+                  "trusted": true
+                },
+                {
+                  "key": "Enter",
+                  "repeat": true,
+                  "trusted": true
+                }
+              ]
+            }
+          },
+          {
+            "name": "Held Escape returns one level from controls and requires release before leaving options",
+            "pass": false,
+            "error": "AssertionError [ERR_ASSERTION]: {\"view\":\"home\",\"bootHidden\":true,\"focusedId\":\"\",\"focusedTag\":\"BUTTON\",\"pathname\":\"/index.html\",\"events\":[{\"key\":\"Escape\",\"repeat\":false,\"trusted\":true},{\"key\":\"Escape\",\"repeat\":true,\"trusted\":true}]}\n\n'home' !== 'options'\n\n    at view (file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/browser-menu-input-r32.mjs:38:10)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/browser-menu-input-r32.mjs:73:78\n    at async test (file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/browser-menu-input-r32.mjs:55:44)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/browser-menu-input-r32.mjs:71:3",
+            "observed": {
+              "view": "home",
+              "bootHidden": true,
+              "focusedId": "",
+              "focusedTag": "BUTTON",
+              "pathname": "/index.html",
+              "events": [
+                {
+                  "key": "Escape",
+                  "repeat": false,
+                  "trusted": true
+                },
+                {
+                  "key": "Escape",
+                  "repeat": true,
+                  "trusted": true
+                }
+              ]
+            }
+          },
+          {
+            "name": "Held Space from the boot screen cannot arm the newly focused Play button",
+            "pass": false,
+            "error": "AssertionError [ERR_ASSERTION]: {\"view\":\"modes\",\"bootHidden\":true,\"focusedId\":\"\",\"focusedTag\":\"A\",\"pathname\":\"/index.html\",\"events\":[{\"key\":\" \",\"repeat\":false,\"trusted\":true},{\"key\":\" \",\"repeat\":true,\"trusted\":true}]}\n\n'modes' !== 'home'\n\n    at view (file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/browser-menu-input-r32.mjs:38:10)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/browser-menu-input-r32.mjs:81:38\n    at async test (file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/browser-menu-input-r32.mjs:55:44)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/browser-menu-input-r32.mjs:78:3",
+            "observed": {
+              "view": "modes",
+              "bootHidden": true,
+              "focusedId": "",
+              "focusedTag": "A",
+              "pathname": "/index.html",
+              "events": [
+                {
+                  "key": " ",
+                  "repeat": false,
+                  "trusted": true
+                },
+                {
+                  "key": " ",
+                  "repeat": true,
+                  "trusted": true
+                }
+              ]
+            }
+          },
+          {
+            "name": "Native button activation by a fresh Enter or Space still fires exactly once",
+            "pass": true,
+            "detail": {
+              "trustedNativeButtonClicks": 2,
+              "syntheticClickSubstitution": false
+            }
+          },
+          {
+            "name": "Repeated arrow presses continue navigating menu items",
+            "pass": true,
+            "detail": {
+              "trustedRepeat": true,
+              "twoDownEventsMoveTwoItems": true
+            }
+          },
+          {
+            "name": "Native select navigation keeps repeated arrows and updates the saved setting",
+            "pass": true,
+            "detail": {
+              "nativeSelectRetainsFocus": true,
+              "settingPersistedThroughRealController": true
+            }
+          },
+          {
+            "name": "Events already consumed by a capture handler cannot navigate the menu",
+            "pass": true,
+            "detail": {
+              "captureHandlerFixture": true,
+              "defaultPreventedHonored": true,
+              "fullRemappingFlowClaimed": false
+            }
+          }
+        ],
+        "browserErrors": [],
+        "inputs": [
+          {
+            "path": "index.html",
+            "sha256": "9cab25b27a5a4badac439f824729d93210283b2f4cce9da4cf545982ba2b4e0a"
+          },
+          {
+            "path": "styles/game-menu-r20.css",
+            "sha256": "bbd1d381bbd2d654128b5376a7d5ff3dc317a9cade3b28763d235c2851759604"
+          },
+          {
+            "path": "src/interface-preferences-r20.js",
+            "sha256": "79e4655dcff4674e9447c7473a4a2db77fdc5ff31c370bc331d5c74e6d83ea35"
+          },
+          {
+            "path": "src/menu-navigation-r20.js",
+            "sha256": "46ed45264202e5f3d6bb84415ad5dd7ad04e91a375653ee9ae7196c853b27d8d"
+          },
+          {
+            "path": "src/bow-sprite-library-r20.js",
+            "sha256": "6a0abd067c725dd318aa0d98033530095be315ac0b3702607defdd1b3fbb5421"
+          },
+          {
+            "path": "src/game-menu-r20.js",
+            "sha256": "e2a6e8be20e606f516e6a503a9ef87c4a00286484c0616022d5952ec3c298e72"
+          },
+          {
+            "path": "tests/browser-menu-input-r32.mjs",
+            "sha256": "97fab6f5dccab89e9a3b64c64674bce0e727919a426299acd521fbf3fa04f235"
+          }
+        ],
+        "scope": "Delivered menu HTML, CSS and controllers with trusted Chromium keyboard events. Image requests use a one-pixel fixture; no visual-art fidelity, full combat, hardware keyboard, physical gamepad or complete remapping certification."
+      },
+      "after": {
+        "schema": "re.bow.menu-input-browser-r32/1",
+        "passed": 7,
+        "failed": 0,
+        "browserVersion": "156.0.8078.73",
+        "checks": [
+          {
+            "name": "Held Enter leaves the boot screen once and requires a fresh press to open modes",
+            "pass": true,
+            "detail": {
+              "trustedRepeat": true,
+              "oneViewPerPress": true,
+              "newPressOpensModes": true
+            }
+          },
+          {
+            "name": "Held Escape returns one level from controls and requires release before leaving options",
+            "pass": true,
+            "detail": {
+              "trustedRepeat": true,
+              "controlsToOptionsOnly": true,
+              "freshPressReturnsHome": true
+            }
+          },
+          {
+            "name": "Held Space from the boot screen cannot arm the newly focused Play button",
+            "pass": true,
+            "detail": {
+              "trustedRepeat": true,
+              "bootReleaseDoesNotActivatePlay": true,
+              "freshSpacePressWorks": true
+            }
+          },
+          {
+            "name": "Native button activation by a fresh Enter or Space still fires exactly once",
+            "pass": true,
+            "detail": {
+              "trustedNativeButtonClicks": 2,
+              "syntheticClickSubstitution": false
+            }
+          },
+          {
+            "name": "Repeated arrow presses continue navigating menu items",
+            "pass": true,
+            "detail": {
+              "trustedRepeat": true,
+              "twoDownEventsMoveTwoItems": true
+            }
+          },
+          {
+            "name": "Native select navigation keeps repeated arrows and updates the saved setting",
+            "pass": true,
+            "detail": {
+              "nativeSelectRetainsFocus": true,
+              "settingPersistedThroughRealController": true
+            }
+          },
+          {
+            "name": "Events already consumed by a capture handler cannot navigate the menu",
+            "pass": true,
+            "detail": {
+              "captureHandlerFixture": true,
+              "defaultPreventedHonored": true,
+              "fullRemappingFlowClaimed": false
+            }
+          }
+        ],
+        "browserErrors": [],
+        "inputs": [
+          {
+            "path": "index.html",
+            "sha256": "9cab25b27a5a4badac439f824729d93210283b2f4cce9da4cf545982ba2b4e0a"
+          },
+          {
+            "path": "styles/game-menu-r20.css",
+            "sha256": "bbd1d381bbd2d654128b5376a7d5ff3dc317a9cade3b28763d235c2851759604"
+          },
+          {
+            "path": "src/interface-preferences-r20.js",
+            "sha256": "79e4655dcff4674e9447c7473a4a2db77fdc5ff31c370bc331d5c74e6d83ea35"
+          },
+          {
+            "path": "src/menu-navigation-r20.js",
+            "sha256": "46ed45264202e5f3d6bb84415ad5dd7ad04e91a375653ee9ae7196c853b27d8d"
+          },
+          {
+            "path": "src/bow-sprite-library-r20.js",
+            "sha256": "6a0abd067c725dd318aa0d98033530095be315ac0b3702607defdd1b3fbb5421"
+          },
+          {
+            "path": "src/game-menu-r20.js",
+            "sha256": "42b65299816edad16a17192a1bed8303bb0d3ac2f6152942476905c63da46bc0"
+          },
+          {
+            "path": "tests/browser-menu-input-r32.mjs",
+            "sha256": "97fab6f5dccab89e9a3b64c64674bce0e727919a426299acd521fbf3fa04f235"
+          }
+        ],
+        "scope": "Delivered menu HTML, CSS and controllers with trusted Chromium keyboard events. Image requests use a one-pixel fixture; no visual-art fidelity, full combat, hardware keyboard, physical gamepad or complete remapping certification."
+      }
+    },
+    {
+      "name": "performance-lifecycle",
+      "command": "node tests/browser-performance-lifecycle-r32.mjs",
+      "before": {
+        "schema": "re.bow.performance-lifecycle-browser-r32/1",
+        "passed": 1,
+        "failed": 4,
+        "browserVersion": "156.0.8078.73",
+        "checks": [
+          {
+            "name": "Manual stop produces an exportable partial measurement and allows a new run",
+            "pass": true,
+            "detail": {
+              "reportReason": "manual",
+              "secondRunStarted": true,
+              "actualGameMounted": false
+            }
+          },
+          {
+            "name": "A persisted lifecycle interruption retains its partial report and restores controls",
+            "pass": false,
+            "error": "AssertionError [ERR_ASSERTION]: {\"measureDisabled\":true,\"stopDisabled\":false,\"downloadDisabled\":true,\"resultRows\":0,\"status\":\"Mesure en cours. Vous pouvez jouer dans le cadre.\",\"active\":false,\"reason\":\"parent-pagehide\"}\n\ntrue !== false\n\n    at file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/browser-performance-lifecycle-r32.mjs:98:12\n    at async test (file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/browser-performance-lifecycle-r32.mjs:70:20)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/browser-performance-lifecycle-r32.mjs:90:3",
+            "observed": {
+              "measureDisabled": true,
+              "stopDisabled": false,
+              "downloadDisabled": true,
+              "resultRows": 0,
+              "status": "Mesure en cours. Vous pouvez jouer dans le cadre.",
+              "active": false,
+              "reason": "parent-pagehide"
+            }
+          },
+          {
+            "name": "Actual browser back/forward-cache restoration keeps an interrupted measurement usable",
+            "pass": false,
+            "error": "AssertionError [ERR_ASSERTION]: {\"measureDisabled\":true,\"stopDisabled\":false,\"downloadDisabled\":true,\"resultRows\":0,\"status\":\"Mesure en cours. Vous pouvez jouer dans le cadre.\",\"active\":false,\"reason\":\"parent-pagehide\"}\n\ntrue !== false\n\n    at file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/browser-performance-lifecycle-r32.mjs:113:12\n    at async test (file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/browser-performance-lifecycle-r32.mjs:70:20)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/browser-performance-lifecycle-r32.mjs:106:3",
+            "observed": {
+              "measureDisabled": true,
+              "stopDisabled": false,
+              "downloadDisabled": true,
+              "resultRows": 0,
+              "status": "Mesure en cours. Vous pouvez jouer dans le cadre.",
+              "active": false,
+              "reason": "parent-pagehide"
+            }
+          },
+          {
+            "name": "Changing mode clears the previous report and ignores completion from the outgoing frame",
+            "pass": false,
+            "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\nfalse !== true\n\n    at file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/browser-performance-lifecycle-r32.mjs:129:12\n    at async test (file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/browser-performance-lifecycle-r32.mjs:70:20)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/browser-performance-lifecycle-r32.mjs:121:3",
+            "observed": {
+              "measureDisabled": true,
+              "stopDisabled": true,
+              "downloadDisabled": false,
+              "resultRows": 14,
+              "status": "Ouverture du mode…",
+              "active": null,
+              "reason": null
+            }
+          },
+          {
+            "name": "Reloading the embedded document resets report ownership and both measurement controls",
+            "pass": false,
+            "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\nfalse !== true\n\n    at file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/browser-performance-lifecycle-r32.mjs:149:12\n    at async test (file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/browser-performance-lifecycle-r32.mjs:70:20)\n    at async file:///workspace/scratch/0162b8ad3edf/bow-runtime/tests/browser-performance-lifecycle-r32.mjs:138:3",
+            "observed": {
+              "measureDisabled": false,
+              "stopDisabled": true,
+              "downloadDisabled": false,
+              "resultRows": 14,
+              "status": "Mode prêt. Lancez une mesure lorsque vous souhaitez observer cette session.",
+              "active": false,
+              "reason": null
+            }
+          }
+        ],
+        "browserErrors": [],
+        "inputs": [
+          {
+            "path": "modules/fidelity-r31/performance/index.html",
+            "sha256": "f5203c8c79dec250093a7c3a9e55d7def1e83859c7b29eff3b6e564824dcfdc2"
+          },
+          {
+            "path": "modules/fidelity-r31/performance/page.js",
+            "sha256": "5ecb06d9051608f99ddc3f7a1d6410073d129f07b1dc66ce6d765005e1b9a9c3"
+          },
+          {
+            "path": "modules/fidelity-r31/performance/monitor.js",
+            "sha256": "503e992e70900d0afd1b49c8d9f8acec9bbb881095d341095ead9c1bd4e24cc0"
+          },
+          {
+            "path": "modules/fidelity-r31/performance/style.css",
+            "sha256": "41acdde8c1eacee61d48f2b9580e98ec7f67211336b661a024e6456f805e4cc6"
+          },
+          {
+            "path": "tests/browser-performance-lifecycle-r32.mjs",
+            "sha256": "36c9717bfe2c3037453caaffc454ee51fafd5127e426323500cd5b59692273d6"
+          }
+        ],
+        "scope": "Delivered performance page and monitor in Chromium, with explicit same-origin iframe fixtures in place of game modes. Includes trusted BFCache restoration and separate synthetic lifecycle coverage. No full-game, physical-FPS, GPU-memory or real-device certification."
+      },
+      "after": {
+        "schema": "re.bow.performance-lifecycle-browser-r32/1",
+        "passed": 5,
+        "failed": 0,
+        "browserVersion": "156.0.8078.73",
+        "checks": [
+          {
+            "name": "Manual stop produces an exportable partial measurement and allows a new run",
+            "pass": true,
+            "detail": {
+              "reportReason": "manual",
+              "secondRunStarted": true,
+              "actualGameMounted": false
+            }
+          },
+          {
+            "name": "A persisted lifecycle interruption retains its partial report and restores controls",
+            "pass": true,
+            "detail": {
+              "syntheticPageTransitionEvents": true,
+              "actualMonitor": true,
+              "interruptedReportRetained": true,
+              "restartedOnlyByClick": true
+            }
+          },
+          {
+            "name": "Actual browser back/forward-cache restoration keeps an interrupted measurement usable",
+            "pass": true,
+            "detail": {
+              "trustedPersistedPageShow": true,
+              "sameDocumentRestored": true,
+              "interruptedReason": "parent-pagehide",
+              "automaticRestart": false
+            }
+          },
+          {
+            "name": "Changing mode clears the previous report and ignores completion from the outgoing frame",
+            "pass": true,
+            "detail": {
+              "oldReportClearedBeforeLoad": true,
+              "newModeIdle": true,
+              "oldCompletionIgnored": true
+            }
+          },
+          {
+            "name": "Reloading the embedded document resets report ownership and both measurement controls",
+            "pass": true,
+            "detail": {
+              "iframeDocumentReplaced": true,
+              "oldReportCleared": true,
+              "freshRunAvailable": true
+            }
+          }
+        ],
+        "browserErrors": [],
+        "inputs": [
+          {
+            "path": "modules/fidelity-r31/performance/index.html",
+            "sha256": "f5203c8c79dec250093a7c3a9e55d7def1e83859c7b29eff3b6e564824dcfdc2"
+          },
+          {
+            "path": "modules/fidelity-r31/performance/page.js",
+            "sha256": "aff3d22ef3202433c114d33e89a36eed81fc8dd37c7dfc9a2f293251c47eccfe"
+          },
+          {
+            "path": "modules/fidelity-r31/performance/monitor.js",
+            "sha256": "503e992e70900d0afd1b49c8d9f8acec9bbb881095d341095ead9c1bd4e24cc0"
+          },
+          {
+            "path": "modules/fidelity-r31/performance/style.css",
+            "sha256": "41acdde8c1eacee61d48f2b9580e98ec7f67211336b661a024e6456f805e4cc6"
+          },
+          {
+            "path": "tests/browser-performance-lifecycle-r32.mjs",
+            "sha256": "36c9717bfe2c3037453caaffc454ee51fafd5127e426323500cd5b59692273d6"
+          }
+        ],
+        "scope": "Delivered performance page and monitor in Chromium, with explicit same-origin iframe fixtures in place of game modes. Includes trusted BFCache restoration and separate synthetic lifecycle coverage. No full-game, physical-FPS, GPU-memory or real-device certification."
+      }
+    },
+    {
+      "name": "static-reflow",
+      "command": "node tests/browser-reflow-r32.mjs",
+      "before": {
+        "schema": "re.bow.static-reflow-browser-r32/1",
+        "passed": 4,
+        "failed": 2,
+        "browserVersion": "156.0.8078.73",
+        "checks": [
+          {
+            "name": "audio: 320px viewport, 100% root text",
+            "pass": true,
+            "observed": {
+              "width": 320,
+              "scroll": 320,
+              "rootFontSize": "16px",
+              "heading": {
+                "text": "Notes d’écoute personnelles",
+                "font": "700 20.8px / 31.2px system-ui, sans-serif",
+                "left": 25.796875,
+                "right": 294.203125,
+                "width": 268.40625,
+                "scroll": 268,
+                "textRects": [
+                  {
+                    "left": 25.796875,
+                    "right": 203.515625,
+                    "width": 177.71875
+                  },
+                  {
+                    "left": 25.796875,
+                    "right": 176.171875,
+                    "width": 150.375
+                  }
+                ]
+              },
+              "ancestors": [
+                {
+                  "tag": "H2",
+                  "overflowX": "visible"
+                },
+                {
+                  "tag": "SECTION",
+                  "overflowX": "visible"
+                },
+                {
+                  "tag": "MAIN",
+                  "overflowX": "visible"
+                },
+                {
+                  "tag": "BODY",
+                  "overflowX": "visible"
+                },
+                {
+                  "tag": "HTML",
+                  "overflowX": "visible"
+                }
+              ]
+            },
+            "screenshot": "qa-gamedev-r32/reflow-before/audio-320-text100.png"
+          },
+          {
+            "name": "audio: 320px viewport, 200% root text",
+            "pass": false,
+            "error": "AssertionError [ERR_ASSERTION]: {\"width\":320,\"scroll\":351,\"rootFontSize\":\"32px\",\"heading\":{\"text\":\"Notes d’écoute personnelles\",\"font\":\"700 41.6px / 62.4px system-ui, sans-serif\",\"left\":50.59375,\"right\":269.40625,\"width\":218.8125,\"scroll\":301,\"textRects\":[{\"left\":50.59375,\"right\":186.84375,\"width\":136.25},{\"left\":50.59375,\"right\":255.328125,\"width\":204.734375},{\"left\":50.59375,\"right\":351.34375,\"width\":300.75}]},\"ancestors\":[{\"tag\":\"H2\",\"overflowX\":\"visible\"},{\"tag\":\"SECTION\",\"overflowX\":\"visible\"},{\"tag\":\"MAIN\",\"overflowX\":\"visible\"},{\"tag\":\"BODY\",\"overflowX\":\"visible\"},{\"tag\":\"HTML\",\"overflowX\":\"visible\"}]}\n    at file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-reflow-r32.mjs:77:7",
+            "observed": {
+              "width": 320,
+              "scroll": 351,
+              "rootFontSize": "32px",
+              "heading": {
+                "text": "Notes d’écoute personnelles",
+                "font": "700 41.6px / 62.4px system-ui, sans-serif",
+                "left": 50.59375,
+                "right": 269.40625,
+                "width": 218.8125,
+                "scroll": 301,
+                "textRects": [
+                  {
+                    "left": 50.59375,
+                    "right": 186.84375,
+                    "width": 136.25
+                  },
+                  {
+                    "left": 50.59375,
+                    "right": 255.328125,
+                    "width": 204.734375
+                  },
+                  {
+                    "left": 50.59375,
+                    "right": 351.34375,
+                    "width": 300.75
+                  }
+                ]
+              },
+              "ancestors": [
+                {
+                  "tag": "H2",
+                  "overflowX": "visible"
+                },
+                {
+                  "tag": "SECTION",
+                  "overflowX": "visible"
+                },
+                {
+                  "tag": "MAIN",
+                  "overflowX": "visible"
+                },
+                {
+                  "tag": "BODY",
+                  "overflowX": "visible"
+                },
+                {
+                  "tag": "HTML",
+                  "overflowX": "visible"
+                }
+              ]
+            },
+            "screenshot": "qa-gamedev-r32/reflow-before/audio-320-text200.png"
+          },
+          {
+            "name": "audio: 1280px viewport, 100% root text",
+            "pass": true,
+            "observed": {
+              "width": 1280,
+              "scroll": 1280,
+              "rootFontSize": "16px",
+              "heading": {
+                "text": "Notes d’écoute personnelles",
+                "font": "700 20.8px / 31.2px system-ui, sans-serif",
+                "left": 146.1875,
+                "right": 1133.8125,
+                "width": 987.625,
+                "scroll": 988,
+                "textRects": [
+                  {
+                    "left": 146.1875,
+                    "right": 481.53125,
+                    "width": 335.34375
+                  }
+                ]
+              },
+              "ancestors": [
+                {
+                  "tag": "H2",
+                  "overflowX": "visible"
+                },
+                {
+                  "tag": "SECTION",
+                  "overflowX": "visible"
+                },
+                {
+                  "tag": "MAIN",
+                  "overflowX": "visible"
+                },
+                {
+                  "tag": "BODY",
+                  "overflowX": "visible"
+                },
+                {
+                  "tag": "HTML",
+                  "overflowX": "visible"
+                }
+              ]
+            },
+            "screenshot": "qa-gamedev-r32/reflow-before/audio-1280-text100.png"
+          },
+          {
+            "name": "sprites: 320px viewport, 100% root text",
+            "pass": true,
+            "observed": {
+              "width": 320,
+              "scroll": 320,
+              "rootFontSize": "16px",
+              "heading": {
+                "text": "Illustrations corporelles R31",
+                "font": "700 24px / 36px system-ui, sans-serif",
+                "left": 12,
+                "right": 308,
+                "width": 296,
+                "scroll": 296,
+                "textRects": [
+                  {
+                    "left": 12,
+                    "right": 175.828125,
+                    "width": 163.828125
+                  },
+                  {
+                    "left": 12,
+                    "right": 223.59375,
+                    "width": 211.59375
+                  }
+                ]
+              },
+              "ancestors": [
+                {
+                  "tag": "H1",
+                  "overflowX": "visible"
+                },
+                {
+                  "tag": "MAIN",
+                  "overflowX": "visible"
+                },
+                {
+                  "tag": "BODY",
+                  "overflowX": "visible"
+                },
+                {
+                  "tag": "HTML",
+                  "overflowX": "visible"
+                }
+              ]
+            },
+            "screenshot": "qa-gamedev-r32/reflow-before/sprites-320-text100.png"
+          },
+          {
+            "name": "sprites: 320px viewport, 200% root text",
+            "pass": false,
+            "error": "AssertionError [ERR_ASSERTION]: {\"width\":320,\"scroll\":340,\"rootFontSize\":\"32px\",\"heading\":{\"text\":\"Illustrations corporelles R31\",\"font\":\"700 48px / 72px system-ui, sans-serif\",\"left\":12,\"right\":308,\"width\":296,\"scroll\":328,\"textRects\":[{\"left\":12,\"right\":339.640625,\"width\":327.640625},{\"left\":12,\"right\":314.703125,\"width\":302.703125},{\"left\":12,\"right\":115.765625,\"width\":103.765625}]},\"ancestors\":[{\"tag\":\"H1\",\"overflowX\":\"visible\"},{\"tag\":\"MAIN\",\"overflowX\":\"visible\"},{\"tag\":\"BODY\",\"overflowX\":\"visible\"},{\"tag\":\"HTML\",\"overflowX\":\"visible\"}]}\n    at file:///workspace/scratch/0162b8ad3edf/bow-sparse/tests/browser-reflow-r32.mjs:77:7",
+            "observed": {
+              "width": 320,
+              "scroll": 340,
+              "rootFontSize": "32px",
+              "heading": {
+                "text": "Illustrations corporelles R31",
+                "font": "700 48px / 72px system-ui, sans-serif",
+                "left": 12,
+                "right": 308,
+                "width": 296,
+                "scroll": 328,
+                "textRects": [
+                  {
+                    "left": 12,
+                    "right": 339.640625,
+                    "width": 327.640625
+                  },
+                  {
+                    "left": 12,
+                    "right": 314.703125,
+                    "width": 302.703125
+                  },
+                  {
+                    "left": 12,
+                    "right": 115.765625,
+                    "width": 103.765625
+                  }
+                ]
+              },
+              "ancestors": [
+                {
+                  "tag": "H1",
+                  "overflowX": "visible"
+                },
+                {
+                  "tag": "MAIN",
+                  "overflowX": "visible"
+                },
+                {
+                  "tag": "BODY",
+                  "overflowX": "visible"
+                },
+                {
+                  "tag": "HTML",
+                  "overflowX": "visible"
+                }
+              ]
+            },
+            "screenshot": "qa-gamedev-r32/reflow-before/sprites-320-text200.png"
+          },
+          {
+            "name": "sprites: 1280px viewport, 100% root text",
+            "pass": true,
+            "observed": {
+              "width": 1280,
+              "scroll": 1280,
+              "rootFontSize": "16px",
+              "heading": {
+                "text": "Illustrations corporelles R31",
+                "font": "700 35.2px / 52.8px system-ui, sans-serif",
+                "left": 20,
+                "right": 1260,
+                "width": 1240,
+                "scroll": 1240,
+                "textRects": [
+                  {
+                    "left": 20,
+                    "right": 582.640625,
+                    "width": 562.640625
+                  }
+                ]
+              },
+              "ancestors": [
+                {
+                  "tag": "H1",
+                  "overflowX": "visible"
+                },
+                {
+                  "tag": "MAIN",
+                  "overflowX": "visible"
+                },
+                {
+                  "tag": "BODY",
+                  "overflowX": "visible"
+                },
+                {
+                  "tag": "HTML",
+                  "overflowX": "visible"
+                }
+              ]
+            },
+            "screenshot": "qa-gamedev-r32/reflow-before/sprites-1280-text100.png"
+          }
+        ],
+        "browserErrors": [],
+        "scriptFixtures": [
+          "/modules/fidelity-r31/audio/player.js",
+          "/modules/fidelity-r31/combat/generated-runtime.js",
+          "/modules/fidelity-r31/performance/image-budget.js",
+          "/modules/fidelity-r31/sprites/page.js"
+        ],
+        "inputs": [
+          {
+            "path": "modules/fidelity-r31/audio/index.html",
+            "sha256": "1fc3cdd9fa17a4363adef6400b2255a88fef2b2665b66ee0b67cb4450a28932d"
+          },
+          {
+            "path": "modules/fidelity-r31/audio/style.css",
+            "sha256": "52bd1bb1ffd635237b204f35abae4fb3f9d6288b4fa3a9f0f4d68dd53396086c"
+          },
+          {
+            "path": "modules/fidelity-r31/sprites/index.html",
+            "sha256": "ffc233a8765d128fde14f41e15b58481b496d5c5a9915833d842a68dd24ecd78"
+          },
+          {
+            "path": "modules/fidelity-r31/sprites/style.css",
+            "sha256": "bc63a4d8de3d93b508586f835d891e9b58cd5166746f06fb045451a4c4ca9352"
+          },
+          {
+            "path": "tests/browser-reflow-r32.mjs",
+            "sha256": "6829f406e031390bb0879204e80b0a6abb030ec2e7c4b48ea755763e4dbcf257"
+          }
+        ],
+        "scope": "Delivered audio/sprites HTML and CSS, unchanged native fonts, actual 100%/200% root text at 320px and ordinary 1280px viewport. External scripts are explicit inert fixtures; static headings only. Original R31 browser suites separately verify populated pages, media and interactions. No artwork fidelity or physical-device certification."
+      },
+      "after": {
+        "schema": "re.bow.static-reflow-browser-r32/1",
+        "passed": 6,
+        "failed": 0,
+        "browserVersion": "156.0.8078.73",
+        "checks": [
+          {
+            "name": "audio: 320px viewport, 100% root text",
+            "pass": true,
+            "observed": {
+              "width": 320,
+              "scroll": 320,
+              "rootFontSize": "16px",
+              "heading": {
+                "text": "Notes d’écoute personnelles",
+                "font": "700 20.8px / 31.2px system-ui, sans-serif",
+                "left": 25.796875,
+                "right": 294.203125,
+                "width": 268.40625,
+                "scroll": 268,
+                "textRects": [
+                  {
+                    "left": 25.796875,
+                    "right": 203.515625,
+                    "width": 177.71875
+                  },
+                  {
+                    "left": 25.796875,
+                    "right": 176.171875,
+                    "width": 150.375
+                  }
+                ]
+              },
+              "ancestors": [
+                {
+                  "tag": "H2",
+                  "overflowX": "visible"
+                },
+                {
+                  "tag": "SECTION",
+                  "overflowX": "visible"
+                },
+                {
+                  "tag": "MAIN",
+                  "overflowX": "visible"
+                },
+                {
+                  "tag": "BODY",
+                  "overflowX": "visible"
+                },
+                {
+                  "tag": "HTML",
+                  "overflowX": "visible"
+                }
+              ]
+            },
+            "screenshot": "qa-gamedev-r32/reflow/audio-320-text100.png"
+          },
+          {
+            "name": "audio: 320px viewport, 200% root text",
+            "pass": true,
+            "observed": {
+              "width": 320,
+              "scroll": 320,
+              "rootFontSize": "32px",
+              "heading": {
+                "text": "Notes d’écoute personnelles",
+                "font": "700 41.6px / 62.4px system-ui, sans-serif",
+                "left": 50.59375,
+                "right": 269.40625,
+                "width": 218.8125,
+                "scroll": 219,
+                "textRects": [
+                  {
+                    "left": 50.59375,
+                    "right": 186.84375,
+                    "width": 136.25
+                  },
+                  {
+                    "left": 50.59375,
+                    "right": 255.328125,
+                    "width": 204.734375
+                  },
+                  {
+                    "left": 50.59375,
+                    "right": 241.65625,
+                    "width": 191.0625
+                  },
+                  {
+                    "left": 50.59375,
+                    "right": 160.296875,
+                    "width": 109.703125
+                  }
+                ]
+              },
+              "ancestors": [
+                {
+                  "tag": "H2",
+                  "overflowX": "visible"
+                },
+                {
+                  "tag": "SECTION",
+                  "overflowX": "visible"
+                },
+                {
+                  "tag": "MAIN",
+                  "overflowX": "visible"
+                },
+                {
+                  "tag": "BODY",
+                  "overflowX": "visible"
+                },
+                {
+                  "tag": "HTML",
+                  "overflowX": "visible"
+                }
+              ]
+            },
+            "screenshot": "qa-gamedev-r32/reflow/audio-320-text200.png"
+          },
+          {
+            "name": "audio: 1280px viewport, 100% root text",
+            "pass": true,
+            "observed": {
+              "width": 1280,
+              "scroll": 1280,
+              "rootFontSize": "16px",
+              "heading": {
+                "text": "Notes d’écoute personnelles",
+                "font": "700 20.8px / 31.2px system-ui, sans-serif",
+                "left": 146.1875,
+                "right": 1133.8125,
+                "width": 987.625,
+                "scroll": 988,
+                "textRects": [
+                  {
+                    "left": 146.1875,
+                    "right": 481.53125,
+                    "width": 335.34375
+                  }
+                ]
+              },
+              "ancestors": [
+                {
+                  "tag": "H2",
+                  "overflowX": "visible"
+                },
+                {
+                  "tag": "SECTION",
+                  "overflowX": "visible"
+                },
+                {
+                  "tag": "MAIN",
+                  "overflowX": "visible"
+                },
+                {
+                  "tag": "BODY",
+                  "overflowX": "visible"
+                },
+                {
+                  "tag": "HTML",
+                  "overflowX": "visible"
+                }
+              ]
+            },
+            "screenshot": "qa-gamedev-r32/reflow/audio-1280-text100.png"
+          },
+          {
+            "name": "sprites: 320px viewport, 100% root text",
+            "pass": true,
+            "observed": {
+              "width": 320,
+              "scroll": 320,
+              "rootFontSize": "16px",
+              "heading": {
+                "text": "Illustrations corporelles R31",
+                "font": "700 24px / 36px system-ui, sans-serif",
+                "left": 12,
+                "right": 308,
+                "width": 296,
+                "scroll": 296,
+                "textRects": [
+                  {
+                    "left": 12,
+                    "right": 175.828125,
+                    "width": 163.828125
+                  },
+                  {
+                    "left": 12,
+                    "right": 223.59375,
+                    "width": 211.59375
+                  }
+                ]
+              },
+              "ancestors": [
+                {
+                  "tag": "H1",
+                  "overflowX": "visible"
+                },
+                {
+                  "tag": "MAIN",
+                  "overflowX": "visible"
+                },
+                {
+                  "tag": "BODY",
+                  "overflowX": "visible"
+                },
+                {
+                  "tag": "HTML",
+                  "overflowX": "visible"
+                }
+              ]
+            },
+            "screenshot": "qa-gamedev-r32/reflow/sprites-320-text100.png"
+          },
+          {
+            "name": "sprites: 320px viewport, 200% root text",
+            "pass": true,
+            "observed": {
+              "width": 320,
+              "scroll": 320,
+              "rootFontSize": "32px",
+              "heading": {
+                "text": "Illustrations corporelles R31",
+                "font": "700 48px / 72px system-ui, sans-serif",
+                "left": 12,
+                "right": 308,
+                "width": 296,
+                "scroll": 296,
+                "textRects": [
+                  {
+                    "left": 12,
+                    "right": 276.890625,
+                    "width": 264.890625
+                  },
+                  {
+                    "left": 12,
+                    "right": 74.75,
+                    "width": 62.75
+                  },
+                  {
+                    "left": 12,
+                    "right": 286.125,
+                    "width": 274.125
+                  },
+                  {
+                    "left": 12,
+                    "right": 161.046875,
+                    "width": 149.046875
+                  }
+                ]
+              },
+              "ancestors": [
+                {
+                  "tag": "H1",
+                  "overflowX": "visible"
+                },
+                {
+                  "tag": "MAIN",
+                  "overflowX": "visible"
+                },
+                {
+                  "tag": "BODY",
+                  "overflowX": "visible"
+                },
+                {
+                  "tag": "HTML",
+                  "overflowX": "visible"
+                }
+              ]
+            },
+            "screenshot": "qa-gamedev-r32/reflow/sprites-320-text200.png"
+          },
+          {
+            "name": "sprites: 1280px viewport, 100% root text",
+            "pass": true,
+            "observed": {
+              "width": 1280,
+              "scroll": 1280,
+              "rootFontSize": "16px",
+              "heading": {
+                "text": "Illustrations corporelles R31",
+                "font": "700 35.2px / 52.8px system-ui, sans-serif",
+                "left": 20,
+                "right": 1260,
+                "width": 1240,
+                "scroll": 1240,
+                "textRects": [
+                  {
+                    "left": 20,
+                    "right": 582.640625,
+                    "width": 562.640625
+                  }
+                ]
+              },
+              "ancestors": [
+                {
+                  "tag": "H1",
+                  "overflowX": "visible"
+                },
+                {
+                  "tag": "MAIN",
+                  "overflowX": "visible"
+                },
+                {
+                  "tag": "BODY",
+                  "overflowX": "visible"
+                },
+                {
+                  "tag": "HTML",
+                  "overflowX": "visible"
+                }
+              ]
+            },
+            "screenshot": "qa-gamedev-r32/reflow/sprites-1280-text100.png"
+          }
+        ],
+        "browserErrors": [],
+        "scriptFixtures": [
+          "/modules/fidelity-r31/audio/player.js",
+          "/modules/fidelity-r31/combat/generated-runtime.js",
+          "/modules/fidelity-r31/performance/image-budget.js",
+          "/modules/fidelity-r31/sprites/page.js"
+        ],
+        "inputs": [
+          {
+            "path": "modules/fidelity-r31/audio/index.html",
+            "sha256": "1fc3cdd9fa17a4363adef6400b2255a88fef2b2665b66ee0b67cb4450a28932d"
+          },
+          {
+            "path": "modules/fidelity-r31/audio/style.css",
+            "sha256": "edc4f2e0df6ec67dc5d9ae5721b19e3a293a2115e3d08150045580ffe0c10a3a"
+          },
+          {
+            "path": "modules/fidelity-r31/sprites/index.html",
+            "sha256": "ffc233a8765d128fde14f41e15b58481b496d5c5a9915833d842a68dd24ecd78"
+          },
+          {
+            "path": "modules/fidelity-r31/sprites/style.css",
+            "sha256": "1cf82a8ed82bda09e87cc287921ebc21fdccea1c477bc33260286888e34214c4"
+          },
+          {
+            "path": "tests/browser-reflow-r32.mjs",
+            "sha256": "6829f406e031390bb0879204e80b0a6abb030ec2e7c4b48ea755763e4dbcf257"
+          }
+        ],
+        "scope": "Delivered audio/sprites HTML and CSS, unchanged native fonts, actual 100%/200% root text at 320px and ordinary 1280px viewport. External scripts are explicit inert fixtures; static headings only. Original R31 browser suites separately verify populated pages, media and interactions. No artwork fidelity or physical-device certification."
+      }
+    }
+  ],
+  "existingRegressionSuites": [
+    {
+      "suite": "v071",
+      "passed": 22,
+      "failed": 0,
+      "reportSha256": "7a7139d5e6dbab08020d683998ff3e55b15d1a6452b9beaba96ef5d867d4bb43"
+    },
+    {
+      "suite": "catalog-replay-r7",
+      "passed": 24,
+      "failed": 0,
+      "reportSha256": "02800f9c7c8df534a62ece23c20ce736c713bb771ebfb082c6a11944afed5249"
+    },
+    {
+      "suite": "performance-access-r31",
+      "passed": 12,
+      "failed": 0,
+      "reportSha256": "319b23da90f818b8d9fe411b580379a9baa91717e1b25e3cb782aba18a84ed59"
+    },
+    {
+      "suite": "menu-r20",
+      "passed": 9,
+      "failed": 0,
+      "logSha256": "651691c16ada8675dde3242646305b5b116497d84e2c5a8254efd9c093bccc8c"
+    }
+  ],
+  "scope": "Recorded local before/after executions. Browser input uses delivered page and engine; menu images and measurement game iframe are explicit fixtures. Missing raster assets in the sparse checkout limit existing DOM/VM suites to their actual behavioral assertions. Full assets, builds, pinned CI tools and published archives are verified separately in GitHub Actions. No 1:1 fidelity, physical-controller, actual touchscreen or total GPU-memory certification.",
+  "totals": {
+    "before": {
+      "passed": 21,
+      "failed": 16
+    },
+    "after": {
+      "passed": 37,
+      "failed": 0
+    }
+  },
+  "sourceScope": {
+    "schema": "re.bow.current-scope-r32/1",
+    "published_baseline": "413b89bfafc18abc55be1404ff77bdaf573b1334",
+    "modified": [
+      ".github/workflows/ci.yml",
+      ".github/workflows/source-fidelity-r23.yml",
+      ".github/workflows/source-fidelity-r24.yml",
+      ".github/workflows/source-fidelity-r28.yml",
+      ".github/workflows/source-fidelity-r31.yml",
+      "modules/fidelity-r31/audio/style.css",
+      "modules/fidelity-r31/performance/page.js",
+      "modules/fidelity-r31/sprites/style.css",
+      "package.json",
+      "src/game-menu-r20.js",
+      "src/trial-input-v071.js"
+    ],
+    "added": [
+      ".github/workflows/gamedev-r32.yml",
+      "AGENTS.md",
+      "docs/GAMEDEV_APPLIED_R32.json",
+      "docs/GAMEDEV_APPLIED_R32.md",
+      "docs/GAMEDEV_GUIDANCE.md",
+      "scripts/verify-current-r32.mjs",
+      "tests/browser-input-r32.mjs",
+      "tests/browser-menu-input-r32.mjs",
+      "tests/browser-performance-lifecycle-r32.mjs",
+      "tests/browser-reflow-r32.mjs",
+      "tests/r32-historical-plan.json",
+      "tests/verify-current-guard-r32.mjs",
+      "tests/verify-input-r32.mjs"
+    ],
+    "assertions": [
+      "Only explicitly reviewed R32 paths changed; old tests, data, assets, reports and replay contracts retain published bytes.",
+      "Input, menu and two heading style changes match the reviewed baseline transformations.",
+      "All 38 remaining original npm verify commands stay on current, in their original order.",
+      "Both unchanged source-preservation suites run on the exact published R31 snapshot.",
+      "All four R32 browser suites and unchanged R31 browser recipes stay current; R31 provenance/build use the published snapshot."
+    ],
+    "scope": "Source and pipeline integrity. Behavioural results are reported by their separate executed suites."
+  },
+  "sourceGuard": {
+    "schema": "re.bow.current-guard-tests-r32/1",
+    "baseline": "413b89bfafc18abc55be1404ff77bdaf573b1334",
+    "input": "actual Git worktree compared with published R31",
+    "passed": 26,
+    "failed": 0,
+    "cases": [
+      {
+        "name": "The reviewed current files and historical command split are accepted",
+        "pass": true
+      },
+      {
+        "name": "An unrelated engine change is refused",
+        "pass": true
+      },
+      {
+        "name": "An extra change to a historical test is refused",
+        "pass": true
+      },
+      {
+        "name": "A regenerated historical delivery report is not accepted as new source evidence",
+        "pass": true
+      },
+      {
+        "name": "An undeclared new file is refused",
+        "pass": true
+      },
+      {
+        "name": "Deleting an approved source file is refused",
+        "pass": true
+      },
+      {
+        "name": "A rename cannot hide behind the approved source path",
+        "pass": true
+      },
+      {
+        "name": "The full browser input test must be present",
+        "pass": true
+      },
+      {
+        "name": "Unrelated edits inside the approved input file are refused",
+        "pass": true
+      },
+      {
+        "name": "Unrelated edits inside the approved menu file are refused",
+        "pass": true
+      },
+      {
+        "name": "The original lifecycle defect cannot be delivered unchanged",
+        "pass": true
+      },
+      {
+        "name": "Unrelated style changes in the approved audio stylesheet are refused",
+        "pass": true
+      },
+      {
+        "name": "Unrelated style changes in the approved sprites stylesheet are refused",
+        "pass": true
+      },
+      {
+        "name": "The primary verify alias cannot omit current assertions",
+        "pass": true
+      },
+      {
+        "name": "An original current engine suite cannot be dropped",
+        "pass": true
+      },
+      {
+        "name": "The archival command cannot substitute another commit",
+        "pass": true
+      },
+      {
+        "name": "Both original historical suites are mandatory in the archive plan",
+        "pass": true
+      },
+      {
+        "name": "A command that only prints success cannot replace a historical assertion",
+        "pass": true
+      },
+      {
+        "name": "R31 archives cannot silently follow main or the submitted branch",
+        "pass": true
+      },
+      {
+        "name": "R31 browser assertions must exercise the current source",
+        "pass": true
+      },
+      {
+        "name": "An original R31 browser recipe cannot be replaced by the new focused test",
+        "pass": true
+      },
+      {
+        "name": "R23 must keep its original preservation suite on the published snapshot",
+        "pass": true
+      },
+      {
+        "name": "Current scope verification cannot be postponed after R28 report refresh",
+        "pass": true
+      },
+      {
+        "name": "The current browser workflow cannot omit its executed suites",
+        "pass": true
+      },
+      {
+        "name": "The new browser suites cannot be made nonblocking",
+        "pass": true
+      },
+      {
+        "name": "A package version change cannot invalidate old replay contracts unnoticed",
+        "pass": true
+      }
+    ],
+    "scope": "Source/pipeline guard fault injection only. Fixtures are changed in memory; historical files are never rewritten."
+  },
+  "priorCiFailures": {
+    "run": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/40875389370",
+    "head": "e0d311daf19257dd27ebd4d920b395450c94db5e",
+    "audioJob": 123457529197,
+    "spritesJob": 123457529209,
+    "cause": "Preexisting heading overflow at 320px with 200% root text. Current R31 browser recipes keep their assertions and verify the corrected styles."
+  }
+}

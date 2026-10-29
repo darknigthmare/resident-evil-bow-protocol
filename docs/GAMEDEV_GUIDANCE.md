@@ -9,7 +9,7 @@ Ce document transforme les guides transversaux d’[awesome-gamedev-agent-skills
 | Projet | `darknigthmare/resident-evil-bow-protocol` |
 | Base de cette intégration | `main`, commit `413b89bfafc18abc55be1404ff77bdaf573b1334` |
 | Version du package | `0.7.3` |
-| Dernier lot identifié | R31, après fusion des ajouts R30–R31 |
+| Base publiée du cadre | R31, après fusion des ajouts R30–R31 ; application suivante documentée dans [R32](GAMEDEV_APPLIED_R32.md) |
 | Catalogue de guides | Commit `19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9` |
 | Mode d’utilisation | Lecture ciblée de guides à révision fixe, complétée par les contrats du projet |
 
@@ -107,7 +107,7 @@ Lire les commandes dans le `package.json` et les workflows du commit de travail.
 
 Certaines recettes écrivent des rapports ou produisent des captures. Les lancer dans un checkout adapté, examiner le diff et suivre l’ordre du workflow avant de publier une preuve. Une recette historique et une recette du montage courant ont des périmètres différents ; ne pas additionner leurs résultats comme s’il s’agissait de nouveaux tests identiques.
 
-`npm run verify` assemble la chaîne historique jusqu’à R20 ; il ne remplace pas les suites spécialisées R31 listées dans le workflow courant. La sélection de commandes doit suivre les responsabilités réellement modifiées.
+Depuis R32, `npm run verify` exige les 38 commandes originales qui restent sur la version courante, les nouveaux contrôles R32 et les deux suites de conservation exécutées sur l’archive publiée R31. `npm run verify:r32:http` vérifie les nouvelles interactions dans le navigateur. Le workflow R31 distingue les audits de provenance et de build sur le commit publié R31, et ses anciennes recettes navigateur exécutées sur la révision courante. Une preuve d’archive ne constitue pas une preuve d’exécution de R32. Voir [le détail et les limites de cette transition](GAMEDEV_APPLIED_R32.md). La sélection de commandes doit suivre les responsabilités réellement modifiées.
 
 Pour les ajouts documentaires de cette intégration, les contrôles requis sont les liens, les chemins, la cohérence des consignes et le diff limité à `AGENTS.md` et ce document. Les tests de gameplay existants restent disponibles et les workflows GitHub gardent leurs déclencheurs actuels.
 

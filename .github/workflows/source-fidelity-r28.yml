@@ -38,6 +38,8 @@ jobs:
         run: |
           mkdir -p qa-fidelity-r28-ci
           "$RUNNER_TEMP/fidelity-r28-venv/bin/python" scripts/run-published-release-r29.py --commit 9bcb3535189ffa7b21f08f733be2f1afeb73b984 --evidence qa-fidelity-r28-ci/published-release --plan scripts/ci-r29/plans/r28-publication.json
+      - name: Validate current engine and historical assertions before report generation
+        run: npm run verify > qa-fidelity-r28-ci/current-and-published-verify.log
       - name: Invalidate the previous test reports before this execution
         run: |
           rm -f docs/R28_EXPORT_TESTS.json docs/R28_SPRITES_TESTS.json docs/R28_BODY_SOURCES_TESTS.json docs/R28_CANONICAL_VALIDATION.json docs/R28_AUDIO_TESTS.json docs/R28_COMBAT_SPRITE_TESTS.json docs/R28_EVOLUTIONS_ENGINE_TESTS.json
@@ -105,8 +107,6 @@ jobs:
             assert.equal(failed,0,file);assert.notEqual(report.pass,false,file);assert.equal(report.skipped??0,0,file);
           }
           JS
-      - name: Keep the original engine and content assertions active
-        run: npm run verify > qa-fidelity-r28-ci/historical-verify.log
       - name: Preserve only reports from this execution
         if: always()
         run: |

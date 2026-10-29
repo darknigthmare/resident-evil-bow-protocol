@@ -8,7 +8,7 @@ Les demandes de l’utilisateur définissent le périmètre de chaque interventi
 1. Relever la branche, le commit et les modifications déjà présentes avant toute édition.
 2. Lire `package.json`, le point d’entrée concerné et un exemple fonctionnel du même sous-système.
 3. Lire [le guide gamedev](docs/GAMEDEV_GUIDANCE.md), puis uniquement les guides amont utiles à la tâche.
-4. Lire les preuves et limites du lot courant : [livraison R31](docs/R31_DELIVERY.md) et [suivi R31](docs/FIDELITE_R31.md) à la date d’introduction de ces consignes. Rechercher les lots plus récents lorsqu’ils existent.
+4. Lire les preuves et limites du lot courant : [application R32](docs/GAMEDEV_APPLIED_R32.md), [livraison R31](docs/R31_DELIVERY.md) et [suivi R31](docs/FIDELITE_R31.md). Rechercher les lots plus récents lorsqu’ils existent.
 
 La référence initiale est `413b89bfafc18abc55be1404ff77bdaf573b1334`, version de package `0.7.3`, avec les ajouts R30–R31 fusionnés. Le titre R20 du README ne suffit pas à identifier le dernier état du projet.
 
@@ -54,7 +54,7 @@ Conserver le moteur et les dépendances du projet. Les exemples Godot/Unity/Unre
 5. Pour un changement de comportement ou de présentation, vérifier le parcours réel dans le navigateur et les cas de reprise utiles. Un contrôle statique ne vaut pas une recette de jeu.
 6. Mettre à jour le suivi de la tâche lorsque le contenu change, avec une preuve proportionnée. Garder ouverts les critères non démontrés.
 
-Commandes existantes : `npm start`, `npm run verify`, `npm run build`, `npm run verify:r20:http`. `npm run verify` ne couvre pas à lui seul toutes les suites R31 : le workflow R31 le complète avec ses suites par chantier ; voir le guide pour leur sélection. Reprendre les versions d’outils épinglées dans les workflows concernés.
+Commandes existantes : `npm start`, `npm run verify`, `npm run build`, `npm run verify:r20:http`. À partir de R32, `npm run verify` exige les suites courantes et les deux assertions de conservation sur l’archive publiée R31. `npm run verify:r32:http` contrôle les nouvelles interactions navigateur. Le workflow R31 distingue provenance/build sur l’archive publiée et anciennes recettes navigateur sur la révision courante. Lire [le partage des validations](docs/GAMEDEV_APPLIED_R32.md) avant de lancer un générateur de rapports. Reprendre les versions d’outils épinglées dans les workflows concernés.
 
 Pour une modification documentaire seule, vérifier les liens, les chemins, les instructions et le diff. Ne pas régénérer les données du jeu ou les preuves historiques pour cette seule raison. Ne pas annoncer les tests de gameplay comme exécutés s’ils ne l’ont pas été.
 

@@ -84,7 +84,7 @@ jobs:
           node tests/verify-model-assets-r24.mjs
           node tests/verify-model-skeletons-r24.mjs > qa-fidelity-r24-ci/model-skeletons.json
           node tests/verify-persistence-r24.mjs
-          node tests/verify-preservation-r20.mjs
+          python3 scripts/run-published-release-r29.py --commit 413b89bfafc18abc55be1404ff77bdaf573b1334 --evidence qa-gamedev-r32/r24-historical-preservation -- node tests/verify-preservation-r20.mjs
       - name: Locate Chromium
         run: |
           if command -v google-chrome >/dev/null; then
@@ -121,6 +121,7 @@ jobs:
           name: fidelity-r24-${{ github.run_id }}
           path: |
             qa-*r24*/
+            qa-gamedev-r32/r24-historical-preservation/
             !qa-persistence-r24-fixtures/legacy-runtime/**
             docs/R24_ACCESS_BROWSER.json
             docs/R24_ACCESS_PERFORMANCE.json

@@ -1,4 +1,4 @@
-name: R31 all open fidelity workstreams, generated bodies and real restore
+name: R31 published provenance/build and current browser regressions
 on:
   pull_request:
     branches: [main]
@@ -15,11 +15,13 @@ defaults:
     shell: bash
 jobs:
   provenance:
+    name: Published R31 provenance
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
+          ref: 413b89bfafc18abc55be1404ff77bdaf573b1334
           persist-credentials: false
           fetch-depth: 0
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
@@ -68,7 +70,7 @@ jobs:
           node tests/verify-audio-listening-r31.mjs
           node tests/verify-native-runtime-r31.mjs
           node tests/verify-performance-access-r31.mjs
-      - name: Require every current source report to be freshly executed
+      - name: Require every published R31 report to be freshly executed
         run: |
           node --input-type=module - <<'JS'
           import assert from 'node:assert/strict';
@@ -80,8 +82,8 @@ jobs:
             assert.equal(report.failed,0,file);assert.equal(report.skipped??0,0,file);
           }
           JS
-      - name: Keep every original current engine and UI assertion active
-        run: npm run verify > qa-fidelity-r31-ci/current-engine-ui.log
+      - name: Keep every original engine and UI assertion active in published R31
+        run: npm run verify > qa-fidelity-r31-ci/published-engine-ui.log
       - name: Publish diagnostics from this execution only
         if: always()
         run: |
@@ -93,16 +95,17 @@ jobs:
           fi
           if [[ -f qa-fidelity-r31-ci/integration-started && -f docs/R31_INTEGRATION_TESTS.json ]]; then cp docs/R31_INTEGRATION_TESTS.json qa-fidelity-r31-ci/; fi
           node tests/ci-report-r25.mjs qa-fidelity-r31-ci
-      - name: Upload actual current source results
+      - name: Upload executed published R31 results
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: fidelity-r31-provenance-${{ github.run_id }}
+          name: fidelity-r31-archive-provenance-${{ github.run_id }}
           path: |
             qa-fidelity-r31-ci/
           if-no-files-found: warn
           retention-days: 14
   browser:
+    name: Current R31 browser - ${{ matrix.suite }}
     needs: provenance
     runs-on: ubuntu-latest
     timeout-minutes: 20
@@ -149,12 +152,13 @@ jobs:
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
+          ref: ${{ github.sha }}
           persist-credentials: false
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: '22.16.0'
       - name: Install pinned browser verification tools
-        run: npm install --no-audit --no-fund --no-save --package-lock=false --fetch-timeout=60000 --fetch-retries=2 playwright@1.64.1 @napi-rs/canvas@0.1.80 @puppeteer/browsers@2.10.10
+        run: npm install --no-audit --no-fund --no-save --package-lock=false --fetch-timeout=60000 --fetch-retries=2 playwright@1.64.1 @napi-rs/canvas@0.1.80 @puppeteer/browsers@2.10.10 axe-core@4.14.0
       - name: Install the recorded native rendering browser version
         run: |
           node --input-type=module - <<'JS'
@@ -165,7 +169,7 @@ jobs:
             cacheDir:path.join(process.env.RUNNER_TEMP,'fidelity-r31-chrome')});
           fs.appendFileSync(process.env.GITHUB_ENV,'CHROME_BIN='+browser.executablePath+'\n');
           JS
-      - name: Run the current source browser checks
+      - name: Run unchanged R31 browser assertions on current source
         run: |
           rm -f '${{ matrix.report }}'
           if [[ -n '${{ matrix.secondary_report }}' ]]; then rm -f '${{ matrix.secondary_report }}'; fi
@@ -182,7 +186,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: fidelity-r31-${{ matrix.suite }}-${{ github.run_id }}
+          name: fidelity-r31-current-${{ matrix.suite }}-${{ github.run_id }}
           path: |
             ${{ matrix.report }}
             ${{ matrix.secondary_report }}
@@ -190,17 +194,19 @@ jobs:
           if-no-files-found: warn
           retention-days: 14
   build:
+    name: Published R31 static build
     needs: provenance
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
+          ref: 413b89bfafc18abc55be1404ff77bdaf573b1334
           persist-credentials: false
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: '22.16.0'
-      - name: Build and compare the complete current static delivery
+      - name: Build and compare the published R31 static delivery
         run: |
           npm run build
           node --input-type=module - <<'JS'
