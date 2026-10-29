@@ -91,6 +91,30 @@ La recette exige quatre contrôles témoins réussis et six reproductions des d�
 
 La garde de la révision complète borne désormais 15 fichiers modifiés et 16 ajouts par rapport à R31. Elle contrôle exactement les deux transformations du lecteur et comporte 34 cas de contrôle. Aucune autre suite n'est déplacée vers une archive. Les résultats de CI doivent toujours être lus sur le commit effectivement livré.
 
+## Complément R32 — commandes du combat avec évolutions
+
+La référence de départ est `a8e8996d2a1d50fc99872bf02e4420b44b81167a`. Sur ce commit, la [CI R32](https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/40901306068) a exécuté **84 groupes comportementaux et 34 cas de garde**, tous réussis. La recette du lecteur de mouvements a confirmé ses quatre contrôles témoins, ses six défauts attendus et dix scénarios corrigés. La [QA générale et le build](https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/40901305835) ont aussi réussi. Ces résultats concernent ce commit antérieur au présent complément.
+
+### Correction dans le contrôleur Évolutions
+
+`modules/fidelity-r28/evolutions/duel.js` possédait encore son propre lecteur de manette sans contrôle du focus. Une reproduction V8 exécutant le contrôleur et le gestionnaire d'entrées réels, avec des dépendances explicites de DOM, RAF, manette et combat, a montré Start reprenant une fenêtre visible mais inactive. Une pression encore non échantillonnée au retour produisait également une reprise. Le même montage a confirmé que l'Entrée du pavé numérique n'activait pas le bouton GARDE. Cette reproduction ne vaut pas une exécution navigateur ou une preuve du moteur de combat.
+
+Le correctif applique à ce contrôleur la suspension et la remise à jour des références de manette déjà validées dans le catalogue. Une perte de focus ou le masquage suspend le combat ; le retour ne constitue pas une commande de reprise. Le premier échantillon après retour est neutralisé, puis un nouveau front Start peut reprendre. Les événements de navigation conservent la pause lors d'une restauration du même document.
+
+Le lecteur distinct du bouton Select respecte aussi le focus. Le nettoyage existant reste intégralement conservé : il annule les demandes d'évolution en attente et réinitialise leur référence de manette à chaque pause/reprise. Une évolution reste volontaire. L'ajout de `NumpadEnter` réutilise les sources de maintien indépendantes déjà employées par Entrée et Espace.
+
+Le contrat Évolutions, digest `a4bf5c42ebd70c803e99412113ce5e30a1b52ffb56cb7e5143fd75f2d5c63893`, couvre neuf sources et exclut ce contrôleur de page. Aucune de ces neuf sources, aucune règle d'évolution et aucun pack de replay ne sont modifiés.
+
+### Recette courante et conservation des anciennes preuves
+
+`tests/browser-evolution-input-r32.mjs` sert le montage HTML Évolutions original, ses contrôleurs et le vrai moteur/replay. Son témoin remplace uniquement le contrôleur de page par les octets de `a8e8996d`. Les commandes clavier, le focus et le retour BFCache sont produits par Chromium ; les images raster et la manette standard sont des fixtures déclarées. Les deux cas portant sur une demande d'évolution isolent l'horloge RAF et atteignent les conditions par de vrais ticks, sans modifier directement la santé ou la jauge.
+
+La recette exige **cinq contrôles témoins réussis et cinq défauts précis**, puis **dix scénarios réussis sur le contrôleur courant** : Start hors focus, appui maintenu au retour, BFCache, maintien/relâchement des boutons à 1280 et 390 px, pause/reprise CPU, Select et annulation d'une demande. Un échec de chargement ou un délai dépassé ne constitue pas une reproduction acceptée.
+
+La même commande rejoue aussi les **16 groupes de `tests/browser-evolutions-r28.mjs` inchangé sur le checkout courant**. Son ancien rapport est sauvegardé avant exécution, puis restauré à ses octets exacts ; seul le nouveau résultat rejoint `qa-gamedev-r32/evolutions-existing`. Cela apporte une preuve actuelle, car le workflow R28 existant teste déjà sa recette navigateur sur une archive publiée. Aucun test supplémentaire n'est déplacé vers une archive.
+
+Les résultats effectifs appartiennent aux rapports CI du commit livré. Les comptes ci-dessus décrivent les critères de la recette avant son exécution, sans annoncer un succès anticipé. La garde complète autorise désormais **16 fichiers modifiés et 17 ajouts** par rapport à R31 ; ses **37 cas** conservent les refus de changements hors périmètre et ajoutent la protection du contrôleur Évolutions et de sa recette.
+
 ## Conservation des versions publiées et validation courante
 
 Les anciennes validations R19/R20 et R31 imposent des empreintes de sources publiées. R32 ne remplace ni leurs empreintes attendues, ni leurs rapports par de faux résultats actualisés.
@@ -98,11 +122,11 @@ Les anciennes validations R19/R20 et R31 imposent des empreintes de sources publ
 - `npm run verify:current` exécute d'abord la garde R32, ses cas négatifs, puis les **38 autres commandes originales** de `npm run verify` dans leur ordre et la nouvelle suite d'entrées.
 - `npm run verify:historical:r31` exécute les deux suites originales de conservation R19/R20 sur une archive Git du commit publié R31, avec leurs assertions intactes.
 - `npm run verify` exige les deux étapes. Les entrées dédiées aux sauvegardes et à R20 exposent également ce partage.
-- `npm run verify:r32` contrôle le périmètre courant et les entrées ; `npm run verify:r32:http` exécute les sept suites navigateur sur les fichiers courants, dont les recettes des commandes et du focus du catalogue, et celle de la lecture des mouvements au clavier.
+- `npm run verify:r32` contrôle le périmètre courant et les entrées ; `npm run verify:r32:http` exécute les huit recettes R32 sur les fichiers courants, dont les commandes et le focus du catalogue, la lecture des mouvements au clavier et les entrées Évolutions. Cette dernière rejoue aussi les 16 groupes de l'ancienne recette navigateur Évolutions, inchangée, sur le checkout courant.
 - Le workflow R31 conserve ses audits de provenance et son build sur le commit publié explicitement fixé. Ses sept anciennes recettes navigateur sont exécutées, avec leurs assertions intactes, sur la révision courante : elles vérifient notamment les corrections de reflow avec les vrais médias. Les libellés distinguent ces deux périmètres. La dépendance `axe-core` est installée explicitement comme dans les autres workflows d'accessibilité.
 - R23/R24 continuent leurs vérifications courantes et exécutent leur seule assertion de conservation R20 sur l'archive publiée. R28 exécute `npm run verify` avant de régénérer ses rapports de travail.
 - Les suites d'intégration R25/R26 contiennent elles aussi une assertion imposant l'identité des sources historiques. Elles sont exécutées intégralement sur l'archive publiée, avec leurs assertions intactes. La garde R32 s'exécute avant les générateurs de ces workflows et vérifie que tous leurs autres fichiers restent inchangés. Les autres recettes de ces workflows sont conservées. Les nouveaux journaux du runner sont publiés comme preuves d'archive ; leurs JSON historiques ne sont pas présentés comme de nouveaux résultats.
 
-La garde `scripts/verify-current-r32.mjs` compare l'ensemble du diff à R31. Elle refuse tout chemin inattendu, suppression, renommage, modification de données, d'assets, d'anciens tests ou de preuves historiques. Les transformations des commandes et du menu sont bornées aux hunks relus ; le contrôleur catalogue doit correspondre à l'empreinte de sa nouvelle source R32 relue. Cette empreinte ne remplace aucun manifeste historique. Les commandes de vérification, références d'archives et workflows sont contrôlés exactement. Les tests de faute modifient uniquement des copies en mémoire.
+La garde `scripts/verify-current-r32.mjs` compare l'ensemble du diff à R31. Elle refuse tout chemin inattendu, suppression, renommage, modification de données, d'assets, d'anciens tests ou de preuves historiques. Les transformations des commandes, du menu, du lecteur de mouvements et du contrôleur Évolutions sont bornées aux hunks relus ; le contrôleur catalogue doit correspondre à l'empreinte de sa nouvelle source R32 relue. Cette empreinte ne remplace aucun manifeste historique. Les commandes de vérification, références d'archives et workflows sont contrôlés exactement. Les tests de faute modifient uniquement des copies en mémoire.
 
 Cette révision corrige les interactions décrites. Les critères artistiques et de fidélité encore ouverts dans R31 restent ouverts. Le commit de la branche et les exécutions GitHub Actions constituent la référence pour l'état d'intégration ; le présent document ne prétend pas que la branche a été fusionnée ou déployée.

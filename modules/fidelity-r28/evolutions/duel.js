@@ -7,6 +7,7 @@ let s=null,live=null,replay=null,paused=true,last=0,acc=0,pending=null,raf=null,
 let evolutionSignatureR28='',movesUidR28='',padEvolutionR28={id:'',held:false};
 const chosenEvolutionR28=['',''];
 const buttonHoldsR28=new Map();
+let focusedR32=document.hasFocus?.()??true,rebasePadR32=true;
 const introR10=root.RE_TRIAL_INTRO.create();let suppressPadR10=false;
 const introActiveR10=()=>introR10.snapshot().active;
 const FINAL_TICKS_R9=600;let finalStateR9=null,finalTickR9=0,finalPausedR9=true;
@@ -32,6 +33,14 @@ $('trialStage').value=D.stages.some(st=>st.id===params.get('stage'))?params.get(
 function focusArena(){canvas.focus?.({preventScroll:true});}
 function releaseButtonHoldsR28(button){for(const [code,hold]of buttonHoldsR28)if(!button||hold.button===button){controls.pointer(hold.id,hold.action,false);buttonHoldsR28.delete(code);}}
 function clear(){releaseButtonHoldsR28();controls.clear();live?.cancelEvolution();pending=null;acc=0;last=0;padEvolutionR28={id:'',held:false};}
+function suspendInputR32(){focusedR32=false;rebasePadR32=true;pause();}
+function restoreInputR32(){focusedR32=document.hasFocus?.()??true;rebasePadR32=true;acc=0;last=0;}
+function samplePadR32(){
+ const pad=controls.samplePad();
+ if(!focusedR32||document.hidden){rebasePadR32=true;return{...pad,held:{},edges:[]};}
+ if(rebasePadR32){rebasePadR32=false;return{...pad,held:{},edges:[]};}
+ return pad;
+}
 function status(message){$('trialReplayStatus').textContent=message;}
 function configuration(){return{uid:$('trialSubject').value,target:$('trialTarget').value,stage:$('trialStage').value,mode:$('trialMode').value,seed:7070};}
 function rebuildMoves(){
@@ -69,7 +78,7 @@ function tick(count=1,pad){
  const autoplayR9=!paused;
  if(!Number.isInteger(count)||count<0||count>R.MAX_FRAMES)throw Error('Avance invalide.');
  if(introActiveR10()){for(let n=0;n<count&&introActiveR10();n++)introR10.step();if(!introActiveR10())finishIntroR10(false);dirty=true;return s;}
- pad??=controls.samplePad();
+ pad??=samplePadR32();
  if(suppressPadR10){const neutral=!Object.values(pad.held||{}).some(Boolean)&&!(pad.edges||[]).length;if(neutral)suppressPadR10=false;else pad={held:{},edges:[]};}
  for(let n=0;n<count;n++){
   if(replay){if(replay.ended())break;s=replay.tick(1);}
@@ -109,7 +118,7 @@ function installReplay(value){
  $('trialResult').textContent='REPLAY VÉRIFIÉ · départ en pause à la frame 0.';status('Commandes et empreinte vérifiées · pas de santé importée ni de récompense.');rebuildMoves();dirty=true;draw();return true;
 }
 function loop(now){
- const dt=last?Math.max(0,Math.min(100,now-last)):0;last=now;const pad=controls.samplePad();sampleEvolutionPadR28();
+ const dt=last?Math.max(0,Math.min(100,now-last)):0;last=now;const pad=samplePadR32();sampleEvolutionPadR28();
  if(presentationActiveR9()){const speed=Number($('trialSpeed').value);advancePresentationR9(dt*([.25,.5,1,2].includes(speed)?speed:1));}
  if(!document.hidden&&pad.edges.includes('pause'))togglePause();
  if(introActiveR10()){advanceIntroR10(dt,Number($('trialSpeed').value));if(dirty)draw();raf=requestAnimationFrame(loop);return;}
@@ -195,7 +204,7 @@ function sampleEvolutionPadR28() {
  const id=String(pad.index)+'|'+pad.id,button=pad.buttons?.[8],held=!!button?.pressed||Number(button?.value)>.5;
  if(id!==padEvolutionR28.id){padEvolutionR28={id,held};return;}
  const edge=held&&!padEvolutionR28.held;padEvolutionR28={id,held};
- if(edge&&!paused&&!replay&&!introActiveR10()&&!document.hidden)requestEvolutionR28(0);
+ if(edge&&focusedR32&&!paused&&!replay&&!introActiveR10()&&!document.hidden)requestEvolutionR28(0);
 }
 $('trialStart').addEventListener('click',startPresentedR10);$('trialIntroSkip').addEventListener('click',skipIntroR10);$('trialPause').addEventListener('click',togglePause);
 $('trialStep').addEventListener('click',()=>{pause();if(presentationActiveR9()){finalTickR9=Math.min(FINAL_TICKS_R9,finalTickR9+1);dirty=true;}else tick(1,{held:{},edges:[]});draw();});$('trialSpeed').addEventListener('change',()=>{acc=0;last=0;soundR16();});
@@ -216,15 +225,15 @@ for(const b of document.querySelectorAll('[data-hold]')){
  b.addEventListener('pointerdown',e=>{e.preventDefault();if(!paused&&!replay&&!introActiveR10())controls.pointer(e.pointerId,b.dataset.hold,true);b.setPointerCapture?.(e.pointerId);});
  for(const event of ['pointerup','pointercancel','lostpointercapture'])b.addEventListener(event,e=>controls.pointer(e.pointerId,b.dataset.hold,false));
  b.addEventListener('keydown',e=>{
-  if(!['Space','Enter'].includes(e.code))return;
+  if(!['Space','Enter','NumpadEnter'].includes(e.code))return;
   e.preventDefault();
   if(e.ctrlKey||e.altKey||e.metaKey||e.repeat||buttonHoldsR28.has(e.code)||b.disabled||paused||replay||introActiveR10()||s.finished||document.hidden)return;
   const hold={id:'r28-button-key:'+e.code,action:b.dataset.hold,button:b};buttonHoldsR28.set(e.code,hold);controls.pointer(hold.id,hold.action,true);
  });
  b.addEventListener('blur',()=>releaseButtonHoldsR28(b));
 }
-root.addEventListener('blur',pause);document.addEventListener('visibilitychange',()=>{if(document.hidden)pause();});
-root.addEventListener('pagehide',()=>{ioTicket++;pause();cancelAnimationFrame(raf);raf=null;});root.addEventListener('pageshow',e=>{if(e.persisted&&raf===null){pause();draw();raf=requestAnimationFrame(loop);}});
+root.addEventListener('blur',suspendInputR32);root.addEventListener('focus',restoreInputR32);document.addEventListener('visibilitychange',()=>{if(document.hidden)suspendInputR32();else restoreInputR32();});
+root.addEventListener('pagehide',()=>{ioTicket++;suspendInputR32();cancelAnimationFrame(raf);raf=null;});root.addEventListener('pageshow',e=>{if(e.persisted&&raf===null){pause();restoreInputR32();draw();raf=requestAnimationFrame(loop);}});
 root.addEventListener('re:assetstatus',()=>dirty=true);
 root.RE_EVOLUTION_DUEL_R28=root.RE_CATALOG_DUEL=Object.freeze({requestEvolution:requestEvolutionR28,draw,reset,tick,startPresented:startPresentedR10,skipIntro:skipIntroR10,getIntro:introR10.snapshot,advanceIntro:advanceIntroR10,advancePresentation:advancePresentationR9,getPresentation:()=>({frame:finalTickR9,paused:finalPausedR9,active:presentationActiveR9(),max:FINAL_TICKS_R9,description:presentationActiveR9()?root.RE_MATCH_SEQUENCES.describe(s,s.winner===-1?0:s.winner,{finalTick:finalTickR9}):null}),getState:()=>s,isPaused:()=>paused,progression:false,exportReplay,installReplay,isReplay:()=>!!replay});
 reset(false);

@@ -28,6 +28,7 @@ export const R32_FILES = Object.freeze({
   'src/trial-input-v071.js': 'M',
   'src/catalog-duel-v070.js': 'M',
   'src/game-menu-r20.js': 'M',
+  'modules/fidelity-r28/evolutions/duel.js': 'M',
   'modules/fidelity-r31/performance/page.js': 'M',
   'modules/fidelity-r31/motion/page.js': 'M',
   'modules/fidelity-r31/audio/style.css': 'M',
@@ -55,6 +56,7 @@ export const R32_FILES = Object.freeze({
   'tests/browser-performance-lifecycle-r32.mjs': 'A',
   'tests/browser-reflow-r32.mjs': 'A',
   'tests/browser-motion-input-r32.mjs': 'A',
+  'tests/browser-evolution-input-r32.mjs': 'A',
   '.github/workflows/gamedev-r32.yml': 'A',
 });
 const OPTIONAL = new Set(['docs/GAMEDEV_APPLIED_R32.json']);
@@ -86,6 +88,35 @@ export function expectedMenu(baseline) {
     "    if (event.repeat && (event.key === 'Escape' || (confirmation && (!boot.hidden || event.target?.closest?.('button,a[href]'))))) {\n" +
     '      event.preventDefault(); return;\n' +
     '    }\n', 'menu repeat filter');
+}
+
+export function expectedEvolution(baseline) {
+  let source = baseline;
+  source = replaceOnce(source,
+    "const buttonHoldsR28=new Map();\n",
+    "const buttonHoldsR28=new Map();\nlet focusedR32=document.hasFocus?.()??true,rebasePadR32=true;\n", "evolution focus state");
+  source = replaceOnce(source,
+    "function status(message){$('trialReplayStatus').textContent=message;}\n",
+    "function suspendInputR32(){focusedR32=false;rebasePadR32=true;pause();}\nfunction restoreInputR32(){focusedR32=document.hasFocus?.()??true;rebasePadR32=true;acc=0;last=0;}\nfunction samplePadR32(){\n const pad=controls.samplePad();\n if(!focusedR32||document.hidden){rebasePadR32=true;return{...pad,held:{},edges:[]};}\n if(rebasePadR32){rebasePadR32=false;return{...pad,held:{},edges:[]};}\n return pad;\n}\nfunction status(message){$('trialReplayStatus').textContent=message;}\n", "evolution pad lifecycle");
+  source = replaceOnce(source,
+    " pad??=controls.samplePad();",
+    " pad??=samplePadR32();", "evolution manual pad sampling");
+  source = replaceOnce(source,
+    "last=now;const pad=controls.samplePad();sampleEvolutionPadR28();",
+    "last=now;const pad=samplePadR32();sampleEvolutionPadR28();", "evolution automatic pad sampling");
+  source = replaceOnce(source,
+    " if(edge&&!paused&&!replay&&!introActiveR10()&&!document.hidden)requestEvolutionR28(0);",
+    " if(edge&&focusedR32&&!paused&&!replay&&!introActiveR10()&&!document.hidden)requestEvolutionR28(0);", "evolution Select focus boundary");
+  source = replaceOnce(source,
+    "  if(!['Space','Enter'].includes(e.code))return;",
+    "  if(!['Space','Enter','NumpadEnter'].includes(e.code))return;", "evolution numpad button activation");
+  source = replaceOnce(source,
+    "root.addEventListener('blur',pause);document.addEventListener('visibilitychange',()=>{if(document.hidden)pause();});",
+    "root.addEventListener('blur',suspendInputR32);root.addEventListener('focus',restoreInputR32);document.addEventListener('visibilitychange',()=>{if(document.hidden)suspendInputR32();else restoreInputR32();});", "evolution focus restoration");
+  source = replaceOnce(source,
+    "root.addEventListener('pagehide',()=>{ioTicket++;pause();cancelAnimationFrame(raf);raf=null;});root.addEventListener('pageshow',e=>{if(e.persisted&&raf===null){pause();draw();raf=requestAnimationFrame(loop);}});",
+    "root.addEventListener('pagehide',()=>{ioTicket++;suspendInputR32();cancelAnimationFrame(raf);raf=null;});root.addEventListener('pageshow',e=>{if(e.persisted&&raf===null){pause();restoreInputR32();draw();raf=requestAnimationFrame(loop);}});", "evolution page lifecycle");
+  return source;
 }
 
 export function expectedMotion(baseline) {
@@ -138,6 +169,7 @@ export function expectedPackage(baseline) {
     'node tests/browser-performance-lifecycle-r32.mjs',
     'node tests/browser-reflow-r32.mjs',
     'node tests/browser-motion-input-r32.mjs',
+    'node tests/browser-evolution-input-r32.mjs',
   ].join(' && ');
   return {...baseline, scripts};
 }
@@ -326,6 +358,8 @@ export function validateSnapshot({baseline, current, changes}) {
     assert.equal(current.get(file), expectedReflow(file, baseline.get(file)),
       'Only the reviewed heading wrapping change is permitted: ' + file);
   }
+  assert.equal(current.get('modules/fidelity-r28/evolutions/duel.js'), expectedEvolution(baseline.get('modules/fidelity-r28/evolutions/duel.js')),
+    'Only the reviewed evolution focus and numpad boundaries are permitted');
   assert.equal(current.get('modules/fidelity-r31/motion/page.js'), expectedMotion(baseline.get('modules/fidelity-r31/motion/page.js')),
     'Only the reviewed motion keyboard boundaries are permitted');
   assert.notEqual(current.get('modules/fidelity-r31/performance/page.js'),
@@ -341,10 +375,10 @@ export function validateSnapshot({baseline, current, changes}) {
     added: changes.filter(value => value.status === 'A').map(value => value.file).sort(),
     assertions: [
       'Only explicitly reviewed R32 paths changed; old tests, data, assets, reports and replay contracts retain published bytes.',
-      'Input, menu and two heading style changes match the reviewed baseline transformations; catalogue controls/focus match the reviewed R32 source hash.',
+      'Input, menu, motion, evolution focus/numpad and two heading style changes match the reviewed baseline transformations; catalogue controls/focus match the reviewed R32 source hash.',
       'All 38 remaining original npm verify commands stay on current, in their original order.',
       'Both npm preservation suites and the R25/R26 frozen integration suites run unchanged on the exact published R31 snapshot.',
-      'All seven R32 browser suites and unchanged R31 browser recipes stay current; R31 provenance/build use the published snapshot.',
+      'All eight R32 browser suites, the unchanged R28 evolution regression and unchanged R31 browser recipes stay current; R31 provenance/build use the published snapshot.',
     ],
     scope: 'Source and pipeline integrity. Behavioural results are reported by their separate executed suites.',
   };

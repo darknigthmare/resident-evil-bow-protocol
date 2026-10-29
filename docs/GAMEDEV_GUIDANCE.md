@@ -115,6 +115,8 @@ Le complément R32 du duel catalogue ajoute deux recettes à `npm run verify:r32
 
 Le lecteur de mouvements R31 applique également cette distinction : lecture/pause est une action ponctuelle, tandis que le parcours image par image conserve les répétitions. Sa recette `tests/browser-motion-input-r32.mjs` vérifie la première activation native, les répétitions et les raccourcis réservés, avec les médias réels en CI.
 
+Le mode Combat avec évolutions possède son propre contrôleur de page et deux lecteurs de manette : commandes de combat/Start et évolution/Select. Une correction du catalogue doit donc être vérifiée séparément sur ce montage. La recette `tests/browser-evolution-input-r32.mjs` couvre le retour de focus, les boutons et les évolutions volontaires, puis rejoue l'ancienne recette R28 intacte sur le code courant en conservant son ancien rapport. Les contrats scellés du moteur restent distincts de ce contrôleur d'interface.
+
 ## 6. Utilisation lors des prochains travaux
 
 1. Partir de la version courante et de la demande précise, puis sélectionner les guides pertinents.

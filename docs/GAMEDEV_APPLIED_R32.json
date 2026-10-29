@@ -5408,6 +5408,128 @@
       "guardCases": 34,
       "additionalArchivedSuites": 0
     },
+    "noCombatRuleOrReplayContractChange": true,
+    "completedCi": {
+      "commit": "a8e8996d2a1d50fc99872bf02e4420b44b81167a",
+      "r32": {
+        "run": 40901306068,
+        "job": 123544014970,
+        "event": "push",
+        "conclusion": "success",
+        "behavioralGroups": 84,
+        "guardCases": 34,
+        "browserVersion": "154.0.8037.57",
+        "motion": {
+          "before": {
+            "passed": 4,
+            "expectedDefects": 6
+          },
+          "after": {
+            "passed": 10,
+            "failed": 0
+          },
+          "complete": true
+        }
+      },
+      "generalQaAndBuild": {
+        "run": 40901305835,
+        "job": 123544013714,
+        "event": "push",
+        "conclusion": "success"
+      },
+      "scope": "Executed CI logs verified on this exact commit. This does not claim that every workflow or any later commit passed."
+    }
+  },
+  "evolutionInputFollowUp": {
+    "baseCommit": "a8e8996d2a1d50fc99872bf02e4420b44b81167a",
+    "runtimePath": "modules/fidelity-r28/evolutions/duel.js",
+    "guides": [
+      "input-systems",
+      "game-ui-ux"
+    ],
+    "prepublication": {
+      "localExecutorAvailable": false,
+      "syntaxParsedInV8": true,
+      "behavioralFixture": {
+        "runtime": "V8",
+        "actualControllerAndInputExecuted": true,
+        "fixtures": [
+          "DOM",
+          "requestAnimationFrame",
+          "standard gamepad",
+          "presentation",
+          "combat",
+          "replay"
+        ],
+        "cases": [
+          {
+            "name": "Start outside a visible inactive window",
+            "before": "Duel resumes",
+            "after": "Duel remains paused"
+          },
+          {
+            "name": "Unobserved Start edge on focus restoration",
+            "before": "Duel resumes",
+            "after": "Duel remains paused"
+          },
+          {
+            "name": "NumpadEnter on the guard button",
+            "before": "No guard input",
+            "after": "Guard while held, release on keyup"
+          },
+          {
+            "name": "Evolution request pending before blur",
+            "before": "Cancelled",
+            "after": "Cancellation preserved"
+          }
+        ],
+        "scope": "Actual controller and input source executed with explicit dependency fixtures. This is not Chromium or a real combat/replay execution."
+      }
+    },
+    "browserRecipe": {
+      "script": "tests/browser-evolution-input-r32.mjs",
+      "requiredBefore": {
+        "passed": 5,
+        "knownDefects": 5
+      },
+      "requiredAfter": {
+        "passed": 10,
+        "failed": 0
+      },
+      "viewports": [
+        1280,
+        390
+      ],
+      "resources": "Original evolution HTML, controllers, combat engine and replay; explicit raster and standard-gamepad fixtures.",
+      "lifecycle": "Browser-generated visible blur/focus and real BFCache restoration. The Select and pending-request cases use a separately labelled controlled animation clock and real engine ticks.",
+      "baselineOverride": "Only the page controller from the exact base commit is substituted in HTTP responses.",
+      "expectedFailureReasonRequired": true,
+      "report": "qa-gamedev-r32/evolution-input.json",
+      "existingRegression": {
+        "script": "tests/browser-evolutions-r28.mjs",
+        "unchanged": true,
+        "requiredPassed": 16,
+        "source": "Current checkout",
+        "historicalReportRestoredByteForByte": true,
+        "evidenceDirectory": "qa-gamedev-r32/evolutions-existing"
+      },
+      "resultAuthority": "Executed CI for the delivered commit; these expected counts and preservation requirements are recipe targets, not preclaimed results."
+    },
+    "replayContract": {
+      "path": "modules/fidelity-r28/evolutions/contract.json",
+      "digest": "a4bf5c42ebd70c803e99412113ce5e30a1b52ffb56cb7e5143fd75f2d5c63893",
+      "sealedFiles": 9,
+      "controllerIncluded": false,
+      "changed": false
+    },
+    "reviewedScope": {
+      "modified": 16,
+      "added": 17,
+      "browserR32Recipes": 8,
+      "currentOriginalEvolutionRecipe": 1,
+      "guardCases": 37,
+      "additionalArchivedSuites": 0
+    },
     "noCombatRuleOrReplayContractChange": true
   }
 }
