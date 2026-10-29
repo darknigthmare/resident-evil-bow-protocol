@@ -31,6 +31,8 @@ export const R32_FILES = Object.freeze({
   '.github/workflows/ci.yml': 'M',
   '.github/workflows/source-fidelity-r23.yml': 'M',
   '.github/workflows/source-fidelity-r24.yml': 'M',
+  '.github/workflows/source-fidelity-r25.yml': 'M',
+  '.github/workflows/source-fidelity-r26.yml': 'M',
   '.github/workflows/source-fidelity-r28.yml': 'M',
   '.github/workflows/source-fidelity-r31.yml': 'M',
   'AGENTS.md': 'A',
@@ -194,6 +196,23 @@ export function expectedWorkflow(file, baseline) {
       '',
     ].join('\n');
   }
+  if (file === '.github/workflows/source-fidelity-r25.yml' ||
+      file === '.github/workflows/source-fidelity-r26.yml') {
+    const release = file.includes('r25') ? '25' : '26';
+    const firstGeneration = '      - name: Reproduce frozen source catalogue and workbook before evidence reports are regenerated\n';
+    result = replaceOnce(result, firstGeneration,
+      '      - name: Verify the reviewed current delta before any R' + release + ' report refresh\n' +
+      '        run: node scripts/verify-current-r32.mjs\n' + firstGeneration,
+      'R' + release + ' current scope before report refresh');
+    result = replaceOnce(result, '          node tests/verify-r' + release + '-integration.mjs\n',
+      '          python3 scripts/run-published-release-r29.py --commit ' + BASE_COMMIT +
+      ' --evidence qa-fidelity-r' + release + '-ci/published-integration -- node tests/verify-r' + release + '-integration.mjs\n',
+      'R' + release + ' original integration on published R31');
+    const lastReport = '            docs/R' + release + (release === '25' ? '_FULL_MATCHES.json\n' : '_MATCHES.json\n');
+    return replaceOnce(result, lastReport,
+      lastReport + '            !docs/R' + release + '_INTEGRATION_TESTS.json\n',
+      'R' + release + ' archive report must not be uploaded as a fresh current result');
+  }
   if (file === '.github/workflows/source-fidelity-r23.yml' ||
       file === '.github/workflows/source-fidelity-r24.yml') {
     const release = file.includes('r23') ? 'r23' : 'r24';
@@ -300,7 +319,7 @@ export function validateSnapshot({baseline, current, changes}) {
       'Only explicitly reviewed R32 paths changed; old tests, data, assets, reports and replay contracts retain published bytes.',
       'Input, menu and two heading style changes match the reviewed baseline transformations.',
       'All 38 remaining original npm verify commands stay on current, in their original order.',
-      'Both unchanged source-preservation suites run on the exact published R31 snapshot.',
+      'Both npm preservation suites and the R25/R26 frozen integration suites run unchanged on the exact published R31 snapshot.',
       'All four R32 browser suites and unchanged R31 browser recipes stay current; R31 provenance/build use the published snapshot.',
     ],
     scope: 'Source and pipeline integrity. Behavioural results are reported by their separate executed suites.',

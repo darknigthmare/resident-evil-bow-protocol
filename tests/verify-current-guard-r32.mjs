@@ -39,8 +39,8 @@ export function runGuardCases(snapshot, {writeReport = true, origin = 'supplied 
   test('The reviewed current files and historical command split are accepted', () => {
     const result = validateSnapshot(snapshot);
     assert.equal(result.published_baseline, BASE_COMMIT);
-    assert.equal(result.modified.length, 11);
-    assert.equal(result.added.length, Object.keys(R32_FILES).length - 11 -
+    assert.equal(result.modified.length, 13);
+    assert.equal(result.added.length, Object.keys(R32_FILES).length - 13 -
       (snapshot.current.has('docs/GAMEDEV_APPLIED_R32.json') ? 0 : 1));
   });
   rejected('An unrelated engine change is refused', fixture => {
@@ -129,6 +129,12 @@ export function runGuardCases(snapshot, {writeReport = true, origin = 'supplied 
       /          python3 scripts\/run-published-release-r29\.py[^\n]*\n/,
       '          echo skipped\n'));
   }, /Workflow must preserve/);
+  for (const release of ['25', '26']) {
+    rejected('R' + release + ' frozen integration must use the exact published R31 snapshot', fixture => {
+      const file = '.github/workflows/source-fidelity-r' + release + '.yml';
+      fixture.current.set(file, fixture.current.get(file).replace('--commit ' + BASE_COMMIT, '--commit ' + '0'.repeat(40)));
+    }, /Workflow must preserve/);
+  }
   rejected('Current scope verification cannot be postponed after R28 report refresh', fixture => {
     const file = '.github/workflows/source-fidelity-r28.yml';
     const command = '        run: npm run verify > qa-fidelity-r28-ci/current-and-published-verify.log\n';

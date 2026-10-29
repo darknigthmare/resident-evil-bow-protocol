@@ -33,6 +33,8 @@ jobs:
       - name: Install the canvas tool required by original replay fixtures
         timeout-minutes: 5
         run: npm install --no-audit --no-fund --no-save --package-lock=false --fetch-timeout=60000 --fetch-retries=2 @napi-rs/canvas@0.1.80
+      - name: Verify the reviewed current delta before any R26 report refresh
+        run: node scripts/verify-current-r32.mjs
       - name: Reproduce frozen source catalogue and workbook before evidence reports are regenerated
         run: |
           mkdir -p qa-fidelity-r26-ci
@@ -73,7 +75,7 @@ jobs:
           git worktree add --quiet --detach "$R26_REVIEWED_TREE" 826f7ed1811c48adc0609f97699eb32f629fc78a
           trap 'git worktree remove --force "$R26_REVIEWED_TREE"' EXIT
           "$RUNNER_TEMP/fidelity-r26-venv/bin/python" "$R26_REVIEWED_TREE/scripts/audit-delivery-r26.py" --check > qa-fidelity-r26-ci/published-delivery-check.json
-          node tests/verify-r26-integration.mjs
+          python3 scripts/run-published-release-r29.py --commit 413b89bfafc18abc55be1404ff77bdaf573b1334 --evidence qa-fidelity-r26-ci/published-integration -- node tests/verify-r26-integration.mjs
       - name: Validate bounded imports, published provenance and export guards
         run: '"$RUNNER_TEMP/fidelity-r26-venv/bin/python" -m unittest discover -s tests -p "test_*r26.py" -v'
       - name: Validate CI diagnostic boundaries
@@ -98,6 +100,7 @@ jobs:
             qa-fidelity-r26-ci/
             docs/R26_*TEST*.json
             docs/R26_MATCHES.json
+            !docs/R26_INTEGRATION_TESTS.json
           if-no-files-found: warn
           retention-days: 14
   browser:

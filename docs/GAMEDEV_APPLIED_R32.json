@@ -2056,6 +2056,8 @@
       ".github/workflows/ci.yml",
       ".github/workflows/source-fidelity-r23.yml",
       ".github/workflows/source-fidelity-r24.yml",
+      ".github/workflows/source-fidelity-r25.yml",
+      ".github/workflows/source-fidelity-r26.yml",
       ".github/workflows/source-fidelity-r28.yml",
       ".github/workflows/source-fidelity-r31.yml",
       "modules/fidelity-r31/audio/style.css",
@@ -2084,7 +2086,7 @@
       "Only explicitly reviewed R32 paths changed; old tests, data, assets, reports and replay contracts retain published bytes.",
       "Input, menu and two heading style changes match the reviewed baseline transformations.",
       "All 38 remaining original npm verify commands stay on current, in their original order.",
-      "Both unchanged source-preservation suites run on the exact published R31 snapshot.",
+      "Both npm preservation suites and the R25/R26 frozen integration suites run unchanged on the exact published R31 snapshot.",
       "All four R32 browser suites and unchanged R31 browser recipes stay current; R31 provenance/build use the published snapshot."
     ],
     "scope": "Source and pipeline integrity. Behavioural results are reported by their separate executed suites."
@@ -2093,7 +2095,7 @@
     "schema": "re.bow.current-guard-tests-r32/1",
     "baseline": "413b89bfafc18abc55be1404ff77bdaf573b1334",
     "input": "actual Git worktree compared with published R31",
-    "passed": 26,
+    "passed": 28,
     "failed": 0,
     "cases": [
       {
@@ -2185,6 +2187,14 @@
         "pass": true
       },
       {
+        "name": "R25 frozen integration must use the exact published R31 snapshot",
+        "pass": true
+      },
+      {
+        "name": "R26 frozen integration must use the exact published R31 snapshot",
+        "pass": true
+      },
+      {
         "name": "Current scope verification cannot be postponed after R28 report refresh",
         "pass": true
       },
@@ -2209,5 +2219,17 @@
     "audioJob": 123457529197,
     "spritesJob": 123457529209,
     "cause": "Preexisting heading overflow at 320px with 200% root text. Current R31 browser recipes keep their assertions and verify the corrected styles."
+  },
+  "completedCiForRuntimeCommit": {
+    "commit": "baaf75b1b605029ec11ac03dc52cf54eb761b65d",
+    "r32": {
+      "conclusion": "success",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/40885728382"
+    },
+    "generalQaAndBuild": {
+      "conclusion": "success",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/40885728416"
+    },
+    "scope": "Successful runs for the runtime commit. A subsequent CI-only adjustment archives the complete R25/R26 integration suites because their source-freeze assertions predate R32. The new workflow execution is reported separately; these successful runs are not relabeled with another commit."
   }
 }
