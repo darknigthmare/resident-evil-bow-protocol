@@ -18,6 +18,7 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           persist-credentials: false
+          fetch-depth: 0
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: '22.16.0'
@@ -39,7 +40,7 @@ jobs:
           "$RUNNER_TEMP/fidelity-r23-venv/bin/python" -m unittest discover -s tests -p 'test_*r23.py' -v
           node tests/verify-persistence-r23.mjs
           node scripts/audit-conclusions-r23.mjs --check
-          node tests/verify-preservation-r20.mjs
+          python3 scripts/run-published-release-r29.py --commit 413b89bfafc18abc55be1404ff77bdaf573b1334 --evidence qa-gamedev-r32/r23-historical-preservation -- node tests/verify-preservation-r20.mjs
       - name: Locate Chromium
         run: |
           if command -v google-chrome >/dev/null; then
@@ -72,5 +73,6 @@ jobs:
           name: fidelity-r23-${{ github.run_id }}
           path: |
             qa-*r23*/
+            qa-gamedev-r32/r23-historical-preservation/
           if-no-files-found: warn
           retention-days: 14

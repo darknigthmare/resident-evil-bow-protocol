@@ -68,6 +68,11 @@
   document.addEventListener('keydown', event => {
     if (event.ctrlKey && event.shiftKey && event.code === 'KeyD') { event.preventDefault(); location.href = 'dev.html'; return; }
     if (event.ctrlKey || event.metaKey || event.altKey || event.defaultPrevented) return;
+    // A held confirmation/back key must not activate the newly focused screen.
+    const confirmation = event.key === 'Enter' || event.key === ' ';
+    if (event.repeat && (event.key === 'Escape' || (confirmation && (!boot.hidden || event.target?.closest?.('button,a[href]'))))) {
+      event.preventDefault(); return;
+    }
     if (!boot.hidden) {
       if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); enter(); }
       if (event.key === 'Tab') { event.preventDefault(); focus(by('enterProtocol')); }

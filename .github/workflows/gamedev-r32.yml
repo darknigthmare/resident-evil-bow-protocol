@@ -1,0 +1,48 @@
+name: R32 current inputs, menus, measurement lifecycle and reflow
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main, 'codex/**']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: gamedev-r32-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  current:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - name: Install pinned browser verification tools
+        run: npm install --no-audit --no-fund --no-save --package-lock=false --fetch-timeout=60000 --fetch-retries=2 playwright@1.64.1 @napi-rs/canvas@0.1.80 @puppeteer/browsers@2.10.10
+      - name: Install the recorded Chromium version
+        run: |
+          node --input-type=module - <<'JS'
+          import fs from 'node:fs';
+          import path from 'node:path';
+          import {install,Browser} from '@puppeteer/browsers';
+          const browser=await install({browser:Browser.CHROME,buildId:'154.0.8037.57',
+            cacheDir:path.join(process.env.RUNNER_TEMP,'gamedev-r32-chrome')});
+          fs.appendFileSync(process.env.GITHUB_ENV,'CHROME_BIN='+browser.executablePath+'\n');
+          JS
+      - name: Check the current delta and input regression before any report refresh
+        run: npm run verify:r32
+      - name: Exercise delivered inputs, menu keys, measurement lifecycle and reflow
+        run: npm run verify:r32:http
+      - name: Preserve evidence from this execution
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: gamedev-r32-current-${{ github.run_id }}
+          path: qa-gamedev-r32/
+          if-no-files-found: warn
+          retention-days: 14

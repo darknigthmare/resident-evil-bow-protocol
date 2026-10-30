@@ -16,6 +16,9 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+          fetch-depth: 0
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: '22.16.0'
@@ -52,3 +55,11 @@ jobs:
           console.log('Current manifest, main roster and annex agree; no experimental promotion.');
           NODE
           test -s dist/modules/versus.html
+      - name: Preserve current scope and published R31 assertion evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: gamedev-r32-unit-and-archive-${{ github.run_id }}
+          path: qa-gamedev-r32/
+          if-no-files-found: warn
+          retention-days: 14

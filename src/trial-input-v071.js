@@ -22,7 +22,9 @@ function create(){
   for(const key of held)input[heldKeys[key]]=true;for(const action of pointers.values())if(action in input&&['left','right','down','guard'].includes(action))input[action]=true;
   for(const [k,v]of Object.entries(pad.held||{}))if(v&&k in input)input[k]=true;
   for(const a of pad.edges||[])if(a!=='pause')queue(a);
-  const take=edges.splice(0);for(const a of take){if(a==='jump'||a==='dash')input[a]=true;else if(a==='throw'){input.tech=true;if(!input.slot)input.slot='throw';}else if(!input.slot){input.slot=a==='special'?(input.down?'specialDown':input.left||input.right?(((input.right?1:-1)===face)?'specialForward':'specialBack'):'special'):a;}}
+  // Opposite directions cancel, including when they come from different devices.
+  const direction=(input.right?1:0)-(input.left?1:0);
+  const take=edges.splice(0);for(const a of take){if(a==='jump'||a==='dash')input[a]=true;else if(a==='throw'){input.tech=true;if(!input.slot)input.slot='throw';}else if(!input.slot){input.slot=a==='special'?(input.down?'specialDown':direction===face?'specialForward':direction===-face?'specialBack':'special'):a;}}
   return input;
  }
  function clear(){held.clear();pressed.clear();pointers.clear();edges=[];}

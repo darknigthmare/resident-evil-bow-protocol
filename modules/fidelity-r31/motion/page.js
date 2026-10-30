@@ -84,9 +84,14 @@ byId('position').addEventListener('input', () => {stop(); draw(Number(byId('posi
 byId('previous').addEventListener('click', () => {stop(); draw(frame - 1, true);});
 byId('next').addEventListener('click', () => {stop(); draw(frame + 1, true);});
 byId('play').addEventListener('click', play); byId('speed').addEventListener('change', stop);
+byId('play').addEventListener('keydown', event => {
+  if (event.defaultPrevented || event.ctrlKey || event.altKey || event.metaKey) return;
+  if (event.repeat && ['Enter', ' '].includes(event.key)) event.preventDefault();
+});
 byId('canvas').addEventListener('keydown', event => {
+  if (event.defaultPrevented || event.ctrlKey || event.altKey || event.metaKey) return;
   if (!['ArrowLeft', 'ArrowRight', 'Home', 'End', ' '].includes(event.key) || !current) return;
-  event.preventDefault(); if (event.key === ' ') {play(); return;} stop();
+  event.preventDefault(); if (event.key === ' ') {if (!event.repeat) play(); return;} stop();
   draw(event.key === 'Home' ? 0 : event.key === 'End' ? current.frames.length - 1 : frame + (event.key === 'ArrowLeft' ? -1 : 1), true);
 });
 document.addEventListener('visibilitychange', () => {if (document.hidden) stop();});
