@@ -63,6 +63,20 @@ export const R32_FILES = Object.freeze({
 });
 const OPTIONAL = new Set(['docs/GAMEDEV_APPLIED_R32.json']);
 const BASELINE_PATHS = Object.keys(R32_FILES).filter(file => R32_FILES[file] === 'M');
+const R33_OVERLAY_FILES = Object.freeze(new Set([
+  'dev.html',
+  'modules/fidelity-r33/index.html',
+  'modules/fidelity-r33/style.css',
+  'modules/fidelity-r33/page.js',
+  'modules/fidelity-r33/native-renderer.js',
+  'modules/fidelity-r33/manifest.json',
+  'scripts/verify-current-r33.mjs',
+  'tests/verify-current-guard-r33.mjs',
+  'tests/browser-r33.mjs',
+  '.github/workflows/gamedev-r33.yml',
+  'docs/GAMEDEV_APPLIED_R33.md',
+]));
+export function isLaterReleasePath(file) { return R33_OVERLAY_FILES.has(file); }
 
 function replaceOnce(source, before, after, label) {
   assert.equal(source.split(before).length - 1, 1, 'Baseline anchor must occur once: ' + label);
@@ -421,13 +435,14 @@ export function collectSnapshot(root = ROOT) {
   const fields = git('diff', '--name-status', '--no-renames', '-z', BASE_COMMIT, '--')
     .split('\0').filter(Boolean);
   assert.equal(fields.length % 2, 0, 'Unexpected Git change record');
-  const changes = [];
-  for (let i = 0; i < fields.length; i += 2) changes.push({status: fields[i], file: fields[i + 1]});
+  const allChanges = [];
+  for (let i = 0; i < fields.length; i += 2) allChanges.push({status: fields[i], file: fields[i + 1]});
   for (const file of git('ls-files', '--others', '--exclude-standard', '-z').split('\0').filter(Boolean)) {
-    changes.push({status: 'A', file});
+    allChanges.push({status: 'A', file});
   }
-  // Check the entire Git delta before opening selected files. Ignored QA outputs
-  // do not authorize changes to any tracked historical report.
+  // R32 remains exact for its own release. R33 is validated by its separate guard;
+  // only the explicit R33 overlay list is excluded here.
+  const changes = allChanges.filter(change => !isLaterReleasePath(change.file));
   validateChangeList(changes);
   const baseline = new Map(BASELINE_PATHS.map(file => [file, git('show', BASE_COMMIT + ':' + file)]));
   const current = new Map();

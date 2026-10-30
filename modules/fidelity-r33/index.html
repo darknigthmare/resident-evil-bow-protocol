@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="dark"><title>R33 — Couverture source et orientations</title>
+<link rel="stylesheet" href="style.css">
+<script type="importmap">{"imports":{"three":"../fidelity-r24/models/vendor/three/build/three.module.min.js","three/addons/":"../fidelity-r24/models/vendor/three/examples/jsm/"}}</script>
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu R33</a>
+<header><a href="../../dev.html">← Centre DEV</a><a href="../fidelity-r31/index.html">Suivi R31</a><a href="../fidelity-r31/sprites/index.html">Illustrations R31</a></header>
+<main id="main">
+<p class="eyebrow">R33 · SOURCES AVANT ADAPTATION</p>
+<h1>Couverture source, orientations et manquants</h1>
+<p class="lead">Ce lot ajoute des vues reproductibles depuis les modèles publiés déjà archivés, complète une orientation source et corrige un cadrage sans inventer d’animation. Il ne transforme pas une référence statique en preuve de fidélité globale 1:1.</p>
+<p id="status" role="status" aria-live="polite">Chargement du manifeste R33…</p>
+<button id="retry" type="button" hidden>Réessayer le chargement R33</button>
+<section aria-labelledby="summaryTitle"><h2 id="summaryTitle">Périmètre vérifié</h2><div id="summary" class="summary"></div></section>
+
+<section aria-labelledby="nativeTitle">
+<h2 id="nativeTitle">16 vues natives nouvellement rendables</h2>
+<p>Les quatre angles utilisent les géométries et textures R26 vérifiées. Caméra seule en orbite, sans miroir ni changement de pose.</p>
+<div class="controls">
+<label>Variante source<select id="nativeModel" disabled></select></label>
+<button id="renderNative" type="button" disabled>Générer les 4 vues</button>
+<button id="nativeRetry" type="button" hidden>Réessayer ce rendu</button>
+</div>
+<p id="nativeStatus" role="status" aria-live="polite">Aucun rendu demandé.</p>
+<div id="nativeViews" class="views" aria-live="polite"></div>
+<dl id="nativeFacts" class="facts"></dl>
+</section>
+
+<section aria-labelledby="orientationTitle">
+<h2 id="orientationTitle">Zombie GameCube 2002 — côté gauche source</h2>
+<p>Cette vue vient directement du rendu vérifié du modèle NakedZombie. Elle n’est ni retournée horizontalement ni promue en idle original.</p>
+<div class="single"><canvas id="sourceLeft" width="768" height="768" aria-label="Vue source gauche du Zombie GameCube 2002"></canvas></div>
+<p id="sourceLeftStatus" role="status"></p>
+</section>
+
+<section aria-labelledby="lucasTitle">
+<h2 id="lucasTitle">Lucas muté — cadrage de revue</h2>
+<p>Le PNG R31 est replacé dans un cadre transparent plus généreux. Aucun pixel d’anatomie supplémentaire n’est généré par R33.</p>
+<div class="single"><canvas id="lucasFrame" width="768" height="768" aria-label="Présentation recadrée de Lucas muté"></canvas></div>
+<p id="lucasStatus" role="status"></p>
+</section>
+
+<section aria-labelledby="inventoryTitle">
+<h2 id="inventoryTitle">Inventaire des 389 incarnations</h2>
+<form id="filters" role="search">
+<label>Rechercher<input id="search" type="search" placeholder="Identité, nom, jeu…" disabled></label>
+<label>Catégorie<select id="kind" disabled><option value="all">Toutes</option><option value="main">Combattants principaux</option><option value="prototype">Prototypes isolés</option><option value="context">Rencontres contextuelles</option></select></label>
+<label>Ajout R33<select id="coverage" disabled><option value="all">Tous les états</option><option value="r33">Avec ajout R33</option><option value="native">Nouvelles vues natives</option><option value="source">Orientation source</option><option value="framing">Cadrage de revue</option><option value="open">Sans ajout R33</option></select></label>
+</form>
+<p id="inventoryCount" role="status" aria-live="polite"></p>
+<div class="pager"><button id="previous" type="button" disabled>Page précédente</button><span id="pageLabel"></span><button id="next" type="button" disabled>Page suivante</button></div>
+<div id="inventory" class="inventory"></div>
+<div class="pager"><button id="previousBottom" type="button" disabled>Page précédente</button><span id="pageLabelBottom"></span><button id="nextBottom" type="button" disabled>Page suivante</button></div>
+</section>
+
+<details><summary>Limites de fidélité</summary><ul id="limits"></ul></details>
+</main>
+<script type="module" src="page.js"></script>
+</body></html>

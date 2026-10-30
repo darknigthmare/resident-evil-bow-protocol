@@ -1,0 +1,56 @@
+name: R33 source coverage and native views
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main, 'codex/**']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: gamedev-r33-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  current:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - name: Install pinned R33 browser verification tools
+        run: npm install --no-audit --no-fund --no-save --package-lock=false --fetch-timeout=60000 --fetch-retries=2 playwright@1.64.1 @napi-rs/canvas@0.1.80 @puppeteer/browsers@2.10.10
+      - name: Install the recorded Chromium version
+        run: |
+          node --input-type=module - <<'JS'
+          import fs from 'node:fs';
+          import path from 'node:path';
+          import {install,Browser} from '@puppeteer/browsers';
+          const browser=await install({browser:Browser.CHROME,buildId:'154.0.8037.57',
+            cacheDir:path.join(process.env.RUNNER_TEMP,'gamedev-r33-chrome')});
+          fs.appendFileSync(process.env.GITHUB_ENV,'CHROME_BIN='+browser.executablePath+'\n');
+          JS
+      - name: Preserve the successful R32 boundary on the current checkout
+        run: |
+          node scripts/verify-current-r32.mjs
+          node tests/verify-current-guard-r32.mjs
+      - name: Verify the exact R33 overlay and its negative guards
+        run: |
+          node scripts/verify-current-r33.mjs
+          node tests/verify-current-guard-r33.mjs
+      - name: Exercise R33 inventory, source orientation, framing and sixteen native views
+        run: node tests/browser-r33.mjs
+      - name: Build the complete static delivery
+        run: npm run build
+      - name: Preserve R33 execution evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: gamedev-r33-current-${{ github.run_id }}
+          path: qa-gamedev-r33/
+          if-no-files-found: warn
+          retention-days: 14
