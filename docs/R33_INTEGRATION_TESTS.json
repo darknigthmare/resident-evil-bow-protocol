@@ -1,0 +1,748 @@
+{
+  "schema": "re.bow.integration-r33/1",
+  "passed": 9,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "All17 open workstreams have one of six responsible lots, with explicit remaining criteria",
+      "pass": true,
+      "detail": {
+        "workstreams": 17,
+        "responsibleLots": 6,
+        "canonicalFidelityCertified": false
+      }
+    },
+    {
+      "name": "The generated catalogue and all original refusals are preserved apart from the separate optional families",
+      "pass": true,
+      "detail": {
+        "activeGeneratedDefaults": 363,
+        "originalPending": 22,
+        "failedRevisionPreserved": true
+      }
+    },
+    {
+      "name": "Eight independently generated sides remain four source-edition families, with context and unassigned pose held",
+      "pass": true,
+      "detail": {
+        "newGeneratedPngs": 8,
+        "optionalCombatPoseFamilies": 2,
+        "heldStudyFamilies": 2,
+        "newOriginalIdleCycles": 0
+      }
+    },
+    {
+      "name": "The native index conserves all R30 records and adds six complete clips without inventing action assignments",
+      "pass": true,
+      "detail": {
+        "subjects": 53,
+        "newClips": 6,
+        "newNativeSamples": 1270,
+        "reusedMarineSamples": 300,
+        "originalIdleCertified": false
+      }
+    },
+    {
+      "name": "Native portrait crops change three references while preserving exact identity coverage and the missing avatar",
+      "pass": true,
+      "detail": {
+        "avatars": 388,
+        "sourceRenderedReplacements": 3,
+        "exactUnresolvedAvatar": [
+          "re7-jack-baker-scissor"
+        ]
+      }
+    },
+    {
+      "name": "Source evidence and the selective restore stay qualified to their actual new work",
+      "pass": true,
+      "detail": {
+        "realStorageKeys": 18,
+        "originalReplayRoutes": 4,
+        "maximumFilesPerBatch": 16,
+        "globalFidelityClaimed": false
+      }
+    },
+    {
+      "name": "Every aggregated test report is current and positive; historical and integration work is kept separate",
+      "pass": true,
+      "detail": {
+        "reports": 18,
+        "totals": {
+          "python_tests": 57,
+          "browser_groups": 56,
+          "node_groups": 49,
+          "guard_checks": 39,
+          "definition_checks": 6
+        }
+      }
+    },
+    {
+      "name": "The70-sheet workbook is reproduced with63 prior sheets preserved and no historic source overwrite",
+      "pass": true,
+      "detail": {
+        "workbook": "docs/BOW_FIDELITE_R33.xlsx",
+        "previousWorkbookUntouched": true,
+        "reproduced": 3,
+        "expectedSheets": 70,
+        "preservedSheets": 63
+      }
+    },
+    {
+      "name": "Current mounts use the reviewed R33 readers while the R31 evolution document remains published",
+      "pass": true,
+      "detail": {
+        "currentCombatMounts": 3,
+        "additiveTools": 2,
+        "preservedEvolutionDocument": true
+      }
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "4a97b6db37f7cab887c8eb329350a7b24d6f3f222cb454980070874cee061929"
+    },
+    {
+      "path": ".github/workflows/gamedev-r32.yml",
+      "sha256": "0401894ba6a5d051fe07c02197b936baee8ce5c4f476dc127592970836813258"
+    },
+    {
+      "path": ".github/workflows/source-fidelity-r25.yml",
+      "sha256": "22cb92a9e8e266977c14dd234166c4fdf71f912b3937fbd8edb0ec42780570de"
+    },
+    {
+      "path": ".github/workflows/source-fidelity-r26.yml",
+      "sha256": "a7ba4ae44a6c829c1b8c7e1c4e57b49d19a3157f306150c5481ce89999a48100"
+    },
+    {
+      "path": ".github/workflows/source-fidelity-r31.yml",
+      "sha256": "fbd27d4e7b32f99b70965a08feab73215430eceb28935e3724d03fd37e40b671"
+    },
+    {
+      "path": ".github/workflows/source-fidelity-r33.yml",
+      "sha256": "2c0a90be04cade742b32b0d9a789f2e94667d91f131d5f0701b0a210f39ef65b"
+    },
+    {
+      "path": "catalog-duel.html",
+      "sha256": "15be332b6307c84608c9009db0d585f72e1d497da336eac95b3352527b633628"
+    },
+    {
+      "path": "codex.html",
+      "sha256": "3292dab6591018c0d9dc462fb3bbe2ef9e3ce39c6f1fb80091b1c7c71743e5b8"
+    },
+    {
+      "path": "docs/BOW_FIDELITE_R33.xlsx",
+      "sha256": "29be1f2adefdd54d7b0538dbc1da63f20072870c75e90a440772ddd23c3a852e"
+    },
+    {
+      "path": "docs/R33_CI_VALIDATION.json",
+      "sha256": "c7bc61089442d36e22baf51c9226b3b38683a38d3107bf6d565a5cbc1f1af525"
+    },
+    {
+      "path": "docs/R33_CURRENT_GUARD_TESTS.json",
+      "sha256": "35d99f340daff38f7eea4348f9633841c68f80a3de5272e4876996471a3886e9"
+    },
+    {
+      "path": "docs/R33_DASHBOARD_BROWSER.json",
+      "sha256": "e3e9ce8ea045491c00eadcdf7e74c0367e3399bae4c157d31619256700727fe6"
+    },
+    {
+      "path": "docs/R33_DOSSIER_BROWSER.json",
+      "sha256": "c8c5eacb25237bec0207a4b5dc6966bada27e3e2ba67c72a7e2c7a049435c148"
+    },
+    {
+      "path": "docs/R33_EVIDENCE_BROWSER.json",
+      "sha256": "82e8087af96a59d28268bef7628fd0d3e87c564c2b0257b75e19e72a5d79d54a"
+    },
+    {
+      "path": "docs/R33_EVIDENCE_QUERY_TESTS.json",
+      "sha256": "55c85b820888d441bf08d96f5fcd996bd8f3c13786913de03ae53d8d5fe5ed8a"
+    },
+    {
+      "path": "docs/R33_EVIDENCE_TESTS.json",
+      "sha256": "c33422ed5388fec89807554950ad4ca68517971a0f430535bbc071afecc9d41e"
+    },
+    {
+      "path": "docs/R33_EXPORT.json",
+      "sha256": "e98280bdad424e5eb91f585dce993402f07ca1723923a95890036057764db4dc"
+    },
+    {
+      "path": "docs/R33_EXPORT_TESTS.json",
+      "sha256": "4aa42bc53e5e9e4d0fe4516f8e9d8e5242a3bfebb68843b9758611b5feb78746"
+    },
+    {
+      "path": "docs/R33_GENERATED_RUNTIME_TESTS.json",
+      "sha256": "faf5c8628381d87220c834c5448703c517369c3047ebcb0d207b425cc201e29b"
+    },
+    {
+      "path": "docs/R33_NATIVE.md",
+      "sha256": "18313ccecd1f7041d73027771f7357afbcfedc7df40bfeb1757033bb91e34c4e"
+    },
+    {
+      "path": "docs/R33_NATIVE_BROWSER.json",
+      "sha256": "33eed747658d4f6c69f97d44bba69c8aec91a0f9da07e1e88113f084c1a46593"
+    },
+    {
+      "path": "docs/R33_NATIVE_RIG_TESTS.json",
+      "sha256": "735d80300b3df3d5faff669d722e84b4e9d8722728f97bab04bb1e1e57806013"
+    },
+    {
+      "path": "docs/R33_NATIVE_TESTS.json",
+      "sha256": "e0f17c590fe4499c7ba96c15f73cc823abc6e576033b5d21e9261555f09e2db1"
+    },
+    {
+      "path": "docs/R33_PERSISTENCE_BROWSER.json",
+      "sha256": "67fbf500bd7f08c727db94462415b817c3ae49a11e432233689b64d4046fb685"
+    },
+    {
+      "path": "docs/R33_PERSISTENCE_TESTS.json",
+      "sha256": "bc58eed020f265c5cc9d7b3b2c575118943c78030277e6054a51c499b2220fd7"
+    },
+    {
+      "path": "docs/R33_REPRODUCTION.json",
+      "sha256": "ef5442f9ce9198dc7efde780019bf3a7b181a86208695d6e68b06db0853df74f"
+    },
+    {
+      "path": "docs/R33_RUNTIME_BROWSER.json",
+      "sha256": "cf2d23f9887177ac3a5891bc653658296c29d3b731a76b93fcfa2aec9c86b34c"
+    },
+    {
+      "path": "docs/R33_RUNTIME_TESTS.json",
+      "sha256": "72cee7508e069f1c9bc4b745d9c3caf536569d84f36d31e5ab6b700c366d8849"
+    },
+    {
+      "path": "docs/R33_SPRITES.md",
+      "sha256": "e845e705eb3cae5f02b1452dd07797d008e52436181676a35b217aa05f122f19"
+    },
+    {
+      "path": "docs/R33_SPRITES_BROWSER.json",
+      "sha256": "4c2ce2f2419ce66d662b595cefff9d33373e4e4d2361d44a90beea59f9c7d0b8"
+    },
+    {
+      "path": "docs/R33_SPRITES_TESTS.json",
+      "sha256": "d1fc427d28a7eddf8fafa265146b8ca27b625a243d510c7206fb25dc0a2cec61"
+    },
+    {
+      "path": "docs/R33_VALIDATION.json",
+      "sha256": "16542fab9f6a82ad73400b73a462c400053cc0d7cef7cbdd3e1f824e45dabbd9"
+    },
+    {
+      "path": "modules/fidelity-r24/persistence/bootstrap.js",
+      "sha256": "e3cb385be578dfa143e131dfebfbe000d0563b7bddfac8032e2d21d9cb623967"
+    },
+    {
+      "path": "modules/fidelity-r24/persistence/engines.json",
+      "sha256": "d99c7e4e93bf09fa9f85dc62a4ed1a9abba26066c2d1328e907a7ac03d9e03b1"
+    },
+    {
+      "path": "modules/fidelity-r24/persistence/runner.js",
+      "sha256": "53b2b02084e8029e98b262079722143d04bb283d3f3317e69027cdf94e910dff"
+    },
+    {
+      "path": "modules/fidelity-r24/persistence/sandbox.js",
+      "sha256": "0e9c76a5c67428669327347d3995eab6580564dbffa026aa5ffbfecd9f227cf1"
+    },
+    {
+      "path": "modules/fidelity-r24/persistence/verifier.js",
+      "sha256": "3c9c71a3001d490f08e5313e017d83221a70571270008c1e4f37273eda62f735"
+    },
+    {
+      "path": "modules/fidelity-r28/evolutions/contract.js",
+      "sha256": "ad4053134b4348bbb74ca7373e59e2192875abb4ccb658af21d10d32890c105d"
+    },
+    {
+      "path": "modules/fidelity-r28/evolutions/contract.json",
+      "sha256": "441e4dbf4a40d613d143541f582c258d895845874b2bd265df4b3dda9212d38d"
+    },
+    {
+      "path": "modules/fidelity-r28/evolutions/data.js",
+      "sha256": "2e6981813c3b68a93084917d48cb51b9b42f9d108d6baba89effa7ca5979980f"
+    },
+    {
+      "path": "modules/fidelity-r28/evolutions/engine.js",
+      "sha256": "88d15965d5fccc00c741f5dd7a68f0f4e100629e4fd80dddda76387f81615cd8"
+    },
+    {
+      "path": "modules/fidelity-r28/evolutions/replay.js",
+      "sha256": "2ad5aebbfa135ce2f00f82bea3234085e2107f6fe210cefd2d58f8328e4197b7"
+    },
+    {
+      "path": "modules/fidelity-r30/native/manifest.json",
+      "sha256": "542d0cf097bbc9c938f81de19fdff431a2b3e5b3d78b06250833810f0dece778"
+    },
+    {
+      "path": "modules/fidelity-r30/native/new-sources/manifest.json",
+      "sha256": "5f72814259927801af1b10d17a874155ca0b4510a826f2a7d94db022376dce26"
+    },
+    {
+      "path": "modules/fidelity-r30/native/other-games/manifest.json",
+      "sha256": "387bf1ecb4608978a7836d4fb040dc8032c66d2d5a0953ba33d34332e97a92de"
+    },
+    {
+      "path": "modules/fidelity-r30/native/other-games/renderer.js",
+      "sha256": "4dbf7e35f87607945ca4bc0a5b65c5d6d770e1b9bbb8cb6b4ae6f72eda4420a9"
+    },
+    {
+      "path": "modules/fidelity-r30/native/revelations/manifest.json",
+      "sha256": "5c8abf74b06e23ab4f6956680121a081f95fee8923447c211f84e1bed25a481c"
+    },
+    {
+      "path": "modules/fidelity-r30/native/revelations/renderer.js",
+      "sha256": "19e9422bac94998dfd4e4c4aff00727f142c9f9d1497babb88788932feab518c"
+    },
+    {
+      "path": "modules/fidelity-r30/selection/manifest.json",
+      "sha256": "32fc768c8a91616a37ed7f67d767c4e916ac1ddf0567bca60c3f62dca4d91b8c"
+    },
+    {
+      "path": "modules/fidelity-r31/audio/manifest.json",
+      "sha256": "f7c1fc43e8ac06b5efbbafc46fddc2448de6bc4f161897ba6c25da9c9ca91860"
+    },
+    {
+      "path": "modules/fidelity-r31/evolutions/index.html",
+      "sha256": "e86aebbcf22f14617b4744ae6fd17d2274e4b63f794079f45cc5774e36e32260"
+    },
+    {
+      "path": "modules/fidelity-r31/performance/image-budget.js",
+      "sha256": "e7a3a2039c9c666475fdfe118bc1fece445891d0213bbe20e75fece248cebce2"
+    },
+    {
+      "path": "modules/fidelity-r31/persistence/index.html",
+      "sha256": "f68aae7994e0d855917174d4cc2e78585040b2e34b1766b1b5e66426eb326236"
+    },
+    {
+      "path": "modules/fidelity-r31/persistence/journal.js",
+      "sha256": "31692ad9cfb947bcff34430ee1fff322c39274cfe2b6decb8f657309ded8c7cd"
+    },
+    {
+      "path": "modules/fidelity-r31/persistence/page.js",
+      "sha256": "6a817e9bbb7035c0eb0e476cee9c225fba561ce8dce1f5b0402d78a6652f062b"
+    },
+    {
+      "path": "modules/fidelity-r31/persistence/restore.js",
+      "sha256": "eea96d028d097b4f57351c88d4a0a4db53af6a2002b634fed6de9fec23b161ec"
+    },
+    {
+      "path": "modules/fidelity-r31/persistence/style.css",
+      "sha256": "730260a1b61885fe088b80580e1489d07ec3ec47c870f748fab9dd4158e3f59f"
+    },
+    {
+      "path": "modules/fidelity-r31/progress.json",
+      "sha256": "0083e4c59e90eb7a0436d8c9da5d21fe2e95825f13d5b750245c0f917fa05e15"
+    },
+    {
+      "path": "modules/fidelity-r31/replay/verify.js",
+      "sha256": "e8d6bdebab913491b72985f855747bd899916452d6777199f8abc92e79c6013d"
+    },
+    {
+      "path": "modules/fidelity-r31/sprites/manifest.json",
+      "sha256": "6b4df5ec5509bf661c0417d34e31038d9efd4bc5ccf719090edbbb2d94d77880"
+    },
+    {
+      "path": "modules/fidelity-r33/combat/generated-adapter.js",
+      "sha256": "8c1e12a99c91184f067646a2c92633580f1fa51d51b6018aa0fc0e45064f5292"
+    },
+    {
+      "path": "modules/fidelity-r33/combat/generated-runtime.js",
+      "sha256": "20f783c2041c63fb7f63e1321f706f14aa54ea227c70797d33038e277d224cc7"
+    },
+    {
+      "path": "modules/fidelity-r33/combat/manifest.json",
+      "sha256": "11921f3fa53293b064837da0c32f7d888be04b2dbcc1c2b33c0f116e24a85809"
+    },
+    {
+      "path": "modules/fidelity-r33/combat/native-adapter.js",
+      "sha256": "503e2628591ff36c424026c708927ace5f235dd2b189efa053ade3fbeab77ca5"
+    },
+    {
+      "path": "modules/fidelity-r33/combat/native-index.json",
+      "sha256": "d952e5027d52bb1cd416fd7443f1632f0b676354904b08d3bbc299a34cf0bd1a"
+    },
+    {
+      "path": "modules/fidelity-r33/combat/native-runtime.js",
+      "sha256": "1fbbcd3e88989cf7800ec662b9c80678e3aeb8fb5687e71642ca7baeb9b32646"
+    },
+    {
+      "path": "modules/fidelity-r33/dashboard.js",
+      "sha256": "a985dfd9df715dca335a63f7ba45196f12989d7de9193e46ac224798b1a81417"
+    },
+    {
+      "path": "modules/fidelity-r33/dossier-additions.json",
+      "sha256": "7bb553f7e10e4aa11a6264e3fa491577830702d6cb7af5306f13ca1a6aa58652"
+    },
+    {
+      "path": "modules/fidelity-r33/dossier-link.js",
+      "sha256": "f4e3d65320e869f69d1e4944d8bd829c0dd22005396e01c2840fd267a0ea9527"
+    },
+    {
+      "path": "modules/fidelity-r33/evidence/captures.json",
+      "sha256": "087df235df88534973bbae881823f6c99ec37ef303f2cada6223de6992c43c5e"
+    },
+    {
+      "path": "modules/fidelity-r33/evidence/curation.json",
+      "sha256": "7875f79b6b5e764cc1b3d08881752805cd2d32ec8566b672ac37ac1b6317c1de"
+    },
+    {
+      "path": "modules/fidelity-r33/evidence/delivery.json",
+      "sha256": "fde666b4808eb01881f493a8848005560ceb8c517e9ef4383e2216d41d8ddaa1"
+    },
+    {
+      "path": "modules/fidelity-r33/evidence/index.html",
+      "sha256": "36b2c4cfb030e7aeb8686775e2c3d6244b0e523e8a7474f5cdbb3395821caee2"
+    },
+    {
+      "path": "modules/fidelity-r33/evidence/manifest.json",
+      "sha256": "386ee45ae46ddb4355aec4a012d3d67a9fa6c51fe1934bc3c83c560e79b46f2e"
+    },
+    {
+      "path": "modules/fidelity-r33/evidence/page.js",
+      "sha256": "1f04ef64ba60866a71a463fec5457b21cd294595fdd0142058cc2efb2ab21363"
+    },
+    {
+      "path": "modules/fidelity-r33/evidence/query.js",
+      "sha256": "6ff6d24e730c1ba7ed478255f49f3cbf4a58c570f599702509d8fe48f8e32895"
+    },
+    {
+      "path": "modules/fidelity-r33/evidence/style.css",
+      "sha256": "1f3c0fcb70b0294d5f3f389984f2addc5adffba44c4efc7deebcec3ffd2cf6c0"
+    },
+    {
+      "path": "modules/fidelity-r33/evolutions/index.html",
+      "sha256": "40d61ede56c2f9f1ae0ceb618b35487d9974c4866344b8278fd47814879327dc"
+    },
+    {
+      "path": "modules/fidelity-r33/evolutions/selection.js",
+      "sha256": "612a7cc901a6271e2eaabae0bdc03dfc0f3e007160b30e4dd66f1f483e258bdc"
+    },
+    {
+      "path": "modules/fidelity-r33/index.html",
+      "sha256": "0094c58b11e511dbc15b4d4dbdee20490fdbce853e4386f9ba61ba7444b4329c"
+    },
+    {
+      "path": "modules/fidelity-r33/native/delivery.json",
+      "sha256": "47599834d5dbbcd695924c1fed774d18a630b1606e0112fac1ab096b3d346e6c"
+    },
+    {
+      "path": "modules/fidelity-r33/native/index.html",
+      "sha256": "7a42b598263f99a1c573f621c06ecc0ce150e056f7663e6c800c2690fcf3fa73"
+    },
+    {
+      "path": "modules/fidelity-r33/native/inputs.json",
+      "sha256": "8808f55966f52c45641c8ed597445d704fadeed78fe94ad7e529685509d41a38"
+    },
+    {
+      "path": "modules/fidelity-r33/native/manifest.json",
+      "sha256": "53d6bd14b5673674b92c1089d5b58d9fd10426e9d869c11a1250112cfc26ed43"
+    },
+    {
+      "path": "modules/fidelity-r33/native/page.js",
+      "sha256": "ad1f707508fa3b2e280f85f7bdbe26c19f720d3223e60a00d9c10c2ee3d40bb5"
+    },
+    {
+      "path": "modules/fidelity-r33/native/poses/re0-zombie-gc-r26-1--front.png",
+      "sha256": "3bd01b940c180b6c719e36259c7dceacc0f0b7bc8ce3d85da992c75d099a17c3"
+    },
+    {
+      "path": "modules/fidelity-r33/native/poses/re5-chainsaw-majini-pc-published--front.png",
+      "sha256": "01e33308b2f6758949eb69d24dd8c0a77c9403d7d54de5bbbb23b7d07f02e2c9"
+    },
+    {
+      "path": "modules/fidelity-r33/native/poses/re5-executioner-pc-published--front.png",
+      "sha256": "ee8192ebf47d4ce70be810ccc51af7afbe95d2d9b1fe472a6feeb33e2dcda6b5"
+    },
+    {
+      "path": "modules/fidelity-r33/native/reader.js",
+      "sha256": "9eeed9f25acef7de231ebb13b11a81757a70fe31d861d281e547b48e1a667c91"
+    },
+    {
+      "path": "modules/fidelity-r33/native/renderer.js",
+      "sha256": "feda364373160bba391e5406cf866e995867e5b5d3970bff72a91d00f2742f79"
+    },
+    {
+      "path": "modules/fidelity-r33/native/review/contacts.json",
+      "sha256": "fb676d6aa92fb030c7db9d2d228246f553cad9cfc5fc46004497274a4793c4b7"
+    },
+    {
+      "path": "modules/fidelity-r33/native/review/observations.json",
+      "sha256": "543d061ec88a0ac4fc7dfe1a10304d8ecf6f5667908524297632e46383031c8d"
+    },
+    {
+      "path": "modules/fidelity-r33/native/style.css",
+      "sha256": "566d51146e35b0906098ceccc755101dda1638e4b82cfa93c49e14fd589a6f7e"
+    },
+    {
+      "path": "modules/fidelity-r33/persistence/delivery.json",
+      "sha256": "85d32cf7dbdcc18d3b00ec8df45dfbc86dd274b9b4145930ebf2d05720e94f8e"
+    },
+    {
+      "path": "modules/fidelity-r33/persistence/index.html",
+      "sha256": "bf3f07a7e368d07c6c23afeb6c198b14e4007c3c3727fac18f127d635acd37e0"
+    },
+    {
+      "path": "modules/fidelity-r33/persistence/link.js",
+      "sha256": "245d9589fe0d849f23bb6cbbc0cb8c617aa16c70bd07c52576565e098ca4157c"
+    },
+    {
+      "path": "modules/fidelity-r33/persistence/manifest.json",
+      "sha256": "dc986462cc3543e306482a8caa5b7d9bd4bc6c203a47a11ed92cebb9fb9b9e78"
+    },
+    {
+      "path": "modules/fidelity-r33/persistence/page.js",
+      "sha256": "2d4481413e1be7264bee400bad0d3f81b2fbb40cf869c2efe317e07aca0a7271"
+    },
+    {
+      "path": "modules/fidelity-r33/persistence/restore.js",
+      "sha256": "87ab1cf43b23f20e4537a580c6b0a30fc9bd08b9c596c9ba47570205d3ee2322"
+    },
+    {
+      "path": "modules/fidelity-r33/progress.json",
+      "sha256": "9f9f98e7591cc4a2c414bfa3c56067ec9e8a15be2dd401b9619f976082527a14"
+    },
+    {
+      "path": "modules/fidelity-r33/replay/batch.js",
+      "sha256": "f40f11193afdb3015e879c6b9d055700af87a768dd847afe2e8e74e7cf8527fc"
+    },
+    {
+      "path": "modules/fidelity-r33/replay/index.html",
+      "sha256": "2322066c9c3036054eb2b7309733b9cd8ee77af96cffc00a16d82d68b02fc7c8"
+    },
+    {
+      "path": "modules/fidelity-r33/replay/page.js",
+      "sha256": "d060ba49a903e9ee36dc67ece9cfe753d7d026d0134a4812bbd51030ceceea67"
+    },
+    {
+      "path": "modules/fidelity-r33/selection/avatars.js",
+      "sha256": "12795289487e44b89ff4527d05fc8509bfe951b99cd04c5cb1644d34cedcbc3a"
+    },
+    {
+      "path": "modules/fidelity-r33/selection/manifest.json",
+      "sha256": "36649eb348a8e7fe31e7f9ed27d1d580e154f5dd82741b0a0d0a0be8b77d53dc"
+    },
+    {
+      "path": "modules/fidelity-r33/sprites/delivery.json",
+      "sha256": "65a2282b2cfcdbe5dfca36155bc72d7064432375fe39c1a19fec61fc9f8be578"
+    },
+    {
+      "path": "modules/fidelity-r33/sprites/generated/re2-giant-alligator/left.png",
+      "sha256": "a755e15ec517923db402bce27fd61dc6dcfe92d661a39cc594d5368c802c3922"
+    },
+    {
+      "path": "modules/fidelity-r33/sprites/generated/re2-giant-alligator/right.png",
+      "sha256": "5041beacc5f4a5e58ab62d92861540e7cd99aee7bf4e0f760f105b7785a8aa1f"
+    },
+    {
+      "path": "modules/fidelity-r33/sprites/generated/re2-giant-moth/left.png",
+      "sha256": "1dc05e7896b19ce5b57533aa31a718bd3b163f6633438c496cd90b56da7fad55"
+    },
+    {
+      "path": "modules/fidelity-r33/sprites/generated/re2-giant-moth/right.png",
+      "sha256": "59c2b38931a26de6ea95e29d19a166c3faad9b84c6af877c3eb45fa7604297ee"
+    },
+    {
+      "path": "modules/fidelity-r33/sprites/generated/re2-zombie-dog/left.png",
+      "sha256": "51c133c483bbf9f95b57a4ac39e034e49ab2d55cb7db7d77d65950d431136d2a"
+    },
+    {
+      "path": "modules/fidelity-r33/sprites/generated/re2-zombie-dog/right.png",
+      "sha256": "77459158f84c6b0a52874a5050c80ae15d20447deadeb23b056f48aeb08d0ada"
+    },
+    {
+      "path": "modules/fidelity-r33/sprites/generated/re3-zombie/left.png",
+      "sha256": "2508132e03f1af13823fc4ec63e3769d11cd732f8deb1747dbb5803f22c7be5e"
+    },
+    {
+      "path": "modules/fidelity-r33/sprites/generated/re3-zombie/right.png",
+      "sha256": "b1968518ea8a8d922677bfec9f5d05e3fa9bffbe94ab5d911925ad97921d92a5"
+    },
+    {
+      "path": "modules/fidelity-r33/sprites/index.html",
+      "sha256": "63a34540d1955a25c3810958b3630ec319d19c72e297c9fada2abd543904f102"
+    },
+    {
+      "path": "modules/fidelity-r33/sprites/library.js",
+      "sha256": "f0bed845737e12319bc099bd2b2993231bed85ba98454091df2f949123af1040"
+    },
+    {
+      "path": "modules/fidelity-r33/sprites/manifest.json",
+      "sha256": "b33b8c6738a97906e87625bfeae78b8132fef195591dbbcb40bedc9282eb0042"
+    },
+    {
+      "path": "modules/fidelity-r33/sprites/output-digests.json",
+      "sha256": "fe6ea652c0d5881072fa7850b2c886ed769a083911afee141bd0390266a3449f"
+    },
+    {
+      "path": "modules/fidelity-r33/sprites/page.js",
+      "sha256": "072a493a4dd50ded9ddee6cef82acbce642d73ae1e7ed1ec179323e22e9da08d"
+    },
+    {
+      "path": "modules/fidelity-r33/sprites/style.css",
+      "sha256": "47b6d44e266a62c61c0873e678de09effef38a11c7df39655ce443826501fe59"
+    },
+    {
+      "path": "modules/fidelity-r33/tracking/delivery.json",
+      "sha256": "0c032c7e2ea19e9fb72dcfc499281029da128bc3faa548befda5c3bbcae07544"
+    },
+    {
+      "path": "modules/fidelity-r33/validation/delivery.json",
+      "sha256": "6760eccde921a424773107720d4a3d5a20437500181b46e5fd6ca27e4eb80d18"
+    },
+    {
+      "path": "modules/versus.html",
+      "sha256": "058373c981f666d3a4c9263c32346e7406d08291a882bc1480945bd69c566b19"
+    },
+    {
+      "path": "package.json",
+      "sha256": "5281abb9be78e71b9330bfd8cba709849c25aebda5bbb4ff35061216a39060ca"
+    },
+    {
+      "path": "saves.html",
+      "sha256": "eba7c246278ac1ba44f2ab5cf1812ebfb5c41787649354b921fdc9821cf56cb7"
+    },
+    {
+      "path": "scripts/build-evidence-r33.py",
+      "sha256": "42b14b636e91901a2032a1adb627af59ed8af48ec57d6a114be85d99e1f278e2"
+    },
+    {
+      "path": "scripts/build-native-r33.py",
+      "sha256": "143e0739d8cf6bceac412b3ff0f8dded7ce0970e67912dd340224dbf8535c2de"
+    },
+    {
+      "path": "scripts/build-runtime-r33.py",
+      "sha256": "713e1193d79e6bcc5a77a4400e480e9a26cbf87e386c5b949b3a9d6f544a4c8e"
+    },
+    {
+      "path": "scripts/build-sprites-r33.py",
+      "sha256": "d0210b806e8b06e316ddab1c4f30bd633c48f5c9d88e8963f159ab8edd9ebabc"
+    },
+    {
+      "path": "scripts/fidelity-progress-r33.py",
+      "sha256": "f632ac0b2eb3dec2225349d29959253be7fea336889890cff0e603e5f8e91892"
+    },
+    {
+      "path": "scripts/pack-native-r33.py",
+      "sha256": "97897c8b392cee9df6e7963513e30f71139c187974550678b5d561c3aca43f91"
+    },
+    {
+      "path": "scripts/prepare-native-r33.py",
+      "sha256": "3a84ff4f6c2ebfd220f36a49660e159c90d94b1a0e1d5ecb628dee6c8de121ac"
+    },
+    {
+      "path": "scripts/render-native-r33.mjs",
+      "sha256": "14df4963cfe18ad730543750641be242f4c99ade2939fd658a58e413339ba972"
+    },
+    {
+      "path": "scripts/validate-fidelity-ci-r33.py",
+      "sha256": "eac5643003a75a4aba304248b40e2033ea325992974f580e186696f6d232c881"
+    },
+    {
+      "path": "scripts/verify-current-r32.mjs",
+      "sha256": "b7f8af151bf7420d32074b06c04a57a16131b65e8f99a940213ba42a5f5fe37a"
+    },
+    {
+      "path": "scripts/verify-current-r33.mjs",
+      "sha256": "d6af56c1cc9b7a5b3e027754517c25363389569e124187f1bf6e15dc69988797"
+    },
+    {
+      "path": "src/catalog-expansion-data.js",
+      "sha256": "c33d05f4139ee9832990903289bf0edd5c16c54ccb678b6e81b0e13d75a0cce4"
+    },
+    {
+      "path": "src/catalog-trial-adapter.js",
+      "sha256": "2804ad111b5ee44e959ee2f12c604275193691e803f819a704950ca89fa502b7"
+    },
+    {
+      "path": "src/combat-foundation-v060.js",
+      "sha256": "4c2aa12007670a1535d4c467db115a148161a4ab08778be17d4ef4f44e95ba82"
+    },
+    {
+      "path": "src/re-data.js",
+      "sha256": "090cf6e14a5ddf73291bcc443db1500e1810911beb926b4b4e26f9b0160b355a"
+    },
+    {
+      "path": "src/save-center-r19.js",
+      "sha256": "6a312bd65ea55fcfe272e4adc9add12ce51affb4a9d424f5bee9998b9952ccbf"
+    },
+    {
+      "path": "src/spatial-weakpoints-v072.js",
+      "sha256": "046cb41f2536b9d51204d01f27b9dc4a55472fb916ace2f1d8dfebe9c1b80ff7"
+    },
+    {
+      "path": "tests/browser-evidence-r33.mjs",
+      "sha256": "92e7382c8a6c4e002e587a23c795061d5988d354253df1b4a0dda2102c5ca14a"
+    },
+    {
+      "path": "tests/browser-fidelity-r33.mjs",
+      "sha256": "81aecc2b7cd4ca8cf513fa099e908991d33ce295107e65b87a3067033414c4a0"
+    },
+    {
+      "path": "tests/browser-generated-sprites-r33.mjs",
+      "sha256": "312cff58dcbd36511df05388295c4952191be8bf98b06fe1ca53a7e5a5a6f369"
+    },
+    {
+      "path": "tests/browser-native-r33.mjs",
+      "sha256": "2f6928e8d994cd03061206a786946cd4ee964a223caff0f902640d8c19790837"
+    },
+    {
+      "path": "tests/browser-persistence-r33.mjs",
+      "sha256": "c205a5f6c4f38260f0264fedacb0c910c5572334f77d43ca35a625d7a9b8b0c0"
+    },
+    {
+      "path": "tests/browser-runtime-r33.mjs",
+      "sha256": "ba46130be48a4227adb39587782560c7db6cc905f3cdddca6078f014b222b667"
+    },
+    {
+      "path": "tests/persistence-fixtures-r24.mjs",
+      "sha256": "1d93b56a56f1a44a2ccf67cdb2c6cdd42e9a4155a499b2d7e3c1a17ca6afcc3b"
+    },
+    {
+      "path": "tests/test_evidence_r33.py",
+      "sha256": "fbbab1f7883049f4cf079817a609d5c3ca150d71044453a992abe05a3f7a552e"
+    },
+    {
+      "path": "tests/test_fidelity_r33.py",
+      "sha256": "0255c4324dc8ad5ed4ec5ec6578c978d0c5e8cf3eced27415e7072aa690bed3f"
+    },
+    {
+      "path": "tests/test_generated_sprites_r33.py",
+      "sha256": "28c59a0eb2aadecabc4ad810eb4dd7796892f05df5e777dc9bd7763df96fdc72"
+    },
+    {
+      "path": "tests/test_native_r33.py",
+      "sha256": "2c7139eda204bbc99e0ee720af98a45cfd495da6410842906f05498bd4cf6b93"
+    },
+    {
+      "path": "tests/verify-current-guard-r32.mjs",
+      "sha256": "fe19744e09246b1fc9d86ad493b0650ca3ea593701be844b86a8dfb26ba160a9"
+    },
+    {
+      "path": "tests/verify-current-guard-r33.mjs",
+      "sha256": "61fe11affb386087bc8584c581f80d4429e4558fc8925727c1089978115f4e04"
+    },
+    {
+      "path": "tests/verify-evidence-r33.mjs",
+      "sha256": "bdf279ff70f70f3d0aab8f79be64452e425b57672268b758bc52b327a875128e"
+    },
+    {
+      "path": "tests/verify-generated-sprites-r33.mjs",
+      "sha256": "7fbf2b425d5aacaeb877b4581e1cf72e51d8233b9f2b354a9880d0447be9ebc7"
+    },
+    {
+      "path": "tests/verify-native-motion-r33.mjs",
+      "sha256": "ecafa2a2cefb0edfbb4875d8396c7f5c344ac49b0b7d0117793be75f8bfd3b09"
+    },
+    {
+      "path": "tests/verify-persistence-r33.mjs",
+      "sha256": "50d9d112ed145373f4aad9f45091d6c69477778d211ca31553d16566bc870421"
+    },
+    {
+      "path": "tests/verify-r33-integration.mjs",
+      "sha256": "dc69c9bb0fef07ea2a5f3bddd1bc4401896d6941ca1a039c63dd72071033e9d9"
+    },
+    {
+      "path": "tests/verify-runtime-r33.mjs",
+      "sha256": "13c3b8b74bb32d201ad0f1eed101e07d5674bff6cb3722e894a016f1c2a80c67"
+    }
+  ],
+  "scope": "Current R33 cross-lot bindings and explicit admission boundaries; source originality and whole-catalogue completion remain open."
+}

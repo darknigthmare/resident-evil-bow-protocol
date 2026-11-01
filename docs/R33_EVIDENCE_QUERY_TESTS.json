@@ -1,0 +1,116 @@
+{
+  "schema": "re.bow.evidence-query-tests-r33/1",
+  "passed": 12,
+  "failed": 0,
+  "sourceFiles": [
+    {
+      "path": "tests/verify-evidence-r33.mjs",
+      "bytes": 9269,
+      "sha256": "bdf279ff70f70f3d0aab8f79be64452e425b57672268b758bc52b327a875128e"
+    },
+    {
+      "path": "modules/fidelity-r33/evidence/query.js",
+      "bytes": 7805,
+      "sha256": "6ff6d24e730c1ba7ed478255f49f3cbf4a58c570f599702509d8fe48f8e32895"
+    },
+    {
+      "path": "modules/fidelity-r33/evidence/manifest.json",
+      "bytes": 320248,
+      "sha256": "386ee45ae46ddb4355aec4a012d3d67a9fa6c51fe1934bc3c83c560e79b46f2e"
+    }
+  ],
+  "checks": [
+    {
+      "name": "Every exact UID exposes only its own claims and candidate audio contexts",
+      "pass": true,
+      "detail": {
+        "exactDossiers": 18,
+        "implicitAliases": 0
+      }
+    },
+    {
+      "name": "Source inputs are copied and deeply frozen instead of mutating caller data",
+      "pass": true,
+      "detail": {
+        "deepFrozen": true,
+        "inputIndependent": true
+      }
+    },
+    {
+      "name": "Every complete cited context matches documentarily and never admits gameplay",
+      "pass": true,
+      "detail": {
+        "documentaryMatches": 35,
+        "gameplayAssignments": 0
+      }
+    },
+    {
+      "name": "Identity, original game, phase and anatomical region are independent context gates",
+      "pass": true,
+      "detail": {
+        "wrongContextCasesRejected": 5
+      }
+    },
+    {
+      "name": "Every missing encounter or physical condition fails closed",
+      "pass": true,
+      "detail": {
+        "independentConditionsRejected": 19
+      }
+    },
+    {
+      "name": "Stinger length remains an upper bound including pincers with no collision permission",
+      "pass": true,
+      "detail": {
+        "upperBoundMeters": 3,
+        "unsupportedTransfers": 4
+      }
+    },
+    {
+      "name": "Own-body outcomes cannot certify a finishing move against any arbitrary catalogue victim",
+      "pass": true,
+      "detail": {
+        "explicitArbitraryVictimQueries": 778,
+        "arbitraryVictimCompatibility": false
+      }
+    },
+    {
+      "name": "The heard growl stays unidentified despite a nearby Nosferatu documentary context",
+      "pass": true,
+      "detail": {
+        "candidateFiles": 5,
+        "inferredSpeakerOrActionAssignments": 0
+      }
+    },
+    {
+      "name": "All218 audio references retain old file bytes and no new media claim",
+      "pass": true,
+      "detail": {
+        "reusedFilesChecked": 218,
+        "newlyCreatedFiles": 0
+      }
+    },
+    {
+      "name": "Forged cross-identity source or admission metadata is rejected",
+      "pass": true,
+      "detail": {
+        "forgedProofInputsRejected": 10
+      }
+    },
+    {
+      "name": "Audio URL traversal, corrupt hashes, oversized data and invented attributions are rejected",
+      "pass": true,
+      "detail": {
+        "invalidAudioInputsRejected": 8
+      }
+    },
+    {
+      "name": "Missing exact Jack image remains missing while every claimed input hash is current",
+      "pass": true,
+      "detail": {
+        "newJackAvatar": false,
+        "currentInputHashes": 15
+      }
+    }
+  ]
+}

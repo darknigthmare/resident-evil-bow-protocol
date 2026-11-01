@@ -1,0 +1,728 @@
+
+> resident-evil-bow-protocol@0.7.3 verify
+> npm run verify:current && npm run verify:historical:r31
+
+
+> resident-evil-bow-protocol@0.7.3 verify:current
+> node scripts/verify-current-r33.mjs && node tests/verify-current-guard-r33.mjs && node scripts/contract.mjs && node scripts/context-contract.mjs && node tests/verify-lore.mjs && node tests/verify-engine.mjs && node tests/verify-pages.mjs && node tests/verify-ui.mjs && node tests/verify-v060.mjs && node tests/verify-v061.mjs && node tests/verify-v070.mjs && node tests/verify-v071.mjs && node tests/verify-v072.mjs && node scripts/audit-delivery-v072.mjs && node tests/verify-v073.mjs && node scripts/compile-directions.mjs && node tests/verify-directions.mjs && node tests/verify-directional-animation.mjs && node tests/verify-directional-r3.mjs && node tests/verify-directional-r4.mjs && node tests/verify-renderer-recovery-r5.mjs && node tests/verify-combat-stage-r6.mjs && node scripts/catalog-replay-contract.mjs && node tests/verify-catalog-replay-r7.mjs && node tests/verify-match-sequences-r8.mjs && node tests/verify-sequences-r8-addendum.mjs && node tests/verify-planning-integration-r8.mjs && node tests/verify-audit-r9.mjs && node tests/verify-delivery-r10.mjs && node tests/verify-lucas-r11.mjs && node tests/verify-lucas-continuity-r11.mjs && node tests/verify-flight-r12.mjs && node tests/verify-replay-vault-r13.mjs && node tests/verify-baker-stages-r14.mjs && node tests/verify-baker-audio-r15.mjs && node tests/verify-trial-audio-r16.mjs && node tests/verify-combat-text-r17.mjs && node tests/verify-access-context-r18.mjs && node tests/verify-menu-r20.mjs && node tests/verify-sprites-r20.mjs && node tests/verify-input-r32.mjs
+
+{"suite":"r33-current-scope","modified":7,"added":1560,"inheritedGuardVerified":true}
+PASS The current R33 delta and inherited current sources are admitted together
+PASS An inherited file remains frozen: src/unified-engine-v060.js
+PASS An inherited file remains frozen: tests/verify-engine.mjs
+PASS An inherited file remains frozen: assets/portraits/unreviewed.png
+PASS An inherited file remains frozen: data/roster.json
+PASS An inherited file remains frozen: docs/R31_DELIVERY.json
+PASS An inherited file remains frozen: modules/fidelity-r31/combat/generated-runtime.js
+PASS Deleting a permitted HTML mount is refused
+PASS A rename cannot hide an old source modification
+PASS A new source outside the R33 namespaces is refused
+PASS A new tool must have an R33 name
+PASS An unknown root file cannot masquerade as an R33 module
+PASS Traversal and alternate separators cannot enter an allowed namespace
+PASS A delivered symlink is refused
+PASS An empty placeholder does not count as a delivered source
+PASS A 100 MiB source cannot be committed as a regular Git asset
+PASS Duplicate Git changes are refused
+PASS An original current engine assertion cannot be omitted
+PASS The primary verification still requires both original published assertions
+PASS The original published commit cannot silently follow a branch
+PASS The nine R32 browser recipes cannot be shortened
+PASS Package metadata cannot change incidentally to the guard boundary
+PASS The new R33 source verification cannot be replaced by a success print
+PASS The new R33 browser recipes remain blocking commands
+PASS The direct guard caller cannot acquire an unrelated workflow change: .github/workflows/source-fidelity-r25.yml
+PASS The direct guard caller cannot acquire an unrelated workflow change: .github/workflows/source-fidelity-r26.yml
+PASS An R33 pipeline edit must be checked before in-memory projection
+PASS A required direct guard caller cannot disappear from the delta
+PASS An unrelated HTML edit remains refused: modules/versus.html
+PASS An unrelated HTML edit remains refused: catalog-duel.html
+PASS An unrelated HTML edit remains refused: codex.html
+PASS An unrelated HTML edit remains refused: saves.html
+PASS The inherited input fix is still checked against current bytes
+PASS The inherited evolution focus correction cannot revert behind the projection
+PASS The inherited gallery lifecycle correction cannot revert behind the projection
+PASS The original current browser workflow cannot be made nonblocking
+PASS The current R31 browser recipes cannot be silently archived
+PASS Report output paths cannot overwrite package, historical reports or another R33 proof
+PASS The source guard and its tests have separate owned report documents
+PASS The reviewed current files and historical command split are accepted
+PASS An unrelated engine change is refused
+PASS An extra change to a historical test is refused
+PASS A regenerated historical delivery report is not accepted as new source evidence
+PASS An undeclared new file is refused
+PASS Deleting an approved source file is refused
+PASS A rename cannot hide behind the approved source path
+PASS The full browser input test must be present
+PASS The delivered catalogue regression must remain present: tests/browser-catalog-controls-r32.mjs
+PASS The delivered catalogue regression must remain present: tests/browser-catalog-focus-r32.mjs
+PASS Unrelated edits inside the approved input file are refused
+PASS Unrelated edits inside the approved catalogue controller are refused
+PASS The original keyboard and focus defects cannot replace the catalogue correction
+PASS Unrelated edits inside the approved menu file are refused
+PASS The motion keyboard browser regression must remain present
+PASS Unrelated changes to the motion reader are refused
+PASS The evolution input browser regression must remain present
+PASS Unrelated changes to the evolution controller are refused
+PASS The original evolution focus defect cannot replace the correction
+PASS The gallery selection browser regression must remain present
+PASS Unrelated changes to the gallery controller are refused
+PASS The original gallery races cannot replace the correction
+PASS The original lifecycle defect cannot be delivered unchanged
+PASS Unrelated style changes in the approved audio stylesheet are refused
+PASS Unrelated style changes in the approved sprites stylesheet are refused
+PASS The primary verify alias cannot omit current assertions
+PASS An original current engine suite cannot be dropped
+PASS The archival command cannot substitute another commit
+PASS Both original historical suites are mandatory in the archive plan
+PASS A command that only prints success cannot replace a historical assertion
+PASS R31 archives cannot silently follow main or the submitted branch
+PASS R31 browser assertions must exercise the current source
+PASS An original R31 browser recipe cannot be replaced by the new focused test
+PASS R23 must keep its original preservation suite on the published snapshot
+PASS R25 frozen integration must use the exact published R31 snapshot
+PASS R26 frozen integration must use the exact published R31 snapshot
+PASS Current scope verification cannot be postponed after R28 report refresh
+PASS The current browser workflow cannot omit its executed suites
+PASS The new browser suites cannot be made nonblocking
+PASS A package version change cannot invalidate old replay contracts unnoticed
+{"suite":"r32-current-guard","passed":40,"failed":0,"input":"Current inherited sources with strictly verified R33-only wiring projected in memory"}
+{"suite":"r33-current-guard","passed":39,"failed":0,"historicalPassed":40,"historicalFailed":0}
+Runtime contract 0.7.3 612953ce952cdd2bd6b5dd21a489bc961c2bfcc3ff1321d15528e341f34ee67d
+Context contract 4af946077d25392fb409ab18d6ed619bc955610ab4a17c38863a2921513977f6
+{
+  "pass": true,
+  "version": "0.7.3",
+  "fighters": 115,
+  "moves": 1150,
+  "uniqueSignatures": 115,
+  "evidence": {
+    "canonical": 708,
+    "anatomical": 279,
+    "simulation": 163
+  },
+  "mechanics": 31
+}
+PASS Every delivered JavaScript source parses
+PASS Compiled browser datasets exactly match their editable release records
+PASS Unique playable identities, physical dimensions and complete authored move contracts
+PASS All referenced local portraits, full-body sprites and declared arena files decode
+PASS Every dossier, route opponent and cinematic stage resolves to delivered content
+PASS All real repertoires start, spend resources and activate only after their startup
+PASS Resource exhaustion blocks paid attacks, then passive recovery restores eligibility
+PASS The real recovery utility is delayed and clamps to the reserve capacity
+PASS Organic healing uses real recoverable damage, has a budget and can be interrupted
+PASS A morphologically small attacker really leaves the floor during its authored leap
+PASS High and low guards apply the correct real contact response
+PASS Authored projectiles travel into real targets and ranged CPU adapts to a crouched small body
+PASS Camouflage activates through its real move and a real hit cancels it without invulnerability
+PASS Small and large bodies separate at both walls without crossing floor or bounds
+PASS Every playable species closes distance and damages an idle opponent through the real CPU
+PASS Eight complete CPU duels cover asymmetric matchups at full initial life
+PASS Super techniques require earned gauge and create real deferred damage
+PASS Seeded CPU commands reproduce the same simulation without consulting AI during replay
+PASS All stories advance through eight validated wins into their own unlocked ending
+PASS Defeat consumes only the three continues and rejects an unrelated duel result
+PASS Two-slot saves preserve progression and recover from a corrupted latest write
+PASS The actual versus HTML initializes its real controls, engine and reference renderer
+PASS Actual keyboard movement, pause and rematch preserve the chosen match configuration
+PASS The actual UI engine records and replays a complete CPU match identically
+PASS Corrupted replays are rejected and truncated replays pause with an explicit incomplete state
+PASS Cinematic contracts draw actual references for hero, before, after and ending scenes
+{"passed":26,"failed":0,"report":"tests/engine-results.json"}
+PASS Operations and Codex scripts parse and their shipped HTML loads
+PASS Codex pagination exposes every dossier exactly once with the right status
+PASS Codex status and episode filters partition the real catalog without leakage
+PASS Codex search ignores accents and case; empty results and filter resets are usable
+PASS All Codex details preserve assets, links and focus; reviewed visual diagnostics remain available in DEV
+PASS Codex direct links open the requested dossier and missing image failures stay explicit
+PASS Operations iframe handshake launches the real eight-opponent Arcade route
+PASS Operations ignore unrelated windows, stale results and stale acknowledgements
+PASS A genuine Arcade KO advances only on Next; duplicate results count once
+PASS Eight real Arcade victories complete the route and persist the record
+PASS Boss Rush selects ten genuine bosses and preserves the selected difficulty
+PASS Apex Mutation selects its twelve fixed forms and matching first chamber
+PASS E-001 Family Protocol selects fourteen Dulvey subjects
+PASS Stylized and cinematic finishes emit one correlated result after their actual sequence
+PASS Survival restores twelve percentage points after actual injuries and carries life into the next engine match
+PASS A replay recorded during reduced-health Survival reproduces the real result
+PASS A real Survival defeat ends the run and does not increase its record
+PASS Stale engine errors cannot cancel an active duel with a newer requestId
+PASS A real engine launch failure retains its requestId and offers a clean restart
+PASS A delayed ready notification cannot automatically replay an already completed encounter
+PASS Leaving a run aborts the real engine, late results stay ignored and a new run can launch
+PASS Stored operation records survive a page reload and corrupted storage falls back to a clean setup
+{"passed":22,"failed":0,"report":"tests/pages-results.json"}
+PASS Primary screens load the R20 game presentation and shared preferences
+PASS Main menu exposes six player entries without development routes or audit badges
+PASS Seven game protocols and biological archives retain exact native routes
+PASS Bestiary preserves identified incarnations and their biological sources
+PASS Technique dossier exposes traceability and adaptation boundaries
+PASS Combat selection, pause and technique controls retain their engine mounts
+PASS Health presentation contains Resident Evil FINE, CAUTION and DANGER states
+PASS Presentation styles are local and preserve keyboard focus and reduced-motion support
+PASS Moveset archive declares all traceability fields and commands
+PASS Dossiers preserve campaign selection, continuation and the real combat iframe
+PASS All public pages retain a route back to the main containment menu
+PASS Moveset archive initializes every subject and ten rows from delivered data
+PASS Every menu route resolves to a shipped page; boot and options have explicit controls
+{
+  "pass": true,
+  "checks": 13,
+  "fighters": 115,
+  "moves": 1150
+}
+PASS RE5 coverage partitions playable identities without duplicates
+PASS P30, Plagas, T-virus and Uroboros profiles remain biologically distinct
+PASS All 160 command contracts activate through the actual startup, never on button press
+PASS Gatling burst spawns exactly six delayed ballistic projectiles and consumes its band
+PASS Empty ammunition prevents firing until a real delayed reload
+PASS Chainsaw heat is bounded and cooling happens after the utility startup
+PASS Fire exposes first Uroboros and Mkono; a non-fire hit does not
+PASS Guard does not expose a closed core; burn denial cannot be bypassed via direct heal
+PASS Fire interrupts an active regeneration and its expiration restores eligibility
+PASS Self-exposure starts at activation, expires, and does not leak across rounds
+PASS Sixteen independent procedural chambers render deterministic nonempty pixels
+PASS New RE5 dossiers contain eight distinct opponents from the same episode
+PASS All fixed routes retain their full length and order for every playable selection
+PASS All procedural chambers preload successfully through the actual Versus renderer
+PASS Coverage register reports remaining and provisional entries from actual data
+PASS All sixteen new subjects complete full-life CPU duels with finite bounded state
+PASS Recorded commands replay RE5 core exposure and resources without consulting AI
+{"passed":17,"failed":0}
+PASS Checkpoints round-trip all 115 fighter identities without touching dossier slots
+PASS Corrupted newest checkpoint recovers the other slot and repairs the broken one
+PASS A terminal tombstone prevents resurrection of a completed or failed run
+PASS Checksum damage, malformed JSON and oversized imports do not alter the valid checkpoint
+PASS Invalid health, counters, routes, difficulty and unknown creatures are rejected
+PASS Imported profiles are reconstructed from a whitelist, not merged into prototypes
+PASS Stale tabs detect a changed storage head and refuse to overwrite it
+PASS Unavailable storage and unconfirmed writes return explicit failures
+PASS Bench executes all 1150 real move startups with no reward or result channel
+PASS Bench tick count is independent from playback speed and rendering
+PASS Directional command selection stays relative to the opponent on both sides
+PASS Laboratory controls initialize and step the real engine without navigation or saving
+PASS All 460 finisher entries are reachable exactly once and filtering retains four per specimen
+PASS An interrupted operation resumes its identical opponent, seed and starting health after reload
+PASS A real victory stores the next encounter; reload cannot grant that victory twice
+PASS Reversed winner-slot identities and zero-life winners cannot change progression
+PASS A real replay carries the runtime contract and mismatches are rejected before state changes
+PASS Checkpoint import rejects invalid data without interrupting a running duel
+PASS Production serves packaged assets without redirecting them to an obsolete deployment
+{"passed":19,"failed":0}
+PASS Every one of the 274 missing entries has exactly one explicit dossier
+PASS All references and portraits resolve; no fabricated dimensions or canon completion flags
+PASS New commands are all simulation; no finishers/campaigns silently generated
+PASS 2310 real startups activate exactly once and obey paid resource eligibility
+PASS New projectile, venom and regeneration mappings stay within declared families
+PASS 231 full-life CPU duels finish with finite life, positions and resources
+PASS Every contextual dossier initializes a bounded deterministic state machine
+PASS Terminal explosions consume the organism once and prevent subsequent commands
+PASS Cocoon incubates without attacking and can be contained before emergence
+PASS UV stays exclusive to The Girl and cannot create a canonical kill
+PASS Stable pages never import the experiment adapter or write experiment rewards
+PASS Catalog exposes all 274 player archives and preserves DEV techniques, routes, filters and deep links
+PASS Experimental laboratory loads 346 choices and executes requested subject without writing storage
+PASS Duel initializes, accepts input, pauses and retains no result channel
+PASS Context UI accepts all 43 identities and disables UV for other records
+PASS Compiled expansion equals editable data and payload checksum catches modifications
+{"passed":16,"failed":0}
+PASS Production definitions include only reviewed R6 changes; annex unchanged
+PASS Cocoon cannot be bypassed with advance; only destroyed integrity succeeds
+PASS Swarm succeeds only after density reaches zero, not through a generic progress button
+PASS Explosion is consumed exactly once and an unavoided rupture is a failure
+PASS Plant and phase goals cannot be advanced without their countermeasure window
+PASS Water and vehicle progression is gated by recovery instead of a continuously open exit
+PASS All 43 contextual profiles complete through ordinary actions with no injected health or result
+PASS All 43 sessions restore the exact paused frame and continue identically
+PASS Malformed timelines, unknown IDs, extra terminal commands and impossible states are rejected
+PASS Snapshot edits cannot change a live session or forge a restored health value
+PASS Dual-slot recovery preserves the good copy after a damaged latest write
+PASS A stale tab cannot overwrite a newer checkpoint without explicit adoption
+PASS Unavailable storage and refused imports leave existing progression data untouched
+PASS Completion register contains unique contextual successes, not attempt counters or campaign credits
+PASS Keyboard attacks and jump are edge-triggered; taps survive release before the simulation tick
+PASS Touch holds retain other fingers and released jump never repeats while held
+PASS Directional specials follow facing and all ten command slots remain accessible
+PASS Sparse/disconnected/policy-blocked gamepads are safe and held buttons do not become repeated attacks
+PASS Context page resumes an exact saved frame in pause without altering campaign slots
+PASS Context focus/visibility loss pauses the clock and unknown links do not silently restore another record
+PASS An asynchronous import cannot replace a selection made while the file was being read
+PASS Duel pause clears a pending button attack and browser focus loss cannot leave movement latched
+{"passed":22,"failed":0}
+PASS All 389 identities have one exclusive gameplay route and local assets
+PASS Five exact incarnations opt in; unknown forms receive no invented spatial weakness
+PASS Normalized zones mirror with facing and follow vertical movement and crouch
+PASS Segment clipping rejects diagonal rectangle false positives and malformed geometry
+PASS Segment clipping returns earliest entry for fast, reverse and stationary shots
+PASS Open core bonus requires a matching hitbox and incoming side for all five subjects
+PASS Closed, blocked, thrown, area and unlocalized hits never receive a spatial critical
+PASS Tail weakness is rear-facing and misses at the wrong height
+PASS Thermal exposure still interrupts regeneration, expires and resets normally
+PASS Fast projectile collision uses the actual outgoing segment on its return frame
+PASS Returning shot guard uses flight direction before the velocity reversal
+PASS Diagonal projectile cannot hit a body only covered by its enclosing rectangle
+PASS Projectile crossing an open front zone records one critical and is consumed
+PASS Area explosions do not borrow a body-wide weakpoint bonus
+PASS Spatial overlay renders pixels without changing simulation or consuming openings
+PASS Main and experimental labs show explicit opening/rear fixtures and pause on blur
+PASS Recorded input replay is identical with active spatial rules, resources and impacts
+PASS Context journal contract stays byte-identical to the shipped v0.7.1 journal
+{"passed":18,"failed":0}
+{"version":"0.7.3","identities":389,"main":115,"experimental":231,"contextual":43,"commands":3460,"pages":19,"checkedLocalFiles":640,"missing":[]}
+PASS Fast returning projectiles hit before clearing the outgoing-pass marker
+PASS Turning while still overlapping a target cannot produce an immediate second hit
+PASS Both return directions hit narrow and wide targets without a distance threshold
+PASS An outward crossing and later return each hit once in a real projectile trajectory
+PASS A diagonal crossing of a deeper core cannot pierce the earlier body contact
+PASS A vertical projectile can hit the upper core at the first body contact
+PASS A shot starting inside the body cannot borrow a deeper critical later in its segment
+PASS Front and rear zones remain reachable from their intended incoming sides
+PASS Combo escape knockback follows return flight instead of original shooter facing
+PASS Last impact records the first surface point and a clipped trajectory
+PASS Reset clears diagnostic contacts and draw never changes combat state
+PASS Controlled input replay preserves contact telemetry and complete combat state
+PASS laboratory.html: share links recreate a paused validated scenario without save data
+PASS laboratory.html: persisted pageshow restores exactly one paused animation loop
+PASS catalog-laboratory.html: share links recreate a paused validated scenario without save data
+PASS catalog-laboratory.html: persisted pageshow restores exactly one paused animation loop
+PASS Experimental duel returns from page cache paused with no ghost attack or double loop
+PASS Context page returns from cache at the same frame and can resume its saved journal
+PASS Main R6 edits explicit; annex/context remain unchanged from v0.7.2
+{"passed":19,"failed":0}
+{"records":24,"combatIdentities":346,"readyReferencePoses":5,"filesChecked":16,"newGeneratedCharacterArt":0,"finishedPerMoveAnimations":0}
+PASS All 346 combat identities resolve both requested directions without mutation
+PASS Attack direction takes precedence over screen crossing and actor velocity
+PASS Engine owns idle facing; retreating does not turn the sprite away from the opponent
+PASS Presentation-only actors face their counterpart and retain direction at identical positions
+PASS Front-facing portraits are never labelled as lateral and are not squashed
+PASS Independent side files are selected with no second flip and with their own foot anchors
+PASS A single lateral pose cannot be mirrored without a per-drawing review
+PASS Asymmetric anatomy rejects reflection even when a malformed registry requests it
+PASS Unreviewed, frontal or mismatched directional images cannot pass the runtime contract
+PASS All gameplay renderer pages load the same direction contract before drawing
+PASS Native Canvas draws independent directional texture pixels, not an illustrative screenshot
+PASS Portrait path is preserved independently of directional combat selection
+PASS Production registry does not pretend that undelivered artwork exists
+PASS In-game direction inspection initializes the actual shared rendering code
+PASS Whole source canvas and its foot anchor are preserved for dedicated views
+PASS Three-quarter fallback cannot mirror without an exact-drawing review
+PASS An uncertain anatomy flag requires an explicit per-identity bilateral review
+PASS Protected asymmetric incarnations never accept a bilateral override
+PASS Clip frame boundaries use integer game ticks; no interpolation into adjacent cells
+PASS A looping clip wraps at its exact total frame duration
+PASS Attack lock remains authoritative even during screen crossing and retreat
+PASS Retreat state is relative to facing, not absolute screen direction
+PASS Missing action art falls back to a static side pose without claiming animation
+PASS Malformed clip frames cannot be selected by the renderer
+PASS Visual registry changes neither 346 fighter definitions nor physics
+PASS Production coverage distinguishes native reference poses, single side and missing artwork
+PASS Raster metadata matches measured committed PNG and WebP dimensions
+PASS Empty, truncated or non-raster inputs are refused before registration
+PASS Presentation swap moves actors between positions instead of making them face outward
+PASS No published mockup image is referenced as a character or stage
+PASS Shared selector infers walking, retreat, air, crouch and blockstun from actual actor fields
+PASS Terminal poses and attack locking do not depend on absolute sprite position
+PASS Reaction clock begins on its state transition instead of final frame at match age
+PASS Clock pauses with simulation time and resets on seek or a new actor without mutation
+PASS Explicit frame scrub and committed attack tick override the passive clock
+PASS Clip-disabled fallback keeps the requested anatomical side and never a second reflection
+PASS A loading attack atlas renders the already-loaded same-side idle pixels
+[B.O.W. visuel] Image introuvable ou illisible : assets/tests/missing-r3.png
+PASS Broken directional action keeps valid lateral idle instead of a frontal reference
+PASS Native RE2 larva uses a measured complete silhouette and a declared bilateral reflection
+PASS Oblique animal references stay oblique even when approved to face the opponent
+PASS Atelier exposes all 21 states, exact stepping, scrub limits and real laboratory links
+PASS Atelier pauses on blur and hides stale actions for an empty search
+PASS Historical R3 preservation with explicitly checked R6 combat delta
+PASS Twelve processed references match reviewed source hashes and emitted PNG metadata
+PASS Derived references have transparent padding, without removing opaque nonblack source pixels
+PASS Hyena dark belly survives exact-black processing and source-clipped art stays flagged
+PASS Ten oblique images face their target without becoming validated lateral silhouettes
+PASS Two existing near-profile poses join the three earlier reference poses, not five new drawings
+PASS Reviewed reference descriptors reject unsafe or unreviewed inputs
+PASS Protected asymmetric subjects cannot receive an automatic bilateral exemption
+PASS Identical atlas pixels cannot claim two anatomical sides by changing names, timings or anchors
+PASS Action preloading also warms the same-side idle fallback, bounded to four unique images
+[B.O.W. visuel] Image introuvable ou illisible : assets/tests/r4-missing.png
+PASS Missing processed reference falls back to its original image and retains the error
+PASS Dossier outcome clips advance through real renderer pixels and restart on a new page
+PASS All 346 identities preserved with explicit R6 combat-contract changes
+{"passed":12,"failed":0}
+PASS Six stalled images time out and release the seventh queued request
+PASS Timed-out preload resolves false instead of hanging forever
+PASS Late callbacks from an expired image cannot settle its retry
+PASS Source assignment failures settle as errors without consuming queue capacity
+PASS Evicted failed assets stay negative-cached until explicitly retried
+PASS An explicit retry recovers an evicted failure on its next request
+PASS Retry keeps the failure visible until successful image recovery
+PASS A successful portrait does not erase a failed sprite of the same path
+PASS Synchronous image completion does not leak timers or load slots
+PASS Success detaches stale callbacks and cancels the timeout
+PASS Tainted matte readback is attempted only once per decoded image/tolerance
+PASS Changing the reviewed matte tolerance allows exactly one new read attempt
+PASS Failed matte attempts release temporary canvases without destroying the original
+PASS Fallback to the original re-resolves its own direction, not the failed derivative mirror
+PASS Cache and failure diagnostics stay bounded across large error sets
+PASS R4 assets/art and R5 baselines retained, R6 combat edits checked explicitly
+{"passed":16,"failed":0}
+PASS Historical R6/R11 changes preserved; only Flying Bug adds the reviewed R12 delta
+PASS Nemesis rocket equipment does not gain fire, another mutation, or teleportation
+PASS Nemesis backward jump moves continuously and lands without a position jump
+PASS Rocket hits once, explodes once and cannot also apply direct contact damage
+PASS A missed rocket detonates once on the wall without damaging a remote opponent
+PASS Rocket explosion preserves frontal guard and gives no spatial critical bonus
+PASS Gatling sustained emissions stop after a real interrupt; emitted rounds survive
+PASS Uninterrupted Gatling burst emits six rounds at authored intervals, charged only once
+PASS Pending burst originates at current actor position while keeping engaged facing
+PASS Jill burst respects the same interruption rules without a new biological effect
+PASS Nemesis super costs gauge and resource once and exposes a punishable startup
+PASS Full Nemesis salvo has exactly three independently colliding explosive rounds
+PASS Quadruped super has two active windows separated by a real non-hitting gap
+PASS Interrupting the quadruped sequence removes its second strike without refund
+PASS Pounce collision remains closed during ascent and opens on the descent window
+PASS Shared effects read simulation state without modifying resources, RNG or event logs
+PASS Rocket, ballistic, flame, secretion and electric visuals use distinct pixel geometry
+PASS Window cues have no attack stroke during startup or between active hits
+PASS Four authored scenes produce distinct deterministic images and changing animation frames
+PASS Interior precipitation is disabled while exterior rain remains allowed
+PASS All combat/laboratory screens load the identical shared effects implementation
+PASS Primary and annex benches execute new real startup/gap mechanics with no save packets
+PASS Stage workshop filters safely and returns from lifecycle events as one paused loop
+PASS All declared multi-hit windows are bounded and profiles have unique ten-slot names
+{"passed":24,"failed":0}
+Catalog replay contract 7481cce1dabb7aab981422cd28448648476e60737991e764783118ae038e2ca0
+PASS Empty recordings validate and exports do not expose mutable internal commands
+PASS Human commands reproduce full state, actual AI RNG and transient contacts
+PASS Complete CPU duels replay until the identical terminal state without imported health
+PASS Every one of 346 stable/experimental selections preserves identity in replay
+PASS All 52 stages and unsigned seed extremes retain exact setup
+PASS Replay seek backward reconstructs RNG, life, resources and object state exactly
+PASS Replay speed/chunk size changes presentation only, never simulation outcome
+PASS Malformed JSON and oversized UTF-8 payloads fail before a replay is constructed
+PASS Version/contract mismatches and unknown identities or stage paths are rejected
+PASS Unexpected health/profile fields and prototype pollution keys cannot be imported
+PASS Seed, frame count, mask and slot boundaries reject negative/fractional/out-of-range values
+PASS Truncated blocks and commands added after terminal time are rejected
+PASS Checksum tampering and altered human commands cannot preserve a valid result
+PASS CPU files reject hidden manual inputs instead of changing deterministic AI decisions
+PASS Replay end is immutable, and invalid seek/count arguments do not advance state
+PASS Recording step after terminal completion cannot append extra input frames
+PASS Starting or resuming a duel transfers focus from the button to the keyboard arena
+PASS Editing form fields or using browser modifier shortcuts never triggers a combat attack
+PASS A bad replay import leaves the current running match, setup and playback mode intact
+PASS UI imports a valid replay paused, gates human commands and exposes step/seek/exit
+PASS Pause and cache restoration keep one loop, no held movement and no phantom attack
+PASS An asynchronous import cannot replace a different subject chosen in the meantime
+PASS No replay/session action writes storage or sends a campaign result message
+PASS R7 profiles/annex/art preserved; only the documented R8 controller/contract successor is allowed
+{"passed":24,"failed":0}
+PASS Eight distinct sequence slots are supported without changing the 21 ordinary states/actions
+PASS Intro ticks use the current round countdown and restart at round boundaries
+PASS First-round loss stays reversible despite zero life and a KO actor
+PASS Reaching match point does not start a final defeat before the round countdown ends
+PASS Draw and malformed winner values never nominate the second player
+PASS A pending conclusion suppresses the ordinary final presentation
+PASS Only the declared winner object with the correct slot can conclude
+PASS Final victory flows to a separate outro slot, without extending the combat state
+PASS Reduced motion, NaN and extreme ticks cannot advance or overflow a sequence
+PASS A lethal final clip is not reused as a first-round loss
+PASS All 346 identities and eight sequence contexts stay read-only
+PASS Current art contains no newly invented sequence clips
+PASS Resident Evil transitions do not fall back to CODEC, FOX or CQC archive themes
+PASS Source integration uses the same phase mapper and guards both conclusion entry points
+PASS Runtime contract covers the new main-controller dependency, with catalog and journal unchanged
+PASS Workshop supports search, selected state, stepping and no-result safely
+PASS Workshop pause and persisted-page restoration own a single render loop
+{"passed":17,"failed":0}
+PASS Exact sequence keys cover both orientations without inheriting attack or death states
+PASS An authored round clip respects its explicit tick rather than the stale actor attack tick
+PASS Round and final ticks can be rewound without presentation state leaking into gameplay
+PASS Malformation and unknown slots never manufacture a valid presentation or conclusion
+PASS A drawn final outro is never substituted for a match or round loss
+PASS Preparation data carries no command, life, mutation or source of campaign rewards
+PASS A complete first-to-two CPU match produces reversible round results and one final victor
+PASS An emitted verdict cannot reopen a finisher or credit a second conclusion
+PASS All 52 stages are selectable without adding actor or campaign state
+PASS A validated shared scenario restores identity, sequence, stage and exact tick
+PASS Unknown stage/state and noninteger time fall back safely
+PASS Sharing includes only allowed presentation fields, never health or external paths
+PASS Empty search hides the scenario instead of sharing a removed subject
+PASS Invalid finisher indices never silently choose the first conclusion
+PASS Double openings preserve the existing countdown and cannot interrupt an active conclusion
+PASS Already delivered main result rejects both direct and public conclusion entry points
+PASS AUD-03 Malformed bindings repair to usable defaults without modifying their input
+PASS AUD-03 Valid individual remaps survive and missing actions inherit defaults
+PASS AUD-03 Reserved, oversized and duplicate codes cannot silently disable another action
+PASS AUD-04 Malformed conclusion objects normalize before a scene may be published
+PASS AUD-04 Valid history survives and unknown ids/dates cannot enter the repaired ledger
+PASS AUD-04 Finisher settings reject infinite duration and preserve valid choices
+PASS AUD-02 Gamepad denial is contained once, then optional retry can recover it
+PASS AUD-02 Absent API, sparse arrays and disconnected or malformed gamepads remain safe
+PASS AUD-03 Malformed JSON and unavailable storage report fallback without any write
+PASS AUD-01 Pause Tab stays in its menu; Enter and Space retain native button activation
+PASS AUD-01 Techniques Tab and Shift+Tab move inside the modal and Escape restores the arena
+PASS AUD-01 A modal opened from pause returns to pause rather than restarting combat
+PASS AUD-01 F2 uses its own focus sequence and guarded browser modifiers cannot fire attacks
+PASS AUD-02 Denied gamepad cannot leave a half-started controller and keyboard still moves
+PASS AUD-03 Corrupt persisted mappings load repaired controls without deleting campaign data
+PASS AUD-04 Corrupt done:null no longer throws after scene creation and credit is not duplicated
+PASS AUD-04 Storage write refusal keeps a valid single conclusion in memory and reports the limit
+PASS AUD-04 Directly damaged in-memory history is repaired before changing the conclusion window
+PASS AUD-06 Persisted page lifecycle retains one useful audio host and one paused render loop
+PASS AUD-06 Discarded page disposes audio permanently instead of leaking its context
+PASS AUD-05 Natural full-health CPU end advances victory to outro without advancing combat or replay
+PASS AUD-05 Final sequence pauses, steps by one tick, resumes and has a bounded duration
+PASS AUD-05 Replay seek/restart resets only presentation and a rejected import preserves both states
+PASS AUD-05 Focus loss freezes final presentation, and a partial recording never becomes a final sequence
+PASS AUD-06 Audio parking suspends rather than disposes, preserves volumes and can unlock again
+PASS PRESERVATION All original fighter definitions, art and stage assets remain byte-identical to R8
+{"passed":26,"failed":0}
+PASS An intro starts and ends without storing combat state or commands
+PASS Pause freezes the clock and step advances exactly one integer tick
+PASS Intro speed is scaled after delta clamping, independent of monitor frequency
+PASS Invalid clock inputs never advance and excessive time is bounded
+PASS Skipping is idempotent and a restart resets every presentation field
+PASS All 346 subjects use the correct intro UID without advancing the true engine
+PASS Reduced motion freezes the artwork tick, not the deterministic intro duration
+PASS All existing finisher IDs have a defined noncanonical compatibility verdict
+PASS Humanlike compatible shapes retain the inherited prototype conclusion
+PASS Every conclusion rejects a projection as a victim
+PASS Aquatic, collective, plant, giant, winged and mechanical victims cannot use the generic fall
+PASS Unknown/reference gabarits fail closed instead of inheriting a human body
+PASS Cross-incarnation finisher IDs cannot select another fighter repertoire
+PASS A low body cannot enter the standing grapple sequence and size envelopes are respected
+PASS Policy evaluation never mutates profiles, life, resources or finishing history
+PASS Gameplay, art and isolated replay contracts remain byte-identical to R9
+{"passed":16,"failed":0}
+PASS Only human Lucas changes; all other 345 combat definitions and art are preserved
+PASS Ten actions are classified as simulation, with human/mutated variants strictly separate
+PASS All ten commands still activate through startup with resources paid exactly once
+PASS Remote placement causes no immediate damage and arms only after its stated delay
+PASS Manual detonation triggers the owned armed charge once, not poison or healing
+PASS An empty detonator gives an explicit message with no resource cost or artificial blast
+PASS Detonation before arming neither consumes nor explodes a charge
+PASS Remote activation cannot trigger another owner or a non-remote device
+PASS The fourth charge retires the oldest instead of exceeding the global capacity
+PASS Super creates three visible charges, then three distinct timed blasts
+PASS A super shares the same three-object budget with the previously deployed network
+PASS Wire catches a fast low crossing in either direction without a skipped contact
+PASS A jump over a wire is allowed; landing within its zone can trigger it
+PASS Proximity crate waits for arming and explodes only at nearby ground contact
+PASS Enemy melee can destroy a remote charge before the activation command
+PASS Interrupted setup never spawns a device and never refunds the committed cost
+PASS Owner KO, round transition and reset clear the deployed network
+PASS Remote charges expire without an explosion, and no future round inherits them
+PASS Thrown charge is a timed projectile and detonates once, not a melee strike
+PASS Ten deterministic CPU trials finish and the replay reconstructs each exact state
+PASS Laboratory explicitly primes a remote fixture for the detonator, with no progression writes
+PASS Device cues render without changing objects, input state or resources
+{"passed":22,"failed":0}
+PASS Six human Lucas panels use the correct identity, and eight challenges match current opponents
+PASS All 114 peer Dossiers and the existing eight-fight human route remain unchanged
+PASS The four inherited Lucas conclusions are kept but blocked as attacker for all 115 victims
+PASS Human Lucas still finishes a real short-timer match normally without a legacy conclusion credit
+PASS The original R11 paid focus command had no displacement; the exact old definition reproduces it
+PASS Only two mechanical commands change; no borrowed anatomy, sprite or attack is created
+PASS Both maneuvers commit their existing cost once, before any movement
+PASS Left and right flight trajectories are symmetric and bounded in continuous increments
+PASS The previous instantaneous blink is absent; the retreat moves through its active ticks
+PASS No energy means no takeoff, no invisible focus, no health or damage side effect
+PASS No midair re-trigger or unlimited flight chain is admitted
+PASS Corners restrict the real path instead of teleporting through the arena bounds
+PASS A crossing opponent does not reverse the committed maneuver halfway through its attack
+PASS Damage before activation interrupts departure without refunding its committed cost
+PASS The insect remains hittable in flight and a hit cancels the maneuver, not gravity
+PASS A low hitbox misses only when the actual body is above it, without an invulnerability flag
+PASS Repeated maneuvers cannot heal, poison, deal damage or summon an extra entity
+PASS A fresh round/reset never inherits a hovering actor or a focus buff
+PASS Seeded CPU choices can use the utility and preserve full deterministic replay states
+PASS Archived experimental replay validates flight coordinates, landing and RNG exactly
+PASS Both laboratories expose measured motion after takeoff, pause and reset without writes
+PASS Main Versus selects the correct incarnation and runs its utility through the real input path
+PASS The 114 other profiles, all Dossiers, core simulation and auxiliary content remain unchanged
+{"passed":19,"failed":0}
+PASS RLE recorder preserves every command, including facing-independent packed edges
+PASS 216000 actual captured ticks use one run when idle and never grow beyond the frame cap
+PASS Worst-case alternating input is bounded independently of elapsed play duration
+PASS Invalid packed commands are rejected without consuming frames; exported runs are detached
+PASS A successful archive save is read back, de-duplicated and independent of caller mutations
+PASS Quota denial leaves original bytes untouched and exposes an unsaved exportable record
+PASS Recovery retry persists the same pending record once after storage becomes writable
+PASS Unreadable legacy archive is not replaced; raw backup reproduces every original byte
+PASS 30 existing records are never silently trimmed to make room for the next match
+PASS A changed storage snapshot blocks a stale write instead of replacing another tab
+PASS A silently refused write is not advertised as durable persistence
+PASS An identical ID with different contents never overwrites the existing entry
+PASS Pending storage stays bounded and capture can be suspended rather than dropping archives
+PASS Single removal and explicit clear preserve unrelated campaign and experiment keys
+PASS Denied deletion never advertises success or discards the only pending copy
+PASS Corrupt and oversized import envelopes are rejected before a match is started
+PASS Actual main match records compact commands and replays its result and actor state
+PASS A real result survives storage quota and remains exportable across a new match
+PASS Training consumes no replay memory and does not erase earlier match archives
+PASS Recording limit fixture keeps the real victory but saves only a marked excerpt
+PASS Manual excerpt is detached and cannot alter ongoing simulation or award a victory
+PASS Archive opening pauses current combat and closing restores only its previous state
+PASS Two-click deletion and same-version playback are linked to the actual stored selection
+PASS Invalid or stale asynchronous file reads do not replace a changed match
+PASS Legacy incompatible records stay listed and exportable but cannot start playback
+PASS R13 data and art preserved; R14 renderer successor checked against its exact predecessor
+{"passed":26,"failed":0}
+PASS Exactly three existing RE7 IDs are opted in; 52 stage records and their routes are not enlarged
+PASS All three sets produce independent opaque frames with no dependency on remote images
+PASS Repeated time and time rewind reproduce exact pixels, regardless of draw order
+PASS Reduced motion freezes every animated layer and camera without hiding its room
+PASS Invalid time/camera values are bounded and never create stale or transparent margins
+PASS Architecture and three animation categories can be isolated without moving collision terrain
+PASS The combat floor stays pixel-stable while the ceiling and background animate
+PASS Exterior rain has explicit apertures; the testing corridor has no weather overlay
+PASS Unsupported IDs fail without painting, clearing or allocating stage state
+PASS Context transforms, alpha, stroke state and inputs are restored after every drawing
+PASS Renderer code has no wall-clock, mutable random generator, timers, audio or save channel
+PASS Every HTML renderer entry point loads the same optional R14 module before drawing
+PASS Workshop exposes the selected real room, five layer choices and original 52 configurations
+PASS Seek, step and share link restore the chosen room/layer/frame in pause
+PASS Invalid deep links do not import a camera, life, stage file or unknown layer
+PASS Empty search removes stale links and reduced-motion prevents automatic playback
+PASS Focus loss and simulated persisted lifecycle retain one paused loop and exact frame
+PASS Real renderer preloads procedural rooms, and a missing module still uses preserved original art
+PASS Rendering each new room cannot change full CPU-duel state or consume simulation random numbers
+PASS R14 protected data retained; audio follows the exact documented R15 successor
+{"passed":20,"failed":0}
+PASS Three exact stage IDs expose nine original layers, not generic or copied recordings
+PASS Mixed stereo PCM is bounded, nonzero, finite and seamless over 12 seconds
+PASS All nine solo layers are audible-valued and have distinct PCM fingerprints
+PASS Sample rate is bounded and invalid room or layer cannot cause arbitrary allocation
+PASS Synthesis is deterministic and never consults the combat/global random source
+PASS Full mix equals its three authored stems and retains distinct stereo channels
+PASS No audio context or sound starts without a trusted activation and enabled settings
+PASS Timeline frame gives an exact buffer offset while only one ambience voice exists
+PASS Steady updates reuse their node; a large seek resynchronizes from the requested frame
+PASS Pause ends the audible node; resume uses the new simulation offset without a duplicate
+PASS Changing room or stem disconnects the old graph and isolates the requested recipe
+PASS All requested mixes/stems keep at most four authored PCM buffers
+PASS An isolated audition lasts exactly 12 seconds, then cannot restart on a volume update
+PASS Master and ambience zero silence their bus without changing effect preferences
+PASS Failed AudioContext and failed buffer start stay nonfatal and clean up the source
+PASS Legacy family audio remains byte-identical and missing R15 module falls back safely
+PASS Real combat snapshots select the room without mutating state, events or RNG
+PASS End, stop, navigation parking and final disposal cannot leave a scene playing
+PASS Workshop has no autoplay, no persistence and no stale room/layer after an empty search
+PASS The two real game consumers load the shared composition before their audio controller
+PASS Roster, all historical files of art, stage data, core engine and replay contracts remain exact R14
+{"passed":21,"failed":0}
+PASS No context, voice or sample is created by initialization, query data or untrusted clicks
+PASS All 346 combat identities can be observed without changing their data or the simulation
+PASS Trusted activation consumes past events silently, preserving health, frame and command history
+PASS A real Gatling burst sounds only six emitted shots at the exact release frames
+PASS Interrupting a sustained burst silences cancelled rounds instead of playing its whole reservation
+PASS A declared non-sustained delayed-burst fixture sounds on actual movement, not reservation
+PASS Rocket launch and its unique actual explosion are distinct, with no activation double
+PASS Three Lucas timed charges each signal placement, arming and one blast
+PASS Empty detonator, rejected command and paid startup do not invent healing or impact cues
+PASS Ordinary melee sound is delayed until activation and failed early attacks stay silent
+PASS Pause and manual stepping consume events without sounding them or replaying backlog on resume
+PASS The explicit intro remains silent and does not create a fake combat or result event
+PASS Non-real-time playback speed silences both buses; return to x1 does not replay missed attacks
+PASS Replay seek creates a silent audio discontinuity; state and exported replay stay exact
+PASS A real short-timer match sounds one terminal result and later outcome drawings do not repeat it
+PASS Repeated presentation calls at the same frame never duplicate a sound or reset a loop
+PASS Master, effects and ambience controls are independent and safe before activation
+PASS A delayed unlock cannot activate the wrong duel after selection changes
+PASS A missing or rejected Web Audio API does not throw into the controller
+PASS Persisted navigation parks audio and needs activation again; discarded pages dispose it
+PASS Effects, event diagnostics and delayed projectile metadata remain bounded under repeated attacks
+PASS Three Baker rooms use existing authored loops; other stages retain the old generic fallback
+PASS Enabled versus disabled sound preserves complete CPU states, RNG and replay commands
+PASS The real experimental page binds native controls without storage, autoplay, messages or extra loops
+PASS All gameplay contracts, rosters, art, existing workbooks and Baker PCM data remain unchanged
+{"passed":25,"failed":0}
+PASS Disabled by default: no history, audio context, persistent writes or game changes
+PASS All 346 identities are observed read-only without requiring sound or source reclassification
+PASS Enabling late starts from the current cursor, never displays the past attack backlog
+PASS Gatling captions count exactly the six emitted shots and group close repeats
+PASS Interrupted bursts do not describe the five reserved but cancelled bullets
+PASS Delayed independent projectiles are described when moving, not during reservation
+PASS Lucas placement, arming and explosion remain distinct; secondary blast event is not duplicated
+PASS Empty detonator explains the absence of armed charges without inventing a blast
+PASS Blocked damage names the defender and is not repeated as a normal impact
+PASS Healing is described only for health actually restored; annotations use fixed participant IDs
+PASS Pause freezes text; overlays expire in simulation ticks, not wall time or paint calls
+PASS Seek to another state clears transcript and never claims an unobserved full history
+PASS Frame rewind and clear do not replay stale captions on a later draw
+PASS Large unobserved advances are labelled partial instead of claiming every event was recorded
+PASS The transcript and repeated-source queue stay bounded over a long fixture stream
+PASS Synthetic draw/guard break/results distinguish the affected participant without guessing dialogue
+PASS Announcements are excluded during pause, hidden pages, acceleration and manual steps
+PASS Malformed state and control characters remain safe; exported journal views cannot mutate the observer
+PASS Three full CPU replays and their exported data are byte-identical with or without text observation
+PASS Main panel pauses, stays keyboard-contained and restores a running match without writes
+PASS Closing a panel opened from pause leaves the game paused; blur cannot auto-resume it
+PASS Actual main controller emits captions while its audio remains disabled
+PASS Trial mode, imports and overlay journal do not add progression writes or a second animation loop
+PASS HTML-looking names are text nodes, not executable markup; hidden modal restores inert state
+PASS Conserved navigation closes the text panel without a forced resume or duplicated listener loop
+PASS Fighters, moves, stages, Dossiers, artwork and all three replay/journal contracts are preserved
+{"passed":26,"failed":0}
+PASS All 43 exercise sessions retain exactly the same commands, outcome and checkpoint with descriptions
+PASS Disabled text consumes only its private cursor and never displays past events on activation
+PASS Manual actions at the same frame are observed once, without advancing time
+PASS Context phase labels describe a simulation, not a boss death or campaign victory
+PASS UV activation is specific to the only exercise that supports the apparatus
+PASS Restoring a copied checkpoint opens a new observation, not a replay of historical notices
+PASS Synthetic event-window overflow is labelled partial without inventing an exact missed count
+PASS Synthetic volume is bounded to 60 entries and two current lines; expiry freezes in pause
+PASS Unknown and HTML-looking context events are not promoted to live official dialogue
+PASS Rejected action notices preserve their reason and never imply energy or progress was gained
+PASS Context panel pauses a playing session and restores it without a new clock or storage write
+PASS Context modal contains keyboard focus and blocks manual action shortcuts behind it
+PASS Context selection and reset clear old history; invalid import preserves the active journal
+PASS Blur/visibility and finished sessions do not auto-resume when the context panel closes
+PASS All 43 context selectors keep the read-only panel available without rewards from consultation
+PASS Dossier parent samples only the exact acknowledged same-origin duel
+PASS Story text panel preserves the running pause state, focus, saves and progression counters
+PASS Story pause and blur interruptions never gain a resume from closing text
+PASS Changing story while text is open closes it and cannot revive its old duel
+PASS Mismatched child token or foreign-origin access fails closed without throwing or game writes
+PASS Invalid result packets and unsolicited messages cannot fill the story text journal or grant a win
+PASS A real accelerated story duel still delivers one result with no extra win from text
+PASS Context result has one live announcement source, with the existing fallback restored when text is disabled
+PASS Story input held before opening the panel is released instead of replayed on close
+PASS All historical data, original assets, simulations and three contracts remain unchanged
+{"passed":25,"failed":0}
+PASS A controller connected with confirm held cannot launch a mode
+PASS Directional repeats have a bounded delay; no held confirmation repeats
+PASS Axes use a dead zone and only standard mappings are accepted
+PASS Disconnect and visibility reset require neutral input before new actions
+PASS Two controllers cannot duplicate the same menu action in one frame
+PASS Preferences are normalized and unrelated/prototype fields are dropped
+PASS Corrupt and inaccessible preference storage uses safe defaults
+PASS Explicit preference saves touch exactly one isolated interface key
+PASS Failed preference writes retain usable session settings without false success
+{"suite":"menu-r20-unit","passed":9,"failed":0}
+PASS re2r-tyrant: real PNG alpha, complete bounds and SHA-256 match its manifest
+PASS re2r-licker: real PNG alpha, complete bounds and SHA-256 match its manifest
+PASS re1r-hunter: real PNG alpha, complete bounds and SHA-256 match its manifest
+PASS re3r-nemesis: real PNG alpha, complete bounds and SHA-256 match its manifest
+PASS Registry exactly matches reviewed source and exposes no invented animation or limb layers
+PASS Unknown identity and absent animation fail before loading any image
+PASS Loading failure or incorrect dimensions can be retried without an unresolved cache entry
+PASS All four decoded images remain bounded and repeated loading shares the same promise
+PASS Drawing anchors the image at its grounded pivot and refuses missing direction or state
+{"passed":9,"failed":0}
+PASS keyboard: neutral, opposing directions, crouch and both facings match combat
+PASS pointers: neutral, opposing directions, crouch and both facings match combat
+PASS standard-gamepad: neutral, opposing directions, crouch and both facings match combat
+PASS Opposed directions across keyboard, pointer and gamepad resolve neutrally
+PASS Releasing one opposite direction restores the surviving direction and respects a facing change
+PASS Repeated keydowns cannot repeat a special, and clear removes pending actions and held sources
+PASS Guard, throw escape, jump and dash retain their original action semantics
+{"passed":7,"failed":0}
+
+> resident-evil-bow-protocol@0.7.3 verify:historical:r31
+> python3 scripts/run-published-release-r29.py --commit 413b89bfafc18abc55be1404ff77bdaf573b1334 --evidence qa-gamedev-r32/historical-r31 --plan tests/r32-historical-plan.json
+
+PUBLISHED CHECK 1 exit=0 node tests/verify-save-center-r19.mjs
+PUBLISHED CHECK 2 exit=0 node tests/verify-preservation-r20.mjs
+{"schema": "re.bow.published-assertions-r29/1", "published_commit": "413b89bfafc18abc55be1404ff77bdaf573b1334", "plan": {"path": "tests/r32-historical-plan.json", "sha256": "8155777be8c063cd2098de3d23c30abf592067b7b0bea5ef2129e56474537764"}, "executions": [{"command": ["node", "tests/verify-save-center-r19.mjs"], "exit_code": 0, "executed_assertions": {"passed": 25, "failed": 0}, "log": "command-00.log", "log_sha256": "cf57302fd4f517d13718b3a1b63ffc41632dcb845442ccba12511f7642315a8d"}, {"command": ["node", "tests/verify-preservation-r20.mjs"], "exit_code": 0, "executed_assertions": {"passed": 8, "failed": 0}, "log": "command-01.log", "log_sha256": "68f41c950c00c05634aa10d00d0761d16b4fac53e2cc6dc90f570cd7f3c8daf1"}], "exit_code": 0, "duration_seconds": 11.416, "log_sha256": "0f0928fe285b9b9cb8c3e6ebcced8ceee49b829d2af46d3c4f810309a4350e4f", "runner_sha256": "0c452dfe4a21591c6237a634f1efad0b45feb0ac1079950deaabee94afb3f568", "git_archive_with_original_head_and_index": true, "historical_assertions_modified": false, "calling_checkout_sources_modified": false, "scope": "The published release and its recorded source hashes; current release tests remain separate."}

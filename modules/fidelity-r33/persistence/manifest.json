@@ -1,0 +1,154 @@
+{
+  "schema": "re.bow.persistence-contract-r33/1",
+  "release": "R33",
+  "baselineCommit": "adb733b9faf10a041c0b4ef5aa115f43ec67dd34",
+  "taskIds": [
+    "G-SAUVES",
+    "G-REPLAYS"
+  ],
+  "counts": {
+    "allowlistedGameKeys": 18,
+    "gameStorageGroups": 8,
+    "newCatalogueIdentities": 0,
+    "mixedReplayInputSchemas": 3,
+    "originalEngineRoutesVerified": 4,
+    "maximumReplayFiles": 16,
+    "maximumReplayBatchBytes": 33554432,
+    "nodeGroups": 12,
+    "browserGroups": 11
+  },
+  "restore": {
+    "selectedGroupsOnlyDuringRecovery": true,
+    "unselectedProgressPreserved": true,
+    "selectedOutsideWriterConflictsRefused": true,
+    "initialFullBackupStalenessCheckRetained": true,
+    "publishedR31JournalSchema": "re.bow.real-restore-journal-r31/1",
+    "databaseAndLock": "re.bow.real-restore.r31",
+    "automaticResume": false,
+    "multiKeyLocalStorageAtomic": false
+  },
+  "replay": {
+    "individualSchemas": [
+      "R13 main replay",
+      "re.bow.catalog-duel-replay/1",
+      "re.bow.evolution-duel-replay/1"
+    ],
+    "inputSha256Bound": true,
+    "exactDuplicateSkipped": true,
+    "originalEngineMigration": false,
+    "sequential": true,
+    "passes": 2,
+    "opaqueOrigin": true,
+    "cancellationCleansLatePreparedTask": true,
+    "reportsExportable": true
+  },
+  "files": [
+    {
+      "path": "modules/fidelity-r33/persistence/index.html",
+      "bytes": 4589,
+      "sha256": "bf3f07a7e368d07c6c23afeb6c198b14e4007c3c3727fac18f127d635acd37e0"
+    },
+    {
+      "path": "modules/fidelity-r33/persistence/page.js",
+      "bytes": 8982,
+      "sha256": "2d4481413e1be7264bee400bad0d3f81b2fbb40cf869c2efe317e07aca0a7271"
+    },
+    {
+      "path": "modules/fidelity-r33/persistence/restore.js",
+      "bytes": 11279,
+      "sha256": "87ab1cf43b23f20e4537a580c6b0a30fc9bd08b9c596c9ba47570205d3ee2322"
+    },
+    {
+      "path": "modules/fidelity-r33/persistence/link.js",
+      "bytes": 1671,
+      "sha256": "245d9589fe0d849f23bb6cbbc0cb8c617aa16c70bd07c52576565e098ca4157c"
+    },
+    {
+      "path": "modules/fidelity-r33/replay/index.html",
+      "bytes": 2420,
+      "sha256": "2322066c9c3036054eb2b7309733b9cd8ee77af96cffc00a16d82d68b02fc7c8"
+    },
+    {
+      "path": "modules/fidelity-r33/replay/page.js",
+      "bytes": 4732,
+      "sha256": "d060ba49a903e9ee36dc67ece9cfe753d7d026d0134a4812bbd51030ceceea67"
+    },
+    {
+      "path": "modules/fidelity-r33/replay/batch.js",
+      "bytes": 6071,
+      "sha256": "f40f11193afdb3015e879c6b9d055700af87a768dd847afe2e8e74e7cf8527fc"
+    }
+  ],
+  "inheritedContracts": [
+    {
+      "path": "src/save-center-r19.js",
+      "bytes": 10791,
+      "sha256": "6a312bd65ea55fcfe272e4adc9add12ce51affb4a9d424f5bee9998b9952ccbf"
+    },
+    {
+      "path": "modules/fidelity-r31/persistence/journal.js",
+      "bytes": 3838,
+      "sha256": "31692ad9cfb947bcff34430ee1fff322c39274cfe2b6decb8f657309ded8c7cd"
+    },
+    {
+      "path": "modules/fidelity-r31/persistence/restore.js",
+      "bytes": 10722,
+      "sha256": "eea96d028d097b4f57351c88d4a0a4db53af6a2002b634fed6de9fec23b161ec"
+    },
+    {
+      "path": "modules/fidelity-r31/persistence/style.css",
+      "bytes": 1826,
+      "sha256": "730260a1b61885fe088b80580e1489d07ec3ec47c870f748fab9dd4158e3f59f"
+    },
+    {
+      "path": "modules/fidelity-r31/replay/verify.js",
+      "bytes": 8084,
+      "sha256": "e8d6bdebab913491b72985f855747bd899916452d6777199f8abc92e79c6013d"
+    },
+    {
+      "path": "modules/fidelity-r28/evolutions/contract.json",
+      "bytes": 1470,
+      "sha256": "441e4dbf4a40d613d143541f582c258d895845874b2bd265df4b3dda9212d38d"
+    },
+    {
+      "path": "modules/fidelity-r24/persistence/engines.json",
+      "bytes": 556,
+      "sha256": "d99c7e4e93bf09fa9f85dc62a4ed1a9abba26066c2d1328e907a7ac03d9e03b1"
+    }
+  ],
+  "guide": {
+    "path": "docs/R33_PERSISTENCE.md",
+    "bytes": 5475,
+    "sha256": "1fee6c4ba67c8ee525b3ea9908cc9dd4e2bcb20b12b8850848d643f393dc95b4"
+  },
+  "builder": {
+    "path": "scripts/build-persistence-r33.py",
+    "bytes": 7352,
+    "sha256": "67061edac0570fc4ef051c8f564fa335cbdb6ca9a92bbcb50559cde27b2e8cfe"
+  },
+  "validation": [
+    {
+      "path": "docs/R33_PERSISTENCE_TESTS.json",
+      "bytes": 5135,
+      "sha256": "bc58eed020f265c5cc9d7b3b2c575118943c78030277e6054a51c499b2220fd7",
+      "command": "node tests/verify-persistence-r33.mjs",
+      "passed": 12,
+      "failed": 0
+    },
+    {
+      "path": "docs/R33_PERSISTENCE_BROWSER.json",
+      "bytes": 11142,
+      "sha256": "67fbf500bd7f08c727db94462415b817c3ae49a11e432233689b64d4046fb685",
+      "command": "node tests/browser-persistence-r33.mjs",
+      "passed": 11,
+      "failed": 0
+    }
+  ],
+  "limits": {
+    "cloudBackendConfigured": false,
+    "physicalPowerLossCertified": false,
+    "physicalDevicesOrScreenReadersCertified": false,
+    "allHistoricalReplayContractsCertified": false,
+    "artisticFidelityCertified": false
+  }
+}

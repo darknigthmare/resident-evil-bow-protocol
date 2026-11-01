@@ -1,0 +1,84 @@
+{
+  "schema": "re.bow.input-r32/1",
+  "passed": 7,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "keyboard: neutral, opposing directions, crouch and both facings match combat",
+      "pass": true,
+      "detail": {
+        "directionCases": 8,
+        "facings": 2,
+        "combinations": 16,
+        "syntheticDevice": false
+      }
+    },
+    {
+      "name": "pointers: neutral, opposing directions, crouch and both facings match combat",
+      "pass": true,
+      "detail": {
+        "directionCases": 8,
+        "facings": 2,
+        "combinations": 16,
+        "syntheticDevice": true
+      }
+    },
+    {
+      "name": "standard-gamepad: neutral, opposing directions, crouch and both facings match combat",
+      "pass": true,
+      "detail": {
+        "directionCases": 8,
+        "facings": 2,
+        "combinations": 16,
+        "syntheticDevice": true
+      }
+    },
+    {
+      "name": "Opposed directions across keyboard, pointer and gamepad resolve neutrally",
+      "pass": true,
+      "detail": {
+        "devicePairs": 3,
+        "facings": 2
+      }
+    },
+    {
+      "name": "Releasing one opposite direction restores the surviving direction and respects a facing change",
+      "pass": true,
+      "detail": {
+        "leftAliasesIndependent": true,
+        "facingReadAtConsumption": true
+      }
+    },
+    {
+      "name": "Repeated keydowns cannot repeat a special, and clear removes pending actions and held sources",
+      "pass": true,
+      "detail": {
+        "noOperatingSystemRepeat": true,
+        "pendingActionCleared": true
+      }
+    },
+    {
+      "name": "Guard, throw escape, jump and dash retain their original action semantics",
+      "pass": true,
+      "detail": {
+        "heldGuardPreserved": true,
+        "discreteActionsConsumedOnce": true
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "path": "src/trial-input-v071.js",
+      "sha256": "d8be0edc198e1c91c3022b40c8831d2f8b3623fdada820ce0253683b96a9379c"
+    },
+    {
+      "path": "src/combat-foundation-v060.js",
+      "sha256": "4c2aa12007670a1535d4c467db115a148161a4ab08778be17d4ef4f44e95ba82"
+    },
+    {
+      "path": "tests/verify-input-r32.mjs",
+      "sha256": "9d484f04044a2251f6380b4b8d109bead117c20b5c82dd7d7a11ca8b7688a6ed"
+    }
+  ],
+  "scope": "Real trial-input and combat direction resolver in Node VM. Device events are fixtures; physical controllers and a full browser match are separate checks."
+}

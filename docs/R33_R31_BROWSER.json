@@ -1,0 +1,1036 @@
+{
+  "schema": "re.bow.current-r31-browser-r33/1",
+  "release": "R33",
+  "startedAt": "2026-11-01T00:37:05.821628+00:00",
+  "finishedAt": "2026-11-01T00:38:00.750315+00:00",
+  "checkoutBase": "adb733b9faf10a041c0b4ef5aa115f43ec67dd34",
+  "currentSource": true,
+  "originalAssertionsUnchanged": true,
+  "complete": true,
+  "passed": 57,
+  "failed": 0,
+  "executedSuites": 7,
+  "successfulSuites": 7,
+  "checks": [
+    {
+      "name": "sprites",
+      "command": [
+        "/workspace/.tools/node-v22.16.0-linux-x64/bin/node",
+        "tests/browser-generated-sprites-r31.mjs"
+      ],
+      "startedAt": "2026-11-01T00:37:05.827796+00:00",
+      "finishedAt": "2026-11-01T00:37:12.933378+00:00",
+      "exitCode": 0,
+      "executionError": null,
+      "log": {
+        "path": "qa-r33-r31-current/sprites/execution.log",
+        "bytes": 549,
+        "sha256": "691bb65cbc7a46c3b02f38c904d2678b83efa4fa79edb9d1c89501abedf0292e"
+      },
+      "reports": [
+        {
+          "originalPath": "docs/R31_SPRITES_BROWSER.json",
+          "executionReport": {
+            "path": "qa-r33-r31-current/sprites/R31_SPRITES_BROWSER.json",
+            "bytes": 4817,
+            "sha256": "b427ce240a0d04afe91b7c9fa52ed6897837c024e8737b3b2086af62788a0087"
+          },
+          "fresh": true,
+          "passed": 5,
+          "failed": 0,
+          "sourceCurrent": true,
+          "staleSources": [],
+          "sourceFiles": [
+            {
+              "path": "tests/browser-generated-sprites-r31.mjs",
+              "sha256": "203bad0581ac8b39fe5735eae8c48662669f43bc1f6e065b3f9ba92847b97d41"
+            },
+            {
+              "path": "modules/fidelity-r31/sprites/manifest.json",
+              "sha256": "6b4df5ec5509bf661c0417d34e31038d9efd4bc5ccf719090edbbb2d94d77880"
+            },
+            {
+              "path": "modules/fidelity-r31/sprites/index.html",
+              "sha256": "ffc233a8765d128fde14f41e15b58481b496d5c5a9915833d842a68dd24ecd78"
+            },
+            {
+              "path": "modules/fidelity-r31/sprites/page.js",
+              "sha256": "79390613050cc180f20f5c39b09970b505e9d6f3f9805dadc71e32fe0db7fced"
+            },
+            {
+              "path": "modules/fidelity-r31/sprites/style.css",
+              "sha256": "1cf82a8ed82bda09e87cc287921ebc21fdccea1c477bc33260286888e34214c4"
+            },
+            {
+              "path": "modules/fidelity-r31/combat/generated-runtime.js",
+              "sha256": "d03a03c3fb68f686c41812d9b051ca2240c4bbba9eba64a4deadf16d4412162e"
+            },
+            {
+              "path": "modules/fidelity-r31/performance/image-budget.js",
+              "sha256": "e7a3a2039c9c666475fdfe118bc1fece445891d0213bbe20e75fece248cebce2"
+            },
+            {
+              "path": "modules/versus.html",
+              "sha256": "058373c981f666d3a4c9263c32346e7406d08291a882bc1480945bd69c566b19"
+            },
+            {
+              "path": "catalog-duel.html",
+              "sha256": "15be332b6307c84608c9009db0d585f72e1d497da336eac95b3352527b633628"
+            },
+            {
+              "path": "modules/fidelity-r31/evolutions/index.html",
+              "sha256": "e86aebbcf22f14617b4744ae6fd17d2274e4b63f794079f45cc5774e36e32260"
+            }
+          ]
+        }
+      ],
+      "historicalReportsRestored": [
+        {
+          "path": "docs/R31_SPRITES_BROWSER.json",
+          "sha256": "21e3fdf31941e44d9eab88798b21ab920f70634ee059996c501fbd7bff6f64e1",
+          "bytes": 4817
+        }
+      ],
+      "passed": 5,
+      "failed": 0,
+      "complete": true
+    },
+    {
+      "name": "motion-commands",
+      "command": [
+        "/workspace/.tools/node-v22.16.0-linux-x64/bin/node",
+        "tests/browser-motion-commands-r31.mjs"
+      ],
+      "startedAt": "2026-11-01T00:37:05.827903+00:00",
+      "finishedAt": "2026-11-01T00:37:16.901395+00:00",
+      "exitCode": 0,
+      "executionError": null,
+      "log": {
+        "path": "qa-r33-r31-current/motion-commands/execution.log",
+        "bytes": 971,
+        "sha256": "b80bb34654c926ccde0b9195032dfc52305278ec645d14f3e475b335b1601763"
+      },
+      "reports": [
+        {
+          "originalPath": "docs/R31_MOTION_BROWSER.json",
+          "executionReport": {
+            "path": "qa-r33-r31-current/motion-commands/R31_MOTION_BROWSER.json",
+            "bytes": 5446,
+            "sha256": "6798eae39676a969796175c878c78a92f94e519a3b21c1209ec42772b5251142"
+          },
+          "fresh": true,
+          "passed": 10,
+          "failed": 0,
+          "sourceCurrent": true,
+          "staleSources": [],
+          "sourceFiles": [
+            {
+              "path": "tests/browser-motion-commands-r31.mjs",
+              "sha256": "e243855020fe2f5da68e6fe9a8143cf85a614e1d513352bb7c00ece92daca532"
+            },
+            {
+              "path": "modules/fidelity-r31/motion/index.html",
+              "sha256": "f6503899e639913cde028587cf14f23cea3cd399b00de94d3b25d72002712d26"
+            },
+            {
+              "path": "modules/fidelity-r31/motion/page.js",
+              "sha256": "eb7a856deee9bff51cf6df8ee3eba3a396450515c9ae8d9987bc73c432c225a3"
+            },
+            {
+              "path": "modules/fidelity-r31/motion/reader.js",
+              "sha256": "49f258b7a3df81faf3dcbe85e6f8aeb21e69dc6e4b04719f5b1c279bad36bc43"
+            },
+            {
+              "path": "modules/fidelity-r31/motion/style.css",
+              "sha256": "9606ea6f181ebfbadf13287d99d4f39462df6dc73201ae03e4cf10bf8d70c1aa"
+            },
+            {
+              "path": "modules/fidelity-r31/motion/manifest.json",
+              "sha256": "d256888e487fc3e931739b47496d58ef71490f0e9d8dd59541d6b8eab444b173"
+            },
+            {
+              "path": "modules/fidelity-r31/motion/root-follow-manifest.json",
+              "sha256": "0bbc69ea86427b34d6b75f486cc6bf1d5c84114e5a3a6f8ba9f1ed5b57b68269"
+            },
+            {
+              "path": "modules/fidelity-r31/commands/index.html",
+              "sha256": "ac84169d1da04aa510a905db3f82e4126ce0b70343629568cf625f095bb51bf5"
+            },
+            {
+              "path": "modules/fidelity-r31/commands/page.js",
+              "sha256": "36c5c513d7e45aa4ade6ec599606f41ba15708d10d6c5b0e4679cb7dbca33527"
+            },
+            {
+              "path": "modules/fidelity-r31/commands/style.css",
+              "sha256": "86ee1c5462a3476a751cadab094371be4bacf86621af7a700740886ccd2bd828"
+            },
+            {
+              "path": "modules/fidelity-r31/commands/manifest.json",
+              "sha256": "049dce3094ee8a3713e094e529eec30407f98e4d2b59df383a0c070260538c49"
+            }
+          ]
+        }
+      ],
+      "historicalReportsRestored": [
+        {
+          "path": "docs/R31_MOTION_BROWSER.json",
+          "sha256": "db8f139fe98c843ff0c3047b22c9805bca050cd1a5503bf9ca98714f18ec8d2c",
+          "bytes": 5446
+        }
+      ],
+      "passed": 10,
+      "failed": 0,
+      "complete": true
+    },
+    {
+      "name": "canonical",
+      "command": [
+        "/workspace/.tools/node-v22.16.0-linux-x64/bin/node",
+        "tests/browser-canonical-r31.mjs"
+      ],
+      "startedAt": "2026-11-01T00:37:12.936421+00:00",
+      "finishedAt": "2026-11-01T00:37:20.861861+00:00",
+      "exitCode": 0,
+      "executionError": null,
+      "log": {
+        "path": "qa-r33-r31-current/canonical/execution.log",
+        "bytes": 756,
+        "sha256": "5e7b5960903bdd17aaaefcaaf1fad40418e8dd8fe4cddb566f39341f492afd39"
+      },
+      "reports": [
+        {
+          "originalPath": "docs/R31_CANONICAL_BROWSER.json",
+          "executionReport": {
+            "path": "qa-r33-r31-current/canonical/R31_CANONICAL_BROWSER.json",
+            "bytes": 3843,
+            "sha256": "21e8a13c5b98b321446d4e80a59966774417a6b4cefb10f72e433b5f570d546d"
+          },
+          "fresh": true,
+          "passed": 8,
+          "failed": 0,
+          "sourceCurrent": true,
+          "staleSources": [],
+          "sourceFiles": [
+            {
+              "path": "tests/browser-canonical-r31.mjs",
+              "sha256": "249675dc3f2e334526922fb32b3ca1402c23eab7cf0fd1ea42da0462a26c02de"
+            },
+            {
+              "path": "modules/fidelity-r31/canonical/index.html",
+              "sha256": "a454ac438154b60d021c865a9ffca63ffacc88f2af9eea3175bcc0ee2ef81539"
+            },
+            {
+              "path": "modules/fidelity-r31/canonical/page.js",
+              "sha256": "12ac857d849c04c076a2be1ee2a9a6073d188e8fe43102dc02d2b499b66eb655"
+            },
+            {
+              "path": "modules/fidelity-r31/canonical/query.js",
+              "sha256": "baf1c7006bf55fa0f90acb45b19b183d8c76f6ae3f44b4ae65bd60aded7e84ca"
+            },
+            {
+              "path": "modules/fidelity-r31/canonical/style.css",
+              "sha256": "71d23044d4d25996faebd73339721f84866387d3e842f809f5d2ab8060bc3076"
+            },
+            {
+              "path": "modules/fidelity-r31/canonical/manifest.json",
+              "sha256": "3fbe8866dc01ef6b8cb7ed6eaf7c5da9827462364f9f072c3c5b430747d868df"
+            },
+            {
+              "path": "data/roster.json",
+              "sha256": "e1aba741cea7e34ee653c0fc1d7c92b666182f03f2b00d5b72421c4c93ca1dc0"
+            }
+          ]
+        }
+      ],
+      "historicalReportsRestored": [
+        {
+          "path": "docs/R31_CANONICAL_BROWSER.json",
+          "sha256": "21e8a13c5b98b321446d4e80a59966774417a6b4cefb10f72e433b5f570d546d",
+          "bytes": 3843
+        }
+      ],
+      "passed": 8,
+      "failed": 0,
+      "complete": true
+    },
+    {
+      "name": "restore-replays",
+      "command": [
+        "/workspace/.tools/node-v22.16.0-linux-x64/bin/node",
+        "tests/browser-persistence-r31.mjs"
+      ],
+      "startedAt": "2026-11-01T00:37:16.904533+00:00",
+      "finishedAt": "2026-11-01T00:37:33.591035+00:00",
+      "exitCode": 0,
+      "executionError": null,
+      "log": {
+        "path": "qa-r33-r31-current/restore-replays/execution.log",
+        "bytes": 827,
+        "sha256": "41226dd246cc0298b6365af0ddd27a67608296c8102367f975fd2a7fdde1b4cc"
+      },
+      "reports": [
+        {
+          "originalPath": "docs/R31_PERSISTENCE_BROWSER.json",
+          "executionReport": {
+            "path": "qa-r33-r31-current/restore-replays/R31_PERSISTENCE_BROWSER.json",
+            "bytes": 5545,
+            "sha256": "5332594ba263cc5d4dd3f2d3e445344389b294fc81a1d55f31b9ba81cc3909ce"
+          },
+          "fresh": true,
+          "passed": 9,
+          "failed": 0,
+          "sourceCurrent": true,
+          "staleSources": [],
+          "sourceFiles": [
+            {
+              "path": "modules/fidelity-r31/persistence/index.html",
+              "sha256": "f68aae7994e0d855917174d4cc2e78585040b2e34b1766b1b5e66426eb326236"
+            },
+            {
+              "path": "modules/fidelity-r31/persistence/page.js",
+              "sha256": "6a817e9bbb7035c0eb0e476cee9c225fba561ce8dce1f5b0402d78a6652f062b"
+            },
+            {
+              "path": "modules/fidelity-r31/persistence/restore.js",
+              "sha256": "eea96d028d097b4f57351c88d4a0a4db53af6a2002b634fed6de9fec23b161ec"
+            },
+            {
+              "path": "modules/fidelity-r31/persistence/journal.js",
+              "sha256": "31692ad9cfb947bcff34430ee1fff322c39274cfe2b6decb8f657309ded8c7cd"
+            },
+            {
+              "path": "modules/fidelity-r31/persistence/style.css",
+              "sha256": "730260a1b61885fe088b80580e1489d07ec3ec47c870f748fab9dd4158e3f59f"
+            },
+            {
+              "path": "modules/fidelity-r31/replay/index.html",
+              "sha256": "80846151eef2166648ce734760a8989086f1820773837b1a0fdf1e07d6f9dd65"
+            },
+            {
+              "path": "modules/fidelity-r31/replay/page.js",
+              "sha256": "0dd1e92426305267925ab0344ea624b2453d94bee3503babe937021bfdc5be72"
+            },
+            {
+              "path": "modules/fidelity-r31/replay/verify.js",
+              "sha256": "e8d6bdebab913491b72985f855747bd899916452d6777199f8abc92e79c6013d"
+            },
+            {
+              "path": "src/save-center-r19.js",
+              "sha256": "6a312bd65ea55fcfe272e4adc9add12ce51affb4a9d424f5bee9998b9952ccbf"
+            },
+            {
+              "path": "modules/fidelity-r28/evolutions/contract.json",
+              "sha256": "441e4dbf4a40d613d143541f582c258d895845874b2bd265df4b3dda9212d38d"
+            },
+            {
+              "path": "modules/versus.html",
+              "sha256": "058373c981f666d3a4c9263c32346e7406d08291a882bc1480945bd69c566b19"
+            },
+            {
+              "path": "tests/browser-persistence-r31.mjs",
+              "sha256": "d6b892411f7f19d5212ae7526944f3e3797575583ff14b09829fdbb810bf727a"
+            }
+          ]
+        }
+      ],
+      "historicalReportsRestored": [
+        {
+          "path": "docs/R31_PERSISTENCE_BROWSER.json",
+          "sha256": "b5352cd577ee30d61fd2ffcd1eee363833bb6731524ac1c5d8c52fcbb7bc2e34",
+          "bytes": 5545
+        }
+      ],
+      "passed": 9,
+      "failed": 0,
+      "complete": true
+    },
+    {
+      "name": "audio",
+      "command": [
+        "/workspace/.tools/node-v22.16.0-linux-x64/bin/node",
+        "tests/browser-audio-r31.mjs"
+      ],
+      "startedAt": "2026-11-01T00:37:20.866046+00:00",
+      "finishedAt": "2026-11-01T00:37:31.686526+00:00",
+      "exitCode": 0,
+      "executionError": null,
+      "log": {
+        "path": "qa-r33-r31-current/audio/execution.log",
+        "bytes": 809,
+        "sha256": "cca51139f83e4e5884c8b4a6358b9d2ef380b4b0ac6716162cd82332b9f3eee6"
+      },
+      "reports": [
+        {
+          "originalPath": "docs/R31_AUDIO_BROWSER.json",
+          "executionReport": {
+            "path": "qa-r33-r31-current/audio/R31_AUDIO_BROWSER.json",
+            "bytes": 4853,
+            "sha256": "eee5d3a5476b61203a05974f8cd5fa5faeee70fba1bfe760b7676e805dabeac2"
+          },
+          "fresh": true,
+          "passed": 9,
+          "failed": 0,
+          "sourceCurrent": true,
+          "staleSources": [],
+          "sourceFiles": [
+            {
+              "path": "tests/browser-audio-r31.mjs",
+              "sha256": "de5f5fe3fcfd1548153b2ca068532ebc4d5a2290e5e669a86d66887f45eccdb8"
+            },
+            {
+              "path": "modules/fidelity-r31/audio/index.html",
+              "sha256": "1fc3cdd9fa17a4363adef6400b2255a88fef2b2665b66ee0b67cb4450a28932d"
+            },
+            {
+              "path": "modules/fidelity-r31/audio/style.css",
+              "sha256": "edc4f2e0df6ec67dc5d9ae5721b19e3a293a2115e3d08150045580ffe0c10a3a"
+            },
+            {
+              "path": "modules/fidelity-r31/audio/player.js",
+              "sha256": "5a2510daa4a8c94c26e028cb2cedaa62c2b48fcd11052ae6f7ba3015f0639d29"
+            },
+            {
+              "path": "modules/fidelity-r31/audio/review-format.js",
+              "sha256": "0fc5a0904d92482d2c518770f3f824690cfa58edb5a49af408a3df441944ebdb"
+            },
+            {
+              "path": "modules/fidelity-r31/audio/manifest.json",
+              "sha256": "f7c1fc43e8ac06b5efbbafc46fddc2448de6bc4f161897ba6c25da9c9ca91860"
+            }
+          ]
+        }
+      ],
+      "historicalReportsRestored": [
+        {
+          "path": "docs/R31_AUDIO_BROWSER.json",
+          "sha256": "62ae4de538f41785b49c31efc3ffdb4b838f8cb1da76d87d498d01a96f213528",
+          "bytes": 4853
+        }
+      ],
+      "passed": 9,
+      "failed": 0,
+      "complete": true
+    },
+    {
+      "name": "performance-access",
+      "command": [
+        "/workspace/.tools/node-v22.16.0-linux-x64/bin/node",
+        "tests/browser-performance-access-r31.mjs"
+      ],
+      "startedAt": "2026-11-01T00:37:31.689055+00:00",
+      "finishedAt": "2026-11-01T00:37:47.395564+00:00",
+      "exitCode": 0,
+      "executionError": null,
+      "log": {
+        "path": "qa-r33-r31-current/performance-access/execution.log",
+        "bytes": 830,
+        "sha256": "2eb8779688c3e4e33adb93963da325054c19338206a8689e49f9881bd4e4bed3"
+      },
+      "reports": [
+        {
+          "originalPath": "docs/R31_PERFORMANCE_ACCESS_BROWSER.json",
+          "executionReport": {
+            "path": "qa-r33-r31-current/performance-access/R31_PERFORMANCE_ACCESS_BROWSER.json",
+            "bytes": 11824,
+            "sha256": "84374eabd08a1f44aaaaa9d79081411646ac0df7c583b064ca6acae6608b6d6b"
+          },
+          "fresh": true,
+          "passed": 8,
+          "failed": 0,
+          "sourceCurrent": true,
+          "staleSources": [],
+          "sourceFiles": [
+            {
+              "path": "tests/browser-performance-access-r31.mjs",
+              "sha256": "bf4c59ab631deeb9408b1a4e7c62724512a0e904c94104de84b62e8948f2569e"
+            },
+            {
+              "path": "modules/fidelity-r31/performance/image-budget.js",
+              "sha256": "e7a3a2039c9c666475fdfe118bc1fece445891d0213bbe20e75fece248cebce2"
+            },
+            {
+              "path": "modules/fidelity-r31/performance/monitor.js",
+              "sha256": "503e992e70900d0afd1b49c8d9f8acec9bbb881095d341095ead9c1bd4e24cc0"
+            },
+            {
+              "path": "modules/fidelity-r31/performance/index.html",
+              "sha256": "f5203c8c79dec250093a7c3a9e55d7def1e83859c7b29eff3b6e564824dcfdc2"
+            },
+            {
+              "path": "modules/fidelity-r31/performance/page.js",
+              "sha256": "aff3d22ef3202433c114d33e89a36eed81fc8dd37c7dfc9a2f293251c47eccfe"
+            },
+            {
+              "path": "modules/fidelity-r31/performance/style.css",
+              "sha256": "41acdde8c1eacee61d48f2b9580e98ec7f67211336b661a024e6456f805e4cc6"
+            },
+            {
+              "path": "modules/fidelity-r31/access/match-summary.js",
+              "sha256": "f2b04b703adaef7d0154e48e2ec7b28f29d24c57800b20d73a8d93ad081b4cdd"
+            },
+            {
+              "path": "modules/fidelity-r31/combat/generated-runtime.js",
+              "sha256": "d03a03c3fb68f686c41812d9b051ca2240c4bbba9eba64a4deadf16d4412162e"
+            },
+            {
+              "path": "modules/fidelity-r31/combat/native-runtime.js",
+              "sha256": "0e0be612903c65108d5dd3d691b3f074bcb619364812f82f3242b391f704bb36"
+            },
+            {
+              "path": "modules/fidelity-r31/selection/avatars.js",
+              "sha256": "f0e70109be3310c13155c512767eacf60f28d0f48082752200a3b03de215ec1a"
+            },
+            {
+              "path": "modules/fidelity-r31/sprites/manifest.json",
+              "sha256": "6b4df5ec5509bf661c0417d34e31038d9efd4bc5ccf719090edbbb2d94d77880"
+            },
+            {
+              "path": "modules/fidelity-r30/native/manifest.json",
+              "sha256": "542d0cf097bbc9c938f81de19fdff431a2b3e5b3d78b06250833810f0dece778"
+            },
+            {
+              "path": "modules/fidelity-r30/selection/manifest.json",
+              "sha256": "32fc768c8a91616a37ed7f67d767c4e916ac1ddf0567bca60c3f62dca4d91b8c"
+            },
+            {
+              "path": "modules/versus.html",
+              "sha256": "058373c981f666d3a4c9263c32346e7406d08291a882bc1480945bd69c566b19"
+            },
+            {
+              "path": "catalog-duel.html",
+              "sha256": "15be332b6307c84608c9009db0d585f72e1d497da336eac95b3352527b633628"
+            },
+            {
+              "path": "modules/fidelity-r31/evolutions/index.html",
+              "sha256": "e86aebbcf22f14617b4744ae6fd17d2274e4b63f794079f45cc5774e36e32260"
+            }
+          ]
+        }
+      ],
+      "historicalReportsRestored": [
+        {
+          "path": "docs/R31_PERFORMANCE_ACCESS_BROWSER.json",
+          "sha256": "c099bf7c40c6b462bbc04f4617ac66c6bc7a178a750791d89fd4a4f85cf656d3",
+          "bytes": 11823
+        }
+      ],
+      "passed": 8,
+      "failed": 0,
+      "complete": true
+    },
+    {
+      "name": "tracking-dossiers",
+      "command": [
+        "/workspace/.tools/node-v22.16.0-linux-x64/bin/node",
+        "tests/browser-fidelity-r31.mjs"
+      ],
+      "startedAt": "2026-11-01T00:37:47.401669+00:00",
+      "finishedAt": "2026-11-01T00:38:00.749320+00:00",
+      "exitCode": 0,
+      "executionError": null,
+      "log": {
+        "path": "qa-r33-r31-current/tracking-dossiers/execution.log",
+        "bytes": 857,
+        "sha256": "21967dcc94f2154d700fb21403c7df65269cc5174780eeb543aa481a80c49e8c"
+      },
+      "reports": [
+        {
+          "originalPath": "docs/R31_DASHBOARD_BROWSER.json",
+          "executionReport": {
+            "path": "qa-r33-r31-current/tracking-dossiers/R31_DASHBOARD_BROWSER.json",
+            "bytes": 2252,
+            "sha256": "3c2344a04f129bcfd46f70233ff31fda3d80f12ca70e251e8e4fc477b03b2d81"
+          },
+          "fresh": true,
+          "passed": 3,
+          "failed": 0,
+          "sourceCurrent": true,
+          "staleSources": [],
+          "sourceFiles": [
+            {
+              "path": "tests/browser-fidelity-r31.mjs",
+              "sha256": "adf0d7bc53fbbc60cdfaa7ae69248545375d208c49639254c0692e7e9a4f23db"
+            },
+            {
+              "path": "modules/fidelity-r31/index.html",
+              "sha256": "80690bba70df23d0aaf87802f253a819d11c58d3299e32120105dbe221ece24f"
+            },
+            {
+              "path": "modules/fidelity-r31/dashboard.js",
+              "sha256": "dedee4432be1d0e684f161e89490329c89556ea3bb299d7ac93188d2927e2705"
+            },
+            {
+              "path": "modules/fidelity-r31/dossier-link.js",
+              "sha256": "06b8ac003697f49c790cbb5e5a19005a44daa66a7b7bdf5b5b43cb6d35c6fff2"
+            },
+            {
+              "path": "modules/fidelity-r31/progress.json",
+              "sha256": "0083e4c59e90eb7a0436d8c9da5d21fe2e95825f13d5b750245c0f917fa05e15"
+            },
+            {
+              "path": "modules/fidelity-r31/dossier-additions.json",
+              "sha256": "522c7760cccf4497035c5c1686c8e25ba5564addd14140efc0f4c7f194e4f31e"
+            },
+            {
+              "path": "codex.html",
+              "sha256": "3292dab6591018c0d9dc462fb3bbe2ef9e3ce39c6f1fb80091b1c7c71743e5b8"
+            }
+          ]
+        },
+        {
+          "originalPath": "docs/R31_DOSSIER_BROWSER.json",
+          "executionReport": {
+            "path": "qa-r33-r31-current/tracking-dossiers/R31_DOSSIER_BROWSER.json",
+            "bytes": 3205,
+            "sha256": "c295437d32ee24cf00b95b8dacd6347667f6bbc8c2800b1e447f9c5c98d0af4c"
+          },
+          "fresh": true,
+          "passed": 5,
+          "failed": 0,
+          "sourceCurrent": true,
+          "staleSources": [],
+          "sourceFiles": [
+            {
+              "path": "tests/browser-fidelity-r31.mjs",
+              "sha256": "adf0d7bc53fbbc60cdfaa7ae69248545375d208c49639254c0692e7e9a4f23db"
+            },
+            {
+              "path": "modules/fidelity-r31/index.html",
+              "sha256": "80690bba70df23d0aaf87802f253a819d11c58d3299e32120105dbe221ece24f"
+            },
+            {
+              "path": "modules/fidelity-r31/dashboard.js",
+              "sha256": "dedee4432be1d0e684f161e89490329c89556ea3bb299d7ac93188d2927e2705"
+            },
+            {
+              "path": "modules/fidelity-r31/dossier-link.js",
+              "sha256": "06b8ac003697f49c790cbb5e5a19005a44daa66a7b7bdf5b5b43cb6d35c6fff2"
+            },
+            {
+              "path": "modules/fidelity-r31/progress.json",
+              "sha256": "0083e4c59e90eb7a0436d8c9da5d21fe2e95825f13d5b750245c0f917fa05e15"
+            },
+            {
+              "path": "modules/fidelity-r31/dossier-additions.json",
+              "sha256": "522c7760cccf4497035c5c1686c8e25ba5564addd14140efc0f4c7f194e4f31e"
+            },
+            {
+              "path": "codex.html",
+              "sha256": "3292dab6591018c0d9dc462fb3bbe2ef9e3ce39c6f1fb80091b1c7c71743e5b8"
+            }
+          ]
+        }
+      ],
+      "historicalReportsRestored": [
+        {
+          "path": "docs/R31_DASHBOARD_BROWSER.json",
+          "sha256": "5d9fc4738e45df3c861247fc3dfe0a27bdb3b07af9fed900bcb76dbb3bca320c",
+          "bytes": 2252
+        },
+        {
+          "path": "docs/R31_DOSSIER_BROWSER.json",
+          "sha256": "7557fb535748911a52bb1b2f5d40f252206b6b24bb70909d7193a2a70c555287",
+          "bytes": 3205
+        }
+      ],
+      "passed": 8,
+      "failed": 0,
+      "complete": true
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": ".github/workflows/source-fidelity-r31.yml",
+      "bytes": 11528,
+      "sha256": "fbd27d4e7b32f99b70965a08feab73215430eceb28935e3724d03fd37e40b671"
+    },
+    {
+      "path": "catalog-duel.html",
+      "bytes": 8145,
+      "sha256": "15be332b6307c84608c9009db0d585f72e1d497da336eac95b3352527b633628"
+    },
+    {
+      "path": "codex.html",
+      "bytes": 4591,
+      "sha256": "3292dab6591018c0d9dc462fb3bbe2ef9e3ce39c6f1fb80091b1c7c71743e5b8"
+    },
+    {
+      "path": "data/roster.json",
+      "bytes": 2360224,
+      "sha256": "e1aba741cea7e34ee653c0fc1d7c92b666182f03f2b00d5b72421c4c93ca1dc0"
+    },
+    {
+      "path": "modules/fidelity-r28/evolutions/contract.json",
+      "bytes": 1470,
+      "sha256": "441e4dbf4a40d613d143541f582c258d895845874b2bd265df4b3dda9212d38d"
+    },
+    {
+      "path": "modules/fidelity-r30/native/manifest.json",
+      "bytes": 1038,
+      "sha256": "542d0cf097bbc9c938f81de19fdff431a2b3e5b3d78b06250833810f0dece778"
+    },
+    {
+      "path": "modules/fidelity-r30/selection/manifest.json",
+      "bytes": 876354,
+      "sha256": "32fc768c8a91616a37ed7f67d767c4e916ac1ddf0567bca60c3f62dca4d91b8c"
+    },
+    {
+      "path": "modules/fidelity-r31/access/match-summary.js",
+      "bytes": 6104,
+      "sha256": "f2b04b703adaef7d0154e48e2ec7b28f29d24c57800b20d73a8d93ad081b4cdd"
+    },
+    {
+      "path": "modules/fidelity-r31/audio/index.html",
+      "bytes": 4303,
+      "sha256": "1fc3cdd9fa17a4363adef6400b2255a88fef2b2665b66ee0b67cb4450a28932d"
+    },
+    {
+      "path": "modules/fidelity-r31/audio/manifest.json",
+      "bytes": 438082,
+      "sha256": "f7c1fc43e8ac06b5efbbafc46fddc2448de6bc4f161897ba6c25da9c9ca91860"
+    },
+    {
+      "path": "modules/fidelity-r31/audio/player.js",
+      "bytes": 13111,
+      "sha256": "5a2510daa4a8c94c26e028cb2cedaa62c2b48fcd11052ae6f7ba3015f0639d29"
+    },
+    {
+      "path": "modules/fidelity-r31/audio/review-format.js",
+      "bytes": 5176,
+      "sha256": "0fc5a0904d92482d2c518770f3f824690cfa58edb5a49af408a3df441944ebdb"
+    },
+    {
+      "path": "modules/fidelity-r31/audio/style.css",
+      "bytes": 2353,
+      "sha256": "edc4f2e0df6ec67dc5d9ae5721b19e3a293a2115e3d08150045580ffe0c10a3a"
+    },
+    {
+      "path": "modules/fidelity-r31/canonical/index.html",
+      "bytes": 1618,
+      "sha256": "a454ac438154b60d021c865a9ffca63ffacc88f2af9eea3175bcc0ee2ef81539"
+    },
+    {
+      "path": "modules/fidelity-r31/canonical/manifest.json",
+      "bytes": 68904,
+      "sha256": "3fbe8866dc01ef6b8cb7ed6eaf7c5da9827462364f9f072c3c5b430747d868df"
+    },
+    {
+      "path": "modules/fidelity-r31/canonical/page.js",
+      "bytes": 12117,
+      "sha256": "12ac857d849c04c076a2be1ee2a9a6073d188e8fe43102dc02d2b499b66eb655"
+    },
+    {
+      "path": "modules/fidelity-r31/canonical/query.js",
+      "bytes": 7790,
+      "sha256": "baf1c7006bf55fa0f90acb45b19b183d8c76f6ae3f44b4ae65bd60aded7e84ca"
+    },
+    {
+      "path": "modules/fidelity-r31/canonical/style.css",
+      "bytes": 2476,
+      "sha256": "71d23044d4d25996faebd73339721f84866387d3e842f809f5d2ab8060bc3076"
+    },
+    {
+      "path": "modules/fidelity-r31/combat/generated-runtime.js",
+      "bytes": 25847,
+      "sha256": "d03a03c3fb68f686c41812d9b051ca2240c4bbba9eba64a4deadf16d4412162e"
+    },
+    {
+      "path": "modules/fidelity-r31/combat/native-runtime.js",
+      "bytes": 23264,
+      "sha256": "0e0be612903c65108d5dd3d691b3f074bcb619364812f82f3242b391f704bb36"
+    },
+    {
+      "path": "modules/fidelity-r31/commands/index.html",
+      "bytes": 1593,
+      "sha256": "ac84169d1da04aa510a905db3f82e4126ce0b70343629568cf625f095bb51bf5"
+    },
+    {
+      "path": "modules/fidelity-r31/commands/manifest.json",
+      "bytes": 2126541,
+      "sha256": "049dce3094ee8a3713e094e529eec30407f98e4d2b59df383a0c070260538c49"
+    },
+    {
+      "path": "modules/fidelity-r31/commands/page.js",
+      "bytes": 7488,
+      "sha256": "36c5c513d7e45aa4ade6ec599606f41ba15708d10d6c5b0e4679cb7dbca33527"
+    },
+    {
+      "path": "modules/fidelity-r31/commands/style.css",
+      "bytes": 612,
+      "sha256": "86ee1c5462a3476a751cadab094371be4bacf86621af7a700740886ccd2bd828"
+    },
+    {
+      "path": "modules/fidelity-r31/dashboard.js",
+      "bytes": 6614,
+      "sha256": "dedee4432be1d0e684f161e89490329c89556ea3bb299d7ac93188d2927e2705"
+    },
+    {
+      "path": "modules/fidelity-r31/dossier-additions.json",
+      "bytes": 352985,
+      "sha256": "522c7760cccf4497035c5c1686c8e25ba5564addd14140efc0f4c7f194e4f31e"
+    },
+    {
+      "path": "modules/fidelity-r31/dossier-link.js",
+      "bytes": 8097,
+      "sha256": "06b8ac003697f49c790cbb5e5a19005a44daa66a7b7bdf5b5b43cb6d35c6fff2"
+    },
+    {
+      "path": "modules/fidelity-r31/evolutions/index.html",
+      "bytes": 8649,
+      "sha256": "e86aebbcf22f14617b4744ae6fd17d2274e4b63f794079f45cc5774e36e32260"
+    },
+    {
+      "path": "modules/fidelity-r31/index.html",
+      "bytes": 3125,
+      "sha256": "80690bba70df23d0aaf87802f253a819d11c58d3299e32120105dbe221ece24f"
+    },
+    {
+      "path": "modules/fidelity-r31/motion/index.html",
+      "bytes": 2729,
+      "sha256": "f6503899e639913cde028587cf14f23cea3cd399b00de94d3b25d72002712d26"
+    },
+    {
+      "path": "modules/fidelity-r31/motion/manifest.json",
+      "bytes": 3298216,
+      "sha256": "d256888e487fc3e931739b47496d58ef71490f0e9d8dd59541d6b8eab444b173"
+    },
+    {
+      "path": "modules/fidelity-r31/motion/page.js",
+      "bytes": 9926,
+      "sha256": "eb7a856deee9bff51cf6df8ee3eba3a396450515c9ae8d9987bc73c432c225a3"
+    },
+    {
+      "path": "modules/fidelity-r31/motion/reader.js",
+      "bytes": 9097,
+      "sha256": "49f258b7a3df81faf3dcbe85e6f8aeb21e69dc6e4b04719f5b1c279bad36bc43"
+    },
+    {
+      "path": "modules/fidelity-r31/motion/root-follow-manifest.json",
+      "bytes": 601056,
+      "sha256": "0bbc69ea86427b34d6b75f486cc6bf1d5c84114e5a3a6f8ba9f1ed5b57b68269"
+    },
+    {
+      "path": "modules/fidelity-r31/motion/style.css",
+      "bytes": 1704,
+      "sha256": "9606ea6f181ebfbadf13287d99d4f39462df6dc73201ae03e4cf10bf8d70c1aa"
+    },
+    {
+      "path": "modules/fidelity-r31/performance/image-budget.js",
+      "bytes": 3855,
+      "sha256": "e7a3a2039c9c666475fdfe118bc1fece445891d0213bbe20e75fece248cebce2"
+    },
+    {
+      "path": "modules/fidelity-r31/performance/index.html",
+      "bytes": 1632,
+      "sha256": "f5203c8c79dec250093a7c3a9e55d7def1e83859c7b29eff3b6e564824dcfdc2"
+    },
+    {
+      "path": "modules/fidelity-r31/performance/monitor.js",
+      "bytes": 3881,
+      "sha256": "503e992e70900d0afd1b49c8d9f8acec9bbb881095d341095ead9c1bd4e24cc0"
+    },
+    {
+      "path": "modules/fidelity-r31/performance/page.js",
+      "bytes": 3936,
+      "sha256": "aff3d22ef3202433c114d33e89a36eed81fc8dd37c7dfc9a2f293251c47eccfe"
+    },
+    {
+      "path": "modules/fidelity-r31/performance/style.css",
+      "bytes": 1156,
+      "sha256": "41acdde8c1eacee61d48f2b9580e98ec7f67211336b661a024e6456f805e4cc6"
+    },
+    {
+      "path": "modules/fidelity-r31/persistence/index.html",
+      "bytes": 4316,
+      "sha256": "f68aae7994e0d855917174d4cc2e78585040b2e34b1766b1b5e66426eb326236"
+    },
+    {
+      "path": "modules/fidelity-r31/persistence/journal.js",
+      "bytes": 3838,
+      "sha256": "31692ad9cfb947bcff34430ee1fff322c39274cfe2b6decb8f657309ded8c7cd"
+    },
+    {
+      "path": "modules/fidelity-r31/persistence/page.js",
+      "bytes": 8699,
+      "sha256": "6a817e9bbb7035c0eb0e476cee9c225fba561ce8dce1f5b0402d78a6652f062b"
+    },
+    {
+      "path": "modules/fidelity-r31/persistence/restore.js",
+      "bytes": 10722,
+      "sha256": "eea96d028d097b4f57351c88d4a0a4db53af6a2002b634fed6de9fec23b161ec"
+    },
+    {
+      "path": "modules/fidelity-r31/persistence/style.css",
+      "bytes": 1826,
+      "sha256": "730260a1b61885fe088b80580e1489d07ec3ec47c870f748fab9dd4158e3f59f"
+    },
+    {
+      "path": "modules/fidelity-r31/progress.json",
+      "bytes": 41831,
+      "sha256": "0083e4c59e90eb7a0436d8c9da5d21fe2e95825f13d5b750245c0f917fa05e15"
+    },
+    {
+      "path": "modules/fidelity-r31/replay/index.html",
+      "bytes": 1980,
+      "sha256": "80846151eef2166648ce734760a8989086f1820773837b1a0fdf1e07d6f9dd65"
+    },
+    {
+      "path": "modules/fidelity-r31/replay/page.js",
+      "bytes": 3193,
+      "sha256": "0dd1e92426305267925ab0344ea624b2453d94bee3503babe937021bfdc5be72"
+    },
+    {
+      "path": "modules/fidelity-r31/replay/verify.js",
+      "bytes": 8084,
+      "sha256": "e8d6bdebab913491b72985f855747bd899916452d6777199f8abc92e79c6013d"
+    },
+    {
+      "path": "modules/fidelity-r31/selection/avatars.js",
+      "bytes": 25188,
+      "sha256": "f0e70109be3310c13155c512767eacf60f28d0f48082752200a3b03de215ec1a"
+    },
+    {
+      "path": "modules/fidelity-r31/sprites/index.html",
+      "bytes": 1675,
+      "sha256": "ffc233a8765d128fde14f41e15b58481b496d5c5a9915833d842a68dd24ecd78"
+    },
+    {
+      "path": "modules/fidelity-r31/sprites/manifest.json",
+      "bytes": 2360463,
+      "sha256": "6b4df5ec5509bf661c0417d34e31038d9efd4bc5ccf719090edbbb2d94d77880"
+    },
+    {
+      "path": "modules/fidelity-r31/sprites/page.js",
+      "bytes": 5463,
+      "sha256": "79390613050cc180f20f5c39b09970b505e9d6f3f9805dadc71e32fe0db7fced"
+    },
+    {
+      "path": "modules/fidelity-r31/sprites/style.css",
+      "bytes": 1887,
+      "sha256": "1cf82a8ed82bda09e87cc287921ebc21fdccea1c477bc33260286888e34214c4"
+    },
+    {
+      "path": "modules/fidelity-r33/combat/generated-runtime.js",
+      "bytes": 29995,
+      "sha256": "20f783c2041c63fb7f63e1321f706f14aa54ea227c70797d33038e277d224cc7"
+    },
+    {
+      "path": "modules/fidelity-r33/combat/native-adapter.js",
+      "bytes": 10046,
+      "sha256": "503e2628591ff36c424026c708927ace5f235dd2b189efa053ade3fbeab77ca5"
+    },
+    {
+      "path": "modules/fidelity-r33/combat/native-runtime.js",
+      "bytes": 23528,
+      "sha256": "1fbbcd3e88989cf7800ec662b9c80678e3aeb8fb5687e71642ca7baeb9b32646"
+    },
+    {
+      "path": "modules/fidelity-r33/evolutions/index.html",
+      "bytes": 8659,
+      "sha256": "40d61ede56c2f9f1ae0ceb618b35487d9974c4866344b8278fd47814879327dc"
+    },
+    {
+      "path": "modules/fidelity-r33/selection/avatars.js",
+      "bytes": 25218,
+      "sha256": "12795289487e44b89ff4527d05fc8509bfe951b99cd04c5cb1644d34cedcbc3a"
+    },
+    {
+      "path": "modules/versus.html",
+      "bytes": 32753,
+      "sha256": "058373c981f666d3a4c9263c32346e7406d08291a882bc1480945bd69c566b19"
+    },
+    {
+      "path": "saves.html",
+      "bytes": 4985,
+      "sha256": "eba7c246278ac1ba44f2ab5cf1812ebfb5c41787649354b921fdc9821cf56cb7"
+    },
+    {
+      "path": "scripts/run-r31-browser-r33.py",
+      "bytes": 8306,
+      "sha256": "25c4ca77d7b491e6ef9013fc8d9ed5acc6728e4d6e01f657eaf258a2b7febeb2"
+    },
+    {
+      "path": "src/save-center-r19.js",
+      "bytes": 10791,
+      "sha256": "6a312bd65ea55fcfe272e4adc9add12ce51affb4a9d424f5bee9998b9952ccbf"
+    },
+    {
+      "path": "tests/browser-audio-r31.mjs",
+      "bytes": 13690,
+      "sha256": "de5f5fe3fcfd1548153b2ca068532ebc4d5a2290e5e669a86d66887f45eccdb8"
+    },
+    {
+      "path": "tests/browser-canonical-r31.mjs",
+      "bytes": 11738,
+      "sha256": "249675dc3f2e334526922fb32b3ca1402c23eab7cf0fd1ea42da0462a26c02de"
+    },
+    {
+      "path": "tests/browser-fidelity-r31.mjs",
+      "bytes": 14521,
+      "sha256": "adf0d7bc53fbbc60cdfaa7ae69248545375d208c49639254c0692e7e9a4f23db"
+    },
+    {
+      "path": "tests/browser-generated-sprites-r31.mjs",
+      "bytes": 11164,
+      "sha256": "203bad0581ac8b39fe5735eae8c48662669f43bc1f6e065b3f9ba92847b97d41"
+    },
+    {
+      "path": "tests/browser-motion-commands-r31.mjs",
+      "bytes": 17794,
+      "sha256": "e243855020fe2f5da68e6fe9a8143cf85a614e1d513352bb7c00ece92daca532"
+    },
+    {
+      "path": "tests/browser-performance-access-r31.mjs",
+      "bytes": 24139,
+      "sha256": "bf4c59ab631deeb9408b1a4e7c62724512a0e904c94104de84b62e8948f2569e"
+    },
+    {
+      "path": "tests/browser-persistence-r31.mjs",
+      "bytes": 17770,
+      "sha256": "d6b892411f7f19d5212ae7526944f3e3797575583ff14b09829fdbb810bf727a"
+    }
+  ],
+  "historicalReportsRestored": [
+    {
+      "path": "docs/R31_AUDIO_BROWSER.json",
+      "bytes": 4853,
+      "sha256": "62ae4de538f41785b49c31efc3ffdb4b838f8cb1da76d87d498d01a96f213528"
+    },
+    {
+      "path": "docs/R31_CANONICAL_BROWSER.json",
+      "bytes": 3843,
+      "sha256": "21e8a13c5b98b321446d4e80a59966774417a6b4cefb10f72e433b5f570d546d"
+    },
+    {
+      "path": "docs/R31_DASHBOARD_BROWSER.json",
+      "bytes": 2252,
+      "sha256": "5d9fc4738e45df3c861247fc3dfe0a27bdb3b07af9fed900bcb76dbb3bca320c"
+    },
+    {
+      "path": "docs/R31_DOSSIER_BROWSER.json",
+      "bytes": 3205,
+      "sha256": "7557fb535748911a52bb1b2f5d40f252206b6b24bb70909d7193a2a70c555287"
+    },
+    {
+      "path": "docs/R31_MOTION_BROWSER.json",
+      "bytes": 5446,
+      "sha256": "db8f139fe98c843ff0c3047b22c9805bca050cd1a5503bf9ca98714f18ec8d2c"
+    },
+    {
+      "path": "docs/R31_PERFORMANCE_ACCESS_BROWSER.json",
+      "bytes": 11823,
+      "sha256": "c099bf7c40c6b462bbc04f4617ac66c6bc7a178a750791d89fd4a4f85cf656d3"
+    },
+    {
+      "path": "docs/R31_PERSISTENCE_BROWSER.json",
+      "bytes": 5545,
+      "sha256": "b5352cd577ee30d61fd2ffcd1eee363833bb6731524ac1c5d8c52fcbb7bc2e34"
+    },
+    {
+      "path": "docs/R31_SPRITES_BROWSER.json",
+      "bytes": 4817,
+      "sha256": "21e3fdf31941e44d9eab88798b21ab920f70634ee059996c501fbd7bff6f64e1"
+    }
+  ],
+  "scope": "The seven unchanged R31 browser suites were actually executed on the current R33 checkout, using real current HTML and active mounts. Fresh results and logs are separate from the byte-restored historical reports. No archive simulation, assertion removal, fabricated old-report reuse, data rebuild or global fidelity certification."
+}

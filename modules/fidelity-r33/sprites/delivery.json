@@ -1,0 +1,265 @@
+{
+  "schema": "re.bow.fidelity-lot-r33/1",
+  "release": "R33",
+  "lotId": "sprites",
+  "responsibleAgent": "r33_generated_assets",
+  "workstreams": [
+    "R20-10",
+    "G-RENDU"
+  ],
+  "summary": "Huit PNG réellement générés, quatre familles documentaires GameCube avec côtés indépendants ; deux familles de poses neutres adaptées volontaires, une rencontre contextuelle et une étude de pose compacte.",
+  "advances": [
+    "Huit sorties image_gen sans retouche : profils gauche/droite indépendants de Zombie Dog, Giant Alligator, Giant Moth et Zombie féminin blond RE3 du port GameCube.",
+    "Seize vues natives et quatre archives déjà conservées servent de références exactes ; aucune équivalence avec les cibles PlayStation n’est inventée.",
+    "Les poses neutres adaptées de Zombie Dog et Zombie RE3 peuvent être choisies volontairement ; Alligator reste contextuel et Moth n’expose aucun état de combat.",
+    "Galerie avec contrôle SHA/PNG/dimensions, chargement paresseux, annulation et reprise ; 12testsPython,8groupesNode et7groupesChromium réussis."
+  ],
+  "remaining": [
+    "Éditions PlayStation du catalogue, textures originales exactes, géométrie, zones cachées et échelles physiques restent non qualifiées par ces images générées.",
+    "Aucun nouvel idle original, attaque, geste temporel, intro/outro ou animation de combat complète n’est ajouté.",
+    "La pose compacte de Moth ne documente aucun cycle de vol ; Alligator ne devient pas un combattant.",
+    "Les22refus initiaux et le refus de révisionTyrant sont conservés sans nouvel essai.",
+    "Modèles et animations natives pour les autres incarnations, équipements et autres phases restent à produire depuis des sources vérifiables."
+  ],
+  "sourceFiles": [
+    {
+      "path": "scripts/build-sprites-r33.py",
+      "bytes": 12546,
+      "sha256": "d0210b806e8b06e316ddab1c4f30bd633c48f5c9d88e8963f159ab8edd9ebabc"
+    },
+    {
+      "path": "tests/test_generated_sprites_r33.py",
+      "bytes": 8395,
+      "sha256": "28c59a0eb2aadecabc4ad810eb4dd7796892f05df5e777dc9bd7763df96fdc72"
+    },
+    {
+      "path": "tests/verify-generated-sprites-r33.mjs",
+      "bytes": 5023,
+      "sha256": "7fbf2b425d5aacaeb877b4581e1cf72e51d8233b9f2b354a9880d0447be9ebc7"
+    },
+    {
+      "path": "tests/browser-generated-sprites-r33.mjs",
+      "bytes": 13546,
+      "sha256": "312cff58dcbd36511df05388295c4952191be8bf98b06fe1ca53a7e5a5a6f369"
+    },
+    {
+      "path": "modules/fidelity-r33/sprites/manifest.json",
+      "bytes": 94967,
+      "sha256": "b33b8c6738a97906e87625bfeae78b8132fef195591dbbcb40bedc9282eb0042"
+    },
+    {
+      "path": "modules/fidelity-r33/sprites/index.html",
+      "bytes": 2188,
+      "sha256": "63a34540d1955a25c3810958b3630ec319d19c72e297c9fada2abd543904f102"
+    },
+    {
+      "path": "modules/fidelity-r33/sprites/style.css",
+      "bytes": 2512,
+      "sha256": "47b6d44e266a62c61c0873e678de09effef38a11c7df39655ce443826501fe59"
+    },
+    {
+      "path": "modules/fidelity-r33/sprites/library.js",
+      "bytes": 4976,
+      "sha256": "f0bed845737e12319bc099bd2b2993231bed85ba98454091df2f949123af1040"
+    },
+    {
+      "path": "modules/fidelity-r33/sprites/page.js",
+      "bytes": 5745,
+      "sha256": "072a493a4dd50ded9ddee6cef82acbce642d73ae1e7ed1ec179323e22e9da08d"
+    },
+    {
+      "path": "docs/R33_SPRITES_TESTS.json",
+      "bytes": 2525,
+      "sha256": "d1fc427d28a7eddf8fafa265146b8ca27b625a243d510c7206fb25dc0a2cec61"
+    },
+    {
+      "path": "docs/R33_GENERATED_RUNTIME_TESTS.json",
+      "bytes": 2221,
+      "sha256": "faf5c8628381d87220c834c5448703c517369c3047ebcb0d207b425cc201e29b"
+    },
+    {
+      "path": "docs/R33_SPRITES_BROWSER.json",
+      "bytes": 7067,
+      "sha256": "4c2ce2f2419ce66d662b595cefff9d33373e4e4d2361d44a90beea59f9c7d0b8"
+    },
+    {
+      "path": "docs/R33_SPRITES.md",
+      "bytes": 5475,
+      "sha256": "e845e705eb3cae5f02b1452dd07797d008e52436181676a35b217aa05f122f19"
+    }
+  ],
+  "manifests": [
+    {
+      "path": "modules/fidelity-r33/sprites/manifest.json",
+      "bytes": 94967,
+      "sha256": "b33b8c6738a97906e87625bfeae78b8132fef195591dbbcb40bedc9282eb0042"
+    }
+  ],
+  "resources": [
+    {
+      "path": "modules/fidelity-r33/sprites/index.html",
+      "label": "Galerie des huit profils documentés"
+    },
+    {
+      "path": "docs/R33_SPRITES.md",
+      "label": "Portée, références et limites des huit PNG"
+    },
+    {
+      "path": "docs/R33_SPRITES_TESTS.json",
+      "label": "Tests des vrais PNG et des éditions tenues séparées"
+    },
+    {
+      "path": "docs/R33_GENERATED_RUNTIME_TESTS.json",
+      "label": "Contrat indépendant du lecteur et corruptions refusées"
+    },
+    {
+      "path": "docs/R33_SPRITES_BROWSER.json",
+      "label": "Sept groupes Chromium avec les médias réels"
+    }
+  ],
+  "identities": [
+    {
+      "id": "re2-zombie-dog",
+      "summary": "Deux profils GameCube réellement générés depuis quatre vues natives ; cible PlayStation tenue distincte, aucune animation originale ajoutée.",
+      "artifacts": [
+        {
+          "path": "modules/fidelity-r33/sprites/generated/re2-zombie-dog/right.png",
+          "bytes": 1161077,
+          "sha256": "77459158f84c6b0a52874a5050c80ae15d20447deadeb23b056f48aeb08d0ada",
+          "label": "Zombie Dog — variante GameCube — right",
+          "kind": "generated-source-edition-static-side",
+          "sourceEdition": "Resident Evil 2 — port GameCube (2003), Zombie Dog"
+        },
+        {
+          "path": "modules/fidelity-r33/sprites/generated/re2-zombie-dog/left.png",
+          "bytes": 1254334,
+          "sha256": "51c133c483bbf9f95b57a4ac39e034e49ab2d55cb7db7d77d65950d431136d2a",
+          "label": "Zombie Dog — variante GameCube — left",
+          "kind": "generated-source-edition-static-side",
+          "sourceEdition": "Resident Evil 2 — port GameCube (2003), Zombie Dog"
+        },
+        {
+          "path": "modules/fidelity-r33/sprites/review/re2-zombie-dog.json",
+          "bytes": 1969,
+          "sha256": "c09f6172b14fa6567f353c63bdadfdf6dfa5cc611ab2d0dbd67c88c0302200fa",
+          "label": "Observation des deux côtés générés et des vues natives conservées",
+          "kind": "source-output-visual-review",
+          "sourceEdition": "Resident Evil 2 — port GameCube (2003), Zombie Dog"
+        }
+      ]
+    },
+    {
+      "id": "re2-giant-alligator",
+      "summary": "Deux profils GameCube réellement générés depuis quatre vues natives ; cible PlayStation tenue distincte, aucune animation originale ajoutée.",
+      "artifacts": [
+        {
+          "path": "modules/fidelity-r33/sprites/generated/re2-giant-alligator/right.png",
+          "bytes": 690627,
+          "sha256": "5041beacc5f4a5e58ab62d92861540e7cd99aee7bf4e0f760f105b7785a8aa1f",
+          "label": "Giant Alligator — contexte du port GameCube — right",
+          "kind": "generated-source-edition-static-side",
+          "sourceEdition": "Resident Evil 2 — port GameCube (2003), Alligator"
+        },
+        {
+          "path": "modules/fidelity-r33/sprites/generated/re2-giant-alligator/left.png",
+          "bytes": 719433,
+          "sha256": "a755e15ec517923db402bce27fd61dc6dcfe92d661a39cc594d5368c802c3922",
+          "label": "Giant Alligator — contexte du port GameCube — left",
+          "kind": "generated-source-edition-static-side",
+          "sourceEdition": "Resident Evil 2 — port GameCube (2003), Alligator"
+        },
+        {
+          "path": "modules/fidelity-r33/sprites/review/re2-giant-alligator.json",
+          "bytes": 1963,
+          "sha256": "565703fca1e08bd304b725bff255fdae2bb6d5b3c02b066d9878a4d8ebefecaf",
+          "label": "Observation des deux côtés générés et des vues natives conservées",
+          "kind": "source-output-visual-review",
+          "sourceEdition": "Resident Evil 2 — port GameCube (2003), Alligator"
+        }
+      ]
+    },
+    {
+      "id": "re2-giant-moth",
+      "summary": "Deux profils GameCube réellement générés depuis quatre vues natives ; cible PlayStation tenue distincte, aucune animation originale ajoutée.",
+      "artifacts": [
+        {
+          "path": "modules/fidelity-r33/sprites/generated/re2-giant-moth/right.png",
+          "bytes": 595745,
+          "sha256": "59c2b38931a26de6ea95e29d19a166c3faad9b84c6af877c3eb45fa7604297ee",
+          "label": "Giant Moth — pose compacte du port GameCube — right",
+          "kind": "generated-source-edition-static-side",
+          "sourceEdition": "Resident Evil 2 — port GameCube (2003), Giant Moth"
+        },
+        {
+          "path": "modules/fidelity-r33/sprites/generated/re2-giant-moth/left.png",
+          "bytes": 649491,
+          "sha256": "1dc05e7896b19ce5b57533aa31a718bd3b163f6633438c496cd90b56da7fad55",
+          "label": "Giant Moth — pose compacte du port GameCube — left",
+          "kind": "generated-source-edition-static-side",
+          "sourceEdition": "Resident Evil 2 — port GameCube (2003), Giant Moth"
+        },
+        {
+          "path": "modules/fidelity-r33/sprites/review/re2-giant-moth.json",
+          "bytes": 1934,
+          "sha256": "44e414f7ad3506765a8440378d58a9ae297b52dc877be712c51eef2fc02efeb6",
+          "label": "Observation des deux côtés générés et des vues natives conservées",
+          "kind": "source-output-visual-review",
+          "sourceEdition": "Resident Evil 2 — port GameCube (2003), Giant Moth"
+        }
+      ]
+    },
+    {
+      "id": "re3-zombie",
+      "summary": "Deux profils GameCube réellement générés depuis quatre vues natives ; cible PlayStation tenue distincte, aucune animation originale ajoutée.",
+      "artifacts": [
+        {
+          "path": "modules/fidelity-r33/sprites/generated/re3-zombie/right.png",
+          "bytes": 1058153,
+          "sha256": "b1968518ea8a8d922677bfec9f5d05e3fa9bffbe94ab5d911925ad97921d92a5",
+          "label": "Zombie blonde — haut sombre, jupe beige — GameCube — right",
+          "kind": "generated-source-edition-static-side",
+          "sourceEdition": "Resident Evil 3: Nemesis — port GameCube (2003), blonde female costume1"
+        },
+        {
+          "path": "modules/fidelity-r33/sprites/generated/re3-zombie/left.png",
+          "bytes": 989584,
+          "sha256": "2508132e03f1af13823fc4ec63e3769d11cd732f8deb1747dbb5803f22c7be5e",
+          "label": "Zombie blonde — haut sombre, jupe beige — GameCube — left",
+          "kind": "generated-source-edition-static-side",
+          "sourceEdition": "Resident Evil 3: Nemesis — port GameCube (2003), blonde female costume1"
+        },
+        {
+          "path": "modules/fidelity-r33/sprites/review/re3-zombie.json",
+          "bytes": 2040,
+          "sha256": "cd815929e3c5839ea942c1f92dd7dd89d02d904a818308140024775ba1b4f91d",
+          "label": "Observation des deux côtés générés et des vues natives conservées",
+          "kind": "source-output-visual-review",
+          "sourceEdition": "Resident Evil 3: Nemesis — port GameCube (2003), blonde female costume1"
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "newGeneratedPngs": 8,
+    "sourceEditionFamilies": 4,
+    "independentlyGeneratedSides": 8,
+    "newTargetIdentities": 0,
+    "newDefaultSpriteReplacements": 0,
+    "newNativeGameSprites": 0,
+    "newOriginalIdleAnimations": 0,
+    "sourceEditionStaticPoseFamiliesEligibleForVoluntaryChoice": 2,
+    "documentaryOnlyFamilies": 2,
+    "preservedInitialTargetRefusals": 22,
+    "preservedFailedRevisions": 1,
+    "newGenerationRefusals": 0,
+    "manuallyEditedPngs": 0,
+    "nativeReferenceViewsReused": 16,
+    "nativeSourceArchivesReused": 4,
+    "newNativeSourceArchives": 0,
+    "newNativeReferenceViews": 0,
+    "pythonTests": 12,
+    "nodeGroups": 8,
+    "browserGroups": 7
+  },
+  "canonicalFidelityCertified": false
+}

@@ -34,7 +34,7 @@ jobs:
         timeout-minutes: 5
         run: npm install --no-audit --no-fund --no-save --package-lock=false --fetch-timeout=60000 --fetch-retries=2 @napi-rs/canvas@0.1.80
       - name: Verify the reviewed current delta before any R26 report refresh
-        run: node scripts/verify-current-r32.mjs
+        run: node scripts/verify-current-r33.mjs
       - name: Reproduce frozen source catalogue and workbook before evidence reports are regenerated
         run: |
           mkdir -p qa-fidelity-r26-ci

@@ -1,0 +1,376 @@
+{
+  "schema": "re.bow.motion-keyboard-browser-r32/1",
+  "observedAtUTC": "2026-11-01T00:38:16.995Z",
+  "browserVersion": "154.0.8037.57",
+  "baselineCommit": "7c777b8f29292e0eded224cda2abc06ae8796bc9",
+  "baselineControllerSha256": "4b671c33c025605d63c01f98ddf511e4a6de8b285d0d92f8ae0614b3734f307d",
+  "currentControllerSha256": "eb7a856deee9bff51cf6df8ee3eba3a396450515c9ae8d9987bc73c432c225a3",
+  "passed": 10,
+  "failed": 0,
+  "expectedBeforeFailures": [
+    "canvas-space-repeat",
+    "play-enter-repeat",
+    "modified-and-consumed-shortcuts"
+  ],
+  "before": {
+    "passed": 4,
+    "failed": 6
+  },
+  "after": {
+    "passed": 10,
+    "failed": 0
+  },
+  "complete": true,
+  "unexpectedBefore": [],
+  "setupError": null,
+  "pageErrors": [],
+  "missingResources": [],
+  "checks": [
+    {
+      "phase": "before",
+      "width": 1280,
+      "name": "canvas-space-repeat",
+      "pass": false,
+      "expectedBaselineDefect": true,
+      "error": "AssertionError [ERR_ASSERTION]: An OS key repeat changed playback state\n\nfalse !== true\n\n    at repeats (file:///workspace/resident-evil-bow-protocol/tests/browser-motion-input-r32.mjs:45:12)\n    at async file:///workspace/resident-evil-bow-protocol/tests/browser-motion-input-r32.mjs:98:9\n    at async one (file:///workspace/resident-evil-bow-protocol/tests/browser-motion-input-r32.mjs:70:20)\n    at async file:///workspace/resident-evil-bow-protocol/tests/browser-motion-input-r32.mjs:96:7"
+    },
+    {
+      "phase": "before",
+      "width": 1280,
+      "name": "play-enter-repeat",
+      "pass": false,
+      "expectedBaselineDefect": true,
+      "error": "AssertionError [ERR_ASSERTION]: An OS key repeat changed playback state\n\nfalse !== true\n\n    at repeats (file:///workspace/resident-evil-bow-protocol/tests/browser-motion-input-r32.mjs:45:12)\n    at async file:///workspace/resident-evil-bow-protocol/tests/browser-motion-input-r32.mjs:112:11\n    at async one (file:///workspace/resident-evil-bow-protocol/tests/browser-motion-input-r32.mjs:70:20)\n    at async file:///workspace/resident-evil-bow-protocol/tests/browser-motion-input-r32.mjs:107:7"
+    },
+    {
+      "phase": "before",
+      "width": 1280,
+      "name": "play-space-native-release",
+      "pass": true,
+      "detail": {
+        "nativeReleaseClicks": 2,
+        "beforeReleaseClicks": 0,
+        "repeatedSpacePreservesActivation": true
+      },
+      "trustedEvents": true,
+      "storageUnchanged": true
+    },
+    {
+      "phase": "before",
+      "width": 1280,
+      "name": "frame-navigation-and-native-controls",
+      "pass": true,
+      "detail": {
+        "repeatedFrameSteps": [
+          1,
+          2,
+          3,
+          2,
+          1
+        ],
+        "endpoints": [
+          107,
+          0
+        ],
+        "nativeSliderMovedTo": 1,
+        "nativeSpeed": "1"
+      },
+      "trustedEvents": true,
+      "storageUnchanged": true
+    },
+    {
+      "phase": "before",
+      "width": 1280,
+      "name": "modified-and-consumed-shortcuts",
+      "pass": false,
+      "expectedBaselineDefect": true,
+      "error": "AssertionError [ERR_ASSERTION]: Control must not seek the canvas\n\n1 !== 0\n\n    at file:///workspace/resident-evil-bow-protocol/tests/browser-motion-input-r32.mjs:158:18\n    at async one (file:///workspace/resident-evil-bow-protocol/tests/browser-motion-input-r32.mjs:70:20)\n    at async file:///workspace/resident-evil-bow-protocol/tests/browser-motion-input-r32.mjs:152:7"
+    },
+    {
+      "phase": "before",
+      "width": 390,
+      "name": "canvas-space-repeat",
+      "pass": false,
+      "expectedBaselineDefect": true,
+      "error": "AssertionError [ERR_ASSERTION]: An OS key repeat changed playback state\n\nfalse !== true\n\n    at repeats (file:///workspace/resident-evil-bow-protocol/tests/browser-motion-input-r32.mjs:45:12)\n    at async file:///workspace/resident-evil-bow-protocol/tests/browser-motion-input-r32.mjs:98:9\n    at async one (file:///workspace/resident-evil-bow-protocol/tests/browser-motion-input-r32.mjs:70:20)\n    at async file:///workspace/resident-evil-bow-protocol/tests/browser-motion-input-r32.mjs:96:7"
+    },
+    {
+      "phase": "before",
+      "width": 390,
+      "name": "play-enter-repeat",
+      "pass": false,
+      "expectedBaselineDefect": true,
+      "error": "AssertionError [ERR_ASSERTION]: An OS key repeat changed playback state\n\nfalse !== true\n\n    at repeats (file:///workspace/resident-evil-bow-protocol/tests/browser-motion-input-r32.mjs:45:12)\n    at async file:///workspace/resident-evil-bow-protocol/tests/browser-motion-input-r32.mjs:112:11\n    at async one (file:///workspace/resident-evil-bow-protocol/tests/browser-motion-input-r32.mjs:70:20)\n    at async file:///workspace/resident-evil-bow-protocol/tests/browser-motion-input-r32.mjs:107:7"
+    },
+    {
+      "phase": "before",
+      "width": 390,
+      "name": "play-space-native-release",
+      "pass": true,
+      "detail": {
+        "nativeReleaseClicks": 2,
+        "beforeReleaseClicks": 0,
+        "repeatedSpacePreservesActivation": true
+      },
+      "trustedEvents": true,
+      "storageUnchanged": true
+    },
+    {
+      "phase": "before",
+      "width": 390,
+      "name": "frame-navigation-and-native-controls",
+      "pass": true,
+      "detail": {
+        "repeatedFrameSteps": [
+          1,
+          2,
+          3,
+          2,
+          1
+        ],
+        "endpoints": [
+          107,
+          0
+        ],
+        "nativeSliderMovedTo": 1,
+        "nativeSpeed": "1"
+      },
+      "trustedEvents": true,
+      "storageUnchanged": true
+    },
+    {
+      "phase": "before",
+      "width": 390,
+      "name": "modified-and-consumed-shortcuts",
+      "pass": false,
+      "expectedBaselineDefect": true,
+      "error": "AssertionError [ERR_ASSERTION]: Control must not seek the canvas\n\n1 !== 0\n\n    at file:///workspace/resident-evil-bow-protocol/tests/browser-motion-input-r32.mjs:158:18\n    at async one (file:///workspace/resident-evil-bow-protocol/tests/browser-motion-input-r32.mjs:70:20)\n    at async file:///workspace/resident-evil-bow-protocol/tests/browser-motion-input-r32.mjs:152:7"
+    },
+    {
+      "phase": "after",
+      "width": 1280,
+      "name": "canvas-space-repeat",
+      "pass": true,
+      "detail": {
+        "pressStarts": true,
+        "repeatDoesNotToggle": true,
+        "newPressStops": true,
+        "nativeButtonClicks": 0
+      },
+      "trustedEvents": true,
+      "storageUnchanged": true
+    },
+    {
+      "phase": "after",
+      "width": 1280,
+      "name": "play-enter-repeat",
+      "pass": true,
+      "detail": {
+        "nativeEnterClicks": 4,
+        "numericEnterCovered": true,
+        "repeatedClicks": 0
+      },
+      "trustedEvents": true,
+      "storageUnchanged": true
+    },
+    {
+      "phase": "after",
+      "width": 1280,
+      "name": "play-space-native-release",
+      "pass": true,
+      "detail": {
+        "nativeReleaseClicks": 2,
+        "beforeReleaseClicks": 0,
+        "repeatedSpacePreservesActivation": true
+      },
+      "trustedEvents": true,
+      "storageUnchanged": true
+    },
+    {
+      "phase": "after",
+      "width": 1280,
+      "name": "frame-navigation-and-native-controls",
+      "pass": true,
+      "detail": {
+        "repeatedFrameSteps": [
+          1,
+          2,
+          3,
+          2,
+          1
+        ],
+        "endpoints": [
+          107,
+          0
+        ],
+        "nativeSliderMovedTo": 1,
+        "nativeSpeed": "1"
+      },
+      "trustedEvents": true,
+      "storageUnchanged": true
+    },
+    {
+      "phase": "after",
+      "width": 1280,
+      "name": "modified-and-consumed-shortcuts",
+      "pass": true,
+      "detail": {
+        "modifierChords": 6,
+        "browserShortcutsNotConsumed": true,
+        "previouslyConsumedKeys": 2,
+        "readerStateUnchanged": true
+      },
+      "trustedEvents": true,
+      "storageUnchanged": true
+    },
+    {
+      "phase": "after",
+      "width": 390,
+      "name": "canvas-space-repeat",
+      "pass": true,
+      "detail": {
+        "pressStarts": true,
+        "repeatDoesNotToggle": true,
+        "newPressStops": true,
+        "nativeButtonClicks": 0
+      },
+      "trustedEvents": true,
+      "storageUnchanged": true
+    },
+    {
+      "phase": "after",
+      "width": 390,
+      "name": "play-enter-repeat",
+      "pass": true,
+      "detail": {
+        "nativeEnterClicks": 4,
+        "numericEnterCovered": true,
+        "repeatedClicks": 0
+      },
+      "trustedEvents": true,
+      "storageUnchanged": true
+    },
+    {
+      "phase": "after",
+      "width": 390,
+      "name": "play-space-native-release",
+      "pass": true,
+      "detail": {
+        "nativeReleaseClicks": 2,
+        "beforeReleaseClicks": 0,
+        "repeatedSpacePreservesActivation": true
+      },
+      "trustedEvents": true,
+      "storageUnchanged": true
+    },
+    {
+      "phase": "after",
+      "width": 390,
+      "name": "frame-navigation-and-native-controls",
+      "pass": true,
+      "detail": {
+        "repeatedFrameSteps": [
+          1,
+          2,
+          3,
+          2,
+          1
+        ],
+        "endpoints": [
+          107,
+          0
+        ],
+        "nativeSliderMovedTo": 1,
+        "nativeSpeed": "1"
+      },
+      "trustedEvents": true,
+      "storageUnchanged": true
+    },
+    {
+      "phase": "after",
+      "width": 390,
+      "name": "modified-and-consumed-shortcuts",
+      "pass": true,
+      "detail": {
+        "modifierChords": 6,
+        "browserShortcutsNotConsumed": true,
+        "previouslyConsumedKeys": 2,
+        "readerStateUnchanged": true
+      },
+      "trustedEvents": true,
+      "storageUnchanged": true
+    }
+  ],
+  "inputs": {
+    "before": [
+      {
+        "path": "modules/fidelity-r31/motion/atlases/rerev-ooze--em1000_em1000_BA_20--left/atlas-00.png",
+        "sha256": "7ad8a1942ff1e6385dba09d247f87ac613d104c37d84ec34b8370842d5340617"
+      },
+      {
+        "path": "modules/fidelity-r31/motion/atlases/rerev-ooze--em1000_em1000_BA_20--left/atlas-04.png",
+        "sha256": "5fa968209ac307e180fef320975f3496b9b0b8832b702de7202c24c373c8d7f3"
+      },
+      {
+        "path": "modules/fidelity-r31/motion/index.html",
+        "sha256": "f6503899e639913cde028587cf14f23cea3cd399b00de94d3b25d72002712d26"
+      },
+      {
+        "path": "modules/fidelity-r31/motion/manifest.json",
+        "sha256": "d256888e487fc3e931739b47496d58ef71490f0e9d8dd59541d6b8eab444b173"
+      },
+      {
+        "path": "modules/fidelity-r31/motion/page.js",
+        "sha256": "4b671c33c025605d63c01f98ddf511e4a6de8b285d0d92f8ae0614b3734f307d"
+      },
+      {
+        "path": "modules/fidelity-r31/motion/reader.js",
+        "sha256": "49f258b7a3df81faf3dcbe85e6f8aeb21e69dc6e4b04719f5b1c279bad36bc43"
+      },
+      {
+        "path": "modules/fidelity-r31/motion/root-follow-manifest.json",
+        "sha256": "0bbc69ea86427b34d6b75f486cc6bf1d5c84114e5a3a6f8ba9f1ed5b57b68269"
+      },
+      {
+        "path": "modules/fidelity-r31/motion/style.css",
+        "sha256": "9606ea6f181ebfbadf13287d99d4f39462df6dc73201ae03e4cf10bf8d70c1aa"
+      }
+    ],
+    "after": [
+      {
+        "path": "modules/fidelity-r31/motion/atlases/rerev-ooze--em1000_em1000_BA_20--left/atlas-00.png",
+        "sha256": "7ad8a1942ff1e6385dba09d247f87ac613d104c37d84ec34b8370842d5340617"
+      },
+      {
+        "path": "modules/fidelity-r31/motion/atlases/rerev-ooze--em1000_em1000_BA_20--left/atlas-04.png",
+        "sha256": "5fa968209ac307e180fef320975f3496b9b0b8832b702de7202c24c373c8d7f3"
+      },
+      {
+        "path": "modules/fidelity-r31/motion/index.html",
+        "sha256": "f6503899e639913cde028587cf14f23cea3cd399b00de94d3b25d72002712d26"
+      },
+      {
+        "path": "modules/fidelity-r31/motion/manifest.json",
+        "sha256": "d256888e487fc3e931739b47496d58ef71490f0e9d8dd59541d6b8eab444b173"
+      },
+      {
+        "path": "modules/fidelity-r31/motion/page.js",
+        "sha256": "eb7a856deee9bff51cf6df8ee3eba3a396450515c9ae8d9987bc73c432c225a3"
+      },
+      {
+        "path": "modules/fidelity-r31/motion/reader.js",
+        "sha256": "49f258b7a3df81faf3dcbe85e6f8aeb21e69dc6e4b04719f5b1c279bad36bc43"
+      },
+      {
+        "path": "modules/fidelity-r31/motion/root-follow-manifest.json",
+        "sha256": "0bbc69ea86427b34d6b75f486cc6bf1d5c84114e5a3a6f8ba9f1ed5b57b68269"
+      },
+      {
+        "path": "modules/fidelity-r31/motion/style.css",
+        "sha256": "9606ea6f181ebfbadf13287d99d4f39462df6dc73201ae03e4cf10bf8d70c1aa"
+      }
+    ]
+  },
+  "testSourceSha256": "b82100c665e18140829e568b0a2426ed9dc88ff4f4895ca3e7c25ec2dca23a76",
+  "scope": "Actual motion page, original reader, native manifests and SHA-verified decoded atlases. Trusted Chromium keyboard, native button click synthesis and native select/slider behavior at1280/390px. Only the page-controller source is substituted for the exact baseline phase. Baseline failures are required for the three known defects; all baseline controls and all current cases must pass. No physical-device or assistive-technology certification."
+}

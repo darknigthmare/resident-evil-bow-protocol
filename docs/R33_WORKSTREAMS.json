@@ -1,0 +1,862 @@
+{
+  "release": "R33",
+  "summary": "6/6 lots livrés dans leur périmètre ; 17 chantiers attribués et toujours ouverts ; 27 incarnations avec ajouts R33. Fidélité globale 1:1 non certifiée.",
+  "tasks": [
+    {
+      "id": "R20-09",
+      "title": "Rig par membre et animations",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Lot native · responsable : r33_native_motion.",
+        "Seize vues indépendantes de quatre corps : deux costumes Zombie RE0 GameCube2002, Chainsaw Majini et Executioner RE5 PC2009, sans retouche de pose ou de géométrie.",
+        "Six scènes inédites Sea Creeper/Scagdead, douze projections opposées réelles et1270images60Hz plus douze points de fin ; courbes, poids et textures conservés.",
+        "Une variante marine de nage stationnaire observée peut être choisie volontairement ; ses300imagesR30 sont réutilisées, sans être recomptées comme nouveaux rendus ni comme idle original.",
+        "Cent cinquante-six échantillons de contact examinés, séquences reconstruites indépendamment et atlas RGBA comparés sans perte.",
+        "Les six gestes observés sont nommés descriptivement, sans attribuer BA/DM à une commande, intro, outro ou résultat."
+      ],
+      "remaining": [
+        "389 incarnations sans idle natif complet vérifié.",
+        "Attribution des gestes, continuité native, équipements, orientations et édition cible restent vérifiés séparément.",
+        "Aucun nouveau cycle idle cible ni nouvelle action de combat attribuée ; l’édition PC/HD2013 reste distincte de3DS2012.",
+        "Les gestes complets de toutes les autres incarnations, objets et partenaires restent à sourcer.",
+        "Aucun nouvel idle original certifié, aucune attaque ou séquence de résultat originale affectée.",
+        "Les quatre nouveaux corps sont en pose source en T ; les armes RE5 et matériaux inconnus ne sont pas complétés au jugé.",
+        "La variante marine est une adaptation de présentation PC/HD2013, sans admission automatique à la cible3DS2012 ni contact terrestre certifié.",
+        "Inventaires officiels, timings, scènes causales, sons liés et compatibilités de victimes restent soumis aux preuves d’origine.",
+        "Les22refus initiaux et le refus de révisionTyrant sont conservés sans nouvel essai."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r31/index.html",
+          "label": "Acquis antérieurs et critères R31"
+        },
+        {
+          "href": "native/delivery.json",
+          "label": "Livraison et limites du lot native"
+        },
+        {
+          "href": "native/index.html",
+          "label": "Corps et mouvements sources R33"
+        },
+        {
+          "href": "native/review/observations.json",
+          "label": "Revues visuelles et limites"
+        },
+        {
+          "href": "../../docs/R33_NATIVE.md",
+          "label": "Portée du lot natif"
+        }
+      ],
+      "r30_new_implementation": true,
+      "owner": "r33_native_motion",
+      "lotId": "native",
+      "deliveryState": "LIVRÉ PARTIEL",
+      "r31_new_implementation": true,
+      "r33_new_implementation": true
+    },
+    {
+      "id": "R20-10",
+      "title": "Étendre les sprites au catalogue",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Lot sprites · responsable : r33_generated_assets.",
+        "Huit sorties image_gen sans retouche : profils gauche/droite indépendants de Zombie Dog, Giant Alligator, Giant Moth et Zombie féminin blond RE3 du port GameCube.",
+        "Seize vues natives et quatre archives déjà conservées servent de références exactes ; aucune équivalence avec les cibles PlayStation n’est inventée.",
+        "Les poses neutres adaptées de Zombie Dog et Zombie RE3 peuvent être choisies volontairement ; Alligator reste contextuel et Moth n’expose aucun état de combat.",
+        "Galerie avec contrôle SHA/PNG/dimensions, chargement paresseux, annulation et reprise ; 12testsPython,8groupesNode et7groupesChromium réussis."
+      ],
+      "remaining": [
+        "211 corps de combattants et 40 contextes restent conjointement non qualifiés ; les 22 refus sont conservés.",
+        "Équipements, autres phases, deux orientations et cycles complets de combat encore non vérifiés.",
+        "La pointe supérieure de Lucas à alpha faible reste incertaine ; les détails de texture générés ne sont pas des texels originaux certifiés.",
+        "Les deux présentations frontales ne fournissent pas des idles latéraux. La variante Zombie ne fournit qu’un côté droit et une image statique ; les autres orientations et gestes restent ouverts.",
+        "Le costume Zombie initial n’est pas remplacé par défaut ; une variante complète ne qualifie pas automatiquement toutes les variantes de l’identité.",
+        "Les22refus de génération historiques et le refus de révision Tyrant sont conservés sans nouvel essai. Corps cachés, équipements et autres incarnations sans source complète restent à compléter.",
+        "Éditions PlayStation du catalogue, textures originales exactes, géométrie, zones cachées et échelles physiques restent non qualifiées par ces images générées.",
+        "Aucun nouvel idle original, attaque, geste temporel, intro/outro ou animation de combat complète n’est ajouté.",
+        "La pose compacte de Moth ne documente aucun cycle de vol ; Alligator ne devient pas un combattant.",
+        "Les22refus initiaux et le refus de révisionTyrant sont conservés sans nouvel essai.",
+        "Modèles et animations natives pour les autres incarnations, équipements et autres phases restent à produire depuis des sources vérifiables."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r31/index.html",
+          "label": "Acquis antérieurs et critères R31"
+        },
+        {
+          "href": "sprites/delivery.json",
+          "label": "Livraison et limites du lot sprites"
+        },
+        {
+          "href": "sprites/index.html",
+          "label": "Galerie des huit profils documentés"
+        },
+        {
+          "href": "../../docs/R33_SPRITES.md",
+          "label": "Portée, références et limites des huit PNG"
+        },
+        {
+          "href": "../../docs/R33_SPRITES_TESTS.json",
+          "label": "Tests des vrais PNG et des éditions tenues séparées"
+        },
+        {
+          "href": "../../docs/R33_GENERATED_RUNTIME_TESTS.json",
+          "label": "Contrat indépendant du lecteur et corruptions refusées"
+        }
+      ],
+      "r30_new_implementation": true,
+      "owner": "r33_generated_assets",
+      "lotId": "sprites",
+      "deliveryState": "LIVRÉ PARTIEL",
+      "r31_new_implementation": true,
+      "r33_new_implementation": true
+    },
+    {
+      "id": "G-PERIMETRE",
+      "title": "Périmètre et alias",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Lot evidence · responsable : r33_source_evidence.",
+        "Corps, côtés anatomiques, phases, déclencheurs et restrictions sont reliés à des citations visibles et aux empreintes des captures.",
+        "La borne de longueur du Stinger comprend les pinces ; les deux conclusions documentaires restent limitées au propre corps décrit.",
+        "Une comparaison de contexte et une file d’écoute volontaire présentent ensemble les références, les éditions publiées et les 218 fichiers R31 conservés.",
+        "Le journal Code: Veronica décrit un grondement sous terre sans identifier avec certitude son émetteur ; aucun fichier Alexander n’est promu depuis ce récit.",
+        "La référence exacte du Jack à scie à ciseaux reste manquante après recherche : aucun avatar d’une autre phase n’est substitué."
+      ],
+      "remaining": [
+        "Revue exhaustive des alias, modes, DLC et extensions ; corriger chaque ambiguïté de support ou de forme avec une preuve.",
+        "Captures primaires directes, gestes horodatés et correspondances aux banques originales restent à produire.",
+        "Plaga C→Duvalia et équivalence des éditions retenues restent non prouvés.",
+        "Aucune taille de collision physique n’est certifiée ; une mesure larvale ou une borne textuelle ne dimensionne pas un boss.",
+        "Aucune conclusion animée ni compatibilité universelle entre victimes n’est déclarée.",
+        "Captures primaires directes, éditions natives comparées, vues complètes et gestes horodatés restent nécessaires.",
+        "Les faits ne certifient ni idle, animation, timing, commandes originales, échelle de collision ou fidélité globale 1:1.",
+        "Les 218 fichiers sont réutilisés de R31 ; écoute indépendante, locuteur, phase, action et mixage de chaque son restent non attribués.",
+        "Aucune conclusion contre une victime arbitraire du catalogue n’est déduite d’une faiblesse de l’organisme décrit.",
+        "Les trois accès primaires essayés ont été refusés ; les transcriptions tierces restent qualifiées comme secondaires."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r31/index.html",
+          "label": "Acquis antérieurs et critères R31"
+        },
+        {
+          "href": "evidence/delivery.json",
+          "label": "Livraison et limites du lot evidence"
+        },
+        {
+          "href": "evidence/index.html",
+          "label": "Comparer les preuves et préparer une écoute"
+        },
+        {
+          "href": "../../docs/R33_EVIDENCE.md",
+          "label": "Qualification et limites du lot sources"
+        }
+      ],
+      "r30_new_implementation": false,
+      "owner": "r33_source_evidence",
+      "lotId": "evidence",
+      "deliveryState": "LIVRÉ PARTIEL",
+      "r31_new_implementation": true,
+      "r33_new_implementation": true
+    },
+    {
+      "id": "G-PREUVES",
+      "title": "Preuves et revue canonique",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Lot evidence · responsable : r33_source_evidence.",
+        "Corps, côtés anatomiques, phases, déclencheurs et restrictions sont reliés à des citations visibles et aux empreintes des captures.",
+        "La borne de longueur du Stinger comprend les pinces ; les deux conclusions documentaires restent limitées au propre corps décrit.",
+        "Une comparaison de contexte et une file d’écoute volontaire présentent ensemble les références, les éditions publiées et les 218 fichiers R31 conservés.",
+        "Le journal Code: Veronica décrit un grondement sous terre sans identifier avec certitude son émetteur ; aucun fichier Alexander n’est promu depuis ce récit.",
+        "La référence exacte du Jack à scie à ciseaux reste manquante après recherche : aucun avatar d’une autre phase n’est substitué."
+      ],
+      "remaining": [
+        "Captures originales et séquences horodatées de chaque geste, phase et transformation ; comparaison indépendante aux paquets et banques bruts.",
+        "Captures primaires directes, gestes horodatés et correspondances aux banques originales restent à produire.",
+        "Plaga C→Duvalia et équivalence des éditions retenues restent non prouvés.",
+        "Aucune taille de collision physique n’est certifiée ; une mesure larvale ou une borne textuelle ne dimensionne pas un boss.",
+        "Aucune conclusion animée ni compatibilité universelle entre victimes n’est déclarée.",
+        "Captures primaires directes, éditions natives comparées, vues complètes et gestes horodatés restent nécessaires.",
+        "Les faits ne certifient ni idle, animation, timing, commandes originales, échelle de collision ou fidélité globale 1:1.",
+        "Les 218 fichiers sont réutilisés de R31 ; écoute indépendante, locuteur, phase, action et mixage de chaque son restent non attribués.",
+        "Aucune conclusion contre une victime arbitraire du catalogue n’est déduite d’une faiblesse de l’organisme décrit.",
+        "Les trois accès primaires essayés ont été refusés ; les transcriptions tierces restent qualifiées comme secondaires."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r31/index.html",
+          "label": "Acquis antérieurs et critères R31"
+        },
+        {
+          "href": "evidence/delivery.json",
+          "label": "Livraison et limites du lot evidence"
+        },
+        {
+          "href": "evidence/index.html",
+          "label": "Comparer les preuves et préparer une écoute"
+        },
+        {
+          "href": "../../docs/R33_EVIDENCE.md",
+          "label": "Qualification et limites du lot sources"
+        }
+      ],
+      "r30_new_implementation": true,
+      "owner": "r33_source_evidence",
+      "lotId": "evidence",
+      "deliveryState": "LIVRÉ PARTIEL",
+      "r31_new_implementation": true,
+      "r33_new_implementation": true
+    },
+    {
+      "id": "G-COMMANDES",
+      "title": "Répertoire complet des commandes",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Lot native · responsable : r33_native_motion.",
+        "Seize vues indépendantes de quatre corps : deux costumes Zombie RE0 GameCube2002, Chainsaw Majini et Executioner RE5 PC2009, sans retouche de pose ou de géométrie.",
+        "Six scènes inédites Sea Creeper/Scagdead, douze projections opposées réelles et1270images60Hz plus douze points de fin ; courbes, poids et textures conservés.",
+        "Une variante marine de nage stationnaire observée peut être choisie volontairement ; ses300imagesR30 sont réutilisées, sans être recomptées comme nouveaux rendus ni comme idle original.",
+        "Cent cinquante-six échantillons de contact examinés, séquences reconstruites indépendamment et atlas RGBA comparés sans perte.",
+        "Les six gestes observés sont nommés descriptivement, sans attribuer BA/DM à une commande, intro, outro ou résultat."
+      ],
+      "remaining": [
+        "Répertoire officiel complet, action identifiée par séquence et correspondance aux commandes ; dépasser dix slots lorsque le répertoire le demande.",
+        "Inventaires originaux exhaustifs, gestes et timings certifiés par incarnation ; liens aux commandes et répertoires dépassant dix slots si nécessaire.",
+        "Aucun nouvel idle original certifié, aucune attaque ou séquence de résultat originale affectée.",
+        "Les quatre nouveaux corps sont en pose source en T ; les armes RE5 et matériaux inconnus ne sont pas complétés au jugé.",
+        "La variante marine est une adaptation de présentation PC/HD2013, sans admission automatique à la cible3DS2012 ni contact terrestre certifié.",
+        "Inventaires officiels, timings, scènes causales, sons liés et compatibilités de victimes restent soumis aux preuves d’origine.",
+        "Les22refus initiaux et le refus de révisionTyrant sont conservés sans nouvel essai."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r31/index.html",
+          "label": "Acquis antérieurs et critères R31"
+        },
+        {
+          "href": "native/delivery.json",
+          "label": "Livraison et limites du lot native"
+        },
+        {
+          "href": "native/index.html",
+          "label": "Corps et mouvements sources R33"
+        },
+        {
+          "href": "native/review/observations.json",
+          "label": "Revues visuelles et limites"
+        },
+        {
+          "href": "../../docs/R33_NATIVE.md",
+          "label": "Portée du lot natif"
+        }
+      ],
+      "r30_new_implementation": false,
+      "owner": "r33_native_motion",
+      "lotId": "native",
+      "deliveryState": "LIVRÉ PARTIEL",
+      "r31_new_implementation": true,
+      "r33_new_implementation": true
+    },
+    {
+      "id": "G-MANCHES",
+      "title": "Fin de manche et résultat",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Lot native · responsable : r33_native_motion.",
+        "Seize vues indépendantes de quatre corps : deux costumes Zombie RE0 GameCube2002, Chainsaw Majini et Executioner RE5 PC2009, sans retouche de pose ou de géométrie.",
+        "Six scènes inédites Sea Creeper/Scagdead, douze projections opposées réelles et1270images60Hz plus douze points de fin ; courbes, poids et textures conservés.",
+        "Une variante marine de nage stationnaire observée peut être choisie volontairement ; ses300imagesR30 sont réutilisées, sans être recomptées comme nouveaux rendus ni comme idle original.",
+        "Cent cinquante-six échantillons de contact examinés, séquences reconstruites indépendamment et atlas RGBA comparés sans perte.",
+        "Les six gestes observés sont nommés descriptivement, sans attribuer BA/DM à une commande, intro, outro ou résultat."
+      ],
+      "remaining": [
+        "Victoire, défaite, égalité et leurs séquences, dessins et sons officiels par incarnation ; recette KO et conclusions artistiques séparée.",
+        "Preuve causale de victoire/défaite/égalité, rôle exact des scènes et sons finaux par incarnation avant affectation aux résultats.",
+        "Aucun nouvel idle original certifié, aucune attaque ou séquence de résultat originale affectée.",
+        "Les quatre nouveaux corps sont en pose source en T ; les armes RE5 et matériaux inconnus ne sont pas complétés au jugé.",
+        "La variante marine est une adaptation de présentation PC/HD2013, sans admission automatique à la cible3DS2012 ni contact terrestre certifié.",
+        "Inventaires officiels, timings, scènes causales, sons liés et compatibilités de victimes restent soumis aux preuves d’origine.",
+        "Les22refus initiaux et le refus de révisionTyrant sont conservés sans nouvel essai."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r31/index.html",
+          "label": "Acquis antérieurs et critères R31"
+        },
+        {
+          "href": "native/delivery.json",
+          "label": "Livraison et limites du lot native"
+        },
+        {
+          "href": "native/index.html",
+          "label": "Corps et mouvements sources R33"
+        },
+        {
+          "href": "native/review/observations.json",
+          "label": "Revues visuelles et limites"
+        },
+        {
+          "href": "../../docs/R33_NATIVE.md",
+          "label": "Portée du lot natif"
+        }
+      ],
+      "r30_new_implementation": false,
+      "owner": "r33_native_motion",
+      "lotId": "native",
+      "deliveryState": "LIVRÉ PARTIEL",
+      "r31_new_implementation": true,
+      "r33_new_implementation": true
+    },
+    {
+      "id": "G-CINEMATIQUES",
+      "title": "Intros et outros",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Lot native · responsable : r33_native_motion.",
+        "Seize vues indépendantes de quatre corps : deux costumes Zombie RE0 GameCube2002, Chainsaw Majini et Executioner RE5 PC2009, sans retouche de pose ou de géométrie.",
+        "Six scènes inédites Sea Creeper/Scagdead, douze projections opposées réelles et1270images60Hz plus douze points de fin ; courbes, poids et textures conservés.",
+        "Une variante marine de nage stationnaire observée peut être choisie volontairement ; ses300imagesR30 sont réutilisées, sans être recomptées comme nouveaux rendus ni comme idle original.",
+        "Cent cinquante-six échantillons de contact examinés, séquences reconstruites indépendamment et atlas RGBA comparés sans perte.",
+        "Les six gestes observés sont nommés descriptivement, sans attribuer BA/DM à une commande, intro, outro ou résultat."
+      ],
+      "remaining": [
+        "Intros, outros et bande sonore complète par sujet ; attribution de l’action, de la phase et des raccords du jeu d’origine.",
+        "Vidéos ou captures du jeu d’origine identifiant le rôle intro/outro, raccords, environnement, partenaires et bande sonore.",
+        "Aucun nouvel idle original certifié, aucune attaque ou séquence de résultat originale affectée.",
+        "Les quatre nouveaux corps sont en pose source en T ; les armes RE5 et matériaux inconnus ne sont pas complétés au jugé.",
+        "La variante marine est une adaptation de présentation PC/HD2013, sans admission automatique à la cible3DS2012 ni contact terrestre certifié.",
+        "Inventaires officiels, timings, scènes causales, sons liés et compatibilités de victimes restent soumis aux preuves d’origine.",
+        "Les22refus initiaux et le refus de révisionTyrant sont conservés sans nouvel essai."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r31/index.html",
+          "label": "Acquis antérieurs et critères R31"
+        },
+        {
+          "href": "native/delivery.json",
+          "label": "Livraison et limites du lot native"
+        },
+        {
+          "href": "native/index.html",
+          "label": "Corps et mouvements sources R33"
+        },
+        {
+          "href": "native/review/observations.json",
+          "label": "Revues visuelles et limites"
+        },
+        {
+          "href": "../../docs/R33_NATIVE.md",
+          "label": "Portée du lot natif"
+        }
+      ],
+      "r30_new_implementation": false,
+      "owner": "r33_native_motion",
+      "lotId": "native",
+      "deliveryState": "LIVRÉ PARTIEL",
+      "r31_new_implementation": true,
+      "r33_new_implementation": true
+    },
+    {
+      "id": "G-REPLAYS",
+      "title": "Compatibilité des replays",
+      "category": "functions",
+      "status": "EN COURS",
+      "advances": [
+        "Lot persistence · responsable : r33_saves_replays.",
+        "Le blocage R31 après modification d’un groupe non choisi est reproduit ; R33 reprend ou annule uniquement les groupes sélectionnés.",
+        "Les anciens journaux R31 restent lisibles, sans migration ; les conflits sur groupes choisis, aperçus périmés, quotas et verrous restent protégés.",
+        "Un lot accepte jusqu’à 16 fichiers individuels R13/R7/R28, 32 Mio au total, avec SHA-256 de chaque source, doublons et refus explicites.",
+        "Quatre routes originales sont reconstruites séquentiellement deux fois : Versus actuel, avant R13, catalogue R7 et évolutions R28 ; aucune sauvegarde du parent n’est modifiée.",
+        "Le constat exportable garde les fichiers annulés/non lancés ; le nettoyage couvre la source préparée tardivement et le retour de page sans relance automatique."
+      ],
+      "remaining": [
+        "Autres révisions et contrats historiques, campagnes et conclusions artistiques ; ne pas lire un ancien contrat sous un moteur courant.",
+        "Synchronisation ou restauration cloud : aucun service distant ni compte configuré.",
+        "Pannes physiques, interruptions du système d’exploitation et appareils physiques hors du navigateur cloud restent non certifiés.",
+        "Autres contrats historiques non publiés, reprises de campagne et conclusions artistiques ne sont pas validés par la relecture de commandes.",
+        "Le localStorage du jeu ne fournit pas de transaction globale entre onglets non coopérants ; fermer les autres onglets et conserver le fichier avant restauration.",
+        "Aucun backend cloud ou compte distant configuré ; aucune synchronisation certifiée.",
+        "LocalStorage ne rend pas les écritures de plusieurs clés atomiques ; fermer les autres onglets reste nécessaire.",
+        "Pannes physiques, coupures électriques, appareils physiques et lecteurs d’écran réels restent non certifiés.",
+        "Les contrats historiques inconnus, reprises de campagnes, conclusions artistiques, images et sons ne sont pas validés par la relecture.",
+        "Les collections principales et sauvegardes R19 restent dans le lecteur historique ; ce lot traite les fichiers individuels sélectionnés."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r31/index.html",
+          "label": "Acquis antérieurs et critères R31"
+        },
+        {
+          "href": "persistence/delivery.json",
+          "label": "Livraison et limites du lot persistence"
+        },
+        {
+          "href": "persistence/index.html",
+          "label": "Restaurer les groupes choisis avec reprise"
+        },
+        {
+          "href": "replay/index.html",
+          "label": "Vérifier plusieurs replays, dont les évolutions"
+        },
+        {
+          "href": "../../docs/R33_PERSISTENCE.md",
+          "label": "Portée, protection des groupes et reproduction"
+        },
+        {
+          "href": "../../docs/R33_PERSISTENCE_TESTS.json",
+          "label": "Reproduction avant/après et garde des lots"
+        }
+      ],
+      "r30_new_implementation": false,
+      "owner": "r33_saves_replays",
+      "lotId": "persistence",
+      "deliveryState": "LIVRÉ PARTIEL",
+      "r31_new_implementation": true,
+      "r33_new_implementation": true
+    },
+    {
+      "id": "G-SAUVES",
+      "title": "Sauvegardes et restauration",
+      "category": "functions",
+      "status": "EN COURS",
+      "advances": [
+        "Lot persistence · responsable : r33_saves_replays.",
+        "Le blocage R31 après modification d’un groupe non choisi est reproduit ; R33 reprend ou annule uniquement les groupes sélectionnés.",
+        "Les anciens journaux R31 restent lisibles, sans migration ; les conflits sur groupes choisis, aperçus périmés, quotas et verrous restent protégés.",
+        "Un lot accepte jusqu’à 16 fichiers individuels R13/R7/R28, 32 Mio au total, avec SHA-256 de chaque source, doublons et refus explicites.",
+        "Quatre routes originales sont reconstruites séquentiellement deux fois : Versus actuel, avant R13, catalogue R7 et évolutions R28 ; aucune sauvegarde du parent n’est modifiée.",
+        "Le constat exportable garde les fichiers annulés/non lancés ; le nettoyage couvre la source préparée tardivement et le retour de page sans relance automatique."
+      ],
+      "remaining": [
+        "Restauration du stockage réel du jeu, cloud et reprises après interruption hors de la base isolée ; l’outil R26 ne certifie pas ces usages.",
+        "Synchronisation ou restauration cloud : aucun service distant ni compte configuré.",
+        "Pannes physiques, interruptions du système d’exploitation et appareils physiques hors du navigateur cloud restent non certifiés.",
+        "Autres contrats historiques non publiés, reprises de campagne et conclusions artistiques ne sont pas validés par la relecture de commandes.",
+        "Le localStorage du jeu ne fournit pas de transaction globale entre onglets non coopérants ; fermer les autres onglets et conserver le fichier avant restauration.",
+        "Aucun backend cloud ou compte distant configuré ; aucune synchronisation certifiée.",
+        "LocalStorage ne rend pas les écritures de plusieurs clés atomiques ; fermer les autres onglets reste nécessaire.",
+        "Pannes physiques, coupures électriques, appareils physiques et lecteurs d’écran réels restent non certifiés.",
+        "Les contrats historiques inconnus, reprises de campagnes, conclusions artistiques, images et sons ne sont pas validés par la relecture.",
+        "Les collections principales et sauvegardes R19 restent dans le lecteur historique ; ce lot traite les fichiers individuels sélectionnés."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r31/index.html",
+          "label": "Acquis antérieurs et critères R31"
+        },
+        {
+          "href": "persistence/delivery.json",
+          "label": "Livraison et limites du lot persistence"
+        },
+        {
+          "href": "persistence/index.html",
+          "label": "Restaurer les groupes choisis avec reprise"
+        },
+        {
+          "href": "replay/index.html",
+          "label": "Vérifier plusieurs replays, dont les évolutions"
+        },
+        {
+          "href": "../../docs/R33_PERSISTENCE.md",
+          "label": "Portée, protection des groupes et reproduction"
+        },
+        {
+          "href": "../../docs/R33_PERSISTENCE_TESTS.json",
+          "label": "Reproduction avant/après et garde des lots"
+        }
+      ],
+      "r30_new_implementation": false,
+      "owner": "r33_saves_replays",
+      "lotId": "persistence",
+      "deliveryState": "LIVRÉ PARTIEL",
+      "r31_new_implementation": true,
+      "r33_new_implementation": true
+    },
+    {
+      "id": "G-VICTIMES",
+      "title": "Compatibilité des conclusions",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Lot evidence · responsable : r33_source_evidence.",
+        "Corps, côtés anatomiques, phases, déclencheurs et restrictions sont reliés à des citations visibles et aux empreintes des captures.",
+        "La borne de longueur du Stinger comprend les pinces ; les deux conclusions documentaires restent limitées au propre corps décrit.",
+        "Une comparaison de contexte et une file d’écoute volontaire présentent ensemble les références, les éditions publiées et les 218 fichiers R31 conservés.",
+        "Le journal Code: Veronica décrit un grondement sous terre sans identifier avec certitude son émetteur ; aucun fichier Alexander n’est promu depuis ce récit.",
+        "La référence exacte du Jack à scie à ciseaux reste manquante après recherche : aucun avatar d’une autre phase n’est substitué."
+      ],
+      "remaining": [
+        "Toutes les associations admissibles et leurs conclusions finales ; revue morphologique, artistique et séquences d’origine.",
+        "Captures primaires directes, gestes horodatés et correspondances aux banques originales restent à produire.",
+        "Plaga C→Duvalia et équivalence des éditions retenues restent non prouvés.",
+        "Aucune taille de collision physique n’est certifiée ; une mesure larvale ou une borne textuelle ne dimensionne pas un boss.",
+        "Aucune conclusion animée ni compatibilité universelle entre victimes n’est déclarée.",
+        "Captures primaires directes, éditions natives comparées, vues complètes et gestes horodatés restent nécessaires.",
+        "Les faits ne certifient ni idle, animation, timing, commandes originales, échelle de collision ou fidélité globale 1:1.",
+        "Les 218 fichiers sont réutilisés de R31 ; écoute indépendante, locuteur, phase, action et mixage de chaque son restent non attribués.",
+        "Aucune conclusion contre une victime arbitraire du catalogue n’est déduite d’une faiblesse de l’organisme décrit.",
+        "Les trois accès primaires essayés ont été refusés ; les transcriptions tierces restent qualifiées comme secondaires."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r31/index.html",
+          "label": "Acquis antérieurs et critères R31"
+        },
+        {
+          "href": "evidence/delivery.json",
+          "label": "Livraison et limites du lot evidence"
+        },
+        {
+          "href": "evidence/index.html",
+          "label": "Comparer les preuves et préparer une écoute"
+        },
+        {
+          "href": "../../docs/R33_EVIDENCE.md",
+          "label": "Qualification et limites du lot sources"
+        }
+      ],
+      "r30_new_implementation": false,
+      "owner": "r33_source_evidence",
+      "lotId": "evidence",
+      "deliveryState": "LIVRÉ PARTIEL",
+      "r31_new_implementation": true,
+      "r33_new_implementation": true
+    },
+    {
+      "id": "G-ECHELLE",
+      "title": "Dimensions et points faibles",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Lot evidence · responsable : r33_source_evidence.",
+        "Corps, côtés anatomiques, phases, déclencheurs et restrictions sont reliés à des citations visibles et aux empreintes des captures.",
+        "La borne de longueur du Stinger comprend les pinces ; les deux conclusions documentaires restent limitées au propre corps décrit.",
+        "Une comparaison de contexte et une file d’écoute volontaire présentent ensemble les références, les éditions publiées et les 218 fichiers R31 conservés.",
+        "Le journal Code: Veronica décrit un grondement sous terre sans identifier avec certitude son émetteur ; aucun fichier Alexander n’est promu depuis ce récit.",
+        "La référence exacte du Jack à scie à ciseaux reste manquante après recherche : aucun avatar d’une autre phase n’est substitué."
+      ],
+      "remaining": [
+        "Mesures primaires, tailles corporelles et collision, géants et aquatiques ; zéro échelle physique certifiée.",
+        "Captures primaires directes, gestes horodatés et correspondances aux banques originales restent à produire.",
+        "Plaga C→Duvalia et équivalence des éditions retenues restent non prouvés.",
+        "Aucune taille de collision physique n’est certifiée ; une mesure larvale ou une borne textuelle ne dimensionne pas un boss.",
+        "Aucune conclusion animée ni compatibilité universelle entre victimes n’est déclarée.",
+        "Captures primaires directes, éditions natives comparées, vues complètes et gestes horodatés restent nécessaires.",
+        "Les faits ne certifient ni idle, animation, timing, commandes originales, échelle de collision ou fidélité globale 1:1.",
+        "Les 218 fichiers sont réutilisés de R31 ; écoute indépendante, locuteur, phase, action et mixage de chaque son restent non attribués.",
+        "Aucune conclusion contre une victime arbitraire du catalogue n’est déduite d’une faiblesse de l’organisme décrit.",
+        "Les trois accès primaires essayés ont été refusés ; les transcriptions tierces restent qualifiées comme secondaires."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r31/index.html",
+          "label": "Acquis antérieurs et critères R31"
+        },
+        {
+          "href": "evidence/delivery.json",
+          "label": "Livraison et limites du lot evidence"
+        },
+        {
+          "href": "evidence/index.html",
+          "label": "Comparer les preuves et préparer une écoute"
+        },
+        {
+          "href": "../../docs/R33_EVIDENCE.md",
+          "label": "Qualification et limites du lot sources"
+        }
+      ],
+      "r30_new_implementation": false,
+      "owner": "r33_source_evidence",
+      "lotId": "evidence",
+      "deliveryState": "LIVRÉ PARTIEL",
+      "r31_new_implementation": true,
+      "r33_new_implementation": true
+    },
+    {
+      "id": "G-RENDU",
+      "title": "Sprites, clips et asymétries",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Lot sprites · responsable : r33_generated_assets.",
+        "Huit sorties image_gen sans retouche : profils gauche/droite indépendants de Zombie Dog, Giant Alligator, Giant Moth et Zombie féminin blond RE3 du port GameCube.",
+        "Seize vues natives et quatre archives déjà conservées servent de références exactes ; aucune équivalence avec les cibles PlayStation n’est inventée.",
+        "Les poses neutres adaptées de Zombie Dog et Zombie RE3 peuvent être choisies volontairement ; Alligator reste contextuel et Moth n’expose aucun état de combat.",
+        "Galerie avec contrôle SHA/PNG/dimensions, chargement paresseux, annulation et reprise ; 12testsPython,8groupesNode et7groupesChromium réussis."
+      ],
+      "remaining": [
+        "Sprites définitifs, deux orientations, asymétries, mouvements, impacts et transformations de tout le catalogue ; rendu original du jeu non certifié.",
+        "La pointe supérieure de Lucas à alpha faible reste incertaine ; les détails de texture générés ne sont pas des texels originaux certifiés.",
+        "Les deux présentations frontales ne fournissent pas des idles latéraux. La variante Zombie ne fournit qu’un côté droit et une image statique ; les autres orientations et gestes restent ouverts.",
+        "Le costume Zombie initial n’est pas remplacé par défaut ; une variante complète ne qualifie pas automatiquement toutes les variantes de l’identité.",
+        "Les22refus de génération historiques et le refus de révision Tyrant sont conservés sans nouvel essai. Corps cachés, équipements et autres incarnations sans source complète restent à compléter.",
+        "Éditions PlayStation du catalogue, textures originales exactes, géométrie, zones cachées et échelles physiques restent non qualifiées par ces images générées.",
+        "Aucun nouvel idle original, attaque, geste temporel, intro/outro ou animation de combat complète n’est ajouté.",
+        "La pose compacte de Moth ne documente aucun cycle de vol ; Alligator ne devient pas un combattant.",
+        "Les22refus initiaux et le refus de révisionTyrant sont conservés sans nouvel essai.",
+        "Modèles et animations natives pour les autres incarnations, équipements et autres phases restent à produire depuis des sources vérifiables."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r31/index.html",
+          "label": "Acquis antérieurs et critères R31"
+        },
+        {
+          "href": "sprites/delivery.json",
+          "label": "Livraison et limites du lot sprites"
+        },
+        {
+          "href": "sprites/index.html",
+          "label": "Galerie des huit profils documentés"
+        },
+        {
+          "href": "../../docs/R33_SPRITES.md",
+          "label": "Portée, références et limites des huit PNG"
+        },
+        {
+          "href": "../../docs/R33_SPRITES_TESTS.json",
+          "label": "Tests des vrais PNG et des éditions tenues séparées"
+        },
+        {
+          "href": "../../docs/R33_GENERATED_RUNTIME_TESTS.json",
+          "label": "Contrat indépendant du lecteur et corruptions refusées"
+        }
+      ],
+      "r30_new_implementation": true,
+      "owner": "r33_generated_assets",
+      "lotId": "sprites",
+      "deliveryState": "LIVRÉ PARTIEL",
+      "r31_new_implementation": true,
+      "r33_new_implementation": true
+    },
+    {
+      "id": "G-PERF",
+      "title": "Performances sur appareils cibles",
+      "category": "validation",
+      "status": "EN COURS",
+      "advances": [
+        "Lot validation · responsable : root.",
+        "Les trois montages actuels partagent les nouveaux lecteurs bornés : registre généré conservé, quatre familles source volontaires et bibliothèque native composite de53identités.",
+        "Deux familles de poses adaptées ont des côtés gauche/droite indépendants ; seuls les états réellement produits sont dessinés. Les cibles contextuelles et gestes non attribués restent tenus hors admission.",
+        "Trois portraits natifs utilisent des cadres de tête/haut du corps inspectés sans modifier les PNG, avec édition et équipements absents conservés comme limites.",
+        "Le choix marin Sea Creeper est explicitement aquatique ; le cycle conserve ses300images antérieures et ses temps natifs, avec réduction du mouvement respectée.",
+        "Les vrais PNG des deux côtés et atlas restent sous le budget coordonné ; après pression synthétique32MP, les deux côtés reprennent automatiquement sans erreur de corruption ni délai de cache négatif.",
+        "Les contrôles au clavier restent utilisables à320pixels avec un texte réellement doublé ; les deux panneaux nouveaux passent axe4.14 dans ce périmètre. Les acteurs, replays et sauvegardes restent inchangés par les choix visuels."
+      ],
+      "remaining": [
+        "Appareils physiques, GPU cibles, budgets mémoire globaux et longues sessions de combat ; le rendu logiciel cloud ne les certifie pas.",
+        "Appareils physiques et lecteurs d’écran réels non exercés ; conformité WCAG globale non certifiée.",
+        "Mémoire des autres rendus, du navigateur et du GPU non mesurée ; longues sessions sur appareils cibles encore à tester.",
+        "La mémoire totale du navigateur/GPU, la cadence de l’écran physique et les appareils cibles restent non mesurés ; le budget ne couvre que les lecteurs participants.",
+        "Manettes physiques et lecteurs d’écran réels non éprouvés ; les interactions clavier sont émises par Chromium, les événements de cycle de vie et la réservation de pression sont des fixtures explicites.",
+        "Les PNG générés ne certifient ni texels originaux ni équivalence GameCube/PlayStation. Une pose fixe n’est pas un idle animé.",
+        "Aucun nouvel idle original certifié. La boucle marine observée n’atteste pas un appui terrestre ou le nom original de l’action ; les armes RE5 absentes et matériaux natifs non qualifiés restent ouverts."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r31/index.html",
+          "label": "Acquis antérieurs et critères R31"
+        },
+        {
+          "href": "validation/delivery.json",
+          "label": "Livraison et limites du lot validation"
+        },
+        {
+          "href": "evolutions/index.html",
+          "label": "Combat avec évolutions et nouvelles variantes"
+        },
+        {
+          "href": "../../docs/R33_RUNTIME_TESTS.json",
+          "label": "Dix groupes Node exécutés"
+        },
+        {
+          "href": "../../docs/R33_RUNTIME_BROWSER.json",
+          "label": "Huit groupes navigateur exécutés"
+        }
+      ],
+      "r30_new_implementation": true,
+      "owner": "root",
+      "lotId": "validation",
+      "deliveryState": "LIVRÉ PARTIEL",
+      "r31_new_implementation": true,
+      "r33_new_implementation": true
+    },
+    {
+      "id": "G-ACCESS",
+      "title": "Accessibilité et appareils",
+      "category": "validation",
+      "status": "EN COURS",
+      "advances": [
+        "Lot validation · responsable : root.",
+        "Les trois montages actuels partagent les nouveaux lecteurs bornés : registre généré conservé, quatre familles source volontaires et bibliothèque native composite de53identités.",
+        "Deux familles de poses adaptées ont des côtés gauche/droite indépendants ; seuls les états réellement produits sont dessinés. Les cibles contextuelles et gestes non attribués restent tenus hors admission.",
+        "Trois portraits natifs utilisent des cadres de tête/haut du corps inspectés sans modifier les PNG, avec édition et équipements absents conservés comme limites.",
+        "Le choix marin Sea Creeper est explicitement aquatique ; le cycle conserve ses300images antérieures et ses temps natifs, avec réduction du mouvement respectée.",
+        "Les vrais PNG des deux côtés et atlas restent sous le budget coordonné ; après pression synthétique32MP, les deux côtés reprennent automatiquement sans erreur de corruption ni délai de cache négatif.",
+        "Les contrôles au clavier restent utilisables à320pixels avec un texte réellement doublé ; les deux panneaux nouveaux passent axe4.14 dans ce périmètre. Les acteurs, replays et sauvegardes restent inchangés par les choix visuels."
+      ],
+      "remaining": [
+        "Lecteurs d’écran réels, appareils tactiles et manettes physiques, contenus hors écran et conformité WCAG complète.",
+        "Appareils physiques et lecteurs d’écran réels non exercés ; conformité WCAG globale non certifiée.",
+        "Mémoire des autres rendus, du navigateur et du GPU non mesurée ; longues sessions sur appareils cibles encore à tester.",
+        "La mémoire totale du navigateur/GPU, la cadence de l’écran physique et les appareils cibles restent non mesurés ; le budget ne couvre que les lecteurs participants.",
+        "Manettes physiques et lecteurs d’écran réels non éprouvés ; les interactions clavier sont émises par Chromium, les événements de cycle de vie et la réservation de pression sont des fixtures explicites.",
+        "Les PNG générés ne certifient ni texels originaux ni équivalence GameCube/PlayStation. Une pose fixe n’est pas un idle animé.",
+        "Aucun nouvel idle original certifié. La boucle marine observée n’atteste pas un appui terrestre ou le nom original de l’action ; les armes RE5 absentes et matériaux natifs non qualifiés restent ouverts."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r31/index.html",
+          "label": "Acquis antérieurs et critères R31"
+        },
+        {
+          "href": "validation/delivery.json",
+          "label": "Livraison et limites du lot validation"
+        },
+        {
+          "href": "evolutions/index.html",
+          "label": "Combat avec évolutions et nouvelles variantes"
+        },
+        {
+          "href": "../../docs/R33_RUNTIME_TESTS.json",
+          "label": "Dix groupes Node exécutés"
+        },
+        {
+          "href": "../../docs/R33_RUNTIME_BROWSER.json",
+          "label": "Huit groupes navigateur exécutés"
+        }
+      ],
+      "r30_new_implementation": true,
+      "owner": "root",
+      "lotId": "validation",
+      "deliveryState": "LIVRÉ PARTIEL",
+      "r31_new_implementation": true,
+      "r33_new_implementation": true
+    },
+    {
+      "id": "G-AUDIO",
+      "title": "Voix et sons par incarnation",
+      "category": "sources",
+      "status": "EN COURS",
+      "advances": [
+        "Lot evidence · responsable : r33_source_evidence.",
+        "Corps, côtés anatomiques, phases, déclencheurs et restrictions sont reliés à des citations visibles et aux empreintes des captures.",
+        "La borne de longueur du Stinger comprend les pinces ; les deux conclusions documentaires restent limitées au propre corps décrit.",
+        "Une comparaison de contexte et une file d’écoute volontaire présentent ensemble les références, les éditions publiées et les 218 fichiers R31 conservés.",
+        "Le journal Code: Veronica décrit un grondement sous terre sans identifier avec certitude son émetteur ; aucun fichier Alexander n’est promu depuis ce récit.",
+        "La référence exacte du Jack à scie à ciseaux reste manquante après recherche : aucun avatar d’une autre phase n’est substitué."
+      ],
+      "remaining": [
+        "Écoute indépendante, locuteur et action/phase, comparaison aux banques brutes, cris et mixage final ; ne pas affecter automatiquement ces sons au combat.",
+        "Écoute indépendante de chaque fichier, locuteur et incarnation exacte, phase et geste à retrouver dans une séquence originale.",
+        "Comparer les banques natives brutes et les éditions cibles ; le groupe publié ne certifie pas le rattachement d’un fichier à une forme.",
+        "Valider les déclencheurs, synchronisation et mixage final avant toute affectation automatique au combat.",
+        "Captures primaires directes, éditions natives comparées, vues complètes et gestes horodatés restent nécessaires.",
+        "Les faits ne certifient ni idle, animation, timing, commandes originales, échelle de collision ou fidélité globale 1:1.",
+        "Les 218 fichiers sont réutilisés de R31 ; écoute indépendante, locuteur, phase, action et mixage de chaque son restent non attribués.",
+        "Aucune conclusion contre une victime arbitraire du catalogue n’est déduite d’une faiblesse de l’organisme décrit.",
+        "Les trois accès primaires essayés ont été refusés ; les transcriptions tierces restent qualifiées comme secondaires."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r31/index.html",
+          "label": "Acquis antérieurs et critères R31"
+        },
+        {
+          "href": "evidence/delivery.json",
+          "label": "Livraison et limites du lot evidence"
+        },
+        {
+          "href": "evidence/index.html",
+          "label": "Comparer les preuves et préparer une écoute"
+        },
+        {
+          "href": "../../docs/R33_EVIDENCE.md",
+          "label": "Qualification et limites du lot sources"
+        }
+      ],
+      "r30_new_implementation": false,
+      "owner": "r33_source_evidence",
+      "lotId": "evidence",
+      "deliveryState": "LIVRÉ PARTIEL",
+      "r31_new_implementation": true,
+      "r33_new_implementation": true
+    },
+    {
+      "id": "G-RECETTE",
+      "title": "Recette cumulative",
+      "category": "validation",
+      "status": "EN COURS",
+      "advances": [
+        "Les 17 chantiers sont attribués à six lots, avec portée, preuves et critères ouverts.",
+        "Les 63 feuilles R31 et leurs relations sont conservées ; sept feuilles R33 distinguent les ajouts par UID et nature.",
+        "La recette ne crédite que les rapports réellement exécutés avec empreintes courantes ; les agrégats sont des totaux."
+      ],
+      "remaining": [
+        "Toutes les combinaisons, commandes, campagnes, KO, séquences artistiques et validations sur appareils cibles."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r31/index.html",
+          "label": "Acquis antérieurs et critères R31"
+        },
+        {
+          "href": "../../docs/R33_VALIDATION.json",
+          "label": "Recette R33 par périmètre"
+        }
+      ],
+      "r30_new_implementation": true,
+      "owner": "r33_excel_tracking",
+      "lotId": "tracking",
+      "deliveryState": "LIVRÉ PARTIEL",
+      "r31_new_implementation": true,
+      "r33_new_implementation": true
+    },
+    {
+      "id": "G-LIVRAISON",
+      "title": "Livraisons et suivi",
+      "category": "validation",
+      "status": "EN COURS",
+      "advances": [
+        "Les 17 chantiers sont attribués à six lots, avec portée, preuves et critères ouverts.",
+        "Les 63 feuilles R31 et leurs relations sont conservées ; sept feuilles R33 distinguent les ajouts par UID et nature.",
+        "La recette ne crédite que les rapports réellement exécutés avec empreintes courantes ; les agrégats sont des totaux."
+      ],
+      "remaining": [
+        "Revue humaine et exécution CI de la nouvelle livraison ; tous les chantiers restent ouverts tant que leurs critères manquent de preuves."
+      ],
+      "evidence": [
+        {
+          "href": "../fidelity-r31/index.html",
+          "label": "Acquis antérieurs et critères R31"
+        },
+        {
+          "href": "../../docs/R33_VALIDATION.json",
+          "label": "Recette R33 par périmètre"
+        }
+      ],
+      "r30_new_implementation": true,
+      "owner": "r33_excel_tracking",
+      "lotId": "tracking",
+      "deliveryState": "LIVRÉ PARTIEL",
+      "r31_new_implementation": true,
+      "r33_new_implementation": true
+    }
+  ],
+  "generation_preference": {
+    "user_choice": "Conserver les refus, fidélité prioritaire",
+    "preserve_tool_refusals": true,
+    "no_softened_variants_to_fill_counter": true,
+    "actual_files_and_blocked_attempts_counted_separately": true
+  }
+}

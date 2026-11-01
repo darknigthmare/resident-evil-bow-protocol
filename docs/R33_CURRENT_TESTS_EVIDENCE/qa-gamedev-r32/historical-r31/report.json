@@ -1,0 +1,44 @@
+{
+  "schema": "re.bow.published-assertions-r29/1",
+  "published_commit": "413b89bfafc18abc55be1404ff77bdaf573b1334",
+  "plan": {
+    "path": "tests/r32-historical-plan.json",
+    "sha256": "8155777be8c063cd2098de3d23c30abf592067b7b0bea5ef2129e56474537764"
+  },
+  "executions": [
+    {
+      "command": [
+        "node",
+        "tests/verify-save-center-r19.mjs"
+      ],
+      "exit_code": 0,
+      "executed_assertions": {
+        "passed": 25,
+        "failed": 0
+      },
+      "log": "command-00.log",
+      "log_sha256": "cf57302fd4f517d13718b3a1b63ffc41632dcb845442ccba12511f7642315a8d"
+    },
+    {
+      "command": [
+        "node",
+        "tests/verify-preservation-r20.mjs"
+      ],
+      "exit_code": 0,
+      "executed_assertions": {
+        "passed": 8,
+        "failed": 0
+      },
+      "log": "command-01.log",
+      "log_sha256": "68f41c950c00c05634aa10d00d0761d16b4fac53e2cc6dc90f570cd7f3c8daf1"
+    }
+  ],
+  "exit_code": 0,
+  "duration_seconds": 11.416,
+  "log_sha256": "0f0928fe285b9b9cb8c3e6ebcced8ceee49b829d2af46d3c4f810309a4350e4f",
+  "runner_sha256": "0c452dfe4a21591c6237a634f1efad0b45feb0ac1079950deaabee94afb3f568",
+  "git_archive_with_original_head_and_index": true,
+  "historical_assertions_modified": false,
+  "calling_checkout_sources_modified": false,
+  "scope": "The published release and its recorded source hashes; current release tests remain separate."
+}

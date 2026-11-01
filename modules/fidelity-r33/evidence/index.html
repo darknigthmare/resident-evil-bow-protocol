@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Preuves par incarnation · B.O.W. Protocol R33</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="query.js" defer></script>
+  <script src="page.js" type="module"></script>
+</head>
+<body>
+  <a class="skip" href="#dossier">Aller au dossier</a>
+  <header>
+    <a href="../index.html">Suivi des lots R33</a>
+    <p class="eyebrow">OUTILS DEV · RÉFÉRENCES DOCUMENTAIRES</p>
+    <h1>Preuves par incarnation</h1>
+    <p>Comparer le corps, la phase et les conditions décrites avant d’associer un média. Une citation documentaire ne certifie ni les pixels d’origine ni une animation de combat.</p>
+  </header>
+  <main>
+    <p id="status" role="status">Préparation des références…</p>
+    <form id="filters" aria-label="Choisir une incarnation">
+      <label for="identity">Incarnation</label>
+      <select id="identity" name="id" disabled></select>
+      <button id="export" type="button" disabled>EXPORTER CE DOSSIER</button>
+    </form>
+    <section id="dossier" aria-labelledby="name" tabindex="-1">
+      <h2 id="name">Dossier</h2>
+      <p id="edition"></p>
+      <p id="qualification" class="notice">Les supports, éditions techniques et banques natives restent à comparer. Aucune affectation automatique au combat.</p>
+      <div id="claims"></div>
+    </section>
+    <section aria-labelledby="context-title">
+      <h2 id="context-title">Vérifier un contexte documentaire</h2>
+      <p>Le résultat compare uniquement les conditions citées. Même un contexte correspondant reste documentaire.</p>
+      <form id="context-form">
+        <label for="claim">Citation à examiner</label><select id="claim" disabled></select>
+        <label for="context-game">Jeu de la situation</label><select id="context-game" disabled></select>
+        <label for="context-phase">Phase de la situation</label><select id="context-phase" disabled></select>
+        <label for="context-region">Partie du corps</label><select id="context-region" disabled></select>
+        <fieldset id="conditions"><legend>Conditions effectivement présentes</legend></fieldset>
+        <button id="check-context" type="submit" disabled>COMPARER LE CONTEXTE</button>
+      </form>
+      <p id="context-result" role="status">Choisissez une citation.</p>
+    </section>
+    <section aria-labelledby="audio-title">
+      <h2 id="audio-title">Écoute liée aux références</h2>
+      <p>Les fichiers ci-dessous proviennent de la bibliothèque R31 conservée. Groupe publié, édition cible, locuteur, phase et action sont des critères distincts ; aucun fichier n’est compté comme nouveau média R33.</p>
+      <label for="clip">Fichier candidat</label><select id="clip" disabled></select>
+      <p id="audio-meta"></p>
+      <button id="prepare" type="button" disabled>PRÉPARER LE FICHIER VÉRIFIÉ</button>
+      <p id="audio-status" role="status">Aucune lecture automatique.</p>
+      <audio id="audio" controls preload="none" aria-label="Écouter le fichier candidat vérifié"></audio>
+      <p><a id="audio-review" href="../../fidelity-r31/audio/index.html">Ouvrir les notes d’écoute R31</a></p>
+    </section>
+    <section aria-labelledby="missing-title">
+      <h2 id="missing-title">Référence exacte encore manquante</h2>
+      <p>Jack Baker à scie à ciseaux reste sans avatar exact admis. Une image de Jack à pelle ou d’une autre mutation ne remplit pas ce critère. Les accès essayés et leurs refus sont conservés dans le manifeste.</p>
+    </section>
+  </main>
+  <footer><a href="../../../docs/R33_EVIDENCE.md">Méthode, provenance et limites R33</a> · Aucun état de combat ou stockage du jeu n’est modifié.</footer>
+</body>
+</html>

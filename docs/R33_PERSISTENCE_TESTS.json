@@ -1,0 +1,153 @@
+{
+  "schema": "re.bow.persistence-tests-r33/1",
+  "passed": 12,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Published R31 reproduces the unrelated-group recovery block; R33 preserves that progress and undoes selected groups",
+      "pass": true,
+      "detail": {
+        "baselineKnownLimitReproduced": true,
+        "baselineGameWritesAfterConflict": 0,
+        "currentUndoSucceeded": true,
+        "unrelatedProgressPreserved": true
+      }
+    },
+    {
+      "name": "Interrupted R31 journals resume in R33 after unrelated progress with no repeated game write",
+      "pass": true,
+      "detail": {
+        "publishedJournalSchemaRetained": true,
+        "selectedRawBytesRecovered": true,
+        "alreadyAppliedWritesRepeated": 0
+      }
+    },
+    {
+      "name": "A selected-key outside writer still blocks resume and undo before another game write",
+      "pass": true,
+      "detail": {
+        "directionsRefused": 2,
+        "conflictingAndUnrelatedValuesPreserved": true
+      }
+    },
+    {
+      "name": "Closing a finished journal allows unrelated later progress but refuses altered selected values",
+      "pass": true,
+      "detail": {
+        "terminalCloseSelectedScope": true,
+        "alteredSelectedValueBlocksClose": true
+      }
+    },
+    {
+      "name": "The first application retains the full-preview staleness check and exact downloaded backup",
+      "pass": true,
+      "detail": {
+        "staleFullBackupRefusedBeforeJournal": true,
+        "initialApplyStillRequiresNewPreview": true
+      }
+    },
+    {
+      "name": "Quotas, missing lock and abort keep the journal/write boundary safe",
+      "pass": true,
+      "detail": {
+        "journalQuotaGameWrites": 0,
+        "gameQuotaUndoSucceeded": true,
+        "deniedLockGameWrites": 0,
+        "abortGameWrites": 0
+      }
+    },
+    {
+      "name": "Tampered journal payload, duplicate JSON and foreign storage keys are refused",
+      "pass": true,
+      "detail": {
+        "damagedJournalRefused": true,
+        "invalidImportsRefused": 2,
+        "foreignKeysReadOrWritten": 0
+      }
+    },
+    {
+      "name": "The mixed-file intake binds raw UTF-8 SHA, detects duplicates and rejects malformed individual files before simulation",
+      "pass": true,
+      "detail": {
+        "individualContractsRecognized": 3,
+        "strictDuplicateSkipped": 1,
+        "malformedInputsRetainedAsRefused": 2,
+        "preparationEngineStarts": 0
+      }
+    },
+    {
+      "name": "Intake bounds and private plans cannot launch excessive or foreign verification work",
+      "pass": true,
+      "detail": {
+        "refusedBounds": 3,
+        "foreignPlanRefused": true,
+        "asynchronousInputMutationCannotChangeHashBinding": true
+      }
+    },
+    {
+      "name": "Batches run sequentially, retain individual engine refusals and require two equal reconstructions",
+      "pass": true,
+      "detail": {
+        "peakActiveVerifiers": 1,
+        "unknownContractDoesNotHideOtherResults": true,
+        "onePassCannotBeCertified": true
+      }
+    },
+    {
+      "name": "Cancellation during preparation settles immediately and cancels a late iframe task without mutating the exported result",
+      "pass": true,
+      "detail": {
+        "cancelSettledBeforeLatePreparation": true,
+        "lateTaskCancelled": true,
+        "secondReplayNeverStarted": true,
+        "resultImmutableAfterCompletion": true
+      }
+    },
+    {
+      "name": "View callback errors cannot corrupt a batch, and simultaneous starts are refused",
+      "pass": true,
+      "detail": {
+        "callbackFailuresCannotAlterReconstruction": true,
+        "parallelStartRefused": true
+      }
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "src/save-center-r19.js",
+      "bytes": 10791,
+      "sha256": "6a312bd65ea55fcfe272e4adc9add12ce51affb4a9d424f5bee9998b9952ccbf"
+    },
+    {
+      "path": "modules/fidelity-r31/persistence/restore.js",
+      "bytes": 10722,
+      "sha256": "eea96d028d097b4f57351c88d4a0a4db53af6a2002b634fed6de9fec23b161ec"
+    },
+    {
+      "path": "modules/fidelity-r31/persistence/journal.js",
+      "bytes": 3838,
+      "sha256": "31692ad9cfb947bcff34430ee1fff322c39274cfe2b6decb8f657309ded8c7cd"
+    },
+    {
+      "path": "modules/fidelity-r31/replay/verify.js",
+      "bytes": 8084,
+      "sha256": "e8d6bdebab913491b72985f855747bd899916452d6777199f8abc92e79c6013d"
+    },
+    {
+      "path": "modules/fidelity-r33/persistence/restore.js",
+      "bytes": 11279,
+      "sha256": "87ab1cf43b23f20e4537a580c6b0a30fc9bd08b9c596c9ba47570205d3ee2322"
+    },
+    {
+      "path": "modules/fidelity-r33/replay/batch.js",
+      "bytes": 6071,
+      "sha256": "f40f11193afdb3015e879c6b9d055700af87a768dd847afe2e8e74e7cf8527fc"
+    },
+    {
+      "path": "tests/verify-persistence-r33.mjs",
+      "bytes": 18049,
+      "sha256": "50d9d112ed145373f4aad9f45091d6c69477778d211ca31553d16566bc870421"
+    }
+  ],
+  "scope": "R31 before/current selective recovery in explicit memory fixtures; mixed-contract batching uses controlled verification tasks. Actual browser storage, reload, engine reconstruction and page lifecycle are separate."
+}
