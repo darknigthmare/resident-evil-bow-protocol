@@ -1,0 +1,6 @@
+PASS Manual stop produces an exportable partial measurement and allows a new run
+PASS A persisted lifecycle interruption retains its partial report and restores controls
+PASS Actual browser back/forward-cache restoration keeps an interrupted measurement usable
+PASS Changing mode clears the previous report and ignores completion from the outgoing frame
+PASS Reloading the embedded document resets report ownership and both measurement controls
+{"passed":5,"failed":0,"report":"qa-gamedev-r32/performance-lifecycle.json"}

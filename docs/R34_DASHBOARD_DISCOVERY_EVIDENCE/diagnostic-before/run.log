@@ -1,0 +1,12 @@
+PASS All 17 workstreams, filters and source links at 1440px
+PASS All 17 workstreams, filters and source links at 390px
+FAIL Bestiary retains one visible current sources link after header setup at 1440/390px: The source entry reaches the current local delivery
++ actual - expected
+
++ 'http://127.0.0.1:5371/modules/fidelity-r31/index.html'
+- 'http://127.0.0.1:5371/modules/fidelity-r33/index.html'
+
+PASS Keyboard skip link, named filters and visible focus
+PASS 404 and malformed progress refuse incomplete data, then retry recovers
+PASS Untrusted source text stays text and external review links are refused
+{"passed":5,"failed":1}

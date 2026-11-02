@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Production portraits et poses — R34</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><a href="../../../dev.html">← ATELIER</a><span>R34 / PORTRAITS ET POSES</span></header>
+  <main>
+    <h1>Production des combattants</h1>
+    <p id="devGate">Cet écran de production est disponible en <a href="?dev=1">mode DEV</a>.</p>
+    <section id="workspace" hidden>
+      <p>Portraits, puis corps entiers en pose de combat. Les images générées, les références réutilisées, les refus et les travaux en attente restent distingués. Une pose fixe n’est pas une animation idle originale.</p>
+      <p id="summary"></p>
+      <form id="filters" role="search">
+        <label>RECHERCHE<input id="search" type="search" placeholder="Nom, jeu ou identifiant"></label>
+        <label>LOT<select id="lot"><option value="">TOUS</option><option value="lot_1">LOT 1</option><option value="lot_2">LOT 2</option><option value="lot_3">LOT 3</option><option value="lot_4">LOT 4</option></select></label>
+        <label>SORTIE<select id="kind"><option value="portrait">PORTRAIT</option><option value="idle">POSE IDLE ENTIÈRE</option></select></label>
+        <label>ÉTAT<select id="status"><option value="">TOUS</option><option value="GENERATED">NOUVEAU GÉNÉRÉ</option><option value="PENDING">EN ATTENTE</option><option value="BLOCKED_HISTORICAL_REFUSAL">REFUS CONSERVÉ</option><option value="BLOCKED_BY_TOOL">NOUVEAU REFUS</option><option value="HELD_REFERENCE">RÉFÉRENCE À COMPLÉTER</option></select></label>
+      </form>
+      <div class="layout">
+        <section aria-label="Combattants"><div id="choices"></div><nav aria-label="Pages"><button id="previous" type="button">← PRÉCÉDENT</button><span id="page"></span><button id="next" type="button">SUIVANT →</button></nav></section>
+        <section id="detail" aria-label="Production sélectionnée">
+          <h2 id="name">Choisir un combattant</h2><p id="identity"></p>
+          <p id="message" role="status" aria-live="polite"></p>
+          <div id="image"><img id="asset" alt="" hidden></div>
+          <dl id="facts"></dl><ul id="notes"></ul><div id="links"></div>
+        </section>
+      </div>
+    </section>
+  </main>
+  <script src="../../fidelity-r31/performance/image-budget.js"></script><script src="page.js"></script>
+</body>
+</html>

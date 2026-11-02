@@ -1,0 +1,538 @@
+{
+  "schema": "re.bow.dashboard-discovery-review-r34/1",
+  "publishedAt": "2026-11-02T05:12:08.254432+00:00",
+  "baselineCommit": "730ededd457c1a4c8cf09db4f5a8a4938626f17d",
+  "change": {
+    "path": "tests/browser-fidelity-dashboard-r24.mjs",
+    "kind": "test-discovery-correction",
+    "problem": "R24 discovery treated every dossier-link adapter as the owner of the primary Sources et chantiers entry. R33 intentionally owns a separate developer-only Ajouts R33 entry; the primary entry remains owned by R31.",
+    "correction": "Filter installed adapters by the primary entry owner getElementById(fidelityR23Link), then retain the existing maximum-release calculation. No expected release is hard-coded.",
+    "productRuntimeChanged": false,
+    "assertionsOutsideDiscoveryUnchanged": true,
+    "primaryEntryAssertionsPreserved": [
+      "unique compatible ID",
+      "one named entry",
+      "visible entry",
+      "exact destination",
+      "no duplicate target entry",
+      "real click/tap navigation",
+      "seventeen workstreams at destination"
+    ],
+    "contractEvidence": {
+      "path": "tests/browser-fidelity-r33.mjs",
+      "bytes": 18180,
+      "sha256": "81aecc2b7cd4ca8cf513fa099e908991d33ce295107e65b87a3067033414c4a0",
+      "executedByThisR24Review": false,
+      "relevantAssertions": "R33 player-path assertions require #fidelityR33Link hidden in player mode and #fidelityR23Link targeting fidelity-r31/index.html; DEV evidence remains separate."
+    },
+    "ownerInspection": [
+      {
+        "release": 23,
+        "path": "modules/fidelity-r23/dossier-link.js",
+        "ownsPrimarySourceEntry": true,
+        "bytes": 494,
+        "sha256": "0fde59ce77ccc176aeb1034af3693d811eed4f47e4ef5aa0c119b7fc1f5d606d"
+      },
+      {
+        "release": 24,
+        "path": "modules/fidelity-r24/dossier-link.js",
+        "ownsPrimarySourceEntry": true,
+        "bytes": 823,
+        "sha256": "087d4a7db750310889d9426b590590e60ecb84f4c8994d2d606dc369d4bce0be"
+      },
+      {
+        "release": 25,
+        "path": "modules/fidelity-r25/dossier-link.js",
+        "ownsPrimarySourceEntry": true,
+        "bytes": 7858,
+        "sha256": "059644dbf0927762351836838c55457af218c38be40ebc6f8b09cc5aa0337a5c"
+      },
+      {
+        "release": 26,
+        "path": "modules/fidelity-r26/dossier-link.js",
+        "ownsPrimarySourceEntry": true,
+        "bytes": 10599,
+        "sha256": "f24d408bf4d004ab35d4737e0bdc1593bdbcb74d8d090a3419d0371e531780bd"
+      },
+      {
+        "release": 27,
+        "path": "modules/fidelity-r27/dossier-link.js",
+        "ownsPrimarySourceEntry": true,
+        "bytes": 11035,
+        "sha256": "d6b01bf6c77558f62afc09a0e21ef807daf879848acf16e3998b9f397b7c119c"
+      },
+      {
+        "release": 28,
+        "path": "modules/fidelity-r28/dossier-link.js",
+        "ownsPrimarySourceEntry": false,
+        "bytes": 8543,
+        "sha256": "d8dfee965825d082d7f8cf3c6ab629ba3ca19963f960bdedaec95f2858f783dc"
+      },
+      {
+        "release": 29,
+        "path": "modules/fidelity-r29/dossier-link.js",
+        "ownsPrimarySourceEntry": true,
+        "bytes": 14285,
+        "sha256": "2e14a82bd6c3d09861e9fc8e2fd676375620f8b2c574052de845cf7a1af2e7f3"
+      },
+      {
+        "release": 30,
+        "path": "modules/fidelity-r30/dossier-link.js",
+        "ownsPrimarySourceEntry": true,
+        "bytes": 9375,
+        "sha256": "6e472b66073fabb50355509f2f142bca2432a35c183c8a687ab877a8090e04a4"
+      },
+      {
+        "release": 31,
+        "path": "modules/fidelity-r31/dossier-link.js",
+        "ownsPrimarySourceEntry": true,
+        "bytes": 8097,
+        "sha256": "06b8ac003697f49c790cbb5e5a19005a44daa66a7b7bdf5b5b43cb6d35c6fff2"
+      },
+      {
+        "release": 33,
+        "path": "modules/fidelity-r33/dossier-link.js",
+        "ownsPrimarySourceEntry": false,
+        "bytes": 8173,
+        "sha256": "f4e3d65320e869f69d1e4944d8bd829c0dd22005396e01c2840fd267a0ea9527"
+      }
+    ],
+    "derivedPrimaryRelease": 31,
+    "exactTransformation": {
+      "path": "tests/browser-fidelity-dashboard-r24.mjs",
+      "baseline": "730ededd457c1a4c8cf09db4f5a8a4938626f17d",
+      "before": "// The header always points to the latest installed adapter; historical dashboards stay independently checked.\nconst installedAdapters = [...codex.matchAll(/<script src=\"modules\\/fidelity-r(\\d+)\\/dossier-link\\.js\"><\\/script>/g)].map(match => Number(match[1]));\n",
+      "after": "// Only adapters owning the primary source entry determine its current dashboard.\n// Separately owned developer additions keep their own links and do not replace it.\nconst installedAdapters = [...codex.matchAll(/<script src=\"modules\\/fidelity-r(\\d+)\\/dossier-link\\.js\"><\\/script>/g)]\n  .filter(match => /getElementById\\(\\s*['\"]fidelityR23Link['\"]\\s*\\)/.test(fs.readFileSync(path.join(root, 'modules/fidelity-r' + match[1] + '/dossier-link.js'), 'utf8')))\n  .map(match => Number(match[1]));\n",
+      "beforeSha256": "d3dcb1ca877db4f63329de7b7e75a0b2faedaa312a4a70563aca4e470755c6de",
+      "afterSha256": "b0cf6c95e19ad26e059beadfc027947868c3f2db8f560b1739939bb48676271d",
+      "inverseExactCount": 1,
+      "remainingBytesIdentical": true
+    }
+  },
+  "diagnosticBefore": {
+    "status": "diagnostic-failure-preserved",
+    "passed": 5,
+    "failed": 1,
+    "exitCode": 1,
+    "startedAt": "2026-11-02T04:58:25.501Z",
+    "completedAt": "2026-11-02T04:58:29.630Z",
+    "environment": {
+      "virtualized": true,
+      "headless": true,
+      "node": "v22.16.0",
+      "chromium": "154.0.8037.57"
+    },
+    "testSha256": "d3dcb1ca877db4f63329de7b7e75a0b2faedaa312a4a70563aca4e470755c6de",
+    "testBindingBasis": "Immutable baseline source and exact inverse transformation; no complete pre-run source inventory was taken.",
+    "failure": "Actual Sources et chantiers destination is /modules/fidelity-r31/index.html; faulty installed-adapter discovery expected /modules/fidelity-r33/index.html.",
+    "screenshotsRetained": false,
+    "screenshotsLimitation": "The recipe reuses its screenshot paths. The diagnostic screenshots were overwritten by the later successful run before archival; no before screenshot is claimed."
+  },
+  "currentAfter": {
+    "status": "passed",
+    "passed": 6,
+    "failed": 0,
+    "exitCode": 0,
+    "startedAt": "2026-11-02T04:59:04.964Z",
+    "completedAt": "2026-11-02T04:59:09.483Z",
+    "environment": {
+      "virtualized": true,
+      "headless": true,
+      "node": "v22.16.0",
+      "chromium": "154.0.8037.57"
+    },
+    "testSha256": "b0cf6c95e19ad26e059beadfc027947868c3f2db8f560b1739939bb48676271d",
+    "executedTestMatchesCurrentParent": true,
+    "viewportWidths": [
+      1440,
+      390
+    ],
+    "touchEmulated": true,
+    "physicalDevicesCertified": false,
+    "screenshotsScope": "Current successful-run screenshots show the historical R24 dashboard. The recipe does not capture its source-entry click assertion as an image.",
+    "rawReport": "docs/R34_DASHBOARD_DISCOVERY_EVIDENCE/current-after/report.json"
+  },
+  "sourceBindings": {
+    "capturedAt": "2026-11-02T05:12:08.254488+00:00",
+    "phase": "post-execution-selected-input-comparison",
+    "preExecutionCompleteInventoryAvailable": false,
+    "completeFixtureInventoryCertified": false,
+    "fixtureRoot": "/workspace/scratch/r35-review/dashboard-checkout",
+    "fixtureMethod": "The test, dev server and root HTML were copied. Runtime src/modules/data/styles and other unchanged resources were served through symlink-backed directories. The historical output report was copied into an owned docs location before execution; recipe reports and screenshots remained outside the parent checkout.",
+    "selectedInputs": [
+      {
+        "path": "codex.html",
+        "bytes": 4591,
+        "sha256": "3292dab6591018c0d9dc462fb3bbe2ef9e3ce39c6f1fb80091b1c7c71743e5b8",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "copied"
+      },
+      {
+        "path": "data/roster.json",
+        "bytes": 2360224,
+        "sha256": "e1aba741cea7e34ee653c0fc1d7c92b666182f03f2b00d5b72421c4c93ca1dc0",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "symlink-backed"
+      },
+      {
+        "path": "docs/R20_TRACKING.json",
+        "bytes": 20420,
+        "sha256": "bab7a5f564e98a7b6bd81080f08fb6bcf842a9fd78b1ba80fee00029eb59ba11",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "symlink-backed"
+      },
+      {
+        "path": "docs/R24_TRACKING.json",
+        "bytes": 273645,
+        "sha256": "1f1e97420ae84664265a865ca4310922e389243b988815e3db43240cfbf9459e",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "symlink-backed"
+      },
+      {
+        "path": "modules/fidelity-r23/access/dossier-access.js",
+        "bytes": 623,
+        "sha256": "429c793ea3b8c061850cff17155a611599777c98e98bcb529c4b366249d0230c",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "symlink-backed"
+      },
+      {
+        "path": "modules/fidelity-r23/dashboard.js",
+        "bytes": 4290,
+        "sha256": "ba18725f61cfcd52239d43a906d790b9c4c249e19603a5eb0c5b6b8865b11523",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "symlink-backed"
+      },
+      {
+        "path": "modules/fidelity-r23/dossier-link.js",
+        "bytes": 494,
+        "sha256": "0fde59ce77ccc176aeb1034af3693d811eed4f47e4ef5aa0c119b7fc1f5d606d",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "symlink-backed"
+      },
+      {
+        "path": "modules/fidelity-r23/style.css",
+        "bytes": 3167,
+        "sha256": "ce058d9c9086572c4ca5f64f8ada9d0eff628442743a7629e6ad9ee25534c761",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "symlink-backed"
+      },
+      {
+        "path": "modules/fidelity-r23/visual/dossier-portraits.js",
+        "bytes": 8912,
+        "sha256": "401d6535c33378aa23e2f1808ef6608b51a1fb7a79a2036a3af676ca5bf7548a",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "symlink-backed"
+      },
+      {
+        "path": "modules/fidelity-r24/access/gamepad-navigation.js",
+        "bytes": 5312,
+        "sha256": "bff00e00de122c59a55180163f19999bfdb5f9c2781317210978eb2f4c26531a",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "symlink-backed"
+      },
+      {
+        "path": "modules/fidelity-r24/access/gamepad.css",
+        "bytes": 507,
+        "sha256": "0f6dcaef7d6c026cf4c8df94120cff4d43daf59864c45d0583960afa86d27719",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "symlink-backed"
+      },
+      {
+        "path": "modules/fidelity-r24/access/text-reflow.css",
+        "bytes": 343,
+        "sha256": "4e2b05457285ed25a7de502187bfe7c44dadb8fe5933b49142427b22a3ca1abc",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "symlink-backed"
+      },
+      {
+        "path": "modules/fidelity-r24/audio/manifest.json",
+        "bytes": 63984,
+        "sha256": "9c203250e59f42c58f7b2d6f6f92f5e812bcd0c9a96296dd2fa7031f8caea0c5",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "symlink-backed"
+      },
+      {
+        "path": "modules/fidelity-r24/dossier-link.js",
+        "bytes": 823,
+        "sha256": "087d4a7db750310889d9426b590590e60ecb84f4c8994d2d606dc369d4bce0be",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "symlink-backed"
+      },
+      {
+        "path": "modules/fidelity-r24/index.html",
+        "bytes": 2712,
+        "sha256": "5dbbb881066464f0f9e0b8c36a0ce962f1ce86fdb474b92c87f443aa367e97ef",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "symlink-backed"
+      },
+      {
+        "path": "modules/fidelity-r24/motion/manifest.json",
+        "bytes": 253199,
+        "sha256": "326b4259ec20644fe21472abaada75eff5d7d5b54f65b03e490c905924d746f8",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "symlink-backed"
+      },
+      {
+        "path": "modules/fidelity-r24/progress.json",
+        "bytes": 18523,
+        "sha256": "36c03fc0392aacc6aa2c280e2d4d84356ee1a62c5bb06c43c89678e385f78112",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "symlink-backed"
+      },
+      {
+        "path": "modules/fidelity-r24/visual/manifest.json",
+        "bytes": 198419,
+        "sha256": "4a83d8476124ab7f7c3347d5d24e7fde9cf6ca86ae18f0f4cf3dc12237aa6cea",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "symlink-backed"
+      },
+      {
+        "path": "modules/fidelity-r25/access/workbench.css",
+        "bytes": 470,
+        "sha256": "543b6d43613062b9b4937c77b2ffeeded3f35c9d0416ccc5eda9abe3c3e6765e",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "symlink-backed"
+      },
+      {
+        "path": "modules/fidelity-r25/dossier-link.js",
+        "bytes": 7858,
+        "sha256": "059644dbf0927762351836838c55457af218c38be40ebc6f8b09cc5aa0337a5c",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "symlink-backed"
+      },
+      {
+        "path": "modules/fidelity-r26/dossier-link.js",
+        "bytes": 10599,
+        "sha256": "f24d408bf4d004ab35d4737e0bdc1593bdbcb74d8d090a3419d0371e531780bd",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "symlink-backed"
+      },
+      {
+        "path": "modules/fidelity-r27/dossier-link.js",
+        "bytes": 11035,
+        "sha256": "d6b01bf6c77558f62afc09a0e21ef807daf879848acf16e3998b9f397b7c119c",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "symlink-backed"
+      },
+      {
+        "path": "modules/fidelity-r28/dossier-link.js",
+        "bytes": 8543,
+        "sha256": "d8dfee965825d082d7f8cf3c6ab629ba3ca19963f960bdedaec95f2858f783dc",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "symlink-backed"
+      },
+      {
+        "path": "modules/fidelity-r29/dossier-link.js",
+        "bytes": 14285,
+        "sha256": "2e14a82bd6c3d09861e9fc8e2fd676375620f8b2c574052de845cf7a1af2e7f3",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "symlink-backed"
+      },
+      {
+        "path": "modules/fidelity-r30/dossier-link.js",
+        "bytes": 9375,
+        "sha256": "6e472b66073fabb50355509f2f142bca2432a35c183c8a687ab877a8090e04a4",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "symlink-backed"
+      },
+      {
+        "path": "modules/fidelity-r31/dashboard.js",
+        "bytes": 6614,
+        "sha256": "dedee4432be1d0e684f161e89490329c89556ea3bb299d7ac93188d2927e2705",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "symlink-backed"
+      },
+      {
+        "path": "modules/fidelity-r31/dossier-link.js",
+        "bytes": 8097,
+        "sha256": "06b8ac003697f49c790cbb5e5a19005a44daa66a7b7bdf5b5b43cb6d35c6fff2",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "symlink-backed"
+      },
+      {
+        "path": "modules/fidelity-r31/index.html",
+        "bytes": 3125,
+        "sha256": "80690bba70df23d0aaf87802f253a819d11c58d3299e32120105dbe221ece24f",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "symlink-backed"
+      },
+      {
+        "path": "modules/fidelity-r31/progress.json",
+        "bytes": 41831,
+        "sha256": "0083e4c59e90eb7a0436d8c9da5d21fe2e95825f13d5b750245c0f917fa05e15",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "symlink-backed"
+      },
+      {
+        "path": "modules/fidelity-r33/dossier-additions.json",
+        "bytes": 107078,
+        "sha256": "7bb553f7e10e4aa11a6264e3fa491577830702d6cb7af5306f13ca1a6aa58652",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "symlink-backed"
+      },
+      {
+        "path": "modules/fidelity-r33/dossier-link.js",
+        "bytes": 8173,
+        "sha256": "f4e3d65320e869f69d1e4944d8bd829c0dd22005396e01c2840fd267a0ea9527",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "symlink-backed"
+      },
+      {
+        "path": "modules/source-motion-r22/dossier-link.js",
+        "bytes": 1260,
+        "sha256": "70e6cd486b242f1bd4d38ee12bd754071c487f9a51b9553ea70c04d5f08b22e8",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "symlink-backed"
+      },
+      {
+        "path": "modules/source-motion-r22/native-portraits.js",
+        "bytes": 10292,
+        "sha256": "c7861a31950f3b6ad5ddbf8f1e17ef0df3fb620f63bbf795f2140b77f82f4b43",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "symlink-backed"
+      },
+      {
+        "path": "scripts/dev.mjs",
+        "bytes": 1276,
+        "sha256": "12ee03ace333687171e978d73bbaadd7ff02653875ed02df3025ab00a2eee08f",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "copied"
+      },
+      {
+        "path": "src/codex.js",
+        "bytes": 6295,
+        "sha256": "9b28ea2807774dc0a3f853db1fbdf240aa7c9f40a95176086d36abcabdc0b5cf",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "symlink-backed"
+      },
+      {
+        "path": "src/interface-preferences-r20.js",
+        "bytes": 2051,
+        "sha256": "79e4655dcff4674e9447c7473a4a2db77fdc5ff31c370bc331d5c74e6d83ea35",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "symlink-backed"
+      },
+      {
+        "path": "src/menu-navigation-r20.js",
+        "bytes": 2173,
+        "sha256": "46ed45264202e5f3d6bb84415ad5dd7ad04e91a375653ee9ae7196c853b27d8d",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "symlink-backed"
+      },
+      {
+        "path": "src/player-shell-r20.js",
+        "bytes": 6567,
+        "sha256": "97621067c2878bb193fb4b2d30c7ff903e0ceaf7ec17d7b33858ff90521732f4",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "symlink-backed"
+      },
+      {
+        "path": "src/re-data.js",
+        "bytes": 1786234,
+        "sha256": "090cf6e14a5ddf73291bcc443db1500e1810911beb926b4b4e26f9b0160b355a",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "symlink-backed"
+      },
+      {
+        "path": "styles/archive.css",
+        "bytes": 9945,
+        "sha256": "ddad248f9053045bef986b4bbb9950071632ac1c22936775fcaa5dc2f5219e3d",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "symlink-backed"
+      },
+      {
+        "path": "styles/bow-v073.css",
+        "bytes": 36425,
+        "sha256": "4c17dce0fe045df56a348d3696e37163808fcba35474cbec6f920d5dbcd7c402",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "symlink-backed"
+      },
+      {
+        "path": "styles/hub.css",
+        "bytes": 8957,
+        "sha256": "6fe0f81ca2823d3819761fad546fe13051e086ae35dbacc19c5397c1a291174a",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "symlink-backed"
+      },
+      {
+        "path": "styles/player-shell-r20.css",
+        "bytes": 19530,
+        "sha256": "87c68eb441075530b6b81a150a2c303f6351f2298732d12de891807a08286443",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "symlink-backed"
+      },
+      {
+        "path": "tests/browser-fidelity-dashboard-r24.mjs",
+        "bytes": 14257,
+        "sha256": "b0cf6c95e19ad26e059beadfc027947868c3f2db8f560b1739939bb48676271d",
+        "parentMatchesFixture": true,
+        "fixtureSourceMode": "copied"
+      }
+    ],
+    "selectedInputCount": 44,
+    "differences": [],
+    "scope": "Selected test, server, mounted page/scripts/styles, primary-link adapters and directly used R20/R24/R31 data were compared byte-for-byte after execution. This does not claim a contemporaneous full fixture snapshot, full network dependency closure, all media, or unchanged bytes of every file during the earlier diagnostic."
+  },
+  "evidence": [
+    {
+      "path": "docs/R34_DASHBOARD_DISCOVERY_EVIDENCE/diagnostic-before/run.log",
+      "bytes": 631,
+      "sha256": "2734b04a0a0d6dabb82f9c8151fe937f74aa7bb89687f8438f17eb0d2ad92d91",
+      "copiedWithoutModification": true
+    },
+    {
+      "path": "docs/R34_DASHBOARD_DISCOVERY_EVIDENCE/diagnostic-before/report.json",
+      "bytes": 5429,
+      "sha256": "6649898b7e5802ecb72cd0505aed3892b1edcb46aaaf566be19aa9d1c2230376",
+      "copiedWithoutModification": true
+    },
+    {
+      "path": "docs/R34_DASHBOARD_DISCOVERY_EVIDENCE/current-after/run.log",
+      "bytes": 440,
+      "sha256": "34aa68bce8d6d8e825d1ebd4b19f5815815ec82b3cc7fd30701a71b39c7086c2",
+      "copiedWithoutModification": true
+    },
+    {
+      "path": "docs/R34_DASHBOARD_DISCOVERY_EVIDENCE/current-after/report.json",
+      "bytes": 5461,
+      "sha256": "467974d107a3909d02b2c093d04aa3bc7e819a5825c0bdb633e8d15ffd4ad727",
+      "copiedWithoutModification": true
+    },
+    {
+      "path": "docs/R34_DASHBOARD_DISCOVERY_EVIDENCE/current-after/executed-test.mjs.txt",
+      "bytes": 14257,
+      "sha256": "b0cf6c95e19ad26e059beadfc027947868c3f2db8f560b1739939bb48676271d",
+      "copiedWithoutModification": true
+    },
+    {
+      "path": "docs/R34_DASHBOARD_DISCOVERY_EVIDENCE/exact-discovery-transform.json",
+      "bytes": 1156,
+      "sha256": "0580e01109a1e17616c32c56427dc9e925b7a77d6183cbd665e5d28bb1ec483e",
+      "copiedWithoutModification": true
+    },
+    {
+      "path": "docs/R34_DASHBOARD_DISCOVERY_EVIDENCE/current-after/screenshots/dashboard-1440.png",
+      "bytes": 794569,
+      "sha256": "0c3f3f07a2450bb9e4a5ca1dbe40afc80b31825af9a26d5099a27c785c6b8c79",
+      "copiedWithoutModification": true
+    },
+    {
+      "path": "docs/R34_DASHBOARD_DISCOVERY_EVIDENCE/current-after/screenshots/dashboard-390.png",
+      "bytes": 843873,
+      "sha256": "dd4f2f708ed13f6a9c5b65fb9d005de323d0924d1db58fe1315a8dfce6d6c4c7",
+      "copiedWithoutModification": true
+    }
+  ],
+  "conservation": {
+    "historicalReport": "docs/R24_DASHBOARD_BROWSER.json",
+    "historicalReportMatchesBaseline": true,
+    "historicalReportSha256": "d644e6c6bc6f735669a2ef3185728afc77c588942d30e38d97aa7819a12c541c",
+    "oldReportsRefreshed": false,
+    "newExecutionDuringEvidencePublication": false
+  },
+  "limitations": [
+    "Diagnostic failure and current success are separate results.",
+    "No complete before-run source inventory was recorded. Selected bindings are explicitly post-execution.",
+    "No original idle animation, native sprite, combat fidelity, full 1:1 fidelity or physical hardware certification follows from this dashboard navigation review."
+  ]
+}

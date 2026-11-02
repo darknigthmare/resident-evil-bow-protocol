@@ -1,0 +1,540 @@
+{
+  "schema": "re.bow.evidence-curation-r33/1",
+  "release": "R33",
+  "claims": [
+    {
+      "id": "R33-EVID-001",
+      "uid": "re0-stinger",
+      "sourceId": "re0-stinger",
+      "label": "Longueur maximale, pinces comprises",
+      "excerpt": "It reaches lengths of up to three meters, including its pincers.",
+      "type": "dimension",
+      "phase": "documented-encounter",
+      "bodyRegion": "body-including-pincers",
+      "requiredConditions": [],
+      "actorRole": "subject-property",
+      "limitation": "Borne textuelle supérieure incluant les pinces ; pas une mesure du modèle, de sa hauteur ni de la collision du combat 2D."
+    },
+    {
+      "id": "R33-EVID-002",
+      "uid": "re0-stinger",
+      "sourceId": "re0-stinger",
+      "label": "Pinces durcies capables de couper de l’acier",
+      "excerpt": "Its pincers in particular are tough enough to cut through steel.",
+      "type": "anatomy",
+      "phase": "documented-encounter",
+      "bodyRegion": "pincers",
+      "requiredConditions": [],
+      "actorRole": "subject-property",
+      "limitation": "Fait documentaire de cette incarnation ; aucune animation, cadence originale, collision, banque sonore ou commande officielle certifiée."
+    },
+    {
+      "id": "R33-EVID-003",
+      "uid": "re0-stinger",
+      "sourceId": "re0-stinger",
+      "label": "Tête vulnérable malgré le corps blindé",
+      "excerpt": "The Stinger has a tough, armoured body, but its head is surprisingly vulnerable.",
+      "type": "weakpoint",
+      "phase": "documented-encounter",
+      "bodyRegion": "head",
+      "requiredConditions": [],
+      "actorRole": "subject-property",
+      "limitation": "Fait documentaire de cette incarnation ; aucune animation, cadence originale, collision, banque sonore ou commande officielle certifiée."
+    },
+    {
+      "id": "R33-EVID-004",
+      "uid": "re0-stinger",
+      "sourceId": "re0-stinger",
+      "label": "Apparition après acquisition du pic à glace",
+      "excerpt": "Bursts through the roof after acquiring the Ice Pick .",
+      "type": "encounter-condition",
+      "phase": "train-bar-lounge-entry",
+      "bodyRegion": "whole-body",
+      "requiredConditions": [
+        "ice-pick-acquired"
+      ],
+      "actorRole": "subject-property",
+      "limitation": "Condition décrite pour le Bar Lounge du train ; aucun délai, déclencheur moteur ou intro animée admis."
+    },
+    {
+      "id": "R33-EVID-005",
+      "uid": "re0-centurion",
+      "sourceId": "re0-centurion",
+      "label": "Apparition au retrait de la clé de feu",
+      "excerpt": "Emerges when you have taken the Fire Key from underneath the cage.",
+      "type": "encounter-condition",
+      "phase": "training-large-hall-entry",
+      "bodyRegion": "whole-body",
+      "requiredConditions": [
+        "fire-key-taken-from-cage"
+      ],
+      "actorRole": "subject-property",
+      "limitation": "Fait documentaire de cette incarnation ; aucune animation, cadence originale, collision, banque sonore ou commande officielle certifiée."
+    },
+    {
+      "id": "R33-EVID-006",
+      "uid": "re0-centurion",
+      "sourceId": "re0-centurion",
+      "label": "Prédateur carnivore multisegmenté",
+      "excerpt": "This multilegged, carnivorous creature survives by preying on humans.",
+      "type": "anatomy",
+      "phase": "documented-encounter",
+      "bodyRegion": "whole-body",
+      "requiredConditions": [],
+      "actorRole": "subject-property",
+      "limitation": "Description d’un régime prédateur humain, sans compatibilité avec des victimes B.O.W. arbitraires."
+    },
+    {
+      "id": "R33-EVID-007",
+      "uid": "re0-lurker",
+      "sourceId": "re0-lurker",
+      "label": "Sens visuels et auditifs régressés, détection des proies accrue",
+      "excerpt": "Their eyes and ears have devolved greatly in this form, but their ability to sense prey has been evolved to an almost supernatural level.",
+      "type": "anatomy",
+      "phase": "documented-encounter",
+      "bodyRegion": "sensory-organs",
+      "requiredConditions": [],
+      "actorRole": "subject-property",
+      "limitation": "Fait documentaire de cette incarnation ; aucune animation, cadence originale, collision, banque sonore ou commande officielle certifiée."
+    },
+    {
+      "id": "R33-EVID-008",
+      "uid": "re0-lurker",
+      "sourceId": "re0-lurker",
+      "label": "Sortie de l’eau probabiliste à proximité",
+      "excerpt": "There's a chance that it will jump out the water as you pass.",
+      "type": "encounter-condition",
+      "phase": "treatment-plant-water-ambush",
+      "bodyRegion": "whole-body",
+      "requiredConditions": [
+        "original-protagonist-passes-water"
+      ],
+      "actorRole": "subject-property",
+      "limitation": "Possibilité de rencontre décrite dans les lieux listés ; aucune probabilité numérique ni attaque inévitable déduite."
+    },
+    {
+      "id": "R33-EVID-009",
+      "uid": "re0-lurker",
+      "sourceId": "re0-bow-report",
+      "label": "Rapport Amphibia : saut et langue accrus, pas d’intelligence accrue",
+      "excerpt": "Injecting a frog with the virus resulted in an increase in leaping power and abnormal tongue growth. However, no change in mental ability was observed.",
+      "type": "anatomy",
+      "phase": "amphibia-experiment",
+      "bodyRegion": "frog-experimental-body",
+      "requiredConditions": [],
+      "actorRole": "subject-property",
+      "limitation": "Le texte du rapport dit « Amphibia » et « frog », pas Lurker. L’association au Lurker est celle du résumé éditorial de la page ; pas un identifiant natif certifié."
+    },
+    {
+      "id": "R33-EVID-010",
+      "uid": "re0-mimicry-marcus",
+      "sourceId": "re0-mimicry-marcus",
+      "label": "Texture du camouflage humain à distance",
+      "excerpt": "They are actually able to modify the texture of their skin to such a degree that from a distance the shape they take on looks like a real man.",
+      "type": "anatomy",
+      "phase": "human-disguise",
+      "bodyRegion": "collective-surface",
+      "requiredConditions": [],
+      "actorRole": "subject-property",
+      "limitation": "Fait documentaire de cette incarnation ; aucune animation, cadence originale, collision, banque sonore ou commande officielle certifiée."
+    },
+    {
+      "id": "R33-EVID-011",
+      "uid": "re0-mimicry-marcus",
+      "sourceId": "re0-leech-growth",
+      "label": "Archives des sangsues : disparition du comportement individuel",
+      "excerpt": "The leeches no longer exhibit individual behavior, even when not feeding. They move as a collective.",
+      "type": "form-context",
+      "phase": "april-22-1978-experiment",
+      "bodyRegion": "whole-body",
+      "requiredConditions": [],
+      "actorRole": "subject-property",
+      "limitation": "Observation datée d’un collectif expérimental ; pas une preuve du rig, de sa phase de combat ou d’un bouton d’évolution."
+    },
+    {
+      "id": "R33-EVID-012",
+      "uid": "re0-mimicry-marcus",
+      "sourceId": "re0-leech-growth",
+      "label": "Archives des sangsues : imitation de Marcus",
+      "excerpt": "June 3rd, 1978 A day worthy of commemoration. Today they begin to mimic me!",
+      "type": "form-context",
+      "phase": "june-3-1978-experiment",
+      "bodyRegion": "whole-body",
+      "requiredConditions": [],
+      "actorRole": "subject-property",
+      "limitation": "Transcription du journal en jeu publiée par un tiers ; le lien de contexte avec Mimicry Marcus ne certifie pas les frames de transformation."
+    },
+    {
+      "id": "R33-EVID-013",
+      "uid": "re0-queen-leech-second-form",
+      "sourceId": "re0-queen-leech-second-form",
+      "label": "Deuxième forme : résistance accrue après défaite de la première",
+      "excerpt": "After defeating the Queen Leech, it undergoes a rapid mutation which increases its size and also its resistance to conventional firearms, making it practically invulnerable to anything you have at your disposal.",
+      "type": "form-transition",
+      "phase": "second-form",
+      "bodyRegion": "whole-body",
+      "requiredConditions": [
+        "first-form-defeated"
+      ],
+      "actorRole": "subject-property",
+      "limitation": "Transition narrative et résistance qualitative ; « practically » ne signifie pas une immunité universelle ni des valeurs chiffrées."
+    },
+    {
+      "id": "R33-EVID-014",
+      "uid": "re0-queen-leech-second-form",
+      "sourceId": "re0-queen-leech-second-form",
+      "label": "Deuxième forme : faiblesse à la lumière du soleil",
+      "excerpt": "However it does have a very strong weakness to sunlight...",
+      "type": "weakpoint",
+      "phase": "second-form",
+      "bodyRegion": "whole-body",
+      "requiredConditions": [
+        "sunlight-exposure"
+      ],
+      "actorRole": "subject-property",
+      "limitation": "Fait documentaire de cette incarnation ; aucune animation, cadence originale, collision, banque sonore ou commande officielle certifiée."
+    },
+    {
+      "id": "R33-EVID-015",
+      "uid": "re1r-crimson-head",
+      "sourceId": "re1r-body-disposal",
+      "label": "Le fichier cite deux moyens d’empêcher la réanimation",
+      "excerpt": "Currently there are two known methods to cease their resurrection. INCINERATION DESTRUCTION OF THE HEAD",
+      "type": "mutation-prevention",
+      "phase": "dormant-zombie-before-reanimation",
+      "bodyRegion": "whole-body",
+      "requiredConditions": [
+        "corpse-not-yet-reanimated"
+      ],
+      "actorRole": "subject-property",
+      "limitation": "Instruction de destruction du corps, pas une preuve que le joueur peut évoluer volontairement après incinération ou décapitation."
+    },
+    {
+      "id": "R33-EVID-016",
+      "uid": "re1r-crimson-head",
+      "sourceId": "re1r-crimson-head",
+      "label": "Cas particulier du couloir : réveil aussi lors d’une tentative de brûler avant le collier",
+      "excerpt": "Alternatively, if you try and burn the body with the Lighter and Kerosene before acquiring the Collar then the body will also come alive.",
+      "type": "encounter-condition",
+      "phase": "mirror-corridor-fixed-corpse",
+      "bodyRegion": "whole-body",
+      "requiredConditions": [
+        "collar-not-acquired",
+        "attempt-lighter-and-kerosene"
+      ],
+      "actorRole": "subject-property",
+      "limitation": "Cadavre immobile du Mirror Corridor seulement ; n’annule pas la prévention générique et ne décrit pas tous les zombies."
+    },
+    {
+      "id": "R33-EVID-017",
+      "uid": "re1r-chimera",
+      "sourceId": "re1r-chimera",
+      "label": "Composition humaine et mouche",
+      "excerpt": "This creature is the combination of human DNA and that of a fly, resulting in a deadly monster of grotesque appearance but severely lacking in intelligence.",
+      "type": "anatomy",
+      "phase": "documented-encounter",
+      "bodyRegion": "whole-body",
+      "requiredConditions": [],
+      "actorRole": "subject-property",
+      "limitation": "Fait documentaire de cette incarnation ; aucune animation, cadence originale, collision, banque sonore ou commande officielle certifiée."
+    },
+    {
+      "id": "R33-EVID-018",
+      "uid": "re1r-chimera",
+      "sourceId": "re1r-chimera",
+      "label": "Locomotion au sol et au plafond du laboratoire",
+      "excerpt": "Crawling around on the floor and on the ceiling. Some enter the room through the air ducts.",
+      "type": "locomotion",
+      "phase": "laboratory-power-maze",
+      "bodyRegion": "whole-body",
+      "requiredConditions": [
+        "laboratory-room"
+      ],
+      "actorRole": "subject-property",
+      "limitation": "Comportement localisé de la référence Remake ; ne certifie pas un mouvement natif, une orientation 2D ou une équivalence avec RE1 1996."
+    },
+    {
+      "id": "R33-EVID-019",
+      "uid": "recv-nosferatu",
+      "sourceId": "recv-nosferatu",
+      "label": "Échec d’un essai de prototype T-Veronica sur Alexander",
+      "excerpt": "The twins took it upon themselves to use their father as a test subject of the prototype T-Veronica Virus. Unfortunately the experiment ended in failure, and Alexander lost his mind and his soul.",
+      "type": "origin-context",
+      "phase": "documented-encounter",
+      "bodyRegion": "whole-body",
+      "requiredConditions": [],
+      "actorRole": "subject-property",
+      "limitation": "Fait documentaire de cette incarnation ; aucune animation, cadence originale, collision, banque sonore ou commande officielle certifiée."
+    },
+    {
+      "id": "R33-EVID-020",
+      "uid": "recv-nosferatu",
+      "sourceId": "cv-workers-diary",
+      "label": "Journal : récit indirect d’un confinement de plus de dix ans",
+      "excerpt": "He says that there is a man who has been confined for over 10 years, locked up in a cell deep below here. People call him \"Nosferatu\" and are deathly afraid of him.",
+      "type": "reported-context",
+      "phase": "underground-confinement",
+      "bodyRegion": "whole-body",
+      "requiredConditions": [],
+      "actorRole": "subject-property",
+      "limitation": "Récit rapporté par un travailleur dans un journal ; pas une mesure indépendante du temps ou de la biologie."
+    },
+    {
+      "id": "R33-EVID-021",
+      "uid": "recv-nosferatu",
+      "sourceId": "cv-workers-diary",
+      "label": "Journal : grondement entendu sous terre, locuteur non identifié",
+      "excerpt": "At midnight I woke up to an ominous growling sound that seemed to be coming from deep under ground...",
+      "type": "audio-context",
+      "phase": "underground-confinement",
+      "bodyRegion": "whole-body",
+      "requiredConditions": [],
+      "actorRole": "unidentified-heard-source",
+      "limitation": "Le narrateur situe un grondement sous terre ; il n’identifie ni le locuteur avec certitude, ni le fichier audio, ni une attaque. Ne rattache aucun son de la banque Alexander automatiquement."
+    },
+    {
+      "id": "R33-EVID-022",
+      "uid": "re6-napad",
+      "sourceId": "re6-napad-file",
+      "label": "Vapeur émise pour la régulation thermique",
+      "excerpt": "It's so high, in fact, that its body constantly gives off steam in order to maintain a non-life-threatening temperature level.",
+      "type": "anatomy",
+      "phase": "documented-encounter",
+      "bodyRegion": "body-surface",
+      "requiredConditions": [],
+      "actorRole": "subject-property",
+      "limitation": "La vapeur est décrite dans une transcription ; aucun système de refroidissement simulé, température numérique ou vapeur native synchronisée certifiée."
+    },
+    {
+      "id": "R33-EVID-023",
+      "uid": "re6-napad",
+      "sourceId": "re6-napad-file",
+      "label": "Carapace endommageable et centre nerveux dorsal",
+      "excerpt": "Any damage to the creature, whether by gunshot or blunt force trauma, will chip away at it shell-like exterior, revealing its softer muscle tissue underneath. The nerve center under the shell on its back is very sensitive. Damage to this area will kill the creature instantly.",
+      "type": "own-body-outcome",
+      "phase": "documented-encounter",
+      "bodyRegion": "nerve-center-under-back-shell",
+      "requiredConditions": [
+        "back-shell-damaged",
+        "nerve-center-hit"
+      ],
+      "actorRole": "own-body-damage-reported",
+      "limitation": "Issue décrite sur le corps de ce Napad ; ne donne pas un finisher universel, une zone de collision réelle ou un coût de dégâts à notre adaptation."
+    },
+    {
+      "id": "R33-EVID-024",
+      "uid": "re6-napad",
+      "sourceId": "re6-napad-file",
+      "label": "Excitation : frappes sur le thorax",
+      "excerpt": "When it becomes excited, it has been observed to thump on its chest much like a gorilla.",
+      "type": "gesture",
+      "phase": "excited",
+      "bodyRegion": "chest",
+      "requiredConditions": [
+        "excited"
+      ],
+      "actorRole": "subject-property",
+      "limitation": "Geste documentaire, pas un idle original identifié ni une animation affectée au combat."
+    },
+    {
+      "id": "R33-EVID-025",
+      "uid": "re6-napad",
+      "sourceId": "re6-napad",
+      "label": "Éclosion des chrysalides de City Hall à l’approche",
+      "excerpt": "When you jump down from the balcony and approach, the chrysalids will hatch Napads.",
+      "type": "encounter-condition",
+      "phase": "chris-chapter-2-city-hall",
+      "bodyRegion": "whole-body",
+      "requiredConditions": [
+        "dropped-from-balcony",
+        "approached-chrysalids"
+      ],
+      "actorRole": "subject-property",
+      "limitation": "Événement de ce lieu et chapitre ; pas une preuve que toute mutation J’avo produit Napad."
+    },
+    {
+      "id": "R33-EVID-026",
+      "uid": "re6-ubistvo",
+      "sourceId": "re6-ubistvo-file",
+      "label": "Organes et scie biologique dans la main droite",
+      "excerpt": "Ubistvo is humanoid in form, but its spinal column, rib cage, and heart are all located in its right hand, which itself resembles a monstrous, organic chainsaw.",
+      "type": "anatomy",
+      "phase": "documented-encounter",
+      "bodyRegion": "right-hand",
+      "requiredConditions": [],
+      "actorRole": "subject-property",
+      "limitation": "Côté anatomique droit explicite : une image miroir ne devient pas une référence originale de l’autre côté."
+    },
+    {
+      "id": "R33-EVID-027",
+      "uid": "re6-ubistvo",
+      "sourceId": "re6-ubistvo-file",
+      "label": "Le cœur de la main alimente la scie et la survie",
+      "excerpt": "The heart in its hand not only powers the chainsaw, but also keeps Ubistvo alive. Destroy the heart and Ubistvo will die immediately.",
+      "type": "own-body-outcome",
+      "phase": "documented-encounter",
+      "bodyRegion": "heart-in-right-hand",
+      "requiredConditions": [
+        "heart-destroyed"
+      ],
+      "actorRole": "own-body-damage-reported",
+      "limitation": "Issue documentaire sur ce propre organe ; ne certifie ni toutes les rencontres ni une conclusion contre d’autres victimes."
+    },
+    {
+      "id": "R33-EVID-028",
+      "uid": "re6-ubistvo",
+      "sourceId": "re6-ubistvo",
+      "label": "Rencontres où l’évitement est nécessaire",
+      "excerpt": "In many stages, the Ubistvo cannot be killed and, as a result, must be avoided.",
+      "type": "encounter-restriction",
+      "phase": "documented-encounter",
+      "bodyRegion": "whole-body",
+      "requiredConditions": [
+        "stage-specific"
+      ],
+      "actorRole": "subject-property",
+      "limitation": "« many stages » reste non exhaustif : les exceptions de scénario empêchent de déduire une vulnérabilité uniforme depuis le fichier anatomique."
+    },
+    {
+      "id": "R33-EVID-029",
+      "uid": "re6-ustanak",
+      "sourceId": "re6-ustanak-file",
+      "label": "Structure métallique du bras droit pour la capture",
+      "excerpt": "The creature has a metallic structure on its right arm for restraining targets.",
+      "type": "anatomy",
+      "phase": "documented-encounter",
+      "bodyRegion": "right-arm",
+      "requiredConditions": [],
+      "actorRole": "subject-property",
+      "limitation": "Fait documentaire de cette incarnation ; aucune animation, cadence originale, collision, banque sonore ou commande officielle certifiée."
+    },
+    {
+      "id": "R33-EVID-030",
+      "uid": "re6-ustanak",
+      "sourceId": "re6-ustanak-file",
+      "label": "Prélèvement après capture au moyen des seringues du bras",
+      "excerpt": "Once a target has been apprehended, the creature can use one of the syringes on its arm to take tissue samples from the target.",
+      "type": "conditional-action",
+      "phase": "documented-encounter",
+      "bodyRegion": "right-arm",
+      "requiredConditions": [
+        "target-apprehended"
+      ],
+      "actorRole": "subject-property",
+      "limitation": "Geste documentaire conditionné par une capture ; aucune animation originale ni conclusion arbitraire n’est assignée."
+    },
+    {
+      "id": "R33-EVID-031",
+      "uid": "re6-ustanak",
+      "sourceId": "re6-ustanak2-file",
+      "label": "Facultés mentales conservées et machines complexes",
+      "excerpt": "Even though he is a manufactured B.O.W., all his mental faculties as a human remain intact, giving him the capacity for cogent thought. This makes Ustanak the perfect candidate for carrying out missions on his own. A side effect of the mutation is that it may even have increased his intelligence as he is able to use complex machinery and equipment soon after picking it up.",
+      "type": "anatomy",
+      "phase": "documented-encounter",
+      "bodyRegion": "cognition",
+      "requiredConditions": [],
+      "actorRole": "subject-property",
+      "limitation": "Fait documentaire de cette incarnation ; aucune animation, cadence originale, collision, banque sonore ou commande officielle certifiée."
+    },
+    {
+      "id": "R33-EVID-032",
+      "uid": "re6-rasklapanje",
+      "sourceId": "re6-rasklapanje-file",
+      "label": "Corps principal dans le torse, enveloppe blanche protectrice",
+      "excerpt": "The smooth, white skin that envelopes this creature is an exoskeleton designed to protect the slug-like part of its main body, located in the torso.",
+      "type": "anatomy",
+      "phase": "documented-encounter",
+      "bodyRegion": "torso-main-body",
+      "requiredConditions": [],
+      "actorRole": "subject-property",
+      "limitation": "Fait documentaire de cette incarnation ; aucune animation, cadence originale, collision, banque sonore ou commande officielle certifiée."
+    },
+    {
+      "id": "R33-EVID-033",
+      "uid": "re6-rasklapanje",
+      "sourceId": "re6-rasklapanje-file",
+      "label": "Parties détachées capables de chercher une proie",
+      "excerpt": "These detached body parts can still search for prey independently and ensnare it.",
+      "type": "conditional-action",
+      "phase": "detached-body-part",
+      "bodyRegion": "detached-part",
+      "requiredConditions": [
+        "body-part-detached"
+      ],
+      "actorRole": "subject-property",
+      "limitation": "Une partie détachée n’est pas automatiquement le corps principal ou un combattant catalogue additionnel."
+    },
+    {
+      "id": "R33-EVID-034",
+      "uid": "re6-rasklapanje",
+      "sourceId": "re6-rasklapanje-file",
+      "label": "Chaleur intense : sortie du corps principal",
+      "excerpt": "Its primary weakness is fire, and when it encounters intense heat, its main body will leap out of its humanoid exoskeleton to escape danger.",
+      "type": "form-response",
+      "phase": "heat-escape",
+      "bodyRegion": "main-body",
+      "requiredConditions": [
+        "intense-heat"
+      ],
+      "actorRole": "subject-property",
+      "limitation": "Fait documentaire de cette incarnation ; aucune animation, cadence originale, collision, banque sonore ou commande officielle certifiée."
+    },
+    {
+      "id": "R33-EVID-035",
+      "uid": "recv-alexia",
+      "sourceId": "cv-virus-research",
+      "label": "Projet d’adaptation à basse température sur quinze ans",
+      "excerpt": "I will suppress the activity of the virus at an ultra-low temperature, so that my cells will change slowly. My calculations indicate that it will take 15 years before my body will gain immunity, and become able to coexist with the virus.",
+      "type": "origin-context",
+      "phase": "planned-cryogenic-incubation",
+      "bodyRegion": "whole-body",
+      "requiredConditions": [],
+      "actorRole": "subject-property",
+      "limitation": "Calcul déclaré par Alexia dans le fichier, pas une durée d’évolution utilisable en plein combat ni une mesure physique indépendante."
+    }
+  ],
+  "dimensionConstraints": [
+    {
+      "id": "stinger-length-upper-bound",
+      "uid": "re0-stinger",
+      "claimId": "R33-EVID-001",
+      "quantity": "length",
+      "phase": "documented-encounter",
+      "bodyRegion": "body-including-pincers",
+      "operator": "less-than-or-equal",
+      "value": 3,
+      "unit": "m",
+      "siValueMeters": 3,
+      "exactValueCertified": false,
+      "targetCollisionAdmitted": false
+    }
+  ],
+  "conclusionRestrictions": [
+    {
+      "id": "napad-own-back-nerve",
+      "claimId": "R33-EVID-023",
+      "uid": "re6-napad",
+      "phase": "documented-encounter",
+      "bodyRegion": "nerve-center-under-back-shell",
+      "victimRole": "same-documented-napad-body",
+      "requiredConditions": [
+        "back-shell-damaged",
+        "nerve-center-hit"
+      ],
+      "gameplayAdmitted": false
+    },
+    {
+      "id": "ubistvo-own-heart",
+      "claimId": "R33-EVID-027",
+      "uid": "re6-ubistvo",
+      "phase": "documented-encounter",
+      "bodyRegion": "heart-in-right-hand",
+      "victimRole": "same-documented-ubistvo-body",
+      "requiredConditions": [
+        "heart-destroyed"
+      ],
+      "gameplayAdmitted": false
+    }
+  ],
+  "scope": "Documentary claims bound to exact catalogue UID, edition context, phase, anatomy and source. No native action/audio assignment or global 1:1 certification."
+}

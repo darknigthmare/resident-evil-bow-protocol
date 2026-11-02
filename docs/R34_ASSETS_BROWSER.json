@@ -1,0 +1,129 @@
+{
+  "schema": "re.bow.roster-assets-browser-r34/1",
+  "passed": 8,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "The normal player route does not fetch or expose the production register",
+      "pass": true,
+      "detail": {
+        "devOnly": true,
+        "registerRequests": 0,
+        "generatedPngRequests": 0
+      }
+    },
+    {
+      "name": "One real generated portrait is SHA-checked, decoded and presented with truthful provenance",
+      "pass": true,
+      "detail": {
+        "id": "re0-mimicry-marcus",
+        "sourceSha256": "a1172064a68f236f25aaaca43e9af8a32fa552480167b45345c25211558ce910",
+        "decoded": {
+          "width": 1254,
+          "height": 1254,
+          "zero": 908151,
+          "visible": 640691,
+          "alt": "Mimicry Marcus — camouflage rompu — portrait généré"
+        },
+        "pixels": 1572516,
+        "generatedPngsInitiallyLoaded": 1,
+        "frames": 1
+      }
+    },
+    {
+      "name": "Keyboard activation keeps focus and a preserved refusal never loads a generated substitute",
+      "pass": true,
+      "detail": {
+        "nativeKeyboardActivation": true,
+        "focusRetained": true,
+        "refusedUid": "re1r-tyrant",
+        "generatedRefusalSubstitutions": 0
+      }
+    },
+    {
+      "name": "A corrupted actual PNG is refused while its source receipt remains reachable",
+      "pass": true,
+      "detail": {
+        "alteredPixelsDisplayed": false,
+        "receiptLinkKept": true
+      }
+    },
+    {
+      "name": "Leaving and returning releases the real decoder credits and reloads the selected portrait",
+      "pass": true,
+      "detail": {
+        "syntheticPageLifecycle": true,
+        "hiddenPixels": 0,
+        "resumedSha256": "a1172064a68f236f25aaaca43e9af8a32fa552480167b45345c25211558ce910",
+        "saveWrites": 0
+      }
+    },
+    {
+      "name": "An interrupted initial register load can restart before its old request completes",
+      "pass": true,
+      "detail": {
+        "restartRegisterRequests": 2,
+        "supersededInitializationPublished": false,
+        "syntheticLifecycle": true
+      }
+    },
+    {
+      "name": "A superseded image failure cannot overwrite the currently selected image or URI",
+      "pass": true,
+      "detail": {
+        "currentUid": "re0-proto-tyrant",
+        "staleRejectedImagePublished": false
+      }
+    },
+    {
+      "name": "The gallery reflows at320px with actual200percent text and passes axe4.14",
+      "pass": true,
+      "detail": {
+        "sizes": {
+          "viewport": 320,
+          "scroll": 320,
+          "fontSize": 32,
+          "detail": 275.21875,
+          "detailScroll": 273
+        },
+        "audit": {
+          "version": "4.14.0",
+          "violations": [],
+          "passes": 27
+        },
+        "actualTextSize": "200%",
+        "physicalAssistiveDevicesCertified": false
+      }
+    }
+  ],
+  "preview": false,
+  "testedManifestSha256": "4ba2a02746923fc1e1a6ee004f21d992281b15daa1099910c433bf7c59fa11b7",
+  "manifestCurrentAtCompletion": true,
+  "sourceFiles": [
+    {
+      "path": "tests/browser-roster-assets-r34.mjs",
+      "sha256": "a4c1066247591a13597221a9b8d65b11a2952364e6fd7800a055ff17282dddce"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/index.html",
+      "sha256": "a946de19f14aa25d3c820c1e3eccea0b2f4a16bfef79e42c39cbfa9afc9cdde7"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/style.css",
+      "sha256": "0bc1123717893f8c663284310546121276936ee70c52f812e8f96d81ce937ea1"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/page.js",
+      "sha256": "e4f8422447aaa97d836027367840dbc4d704e76ae85e01985762b0595bde7071"
+    },
+    {
+      "path": "modules/fidelity-r31/performance/image-budget.js",
+      "sha256": "e7a3a2039c9c666475fdfe118bc1fece445891d0213bbe20e75fece248cebce2"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/manifest.json",
+      "sha256": "4ba2a02746923fc1e1a6ee004f21d992281b15daa1099910c433bf7c59fa11b7"
+    }
+  ],
+  "scope": "Actual DEV gallery, real generated PNGs and exact read snapshot of the compiler register. Page lifecycle/transport delays are declared fixtures; no body completeness, original-animation, physical-device or global1:1 certification."
+}

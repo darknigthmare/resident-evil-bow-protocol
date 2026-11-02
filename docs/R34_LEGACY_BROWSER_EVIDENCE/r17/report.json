@@ -1,0 +1,115 @@
+{
+  "suite": "combat-text-r17-http",
+  "passed": 12,
+  "failed": 0,
+  "physicalDevices": false,
+  "screenReaderSpeechCertified": false,
+  "checks": [
+    {
+      "name": "Native panel setup, workbook bytes and independent sound-off activation",
+      "width": 1440,
+      "pass": true,
+      "nativeControls": true,
+      "xlsxBytes": 16532,
+      "storageUnchanged": true
+    },
+    {
+      "name": "Actual empty detonator gets readable captions with no audio unlock",
+      "width": 1440,
+      "pass": true,
+      "nativeUtility": true,
+      "soundDisabled": true,
+      "noFakeExplosion": true
+    },
+    {
+      "name": "Native modal keyboard, pause continuity and inert background",
+      "width": 1440,
+      "pass": true,
+      "nativeTab": true,
+      "nativeShiftTab": true,
+      "restoredFocus": true,
+      "preexistingPauseRetained": true
+    },
+    {
+      "name": "Configured real timed match records one textual result without repeating on final draw",
+      "width": 1440,
+      "pass": true,
+      "realEngineStepped": true,
+      "shortTimerAndHealthConfigured": true,
+      "finished": true,
+      "resultCount": 1,
+      "winner": 0,
+      "unchanged": true
+    },
+    {
+      "name": "Experimental journal follows CPU events and rejects bad import without replacing its transcript",
+      "width": 1440,
+      "pass": true,
+      "CPUAccelerated": true,
+      "nativeFileInput": true,
+      "storageUnchanged": true
+    },
+    {
+      "name": "Clear affects only the journal; replay seeking resets annotations, not gameplay data",
+      "width": 1440,
+      "pass": true,
+      "nativeImport": true,
+      "seekFrame": 120,
+      "clearIsPresentationOnly": true,
+      "consoleErrors": 0
+    },
+    {
+      "name": "Native panel setup, workbook bytes and independent sound-off activation",
+      "width": 390,
+      "pass": true,
+      "nativeControls": true,
+      "xlsxBytes": 16532,
+      "storageUnchanged": true
+    },
+    {
+      "name": "Actual empty detonator gets readable captions with no audio unlock",
+      "width": 390,
+      "pass": true,
+      "nativeUtility": true,
+      "soundDisabled": true,
+      "noFakeExplosion": true
+    },
+    {
+      "name": "Native modal keyboard, pause continuity and inert background",
+      "width": 390,
+      "pass": true,
+      "nativeTab": true,
+      "nativeShiftTab": true,
+      "restoredFocus": true,
+      "preexistingPauseRetained": true
+    },
+    {
+      "name": "Configured real timed match records one textual result without repeating on final draw",
+      "width": 390,
+      "pass": true,
+      "realEngineStepped": true,
+      "shortTimerAndHealthConfigured": true,
+      "finished": true,
+      "resultCount": 1,
+      "winner": 0,
+      "unchanged": true
+    },
+    {
+      "name": "Experimental journal follows CPU events and rejects bad import without replacing its transcript",
+      "width": 390,
+      "pass": true,
+      "CPUAccelerated": true,
+      "nativeFileInput": true,
+      "storageUnchanged": true
+    },
+    {
+      "name": "Clear affects only the journal; replay seeking resets annotations, not gameplay data",
+      "width": 390,
+      "pass": true,
+      "nativeImport": true,
+      "seekFrame": 120,
+      "clearIsPresentationOnly": true,
+      "consoleErrors": 0
+    }
+  ]
+}

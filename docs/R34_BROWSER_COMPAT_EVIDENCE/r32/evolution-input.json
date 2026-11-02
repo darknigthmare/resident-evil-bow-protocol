@@ -1,0 +1,1662 @@
+{
+  "schema": "re.bow.evolution-input-r32/1",
+  "observedAtUTC": "2026-11-02T05:08:41.112Z",
+  "browserVersion": "154.0.8037.57",
+  "passed": 10,
+  "failed": 0,
+  "before": {
+    "passed": 5,
+    "failed": 5
+  },
+  "after": {
+    "passed": 10,
+    "failed": 0
+  },
+  "complete": true,
+  "checks": [
+    {
+      "phase": "before",
+      "scenario": "visible-blur-start",
+      "outcome": "baseline-defect",
+      "error": "AssertionError [ERR_ASSERTION]: Start resumed a visible but unfocused evolution duel\n\nfalse !== true\n\n    at Object.run (file:///workspace/scratch/r35-ci/repro/checkout/tests/browser-evolution-input-r32.mjs:149:14)\n    at async runScenario (file:///workspace/scratch/r35-ci/repro/checkout/tests/browser-evolution-input-r32.mjs:346:20)\n    at async file:///workspace/scratch/r35-ci/repro/checkout/tests/browser-evolution-input-r32.mjs:407:72",
+      "observed": {
+        "paused": false,
+        "frame": 8,
+        "hidden": false,
+        "focused": false,
+        "samples": 60,
+        "uid": "re3r-nemesis",
+        "history": 0,
+        "events": [
+          {
+            "type": "pageshow",
+            "trusted": true,
+            "persisted": false,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "pointerdown",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "focus",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "click",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "blur",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "focus",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "pointerdown",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "blur",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "focus",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "click",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "blur",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "focus",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "blur",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": false,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "blur",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": false,
+            "code": null,
+            "repeat": false,
+            "action": null
+          }
+        ]
+      }
+    },
+    {
+      "phase": "before",
+      "scenario": "held-start-focus-return",
+      "outcome": "baseline-defect",
+      "error": "AssertionError [ERR_ASSERTION]: Held Start resumed during the evolution focus transition\n\nfalse !== true\n\n    at Object.run (file:///workspace/scratch/r35-ci/repro/checkout/tests/browser-evolution-input-r32.mjs:159:14)\n    at runNextTicks (node:internal/process/task_queues:65:5)\n    at process.processImmediate (node:internal/timers:453:9)\n    at process.callbackTrampoline (node:internal/async_hooks:130:17)\n    at async runScenario (file:///workspace/scratch/r35-ci/repro/checkout/tests/browser-evolution-input-r32.mjs:346:20)\n    at async file:///workspace/scratch/r35-ci/repro/checkout/tests/browser-evolution-input-r32.mjs:407:72",
+      "observed": {
+        "paused": false,
+        "frame": 11,
+        "hidden": false,
+        "focused": true,
+        "samples": 62,
+        "uid": "re3r-nemesis",
+        "history": 0,
+        "events": [
+          {
+            "type": "pageshow",
+            "trusted": true,
+            "persisted": false,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "pointerdown",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "focus",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "click",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "blur",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "focus",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "pointerdown",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "blur",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "focus",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "click",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "blur",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "focus",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "blur",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": false,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "blur",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": false,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "focus",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "focus",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          }
+        ]
+      }
+    },
+    {
+      "phase": "before",
+      "scenario": "bfcache-start-boundary",
+      "outcome": "baseline-defect",
+      "error": "AssertionError [ERR_ASSERTION]: An unseen Start edge resumed the restored evolution document\n\nfalse !== true\n\n    at Object.run (file:///workspace/scratch/r35-ci/repro/checkout/tests/browser-evolution-input-r32.mjs:177:14)\n    at async runScenario (file:///workspace/scratch/r35-ci/repro/checkout/tests/browser-evolution-input-r32.mjs:346:20)\n    at async file:///workspace/scratch/r35-ci/repro/checkout/tests/browser-evolution-input-r32.mjs:407:72",
+      "observed": {
+        "paused": false,
+        "frame": 10,
+        "hidden": false,
+        "focused": true,
+        "samples": 68,
+        "uid": "re3r-nemesis",
+        "history": 0,
+        "events": [
+          {
+            "type": "pageshow",
+            "trusted": true,
+            "persisted": false,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "pointerdown",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "focus",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "click",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "blur",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "focus",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "pointerdown",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "blur",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "focus",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "click",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "blur",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "focus",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "pagehide",
+            "trusted": true,
+            "persisted": true,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "visibilitychange",
+            "trusted": true,
+            "persisted": null,
+            "hidden": true,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "visibilitychange",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "pageshow",
+            "trusted": true,
+            "persisted": true,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          }
+        ]
+      }
+    },
+    {
+      "phase": "before",
+      "scenario": "cpu-fresh-start",
+      "outcome": "pass",
+      "detail": {
+        "pauseResumePause": true,
+        "freshPresses": 3,
+        "noRepeatedToggle": true,
+        "frames": 15,
+        "digest": "6f102095",
+        "contract": "a4bf5c42ebd70c803e99412113ce5e30a1b52ffb56cb7e5143fd75f2d5c63893",
+        "replayRoundTrip": true
+      }
+    },
+    {
+      "phase": "before",
+      "scenario": "held-select-voluntary-evolution",
+      "outcome": "pass",
+      "detail": {
+        "natural": {
+          "frame": 678,
+          "uid": "re2r-tyrant",
+          "life": 3910,
+          "meter": 36,
+          "reason": null,
+          "ready": true
+        },
+        "heldSelectIgnored": true,
+        "freshSelectAppliedOnce": true,
+        "simulatedAnimationClock": true,
+        "healthOrResourceOverrides": 0,
+        "frames": 679,
+        "digest": "68a1966d",
+        "contract": "a4bf5c42ebd70c803e99412113ce5e30a1b52ffb56cb7e5143fd75f2d5c63893",
+        "replayRoundTrip": true
+      }
+    },
+    {
+      "phase": "before",
+      "scenario": "blur-cancels-pending-evolution",
+      "outcome": "pass",
+      "detail": {
+        "natural": {
+          "frame": 678,
+          "uid": "re2r-tyrant",
+          "life": 3910,
+          "meter": 36,
+          "reason": null,
+          "ready": true
+        },
+        "trustedKeyboardAndBlur": true,
+        "pendingMutationCancelled": true,
+        "simulatedAnimationClock": true,
+        "healthOrResourceOverrides": 0,
+        "frames": 679,
+        "digest": "a27adc15",
+        "contract": "a4bf5c42ebd70c803e99412113ce5e30a1b52ffb56cb7e5143fd75f2d5c63893",
+        "replayRoundTrip": true
+      }
+    },
+    {
+      "phase": "before",
+      "scenario": "native-enter-space-1280",
+      "outcome": "pass",
+      "detail": {
+        "width": 1280,
+        "trustedKeyboard": true,
+        "evidence": [
+          {
+            "key": "Enter",
+            "guardReleaseAndBlur": true,
+            "jumpInputFrames": 1,
+            "frames": 19,
+            "digest": "7941f998",
+            "contract": "a4bf5c42ebd70c803e99412113ce5e30a1b52ffb56cb7e5143fd75f2d5c63893",
+            "replayRoundTrip": true
+          },
+          {
+            "key": "Space",
+            "guardReleaseAndBlur": true,
+            "jumpInputFrames": 1,
+            "frames": 18,
+            "digest": "e223f56d",
+            "contract": "a4bf5c42ebd70c803e99412113ce5e30a1b52ffb56cb7e5143fd75f2d5c63893",
+            "replayRoundTrip": true
+          }
+        ]
+      }
+    },
+    {
+      "phase": "before",
+      "scenario": "numpad-enter-sources-1280",
+      "outcome": "baseline-defect",
+      "error": "AssertionError [ERR_ASSERTION]: NumpadEnter did not hold the evolution guard button\n\nfalse !== true\n\n    at Object.run (file:///workspace/scratch/r35-ci/repro/checkout/tests/browser-evolution-input-r32.mjs:279:14)\n    at async runScenario (file:///workspace/scratch/r35-ci/repro/checkout/tests/browser-evolution-input-r32.mjs:346:20)\n    at async file:///workspace/scratch/r35-ci/repro/checkout/tests/browser-evolution-input-r32.mjs:407:72",
+      "observed": {
+        "paused": false,
+        "frame": 11,
+        "hidden": false,
+        "focused": true,
+        "samples": 60,
+        "uid": "re3r-nemesis",
+        "history": 0,
+        "events": [
+          {
+            "type": "pageshow",
+            "trusted": true,
+            "persisted": false,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "pointerdown",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "focus",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "click",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "blur",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "focus",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "pointerdown",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "blur",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "focus",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "click",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "blur",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "focus",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "blur",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "focus",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": "guard"
+          },
+          {
+            "type": "keydown",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": "NumpadEnter",
+            "repeat": false,
+            "action": "guard"
+          },
+          {
+            "type": "click",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": "guard"
+          }
+        ]
+      }
+    },
+    {
+      "phase": "before",
+      "scenario": "native-enter-space-390",
+      "outcome": "pass",
+      "detail": {
+        "width": 390,
+        "trustedKeyboard": true,
+        "evidence": [
+          {
+            "key": "Enter",
+            "guardReleaseAndBlur": true,
+            "jumpInputFrames": 1,
+            "frames": 18,
+            "digest": "e223f56d",
+            "contract": "a4bf5c42ebd70c803e99412113ce5e30a1b52ffb56cb7e5143fd75f2d5c63893",
+            "replayRoundTrip": true
+          },
+          {
+            "key": "Space",
+            "guardReleaseAndBlur": true,
+            "jumpInputFrames": 1,
+            "frames": 18,
+            "digest": "b6c4a20d",
+            "contract": "a4bf5c42ebd70c803e99412113ce5e30a1b52ffb56cb7e5143fd75f2d5c63893",
+            "replayRoundTrip": true
+          }
+        ]
+      }
+    },
+    {
+      "phase": "before",
+      "scenario": "numpad-enter-sources-390",
+      "outcome": "baseline-defect",
+      "error": "AssertionError [ERR_ASSERTION]: NumpadEnter did not hold the evolution guard button\n\nfalse !== true\n\n    at Object.run (file:///workspace/scratch/r35-ci/repro/checkout/tests/browser-evolution-input-r32.mjs:279:14)\n    at async runScenario (file:///workspace/scratch/r35-ci/repro/checkout/tests/browser-evolution-input-r32.mjs:346:20)\n    at async file:///workspace/scratch/r35-ci/repro/checkout/tests/browser-evolution-input-r32.mjs:407:72",
+      "observed": {
+        "paused": false,
+        "frame": 9,
+        "hidden": false,
+        "focused": true,
+        "samples": 52,
+        "uid": "re3r-nemesis",
+        "history": 0,
+        "events": [
+          {
+            "type": "pageshow",
+            "trusted": true,
+            "persisted": false,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "pointerdown",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "focus",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "click",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "blur",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "focus",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "pointerdown",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "blur",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "focus",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "click",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "blur",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "focus",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "blur",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": null
+          },
+          {
+            "type": "focus",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": "guard"
+          },
+          {
+            "type": "keydown",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": "NumpadEnter",
+            "repeat": false,
+            "action": "guard"
+          },
+          {
+            "type": "click",
+            "trusted": true,
+            "persisted": null,
+            "hidden": false,
+            "focused": true,
+            "code": null,
+            "repeat": false,
+            "action": "guard"
+          }
+        ]
+      }
+    },
+    {
+      "phase": "after",
+      "scenario": "visible-blur-start",
+      "outcome": "pass",
+      "detail": {
+        "trustedVisibleBlur": true,
+        "backgroundStartIgnored": true,
+        "pausedFrame": 6
+      }
+    },
+    {
+      "phase": "after",
+      "scenario": "held-start-focus-return",
+      "outcome": "pass",
+      "detail": {
+        "trustedBlurAndFocus": true,
+        "oldStartIgnored": true,
+        "freshPressResumed": true
+      }
+    },
+    {
+      "phase": "after",
+      "scenario": "bfcache-start-boundary",
+      "outcome": "pass",
+      "detail": {
+        "sameDocumentRestored": true,
+        "trustedPersistedPageShow": true,
+        "oldStartIgnored": true,
+        "freshPressResumed": true
+      }
+    },
+    {
+      "phase": "after",
+      "scenario": "cpu-fresh-start",
+      "outcome": "pass",
+      "detail": {
+        "pauseResumePause": true,
+        "freshPresses": 3,
+        "noRepeatedToggle": true,
+        "frames": 14,
+        "digest": "925af5ff",
+        "contract": "a4bf5c42ebd70c803e99412113ce5e30a1b52ffb56cb7e5143fd75f2d5c63893",
+        "replayRoundTrip": true
+      }
+    },
+    {
+      "phase": "after",
+      "scenario": "held-select-voluntary-evolution",
+      "outcome": "pass",
+      "detail": {
+        "natural": {
+          "frame": 678,
+          "uid": "re2r-tyrant",
+          "life": 3910,
+          "meter": 36,
+          "reason": null,
+          "ready": true
+        },
+        "heldSelectIgnored": true,
+        "freshSelectAppliedOnce": true,
+        "simulatedAnimationClock": true,
+        "healthOrResourceOverrides": 0,
+        "frames": 679,
+        "digest": "68a1966d",
+        "contract": "a4bf5c42ebd70c803e99412113ce5e30a1b52ffb56cb7e5143fd75f2d5c63893",
+        "replayRoundTrip": true
+      }
+    },
+    {
+      "phase": "after",
+      "scenario": "blur-cancels-pending-evolution",
+      "outcome": "pass",
+      "detail": {
+        "natural": {
+          "frame": 678,
+          "uid": "re2r-tyrant",
+          "life": 3910,
+          "meter": 36,
+          "reason": null,
+          "ready": true
+        },
+        "trustedKeyboardAndBlur": true,
+        "pendingMutationCancelled": true,
+        "simulatedAnimationClock": true,
+        "healthOrResourceOverrides": 0,
+        "frames": 679,
+        "digest": "a27adc15",
+        "contract": "a4bf5c42ebd70c803e99412113ce5e30a1b52ffb56cb7e5143fd75f2d5c63893",
+        "replayRoundTrip": true
+      }
+    },
+    {
+      "phase": "after",
+      "scenario": "native-enter-space-1280",
+      "outcome": "pass",
+      "detail": {
+        "width": 1280,
+        "trustedKeyboard": true,
+        "evidence": [
+          {
+            "key": "Enter",
+            "guardReleaseAndBlur": true,
+            "jumpInputFrames": 1,
+            "frames": 18,
+            "digest": "5ffce261",
+            "contract": "a4bf5c42ebd70c803e99412113ce5e30a1b52ffb56cb7e5143fd75f2d5c63893",
+            "replayRoundTrip": true
+          },
+          {
+            "key": "Space",
+            "guardReleaseAndBlur": true,
+            "jumpInputFrames": 1,
+            "frames": 19,
+            "digest": "fc2993a1",
+            "contract": "a4bf5c42ebd70c803e99412113ce5e30a1b52ffb56cb7e5143fd75f2d5c63893",
+            "replayRoundTrip": true
+          }
+        ]
+      }
+    },
+    {
+      "phase": "after",
+      "scenario": "numpad-enter-sources-1280",
+      "outcome": "pass",
+      "detail": {
+        "width": 1280,
+        "independentEnterAndNumpad": true,
+        "independentPointer": true,
+        "jumpInputFrames": 1,
+        "guardReplay": {
+          "frames": 42,
+          "digest": "fc6fcd33",
+          "contract": "a4bf5c42ebd70c803e99412113ce5e30a1b52ffb56cb7e5143fd75f2d5c63893",
+          "replayRoundTrip": true
+        },
+        "frames": 19,
+        "digest": "7941f998",
+        "contract": "a4bf5c42ebd70c803e99412113ce5e30a1b52ffb56cb7e5143fd75f2d5c63893",
+        "replayRoundTrip": true
+      }
+    },
+    {
+      "phase": "after",
+      "scenario": "native-enter-space-390",
+      "outcome": "pass",
+      "detail": {
+        "width": 390,
+        "trustedKeyboard": true,
+        "evidence": [
+          {
+            "key": "Enter",
+            "guardReleaseAndBlur": true,
+            "jumpInputFrames": 1,
+            "frames": 19,
+            "digest": "7941f998",
+            "contract": "a4bf5c42ebd70c803e99412113ce5e30a1b52ffb56cb7e5143fd75f2d5c63893",
+            "replayRoundTrip": true
+          },
+          {
+            "key": "Space",
+            "guardReleaseAndBlur": true,
+            "jumpInputFrames": 1,
+            "frames": 18,
+            "digest": "b6c4a20d",
+            "contract": "a4bf5c42ebd70c803e99412113ce5e30a1b52ffb56cb7e5143fd75f2d5c63893",
+            "replayRoundTrip": true
+          }
+        ]
+      }
+    },
+    {
+      "phase": "after",
+      "scenario": "numpad-enter-sources-390",
+      "outcome": "pass",
+      "detail": {
+        "width": 390,
+        "independentEnterAndNumpad": true,
+        "independentPointer": true,
+        "jumpInputFrames": 1,
+        "guardReplay": {
+          "frames": 43,
+          "digest": "b455e60e",
+          "contract": "a4bf5c42ebd70c803e99412113ce5e30a1b52ffb56cb7e5143fd75f2d5c63893",
+          "replayRoundTrip": true
+        },
+        "frames": 20,
+        "digest": "db3d725c",
+        "contract": "a4bf5c42ebd70c803e99412113ce5e30a1b52ffb56cb7e5143fd75f2d5c63893",
+        "replayRoundTrip": true
+      }
+    }
+  ],
+  "existing": {
+    "script": "tests/browser-evolutions-r28.mjs",
+    "sourceSha256": "426a7f7fb32932ca814c9191942f50ed85ee1e3c8f0d02f07087d87b19c7bb97",
+    "status": 0,
+    "signal": null,
+    "passed": 16,
+    "failed": 0,
+    "historicalReportRestored": true,
+    "currentControllerSha256": "2cd567da5e5f553af8203b9b00d55a7dbb8c49487a11ad47c3035b6299237f68",
+    "pass": true,
+    "error": null,
+    "evidence": "qa-gamedev-r32/evolutions-existing",
+    "scope": "The unmodified 16-group R28 browser suite, executed against the current checkout and its real assets."
+  },
+  "baseline": {
+    "commit": "a8e8996d2a1d50fc99872bf02e4420b44b81167a",
+    "controller": "modules/fidelity-r28/evolutions/duel.js",
+    "sha256": "0ec13acbaeba2e3cbab2bd2242dd4c05035ce4c0966c956d422beae484e38d73"
+  },
+  "current": {
+    "controller": "modules/fidelity-r28/evolutions/duel.js",
+    "sha256": "2cd567da5e5f553af8203b9b00d55a7dbb8c49487a11ad47c3035b6299237f68"
+  },
+  "inputs": [
+    {
+      "phase": "after",
+      "path": "assets/sprites/bow/manifest.json",
+      "sha256": "f2dae7dcc85e2d913d58236d64845e3db387b071d1accb02a6d51a65851f20e6"
+    },
+    {
+      "phase": "after",
+      "path": "modules/fidelity-r27/combat/adapter.js",
+      "sha256": "ec1f22e69a7d9ecf3433e6238bc134a8af369ac146ec8d8a8e21c7aca6408d2d"
+    },
+    {
+      "phase": "after",
+      "path": "modules/fidelity-r28/combat/sprite-runtime.js",
+      "sha256": "cbb106a55ff365c9307481d453bc065bcab907a36bf8af0d1eb2d5e32097d5f7"
+    },
+    {
+      "phase": "after",
+      "path": "modules/fidelity-r28/evolutions/contract.js",
+      "sha256": "ad4053134b4348bbb74ca7373e59e2192875abb4ccb658af21d10d32890c105d"
+    },
+    {
+      "phase": "after",
+      "path": "modules/fidelity-r28/evolutions/data.js",
+      "sha256": "2e6981813c3b68a93084917d48cb51b9b42f9d108d6baba89effa7ca5979980f"
+    },
+    {
+      "phase": "after",
+      "path": "modules/fidelity-r28/evolutions/duel.js",
+      "sha256": "2cd567da5e5f553af8203b9b00d55a7dbb8c49487a11ad47c3035b6299237f68"
+    },
+    {
+      "phase": "after",
+      "path": "modules/fidelity-r28/evolutions/engine.js",
+      "sha256": "88d15965d5fccc00c741f5dd7a68f0f4e100629e4fd80dddda76387f81615cd8"
+    },
+    {
+      "phase": "after",
+      "path": "modules/fidelity-r28/evolutions/index.html",
+      "sha256": "23ed1dd8860143a2cd8b93c9dbbfba074008691bfae1befb37e5a265f9d95304"
+    },
+    {
+      "phase": "after",
+      "path": "modules/fidelity-r28/evolutions/replay.js",
+      "sha256": "2ad5aebbfa135ce2f00f82bea3234085e2107f6fe210cefd2d58f8328e4197b7"
+    },
+    {
+      "phase": "after",
+      "path": "modules/fidelity-r28/evolutions/selection.js",
+      "sha256": "dff8c67b753726609420170d7816850d38c0f6316fd60ee8f20bc34447a8d663"
+    },
+    {
+      "phase": "after",
+      "path": "modules/fidelity-r28/evolutions/styles.css",
+      "sha256": "8dc471ea12a1d47dda48a7281fc38ef72a237eb5b957a89b9b34dc9a6c4af82d"
+    },
+    {
+      "phase": "after",
+      "path": "modules/fidelity-r28/sprites/manifest.json",
+      "sha256": "33666554018e56009884dc58e4c874f1caf4a8e42cd260c9a39c6d3f84d2a6f9"
+    },
+    {
+      "phase": "after",
+      "path": "src/baker-ambience-r15.js",
+      "sha256": "ffb355735f83c8f18589cd02b4daef519105287848343dc5eb5a50907df7a86a"
+    },
+    {
+      "phase": "after",
+      "path": "src/baker-stages-r14.js",
+      "sha256": "2735c502a55bf54964bfe6a61be4d7eeee09d6c9b24c1acf164fe9d084b878fb"
+    },
+    {
+      "phase": "after",
+      "path": "src/catalog-expansion-data.js",
+      "sha256": "c33d05f4139ee9832990903289bf0edd5c16c54ccb678b6e81b0e13d75a0cce4"
+    },
+    {
+      "phase": "after",
+      "path": "src/catalog-replay-contract.js",
+      "sha256": "2778547c459e6efcc95810e8c3dd1108449ca752adaf54f751406573b84ec934"
+    },
+    {
+      "phase": "after",
+      "path": "src/catalog-trial-adapter.js",
+      "sha256": "2804ad111b5ee44e959ee2f12c604275193691e803f819a704950ca89fa502b7"
+    },
+    {
+      "phase": "after",
+      "path": "src/combat-audio-v060.js",
+      "sha256": "c40377240c4093b99154b01b713706829fc33ad324f581d77f4ceb2a816659ea"
+    },
+    {
+      "phase": "after",
+      "path": "src/combat-cues-r6.js",
+      "sha256": "7b24fb33b1ee04fa76301685efc468273eb564fa9d4c8141b59a70430894124d"
+    },
+    {
+      "phase": "after",
+      "path": "src/combat-foundation-v060.js",
+      "sha256": "4c2aa12007670a1535d4c467db115a148161a4ab08778be17d4ef4f44e95ba82"
+    },
+    {
+      "phase": "after",
+      "path": "src/combat-text-panel-r17.js",
+      "sha256": "45eebba4cbfb2a9517615d86111b1b12565c09b668bb5179e70896f6049fefb5"
+    },
+    {
+      "phase": "after",
+      "path": "src/combat-text-r17.js",
+      "sha256": "952d6254e5897dd36deb93a8cd96fa7d8f50898d9ba238492b9d4880a31d23c5"
+    },
+    {
+      "phase": "after",
+      "path": "src/directional-art.js",
+      "sha256": "50d15c95c4c5e402543dad18a6163746315af27605f701ea8777d6f57cb6ba2f"
+    },
+    {
+      "phase": "after",
+      "path": "src/fighter-directions.js",
+      "sha256": "3787d48622665d1fd8a33ed2f48f2887e1409c9dd312b11c16e031989f2ceb4e"
+    },
+    {
+      "phase": "after",
+      "path": "src/interface-preferences-r20.js",
+      "sha256": "79e4655dcff4674e9447c7473a4a2db77fdc5ff31c370bc331d5c74e6d83ea35"
+    },
+    {
+      "phase": "after",
+      "path": "src/match-sequences-r8.js",
+      "sha256": "4659ab336463951c5a269dac71321beb77c288a77ddc9036961b58e310fdb368"
+    },
+    {
+      "phase": "after",
+      "path": "src/platform-safety-r9.js",
+      "sha256": "c22d658049085e8e2c051dd0a15d2028ffaadd20cd5c343144a075340abe471d"
+    },
+    {
+      "phase": "after",
+      "path": "src/re-data.js",
+      "sha256": "090cf6e14a5ddf73291bcc443db1500e1810911beb926b4b4e26f9b0160b355a"
+    },
+    {
+      "phase": "after",
+      "path": "src/re-renderer.js",
+      "sha256": "fbd24f06be8c246356ba47715dce9bf80fdb75f2eb3e1648819611e8d0f6850c"
+    },
+    {
+      "phase": "after",
+      "path": "src/re5-scenes-v060.js",
+      "sha256": "759f94aad96616e2bdab18b6ce998b2d185e8f9f0703f875c26980727de7bb49"
+    },
+    {
+      "phase": "after",
+      "path": "src/spatial-weakpoints-v072.js",
+      "sha256": "046cb41f2536b9d51204d01f27b9dc4a55472fb916ace2f1d8dfebe9c1b80ff7"
+    },
+    {
+      "phase": "after",
+      "path": "src/stage-dynamics-r6.js",
+      "sha256": "448bd71890918de9841637c86bb9b2c7c6c991195d0e07472f2a1275a0fb49a5"
+    },
+    {
+      "phase": "after",
+      "path": "src/trial-audio-panel-r16.js",
+      "sha256": "d9dfcb150e1589f7597384c045c23c500d4c7198b149124d6bf1e8fbff79687a"
+    },
+    {
+      "phase": "after",
+      "path": "src/trial-audio-r16.js",
+      "sha256": "970c5e67baff72acee5e30568d3ac603ee5fa944a8d7c8dbf988d30e98874f4e"
+    },
+    {
+      "phase": "after",
+      "path": "src/trial-input-v071.js",
+      "sha256": "d8be0edc198e1c91c3022b40c8831d2f8b3623fdada820ce0253683b96a9379c"
+    },
+    {
+      "phase": "after",
+      "path": "src/trial-intro-r10.js",
+      "sha256": "39bffdd5ed97cd920b46aff6e5955556965c13300257e782f75f2ece4d896781"
+    },
+    {
+      "phase": "after",
+      "path": "src/trial-text-panel-r17.js",
+      "sha256": "3b8a74765979ed07955994a2266c6ec312e740d5fdf3016d183e8b6987d3c000"
+    },
+    {
+      "phase": "after",
+      "path": "styles/bow-v073.css",
+      "sha256": "4c17dce0fe045df56a348d3696e37163808fcba35474cbec6f920d5dbcd7c402"
+    },
+    {
+      "phase": "after",
+      "path": "styles/catalog-v070.css",
+      "sha256": "aedfe25902f1d4c48cd858513d38f57e1ffb56dc73da5dbe812ac976e108135b"
+    },
+    {
+      "phase": "after",
+      "path": "styles/combat-text-r17.css",
+      "sha256": "925c97c037cdb96d79c6baebb1bf758a919d076c7c3e8015fca417340f2ffd20"
+    },
+    {
+      "phase": "after",
+      "path": "styles/journal-v071.css",
+      "sha256": "dd00ba4cac1ed9881fd21794c4547b6f8fed49f9ff0464ac211c16f15ed5161d"
+    },
+    {
+      "phase": "after",
+      "path": "styles/player-shell-r20.css",
+      "sha256": "87c68eb441075530b6b81a150a2c303f6351f2298732d12de891807a08286443"
+    },
+    {
+      "phase": "after",
+      "path": "styles/replay-r7.css",
+      "sha256": "08c3ef3f1f63a18ffd3bc43050d1a7571d3b9d49fd005b35e4d0136bd3f98507"
+    },
+    {
+      "phase": "after",
+      "path": "styles/trial-audio-r16.css",
+      "sha256": "20ec128850c8c9d1d73999065e54071ab93464e929a9c1490e0685340847eb04"
+    },
+    {
+      "phase": "before",
+      "path": "assets/sprites/bow/manifest.json",
+      "sha256": "f2dae7dcc85e2d913d58236d64845e3db387b071d1accb02a6d51a65851f20e6"
+    },
+    {
+      "phase": "before",
+      "path": "modules/fidelity-r27/combat/adapter.js",
+      "sha256": "ec1f22e69a7d9ecf3433e6238bc134a8af369ac146ec8d8a8e21c7aca6408d2d"
+    },
+    {
+      "phase": "before",
+      "path": "modules/fidelity-r28/combat/sprite-runtime.js",
+      "sha256": "cbb106a55ff365c9307481d453bc065bcab907a36bf8af0d1eb2d5e32097d5f7"
+    },
+    {
+      "phase": "before",
+      "path": "modules/fidelity-r28/evolutions/contract.js",
+      "sha256": "ad4053134b4348bbb74ca7373e59e2192875abb4ccb658af21d10d32890c105d"
+    },
+    {
+      "phase": "before",
+      "path": "modules/fidelity-r28/evolutions/data.js",
+      "sha256": "2e6981813c3b68a93084917d48cb51b9b42f9d108d6baba89effa7ca5979980f"
+    },
+    {
+      "phase": "before",
+      "path": "modules/fidelity-r28/evolutions/duel.js",
+      "sha256": "0ec13acbaeba2e3cbab2bd2242dd4c05035ce4c0966c956d422beae484e38d73"
+    },
+    {
+      "phase": "before",
+      "path": "modules/fidelity-r28/evolutions/engine.js",
+      "sha256": "88d15965d5fccc00c741f5dd7a68f0f4e100629e4fd80dddda76387f81615cd8"
+    },
+    {
+      "phase": "before",
+      "path": "modules/fidelity-r28/evolutions/index.html",
+      "sha256": "23ed1dd8860143a2cd8b93c9dbbfba074008691bfae1befb37e5a265f9d95304"
+    },
+    {
+      "phase": "before",
+      "path": "modules/fidelity-r28/evolutions/replay.js",
+      "sha256": "2ad5aebbfa135ce2f00f82bea3234085e2107f6fe210cefd2d58f8328e4197b7"
+    },
+    {
+      "phase": "before",
+      "path": "modules/fidelity-r28/evolutions/selection.js",
+      "sha256": "dff8c67b753726609420170d7816850d38c0f6316fd60ee8f20bc34447a8d663"
+    },
+    {
+      "phase": "before",
+      "path": "modules/fidelity-r28/evolutions/styles.css",
+      "sha256": "8dc471ea12a1d47dda48a7281fc38ef72a237eb5b957a89b9b34dc9a6c4af82d"
+    },
+    {
+      "phase": "before",
+      "path": "modules/fidelity-r28/sprites/manifest.json",
+      "sha256": "33666554018e56009884dc58e4c874f1caf4a8e42cd260c9a39c6d3f84d2a6f9"
+    },
+    {
+      "phase": "before",
+      "path": "src/baker-ambience-r15.js",
+      "sha256": "ffb355735f83c8f18589cd02b4daef519105287848343dc5eb5a50907df7a86a"
+    },
+    {
+      "phase": "before",
+      "path": "src/baker-stages-r14.js",
+      "sha256": "2735c502a55bf54964bfe6a61be4d7eeee09d6c9b24c1acf164fe9d084b878fb"
+    },
+    {
+      "phase": "before",
+      "path": "src/catalog-expansion-data.js",
+      "sha256": "c33d05f4139ee9832990903289bf0edd5c16c54ccb678b6e81b0e13d75a0cce4"
+    },
+    {
+      "phase": "before",
+      "path": "src/catalog-replay-contract.js",
+      "sha256": "2778547c459e6efcc95810e8c3dd1108449ca752adaf54f751406573b84ec934"
+    },
+    {
+      "phase": "before",
+      "path": "src/catalog-trial-adapter.js",
+      "sha256": "2804ad111b5ee44e959ee2f12c604275193691e803f819a704950ca89fa502b7"
+    },
+    {
+      "phase": "before",
+      "path": "src/combat-audio-v060.js",
+      "sha256": "c40377240c4093b99154b01b713706829fc33ad324f581d77f4ceb2a816659ea"
+    },
+    {
+      "phase": "before",
+      "path": "src/combat-cues-r6.js",
+      "sha256": "7b24fb33b1ee04fa76301685efc468273eb564fa9d4c8141b59a70430894124d"
+    },
+    {
+      "phase": "before",
+      "path": "src/combat-foundation-v060.js",
+      "sha256": "4c2aa12007670a1535d4c467db115a148161a4ab08778be17d4ef4f44e95ba82"
+    },
+    {
+      "phase": "before",
+      "path": "src/combat-text-panel-r17.js",
+      "sha256": "45eebba4cbfb2a9517615d86111b1b12565c09b668bb5179e70896f6049fefb5"
+    },
+    {
+      "phase": "before",
+      "path": "src/combat-text-r17.js",
+      "sha256": "952d6254e5897dd36deb93a8cd96fa7d8f50898d9ba238492b9d4880a31d23c5"
+    },
+    {
+      "phase": "before",
+      "path": "src/directional-art.js",
+      "sha256": "50d15c95c4c5e402543dad18a6163746315af27605f701ea8777d6f57cb6ba2f"
+    },
+    {
+      "phase": "before",
+      "path": "src/fighter-directions.js",
+      "sha256": "3787d48622665d1fd8a33ed2f48f2887e1409c9dd312b11c16e031989f2ceb4e"
+    },
+    {
+      "phase": "before",
+      "path": "src/interface-preferences-r20.js",
+      "sha256": "79e4655dcff4674e9447c7473a4a2db77fdc5ff31c370bc331d5c74e6d83ea35"
+    },
+    {
+      "phase": "before",
+      "path": "src/match-sequences-r8.js",
+      "sha256": "4659ab336463951c5a269dac71321beb77c288a77ddc9036961b58e310fdb368"
+    },
+    {
+      "phase": "before",
+      "path": "src/platform-safety-r9.js",
+      "sha256": "c22d658049085e8e2c051dd0a15d2028ffaadd20cd5c343144a075340abe471d"
+    },
+    {
+      "phase": "before",
+      "path": "src/re-data.js",
+      "sha256": "090cf6e14a5ddf73291bcc443db1500e1810911beb926b4b4e26f9b0160b355a"
+    },
+    {
+      "phase": "before",
+      "path": "src/re-renderer.js",
+      "sha256": "fbd24f06be8c246356ba47715dce9bf80fdb75f2eb3e1648819611e8d0f6850c"
+    },
+    {
+      "phase": "before",
+      "path": "src/re5-scenes-v060.js",
+      "sha256": "759f94aad96616e2bdab18b6ce998b2d185e8f9f0703f875c26980727de7bb49"
+    },
+    {
+      "phase": "before",
+      "path": "src/spatial-weakpoints-v072.js",
+      "sha256": "046cb41f2536b9d51204d01f27b9dc4a55472fb916ace2f1d8dfebe9c1b80ff7"
+    },
+    {
+      "phase": "before",
+      "path": "src/stage-dynamics-r6.js",
+      "sha256": "448bd71890918de9841637c86bb9b2c7c6c991195d0e07472f2a1275a0fb49a5"
+    },
+    {
+      "phase": "before",
+      "path": "src/trial-audio-panel-r16.js",
+      "sha256": "d9dfcb150e1589f7597384c045c23c500d4c7198b149124d6bf1e8fbff79687a"
+    },
+    {
+      "phase": "before",
+      "path": "src/trial-audio-r16.js",
+      "sha256": "970c5e67baff72acee5e30568d3ac603ee5fa944a8d7c8dbf988d30e98874f4e"
+    },
+    {
+      "phase": "before",
+      "path": "src/trial-input-v071.js",
+      "sha256": "d8be0edc198e1c91c3022b40c8831d2f8b3623fdada820ce0253683b96a9379c"
+    },
+    {
+      "phase": "before",
+      "path": "src/trial-intro-r10.js",
+      "sha256": "39bffdd5ed97cd920b46aff6e5955556965c13300257e782f75f2ece4d896781"
+    },
+    {
+      "phase": "before",
+      "path": "src/trial-text-panel-r17.js",
+      "sha256": "3b8a74765979ed07955994a2266c6ec312e740d5fdf3016d183e8b6987d3c000"
+    },
+    {
+      "phase": "before",
+      "path": "styles/bow-v073.css",
+      "sha256": "4c17dce0fe045df56a348d3696e37163808fcba35474cbec6f920d5dbcd7c402"
+    },
+    {
+      "phase": "before",
+      "path": "styles/catalog-v070.css",
+      "sha256": "aedfe25902f1d4c48cd858513d38f57e1ffb56dc73da5dbe812ac976e108135b"
+    },
+    {
+      "phase": "before",
+      "path": "styles/combat-text-r17.css",
+      "sha256": "925c97c037cdb96d79c6baebb1bf758a919d076c7c3e8015fca417340f2ffd20"
+    },
+    {
+      "phase": "before",
+      "path": "styles/journal-v071.css",
+      "sha256": "dd00ba4cac1ed9881fd21794c4547b6f8fed49f9ff0464ac211c16f15ed5161d"
+    },
+    {
+      "phase": "before",
+      "path": "styles/player-shell-r20.css",
+      "sha256": "87c68eb441075530b6b81a150a2c303f6351f2298732d12de891807a08286443"
+    },
+    {
+      "phase": "before",
+      "path": "styles/replay-r7.css",
+      "sha256": "08c3ef3f1f63a18ffd3bc43050d1a7571d3b9d49fd005b35e4d0136bd3f98507"
+    },
+    {
+      "phase": "before",
+      "path": "styles/trial-audio-r16.css",
+      "sha256": "20ec128850c8c9d1d73999065e54071ab93464e929a9c1490e0685340847eb04"
+    }
+  ],
+  "testSourceSha256": "657b6a07c9cb85bcb34d9525eb831838511a2674791acaf3bff4e83bb9149d38",
+  "browserErrors": [],
+  "missingCode": [],
+  "unavailableOptionalData": [],
+  "scope": "Delivered evolution HTML, controller, engine and deterministic replay; exact prior controller is the only baseline substitution. Eight groups per phase use the production automatic RAF loop. Two eligibility groups explicitly simulate RAF and reach eligibility through real engine ticks without health/resource overrides. Keyboard, pointer, visible blur/focus and BFCache events are generated by Chromium. Standard gamepad and raster artwork are explicit fixtures for this focused suite. The unchanged existing R28 recipe runs separately on current source and real assets. No physical-device or artistic-fidelity certification."
+}

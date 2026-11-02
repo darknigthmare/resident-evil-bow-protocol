@@ -1,0 +1,100 @@
+{
+  "schema": "re.bow.generated-output-r34/1",
+  "uid": "re3-hunter-beta",
+  "kind": "idle",
+  "lotId": "lot_1",
+  "status": "GENERATED",
+  "generator": "image_gen",
+  "image": "modules/fidelity-r34/assets/generated/re3-hunter-beta/idle-right.png",
+  "prompt": "Edit the provided generated positive study into a faithful 2D combat base pose, using the original reference as anatomical authority. Correct ONLY the fighting view. Rotate the ENTIRE torso, pelvis and both feet into a clear three-quarter RIGHT-facing stance; turning the face alone is insufficient. Keep the original own LEFT claw longer than the right, attached to the same anatomical arm; the far left arm may remain visible, but do not mirror or exchange the claws. Keep every toe/claw inside padding and preserve all red head/shoulder nodules, scales and colours. Keep raw output as a single complete RGBA PNG on transparent background, no text, labels, floor, coloured outline or scene. This remains generated adaptation, not original frames or geometric1:1 certification.",
+  "references": [
+    {
+      "path": "assets/specimens/re3-hunter-beta.png",
+      "bytes": 294592,
+      "sha256": "9ac57302bd3deee20094dc193631bc800871915e1be0ca7ebaa9346a51c9e2cf",
+      "role": "full-body-reference",
+      "bodyCoverage": "partial",
+      "exactIdentity": true,
+      "sourceUrl": "https://bogleech.com/halloween/hall18-re3",
+      "sourceEdition": "Resident Evil 3: Nemesis (1999)",
+      "targetEditionAdmitted": true,
+      "bodyCompletenessIndependentReviewRequired": true
+    },
+    {
+      "path": "modules/fidelity-r34/assets/lots/lot_1/re3-hunter-beta/research/resume-initial-positive.png",
+      "bytes": 1866232,
+      "sha256": "6aca0e953cacdbe71229f6a0fb35647926c02d759118894a26faf19a66ed0583",
+      "sourceOutputPath": "/workspace/generated_images/exec-a99a6d02-4da1-4a5c-ad55-6d7ab62f624e.png",
+      "notAnatomicalProof": true,
+      "exactIdentity": true,
+      "targetEditionAdmitted": true,
+      "sourceEdition": "Resident Evil 3: Nemesis (1999)",
+      "sourceKind": "generated-positive-study",
+      "generatedMedia": true,
+      "role": "style-and-correction-input-only"
+    }
+  ],
+  "sourceOutputPath": "/workspace/generated_images/exec-fe6ff258-980a-4dda-a01b-8c5c469346d9.png",
+  "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-fe6ff258-980a-4dda-a01b-8c5c469346d9.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "generatedBytesEdited": false,
+  "productionAttempt": {
+    "path": "modules/fidelity-r34/assets/lots/lot_1/re3-hunter-beta/research/resume-call-2.json",
+    "sha256": "b9af13c217e1fe327e65cd55226a9fdbe606709413507151fdf9c081f439ba1b"
+  },
+  "review": {
+    "visuallyReviewed": true,
+    "canonicalFidelityCertified": false,
+    "originalIdleAnimationCertified": false,
+    "knownAppearanceGaps": [],
+    "sourceFacing": "right",
+    "sourceEdition": "Resident Evil 3: Nemesis (1999)",
+    "fullBodyVisible": true,
+    "fullBodyReviewed": true,
+    "completeBodyReferenceVerified": true,
+    "fightingPoseReviewed": true,
+    "completeBodyReferences": [
+      {
+        "path": "assets/specimens/re3-hunter-beta.png",
+        "sha256": "9ac57302bd3deee20094dc193631bc800871915e1be0ca7ebaa9346a51c9e2cf",
+        "observation": "Complete original 1999 HunterBeta shows red/orange head/shoulder nodules, two arms with claws and both clawed feet within frame."
+      }
+    ],
+    "observations": [
+      "Corrected raw alpha composite shows a clear right-facing three-quarter whole-body crouch. The original own-left claw remains longer and attached to the same source arm rather than mirrored; both clawed feet and nodules remain complete.",
+      "Actually rendered through Chromium native alpha compositing on neutral background; RGB under alpha0 is not a visible halo.",
+      "Generated single static adaptation; no original-game frame, original idle loop, geometric or global1:1 certification."
+    ],
+    "qaComposite": {
+      "path": "modules/fidelity-r34/assets/lots/lot_1/reviews/resume-qa-2.png",
+      "bytes": 2257129,
+      "sha256": "33a626a49f45b4e54a533fd3923eb422d3ee4b8fe738def3051c517b44c67cd9"
+    }
+  },
+  "bytes": 1941730,
+  "sha256": "4279de07c9dbbddf03256314cf756531dfadba4d7b7a4a5333d2fb5cb62142e5",
+  "technical": {
+    "format": "PNG",
+    "width": 1083,
+    "height": 1452,
+    "bounds": {
+      "x": 23,
+      "y": 51,
+      "width": 1051,
+      "height": 1357
+    },
+    "pivot": {
+      "x": 548.5,
+      "y": 1408
+    },
+    "alpha": {
+      "channel": true,
+      "min": 0,
+      "max": 255,
+      "visibleThreshold": 16,
+      "transparentPixels": 811229,
+      "totalPixels": 1572516
+    },
+    "silhouetteTouchesCanvasEdge": false,
+    "decodedRgbaSha256": "bb96fbcbf46f72c3491dfcd37ac89987c1bf95408a003b2e4355d4b344082a7c"
+  }
+}

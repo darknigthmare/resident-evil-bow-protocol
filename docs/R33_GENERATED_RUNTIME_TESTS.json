@@ -1,0 +1,79 @@
+{
+  "schema": "re.bow.generated-library-tests-r33/1",
+  "passed": 8,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Actual eight records and four complete source-edition pairs pass the reader contract",
+      "pass": true,
+      "evidence": {
+        "pngs": 8,
+        "pairs": 4
+      }
+    },
+    {
+      "name": "Every actual PNG passes byte count, SHA and PNG signature independently",
+      "pass": true,
+      "evidence": {
+        "actualPngs": 8
+      }
+    },
+    {
+      "name": "Corruption, truncated bytes and a wrong PNG signature are refused before decode",
+      "pass": true,
+      "evidence": {
+        "rejected": 3
+      }
+    },
+    {
+      "name": "Remote, absolute, traversal, encoded and fragment source paths are refused",
+      "pass": true,
+      "evidence": {
+        "rejected": 11
+      }
+    },
+    {
+      "name": "Edition promotion, procedural mirroring and fake animation claims fail closed",
+      "pass": true,
+      "evidence": {
+        "rejected": 8
+      }
+    },
+    {
+      "name": "Documentary moth and contextual alligator cannot acquire a combat state",
+      "pass": true,
+      "evidence": {
+        "heldFamilies": 2
+      }
+    },
+    {
+      "name": "Duplicate sides, unknown states and mismatched family labels are refused",
+      "pass": true,
+      "evidence": {
+        "rejected": 4
+      }
+    },
+    {
+      "name": "The reader has no game-state, storage, timing or image-mirror writes",
+      "pass": true,
+      "evidence": {
+        "readerIsPresentationOnly": true
+      }
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "tests/verify-generated-sprites-r33.mjs",
+      "sha256": "7fbf2b425d5aacaeb877b4581e1cf72e51d8233b9f2b354a9880d0447be9ebc7"
+    },
+    {
+      "path": "modules/fidelity-r33/sprites/library.js",
+      "sha256": "f0bed845737e12319bc099bd2b2993231bed85ba98454091df2f949123af1040"
+    },
+    {
+      "path": "modules/fidelity-r33/sprites/manifest.json",
+      "sha256": "b33b8c6738a97906e87625bfeae78b8132fef195591dbbcb40bedc9282eb0042"
+    }
+  ],
+  "scope": "Independent validation of actual PNG bytes, declared pair contracts and rejected corruption/paths/edition promotion. This does not certify original game pixels or animation."
+}

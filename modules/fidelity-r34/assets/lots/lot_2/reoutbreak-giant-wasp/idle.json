@@ -1,0 +1,102 @@
+{
+  "schema": "re.bow.generated-output-r34/1",
+  "uid": "reoutbreak-giant-wasp",
+  "kind": "idle",
+  "lotId": "lot_2",
+  "status": "GENERATED",
+  "generator": "image_gen",
+  "image": "modules/fidelity-r34/assets/generated/reoutbreak-giant-wasp/idle-right.png",
+  "prompt": "Correct the LAST attached generated wasp image. The complete wasp itself is already correct and right-facing: keep its identity, two pale veined wings, striped body, head to RIGHT, all thin legs and the stinger. Remove the tiny DETACHED diagonal alpha fragment at the extreme TOP-LEFT corner; it is not part of the insect. Return only the complete single wasp on clean native transparent alpha, with at least ten percent transparent margin around EVERY wing/leg/stinger endpoint, no stray fragments or halos. Preserve the actual source appearance from the FIRST original reference. Do not mirror, add limbs, crop wings or paint a background. One static base pose, no text, scene or animation grid.",
+  "references": [
+    {
+      "path": "assets/catalog/reoutbreak-giant-wasp.png",
+      "bytes": 49797,
+      "sha256": "13f8c0e93ba85d3cc3cbbd057ce63a805a14627151d9667939a389e76d9c7820",
+      "sourceUrl": "https://www.evilresource.com/resident-evil-outbreak/enemies/giant-wasp",
+      "sourceEdition": "Resident Evil Outbreak (2003)",
+      "exactIdentity": true,
+      "targetEditionAdmitted": true,
+      "role": "actually-inspected-complete-body-source"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/lots/lot_2/reoutbreak-giant-wasp/revisions/idle-166a0a703d4bfe1e079ca3284501061ac4595ae3cce7ea0d7c2410a1f4a25dc5-d07e95ca488c03b4447b36aa33ecb16ad7eabdbb630ac61e66456800047e4cee/image.png",
+      "bytes": 704033,
+      "sha256": "166a0a703d4bfe1e079ca3284501061ac4595ae3cce7ea0d7c2410a1f4a25dc5",
+      "exactIdentity": true,
+      "targetEditionAdmitted": true,
+      "role": "generated-draft-to-clean-not-original-body-proof",
+      "sourceEdition": "Resident Evil Outbreak (2003)",
+      "originalToolReferencePath": "modules/fidelity-r34/assets/generated/reoutbreak-giant-wasp/idle-right.png"
+    }
+  ],
+  "generatedBytesEdited": false,
+  "review": {
+    "visuallyReviewed": true,
+    "sourceFacing": "right",
+    "fullBodyVisible": true,
+    "fullBodyReviewed": true,
+    "completeBodyReferenceVerified": true,
+    "fightingPoseReviewed": true,
+    "knownAppearanceGaps": [],
+    "observations": [
+      "The exact Outbreak source was independently opened, including its spread pale veined wings, dark eyes, segmented striped abdomen, thin legs and stinger.",
+      "The raw output angles the anterior head to the right while airborne, preserving the wing count, hanging limb ends and complete abdomen/stinger. No floor or humanoid supports are added.",
+      "Raw generator pixels remain unchanged; the true browser alpha composite was inspected. This is one generated static adaptation, not original Capcom pixels or a certified original idle cycle.",
+      "The first raw PNG had a detached alpha16 fragment at the top-left canvas edge; no pixels were painted or discarded by code. A new image-generator correction removes that non-anatomical fragment while preserving the complete right-facing wasp. Native alpha16 bounds now start at116,97 and finish1329,1053 inside the1402x1122canvas."
+    ],
+    "completeBodyReferences": [
+      {
+        "path": "assets/catalog/reoutbreak-giant-wasp.png",
+        "sha256": "13f8c0e93ba85d3cc3cbbd057ce63a805a14627151d9667939a389e76d9c7820",
+        "observation": "Complete airborne wasp catalogue with head, thorax, striped abdomen and stinger, thin dangling legs and two spread pale wings inside image bounds. Identifying anatomy is fully visible, exact motion is not supplied."
+      }
+    ],
+    "canonicalFidelityCertified": false,
+    "originalIdleAnimationCertified": false
+  },
+  "sourceOutputPath": "/workspace/generated_images/exec-f0310cc8-473b-4473-b341-0e302c6b58a6.png",
+  "productionAttempt": {
+    "path": "modules/fidelity-r34/assets/lots/lot_2/production-attempts/reoutbreak-giant-wasp/idle-02-alpha-correction.json",
+    "sha256": "a83f11a98689e1716349199f7068994f4ec25a4edcd0d3da6ce202c229e780a9"
+  },
+  "replacesGeneratedOutput": {
+    "reason": "Remove detached top-left alpha fragment through a genuine new tool output; complete wasp anatomy and rightward pose preserved with verified padding.",
+    "receipt": {
+      "path": "modules/fidelity-r34/assets/lots/lot_2/reoutbreak-giant-wasp/revisions/idle-166a0a703d4bfe1e079ca3284501061ac4595ae3cce7ea0d7c2410a1f4a25dc5-d07e95ca488c03b4447b36aa33ecb16ad7eabdbb630ac61e66456800047e4cee/receipt.json",
+      "bytes": 4781,
+      "sha256": "d07e95ca488c03b4447b36aa33ecb16ad7eabdbb630ac61e66456800047e4cee"
+    },
+    "image": {
+      "path": "modules/fidelity-r34/assets/lots/lot_2/reoutbreak-giant-wasp/revisions/idle-166a0a703d4bfe1e079ca3284501061ac4595ae3cce7ea0d7c2410a1f4a25dc5-d07e95ca488c03b4447b36aa33ecb16ad7eabdbb630ac61e66456800047e4cee/image.png",
+      "bytes": 704033,
+      "sha256": "166a0a703d4bfe1e079ca3284501061ac4595ae3cce7ea0d7c2410a1f4a25dc5"
+    }
+  },
+  "bytes": 677871,
+  "sha256": "74a9e5ef826cc7ab498fb79f3cb2f7cde91872fa932efccdf3b4853335df43d0",
+  "technical": {
+    "format": "PNG",
+    "width": 1402,
+    "height": 1122,
+    "bounds": {
+      "x": 116,
+      "y": 97,
+      "width": 1213,
+      "height": 956
+    },
+    "pivot": {
+      "x": 722.5,
+      "y": 1053
+    },
+    "alpha": {
+      "channel": true,
+      "min": 0,
+      "max": 255,
+      "visibleThreshold": 16,
+      "transparentPixels": 1334680,
+      "totalPixels": 1573044
+    },
+    "silhouetteTouchesCanvasEdge": false,
+    "decodedRgbaSha256": "5caddaffc20b24722e8730120adfe956e665532286b55115a8ef619390ab266f"
+  }
+}

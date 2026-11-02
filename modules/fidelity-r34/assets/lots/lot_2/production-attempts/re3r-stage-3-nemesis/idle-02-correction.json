@@ -1,0 +1,68 @@
+{
+  "schema": "re.bow.production-attempt-r34/1",
+  "uid": "re3r-stage-3-nemesis",
+  "kind": "idle",
+  "lotId": "lot_2",
+  "stage": "positive-output-correction",
+  "generator": "image_gen",
+  "status": "GENERATED",
+  "createdAt": "2026-11-01T02:57:09.904743+00:00",
+  "prompt": "Correct the existing generated game asset, with the original source as anatomical truth. Correct the generated LAST image using the FIRST verified original body source: restore the low rounded source mouth rather than the elongated upright snout. Keep the entire grounded irregular final-stage mass and all radial appendages. Direct the mouth opening toward screen RIGHT in a three-quarter static presentation, without inventing a humanoid stance, legs or locomotion.\nOne COMPLETE character in one image, every extremity and equipment endpoint inside at least ten percent transparent padding. No text, scene, floor, coloured outline or frame. Preserve original identity, colours, equipment and anatomical asymmetries. Native transparent alpha. A static generated adaptation, not an original frame or original animation. Do not use a horizontal software mirror.",
+  "references": [
+    {
+      "path": "modules/fidelity-r34/assets/source-research/nemesis3-bogleech-final.png",
+      "bytes": 896999,
+      "sha256": "3ac251f5523fd59aca1c56ea03c5385c50b8e56e22225166ae3f27bc41898ab5",
+      "sourceUrl": "https://bogleech.com/re/re3make-nemesisfinal.png",
+      "sourceEdition": "Resident Evil 3 remake (2020)",
+      "exactIdentity": true,
+      "targetEditionAdmitted": true,
+      "role": "actually-inspected-complete-body-source"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re3r-stage-3-nemesis/studies/idle-initial.png",
+      "bytes": 2732412,
+      "sha256": "f639341c57d2b39ff039c1867e05ca129cda9f26bd6960393064305f7fa77a87",
+      "exactIdentity": true,
+      "targetEditionAdmitted": true,
+      "sourceEdition": "Resident Evil 3 remake (2020)",
+      "role": "generated-positive-draft-to-correct-not-anatomical-proof"
+    }
+  ],
+  "completeBodyReference": {
+    "path": "modules/fidelity-r34/assets/source-research/nemesis3-bogleech-final.png",
+    "bytes": 896999,
+    "sha256": "3ac251f5523fd59aca1c56ea03c5385c50b8e56e22225166ae3f27bc41898ab5",
+    "sourceUrl": "https://bogleech.com/re/re3make-nemesisfinal.png",
+    "sourceEdition": "Resident Evil 3 remake (2020)",
+    "exactIdentity": true,
+    "targetEditionAdmitted": true,
+    "role": "actually-inspected-complete-body-source"
+  },
+  "sourceObservation": "Whole asymmetrical final-stage mass visible: broad grounded tissue base, multiple claw-like long radial arms, webbed upright appendages and central open mouth. It is not a biped; reference does not establish locomotion away from its wall or unseen rear surfaces. Several thin tips approach the frame, so exact tiny distal outlines remain limited.",
+  "priorPositiveOutput": {
+    "path": "modules/fidelity-r34/assets/generated/re3r-stage-3-nemesis/studies/idle-initial.png",
+    "bytes": 2732412,
+    "sha256": "f639341c57d2b39ff039c1867e05ca129cda9f26bd6960393064305f7fa77a87",
+    "exactIdentity": true,
+    "targetEditionAdmitted": true,
+    "sourceEdition": "Resident Evil 3 remake (2020)",
+    "role": "generated-positive-draft-to-correct-not-anatomical-proof"
+  },
+  "toolArgs": {
+    "prompt": "Correct the existing generated game asset, with the original source as anatomical truth. Correct the generated LAST image using the FIRST verified original body source: restore the low rounded source mouth rather than the elongated upright snout. Keep the entire grounded irregular final-stage mass and all radial appendages. Direct the mouth opening toward screen RIGHT in a three-quarter static presentation, without inventing a humanoid stance, legs or locomotion.\nOne COMPLETE character in one image, every extremity and equipment endpoint inside at least ten percent transparent padding. No text, scene, floor, coloured outline or frame. Preserve original identity, colours, equipment and anatomical asymmetries. Native transparent alpha. A static generated adaptation, not an original frame or original animation. Do not use a horizontal software mirror.",
+    "referenced_image_paths": [
+      "/workspace/resident-evil-bow-protocol/modules/fidelity-r34/assets/source-research/nemesis3-bogleech-final.png",
+      "/workspace/resident-evil-bow-protocol/modules/fidelity-r34/assets/generated/re3r-stage-3-nemesis/studies/idle-initial.png"
+    ],
+    "transparent_background": true
+  },
+  "interruptionReview": {
+    "previousPreparedCorrectionHadNoRecoverableReturn": true,
+    "noKnownModerationRefusalForUid": true,
+    "oneDocumentedCorrectionAuthorizedByCoordinator": true
+  },
+  "updatedAt": "2026-11-01T03:02:27.192693+00:00",
+  "sourceOutputPath": "/workspace/generated_images/exec-d0f97add-f10b-4ab2-8327-a2bd3c96cfc3.png",
+  "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-d0f97add-f10b-4ab2-8327-a2bd3c96cfc3.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+}

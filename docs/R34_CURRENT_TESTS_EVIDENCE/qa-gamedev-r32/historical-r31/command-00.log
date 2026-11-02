@@ -1,0 +1,26 @@
+PASS The registry contains exactly 18 persistent game keys in eight disjoint groups
+PASS Export reads only known keys and cannot include auth tokens or unrelated storage
+PASS Raw Unicode, whitespace, malformed copies and absence survive export byte-for-byte
+PASS Preview lists adds, replacements and removals but performs no write
+PASS A restoration requires both exact before-copy acknowledgement and explicit confirmation
+PASS Only selected groups change and old double slots cannot mask a restored revision
+PASS Whole-group preview refuses empty and damaged incoming groups without changing the target
+PASS Outer corruption, future format and damaged checksum are refused
+PASS Unknown, repeated, missing and extra keys are rejected even with a recomputed checksum
+PASS Invalid metadata or non-string raw values cannot be imported
+PASS Per-value and aggregate bounds reject oversize content before any restore
+PASS Internal checksums protect Dossier, Operations and contextual paired copies
+PASS A read denied by the browser cannot be misreported as an empty valid backup
+PASS A change after preview refuses restoration before the first write
+PASS A quota failure on the second key rolls back the first without losing old data
+PASS A silent failed write is detected and the first write is rolled back
+PASS A persistent rollback failure exposes exact recovery data instead of claiming success
+PASS An external writer during restoration is never overwritten by rollback
+PASS Cancelled, fake, reused and cross-instance previews cannot be applied
+PASS Selectors reject unknown groups and duplicates; preview metadata is immutable
+PASS A real Dossier profile round-trips and remains validated by its existing loader
+PASS A real contextual checkpoint round-trips with identical restored state and records
+PASS All 18 keys, including older dojo copies, round-trip without parsing or reformatting values
+PASS New page is linked, included in the static build and has no remote upload code
+PASS R19 gameplay, original assets and workbooks are preserved; three R20 presentation diffs are reviewed explicitly
+{"passed":25,"failed":0}

@@ -1,0 +1,35 @@
+:root { color-scheme: dark; font-family: system-ui, sans-serif; font-size: 18px; background: #111716; color: #e7eeeb; }
+* { box-sizing: border-box; }
+body { margin: 0; padding: max(1rem, env(safe-area-inset-top)) max(1rem, env(safe-area-inset-right)) max(1rem, env(safe-area-inset-bottom)) max(1rem, env(safe-area-inset-left)); }
+header, main, footer { max-width: 74rem; margin-inline: auto; min-width: 0; }
+header { padding-block: 1rem; }
+h1 { font-size: clamp(1.8rem, 5vw, 3rem); line-height: 1.1; }
+h2 { font-size: 1.45rem; }
+h3 { font-size: 1.1rem; }
+p, li, dd, blockquote, a, code, label, h1, h2, h3, legend, button { overflow-wrap: anywhere; }
+a { color: #9de7ca; text-underline-offset: .16em; }
+button, select, input { font: inherit; }
+button, select { min-width: 0; min-height: 2.8rem; max-width: 100%; width: 100%; color: #eff6f2; background: #263c33; border: 1px solid #739a87; border-radius: .2rem; padding: .6rem; }
+button { cursor: pointer; font-weight: 650; }
+button:disabled, select:disabled { cursor: default; opacity: .65; }
+button:focus-visible, select:focus-visible, input:focus-visible, a:focus-visible, [tabindex]:focus-visible { outline: 3px solid #f7d36d; outline-offset: 3px; }
+form, section { min-width: 0; }
+form { display: grid; gap: .6rem; }
+section { margin-block: 1.6rem; padding: 1rem; border: 1px solid #426252; background: #18211d; }
+article { margin-block: 1rem; padding: .85rem; background: #202e27; border-inline-start: .2rem solid #86b89d; }
+blockquote { margin: .8rem 0; border-inline-start: 2px solid #8bafa0; padding-inline-start: .8rem; }
+dl { margin-block: .8rem; }
+dt { font-weight: 650; }
+dd { margin-inline-start: 0; margin-block-end: .6rem; }
+.eyebrow { letter-spacing: .1em; font-size: .85rem; }
+.notice { padding: .8rem; border: 1px solid #d6bf78; background: #302d20; }
+.tag { font-size: .85rem; color: #c1dacb; }
+fieldset { min-width: 0; border: 1px solid #718776; margin: 0; padding: .8rem; }
+fieldset label { display: flex; gap: .6rem; align-items: start; margin-block: .6rem; }
+input[type="checkbox"] { width: 1.25rem; height: 1.25rem; flex-shrink: 0; }
+audio { display: block; width: 100%; min-width: 0; margin-block: .8rem; }
+footer { padding-block: 1rem; }
+.skip { position: fixed; top: -8rem; left: 1rem; z-index: 5; background: #111716; padding: 1rem; }
+.skip:focus { top: 1rem; }
+@media (min-width: 52rem) { #filters { grid-template-columns: minmax(0, 1fr) minmax(12rem, 20rem); align-items: end; } #filters label { grid-column: 1 / -1; } }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto; } }

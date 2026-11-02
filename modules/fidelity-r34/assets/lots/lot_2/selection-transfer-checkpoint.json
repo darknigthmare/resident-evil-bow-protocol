@@ -1,0 +1,877 @@
+{
+  "schema": "re.bow.selection-transfer-production-r34/1",
+  "lotId": "lot_2",
+  "producer": "selection-transfer-resumed",
+  "authorizedBy": "Root NEW_TASK: PHASE2 GLOBALE authorized; 12 UID exclusive transfer confirmed by lot B.",
+  "phase": "complete",
+  "updatedAt": "2026-11-01T02:55:16.570396+00:00",
+  "subjects": [
+    {
+      "uid": "re0-proto-tyrant",
+      "state": "GENERATED",
+      "actualPrompt": "Create a faithful generated game asset for Proto-Tyrant, exact incarnation Resident Evil 0 (2002). Use the attached verified references only. Preserve the precise head, anatomy, proportions, costume, equipment, material colours and asymmetric details. Do not mix games, phases or editions. Match the source appearance without added cartoon outlines, coloured halos or decoration. One subject only, no text, labels, scenery, floor, montage or frame. Clean transparent alpha. This remains a generated adaptation, not an original Capcom frame or a geometric 1:1 certificate. One complete full-body static combat idle base pose, facing right in a side/three-quarter fighting-game view. Keep every source-documented limb, foot, tail, wing, tentacle, horn and equipment inside the image with generous transparent padding. Preserve actual locomotion and support points; do not turn a quadruped or aquatic creature into a humanoid. Produce the entire body in this one image, not separate pieces. No motion blur, duplicate bodies or animation-frame grid. Only proceed after actually reviewing a complete source body reference.",
+      "sourceReferences": [
+        {
+          "path": "assets/specimens/re0-proto-tyrant.png",
+          "bytes": 217119,
+          "sha256": "2be37f7473611e2e169667fec7da0a3e8142dc2354cc268b89938373398d9229",
+          "role": "full-body-reference",
+          "bodyCoverage": "partial",
+          "exactIdentity": true,
+          "sourceUrl": "https://blackjackrants.blogspot.com/2021/03/reviewing-monsters-resident-evil-zero.html",
+          "sourceEdition": "Resident Evil 0 (2002)",
+          "targetEditionAdmitted": true,
+          "bodyCompletenessIndependentReviewRequired": true
+        },
+        {
+          "path": "assets/catalog/re0-proto-tyrant.png",
+          "bytes": 160510,
+          "sha256": "dcf43dd374457cfcfa226ce5d795adfed21f8cabc512f8e7895c26a2d4349dc7",
+          "role": "catalogue-reference",
+          "bodyCoverage": "unknown",
+          "exactIdentity": true,
+          "sourceUrl": "https://www.evilresource.com/resident-evil-zero/enemies/proto-tyrant",
+          "sourceEdition": "Resident Evil 0 (2002)",
+          "targetEditionAdmitted": true,
+          "bodyCompletenessIndependentReviewRequired": true
+        }
+      ],
+      "sourceOutputPath": "/workspace/generated_images/exec-81992164-d7fa-4da0-8e48-3b9e5cea1df4.png",
+      "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-81992164-d7fa-4da0-8e48-3b9e5cea1df4.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "error": null,
+      "attempts": [
+        {
+          "uid": "re0-proto-tyrant",
+          "prompt": "Correct the second image, which is a generated study of re0-proto-tyrant; the first image is the original-game anatomy reference for Resident Evil 0 (2002). Produce ONE complete transparent full-body 2D fighting-game combat idle BASE POSE clearly facing image RIGHT. The previous study faces left or front and must be re-posed, not mirrored. Turn the head, gaze, torso and feet into a readable right-facing side/three-quarter ready stance. Preserve the exact source identity, skin colours, proportions and asymmetric anatomy; do not swap the creature's anatomical right and left limbs. Keep every foot, finger and long claw tip in the image with at least5percent clear transparent padding. Maintain the giant right-side arm and smaller opposite arm. Preserve all source-documented details without adding equipment, extra limbs or hidden anatomy. No text, frame grid, scenery, ground, added outline or glow. Static single image, not original game frames or certified geometry.",
+          "paths": [
+            "/workspace/resident-evil-bow-protocol/assets/specimens/re0-proto-tyrant.png",
+            "/workspace/generated_images/exec-81992164-d7fa-4da0-8e48-3b9e5cea1df4.png"
+          ],
+          "correction": true,
+          "startedAt": "2026-11-01T02:42:28.403Z",
+          "state": "GENERATED_AWAITING_REVIEW",
+          "sourceOutputPath": "/workspace/generated_images/exec-a33c709b-26d8-45ca-b318-5eddb5571ed0.png",
+          "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-a33c709b-26d8-45ca-b318-5eddb5571ed0.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+          "error": null,
+          "finishedAt": "2026-11-01T02:43:20.817Z"
+        }
+      ],
+      "independentSourceReview": {
+        "path": "assets/specimens/re0-proto-tyrant.png",
+        "sha256": "2be37f7473611e2e169667fec7da0a3e8142dc2354cc268b89938373398d9229",
+        "actuallyViewed": true,
+        "completeVisibleBody": true,
+        "observation": "Both feet and the complete enlarged right-arm claws fit in the original source; head, chest and smaller opposite hand are visible. The first generated study remains left-facing and requires a pose correction.",
+        "canonicalFidelityCertified": false
+      },
+      "receipt": "modules/fidelity-r34/assets/lots/lot_2/re0-proto-tyrant/idle.json",
+      "sha256": "cdd658ecac3c1b99a7a4eddf3635575842ab9e861c70116bf1d1e047c072fd5d",
+      "finalSourceOutputPath": "/workspace/generated_images/exec-a33c709b-26d8-45ca-b318-5eddb5571ed0.png",
+      "admittedDirection": "right",
+      "anatomicalAsymmetryObservation": "Against the original full source, the enlarged clawed RIGHT arm remains on image-left and the smaller LEFT hand on image-right. The corrected head and leading foot face right without exchanging these limbs. This is a three-quarter adapted pose, not a certified geometric model rotation."
+    },
+    {
+      "uid": "re1r-chimera",
+      "state": "GENERATED",
+      "actualPrompt": "Create a faithful generated game asset for Chimera, exact incarnation Resident Evil remake (2002). Use the attached verified references only. Preserve the precise head, anatomy, proportions, costume, equipment, material colours and asymmetric details. Do not mix games, phases or editions. Match the source appearance without added cartoon outlines, coloured halos or decoration. One subject only, no text, labels, scenery, floor, montage or frame. Clean transparent alpha. This remains a generated adaptation, not an original Capcom frame or a geometric 1:1 certificate. One complete full-body static combat idle base pose, facing right in a side/three-quarter fighting-game view. Keep every source-documented limb, foot, tail, wing, tentacle, horn and equipment inside the image with generous transparent padding. Preserve actual locomotion and support points; do not turn a quadruped or aquatic creature into a humanoid. Produce the entire body in this one image, not separate pieces. No motion blur, duplicate bodies or animation-frame grid. Only proceed after actually reviewing a complete source body reference.",
+      "sourceReferences": [
+        {
+          "path": "assets/specimens/re1r-chimera.png",
+          "bytes": 271321,
+          "sha256": "e0035a770dd991b0110bd48ea8fec2fc671775e4ab7ec449c93e448138931c82",
+          "role": "full-body-reference",
+          "bodyCoverage": "partial",
+          "exactIdentity": true,
+          "sourceUrl": "https://bogleech.com/halloween/hall18-re",
+          "sourceEdition": "Resident Evil remake (2002)",
+          "targetEditionAdmitted": true,
+          "bodyCompletenessIndependentReviewRequired": true
+        },
+        {
+          "path": "assets/catalog/re1r-chimera.png",
+          "bytes": 113762,
+          "sha256": "7285eff1985e75a094575d8c8c4cd7690278538512c6d5296c0adfb3b72e0a50",
+          "role": "catalogue-reference",
+          "bodyCoverage": "unknown",
+          "exactIdentity": true,
+          "sourceUrl": "https://www.evilresource.com/resident-evil-remake/enemies/chimera",
+          "sourceEdition": "Resident Evil remake (2002)",
+          "targetEditionAdmitted": true,
+          "bodyCompletenessIndependentReviewRequired": true
+        }
+      ],
+      "sourceOutputPath": "/workspace/generated_images/exec-be00d449-efc6-4945-b209-58d2a9b6aeb6.png",
+      "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-be00d449-efc6-4945-b209-58d2a9b6aeb6.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "error": null,
+      "receipt": "modules/fidelity-r34/assets/lots/lot_2/re1r-chimera/idle.json",
+      "sha256": "a3d967ad2dfef1ac884fb009cd09b65ddde5532b70e2cd84c606ada03c64313a",
+      "independentSourceReview": {
+        "path": "assets/specimens/re1r-chimera.png",
+        "sha256": "e0035a770dd991b0110bd48ea8fec2fc671775e4ab7ec449c93e448138931c82",
+        "actuallyViewed": true,
+        "completeVisibleBody": true,
+        "observation": "The original source shows a whole insect/human hybrid with raised hook, jointed appendages and two terminal lower clawed supports. Recovered generated pose faces right and keeps the long upper hook and lower claws inside margins.",
+        "canonicalFidelityCertified": false
+      }
+    },
+    {
+      "uid": "re2-g-second-form",
+      "state": "GENERATED",
+      "actualPrompt": "Create a faithful generated game asset for G — deuxième forme, exact incarnation Resident Evil 2 (1998). Use the attached verified references only. Preserve the precise head, anatomy, proportions, costume, equipment, material colours and asymmetric details. Do not mix games, phases or editions. Match the source appearance without added cartoon outlines, coloured halos or decoration. One subject only, no text, labels, scenery, floor, montage or frame. Clean transparent alpha. This remains a generated adaptation, not an original Capcom frame or a geometric 1:1 certificate. One complete full-body static combat idle base pose, facing right in a side/three-quarter fighting-game view. Keep every source-documented limb, foot, tail, wing, tentacle, horn and equipment inside the image with generous transparent padding. Preserve actual locomotion and support points; do not turn a quadruped or aquatic creature into a humanoid. Produce the entire body in this one image, not separate pieces. No motion blur, duplicate bodies or animation-frame grid. Only proceed after actually reviewing a complete source body reference.",
+      "sourceReferences": [
+        {
+          "path": "assets/specimens/re2-g-second-form.png",
+          "bytes": 385465,
+          "sha256": "761f1cdd361d3379a195095996313d907a0fe78d6e59592ed659bc30484db9aa",
+          "role": "full-body-reference",
+          "bodyCoverage": "partial",
+          "exactIdentity": true,
+          "sourceUrl": "https://bogleech.com/halloween/hall18-re2",
+          "sourceEdition": "Resident Evil 2 (1998)",
+          "targetEditionAdmitted": true,
+          "bodyCompletenessIndependentReviewRequired": true
+        },
+        {
+          "path": "assets/catalog/re2-g-second-form.png",
+          "bytes": 152436,
+          "sha256": "6d6d7a1d53864b50aaabc5d39d67f12dd596e3dd844b05866495baa16bb13a0c",
+          "role": "catalogue-reference",
+          "bodyCoverage": "unknown",
+          "exactIdentity": true,
+          "sourceUrl": "https://www.evilresource.com/resident-evil-2/enemies/g-second-form",
+          "sourceEdition": "Resident Evil 2 (1998)",
+          "targetEditionAdmitted": true,
+          "bodyCompletenessIndependentReviewRequired": true
+        }
+      ],
+      "sourceOutputPath": "/workspace/generated_images/exec-9e0a9230-4ace-4804-a011-2f39df13001a.png",
+      "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-9e0a9230-4ace-4804-a011-2f39df13001a.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "error": null,
+      "attempts": [
+        {
+          "uid": "re2-g-second-form",
+          "prompt": "Correct the second image, which is a generated study of re2-g-second-form; the first image is the original-game anatomy reference for Resident Evil 2 (1998). Produce ONE complete transparent full-body 2D fighting-game combat idle BASE POSE clearly facing image RIGHT. The previous study faces left or front and must be re-posed, not mirrored. Turn the head, gaze, torso and feet into a readable right-facing side/three-quarter ready stance. Preserve the exact source identity, skin colours, proportions and asymmetric anatomy; do not swap the creature's anatomical right and left limbs. Keep every foot, finger and long claw tip in the image with at least5percent clear transparent padding. Maintain the giant right-side arm and smaller opposite arm. Preserve all source-documented details without adding equipment, extra limbs or hidden anatomy. No text, frame grid, scenery, ground, added outline or glow. Static single image, not original game frames or certified geometry.",
+          "paths": [
+            "/workspace/resident-evil-bow-protocol/assets/specimens/re2-g-second-form.png",
+            "/workspace/generated_images/exec-9e0a9230-4ace-4804-a011-2f39df13001a.png"
+          ],
+          "correction": true,
+          "startedAt": "2026-11-01T02:42:28.684Z",
+          "state": "GENERATED_AWAITING_REVIEW",
+          "sourceOutputPath": "/workspace/generated_images/exec-c1d9a369-d76a-4c77-8d9d-0e43cb2a2f9e.png",
+          "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-c1d9a369-d76a-4c77-8d9d-0e43cb2a2f9e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+          "error": null,
+          "finishedAt": "2026-11-01T02:44:54.574Z"
+        }
+      ],
+      "independentSourceReview": {
+        "path": "assets/specimens/re2-g-second-form.png",
+        "sha256": "761f1cdd361d3379a195095996313d907a0fe78d6e59592ed659bc30484db9aa",
+        "actuallyViewed": true,
+        "completeVisibleBody": true,
+        "observation": "The original G2 shows the large right shoulder eye, enlarged claw hand, embedded blond human head, smaller opposite arm, both legs and feet. The initial generated body is frontal, so it is not a right-facing fighting default.",
+        "canonicalFidelityCertified": false
+      },
+      "receipt": "modules/fidelity-r34/assets/lots/lot_2/re2-g-second-form/idle.json",
+      "sha256": "2e409e63966c2d80ea652425c6ef46b7c4898c803fe73f2258b1d17eecc01d4a",
+      "finalSourceOutputPath": "/workspace/generated_images/exec-c1d9a369-d76a-4c77-8d9d-0e43cb2a2f9e.png",
+      "admittedDirection": "right",
+      "anatomicalAsymmetryObservation": "The giant eye and enlarged clawed RIGHT arm remain on image-left; the embedded blond human head stays on the opposite image-right shoulder. The corrected mutated head and leading foot turn toward image-right without reversing these source anchors. The torso is three-quarter rather than strict orthographic profile."
+    },
+    {
+      "uid": "re2-ivy",
+      "state": "GENERATED",
+      "actualPrompt": "Create a faithful generated game asset for Ivy / Plant 43, exact incarnation Resident Evil 2 (1998). Use the attached verified references only. Preserve the precise head, anatomy, proportions, costume, equipment, material colours and asymmetric details. Do not mix games, phases or editions. Match the source appearance without added cartoon outlines, coloured halos or decoration. One subject only, no text, labels, scenery, floor, montage or frame. Clean transparent alpha. This remains a generated adaptation, not an original Capcom frame or a geometric 1:1 certificate. One complete full-body static combat idle base pose, facing right in a side/three-quarter fighting-game view. Keep every source-documented limb, foot, tail, wing, tentacle, horn and equipment inside the image with generous transparent padding. Preserve actual locomotion and support points; do not turn a quadruped or aquatic creature into a humanoid. Produce the entire body in this one image, not separate pieces. No motion blur, duplicate bodies or animation-frame grid. Only proceed after actually reviewing a complete source body reference.",
+      "sourceReferences": [
+        {
+          "path": "assets/specimens/re2-ivy.png",
+          "bytes": 458589,
+          "sha256": "bcd90852a47eb76c15abbbce3c00833d9917efd44d39c7054c25e7bee2295f8d",
+          "role": "full-body-reference",
+          "bodyCoverage": "partial",
+          "exactIdentity": true,
+          "sourceUrl": "https://bogleech.com/halloween/hall20-reremake",
+          "sourceEdition": "Resident Evil 2 (1998)",
+          "targetEditionAdmitted": true,
+          "bodyCompletenessIndependentReviewRequired": true
+        },
+        {
+          "path": "assets/catalog/re2-ivy.png",
+          "bytes": 124423,
+          "sha256": "291ee36c11ff37eb376fb51826e27e580a9e1618e777da03fbdc5007784730e1",
+          "role": "catalogue-reference",
+          "bodyCoverage": "unknown",
+          "exactIdentity": true,
+          "sourceUrl": "https://www.evilresource.com/resident-evil-2/enemies/ivy",
+          "sourceEdition": "Resident Evil 2 (1998)",
+          "targetEditionAdmitted": true,
+          "bodyCompletenessIndependentReviewRequired": true
+        }
+      ],
+      "sourceOutputPath": "/workspace/generated_images/exec-3d130606-0041-4639-b1e2-d72ea0873312.png",
+      "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-3d130606-0041-4639-b1e2-d72ea0873312.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "error": null,
+      "receipt": "modules/fidelity-r34/assets/lots/lot_2/re2-ivy/idle.json",
+      "sha256": "19b35e1fc3c6cea7265a9cadb9f16979ca8ca03d5876ee9bfdefc6cf7dd5b194",
+      "independentSourceReview": {
+        "path": "assets/specimens/re2-ivy.png",
+        "sha256": "bcd90852a47eb76c15abbbce3c00833d9917efd44d39c7054c25e7bee2295f8d",
+        "actuallyViewed": true,
+        "completeVisibleBody": true,
+        "observation": "The original orange three-pointed flower, green bent trunk, root supports, vines and red terminal buds are all in frame. The recovered generated pose retains these endpoints and bends forward toward image right.",
+        "canonicalFidelityCertified": false
+      }
+    },
+    {
+      "uid": "re2-tyrant-mutation",
+      "state": "GENERATED",
+      "actualPrompt": null,
+      "sourceReferences": [
+        {
+          "path": "assets/specimens/re2-tyrant-mutation.png",
+          "bytes": 382105,
+          "sha256": "5d99e860d3f58fd19b9d7da9d2bbf55d8e8e2002bd3133c13c4d9f82af7be54b",
+          "role": "full-body-reference",
+          "bodyCoverage": "partial",
+          "exactIdentity": true,
+          "sourceUrl": "https://bogleech.com/halloween/hall18-re2",
+          "sourceEdition": "Resident Evil 2 (1998)",
+          "targetEditionAdmitted": true,
+          "bodyCompletenessIndependentReviewRequired": true
+        },
+        {
+          "path": "assets/catalog/re2-tyrant-mutation.png",
+          "bytes": 144428,
+          "sha256": "4dc108c6fbde03368ca2252b9171ebcfa3f88557a4321788b081fcc59e551d94",
+          "role": "catalogue-reference",
+          "bodyCoverage": "unknown",
+          "exactIdentity": true,
+          "sourceUrl": "https://www.evilresource.com/resident-evil-2/enemies/tyrant-mutation",
+          "sourceEdition": "Resident Evil 2 (1998)",
+          "targetEditionAdmitted": true,
+          "bodyCompletenessIndependentReviewRequired": true
+        }
+      ],
+      "sourceOutputPath": null,
+      "output_hint": null,
+      "error": null,
+      "attempts": [
+        {
+          "uid": "re2-tyrant-mutation",
+          "prompt": "Create a faithful generated game asset for Super Tyrant, exact incarnation Resident Evil 2 (1998). Use the attached verified references only. Preserve the precise head, anatomy, proportions, costume, equipment, material colours and asymmetric details. Do not mix games, phases or editions. Match the source appearance without added cartoon outlines, coloured halos or decoration. One subject only, no text, labels, scenery, floor, montage or frame. Clean transparent alpha. This remains a generated adaptation, not an original Capcom frame or a geometric 1:1 certificate. One complete full-body static combat idle base pose, facing right in a side/three-quarter fighting-game view. Keep every source-documented limb, foot, tail, wing, tentacle, horn and equipment inside the image with generous transparent padding. Preserve actual locomotion and support points; do not turn a quadruped or aquatic creature into a humanoid. Produce the entire body in this one image, not separate pieces. No motion blur, duplicate bodies or animation-frame grid. Only proceed after actually reviewing a complete source body reference. The reference view establishes anatomy; do not simply reproduce its front or left-facing presentation. For this new 2D fighting pose the head, gaze and forward foot point clearly to image RIGHT. Keep all extremities inside at least5percent transparent canvas margins, preserve anatomical asymmetry without a software mirror.",
+          "paths": [
+            "/workspace/resident-evil-bow-protocol/assets/specimens/re2-tyrant-mutation.png",
+            "/workspace/resident-evil-bow-protocol/assets/catalog/re2-tyrant-mutation.png"
+          ],
+          "correction": false,
+          "startedAt": "2026-11-01T02:42:28.970Z",
+          "state": "GENERATED_AWAITING_REVIEW",
+          "sourceOutputPath": "/workspace/generated_images/exec-da53c10e-ca3f-41f5-840a-143a56511161.png",
+          "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-da53c10e-ca3f-41f5-840a-143a56511161.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+          "error": null,
+          "finishedAt": "2026-11-01T02:44:03.711Z"
+        }
+      ],
+      "independentSourceReview": {
+        "path": "assets/specimens/re2-tyrant-mutation.png",
+        "sha256": "5d99e860d3f58fd19b9d7da9d2bbf55d8e8e2002bd3133c13c4d9f82af7be54b",
+        "actuallyViewed": true,
+        "completeVisibleBody": true,
+        "observation": "Original reference contains pale head, exposed chest organ, asymmetrical claws on both hands, complete legs and both bare feet. Main tips are inside the source frame.",
+        "canonicalFidelityCertified": false
+      },
+      "receipt": "modules/fidelity-r34/assets/lots/lot_2/re2-tyrant-mutation/idle.json",
+      "sha256": "ec588ca8aee9be9ae6bbb726f7ce08877a1161bb9fb20593cf6e7a6e6813872c",
+      "finalSourceOutputPath": "/workspace/generated_images/exec-da53c10e-ca3f-41f5-840a-143a56511161.png",
+      "admittedDirection": "right",
+      "anatomicalAsymmetryObservation": "The larger RIGHT arm and exposed chest organ stay on the source image-left side, with the pale patch on that same knee. The opposite hand remains smaller on image-right. The head and feet orient right without exchanging that source-specific arrangement."
+    },
+    {
+      "uid": "re3-hunter-gamma",
+      "state": "GENERATED",
+      "actualPrompt": null,
+      "sourceReferences": [
+        {
+          "path": "assets/specimens/re3-hunter-gamma.png",
+          "bytes": 483952,
+          "sha256": "325c19a8d1b3ad393b84534f1f1ea249b120919806eea049ac0044b4df025acb",
+          "role": "full-body-reference",
+          "bodyCoverage": "partial",
+          "exactIdentity": true,
+          "sourceUrl": "https://bogleech.com/halloween/hall18-re3",
+          "sourceEdition": "Resident Evil 3: Nemesis (1999)",
+          "targetEditionAdmitted": true,
+          "bodyCompletenessIndependentReviewRequired": true
+        },
+        {
+          "path": "assets/catalog/re3-hunter-gamma.png",
+          "bytes": 203256,
+          "sha256": "7bb0be5b4fadd4c439f8bc3ea2fb10677ca4cc3f41e8986e61eff80998ef4c9f",
+          "role": "catalogue-reference",
+          "bodyCoverage": "unknown",
+          "exactIdentity": true,
+          "sourceUrl": "https://www.evilresource.com/resident-evil-3-nemesis/enemies/hunter-gamma",
+          "sourceEdition": "Resident Evil 3: Nemesis (1999)",
+          "targetEditionAdmitted": true,
+          "bodyCompletenessIndependentReviewRequired": true
+        }
+      ],
+      "sourceOutputPath": null,
+      "output_hint": null,
+      "error": null,
+      "attempts": [
+        {
+          "uid": "re3-hunter-gamma",
+          "prompt": "Create a faithful generated game asset for Hunter γ, exact incarnation Resident Evil 3: Nemesis (1999). Use the attached verified references only. Preserve the precise head, anatomy, proportions, costume, equipment, material colours and asymmetric details. Do not mix games, phases or editions. Match the source appearance without added cartoon outlines, coloured halos or decoration. One subject only, no text, labels, scenery, floor, montage or frame. Clean transparent alpha. This remains a generated adaptation, not an original Capcom frame or a geometric 1:1 certificate. One complete full-body static combat idle base pose, facing right in a side/three-quarter fighting-game view. Keep every source-documented limb, foot, tail, wing, tentacle, horn and equipment inside the image with generous transparent padding. Preserve actual locomotion and support points; do not turn a quadruped or aquatic creature into a humanoid. Produce the entire body in this one image, not separate pieces. No motion blur, duplicate bodies or animation-frame grid. Only proceed after actually reviewing a complete source body reference. The reference view establishes anatomy; do not simply reproduce its front or left-facing presentation. For this new 2D fighting pose the head, gaze and forward foot point clearly to image RIGHT. Keep all extremities inside at least5percent transparent canvas margins, preserve anatomical asymmetry without a software mirror.",
+          "paths": [
+            "/workspace/resident-evil-bow-protocol/assets/specimens/re3-hunter-gamma.png",
+            "/workspace/resident-evil-bow-protocol/assets/catalog/re3-hunter-gamma.png"
+          ],
+          "correction": false,
+          "startedAt": "2026-11-01T02:42:29.254Z",
+          "state": "GENERATED_AWAITING_REVIEW",
+          "sourceOutputPath": "/workspace/generated_images/exec-7524b21d-d5ba-4c6f-9439-15876079f83a.png",
+          "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-7524b21d-d5ba-4c6f-9439-15876079f83a.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+          "error": null,
+          "finishedAt": "2026-11-01T02:45:39.992Z"
+        }
+      ],
+      "independentSourceReview": {
+        "path": "assets/specimens/re3-hunter-gamma.png",
+        "sha256": "325c19a8d1b3ad393b84534f1f1ea249b120919806eea049ac0044b4df025acb",
+        "actuallyViewed": true,
+        "completeVisibleBody": true,
+        "observation": "The original blue-black amphibian crouches with broad rounded head and open red mouth. Both foreclaws and large splayed webbed rear feet are complete inside the source canvas.",
+        "canonicalFidelityCertified": false
+      },
+      "receipt": "modules/fidelity-r34/assets/lots/lot_2/re3-hunter-gamma/idle.json",
+      "sha256": "ce49e7700df1f4b214f81635b9cf60da36d46f66c7c71d458d17e59e270eab52",
+      "finalSourceOutputPath": "/workspace/generated_images/exec-7524b21d-d5ba-4c6f-9439-15876079f83a.png",
+      "admittedDirection": "right"
+    },
+    {
+      "uid": "re4-iron-maiden",
+      "state": "GENERATED",
+      "actualPrompt": null,
+      "sourceReferences": [
+        {
+          "path": "assets/specimens/re4-iron-maiden.png",
+          "bytes": 326424,
+          "sha256": "36e3ea48ac98978a928a74f88ad9a9066ce3fe33b9559f328ad69273b2358aab",
+          "role": "full-body-reference",
+          "bodyCoverage": "partial",
+          "exactIdentity": true,
+          "sourceUrl": "https://bogleech.com/halloween/hall18-re4",
+          "sourceEdition": "Resident Evil 4 (2005)",
+          "targetEditionAdmitted": true,
+          "bodyCompletenessIndependentReviewRequired": true
+        },
+        {
+          "path": "assets/catalog/re4-iron-maiden.png",
+          "bytes": 124988,
+          "sha256": "da45338a48626e2c58bf916a6b64c3dc4f341c5c7322c92ac0da46cb0f6d8680",
+          "role": "catalogue-reference",
+          "bodyCoverage": "unknown",
+          "exactIdentity": true,
+          "sourceUrl": "https://www.evilresource.com/resident-evil-4/enemies/iron-maiden",
+          "sourceEdition": "Resident Evil 4 (2005)",
+          "targetEditionAdmitted": true,
+          "bodyCompletenessIndependentReviewRequired": true
+        }
+      ],
+      "sourceOutputPath": null,
+      "output_hint": null,
+      "error": null,
+      "attempts": [
+        {
+          "uid": "re4-iron-maiden",
+          "prompt": "Create a faithful generated game asset for Iron Maiden, exact incarnation Resident Evil 4 (2005). Use the attached verified references only. Preserve the precise head, anatomy, proportions, costume, equipment, material colours and asymmetric details. Do not mix games, phases or editions. Match the source appearance without added cartoon outlines, coloured halos or decoration. One subject only, no text, labels, scenery, floor, montage or frame. Clean transparent alpha. This remains a generated adaptation, not an original Capcom frame or a geometric 1:1 certificate. One complete full-body static combat idle base pose, facing right in a side/three-quarter fighting-game view. Keep every source-documented limb, foot, tail, wing, tentacle, horn and equipment inside the image with generous transparent padding. Preserve actual locomotion and support points; do not turn a quadruped or aquatic creature into a humanoid. Produce the entire body in this one image, not separate pieces. No motion blur, duplicate bodies or animation-frame grid. Only proceed after actually reviewing a complete source body reference. The reference view establishes anatomy; do not simply reproduce its front or left-facing presentation. For this new 2D fighting pose the head, gaze and forward foot point clearly to image RIGHT. Keep all extremities inside at least5percent transparent canvas margins, preserve anatomical asymmetry without a software mirror.",
+          "paths": [
+            "/workspace/resident-evil-bow-protocol/assets/specimens/re4-iron-maiden.png",
+            "/workspace/resident-evil-bow-protocol/assets/catalog/re4-iron-maiden.png"
+          ],
+          "correction": false,
+          "startedAt": "2026-11-01T02:42:29.536Z",
+          "state": "GENERATED_AWAITING_REVIEW",
+          "sourceOutputPath": "/workspace/generated_images/exec-bb7bc320-3b3a-4b6c-b04b-e0c4066fda8e.png",
+          "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-bb7bc320-3b3a-4b6c-b04b-e0c4066fda8e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+          "error": null,
+          "finishedAt": "2026-11-01T02:46:12.149Z"
+        },
+        {
+          "uid": "re4-iron-maiden",
+          "prompt": "Correct only the fighting pose and canvas spacing in the second image, a generated study of the original Resident Evil4(2005) Iron Maiden. The first image is the anatomy reference. Preserve the original-game slender gray spiked body, spherical mouth-head, long fingers, two legs and feet. Pose the WHOLE creature clearly toward image RIGHT in a2D fighting-game side view: show the mouth opening on the RIGHT-facing profile of the head, with the neck and chest oriented right, knees flexed and leading hand held ready toward image right. This must be an actual right-facing re-pose, not a horizontal mirror. Preserve source asymmetry and all existing anatomy. Put every short spike, fingertip and foot inside generous clear transparent padding on every side, at least5percent. No text, grid, duplicate body, scenery, floor, glow or added outline. Output a single static transparent fighting base pose, not original game animation.",
+          "paths": [
+            "/workspace/resident-evil-bow-protocol/assets/specimens/re4-iron-maiden.png",
+            "/workspace/resident-evil-bow-protocol/modules/fidelity-r34/assets/studies/selection-transfer/re4-iron-maiden/initial.png"
+          ],
+          "correction": true,
+          "startedAt": "2026-11-01T02:49:15.126Z",
+          "state": "GENERATED_AWAITING_REVIEW",
+          "sourceOutputPath": "/workspace/generated_images/exec-98218b68-eae5-44f8-91b1-e38d593795e2.png",
+          "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-98218b68-eae5-44f8-91b1-e38d593795e2.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+          "error": null,
+          "finishedAt": "2026-11-01T02:52:42.057Z"
+        }
+      ],
+      "independentSourceReview": {
+        "path": "assets/specimens/re4-iron-maiden.png",
+        "sha256": "36e3ea48ac98978a928a74f88ad9a9066ce3fe33b9559f328ad69273b2358aab",
+        "actuallyViewed": true,
+        "completeVisibleBody": true,
+        "observation": "Original slender gray Iron Maiden has mouth-head and many short projecting spines, both hands and their long digits, both legs and feet. The raised fingertips are near the source boundary but not cut.",
+        "canonicalFidelityCertified": false
+      },
+      "receipt": "modules/fidelity-r34/assets/lots/lot_2/re4-iron-maiden/idle.json",
+      "sha256": "e3db741c1aee7442078e9803a79d914b21106c525f309cadcfd51e2a87bfd5af",
+      "finalSourceOutputPath": "/workspace/generated_images/exec-98218b68-eae5-44f8-91b1-e38d593795e2.png",
+      "admittedDirection": "right"
+    },
+    {
+      "uid": "re4-verdugo",
+      "state": "GENERATED",
+      "actualPrompt": null,
+      "sourceReferences": [
+        {
+          "path": "assets/specimens/re4-verdugo.webp",
+          "bytes": 296852,
+          "sha256": "b17cc038a0adb07115d2891f9adf703141d401bed09e9aeb30d222b32735c11b",
+          "role": "full-body-reference",
+          "bodyCoverage": "partial",
+          "exactIdentity": true,
+          "sourceUrl": "https://blackjackrants.blogspot.com/2020/10/reviewing-monsters-resident-evil-4.html",
+          "sourceEdition": "Resident Evil 4 (2005)",
+          "targetEditionAdmitted": true,
+          "bodyCompletenessIndependentReviewRequired": true
+        },
+        {
+          "path": "assets/catalog/re4-verdugo.png",
+          "bytes": 141098,
+          "sha256": "a6d7127e22d6dfc1796cb2005f2c975e0add21de82f38d5bf3cb3978de227ba1",
+          "role": "catalogue-reference",
+          "bodyCoverage": "unknown",
+          "exactIdentity": true,
+          "sourceUrl": "https://www.evilresource.com/resident-evil-4/enemies/verdugo",
+          "sourceEdition": "Resident Evil 4 (2005)",
+          "targetEditionAdmitted": true,
+          "bodyCompletenessIndependentReviewRequired": true
+        }
+      ],
+      "sourceOutputPath": null,
+      "output_hint": null,
+      "error": null,
+      "attempts": [
+        {
+          "uid": "re4-verdugo",
+          "prompt": "Create a faithful generated game asset for Verdugo, exact incarnation Resident Evil 4 (2005). Use the attached verified references only. Preserve the precise head, anatomy, proportions, costume, equipment, material colours and asymmetric details. Do not mix games, phases or editions. Match the source appearance without added cartoon outlines, coloured halos or decoration. One subject only, no text, labels, scenery, floor, montage or frame. Clean transparent alpha. This remains a generated adaptation, not an original Capcom frame or a geometric 1:1 certificate. One complete full-body static combat idle base pose, facing right in a side/three-quarter fighting-game view. Keep every source-documented limb, foot, tail, wing, tentacle, horn and equipment inside the image with generous transparent padding. Preserve actual locomotion and support points; do not turn a quadruped or aquatic creature into a humanoid. Produce the entire body in this one image, not separate pieces. No motion blur, duplicate bodies or animation-frame grid. Only proceed after actually reviewing a complete source body reference. The reference view establishes anatomy; do not simply reproduce its front or left-facing presentation. For this new 2D fighting pose the head, gaze and forward foot point clearly to image RIGHT. Keep all extremities inside at least5percent transparent canvas margins, preserve anatomical asymmetry without a software mirror.",
+          "paths": [
+            "/workspace/resident-evil-bow-protocol/assets/specimens/re4-verdugo.webp",
+            "/workspace/resident-evil-bow-protocol/assets/catalog/re4-verdugo.png"
+          ],
+          "correction": false,
+          "startedAt": "2026-11-01T02:42:29.820Z",
+          "state": "GENERATED_AWAITING_REVIEW",
+          "sourceOutputPath": "/workspace/generated_images/exec-b3d9d156-f351-4ff6-ba38-3a5be5b978c3.png",
+          "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-b3d9d156-f351-4ff6-ba38-3a5be5b978c3.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+          "error": null,
+          "finishedAt": "2026-11-01T02:46:57.955Z"
+        }
+      ],
+      "independentSourceReview": {
+        "path": "assets/specimens/re4-verdugo.webp",
+        "sha256": "b17cc038a0adb07115d2891f9adf703141d401bed09e9aeb30d222b32735c11b",
+        "actuallyViewed": true,
+        "completeVisibleBody": true,
+        "observation": "The full white-background original-game render contains armored body, orange eyes, long hand claws, both feet and the whole segmented blade-ended tail. None of the tail blade or foot tips is cut.",
+        "canonicalFidelityCertified": false
+      },
+      "receipt": "modules/fidelity-r34/assets/lots/lot_2/re4-verdugo/idle.json",
+      "sha256": "43be4badd72103c915fb19d3e59266deeb5e8a5f71ac158983049044c4ff7b41",
+      "finalSourceOutputPath": "/workspace/generated_images/exec-b3d9d156-f351-4ff6-ba38-3a5be5b978c3.png",
+      "admittedDirection": "right"
+    },
+    {
+      "uid": "re4r-verdugo",
+      "state": "GENERATED",
+      "actualPrompt": null,
+      "sourceReferences": [
+        {
+          "path": "assets/specimens/re4r-verdugo.png",
+          "bytes": 603011,
+          "sha256": "4f27d408f91c009f2de69137d72917d8f50f7168d1a9a2e7e1111f6af9fcd9bd",
+          "role": "full-body-reference",
+          "bodyCoverage": "partial",
+          "exactIdentity": true,
+          "sourceUrl": "https://blackjackrants.blogspot.com/2023/10/reviewing-monsters-resident-evil-4.html?m=1",
+          "sourceEdition": "Resident Evil 4 remake (2023)",
+          "targetEditionAdmitted": true,
+          "bodyCompletenessIndependentReviewRequired": true
+        },
+        {
+          "path": "assets/catalog/re4r-verdugo.png",
+          "bytes": 146542,
+          "sha256": "f7c6d312e496ff8b55052cb63cb97ffe75c6ed2ec0c4d370f96931e4724020b7",
+          "role": "catalogue-reference",
+          "bodyCoverage": "unknown",
+          "exactIdentity": true,
+          "sourceUrl": "https://www.evilresource.com/resident-evil-4-remake/enemies/verdugo",
+          "sourceEdition": "Resident Evil 4 remake (2023)",
+          "targetEditionAdmitted": true,
+          "bodyCompletenessIndependentReviewRequired": true
+        }
+      ],
+      "sourceOutputPath": null,
+      "output_hint": null,
+      "error": null,
+      "independentSourceReview": {
+        "path": "assets/specimens/re4r-verdugo.png",
+        "sha256": "4f27d408f91c009f2de69137d72917d8f50f7168d1a9a2e7e1111f6af9fcd9bd",
+        "actuallyViewed": true,
+        "completeVisibleBody": true,
+        "observation": "The remake render contains the full overhead looping segmented tail and long blade, both hooked hands and feet. Horizontal rectangular marks are background artifacts, not creature anatomy.",
+        "canonicalFidelityCertified": false
+      },
+      "attempts": [
+        {
+          "uid": "re4r-verdugo",
+          "prompt": "Create a faithful generated game asset for Verdugo, exact incarnation Resident Evil 4 remake (2023). Use the attached verified references only. Preserve the precise head, anatomy, proportions, costume, equipment, material colours and asymmetric details. Do not mix games, phases or editions. Match the source appearance without added cartoon outlines, coloured halos or decoration. One subject only, no text, labels, scenery, floor, montage or frame. Clean transparent alpha. This remains a generated adaptation, not an original Capcom frame or a geometric 1:1 certificate. One complete full-body static combat idle base pose, facing right in a side/three-quarter fighting-game view. Keep every source-documented limb, foot, tail, wing, tentacle, horn and equipment inside the image with generous transparent padding. Preserve actual locomotion and support points; do not turn a quadruped or aquatic creature into a humanoid. Produce the entire body in this one image, not separate pieces. No motion blur, duplicate bodies or animation-frame grid. Only proceed after actually reviewing a complete source body reference. For the requested fighting view, use an unmistakable RIGHT-facing head/mouth profile and right-facing three-quarter torso, flexed knees and complete supporting feet. The source front view is only an anatomy reference, not the requested camera pose. Keep every extremity and equipment endpoint inside generous transparent margins; no mirror, no cropped fingers, no added anatomy. Preserve the complete looping segmented tail and terminal blade. Horizontal rectangular background marks in the source are not body parts and must be excluded.",
+          "paths": [
+            "/workspace/resident-evil-bow-protocol/assets/specimens/re4r-verdugo.png",
+            "/workspace/resident-evil-bow-protocol/assets/catalog/re4r-verdugo.png"
+          ],
+          "correction": false,
+          "startedAt": "2026-11-01T02:49:13.970Z",
+          "state": "GENERATED_AWAITING_REVIEW",
+          "sourceOutputPath": "/workspace/generated_images/exec-9b833067-0a15-435a-9757-3739c8791ff5.png",
+          "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-9b833067-0a15-435a-9757-3739c8791ff5.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+          "error": null,
+          "finishedAt": "2026-11-01T02:50:00.502Z"
+        }
+      ],
+      "receipt": "modules/fidelity-r34/assets/lots/lot_2/re4r-verdugo/idle.json",
+      "sha256": "ae6a5e60cde686db12bd19d19dae5b10679c31f1500a2faf45b7fc58cff3642e",
+      "finalSourceOutputPath": "/workspace/generated_images/exec-9b833067-0a15-435a-9757-3739c8791ff5.png",
+      "admittedDirection": "right"
+    },
+    {
+      "uid": "re7-molded",
+      "state": "GENERATED",
+      "actualPrompt": null,
+      "sourceReferences": [
+        {
+          "path": "assets/specimens/re7-molded.png",
+          "bytes": 693436,
+          "sha256": "5a63d683e3ec6d001b72bd9dc970b0115e62da51fe681b1c4c3a3e15e9c0df2d",
+          "role": "full-body-reference",
+          "bodyCoverage": "partial",
+          "exactIdentity": true,
+          "sourceUrl": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+          "sourceEdition": "Resident Evil 7 biohazard (2017)",
+          "targetEditionAdmitted": true,
+          "bodyCompletenessIndependentReviewRequired": true
+        },
+        {
+          "path": "assets/catalog/re7-molded.png",
+          "bytes": 92422,
+          "sha256": "b01d96bc2c04aae559da57efa3f1426ae7007e3ecbfa196514369e68a8738336",
+          "role": "catalogue-reference",
+          "bodyCoverage": "unknown",
+          "exactIdentity": true,
+          "sourceUrl": "https://www.evilresource.com/resident-evil-7/enemies/molded",
+          "sourceEdition": "Resident Evil 7 biohazard (2017)",
+          "targetEditionAdmitted": true,
+          "bodyCompletenessIndependentReviewRequired": true
+        }
+      ],
+      "sourceOutputPath": null,
+      "output_hint": null,
+      "error": null,
+      "independentSourceReview": {
+        "path": "assets/specimens/re7-molded.png",
+        "sha256": "5a63d683e3ec6d001b72bd9dc970b0115e62da51fe681b1c4c3a3e15e9c0df2d",
+        "actuallyViewed": true,
+        "completeVisibleBody": true,
+        "observation": "The original dark fibrous humanoid has elongated mouth-head, pale teeth, narrow torso, two long clawed hands, complete legs and two splayed feet, all inside the source canvas.",
+        "canonicalFidelityCertified": false
+      },
+      "attempts": [
+        {
+          "uid": "re7-molded",
+          "prompt": "Create a faithful generated game asset for Molded, exact incarnation Resident Evil 7 biohazard (2017). Use the attached verified references only. Preserve the precise head, anatomy, proportions, costume, equipment, material colours and asymmetric details. Do not mix games, phases or editions. Match the source appearance without added cartoon outlines, coloured halos or decoration. One subject only, no text, labels, scenery, floor, montage or frame. Clean transparent alpha. This remains a generated adaptation, not an original Capcom frame or a geometric 1:1 certificate. One complete full-body static combat idle base pose, facing right in a side/three-quarter fighting-game view. Keep every source-documented limb, foot, tail, wing, tentacle, horn and equipment inside the image with generous transparent padding. Preserve actual locomotion and support points; do not turn a quadruped or aquatic creature into a humanoid. Produce the entire body in this one image, not separate pieces. No motion blur, duplicate bodies or animation-frame grid. Only proceed after actually reviewing a complete source body reference. For the requested fighting view, use an unmistakable RIGHT-facing head/mouth profile and right-facing three-quarter torso, flexed knees and complete supporting feet. The source front view is only an anatomy reference, not the requested camera pose. Keep every extremity and equipment endpoint inside generous transparent margins; no mirror, no cropped fingers, no added anatomy.",
+          "paths": [
+            "/workspace/resident-evil-bow-protocol/assets/specimens/re7-molded.png",
+            "/workspace/resident-evil-bow-protocol/assets/catalog/re7-molded.png"
+          ],
+          "correction": false,
+          "startedAt": "2026-11-01T02:49:14.266Z",
+          "state": "GENERATED_AWAITING_REVIEW",
+          "sourceOutputPath": "/workspace/generated_images/exec-3a98e375-1ccd-46a7-820a-fbfe2c8e0a64.png",
+          "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-3a98e375-1ccd-46a7-820a-fbfe2c8e0a64.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+          "error": null,
+          "finishedAt": "2026-11-01T02:51:57.505Z"
+        }
+      ],
+      "receipt": "modules/fidelity-r34/assets/lots/lot_2/re7-molded/idle.json",
+      "sha256": "03b330bfe97fe2e56192ac8bbe5d173e9ded16dd700d8969997f5d09320f7bf9",
+      "finalSourceOutputPath": "/workspace/generated_images/exec-3a98e375-1ccd-46a7-820a-fbfe2c8e0a64.png",
+      "admittedDirection": "right"
+    },
+    {
+      "uid": "re7-fumer",
+      "state": "GENERATED",
+      "actualPrompt": null,
+      "sourceReferences": [
+        {
+          "path": "assets/catalog/re7-fumer.png",
+          "bytes": 978067,
+          "sha256": "6ac0e3713bb5994d313bdc7d515479b8324fb9ff8b6e836e082188d9a24a1b07",
+          "role": "catalogue-reference",
+          "bodyCoverage": "unknown",
+          "exactIdentity": true,
+          "sourceUrl": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+          "sourceEdition": "Resident Evil 7 Biohazard (2017) — Not a Hero",
+          "targetEditionAdmitted": true,
+          "bodyCompletenessIndependentReviewRequired": true
+        },
+        {
+          "path": "assets/catalog/re7-fumer.png",
+          "bytes": 978067,
+          "sha256": "6ac0e3713bb5994d313bdc7d515479b8324fb9ff8b6e836e082188d9a24a1b07",
+          "role": "catalogue-reference",
+          "bodyCoverage": "unknown",
+          "exactIdentity": true,
+          "sourceUrl": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+          "sourceEdition": "Resident Evil 7 Biohazard (2017) — Not a Hero",
+          "targetEditionAdmitted": true,
+          "bodyCompletenessIndependentReviewRequired": true
+        }
+      ],
+      "sourceOutputPath": null,
+      "output_hint": null,
+      "error": null,
+      "independentSourceReview": {
+        "path": "assets/catalog/re7-fumer.png",
+        "sha256": "6ac0e3713bb5994d313bdc7d515479b8324fb9ff8b6e836e082188d9a24a1b07",
+        "actuallyViewed": true,
+        "completeVisibleBody": true,
+        "observation": "The source shows a complete slender pale web-covered Fumer: mouth-head, both long hands, pelvis, legs and both feet. This is not the broad Mama Mold silhouette.",
+        "canonicalFidelityCertified": false
+      },
+      "attempts": [
+        {
+          "uid": "re7-fumer",
+          "prompt": "Create a faithful generated game asset for Fumer (WM-002), exact incarnation Resident Evil 7 Biohazard (2017) — Not a Hero. Use the attached verified references only. Preserve the precise head, anatomy, proportions, costume, equipment, material colours and asymmetric details. Do not mix games, phases or editions. Match the source appearance without added cartoon outlines, coloured halos or decoration. One subject only, no text, labels, scenery, floor, montage or frame. Clean transparent alpha. This remains a generated adaptation, not an original Capcom frame or a geometric 1:1 certificate. One complete full-body static combat idle base pose, facing right in a side/three-quarter fighting-game view. Keep every source-documented limb, foot, tail, wing, tentacle, horn and equipment inside the image with generous transparent padding. Preserve actual locomotion and support points; do not turn a quadruped or aquatic creature into a humanoid. Produce the entire body in this one image, not separate pieces. No motion blur, duplicate bodies or animation-frame grid. Only proceed after actually reviewing a complete source body reference. For the requested fighting view, use an unmistakable RIGHT-facing head/mouth profile and right-facing three-quarter torso, flexed knees and complete supporting feet. The source front view is only an anatomy reference, not the requested camera pose. Keep every extremity and equipment endpoint inside generous transparent margins; no mirror, no cropped fingers, no added anatomy.",
+          "paths": [
+            "/workspace/resident-evil-bow-protocol/assets/catalog/re7-fumer.png"
+          ],
+          "correction": false,
+          "startedAt": "2026-11-01T02:49:14.549Z",
+          "state": "GENERATED_AWAITING_REVIEW",
+          "sourceOutputPath": "/workspace/generated_images/exec-924733bb-2393-404c-bdb9-b1c7b9668a82.png",
+          "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-924733bb-2393-404c-bdb9-b1c7b9668a82.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+          "error": null,
+          "finishedAt": "2026-11-01T02:50:34.760Z"
+        }
+      ],
+      "receipt": "modules/fidelity-r34/assets/lots/lot_2/re7-fumer/idle.json",
+      "sha256": "c7cfa9ef9b8dc5f6351cecc0c95d15b79121cc487dbccc16dd8a2eeecaea2336",
+      "finalSourceOutputPath": "/workspace/generated_images/exec-924733bb-2393-404c-bdb9-b1c7b9668a82.png",
+      "admittedDirection": "right"
+    },
+    {
+      "uid": "re7-mama-mold",
+      "state": "GENERATED",
+      "actualPrompt": null,
+      "sourceReferences": [
+        {
+          "path": "assets/catalog/re7-mama-mold.png",
+          "bytes": 695756,
+          "sha256": "02c8fb9b0bf49d3460d350013338c40acdd6cb500e147e751f33596f1412d163",
+          "role": "catalogue-reference",
+          "bodyCoverage": "unknown",
+          "exactIdentity": true,
+          "sourceUrl": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+          "sourceEdition": "Resident Evil 7 biohazard (2017)",
+          "targetEditionAdmitted": true,
+          "bodyCompletenessIndependentReviewRequired": true
+        },
+        {
+          "path": "assets/catalog/re7-mama-mold.png",
+          "bytes": 695756,
+          "sha256": "02c8fb9b0bf49d3460d350013338c40acdd6cb500e147e751f33596f1412d163",
+          "role": "catalogue-reference",
+          "bodyCoverage": "unknown",
+          "exactIdentity": true,
+          "sourceUrl": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+          "sourceEdition": "Resident Evil 7 biohazard (2017)",
+          "targetEditionAdmitted": true,
+          "bodyCompletenessIndependentReviewRequired": true
+        }
+      ],
+      "sourceOutputPath": null,
+      "output_hint": null,
+      "error": null,
+      "independentSourceReview": {
+        "path": "assets/catalog/re7-mama-mold.png",
+        "sha256": "02c8fb9b0bf49d3460d350013338c40acdd6cb500e147e751f33596f1412d163",
+        "actuallyViewed": true,
+        "completeVisibleBody": true,
+        "observation": "The source contains the complete heavy torso, short neck/head, both arms and long fingers, legs and both feet. The silhouette is broader and heavier than the Fumer.",
+        "canonicalFidelityCertified": false
+      },
+      "attempts": [
+        {
+          "uid": "re7-mama-mold",
+          "prompt": "Create a faithful generated game asset for Mama Mold (WM-001), exact incarnation Resident Evil 7 biohazard (2017). Use the attached verified references only. Preserve the precise head, anatomy, proportions, costume, equipment, material colours and asymmetric details. Do not mix games, phases or editions. Match the source appearance without added cartoon outlines, coloured halos or decoration. One subject only, no text, labels, scenery, floor, montage or frame. Clean transparent alpha. This remains a generated adaptation, not an original Capcom frame or a geometric 1:1 certificate. One complete full-body static combat idle base pose, facing right in a side/three-quarter fighting-game view. Keep every source-documented limb, foot, tail, wing, tentacle, horn and equipment inside the image with generous transparent padding. Preserve actual locomotion and support points; do not turn a quadruped or aquatic creature into a humanoid. Produce the entire body in this one image, not separate pieces. No motion blur, duplicate bodies or animation-frame grid. Only proceed after actually reviewing a complete source body reference. For the requested fighting view, use an unmistakable RIGHT-facing head/mouth profile and right-facing three-quarter torso, flexed knees and complete supporting feet. The source front view is only an anatomy reference, not the requested camera pose. Keep every extremity and equipment endpoint inside generous transparent margins; no mirror, no cropped fingers, no added anatomy.",
+          "paths": [
+            "/workspace/resident-evil-bow-protocol/assets/catalog/re7-mama-mold.png"
+          ],
+          "correction": false,
+          "startedAt": "2026-11-01T02:49:14.833Z",
+          "state": "GENERATED_AWAITING_REVIEW",
+          "sourceOutputPath": "/workspace/generated_images/exec-fcc59119-57f0-4c01-8dc3-9fc89097c20a.png",
+          "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-fcc59119-57f0-4c01-8dc3-9fc89097c20a.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+          "error": null,
+          "finishedAt": "2026-11-01T02:51:08.156Z"
+        }
+      ],
+      "receipt": "modules/fidelity-r34/assets/lots/lot_2/re7-mama-mold/idle.json",
+      "sha256": "a5d420750859aa6b3a839dfd534175246e1d156d5f167eaf3e8731ce1711e8a4",
+      "finalSourceOutputPath": "/workspace/generated_images/exec-fcc59119-57f0-4c01-8dc3-9fc89097c20a.png",
+      "admittedDirection": "right"
+    }
+  ],
+  "recoveryNote": "Recovered four exact initial tool paths after environment restart. Chimera and Ivy already imported; Proto-Tyrant and G2 require one direction correction. Remaining eight were never launched in this durable checkpoint.",
+  "complete": true,
+  "counts": {
+    "subjects": 12,
+    "generated": 12,
+    "defaultRightFacingWholeBodyPoses": 12,
+    "blockedByTool": 0,
+    "heldReference": 0,
+    "pending": 0,
+    "correctedPositiveStudies": 3
+  },
+  "resultReceipts": [
+    {
+      "uid": "re0-proto-tyrant",
+      "receipt": "modules/fidelity-r34/assets/lots/lot_2/re0-proto-tyrant/idle.json",
+      "receiptSha256": "b699b9fdde277be23087685a95da561e7fe9dc0eed04a17fda513dd36f0df195",
+      "image": "modules/fidelity-r34/assets/generated/re0-proto-tyrant/idle-right.png",
+      "sha256": "cdd658ecac3c1b99a7a4eddf3635575842ab9e861c70116bf1d1e047c072fd5d",
+      "sourceFacing": "right",
+      "fullBodyReviewed": true,
+      "canonicalFidelityCertified": false
+    },
+    {
+      "uid": "re1r-chimera",
+      "receipt": "modules/fidelity-r34/assets/lots/lot_2/re1r-chimera/idle.json",
+      "receiptSha256": "44ca2883c90db7acb779cc69bbbf1e29b74462d551aff58af420327062cb61c4",
+      "image": "modules/fidelity-r34/assets/generated/re1r-chimera/idle-right.png",
+      "sha256": "a3d967ad2dfef1ac884fb009cd09b65ddde5532b70e2cd84c606ada03c64313a",
+      "sourceFacing": "right",
+      "fullBodyReviewed": true,
+      "canonicalFidelityCertified": false
+    },
+    {
+      "uid": "re2-g-second-form",
+      "receipt": "modules/fidelity-r34/assets/lots/lot_2/re2-g-second-form/idle.json",
+      "receiptSha256": "e1e5e9fc9ce701218ba43a7987bd7d2922aaa212dd6e396f003f13f99185da4d",
+      "image": "modules/fidelity-r34/assets/generated/re2-g-second-form/idle-right.png",
+      "sha256": "2e409e63966c2d80ea652425c6ef46b7c4898c803fe73f2258b1d17eecc01d4a",
+      "sourceFacing": "right",
+      "fullBodyReviewed": true,
+      "canonicalFidelityCertified": false
+    },
+    {
+      "uid": "re2-ivy",
+      "receipt": "modules/fidelity-r34/assets/lots/lot_2/re2-ivy/idle.json",
+      "receiptSha256": "a1339c3da85b264b45826016001d9331057b273602335bdd7e3d047a039dff02",
+      "image": "modules/fidelity-r34/assets/generated/re2-ivy/idle-right.png",
+      "sha256": "19b35e1fc3c6cea7265a9cadb9f16979ca8ca03d5876ee9bfdefc6cf7dd5b194",
+      "sourceFacing": "right",
+      "fullBodyReviewed": true,
+      "canonicalFidelityCertified": false
+    },
+    {
+      "uid": "re2-tyrant-mutation",
+      "receipt": "modules/fidelity-r34/assets/lots/lot_2/re2-tyrant-mutation/idle.json",
+      "receiptSha256": "1df4b75d2ad29a698e537bddf2eb97005a58c167c571f1e11e0965710d31695f",
+      "image": "modules/fidelity-r34/assets/generated/re2-tyrant-mutation/idle-right.png",
+      "sha256": "ec588ca8aee9be9ae6bbb726f7ce08877a1161bb9fb20593cf6e7a6e6813872c",
+      "sourceFacing": "right",
+      "fullBodyReviewed": true,
+      "canonicalFidelityCertified": false
+    },
+    {
+      "uid": "re3-hunter-gamma",
+      "receipt": "modules/fidelity-r34/assets/lots/lot_2/re3-hunter-gamma/idle.json",
+      "receiptSha256": "f92767160ff071a44d47be5abaec562999935a26aa5febbf424a378e6c3bb3fa",
+      "image": "modules/fidelity-r34/assets/generated/re3-hunter-gamma/idle-right.png",
+      "sha256": "ce49e7700df1f4b214f81635b9cf60da36d46f66c7c71d458d17e59e270eab52",
+      "sourceFacing": "right",
+      "fullBodyReviewed": true,
+      "canonicalFidelityCertified": false
+    },
+    {
+      "uid": "re4-iron-maiden",
+      "receipt": "modules/fidelity-r34/assets/lots/lot_2/re4-iron-maiden/idle.json",
+      "receiptSha256": "51a8e1683b5cf8f7feab96df49d4021d6eb46fe3b8bb4c7ff89af6527fb278c2",
+      "image": "modules/fidelity-r34/assets/generated/re4-iron-maiden/idle-right.png",
+      "sha256": "e3db741c1aee7442078e9803a79d914b21106c525f309cadcfd51e2a87bfd5af",
+      "sourceFacing": "right",
+      "fullBodyReviewed": true,
+      "canonicalFidelityCertified": false
+    },
+    {
+      "uid": "re4-verdugo",
+      "receipt": "modules/fidelity-r34/assets/lots/lot_2/re4-verdugo/idle.json",
+      "receiptSha256": "7f19c9b3dd64f0465403a44ace69fa7d29512882f502808147188df7befab9d4",
+      "image": "modules/fidelity-r34/assets/generated/re4-verdugo/idle-right.png",
+      "sha256": "43be4badd72103c915fb19d3e59266deeb5e8a5f71ac158983049044c4ff7b41",
+      "sourceFacing": "right",
+      "fullBodyReviewed": true,
+      "canonicalFidelityCertified": false
+    },
+    {
+      "uid": "re4r-verdugo",
+      "receipt": "modules/fidelity-r34/assets/lots/lot_2/re4r-verdugo/idle.json",
+      "receiptSha256": "01f42d7166fe106656f3f2116aa5ea2541ca9dd2bdf7cc7c8c8e0605e03154cf",
+      "image": "modules/fidelity-r34/assets/generated/re4r-verdugo/idle-right.png",
+      "sha256": "ae6a5e60cde686db12bd19d19dae5b10679c31f1500a2faf45b7fc58cff3642e",
+      "sourceFacing": "right",
+      "fullBodyReviewed": true,
+      "canonicalFidelityCertified": false
+    },
+    {
+      "uid": "re7-molded",
+      "receipt": "modules/fidelity-r34/assets/lots/lot_2/re7-molded/idle.json",
+      "receiptSha256": "c34be199817dc53414e5669c5141fab8494aab04a2f36ebe95ffdc750c0d6087",
+      "image": "modules/fidelity-r34/assets/generated/re7-molded/idle-right.png",
+      "sha256": "03b330bfe97fe2e56192ac8bbe5d173e9ded16dd700d8969997f5d09320f7bf9",
+      "sourceFacing": "right",
+      "fullBodyReviewed": true,
+      "canonicalFidelityCertified": false
+    },
+    {
+      "uid": "re7-fumer",
+      "receipt": "modules/fidelity-r34/assets/lots/lot_2/re7-fumer/idle.json",
+      "receiptSha256": "b675e647522d8a2c3716f5408c8b168fdf8e9cba58bc91c382cc04cd3cfcb898",
+      "image": "modules/fidelity-r34/assets/generated/re7-fumer/idle-right.png",
+      "sha256": "c7cfa9ef9b8dc5f6351cecc0c95d15b79121cc487dbccc16dd8a2eeecaea2336",
+      "sourceFacing": "right",
+      "fullBodyReviewed": true,
+      "canonicalFidelityCertified": false
+    },
+    {
+      "uid": "re7-mama-mold",
+      "receipt": "modules/fidelity-r34/assets/lots/lot_2/re7-mama-mold/idle.json",
+      "receiptSha256": "7a3db7b88604345d2b62c42bd9aefe82372e426ced698e82640dc4d8ab58148e",
+      "image": "modules/fidelity-r34/assets/generated/re7-mama-mold/idle-right.png",
+      "sha256": "a5d420750859aa6b3a839dfd534175246e1d156d5f167eaf3e8731ce1711e8a4",
+      "sourceFacing": "right",
+      "fullBodyReviewed": true,
+      "canonicalFidelityCertified": false
+    }
+  ]
+}

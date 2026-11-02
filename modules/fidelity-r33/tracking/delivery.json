@@ -1,0 +1,112 @@
+{
+  "schema": "re.bow.fidelity-lot-r33/1",
+  "release": "R33",
+  "lotId": "tracking",
+  "owner": "r33_excel_tracking",
+  "workstreams": [
+    "G-LIVRAISON",
+    "G-RECETTE"
+  ],
+  "summary": "Suivi exact des six lots et 17 chantiers, 389 identités conservées, 70 feuilles dont les 63 historiques intactes et export reproduit à l’identique.",
+  "advances": [
+    "Les 17 chantiers sont attribués à six lots responsables ; tous les critères sans preuve restent ouverts.",
+    "Les 27 identités avec ajouts R33 ont 44 objets de preuve ou d’audit au total ; les 95 lignes de source distinguent manifestes, code, rapports et preuves liées aux UID.",
+    "Le classeur compte 70 feuilles ; les 63 feuilles R31 et leurs relations sont conservées octet par octet. La reproduction du fichier passe trois contrôles sur trois.",
+    "21 tests Python et dix groupes navigateur sont réellement exécutés : filtres, clavier, texte doublé, empreintes, routes exactes, corruptions, reprise et accès DEV. Les anciens hôtes et liens R31 restent présents.",
+    "Les 18 rapports de recette sont courants dans leur périmètre ; les 40 cas R32 historiques, compatibilités et preuves après export restent séparés."
+  ],
+  "remaining": [
+    "La recette technique ne certifie pas la fidélité artistique globale 1:1, les textures exactes, les éditions cibles ni les idles originaux encore sans preuve.",
+    "Les appareils physiques, lecteurs d’écran réels et pannes du système d’exploitation restent hors de la recette navigateur cloud."
+  ],
+  "canonicalFidelityCertified": false,
+  "sourceFiles": [
+    {
+      "path": "scripts/fidelity-progress-r33.py",
+      "bytes": 32470,
+      "sha256": "f632ac0b2eb3dec2225349d29959253be7fea336889890cff0e603e5f8e91892"
+    },
+    {
+      "path": "tests/test_fidelity_r33.py",
+      "bytes": 18728,
+      "sha256": "0255c4324dc8ad5ed4ec5ec6578c978d0c5e8cf3eced27415e7072aa690bed3f"
+    },
+    {
+      "path": "tests/browser-fidelity-r33.mjs",
+      "bytes": 18180,
+      "sha256": "81aecc2b7cd4ca8cf513fa099e908991d33ce295107e65b87a3067033414c4a0"
+    },
+    {
+      "path": "modules/fidelity-r33/index.html",
+      "bytes": 3133,
+      "sha256": "0094c58b11e511dbc15b4d4dbdee20490fdbce853e4386f9ba61ba7444b4329c"
+    },
+    {
+      "path": "modules/fidelity-r33/dashboard.js",
+      "bytes": 6787,
+      "sha256": "a985dfd9df715dca335a63f7ba45196f12989d7de9193e46ac224798b1a81417"
+    },
+    {
+      "path": "modules/fidelity-r33/dossier-link.js",
+      "bytes": 8173,
+      "sha256": "f4e3d65320e869f69d1e4944d8bd829c0dd22005396e01c2840fd267a0ea9527"
+    },
+    {
+      "path": "docs/R33_EXPORT_TESTS.json",
+      "bytes": 1009,
+      "sha256": "4aa42bc53e5e9e4d0fe4516f8e9d8e5242a3bfebb68843b9758611b5feb78746"
+    },
+    {
+      "path": "docs/R33_DASHBOARD_BROWSER.json",
+      "bytes": 2651,
+      "sha256": "e3e9ce8ea045491c00eadcdf7e74c0367e3399bae4c157d31619256700727fe6"
+    },
+    {
+      "path": "docs/R33_DOSSIER_BROWSER.json",
+      "bytes": 3579,
+      "sha256": "c8c5eacb25237bec0207a4b5dc6966bada27e3e2ba67c72a7e2c7a049435c148"
+    },
+    {
+      "path": "docs/R33_EXPORT.json",
+      "bytes": 417,
+      "sha256": "e98280bdad424e5eb91f585dce993402f07ca1723923a95890036057764db4dc"
+    },
+    {
+      "path": "docs/R33_REPRODUCTION.json",
+      "bytes": 476,
+      "sha256": "ef5442f9ce9198dc7efde780019bf3a7b181a86208695d6e68b06db0853df74f"
+    }
+  ],
+  "resources": [
+    {
+      "path": "modules/fidelity-r33/index.html",
+      "label": "Suivi des 17 chantiers et des six lots"
+    },
+    {
+      "path": "docs/BOW_FIDELITE_R33.xlsx",
+      "label": "Classeur à 70 feuilles"
+    },
+    {
+      "path": "docs/R33_REPRODUCTION.json",
+      "label": "Reproduction exacte du classeur"
+    }
+  ],
+  "identities": [],
+  "counts": {
+    "catalogueIdentities": 389,
+    "openWorkstreams": 17,
+    "responsibleLots": 6,
+    "historicalSheetsPreserved": 63,
+    "workbookSheets": 70,
+    "identitiesWithAdditions": 27,
+    "identityProofOrAuditObjects": 44,
+    "sourceRows": 95,
+    "pythonTests": 21,
+    "dashboardBrowserGroups": 4,
+    "dossierBrowserGroups": 6,
+    "browserGroups": 10,
+    "workbookReproductionChecks": 3,
+    "currentTechnicalReports": 18,
+    "canonicalFidelityCertified": 0
+  }
+}

@@ -1,0 +1,73 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import http from 'node:http';
+import {createRequire} from 'node:module';
+import {createHash} from 'node:crypto';
+if (process.env.R34_FROZEN_SMOKE !== '1') throw Error('Await the explicit root freeze signal before running this smoke.');
+const root='/workspace/resident-evil-bow-protocol',out='/workspace/scratch/r34-natural-render-smoke-next';
+fs.mkdirSync(out,{recursive:true});
+const require=createRequire(root+'/package.json'),{chromium}=require('playwright');
+const bound=new Map(),errors=[],requests=[];
+const hash=raw=>createHash('sha256').update(raw).digest('hex');
+const types={'.html':'text/html','.js':'text/javascript','.css':'text/css','.json':'application/json','.png':'image/png','.webp':'image/webp','.jpg':'image/jpeg','.svg':'image/svg+xml'};
+const server=http.createServer((req,res)=>{
+ const name=decodeURIComponent(new URL(req.url,'http://localhost').pathname).replace(/^\/+/,''),file=path.resolve(root,name);
+ if(name==='favicon.ico'){res.statusCode=204;return res.end();}
+ if(!file.startsWith(root+'/')||!fs.existsSync(file)||!fs.statSync(file).isFile()){res.statusCode=404;return res.end('missing');}
+ const raw=fs.readFileSync(file);if(/\.(html|js|json|css)$/.test(name)&&!bound.has(name))bound.set(name,raw);
+ requests.push(name);res.setHeader('Content-Type',types[path.extname(file)]||'application/octet-stream');res.end(raw);
+});
+await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
+const origin='http://127.0.0.1:'+server.address().port;
+const browser=await chromium.launch({headless:true,executablePath:'/usr/bin/chromium',args:['--no-sandbox','--disable-dev-shm-usage']});
+const frozenAssets=JSON.parse(fs.readFileSync(root+'/modules/fidelity-r34/assets/manifest.json'));
+const frozenRegistry=JSON.parse(fs.readFileSync(root+'/modules/fidelity-r34/combat/manifest.json'));
+const optionalId='re3-nemesis-second-form';
+const optionalAsset=frozenAssets.sprites.find(row=>row.id===optionalId&&row.defaultAdmission===true&&row.sourceFacing==='right');
+if(optionalAsset&&!frozenRegistry.sprites.concat(frozenRegistry.historicalReplacements||[]).some(row=>row.id===optionalId&&row.generatedByR34===true&&row.sha256===optionalAsset.sha256)) throw Error('Nemesis asset and runtime admission are not synchronized.');
+const scenarioIds=['re1-cerberus','re7-flying-bug',...(optionalAsset?[optionalId]:[])];
+const rows=[];
+try{
+ for(const uid of scenarioIds){
+  const context=await browser.newContext({viewport:{width:1280,height:1000},reducedMotion:'reduce'});
+  await context.addInitScript(()=>{
+   window.__smokeBlob=new Map();window.__smokeImages=[];window.__smokeLabels=[];window.__smokeRecords=[];window.__smokeCurrent=null;
+   const create=URL.createObjectURL.bind(URL);URL.createObjectURL=function(blob){const u=create(blob),r={bytes:blob.size,sha:null};__smokeBlob.set(u,r);blob.arrayBuffer().then(raw=>crypto.subtle.digest('SHA-256',raw)).then(raw=>r.sha=[...new Uint8Array(raw)].map(n=>n.toString(16).padStart(2,'0')).join(''));return u;};
+   const draw=CanvasRenderingContext2D.prototype.drawImage;
+   CanvasRenderingContext2D.prototype.drawImage=function(source,...args){if(__smokeCurrent){const m=this.getTransform();const r={source:source instanceof HTMLImageElement?source.src:source?.constructor?.name,args:args.slice(),matrix:[m.a,m.b,m.c,m.d,m.e,m.f],blob:source instanceof HTMLImageElement?__smokeBlob.get(source.src)||null:null};__smokeCurrent.images.push(r);__smokeImages.push(r);}return draw.call(this,source,...args);};
+   const fill=CanvasRenderingContext2D.prototype.fillText;
+   CanvasRenderingContext2D.prototype.fillText=function(text,...args){if(__smokeCurrent&&String(text).includes('Vue'))__smokeCurrent.labels.push(text);return fill.call(this,text,...args);};
+  });
+  const page=await context.newPage();page.on('pageerror',error=>errors.push({uid,message:error.message}));
+  await page.goto(origin+'/catalog-duel.html');
+  await page.waitForFunction(()=>window.RE_MATCH_SELECTION_R34&&RE_COMBAT_SPRITES_R34.state().loaded&&RE_SELECTION_AVATARS_R34.status().loaded);
+  await page.selectOption('#trialSubject',uid);await page.selectOption('#trialTarget','re1-cerberus');await page.selectOption('#trialMode','human');
+  const initial=await page.evaluate(()=>RE_MATCH_SELECTION_R34.state());
+  await page.evaluate(()=>{
+   const old=RE_RENDERER.drawFighter;
+   RE_RENDERER=Object.freeze({...RE_RENDERER,drawFighter:function(ctx,f,x,y,face,scale,pose={}){
+    const actor=pose.actor,uid=f?.uid||f?.id;const rec={uid,slot:actor?.slot,frame:RE_CATALOG_DUEL.getState().frame,pose:{jump:pose.jump,presentationState:pose.presentationState,animationState:pose.animationState},actor:{onGround:actor?.onGround,state:actor?.state,vx:actor?.vx,vy:actor?.vy,x:actor?.x,y:actor?.y,face:actor?.face,attack:actor?.attack?.name||null},classified:RE_COMBAT_SPRITE_ADAPTER_R33?.classify(pose),decision:RE_COMBAT_SPRITES_R34.presentationDecision(uid,{state:RE_COMBAT_SPRITE_ADAPTER_R33?.classify(pose),facing:face}),images:[],labels:[]};
+    const stateBefore=JSON.stringify(RE_CATALOG_DUEL.getState()),replayBefore=JSON.stringify(RE_CATALOG_DUEL.exportReplay()),storageBefore=JSON.stringify(Object.fromEntries(Object.entries(localStorage)));
+    const previous=__smokeCurrent;__smokeCurrent=rec;try{return old.call(this,ctx,f,x,y,face,scale,pose);}finally{__smokeCurrent=previous;rec.readOnlyRender=stateBefore===JSON.stringify(RE_CATALOG_DUEL.getState())&&replayBefore===JSON.stringify(RE_CATALOG_DUEL.exportReplay())&&storageBefore===JSON.stringify(Object.fromEntries(Object.entries(localStorage)));if(actor?.slot===0&&__smokeRecords.length<300)__smokeRecords.push(rec);}
+   }});
+  });
+  await page.click('#charactersConfirmR34');await page.waitForFunction(()=>RE_MATCH_SELECTION_R34.state().phase==='stages');
+  const stages=await page.evaluate(()=>RE_MATCH_SELECTION_R34.state());
+  await page.click('#stageConfirmR34');await page.waitForFunction(()=>RE_MATCH_SELECTION_R34.state().phase==='combat');
+  if(await page.evaluate(()=>RE_CATALOG_DUEL.getIntro().active))await page.locator('#trialCanvas').press('Enter');
+  await page.waitForFunction(()=>!RE_CATALOG_DUEL.getIntro().active&&!RE_CATALOG_DUEL.isPaused()&&RE_CATALOG_DUEL.getState().frame>5);
+  await page.waitForTimeout(1000);await page.locator('#trialCanvas').press('KeyP');
+  const value=await page.evaluate(()=>({flow:RE_MATCH_SELECTION_R34.state(),paused:RE_CATALOG_DUEL.isPaused(),records:__smokeRecords,bodyState:RE_COMBAT_SPRITES_R34.state(),barrier:RE_HELD_PRESENTATION_R34?.state(),actor:JSON.parse(JSON.stringify(RE_CATALOG_DUEL.getState().a))}));
+  await page.locator('#trialCanvas').screenshot({path:out+'/'+uid+'.png'});
+  const manifest=JSON.parse(fs.readFileSync(root+'/modules/fidelity-r34/combat/manifest.json')),body=manifest.sprites.find(row=>row.id===uid);
+  const actualIdle=value.records.filter(row=>row.classified==='idle'&&row.frame>0),rawDraws=actualIdle.flatMap(row=>row.images).filter(image=>image.blob?.sha===body.sha256);
+  const distinct=[...new Set(actualIdle.flatMap(row=>row.images.map(image=>image.blob?.sha||image.source)))];
+  rows.push({uid,initialPhase:initial.phase,stagePhase:stages.phase,expectedBody:{image:body.image,sha256:body.sha256},actualIdleFrames:actualIdle.length,rawBodyDraws:rawDraws.length,distinctIdleImageSources:distinct,renderReadOnly:value.records.every(row=>row.readOnlyRender),...value});
+  console.log(JSON.stringify({uid,initial:initial.phase,stages:stages.phase,combat:value.flow.phase,actualIdleFrames:actualIdle.length,rawBodyDraws:rawDraws.length,onGround:value.actor.onGround,state:value.actor.state,renderReadOnly:rows.at(-1).renderReadOnly,distinctIdleImageSources:distinct}));
+  await context.close();
+ }
+}finally{await browser.close();await new Promise(resolve=>server.close(resolve));}
+const stale=[...bound].filter(([name,raw])=>hash(fs.readFileSync(root+'/'+name))!==hash(raw)).map(([name])=>name);
+const report={schema:'re.bow.natural-render-smoke-r34/1',scenarioIds,optionalNemesis:{id:optionalId,included:!!optionalAsset,reason:optionalAsset?'A new right-facing R34 idle is admitted and SHA-synchronized.':'No admitted right-facing R34 idle is present for this identity.'},rows,errors,staleExecutedSources:stale,sourceFiles:[...bound].map(([name,raw])=>({path:name,sha256:hash(raw)})),scope:'Bounded live player matches for Cerberus and Flying Bug, plus Nemesis1999phase2 only when its new right idle is admitted, in normal default character→stage→combat flow. No forced actor state or direct idle render call. Test hooks only record render images/classification/transforms and byte-equality during each real render. Natural simulation advances between frames; no gameplay, data, source or shared report was edited.'};
+fs.writeFileSync(out+'/report.json',JSON.stringify(report,null,2)+'\n');
+if(errors.length||rows.some(row=>!row.rawBodyDraws||!row.renderReadOnly))process.exitCode=1;

@@ -1,0 +1,112 @@
+{
+  "schema": "re.bow.fidelity-lot-r33/1",
+  "release": "R33",
+  "lotId": "persistence",
+  "owner": "r33_saves_replays",
+  "workstreams": [
+    "G-SAUVES",
+    "G-REPLAYS"
+  ],
+  "summary": "Reprise/retour des groupes choisis en préservant les progrès extérieurs non choisis ; lots individuels R13/R7/R28 isolés et vérifiés.",
+  "advances": [
+    "Le blocage R31 après modification d’un groupe non choisi est reproduit ; R33 reprend ou annule uniquement les groupes sélectionnés.",
+    "Les anciens journaux R31 restent lisibles, sans migration ; les conflits sur groupes choisis, aperçus périmés, quotas et verrous restent protégés.",
+    "Un lot accepte jusqu’à 16 fichiers individuels R13/R7/R28, 32 Mio au total, avec SHA-256 de chaque source, doublons et refus explicites.",
+    "Quatre routes originales sont reconstruites séquentiellement deux fois : Versus actuel, avant R13, catalogue R7 et évolutions R28 ; aucune sauvegarde du parent n’est modifiée.",
+    "Le constat exportable garde les fichiers annulés/non lancés ; le nettoyage couvre la source préparée tardivement et le retour de page sans relance automatique."
+  ],
+  "remaining": [
+    "Aucun backend cloud ou compte distant configuré ; aucune synchronisation certifiée.",
+    "LocalStorage ne rend pas les écritures de plusieurs clés atomiques ; fermer les autres onglets reste nécessaire.",
+    "Pannes physiques, coupures électriques, appareils physiques et lecteurs d’écran réels restent non certifiés.",
+    "Les contrats historiques inconnus, reprises de campagnes, conclusions artistiques, images et sons ne sont pas validés par la relecture.",
+    "Les collections principales et sauvegardes R19 restent dans le lecteur historique ; ce lot traite les fichiers individuels sélectionnés."
+  ],
+  "canonicalFidelityCertified": false,
+  "identities": [],
+  "counts": {
+    "allowlistedGameKeys": 18,
+    "gameStorageGroups": 8,
+    "newCatalogueIdentities": 0,
+    "mixedReplayInputSchemas": 3,
+    "originalEngineRoutesVerified": 4,
+    "maximumReplayFiles": 16,
+    "maximumReplayBatchBytes": 33554432,
+    "nodeGroups": 12,
+    "browserGroups": 11
+  },
+  "sourceFiles": [
+    {
+      "path": "modules/fidelity-r33/persistence/manifest.json",
+      "bytes": 4903,
+      "sha256": "dc986462cc3543e306482a8caa5b7d9bd4bc6c203a47a11ed92cebb9fb9b9e78"
+    },
+    {
+      "path": "modules/fidelity-r33/persistence/index.html",
+      "bytes": 4589,
+      "sha256": "bf3f07a7e368d07c6c23afeb6c198b14e4007c3c3727fac18f127d635acd37e0"
+    },
+    {
+      "path": "modules/fidelity-r33/persistence/page.js",
+      "bytes": 8982,
+      "sha256": "2d4481413e1be7264bee400bad0d3f81b2fbb40cf869c2efe317e07aca0a7271"
+    },
+    {
+      "path": "modules/fidelity-r33/persistence/restore.js",
+      "bytes": 11279,
+      "sha256": "87ab1cf43b23f20e4537a580c6b0a30fc9bd08b9c596c9ba47570205d3ee2322"
+    },
+    {
+      "path": "modules/fidelity-r33/persistence/link.js",
+      "bytes": 1671,
+      "sha256": "245d9589fe0d849f23bb6cbbc0cb8c617aa16c70bd07c52576565e098ca4157c"
+    },
+    {
+      "path": "modules/fidelity-r33/replay/index.html",
+      "bytes": 2420,
+      "sha256": "2322066c9c3036054eb2b7309733b9cd8ee77af96cffc00a16d82d68b02fc7c8"
+    },
+    {
+      "path": "modules/fidelity-r33/replay/page.js",
+      "bytes": 4732,
+      "sha256": "d060ba49a903e9ee36dc67ece9cfe753d7d026d0134a4812bbd51030ceceea67"
+    },
+    {
+      "path": "modules/fidelity-r33/replay/batch.js",
+      "bytes": 6071,
+      "sha256": "f40f11193afdb3015e879c6b9d055700af87a768dd847afe2e8e74e7cf8527fc"
+    },
+    {
+      "path": "docs/R33_PERSISTENCE_TESTS.json",
+      "bytes": 5135,
+      "sha256": "bc58eed020f265c5cc9d7b3b2c575118943c78030277e6054a51c499b2220fd7"
+    },
+    {
+      "path": "docs/R33_PERSISTENCE_BROWSER.json",
+      "bytes": 11142,
+      "sha256": "67fbf500bd7f08c727db94462415b817c3ae49a11e432233689b64d4046fb685"
+    }
+  ],
+  "resources": [
+    {
+      "path": "modules/fidelity-r33/persistence/index.html",
+      "label": "Restaurer les groupes choisis avec reprise"
+    },
+    {
+      "path": "modules/fidelity-r33/replay/index.html",
+      "label": "Vérifier plusieurs replays, dont les évolutions"
+    },
+    {
+      "path": "docs/R33_PERSISTENCE.md",
+      "label": "Portée, protection des groupes et reproduction"
+    },
+    {
+      "path": "docs/R33_PERSISTENCE_TESTS.json",
+      "label": "Reproduction avant/après et garde des lots"
+    },
+    {
+      "path": "docs/R33_PERSISTENCE_BROWSER.json",
+      "label": "Stockage et moteurs réels dans Chromium"
+    }
+  ]
+}

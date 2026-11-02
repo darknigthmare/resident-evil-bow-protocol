@@ -1,0 +1,68 @@
+{
+  "schema": "re.bow.production-attempt-r34/1",
+  "uid": "rerev2-glasp",
+  "kind": "idle",
+  "lotId": "lot_2",
+  "stage": "positive-output-correction",
+  "generator": "image_gen",
+  "status": "GENERATED",
+  "createdAt": "2026-11-01T02:57:09.924007+00:00",
+  "prompt": "Correct the existing generated game asset, with the original source as anatomical truth. Correct the LAST draft from LEFT-facing to a true RIGHT-facing three-quarter airborne idle. Preserve the source short veined wings, swollen abdomen and all hooked hanging limbs, without ground feet, human anatomy or a software mirror. The anterior mouth/head should project distinctly toward screen RIGHT.\nOne COMPLETE character in one image, every extremity and equipment endpoint inside at least ten percent transparent padding. No text, scene, floor, coloured outline or frame. Preserve original identity, colours, equipment and anatomical asymmetries. Native transparent alpha. A static generated adaptation, not an original frame or original animation. Do not use a horizontal software mirror.",
+  "references": [
+    {
+      "path": "assets/specimens/rerev2-glasp.png",
+      "bytes": 207970,
+      "sha256": "ed00d117f46dafeb10804bafd49720fbf002c0e52dd1e2928176515f02026ac7",
+      "sourceUrl": "https://blackjackrants.blogspot.com/2021/07/reviewing-monsters-resident-evil_02047146349.html",
+      "sourceEdition": "Resident Evil Revelations 2 (2015)",
+      "exactIdentity": true,
+      "targetEditionAdmitted": true,
+      "role": "actually-inspected-complete-body-source"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerev2-glasp/studies/idle-initial.png",
+      "bytes": 1400307,
+      "sha256": "7ffaf3541c7a018c75f3dcdcee8859bb21e8779a223d9adcf2b42490a9acad84",
+      "exactIdentity": true,
+      "targetEditionAdmitted": true,
+      "sourceEdition": "Resident Evil Revelations 2 (2015)",
+      "role": "generated-positive-draft-to-correct-not-anatomical-proof"
+    }
+  ],
+  "completeBodyReference": {
+    "path": "assets/specimens/rerev2-glasp.png",
+    "bytes": 207970,
+    "sha256": "ed00d117f46dafeb10804bafd49720fbf002c0e52dd1e2928176515f02026ac7",
+    "sourceUrl": "https://blackjackrants.blogspot.com/2021/07/reviewing-monsters-resident-evil_02047146349.html",
+    "sourceEdition": "Resident Evil Revelations 2 (2015)",
+    "exactIdentity": true,
+    "targetEditionAdmitted": true,
+    "role": "actually-inspected-complete-body-source"
+  },
+  "sourceObservation": "Entire nonhuman insect: bulbous translucent abdomen, short veined side wings, front mouthparts and all long hooked hanging limbs end inside frame. This is airborne arthropod support, not humanoid standing feet.",
+  "priorPositiveOutput": {
+    "path": "modules/fidelity-r34/assets/generated/rerev2-glasp/studies/idle-initial.png",
+    "bytes": 1400307,
+    "sha256": "7ffaf3541c7a018c75f3dcdcee8859bb21e8779a223d9adcf2b42490a9acad84",
+    "exactIdentity": true,
+    "targetEditionAdmitted": true,
+    "sourceEdition": "Resident Evil Revelations 2 (2015)",
+    "role": "generated-positive-draft-to-correct-not-anatomical-proof"
+  },
+  "toolArgs": {
+    "prompt": "Correct the existing generated game asset, with the original source as anatomical truth. Correct the LAST draft from LEFT-facing to a true RIGHT-facing three-quarter airborne idle. Preserve the source short veined wings, swollen abdomen and all hooked hanging limbs, without ground feet, human anatomy or a software mirror. The anterior mouth/head should project distinctly toward screen RIGHT.\nOne COMPLETE character in one image, every extremity and equipment endpoint inside at least ten percent transparent padding. No text, scene, floor, coloured outline or frame. Preserve original identity, colours, equipment and anatomical asymmetries. Native transparent alpha. A static generated adaptation, not an original frame or original animation. Do not use a horizontal software mirror.",
+    "referenced_image_paths": [
+      "/workspace/resident-evil-bow-protocol/assets/specimens/rerev2-glasp.png",
+      "/workspace/resident-evil-bow-protocol/modules/fidelity-r34/assets/generated/rerev2-glasp/studies/idle-initial.png"
+    ],
+    "transparent_background": true
+  },
+  "interruptionReview": {
+    "previousPreparedCorrectionHadNoRecoverableReturn": true,
+    "noKnownModerationRefusalForUid": true,
+    "oneDocumentedCorrectionAuthorizedByCoordinator": true
+  },
+  "updatedAt": "2026-11-01T03:00:56.565757+00:00",
+  "sourceOutputPath": "/workspace/generated_images/exec-801f8063-77eb-4713-bfe1-bff1f547ddad.png",
+  "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-801f8063-77eb-4713-bfe1-bff1f547ddad.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+}

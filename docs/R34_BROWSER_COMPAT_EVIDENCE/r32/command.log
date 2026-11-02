@@ -1,0 +1,188 @@
+PASS 1440 neutral
+PASS 1440 left
+PASS 1440 right
+PASS 1440 opposite
+PASS 1440 opposite-and-down
+PASS 1440 release-left
+PASS 390 neutral
+PASS 390 left
+PASS 390 right
+PASS 390 opposite
+PASS 390 opposite-and-down
+PASS 390 release-left
+{"passed":12,"failed":0,"report":"qa-gamedev-r32/browser-input.json"}
+PASS 1280 left accepts Enter once per press and releases
+PASS 1280 left accepts Space once per press and releases
+PASS 1280 right accepts Enter once per press and releases
+PASS 1280 right accepts Space once per press and releases
+PASS 1280 down accepts Enter once per press and releases
+PASS 1280 down accepts Space once per press and releases
+PASS 1280 guard accepts Enter once per press and releases
+PASS 1280 guard accepts Space once per press and releases
+PASS 1280 jump accepts Enter once per press and releases
+PASS 1280 jump accepts Space once per press and releases
+PASS 1280 dash accepts Enter once per press and releases
+PASS 1280 dash accepts Space once per press and releases
+PASS 390 left accepts Enter once per press and releases
+PASS 390 left accepts Space once per press and releases
+PASS 390 right accepts Enter once per press and releases
+PASS 390 right accepts Space once per press and releases
+PASS 390 down accepts Enter once per press and releases
+PASS 390 down accepts Space once per press and releases
+PASS 390 guard accepts Enter once per press and releases
+PASS 390 guard accepts Space once per press and releases
+PASS 390 jump accepts Enter once per press and releases
+PASS 390 jump accepts Space once per press and releases
+PASS 390 dash accepts Enter once per press and releases
+PASS 390 dash accepts Space once per press and releases
+PASS Keyboard release preserves an independent pointer hold, and pointer release clears it
+PASS Changing the focused element releases a keyboard hold before keyup
+PASS Pause and reset discard an unfinished button hold without accepting key repeat as a new press
+PASS Replay installation clears a live hold and leaves disabled controls unable to change recorded input
+PASS Main and numpad Enter remain independent holds on the same guard button
+PASS Native Tab navigation reaches an actionable hold button from the live arena
+{"passed":30,"failed":0,"report":"qa-gamedev-r32/catalog-controls.json"}
+PASS A trusted visible-window blur pauses the duel and Start cannot resume it in the background
+PASS Holding Start through a trusted focus return requires release and a new press before resuming
+PASS Keyboard movement held before a trusted blur is cleared before voluntary resume
+PASS A captured pointer hold is cleared by a trusted blur before voluntary resume
+PASS CPU mode still pauses and resumes once per fresh Start press despite per-tick input clearing
+PASS Synthetic hidden/visible boundaries preserve pause and require a new Start press
+PASS Real BFCache restoration retains the duel in pause and rebases a Start press made before navigation
+{"passed":7,"failed":0,"report":"qa-gamedev-r32/browser-catalog-focus.json"}
+PASS Held Enter leaves the boot screen once and requires a fresh press to open modes
+PASS Held Escape returns one level from controls and requires release before leaving options
+PASS Held Space from the boot screen cannot arm the newly focused Play button
+PASS Native button activation by a fresh Enter or Space still fires exactly once
+PASS Repeated arrow presses continue navigating menu items
+PASS Native select navigation keeps repeated arrows and updates the saved setting
+PASS Events already consumed by a capture handler cannot navigate the menu
+{"passed":7,"failed":0,"report":"qa-gamedev-r32/menu-input.json"}
+PASS Manual stop produces an exportable partial measurement and allows a new run
+PASS A persisted lifecycle interruption retains its partial report and restores controls
+PASS Actual browser back/forward-cache restoration keeps an interrupted measurement usable
+PASS Changing mode clears the previous report and ignores completion from the outgoing frame
+PASS Reloading the embedded document resets report ownership and both measurement controls
+{"passed":5,"failed":0,"report":"qa-gamedev-r32/performance-lifecycle.json"}
+PASS audio: 320px viewport, 100% root text
+PASS audio: 320px viewport, 200% root text
+PASS audio: 1280px viewport, 100% root text
+PASS sprites: 320px viewport, 100% root text
+PASS sprites: 320px viewport, 200% root text
+PASS sprites: 1280px viewport, 100% root text
+{"passed":6,"failed":0,"report":"qa-gamedev-r32/reflow.json"}
+BASELINE-DEFECT before 1280 canvas-space-repeat: An OS key repeat changed playback state
+
+false !== true
+
+BASELINE-DEFECT before 1280 play-enter-repeat: An OS key repeat changed playback state
+
+false !== true
+
+PASS before 1280 play-space-native-release
+PASS before 1280 frame-navigation-and-native-controls
+BASELINE-DEFECT before 1280 modified-and-consumed-shortcuts: Control must not seek the canvas
+
+1 !== 0
+
+BASELINE-DEFECT before 390 canvas-space-repeat: An OS key repeat changed playback state
+
+false !== true
+
+BASELINE-DEFECT before 390 play-enter-repeat: An OS key repeat changed playback state
+
+false !== true
+
+PASS before 390 play-space-native-release
+PASS before 390 frame-navigation-and-native-controls
+BASELINE-DEFECT before 390 modified-and-consumed-shortcuts: Control must not seek the canvas
+
+1 !== 0
+
+PASS after 1280 canvas-space-repeat
+PASS after 1280 play-enter-repeat
+PASS after 1280 play-space-native-release
+PASS after 1280 frame-navigation-and-native-controls
+PASS after 1280 modified-and-consumed-shortcuts
+PASS after 390 canvas-space-repeat
+PASS after 390 play-enter-repeat
+PASS after 390 play-space-native-release
+PASS after 390 frame-navigation-and-native-controls
+PASS after 390 modified-and-consumed-shortcuts
+{"suite":"motion-keyboard-r32","passed":10,"failed":0,"before":{"passed":4,"failed":6},"after":{"passed":10,"failed":0},"baselineCommit":"7c777b8f29292e0eded224cda2abc06ae8796bc9","baselineControllerSha256":"4b671c33c025605d63c01f98ddf511e4a6de8b285d0d92f8ae0614b3734f307d","currentControllerSha256":"eb7a856deee9bff51cf6df8ee3eba3a396450515c9ae8d9987bc73c432c225a3","browserVersion":"154.0.8037.57","complete":true,"report":"qa-gamedev-r32/motion-input.json"}
+BASELINE-DEFECT before visible-blur-start: Start resumed a visible but unfocused evolution duel
+
+false !== true
+
+BASELINE-DEFECT before held-start-focus-return: Held Start resumed during the evolution focus transition
+
+false !== true
+
+BASELINE-DEFECT before bfcache-start-boundary: An unseen Start edge resumed the restored evolution document
+
+false !== true
+
+PASS before cpu-fresh-start
+PASS before held-select-voluntary-evolution
+PASS before blur-cancels-pending-evolution
+PASS before native-enter-space-1280
+BASELINE-DEFECT before numpad-enter-sources-1280: NumpadEnter did not hold the evolution guard button
+
+false !== true
+
+PASS before native-enter-space-390
+BASELINE-DEFECT before numpad-enter-sources-390: NumpadEnter did not hold the evolution guard button
+
+false !== true
+
+PASS after visible-blur-start
+PASS after held-start-focus-return
+PASS after bfcache-start-boundary
+PASS after cpu-fresh-start
+PASS after held-select-voluntary-evolution
+PASS after blur-cancels-pending-evolution
+PASS after native-enter-space-1280
+PASS after numpad-enter-sources-1280
+PASS after native-enter-space-390
+PASS after numpad-enter-sources-390
+PASS Main selection groups exact incarnations and assigns an evolved form without starting combat
+PASS Classic trial keeps all 346 profiles and its historical replay schema while grouping forms
+PASS Main grouped controls remain reachable at 320px with every text size doubled
+PASS Evolution selector preserves all profiles and shows context forms under their exact base
+PASS A natural fight reaches eligibility, stays in its base form, then the real button mutates without healing
+PASS Replay seeks across the exact mutation and disables voluntary controls in read-only playback
+PASS Corrupt replay is rejected before replacing the current fight
+PASS Pause cancels an accepted request before the next combat tick
+PASS Keyboard V chooses the displayed form and repeated keydowns cannot duplicate a mutation
+PASS Focused hold buttons accept Space and Enter, release on keyup/focus loss/pause, and preserve another pointer
+PASS Keyboard jump buttons emit one edge per press and replay import/reset clears an unfinished hold
+PASS Simulated standard controller Select uses a new press and ignores a held connection
+PASS Keyboard B voluntarily evolves the opponent during a naturally simulated CPU fight
+PASS A source-bound context URL is explicit and opens no fabricated free actor
+PASS Evolution mode keyboard and 200% text layout at 1280px
+PASS Evolution mode keyboard and 200% text layout at 320px
+{"passed":16,"failed":0}
+{"suite":"evolution-input-r32","passed":10,"failed":0,"before":{"passed":5,"failed":5},"after":{"passed":10,"failed":0},"existing":{"passed":16,"failed":0,"pass":true},"complete":true,"browserVersion":"154.0.8037.57"}
+BASELINE-DEFECT before late-rejection-keeps-current-link: A stale rejection replaced the selected illustration URL
+PASS before late-success-keeps-current-selection
+BASELINE-DEFECT before hidden-rejection-keeps-current-link: A hidden rejection changed the gallery URL
+BASELINE-DEFECT before pending-selection-has-no-displayed-frame: A pending selection still reported a displayed frame
+BASELINE-DEFECT before new-selection-clears-prior-error: A new selection retained the prior image failure
+BASELINE-DEFECT before first-load-interruption-retries-on-return: Returning after an interrupted first load did not retry the illustration
+BASELINE-DEFECT before initial-registry-interruption-restarts-preparation: Returning after an interrupted registry preparation did not retry initialization
+PASS before current-error-retains-provenance-and-selection
+PASS before variant-link-reloads-the-same-selection
+PASS before native-keyboard-and-mouse-1280
+PASS before native-keyboard-and-mouse-390
+PASS after late-rejection-keeps-current-link
+PASS after late-success-keeps-current-selection
+PASS after hidden-rejection-keeps-current-link
+PASS after pending-selection-has-no-displayed-frame
+PASS after new-selection-clears-prior-error
+PASS after first-load-interruption-retries-on-return
+PASS after initial-registry-interruption-restarts-preparation
+PASS after current-error-retains-provenance-and-selection
+PASS after variant-link-reloads-the-same-selection
+PASS after native-keyboard-and-mouse-1280
+PASS after native-keyboard-and-mouse-390
+{"suite":"sprite-gallery-r32","passed":11,"failed":0,"before":{"passed":5,"failed":6},"after":{"passed":11,"failed":0},"complete":true,"browserVersion":"154.0.8037.57","baselineControllerSha256":"8aadabb00b8c7879f7db7b5e63e54a8b25bf18610842a19facb83e68a1e92cd6","currentControllerSha256":"79390613050cc180f20f5c39b09970b505e9d6f3f9805dadc71e32fe0db7fced","report":"qa-gamedev-r32/sprite-gallery.json"}

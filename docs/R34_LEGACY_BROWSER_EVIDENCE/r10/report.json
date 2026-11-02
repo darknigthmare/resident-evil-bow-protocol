@@ -1,0 +1,240 @@
+{
+  "suite": "R10 HTTP integration",
+  "mode": "Chromium navigating actual localhost HTTP",
+  "physicalHardware": false,
+  "artworkCertification": false,
+  "passed": 22,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Presented intro, native pause/step/skip and keyboard",
+      "width": 1440,
+      "pass": true,
+      "details": {
+        "combatFrozenAt": 0,
+        "nativeKeyboard": true
+      }
+    },
+    {
+      "name": "Intro inputs cannot become a delayed attack",
+      "width": 1440,
+      "pass": true,
+      "details": {
+        "ghostAttack": false
+      }
+    },
+    {
+      "name": "Synthetic held pad must return to neutral",
+      "width": 1440,
+      "pass": true,
+      "details": {
+        "syntheticInput": true,
+        "blocked": true,
+        "afterNeutral": true
+      }
+    },
+    {
+      "name": "Whole CPU duel/replay identical with or without intro",
+      "width": 1440,
+      "pass": true,
+      "details": {
+        "acceleratedCPU": true,
+        "finished": true,
+        "sameState": true,
+        "sameReplay": true
+      }
+    },
+    {
+      "name": "Final presentation advances but never advances the combat",
+      "width": 1440,
+      "pass": true,
+      "details": {
+        "unchanged": true,
+        "state": "outro",
+        "frame": 120
+      }
+    },
+    {
+      "name": "Invalid import preserves intro, valid replay removes it",
+      "width": 1440,
+      "pass": true,
+      "details": {
+        "rejected": true,
+        "preserved": true,
+        "noIntro": true,
+        "replay": true,
+        "frame": 0
+      }
+    },
+    {
+      "name": "Qualified final pair can still conclude",
+      "width": 1440,
+      "pass": true,
+      "details": {
+        "preparedVerdict": true
+      }
+    },
+    {
+      "name": "Aquatic, projection, plant and mechanical victims refuse generic conclusions",
+      "width": 1440,
+      "pass": true,
+      "details": {
+        "preparedVerdicts": true,
+        "targets": [
+          "re4r-del-lago",
+          "re7-eveline",
+          "re2-ivy",
+          "revillage-mutated-heisenberg"
+        ]
+      }
+    },
+    {
+      "name": "Natural incompatible CPU match resolves normally",
+      "width": 1440,
+      "pass": true,
+      "details": {
+        "acceleratedCPU": true,
+        "preparedVerdict": false,
+        "finished": true,
+        "resultSent": true,
+        "noFinisher": true,
+        "historySame": true,
+        "window": false,
+        "frames": 1251
+      }
+    },
+    {
+      "name": "First-round loss is reversible with no finisher window",
+      "width": 1440,
+      "pass": true,
+      "details": {
+        "preparedRoundVerdict": true
+      }
+    },
+    {
+      "name": "Victim-specific archive and real HTTP Excel delivery",
+      "width": 1440,
+      "pass": true,
+      "details": {
+        "workbookBytes": 23781,
+        "sha256": "8dc06096806b5a3500e387dd471c7a4eda0be8d7bd9ae552c51bc815e9e04363",
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "name": "Presented intro, native pause/step/skip and keyboard",
+      "width": 390,
+      "pass": true,
+      "details": {
+        "combatFrozenAt": 0,
+        "nativeKeyboard": true
+      }
+    },
+    {
+      "name": "Intro inputs cannot become a delayed attack",
+      "width": 390,
+      "pass": true,
+      "details": {
+        "ghostAttack": false
+      }
+    },
+    {
+      "name": "Synthetic held pad must return to neutral",
+      "width": 390,
+      "pass": true,
+      "details": {
+        "syntheticInput": true,
+        "blocked": true,
+        "afterNeutral": true
+      }
+    },
+    {
+      "name": "Whole CPU duel/replay identical with or without intro",
+      "width": 390,
+      "pass": true,
+      "details": {
+        "acceleratedCPU": true,
+        "finished": true,
+        "sameState": true,
+        "sameReplay": true
+      }
+    },
+    {
+      "name": "Final presentation advances but never advances the combat",
+      "width": 390,
+      "pass": true,
+      "details": {
+        "unchanged": true,
+        "state": "outro",
+        "frame": 120
+      }
+    },
+    {
+      "name": "Invalid import preserves intro, valid replay removes it",
+      "width": 390,
+      "pass": true,
+      "details": {
+        "rejected": true,
+        "preserved": true,
+        "noIntro": true,
+        "replay": true,
+        "frame": 0
+      }
+    },
+    {
+      "name": "Qualified final pair can still conclude",
+      "width": 390,
+      "pass": true,
+      "details": {
+        "preparedVerdict": true
+      }
+    },
+    {
+      "name": "Aquatic, projection, plant and mechanical victims refuse generic conclusions",
+      "width": 390,
+      "pass": true,
+      "details": {
+        "preparedVerdicts": true,
+        "targets": [
+          "re4r-del-lago",
+          "re7-eveline",
+          "re2-ivy",
+          "revillage-mutated-heisenberg"
+        ]
+      }
+    },
+    {
+      "name": "Natural incompatible CPU match resolves normally",
+      "width": 390,
+      "pass": true,
+      "details": {
+        "acceleratedCPU": true,
+        "preparedVerdict": false,
+        "finished": true,
+        "resultSent": true,
+        "noFinisher": true,
+        "historySame": true,
+        "window": false,
+        "frames": 1251
+      }
+    },
+    {
+      "name": "First-round loss is reversible with no finisher window",
+      "width": 390,
+      "pass": true,
+      "details": {
+        "preparedRoundVerdict": true
+      }
+    },
+    {
+      "name": "Victim-specific archive and real HTTP Excel delivery",
+      "width": 390,
+      "pass": true,
+      "details": {
+        "workbookBytes": 23781,
+        "sha256": "8dc06096806b5a3500e387dd471c7a4eda0be8d7bd9ae552c51bc815e9e04363",
+        "horizontalOverflow": false
+      }
+    }
+  ]
+}

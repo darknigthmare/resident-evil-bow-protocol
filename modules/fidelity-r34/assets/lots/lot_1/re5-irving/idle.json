@@ -1,0 +1,67 @@
+{
+  "schema": "re.bow.generated-output-r34/1",
+  "uid": "re5-irving",
+  "kind": "idle",
+  "lotId": "lot_1",
+  "status": "HELD_REFERENCE",
+  "generator": "image_gen",
+  "reason": "The aquatic Irving image crops the outer tentacles and body mass at several edges. It cannot establish a complete terrestrial or aquatic combat silhouette.",
+  "research": [
+    {
+      "kind": "actual-retained-reference-inspection",
+      "observation": "The aquatic Irving image crops the outer tentacles and body mass at several edges. It cannot establish a complete terrestrial or aquatic combat silhouette.",
+      "references": [
+        {
+          "path": "assets/catalog/re5-irving.png",
+          "bytes": 224678,
+          "sha256": "7ae6904c0a625229048152203da0f9b47d232b02b932c9d6620c81b68578656d"
+        }
+      ]
+    },
+    {
+      "kind": "actual-online-full-source-retrieval",
+      "request": {
+        "path": "modules/fidelity-r34/assets/lots/lot_1/re5-irving/research/web-body-request.json",
+        "bytes": 866,
+        "sha256": "729ccac3337593ccb56dfcdea79be16acb404b2c34430b856a3e701d540f004a"
+      },
+      "summary": {
+        "path": "modules/fidelity-r34/assets/lots/lot_1/web-body-research.json",
+        "bytes": 53924,
+        "sha256": "98e8824850678141e1fa451583ed65efbf7c38b89e28013a402c1b248a9b548c"
+      },
+      "url": "https://www.evilresource.com/images/data/full/re5/irving.png?4b536f71",
+      "sourcePage": "https://www.evilresource.com/resident-evil-5/enemies/irving",
+      "httpStatus": 200,
+      "observation": "The actual direct full-source response was retrieved. Its bytes match the already inspected retained catalogue or named R22 reference; it supplies no additional hidden anatomy."
+    },
+    {
+      "kind": "additional-cross-lot-source-research",
+      "record": {
+        "path": "modules/fidelity-r34/assets/lots/lot_1/research-snapshots/common-body-sources.json",
+        "bytes": 49892,
+        "sha256": "1b61b73a02f0ff882aa52413d8844fc26be44b661e2539de3ab74cf5b945cd09"
+      },
+      "scope": "Only the matching UID entry, when present; no other form is promoted."
+    },
+    {
+      "kind": "supplementary-candidates-and-exclusions",
+      "record": {
+        "path": "modules/fidelity-r34/assets/lots/lot_1/research-snapshots/pipeline-five-assessment.json",
+        "bytes": 7199,
+        "sha256": "f3d8d61afbce58bed04baa4cf1095f99c09a442bb462b16df2f0f3064a03f480"
+      },
+      "scope": "Matching Tyrant/Crimson/Garrador whole sources are already in separate jobs; Eliminator/HunterMu exclusions remain binding."
+    }
+  ],
+  "completeBodyReferenceVerified": false,
+  "generatedByR34": false,
+  "canonicalFidelityCertified": false,
+  "note": "No output PNG, full-body admission, original frame or original idle cycle is claimed by this held receipt.",
+  "priorProofMetadata": {
+    "path": "modules/fidelity-r34/assets/lots/lot_1/re5-irving/research/held-proof-before-snapshot.json",
+    "bytes": 2769,
+    "sha256": "9faae5d82d35c4c5e175683a0251815d508cfed5f2d7097bd9fbb76e5c9ce3b8",
+    "reason": "The same source-curation bytes are now bound at immutable lot-owned snapshot paths so later research additions cannot stale this earlier held decision."
+  }
+}

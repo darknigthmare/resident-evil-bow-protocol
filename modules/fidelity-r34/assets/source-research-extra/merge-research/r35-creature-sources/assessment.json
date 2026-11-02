@@ -1,0 +1,100 @@
+{
+  "schema": "re.bow.source-research-followup-r34/1",
+  "recordedAt": "2026-11-02T05:00:30.030057+00:00",
+  "baselineCommit": "730ededd457c1a4c8cf09db4f5a8a4938626f17d",
+  "scope": "Read-only follow-up research. No generation, import, receipt promotion, module update or original-media certification.",
+  "qualifiedCompleteVisualCandidates": [
+    {
+      "uid": "re2-zombie-dog",
+      "label": "Zombie Dog",
+      "incarnation": "Resident Evil 2 (1998)",
+      "historicalRefusalPreserved": false,
+      "existingOutputStates": {
+        "portrait": "GENERATED",
+        "idle": "HELD_REFERENCE"
+      },
+      "heldReceipt": {
+        "path": "modules/fidelity-r34/assets/lots/lot_4/re2-zombie-dog/idle.json",
+        "bytes": 4139,
+        "sha256": "cf1dfad1b1623ed02aa48d103be7662004160164956b97885562a28891af6345"
+      },
+      "retainedCatalogue": {
+        "path": "/workspace/resident-evil-bow-protocol/assets/catalog/re2-zombie-dog.png",
+        "bytes": 105206,
+        "sha256": "dec5327f243adad8a0b78a862f5ec73ae5fd2b0bbbdbe75de9c3d22b9f40182f",
+        "format": "PNG",
+        "width": 450,
+        "height": 360
+      },
+      "retainedCatalogueSourceUrl": "https://www.evilresource.com/resident-evil-2/enemies/zombie-dog",
+      "sourcePage": {
+        "url": "https://blackjackrants.blogspot.com/2020/09/reviewing-monsters-resident-evil-2.html",
+        "path": "/workspace/scratch/r35-creature-sources/re2-source-page.html",
+        "bytes": 157467,
+        "sha256": "60f701023eb29e9a7f08c30932e41b36a40ec01b943ec85272da8e02172a6885"
+      },
+      "image": {
+        "sourceUrl": "https://static.wikia.nocookie.net/residentevil/images/9/95/CerberusRE2.jpg/revision/latest",
+        "path": "/workspace/scratch/r35-creature-sources/re2-original-dog-candidate.jpg",
+        "bytes": 96680,
+        "sha256": "5a5377c48131d4e2a6b26f0adc051776dd2661fe8a3377e3a2f41a47b0541dd8",
+        "format": "WEBP",
+        "width": 1400,
+        "height": 1600
+      },
+      "actuallyVisuallyInspected": true,
+      "completeVisibleSilhouette": true,
+      "evidenceImprovement": "The retained 450x360 catalogue is a crop of the same 1400x1600 source depiction. The full source adds torso, hip, all four leg/paw endpoints and their damage pattern; it is not an enlarged copy of the crop.",
+      "identityObservation": "Same upright ears, pale visible eye, broken cheek/jaw layout, exposed near-side shoulder and flank wound/ribs as the existing target-qualified RE2 catalogue depiction. This visually connects the full source to the retained 1998 incarnation rather than assigning an edition from its filename alone.",
+      "sourceFacing": "left-three-quarter-front",
+      "posture": "Quadruped; one foreleg raised/back, three visible planted paw positions. No human stance.",
+      "asymmetryObservation": "Visible near-side head/neck damage, exposed shoulder and foreleg and flank ribs must remain on their anatomical side. Opposite flank is not shown. No automatic mirroring is qualified.",
+      "limitations": [
+        "The article discusses both original and remake; the edition connection comes from matching the retained EvilResource target depiction, not from a primary publisher attribution on this blog.",
+        "Static promotional depiction is not an extracted native game frame or animation.",
+        "Hidden opposite-side wounds and surfaces are unverified. A right-facing result must not be certified by mirroring this left-facing image.",
+        "The image has an opaque white background. Its bytes have not been edited.",
+        "No body output has been generated or admitted by this research."
+      ],
+      "recommendedNextStep": "Parent independently inspect full source alongside retained catalogue. May supply both as identity/body references for a generated adaptation, preserving anatomical asymmetry. Inspect output before admission; keep as study if opposite-side details are invented or facing remains left."
+    }
+  ],
+  "rejectedOrInsufficientCandidates": [
+    {
+      "uid": "re6-meset",
+      "image": {
+        "sourceUrl": "https://bogleech.com/re/re6-mesec.png",
+        "path": "/workspace/scratch/r35-creature-sources/meset-bogleech.png",
+        "bytes": 36345,
+        "sha256": "ca4134221e21f2098b29ab88444788b7cfc0a58d94d043a5d35afdac8040bad1",
+        "format": "PNG",
+        "width": 390,
+        "height": 390
+      },
+      "sourcePageRetained": "modules/fidelity-r34/assets/source-research/bogleech-re6.html",
+      "actuallyVisuallyInspected": true,
+      "completeVisibleSilhouette": true,
+      "observation": "The 390x390 view includes both feathered wings and all six hooked limbs with margins. However its stylized illustrated anatomy has no primary attribution establishing exact shipped-game appearance. The article labels it MESEC and discusses the RE6 mutation, but that is insufficient alone to prove a final-game geometry match.",
+      "decision": "HELD_ATTRIBUTION; do not treat this whole illustration as qualified native or exact source body without corroborating final-game views."
+    },
+    {
+      "uids": [
+        "re2r-zombie-dog",
+        "re3r-zombie-dog",
+        "recv-bat"
+      ],
+      "decision": "HELD_REFERENCE unchanged",
+      "observation": "No additional complete exact-incarnation view recovered. Fandom pages returned402, Google returned only JavaScript challenge pages, and Bing response candidates were irrelevant and were rejected. Candidate filenames returned404 and never became attribution evidence."
+    }
+  ],
+  "attemptLog": {
+    "path": "/workspace/scratch/r35-creature-sources/attempts.json",
+    "bytes": 7168,
+    "sha256": "a3502f157fbcd90f872a63c38f2c76af06fb78b2d7bf2700bcd0a3a2cba9ae4c"
+  },
+  "generatedOutputs": 0,
+  "admittedOutputs": 0,
+  "trackedFilesChanged": false,
+  "canonicalFidelityCertified": false,
+  "originalIdleAnimationCertified": false
+}

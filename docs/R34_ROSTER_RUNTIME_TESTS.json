@@ -1,0 +1,2330 @@
+{
+  "schema": "re.bow.roster-runtime-tests-r34/1",
+  "preview": false,
+  "passed": 15,
+  "failed": 0,
+  "skipped": 0,
+  "checks": [
+    {
+      "name": "Actual generated portraits bind unchanged PNG sources and retain selection-only, edition and crop scope",
+      "pass": true,
+      "detail": {
+        "actualPngsDecoded": 305,
+        "sourcePixelsEdited": false,
+        "bodyCertification": false
+      }
+    },
+    {
+      "name": "The composite preserves older defaults except qualified R34 replacements and explicit source-edition holds",
+      "pass": true,
+      "detail": {
+        "publishedBaseSlots": 363,
+        "retainedBaseSlots": 362,
+        "explicitSourceHolds": [
+          "recv-mutated-steve"
+        ],
+        "actualNewDefaults": 114,
+        "historicalReplacements": 2
+      }
+    },
+    {
+      "name": "A final proof contains at least one actual generated and reviewed R34 combat body",
+      "pass": true,
+      "detail": {
+        "actualBodies": 114
+      }
+    },
+    {
+      "name": "The default resolver stays lazy, preserves current registry identity and all stable aliases",
+      "pass": true,
+      "detail": {
+        "records": 366,
+        "initialPngRequests": 0
+      }
+    },
+    {
+      "name": "New R34 defaults reject missing full-body reference, combat-pose, direction and appearance qualifications",
+      "pass": true,
+      "detail": {
+        "malformedContractsRefused": 7,
+        "fixturesAreNewMediaEvidence": false
+      }
+    },
+    {
+      "name": "Historical presentation fails closed before qualification and keeps held media separate from a future qualified body",
+      "pass": true,
+      "detail": {
+        "pendingAndInvalidSourceFailClosed": true,
+        "heldStatesAndSides": 18,
+        "qualifiedFutureSideOnly": true,
+        "exactLegacyViewPreserved": true
+      }
+    },
+    {
+      "name": "The held-media boundary wraps every render entry and never delegates a blocked or loading qualified pose",
+      "pass": true,
+      "detail": {
+        "wrappedEntries": 5,
+        "markerDraws": 10,
+        "qualifiedDraws": 5,
+        "originalDelegations": 5
+      }
+    },
+    {
+      "name": "An early boundary survives later real adapter installation and repeated tail mounts without exposing held media",
+      "pass": true,
+      "detail": {
+        "earlyActualAdapterAndTail": true,
+        "repeatedMountIdempotent": true,
+        "oldPhotoDraws": 0,
+        "installationPasses": 2
+      }
+    },
+    {
+      "name": "A real unheld R34 idle never falls back while decoding and qualified native choices retain priority",
+      "pass": true,
+      "detail": {
+        "actualR34Id": "re0-bat",
+        "actualPngSha256": "b247b9b6c9a69a1ce04a3bcf906580ed2490461f16a809402c8e83d28bea953d",
+        "pendingPhotoFallbacks": 0,
+        "nativePriorityContractFixture": true,
+        "actionFallbackPreserved": true
+      }
+    },
+    {
+      "name": "The builder derives visible-body scope only from all reviewed source qualifications and rejects opposite default direction",
+      "pass": true,
+      "detail": {
+        "syntheticSourceContractsOnly": true,
+        "refused": 7,
+        "sourceBytesWritten": false
+      }
+    },
+    {
+      "name": "Historical replacements require the exact retained SHA and cannot create or duplicate a fighter",
+      "pass": true,
+      "detail": {
+        "invalidHistoricalReplacementsRefused": 4,
+        "syntheticContractsOnly": true
+      }
+    },
+    {
+      "name": "An actual new whole-body PNG draws one right-facing idle and keeps all action, side and actor fallbacks",
+      "pass": true,
+      "detail": {
+        "id": "re0-bat",
+        "actualSha256": "b247b9b6c9a69a1ce04a3bcf906580ed2490461f16a809402c8e83d28bea953d",
+        "frames": 1,
+        "actionFallbacks": 6,
+        "actorChanged": false
+      }
+    },
+    {
+      "name": "Actual optional source decoding recovers from credit pressure without changing its default or edition admission",
+      "pass": true,
+      "detail": {
+        "actualRetainedSourcePng": true,
+        "creditRecovery": true,
+        "promotedDefault": false
+      }
+    },
+    {
+      "name": "Actual new body corruption, pending-decode cancellation and page restoration release all credits",
+      "pass": true,
+      "detail": {
+        "corruptionDrawn": false,
+        "cancelledCredits": 0,
+        "pageshowRecovered": true
+      }
+    },
+    {
+      "name": "Only both explicit DEV parameters select the exact legacy registry",
+      "pass": true,
+      "detail": {
+        "explicitLegacyFixture": "?dev=1&selection=direct",
+        "legacyIsNewMediaProof": false
+      }
+    }
+  ],
+  "actualGeneratedPortraits": 305,
+  "actualGeneratedBodies": 114,
+  "staleSources": [],
+  "sourceFiles": [
+    {
+      "path": "tests/verify-roster-runtime-r34.mjs",
+      "bytes": 30745,
+      "sha256": "d4f662a6bd48b68df8f868d1c65d52c8745453179bbe87a0f6f36b4af5e83f3d"
+    },
+    {
+      "path": "modules/fidelity-r34/combat/manifest.json",
+      "bytes": 1941894,
+      "sha256": "3744e749576e14f50338b7bfe2d923e41e59c7c75d2dd0900c2e536d04393134"
+    },
+    {
+      "path": "modules/fidelity-r34/selection/manifest.json",
+      "bytes": 658071,
+      "sha256": "d505192cbc7ad51a6fd0baa607c2910e5bb3be9025f1072b37f45403ce94d2f3"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/manifest.json",
+      "bytes": 3467890,
+      "sha256": "4ba2a02746923fc1e1a6ee004f21d992281b15daa1099910c433bf7c59fa11b7"
+    },
+    {
+      "path": "modules/fidelity-r33/combat/manifest.json",
+      "bytes": 2431892,
+      "sha256": "11921f3fa53293b064837da0c32f7d888be04b2dbcc1c2b33c0f116e24a85809"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re0-bat/portrait.png",
+      "bytes": 1383008,
+      "sha256": "0d3728a1d621742d27490963ad76b240f5309658dccf07e08ba95c5035c69395"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re0-centurion/portrait.png",
+      "bytes": 1232409,
+      "sha256": "95e28cd790c0e01d911c88ffdf0f947e8278d14bbae42f3e3637ce2f3708077c"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re0-cerberus/portrait.png",
+      "bytes": 1754765,
+      "sha256": "82584ed104a8875ac946da7de3cd962ee9d611429ba896e2841ab34dcf60703c"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re0-crow/portrait.png",
+      "bytes": 1287159,
+      "sha256": "dbea55466ae0eab9454181d3475ea1783fbaeb1ffce6c9be20838f9747f32055"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re0-edward-dewey-zombie/portrait.png",
+      "bytes": 2193302,
+      "sha256": "aa8022f3710aaa1bb62f129604d8c874bf762826cb1da521c1d62d58db9b837c"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re0-eliminator/portrait.png",
+      "bytes": 2480461,
+      "sha256": "769323fa0a1cf913fa9d8f021eefa6464889238d8c8b212a56a8d5f5e2d41b61"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re0-giant-bat/portrait.png",
+      "bytes": 2280766,
+      "sha256": "f8c0d3200b79f97ee32b184f00a05893003f1fea0600ee1f512d366f694a8f77"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re0-giant-spider/portrait.png",
+      "bytes": 2666404,
+      "sha256": "81466cc1e4243b47af0d5f79ba47f2df4f3182d9c0bd6e30a9b261dfac90330a"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re0-hunter/portrait.png",
+      "bytes": 2437635,
+      "sha256": "b6791b5099d776a9a9c73f018eaf60f4ed4186f05be265e10bf94b5a6e21557b"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re0-leech/portrait.png",
+      "bytes": 1040541,
+      "sha256": "9c665f6b2601d5fd847318cbe373f043bdd3ed67ab2b8282cca1f75e92290777"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re0-lurker/portrait.png",
+      "bytes": 1798254,
+      "sha256": "8d4bb59f276d3cccd54de4d087383dae497168cd7c0335f4946db3eeb8bfcf56"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re0-mimicry-marcus/portrait.png",
+      "bytes": 1598436,
+      "sha256": "a1172064a68f236f25aaaca43e9af8a32fa552480167b45345c25211558ce910"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re0-plague-crawler/portrait.png",
+      "bytes": 2138025,
+      "sha256": "74331f9fbdfdde68f2df5f91732023d6a4dcf02d019977b589e019b06340032b"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re0-proto-tyrant/portrait.png",
+      "bytes": 2340987,
+      "sha256": "0aef91d88ce891943ceaf00041065223ca7b33dc9b4c9714902d516ebaa53520"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re0-queen-leech/portrait.png",
+      "bytes": 2166790,
+      "sha256": "c8ca0df6b7f0b8952d9244d1d2cd7681afb5498337fe081b9646dc455b2a48a6"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re0-queen-leech-second-form/portrait.png",
+      "bytes": 2440686,
+      "sha256": "3883ab5b7e74babf534fd7c1f21d2bd201ea0f02704cc8a785ad1ab2eed0878b"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re0-stinger/portrait.png",
+      "bytes": 2018600,
+      "sha256": "6fdf76b9def3e57a72c3a9b2aeae89b88f0e331e98915b15b05fd26840d4d1b2"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re1-adder/portrait.png",
+      "bytes": 1390027,
+      "sha256": "6d6a5388ce1c7e266bed2ed32dc6db1586c2a6060c449f52e5ceb3ebd2955b66"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re1-black-tiger/portrait.png",
+      "bytes": 2723026,
+      "sha256": "480ae72624c8696fe03bd60ff85e1dcb81d290bc0e81e2d5425cee6a50fd0150"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re1-cerberus/portrait.png",
+      "bytes": 2254407,
+      "sha256": "6fa7f88998013a2369a607de3650aa61fab98be0fe49e58235b78deee712fddf"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re1-chimera/portrait.png",
+      "bytes": 2442889,
+      "sha256": "09a807c8834f2465e24ce9078bb60c558d27ff6f952ab3ec4967456e575115de"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re1-crow/portrait.png",
+      "bytes": 1362985,
+      "sha256": "c8594c35916fd726997b2f32399bce29262d66fb07daa4ad7cb3d916566883fd"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re1-forest-speyer-zombie/portrait.png",
+      "bytes": 1557619,
+      "sha256": "5e45d60402f3bc842e65fc0f1f19d7446ef9160f94c087045b67c4101737c3bd"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re1-hunter/portrait.png",
+      "bytes": 2567840,
+      "sha256": "1f5c80ad8961b1e6d0202c3a3d32e9a1a1516eedd08322be330d7173f3f3fb24"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re1-small-spider/portrait.png",
+      "bytes": 1307868,
+      "sha256": "8e1d203d408c66a7cd278f210b075ad152ccd7bb6d2b5a97c0f012603422234c"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re1-tyrant/portrait.png",
+      "bytes": 2221390,
+      "sha256": "83b7f3a4c74485b1f70f3e4b0e8b20ef6703e8b8ef3e143596274f72367d1501"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re1-wasp/portrait.png",
+      "bytes": 1302055,
+      "sha256": "4a4a52bee3817f8f4e5e1f28730da85bdfcaacf0f86832f92aa44e63c48e98e4"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re1-web-spinner/portrait.png",
+      "bytes": 1781909,
+      "sha256": "70a78ec434f2dfd0e720cd6172e093bb80ed10df7b2580290d76559bde7c11f6"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re1-yawn/portrait.png",
+      "bytes": 1778529,
+      "sha256": "75481a9a397023b0126ab7deaad655945334c8dd18d9552f315d326994bfc478"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re1-zombie/portrait.png",
+      "bytes": 1396829,
+      "sha256": "15bcdf874a576d3a3bbdc79aae8dab09e0453b23d24e4dab854ace2a5079c9b7"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re1r-adder/portrait.png",
+      "bytes": 1248287,
+      "sha256": "c7fd2838919cdacbad089ea6146117006bd8437c026cee4f328f7665bf57adc9"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re1r-black-tiger/portrait.png",
+      "bytes": 2772067,
+      "sha256": "e65ff655299fdd53df7d4d9c9d7ccdf16955d8aaf36d6bab61515fd3d2ec6ef2"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re1r-cerberus/portrait.png",
+      "bytes": 1589186,
+      "sha256": "f42a6f6721f19c9852e6e430a02d198a8f61e00d4ef82bf1c03b58f105033fbf"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re1r-chimera/portrait.png",
+      "bytes": 1949849,
+      "sha256": "e29bfc48da888919b1b22f4cf98ae46082105b6419b04f759f39658e2dd31285"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re1r-crimson-head/portrait.png",
+      "bytes": 1996647,
+      "sha256": "1ea97eae39397f855e6432e7c28ce9ae41b73251ecee148665a3c0f3325cb262"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re1r-crow/portrait.png",
+      "bytes": 1169611,
+      "sha256": "fdc305b0e78c0ad092ed660d0ca9ec8c3214359847bf56f07af32a65341e599b"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re1r-forest-speyer-zombie/portrait.png",
+      "bytes": 1672239,
+      "sha256": "0dfb49b8391e5a76ac00a9a9633a159937261553c496aa3ee79fcd498032a709"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re1r-hunter/portrait.png",
+      "bytes": 2657250,
+      "sha256": "3f16d2ccf0aa820211d9197c210f23d01d29d4e665a550772a10af2a7ff4fbcf"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re1r-wasp/portrait.png",
+      "bytes": 805674,
+      "sha256": "e4abb31398496a6821f2b987ba7a4823a2e8f6c312d8dd25a8f0a655fdb55bfe"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re1r-web-spinner/portrait.png",
+      "bytes": 2242636,
+      "sha256": "5459e8564c93958fcfa4e24afdfe7bb8a6c668d844cf46da9ff4f5c5f86426ae"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re1r-yawn/portrait.png",
+      "bytes": 2097605,
+      "sha256": "5319c1b75bcf89e2809b060b73c42c4f010d8c715270fb559f0ac4716ece6d3f"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re1r-zombie/portrait.png",
+      "bytes": 2145062,
+      "sha256": "8a402677d53461f819f1080de1397321f0d4157827d849a5e13485cc6af4b845"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2-brad-vickers-zombie/portrait.png",
+      "bytes": 1271925,
+      "sha256": "6113cdc068529a34a8e0c32dc9cd7d1b59c5f09ea6706e6049aeea0eeefd1b34"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2-crow/portrait.png",
+      "bytes": 1358989,
+      "sha256": "b931f8445d5000cc4b9da4c012b39293a0a3acfa0908ab3d3767f997856486ad"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2-evolved-licker/portrait.png",
+      "bytes": 1797291,
+      "sha256": "6f13447ec52927d62e7c9eda5741a5668b8e54ef0f915b148e434feaf8d78dd1"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2-g-fifth-form/portrait.png",
+      "bytes": 2432487,
+      "sha256": "11d990613c2e30931f0b130f680a71eb0368ce8e3cbd580564a6b64b7dfb162f"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2-g-fourth-form/portrait.png",
+      "bytes": 2210931,
+      "sha256": "0c0f7bd739d31b2bcfad67873540dde177083d16959792f0022f4304bef692d5"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2-g-second-form/portrait.png",
+      "bytes": 2152366,
+      "sha256": "c924c6ffa5e7d480380bd0deb8a405df6c3d8cd75c14a56f044176f87a2207b6"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2-g-third-form/portrait.png",
+      "bytes": 2412890,
+      "sha256": "fac42d49ba7d0f0b25921c23ecbf4cbed93603f8473d017755b8e7888fde9022"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2-g-type-adult/portrait.png",
+      "bytes": 2242298,
+      "sha256": "162b67096bc133d72eb9e2aa5e1385c7273ad8edc5c437510f27df3889f94a57"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2-g-type-young/portrait.png",
+      "bytes": 1099717,
+      "sha256": "2cbae5314f594152733dd4cec01b8fe2f92f2627d28e875430036f9027d54a8f"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2-giant-moth/portrait.png",
+      "bytes": 1928148,
+      "sha256": "673f85dc0b73f46bf7e2dce952ce7d9e70a3f9577ee020b2cd7f590ab5baebac"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2-giant-spider/portrait.png",
+      "bytes": 1761320,
+      "sha256": "3febb837d5c33ce8454e39f709331a40e0219459e5d85a2532dc1732cbcdedbf"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2-ivy/portrait.png",
+      "bytes": 1563824,
+      "sha256": "c8165f2243753db71914ea84ea8511915e944c7185ec29ad068aa34325521f68"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2-large-roach/portrait.png",
+      "bytes": 1331190,
+      "sha256": "6384ee32e6ed92e459ec2e788b1b2485eaa1d378bf33458b589490efd0655e0e"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2-larvae/portrait.png",
+      "bytes": 895225,
+      "sha256": "59bc783a3bb28d3f8091473cb2e0e2d84467a3555a7276cf94a503c40fa84cb5"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2-licker/portrait.png",
+      "bytes": 1678385,
+      "sha256": "88c1a000a25b098fe7a8f71a0852f2f0abd53e30902963fe47b12e7d84b621fb"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2-marvin-branagh-zombie/portrait.png",
+      "bytes": 1438221,
+      "sha256": "60ab77e1f8f72f7896544a2f58cc27c00d18a92532fcf5603ff2683da673269b"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2-poison-ivy/portrait.png",
+      "bytes": 1889094,
+      "sha256": "ec16ce5d4dce806bc46969a490fcd081fc2582791b1d6befa6607202d1d2087c"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2-tyrant/portrait.png",
+      "bytes": 1895569,
+      "sha256": "939257cdf86b7334300f2c641abf0adbc01a7ef945120ebb449ac8bbeb5d81fe"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2-tyrant-mutation/portrait.png",
+      "bytes": 2091625,
+      "sha256": "91135ef207f2b09631233bbdcc66f52afdc7e6ea1916bfd455d3f0e0834a4610"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2-zombie/portrait.png",
+      "bytes": 1570643,
+      "sha256": "c6c4beb9ab76c1ca5e682a09cdaed524ccc6d5323b9f4a79467ebd1dc4dbaa01"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2-zombie-dog/portrait.png",
+      "bytes": 1233805,
+      "sha256": "c320ef0c1877a191dba308868eaf5fe4c554e6453c2a82b8b6dc68de0778ef6f"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2r-g-adult/portrait.png",
+      "bytes": 2591446,
+      "sha256": "4c1bef19e90281df7ff6f1ae18d26fc4335c7adbfb3bc9661754fe1a400d8ecb"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2r-g-fifth-form/portrait.png",
+      "bytes": 3076255,
+      "sha256": "022a766241d253fc958f7403ef7bcf05d310be2d878c5b96d464225f8c341fe0"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2r-g-fourth-form/portrait.png",
+      "bytes": 2813063,
+      "sha256": "fabbbb67dafca700546f306cefc89b851b24e3f28bddfb36d9131a1abdb970d0"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2r-g-second-form/portrait.png",
+      "bytes": 2426492,
+      "sha256": "0c5d9eea4b8f7d908080d09889069235a486b30b6244965bd4ebfc8d1efdb6b8"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2r-g-third-form/portrait.png",
+      "bytes": 2815330,
+      "sha256": "1e843a7df23b39c796636ed620fe7a0f5f5c024e6c5b07a4d664c41d503d216c"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2r-g-young/portrait.png",
+      "bytes": 996583,
+      "sha256": "99842273e08040f765af3bffa7f1cdc5dac76978dc5728b13b312196a3d872f2"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2r-ivy/portrait.png",
+      "bytes": 2451419,
+      "sha256": "f9577d99e14ce3e507b39b4c05c092ddb949fc9e4cc7d0747b6b1d5523cd489e"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2r-licker/portrait.png",
+      "bytes": 2486631,
+      "sha256": "8f94c5b73afdffc211c182570baf8f9da4879e9bd84f688cca450c74cd69c424"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2r-super-tyrant/portrait.png",
+      "bytes": 2342574,
+      "sha256": "a7ae7f77a9b6959310ff512ccb632c0899620ae4deaf804f65f2de4046a4165a"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2r-tyrant/portrait.png",
+      "bytes": 2102606,
+      "sha256": "dcb2c056c8e1b55eedcd07297d6ff811d4a3345f497273ec73970afa6d8381bb"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2r-zombie-dog/portrait.png",
+      "bytes": 1679055,
+      "sha256": "d3dd3b7ada64351d22c9c7c85f9156695fb94a50bac90461b9cb72773bd734bd"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re3-brain-sucker/portrait.png",
+      "bytes": 1943547,
+      "sha256": "a1f50e6956ae4e416f28d352f39d93894fde6930f647ef8945320773e7bffe94"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re3-crow/portrait.png",
+      "bytes": 1215751,
+      "sha256": "29dbd578cd698287032bb1e6f5831193519f6e3cf523a69767909b33b1498de3"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re3-drain-deimos/portrait.png",
+      "bytes": 2122106,
+      "sha256": "9149d59e652e775101b289bb7dccfeaf81171d8eb191b2c4c3798781a07b52d2"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re3-giant-spider/portrait.png",
+      "bytes": 1640346,
+      "sha256": "2f0221f7cc9b5564e5c52e6e782cbaf4f3377cb5c4267eb6a8e59795e5efea45"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re3-grave-digger/portrait.png",
+      "bytes": 2209177,
+      "sha256": "f7cb82fc7eb4950c4cbd018e6eb79d759eb4280a59177aae32a8dcd49a37b351"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re3-hunter-beta/portrait.png",
+      "bytes": 2701118,
+      "sha256": "13834264c0ee92ddae6a5ab52d02c3b023e54150fa8257b1787cccebaa56c9c2"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re3-hunter-gamma/portrait.png",
+      "bytes": 2397303,
+      "sha256": "206691e55d0034de379f0b081635f718bf229de43f0368a4f11e4c0ab12a2391"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re3-nemesis/portrait.png",
+      "bytes": 2382878,
+      "sha256": "6ca33e8944b0c30948ae1fbe3c521a129eb2972b120d571e378ecd6684af3b1f"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re3-nemesis-second-form/portrait.png",
+      "bytes": 2689006,
+      "sha256": "8dee279526611ae15dac04f8a82cb14bfcbebd9614aca7a3af49ec9e2a8faeaa"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re3-sliding-worm/portrait.png",
+      "bytes": 1777143,
+      "sha256": "8ac4832f97a1bc06d4198befdd4e665b51376dae59c15f1c3af8bfdcef01f9cb"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re3-small-spider/portrait.png",
+      "bytes": 1388571,
+      "sha256": "0a4e30495a258073e48646e2f6d1d7404d6d06048a765bfc47c9f781e64793fe"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re3-zombie-dog/portrait.png",
+      "bytes": 1656541,
+      "sha256": "0f416091bc896a38e0698b66a18a33535d8f572a98cddc460f8704d72753b954"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re3r-drain-deimos/portrait.png",
+      "bytes": 2688469,
+      "sha256": "2024b82633dbe12b625d9944b963f6fcdad967bc4d954489c92cb2150ef9d4d4"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re3r-hunter-beta/portrait.png",
+      "bytes": 2666939,
+      "sha256": "6119ff91e45da9886e35fc8c328a615b875fcab356d8784a957a9d5061e5806e"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re3r-hunter-gamma/portrait.png",
+      "bytes": 2421636,
+      "sha256": "ff705267cff4e021ac19b6a44b291c90283f8bcf145c4b34bdaf5a6ef64feb15"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re3r-licker/portrait.png",
+      "bytes": 2568051,
+      "sha256": "1f94e19fcd1a5f90056251900a9450250762952004b9a69ef376d4bef54f106d"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re3r-ne-alpha-parasite/portrait.png",
+      "bytes": 2348103,
+      "sha256": "253265c5fe18ce1f9430c9aee3ba8d9f34698aa1021e09fea056e4cb3dd99053"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re3r-nemesis/portrait.png",
+      "bytes": 2696468,
+      "sha256": "ceb4349884fbde56244413637cf103400b3afb2068a5ad9c6b743988a938792c"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re3r-pale-head/portrait.png",
+      "bytes": 1656815,
+      "sha256": "37adbfa950c80a1e1e796c8dc710dbbf5d27e0bd4721f0187d26f23178bdc03f"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re3r-stage-2-nemesis/portrait.png",
+      "bytes": 2727750,
+      "sha256": "9cacc39fb91b0cad9269f39b11afd61322fe5d126443dc320dc7cf6e4669d0aa"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re3r-stage-3-nemesis/portrait.png",
+      "bytes": 2654991,
+      "sha256": "86e88a9fbd02dd577dcce5036e10848f6ca390bef00dc325e4e7590e031693d9"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re3r-zombie-dog/portrait.png",
+      "bytes": 1921334,
+      "sha256": "953ac4cc7ae022381bffeb60d4c385330d812f4f5c9796b1769ec680a094139a"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4-armadura/portrait.png",
+      "bytes": 2037433,
+      "sha256": "394ae9684f014629ffaf5c221f10c8bd81857881c2320bff6887724f6b0e3bce"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4-bella-sisters/portrait.png",
+      "bytes": 1682493,
+      "sha256": "df03acbe8ecd9d0623dd9d6ab494eabd16b42bd46ddd207cfefd4e76fec6d929"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4-bitores-mendez-enemy/portrait.png",
+      "bytes": 2343256,
+      "sha256": "5b90e4d5a6bacdad93240d567d98d8f390d181af76575d85ceb54f3646a86bc8"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4-bitores-mendez-mutated/portrait.png",
+      "bytes": 2062179,
+      "sha256": "7d448121e14d25a8385b38883da37207add8aacf60c4f96d2bd6e6a29c24eec3"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4-castle-ganado/portrait.png",
+      "bytes": 1675465,
+      "sha256": "c0443339f4e62b063fb7d66dbe2b1bae859b627a60058be5ee4011c845ea2e3c"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4-castle-ganado-leader-zealot/portrait.png",
+      "bytes": 1772552,
+      "sha256": "29fa818404291048ad79b4c8dad59cfb3c38c7e7134f5780089364be6c458f3f"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4-colmillos/portrait.png",
+      "bytes": 2094128,
+      "sha256": "180532787623ff570792502c0d2a3cc2055e47bd7374f1880de2155da1153425"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4-dr-salvador/portrait.png",
+      "bytes": 2215435,
+      "sha256": "2bd5803ee7b4f4ab235bed06861ccaf7b19916e69e1e21d1e4a6a1ce107d9287"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4-el-gigante/portrait.png",
+      "bytes": 2890223,
+      "sha256": "da398a252f8d6750762adf27d8801a0d0388d89eb3230c3760e1c7180921ecf9"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4-garrador/portrait.png",
+      "bytes": 1973778,
+      "sha256": "e21ae2df85daf515bc500f25c72d26e483551193e57a1a35ab3f2da50fea9d3b"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4-hammer-ganado/portrait.png",
+      "bytes": 2387778,
+      "sha256": "1655ac423559009e8605834b55e469ab7ea068803a372b653e0d4c39b77c54b1"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4-iron-maiden/portrait.png",
+      "bytes": 1911962,
+      "sha256": "c88e21d8a1cb1328071afc0be1f8b4c86748771ccf92e3f09e0321f837b873ee"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4-jack-krauser-enemy/portrait.png",
+      "bytes": 2271085,
+      "sha256": "8145ac24dd192a07ceabe1034f932f1213f0007efbbd307609c79a1d76ab253b"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4-jj/portrait.png",
+      "bytes": 2041584,
+      "sha256": "049eee76d3df525378fc2282156ab0b2841b0b154576b6726db3ce769977528a"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4-novistador/portrait.png",
+      "bytes": 2359569,
+      "sha256": "e2dff350a833997290e1cacb1d924f13316216b75ba17d95e884e86b9551081b"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4-osmund-saddler-enemy/portrait.png",
+      "bytes": 2223842,
+      "sha256": "bbf94867a2e800d9e3d180119e6caf01d35432409239ea36e2350d2d9773aae0"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4-regenerator/portrait.png",
+      "bytes": 1915015,
+      "sha256": "91bd5de9dd8c93b59915863831bcb13c57c67e24147de2162b3ccecbca406057"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4-soldier-ganado/portrait.png",
+      "bytes": 2014791,
+      "sha256": "4d82172ffbe735cce5e6585ca4c1770dff261c40e3c1c05257468beeef1828cf"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4-u-3/portrait.png",
+      "bytes": 1773754,
+      "sha256": "5346eda6063c308d05bc4e49d199de30ae62e6b47744004a30ce2eb6e9966f2e"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4-verdugo/portrait.png",
+      "bytes": 1958131,
+      "sha256": "c0ebf96c5636f2bdc3822bf32b4d3496d8793008d1ba152af1ef0bdf2aeb1996"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4-village-ganado/portrait.png",
+      "bytes": 2027970,
+      "sha256": "3dddccb3a66475a8426c712c4b3f712473d2e351dbc94024356eda8fcac54b96"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4r-armadura/portrait.png",
+      "bytes": 2172697,
+      "sha256": "d151f7d9849ae37b25bf9c6318ab8f7cac3338e52579d4638fcffb2aa23d5c51"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4r-armadura-strong-threat/portrait.png",
+      "bytes": 2151005,
+      "sha256": "1960a4e1213fe5280c713280f1e06e276eaef62bc4eaeb2e5f00218d08c5296a"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4r-bitores-mendez/portrait.png",
+      "bytes": 2250348,
+      "sha256": "0786e0fcdd7b45c012b0aa36890b5907ffc0639bfcf58b2945b20a7adf014100"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4r-chainsaw-sisters/portrait.png",
+      "bytes": 2195513,
+      "sha256": "57bf0d11e0cc9a730a8a9f6a0d495dad89632fc90767e8575a41d0b54212356e"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4r-colmillos/portrait.png",
+      "bytes": 2598451,
+      "sha256": "8851a8e6788122d877ea5777bc9ac279f2f52c2eb8156f454081280ee7d9ece8"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4r-colmillos-strong-threat/portrait.png",
+      "bytes": 2774376,
+      "sha256": "2c57c8d4c1a27e5353881b5916e4afcfc6f295c5e8fb737f828bd87e2dd0edb0"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4r-del-lago/portrait.png",
+      "bytes": 2918058,
+      "sha256": "aaf3c99021b3788f5c6178e0fa7e49dfe468fb9a98dd47e1ead42fe07a53a759"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4r-el-gigante/portrait.png",
+      "bytes": 3046883,
+      "sha256": "f862420869b9c04f4f5b853098c7c7f39433907b92c10587930dbeba36053964"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4r-garrador/portrait.png",
+      "bytes": 2433301,
+      "sha256": "442bfae8f19f7b963c0e6a5377f65ca06cd9d4b1767771d6975a6e38fa834113"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4r-iron-maiden/portrait.png",
+      "bytes": 2779971,
+      "sha256": "fd5cd7365fe701bdee541cecd9598af7cea009b42b152ba268c58c58ecd7d008"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4r-jack-krauser/portrait.png",
+      "bytes": 2051671,
+      "sha256": "ccab4e2db439bb43f36d91c48433be0e948568e00b96a3d255dc3805a571f4d1"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4r-jack-krauser-mutated/portrait.png",
+      "bytes": 2716332,
+      "sha256": "20c4604dbf34237360cebad584e6f24863a0e611fd2d3a6cfaf8854a0b64fd31"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4r-novistador/portrait.png",
+      "bytes": 2409703,
+      "sha256": "0472a2802cebbfe2ae9d7db59362774bd1dd7e864ab7f0905c68610195ee03d6"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4r-osmund-saddler-mutated/portrait.png",
+      "bytes": 3110228,
+      "sha256": "bc9a8bf860aca80b52b606411eb451acb1e5a185bbf6e3fd66441dc94e11fd43"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4r-ramon-salazar/portrait.png",
+      "bytes": 1932257,
+      "sha256": "b2675508a2324034c6ca26cd04fd0160c92f6cebd3ff2f58238fab1276a3f200"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4r-ramon-salazar-mutated/portrait.png",
+      "bytes": 2766697,
+      "sha256": "df5b72ea2464f253b971135e3e454648f3ba069b16b217c2a64b4c2857122923"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4r-regenerador/portrait.png",
+      "bytes": 1859663,
+      "sha256": "7d2ee660784bae0c28c016b6fb7b9c9831822fa221ac447ca67333bef1d79a96"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4r-regenerador-strong-threat/portrait.png",
+      "bytes": 2808756,
+      "sha256": "13493aae341a558b9a403f0e21d332a0dea132924d424040f10e2163d689e92d"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4r-soldier/portrait.png",
+      "bytes": 2305203,
+      "sha256": "d1463c5b579a4461c42afce04059c2d67ee3b3d6efd2ab88fab65d80ae2b13f5"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4r-verdugo/portrait.png",
+      "bytes": 2614550,
+      "sha256": "7200ae8869f08e861a1fe19c03c1f48123b0e0dd8a7ab29f221e98d20382ee7e"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4r-villager/portrait.png",
+      "bytes": 2245769,
+      "sha256": "2f9b74a9cee533820d8981c2fb9e8a1870d8a6ee59dfe6bb1e78ded53b9276d7"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4r-zealot/portrait.png",
+      "bytes": 2276343,
+      "sha256": "9d555bc16cdcbc095677e43a7324f6f02d13cf87f13ac2f3a9cd2e223da389f7"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re5-adjule/portrait.png",
+      "bytes": 2230145,
+      "sha256": "e638a8394f70e063678b1a269757e4e1b4f5ebbd6152c12a2d297634fc333346"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re5-albert-wesker-enemy/portrait.png",
+      "bytes": 2233272,
+      "sha256": "f28b00556760b9f68059daa760b5c594674c295171ffe4230456bffdecf2a9c6"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re5-base-majini/portrait.png",
+      "bytes": 1693783,
+      "sha256": "5a22884dd334822ba7aea560c25e1b193267a573ed08a287ca766cca5e70cac8"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re5-big-man-majini/portrait.png",
+      "bytes": 2391880,
+      "sha256": "3cf935934892c28c474af8c6df0a6e8e339f705b35324c208778a893ed4829db"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re5-bui-kichwa/portrait.png",
+      "bytes": 1255677,
+      "sha256": "d8ac1fa9113176f9d56a96d6aab0d2c4d90d44fa5f0684c9c9824af548c11ba3"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re5-cephalo/portrait.png",
+      "bytes": 1831414,
+      "sha256": "518e3f4c74ad38a1ab0c54eb92a550b1b896f834d66839a95697be7f5d9ef2ea"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re5-chainsaw-majini/portrait.png",
+      "bytes": 2163604,
+      "sha256": "3808dc298b46f0edbcf582c5caad759a5374cc40401f74e78b47c99a3b8878a2"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re5-duvalia/portrait.png",
+      "bytes": 3015211,
+      "sha256": "9eff1378661bb175b55984e26a4798ad1d3ee7805638db36ae3bc3c1e6fd01ca"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re5-executioner/portrait.png",
+      "bytes": 2467547,
+      "sha256": "59104037d81382c930289437efc9195d4c2f6a3f83c6def08f52a9db69ae40ae"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re5-gatling-gun-majini/portrait.png",
+      "bytes": 2240390,
+      "sha256": "2cea4203bccd7c32c0405f1501a2892eeea7934132a0c3613af5c237d3d3ad83"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re5-giant-majini/portrait.png",
+      "bytes": 2520040,
+      "sha256": "e9930034548d1fd8e25f756d533e247ae75b528bc4e2f95952bcec71d27b7e8a"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re5-irving/portrait.png",
+      "bytes": 2892173,
+      "sha256": "0d96dae479e231a5e60e8fecd2016aa2fc5a3fab3fe5137deca73b80a7b06adf"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re5-jill-valentine-enemy/portrait.png",
+      "bytes": 1714848,
+      "sha256": "44c4b83ed12cef9d3b3959472f02b016ae9c28dbf2e163360b17f5430e31dde2"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re5-kipepeo/portrait.png",
+      "bytes": 1908695,
+      "sha256": "54903c67288a6806e46764370773cfd947a6f01070abbeaf1c65af12256dcda9"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re5-licker-beta/portrait.png",
+      "bytes": 2198267,
+      "sha256": "7d152904f1b60706f1b25a276d13f1a7047e59d81d02760ce8c5a4c6191a9d13"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re5-ndesu/portrait.png",
+      "bytes": 2686166,
+      "sha256": "41197fb593978d92a3863dbc75ca33ff2c124ab6ad7ef62dfd8ef81ef592f0d5"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re5-popokarimu/portrait.png",
+      "bytes": 2751293,
+      "sha256": "8b017e1112a6350eea5e9ca655e7d8b0685a39c28712cf9bfe17e54c2af153aa"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re5-reaper/portrait.png",
+      "bytes": 2565017,
+      "sha256": "81a0c6ebadde4b621eb2d8151f2cc45b6eb5330491349a5e21b4d15a5f48e7ba"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re5-u-8/portrait.png",
+      "bytes": 1928229,
+      "sha256": "cf68300049f8259214e4bcb3c9977a4d9dff020aba992b614e009d3acccf0f7a"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re5-uroboros-aheri/portrait.png",
+      "bytes": 2555337,
+      "sha256": "4eb4415528e6382fd4927e0a5feb183dba3f3f79faaeab2e749510e9440784ac"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re5-uroboros-albert-wesker/portrait.png",
+      "bytes": 2301814,
+      "sha256": "62928f89ab89611c3f76005b589b1b2cb79a045046f9cac2b9626b85453a7fe9"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re5-uroboros-mkono/portrait.png",
+      "bytes": 2312218,
+      "sha256": "d172e10a08395a8437da3984d4180ffabf77764ee2d014b4babbff024ae99f88"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re5-wetlands-majini/portrait.png",
+      "bytes": 2326921,
+      "sha256": "ef9de47c148de371c0212900ca37180262bd413c6f49b6cf52117ce8aa0fc348"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re6-bloodshot/portrait.png",
+      "bytes": 2336099,
+      "sha256": "c26d5ebb18b16f7a5ab5e7b6fc5aeaa4b3e0c3e476889bc022e1afaa37864224"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re6-iluzija/portrait.png",
+      "bytes": 2638597,
+      "sha256": "623dcdc903061aef0c5466de3a6b17a7485a3ee9a603077e9fabaa83e6fee692"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re6-lepotitsa/portrait.png",
+      "bytes": 2139336,
+      "sha256": "e6a161955ac58feec8d676ebe88ac86be75b94ccf8d9b36b93e5fcbb10cd89a2"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re6-meset/portrait.png",
+      "bytes": 1425743,
+      "sha256": "684859febdecff9909e1c4db7946af6954e7633c19c0d9e47f7e8a9d92e59d00"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re6-napad/portrait.png",
+      "bytes": 2617271,
+      "sha256": "7e7730847cb10206de217a4379fa398ab31b56e753871abf6f786a39942a9297"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re6-ogroman/portrait.png",
+      "bytes": 2394832,
+      "sha256": "adb1d4c7aaccb22305f8a49625af30dc3a88da9fb641b590466c3a9b9e171950"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re6-rasklapanje/portrait.png",
+      "bytes": 1786850,
+      "sha256": "f07b5fb900d5632e2d1c8b45f25c9a8cea295e2e3f85e0caa92315bceff63ea4"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re6-shrieker/portrait.png",
+      "bytes": 2196118,
+      "sha256": "fc42594f9734c6cad064aa6d663d1340d981f7e39ef1a68b82a147ca2e6acf81"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re6-strelat/portrait.png",
+      "bytes": 2263271,
+      "sha256": "14c6087f1b0c41adfd57056b6fbea7f9f20d26d4dfa4a6df0d2eefde9fcd8f3d"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re6-ubistvo/portrait.png",
+      "bytes": 2771057,
+      "sha256": "430b64a7c0d2c0afd9e915dd2d9247ccac29a62d9250a03399cb8ab5db3cf685"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re6-ustanak/portrait.png",
+      "bytes": 2498899,
+      "sha256": "4a7b84ecdd34a41ebe6295114e453333333c34bb98c5b293347ea43b31df039b"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re6-whopper/portrait.png",
+      "bytes": 2263416,
+      "sha256": "6bd180533e7d92a2ed428e2c7ee6fb2690f894d780a52e4d8af124e7c57771ad"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re6-zombie-dog/portrait.png",
+      "bytes": 2399355,
+      "sha256": "5a44950f76e68ecf07cea5318dfbe389ed4ddb73899a38a4d2941c88e7111369"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re7-eveline/portrait.png",
+      "bytes": 2338673,
+      "sha256": "176301281b05416cc5e467dae66392e0e7b7f519d0d5fe775f3b0ff899cf8983"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re7-eveline-final/portrait.png",
+      "bytes": 2665050,
+      "sha256": "0aa8337f382898efb5141cbdcbffbda8c53f9fb893c4a5d2b591a0c98eb680e9"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re7-flying-bug/portrait.png",
+      "bytes": 1229743,
+      "sha256": "dfd0d209e884b4e5072dd88d1f2dfbf01019578d8c26b4f1cdaa94149b7ad8d0"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re7-fumer/portrait.png",
+      "bytes": 2704431,
+      "sha256": "acb110f60efde15b6d9951c37ce38546171082df9b65d121f9be1fa3735c2021"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re7-jack-baker/portrait.png",
+      "bytes": 2240093,
+      "sha256": "b42d2b1b4d189c433615f5a5090c641362ea1ec29e438c84614bb39c7e4a972f"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re7-jack-baker-mutated/portrait.png",
+      "bytes": 2829862,
+      "sha256": "90a70dab134fb6be28a1e3d1857d5d56f61085ef7af2e05952dc750e7e409920"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re7-jack-baker-swamp-man/portrait.png",
+      "bytes": 2706427,
+      "sha256": "80cada5790cde4c0ebec3cf3a5d8c867c7ef34e82cbbfe5c1557cfdd7b64b6e2"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re7-little-crawler/portrait.png",
+      "bytes": 2060730,
+      "sha256": "4aabc6f4719aebc96a460b02fb9de502888eb15d65cebe65da6cd5bdb69f04a0"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re7-lucas-baker/portrait.png",
+      "bytes": 2431773,
+      "sha256": "001fdae0629d0b24ed73a59af5b68ed14c9cdda4dd75e3f56bdd39ee17a7c18d"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re7-lucas-baker-mutated/portrait.png",
+      "bytes": 3237370,
+      "sha256": "3479606978edc4e90b6fdde8e9a35c0790a558331bb3a90a08a9cbc99969f515"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re7-mama-mold/portrait.png",
+      "bytes": 2909294,
+      "sha256": "d731969907545b2e0046501a37c5e0a04992b99d1c750cc61668d33ae00101d5"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re7-marguerite-baker/portrait.png",
+      "bytes": 2542046,
+      "sha256": "73a5b9ea243a6d112805ea93d08d7696843c917cc2457edf25cbb53b350db918"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re7-mia-winters-infected/portrait.png",
+      "bytes": 2596450,
+      "sha256": "e98c9e1d96688adfba09ab23018bda900c656a0852b3a63ee750db531c9b3063"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re7-molded/portrait.png",
+      "bytes": 1803379,
+      "sha256": "dc48ff6badbe6e7706226b4c62608b1a21661a5149ca0215b6225cdae05dc872"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re7-molded-crawler/portrait.png",
+      "bytes": 1801898,
+      "sha256": "76d6c96b7405af947aa946b3ec0239165cc150bbe9aa98b5bf0b3083ecadf246"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re7-molded-fat/portrait.png",
+      "bytes": 2715725,
+      "sha256": "b4d975e9b3ca9b001b9f8632aa0406160f84579e05f0d8f60068585aa83c45be"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/recv-albinoid-adult/portrait.png",
+      "bytes": 1549477,
+      "sha256": "5c230b617a35c63b56d21fba74e2176154282940a1277f84da70f3aea7641b49"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/recv-albinoid-infant/portrait.png",
+      "bytes": 1021377,
+      "sha256": "75665aa02f287024f5eb8a7f10addd9a23c5e10684110f2f91f1320f1902a288"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/recv-anatomist-zombie/portrait.png",
+      "bytes": 1343004,
+      "sha256": "6c0ed08dd82b0c9e59fa7e731c8246f6bc4ab66514f79ba6e29c188cbc2d07e4"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/recv-bandersnatch/portrait.png",
+      "bytes": 2430955,
+      "sha256": "807f470081d2c6430c10c83ed83ee21ed72a9ac4119c0cc9a46459104495adca"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/recv-bat/portrait.png",
+      "bytes": 974824,
+      "sha256": "ecc1cb372ef36bd60412664ddcf2ddb2ccbcb075f4a80032f6504eb70824500b"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/recv-black-widow/portrait.png",
+      "bytes": 1421492,
+      "sha256": "328b1f43c63ee68b16377294209ae3469801ca64c1966e04a6b96183a570eb75"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/recv-giant-black-widow/portrait.png",
+      "bytes": 2024231,
+      "sha256": "089ffc1aa9bf4114caecf680446affa700da8aa37d760e86ccaae4e199b978c8"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/recv-gulp-worm/portrait.png",
+      "bytes": 1693118,
+      "sha256": "b345798880b1fd8de5f91128f46f357b8c485250df582e748df7bd87852108fc"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/recv-hunter/portrait.png",
+      "bytes": 2616178,
+      "sha256": "e3e9cb98bb9bab1543a02beff9762cd216556633d71dcb44fd97be094830563e"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/recv-moth/portrait.png",
+      "bytes": 1519962,
+      "sha256": "b315be27387c56972a812f08b5d34551670314f0bd94b73cb2d661f54a759ade"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/recv-nosferatu/portrait.png",
+      "bytes": 1997882,
+      "sha256": "daa93e5864fa5aa3056694bd3409132e70655f48f304480a7c9ec51e9db59349"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/recv-sweeper/portrait.png",
+      "bytes": 2780767,
+      "sha256": "6de29c057068fa652edda03672024cbe726e7d679ce9b4e0892bdbeebba222aa"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/recv-zombie/portrait.png",
+      "bytes": 2057378,
+      "sha256": "d4986633497d458eb7b71a316c145dfa0971418ddbf78347bacc17aed7ba33fb"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/recv-zombie-dog/portrait.png",
+      "bytes": 1494545,
+      "sha256": "278456a3f6a8175df7dd078114eee247d8c94ed758b4161fc1dbdcfe155fe75d"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak-baby-moth/portrait.png",
+      "bytes": 694379,
+      "sha256": "1182e9363991b8f36d33adccd47bcf63f54b23030c11b7e7bdd3f8aa14ce238f"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak-crow/portrait.png",
+      "bytes": 1318072,
+      "sha256": "d97e03d1f9ea2b8cd07c0b485216d96facafa1d7650b773359e8789d58f8dbe6"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak-g-embryo/portrait.png",
+      "bytes": 1046950,
+      "sha256": "ea4cd4813da0106a796c90d03192cc0a8d76137252e3e0e06cca96f4a47ebcf1"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak-g-type/portrait.png",
+      "bytes": 2385208,
+      "sha256": "da3d605ce71ea2d2c787ede492e09da6c3dd0743875014f0bbd41a036fcef58f"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak-giant-moth/portrait.png",
+      "bytes": 2235057,
+      "sha256": "04e1285d30125a63a8bd1c04841ba09adb349939591632af2ae1a77b1c20906d"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak-giant-spider/portrait.png",
+      "bytes": 2277226,
+      "sha256": "91c6618ef4dc7cff3983decc29961a8fc79cc968499d2d947bbb52fb48b0228b"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak-giant-wasp/portrait.png",
+      "bytes": 998683,
+      "sha256": "9da774762d61a7d8629a93ab1015a3f1f2e397e572d8fbf7e22ee74f369d1dd5"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak-hunter/portrait.png",
+      "bytes": 2574735,
+      "sha256": "824421eccfaaa01a77b292be2f5a3345352e8bffae2904e86d6e6f27607b5d93"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak-hunter-gamma/portrait.png",
+      "bytes": 2285863,
+      "sha256": "645d98d8c7c9753c94335fb126a1398221e6a9fe5d2230aeb2b2d1e311c4b821"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak-leech-man/portrait.png",
+      "bytes": 2316205,
+      "sha256": "136a16fcabb0f2dbfd7dc26ee3f4d924c6cd894e4f28237f20ee946de4ae2be6"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak-licker/portrait.png",
+      "bytes": 1397913,
+      "sha256": "5957f31b3d2865a1bd2403af0327a5ccbe01d638f4ffeb4081ffd9dbe23803a6"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak-queen-leech/portrait.png",
+      "bytes": 1689340,
+      "sha256": "ac62eaa981fd8361031aa72e4f0e37911bf400c811ba4351c7c998d56bbb0c7e"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak-scissor-worm/portrait.png",
+      "bytes": 1558413,
+      "sha256": "a39c8549ad965f7784fc4cd5bc1750c06788dd415969ddc956435506566d10c6"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak-small-leech/portrait.png",
+      "bytes": 874396,
+      "sha256": "648df1a4482d1a4b6ea378ab3e66214bafeddb31b2ab80afb9c0a644e634ccde"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak-thanatos-r/portrait.png",
+      "bytes": 2228180,
+      "sha256": "a6efc5f68e985f5b4c0affe89b5f86852d33c27cfaa4328b7b93f059c261b602"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak-zombie-dog/portrait.png",
+      "bytes": 1835454,
+      "sha256": "40a1cac412b1053c5a67574c7a3d65da0038716298f12c15726cc598335828e2"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak2-axe-man/portrait.png",
+      "bytes": 1772889,
+      "sha256": "805bc96b6b23f3f66908b212cad2e24f80b3eff71e61a48430f7e85375f17dea"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak2-crow/portrait.png",
+      "bytes": 1159843,
+      "sha256": "3ac49d9bbe0e96e7e7cd185f1cd86b77239dce67108a74bb516bb42d8c8bb0ec"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak2-giant-spider/portrait.png",
+      "bytes": 2433085,
+      "sha256": "de4d1c7b76fa6a1009f6f6f8edd2ea3b655b71a7d64caf9f9fec5ae8b8128d84"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak2-giga-bite/portrait.png",
+      "bytes": 1917834,
+      "sha256": "515726ddeab2053c328859f8b9a8e7ba3b1384ee50e767e381230e32d571dad8"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak2-green-zombie/portrait.png",
+      "bytes": 1811000,
+      "sha256": "9711c34ee3336eee844889807746411ad06a2550563f1ca1d2e3794f12b28799"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak2-horn-bill/portrait.png",
+      "bytes": 1359277,
+      "sha256": "09d07c3eb8476d05fe7b9fa5fad7b5b52e5013246332538595e6470c4031b15d"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak2-hunter-mu/portrait.png",
+      "bytes": 2541982,
+      "sha256": "64ff1d239828205835938b593c2aaa1f33d3b0d13fc7957aa29462e375e3bd69"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak2-licker/portrait.png",
+      "bytes": 1237540,
+      "sha256": "ecdf196240e7433629a898cfdaac58ecccdc6fcf84c7e9b29b9ae15981980826"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak2-nyx/portrait.png",
+      "bytes": 2124638,
+      "sha256": "55822ba1df67cac35e2a9268b7bd237b54451f95b64ed5690e6b53a686aa3d29"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak2-scissor-tail/portrait.png",
+      "bytes": 1583312,
+      "sha256": "745d8223c8c3db698fd8f377d66e5bb08dd11314075962482bfdde84a7d51916"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak2-stalker/portrait.png",
+      "bytes": 2397290,
+      "sha256": "ec4f06b636d231202f5db2f8c789119a8743f627cf54bf84b4fbfbc1c3edbc3c"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak2-titan/portrait.png",
+      "bytes": 2278474,
+      "sha256": "fa191cc2f50e26160b06a536368444f15480cfa8a398dc04f4c2cc1669129e3d"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak2-tyrant/portrait.png",
+      "bytes": 1529074,
+      "sha256": "bb3b56d03b02446805e5858c1b1a977c6f867cf8670fb9d1a630fbda49c5ddd9"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak2-tyrant-r/portrait.png",
+      "bytes": 2626539,
+      "sha256": "00a5b7fe15a14c3b6415ae9ceba33907ec2a485bafe6a983eb07a811336a9f2c"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak2-wasp/portrait.png",
+      "bytes": 1091270,
+      "sha256": "0691473c8f8973aa1ef288b6d1a675b845a0e9ba07f86766eac479c168762e7a"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak2-zombie-dog/portrait.png",
+      "bytes": 1946504,
+      "sha256": "679c346f69280a62caf4d2a20dc355738388eb687799c53188c0ae04187c2a34"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak2-zombie-hyena/portrait.png",
+      "bytes": 1837653,
+      "sha256": "17f5ad4357aced884b28ccbeb3be7e7080a0797aae826bffd2bbadca7fc46d93"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak2-zombie-lioness/portrait.png",
+      "bytes": 1989815,
+      "sha256": "a3d75f6fd923bab2ccd47592b0af8e6b748b5aad06122f56330d15c7f5acb05e"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerequiem-ark-zombie/portrait.png",
+      "bytes": 2323188,
+      "sha256": "5de6258d881cf635d323e843f46362d4db947e32ca1592aa62c6814f20fb5650"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerequiem-chunk/portrait.png",
+      "bytes": 2821504,
+      "sha256": "41b7a4ddf9221ff04a033496ae2fdc114634b3a8ae71df96d4e528f2f30cf737"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerequiem-elite-guard/portrait.png",
+      "bytes": 1879325,
+      "sha256": "3bf032c5115da65d7624491204268c75eedcb5440100efcd16a8c1d4235d3789"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerequiem-garmr/portrait.png",
+      "bytes": 2617515,
+      "sha256": "3a1105576bf99d8a94091783d6f96a3c61d91235fd342a8ae2afb4b80ff7b1f6"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerequiem-licker-beta2/portrait.png",
+      "bytes": 2262489,
+      "sha256": "4a1076733337da2343fa8790ebcfc2ee851f3b0509729ee131464c6b278f6010"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerequiem-raccoon-city-bsaa-zombie/portrait.png",
+      "bytes": 2664560,
+      "sha256": "51b43b13421d9adfd3c39779005ac7014d3860cd791ee9f6d1c7b2bb2e9cae89"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerequiem-raccoon-city-chainsaw-zombie/portrait.png",
+      "bytes": 2147551,
+      "sha256": "bc073e172efb48c1f7deaffd58d35d40c9d78604512cea4213f051be66bbd88b"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerequiem-raccoon-city-zombie/portrait.png",
+      "bytes": 2540356,
+      "sha256": "67670219b0b114776297b0b26417e1fe0bb6ee620e702c9e2d18d012a488dbd9"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerequiem-rpd-zombie/portrait.png",
+      "bytes": 2196114,
+      "sha256": "1304d69ab9b1a1c671f82a2d8a722bddb24f151ca395121bca9d1420270afc64"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerequiem-small-spider/portrait.png",
+      "bytes": 1591089,
+      "sha256": "1cd12068be670f71b7a7b8c04310c98aa0cc6b15a1fab3b6ec6c484d128131aa"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerequiem-super-tyrant-t-501/portrait.png",
+      "bytes": 2844432,
+      "sha256": "f8045e68c99f7d55b44fe2e4d599647f77b3575eec9f2af079dcb8128760e1e1"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerequiem-the-commander/portrait.png",
+      "bytes": 2162220,
+      "sha256": "7d3ae66b17797bab89a99cde2b8677a9b2370417c3bd6ea39bfa4f1d39b4b5f9"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerequiem-tyrant-t-501/portrait.png",
+      "bytes": 2173671,
+      "sha256": "2738775757f126b86957c48291709d8a27b3f704e78d00f618466905cf14892c"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerequiem-zombie-cleaner/portrait.png",
+      "bytes": 1764470,
+      "sha256": "8739a66fa4c200784a60edc7aad3f861060ca1f87d97ad106a251cca931d0f49"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerequiem-zombie-singer/portrait.png",
+      "bytes": 1975031,
+      "sha256": "33e813046875fd879bd4191eceb92f1d32312d7aa625a81b4847cb4bbe54156a"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerev-black-fenrir/portrait.png",
+      "bytes": 2320266,
+      "sha256": "099f11f7a20d3d44d59f7cd59fe05bc10cde5e2c7509cf20f40db47852ef479a"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerev-draghignazzo/portrait.png",
+      "bytes": 2592895,
+      "sha256": "b36c3ce029deb125304f19f71770cc877ef08c104abd8e089033199278510f14"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerev-farfarello/portrait.png",
+      "bytes": 2639448,
+      "sha256": "48e8a4d63fa353e21ab2bdb3fdb07cfbda589142643bd195349f080c835750f7"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerev-fenrir/portrait.png",
+      "bytes": 2172066,
+      "sha256": "223047faab3dda038c0e65cfc5b220fba00d9335b3229ed2e438c96dbe051b5a"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerev-ghiozzo/portrait.png",
+      "bytes": 1816884,
+      "sha256": "99f2e52b99c2cef439d8c59cf103bb5a393cb4c7ed2d164b2882d44545a99cf5"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerev-globster/portrait.png",
+      "bytes": 2023386,
+      "sha256": "c5d06f2f38ad4abffc48fb1675ca2e4664c1cb24841d12463a7c59c30eadfc3c"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerev-hunter/portrait.png",
+      "bytes": 2565917,
+      "sha256": "b624bc1481839658d8e8b16c0c1ea78ca02064aed7ffec33703f7d786766c12e"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerev-norman-mutant/portrait.png",
+      "bytes": 2493030,
+      "sha256": "d80d81680c4e505944d9ff5e09c2ed2c668d2c077ea3c45ece997fd290dba55c"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerev-ooze/portrait.png",
+      "bytes": 1762430,
+      "sha256": "12321a56a3c4956849069d7e1c531c009f3ed6f1e8929f0cee3b0d71e69a363e"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerev-pincer-ooze/portrait.png",
+      "bytes": 1997589,
+      "sha256": "502d87297b5cb3350a1bcdc996603de410f22ced25363201a04733f7231ed46f"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerev-rachael-ooze/portrait.png",
+      "bytes": 2039200,
+      "sha256": "6362ebc891e7fe6826f488f282967e2362c664f636e2fe943d288eec46f81e44"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerev-scagdead/portrait.png",
+      "bytes": 2716176,
+      "sha256": "335ebe7e8c440f2942de38b99128a6fc753575897bb2712adb19a5a17f7656ce"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerev-scarmiglione/portrait.png",
+      "bytes": 1805758,
+      "sha256": "8591e5e2805a06c66a117695bdcb7a952263f8929241df19d329b6e03e85af83"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerev-sea-creeper/portrait.png",
+      "bytes": 2395665,
+      "sha256": "255d26aa60692d6f3fa00136fc0327e077a2ceb1434a275fea6ad791ecf5d7a0"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerev-tricorne-ooze/portrait.png",
+      "bytes": 1761031,
+      "sha256": "7378c83a0ad8a99b5647c5b9b443ca129ec34c13ed8405b0bffd494025d739c3"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerev-wall-blister/portrait.png",
+      "bytes": 2343760,
+      "sha256": "06ea4fabb20aadcbc1afa0590736e9909253cc1899bb340f2738f1566915170a"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerev2-dhurlga/portrait.png",
+      "bytes": 2618474,
+      "sha256": "5262edbfc6c714053be80cc152f3ebcd940f75b35c05365535eea154a4545bd8"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerev2-giant-whip-spider/portrait.png",
+      "bytes": 1657193,
+      "sha256": "c6e8ba6b0e11718543bb912e02f5596951d91c0a22e2b90625cd83178bcbbd4b"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerev2-glasp/portrait.png",
+      "bytes": 2484343,
+      "sha256": "943d43d60ee057dcea3f97ee19c76b9dee668b12c45454c8272288a4474527a5"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerev2-ironhead/portrait.png",
+      "bytes": 1959270,
+      "sha256": "25b97bfee266285f89fea326f4e4bbc88e6c5c9828076fcc33e6b40863f40ad3"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerev2-monster-alex/portrait.png",
+      "bytes": 2462382,
+      "sha256": "0b5dbebb96f92bdd787ac2943a2167f54aad5ed3bcd763a5b87bb3338d0403ac"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerev2-monster-alex-2nd-fight/portrait.png",
+      "bytes": 2414182,
+      "sha256": "8a90b83da1c23053f64c9462fa73e9dd824608725c3e4ed905983a79fda731d2"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerev2-monster-neil/portrait.png",
+      "bytes": 3010606,
+      "sha256": "a4126ace200a3c67ef719005480b7ba3e1cf2cc09667edbe1093eb607bbdec09"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerev2-mutant-pedro/portrait.png",
+      "bytes": 2422906,
+      "sha256": "6f2e98de036e6ffc2a9fc346df10757f728e15da8f406c37bea2d045c60f5d60"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerev2-orthrus/portrait.png",
+      "bytes": 2209029,
+      "sha256": "497ce087ed207755a0eb05101cb83f89b3f7df2c3c25bf880bb380dc25a0e6a2"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerev2-revenant/portrait.png",
+      "bytes": 2024785,
+      "sha256": "3e7cbbac018e1e9eb0f35aa6ef49bffd15da48177d075ebf1168cce4c3173302"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerev2-rotten/portrait.png",
+      "bytes": 2166417,
+      "sha256": "dc2edaa4ccad1c7f8ad81ec5dbb3e7319e06e89aeb111649a7864df75cbee890"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerev2-slinger/portrait.png",
+      "bytes": 2728495,
+      "sha256": "ecdf532f493435759f52bf3228975cd0479c6644e85a1bef148d78b851c2c18b"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerev2-vulcanblubber/portrait.png",
+      "bytes": 2281704,
+      "sha256": "75cc23cdc490cab3849e5a8e3ef370e71c455323ca8c996d659a607273cf503a"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/revillage-alcina-dimitrescu/portrait.png",
+      "bytes": 1870744,
+      "sha256": "b51244930c6615120fb3539617a75c16f733f4a9bb563695e1069abf8cc5e270"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/revillage-cassandra-dimitrescu/portrait.png",
+      "bytes": 2322895,
+      "sha256": "7535377aba8384c8421972fc28e3b03ff28c8475dd16f96085fce8f8f94a8879"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/revillage-daniela-dimitrescu/portrait.png",
+      "bytes": 2505325,
+      "sha256": "fd283fddc113285306f282eb9a087aff6d7bf8769d471fd6d13fdf4002691fb6"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/revillage-donna-angie/portrait.png",
+      "bytes": 1919212,
+      "sha256": "ded83081fb7b97a33bdd80e57955f4729d721b30f99c4d17bab536cdee45de8c"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/revillage-hauler/portrait.png",
+      "bytes": 2026676,
+      "sha256": "26406c57b1dbc6b188def4a431f7f6be1e2f3c3ae4b0a166e046cdaecf6b7d69"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/revillage-karl-heisenberg/portrait.png",
+      "bytes": 2510513,
+      "sha256": "2253eef1200d177f0ba23def3eeefdffd7f4315f26f7e74976ca2fdc9b9eee9b"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/revillage-lycan-large/portrait.png",
+      "bytes": 2368024,
+      "sha256": "3ec04f1532ce04c0bf1f2cc838f86f416ba209ca13f276bd3ea72d5ac84cf7fd"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/revillage-moroaica/portrait.png",
+      "bytes": 2144258,
+      "sha256": "ac498e99ed83333cc50051250786414a7206130836e6f74a9696b820cd1beb08"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/revillage-mother-miranda/portrait.png",
+      "bytes": 3104423,
+      "sha256": "3d57f4d61d0777905dbf37d7e4f94a879d17649f2647c87e33948b5d28a3d176"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/revillage-mutated-dimitrescu/portrait.png",
+      "bytes": 3199086,
+      "sha256": "2850911264d20dd6578742b3ec0d6c2576bbd560ba9721cdbb928adf8900b083"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/revillage-mutated-heisenberg/portrait.png",
+      "bytes": 3035593,
+      "sha256": "0b9c7d444b09cb0c932c92cc59b6e81c56f5ebf4ea949ac6c59e6212277a6289"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/revillage-mutated-miranda/portrait.png",
+      "bytes": 3404916,
+      "sha256": "9402ee9169350000933cb80740de693a5b8e0d189d5b5812463f9f90c1bc56d3"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/revillage-mutated-moreau/portrait.png",
+      "bytes": 2879951,
+      "sha256": "692d1d1f630cb42fd0fda0095d2174f1fe589033efaca2733dee2246f1885a3d"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/revillage-salvatore-moreau/portrait.png",
+      "bytes": 2913982,
+      "sha256": "b421ffbc208204267f2a4bf99fb4836a1ac285708af74e79353bf9cd2a360b6f"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/revillage-salvatore-moreau-exposed/portrait.png",
+      "bytes": 2569543,
+      "sha256": "588a5d1c8df11f54a603c15cf50e5e291639c90735f92096a625be57d21f40ec"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/revillage-samca/portrait.png",
+      "bytes": 2753676,
+      "sha256": "fc2aa2e5450d6b17b691ca630b378d6abba27c2c9ea6111a35c6eaeaae423e06"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/revillage-soldat-eins/portrait.png",
+      "bytes": 2191830,
+      "sha256": "a89761fe00e58f4f6887fcf0d20ee2632750217ed35c22a553cff3bc59f2c8d6"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/revillage-soldat-jet/portrait.png",
+      "bytes": 2755362,
+      "sha256": "4f81b0b4708d400ebb5f8dcd61008c3ffc8ba52a9b71901bc7d878499376f417"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/revillage-soldat-panzer/portrait.png",
+      "bytes": 2847478,
+      "sha256": "a7ba4b705d44dc937d80810cefec6099ac5ceebc952a6bf15a2bea25ff1c3591"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/revillage-urias/portrait.png",
+      "bytes": 3190919,
+      "sha256": "f0432febb700f0394f73a5514d0ab7beabc6d2100b8c30cd32c32c8828622df9"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/revillage-urias-strajer/portrait.png",
+      "bytes": 2854321,
+      "sha256": "9e132fd9116fdb52d19f1f71ee524c490981e2b9a08218b84b47295ee738eaae"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/revillage-varcolac/portrait.png",
+      "bytes": 3201642,
+      "sha256": "4125b2838938848bbf408abd951f936fd1882e6c4c8cc94e5ca00f52fad6b998"
+    },
+    {
+      "path": "assets/catalog/recv-mutated-steve.png",
+      "bytes": 160851,
+      "sha256": "8fe5627d0142a673cd4be238719d5c2c6f18ba4688a23a309c9b9acfca230740"
+    },
+    {
+      "path": "assets/sprites/bow/manifest.json",
+      "bytes": 11991,
+      "sha256": "f2dae7dcc85e2d913d58236d64845e3db387b071d1accb02a6d51a65851f20e6"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re0-bat/idle-right.png",
+      "bytes": 1130650,
+      "sha256": "b247b9b6c9a69a1ce04a3bcf906580ed2490461f16a809402c8e83d28bea953d"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re0-crow/idle-right.png",
+      "bytes": 954550,
+      "sha256": "a0eeae2d04d4575205d7ccf96cf2fa1bb6851c046d9427f0e7c871e98da0c2f6"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re0-giant-bat/idle-right.png",
+      "bytes": 2243111,
+      "sha256": "9b072cd7fd64b9775ebd23442448b85bf87109bdfec76cfbd1bfc9656a8b00e2"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re0-leech/idle-right.png",
+      "bytes": 923974,
+      "sha256": "cfc908c7ac13038a01db376d90d88878923bc587d498e6e69fcd45fa5db83859"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re0-lurker/idle-right.png",
+      "bytes": 1933096,
+      "sha256": "2a69516ecad98ce4595e8801779d881190b1eb8a25316d66ad8339719079bccb"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re0-proto-tyrant/idle-right.png",
+      "bytes": 1267924,
+      "sha256": "cdd658ecac3c1b99a7a4eddf3635575842ab9e861c70116bf1d1e047c072fd5d"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re0-stinger/idle-right.png",
+      "bytes": 2036026,
+      "sha256": "6d14d97588267cb6e72bfb3d0eea83336777a39ca68bdf77eaa9f0757b3d86ec"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re1-adder/idle-right.png",
+      "bytes": 1106955,
+      "sha256": "1f50f326bc56abe8e38aaa7ffda81b5ccac87e47d7e360a4cab7518a103f155b"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re1-cerberus/idle-right.png",
+      "bytes": 1949415,
+      "sha256": "46ddab26f087a2f7ea7d4bfef839793489f0aca3d85819e546fa7c24a11e9fa4"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re1-chimera/idle-right.png",
+      "bytes": 1557097,
+      "sha256": "bd984cd07e6da4708d075a4a53ed679966470d1d16bcdc2454eb3cdde2799e0f"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re1-crow/idle-right.png",
+      "bytes": 1498643,
+      "sha256": "2b868d394486f7082d6146ece866926c21b6b4a2563014c79c997b664ea55773"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re1-hunter/idle-right.png",
+      "bytes": 1507096,
+      "sha256": "77ce1867e7d7c928780134ee0babda22503395d71280f4a2a7b3dc3560050d72"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re1-tyrant/idle-right.png",
+      "bytes": 2250375,
+      "sha256": "bd2c9671519aba87d14b925be88131eb7b8a02025470cb07c355ec8128ac617a"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re1-wasp/idle-right.png",
+      "bytes": 813269,
+      "sha256": "47efa7f13e8801a9f5bc303297ed252f1b1b8e414772dd3f2077d04783bd868c"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re1-web-spinner/idle-right.png",
+      "bytes": 2176162,
+      "sha256": "ae876e119907e457a4ca15a6a869419360936105c75c9ec30da33a642e1ef913"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re1-yawn/idle-right.png",
+      "bytes": 1181301,
+      "sha256": "6567d3b71c23c4010a191af23be1968cb11557d084409de596533fd3f3b8a532"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re1-zombie/idle-right.png",
+      "bytes": 713926,
+      "sha256": "a0697d0021281ffb6d64cf9d583389fd03ff0b8573ca4932aabc5888f96baf01"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re1r-adder/idle-right.png",
+      "bytes": 1285050,
+      "sha256": "49201b8a8b19389c37879b0f88858e7fc6eaa2b85f4ae1f989655e4b5da43b8d"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re1r-cerberus/idle-right.png",
+      "bytes": 1682469,
+      "sha256": "38ba748a46074e73779826ca9821ff58a56fbbfa8e00db9c47ed248a2b5cc745"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re1r-chimera/idle-right.png",
+      "bytes": 1451065,
+      "sha256": "a3d967ad2dfef1ac884fb009cd09b65ddde5532b70e2cd84c606ada03c64313a"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re1r-crimson-head/idle-right.png",
+      "bytes": 1372801,
+      "sha256": "16da416e1b5d3786a5f12ffac096b42ff0e973e9fd24d680f9de28c6cb531b6e"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re1r-crow/idle-right.png",
+      "bytes": 1006835,
+      "sha256": "d36068cc2a959bf2542a4fb18616d0e0a85db0aa95a3d3afab0e66825ddb65e3"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re1r-wasp/idle-right.png",
+      "bytes": 609339,
+      "sha256": "e3aa874af30b0cdee27894367170c163b37cd331329fd486af7795e2859e1800"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2-g-fourth-form/idle-right.png",
+      "bytes": 1545095,
+      "sha256": "20b433b6e507b48e5cdb580bd0c1767d5eec075a7d77d080e903aa89fa7605e1"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2-g-second-form/idle-right.png",
+      "bytes": 1790415,
+      "sha256": "2e409e63966c2d80ea652425c6ef46b7c4898c803fe73f2258b1d17eecc01d4a"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2-g-type-young/idle-right.png",
+      "bytes": 1512618,
+      "sha256": "06c5db9638a19b63a67db980ce08d05faa4da89e7c737c6a050e19790fe9ce98"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2-ivy/idle-right.png",
+      "bytes": 1350020,
+      "sha256": "19b35e1fc3c6cea7265a9cadb9f16979ca8ca03d5876ee9bfdefc6cf7dd5b194"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2-large-roach/idle-right.png",
+      "bytes": 1435165,
+      "sha256": "6c506f0bc1c6c1e3972bf02237faeadcf7468b55609b96af0c3da93bfb4b9315"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2-larvae/idle-right.png",
+      "bytes": 1219040,
+      "sha256": "597b4de853348a325ccdae7f149b9f68ce80438643cc20291541789e9a3df882"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2-licker/idle-right.png",
+      "bytes": 2000008,
+      "sha256": "6b13df516dde2eba77073f93121b306af0a4f19d582025930886af401bba7ad2"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2-poison-ivy/idle-right.png",
+      "bytes": 1387318,
+      "sha256": "c252ba14e110a87c343c8e33454441be571edab59cd9d1706dd41ca0084bbdee"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2-tyrant-mutation/idle-right.png",
+      "bytes": 1380022,
+      "sha256": "ec588ca8aee9be9ae6bbb726f7ce08877a1161bb9fb20593cf6e7a6e6813872c"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2-tyrant/idle-right.png",
+      "bytes": 1968627,
+      "sha256": "21c7eac539782f4e156b756f5eaeac220516c6302e7909466d3b50d08dd09cf4"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2r-g-fourth-form/idle-right.png",
+      "bytes": 2511805,
+      "sha256": "cae5923ad19bcf4cc5877f695f44244a45a2a4b44d608e7f40299e55142d41c3"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2r-g-young/idle-right.png",
+      "bytes": 978847,
+      "sha256": "fa8905f8e7a895aaa71efccc4dad05133b17563c674ee917bfa884134438bd24"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re3-brain-sucker/idle-right.png",
+      "bytes": 1879910,
+      "sha256": "a5426498c53a16c5df758d6b1cce0c3b3a84d2d80c0e2a9312883da18a5579b4"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re3-drain-deimos/idle-right.png",
+      "bytes": 1490161,
+      "sha256": "f9a1b3ae122afa201627360f4b6d912d881d603cebd2a541fd1f7a1562675098"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re3-hunter-beta/idle-right.png",
+      "bytes": 1941730,
+      "sha256": "4279de07c9dbbddf03256314cf756531dfadba4d7b7a4a5333d2fb5cb62142e5"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re3-hunter-gamma/idle-right.png",
+      "bytes": 1637879,
+      "sha256": "ce49e7700df1f4b214f81635b9cf60da36d46f66c7c71d458d17e59e270eab52"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re3r-hunter-gamma/idle-right.png",
+      "bytes": 2290876,
+      "sha256": "db9849c265150c9613d267a7a2d120d10d8e9b1392a299b4bfff9fcd818da574"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4-el-gigante/idle-right.png",
+      "bytes": 1849276,
+      "sha256": "116b2c268a11e6135abe581767cd1b379bf7a59b67a98771d23b3fd3985cf0ee"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4-garrador/idle-right.png",
+      "bytes": 1155762,
+      "sha256": "df4cdab2085331444ec409ab2c0de0481f9ccd52c74dda7731c8486ffd6a7e9d"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4-iron-maiden/idle-right.png",
+      "bytes": 1488115,
+      "sha256": "e3db741c1aee7442078e9803a79d914b21106c525f309cadcfd51e2a87bfd5af"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4-novistador/idle-right.png",
+      "bytes": 2148639,
+      "sha256": "e226f6aef77c3ddd1b9034495bfd9a383273694e645c3d9e6b036bc618d6ae98"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4-osmund-saddler-enemy/idle-right.png",
+      "bytes": 1535234,
+      "sha256": "d3951cb56e641d7fed3ed3163d55cbb16239227e17361fe38362f56390a7ec0b"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4-regenerator/idle-right.png",
+      "bytes": 2135437,
+      "sha256": "6bcec55a584bb6284466ec61909de16ec485c86fdfb368baf191be8564360b58"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4-verdugo/idle-right.png",
+      "bytes": 1230140,
+      "sha256": "43be4badd72103c915fb19d3e59266deeb5e8a5f71ac158983049044c4ff7b41"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4r-bitores-mendez/idle-right.png",
+      "bytes": 2190080,
+      "sha256": "03810542339bc83f5eea4e3190a972bfa5a02fb367afa1f0e9e4dc562d9ef5c6"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4r-chainsaw-sisters/idle-right.png",
+      "bytes": 1484288,
+      "sha256": "3f46e6a74f85ab1de5552451cbfea49e45075d41a38c42798fef26981095a2cd"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4r-colmillos/idle-right.png",
+      "bytes": 2598029,
+      "sha256": "516579320fb1c21cddf3d40fb9fcca0036cc69a7198ab5da3a65878f26d148df"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4r-el-gigante/idle-right.png",
+      "bytes": 1634980,
+      "sha256": "10cc7e3e245c65e35017c33034cd6b7bc22881dd5ea838542f80f8359e1134ea"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4r-garrador/idle-right.png",
+      "bytes": 1956439,
+      "sha256": "6d7f280967458fbd7b2535034ebc1691add69c42b47935933ea89857feacbf98"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4r-iron-maiden/idle-right.png",
+      "bytes": 1987743,
+      "sha256": "86a789f90059b9aca74a999ec9cd436b9d26baa41ece6cbe053c33ec2709ee5f"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4r-ramon-salazar/idle-right.png",
+      "bytes": 1105747,
+      "sha256": "4130c8b03d09d810bb94a8830308af8ededc8d22666c7438b0309b1f23a59a57"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4r-regenerador/idle-right.png",
+      "bytes": 1328868,
+      "sha256": "e42cc3927250d86afa883f1ae9f9d27786c7008fac241e770353ae0aaafeca5e"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4r-verdugo/idle-right.png",
+      "bytes": 2127739,
+      "sha256": "ae6a5e60cde686db12bd19d19dae5b10679c31f1500a2faf45b7fc58cff3642e"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re5-albert-wesker-enemy/idle-right.png",
+      "bytes": 2218891,
+      "sha256": "78e2a97747c09b0e3da381b502d872c07b4dc2a94e85b8ce5ffbd7f97173f06e"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re5-big-man-majini/idle-right.png",
+      "bytes": 2030689,
+      "sha256": "43d551d394a65f9316505127deef1500f3fe92e4b5f95869b93066b84b758577"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re5-bui-kichwa/idle-right.png",
+      "bytes": 813374,
+      "sha256": "302495dfc1a2a5a8dacb8cd15e8270839e58c83e9bee833744ccec3dd296f92c"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re5-chainsaw-majini/idle-right.png",
+      "bytes": 1995064,
+      "sha256": "7629fcadb0beeb8d53993ab4ac7d62ede459486589778a4306db93d132448ce1"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re5-gatling-gun-majini/idle-right.png",
+      "bytes": 1285544,
+      "sha256": "bff224c1586a2b7f31e5f8cf2f235d57340f52bd0f7dd153261672cb74e18e78"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re5-kipepeo/idle-right.png",
+      "bytes": 1291898,
+      "sha256": "a3915f07b4fedea17ede5457ff9d3fe26d8bfcb3f44e365ad3ff6765b8888f2b"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re5-ndesu/idle-right.png",
+      "bytes": 1921813,
+      "sha256": "7b8a0de39c21fd00fffc4a27f0ab2a6816a16d80aab955338dab7d5df6afe497"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re5-popokarimu/idle-right.png",
+      "bytes": 2007630,
+      "sha256": "9623e5425928e1795e071b2886c277938c2a91a4c90611aeae229d8ea0f6146d"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re5-reaper/idle-right.png",
+      "bytes": 1705025,
+      "sha256": "8a8135f46e3c6407933b54dc22dbb44edf80e3f12e6c9904ad43f78f0a7fe318"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re5-uroboros-albert-wesker/idle-right.png",
+      "bytes": 1704089,
+      "sha256": "23d202c9c1ec2e49418c2b263b56c577793bee62a2b79f2e828d1bd129504091"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re6-strelat/idle-right.png",
+      "bytes": 2260749,
+      "sha256": "b7868dfdf3911a56f1b26e1bf87179eaeb2423f468ec1cb1bea1855401c97978"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re7-flying-bug/idle-right.png",
+      "bytes": 1760303,
+      "sha256": "0c8fae5781b8560a31547e206584bd237dade07125822c02645d71f052c5d33f"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re7-fumer/idle-right.png",
+      "bytes": 1585273,
+      "sha256": "c7cfa9ef9b8dc5f6351cecc0c95d15b79121cc487dbccc16dd8a2eeecaea2336"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re7-little-crawler/idle-right.png",
+      "bytes": 2318845,
+      "sha256": "f37d320f2414da6ffa41b7ae92273d44729c7b484b190a0ebb3ac37810dc2870"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re7-mama-mold/idle-right.png",
+      "bytes": 2376037,
+      "sha256": "a5d420750859aa6b3a839dfd534175246e1d156d5f167eaf3e8731ce1711e8a4"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re7-molded/idle-right.png",
+      "bytes": 1628186,
+      "sha256": "03b330bfe97fe2e56192ac8bbe5d173e9ded16dd700d8969997f5d09320f7bf9"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/recv-albinoid-adult/idle-right.png",
+      "bytes": 1923381,
+      "sha256": "04585dead2beb891b5f6edff792599638b6767ca822e2225c7ed6cc528a02d14"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/recv-albinoid-infant/idle-right.png",
+      "bytes": 1708134,
+      "sha256": "33945d1df49cbf97180fa647f384285689216fdb91d443997df8bdf9b0c93c57"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/recv-bandersnatch/idle-right.png",
+      "bytes": 1691789,
+      "sha256": "d589f7cde3235916f3737367b79e0e24301b0a6076961571344fbc2b11a2615f"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/recv-nosferatu/idle-right.png",
+      "bytes": 1385396,
+      "sha256": "fb376c0198735bcd60f8285477ab490df4e2e094a4df7c73b1c33f79a3dd973d"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak-baby-moth/idle-right.png",
+      "bytes": 1354847,
+      "sha256": "331400bed185795a606efb58c1cb319420866d3642034d2c096ae5f26b2eaded"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak-crow/idle-right.png",
+      "bytes": 917899,
+      "sha256": "61c6c1448f25c26b1366a9c37126cabfa26b2397453c4ffe33b66c73729c7eb7"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak-g-embryo/idle-right.png",
+      "bytes": 1449773,
+      "sha256": "f3fc2441e69f6024538f6163f3b291f54cd062659fb58a77d1756a335bfc8780"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak-giant-spider/idle-right.png",
+      "bytes": 1868288,
+      "sha256": "5c4c9f4a447193ec1e4c1465ab74ff401c9bd0e866f12ba6134d631dcdb2d1ea"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak-giant-wasp/idle-right.png",
+      "bytes": 677871,
+      "sha256": "74a9e5ef826cc7ab498fb79f3cb2f7cde91872fa932efccdf3b4853335df43d0"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak-queen-leech/idle-right.png",
+      "bytes": 2169252,
+      "sha256": "5b8001a35ebe56f3335885fe227e7134f35a39a7af36f1b0c8e0d87cfc66390b"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak-small-leech/idle-right.png",
+      "bytes": 745625,
+      "sha256": "77fef5adbcdb88a03621269e124ca244b6b980a53a355bfe6f4eebb1b9ac0f0f"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak-thanatos-r/idle-right.png",
+      "bytes": 1527018,
+      "sha256": "9863c0283b9ade29e545704da70fea92f8217fa5e55f532ce2b13ac911c76d74"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak2-crow/idle-right.png",
+      "bytes": 876280,
+      "sha256": "4c985fc59f74de1414995d9c428ddb387e5139469cd4e7696f85c3dc29a42d31"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak2-giant-spider/idle-right.png",
+      "bytes": 2009213,
+      "sha256": "4a2cb5027744a23a3f3a755ff7b03abe7b0fb86add9708cb4101e798ed88d1e6"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak2-giga-bite/idle-right.png",
+      "bytes": 1897697,
+      "sha256": "1319c7965cc588f21f7df3b171bea6b5c4e806b36bc1870623ba43a2fd234497"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak2-horn-bill/idle-right.png",
+      "bytes": 2142296,
+      "sha256": "90825ffe2e75fd07b2c1d88ae300d6b431022fdbf961d0c4029e2db5aaf99ffe"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak2-scissor-tail/idle-right.png",
+      "bytes": 1554115,
+      "sha256": "ee4c3d3fbc62f1210bb849e2ec35ba54386736d454bb805c97b9f4eed31a1238"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak2-tyrant-r/idle-right.png",
+      "bytes": 1447426,
+      "sha256": "de35a5827ae535421ae1887e0a91ae8788a080697c31eb7e9fd3deb319bd027b"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak2-wasp/idle-right.png",
+      "bytes": 769569,
+      "sha256": "22514e75651952d5246f857a571c7929314871ad05d2c78c4c5b99cddcfb12dd"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak2-zombie-hyena/idle-right.png",
+      "bytes": 1980613,
+      "sha256": "389c20c60b9c725ab6aa0f826aaad0ff35ac20ea39483c614a10a0d742b8bd5c"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerequiem-garmr/idle-right.png",
+      "bytes": 2139033,
+      "sha256": "8ca8e5b164a776a800f0a481b342a263dcfd4c304c2c3555a40c2e313af54879"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerequiem-licker-beta2/idle-right.png",
+      "bytes": 2018091,
+      "sha256": "18dee1312602a80ab31831d3d617d88bd9bdad1b7305da004f7cfe78319c63b2"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerequiem-small-spider/idle-right.png",
+      "bytes": 658309,
+      "sha256": "0f5ed76c81cbf86fc57dc7d61624040240b26b26815767e552e75c7ea6335872"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerequiem-tyrant-t-501/idle-right.png",
+      "bytes": 2084161,
+      "sha256": "1134c3530d665adf407633ea6f2ef774f52ea4352f4d06edde2a407eee47d211"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerev-ghiozzo/idle-right.png",
+      "bytes": 2122030,
+      "sha256": "3606dcfdd663146abe870b47404cafb86f7281449cb7a4da18349e5919f8979f"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerev-globster/idle-right.png",
+      "bytes": 1744097,
+      "sha256": "4d62b46df46d6834d0d8f74e77ddac1b2934ea064e1591efb282476f404f9eba"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerev-rachael-ooze/idle-right.png",
+      "bytes": 1351929,
+      "sha256": "a8bda8d1143c08445e945c7f1ea79d1592d4b598fb0bc3cfd82f5d9a93c42940"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerev2-giant-whip-spider/idle-right.png",
+      "bytes": 1698411,
+      "sha256": "b75527c12ac4a9a08679b7f7164d243383476e1e9291a25f69358e5c819e8204"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerev2-glasp/idle-right.png",
+      "bytes": 1557138,
+      "sha256": "b6111a641eb98b004275ef1324bb66d5e41e4ec5254258587a1e794c78a5d3d9"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerev2-monster-neil/idle-right.png",
+      "bytes": 1892595,
+      "sha256": "b210d603d9a94b3f70bc34e77193b393709999849ed769a99a1b2d9ae52f8339"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerev2-orthrus/idle-right.png",
+      "bytes": 1698726,
+      "sha256": "e71dd07e059fad43f427c059ae98930655488aacf9d20a800a9dd4556523a899"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerev2-rotten/idle-right.png",
+      "bytes": 1360123,
+      "sha256": "bcfe42ef62c6af3b00a4a566e5e6c733d0f18a7d6bed510e4c04688def8895d4"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerev2-vulcanblubber/idle-right.png",
+      "bytes": 1598208,
+      "sha256": "d13e36856a150ba4066d6a21dd8a5708582ecc649317d0e51d18d571eb6d637d"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/revillage-hauler/idle-right.png",
+      "bytes": 1178350,
+      "sha256": "0d7bae4950ab8d6fc619e8781bd09d19293b8b3ce8b7234c8baec1551fce01d6"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/revillage-karl-heisenberg/idle-right.png",
+      "bytes": 1351157,
+      "sha256": "834e8fc16d4c5f1c9dda53a319a2749a58c97715b85beaa16e7627f2dfaf8a07"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/revillage-moroaica/idle-right.png",
+      "bytes": 1040093,
+      "sha256": "f048c3765f840e58bbd3116b7c8bf70abe2269f399fe6be9c241c77d60a3a9cd"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/revillage-salvatore-moreau-exposed/idle-right.png",
+      "bytes": 2299589,
+      "sha256": "256f75ee393929df089528d3f758ee09f4726cdd958bfe849bcf4036926c11f7"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/revillage-salvatore-moreau/idle-right.png",
+      "bytes": 2619146,
+      "sha256": "6330e53d6cc24843752bb31258622dfaf948067bd0814e38ab05a97026831817"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/revillage-soldat-jet/idle-right.png",
+      "bytes": 1406177,
+      "sha256": "36bb1bfb120948bcbfb79d03c74e73328861cbba0800f699fd6d3f22f87dec00"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/revillage-varcolac/idle-right.png",
+      "bytes": 2533940,
+      "sha256": "7240a6bb6a8904bd9fbaac23f94977af80fcafbd02f7ca66540a0fa5ec21dba1"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re2r-tyrant/idle-right.png",
+      "bytes": 1132572,
+      "sha256": "1a5ee4a1e8cb81e1c05bc52413908fbdd1835b981fb81626e2171194712511a6"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re1r-hunter/idle-right.png",
+      "bytes": 2063196,
+      "sha256": "b8efdb093f561e899828e30559639ad5f4fe22fee71e5b1c4fe6978d768e468b"
+    },
+    {
+      "path": "data/roster.json",
+      "bytes": 2360224,
+      "sha256": "e1aba741cea7e34ee653c0fc1d7c92b666182f03f2b00d5b72421c4c93ca1dc0"
+    },
+    {
+      "path": "modules/fidelity-r31/performance/image-budget.js",
+      "bytes": 3855,
+      "sha256": "e7a3a2039c9c666475fdfe118bc1fece445891d0213bbe20e75fece248cebce2"
+    },
+    {
+      "path": "modules/fidelity-r34/combat/generated-runtime.js",
+      "bytes": 34955,
+      "sha256": "a0397991c7495c7193c802dd05131f622667c9881e9287fa65bdcb6762f7e814"
+    },
+    {
+      "path": "modules/fidelity-r34/combat/held-presentation.js",
+      "bytes": 5194,
+      "sha256": "5bfb608ee63f67a319dca4d5662685d9f177b5b1845c35c9d2405a827de6abdd"
+    },
+    {
+      "path": "modules/fidelity-r33/combat/generated-adapter.js",
+      "bytes": 4656,
+      "sha256": "8c1e12a99c91184f067646a2c92633580f1fa51d51b6018aa0fc0e45064f5292"
+    },
+    {
+      "path": "modules/fidelity-r33/sprites/generated/re2-zombie-dog/right.png",
+      "bytes": 1161077,
+      "sha256": "77459158f84c6b0a52874a5050c80ae15d20447deadeb23b056f48aeb08d0ada"
+    },
+    {
+      "path": "modules/fidelity-r34/selection/avatars.js",
+      "bytes": 29739,
+      "sha256": "23b88cb031fdadbab82247c071c8d1a262a7d5654132a135ebd14e8b283c1800"
+    },
+    {
+      "path": "modules/fidelity-r34/evolutions/selection.js",
+      "bytes": 7622,
+      "sha256": "4cc8b71efb6e84f7daece46ab3d1c2e5191999cc60ed64b89ba1bd20d120bb44"
+    },
+    {
+      "path": "scripts/build-roster-runtime-r34.py",
+      "bytes": 10100,
+      "sha256": "b461c0685ed1690a1a416b52b9839767fd2b6506097e99279555125901c9e7ce"
+    }
+  ],
+  "scope": "Actual PNG bytes decoded by @napi-rs/canvas; current composite registry, lazy resolver, qualification faults, explicit historical and legacy contracts. Body-specific proof requires actual generated R34 body output. Synthetic contracts and delayed decoders are labelled fixtures; no original-game pixel, idle-cycle or global1:1 certification."
+}

@@ -1,0 +1,73 @@
+{
+  "schema": "re.bow.generated-output-r34/1",
+  "uid": "re3-sliding-worm",
+  "lotId": "lot_3",
+  "kind": "idle",
+  "generator": "image_gen",
+  "status": "HELD_REFERENCE",
+  "reason": "The source shows an overlapping group of several worms; no isolated complete individual can be verified through the intersections without reconstructing hidden sections. No image_gen body request was issued from insufficient original references.",
+  "research": [
+    {
+      "kind": "ACTUAL_SOURCE_INSPECTION",
+      "path": "assets/catalog/re3-sliding-worm.png",
+      "sha256": "fce86236ac15281c0fbc89497916f22c67b34d684c564108708446ff979d2047",
+      "bytes": 95408,
+      "sourceUrl": "https://www.evilresource.com/resident-evil-3-nemesis/enemies/sliding-worm",
+      "observation": "The source shows an overlapping group of several worms; no isolated complete individual can be verified through the intersections without reconstructing hidden sections.",
+      "actuallyInspected": true,
+      "completeBodyReferenceVerified": false
+    },
+    {
+      "kind": "PUBLIC_SOURCE_REFRESH",
+      "path": "modules/fidelity-r34/assets/lots/lot_3/re3-sliding-worm/research/source-refresh.json",
+      "sha256": "b74e8bec161baed20d60e15e8144f0c10f5e54766515e9ccc9e0b8e98c60cfb8",
+      "observation": "The exact public enemy page and its own full image URL were checked; any returned image matches retained cropped bytes. A full URL is not a complete-body proof."
+    },
+    {
+      "kind": "HELD_OTHER_EDITION_SOURCES",
+      "references": [
+        {
+          "path": "modules/fidelity-r30/native/new-sources/views/re3-sliding-worm-gamecube/camera-0.png",
+          "bytes": 48423,
+          "sha256": "407b0a094b4f4e1f274903666461896e4784c584f794e079b248d3a5180a019f",
+          "role": "native-source-body-view",
+          "bodyCoverage": "unknown",
+          "exactIdentity": true,
+          "sourceUrl": "https://www.evilresource.com/resident-evil-3-nemesis/enemies/sliding-worm",
+          "sourceEdition": "Resident Evil 3: Nemesis — port GameCube — export communautaire statique, équivalence PlayStation non vérifiée",
+          "targetEditionAdmitted": false,
+          "bodyCompletenessIndependentReviewRequired": true,
+          "heldReason": "Source edition/model is not admitted as the target incarnation; do not silently promote a port."
+        },
+        {
+          "path": "modules/fidelity-r30/native/new-sources/views/re3-sliding-worm-gamecube/camera-180.png",
+          "bytes": 49058,
+          "sha256": "7acc24aea8a66019351ba1d07922bbc4a80ca668e87200c76aaa2ebf9e82a720",
+          "role": "native-source-body-view",
+          "bodyCoverage": "unknown",
+          "exactIdentity": true,
+          "sourceUrl": "https://www.evilresource.com/resident-evil-3-nemesis/enemies/sliding-worm",
+          "sourceEdition": "Resident Evil 3: Nemesis — port GameCube — export communautaire statique, équivalence PlayStation non vérifiée",
+          "targetEditionAdmitted": false,
+          "bodyCompletenessIndependentReviewRequired": true,
+          "heldReason": "Source edition/model is not admitted as the target incarnation; do not silently promote a port."
+        },
+        {
+          "path": "modules/fidelity-r30/native/new-sources/views/re3-sliding-worm-gamecube/camera-90.png",
+          "bytes": 17799,
+          "sha256": "ab04650ae35f7d1e19b8bd35478e08029282416a8125a79d689209addc706c72",
+          "role": "native-source-body-view",
+          "bodyCoverage": "unknown",
+          "exactIdentity": true,
+          "sourceUrl": "https://www.evilresource.com/resident-evil-3-nemesis/enemies/sliding-worm",
+          "sourceEdition": "Resident Evil 3: Nemesis — port GameCube — export communautaire statique, équivalence PlayStation non vérifiée",
+          "targetEditionAdmitted": false,
+          "bodyCompletenessIndependentReviewRequired": true,
+          "heldReason": "Source edition/model is not admitted as the target incarnation; do not silently promote a port."
+        }
+      ],
+      "observation": "These separate edition/port views are not silently promoted to this target incarnation."
+    }
+  ],
+  "canonicalFidelityCertified": false
+}

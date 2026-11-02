@@ -1,0 +1,162 @@
+{
+  "schema": "re.bow.runtime-tests-r33/1",
+  "passed": 10,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Preserved defaults stay lazy and all generated API aliases share the same bounded reader",
+      "pass": true,
+      "detail": {
+        "defaults": 367,
+        "defaultEditionPromotions": 0,
+        "initialPngRequests": 0
+      }
+    },
+    {
+      "name": "Each explicitly chosen direction decodes its own generated PNG without mirroring",
+      "pass": true,
+      "detail": {
+        "sides": [
+          {
+            "facing": "right",
+            "sha256": "77459158f84c6b0a52874a5050c80ae15d20447deadeb23b056f48aeb08d0ada",
+            "bytes": 1161077,
+            "width": 1536,
+            "height": 1024
+          },
+          {
+            "facing": "left",
+            "sha256": "51c133c483bbf9f95b57a4ac39e034e49ab2d55cb7db7d77d65950d431136d2a",
+            "bytes": 1254334,
+            "width": 1536,
+            "height": 1024
+          }
+        ],
+        "nativeIdleClaimed": false
+      }
+    },
+    {
+      "name": "Contextual alligator and unassigned moth studies never become selectable combat presentations",
+      "pass": true,
+      "detail": {
+        "contextCombatPromotions": 0,
+        "unassignedActionPromotions": 0
+      }
+    },
+    {
+      "name": "Edition, target, duplicate-side, default-admission and family-identifier faults are rejected",
+      "pass": true,
+      "detail": {
+        "heldInvalidContracts": 6,
+        "faultyImagesRequested": 0
+      }
+    },
+    {
+      "name": "A shared-budget refusal preserves both pending directions and automatically resumes actual decodes",
+      "pass": true,
+      "detail": {
+        "recoveryMs": 35.02334700000006,
+        "directionsRecovered": 2,
+        "errorBackoffRequired": false
+      }
+    },
+    {
+      "name": "Corruption is refused and a cancelled decoder releases credit before pageshow recovery",
+      "pass": true,
+      "detail": {
+        "corruptImagesDrawn": 0,
+        "pendingDecodeCancelled": true,
+        "resumedOnPageshow": true
+      }
+    },
+    {
+      "name": "The generated adapter fits the actual selected side and preserves every non-idle fallback and actor byte",
+      "pass": true,
+      "detail": {
+        "side": "left",
+        "maximumDrawWidth": 130,
+        "nonIdleFallbacks": 5,
+        "actorChanged": false
+      }
+    },
+    {
+      "name": "The composite native library adds source studies without admitting missing equipment or editions",
+      "pass": true,
+      "detail": {
+        "newStudies": 30,
+        "directStudyRender": true,
+        "defaultMissingEquipmentAdmissions": 0
+      }
+    },
+    {
+      "name": "The marine source loop needs a deliberate edition choice and retains its real timeline",
+      "pass": true,
+      "detail": {
+        "frames": 150,
+        "sampleRate": 60,
+        "changedFrame": 6,
+        "originalIdleCertified": false,
+        "variantHabitat": "aquatic"
+      }
+    },
+    {
+      "name": "Three source-rendered selection crops preserve identity coverage and all incomplete-body reservations",
+      "pass": true,
+      "detail": {
+        "sourceRenderedPortraits": 3,
+        "coveredIdentities": 388,
+        "exactMissingAvatar": [
+          "re7-jack-baker-scissor"
+        ],
+        "imageBytesEdited": false
+      }
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "modules/fidelity-r33/combat/generated-runtime.js",
+      "sha256": "20f783c2041c63fb7f63e1321f706f14aa54ea227c70797d33038e277d224cc7"
+    },
+    {
+      "path": "modules/fidelity-r33/combat/native-runtime.js",
+      "sha256": "1fbbcd3e88989cf7800ec662b9c80678e3aeb8fb5687e71642ca7baeb9b32646"
+    },
+    {
+      "path": "modules/fidelity-r33/combat/generated-adapter.js",
+      "sha256": "8c1e12a99c91184f067646a2c92633580f1fa51d51b6018aa0fc0e45064f5292"
+    },
+    {
+      "path": "modules/fidelity-r33/combat/native-adapter.js",
+      "sha256": "503e2628591ff36c424026c708927ace5f235dd2b189efa053ade3fbeab77ca5"
+    },
+    {
+      "path": "modules/fidelity-r31/performance/image-budget.js",
+      "sha256": "e7a3a2039c9c666475fdfe118bc1fece445891d0213bbe20e75fece248cebce2"
+    },
+    {
+      "path": "modules/fidelity-r33/combat/manifest.json",
+      "sha256": "11921f3fa53293b064837da0c32f7d888be04b2dbcc1c2b33c0f116e24a85809"
+    },
+    {
+      "path": "modules/fidelity-r33/combat/native-index.json",
+      "sha256": "d952e5027d52bb1cd416fd7443f1632f0b676354904b08d3bbc299a34cf0bd1a"
+    },
+    {
+      "path": "modules/fidelity-r33/selection/avatars.js",
+      "sha256": "12795289487e44b89ff4527d05fc8509bfe951b99cd04c5cb1644d34cedcbc3a"
+    },
+    {
+      "path": "modules/fidelity-r33/selection/manifest.json",
+      "sha256": "36649eb348a8e7fe31e7f9ed27d1d580e154f5dd82741b0a0d0a0be8b77d53dc"
+    },
+    {
+      "path": "modules/fidelity-r33/native/manifest.json",
+      "sha256": "53d6bd14b5673674b92c1089d5b58d9fd10426e9d869c11a1250112cfc26ed43"
+    },
+    {
+      "path": "tests/verify-runtime-r33.mjs",
+      "sha256": "13c3b8b74bb32d201ad0f1eed101e07d5674bff6cb3722e894a016f1c2a80c67"
+    }
+  ],
+  "scope": "Actual delivered PNG bytes decoded with canvas; selected source editions and sides; held contexts/equipment/actions; shared image credits and cancellations. Marine source movement is voluntary and does not certify original idle or physical devices."
+}

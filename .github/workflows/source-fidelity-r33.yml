@@ -1,0 +1,193 @@
+name: R33 current assets, source evidence, restore and presentation
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main, 'codex/**']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: source-fidelity-r33-${{ github.ref }}
+  cancel-in-progress: true
+defaults:
+  run:
+    shell: bash
+jobs:
+  source:
+    name: Published R33 source, integration and engine assertions
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+          ref: 6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: '3.12'
+      - name: Install pinned source and workbook tools
+        run: |
+          python3 -m venv "$RUNNER_TEMP/fidelity-r33-venv"
+          "$RUNNER_TEMP/fidelity-r33-venv/bin/python" -m pip install --timeout 60 --retries 2 Pillow==12.3.0 openpyxl==3.1.5 lxml==6.1.1 PyYAML==6.0.3
+          echo "$RUNNER_TEMP/fidelity-r33-venv/bin" >> "$GITHUB_PATH"
+          npm install --no-audit --no-fund --no-save --package-lock=false --fetch-timeout=60000 --fetch-retries=2 @napi-rs/canvas@0.1.80
+          if ! command -v ffmpeg >/dev/null || ! command -v ffprobe >/dev/null; then sudo apt-get update; sudo apt-get install --yes ffmpeg; fi
+      - name: Verify delivered tracking and integration before reports are refreshed
+        run: |
+          mkdir -p qa-fidelity-r33-ci
+          npm run verify:r33:delivered
+          python3 scripts/fidelity-progress-r33.py check
+          python3 scripts/fidelity-progress-r33.py reproduce
+          touch qa-fidelity-r33-ci/integration-started
+          rm -f docs/R33_INTEGRATION_TESTS.json
+          node tests/verify-r33-integration.mjs
+          cp docs/R33_REPRODUCTION.json qa-fidelity-r33-ci/executed-reproduction.json
+      - name: Invalidate only R33 reports and execute current source assertions
+        run: |
+          touch qa-fidelity-r33-ci/fresh-tests-started
+          rm -f docs/R33_CURRENT_GUARD_TESTS.json docs/R33_CI_VALIDATION.json docs/R33_NATIVE_TESTS.json docs/R33_SPRITES_TESTS.json docs/R33_EVIDENCE_TESTS.json docs/R33_EXPORT_TESTS.json docs/R33_NATIVE_RIG_TESTS.json docs/R33_GENERATED_RUNTIME_TESTS.json docs/R33_EVIDENCE_QUERY_TESTS.json docs/R33_PERSISTENCE_TESTS.json docs/R33_RUNTIME_TESTS.json
+          npm run verify:r33
+      - name: Require freshly executed reports with current source hashes
+        run: |
+          node --input-type=module - <<'JS'
+          import assert from 'node:assert/strict';
+          import fs from 'node:fs';
+          import {createHash} from 'node:crypto';
+          const names=['CURRENT_GUARD_TESTS','CI_VALIDATION','NATIVE_TESTS','SPRITES_TESTS','EVIDENCE_TESTS','EXPORT_TESTS','NATIVE_RIG_TESTS','GENERATED_RUNTIME_TESTS','EVIDENCE_QUERY_TESTS','PERSISTENCE_TESTS','RUNTIME_TESTS'];
+          for(const name of names){
+            const file='docs/R33_'+name+'.json',report=JSON.parse(fs.readFileSync(file));
+            assert(Number.isInteger(report.passed)&&report.passed>0,file);
+            assert.equal(report.failed,0,file);assert.equal(report.skipped??0,0,file);
+            assert(Array.isArray(report.sourceFiles)&&report.sourceFiles.length>0,file+' source bindings');
+            for(const source of report.sourceFiles){
+              assert.equal(createHash('sha256').update(fs.readFileSync(source.path)).digest('hex'),source.sha256,file+': '+source.path);
+            }
+          }
+          JS
+      - name: Keep original functional assertions on current and original preservation assertions on published R31
+        run: npm run verify > qa-fidelity-r33-ci/current-and-published-engine.log
+      - name: Build and byte-compare the current R33 static delivery
+        run: |
+          npm run build > qa-fidelity-r33-ci/build.log
+          python3 scripts/verify-build-r33.py
+          cp docs/R33_BUILD.json qa-fidelity-r33-ci/executed-build.json
+      - name: Collect only evidence produced during this execution
+        if: always()
+        run: |
+          mkdir -p qa-fidelity-r33-ci
+          if [[ -f qa-fidelity-r33-ci/fresh-tests-started ]]; then
+            for name in CURRENT_GUARD_TESTS CI_VALIDATION NATIVE_TESTS SPRITES_TESTS EVIDENCE_TESTS EXPORT_TESTS NATIVE_RIG_TESTS GENERATED_RUNTIME_TESTS EVIDENCE_QUERY_TESTS PERSISTENCE_TESTS RUNTIME_TESTS; do
+              if [[ -f "docs/R33_$name.json" ]]; then cp "docs/R33_$name.json" qa-fidelity-r33-ci/; fi
+            done
+          fi
+          if [[ -f qa-fidelity-r33-ci/integration-started && -f docs/R33_INTEGRATION_TESTS.json ]]; then cp docs/R33_INTEGRATION_TESTS.json qa-fidelity-r33-ci/; fi
+          node tests/ci-report-r25.mjs qa-fidelity-r33-ci
+      - name: Upload actual current source evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: fidelity-r33-current-source-${{ github.run_id }}
+          path: |
+            qa-fidelity-r33-ci/
+            qa-gamedev-r32/
+          if-no-files-found: warn
+          retention-days: 14
+  browser:
+    name: Current R33 browser compatibility view - ${{ matrix.suite }}
+    needs: source
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      AXE_CORE_PATH: ${{ github.workspace }}/node_modules/axe-core/axe.min.js
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        include:
+          - suite: native
+            script: tests/browser-native-r33.mjs
+            report: docs/R33_NATIVE_BROWSER.json
+            secondary_report: ''
+          - suite: sprites
+            script: tests/browser-generated-sprites-r33.mjs
+            report: docs/R33_SPRITES_BROWSER.json
+            secondary_report: ''
+          - suite: evidence
+            script: tests/browser-evidence-r33.mjs
+            report: docs/R33_EVIDENCE_BROWSER.json
+            secondary_report: ''
+          - suite: restore-replays
+            script: tests/browser-persistence-r33.mjs
+            report: docs/R33_PERSISTENCE_BROWSER.json
+            secondary_report: ''
+          - suite: runtime
+            script: tests/browser-runtime-r33.mjs
+            report: docs/R33_RUNTIME_BROWSER.json
+            secondary_report: ''
+          - suite: tracking-dossiers
+            script: tests/browser-fidelity-r33.mjs
+            report: docs/R33_DASHBOARD_BROWSER.json
+            secondary_report: docs/R33_DOSSIER_BROWSER.json
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - name: Install pinned browser verification tools
+        run: npm install --no-audit --no-fund --no-save --package-lock=false --fetch-timeout=60000 --fetch-retries=2 playwright@1.64.1 @napi-rs/canvas@0.1.80 @puppeteer/browsers@2.10.10 axe-core@4.14.0
+      - name: Install the recorded browser version
+        run: |
+          node --input-type=module - <<'JS'
+          import fs from 'node:fs';
+          import path from 'node:path';
+          import {install,Browser} from '@puppeteer/browsers';
+          const browser=await install({browser:Browser.CHROME,buildId:'154.0.8037.57',
+            cacheDir:path.join(process.env.RUNNER_TEMP,'fidelity-r33-chrome')});
+          fs.appendFileSync(process.env.GITHUB_ENV,'CHROME_BIN='+browser.executablePath+'\n');
+          JS
+      - name: Execute current browser assertions and require fresh source-bound reports
+        run: |
+          mkdir -p qa-fidelity-r33-browser
+          touch qa-fidelity-r33-browser/started
+          rm -f '${{ matrix.report }}'
+          if [[ -n '${{ matrix.secondary_report }}' ]]; then rm -f '${{ matrix.secondary_report }}'; fi
+          node --import=./tests/browser-compat-r34.mjs '${{ matrix.script }}'
+          node --input-type=module - '${{ matrix.report }}' '${{ matrix.secondary_report }}' <<'JS'
+          import assert from 'node:assert/strict';
+          import fs from 'node:fs';
+          import {createHash} from 'node:crypto';
+          for(const file of process.argv.slice(2).filter(Boolean)){
+            const report=JSON.parse(fs.readFileSync(file));
+            assert(Number.isInteger(report.passed)&&report.passed>0,file);assert.equal(report.failed,0,file);
+            assert.equal(report.skipped??0,0,file);
+            assert(Array.isArray(report.sourceFiles)&&report.sourceFiles.length>0,file+' source bindings');
+            for(const source of report.sourceFiles){
+              assert.equal(createHash('sha256').update(fs.readFileSync(source.path)).digest('hex'),source.sha256,file+': '+source.path);
+            }
+          }
+          JS
+      - name: Collect browser reports only after the test stage started
+        if: always()
+        run: |
+          if [[ -f qa-fidelity-r33-browser/started ]]; then
+            for file in '${{ matrix.report }}' '${{ matrix.secondary_report }}'; do
+              if [[ -n "$file" && -f "$file" ]]; then cp "$file" qa-fidelity-r33-browser/; fi
+            done
+          fi
+      - name: Preserve fresh browser evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: fidelity-r33-current-${{ matrix.suite }}-${{ github.run_id }}
+          path: |
+            qa-*r33*/
+          if-no-files-found: warn
+          retention-days: 14

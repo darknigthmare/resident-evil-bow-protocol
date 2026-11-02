@@ -1,0 +1,89 @@
+{
+  "schema": "re.bow.generated-output-r34/1",
+  "uid": "re2-licker",
+  "kind": "portrait",
+  "lotId": "lot_3",
+  "status": "GENERATED",
+  "generator": "image_gen",
+  "prompt": "Create a faithful generated game asset for Licker, exact incarnation Resident Evil 2 (1998). Use the attached verified references only. Preserve the precise head, anatomy, proportions, costume, equipment, material colours and asymmetric details. Do not mix games, phases or editions. Match the source appearance without added cartoon outlines, coloured halos or decoration. One subject only, no text, labels, scenery, floor, montage or frame. Clean transparent alpha. This remains a generated adaptation, not an original Capcom frame or a geometric 1:1 certificate. A square selection portrait showing the head and upper body, with the characteristic face and equipment readable at thumbnail size. Keep the visible identity complete inside this portrait crop; do not invent undocumented features.",
+  "references": [
+    {
+      "path": "assets/specimens/re2-licker.png",
+      "bytes": 423127,
+      "sha256": "e7a18786f9c7c27b381cc08303f3e3000b5685de5e898cfd94c5c67ebfa1d653",
+      "role": "full-body-reference",
+      "bodyCoverage": "partial",
+      "exactIdentity": true,
+      "sourceUrl": "https://bogleech.com/halloween/hall18-re2",
+      "sourceEdition": "Resident Evil 2 (1998)",
+      "targetEditionAdmitted": true,
+      "bodyCompletenessIndependentReviewRequired": true
+    },
+    {
+      "path": "assets/catalog/re2-licker.png",
+      "bytes": 87366,
+      "sha256": "a3107f61ff1f4bbcca4479cb2c3fb1689371e9d8394be7a666b0a6fe2c7a838d",
+      "role": "catalogue-reference",
+      "bodyCoverage": "unknown",
+      "exactIdentity": true,
+      "sourceUrl": "https://www.evilresource.com/resident-evil-2/enemies/licker",
+      "sourceEdition": "Resident Evil 2 (1998)",
+      "targetEditionAdmitted": true,
+      "bodyCompletenessIndependentReviewRequired": true
+    }
+  ],
+  "image": "modules/fidelity-r34/assets/generated/re2-licker/portrait.png",
+  "sourceOutputPath": "/workspace/generated_images/exec-8f5efb26-9bde-454a-b4d9-b2b3ddd06047.png",
+  "generatedBytesEdited": false,
+  "toolOutputHint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-8f5efb26-9bde-454a-b4d9-b2b3ddd06047.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "review": {
+    "visuallyReviewed": true,
+    "portraitIdentityReviewed": true,
+    "sourceFacing": "right",
+    "fullBodyVisible": false,
+    "completeBodyReferenceVerified": false,
+    "fightingPoseReviewed": false,
+    "knownAppearanceGaps": [
+      "The tongue tip reaches the upper portrait edge; complete tongue framing is not certified."
+    ],
+    "observations": [
+      "Inspected both retained references and raw output: exposed folded brain, eye-free face, long curled tongue, crouched upper body and curved front claws preserve the 1998 design.",
+      "The portrait includes more torso than a close face crop; tongue tip reaches the top edge and hand tips reach image edges. Full-body completeness is not certified by this portrait.",
+      "Displayed portrait region reviewed: the source-specific face/core remains recognisable; peripheral cropping is limited to the stated portrait framing, not a complete-body claim."
+    ],
+    "canonicalFidelityCertified": false,
+    "originalIdleAnimationCertified": false,
+    "portraitDisplayRegionReviewed": true
+  },
+  "bytes": 1678385,
+  "sha256": "88c1a000a25b098fe7a8f71a0852f2f0abd53e30902963fe47b12e7d84b621fb",
+  "technical": {
+    "format": "PNG",
+    "width": 1254,
+    "height": 1254,
+    "bounds": {
+      "x": 6,
+      "y": 4,
+      "width": 1244,
+      "height": 1248
+    },
+    "pivot": {
+      "x": 628.0,
+      "y": 1252
+    },
+    "alpha": {
+      "channel": true,
+      "min": 0,
+      "max": 255,
+      "visibleThreshold": 16,
+      "transparentPixels": 818456,
+      "totalPixels": 1572516
+    },
+    "silhouetteTouchesCanvasEdge": false,
+    "decodedRgbaSha256": "feb93eb24a543135745487837ec0a681cfb2f10848f6535c605203013b5c89e8"
+  },
+  "reviewAddendum": {
+    "previousReceiptSha256": "7b5bb675fde5b2cc92d12ecc82fe8228fe1e2adae77b9933c08b41022cca1461",
+    "reason": "Explicit display-region review added after pipeline clarified the portrait admission field; generated PNG and exact request are unchanged."
+  }
+}

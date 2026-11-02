@@ -32,8 +32,8 @@ jobs:
       - name: Locate Chromium
         run: |
           if command -v google-chrome >/dev/null; then echo "CHROME_BIN=$(command -v google-chrome)" >> "$GITHUB_ENV"; else npx playwright install --with-deps chromium; fi
-      - run: node tests/browser-audit-r9.mjs
-      - run: node tests/browser-match-sequences-r8.mjs
+      - run: node --import=./tests/browser-compat-r34.mjs tests/browser-audit-r9.mjs
+      - run: node --import=./tests/browser-compat-r34.mjs tests/browser-match-sequences-r8.mjs
       - name: Commit only the verified tracker to staging, without force
         run: |
           set -euo pipefail

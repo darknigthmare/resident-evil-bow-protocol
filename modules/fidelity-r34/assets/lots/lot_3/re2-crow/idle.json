@@ -1,0 +1,73 @@
+{
+  "schema": "re.bow.generated-output-r34/1",
+  "uid": "re2-crow",
+  "lotId": "lot_3",
+  "kind": "idle",
+  "generator": "image_gen",
+  "status": "HELD_REFERENCE",
+  "reason": "The bird head, chest and partial wings are shown but lower body, full feet/claws and tail ends are cut. No image_gen body request was issued from insufficient original references.",
+  "research": [
+    {
+      "kind": "ACTUAL_SOURCE_INSPECTION",
+      "path": "assets/catalog/re2-crow.png",
+      "sha256": "e5c01ca263ec9e503e4d9ac0900096761a11129d0bc77e3b5dd6759027bf6408",
+      "bytes": 60453,
+      "sourceUrl": "https://www.evilresource.com/resident-evil-2/enemies/crow",
+      "observation": "The bird head, chest and partial wings are shown but lower body, full feet/claws and tail ends are cut.",
+      "actuallyInspected": true,
+      "completeBodyReferenceVerified": false
+    },
+    {
+      "kind": "PUBLIC_SOURCE_REFRESH",
+      "path": "modules/fidelity-r34/assets/lots/lot_3/re2-crow/research/source-refresh.json",
+      "sha256": "683dc10cdcf48978d223fba1b94bfdfda3a7b9be90d29f80b38d91d626b52c88",
+      "observation": "The exact public enemy page and its own full image URL were checked; any returned image matches retained cropped bytes. A full URL is not a complete-body proof."
+    },
+    {
+      "kind": "HELD_OTHER_EDITION_SOURCES",
+      "references": [
+        {
+          "path": "modules/fidelity-r30/native/new-sources/views/re2-crow-gamecube-r30/camera-0.png",
+          "bytes": 14963,
+          "sha256": "a5ea80ae34e16dd069167eb8064ffc8a036f8ec1be072c76f3989a15067a2b56",
+          "role": "native-source-body-view",
+          "bodyCoverage": "unknown",
+          "exactIdentity": true,
+          "sourceUrl": "https://www.evilresource.com/resident-evil-2/enemies/crow",
+          "sourceEdition": "Port GameCube — équivalence avec la version PlayStation non vérifiée",
+          "targetEditionAdmitted": false,
+          "bodyCompletenessIndependentReviewRequired": true,
+          "heldReason": "Source edition/model is not admitted as the target incarnation; do not silently promote a port."
+        },
+        {
+          "path": "modules/fidelity-r30/native/new-sources/views/re2-crow-gamecube-r30/camera-180.png",
+          "bytes": 15057,
+          "sha256": "fd92facba1dc553910ce2d0f9dd68766fed107664ed582cedf15f52d3cdc8bb7",
+          "role": "native-source-body-view",
+          "bodyCoverage": "unknown",
+          "exactIdentity": true,
+          "sourceUrl": "https://www.evilresource.com/resident-evil-2/enemies/crow",
+          "sourceEdition": "Port GameCube — équivalence avec la version PlayStation non vérifiée",
+          "targetEditionAdmitted": false,
+          "bodyCompletenessIndependentReviewRequired": true,
+          "heldReason": "Source edition/model is not admitted as the target incarnation; do not silently promote a port."
+        },
+        {
+          "path": "modules/fidelity-r30/native/new-sources/views/re2-crow-gamecube-r30/camera-90.png",
+          "bytes": 25412,
+          "sha256": "f2bc2f0ad2acdff690fb0a9f9500d90fea11c03eca4342a1f36ceec4d01f5f09",
+          "role": "native-source-body-view",
+          "bodyCoverage": "unknown",
+          "exactIdentity": true,
+          "sourceUrl": "https://www.evilresource.com/resident-evil-2/enemies/crow",
+          "sourceEdition": "Port GameCube — équivalence avec la version PlayStation non vérifiée",
+          "targetEditionAdmitted": false,
+          "bodyCompletenessIndependentReviewRequired": true,
+          "heldReason": "Source edition/model is not admitted as the target incarnation; do not silently promote a port."
+        }
+      ],
+      "observation": "These separate edition/port views are not silently promoted to this target incarnation."
+    }
+  ],
+  "canonicalFidelityCertified": false
+}

@@ -25,7 +25,7 @@ jobs:
       - name: Locate Chromium
         run: |
           if command -v google-chrome >/dev/null; then echo "CHROME_BIN=$(command -v google-chrome)" >> "$GITHUB_ENV"; else npx playwright install --with-deps chromium; fi
-      - run: node tests/browser-baker-r14.mjs
+      - run: node --import=./tests/browser-compat-r34.mjs tests/browser-baker-r14.mjs
       - name: Preserve executed evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02

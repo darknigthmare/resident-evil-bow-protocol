@@ -1,0 +1,82 @@
+{
+  "schema": "re.bow.ci-validation-r33/1",
+  "baseline": "adb733b9faf10a041c0b4ef5aa115f43ec67dd34",
+  "passed": 6,
+  "failed": 0,
+  "skipped": 0,
+  "counts": {
+    "workflows": 6,
+    "bash_blocks": 61,
+    "python_blocks": 2,
+    "javascript_blocks": 9
+  },
+  "checks": [
+    {
+      "name": "Six current and inherited workflows parse with pinned actions and read-only permissions",
+      "pass": true
+    },
+    {
+      "name": "Actual Bash, Python and JavaScript command blocks compile and reference delivered tools",
+      "pass": true
+    },
+    {
+      "name": "New R33 assertions and build execute submitted source, with delivered-report checks before refresh",
+      "pass": true
+    },
+    {
+      "name": "Eleven source reports are invalidated, recreated and checked against current source SHA values",
+      "pass": true
+    },
+    {
+      "name": "Six current browser recipes use pinned tools and upload only reports from started test stages",
+      "pass": true
+    },
+    {
+      "name": "All inherited functional recipes remain current while only original frozen preservation assertions use published R31",
+      "pass": true
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": ".github/workflows/source-fidelity-r33.yml",
+      "sha256": "2c0a90be04cade742b32b0d9a789f2e94667d91f131d5f0701b0a210f39ef65b"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "4a97b6db37f7cab887c8eb329350a7b24d6f3f222cb454980070874cee061929"
+    },
+    {
+      "path": ".github/workflows/gamedev-r32.yml",
+      "sha256": "0401894ba6a5d051fe07c02197b936baee8ce5c4f476dc127592970836813258"
+    },
+    {
+      "path": ".github/workflows/source-fidelity-r31.yml",
+      "sha256": "fbd27d4e7b32f99b70965a08feab73215430eceb28935e3724d03fd37e40b671"
+    },
+    {
+      "path": ".github/workflows/source-fidelity-r25.yml",
+      "sha256": "22cb92a9e8e266977c14dd234166c4fdf71f912b3937fbd8edb0ec42780570de"
+    },
+    {
+      "path": ".github/workflows/source-fidelity-r26.yml",
+      "sha256": "a7ba4ae44a6c829c1b8c7e1c4e57b49d19a3157f306150c5481ce89999a48100"
+    },
+    {
+      "path": "package.json",
+      "sha256": "5281abb9be78e71b9330bfd8cba709849c25aebda5bbb4ff35061216a39060ca"
+    },
+    {
+      "path": "scripts/verify-current-r33.mjs",
+      "sha256": "d6af56c1cc9b7a5b3e027754517c25363389569e124187f1bf6e15dc69988797"
+    },
+    {
+      "path": "tests/verify-current-guard-r33.mjs",
+      "sha256": "61fe11affb386087bc8584c581f80d4429e4558fc8925727c1089978115f4e04"
+    },
+    {
+      "path": "scripts/validate-fidelity-ci-r33.py",
+      "sha256": "eac5643003a75a4aba304248b40e2033ea325992974f580e186696f6d232c881"
+    }
+  ],
+  "scope": "Executed local definition parsing and command compilation. No remote R33 result or gameplay result is inferred."
+}

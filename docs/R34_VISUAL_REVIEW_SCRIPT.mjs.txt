@@ -1,0 +1,15 @@
+import fs from 'node:fs';
+import {createRequire} from 'node:module';
+if (process.env.R34_FROZEN_SMOKE !== '1') throw Error('Await the explicit root freeze signal before running this visual review.');
+const root='/workspace/resident-evil-bow-protocol',require=createRequire(root+'/package.json'),{chromium}=require('playwright');
+const manifest=JSON.parse(fs.readFileSync(root+'/modules/fidelity-r34/assets/manifest.json'));
+const optionalId='re3-nemesis-second-form';
+const optional=manifest.sprites.some(row=>row.id===optionalId&&row.defaultAdmission===true&&row.sourceFacing==='right');
+const rows=['re1-cerberus','revillage-salvatore-moreau-exposed','re2-g-type-adult','re4r-ramon-salazar',...(optional?[optionalId]:[])].map(id=>{const asset=manifest.sprites.find(row=>row.id===id),receipt=JSON.parse(fs.readFileSync(root+'/'+asset.receipt.path));return {asset,source:receipt.review.completeBodyReferences[0].path};});
+const img=path=>{const raw=fs.readFileSync(root+'/'+path);const type=raw.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10]))?'png':raw[0]===255&&raw[1]===216?'jpeg':raw.subarray(0,4).toString()==='RIFF'&&raw.subarray(8,12).toString()==='WEBP'?'webp':path.endsWith('.webp')?'webp':'png';return 'data:image/'+type+';base64,'+raw.toString('base64');};
+const browser=await chromium.launch({headless:true,executablePath:'/usr/bin/chromium',args:['--no-sandbox','--disable-dev-shm-usage']});
+const page=await browser.newPage({viewport:{width:1100,height:1400},deviceScaleFactor:1});
+await page.setContent('<!doctype html><meta charset="utf-8"><style>body{margin:0;background:#242827;color:#eee;font:14px sans-serif}.row{height:440px;display:grid;grid-template-columns:1fr 1fr;border-bottom:2px solid #ddd}.col{display:flex;flex-direction:column;min-width:0;padding:8px}h2{font-size:16px;margin:0 0 5px}small{height:34px;overflow-wrap:anywhere}img{width:100%;height:365px;object-fit:contain;background:#747977}</style>'+rows.map(({asset,source})=>'<div class="row"><div class="col"><h2>'+asset.id+' — source</h2><small>'+source+'</small><img src="'+img(source)+'"></div><div class="col"><h2>PNG généré — '+(asset.defaultAdmission?'admis':'étude non admise')+' / '+asset.sourceFacing+'</h2><small>'+asset.image+'</small><img src="'+img(asset.image)+'"></div></div>').join(''));
+await page.evaluate(()=>Promise.all([...document.images].map(image=>image.decode())));
+await page.screenshot({path:'/workspace/scratch/r34-visual-review-next.png',fullPage:true});
+await browser.close();console.log(JSON.stringify(rows.map(row=>({id:row.asset.id,source:row.source,image:row.asset.image,sourceFacing:row.asset.sourceFacing,defaultAdmission:row.asset.defaultAdmission,receipt:row.asset.receipt}))));

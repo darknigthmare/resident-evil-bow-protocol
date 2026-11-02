@@ -1,0 +1,80 @@
+{
+  "schema": "re.bow.dashboard-browser-r33/1",
+  "passed": 4,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "All17 open tasks retain their actual owner, proof routes and doubled text at 1280px",
+      "pass": true,
+      "evidence": {
+        "width": 1280,
+        "openTasks": 17,
+        "ownedLots": 6,
+        "actualProofRoutes": 88,
+        "everyComputedFontDoubled": true
+      }
+    },
+    {
+      "name": "All17 open tasks retain their actual owner, proof routes and doubled text at 320px",
+      "pass": true,
+      "evidence": {
+        "width": 320,
+        "openTasks": 17,
+        "ownedLots": 6,
+        "actualProofRoutes": 88,
+        "everyComputedFontDoubled": true
+      }
+    },
+    {
+      "name": "Retry works and forged ownership, remote proof and executable markup cannot become current progress",
+      "pass": true,
+      "evidence": {
+        "retry": true,
+        "sourceMarkupInert": true,
+        "unassignedOwnerRejected": true,
+        "remoteProofRejected": true
+      }
+    },
+    {
+      "name": "An interrupted request cannot overwrite resumed progress; total proof count remains explicit",
+      "pass": true,
+      "evidence": {
+        "requests": 2,
+        "lateResultIgnored": true,
+        "aggregateExplicitlyTotal": true,
+        "limitation": "Page transition events are explicit synthetic lifecycle fixtures, not a physical BFCache certification."
+      }
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "tests/browser-fidelity-r33.mjs",
+      "sha256": "81aecc2b7cd4ca8cf513fa099e908991d33ce295107e65b87a3067033414c4a0"
+    },
+    {
+      "path": "modules/fidelity-r33/index.html",
+      "sha256": "0094c58b11e511dbc15b4d4dbdee20490fdbce853e4386f9ba61ba7444b4329c"
+    },
+    {
+      "path": "modules/fidelity-r33/dashboard.js",
+      "sha256": "a985dfd9df715dca335a63f7ba45196f12989d7de9193e46ac224798b1a81417"
+    },
+    {
+      "path": "modules/fidelity-r33/dossier-link.js",
+      "sha256": "f4e3d65320e869f69d1e4944d8bd829c0dd22005396e01c2840fd267a0ea9527"
+    },
+    {
+      "path": "modules/fidelity-r33/progress.json",
+      "sha256": "9f9f98e7591cc4a2c414bfa3c56067ec9e8a15be2dd401b9619f976082527a14"
+    },
+    {
+      "path": "modules/fidelity-r33/dossier-additions.json",
+      "sha256": "7bb553f7e10e4aa11a6264e3fa491577830702d6cb7af5306f13ca1a6aa58652"
+    },
+    {
+      "path": "codex.html",
+      "sha256": "3292dab6591018c0d9dc462fb3bbe2ef9e3ce39c6f1fb80091b1c7c71743e5b8"
+    }
+  ],
+  "scope": "Actual current R33 dashboard ownership and exact-UID source links, real HTTP, source hashes, bounded failures and dialog reflow; no physical-device or global1:1 certification."
+}

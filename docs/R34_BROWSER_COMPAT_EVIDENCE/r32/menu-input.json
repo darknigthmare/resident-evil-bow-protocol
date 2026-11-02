@@ -1,0 +1,100 @@
+{
+  "schema": "re.bow.menu-input-browser-r32/1",
+  "passed": 7,
+  "failed": 0,
+  "browserVersion": "154.0.8037.57",
+  "checks": [
+    {
+      "name": "Held Enter leaves the boot screen once and requires a fresh press to open modes",
+      "pass": true,
+      "detail": {
+        "trustedRepeat": true,
+        "oneViewPerPress": true,
+        "newPressOpensModes": true
+      }
+    },
+    {
+      "name": "Held Escape returns one level from controls and requires release before leaving options",
+      "pass": true,
+      "detail": {
+        "trustedRepeat": true,
+        "controlsToOptionsOnly": true,
+        "freshPressReturnsHome": true
+      }
+    },
+    {
+      "name": "Held Space from the boot screen cannot arm the newly focused Play button",
+      "pass": true,
+      "detail": {
+        "trustedRepeat": true,
+        "bootReleaseDoesNotActivatePlay": true,
+        "freshSpacePressWorks": true
+      }
+    },
+    {
+      "name": "Native button activation by a fresh Enter or Space still fires exactly once",
+      "pass": true,
+      "detail": {
+        "trustedNativeButtonClicks": 2,
+        "syntheticClickSubstitution": false
+      }
+    },
+    {
+      "name": "Repeated arrow presses continue navigating menu items",
+      "pass": true,
+      "detail": {
+        "trustedRepeat": true,
+        "twoDownEventsMoveTwoItems": true
+      }
+    },
+    {
+      "name": "Native select navigation keeps repeated arrows and updates the saved setting",
+      "pass": true,
+      "detail": {
+        "nativeSelectRetainsFocus": true,
+        "settingPersistedThroughRealController": true
+      }
+    },
+    {
+      "name": "Events already consumed by a capture handler cannot navigate the menu",
+      "pass": true,
+      "detail": {
+        "captureHandlerFixture": true,
+        "defaultPreventedHonored": true,
+        "fullRemappingFlowClaimed": false
+      }
+    }
+  ],
+  "browserErrors": [],
+  "inputs": [
+    {
+      "path": "index.html",
+      "sha256": "9cab25b27a5a4badac439f824729d93210283b2f4cce9da4cf545982ba2b4e0a"
+    },
+    {
+      "path": "styles/game-menu-r20.css",
+      "sha256": "bbd1d381bbd2d654128b5376a7d5ff3dc317a9cade3b28763d235c2851759604"
+    },
+    {
+      "path": "src/interface-preferences-r20.js",
+      "sha256": "79e4655dcff4674e9447c7473a4a2db77fdc5ff31c370bc331d5c74e6d83ea35"
+    },
+    {
+      "path": "src/menu-navigation-r20.js",
+      "sha256": "46ed45264202e5f3d6bb84415ad5dd7ad04e91a375653ee9ae7196c853b27d8d"
+    },
+    {
+      "path": "src/bow-sprite-library-r20.js",
+      "sha256": "6a0abd067c725dd318aa0d98033530095be315ac0b3702607defdd1b3fbb5421"
+    },
+    {
+      "path": "src/game-menu-r20.js",
+      "sha256": "42b65299816edad16a17192a1bed8303bb0d3ac2f6152942476905c63da46bc0"
+    },
+    {
+      "path": "tests/browser-menu-input-r32.mjs",
+      "sha256": "97fab6f5dccab89e9a3b64c64674bce0e727919a426299acd521fbf3fa04f235"
+    }
+  ],
+  "scope": "Delivered menu HTML, CSS and controllers with trusted Chromium keyboard events. Image requests use a one-pixel fixture; no visual-art fidelity, full combat, hardware keyboard, physical gamepad or complete remapping certification."
+}

@@ -1,0 +1,227 @@
+{
+  "schema": "re.bow.generated-sprites-browser-r33/1",
+  "passed": 7,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Eight actual generated PNGs decode lazily with alpha and complete visible bounds",
+      "pass": true,
+      "evidence": {
+        "actualPngs": [
+          {
+            "uid": "re2-zombie-dog",
+            "facing": "right",
+            "width": 1536,
+            "height": 1024,
+            "transparent": 1242313,
+            "visible": 316801,
+            "bounds": {
+              "x": 189,
+              "y": 59,
+              "width": 1233,
+              "height": 918
+            },
+            "sha": "77459158f84c6b0a52874a5050c80ae15d20447deadeb23b056f48aeb08d0ada"
+          },
+          {
+            "uid": "re2-zombie-dog",
+            "facing": "left",
+            "width": 1536,
+            "height": 1024,
+            "transparent": 1249862,
+            "visible": 308338,
+            "bounds": {
+              "x": 177,
+              "y": 50,
+              "width": 1190,
+              "height": 932
+            },
+            "sha": "51c133c483bbf9f95b57a4ac39e034e49ab2d55cb7db7d77d65950d431136d2a"
+          },
+          {
+            "uid": "re2-giant-alligator",
+            "facing": "right",
+            "width": 2172,
+            "height": 724,
+            "transparent": 1208748,
+            "visible": 345851,
+            "bounds": {
+              "x": 58,
+              "y": 220,
+              "width": 2059,
+              "height": 402
+            },
+            "sha": "5041beacc5f4a5e58ab62d92861540e7cd99aee7bf4e0f760f105b7785a8aa1f"
+          },
+          {
+            "uid": "re2-giant-alligator",
+            "facing": "left",
+            "width": 2172,
+            "height": 724,
+            "transparent": 1209133,
+            "visible": 344984,
+            "bounds": {
+              "x": 77,
+              "y": 223,
+              "width": 2017,
+              "height": 405
+            },
+            "sha": "a755e15ec517923db402bce27fd61dc6dcfe92d661a39cc594d5368c802c3922"
+          },
+          {
+            "uid": "re2-giant-moth",
+            "facing": "right",
+            "width": 1774,
+            "height": 887,
+            "transparent": 1278342,
+            "visible": 276725,
+            "bounds": {
+              "x": 163,
+              "y": 235,
+              "width": 1431,
+              "height": 591
+            },
+            "sha": "59c2b38931a26de6ea95e29d19a166c3faad9b84c6af877c3eb45fa7604297ee"
+          },
+          {
+            "uid": "re2-giant-moth",
+            "facing": "left",
+            "width": 1774,
+            "height": 887,
+            "transparent": 1252542,
+            "visible": 302804,
+            "bounds": {
+              "x": 120,
+              "y": 203,
+              "width": 1566,
+              "height": 611
+            },
+            "sha": "1dc05e7896b19ce5b57533aa31a718bd3b163f6633438c496cd90b56da7fad55"
+          },
+          {
+            "uid": "re3-zombie",
+            "facing": "right",
+            "width": 1536,
+            "height": 1024,
+            "transparent": 1424582,
+            "visible": 136288,
+            "bounds": {
+              "x": 617,
+              "y": 37,
+              "width": 342,
+              "height": 942
+            },
+            "sha": "b1968518ea8a8d922677bfec9f5d05e3fa9bffbe94ab5d911925ad97921d92a5"
+          },
+          {
+            "uid": "re3-zombie",
+            "facing": "left",
+            "width": 1536,
+            "height": 1024,
+            "transparent": 1423480,
+            "visible": 137415,
+            "bounds": {
+              "x": 553,
+              "y": 43,
+              "width": 370,
+              "height": 935
+            },
+            "sha": "2508132e03f1af13823fc4ec63e3769d11cd732f8deb1747dbb5803f22c7be5e"
+          }
+        ],
+        "initialImageRequests": 1,
+        "totalActualImageRequests": 8,
+        "generatedNotNative": true,
+        "animationFramesPerSide": 1
+      }
+    },
+    {
+      "name": "Native keyboard buttons and radio controls change only the documented profile",
+      "pass": true,
+      "evidence": {
+        "trustedActivations": 2,
+        "storageUnchanged": true,
+        "editionPromoted": false
+      }
+    },
+    {
+      "name": "Actual text at200percent remains usable at320px without masked overflow",
+      "pass": true,
+      "evidence": {
+        "size": {
+          "width": 320,
+          "scroll": 320,
+          "detailWidth": 256,
+          "detailScroll": 256,
+          "overflowX": "visible"
+        },
+        "actualTextResize": "200%",
+        "contextualSubjectPreserved": true
+      }
+    },
+    {
+      "name": "Altered real PNG bytes are refused before display while source links remain available",
+      "pass": true,
+      "evidence": {
+        "corruptionRejected": true,
+        "displayed": null,
+        "provenanceLinks": 7
+      }
+    },
+    {
+      "name": "An obsolete selection cannot publish its image, error or address after the current one",
+      "pass": true,
+      "evidence": {
+        "oldRequestWasReal": true,
+        "delayedFailureFixture": true,
+        "currentImageAndAddressPreserved": true
+      }
+    },
+    {
+      "name": "Explicit page lifecycle fixtures release the decoded image and recover the same chosen side",
+      "pass": true,
+      "evidence": {
+        "syntheticLifecycleEvents": true,
+        "actualPngDecodedAfterResume": true,
+        "chosenSide": "left",
+        "physicalBfCacheCertified": false
+      }
+    },
+    {
+      "name": "Sixteen exact retained views and the four native archives are reachable with matching SHA",
+      "pass": true,
+      "evidence": {
+        "retainedNativeViews": 16,
+        "retainedArchives": 4,
+        "referenceFilesFetchedAndHashed": 20
+      }
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "tests/browser-generated-sprites-r33.mjs",
+      "sha256": "312cff58dcbd36511df05388295c4952191be8bf98b06fe1ca53a7e5a5a6f369"
+    },
+    {
+      "path": "modules/fidelity-r33/sprites/manifest.json",
+      "sha256": "b33b8c6738a97906e87625bfeae78b8132fef195591dbbcb40bedc9282eb0042"
+    },
+    {
+      "path": "modules/fidelity-r33/sprites/index.html",
+      "sha256": "63a34540d1955a25c3810958b3630ec319d19c72e297c9fada2abd543904f102"
+    },
+    {
+      "path": "modules/fidelity-r33/sprites/style.css",
+      "sha256": "47b6d44e266a62c61c0873e678de09effef38a11c7df39655ce443826501fe59"
+    },
+    {
+      "path": "modules/fidelity-r33/sprites/library.js",
+      "sha256": "f0bed845737e12319bc099bd2b2993231bed85ba98454091df2f949123af1040"
+    },
+    {
+      "path": "modules/fidelity-r33/sprites/page.js",
+      "sha256": "072a493a4dd50ded9ddee6cef82acbce642d73ae1e7ed1ec179323e22e9da08d"
+    }
+  ],
+  "scope": "Actual Chromium gallery and8true image_gen PNGs, lazy decode, native keyboard controls,320px actual200percent text, corruption and obsolete responses, explicit synthetic lifecycle fixtures and exact retained references. No physical BFCache, original animation, combat assignment or PlayStation equivalence claimed."
+}

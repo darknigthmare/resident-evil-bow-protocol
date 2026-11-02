@@ -1,0 +1,140 @@
+name: R34 generated roster and characters then arena selection
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main, 'codex/**']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: fidelity-r34-${{ github.ref }}
+  cancel-in-progress: true
+defaults:
+  run:
+    shell: bash
+jobs:
+  source:
+    name: Current R34 receipts, admission boundaries and original engine
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: '3.12'
+      - name: Install pinned verification tools
+        run: |
+          python3 -m venv "$RUNNER_TEMP/fidelity-r34-venv"
+          "$RUNNER_TEMP/fidelity-r34-venv/bin/python" -m pip install --timeout 60 --retries 2 Pillow==12.3.0 openpyxl==3.1.5 lxml==6.1.1 PyYAML==6.0.3
+          echo "$RUNNER_TEMP/fidelity-r34-venv/bin" >> "$GITHUB_PATH"
+          npm install --no-audit --no-fund --no-save --package-lock=false --fetch-timeout=60000 --fetch-retries=2 @napi-rs/canvas@0.1.80
+      - name: Verify the delivered source and media bindings before any report refresh
+        run: |
+          node scripts/verify-current-r34.mjs
+          python3 scripts/build-roster-jobs-r34.py --check
+          python3 scripts/build-roster-assets-r34.py --check
+          python3 scripts/build-roster-runtime-r34.py --check
+          python3 scripts/build-selection-r34.py --check
+          python3 scripts/fidelity-progress-r34.py check
+          python3 scripts/fidelity-progress-r34.py reproduce
+          python3 scripts/audit-delivery-r34.py --check
+          node tests/verify-r34-integration.mjs
+      - name: Execute new source assertions with fresh reports
+        run: |
+          mkdir -p qa-fidelity-r34-ci
+          touch qa-fidelity-r34-ci/tests-started
+          rm -f docs/R34_CURRENT_GUARD_TESTS.json docs/R34_ASSETS_TESTS.json docs/R34_ROSTER_RUNTIME_TESTS.json
+          node tests/verify-current-guard-r34.mjs --report=docs/R34_CURRENT_GUARD_TESTS.json
+          python3 tests/test_roster_assets_r34.py
+          node tests/verify-roster-runtime-r34.mjs
+          node --input-type=module - <<'JS'
+          import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
+          for(const name of ['CURRENT_GUARD_TESTS','ASSETS_TESTS','ROSTER_RUNTIME_TESTS']){
+            const file='docs/R34_'+name+'.json',report=JSON.parse(fs.readFileSync(file));
+            assert(report.passed>0,file);assert.equal(report.failed,0,file);assert.equal(report.skipped??0,0,file);
+            assert(report.sourceFiles?.length,file);
+            for(const source of report.sourceFiles)assert.equal(createHash('sha256').update(fs.readFileSync(source.path)).digest('hex'),source.sha256,file+': '+source.path);
+            fs.copyFileSync(file,'qa-fidelity-r34-ci/'+name+'.json');
+          }
+          JS
+      - name: Keep the original engine assertions current and their historical conservation exact
+        run: npm run verify > qa-fidelity-r34-ci/current-and-published-engine.log
+      - name: Build the current complete static delivery
+        run: |
+          npm run build > qa-fidelity-r34-ci/build.log
+          python3 scripts/verify-build-r34.py
+          cp docs/R34_BUILD.json qa-fidelity-r34-ci/
+      - name: Preserve actual execution outputs
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: r34-current-source-${{ github.run_id }}
+          path: |
+            qa-fidelity-r34-ci/
+            qa-fidelity-r34/
+            qa-gamedev-r32/
+          if-no-files-found: warn
+          retention-days: 14
+  browser:
+    name: Current R34 default player view - ${{ matrix.suite }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - suite: characters-arena-combat
+            script: tests/browser-selection-r34.mjs
+            report: docs/R34_SELECTION_BROWSER.json
+          - suite: generated-assets-gallery
+            script: tests/browser-roster-assets-r34.mjs
+            report: docs/R34_ASSETS_BROWSER.json
+          - suite: generated-roster-runtime
+            script: tests/browser-roster-runtime-r34.mjs
+            report: docs/R34_ROSTER_RUNTIME_BROWSER.json
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.16.0'
+      - name: Install pinned browser tools
+        run: npm install --no-audit --no-fund --no-save --package-lock=false --fetch-timeout=60000 --fetch-retries=2 playwright@1.64.1 @napi-rs/canvas@0.1.80 @puppeteer/browsers@2.10.10 axe-core@4.14.0
+      - name: Install the recorded Chromium and locate axe
+        run: |
+          node --input-type=module - <<'JS'
+          import fs from 'node:fs';import path from 'node:path';import {createRequire} from 'node:module';import {install,Browser} from '@puppeteer/browsers';
+          const browser=await install({browser:Browser.CHROME,buildId:'154.0.8037.57',cacheDir:path.join(process.env.RUNNER_TEMP,'r34-chrome')});
+          fs.appendFileSync(process.env.GITHUB_ENV,'CHROME_BIN='+browser.executablePath+'\n');
+          fs.appendFileSync(process.env.GITHUB_ENV,'AXE_CORE_PATH='+createRequire(import.meta.url).resolve('axe-core/axe.min.js')+'\n');
+          JS
+      - name: Exercise the default player flow without the legacy presentation fixture
+        run: |
+          mkdir -p qa-fidelity-r34-browser
+          touch qa-fidelity-r34-browser/started
+          rm -f '${{ matrix.report }}'
+          node '${{ matrix.script }}'
+          node --input-type=module - '${{ matrix.report }}' <<'JS'
+          import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
+          const file=process.argv[2],report=JSON.parse(fs.readFileSync(file));
+          assert(report.passed>0,file);assert.equal(report.failed,0,file);assert.equal(report.skipped??0,0,file);assert(report.sourceFiles?.length,file);
+          for(const source of report.sourceFiles)assert.equal(createHash('sha256').update(fs.readFileSync(source.path)).digest('hex'),source.sha256,file+': '+source.path);
+          fs.copyFileSync(file,'qa-fidelity-r34-browser/report.json');
+          JS
+      - name: Preserve fresh default-view execution outputs
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: r34-default-${{ matrix.suite }}-${{ github.run_id }}
+          path: qa-*r34*/
+          if-no-files-found: warn
+          retention-days: 14

@@ -1,0 +1,129 @@
+{
+  "suite": "baker-audio-r15-http",
+  "passed": 10,
+  "failed": 0,
+  "physicalDevices": false,
+  "subjectiveListening": false,
+  "checks": [
+    {
+      "name": "Native activation, timeline pause, seek and independent volume",
+      "width": 1440,
+      "pass": true,
+      "trustedActivation": true,
+      "realAudioContext": true,
+      "frameSeek": 150,
+      "workbookBytes": 16621
+    },
+    {
+      "name": "Layer and room changes use new recipes; unknown rooms remain silent",
+      "width": 1440,
+      "pass": true,
+      "sceneChangePauses": true,
+      "soloLayers": true,
+      "emptySearchSilent": true
+    },
+    {
+      "name": "Isolated audition works with frozen visuals, stops and never moves the stage",
+      "width": 1440,
+      "pass": true,
+      "isolatedPreview": true,
+      "realTwelveSecondEnd": true,
+      "reducedMotion": true
+    },
+    {
+      "name": "Real OfflineAudioContext reproduces the generated stereo loop without clipping",
+      "width": 1440,
+      "pass": true,
+      "realOfflineAudioContext": true,
+      "pcm": [
+        {
+          "id": "baker_garage_2017",
+          "peak": 0.13108423352241516,
+          "rms": 0.03677563477784197,
+          "error": 0
+        },
+        {
+          "id": "guest_house_attic_2017",
+          "peak": 0.10829384624958038,
+          "rms": 0.022768040469647716,
+          "error": 0
+        },
+        {
+          "id": "testing_area_2017",
+          "peak": 0.10146645456552505,
+          "rms": 0.03367744973488225,
+          "error": 0
+        }
+      ],
+      "subjectiveListening": false
+    },
+    {
+      "name": "Versus uses the shared room audio, pauses it and cannot restart it after match end",
+      "width": 1440,
+      "pass": true,
+      "configuredShortMatch": true,
+      "realEngineTicks": true,
+      "normalResult": true
+    },
+    {
+      "name": "Native activation, timeline pause, seek and independent volume",
+      "width": 390,
+      "pass": true,
+      "trustedActivation": true,
+      "realAudioContext": true,
+      "frameSeek": 150,
+      "workbookBytes": 16621
+    },
+    {
+      "name": "Layer and room changes use new recipes; unknown rooms remain silent",
+      "width": 390,
+      "pass": true,
+      "sceneChangePauses": true,
+      "soloLayers": true,
+      "emptySearchSilent": true
+    },
+    {
+      "name": "Isolated audition works with frozen visuals, stops and never moves the stage",
+      "width": 390,
+      "pass": true,
+      "isolatedPreview": true,
+      "realTwelveSecondEnd": false,
+      "reducedMotion": true
+    },
+    {
+      "name": "Real OfflineAudioContext reproduces the generated stereo loop without clipping",
+      "width": 390,
+      "pass": true,
+      "realOfflineAudioContext": true,
+      "pcm": [
+        {
+          "id": "baker_garage_2017",
+          "peak": 0.13108423352241516,
+          "rms": 0.03677563477784197,
+          "error": 0
+        },
+        {
+          "id": "guest_house_attic_2017",
+          "peak": 0.10829384624958038,
+          "rms": 0.022768040469647716,
+          "error": 0
+        },
+        {
+          "id": "testing_area_2017",
+          "peak": 0.10146645456552505,
+          "rms": 0.03367744973488225,
+          "error": 0
+        }
+      ],
+      "subjectiveListening": false
+    },
+    {
+      "name": "Versus uses the shared room audio, pauses it and cannot restart it after match end",
+      "width": 390,
+      "pass": true,
+      "configuredShortMatch": true,
+      "realEngineTicks": true,
+      "normalResult": true
+    }
+  ]
+}

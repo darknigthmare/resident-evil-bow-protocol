@@ -1,0 +1,502 @@
+{
+  "schema": "re.bow.runtime-browser-r33/1",
+  "passed": 8,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Three actual combat documents load the combined libraries without default edition changes",
+      "pass": true,
+      "detail": {
+        "mounts": [
+          {
+            "route": "/modules/versus.html",
+            "readyMs": 1941.2864690000001,
+            "counts": {
+              "generated": 367,
+              "nativeSubjects": 53,
+              "avatars": 388
+            },
+            "initialBudget": {
+              "limits": {
+                "pixels": 33554432,
+                "assets": 64,
+                "pending": 12
+              },
+              "reservations": 18,
+              "evictions": 0,
+              "refusals": 0,
+              "peakPixels": 6275558,
+              "peakAssets": 18,
+              "reservedPixels": 6275558,
+              "estimatedRgbaBytes": 25102232,
+              "assets": 18,
+              "pending": 1,
+              "pendingPixels": 162000,
+              "owners": {
+                "generated": {
+                  "pixels": 3145398,
+                  "assets": 2,
+                  "pending": 0
+                },
+                "avatars": {
+                  "pixels": 3130160,
+                  "assets": 16,
+                  "pending": 1
+                }
+              },
+              "scope": "Participating generated poses, native atlases and selection portraits only; other canvases, engine art, GPU textures and browser allocations are unmeasured.",
+              "physicalDeviceCertified": false,
+              "globalMemoryCertified": false
+            }
+          },
+          {
+            "route": "/catalog-duel.html",
+            "readyMs": 1339.221254,
+            "counts": {
+              "generated": 367,
+              "nativeSubjects": 53,
+              "avatars": 388
+            },
+            "initialBudget": {
+              "limits": {
+                "pixels": 33554432,
+                "assets": 64,
+                "pending": 12
+              },
+              "reservations": 2,
+              "evictions": 0,
+              "refusals": 0,
+              "peakPixels": 324000,
+              "peakAssets": 2,
+              "reservedPixels": 324000,
+              "estimatedRgbaBytes": 1296000,
+              "assets": 2,
+              "pending": 0,
+              "pendingPixels": 0,
+              "owners": {
+                "avatars": {
+                  "pixels": 324000,
+                  "assets": 2,
+                  "pending": 0
+                }
+              },
+              "scope": "Participating generated poses, native atlases and selection portraits only; other canvases, engine art, GPU textures and browser allocations are unmeasured.",
+              "physicalDeviceCertified": false,
+              "globalMemoryCertified": false
+            }
+          },
+          {
+            "route": "/modules/fidelity-r33/evolutions/index.html",
+            "readyMs": 1127.3419339999991,
+            "counts": {
+              "generated": 367,
+              "nativeSubjects": 53,
+              "avatars": 388
+            },
+            "initialBudget": {
+              "limits": {
+                "pixels": 33554432,
+                "assets": 64,
+                "pending": 12
+              },
+              "reservations": 3,
+              "evictions": 0,
+              "refusals": 0,
+              "peakPixels": 1896864,
+              "peakAssets": 3,
+              "reservedPixels": 1896864,
+              "estimatedRgbaBytes": 7587456,
+              "assets": 3,
+              "pending": 0,
+              "pendingPixels": 0,
+              "owners": {
+                "avatars": {
+                  "pixels": 324000,
+                  "assets": 2,
+                  "pending": 0
+                },
+                "generated": {
+                  "pixels": 1572864,
+                  "assets": 1,
+                  "pending": 0
+                }
+              },
+              "scope": "Participating generated poses, native atlases and selection portraits only; other canvases, engine art, GPU textures and browser allocations are unmeasured.",
+              "physicalDeviceCertified": false,
+              "globalMemoryCertified": false
+            }
+          }
+        ],
+        "defaultEditionPromotions": 0,
+        "hardwarePerformanceCertified": false
+      }
+    },
+    {
+      "name": "A deliberate GameCube family renders both sides in a natural duel while actors, replay and storage stay exact",
+      "pass": true,
+      "detail": {
+        "phase": "fight",
+        "ids": [
+          "re2-zombie-dog",
+          "re2-zombie-dog"
+        ],
+        "frame": 109,
+        "drawn": 2,
+        "sides": [
+          {
+            "facing": "left",
+            "sha256": "51c133c483bbf9f95b57a4ac39e034e49ab2d55cb7db7d77d65950d431136d2a",
+            "sourceEdition": "Resident Evil 2 — port GameCube (2003), Zombie Dog"
+          },
+          {
+            "facing": "right",
+            "sha256": "77459158f84c6b0a52874a5050c80ae15d20447deadeb23b056f48aeb08d0ada",
+            "sourceEdition": "Resident Evil 2 — port GameCube (2003), Zombie Dog"
+          }
+        ],
+        "actorsPreserved": true,
+        "replayPreserved": true,
+        "storage": "{}",
+        "originalIdleCertified": false,
+        "framesPerSide": 1,
+        "mirrored": false
+      }
+    },
+    {
+      "name": "The marine loop is labelled aquatic before selection and retains original source timing after selection",
+      "pass": true,
+      "detail": {
+        "frames": 150,
+        "sampleRate": 60,
+        "habitat": "aquatic",
+        "actionCertified": false,
+        "admittedTargetEdition": false,
+        "first": {
+          "ok": true,
+          "origin": "R33-native",
+          "id": "rerev-sea-creeper--em1200_em1200_BA_1--right--r33-observed-neutral",
+          "frame": 0,
+          "frames": 150,
+          "animated": true,
+          "reducedMotion": false,
+          "mirrored": false,
+          "canonicalFidelityCertified": false,
+          "originalGameSprite": false,
+          "sourceEdition": "PC/HD2013 source publication; 3DS2012 equivalence unverified",
+          "sourceActionCertified": false,
+          "actionIdentity": "observed-neutral-loop",
+          "presentationVariant": true
+        },
+        "next": {
+          "ok": true,
+          "origin": "R33-native",
+          "id": "rerev-sea-creeper--em1200_em1200_BA_1--right--r33-observed-neutral",
+          "frame": 6,
+          "frames": 150,
+          "animated": true,
+          "reducedMotion": false,
+          "mirrored": false,
+          "canonicalFidelityCertified": false,
+          "originalGameSprite": false,
+          "sourceEdition": "PC/HD2013 source publication; 3DS2012 equivalence unverified",
+          "sourceActionCertified": false,
+          "actionIdentity": "observed-neutral-loop",
+          "presentationVariant": true
+        },
+        "reduced": {
+          "ok": true,
+          "origin": "R33-native",
+          "id": "rerev-sea-creeper--em1200_em1200_BA_1--right--r33-observed-neutral",
+          "frame": 0,
+          "frames": 150,
+          "animated": true,
+          "reducedMotion": true,
+          "mirrored": false,
+          "canonicalFidelityCertified": false,
+          "originalGameSprite": false,
+          "sourceEdition": "PC/HD2013 source publication; 3DS2012 equivalence unverified",
+          "sourceActionCertified": false,
+          "actionIdentity": "observed-neutral-loop",
+          "presentationVariant": true
+        }
+      }
+    },
+    {
+      "name": "Three new native face crops display in the actual avatar selection with their source edition",
+      "pass": true,
+      "detail": {
+        "portraits": [
+          {
+            "id": "re0-zombie",
+            "sourceEdition": "GameCube 2002",
+            "title": "Rendu du modèle natif · GameCube 2002",
+            "sourceBodyCompleteCertified": false,
+            "assigned": false,
+            "transform": "translate(0px, 85.215px) scale(3.68)",
+            "sourceImage": "modules/fidelity-r33/native/poses/re0-zombie-gc-r26-1--front.png"
+          },
+          {
+            "id": "re5-chainsaw-majini",
+            "sourceEdition": "Resident Evil 5 (2009) / PC source export",
+            "title": "Rendu du modèle natif · Resident Evil 5 (2009) / PC source export",
+            "sourceBodyCompleteCertified": false,
+            "assigned": false,
+            "transform": "translate(0px, 81.696px) scale(3.62338)",
+            "sourceImage": "modules/fidelity-r33/native/poses/re5-chainsaw-majini-pc-published--front.png"
+          },
+          {
+            "id": "re5-executioner",
+            "sourceEdition": "Resident Evil 5 (2009) / PC source export",
+            "title": "Rendu du modèle natif · Resident Evil 5 (2009) / PC source export",
+            "sourceBodyCompleteCertified": false,
+            "assigned": false,
+            "transform": "translate(-1.36686px, 72.4434px) scale(3.36457)",
+            "sourceImage": "modules/fidelity-r33/native/poses/re5-executioner-pc-published--front.png"
+          }
+        ],
+        "originalRasterEdits": 0
+      }
+    },
+    {
+      "name": "Actual two-side PNGs and native atlases stay bounded and recover automatically after full credit pressure",
+      "pass": true,
+      "detail": {
+        "before": {
+          "limits": {
+            "pixels": 33554432,
+            "assets": 64,
+            "pending": 12
+          },
+          "reservations": 6,
+          "evictions": 0,
+          "refusals": 0,
+          "peakPixels": 3893872,
+          "peakAssets": 6,
+          "reservedPixels": 3893872,
+          "estimatedRgbaBytes": 15575488,
+          "assets": 6,
+          "pending": 0,
+          "pendingPixels": 0,
+          "owners": {
+            "avatars": {
+              "pixels": 486000,
+              "assets": 3,
+              "pending": 0
+            },
+            "generated": {
+              "pixels": 3145728,
+              "assets": 2,
+              "pending": 0
+            },
+            "native": {
+              "pixels": 262144,
+              "assets": 1,
+              "pending": 0
+            }
+          },
+          "scope": "Participating generated poses, native atlases and selection portraits only; other canvases, engine art, GPU textures and browser allocations are unmeasured.",
+          "physicalDeviceCertified": false,
+          "globalMemoryCertified": false
+        },
+        "pressure": {
+          "limits": {
+            "pixels": 33554432,
+            "assets": 64,
+            "pending": 12
+          },
+          "reservations": 7,
+          "evictions": 6,
+          "refusals": 2,
+          "peakPixels": 33554432,
+          "peakAssets": 6,
+          "reservedPixels": 33554432,
+          "estimatedRgbaBytes": 134217728,
+          "assets": 1,
+          "pending": 1,
+          "pendingPixels": 33554432,
+          "owners": {
+            "qa-pressure": {
+              "pixels": 33554432,
+              "assets": 1,
+              "pending": 1
+            }
+          },
+          "scope": "Participating generated poses, native atlases and selection portraits only; other canvases, engine art, GPU textures and browser allocations are unmeasured.",
+          "physicalDeviceCertified": false,
+          "globalMemoryCertified": false
+        },
+        "pendingDirections": 2,
+        "held": [
+          "rejected",
+          "rejected"
+        ],
+        "recoveryMs": 89.70000004768372,
+        "drawn": [
+          true,
+          true
+        ],
+        "recovered": {
+          "limits": {
+            "pixels": 33554432,
+            "assets": 64,
+            "pending": 12
+          },
+          "reservations": 11,
+          "evictions": 6,
+          "refusals": 2,
+          "peakPixels": 33554432,
+          "peakAssets": 6,
+          "reservedPixels": 3569872,
+          "estimatedRgbaBytes": 14279488,
+          "assets": 4,
+          "pending": 0,
+          "pendingPixels": 0,
+          "owners": {
+            "generated": {
+              "pixels": 3145728,
+              "assets": 2,
+              "pending": 0
+            },
+            "avatars": {
+              "pixels": 162000,
+              "assets": 1,
+              "pending": 0
+            },
+            "native": {
+              "pixels": 262144,
+              "assets": 1,
+              "pending": 0
+            }
+          },
+          "scope": "Participating generated poses, native atlases and selection portraits only; other canvases, engine art, GPU textures and browser allocations are unmeasured.",
+          "physicalDeviceCertified": false,
+          "globalMemoryCertified": false
+        },
+        "warmCanvasCalls": {
+          "count": 250,
+          "medianMs": 0,
+          "p95Ms": 0
+        },
+        "generatedErrors": 0,
+        "pressureReservationIsFixture": true,
+        "measuredScope": "Participating reader credits and JavaScript Canvas submission only. No physical screen cadence, GPU time or total browser memory certification."
+      }
+    },
+    {
+      "name": "Keyboard edition controls reflow at320px with actual doubled text and pass scoped axe checks",
+      "pass": true,
+      "detail": {
+        "viewport": 320,
+        "sizes": [
+          {
+            "id": "generatedVariantsR31",
+            "width": 300,
+            "scrollWidth": 298,
+            "clientWidth": 298,
+            "font": 24,
+            "selectFont": 24
+          },
+          {
+            "id": "nativePresentationR30",
+            "width": 300,
+            "scrollWidth": 298,
+            "clientWidth": 298,
+            "font": 24,
+            "selectFont": 24
+          }
+        ],
+        "audit": {
+          "version": "4.14.0",
+          "violations": [],
+          "passes": 11
+        },
+        "physicalAssistiveDeviceCertified": false
+      }
+    },
+    {
+      "name": "Page lifecycle releases credits and selection stays scoped to this document rather than saved progress",
+      "pass": true,
+      "detail": {
+        "documentScopedChoice": true,
+        "syntheticLifecycleEvents": true,
+        "hiddenPixels": 0,
+        "progressWrites": 0,
+        "reloadedChoice": null
+      }
+    },
+    {
+      "name": "An altered source-side PNG fails its digest while the chosen edition and source links remain visible",
+      "pass": true,
+      "detail": {
+        "reason": "Sprite SHA-256 differs from its manifest",
+        "selected": "re2-zombie-dog-gamecube-r33",
+        "errors": 1,
+        "alteredPixelsDisplayed": false
+      }
+    }
+  ],
+  "environment": {
+    "node": "v22.16.0",
+    "chromium": "154.0.8037.57",
+    "executable": "/usr/bin/chromium"
+  },
+  "sourceFiles": [
+    {
+      "path": "tests/browser-runtime-r33.mjs",
+      "sha256": "ba46130be48a4227adb39587782560c7db6cc905f3cdddca6078f014b222b667"
+    },
+    {
+      "path": "modules/versus.html",
+      "sha256": "f739bc0623e6a2d0112e99d790c4b195ecd655ff948752df6f26afaddf68c5ff"
+    },
+    {
+      "path": "catalog-duel.html",
+      "sha256": "a4edb7a5359cbff01baf64832aa66fc8db546327fe85f3f29354427d117ddd77"
+    },
+    {
+      "path": "modules/fidelity-r33/evolutions/index.html",
+      "sha256": "40d61ede56c2f9f1ae0ceb618b35487d9974c4866344b8278fd47814879327dc"
+    },
+    {
+      "path": "modules/fidelity-r33/evolutions/selection.js",
+      "sha256": "612a7cc901a6271e2eaabae0bdc03dfc0f3e007160b30e4dd66f1f483e258bdc"
+    },
+    {
+      "path": "modules/fidelity-r33/combat/generated-runtime.js",
+      "sha256": "20f783c2041c63fb7f63e1321f706f14aa54ea227c70797d33038e277d224cc7"
+    },
+    {
+      "path": "modules/fidelity-r33/combat/generated-adapter.js",
+      "sha256": "8c1e12a99c91184f067646a2c92633580f1fa51d51b6018aa0fc0e45064f5292"
+    },
+    {
+      "path": "modules/fidelity-r33/combat/native-runtime.js",
+      "sha256": "1fbbcd3e88989cf7800ec662b9c80678e3aeb8fb5687e71642ca7baeb9b32646"
+    },
+    {
+      "path": "modules/fidelity-r33/combat/native-adapter.js",
+      "sha256": "503e2628591ff36c424026c708927ace5f235dd2b189efa053ade3fbeab77ca5"
+    },
+    {
+      "path": "modules/fidelity-r33/combat/manifest.json",
+      "sha256": "11921f3fa53293b064837da0c32f7d888be04b2dbcc1c2b33c0f116e24a85809"
+    },
+    {
+      "path": "modules/fidelity-r33/combat/native-index.json",
+      "sha256": "d952e5027d52bb1cd416fd7443f1632f0b676354904b08d3bbc299a34cf0bd1a"
+    },
+    {
+      "path": "modules/fidelity-r33/selection/avatars.js",
+      "sha256": "12795289487e44b89ff4527d05fc8509bfe951b99cd04c5cb1644d34cedcbc3a"
+    },
+    {
+      "path": "modules/fidelity-r33/selection/manifest.json",
+      "sha256": "36649eb348a8e7fe31e7f9ed27d1d580e154f5dd82741b0a0d0a0be8b77d53dc"
+    },
+    {
+      "path": "modules/fidelity-r31/performance/image-budget.js",
+      "sha256": "e7a3a2039c9c666475fdfe118bc1fece445891d0213bbe20e75fece248cebce2"
+    }
+  ],
+  "scope": "Real current combat documents/PNG decoders and natural engine actors; voluntary source editions, actual200%text and scoped axe. Credit-pressure/lifecycle events are explicit fixtures. No original idle or physical-device certification."
+}

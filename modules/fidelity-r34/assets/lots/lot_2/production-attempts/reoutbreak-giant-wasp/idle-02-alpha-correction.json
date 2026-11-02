@@ -1,0 +1,64 @@
+{
+  "schema": "re.bow.production-attempt-r34/1",
+  "uid": "reoutbreak-giant-wasp",
+  "kind": "idle",
+  "lotId": "lot_2",
+  "stage": "positive-alpha-padding-correction",
+  "generator": "image_gen",
+  "status": "GENERATED",
+  "createdAt": "2026-11-01T03:26:26.475853+00:00",
+  "prompt": "Correct the LAST attached generated wasp image. The complete wasp itself is already correct and right-facing: keep its identity, two pale veined wings, striped body, head to RIGHT, all thin legs and the stinger. Remove the tiny DETACHED diagonal alpha fragment at the extreme TOP-LEFT corner; it is not part of the insect. Return only the complete single wasp on clean native transparent alpha, with at least ten percent transparent margin around EVERY wing/leg/stinger endpoint, no stray fragments or halos. Preserve the actual source appearance from the FIRST original reference. Do not mirror, add limbs, crop wings or paint a background. One static base pose, no text, scene or animation grid.",
+  "references": [
+    {
+      "path": "assets/catalog/reoutbreak-giant-wasp.png",
+      "bytes": 49797,
+      "sha256": "13f8c0e93ba85d3cc3cbbd057ce63a805a14627151d9667939a389e76d9c7820",
+      "sourceUrl": "https://www.evilresource.com/resident-evil-outbreak/enemies/giant-wasp",
+      "sourceEdition": "Resident Evil Outbreak (2003)",
+      "exactIdentity": true,
+      "targetEditionAdmitted": true,
+      "role": "actually-inspected-complete-body-source"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/reoutbreak-giant-wasp/idle-right.png",
+      "bytes": 704033,
+      "sha256": "166a0a703d4bfe1e079ca3284501061ac4595ae3cce7ea0d7c2410a1f4a25dc5",
+      "exactIdentity": true,
+      "targetEditionAdmitted": true,
+      "role": "generated-draft-to-clean-not-original-body-proof",
+      "sourceEdition": "Resident Evil Outbreak (2003)"
+    }
+  ],
+  "completeBodyReference": {
+    "path": "assets/catalog/reoutbreak-giant-wasp.png",
+    "bytes": 49797,
+    "sha256": "13f8c0e93ba85d3cc3cbbd057ce63a805a14627151d9667939a389e76d9c7820",
+    "sourceUrl": "https://www.evilresource.com/resident-evil-outbreak/enemies/giant-wasp",
+    "sourceEdition": "Resident Evil Outbreak (2003)",
+    "exactIdentity": true,
+    "targetEditionAdmitted": true,
+    "role": "actually-inspected-complete-body-source"
+  },
+  "sourceObservation": "Complete airborne wasp catalogue with head, thorax, striped abdomen and stinger, thin dangling legs and two spread pale wings inside image bounds. Identifying anatomy is fully visible, exact motion is not supplied.",
+  "priorPositiveOutput": {
+    "path": "modules/fidelity-r34/assets/generated/reoutbreak-giant-wasp/idle-right.png",
+    "bytes": 704033,
+    "sha256": "166a0a703d4bfe1e079ca3284501061ac4595ae3cce7ea0d7c2410a1f4a25dc5",
+    "exactIdentity": true,
+    "targetEditionAdmitted": true,
+    "role": "generated-draft-to-clean-not-original-body-proof",
+    "sourceEdition": "Resident Evil Outbreak (2003)"
+  },
+  "toolArgs": {
+    "prompt": "Correct the LAST attached generated wasp image. The complete wasp itself is already correct and right-facing: keep its identity, two pale veined wings, striped body, head to RIGHT, all thin legs and the stinger. Remove the tiny DETACHED diagonal alpha fragment at the extreme TOP-LEFT corner; it is not part of the insect. Return only the complete single wasp on clean native transparent alpha, with at least ten percent transparent margin around EVERY wing/leg/stinger endpoint, no stray fragments or halos. Preserve the actual source appearance from the FIRST original reference. Do not mirror, add limbs, crop wings or paint a background. One static base pose, no text, scene or animation grid.",
+    "referenced_image_paths": [
+      "/workspace/resident-evil-bow-protocol/assets/catalog/reoutbreak-giant-wasp.png",
+      "/workspace/resident-evil-bow-protocol/modules/fidelity-r34/assets/generated/reoutbreak-giant-wasp/idle-right.png"
+    ],
+    "transparent_background": true
+  },
+  "reason": "Native alpha16 measurement found an isolated top-left fragment atx0; main insect body is complete but current silhouette padding gate correctly rejects it.",
+  "updatedAt": "2026-11-01T03:27:18.356769+00:00",
+  "sourceOutputPath": "/workspace/generated_images/exec-f0310cc8-473b-4473-b341-0e302c6b58a6.png",
+  "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-f0310cc8-473b-4473-b341-0e302c6b58a6.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+}

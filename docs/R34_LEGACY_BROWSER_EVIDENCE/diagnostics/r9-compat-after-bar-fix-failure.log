@@ -1,0 +1,65 @@
+PASS AUD-02-03 1440
+PASS AUD-01 1440
+PASS AUD-04 1440
+PASS AUD-05 1440
+page.click: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('#fightScreen .audio-open58')[22m
+[2m    - locator resolved to <button type="button" class="audio-open58" aria-label="Régler les sons du combat">SON</button>[22m
+[2m  - attempting click action[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is visible, enabled and stable[22m
+[2m      - scrolling into view if needed[22m
+[2m      - done scrolling[22m
+[2m      - <nav class="r20-dev-bar" aria-label="Outils de développement">…</nav> intercepts pointer events[22m
+[2m    - retrying click action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is visible, enabled and stable[22m
+[2m      - scrolling into view if needed[22m
+[2m      - done scrolling[22m
+[2m      - <nav class="r20-dev-bar" aria-label="Outils de développement">…</nav> intercepts pointer events[22m
+[2m    - retrying click action[22m
+[2m      - waiting 100ms[22m
+[2m    50 × waiting for element to be visible, enabled and stable[22m
+[2m       - element is visible, enabled and stable[22m
+[2m       - scrolling into view if needed[22m
+[2m       - done scrolling[22m
+[2m       - <nav class="r20-dev-bar" aria-label="Outils de développement">…</nav> intercepts pointer events[22m
+[2m     - retrying click action[22m
+[2m       - waiting 500ms[22m
+
+    at /workspace/scratch/r35-ci/repro/checkout/tests/browser-audit-r9.mjs:31:391
+    at async run (/workspace/scratch/r35-ci/repro/checkout/tests/browser-audit-r9.mjs:8:50)
+    at async file:///workspace/scratch/r35-ci/repro/checkout/tests/browser-audit-r9.mjs:28:3
+page.click: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('#fightScreen .audio-open58')[22m
+[2m    - locator resolved to <button type="button" class="audio-open58" aria-label="Régler les sons du combat">SON</button>[22m
+[2m  - attempting click action[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is visible, enabled and stable[22m
+[2m      - scrolling into view if needed[22m
+[2m      - done scrolling[22m
+[2m      - <nav class="r20-dev-bar" aria-label="Outils de développement">…</nav> intercepts pointer events[22m
+[2m    - retrying click action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is visible, enabled and stable[22m
+[2m      - scrolling into view if needed[22m
+[2m      - done scrolling[22m
+[2m      - <nav class="r20-dev-bar" aria-label="Outils de développement">…</nav> intercepts pointer events[22m
+[2m    - retrying click action[22m
+[2m      - waiting 100ms[22m
+[2m    50 × waiting for element to be visible, enabled and stable[22m
+[2m       - element is visible, enabled and stable[22m
+[2m       - scrolling into view if needed[22m
+[2m       - done scrolling[22m
+[2m       - <nav class="r20-dev-bar" aria-label="Outils de développement">…</nav> intercepts pointer events[22m
+[2m     - retrying click action[22m
+[2m       - waiting 500ms[22m
+
+    at /workspace/scratch/r35-ci/repro/checkout/tests/browser-audit-r9.mjs:31:391
+    at async run (/workspace/scratch/r35-ci/repro/checkout/tests/browser-audit-r9.mjs:8:50)
+    at async file:///workspace/scratch/r35-ci/repro/checkout/tests/browser-audit-r9.mjs:28:3
+{"passed":4,"failed":1}

@@ -1,0 +1,68 @@
+{
+  "schema": "re.bow.production-attempt-r34/1",
+  "uid": "re4r-iron-maiden",
+  "kind": "idle",
+  "lotId": "lot_2",
+  "stage": "positive-output-correction",
+  "generator": "image_gen",
+  "status": "GENERATED",
+  "createdAt": "2026-11-01T02:57:09.909927+00:00",
+  "prompt": "Correct the existing generated game asset, with the original source as anatomical truth. Correct the generated LAST image to a clear RIGHT-facing side/three-quarter fighting-game ready pose. Its face and jaw must project to RIGHT rather than toward the camera; preserve the complete head, both arms and hands, bloated torso, two legs, both feet and every long needle spine. No cropped needles, no extra spikes or missing limbs.\nOne COMPLETE character in one image, every extremity and equipment endpoint inside at least ten percent transparent padding. No text, scene, floor, coloured outline or frame. Preserve original identity, colours, equipment and anatomical asymmetries. Native transparent alpha. A static generated adaptation, not an original frame or original animation. Do not use a horizontal software mirror.",
+  "references": [
+    {
+      "path": "modules/fidelity-r34/assets/source-research/ironmaiden-re4r-blog.png",
+      "bytes": 95175,
+      "sha256": "bece859838b65682d375510e6f740a52820b85297a77c89fe2474d881a247b1a",
+      "sourceUrl": "https://blackjackrants.blogspot.com/2023/10/reviewing-monsters-resident-evil-4.html",
+      "sourceEdition": "Resident Evil 4 remake (2023)",
+      "exactIdentity": true,
+      "targetEditionAdmitted": true,
+      "role": "actually-inspected-complete-body-source"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/re4r-iron-maiden/studies/idle-initial.png",
+      "bytes": 1753743,
+      "sha256": "c7d1e6220f08236f79334e46c5ccd9a45a35ab3b081e146ebcf8673b2197f254",
+      "exactIdentity": true,
+      "targetEditionAdmitted": true,
+      "sourceEdition": "Resident Evil 4 remake (2023)",
+      "role": "generated-positive-draft-to-correct-not-anatomical-proof"
+    }
+  ],
+  "completeBodyReference": {
+    "path": "modules/fidelity-r34/assets/source-research/ironmaiden-re4r-blog.png",
+    "bytes": 95175,
+    "sha256": "bece859838b65682d375510e6f740a52820b85297a77c89fe2474d881a247b1a",
+    "sourceUrl": "https://blackjackrants.blogspot.com/2023/10/reviewing-monsters-resident-evil-4.html",
+    "sourceEdition": "Resident Evil 4 remake (2023)",
+    "exactIdentity": true,
+    "targetEditionAdmitted": true,
+    "role": "actually-inspected-complete-body-source"
+  },
+  "sourceObservation": "Head, thin neck, complete heavy torso, both outward hands, two legs and bare feet visible, plus long radial spikes. Very dark source; several long thin spikes approach lateral frame edges, so exact distal lengths and rear arrangement are uncertain. Main body support points are the two visible feet.",
+  "priorPositiveOutput": {
+    "path": "modules/fidelity-r34/assets/generated/re4r-iron-maiden/studies/idle-initial.png",
+    "bytes": 1753743,
+    "sha256": "c7d1e6220f08236f79334e46c5ccd9a45a35ab3b081e146ebcf8673b2197f254",
+    "exactIdentity": true,
+    "targetEditionAdmitted": true,
+    "sourceEdition": "Resident Evil 4 remake (2023)",
+    "role": "generated-positive-draft-to-correct-not-anatomical-proof"
+  },
+  "toolArgs": {
+    "prompt": "Correct the existing generated game asset, with the original source as anatomical truth. Correct the generated LAST image to a clear RIGHT-facing side/three-quarter fighting-game ready pose. Its face and jaw must project to RIGHT rather than toward the camera; preserve the complete head, both arms and hands, bloated torso, two legs, both feet and every long needle spine. No cropped needles, no extra spikes or missing limbs.\nOne COMPLETE character in one image, every extremity and equipment endpoint inside at least ten percent transparent padding. No text, scene, floor, coloured outline or frame. Preserve original identity, colours, equipment and anatomical asymmetries. Native transparent alpha. A static generated adaptation, not an original frame or original animation. Do not use a horizontal software mirror.",
+    "referenced_image_paths": [
+      "/workspace/resident-evil-bow-protocol/modules/fidelity-r34/assets/source-research/ironmaiden-re4r-blog.png",
+      "/workspace/resident-evil-bow-protocol/modules/fidelity-r34/assets/generated/re4r-iron-maiden/studies/idle-initial.png"
+    ],
+    "transparent_background": true
+  },
+  "interruptionReview": {
+    "previousPreparedCorrectionHadNoRecoverableReturn": false,
+    "noKnownModerationRefusalForUid": true,
+    "oneDocumentedCorrectionAuthorizedByCoordinator": true
+  },
+  "updatedAt": "2026-11-01T03:00:12.645101+00:00",
+  "sourceOutputPath": "/workspace/generated_images/exec-c570d3f1-2648-476d-be6f-c14e425df511.png",
+  "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-c570d3f1-2648-476d-be6f-c14e425df511.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+}
