@@ -1,0 +1,181 @@
+{
+  "schema": "re.bow.evidence-browser-r33/1",
+  "passed": 11,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Actual documentary viewer presents13 source identities and18 total dossiers without eager media or storage writes",
+      "pass": true,
+      "detail": {
+        "documentedIdentities": 13,
+        "dossiers": 18,
+        "eagerMediaRequests": 0,
+        "storageWrites": 0
+      }
+    },
+    {
+      "name": "Native keyboard selection keeps the exact UID, own anatomy and source edition visible",
+      "pass": true,
+      "detail": {
+        "trustedKeyboardSelection": true,
+        "automaticEditionEquivalence": false
+      }
+    },
+    {
+      "name": "Real context controls require the cited game, phase, anatomy and each condition",
+      "pass": true,
+      "detail": {
+        "missingConditionsRejected": true,
+        "wrongGameRejected": true,
+        "gameplayAssignments": 0
+      }
+    },
+    {
+      "name": "Published WAV and OGG are hash-verified on demand and really decoded without automatic playback",
+      "pass": true,
+      "detail": [
+        {
+          "uid": "recv-nosferatu",
+          "duration": 4.168667,
+          "readyState": 4,
+          "automaticPlayback": false,
+          "independentHumanListening": false
+        },
+        {
+          "uid": "re4-dr-salvador",
+          "duration": 1.559719,
+          "readyState": 4,
+          "automaticPlayback": false,
+          "independentHumanListening": false
+        }
+      ]
+    },
+    {
+      "name": "Changed audio bytes and oversized streams are rejected before a Blob can reach the player",
+      "pass": true,
+      "detail": [
+        {
+          "attack": "hash",
+          "playerSourceAdmitted": false
+        },
+        {
+          "attack": "oversized",
+          "playerSourceAdmitted": false
+        }
+      ]
+    },
+    {
+      "name": "A stale audio response cannot replace a newer selection or disable its preparation",
+      "pass": true,
+      "detail": {
+        "lateFailureIgnored": true,
+        "selectedSourceKept": "b4a25abd8c2b0d9bcb8b4801"
+      }
+    },
+    {
+      "name": "Page exit cancels a pending setup and releases a prepared audio source; return never starts playback",
+      "pass": true,
+      "detail": {
+        "syntheticPageTransitions": true,
+        "sourceReleased": true,
+        "automaticPlaybackOnReturn": false
+      }
+    },
+    {
+      "name": "Initialization interrupted before the manifest returns restarts without duplicate choices or stale publication",
+      "pass": true,
+      "detail": {
+        "manifestResponses": 2,
+        "syntheticPageTransitions": true,
+        "duplicateChoices": 0
+      }
+    },
+    {
+      "name": "Real JSON dossier export preserves source hashes and unresolved listening/edition status",
+      "pass": true,
+      "detail": {
+        "trustedKeyboardDownload": true,
+        "candidates": 5,
+        "attributionsAdded": 0
+      }
+    },
+    {
+      "name": "Source text stays inert and invalid paths or promoted source fields cannot enter the actual page",
+      "pass": true,
+      "detail": {
+        "markupExecuted": false,
+        "unsafeSourcePathRejected": true,
+        "sourcePromotionRejected": true,
+        "unknownUidFallback": false
+      }
+    },
+    {
+      "name": "Actual320px and1280px views retain keyboard focus and pass axe with text doubled",
+      "pass": true,
+      "detail": {
+        "views": [
+          {
+            "width": 320,
+            "font": "100%",
+            "overflow": 0
+          },
+          {
+            "width": 320,
+            "font": "200%",
+            "overflow": 0
+          },
+          {
+            "width": 1280,
+            "font": "100%",
+            "overflow": 0
+          },
+          {
+            "width": 1280,
+            "font": "200%",
+            "overflow": 0
+          }
+        ],
+        "axeViolations": 0,
+        "screenReaderOrHardwareCertified": false
+      }
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "tests/browser-evidence-r33.mjs",
+      "bytes": 19460,
+      "sha256": "92e7382c8a6c4e002e587a23c795061d5988d354253df1b4a0dda2102c5ca14a"
+    },
+    {
+      "path": "modules/fidelity-r33/evidence/index.html",
+      "bytes": 3803,
+      "sha256": "36b2c4cfb030e7aeb8686775e2c3d6244b0e523e8a7474f5cdbb3395821caee2"
+    },
+    {
+      "path": "modules/fidelity-r33/evidence/query.js",
+      "bytes": 7805,
+      "sha256": "6ff6d24e730c1ba7ed478255f49f3cbf4a58c570f599702509d8fe48f8e32895"
+    },
+    {
+      "path": "modules/fidelity-r33/evidence/page.js",
+      "bytes": 12122,
+      "sha256": "1f04ef64ba60866a71a463fec5457b21cd294595fdd0142058cc2efb2ab21363"
+    },
+    {
+      "path": "modules/fidelity-r33/evidence/style.css",
+      "bytes": 2573,
+      "sha256": "1f3c0fcb70b0294d5f3f389984f2addc5adffba44c4efc7deebcec3ffd2cf6c0"
+    },
+    {
+      "path": "modules/fidelity-r33/evidence/manifest.json",
+      "bytes": 320248,
+      "sha256": "386ee45ae46ddb4355aec4a012d3d67a9fa6c51fe1934bc3c83c560e79b46f2e"
+    },
+    {
+      "path": "modules/fidelity-r31/audio/manifest.json",
+      "bytes": 438082,
+      "sha256": "f7c1fc43e8ac06b5efbbafc46fddc2448de6bc4f161897ba6c25da9c9ca91860"
+    }
+  ],
+  "scope": "Actual source UI and published WAV/OGG decode, native keyboard actions, context comparisons, source-bound export, rejected corrupt bytes, asynchronous selection and synthetic page lifecycle, real320px/200%text and axe checks. No independent human listening, physical screen reader or native action attribution."
+}

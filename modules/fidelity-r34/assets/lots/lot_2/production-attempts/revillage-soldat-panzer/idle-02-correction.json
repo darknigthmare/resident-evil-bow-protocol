@@ -1,0 +1,68 @@
+{
+  "schema": "re.bow.production-attempt-r34/1",
+  "uid": "revillage-soldat-panzer",
+  "kind": "idle",
+  "lotId": "lot_2",
+  "stage": "positive-output-correction",
+  "generator": "image_gen",
+  "status": "GENERATED",
+  "createdAt": "2026-11-01T02:57:09.934929+00:00",
+  "prompt": "Correct the existing generated game asset, with the original source as anatomical truth. Correct the LAST draft from frontal to a clear RIGHT-facing three-quarter ready stance. Preserve all source drill tips and their anatomical arm assignment: the original image-right/anatomical-left arm has the larger multiple-drill assembly, while the original image-left/anatomical-right arm has its separate drills. Preserve helmet tubes, armour asymmetry, straps and both boots; do not swap the arms.\nOne COMPLETE character in one image, every extremity and equipment endpoint inside at least ten percent transparent padding. No text, scene, floor, coloured outline or frame. Preserve original identity, colours, equipment and anatomical asymmetries. Native transparent alpha. A static generated adaptation, not an original frame or original animation. Do not use a horizontal software mirror.",
+  "references": [
+    {
+      "path": "assets/specimens/revillage-soldat-panzer.png",
+      "bytes": 342402,
+      "sha256": "e0dc60f210ece6e19d947e0c094ea515c461825542a305b771bb58ad3cc06130",
+      "sourceUrl": "https://blackjackrants.blogspot.com/2021/06/reviewing-monsters-resident-evil-village.html",
+      "sourceEdition": "Resident Evil Village (2021)",
+      "exactIdentity": true,
+      "targetEditionAdmitted": true,
+      "role": "actually-inspected-complete-body-source"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/revillage-soldat-panzer/studies/idle-initial.png",
+      "bytes": 1550541,
+      "sha256": "dde2774d6b96fd5c01a8da270d0d91c1c72c0df791aac8a59c3d7a5f8a111605",
+      "exactIdentity": true,
+      "targetEditionAdmitted": true,
+      "sourceEdition": "Resident Evil Village (2021)",
+      "role": "generated-positive-draft-to-correct-not-anatomical-proof"
+    }
+  ],
+  "completeBodyReference": {
+    "path": "assets/specimens/revillage-soldat-panzer.png",
+    "bytes": 342402,
+    "sha256": "e0dc60f210ece6e19d947e0c094ea515c461825542a305b771bb58ad3cc06130",
+    "sourceUrl": "https://blackjackrants.blogspot.com/2021/06/reviewing-monsters-resident-evil-village.html",
+    "sourceEdition": "Resident Evil Village (2021)",
+    "exactIdentity": true,
+    "targetEditionAdmitted": true,
+    "role": "actually-inspected-complete-body-source"
+  },
+  "sourceObservation": "Entire plated soldier: box respirator helmet with tubes, layered armored torso, both arms carrying multiple long drills and two armored boots visible. Outermost drill tips are inside the square frame, near edges; preserve both feet and all actual drills.",
+  "priorPositiveOutput": {
+    "path": "modules/fidelity-r34/assets/generated/revillage-soldat-panzer/studies/idle-initial.png",
+    "bytes": 1550541,
+    "sha256": "dde2774d6b96fd5c01a8da270d0d91c1c72c0df791aac8a59c3d7a5f8a111605",
+    "exactIdentity": true,
+    "targetEditionAdmitted": true,
+    "sourceEdition": "Resident Evil Village (2021)",
+    "role": "generated-positive-draft-to-correct-not-anatomical-proof"
+  },
+  "toolArgs": {
+    "prompt": "Correct the existing generated game asset, with the original source as anatomical truth. Correct the LAST draft from frontal to a clear RIGHT-facing three-quarter ready stance. Preserve all source drill tips and their anatomical arm assignment: the original image-right/anatomical-left arm has the larger multiple-drill assembly, while the original image-left/anatomical-right arm has its separate drills. Preserve helmet tubes, armour asymmetry, straps and both boots; do not swap the arms.\nOne COMPLETE character in one image, every extremity and equipment endpoint inside at least ten percent transparent padding. No text, scene, floor, coloured outline or frame. Preserve original identity, colours, equipment and anatomical asymmetries. Native transparent alpha. A static generated adaptation, not an original frame or original animation. Do not use a horizontal software mirror.",
+    "referenced_image_paths": [
+      "/workspace/resident-evil-bow-protocol/assets/specimens/revillage-soldat-panzer.png",
+      "/workspace/resident-evil-bow-protocol/modules/fidelity-r34/assets/generated/revillage-soldat-panzer/studies/idle-initial.png"
+    ],
+    "transparent_background": true
+  },
+  "interruptionReview": {
+    "previousPreparedCorrectionHadNoRecoverableReturn": true,
+    "noKnownModerationRefusalForUid": true,
+    "oneDocumentedCorrectionAuthorizedByCoordinator": true
+  },
+  "updatedAt": "2026-11-01T03:02:27.190931+00:00",
+  "sourceOutputPath": "/workspace/generated_images/exec-f0164101-3a45-4629-822c-3ac7526db5d2.png",
+  "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-f0164101-3a45-4629-822c-3ac7526db5d2.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+}

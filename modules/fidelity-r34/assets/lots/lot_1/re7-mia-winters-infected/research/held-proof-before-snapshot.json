@@ -1,0 +1,71 @@
+{
+  "schema": "re.bow.generated-output-r34/1",
+  "uid": "re7-mia-winters-infected",
+  "kind": "idle",
+  "lotId": "lot_1",
+  "status": "HELD_REFERENCE",
+  "generator": "image_gen",
+  "reason": "The apparent full-body specimen is a procedural placeholder with a face, not original anatomical evidence. The real R22 source is only a185pxhead portrait; clothing, legs, feet and weapon are absent.",
+  "research": [
+    {
+      "kind": "actual-retained-reference-inspection",
+      "observation": "The apparent full-body specimen is a procedural placeholder with a face, not original anatomical evidence. The real R22 source is only a185pxhead portrait; clothing, legs, feet and weapon are absent.",
+      "references": [
+        {
+          "path": "assets/specimens/re7-mia-winters-infected.png",
+          "bytes": 54049,
+          "sha256": "97d397dc58f849330bc9bc40cf086521e14c68f45ffe3b841d8ef5a66a87ce31"
+        },
+        {
+          "path": "modules/source-motion-r22/media/native-portraits/re7-mia-winters-infected.png",
+          "bytes": 52318,
+          "sha256": "47f3be58cab452e4e8522e9fa57ecc8a33355f6df6a239193637137fff11c8ec"
+        },
+        {
+          "path": "assets/catalog/re7-mia-winters-infected.png",
+          "bytes": 52318,
+          "sha256": "47f3be58cab452e4e8522e9fa57ecc8a33355f6df6a239193637137fff11c8ec"
+        }
+      ]
+    },
+    {
+      "kind": "actual-online-full-source-retrieval",
+      "request": {
+        "path": "modules/fidelity-r34/assets/lots/lot_1/re7-mia-winters-infected/research/web-body-request.json",
+        "bytes": 875,
+        "sha256": "15855aad706ec5a8b9fa3bc7bf42b6c4d67828f6b08e77ca4fdeea2b9dded718"
+      },
+      "summary": {
+        "path": "modules/fidelity-r34/assets/lots/lot_1/web-body-research.json",
+        "bytes": 53924,
+        "sha256": "98e8824850678141e1fa451583ed65efbf7c38b89e28013a402c1b248a9b548c"
+      },
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEibPCIXeUILruQgP_b9r9ONwzkubtc6BR2Aa4JxvcCtRZ0ENcKr-N-7B4nFpKgd_twCUdy2u-MeZ5v-YKrOShluLUcS08dCenrZaC6ibpRGvNuEUpKVmhMLjbwKc2Y2Cm_k_tHATd7P2EBX/s0/image.png",
+      "sourcePage": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+      "httpStatus": 200,
+      "observation": "The actual direct full-source response was retrieved. Its bytes match the already inspected retained catalogue or named R22 reference; it supplies no additional hidden anatomy."
+    },
+    {
+      "kind": "additional-cross-lot-source-research",
+      "record": {
+        "path": "modules/fidelity-r34/assets/body-source-research.json",
+        "bytes": 49892,
+        "sha256": "1b61b73a02f0ff882aa52413d8844fc26be44b661e2539de3ab74cf5b945cd09"
+      },
+      "scope": "Only the matching UID entry, when present; no other form is promoted."
+    },
+    {
+      "kind": "supplementary-candidates-and-exclusions",
+      "record": {
+        "path": "modules/fidelity-r34/assets/source-research-extra/pipeline-five/assessment.json",
+        "bytes": 7199,
+        "sha256": "f3d8d61afbce58bed04baa4cf1095f99c09a442bb462b16df2f0f3064a03f480"
+      },
+      "scope": "Matching Tyrant/Crimson/Garrador whole sources are already in separate jobs; Eliminator/HunterMu exclusions remain binding."
+    }
+  ],
+  "completeBodyReferenceVerified": false,
+  "generatedByR34": false,
+  "canonicalFidelityCertified": false,
+  "note": "No output PNG, full-body admission, original frame or original idle cycle is claimed by this held receipt."
+}

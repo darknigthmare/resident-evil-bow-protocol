@@ -1,0 +1,67 @@
+{
+  "schema": "re.bow.generated-output-r34/1",
+  "uid": "reoutbreak2-zombie-lioness",
+  "kind": "idle",
+  "lotId": "lot_1",
+  "status": "HELD_REFERENCE",
+  "generator": "image_gen",
+  "reason": "The lioness image cuts hindquarters and tail at the left edge. The exact female wound/body pattern is not reconstructed from the male Stalker.",
+  "research": [
+    {
+      "kind": "actual-retained-reference-inspection",
+      "observation": "The lioness image cuts hindquarters and tail at the left edge. The exact female wound/body pattern is not reconstructed from the male Stalker.",
+      "references": [
+        {
+          "path": "assets/catalog/reoutbreak2-zombie-lioness.png",
+          "bytes": 122844,
+          "sha256": "0cc29b7bb73a90932450bf00683726aba68bbff6e6cb1a2947c23f8265dcb80b"
+        }
+      ]
+    },
+    {
+      "kind": "actual-online-full-source-retrieval",
+      "request": {
+        "path": "modules/fidelity-r34/assets/lots/lot_1/reoutbreak2-zombie-lioness/research/web-body-request.json",
+        "bytes": 952,
+        "sha256": "9b942d84e6ebc2fcc515175f40106fb3a85bb0da7549729a2620a42317710acf"
+      },
+      "summary": {
+        "path": "modules/fidelity-r34/assets/lots/lot_1/web-body-research.json",
+        "bytes": 53924,
+        "sha256": "98e8824850678141e1fa451583ed65efbf7c38b89e28013a402c1b248a9b548c"
+      },
+      "url": "https://www.evilresource.com/images/data/full/reoutbreak2/zombie-lioness.png?2b48f9d4",
+      "sourcePage": "https://www.evilresource.com/resident-evil-outbreak-file-2/enemies/zombie-lioness",
+      "httpStatus": 200,
+      "observation": "The actual direct full-source response was retrieved. Its bytes match the already inspected retained catalogue or named R22 reference; it supplies no additional hidden anatomy."
+    },
+    {
+      "kind": "additional-cross-lot-source-research",
+      "record": {
+        "path": "modules/fidelity-r34/assets/lots/lot_1/research-snapshots/common-body-sources.json",
+        "bytes": 49892,
+        "sha256": "1b61b73a02f0ff882aa52413d8844fc26be44b661e2539de3ab74cf5b945cd09"
+      },
+      "scope": "Only the matching UID entry, when present; no other form is promoted."
+    },
+    {
+      "kind": "supplementary-candidates-and-exclusions",
+      "record": {
+        "path": "modules/fidelity-r34/assets/lots/lot_1/research-snapshots/pipeline-five-assessment.json",
+        "bytes": 7199,
+        "sha256": "f3d8d61afbce58bed04baa4cf1095f99c09a442bb462b16df2f0f3064a03f480"
+      },
+      "scope": "Matching Tyrant/Crimson/Garrador whole sources are already in separate jobs; Eliminator/HunterMu exclusions remain binding."
+    }
+  ],
+  "completeBodyReferenceVerified": false,
+  "generatedByR34": false,
+  "canonicalFidelityCertified": false,
+  "note": "No output PNG, full-body admission, original frame or original idle cycle is claimed by this held receipt.",
+  "priorProofMetadata": {
+    "path": "modules/fidelity-r34/assets/lots/lot_1/reoutbreak2-zombie-lioness/research/held-proof-before-snapshot.json",
+    "bytes": 2829,
+    "sha256": "36dbf9a61dd192e05402d578fde3efd6d890704f1db950eaff7594c1be9d3f09",
+    "reason": "The same source-curation bytes are now bound at immutable lot-owned snapshot paths so later research additions cannot stale this earlier held decision."
+  }
+}

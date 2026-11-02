@@ -1,0 +1,41 @@
+{
+  "schema": "re.bow.production-attempt-r34/1",
+  "uid": "re3-hunter-beta",
+  "kind": "idle",
+  "lotId": "lot_1",
+  "status": "RETURNED_PNG",
+  "requestedAt": "2026-11-01T02:57:34.366878+00:00",
+  "prompt": "Edit the provided generated positive study into a faithful 2D combat base pose, using the original reference as anatomical authority. Correct ONLY the fighting view. Rotate the ENTIRE torso, pelvis and both feet into a clear three-quarter RIGHT-facing stance; turning the face alone is insufficient. Keep the original own LEFT claw longer than the right, attached to the same anatomical arm; the far left arm may remain visible, but do not mirror or exchange the claws. Keep every toe/claw inside padding and preserve all red head/shoulder nodules, scales and colours. Keep raw output as a single complete RGBA PNG on transparent background, no text, labels, floor, coloured outline or scene. This remains generated adaptation, not original frames or geometric1:1 certification.",
+  "references": [
+    {
+      "path": "assets/specimens/re3-hunter-beta.png",
+      "bytes": 294592,
+      "sha256": "9ac57302bd3deee20094dc193631bc800871915e1be0ca7ebaa9346a51c9e2cf",
+      "role": "full-body-reference",
+      "bodyCoverage": "partial",
+      "exactIdentity": true,
+      "sourceUrl": "https://bogleech.com/halloween/hall18-re3",
+      "sourceEdition": "Resident Evil 3: Nemesis (1999)",
+      "targetEditionAdmitted": true,
+      "bodyCompletenessIndependentReviewRequired": true
+    }
+  ],
+  "referenceBodyPath": "assets/specimens/re3-hunter-beta.png",
+  "sourceBodyObservation": "Complete original 1999 HunterBeta shows red/orange head/shoulder nodules, two arms with claws and both clawed feet within frame.",
+  "generatedStudyReference": {
+    "path": "modules/fidelity-r34/assets/lots/lot_1/re3-hunter-beta/research/resume-initial-positive.png",
+    "bytes": 1866232,
+    "sha256": "6aca0e953cacdbe71229f6a0fb35647926c02d759118894a26faf19a66ed0583",
+    "sourceOutputPath": "/workspace/generated_images/exec-a99a6d02-4da1-4a5c-ad55-6d7ab62f624e.png",
+    "notAnatomicalProof": true
+  },
+  "reason": "One targeted correction of a positive output; no prior moderation refusal.",
+  "startedAt": "2026-11-01T02:57:41.688Z",
+  "finishedAt": "2026-11-01T02:58:56.116Z",
+  "sourceOutputPath": "/workspace/generated_images/exec-fe6ff258-980a-4dda-a01b-8c5c469346d9.png",
+  "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-fe6ff258-980a-4dda-a01b-8c5c469346d9.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "resultKeys": [
+    "image_url",
+    "output_hint"
+  ]
+}

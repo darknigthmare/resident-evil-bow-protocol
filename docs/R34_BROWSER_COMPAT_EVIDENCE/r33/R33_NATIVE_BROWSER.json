@@ -1,0 +1,177 @@
+{
+  "schema": "re.bow.native-browser-r33/1",
+  "passed": 9,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "All sixteen real four-camera body views decode exactly and remain static studies",
+      "pass": true,
+      "detail": {
+        "compared": 16,
+        "newIdentities": 3,
+        "sourceVariants": 4,
+        "automaticCombatAdmission": false
+      }
+    },
+    {
+      "name": "Six complete new clips retain both source sides and exact PNG pixels across atlas boundaries",
+      "pass": true,
+      "detail": {
+        "orientedSequences": 12,
+        "newNativeFrames": 1270,
+        "pixelComparedPositions": 48,
+        "sourceActionCertified": false
+      }
+    },
+    {
+      "name": "Voluntary marine playback paints many source frames and wraps using unchanged R30 pixels",
+      "pass": true,
+      "detail": {
+        "distinctPaintedFrames": 74,
+        "wrapFrame": 2,
+        "reusedOriginalFrames": 300,
+        "originalIdleCertified": false,
+        "cache": {
+          "loading": 1,
+          "queued": 0,
+          "cached": 4,
+          "decodedPixels": 589824,
+          "limits": {
+            "manifestBytes": 16777216,
+            "imageBytes": 8388608,
+            "imagePixels": 4194304,
+            "decodedImages": 4,
+            "decodedPixels": 16777216,
+            "concurrentImages": 2
+          }
+        }
+      }
+    },
+    {
+      "name": "Native keyboard activation toggles once while repeated arrows retain frame stepping",
+      "pass": true,
+      "detail": {
+        "initialActivation": true,
+        "repeatedEnterSuppressed": true,
+        "repeatedArrowsAccepted": true,
+        "reservedShortcutPreserved": true
+      }
+    },
+    {
+      "name": "Source scene changes stop playback and a failed old request cannot replace the new selection",
+      "pass": true,
+      "detail": {
+        "selectedUid": "re0-zombie",
+        "obsoleteLoadFailureHeld": true,
+        "staleStatePublished": false
+      }
+    },
+    {
+      "name": "Page exit clears decodes and synthetic restoration redraws without automatic playback",
+      "pass": true,
+      "detail": {
+        "syntheticPageTransitionFixture": true,
+        "exitedCache": {
+          "loading": 0,
+          "queued": 0,
+          "cached": 0,
+          "decodedPixels": 0,
+          "limits": {
+            "manifestBytes": 16777216,
+            "imageBytes": 8388608,
+            "imagePixels": 4194304,
+            "decodedImages": 4,
+            "decodedPixels": 16777216,
+            "concurrentImages": 2
+          }
+        },
+        "restoredCache": {
+          "loading": 0,
+          "queued": 0,
+          "cached": 4,
+          "decodedPixels": 589824,
+          "limits": {
+            "manifestBytes": 16777216,
+            "imageBytes": 8388608,
+            "imagePixels": 4194304,
+            "decodedImages": 4,
+            "decodedPixels": 16777216,
+            "concurrentImages": 2
+          }
+        },
+        "automaticPlayback": false
+      }
+    },
+    {
+      "name": "Tampered native PNGs are rejected before decode and outside paths are refused",
+      "pass": true,
+      "detail": {
+        "tamperedMediaRejected": true,
+        "outsidePathsRejected": 4
+      }
+    },
+    {
+      "name": "An interrupted initial manifest load restarts after a synthetic page return",
+      "pass": true,
+      "detail": {
+        "initialLoadInterrupted": true,
+        "manifestRequests": 2,
+        "syntheticPageTransitions": true,
+        "resumed": true
+      }
+    },
+    {
+      "name": "The real narrow page supports text enlargement, axe checks and leaves game storage unchanged",
+      "pass": true,
+      "detail": {
+        "viewport": 320,
+        "textScale": 2,
+        "overflow": {
+          "body": 320,
+          "document": 320,
+          "viewport": 320,
+          "rootFontPixels": 32
+        },
+        "axeChecksPassed": 38,
+        "violations": [],
+        "storageUnchanged": true,
+        "physicalScreenReaderTested": false
+      }
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "tests/browser-native-r33.mjs",
+      "sha256": "2f6928e8d994cd03061206a786946cd4ee964a223caff0f902640d8c19790837"
+    },
+    {
+      "path": "modules/fidelity-r33/native/manifest.json",
+      "sha256": "53d6bd14b5673674b92c1089d5b58d9fd10426e9d869c11a1250112cfc26ed43"
+    },
+    {
+      "path": "modules/fidelity-r33/native/inputs.json",
+      "sha256": "8808f55966f52c45641c8ed597445d704fadeed78fe94ad7e529685509d41a38"
+    },
+    {
+      "path": "modules/fidelity-r33/native/review/observations.json",
+      "sha256": "543d061ec88a0ac4fc7dfe1a10304d8ecf6f5667908524297632e46383031c8d"
+    },
+    {
+      "path": "modules/fidelity-r33/native/index.html",
+      "sha256": "7a42b598263f99a1c573f621c06ecc0ce150e056f7663e6c800c2690fcf3fa73"
+    },
+    {
+      "path": "modules/fidelity-r33/native/page.js",
+      "sha256": "ad1f707508fa3b2e280f85f7bdbe26c19f720d3223e60a00d9c10c2ee3d40bb5"
+    },
+    {
+      "path": "modules/fidelity-r33/native/reader.js",
+      "sha256": "9eeed9f25acef7de231ebb13b11a81757a70fe31d861d281e547b48e1a667c91"
+    },
+    {
+      "path": "modules/fidelity-r33/native/style.css",
+      "sha256": "566d51146e35b0906098ceccc755101dda1638e4b82cfa93c49e14fd589a6f7e"
+    }
+  ],
+  "scope": "Actual HTML/CSS/controller, retained PNGs and atlas cells under Chromium. All body views and both source sides decoded, sixtyHz multi-frame playback and marine wrap observed. Failed-request, corruption and page-transition cases are declared fixtures; no physical hardware, original engine timing or certified original idle claim."
+}

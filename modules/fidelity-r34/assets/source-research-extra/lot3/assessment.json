@@ -1,0 +1,108 @@
+{
+  "schema": "re.bow.source-research-lot3-extra-r34/1",
+  "reviewedAt": "2026-11-01T02:26:59Z",
+  "requestedIdentities": [
+    "re2-zombie",
+    "re4-dr-salvador",
+    "recv-mutated-steve"
+  ],
+  "newBodyDefaultAdmissionsGranted": 0,
+  "generatedOrEditedPngBytes": 0,
+  "findings": [
+    {
+      "id": "re2-zombie",
+      "requiredIncarnation": "Resident Evil2(1998), catalogue woman with bob haircut and red tank top",
+      "status": "NO_NEW_COMPLETE_BODY_REFERENCE",
+      "evidence": [
+        {
+          "path": "modules/fidelity-r34/assets/source-research-extra/lot3/re2-zombie-evilresource.png",
+          "bytes": 97081,
+          "sha256": "b4d4d5145357c1dd040944ea1816fc94a8737dc193a0639f121766e2c7ee4ccd",
+          "visuallyInspected": true,
+          "observation": "HTTP200 source image is byte-identical to existing catalogue. Exact female/red-top subject is present, but lower torso, legs and feet are outside the source image.",
+          "width": 450,
+          "height": 360
+        }
+      ],
+      "excludedAlternatives": [
+        "ModelsResource PSX index returned403, not bypassed.",
+        "Blog article includes2019remake zombie renders, not a verified complete image of this1998female incarnation."
+      ]
+    },
+    {
+      "id": "re4-dr-salvador",
+      "requiredIncarnation": "Resident Evil4(2005), legs and complete chainsaw",
+      "status": "NO_NEW_COMPLETE_BODY_REFERENCE",
+      "evidence": [
+        {
+          "path": "modules/fidelity-r34/assets/source-research-extra/lot3/re4-salvador-evilresource.png",
+          "bytes": 138805,
+          "sha256": "260597821fd8f2d727964d9f2936f339fd6aad1a91041982c6d16f9949e5d83c",
+          "visuallyInspected": true,
+          "observation": "HTTP200 source image is byte-identical to existing catalogue. Body ends at hips; legs and complete raised chainsaw blade are outside frame.",
+          "width": 450,
+          "height": 360
+        }
+      ],
+      "excludedAlternatives": [
+        "Previously retained PC2007 model views remain edition-held; no silent equivalence to2005.",
+        "ModelsResource GameCube index returned403, not bypassed.",
+        "Bogleech2005article contains no Salvador body reference."
+      ]
+    },
+    {
+      "id": "recv-mutated-steve",
+      "requiredIncarnation": "Resident Evil CODE:Veronica(2000), legs and complete weapon",
+      "status": "COMPLETE_CATALOGUE_RENDER_FOUND_BUT_EDITION_PROVENANCE_UNRESOLVED",
+      "targetEditionAdmissionGranted": false,
+      "evidence": [
+        {
+          "path": "modules/fidelity-r34/assets/source-research-extra/lot3/recv-steve-complete-blog-original.png",
+          "bytes": 144684,
+          "sha256": "a95f5391bba3b472bae17bf2800e5715e70d6970f6398461f9d74e86b46e2408",
+          "visuallyInspected": true,
+          "observation": "Whole500x425render has both legs, both clawed feet, hands, head/back spikes and complete weapon inside the image. Its upper torso matches the existing catalogue render. This establishes that rendered incarnation visually, not its2000origin.",
+          "width": 500,
+          "height": 425
+        },
+        {
+          "path": "modules/fidelity-r34/assets/source-research-extra/lot3/recv-steve-gameplay-blog-original.png",
+          "bytes": 183716,
+          "sha256": "414209bd924c4287e013f0c81b55aa565698d5d992377b832766d9fc56cf90d2",
+          "visuallyInspected": true,
+          "observation": "Screenshot in the same CODE:Veronica article shows a brown-haired humanoid face and green torso, visibly different from the catalogue render. Legs/weapon are cropped here; not a complete replacement reference.",
+          "width": 689,
+          "height": 516
+        },
+        {
+          "path": "modules/fidelity-r34/assets/source-research-extra/lot3/recv-steve-evilresource.png",
+          "bytes": 160851,
+          "sha256": "8fe5627d0142a673cd4be238719d5c2c6f18ba4688a23a309c9b9acfca230740",
+          "visuallyInspected": true,
+          "observation": "Current catalogue source is the cropped upper section of the complete horned/purple render; no extraction credit or explicit model-origin evidence is provided by the captured page.",
+          "width": 450,
+          "height": 360
+        },
+        {
+          "path": "modules/fidelity-r34/assets/source-research-extra/lot3/blog-chronicles-article.html",
+          "bytes": 129495,
+          "sha256": "75b2755ff9f459f6a26240e14d47baeca9594616aae545cb2bb648de2dc48581",
+          "visuallyInspected": false,
+          "observation": "Same author explicitly states using higher-graphics Chronicles renders for older creatures. Therefore the author game heading alone cannot certify the edition of each image."
+        }
+      ],
+      "editionWarning": {
+        "sourceUrl": "https://blackjackrants.blogspot.com/2021/05/reviewing-monsters-resident-evil.html",
+        "exactAuthorQuote": "This means that we get a lot of older enemies (and it's mostly a way for me to source higher-graphics renders for the creatures in some of the older games)",
+        "supportedConclusion": "The body image is complete, but this article is insufficient to admit the horned/purple render as exact CODE:Veronica2000art.",
+        "notEstablished": "A positive asset credit tying this specific render to DarksideChronicles2009 or to an original2000concept render was not obtained. No claim that the wrong edition is proven."
+      },
+      "excludedAlternatives": [
+        "Wii DarksideChronicles model index403, not bypassed.",
+        "ProjectUmbrella and ResidentEvilDatabase source pages refused by network403, not bypassed."
+      ],
+      "holdRecommendation": "Keep target-edition default admission pending independent model credit or exact original-game matching evidence, including for an already generated portrait derived from this catalogue crop."
+    }
+  ],
+  "scope": "Research evidence only. Raw downloaded image bytes are preserved. No generated output, receipt or runtime admission flag was changed."
+}

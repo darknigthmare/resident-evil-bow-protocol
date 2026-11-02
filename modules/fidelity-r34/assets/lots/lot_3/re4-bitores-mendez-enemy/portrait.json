@@ -1,0 +1,90 @@
+{
+  "schema": "re.bow.generated-output-r34/1",
+  "uid": "re4-bitores-mendez-enemy",
+  "kind": "portrait",
+  "lotId": "lot_3",
+  "status": "GENERATED",
+  "generator": "image_gen",
+  "prompt": "Create a faithful generated game asset for Bitores Méndez — forme humaine, exact incarnation Resident Evil 4 (2005). Use the attached verified references only. Preserve the precise head, anatomy, proportions, costume, equipment, material colours and asymmetric details. Do not mix games, phases or editions. Match the source appearance without added cartoon outlines, coloured halos or decoration. One subject only, no text, labels, scenery, floor, montage or frame. Clean transparent alpha. This remains a generated adaptation, not an original Capcom frame or a geometric 1:1 certificate. A square selection portrait showing the head and upper body, with the characteristic face and equipment readable at thumbnail size. Keep the visible identity complete inside this portrait crop; do not invent undocumented features. Tight portrait composition: show the head and upper torso only, with the documented face or primary identifying core large and readable in the square. Keep the complete head, hair, hat, horns, antennae and documented facial appendages inside the canvas with clear transparent padding; a portrait may crop the lower body. No cartoon ink outline or coloured edge halo.",
+  "references": [
+    {
+      "path": "assets/specimens/re4-bitores-mendez-enemy.webp",
+      "bytes": 211036,
+      "sha256": "e9a40081259538ede71a08ecb1df7b9ee493a54a11b4025563389ed1009a7c75",
+      "role": "full-body-reference",
+      "bodyCoverage": "partial",
+      "exactIdentity": true,
+      "sourceUrl": "https://blackjackrants.blogspot.com/2020/10/reviewing-monsters-resident-evil-4.html",
+      "sourceEdition": "Resident Evil 4 (2005)",
+      "targetEditionAdmitted": true,
+      "bodyCompletenessIndependentReviewRequired": true
+    }
+  ],
+  "excludedReferences": [
+    {
+      "path": "assets/catalog/re4-bitores-mendez-enemy.png",
+      "bytes": 148684,
+      "sha256": "514a130194f8d594fca7d1836f57df12eee816bd6a4ad341184eb95643aeff6f",
+      "role": "catalogue-reference",
+      "bodyCoverage": "unknown",
+      "exactIdentity": true,
+      "sourceUrl": "https://www.evilresource.com/resident-evil-4/enemies/bitores-mendez-enemy",
+      "sourceEdition": "Resident Evil 4 (2005)",
+      "targetEditionAdmitted": true,
+      "bodyCompletenessIndependentReviewRequired": true,
+      "reason": "The catalogue image shows a mutated insectoid body rather than the requested human form."
+    }
+  ],
+  "image": "modules/fidelity-r34/assets/generated/re4-bitores-mendez-enemy/portrait.png",
+  "sourceOutputPath": "/workspace/generated_images/exec-beec49c3-d8c1-4d37-8466-35c9880a3b49.png",
+  "generatedBytesEdited": false,
+  "toolOutputHint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-beec49c3-d8c1-4d37-8466-35c9880a3b49.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "review": {
+    "visuallyReviewed": true,
+    "portraitIdentityReviewed": true,
+    "sourceFacing": "front",
+    "fullBodyVisible": false,
+    "completeBodyReferenceVerified": false,
+    "fightingPoseReviewed": false,
+    "knownAppearanceGaps": [],
+    "observations": [
+      "The single inspected 2005 human specimen is bald with a long beard, pale damaged eye, heavy gray double-breasted long coat, raised hand and belt. These identity features remain in the generated upper-body portrait.",
+      "The catalogue image depicting an insectoid mutation was deliberately excluded. Fine beard strands, skin and coat texture are generated approximations, not original texels.",
+      "Displayed portrait region reviewed: the source-specific face/core remains recognisable; peripheral cropping is limited to the stated portrait framing, not a complete-body claim."
+    ],
+    "canonicalFidelityCertified": false,
+    "originalIdleAnimationCertified": false,
+    "portraitDisplayRegionReviewed": true
+  },
+  "bytes": 2343256,
+  "sha256": "5b90e4d5a6bacdad93240d567d98d8f390d181af76575d85ceb54f3646a86bc8",
+  "technical": {
+    "format": "PNG",
+    "width": 1254,
+    "height": 1254,
+    "bounds": {
+      "x": 25,
+      "y": 7,
+      "width": 1229,
+      "height": 1247
+    },
+    "pivot": {
+      "x": 639.5,
+      "y": 1254
+    },
+    "alpha": {
+      "channel": true,
+      "min": 0,
+      "max": 255,
+      "visibleThreshold": 16,
+      "transparentPixels": 560431,
+      "totalPixels": 1572516
+    },
+    "silhouetteTouchesCanvasEdge": true,
+    "decodedRgbaSha256": "e11afac53fec32f58cea8546f56a0200552c1c55f9b527dbb0fe702bae6c1b27"
+  },
+  "reviewAddendum": {
+    "previousReceiptSha256": "7cd4b3daa715ce563a1682f2669788180e6aca402198680ee48dd65861ed83b2",
+    "reason": "Explicit display-region review added after pipeline clarified the portrait admission field; generated PNG and exact request are unchanged."
+  }
+}

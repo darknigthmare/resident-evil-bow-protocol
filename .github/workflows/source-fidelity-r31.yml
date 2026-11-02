@@ -105,7 +105,7 @@ jobs:
           if-no-files-found: warn
           retention-days: 14
   browser:
-    name: Current R31 browser - ${{ matrix.suite }}
+    name: Current R31 browser compatibility view - ${{ matrix.suite }}
     needs: provenance
     runs-on: ubuntu-latest
     timeout-minutes: 20
@@ -169,11 +169,11 @@ jobs:
             cacheDir:path.join(process.env.RUNNER_TEMP,'fidelity-r31-chrome')});
           fs.appendFileSync(process.env.GITHUB_ENV,'CHROME_BIN='+browser.executablePath+'\n');
           JS
-      - name: Run unchanged R31 browser assertions on current source
+      - name: Run unchanged R31 assertions on current source with explicit legacy presentation
         run: |
           rm -f '${{ matrix.report }}'
           if [[ -n '${{ matrix.secondary_report }}' ]]; then rm -f '${{ matrix.secondary_report }}'; fi
-          node '${{ matrix.script }}' ${{ matrix.argument }}
+          node --import=./tests/browser-compat-r34.mjs '${{ matrix.script }}' ${{ matrix.argument }}
           node --input-type=module - '${{ matrix.report }}' '${{ matrix.secondary_report }}' <<'JS'
           import assert from 'node:assert/strict';
           import fs from 'node:fs';

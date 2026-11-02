@@ -1,0 +1,190 @@
+{
+  "schema": "re.bow.current-guard-tests-r34/1",
+  "passed": 32,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "The actual R34 boundary preserves both previous source guards",
+      "pass": true
+    },
+    {
+      "name": "Previously published source remains frozen: src/catalog-duel-v070.js",
+      "pass": true
+    },
+    {
+      "name": "Previously published source remains frozen: src/unified-engine-v060.js",
+      "pass": true
+    },
+    {
+      "name": "Previously published source remains frozen: data/roster.json",
+      "pass": true
+    },
+    {
+      "name": "Previously published source remains frozen: assets/catalog/unreviewed.png",
+      "pass": true
+    },
+    {
+      "name": "Previously published source remains frozen: tests/verify-engine.mjs",
+      "pass": true
+    },
+    {
+      "name": "Previously published source remains frozen: modules/fidelity-r33/combat/generated-runtime.js",
+      "pass": true
+    },
+    {
+      "name": "Previously published source remains frozen: docs/R33_VALIDATION.json",
+      "pass": true
+    },
+    {
+      "name": "A source outside the R34 namespace is refused",
+      "pass": true
+    },
+    {
+      "name": "A deleted mount is refused",
+      "pass": true
+    },
+    {
+      "name": "A rename cannot bypass source conservation",
+      "pass": true
+    },
+    {
+      "name": "A delivered symlink is refused",
+      "pass": true
+    },
+    {
+      "name": "An empty pending output is not a delivered image",
+      "pass": true
+    },
+    {
+      "name": "A100MiB individual blob is refused",
+      "pass": true
+    },
+    {
+      "name": "Traversal, temporary output and alternate separators are refused",
+      "pass": true
+    },
+    {
+      "name": "Repeated changed paths are refused",
+      "pass": true
+    },
+    {
+      "name": "An original current engine assertion cannot disappear",
+      "pass": true
+    },
+    {
+      "name": "Current verification must still require its published preservation step",
+      "pass": true
+    },
+    {
+      "name": "The published R31 reference cannot follow an arbitrary branch",
+      "pass": true
+    },
+    {
+      "name": "The exact unchanged R32 compatibility runner cannot become a success print",
+      "pass": true
+    },
+    {
+      "name": "The new default flow recipe cannot be omitted",
+      "pass": true
+    },
+    {
+      "name": "Package metadata remains unchanged",
+      "pass": true
+    },
+    {
+      "name": "Unreviewed inline presentation is refused: modules/versus.html",
+      "pass": true
+    },
+    {
+      "name": "Unreviewed inline presentation is refused: catalog-duel.html",
+      "pass": true
+    },
+    {
+      "name": "Mounts preserve original controller URL identities",
+      "pass": true
+    },
+    {
+      "name": "A workflow cannot bypass assertions: .github/workflows/source-fidelity-r25.yml",
+      "pass": true
+    },
+    {
+      "name": "A workflow cannot bypass assertions: .github/workflows/source-fidelity-r26.yml",
+      "pass": true
+    },
+    {
+      "name": "A workflow cannot bypass assertions: .github/workflows/source-fidelity-r31.yml",
+      "pass": true
+    },
+    {
+      "name": "A workflow cannot bypass assertions: .github/workflows/gamedev-r32.yml",
+      "pass": true
+    },
+    {
+      "name": "A workflow cannot bypass assertions: .github/workflows/source-fidelity-r33.yml",
+      "pass": true
+    },
+    {
+      "name": "Published R33 source validation cannot silently become an arbitrary checkout",
+      "pass": true
+    },
+    {
+      "name": "The report writer cannot replace another release or follow a symlink",
+      "pass": true
+    }
+  ],
+  "inheritedR33Passed": 39,
+  "inheritedR33Failed": 0,
+  "inheritedR32Passed": 40,
+  "inheritedR32Failed": 0,
+  "sourceFiles": [
+    {
+      "path": "scripts/verify-current-r34.mjs",
+      "sha256": "f8a4a78e10eb3a565659a149bb9965040ab7fd882dabca232cce0b15a96418e3"
+    },
+    {
+      "path": "tests/verify-current-guard-r34.mjs",
+      "sha256": "1b42f63a21a4104914515e47c446127541bbe1d20b3358d8df3c44d6c37304b3"
+    },
+    {
+      "path": "scripts/verify-current-r33.mjs",
+      "sha256": "d6af56c1cc9b7a5b3e027754517c25363389569e124187f1bf6e15dc69988797"
+    },
+    {
+      "path": "tests/verify-current-guard-r33.mjs",
+      "sha256": "61fe11affb386087bc8584c581f80d4429e4558fc8925727c1089978115f4e04"
+    },
+    {
+      "path": "scripts/verify-current-r32.mjs",
+      "sha256": "b7f8af151bf7420d32074b06c04a57a16131b65e8f99a940213ba42a5f5fe37a"
+    },
+    {
+      "path": "tests/verify-current-guard-r32.mjs",
+      "sha256": "fe19744e09246b1fc9d86ad493b0650ca3ea593701be844b86a8dfb26ba160a9"
+    },
+    {
+      "path": "package.json",
+      "sha256": "68f418971d66ca7d801728336c827f66c7c0bd8ec31d9fd743f607cd4177a461"
+    },
+    {
+      "path": ".github/workflows/source-fidelity-r25.yml",
+      "sha256": "418fe9510f6036793f23adf3f85f625f7240e6a331c8b4771d978772a89f9bf7"
+    },
+    {
+      "path": ".github/workflows/source-fidelity-r26.yml",
+      "sha256": "73d0c41bf610928dbb54a9a539b616916971a4784587af77e255cb678027a373"
+    },
+    {
+      "path": ".github/workflows/source-fidelity-r31.yml",
+      "sha256": "535bcc239ddef99d810093edf694c7b5f143c02e10dcf45e3e83b91b038d4b2a"
+    },
+    {
+      "path": ".github/workflows/gamedev-r32.yml",
+      "sha256": "808326e876551fe5727bc292a489bd8b4f0374e09058063646a72559c5cb6912"
+    },
+    {
+      "path": ".github/workflows/source-fidelity-r33.yml",
+      "sha256": "289a566d58e9e68503ac9dbc2bf5322216a6e0e271fd997bba15187e65873908"
+    }
+  ],
+  "scope": "R34 boundary fault injections. The original39 R33 and40 R32 cases execute unchanged after the exact reviewed R34 mount/pipeline projection; no original current functional assertion is removed."
+}

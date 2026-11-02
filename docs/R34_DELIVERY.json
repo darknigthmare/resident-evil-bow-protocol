@@ -1,0 +1,157 @@
+{
+  "schema": "re.bow.delivery-r34/1",
+  "baselineCommit": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+  "scope": {
+    "combatants": 346,
+    "main": 115,
+    "prototypes": 231,
+    "contextualEncountersExcluded": 43,
+    "requestedOutputs": 692
+  },
+  "generated": {
+    "portraits": 306,
+    "staticWholeBodyPoseOutputs": 128,
+    "officialRequestedOutputs": 434,
+    "nativeGameSprites": 0,
+    "originalIdleAnimationCycles": 0
+  },
+  "admitted": {
+    "selectionPortraits": 305,
+    "rightFacingCombatBasePoses": 114,
+    "officialOutputs": 419
+  },
+  "unadmitted": {
+    "generatedStudies": 15,
+    "heldReferenceOutputs": 177,
+    "blockedOutputsIncludingHistoricalAndPriorPhase": 81,
+    "unprocessedOutputs": 0
+  },
+  "playerFlow": [
+    "characters",
+    "stages",
+    "combat"
+  ],
+  "stages": 52,
+  "workbook": {
+    "worksheets": 74,
+    "publishedWorksheetsPreserved": 70,
+    "requestedOutputs": 692,
+    "historicalOpenWorkstreams": 17,
+    "sha256": "d0b27e59dccae4ce6dc892bfe0a9a0d50ca29180943ae0ea2a22976d44314f8b"
+  },
+  "validation": {
+    "complete": true,
+    "reports": 7,
+    "totals": {
+      "unit": 43,
+      "browser": 36,
+      "guard": 32,
+      "ci": 6
+    },
+    "inheritedGuardCasesSeparately": 79,
+    "sourceCurrent": true,
+    "skipped": 0
+  },
+  "currentEngine": {
+    "npmVerifyExitCode": 0,
+    "currentCommands": 41,
+    "originalCurrentFunctionalCommands": 38,
+    "r32InputCommands": 1,
+    "newGuardCases": 32,
+    "inheritedR33GuardCases": 39,
+    "inheritedR32GuardCases": 40,
+    "publishedPreservationCommands": 2,
+    "sourceInputCount": 2866,
+    "parentAndExecutedInputsUnchanged": true
+  },
+  "integration": {
+    "passed": 7,
+    "failed": 0
+  },
+  "build": {
+    "passed": 3,
+    "moduleFiles": 2183,
+    "moduleBytes": 1163743682
+  },
+  "reproduction": {
+    "passed": 3,
+    "failed": 0
+  },
+  "proofs": [
+    {
+      "path": "docs/R34_VALIDATION.json",
+      "bytes": 5384,
+      "sha256": "131c4cde8683ffb940882f6ec25475bc3d09e899080a5ac9f13e272725b17b70"
+    },
+    {
+      "path": "docs/R34_CURRENT_TESTS.json",
+      "bytes": 580723,
+      "sha256": "ab570b33611b4ad6659b0923763f2fec3c80790fbf87e8062c52d58fbdbf9ff4"
+    },
+    {
+      "path": "docs/R34_INTEGRATION_TESTS.json",
+      "bytes": 225257,
+      "sha256": "5070cb8065f0b0a84fde6288de4bb62c577be63b1ce6ac92d601f735d2104874"
+    },
+    {
+      "path": "docs/R34_BUILD.json",
+      "bytes": 467463,
+      "sha256": "24a7f50a3eaf7c25e1b444ed973096945d2a835783d9b8087389c1e2675c50e4"
+    },
+    {
+      "path": "docs/R34_REPRODUCTION.json",
+      "bytes": 1413,
+      "sha256": "1f3e27e37382999d325bfb2914d92a241e22092b8a9a89a736fd413890671c2a"
+    },
+    {
+      "path": "docs/R34_EXPORT.json",
+      "bytes": 634,
+      "sha256": "be1213f94a648d3eeb571893cf0006c995b0444bcf60b4d1bfb861d44af8cbb2"
+    },
+    {
+      "path": "docs/R34_SOURCE_ADDITIONS.json",
+      "bytes": 468377,
+      "sha256": "79161f33e40fd06927d11943bc67ff57f6442da9c043e1baf8ea12ef19a71d17"
+    },
+    {
+      "path": "docs/R34_BROWSER_COMPAT.json",
+      "bytes": 48913,
+      "sha256": "94b42e7469f3d81b453f5acbf12e51fc23eead1736f28250877da16ed5e7a7e6"
+    },
+    {
+      "path": "docs/R34_NATURAL_RENDER_SMOKE.json",
+      "bytes": 13557,
+      "sha256": "f89aec4c8b5fcfc67933faf71ea8a22e1d25b2b1f2d424bb1d0bc522858d3092"
+    },
+    {
+      "path": "docs/R34_VISUAL_REVIEW.json",
+      "bytes": 7909,
+      "sha256": "950f220b815a3088a40ba3a9ad4eedceedb1c3caea378312e410cc39c0506377"
+    },
+    {
+      "path": "docs/BOW_FIDELITE_R34.xlsx",
+      "bytes": 3217334,
+      "sha256": "d0b27e59dccae4ce6dc892bfe0a9a0d50ca29180943ae0ea2a22976d44314f8b"
+    },
+    {
+      "path": "docs/R34_STAGED_CONSERVATION.json",
+      "bytes": 399,
+      "sha256": "80fde306b906e211d5c19bf5c05b526cf2531def36c0c4125f6f344ef3b8c256"
+    },
+    {
+      "path": "docs/R34_WHITESPACE_CHECK.json",
+      "bytes": 72630,
+      "sha256": "13bc33c79480ebe94ac5a22f6716aef9ee2d553bc01ce16c8399d98f856ad911"
+    }
+  ],
+  "canonicalFidelityCertified": false,
+  "remoteCIResultInferred": false,
+  "deploymentResultInferred": false,
+  "limitations": [
+    "Generated adaptations preserve source-qualified identity and visible anatomy; original pixels and hidden geometry are not certified.",
+    "A static base pose is not an original idle animation or a complete combat animation set.",
+    "New default poses face right; absent independently qualified opposite directions retain the existing fallback. No automatic anatomical mirroring is admitted.",
+    "Refusals and insufficient or conflicting references remain explicit in the workbook.",
+    "Source Steve remains unestablished and its older image cannot return through player rendering fallbacks."
+  ]
+}

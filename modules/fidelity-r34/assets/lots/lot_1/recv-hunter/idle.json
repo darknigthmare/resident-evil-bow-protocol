@@ -1,0 +1,67 @@
+{
+  "schema": "re.bow.generated-output-r34/1",
+  "uid": "recv-hunter",
+  "kind": "idle",
+  "lotId": "lot_1",
+  "status": "HELD_REFERENCE",
+  "generator": "image_gen",
+  "reason": "The CodeVeronica Hunter crop shows head/chest and partial arms but cuts its lower body and claw/foot termini. Other Hunter editions are not used to infer them.",
+  "research": [
+    {
+      "kind": "actual-retained-reference-inspection",
+      "observation": "The CodeVeronica Hunter crop shows head/chest and partial arms but cuts its lower body and claw/foot termini. Other Hunter editions are not used to infer them.",
+      "references": [
+        {
+          "path": "assets/catalog/recv-hunter.png",
+          "bytes": 193610,
+          "sha256": "063313f94aaf42228fdb5a29c2bc831a0d852196101f2e29351279d0ee6b4ffa"
+        }
+      ]
+    },
+    {
+      "kind": "actual-online-full-source-retrieval",
+      "request": {
+        "path": "modules/fidelity-r34/assets/lots/lot_1/recv-hunter/research/web-body-request.json",
+        "bytes": 882,
+        "sha256": "3ad75c43d817fb8baf7632bfea52bedfb4021bda32cf5c1f3122e5152e82764b"
+      },
+      "summary": {
+        "path": "modules/fidelity-r34/assets/lots/lot_1/web-body-research.json",
+        "bytes": 53924,
+        "sha256": "98e8824850678141e1fa451583ed65efbf7c38b89e28013a402c1b248a9b548c"
+      },
+      "url": "https://www.evilresource.com/images/data/full/recv/hunter.png?51b5c76b",
+      "sourcePage": "https://www.evilresource.com/resident-evil-code-veronica/enemies/hunter",
+      "httpStatus": 200,
+      "observation": "The actual direct full-source response was retrieved. Its bytes match the already inspected retained catalogue or named R22 reference; it supplies no additional hidden anatomy."
+    },
+    {
+      "kind": "additional-cross-lot-source-research",
+      "record": {
+        "path": "modules/fidelity-r34/assets/lots/lot_1/research-snapshots/common-body-sources.json",
+        "bytes": 49892,
+        "sha256": "1b61b73a02f0ff882aa52413d8844fc26be44b661e2539de3ab74cf5b945cd09"
+      },
+      "scope": "Only the matching UID entry, when present; no other form is promoted."
+    },
+    {
+      "kind": "supplementary-candidates-and-exclusions",
+      "record": {
+        "path": "modules/fidelity-r34/assets/lots/lot_1/research-snapshots/pipeline-five-assessment.json",
+        "bytes": 7199,
+        "sha256": "f3d8d61afbce58bed04baa4cf1095f99c09a442bb462b16df2f0f3064a03f480"
+      },
+      "scope": "Matching Tyrant/Crimson/Garrador whole sources are already in separate jobs; Eliminator/HunterMu exclusions remain binding."
+    }
+  ],
+  "completeBodyReferenceVerified": false,
+  "generatedByR34": false,
+  "canonicalFidelityCertified": false,
+  "note": "No output PNG, full-body admission, original frame or original idle cycle is claimed by this held receipt.",
+  "priorProofMetadata": {
+    "path": "modules/fidelity-r34/assets/lots/lot_1/recv-hunter/research/held-proof-before-snapshot.json",
+    "bytes": 2793,
+    "sha256": "0922e6d01e431ce27dd2a0fba767f5f5192d3835ae37539ba767d4fa4365136d",
+    "reason": "The same source-curation bytes are now bound at immutable lot-owned snapshot paths so later research additions cannot stale this earlier held decision."
+  }
+}

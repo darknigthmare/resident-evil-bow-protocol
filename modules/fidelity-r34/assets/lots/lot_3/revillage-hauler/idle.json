@@ -1,0 +1,91 @@
+{
+  "schema": "re.bow.generated-output-r34/1",
+  "uid": "revillage-hauler",
+  "kind": "idle",
+  "lotId": "lot_3",
+  "generator": "image_gen",
+  "status": "GENERATED",
+  "image": "modules/fidelity-r34/assets/generated/revillage-hauler/idle-right.png",
+  "prompt": "Edit the FIRST supplied generated Hauler image only to repair framing: zoom out so the ENTIRE existing character and ENTIRE axe fit inside the canvas with at least12percent transparent padding on ALL sides. The top helmet spike, both complete bare feet and every blade/tooth point must be visible and must not touch an image edge. The SECOND image is its complete original Village reference. Keep its right-facing stance, exact clothing/gear/weapon, anatomical-right red optical device and opposite rear helmet wheel relationship; do not mirror or swap them. Keep the source opposite-arm occlusion and do not add an exposed new hand. No scenery, floor or other subject. One transparent full-body static combat pose.",
+  "references": [
+    {
+      "path": "modules/fidelity-r34/assets/lots/lot_3/revillage-hauler/research/documented-first-body-study.png",
+      "bytes": 1433881,
+      "sha256": "fb553ced23f134eaf6fa0cfc4886f99b8e9e21bde1a927a87d15d4ad5f1db003",
+      "exactIdentity": true,
+      "sourceEdition": "Resident Evil Village (2021)",
+      "targetEditionAdmitted": true,
+      "role": "generated-style-study-not-anatomical-proof",
+      "generatedByR34": true
+    },
+    {
+      "path": "assets/specimens/revillage-hauler.png",
+      "bytes": 442529,
+      "sha256": "5a8854337899b37b30196fdb56191d67c066b9da7ffe0d3ab03bed2cceb256a5",
+      "role": "full-body-reference",
+      "bodyCoverage": "full",
+      "exactIdentity": true,
+      "sourceUrl": "https://blackjackrants.blogspot.com/2021/06/reviewing-monsters-resident-evil-village.html",
+      "sourceEdition": "Resident Evil Village (2021)",
+      "targetEditionAdmitted": true,
+      "bodyCompletenessIndependentReviewRequired": true,
+      "independentlyVisuallyReviewedAfterRestart": true
+    }
+  ],
+  "generatedBytesEdited": false,
+  "requestCheckpoint": {
+    "path": "modules/fidelity-r34/assets/lots/lot_3/recovery-requests/revillage-hauler-correction-01.json",
+    "sha256": "1fb9956c774cc4b6a25a77ec1c1903d8cbe28a233769fe342253a057cfa92640"
+  },
+  "review": {
+    "visuallyReviewed": true,
+    "canonicalFidelityCertified": false,
+    "originalIdleAnimationCertified": false,
+    "sourceFacing": "right",
+    "fullBodyVisible": true,
+    "fullBodyReviewed": true,
+    "completeBodyReferenceVerified": true,
+    "fightingPoseReviewed": true,
+    "knownAppearanceGaps": [],
+    "completeBodyReferences": [
+      {
+        "path": "assets/specimens/revillage-hauler.png",
+        "sha256": "5a8854337899b37b30196fdb56191d67c066b9da7ffe0d3ab03bed2cceb256a5",
+        "observation": "Second actual full-resolution and alpha review: full helmet with red eye device, all visible body/feet and the complete long toothed axe through the final metal point are inside620x998 image; alpha16bbox(8,65,616,975) confirms4px right margin. The earlier edge concern was conservative and is superseded. Preserve the one visible weapon-holding hand and original occlusion of the opposite arm; do not invent an exposed extra arm."
+      }
+    ],
+    "observations": [
+      "Second actual full-resolution and alpha review: full helmet with red eye device, all visible body/feet and the complete long toothed axe through the final metal point are inside620x998 image; alpha16bbox(8,65,616,975) confirms4px right margin. The earlier edge concern was conservative and is superseded. Preserve the one visible weapon-holding hand and original occlusion of the opposite arm; do not invent an exposed extra arm.",
+      "The initial positive clipped the top fitting/outer silhouette and is preserved. The actual image_gen correction gives the entire right-facing headgear, complete bare feet and full toothed axe clear transparent margins. It retains the source red optical plate and opposite rear wheel relationship, the visible weapon-holding hand and opposite-arm occlusion; no software mirror was used.",
+      "The unedited PNG is a static generated adaptation. The whole visible body/source silhouette is checked; unseen geometry, original pixels and original idle animation are not certified."
+    ]
+  },
+  "bytes": 1178350,
+  "sha256": "0d7bae4950ab8d6fc619e8781bd09d19293b8b3ce8b7234c8baec1551fce01d6",
+  "sourceOutputPath": "/workspace/generated_images/exec-b92e352c-f930-40af-9b9e-de8c10cd67cd.png",
+  "technical": {
+    "format": "PNG",
+    "width": 1025,
+    "height": 1534,
+    "bounds": {
+      "x": 77,
+      "y": 93,
+      "width": 899,
+      "height": 1325
+    },
+    "pivot": {
+      "x": 526.5,
+      "y": 1418
+    },
+    "alpha": {
+      "channel": true,
+      "min": 0,
+      "max": 255,
+      "visibleThreshold": 16,
+      "transparentPixels": 1166360,
+      "totalPixels": 1572350
+    },
+    "silhouetteTouchesCanvasEdge": false,
+    "decodedRgbaSha256": "a4ed0ff5f937c469f0bcedeb3d8bf5527c3551ae916de30fb4147745e2b2defa"
+  }
+}

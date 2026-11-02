@@ -1,0 +1,191 @@
+{
+  "schema": "re.bow.interaction-compatibility-r34/1",
+  "suite": "r33",
+  "baselineCommit": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+  "startedAt": "2026-11-02T04:14:35.754Z",
+  "finishedAt": "2026-11-02T04:16:13.860Z",
+  "passed": 6,
+  "failed": 0,
+  "expectedCommands": 6,
+  "complete": true,
+  "checks": [
+    {
+      "command": [
+        "node",
+        "tests/browser-native-r33.mjs"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "command": [
+        "node",
+        "tests/browser-generated-sprites-r33.mjs"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "command": [
+        "node",
+        "tests/browser-evidence-r33.mjs"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "command": [
+        "node",
+        "tests/browser-persistence-r33.mjs"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "command": [
+        "node",
+        "tests/browser-runtime-r33.mjs"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "command": [
+        "node",
+        "tests/browser-fidelity-r33.mjs"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null
+    }
+  ],
+  "preservedPublishedReports": 7,
+  "freshExecutionReports": [
+    {
+      "path": "qa-browser-compat-r34/r33-reports/R33_NATIVE_BROWSER.json",
+      "sha256": "8bbb94e9a8d39b9babb133af75c5bcbb1f9546e96ce41aaa8253392aa50aecf9",
+      "bytes": 5592,
+      "fresh": true
+    },
+    {
+      "path": "qa-browser-compat-r34/r33-reports/R33_SPRITES_BROWSER.json",
+      "sha256": "4c2ce2f2419ce66d662b595cefff9d33373e4e4d2361d44a90beea59f9c7d0b8",
+      "bytes": 7067,
+      "fresh": true
+    },
+    {
+      "path": "qa-browser-compat-r34/r33-reports/R33_EVIDENCE_BROWSER.json",
+      "sha256": "82e8087af96a59d28268bef7628fd0d3e87c564c2b0257b75e19e72a5d79d54a",
+      "bytes": 5514,
+      "fresh": true
+    },
+    {
+      "path": "qa-browser-compat-r34/r33-reports/R33_PERSISTENCE_BROWSER.json",
+      "sha256": "b619cde35704c64292348a99447ec6e44c437dc1770c3e118404df5357fa0b9b",
+      "bytes": 11142,
+      "fresh": true
+    },
+    {
+      "path": "qa-browser-compat-r34/r33-reports/R33_RUNTIME_BROWSER.json",
+      "sha256": "66277dee168b79fe8dd8014eb7d51ea0e3d5af4215e759974f1d5ec7de9cb130",
+      "bytes": 17137,
+      "fresh": true
+    },
+    {
+      "path": "qa-browser-compat-r34/r33-reports/R33_DASHBOARD_BROWSER.json",
+      "sha256": "e3e9ce8ea045491c00eadcdf7e74c0367e3399bae4c157d31619256700727fe6",
+      "bytes": 2651,
+      "fresh": true
+    },
+    {
+      "path": "qa-browser-compat-r34/r33-reports/R33_DOSSIER_BROWSER.json",
+      "sha256": "c8c5eacb25237bec0207a4b5dc6966bada27e3e2ba67c72a7e2c7a049435c148",
+      "bytes": 3579,
+      "fresh": true
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "scripts/run-browser-compat-r34.mjs",
+      "sha256": "9eaa47f9e08d0daa9efa02924a60ae8ae546fc24b800b45d23232219f8724389"
+    },
+    {
+      "path": "tests/browser-compat-r34.mjs",
+      "sha256": "9b3b6c6c7c70656aa934ff19ba526aa03461b329f5207b513b69128870396cce"
+    },
+    {
+      "path": "package.json",
+      "sha256": "68f418971d66ca7d801728336c827f66c7c0bd8ec31d9fd743f607cd4177a461"
+    },
+    {
+      "path": "modules/versus.html",
+      "sha256": "f739bc0623e6a2d0112e99d790c4b195ecd655ff948752df6f26afaddf68c5ff"
+    },
+    {
+      "path": "catalog-duel.html",
+      "sha256": "a4edb7a5359cbff01baf64832aa66fc8db546327fe85f3f29354427d117ddd77"
+    },
+    {
+      "path": "modules/fidelity-r34/evolutions/index.html",
+      "sha256": "2df6f4d1408762a3fff2680a86551bac1cbf0fec5d8065de95d09523e9ede97c"
+    },
+    {
+      "path": "modules/fidelity-r34/combat/generated-runtime.js",
+      "sha256": "a0397991c7495c7193c802dd05131f622667c9881e9287fa65bdcb6762f7e814"
+    },
+    {
+      "path": "modules/fidelity-r34/selection/avatars.js",
+      "sha256": "23b88cb031fdadbab82247c071c8d1a262a7d5654132a135ebd14e8b283c1800"
+    },
+    {
+      "path": "modules/fidelity-r34/combat/held-presentation.js",
+      "sha256": "5bfb608ee63f67a319dca4d5662685d9f177b5b1845c35c9d2405a827de6abdd"
+    },
+    {
+      "path": "modules/fidelity-r34/selection/prepare.js",
+      "sha256": "13518e73cce71a03123b4b1ab8fbc435e6df2f5c80474c5c67912db96f88d7b3"
+    },
+    {
+      "path": "modules/fidelity-r34/selection/flow.js",
+      "sha256": "7a5274c933e2ab453997cb8df0b258675b7c76c53a18cafa280ec7b3772208ee"
+    },
+    {
+      "path": "modules/fidelity-r33/combat/manifest.json",
+      "sha256": "11921f3fa53293b064837da0c32f7d888be04b2dbcc1c2b33c0f116e24a85809"
+    },
+    {
+      "path": "modules/fidelity-r33/selection/manifest.json",
+      "sha256": "36649eb348a8e7fe31e7f9ed27d1d580e154f5dd82741b0a0d0a0be8b77d53dc"
+    },
+    {
+      "path": "tests/browser-native-r33.mjs",
+      "sha256": "2f6928e8d994cd03061206a786946cd4ee964a223caff0f902640d8c19790837"
+    },
+    {
+      "path": "tests/browser-generated-sprites-r33.mjs",
+      "sha256": "312cff58dcbd36511df05388295c4952191be8bf98b06fe1ca53a7e5a5a6f369"
+    },
+    {
+      "path": "tests/browser-evidence-r33.mjs",
+      "sha256": "92e7382c8a6c4e002e587a23c795061d5988d354253df1b4a0dda2102c5ca14a"
+    },
+    {
+      "path": "tests/browser-persistence-r33.mjs",
+      "sha256": "c205a5f6c4f38260f0264fedacb0c910c5572334f77d43ca35a625d7a9b8b0c0"
+    },
+    {
+      "path": "tests/browser-runtime-r33.mjs",
+      "sha256": "ba46130be48a4227adb39587782560c7db6cc905f3cdddca6078f014b222b667"
+    },
+    {
+      "path": "tests/browser-fidelity-r33.mjs",
+      "sha256": "81aecc2b7cd4ca8cf513fa099e908991d33ce295107e65b87a3067033414c4a0"
+    }
+  ],
+  "scope": "Original assertions unchanged on current controllers, with explicit dev=1&selection=direct presentation and R33 asset dialect. This isolates the former input/presentation contracts; it does not certify the new default character→arena flow or new R34 media."
+}

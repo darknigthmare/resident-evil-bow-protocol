@@ -1,0 +1,54 @@
+/* Selection owns visible screens; combat controllers and simulation stay separate. */
+html[data-r34-selection-preparing] :is(.stage-mini,#nextStage,#mobileStage,#openGallery,#trialCanvas,.trial-readout,.trial-controls,.trial-actions,.replay-panel,#trialSoundPanel,#evolutionPanelR28,#trialIntroStatus,#trialCommandState,#trialKeyboardHelp,.trial-controller-note,#trialResult,#trialScope){display:none!important}
+html[data-r34-selection-preparing] label:has(#trialStage){display:none!important}
+.r34-flow-active [hidden]{display:none!important}
+.r34-flow-active .r34-selection-header{min-width:0;padding:1rem 1.25rem;background:#0b1817;border-bottom:1px solid #55745d;color:#f0edda;overflow-wrap:anywhere}
+.r34-flow-active .r34-selection-header h1{font:900 clamp(1.35rem,3vw,2.25rem)/1.15 system-ui,sans-serif;margin:.65rem 0 .35rem;letter-spacing:.02em}
+.r34-flow-active .r34-selection-header p{margin:.3rem 0;font:1rem/1.5 system-ui,sans-serif;color:#bcc8b9}
+.r34-flow-active .r34-selection-steps{display:flex;gap:1rem;flex-wrap:wrap;margin:0;padding:0;list-style:none;font:700 .85rem/1.4 system-ui,sans-serif;color:#9daa9a}
+.r34-flow-active .r34-selection-steps [aria-current=step]{color:#f1d994;text-decoration:underline;text-underline-offset:.35rem}
+.r34-flow-active .r34-stage-page{min-width:0;color:#eeeada;background:#0a1715;padding:1.25rem;font:1rem/1.5 system-ui,sans-serif}
+.r34-flow-active .r34-stage-tools{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin:1rem 0}
+.r34-flow-active .r34-stage-tools label{display:grid;min-width:0;gap:.35rem;font-size:.9rem;font-weight:700}
+.r34-flow-active .r34-stage-tools input,.r34-flow-active .r34-stage-tools select{box-sizing:border-box;min-width:0;width:100%;padding:.7rem;background:#172b26;color:#f0edda;border:1px solid #82967e;font:inherit}
+.r34-flow-active .r34-stage-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(15rem,100%),1fr));gap:1rem;margin:1rem 0}
+.r34-flow-active .r34-stage-card{box-sizing:border-box;min-width:0;padding:0;text-align:left;overflow:hidden;color:#edead8;background:#142720;border:2px solid #4b6353;font:inherit;border-radius:.2rem;cursor:pointer}
+.r34-flow-active .r34-stage-card[aria-checked=true]{border-color:#edcf7c;box-shadow:0 0 0 2px #edcf7c55}
+.r34-flow-active .r34-stage-card canvas{display:block;width:100%;aspect-ratio:16/9;background:#09120f}
+.r34-flow-active .r34-stage-card strong,.r34-flow-active .r34-stage-card small{display:block;padding:0 .8rem;overflow-wrap:anywhere}
+.r34-flow-active .r34-stage-card strong{padding-top:.65rem;font-size:.95rem;line-height:1.35}
+.r34-flow-active .r34-stage-card small{padding-bottom:.7rem;color:#bec8b7;font-size:.8rem}
+.r34-flow-active .r34-stage-footer{position:sticky;bottom:0;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:1rem;background:#0b1917f5;border:1px solid #687e65;z-index:3}
+.r34-flow-active .r34-stage-footer p{flex:1 1 15rem;margin:0;overflow-wrap:anywhere}
+.r34-flow-active .r34-flow-button{min-width:0;min-height:2.75rem;padding:.7rem 1rem;background:#19342a;color:#eee9d3;border:1px solid #a4b291;border-radius:.15rem;font:700 1rem/1.35 system-ui,sans-serif;cursor:pointer;overflow-wrap:anywhere}
+.r34-flow-active .r34-flow-button-primary{background:#e2cf87;color:#11221a;border-color:#f3e5a6}
+.r34-flow-active button.r34-flow-button:hover:not(:disabled){background:#254636;color:#fff4d4}
+.r34-flow-active button.r34-flow-button-primary:hover:not(:disabled){background:#f3dfa2;color:#11221a;border-color:#fff0bc}
+.r34-flow-active .r34-continue-row{display:flex;justify-content:flex-end;margin:1rem 0}
+.r34-flow-active .r34-flow-status{margin:.5rem 0;min-height:1.5em;color:#e9d896}
+.r34-flow-active .r34-stage-card:focus-visible,.r34-flow-active .r34-flow-button:focus-visible,.r34-flow-active .r34-stage-tools :focus-visible{outline:3px solid #f5e5a6;outline-offset:3px}
+.r34-flow-active .r34-stage-card:disabled,.r34-flow-active .r34-flow-button:disabled{opacity:.6;cursor:wait}
+.r34-flow-active .r34-combat-return{margin:.5rem 0}
+html[data-r34-selection-phase=characters] #nextStage,html[data-r34-selection-phase=characters] #mobileStage,html[data-r34-selection-phase=characters] #openGallery,html[data-r34-selection-phase=characters] .stage-mini{display:none!important}
+html[data-r34-selection-phase]:not([data-r34-selection-phase=combat]) #practice45,html[data-r34-selection-phase]:not([data-r34-selection-phase=combat]) #confirm45,html[data-r34-selection-phase]:not([data-r34-selection-phase=combat]) #link45{display:none!important}
+.r34-flow-main #selectScreen{display:grid;grid-template-rows:auto auto minmax(0,1fr)}
+.r34-flow-main #selectScreen>.select-body{height:auto;min-height:0}
+.r34-flow-main .r34-selection-header{padding:.6rem 1rem}
+.r34-flow-main .r34-selection-header h1{font-size:1.15rem;margin:.45rem 0 .2rem}
+.r34-flow-main .r34-selection-header p{font-size:.9rem}
+.r34-flow-main .r34-stage-page{position:fixed;inset:0;z-index:100;overflow:auto;overscroll-behavior:contain;padding:0}
+.r34-flow-main .r34-stage-content{padding:1.25rem}
+.r34-flow-main #launch{font-size:.85rem;white-space:normal}
+.r34-flow-trial .catalog-trial-main{min-width:0}
+.r34-flow-trial .r34-selection-header{padding:1rem 0;background:transparent}
+@media(max-width:640px){
+ .r34-flow-active .r34-stage-tools{grid-template-columns:minmax(0,1fr)}
+ .r34-flow-active .r34-stage-page{padding:12px}
+ .r34-flow-main .r34-stage-page{padding:0}
+ .r34-flow-main .r34-stage-content{padding:12px}
+ .r34-flow-active .r34-stage-footer{position:static;padding:12px;gap:10px}
+ .r34-flow-active .r34-stage-footer .r34-flow-button{flex:1 1 100%;padding:12px}
+ .r34-flow-active .r34-selection-steps{gap:.5rem;font-size:.75rem}
+ .r34-flow-main .r34-selection-header h1{font-size:1rem}
+ .r34-flow-main .r34-selection-header p{font-size:.8rem}
+}

@@ -1,0 +1,69 @@
+PASS 1440 neutral
+PASS 1440 left
+PASS 1440 right
+PASS 1440 opposite
+PASS 1440 opposite-and-down
+PASS 1440 release-left
+PASS 390 neutral
+PASS 390 left
+PASS 390 right
+PASS 390 opposite
+PASS 390 opposite-and-down
+PASS 390 release-left
+{"passed":12,"failed":0,"report":"qa-gamedev-r32/browser-input.json"}
+PASS 1280 left accepts Enter once per press and releases
+PASS 1280 left accepts Space once per press and releases
+PASS 1280 right accepts Enter once per press and releases
+PASS 1280 right accepts Space once per press and releases
+PASS 1280 down accepts Enter once per press and releases
+PASS 1280 down accepts Space once per press and releases
+PASS 1280 guard accepts Enter once per press and releases
+PASS 1280 guard accepts Space once per press and releases
+PASS 1280 jump accepts Enter once per press and releases
+PASS 1280 jump accepts Space once per press and releases
+PASS 1280 dash accepts Enter once per press and releases
+PASS 1280 dash accepts Space once per press and releases
+PASS 390 left accepts Enter once per press and releases
+PASS 390 left accepts Space once per press and releases
+PASS 390 right accepts Enter once per press and releases
+PASS 390 right accepts Space once per press and releases
+PASS 390 down accepts Enter once per press and releases
+PASS 390 down accepts Space once per press and releases
+PASS 390 guard accepts Enter once per press and releases
+PASS 390 guard accepts Space once per press and releases
+PASS 390 jump accepts Enter once per press and releases
+PASS 390 jump accepts Space once per press and releases
+PASS 390 dash accepts Enter once per press and releases
+PASS 390 dash accepts Space once per press and releases
+PASS Keyboard release preserves an independent pointer hold, and pointer release clears it
+PASS Changing the focused element releases a keyboard hold before keyup
+PASS Pause and reset discard an unfinished button hold without accepting key repeat as a new press
+PASS Replay installation clears a live hold and leaves disabled controls unable to change recorded input
+PASS Main and numpad Enter remain independent holds on the same guard button
+PASS Native Tab navigation reaches an actionable hold button from the live arena
+{"passed":30,"failed":0,"report":"qa-gamedev-r32/catalog-controls.json"}
+PASS A trusted visible-window blur pauses the duel and Start cannot resume it in the background
+PASS Holding Start through a trusted focus return requires release and a new press before resuming
+PASS Keyboard movement held before a trusted blur is cleared before voluntary resume
+PASS A captured pointer hold is cleared by a trusted blur before voluntary resume
+PASS CPU mode still pauses and resumes once per fresh Start press despite per-tick input clearing
+PASS Synthetic hidden/visible boundaries preserve pause and require a new Start press
+PASS Real BFCache restoration retains the duel in pause and rebases a Start press made before navigation
+{"passed":7,"failed":0,"report":"qa-gamedev-r32/browser-catalog-focus.json"}
+PASS Held Enter leaves the boot screen once and requires a fresh press to open modes
+PASS Held Escape returns one level from controls and requires release before leaving options
+PASS Held Space from the boot screen cannot arm the newly focused Play button
+PASS Native button activation by a fresh Enter or Space still fires exactly once
+PASS Repeated arrow presses continue navigating menu items
+PASS Native select navigation keeps repeated arrows and updates the saved setting
+PASS Events already consumed by a capture handler cannot navigate the menu
+{"passed":7,"failed":0,"report":"qa-gamedev-r32/menu-input.json"}
+PASS Manual stop produces an exportable partial measurement and allows a new run
+PASS A persisted lifecycle interruption retains its partial report and restores controls
+PASS Actual browser back/forward-cache restoration keeps an interrupted measurement usable
+PASS Changing mode clears the previous report and ignores completion from the outgoing frame
+FAIL Reloading the embedded document resets report ownership and both measurement controls: Expected values to be strictly equal:
+
+false !== true
+
+{"passed":4,"failed":1,"report":"qa-gamedev-r32/performance-lifecycle.json"}

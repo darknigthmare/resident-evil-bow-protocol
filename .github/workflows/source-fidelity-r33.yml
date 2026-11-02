@@ -15,7 +15,7 @@ defaults:
     shell: bash
 jobs:
   source:
-    name: Current R33 source, integration and engine assertions
+    name: Published R33 source, integration and engine assertions
     runs-on: ubuntu-latest
     timeout-minutes: 35
     steps:
@@ -23,6 +23,7 @@ jobs:
         with:
           persist-credentials: false
           fetch-depth: 0
+          ref: 6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: '22.16.0'
@@ -97,7 +98,7 @@ jobs:
           if-no-files-found: warn
           retention-days: 14
   browser:
-    name: Current R33 browser - ${{ matrix.suite }}
+    name: Current R33 browser compatibility view - ${{ matrix.suite }}
     needs: source
     runs-on: ubuntu-latest
     timeout-minutes: 25
@@ -158,7 +159,7 @@ jobs:
           touch qa-fidelity-r33-browser/started
           rm -f '${{ matrix.report }}'
           if [[ -n '${{ matrix.secondary_report }}' ]]; then rm -f '${{ matrix.secondary_report }}'; fi
-          node '${{ matrix.script }}'
+          node --import=./tests/browser-compat-r34.mjs '${{ matrix.script }}'
           node --input-type=module - '${{ matrix.report }}' '${{ matrix.secondary_report }}' <<'JS'
           import assert from 'node:assert/strict';
           import fs from 'node:fs';

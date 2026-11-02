@@ -1,0 +1,50 @@
+{
+  "schema": "re.bow.fidelity-reproduction-r34/1",
+  "release": "R34",
+  "passed": 3,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Tracking stable across independent Python hash seeds",
+      "pass": true
+    },
+    {
+      "name": "Actual R34 workbook reproduces byte-exactly",
+      "pass": true,
+      "sha256": "d0b27e59dccae4ce6dc892bfe0a9a0d50ca29180943ae0ea2a22976d44314f8b"
+    },
+    {
+      "name": "All 70 R33 sheets and relationships remain byte-exact",
+      "pass": true,
+      "historicalWorksheetPartsPreserved": 88
+    }
+  ],
+  "includedInR34Aggregate": false,
+  "sourceFiles": [
+    {
+      "path": "docs/R34_TRACKING.json",
+      "bytes": 1995268,
+      "sha256": "b5e789458e5819e4c449177e2cf9c48658a227398543b437cb9c839f766e41b9"
+    },
+    {
+      "path": "docs/R34_VALIDATION.json",
+      "bytes": 5384,
+      "sha256": "131c4cde8683ffb940882f6ec25475bc3d09e899080a5ac9f13e272725b17b70"
+    },
+    {
+      "path": "docs/BOW_FIDELITE_R34.xlsx",
+      "bytes": 3217334,
+      "sha256": "d0b27e59dccae4ce6dc892bfe0a9a0d50ca29180943ae0ea2a22976d44314f8b"
+    },
+    {
+      "path": "docs/R34_EXPORT.json",
+      "bytes": 634,
+      "sha256": "be1213f94a648d3eeb571893cf0006c995b0444bcf60b4d1bfb861d44af8cbb2"
+    },
+    {
+      "path": "scripts/fidelity-progress-r34.py",
+      "bytes": 27452,
+      "sha256": "20351759fc797310bdb784917fb56ab4c2db3ae2e76272355f4c60c5b4215706"
+    }
+  ]
+}

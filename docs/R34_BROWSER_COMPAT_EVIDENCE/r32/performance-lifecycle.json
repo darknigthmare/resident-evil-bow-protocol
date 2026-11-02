@@ -1,0 +1,79 @@
+{
+  "schema": "re.bow.performance-lifecycle-browser-r32/1",
+  "passed": 5,
+  "failed": 0,
+  "browserVersion": "154.0.8037.57",
+  "checks": [
+    {
+      "name": "Manual stop produces an exportable partial measurement and allows a new run",
+      "pass": true,
+      "detail": {
+        "reportReason": "manual",
+        "secondRunStarted": true,
+        "actualGameMounted": false
+      }
+    },
+    {
+      "name": "A persisted lifecycle interruption retains its partial report and restores controls",
+      "pass": true,
+      "detail": {
+        "syntheticPageTransitionEvents": true,
+        "actualMonitor": true,
+        "interruptedReportRetained": true,
+        "restartedOnlyByClick": true
+      }
+    },
+    {
+      "name": "Actual browser back/forward-cache restoration keeps an interrupted measurement usable",
+      "pass": true,
+      "detail": {
+        "trustedPersistedPageShow": true,
+        "sameDocumentRestored": true,
+        "interruptedReason": "parent-pagehide",
+        "automaticRestart": false
+      }
+    },
+    {
+      "name": "Changing mode clears the previous report and ignores completion from the outgoing frame",
+      "pass": true,
+      "detail": {
+        "oldReportClearedBeforeLoad": true,
+        "newModeIdle": true,
+        "oldCompletionIgnored": true
+      }
+    },
+    {
+      "name": "Reloading the embedded document resets report ownership and both measurement controls",
+      "pass": true,
+      "detail": {
+        "iframeDocumentReplaced": true,
+        "oldReportCleared": true,
+        "freshRunAvailable": true
+      }
+    }
+  ],
+  "browserErrors": [],
+  "inputs": [
+    {
+      "path": "modules/fidelity-r31/performance/index.html",
+      "sha256": "f5203c8c79dec250093a7c3a9e55d7def1e83859c7b29eff3b6e564824dcfdc2"
+    },
+    {
+      "path": "modules/fidelity-r31/performance/page.js",
+      "sha256": "aff3d22ef3202433c114d33e89a36eed81fc8dd37c7dfc9a2f293251c47eccfe"
+    },
+    {
+      "path": "modules/fidelity-r31/performance/monitor.js",
+      "sha256": "503e992e70900d0afd1b49c8d9f8acec9bbb881095d341095ead9c1bd4e24cc0"
+    },
+    {
+      "path": "modules/fidelity-r31/performance/style.css",
+      "sha256": "41acdde8c1eacee61d48f2b9580e98ec7f67211336b661a024e6456f805e4cc6"
+    },
+    {
+      "path": "tests/browser-performance-lifecycle-r32.mjs",
+      "sha256": "36c9717bfe2c3037453caaffc454ee51fafd5127e426323500cd5b59692273d6"
+    }
+  ],
+  "scope": "Delivered performance page and monitor in Chromium, with explicit same-origin iframe fixtures in place of game modes. Includes trusted BFCache restoration and separate synthetic lifecycle coverage. No full-game, physical-FPS, GPU-memory or real-device certification."
+}

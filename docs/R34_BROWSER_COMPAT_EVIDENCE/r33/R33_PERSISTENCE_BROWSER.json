@@ -1,0 +1,320 @@
+{
+  "schema": "re.bow.persistence-browser-r33/1",
+  "passed": 11,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "R31 native journal reproduces the unrelated-group block and is recovered by the R33 page",
+      "pass": true,
+      "detail": {
+        "beforeR31RefusedWithoutWrites": true,
+        "publishedJournalReadWithoutMigration": true,
+        "selectedUndoSucceeded": true,
+        "unselectedRawProgressKept": true
+      }
+    },
+    {
+      "name": "Real selective restore, keyboard backup and unrelated-progress undo at 1280px",
+      "pass": true,
+      "detail": {
+        "width": 1280,
+        "nativeKeyboardBackup": true,
+        "exactSelectedUndoAfterReload": true,
+        "otherTabProgressKept": true,
+        "unselectedProgressDoesNotBlockJournalClose": true,
+        "textResize": null
+      }
+    },
+    {
+      "name": "Real selective restore, keyboard backup and unrelated-progress undo at 320px",
+      "pass": true,
+      "detail": {
+        "width": 320,
+        "nativeKeyboardBackup": true,
+        "exactSelectedUndoAfterReload": true,
+        "otherTabProgressKept": true,
+        "unselectedProgressDoesNotBlockJournalClose": true,
+        "textResize": "200%"
+      }
+    },
+    {
+      "name": "The real save centre exposes both R33 routes while retaining every R19 control and the published R31 link",
+      "pass": true,
+      "detail": {
+        "actualSaveCentreMount": true,
+        "originalR19ControlsAndR31RouteRetained": true,
+        "newRoutes": 2,
+        "automaticRestoreOrReplayStarts": 0
+      }
+    },
+    {
+      "name": "An interrupted native journal resumes selected groups after reload and preserves unrelated newer progress",
+      "pass": true,
+      "detail": {
+        "fault": "after-localStorage-before-cursor",
+        "reloadGameWrites": 0,
+        "userInvokedResume": true,
+        "unselectedLaterValueKept": true
+      }
+    },
+    {
+      "name": "Selected-key conflicts and a real inter-tab Web Lock still prevent unsafe recovery or application",
+      "pass": true,
+      "detail": {
+        "chosenWriterValuePreserved": true,
+        "selectedConflictGameWrites": 0,
+        "nativeWebLockDeniesSecondTab": true
+      }
+    },
+    {
+      "name": "Injected storage quota and a corrupt native IndexedDB payload retain or reject recovery without overwriting game data",
+      "pass": true,
+      "detail": {
+        "quotaIsExplicitFaultFixture": true,
+        "durableJournalRetained": true,
+        "undoAfterQuota": true,
+        "corruptPayloadRefusedBeforeGameWrites": true
+      }
+    },
+    {
+      "name": "A mixed main, pre-R13, catalogue and evolution file batch uses four original routes sequentially without storage writes",
+      "pass": true,
+      "detail": {
+        "routes": [
+          {
+            "kind": "main-r13",
+            "contract": "612953ce952cdd2bd6b5dd21a489bc961c2bfcc3ff1321d15528e341f34ee67d",
+            "engineId": "main-current"
+          },
+          {
+            "kind": "main-r13",
+            "contract": "87b735420800aa6fc6f1f252e9991bca0ee307107b13e5ed81192d50389cfcb2",
+            "engineId": "main-pre-r13"
+          },
+          {
+            "kind": "catalog-r7",
+            "contract": "7481cce1dabb7aab981422cd28448648476e60737991e764783118ae038e2ca0",
+            "engineId": "catalog-current"
+          },
+          {
+            "kind": "evolution-r28",
+            "contract": "a4bf5c42ebd70c803e99412113ce5e30a1b52ffb56cb7e5143fd75f2d5c63893",
+            "engineId": "evolution-r28"
+          }
+        ],
+        "peakActiveIframes": 1,
+        "duplicateNotResimulated": true,
+        "unsupportedArchiveExplicit": true,
+        "naturalEvolutionDigest": "11012315",
+        "exactExport": true,
+        "gameStorageWrites": 0
+      }
+    },
+    {
+      "name": "Corrupt evolution results, unknown contracts and altered native engine bytes remain refused inside mixed batches",
+      "pass": true,
+      "detail": {
+        "storedDigestRefused": true,
+        "unknownContractRejectedBeforeSimulation": true,
+        "otherValidFileVerified": true,
+        "changedSourceRefusedBeforeIframe": true
+      }
+    },
+    {
+      "name": "Cancellation, page lifecycle and late source preparation clean up the batch without automatic replay",
+      "pass": true,
+      "detail": {
+        "cancelDuringSourcePreparation": true,
+        "latePreparedIframeRemoved": true,
+        "secondFileNotStarted": true,
+        "resultStableAfterCancellation": true,
+        "lifecycleEventsAreExplicitSyntheticFixtures": true,
+        "automaticResumption": false
+      }
+    },
+    {
+      "name": "Both new pages remain keyboard accessible at 320px with doubled text and have no axe violations",
+      "pass": true,
+      "detail": {
+        "viewport": 320,
+        "textResize": "200%",
+        "pages": [
+          {
+            "route": "/modules/fidelity-r33/persistence/index.html",
+            "axeVersion": "4.14.0",
+            "violations": 0
+          },
+          {
+            "route": "/modules/fidelity-r33/replay/index.html",
+            "axeVersion": "4.14.0",
+            "violations": 0
+          }
+        ],
+        "screenReaderOrPhysicalDeviceCertified": false
+      }
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "modules/fidelity-r33/persistence/index.html",
+      "bytes": 4589,
+      "sha256": "bf3f07a7e368d07c6c23afeb6c198b14e4007c3c3727fac18f127d635acd37e0"
+    },
+    {
+      "path": "modules/fidelity-r33/persistence/page.js",
+      "bytes": 8982,
+      "sha256": "2d4481413e1be7264bee400bad0d3f81b2fbb40cf869c2efe317e07aca0a7271"
+    },
+    {
+      "path": "modules/fidelity-r33/persistence/restore.js",
+      "bytes": 11279,
+      "sha256": "87ab1cf43b23f20e4537a580c6b0a30fc9bd08b9c596c9ba47570205d3ee2322"
+    },
+    {
+      "path": "modules/fidelity-r33/persistence/link.js",
+      "bytes": 1671,
+      "sha256": "245d9589fe0d849f23bb6cbbc0cb8c617aa16c70bd07c52576565e098ca4157c"
+    },
+    {
+      "path": "saves.html",
+      "bytes": 4985,
+      "sha256": "eba7c246278ac1ba44f2ab5cf1812ebfb5c41787649354b921fdc9821cf56cb7"
+    },
+    {
+      "path": "modules/fidelity-r33/replay/index.html",
+      "bytes": 2420,
+      "sha256": "2322066c9c3036054eb2b7309733b9cd8ee77af96cffc00a16d82d68b02fc7c8"
+    },
+    {
+      "path": "modules/fidelity-r33/replay/page.js",
+      "bytes": 4732,
+      "sha256": "d060ba49a903e9ee36dc67ece9cfe753d7d026d0134a4812bbd51030ceceea67"
+    },
+    {
+      "path": "modules/fidelity-r33/replay/batch.js",
+      "bytes": 6071,
+      "sha256": "f40f11193afdb3015e879c6b9d055700af87a768dd847afe2e8e74e7cf8527fc"
+    },
+    {
+      "path": "modules/fidelity-r31/persistence/index.html",
+      "bytes": 4316,
+      "sha256": "f68aae7994e0d855917174d4cc2e78585040b2e34b1766b1b5e66426eb326236"
+    },
+    {
+      "path": "modules/fidelity-r31/persistence/page.js",
+      "bytes": 8699,
+      "sha256": "6a817e9bbb7035c0eb0e476cee9c225fba561ce8dce1f5b0402d78a6652f062b"
+    },
+    {
+      "path": "modules/fidelity-r31/persistence/restore.js",
+      "bytes": 10722,
+      "sha256": "eea96d028d097b4f57351c88d4a0a4db53af6a2002b634fed6de9fec23b161ec"
+    },
+    {
+      "path": "modules/fidelity-r31/persistence/journal.js",
+      "bytes": 3838,
+      "sha256": "31692ad9cfb947bcff34430ee1fff322c39274cfe2b6decb8f657309ded8c7cd"
+    },
+    {
+      "path": "modules/fidelity-r31/persistence/style.css",
+      "bytes": 1826,
+      "sha256": "730260a1b61885fe088b80580e1489d07ec3ec47c870f748fab9dd4158e3f59f"
+    },
+    {
+      "path": "modules/fidelity-r31/replay/verify.js",
+      "bytes": 8084,
+      "sha256": "e8d6bdebab913491b72985f855747bd899916452d6777199f8abc92e79c6013d"
+    },
+    {
+      "path": "modules/fidelity-r24/persistence/sandbox.js",
+      "bytes": 6228,
+      "sha256": "0e9c76a5c67428669327347d3995eab6580564dbffa026aa5ffbfecd9f227cf1"
+    },
+    {
+      "path": "modules/fidelity-r24/persistence/bootstrap.js",
+      "bytes": 1485,
+      "sha256": "e3cb385be578dfa143e131dfebfbe000d0563b7bddfac8032e2d21d9cb623967"
+    },
+    {
+      "path": "modules/fidelity-r24/persistence/runner.js",
+      "bytes": 1279,
+      "sha256": "53b2b02084e8029e98b262079722143d04bb283d3f3317e69027cdf94e910dff"
+    },
+    {
+      "path": "modules/fidelity-r24/persistence/verifier.js",
+      "bytes": 7187,
+      "sha256": "3c9c71a3001d490f08e5313e017d83221a70571270008c1e4f37273eda62f735"
+    },
+    {
+      "path": "modules/fidelity-r28/evolutions/contract.json",
+      "bytes": 1470,
+      "sha256": "441e4dbf4a40d613d143541f582c258d895845874b2bd265df4b3dda9212d38d"
+    },
+    {
+      "path": "modules/versus.html",
+      "bytes": 33054,
+      "sha256": "f739bc0623e6a2d0112e99d790c4b195ecd655ff948752df6f26afaddf68c5ff"
+    },
+    {
+      "path": "tests/browser-persistence-r33.mjs",
+      "bytes": 26595,
+      "sha256": "c205a5f6c4f38260f0264fedacb0c910c5572334f77d43ca35a625d7a9b8b0c0"
+    },
+    {
+      "path": "tests/persistence-fixtures-r24.mjs",
+      "bytes": 3723,
+      "sha256": "1d93b56a56f1a44a2ccf67cdb2c6cdd42e9a4155a499b2d7e3c1a17ca6afcc3b"
+    },
+    {
+      "path": "src/re-data.js",
+      "bytes": 1786234,
+      "sha256": "090cf6e14a5ddf73291bcc443db1500e1810911beb926b4b4e26f9b0160b355a"
+    },
+    {
+      "path": "src/catalog-expansion-data.js",
+      "bytes": 3010594,
+      "sha256": "c33d05f4139ee9832990903289bf0edd5c16c54ccb678b6e81b0e13d75a0cce4"
+    },
+    {
+      "path": "src/catalog-trial-adapter.js",
+      "bytes": 583,
+      "sha256": "2804ad111b5ee44e959ee2f12c604275193691e803f819a704950ca89fa502b7"
+    },
+    {
+      "path": "src/spatial-weakpoints-v072.js",
+      "bytes": 5261,
+      "sha256": "046cb41f2536b9d51204d01f27b9dc4a55472fb916ace2f1d8dfebe9c1b80ff7"
+    },
+    {
+      "path": "src/combat-foundation-v060.js",
+      "bytes": 39241,
+      "sha256": "4c2aa12007670a1535d4c467db115a148161a4ab08778be17d4ef4f44e95ba82"
+    },
+    {
+      "path": "modules/fidelity-r28/evolutions/data.js",
+      "bytes": 27685,
+      "sha256": "2e6981813c3b68a93084917d48cb51b9b42f9d108d6baba89effa7ca5979980f"
+    },
+    {
+      "path": "modules/fidelity-r28/evolutions/engine.js",
+      "bytes": 5609,
+      "sha256": "88d15965d5fccc00c741f5dd7a68f0f4e100629e4fd80dddda76387f81615cd8"
+    },
+    {
+      "path": "modules/fidelity-r28/evolutions/contract.js",
+      "bytes": 291,
+      "sha256": "ad4053134b4348bbb74ca7373e59e2192875abb4ccb658af21d10d32890c105d"
+    },
+    {
+      "path": "modules/fidelity-r28/evolutions/replay.js",
+      "bytes": 6801,
+      "sha256": "2ad5aebbfa135ce2f00f82bea3234085e2107f6fe210cefd2d58f8328e4197b7"
+    },
+    {
+      "path": "src/save-center-r19.js",
+      "bytes": 10791,
+      "sha256": "6a312bd65ea55fcfe272e4adc9add12ce51affb4a9d424f5bee9998b9952ccbf"
+    }
+  ],
+  "scope": "Actual isolated Chromium localStorage, IndexedDB, native Web Locks, old/current restore pages, reload, selected/unselected progress, sequential R13/pre-R13/R7/R28 reconstruction with native contracts and source checks. Quota, interruption and pagehide/pageshow cases are labelled fault/synthetic fixtures. No live user profile, cloud, physical power-loss or physical-device certification."
+}

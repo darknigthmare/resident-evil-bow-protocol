@@ -1,0 +1,65 @@
+{
+  "schema": "re.bow.production-attempt-r34/1",
+  "uid": "re0-centurion",
+  "kind": "idle",
+  "lotId": "lot_1",
+  "status": "RETURNED_PNG",
+  "requestedAt": "2026-11-01T02:57:34.369478+00:00",
+  "prompt": "Edit the provided generated positive study into a faithful 2D combat base pose, using the original reference as anatomical authority. Correct the anatomical segmentation and leg-pair fidelity using the original native model preview as authority. Do not merge segments or omit pairs of legs. Preserve each original sequence of body segments and visible leg pairs, original antennae, palps/mandibles and rear tips. A complete low centipede body creeps toward the RIGHT edge, all appendages padded inside frame. Do not invent a simplified lower-leg count. No humanoid parts. Keep raw output as a single complete RGBA PNG on transparent background, no text, labels, floor, coloured outline or scene. This remains generated adaptation, not original frames or geometric1:1 certification.",
+  "references": [
+    {
+      "path": "modules/fidelity-r26/visual/previews/asset-287610.png",
+      "bytes": 194136,
+      "sha256": "d750f39c27e64ca13581c90689ab977cfefab37a0656fbb47cf30ab23604604a",
+      "role": "model-preview",
+      "bodyCoverage": "unknown",
+      "exactIdentity": true,
+      "sourceUrl": "https://www.models-resource.com/gamecube/residentevil0/asset/287610/",
+      "sourceEdition": "Resident Evil 0 (2002)",
+      "targetEditionAdmitted": true,
+      "bodyCompletenessIndependentReviewRequired": true
+    },
+    {
+      "path": "modules/fidelity-r30/native/other-games/poses/re0-centurion-gc-r26-1/native-90.png",
+      "bytes": 33634,
+      "sha256": "5a7e9d5b77cad74624c516e757b1379554d6fda59eb84cf0a5e51a709c27c6e3",
+      "role": "native-source-body-view",
+      "bodyCoverage": "unknown",
+      "exactIdentity": true,
+      "sourceUrl": "https://www.models-resource.com/gamecube/residentevil0/asset/287610/",
+      "sourceEdition": "Resident Evil 0 (2002)",
+      "targetEditionAdmitted": true,
+      "bodyCompletenessIndependentReviewRequired": true
+    },
+    {
+      "path": "assets/catalog/re0-centurion.png",
+      "bytes": 102230,
+      "sha256": "48a51be6d56d3390cdb0209e7e52f5e16cc0864d91907b2d6fb98df95622063a",
+      "role": "catalogue-reference",
+      "bodyCoverage": "unknown",
+      "exactIdentity": true,
+      "sourceUrl": "https://www.evilresource.com/resident-evil-zero/enemies/centurion",
+      "sourceEdition": "Resident Evil 0 (2002)",
+      "targetEditionAdmitted": true,
+      "bodyCompletenessIndependentReviewRequired": true
+    }
+  ],
+  "referenceBodyPath": "modules/fidelity-r26/visual/previews/asset-287610.png",
+  "sourceBodyObservation": "Complete native-derived GC2002 model preview shows full antennae, mandibles, segmented body, all visible leg pairs and rear tips; native90 provides its original side profile.",
+  "generatedStudyReference": {
+    "path": "modules/fidelity-r34/assets/lots/lot_1/re0-centurion/research/resume-initial-positive.png",
+    "bytes": 1031246,
+    "sha256": "76de19b72078b7b112080b2df21ec217f2d8621a73dee2626f703e47cc64a4f4",
+    "sourceOutputPath": "/workspace/generated_images/exec-35ac080e-fedd-4b78-a1fe-77fbd92cd3d0.png",
+    "notAnatomicalProof": true
+  },
+  "reason": "One targeted correction of a positive output; no prior moderation refusal.",
+  "startedAt": "2026-11-01T02:57:41.688Z",
+  "finishedAt": "2026-11-01T02:58:20.356Z",
+  "sourceOutputPath": "/workspace/generated_images/exec-0279c217-bf21-48f3-a3d0-655228486022.png",
+  "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-0279c217-bf21-48f3-a3d0-655228486022.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "resultKeys": [
+    "image_url",
+    "output_hint"
+  ]
+}

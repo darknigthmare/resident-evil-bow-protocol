@@ -1,0 +1,96 @@
+{
+  "schema": "re.bow.generated-output-r34/1",
+  "uid": "rerev2-glasp",
+  "kind": "idle",
+  "lotId": "lot_2",
+  "status": "GENERATED",
+  "generator": "image_gen",
+  "image": "modules/fidelity-r34/assets/generated/rerev2-glasp/idle-right.png",
+  "prompt": "Correct the existing generated game asset, with the original source as anatomical truth. Correct the LAST draft from LEFT-facing to a true RIGHT-facing three-quarter airborne idle. Preserve the source short veined wings, swollen abdomen and all hooked hanging limbs, without ground feet, human anatomy or a software mirror. The anterior mouth/head should project distinctly toward screen RIGHT.\nOne COMPLETE character in one image, every extremity and equipment endpoint inside at least ten percent transparent padding. No text, scene, floor, coloured outline or frame. Preserve original identity, colours, equipment and anatomical asymmetries. Native transparent alpha. A static generated adaptation, not an original frame or original animation. Do not use a horizontal software mirror.",
+  "references": [
+    {
+      "path": "assets/specimens/rerev2-glasp.png",
+      "bytes": 207970,
+      "sha256": "ed00d117f46dafeb10804bafd49720fbf002c0e52dd1e2928176515f02026ac7",
+      "sourceUrl": "https://blackjackrants.blogspot.com/2021/07/reviewing-monsters-resident-evil_02047146349.html",
+      "sourceEdition": "Resident Evil Revelations 2 (2015)",
+      "exactIdentity": true,
+      "targetEditionAdmitted": true,
+      "role": "actually-inspected-complete-body-source"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/generated/rerev2-glasp/studies/idle-initial.png",
+      "bytes": 1400307,
+      "sha256": "7ffaf3541c7a018c75f3dcdcee8859bb21e8779a223d9adcf2b42490a9acad84",
+      "exactIdentity": true,
+      "targetEditionAdmitted": true,
+      "sourceEdition": "Resident Evil Revelations 2 (2015)",
+      "role": "generated-positive-draft-to-correct-not-anatomical-proof"
+    }
+  ],
+  "sourceOutputPath": "/workspace/generated_images/exec-801f8063-77eb-4713-bfe1-bff1f547ddad.png",
+  "generatedBytesEdited": false,
+  "productionAttempt": {
+    "path": "modules/fidelity-r34/assets/lots/lot_2/production-attempts/rerev2-glasp/idle-02-correction.json",
+    "sha256": "6bd3dad8923a316fa88d914d34a8df7afcb8946fbf23d239832af4c9f0e503c7"
+  },
+  "priorPositiveStudy": {
+    "path": "modules/fidelity-r34/assets/generated/rerev2-glasp/studies/idle-initial.png",
+    "bytes": 1400307,
+    "sha256": "7ffaf3541c7a018c75f3dcdcee8859bb21e8779a223d9adcf2b42490a9acad84",
+    "exactIdentity": true,
+    "targetEditionAdmitted": true,
+    "sourceEdition": "Resident Evil Revelations 2 (2015)",
+    "role": "generated-positive-draft-to-correct-not-anatomical-proof"
+  },
+  "review": {
+    "visuallyReviewed": true,
+    "sourceFacing": "right",
+    "fullBodyVisible": true,
+    "fullBodyReviewed": true,
+    "completeBodyReferenceVerified": true,
+    "fightingPoseReviewed": true,
+    "knownAppearanceGaps": [],
+    "observations": [
+      "The original full source establishes the swollen abdomen, small veined wings, anterior head and hooked hanging appendages.",
+      "The corrected raw output visibly projects the anterior head/mouth to the right, with the abdomen behind it, airborne support and all wing/limb ends inside the image. Natural overlap is retained rather than creating human legs.",
+      "Raw pixels remain untouched. A browser alpha composite confirms the visible silhouette; RGB under alpha zero is not a visible halo. This static generated adaptation does not certify original Capcom pixels or an original idle animation."
+    ],
+    "completeBodyReferences": [
+      {
+        "path": "assets/specimens/rerev2-glasp.png",
+        "sha256": "ed00d117f46dafeb10804bafd49720fbf002c0e52dd1e2928176515f02026ac7",
+        "observation": "Entire nonhuman insect: bulbous translucent abdomen, short veined side wings, front mouthparts and all long hooked hanging limbs end inside frame. This is airborne arthropod support, not humanoid standing feet."
+      }
+    ],
+    "canonicalFidelityCertified": false,
+    "originalIdleAnimationCertified": false
+  },
+  "bytes": 1557138,
+  "sha256": "b6111a641eb98b004275ef1324bb66d5e41e4ec5254258587a1e794c78a5d3d9",
+  "technical": {
+    "format": "PNG",
+    "width": 1402,
+    "height": 1122,
+    "bounds": {
+      "x": 102,
+      "y": 18,
+      "width": 1129,
+      "height": 1077
+    },
+    "pivot": {
+      "x": 666.5,
+      "y": 1095
+    },
+    "alpha": {
+      "channel": true,
+      "min": 0,
+      "max": 255,
+      "visibleThreshold": 16,
+      "transparentPixels": 1005229,
+      "totalPixels": 1573044
+    },
+    "silhouetteTouchesCanvasEdge": false,
+    "decodedRgbaSha256": "a8b7be83bfcc6d562162227068e19c9410bd05145d6e38ef986bbf82a2d96ad0"
+  }
+}

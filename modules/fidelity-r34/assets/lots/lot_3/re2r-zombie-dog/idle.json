@@ -1,0 +1,28 @@
+{
+  "schema": "re.bow.generated-output-r34/1",
+  "uid": "re2r-zombie-dog",
+  "lotId": "lot_3",
+  "kind": "idle",
+  "generator": "image_gen",
+  "status": "HELD_REFERENCE",
+  "reason": "The canine head and upper/rear torso are cropped, without complete paws and lower body. No image_gen body request was issued from insufficient original references.",
+  "research": [
+    {
+      "kind": "ACTUAL_SOURCE_INSPECTION",
+      "path": "assets/catalog/re2r-zombie-dog.png",
+      "sha256": "2bb02b9bbd86c33c92c1a6983e7df5b3075506c90ed7da4f1283114bf98faa52",
+      "bytes": 89058,
+      "sourceUrl": "https://www.evilresource.com/resident-evil-2-remake/enemies/zombie-dog",
+      "observation": "The canine head and upper/rear torso are cropped, without complete paws and lower body.",
+      "actuallyInspected": true,
+      "completeBodyReferenceVerified": false
+    },
+    {
+      "kind": "PUBLIC_SOURCE_REFRESH",
+      "path": "modules/fidelity-r34/assets/lots/lot_3/re2r-zombie-dog/research/source-refresh.json",
+      "sha256": "6cbe65a28bf03612220297f41a443be7397e3ad6ee034822ed4789865aae1b19",
+      "observation": "The exact public enemy page and its own full image URL were checked; any returned image matches retained cropped bytes. A full URL is not a complete-body proof."
+    }
+  ],
+  "canonicalFidelityCertified": false
+}

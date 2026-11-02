@@ -1,0 +1,115 @@
+{
+  "schema": "re.bow.dossier-browser-r33/1",
+  "passed": 6,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Actual lot artifacts stay exact-UID and retain editions without loading media",
+      "pass": true,
+      "evidence": {
+        "uid": "rerev-sea-creeper",
+        "linkedArtifacts": 4,
+        "lots": [
+          "native"
+        ],
+        "automaticallyLoadedMedia": 0
+      }
+    },
+    {
+      "name": "A documentary-only identity does not acquire another form’s media and old source cards remain available",
+      "pass": true,
+      "evidence": {
+        "uid": "re3r-zombie",
+        "actualDocumentaryArtifacts": 0,
+        "inventedMedia": 0,
+        "originalSourceHostRetained": true,
+        "newestHeaderLink": true
+      }
+    },
+    {
+      "name": "Current proof card fits the actual dialog and remains keyboard accessible at 1280px",
+      "pass": true,
+      "evidence": {
+        "uid": "rerev-sea-creeper",
+        "width": 1280,
+        "everyComputedFontDoubled": true,
+        "dialogContentFits": true,
+        "keyboardFocusRetained": true
+      }
+    },
+    {
+      "name": "Current proof card fits the actual dialog and remains keyboard accessible at 320px",
+      "pass": true,
+      "evidence": {
+        "uid": "rerev-sea-creeper",
+        "width": 320,
+        "everyComputedFontDoubled": true,
+        "dialogContentFits": true,
+        "keyboardFocusRetained": true
+      }
+    },
+    {
+      "name": "Corrupt proof routes, mismatched UID coverage and oversized transport fail without hiding older evidence",
+      "pass": true,
+      "evidence": [
+        {
+          "kind": "external",
+          "failedClosed": true,
+          "olderHostRetained": true
+        },
+        {
+          "kind": "duplicate",
+          "failedClosed": true,
+          "olderHostRetained": true
+        },
+        {
+          "kind": "oversized",
+          "failedClosed": true,
+          "olderHostRetained": true
+        }
+      ]
+    },
+    {
+      "name": "Production evidence stays in developer Dossiers while the player path and old source mounts remain intact",
+      "pass": true,
+      "evidence": {
+        "uid": "rerev-sea-creeper",
+        "auditHiddenForPlayers": true,
+        "developerEvidenceAvailable": true,
+        "oldSourceMountsRetained": true,
+        "storageUnchanged": true
+      }
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "tests/browser-fidelity-r33.mjs",
+      "sha256": "81aecc2b7cd4ca8cf513fa099e908991d33ce295107e65b87a3067033414c4a0"
+    },
+    {
+      "path": "modules/fidelity-r33/index.html",
+      "sha256": "0094c58b11e511dbc15b4d4dbdee20490fdbce853e4386f9ba61ba7444b4329c"
+    },
+    {
+      "path": "modules/fidelity-r33/dashboard.js",
+      "sha256": "a985dfd9df715dca335a63f7ba45196f12989d7de9193e46ac224798b1a81417"
+    },
+    {
+      "path": "modules/fidelity-r33/dossier-link.js",
+      "sha256": "f4e3d65320e869f69d1e4944d8bd829c0dd22005396e01c2840fd267a0ea9527"
+    },
+    {
+      "path": "modules/fidelity-r33/progress.json",
+      "sha256": "9f9f98e7591cc4a2c414bfa3c56067ec9e8a15be2dd401b9619f976082527a14"
+    },
+    {
+      "path": "modules/fidelity-r33/dossier-additions.json",
+      "sha256": "7bb553f7e10e4aa11a6264e3fa491577830702d6cb7af5306f13ca1a6aa58652"
+    },
+    {
+      "path": "codex.html",
+      "sha256": "3292dab6591018c0d9dc462fb3bbe2ef9e3ce39c6f1fb80091b1c7c71743e5b8"
+    }
+  ],
+  "scope": "Actual current R33 dashboard ownership and exact-UID source links, real HTTP, source hashes, bounded failures and dialog reflow; no physical-device or global1:1 certification."
+}
