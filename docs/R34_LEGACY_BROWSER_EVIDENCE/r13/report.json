@@ -1,0 +1,75 @@
+{
+  "suite": "replay-vault-r13-http",
+  "passed": 8,
+  "failed": 0,
+  "physicalDevices": false,
+  "newArtwork": false,
+  "checks": [
+    {
+      "name": "Quota failure, native export and explicit retry preserve the complete replay",
+      "width": 1440,
+      "pass": true,
+      "configuredShortMatch": true,
+      "quotaInjected": true,
+      "realDownload": true,
+      "frames": 250
+    },
+    {
+      "name": "Native read-only playback and confirmed single removal preserve other storage",
+      "width": 1440,
+      "pass": true,
+      "nativeKeyboard": true,
+      "replayReadOnly": true,
+      "removalConfirmed": true
+    },
+    {
+      "name": "Corrupt archive is backed up exactly; invalid file import preserves the active match",
+      "width": 1440,
+      "pass": true,
+      "corruptFixture": true,
+      "backupByteExact": true,
+      "realFileInput": true
+    },
+    {
+      "name": "Full archive never trims history and lets the user free exactly one slot",
+      "width": 1440,
+      "pass": true,
+      "synthetic30EntryFixture": true,
+      "noAutoTrim": true,
+      "oneExplicitRemoval": true
+    },
+    {
+      "name": "Quota failure, native export and explicit retry preserve the complete replay",
+      "width": 390,
+      "pass": true,
+      "configuredShortMatch": true,
+      "quotaInjected": true,
+      "realDownload": true,
+      "frames": 250
+    },
+    {
+      "name": "Native read-only playback and confirmed single removal preserve other storage",
+      "width": 390,
+      "pass": true,
+      "nativeKeyboard": true,
+      "replayReadOnly": true,
+      "removalConfirmed": true
+    },
+    {
+      "name": "Corrupt archive is backed up exactly; invalid file import preserves the active match",
+      "width": 390,
+      "pass": true,
+      "corruptFixture": true,
+      "backupByteExact": true,
+      "realFileInput": true
+    },
+    {
+      "name": "Full archive never trims history and lets the user free exactly one slot",
+      "width": 390,
+      "pass": true,
+      "synthetic30EntryFixture": true,
+      "noAutoTrim": true,
+      "oneExplicitRemoval": true
+    }
+  ]
+}

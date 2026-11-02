@@ -6,6 +6,7 @@ import hashlib
 import json
 import os
 from pathlib import Path
+import re
 import shutil
 import subprocess
 import tempfile
@@ -15,12 +16,6 @@ ROOT = Path(__file__).resolve().parents[1]
 BASE_COMMIT = '6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5'
 R31_COMMIT = '413b89bfafc18abc55be1404ff77bdaf573b1334'
 NODE = Path('/workspace/.tools/node-v22.16.0-linux-x64/bin/node')
-MODIFIED = {
-    '.github/workflows/source-fidelity-r25.yml', '.github/workflows/source-fidelity-r26.yml',
-    'modules/versus.html', 'catalog-duel.html', 'package.json',
-    '.github/workflows/source-fidelity-r31.yml', '.github/workflows/gamedev-r32.yml',
-    '.github/workflows/source-fidelity-r33.yml',
-}
 
 
 def stamp():
@@ -79,15 +74,54 @@ def check_rows(rows, root):
     return changed
 
 
-def prepare():
-    if git('rev-parse', 'HEAD').decode().strip() != BASE_COMMIT:
-        raise ValueError('Prepare from the explicitly reviewed R33 checkpoint')
+def checkpoint_commits(checkpoint_ref):
+    parent = git('rev-parse', 'HEAD').decode().strip()
+    if checkpoint_ref is None and parent != BASE_COMMIT:
+        raise ValueError('A later parent needs an explicit full --checkpoint-ref; the default remains the reviewed R33 checkpoint')
+    checkpoint = BASE_COMMIT if checkpoint_ref is None else checkpoint_ref
+    if not re.fullmatch(r'[0-9a-f]{40}', checkpoint):
+        raise ValueError('The checkpoint reference must be a full lowercase commit SHA')
+    try:
+        resolved = git('rev-parse', '--verify', checkpoint + '^{commit}').decode().strip()
+        if resolved != checkpoint:
+            raise ValueError('The checkpoint reference must name the exact commit object')
+        git('merge-base', '--is-ancestor', BASE_COMMIT, checkpoint)
+        git('merge-base', '--is-ancestor', checkpoint, parent)
+    except subprocess.CalledProcessError as error:
+        raise ValueError('The checkpoint must descend from the published R33 baseline and belong to HEAD history') from error
+    return parent, checkpoint
+
+
+def reviewed_boundary():
+    # Use the same authoritative transformation checks as the npm pipeline,
+    # including its evolving workflow list, without refreshing any report.
+    script = """
+import {BASE_COMMIT, REVIEWED_MODIFIED_PATHS, collectSnapshot, validateSnapshot} from './scripts/verify-current-r34.mjs';
+const checked = validateSnapshot(collectSnapshot());
+console.log(JSON.stringify({baseline: BASE_COMMIT, declared: REVIEWED_MODIFIED_PATHS, modified: checked.modified}));
+"""
+    result = json.loads(subprocess.check_output([str(NODE), '--input-type=module', '-e', script], cwd=ROOT))
+    declared = result['declared']
+    if (result['baseline'] != BASE_COMMIT or not isinstance(declared, list)
+            or len(declared) != len(set(declared)) or set(result['modified']) != set(declared)):
+        raise ValueError('The inherited delta must match the current guard declarations exactly')
+    return set(declared)
+
+
+def prepare(checkpoint_ref=None):
+    parent_commit, checkpoint_commit = checkpoint_commits(checkpoint_ref)
+    modified = reviewed_boundary()
     values = git('diff', '--name-status', '--no-renames', '-z', BASE_COMMIT, '--').decode().split('\0')
     values = list(filter(None, values))
     delta = [{'status': values[index], 'path': values[index + 1]} for index in range(0, len(values), 2)]
     changed = [item for item in delta if item['status'] == 'M']
-    if any(item['status'] not in {'M', 'A'} for item in delta) or {item['path'] for item in changed} != MODIFIED:
-        raise ValueError('The inherited delta is not exactly the eight reviewed R34 integration files')
+    if any(item['status'] not in {'M', 'A'} for item in delta) or {item['path'] for item in changed} != modified:
+        raise ValueError('The inherited delta is not exactly the current guard-reviewed R34 integration files')
+    overlay_values = list(filter(None, git('diff', '--name-status', '--no-renames', '-z', checkpoint_commit, '--').decode().split('\0')))
+    overlay_delta = [{'status': overlay_values[index], 'path': overlay_values[index + 1]}
+                     for index in range(0, len(overlay_values), 2)]
+    if any(item['status'] not in {'M', 'A'} for item in overlay_delta):
+        raise ValueError('A checkpoint overlay cannot delete, rename or change the type of a source')
     all_paths = paths()
     before = inventory(selected=all_paths)
     output = Path(tempfile.mkdtemp(prefix='r34-current-verify-', dir='/workspace/scratch'))
@@ -97,13 +131,13 @@ def prepare():
     (output / 'clone.log').write_text(cloning.stdout + cloning.stderr)
     if cloning.returncode:
         raise RuntimeError('Isolated clone failed; see ' + str(output / 'clone.log'))
-    checkout = subprocess.run(['git', 'checkout', '--detach', BASE_COMMIT], cwd=snapshot,
+    checkout = subprocess.run(['git', 'checkout', '--detach', checkpoint_commit], cwd=snapshot,
                               text=True, capture_output=True)
     (output / 'checkout.log').write_text(checkout.stdout + checkout.stderr)
     if checkout.returncode:
         raise RuntimeError('Published checkpoint checkout failed')
     additions = git('ls-files', '--others', '--exclude-standard', '-z').decode().split('\0')
-    overlay = sorted({item['path'] for item in delta} | set(filter(None, additions)))
+    overlay = sorted({item['path'] for item in overlay_delta} | set(filter(None, additions)))
     overlay_rows = []
     for name in overlay:
         source = ROOT / name
@@ -116,7 +150,7 @@ def prepare():
     if not (ROOT / 'node_modules').is_dir():
         raise ValueError('Use the existing pinned tools; no installation is performed here')
     (snapshot / 'node_modules').symlink_to(ROOT / 'node_modules', target_is_directory=True)
-    if check_rows(before, ROOT) or check_rows(before, snapshot):
+    if git('rev-parse', 'HEAD').decode().strip() != parent_commit or check_rows(before, ROOT) or check_rows(before, snapshot):
         raise ValueError('A functional source changed while creating the checkpoint')
     source_rows = inventory(root=snapshot, selected=all_paths)
     package = json.loads((snapshot / 'package.json').read_bytes())
@@ -128,6 +162,8 @@ def prepare():
     checkpoint = {
         'schema': 're.bow.isolated-current-checkpoint-r34/1', 'preparedAt': stamp(),
         'parent': str(ROOT), 'snapshot': str(snapshot), 'base': BASE_COMMIT,
+        'parentCommit': parent_commit, 'checkpointCommit': checkpoint_commit,
+        'reviewedModifiedPaths': sorted(modified),
         'modified': changed, 'overlay': overlay_rows, 'sourceInputs': source_rows,
         'node': str(NODE), 'command': ['npm', 'run', 'verify'],
         'verifyCurrent': current, 'historicalCommand': package['scripts']['verify:historical:r31'],
@@ -137,7 +173,8 @@ def prepare():
     }
     target = output / 'checkpoint.json'
     target.write_text(json.dumps(checkpoint, indent=2, ensure_ascii=False) + '\n')
-    print(json.dumps({'checkpoint': str(target), 'base': BASE_COMMIT, 'modified': len(changed),
+    print(json.dumps({'checkpoint': str(target), 'base': BASE_COMMIT,
+                      'parentCommit': parent_commit, 'checkpointCommit': checkpoint_commit, 'modified': len(changed),
                       'overlayFiles': len(overlay_rows), 'sourceInputs': len(source_rows),
                       'sourceInventorySha256': sha(json.dumps(source_rows, sort_keys=True).encode()),
                       'currentCommands': len(current), 'runtimeFilesMatchedParent': True}), flush=True)
@@ -150,9 +187,16 @@ def execute(name):
     checkpoint = json.loads(checkpoint_path.read_bytes())
     if checkpoint.get('schema') != 're.bow.isolated-current-checkpoint-r34/1' or checkpoint['parent'] != str(ROOT):
         raise ValueError('This runner does not own the supplied checkpoint')
+    if checkpoint.get('base') != BASE_COMMIT:
+        raise ValueError('The published R33 conservation baseline cannot change')
     snapshot = Path(checkpoint['snapshot'])
     if snapshot.parent != checkpoint_path.parent or not (snapshot / '.git').is_dir():
         raise ValueError('The prepared isolated Git checkout is missing')
+    parent_commit = checkpoint.get('parentCommit', BASE_COMMIT)
+    checkpoint_commit = checkpoint.get('checkpointCommit', BASE_COMMIT)
+    if (git('rev-parse', 'HEAD').decode().strip() != parent_commit
+            or git('rev-parse', 'HEAD', root=snapshot).decode().strip() != checkpoint_commit):
+        raise ValueError('A prepared parent or isolated checkpoint commit changed')
     if check_rows(checkpoint['sourceInputs'], ROOT) or check_rows(checkpoint['sourceInputs'], snapshot):
         raise ValueError('Source fingerprints changed after preparation; prepare a new checkpoint')
     environment = dict(os.environ)
@@ -172,6 +216,8 @@ def execute(name):
     (ROOT / 'docs/R34_CURRENT_TESTS.log').write_bytes(raw)
     parent_differences = check_rows(checkpoint['sourceInputs'], ROOT)
     executed_differences = check_rows(checkpoint['sourceInputs'], snapshot)
+    parent_commit_unchanged = git('rev-parse', 'HEAD').decode().strip() == parent_commit
+    checkpoint_commit_unchanged = git('rev-parse', 'HEAD', root=snapshot).decode().strip() == checkpoint_commit
     # Original verification may compile source deterministically, but no code
     # difference is silently reclassified as a report-only mutation.
     published_path = snapshot / 'qa-gamedev-r32/historical-r31/report.json'
@@ -217,11 +263,13 @@ def execute(name):
                 captured.append(record(ROOT, target.relative_to(ROOT).as_posix()))
     source_report = {'schema': 're.bow.current-tests-r34/1', 'startedAt': started, 'finishedAt': stamp(),
         'durationSeconds': round(time.monotonic() - started_clock, 3),
-        'baseline': BASE_COMMIT, 'isolatedCurrentCheckout': True, 'sourceSymlinks': False,
+        'baseline': BASE_COMMIT, 'parentCommit': parent_commit, 'checkpointCommit': checkpoint_commit,
+        'parentCommitUnchanged': parent_commit_unchanged, 'checkpointCommitUnchanged': checkpoint_commit_unchanged,
+        'isolatedCurrentCheckout': True, 'sourceSymlinks': False,
         'nodeModulesOnlySymlink': True, 'nodeVersion': node_version,
         'command': ['npm', 'run', 'verify'], 'executedNpmScript': checkpoint['verifyScript'],
-        'exitCode': completed.returncode, 'passed': int(completed.returncode == 0 and not parent_differences and not executed_differences),
-        'failed': int(completed.returncode != 0 or bool(parent_differences) or bool(executed_differences)),
+        'exitCode': completed.returncode, 'passed': int(completed.returncode == 0 and not parent_differences and not executed_differences and parent_commit_unchanged and checkpoint_commit_unchanged),
+        'failed': int(completed.returncode != 0 or bool(parent_differences) or bool(executed_differences) or not parent_commit_unchanged or not checkpoint_commit_unchanged),
         'originalCurrentFunctionalCommands': 38, 'currentR32InputCommands': 1,
         'currentGuardCommands': 2, 'currentCommands': current_rows,
         'guardNewPassed': guards.get('passed') if guards else None,
@@ -252,5 +300,8 @@ if __name__ == '__main__':
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument('--prepare', action='store_true')
     group.add_argument('--run', metavar='CHECKPOINT')
+    parser.add_argument('--checkpoint-ref', metavar='FULL_SHA', help='Explicit ancestor commit to clone for preparation; published R33 remains the conservation baseline.')
     arguments = parser.parse_args()
-    prepare() if arguments.prepare else execute(arguments.run)
+    if arguments.checkpoint_ref is not None and not arguments.prepare:
+        parser.error('--checkpoint-ref applies only to --prepare')
+    prepare(arguments.checkpoint_ref) if arguments.prepare else execute(arguments.run)

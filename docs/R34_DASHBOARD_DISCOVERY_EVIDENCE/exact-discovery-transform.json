@@ -1,0 +1,10 @@
+{
+  "path": "tests/browser-fidelity-dashboard-r24.mjs",
+  "baseline": "730ededd457c1a4c8cf09db4f5a8a4938626f17d",
+  "before": "// The header always points to the latest installed adapter; historical dashboards stay independently checked.\nconst installedAdapters = [...codex.matchAll(/<script src=\"modules\\/fidelity-r(\\d+)\\/dossier-link\\.js\"><\\/script>/g)].map(match => Number(match[1]));\n",
+  "after": "// Only adapters owning the primary source entry determine its current dashboard.\n// Separately owned developer additions keep their own links and do not replace it.\nconst installedAdapters = [...codex.matchAll(/<script src=\"modules\\/fidelity-r(\\d+)\\/dossier-link\\.js\"><\\/script>/g)]\n  .filter(match => /getElementById\\(\\s*['\"]fidelityR23Link['\"]\\s*\\)/.test(fs.readFileSync(path.join(root, 'modules/fidelity-r' + match[1] + '/dossier-link.js'), 'utf8')))\n  .map(match => Number(match[1]));\n",
+  "beforeSha256": "d3dcb1ca877db4f63329de7b7e75a0b2faedaa312a4a70563aca4e470755c6de",
+  "afterSha256": "b0cf6c95e19ad26e059beadfc027947868c3f2db8f560b1739939bb48676271d",
+  "inverseExactCount": 1,
+  "remainingBytesIdentical": true
+}

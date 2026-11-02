@@ -10,7 +10,29 @@ ROOT = Path(__file__).resolve().parents[1]
 BASE = '6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5'
 ALLOWED = {'package.json', '.github/workflows/source-fidelity-r25.yml', '.github/workflows/source-fidelity-r26.yml',
            'modules/versus.html', 'catalog-duel.html', '.github/workflows/source-fidelity-r31.yml',
-           '.github/workflows/gamedev-r32.yml', '.github/workflows/source-fidelity-r33.yml'}
+           '.github/workflows/gamedev-r32.yml', '.github/workflows/source-fidelity-r33.yml',
+           '.github/workflows/access-r18-integration.yml',
+           '.github/workflows/audit-r9-browser.yml',
+           '.github/workflows/baker-audio-r15-browser.yml',
+           '.github/workflows/baker-audio-r15-integration.yml',
+           '.github/workflows/baker-r14-browser.yml',
+           '.github/workflows/baker-r14-integration.yml',
+           '.github/workflows/baker-r14-workbook.yml',
+           '.github/workflows/catalog-replay-r7.yml',
+           '.github/workflows/combat-text-r17-browser.yml',
+           '.github/workflows/combat-text-r17-integration.yml',
+           '.github/workflows/finalize-audit-r9.yml',
+           '.github/workflows/flight-r12-browser.yml',
+           '.github/workflows/flight-r12-integration.yml',
+           '.github/workflows/lucas-r11-browser.yml',
+           '.github/workflows/lucas-r11-integration.yml',
+           '.github/workflows/package-direction-r4.yml',
+           '.github/workflows/r10-browser.yml',
+           '.github/workflows/replay-r13-browser.yml',
+           '.github/workflows/replay-r13-integration.yml',
+           '.github/workflows/saves-r19-integration.yml',
+           '.github/workflows/trial-audio-r16-integration.yml',
+           'tests/browser-fidelity-dashboard-r24.mjs'}
 LEDGER = ROOT / 'docs/R34_SOURCE_ADDITIONS.json'
 
 
@@ -37,7 +59,7 @@ def inspect():
         baseline = git('show', BASE + ':' + name)
         modified.append({'path': name, 'baselineSha256': sha(baseline),
                          'sha256': sha((ROOT / name).read_bytes())})
-    assert {item['path'] for item in modified} == ALLOWED, 'All eight R34 boundary changes must be explicit.'
+    assert {item['path'] for item in modified} == ALLOWED, 'All reviewed R34 boundary changes must be explicit.'
     files = []
     for path in module_files():
         assert not path.is_symlink(), 'Module assets must be ordinary checkout files.'
@@ -48,7 +70,7 @@ def inspect():
             'modifiedHistoricalFiles': sorted(modified, key=lambda item: item['path']),
             'moduleFileCount': len(files), 'moduleBytes': sum(item['bytes'] for item in files), 'moduleFiles': files,
             'historicalWorkbook': {'path': 'docs/BOW_FIDELITE_R33.xlsx', 'sha256': sha((ROOT / 'docs/BOW_FIDELITE_R33.xlsx').read_bytes())},
-            'scope': 'Published R33 files frozen except eight reviewed presentation/tool/pipeline mounts. All R34 module files hash-bound; guardR34 separately checks each allowed transformation and all addition paths.'}
+            'scope': 'Published R33 files frozen except the exact reviewed presentation, pipeline, legacy browser preloads and primary-link discovery correction. All R34 module files hash-bound; guardR34 separately checks each allowed transformation and all addition paths.'}
 
 
 def staged_check(evidence):

@@ -12,9 +12,122 @@ export const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '
 export const BASE_COMMIT = '6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5';
 const PREVIOUS_BASE = 'adb733b9faf10a041c0b4ef5aa115f43ec67dd34';
 export const MOUNTS = ['modules/versus.html', 'catalog-duel.html'];
+export const LEGACY_BROWSER_WORKFLOWS = Object.freeze({
+  ".github/workflows/access-r18-integration.yml": [
+    "tests/browser-combat-text-r17.mjs",
+    "tests/browser-trial-audio-r16.mjs",
+    "tests/browser-baker-audio-r15.mjs",
+    "tests/browser-baker-r14.mjs",
+    "tests/browser-replay-vault-r13.mjs",
+    "tests/browser-flight-r12.mjs",
+    "tests/browser-lucas-r11.mjs",
+    "tests/browser-delivery-r10-http.mjs"
+  ],
+  ".github/workflows/audit-r9-browser.yml": [
+    "tests/browser-audit-r9.mjs"
+  ],
+  ".github/workflows/baker-audio-r15-browser.yml": [
+    "tests/browser-baker-audio-r15.mjs"
+  ],
+  ".github/workflows/baker-audio-r15-integration.yml": [
+    "tests/browser-baker-audio-r15.mjs",
+    "tests/browser-baker-r14.mjs",
+    "tests/browser-replay-vault-r13.mjs",
+    "tests/browser-flight-r12.mjs",
+    "tests/browser-lucas-r11.mjs",
+    "tests/browser-delivery-r10-http.mjs"
+  ],
+  ".github/workflows/baker-r14-browser.yml": [
+    "tests/browser-baker-r14.mjs"
+  ],
+  ".github/workflows/baker-r14-integration.yml": [
+    "tests/browser-baker-r14.mjs",
+    "tests/browser-replay-vault-r13.mjs",
+    "tests/browser-flight-r12.mjs",
+    "tests/browser-lucas-r11.mjs",
+    "tests/browser-delivery-r10-http.mjs"
+  ],
+  ".github/workflows/baker-r14-workbook.yml": [
+    "tests/browser-baker-r14.mjs"
+  ],
+  ".github/workflows/catalog-replay-r7.yml": [
+    "tests/browser-catalog-replay-r7.mjs"
+  ],
+  ".github/workflows/combat-text-r17-browser.yml": [
+    "tests/browser-combat-text-r17.mjs",
+    "tests/browser-trial-audio-r16.mjs"
+  ],
+  ".github/workflows/combat-text-r17-integration.yml": [
+    "tests/browser-combat-text-r17.mjs",
+    "tests/browser-trial-audio-r16.mjs",
+    "tests/browser-baker-audio-r15.mjs",
+    "tests/browser-baker-r14.mjs",
+    "tests/browser-replay-vault-r13.mjs",
+    "tests/browser-flight-r12.mjs",
+    "tests/browser-lucas-r11.mjs",
+    "tests/browser-delivery-r10-http.mjs"
+  ],
+  ".github/workflows/finalize-audit-r9.yml": [
+    "tests/browser-audit-r9.mjs",
+    "tests/browser-match-sequences-r8.mjs"
+  ],
+  ".github/workflows/flight-r12-browser.yml": [
+    "tests/browser-flight-r12.mjs"
+  ],
+  ".github/workflows/flight-r12-integration.yml": [
+    "tests/browser-flight-r12.mjs",
+    "tests/browser-lucas-r11.mjs",
+    "tests/browser-delivery-r10-http.mjs"
+  ],
+  ".github/workflows/lucas-r11-browser.yml": [
+    "tests/browser-lucas-r11.mjs"
+  ],
+  ".github/workflows/lucas-r11-integration.yml": [
+    "tests/browser-lucas-r11.mjs",
+    "tests/browser-delivery-r10-http.mjs"
+  ],
+  ".github/workflows/package-direction-r4.yml": [
+    "tests/browser-directional-r4.mjs"
+  ],
+  ".github/workflows/r10-browser.yml": [
+    "tests/browser-delivery-r10-http.mjs"
+  ],
+  ".github/workflows/replay-r13-browser.yml": [
+    "tests/browser-replay-vault-r13.mjs"
+  ],
+  ".github/workflows/replay-r13-integration.yml": [
+    "tests/browser-replay-vault-r13.mjs",
+    "tests/browser-flight-r12.mjs",
+    "tests/browser-lucas-r11.mjs",
+    "tests/browser-delivery-r10-http.mjs"
+  ],
+  ".github/workflows/saves-r19-integration.yml": [
+    "tests/browser-combat-text-r17.mjs",
+    "tests/browser-trial-audio-r16.mjs",
+    "tests/browser-baker-audio-r15.mjs",
+    "tests/browser-baker-r14.mjs",
+    "tests/browser-replay-vault-r13.mjs",
+    "tests/browser-flight-r12.mjs",
+    "tests/browser-lucas-r11.mjs",
+    "tests/browser-delivery-r10-http.mjs"
+  ],
+  ".github/workflows/trial-audio-r16-integration.yml": [
+    "tests/browser-trial-audio-r16.mjs",
+    "tests/browser-baker-audio-r15.mjs",
+    "tests/browser-baker-r14.mjs",
+    "tests/browser-replay-vault-r13.mjs",
+    "tests/browser-flight-r12.mjs",
+    "tests/browser-lucas-r11.mjs",
+    "tests/browser-delivery-r10-http.mjs"
+  ]
+});
 export const WORKFLOWS = ['.github/workflows/source-fidelity-r25.yml', '.github/workflows/source-fidelity-r26.yml',
-  '.github/workflows/source-fidelity-r31.yml', '.github/workflows/gamedev-r32.yml', '.github/workflows/source-fidelity-r33.yml'];
-const MODIFIED = new Set(['package.json', ...MOUNTS, ...WORKFLOWS]);
+  '.github/workflows/source-fidelity-r31.yml', '.github/workflows/gamedev-r32.yml', '.github/workflows/source-fidelity-r33.yml',
+  ...Object.keys(LEGACY_BROWSER_WORKFLOWS)];
+export const DISCOVERY_TEST = "tests/browser-fidelity-dashboard-r24.mjs";
+export const DISCOVERY_SUBSTITUTION = ["// The header always points to the latest installed adapter; historical dashboards stay independently checked.\nconst installedAdapters = [...codex.matchAll(/<script src=\"modules\\/fidelity-r(\\d+)\\/dossier-link\\.js\"><\\/script>/g)].map(match => Number(match[1]));\n", "// Only adapters owning the primary source entry determine its current dashboard.\n// Separately owned developer additions keep their own links and do not replace it.\nconst installedAdapters = [...codex.matchAll(/<script src=\"modules\\/fidelity-r(\\d+)\\/dossier-link\\.js\"><\\/script>/g)]\n  .filter(match => /getElementById\\(\\s*['\"]fidelityR23Link['\"]\\s*\\)/.test(fs.readFileSync(path.join(root, 'modules/fidelity-r' + match[1] + '/dossier-link.js'), 'utf8')))\n  .map(match => Number(match[1]));\n"];
+export const REVIEWED_MODIFIED_PATHS = ['package.json', ...MOUNTS, ...WORKFLOWS, DISCOVERY_TEST];
+const MODIFIED = new Set(REVIEWED_MODIFIED_PATHS);
 export const SUBSTITUTIONS = [
   ['fidelity-r33/combat/generated-runtime.js', 'fidelity-r34/combat/generated-runtime.js'],
   ['fidelity-r33/selection/avatars.js', 'fidelity-r34/selection/avatars.js'],
@@ -48,7 +161,18 @@ export function expectedMount(file, source) {
   source = once(source, '</head>', '<link rel="stylesheet" href="' + prefix + 'flow.css"><script src="' + prefix + 'prepare.js"></script></head>');
   return once(source, '</body>', '<script src="' + prefix.replace('selection/', 'combat/') + 'held-presentation.js"></script><script src="' + prefix + 'flow.js"></script></body>');
 }
+export function projectedLegacyWorkflow(file, source) {
+  assert(Object.hasOwn(LEGACY_BROWSER_WORKFLOWS, file), 'An exact legacy workflow is required');
+  for (const script of LEGACY_BROWSER_WORKFLOWS[file]) source = once(source, 'node --import=./tests/browser-compat-r34.mjs ' + script, 'node ' + script);
+  return source;
+}
+export function expectedDiscoveryTest(source) {return once(source, ...DISCOVERY_SUBSTITUTION);}
+export function projectedDiscoveryTest(source) {return once(source, DISCOVERY_SUBSTITUTION[1], DISCOVERY_SUBSTITUTION[0]);}
 export function expectedWorkflow(file, source) {
+  if (Object.hasOwn(LEGACY_BROWSER_WORKFLOWS, file)) {
+    for (const script of LEGACY_BROWSER_WORKFLOWS[file]) source = once(source, 'node ' + script, 'node --import=./tests/browser-compat-r34.mjs ' + script);
+    return source;
+  }
   if (/source-fidelity-r(?:25|26)\.yml$/.test(file)) return once(source, 'run: node scripts/verify-current-r33.mjs', 'run: ' + GUARD);
   if (file.endsWith('gamedev-r32.yml')) return once(source,
     'name: R32 current inputs, menus, measurement lifecycle and reflow',
@@ -84,7 +208,10 @@ export function projectedR33(snapshot) {
   const projected = {...old, current: new Map(old.current), changes: snapshot.publishedChanges.map(item => ({...item})), files: new Map(old.files),
     inherited: {...old.inherited, current: new Map(old.inherited.current)}};
   for (const file of MODIFIED) {
-    const baseline = snapshot.baseline.get(file);
+    const baseline = Object.hasOwn(LEGACY_BROWSER_WORKFLOWS, file)
+      ? projectedLegacyWorkflow(file, snapshot.current.get(file))
+      : file === DISCOVERY_TEST ? projectedDiscoveryTest(snapshot.current.get(file)) : snapshot.baseline.get(file);
+    assert.equal(baseline, snapshot.baseline.get(file), 'The reviewed projection must restore exact published bytes: ' + file);
     if (projected.current.has(file)) projected.current.set(file, baseline);
     if (projected.inherited.current.has(file)) projected.inherited.current.set(file, baseline);
     if (projected.files.has(file)) projected.files.set(file, {regular: true, symlink: false, bytes: Buffer.byteLength(baseline)});
@@ -102,6 +229,8 @@ export function validateSnapshot(snapshot) {
   for (const file of ['package.json', ...WORKFLOWS]) assert(seen.has(file), 'Required reviewed pipeline boundary absent: ' + file);
   assert.deepEqual(JSON.parse(snapshot.current.get('package.json')), expectedPackage(JSON.parse(snapshot.baseline.get('package.json'))), 'All original functional commands and explicit compatibility suites must remain');
   for (const file of WORKFLOWS) assert.equal(snapshot.current.get(file), expectedWorkflow(file, snapshot.baseline.get(file)), 'Workflow changes exceed the reviewed scope: ' + file);
+  assert(seen.has(DISCOVERY_TEST), 'The reviewed primary-link discovery correction is required');
+  assert.equal(snapshot.current.get(DISCOVERY_TEST), expectedDiscoveryTest(snapshot.baseline.get(DISCOVERY_TEST)), 'Only the owning-dashboard discovery may change: ' + DISCOVERY_TEST);
   for (const file of MOUNTS) if (seen.has(file)) assert.equal(snapshot.current.get(file), expectedMount(file, snapshot.baseline.get(file)), 'Only the reviewed external presentation mounts may change: ' + file);
   const inherited = validateR33(projectedR33(snapshot));
   return {schema: 're.bow.current-scope-r34/1', baselineCommit: BASE_COMMIT,
@@ -110,7 +239,7 @@ export function validateSnapshot(snapshot) {
     functionalTestsArchived: false, scope: 'R34 art and presentation boundary. All original engine functions remain current; legacy interaction assertions use a declared current-code compatibility view, while new sequential selection is tested by default.'};
 }
 export function sourceFiles(root = ROOT) {return ['scripts/verify-current-r34.mjs', 'tests/verify-current-guard-r34.mjs', 'scripts/verify-current-r33.mjs', 'tests/verify-current-guard-r33.mjs',
-  'scripts/verify-current-r32.mjs', 'tests/verify-current-guard-r32.mjs', 'package.json', ...WORKFLOWS].map(file => ({path: file, sha256: createHash('sha256').update(fs.readFileSync(path.join(root, file))).digest('hex')}));}
+  'scripts/verify-current-r32.mjs', 'tests/verify-current-guard-r32.mjs', 'package.json', DISCOVERY_TEST, ...WORKFLOWS].map(file => ({path: file, sha256: createHash('sha256').update(fs.readFileSync(path.join(root, file))).digest('hex')}));}
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   try {
     const report = validateSnapshot(collectSnapshot());

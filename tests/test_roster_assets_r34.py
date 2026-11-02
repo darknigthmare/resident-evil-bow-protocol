@@ -9,6 +9,7 @@ from pathlib import Path
 import tempfile
 import threading
 import unittest
+from unittest.mock import patch
 
 from PIL import Image
 
@@ -258,6 +259,50 @@ class ReceiptTests(unittest.TestCase):
         self.assertEqual(json.loads(destination.read_bytes()), result)
         module.validate_receipt(result)
         self.assertEqual(len(list(module.revision_bindings(result))), 2)
+
+    def test_first_import_final_validation_failure_removes_new_pair_and_allows_retry(self):
+        image = self.root / self.image_name; image.unlink()
+        destination = self.root / self.job['outputs']['portrait']['receiptPath']
+        source = self.changed_tool_fixture(); original = module.validate_receipt
+
+        def reject_final(receipt, check_image=True, image_source=None, reference_overrides=None):
+            job = original(receipt, check_image, image_source, reference_overrides)
+            if check_image and image_source is None:
+                self.assertTrue(image.exists()); self.assertTrue(destination.exists())
+                raise ValueError('Unit final validation failure after publication')
+            return job
+
+        with patch.object(module, 'validate_receipt', reject_final):
+            with self.assertRaisesRegex(ValueError, 'final validation failure'):
+                module.import_output(self.receipt, source)
+        self.assertFalse(image.exists())
+        self.assertFalse(destination.exists(), 'A failed first import must not leave a GENERATED receipt without its PNG')
+        self.assertEqual((self.root / self.source_name).read_bytes(), self.raw)
+        result, _ = module.import_output(self.receipt, source)
+        self.assertEqual(image.read_bytes(), source.read_bytes())
+        self.assertEqual(json.loads(destination.read_bytes()), result)
+        module.validate_receipt(result)
+
+    def test_revision_final_validation_failure_restores_exact_preexisting_pair(self):
+        destination = self.delivered(); old_receipt = destination.read_bytes()
+        image = self.root / self.image_name; source = self.changed_tool_fixture()
+        original = module.validate_receipt
+
+        def reject_final(receipt, check_image=True, image_source=None, reference_overrides=None):
+            job = original(receipt, check_image, image_source, reference_overrides)
+            if check_image and image_source is None and receipt.get('replacesGeneratedOutput'):
+                self.assertEqual(image.read_bytes(), source.read_bytes())
+                self.assertNotEqual(destination.read_bytes(), old_receipt)
+                raise ValueError('Unit final revision validation failure after publication')
+            return job
+
+        with patch.object(module, 'validate_receipt', reject_final):
+            with self.assertRaisesRegex(ValueError, 'final revision validation failure'):
+                module.import_output(self.receipt, source, replace_sha256=self.receipt['sha256'],
+                                     revision_reason='Unit rollback after a failed final validation')
+        self.assertEqual(image.read_bytes(), self.raw)
+        self.assertEqual(destination.read_bytes(), old_receipt)
+        module.validate_receipt(json.loads(destination.read_bytes()))
 
     def test_revision_precondition_failures_leave_every_file_unchanged(self):
         old_path = self.delivered(); source = self.changed_tool_fixture()

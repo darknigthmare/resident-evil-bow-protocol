@@ -2,7 +2,8 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {ROOT, BASE_COMMIT, WORKFLOWS, MOUNTS, collectSnapshot, validateSnapshot, projectedR33, allowedAddition, ownedReportPath, sourceFiles} from '../scripts/verify-current-r34.mjs';
+import {ROOT, BASE_COMMIT, WORKFLOWS, LEGACY_BROWSER_WORKFLOWS, DISCOVERY_TEST, MOUNTS, collectSnapshot, validateSnapshot, projectedR33,
+  projectedLegacyWorkflow, projectedDiscoveryTest, allowedAddition, ownedReportPath, sourceFiles} from '../scripts/verify-current-r34.mjs';
 import {runGuardCases as inheritedCases} from './verify-current-guard-r33.mjs';
 function clone(s) {return {...s, baseline: new Map(s.baseline), current: new Map(s.current), files: new Map([...s.files].map(([key, value]) => [key, {...value}])),
   changes: s.changes.map(value => ({...value})), publishedChanges: s.publishedChanges.map(value => ({...value})),
@@ -35,6 +36,25 @@ export function runCases(snapshot) {
   for (const file of MOUNTS) reject('Unreviewed inline presentation is refused: ' + file, s => s.current.set(file, s.current.get(file).replace('</body>', '<script>alert(1)</script></body>')), /external presentation mounts/);
   test('Mounts preserve original controller URL identities', () => {assert(snapshot.current.get('catalog-duel.html').includes('src/catalog-duel-v070.js')); assert(!snapshot.current.get('catalog-duel.html').includes('catalog-controller.js'));});
   for (const file of WORKFLOWS) reject('A workflow cannot bypass assertions: ' + file, s => s.current.set(file, s.current.get(file) + '\n# unexpected edit\n'), /Workflow changes/);
+  test('Every legacy teststep preload has an exact inverse to the published workflow', () => {
+    assert.equal(Object.keys(LEGACY_BROWSER_WORKFLOWS).length, 21);
+    assert.equal(Object.values(LEGACY_BROWSER_WORKFLOWS).flat().length, 65);
+    for (const file of Object.keys(LEGACY_BROWSER_WORKFLOWS)) assert.equal(projectedLegacyWorkflow(file, snapshot.current.get(file)), snapshot.baseline.get(file));
+  });
+  reject('A legacy test cannot remove its explicitly scoped preload', s => {
+    const file = '.github/workflows/flight-r12-browser.yml';
+    s.current.set(file, s.current.get(file).replace('node --import=./tests/browser-compat-r34.mjs tests/browser-flight-r12.mjs', 'node tests/browser-flight-r12.mjs'));
+  }, /Workflow changes/);
+  reject('A legacy test cannot use a job-wide preload before dependencies exist', s => {
+    const file = '.github/workflows/flight-r12-browser.yml';
+    s.current.set(file, s.current.get(file).replace('jobs:\n', 'env:\n  NODE_OPTIONS: --import=./tests/browser-compat-r34.mjs\njobs:\n'));
+  }, /Workflow changes/);
+  test('The dashboard discovery correction restores every original assertion byte on inverse projection', () => {
+    assert.equal(projectedDiscoveryTest(snapshot.current.get(DISCOVERY_TEST)), snapshot.baseline.get(DISCOVERY_TEST));
+  });
+  reject('A dashboard assertion cannot be removed with its discovery correction', s => {
+    s.current.set(DISCOVERY_TEST, s.current.get(DISCOVERY_TEST).replace("assert.equal(await link.count(), 1, 'One named source entry');", ''));
+  }, /Only the owning-dashboard discovery/);
   reject('Published R33 source validation cannot silently become an arbitrary checkout', s => {const file = '.github/workflows/source-fidelity-r33.yml'; s.current.set(file, s.current.get(file).replace('ref: ' + BASE_COMMIT, 'ref: main'));}, /Workflow changes/);
   test('The report writer cannot replace another release or follow a symlink', () => {assert.throws(() => ownedReportPath('docs/R33_VALIDATION.json', 're.bow.current-guard-tests-r34/1', 'docs/R34_CURRENT_GUARD_TESTS.json')); assert.throws(() => ownedReportPath('../outside.json', 'x', 'docs/R34_CURRENT_GUARD_TESTS.json'));});
   const inherited = inheritedCases(projectedR33(snapshot), {writeReport: false});

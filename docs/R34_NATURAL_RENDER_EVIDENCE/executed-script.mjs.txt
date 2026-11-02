@@ -3,7 +3,8 @@ import path from 'node:path';
 import http from 'node:http';
 import {createRequire} from 'node:module';
 import {createHash} from 'node:crypto';
-const root='/workspace/resident-evil-bow-protocol',out='/workspace/scratch/r34-natural-render-smoke';
+if (process.env.R34_FROZEN_SMOKE !== '1') throw Error('Await the explicit root freeze signal before running this smoke.');
+const root='/workspace/resident-evil-bow-protocol',out='/workspace/scratch/r34-natural-render-smoke-next';
 fs.mkdirSync(out,{recursive:true});
 const require=createRequire(root+'/package.json'),{chromium}=require('playwright');
 const bound=new Map(),errors=[],requests=[];
@@ -19,9 +20,15 @@ const server=http.createServer((req,res)=>{
 await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
 const origin='http://127.0.0.1:'+server.address().port;
 const browser=await chromium.launch({headless:true,executablePath:'/usr/bin/chromium',args:['--no-sandbox','--disable-dev-shm-usage']});
+const frozenAssets=JSON.parse(fs.readFileSync(root+'/modules/fidelity-r34/assets/manifest.json'));
+const frozenRegistry=JSON.parse(fs.readFileSync(root+'/modules/fidelity-r34/combat/manifest.json'));
+const optionalId='re3-nemesis-second-form';
+const optionalAsset=frozenAssets.sprites.find(row=>row.id===optionalId&&row.defaultAdmission===true&&row.sourceFacing==='right');
+if(optionalAsset&&!frozenRegistry.sprites.concat(frozenRegistry.historicalReplacements||[]).some(row=>row.id===optionalId&&row.generatedByR34===true&&row.sha256===optionalAsset.sha256)) throw Error('Nemesis asset and runtime admission are not synchronized.');
+const scenarioIds=['re1-cerberus','re7-flying-bug',...(optionalAsset?[optionalId]:[])];
 const rows=[];
 try{
- for(const uid of ['re1-cerberus','re7-flying-bug']){
+ for(const uid of scenarioIds){
   const context=await browser.newContext({viewport:{width:1280,height:1000},reducedMotion:'reduce'});
   await context.addInitScript(()=>{
    window.__smokeBlob=new Map();window.__smokeImages=[];window.__smokeLabels=[];window.__smokeRecords=[];window.__smokeCurrent=null;
@@ -61,6 +68,6 @@ try{
  }
 }finally{await browser.close();await new Promise(resolve=>server.close(resolve));}
 const stale=[...bound].filter(([name,raw])=>hash(fs.readFileSync(root+'/'+name))!==hash(raw)).map(([name])=>name);
-const report={schema:'re.bow.natural-render-smoke-r34/1',rows,errors,staleExecutedSources:stale,sourceFiles:[...bound].map(([name,raw])=>({path:name,sha256:hash(raw)})),scope:'Two bounded live player matches in normal default character→stage→combat flow. No forced actor state or direct idle render call. Test hooks only record render images/classification/transforms and byte-equality during each real render. Natural simulation advances between frames; no gameplay, data, source or shared report was edited.'};
+const report={schema:'re.bow.natural-render-smoke-r34/1',scenarioIds,optionalNemesis:{id:optionalId,included:!!optionalAsset,reason:optionalAsset?'A new right-facing R34 idle is admitted and SHA-synchronized.':'No admitted right-facing R34 idle is present for this identity.'},rows,errors,staleExecutedSources:stale,sourceFiles:[...bound].map(([name,raw])=>({path:name,sha256:hash(raw)})),scope:'Bounded live player matches for Cerberus and Flying Bug, plus Nemesis1999phase2 only when its new right idle is admitted, in normal default character→stage→combat flow. No forced actor state or direct idle render call. Test hooks only record render images/classification/transforms and byte-equality during each real render. Natural simulation advances between frames; no gameplay, data, source or shared report was edited.'};
 fs.writeFileSync(out+'/report.json',JSON.stringify(report,null,2)+'\n');
 if(errors.length||rows.some(row=>!row.rawBodyDraws||!row.renderReadOnly))process.exitCode=1;

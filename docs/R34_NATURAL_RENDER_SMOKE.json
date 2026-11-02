@@ -11,8 +11,8 @@
       "characterPhase": "characters",
       "arenaPhase": "stages",
       "combatPhase": "combat",
-      "naturalIdleFrames": 56,
-      "actualBodyDraws": 56,
+      "naturalIdleFrames": 39,
+      "actualBodyDraws": 39,
       "bodySha256": "46ddab26f087a2f7ea7d4bfef839793489f0aca3d85819e546fa7c24a11e9fa4",
       "actorOnGround": true,
       "actorState": "idle",
@@ -25,8 +25,8 @@
       "characterPhase": "characters",
       "arenaPhase": "stages",
       "combatPhase": "combat",
-      "naturalIdleFrames": 29,
-      "actualBodyDraws": 29,
+      "naturalIdleFrames": 47,
+      "actualBodyDraws": 47,
       "bodySha256": "0c8fae5781b8560a31547e206584bd237dade07125822c02645d71f052c5d33f",
       "actorOnGround": true,
       "actorState": "idle",
@@ -39,14 +39,43 @@
   "directIdleDrawCallUsed": false,
   "errors": [],
   "staleExecutedSources": [],
+  "optionalNemesis": {
+    "id": "re3-nemesis-second-form",
+    "included": false,
+    "reason": "No admitted right-facing R34 idle is present for this identity."
+  },
   "snapshot": {
     "generatedBodies": 128,
     "admittedRightBodies": 114,
     "assetsManifest": {
       "path": "modules/fidelity-r34/assets/manifest.json",
       "bytes": 3467890,
-      "sha256": "00685ed8ff673f65a6a074ef5654f21d18d43ab6d99f9518daf8986796fa5e99"
-    }
+      "sha256": "4ba2a02746923fc1e1a6ee004f21d992281b15daa1099910c433bf7c59fa11b7"
+    },
+    "frozenManifests": [
+      {
+        "path": "modules/fidelity-r34/assets/manifest.json",
+        "bytes": 3467890,
+        "sha256": "4ba2a02746923fc1e1a6ee004f21d992281b15daa1099910c433bf7c59fa11b7"
+      },
+      {
+        "path": "modules/fidelity-r34/combat/manifest.json",
+        "bytes": 1941894,
+        "sha256": "3744e749576e14f50338b7bfe2d923e41e59c7c75d2dd0900c2e536d04393134"
+      },
+      {
+        "path": "modules/fidelity-r34/selection/manifest.json",
+        "bytes": 658071,
+        "sha256": "d505192cbc7ad51a6fd0baa607c2910e5bb3be9025f1072b37f45403ce94d2f3"
+      }
+    ]
+  },
+  "execution": {
+    "command": [
+      "R34_FROZEN_SMOKE=1",
+      "/workspace/.tools/node-v22.16.0-linux-x64/bin/node",
+      "/workspace/scratch/r34-natural-render-smoke-next.mjs"
+    ]
   },
   "environment": {
     "node": "v22.16.0",
@@ -55,33 +84,33 @@
   "artifacts": [
     {
       "path": "docs/R34_NATURAL_RENDER_EVIDENCE/raw-report.json",
-      "bytes": 528735,
-      "sha256": "4f1f1a90d28648357bd337456d6bab5c042f2c44df52e53737db5f1ef60f5240",
-      "originalPath": "/workspace/scratch/r34-natural-render-smoke/report.json"
+      "bytes": 581351,
+      "sha256": "18cad806044364183fc726a9397a9e1f130e390e76738b5cafa6174a4f515264",
+      "originalPath": "/workspace/scratch/r34-natural-render-smoke-next/report.json"
     },
     {
       "path": "docs/R34_NATURAL_RENDER_EVIDENCE/executed-script.mjs.txt",
-      "bytes": 7788,
-      "sha256": "e36f2a17310ada9ccd901b282e91aeed11f32cb6eaa7c6985e4aa868d3f47c49",
-      "originalPath": "/workspace/scratch/r34-natural-render-smoke.mjs"
+      "bytes": 8926,
+      "sha256": "f938385f6745c6c204454de6ca5ecf8333eb1b27679aca2ccab79bdb01766981",
+      "originalPath": "/workspace/scratch/r34-natural-render-smoke-next.mjs"
     },
     {
       "path": "docs/R34_NATURAL_RENDER_EVIDENCE/execution-output.txt",
       "bytes": 544,
-      "sha256": "4d62cd5047a645edd7954183a6aaeed2a5e6b23983446d93dde5c91ed812b9a2",
-      "originalPath": "/workspace/scratch/r34-natural-render-smoke-final.log"
+      "sha256": "ae1ae9190d7689d163c83c42f7ca09e6183572f96e3cb51155493674a1b347f8",
+      "originalPath": "/workspace/scratch/r34-natural-render-smoke-next.log"
     },
     {
       "path": "docs/R34_NATURAL_RENDER_EVIDENCE/re1-cerberus.png",
-      "bytes": 1025621,
-      "sha256": "409dfa848ea361cfa62f1d2d6d33c632b107d8ab6fe6f10eda0013488a148964",
-      "originalPath": "/workspace/scratch/r34-natural-render-smoke/re1-cerberus.png"
+      "bytes": 1025417,
+      "sha256": "793ddbd454c13f134b908b925fbbbfc0c96aade00cc24bfb30dc56e3ac638546",
+      "originalPath": "/workspace/scratch/r34-natural-render-smoke-next/re1-cerberus.png"
     },
     {
       "path": "docs/R34_NATURAL_RENDER_EVIDENCE/re7-flying-bug.png",
-      "bytes": 1022147,
-      "sha256": "7ffe94e96e6a059b41f0eb496874d4ff20c9867125bf3c1ce64dcb46545963a4",
-      "originalPath": "/workspace/scratch/r34-natural-render-smoke/re7-flying-bug.png"
+      "bytes": 1022619,
+      "sha256": "f343e97265ca3e313ad0a71ffcd30d9f94fe2a5493baeadb904d31ea3ec1943f",
+      "originalPath": "/workspace/scratch/r34-natural-render-smoke-next/re7-flying-bug.png"
     }
   ],
   "sourceFiles": [
@@ -118,36 +147,12 @@
       "sha256": "87c68eb441075530b6b81a150a2c303f6351f2298732d12de891807a08286443"
     },
     {
-      "path": "modules/fidelity-r34/selection/flow.css",
-      "sha256": "4953eb7abf207752accd63b12d689432916a3c3275b5f79d988c8dbba01b9140"
-    },
-    {
-      "path": "src/interface-preferences-r20.js",
-      "sha256": "79e4655dcff4674e9447c7473a4a2db77fdc5ff31c370bc331d5c74e6d83ea35"
-    },
-    {
-      "path": "src/player-shell-r20.js",
-      "sha256": "97621067c2878bb193fb4b2d30c7ff903e0ceaf7ec17d7b33858ff90521732f4"
-    },
-    {
       "path": "modules/fidelity-r28/evolutions/styles.css",
       "sha256": "8dc471ea12a1d47dda48a7281fc38ef72a237eb5b957a89b9b34dc9a6c4af82d"
     },
     {
-      "path": "src/catalog-expansion-data.js",
-      "sha256": "c33d05f4139ee9832990903289bf0edd5c16c54ccb678b6e81b0e13d75a0cce4"
-    },
-    {
-      "path": "src/catalog-trial-adapter.js",
-      "sha256": "2804ad111b5ee44e959ee2f12c604275193691e803f819a704950ca89fa502b7"
-    },
-    {
-      "path": "src/spatial-weakpoints-v072.js",
-      "sha256": "046cb41f2536b9d51204d01f27b9dc4a55472fb916ace2f1d8dfebe9c1b80ff7"
-    },
-    {
-      "path": "src/combat-foundation-v060.js",
-      "sha256": "4c2aa12007670a1535d4c467db115a148161a4ab08778be17d4ef4f44e95ba82"
+      "path": "src/player-shell-r20.js",
+      "sha256": "97621067c2878bb193fb4b2d30c7ff903e0ceaf7ec17d7b33858ff90521732f4"
     },
     {
       "path": "modules/fidelity-r34/selection/prepare.js",
@@ -156,6 +161,30 @@
     {
       "path": "src/re-data.js",
       "sha256": "090cf6e14a5ddf73291bcc443db1500e1810911beb926b4b4e26f9b0160b355a"
+    },
+    {
+      "path": "modules/fidelity-r34/selection/flow.css",
+      "sha256": "4953eb7abf207752accd63b12d689432916a3c3275b5f79d988c8dbba01b9140"
+    },
+    {
+      "path": "src/interface-preferences-r20.js",
+      "sha256": "79e4655dcff4674e9447c7473a4a2db77fdc5ff31c370bc331d5c74e6d83ea35"
+    },
+    {
+      "path": "src/spatial-weakpoints-v072.js",
+      "sha256": "046cb41f2536b9d51204d01f27b9dc4a55472fb916ace2f1d8dfebe9c1b80ff7"
+    },
+    {
+      "path": "src/catalog-trial-adapter.js",
+      "sha256": "2804ad111b5ee44e959ee2f12c604275193691e803f819a704950ca89fa502b7"
+    },
+    {
+      "path": "src/catalog-expansion-data.js",
+      "sha256": "c33d05f4139ee9832990903289bf0edd5c16c54ccb678b6e81b0e13d75a0cce4"
+    },
+    {
+      "path": "src/combat-foundation-v060.js",
+      "sha256": "4c2aa12007670a1535d4c467db115a148161a4ab08778be17d4ef4f44e95ba82"
     },
     {
       "path": "src/re5-scenes-v060.js",
@@ -307,11 +336,11 @@
     },
     {
       "path": "modules/fidelity-r34/selection/manifest.json",
-      "sha256": "a93aed44bfbd43419e3652a2bce95659067d546d7a97aff041acbd473ae7f293"
+      "sha256": "d505192cbc7ad51a6fd0baa607c2910e5bb3be9025f1072b37f45403ce94d2f3"
     },
     {
       "path": "modules/fidelity-r34/combat/manifest.json",
-      "sha256": "a969673c8d9bff7cf66b6ab12c15ef67a703a4c0e4d0606784dae48f3d8880b2"
+      "sha256": "3744e749576e14f50338b7bfe2d923e41e59c7c75d2dd0900c2e536d04393134"
     },
     {
       "path": "modules/fidelity-r30/native/revelations/manifest.json",
@@ -341,14 +370,15 @@
     },
     {
       "path": "docs/R34_NATURAL_RENDER_EVIDENCE/executed-script.mjs.txt",
-      "bytes": 7788,
-      "sha256": "e36f2a17310ada9ccd901b282e91aeed11f32cb6eaa7c6985e4aa868d3f47c49"
+      "bytes": 8926,
+      "sha256": "f938385f6745c6c204454de6ca5ecf8333eb1b27679aca2ccab79bdb01766981"
     }
   ],
   "observations": [
-    "Both subjects traverse the real character confirmation and distinct arena screen before combat. Intro is skipped by a real Enter key on the combat canvas.",
+    "Both subjects traverse real character confirmation and the distinct arena screen before combat. Intro is skipped by an actual Enter key on the combat canvas.",
     "The flying-bug adaptation rests onGround=true and idle; its existing R12 passive supplies commanded flight manoeuvres, rather than permanent hovering. No hover-to-jump suppression was observed.",
-    "Snapshots show the entire new right-facing P1 image. The opponent left-facing Cerberus retains its declared older fallback; this smoke does not certify a newly produced left side."
+    "Snapshots show the entire new right-facing P1 image. The opponent left-facing Cerberus retains its declared older fallback; this smoke does not certify a newly produced left side.",
+    "Nemesis1999phase2 is not added to the natural-combat smoke because its new study is not an admitted right-facing idle; no actor or default is fabricated to exercise it."
   ],
-  "scope": "Two bounded live matches on frozen R34 registries. Instrumentation only records real renderer calls, source PNG blob SHA values and canvas transforms; equality is checked synchronously around each render. Simulation naturally advances between frames. No source/game data was edited; no physical gamepad, global1:1, original animation, FPS or GPU-memory certification."
+  "scope": "Two bounded live matches on the explicitly frozen R34 registries. Instrumentation records real renderer calls, source PNG blob SHA values and canvas transforms; equality is checked synchronously around each render. Simulation naturally advances between frames. No source/game data edited; no physical-gamepad, global1:1, original-animation, FPS or GPU-memory certification."
 }

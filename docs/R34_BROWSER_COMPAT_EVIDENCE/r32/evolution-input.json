@@ -1,6 +1,6 @@
 {
   "schema": "re.bow.evolution-input-r32/1",
-  "observedAtUTC": "2026-11-02T04:14:27.456Z",
+  "observedAtUTC": "2026-11-02T05:08:41.112Z",
   "browserVersion": "154.0.8037.57",
   "passed": 10,
   "failed": 0,
@@ -18,13 +18,13 @@
       "phase": "before",
       "scenario": "visible-blur-start",
       "outcome": "baseline-defect",
-      "error": "AssertionError [ERR_ASSERTION]: Start resumed a visible but unfocused evolution duel\n\nfalse !== true\n\n    at Object.run (file:///workspace/resident-evil-bow-protocol/tests/browser-evolution-input-r32.mjs:149:14)\n    at async runScenario (file:///workspace/resident-evil-bow-protocol/tests/browser-evolution-input-r32.mjs:346:20)\n    at async file:///workspace/resident-evil-bow-protocol/tests/browser-evolution-input-r32.mjs:407:72",
+      "error": "AssertionError [ERR_ASSERTION]: Start resumed a visible but unfocused evolution duel\n\nfalse !== true\n\n    at Object.run (file:///workspace/scratch/r35-ci/repro/checkout/tests/browser-evolution-input-r32.mjs:149:14)\n    at async runScenario (file:///workspace/scratch/r35-ci/repro/checkout/tests/browser-evolution-input-r32.mjs:346:20)\n    at async file:///workspace/scratch/r35-ci/repro/checkout/tests/browser-evolution-input-r32.mjs:407:72",
       "observed": {
         "paused": false,
-        "frame": 7,
+        "frame": 8,
         "hidden": false,
         "focused": false,
-        "samples": 66,
+        "samples": 60,
         "uid": "re3r-nemesis",
         "history": 0,
         "events": [
@@ -175,13 +175,13 @@
       "phase": "before",
       "scenario": "held-start-focus-return",
       "outcome": "baseline-defect",
-      "error": "AssertionError [ERR_ASSERTION]: Held Start resumed during the evolution focus transition\n\nfalse !== true\n\n    at Object.run (file:///workspace/resident-evil-bow-protocol/tests/browser-evolution-input-r32.mjs:159:14)\n    at async runScenario (file:///workspace/resident-evil-bow-protocol/tests/browser-evolution-input-r32.mjs:346:20)\n    at async file:///workspace/resident-evil-bow-protocol/tests/browser-evolution-input-r32.mjs:407:72",
+      "error": "AssertionError [ERR_ASSERTION]: Held Start resumed during the evolution focus transition\n\nfalse !== true\n\n    at Object.run (file:///workspace/scratch/r35-ci/repro/checkout/tests/browser-evolution-input-r32.mjs:159:14)\n    at runNextTicks (node:internal/process/task_queues:65:5)\n    at process.processImmediate (node:internal/timers:453:9)\n    at process.callbackTrampoline (node:internal/async_hooks:130:17)\n    at async runScenario (file:///workspace/scratch/r35-ci/repro/checkout/tests/browser-evolution-input-r32.mjs:346:20)\n    at async file:///workspace/scratch/r35-ci/repro/checkout/tests/browser-evolution-input-r32.mjs:407:72",
       "observed": {
         "paused": false,
-        "frame": 12,
+        "frame": 11,
         "hidden": false,
         "focused": true,
-        "samples": 66,
+        "samples": 62,
         "uid": "re3r-nemesis",
         "history": 0,
         "events": [
@@ -352,13 +352,13 @@
       "phase": "before",
       "scenario": "bfcache-start-boundary",
       "outcome": "baseline-defect",
-      "error": "AssertionError [ERR_ASSERTION]: An unseen Start edge resumed the restored evolution document\n\nfalse !== true\n\n    at Object.run (file:///workspace/resident-evil-bow-protocol/tests/browser-evolution-input-r32.mjs:177:14)\n    at async runScenario (file:///workspace/resident-evil-bow-protocol/tests/browser-evolution-input-r32.mjs:346:20)\n    at async file:///workspace/resident-evil-bow-protocol/tests/browser-evolution-input-r32.mjs:407:72",
+      "error": "AssertionError [ERR_ASSERTION]: An unseen Start edge resumed the restored evolution document\n\nfalse !== true\n\n    at Object.run (file:///workspace/scratch/r35-ci/repro/checkout/tests/browser-evolution-input-r32.mjs:177:14)\n    at async runScenario (file:///workspace/scratch/r35-ci/repro/checkout/tests/browser-evolution-input-r32.mjs:346:20)\n    at async file:///workspace/scratch/r35-ci/repro/checkout/tests/browser-evolution-input-r32.mjs:407:72",
       "observed": {
         "paused": false,
-        "frame": 7,
+        "frame": 10,
         "hidden": false,
         "focused": true,
-        "samples": 70,
+        "samples": 68,
         "uid": "re3r-nemesis",
         "history": 0,
         "events": [
@@ -533,8 +533,8 @@
         "pauseResumePause": true,
         "freshPresses": 3,
         "noRepeatedToggle": true,
-        "frames": 17,
-        "digest": "0e81fe1e",
+        "frames": 15,
+        "digest": "6f102095",
         "contract": "a4bf5c42ebd70c803e99412113ce5e30a1b52ffb56cb7e5143fd75f2d5c63893",
         "replayRoundTrip": true
       }
@@ -597,8 +597,8 @@
             "key": "Enter",
             "guardReleaseAndBlur": true,
             "jumpInputFrames": 1,
-            "frames": 18,
-            "digest": "5ffce261",
+            "frames": 19,
+            "digest": "7941f998",
             "contract": "a4bf5c42ebd70c803e99412113ce5e30a1b52ffb56cb7e5143fd75f2d5c63893",
             "replayRoundTrip": true
           },
@@ -606,8 +606,8 @@
             "key": "Space",
             "guardReleaseAndBlur": true,
             "jumpInputFrames": 1,
-            "frames": 22,
-            "digest": "09c2f581",
+            "frames": 18,
+            "digest": "e223f56d",
             "contract": "a4bf5c42ebd70c803e99412113ce5e30a1b52ffb56cb7e5143fd75f2d5c63893",
             "replayRoundTrip": true
           }
@@ -618,13 +618,13 @@
       "phase": "before",
       "scenario": "numpad-enter-sources-1280",
       "outcome": "baseline-defect",
-      "error": "AssertionError [ERR_ASSERTION]: NumpadEnter did not hold the evolution guard button\n\nfalse !== true\n\n    at Object.run (file:///workspace/resident-evil-bow-protocol/tests/browser-evolution-input-r32.mjs:279:14)\n    at async runScenario (file:///workspace/resident-evil-bow-protocol/tests/browser-evolution-input-r32.mjs:346:20)\n    at async file:///workspace/resident-evil-bow-protocol/tests/browser-evolution-input-r32.mjs:407:72",
+      "error": "AssertionError [ERR_ASSERTION]: NumpadEnter did not hold the evolution guard button\n\nfalse !== true\n\n    at Object.run (file:///workspace/scratch/r35-ci/repro/checkout/tests/browser-evolution-input-r32.mjs:279:14)\n    at async runScenario (file:///workspace/scratch/r35-ci/repro/checkout/tests/browser-evolution-input-r32.mjs:346:20)\n    at async file:///workspace/scratch/r35-ci/repro/checkout/tests/browser-evolution-input-r32.mjs:407:72",
       "observed": {
         "paused": false,
-        "frame": 10,
+        "frame": 11,
         "hidden": false,
         "focused": true,
-        "samples": 62,
+        "samples": 60,
         "uid": "re3r-nemesis",
         "history": 0,
         "events": [
@@ -803,8 +803,8 @@
             "key": "Enter",
             "guardReleaseAndBlur": true,
             "jumpInputFrames": 1,
-            "frames": 19,
-            "digest": "7941f998",
+            "frames": 18,
+            "digest": "e223f56d",
             "contract": "a4bf5c42ebd70c803e99412113ce5e30a1b52ffb56cb7e5143fd75f2d5c63893",
             "replayRoundTrip": true
           },
@@ -812,8 +812,8 @@
             "key": "Space",
             "guardReleaseAndBlur": true,
             "jumpInputFrames": 1,
-            "frames": 22,
-            "digest": "6d98413c",
+            "frames": 18,
+            "digest": "b6c4a20d",
             "contract": "a4bf5c42ebd70c803e99412113ce5e30a1b52ffb56cb7e5143fd75f2d5c63893",
             "replayRoundTrip": true
           }
@@ -824,13 +824,13 @@
       "phase": "before",
       "scenario": "numpad-enter-sources-390",
       "outcome": "baseline-defect",
-      "error": "AssertionError [ERR_ASSERTION]: NumpadEnter did not hold the evolution guard button\n\nfalse !== true\n\n    at Object.run (file:///workspace/resident-evil-bow-protocol/tests/browser-evolution-input-r32.mjs:279:14)\n    at async runScenario (file:///workspace/resident-evil-bow-protocol/tests/browser-evolution-input-r32.mjs:346:20)\n    at async file:///workspace/resident-evil-bow-protocol/tests/browser-evolution-input-r32.mjs:407:72",
+      "error": "AssertionError [ERR_ASSERTION]: NumpadEnter did not hold the evolution guard button\n\nfalse !== true\n\n    at Object.run (file:///workspace/scratch/r35-ci/repro/checkout/tests/browser-evolution-input-r32.mjs:279:14)\n    at async runScenario (file:///workspace/scratch/r35-ci/repro/checkout/tests/browser-evolution-input-r32.mjs:346:20)\n    at async file:///workspace/scratch/r35-ci/repro/checkout/tests/browser-evolution-input-r32.mjs:407:72",
       "observed": {
         "paused": false,
-        "frame": 10,
+        "frame": 9,
         "hidden": false,
         "focused": true,
-        "samples": 56,
+        "samples": 52,
         "uid": "re3r-nemesis",
         "history": 0,
         "events": [
@@ -1004,7 +1004,7 @@
       "detail": {
         "trustedVisibleBlur": true,
         "backgroundStartIgnored": true,
-        "pausedFrame": 4
+        "pausedFrame": 6
       }
     },
     {
@@ -1036,8 +1036,8 @@
         "pauseResumePause": true,
         "freshPresses": 3,
         "noRepeatedToggle": true,
-        "frames": 13,
-        "digest": "61712049",
+        "frames": 14,
+        "digest": "925af5ff",
         "contract": "a4bf5c42ebd70c803e99412113ce5e30a1b52ffb56cb7e5143fd75f2d5c63893",
         "replayRoundTrip": true
       }
@@ -1100,8 +1100,8 @@
             "key": "Enter",
             "guardReleaseAndBlur": true,
             "jumpInputFrames": 1,
-            "frames": 20,
-            "digest": "ca64e367",
+            "frames": 18,
+            "digest": "5ffce261",
             "contract": "a4bf5c42ebd70c803e99412113ce5e30a1b52ffb56cb7e5143fd75f2d5c63893",
             "replayRoundTrip": true
           },
@@ -1110,7 +1110,7 @@
             "guardReleaseAndBlur": true,
             "jumpInputFrames": 1,
             "frames": 19,
-            "digest": "83873dc9",
+            "digest": "fc2993a1",
             "contract": "a4bf5c42ebd70c803e99412113ce5e30a1b52ffb56cb7e5143fd75f2d5c63893",
             "replayRoundTrip": true
           }
@@ -1127,13 +1127,13 @@
         "independentPointer": true,
         "jumpInputFrames": 1,
         "guardReplay": {
-          "frames": 54,
-          "digest": "4e4e3ca1",
+          "frames": 42,
+          "digest": "fc6fcd33",
           "contract": "a4bf5c42ebd70c803e99412113ce5e30a1b52ffb56cb7e5143fd75f2d5c63893",
           "replayRoundTrip": true
         },
-        "frames": 30,
-        "digest": "024c2cfd",
+        "frames": 19,
+        "digest": "7941f998",
         "contract": "a4bf5c42ebd70c803e99412113ce5e30a1b52ffb56cb7e5143fd75f2d5c63893",
         "replayRoundTrip": true
       }
@@ -1150,8 +1150,8 @@
             "key": "Enter",
             "guardReleaseAndBlur": true,
             "jumpInputFrames": 1,
-            "frames": 20,
-            "digest": "dca88958",
+            "frames": 19,
+            "digest": "7941f998",
             "contract": "a4bf5c42ebd70c803e99412113ce5e30a1b52ffb56cb7e5143fd75f2d5c63893",
             "replayRoundTrip": true
           },
@@ -1159,8 +1159,8 @@
             "key": "Space",
             "guardReleaseAndBlur": true,
             "jumpInputFrames": 1,
-            "frames": 19,
-            "digest": "83873dc9",
+            "frames": 18,
+            "digest": "b6c4a20d",
             "contract": "a4bf5c42ebd70c803e99412113ce5e30a1b52ffb56cb7e5143fd75f2d5c63893",
             "replayRoundTrip": true
           }
@@ -1182,8 +1182,8 @@
           "contract": "a4bf5c42ebd70c803e99412113ce5e30a1b52ffb56cb7e5143fd75f2d5c63893",
           "replayRoundTrip": true
         },
-        "frames": 32,
-        "digest": "68147a4e",
+        "frames": 20,
+        "digest": "db3d725c",
         "contract": "a4bf5c42ebd70c803e99412113ce5e30a1b52ffb56cb7e5143fd75f2d5c63893",
         "replayRoundTrip": true
       }

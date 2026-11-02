@@ -37,9 +37,15 @@ Une absence du registre ne suffit pas à empêcher le moteur historique de dessi
 
 Les corrections d’images importées utilisent une révision explicite par empreinte, avec conservation exacte de l’ancien PNG et de son reçu. Une nouvelle source peut rouvrir un état `HELD_REFERENCE` par l’empreinte de son reçu. Les refus ne peuvent être promus. Les imports partagent un verrou par identité, relisent les préconditions sous verrou et publient une paire PNG/reçu cohérente ; les tests comprennent une vraie concurrence contrôlée et la conservation des archives.
 
+Le rollback du tout premier import retire aussi le reçu neuf si la validation finale échoue, afin de ne pas laisser un état `GENERATED` sans PNG. Les deux nouveaux cas de régression vérifient la suppression de la paire neuve avec possibilité de recommencer, puis la restauration exacte d’une paire préexistante lors d’une révision échouée.
+
 Les anciennes recettes navigateur R31–R33 s’exécutent avec la présentation de compatibilité explicitement activée par `?dev=1&selection=direct`, qui expose le dialecte d’images R33. Leurs assertions originales ne sont pas modifiées. Cette recette vérifie les anciens contrats d’interaction sur les contrôleurs courants ; elle n’atteste pas le nouveau parcours par défaut ni les nouvelles images. Les recettes R34 les vérifient séparément, sans cette option.
 
-Les contrôles originaux du moteur et des entrées continuent sur le code soumis. Le workflow de provenance R33 utilise son commit publié, tandis que ses recettes navigateur continuent sur le code courant avec la compatibilité déclarée. Le garde R34 décrit exactement les huit fichiers historiques modifiés et exécute les cas R33 et R32 inchangés après projection des montages explicitement revus.
+Les douze recettes navigateur antérieures encore montées directement sur les contrôleurs courants utilisent aussi cette fixture explicitement, dans 65 appels répartis entre 21 workflows. Les publications R25–R30 épinglées restent intactes. La fixture masque uniquement la barre DEV qu’elle a introduite artificiellement pour une URL publique ; un marqueur d’URL conserve cette distinction au retour d’historique, sans modifier le stockage ni `history.state`. Une URL explicitement DEV et l’outil catalogue conservent leur navigation.
+
+La découverte du propriétaire du lien primaire dans la recette R24 est corrigée : le lien DEV « Ajouts R33 » ne remplace pas « Sources et chantiers ». Les assertions d’unicité, de visibilité, de destination et de navigation restent intactes. Le garde vérifie la transformation exacte et son inverse ; ce correctif ne modifie aucun lien du produit.
+
+Les contrôles originaux du moteur et des entrées continuent sur le code soumis. Le workflow de provenance R33 utilise son commit publié, tandis que ses recettes navigateur continuent sur le code courant avec la compatibilité déclarée. Le garde R34 décrit exactement les 30 fichiers historiques modifiés : huit montages initiaux, 21 workflows et la découverte du propriétaire du lien R24. Il exécute les cas R33 et R32 inchangés après projection des montages explicitement revus.
 
 ## Preuves
 

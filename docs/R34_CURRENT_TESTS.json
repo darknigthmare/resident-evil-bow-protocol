@@ -1,9 +1,13 @@
 {
   "schema": "re.bow.current-tests-r34/1",
-  "startedAt": "2026-11-02T04:25:09.679926+00:00",
-  "finishedAt": "2026-11-02T04:28:41.986754+00:00",
-  "durationSeconds": 212.307,
+  "startedAt": "2026-11-02T05:10:49.457058+00:00",
+  "finishedAt": "2026-11-02T05:14:09.262627+00:00",
+  "durationSeconds": 199.806,
   "baseline": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+  "parentCommit": "730ededd457c1a4c8cf09db4f5a8a4938626f17d",
+  "checkpointCommit": "730ededd457c1a4c8cf09db4f5a8a4938626f17d",
+  "parentCommitUnchanged": true,
+  "checkpointCommitUnchanged": true,
   "isolatedCurrentCheckout": true,
   "sourceSymlinks": false,
   "nodeModulesOnlySymlink": true,
@@ -28,8 +32,8 @@
       "exitEvidence": "All41 commands are joined by && in the unchanged executed npm pipeline",
       "source": {
         "path": "scripts/verify-current-r34.mjs",
-        "bytes": 11060,
-        "sha256": "f8a4a78e10eb3a565659a149bb9965040ab7fd882dabca232cce0b15a96418e3"
+        "bytes": 17218,
+        "sha256": "111b45a045052149778f1e2fb3744a6d572474fa59cff0345279a6ca54c166b9"
       }
     },
     {
@@ -39,8 +43,8 @@
       "exitEvidence": "All41 commands are joined by && in the unchanged executed npm pipeline",
       "source": {
         "path": "tests/verify-current-guard-r34.mjs",
-        "bytes": 7495,
-        "sha256": "1b42f63a21a4104914515e47c446127541bbe1d20b3358d8df3c44d6c37304b3"
+        "bytes": 9162,
+        "sha256": "881e60380c5298730b5f07d708ac3d79604b6a5d2ee47dcde8503399797d45fd"
       }
     },
     {
@@ -473,7 +477,7 @@
       }
     }
   ],
-  "guardNewPassed": 32,
+  "guardNewPassed": 58,
   "guardInheritedR33Passed": 39,
   "guardInheritedR32Passed": 40,
   "publishedR31Commit": "413b89bfafc18abc55be1404ff77bdaf573b1334",
@@ -523,13 +527,13 @@
     },
     {
       "path": ".github/workflows/access-r18-integration.yml",
-      "bytes": 3649,
-      "sha256": "ba93524624011d514176a576155d20c11f55bc9b77d75d0032eb7bff1d263b00"
+      "bytes": 3969,
+      "sha256": "dcb3e880b9e715041f4f0aaf83bb1daafdabd551434a9b163fabbe984a537b64"
     },
     {
       "path": ".github/workflows/audit-r9-browser.yml",
-      "bytes": 1158,
-      "sha256": "617f8dfa20739d593e97caf51625b375c26aa1fc134b5dc46dad48ac5d125563"
+      "bytes": 1198,
+      "sha256": "d849bdd78bd064d33c49d8c01ecbcd50b86867cb581e07e203b3da91b6562d70"
     },
     {
       "path": ".github/workflows/backup-direction-r3.yml",
@@ -538,33 +542,33 @@
     },
     {
       "path": ".github/workflows/baker-audio-r15-browser.yml",
-      "bytes": 1385,
-      "sha256": "7d39b680cc8546b3e24cf56ade63b4ecdcd2a1d321f0f02932e44360c72d3f3e"
+      "bytes": 1425,
+      "sha256": "43cda4254de1abda0c392f2a90ee115d869f95f324ccb92d619a89717dcc3f30"
     },
     {
       "path": ".github/workflows/baker-audio-r15-integration.yml",
-      "bytes": 3274,
-      "sha256": "31c6d273e03f1eb43191bf93e7a5b6f69db73d499dd2cdc2a116a3e734ce73a2"
+      "bytes": 3514,
+      "sha256": "68942ead523555f5251bc9df0cc050173efd41800eba6ac38abf39164218a3df"
     },
     {
       "path": ".github/workflows/baker-r14-browser.yml",
-      "bytes": 1358,
-      "sha256": "c82afdf3c2e15e86cb11bd24932fd9f582bfe6d3ca87fe7c3844216f1df3fab0"
+      "bytes": 1398,
+      "sha256": "b25d453a1a1248d23385ee53e4759a3e50984c062539285e0cca881a107995f7"
     },
     {
       "path": ".github/workflows/baker-r14-integration.yml",
-      "bytes": 3637,
-      "sha256": "a529239bfb4334a1db3f96552e506ab44b362bbab0672392d2dd83837939c4de"
+      "bytes": 3837,
+      "sha256": "ce713df01691f1117105236fb3be22377fda44e091ada3d7cb8bbd7debb72fb8"
     },
     {
       "path": ".github/workflows/baker-r14-workbook.yml",
-      "bytes": 2467,
-      "sha256": "7512eb72a92f339ee6936984d1a1826e5258c8d7824a1b9f848fd7d3fd8207ca"
+      "bytes": 2507,
+      "sha256": "7ca0cba2921fb4396334ebdab95f4ad16521460d817bb46dfae794a781d67b96"
     },
     {
       "path": ".github/workflows/catalog-replay-r7.yml",
-      "bytes": 2597,
-      "sha256": "0915e2619c7f177b74a035167daa2f80dd8c8258ecb3a42b5a4d83c27a976a67"
+      "bytes": 2637,
+      "sha256": "e289c5e497b32fc95d0f8e4df05f7cd75ba3148ce9d978d0b52ac0a703c2d44f"
     },
     {
       "path": ".github/workflows/ci.yml",
@@ -573,13 +577,13 @@
     },
     {
       "path": ".github/workflows/combat-text-r17-browser.yml",
-      "bytes": 1481,
-      "sha256": "09f29e3ac61355dc42b500f19aeaad2be4139f2090ce89426dc2d081e5c33941"
+      "bytes": 1561,
+      "sha256": "8930c5f58bea36d891ce54f5f42a15be4380bab49e38b2de75ad47079d8d9bb1"
     },
     {
       "path": ".github/workflows/combat-text-r17-integration.yml",
-      "bytes": 3491,
-      "sha256": "5ac24f4ccbe759234b475d41add0b8044882ae9904c779f8b3f37b0707e70d84"
+      "bytes": 3811,
+      "sha256": "82575b4bbf5c011c55fb5c5a5eb415ccee05b566b08329174c3707708767a84b"
     },
     {
       "path": ".github/workflows/complete-planning-r8.yml",
@@ -588,18 +592,18 @@
     },
     {
       "path": ".github/workflows/finalize-audit-r9.yml",
-      "bytes": 3677,
-      "sha256": "9c2b118faa2f198c0ce0be47bc66a7ef5bca2339f5b70fa68ca7c3325a478e63"
+      "bytes": 3757,
+      "sha256": "bc29c2826968f529108c29fb37c3f718fd58b8a1cb253776fec9f30242d2e370"
     },
     {
       "path": ".github/workflows/flight-r12-browser.yml",
-      "bytes": 1315,
-      "sha256": "f46105bb2e1e3205634f0f919650d7a053a573dd99f41d42f24cb7919a7d5806"
+      "bytes": 1355,
+      "sha256": "54981806377f2b697edd527157b1da0a60d933ce859aafe87783617a94acf150"
     },
     {
       "path": ".github/workflows/flight-r12-integration.yml",
-      "bytes": 3564,
-      "sha256": "cee6970cadda3efc23d57215c876c5db82fd5c93aee46f294ade12a2e2dd9fbd"
+      "bytes": 3684,
+      "sha256": "b071aa2fee435ce41fe4fd905d565872be9d498aca01feb57dd7d96e25e2f8d9"
     },
     {
       "path": ".github/workflows/gamedev-r32.yml",
@@ -618,13 +622,13 @@
     },
     {
       "path": ".github/workflows/lucas-r11-browser.yml",
-      "bytes": 1318,
-      "sha256": "dd6a7fa09f4438b08b8a532b9847ab38d518f1b64b4d1db810c131ff7705fce6"
+      "bytes": 1358,
+      "sha256": "a1335e4506eea6b47790865ac15e5d2d0c11ad50dd31a5c1b6ac13f1b2680e1f"
     },
     {
       "path": ".github/workflows/lucas-r11-integration.yml",
-      "bytes": 4324,
-      "sha256": "91ea6c22ca924b837dfa65b2e82b231927fa39d6a90d566032de345bffe2db58"
+      "bytes": 4404,
+      "sha256": "3110de33c1275a9bfbc5f99d0cc8f47105dd633a58f982f6102938fa66127efa"
     },
     {
       "path": ".github/workflows/package-combat-stage-r6.yml",
@@ -648,8 +652,8 @@
     },
     {
       "path": ".github/workflows/package-direction-r4.yml",
-      "bytes": 2608,
-      "sha256": "d99e651a41792aad600f36a132dbffff41ee0e7c6a66a4eee17fc38571ceecb8"
+      "bytes": 2648,
+      "sha256": "c2d2a13ae90548b65d57ec8ea1762c384a8d3dd9cfde81df0cb5dda298a22205"
     },
     {
       "path": ".github/workflows/package-directions.yml",
@@ -668,8 +672,8 @@
     },
     {
       "path": ".github/workflows/r10-browser.yml",
-      "bytes": 1253,
-      "sha256": "384ed3f7be1025969b31f109c157441d51707a367427250b0fe6a67c51cf1692"
+      "bytes": 1293,
+      "sha256": "ba55baca3e97ffab593a9f1cc58c227fca1ed485beaac5611fc6f4dbb5cf3048"
     },
     {
       "path": ".github/workflows/renderer-recovery-r5.yml",
@@ -678,13 +682,13 @@
     },
     {
       "path": ".github/workflows/replay-r13-browser.yml",
-      "bytes": 1330,
-      "sha256": "fc23877f59aca8efed9f7c7661a272c1a9fcd2c5c8fe01d122197c35fde26a72"
+      "bytes": 1370,
+      "sha256": "c197120e4c38ba803edb728a97d7a361d9467cf2080c378b65566cd8d0b3a87e"
     },
     {
       "path": ".github/workflows/replay-r13-integration.yml",
-      "bytes": 3353,
-      "sha256": "7a23cad3ea781be65bc798dfac3c9d2b1041bfa051243fce485b005c3ec54634"
+      "bytes": 3513,
+      "sha256": "81fa098cfc5dd8a1a7b74d0085213d4f69ace70e4b1bac73e0f9bce62ad33a5f"
     },
     {
       "path": ".github/workflows/saves-r19-browser.yml",
@@ -693,8 +697,8 @@
     },
     {
       "path": ".github/workflows/saves-r19-integration.yml",
-      "bytes": 4374,
-      "sha256": "f6ac31ce0c0e2e33683ad1bb5c66fb6b082887c5914763e84af30258692101bf"
+      "bytes": 4694,
+      "sha256": "6ef256864ed237f823b5e3ba0a12720a7be3152fa12dffc2449ed62f54a758fb"
     },
     {
       "path": ".github/workflows/source-fidelity-r22.yml",
@@ -758,8 +762,8 @@
     },
     {
       "path": ".github/workflows/trial-audio-r16-integration.yml",
-      "bytes": 3341,
-      "sha256": "e13d1381d0b87463bb125fe33bb8e29ff4872ec71e5cb630aa61c4fc47c92bb1"
+      "bytes": 3621,
+      "sha256": "2887e6186fe9ca0f688937cc6f1c4998896fa15a06908a9f925a3751eac30481"
     },
     {
       "path": "assets/sprites/bow/generation-prompts.json",
@@ -11334,7 +11338,7 @@
     {
       "path": "modules/fidelity-r34/assets/manifest.json",
       "bytes": 3467890,
-      "sha256": "00685ed8ff673f65a6a074ef5654f21d18d43ab6d99f9518daf8986796fa5e99"
+      "sha256": "4ba2a02746923fc1e1a6ee004f21d992281b15daa1099910c433bf7c59fa11b7"
     },
     {
       "path": "modules/fidelity-r34/assets/native-menu-references.json",
@@ -11415,6 +11419,271 @@
       "path": "modules/fidelity-r34/assets/source-research-extra/lot3/evilresource-recv-steve.html",
       "bytes": 30317,
       "sha256": "ab8d3bc3a7d501bcfc56f4a1917d9faf66534d9903de53c379d0214d4821a43f"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/copy-index.json",
+      "bytes": 22983,
+      "sha256": "ebd1f2262e4f508ad009f470036b3e9cad605a830acc3f9b05d203a03ad01d89"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/generation/nemesis-second-form-request.json",
+      "bytes": 2402,
+      "sha256": "d4e46f5c89dece7b1a6806200e7d490fd88acabf7b91ecf08cbfc067b196249a"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/generation/nemesis-second-form-study.json",
+      "bytes": 9156,
+      "sha256": "4fd3d5f7c6688d50f0bde621eaa951b1fb7e1486e6f7d0459892d09f0b86f355"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/generation/unchanged-held-receipt.json",
+      "bytes": 3501,
+      "sha256": "ccb9a9c85df19a24d99b5de58887b238f9d993ea07c049b65f248ad254424c7e"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/assessment.json",
+      "bytes": 5880,
+      "sha256": "e1c8087905701eb0c2a7812a11b07ca3164a9bc3601af721f73b6093ec4ed01e"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/attempts.json",
+      "bytes": 7168,
+      "sha256": "a3502f157fbcd90f872a63c38f2c76af06fb78b2d7bf2700bcd0a3a2cba9ae4c"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/cv-bat-google-basic.html",
+      "bytes": 92598,
+      "sha256": "218e33d5d8426b8685e4b44b275a5325b386916386f1f55d5e0a7835bd8a466c"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/dog2-google-basic.html",
+      "bytes": 92785,
+      "sha256": "37ffdd5287359b28c065aada795a99f8137a362a62771863ac1f6b771053af7f"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/meset-blog.html",
+      "bytes": 79194,
+      "sha256": "675731e0310b83c0d26b3bad1fee27b9b66481ac7aabe0bd15cf1bbba4396ddc"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/meset-google-basic.html",
+      "bytes": 92508,
+      "sha256": "3e959fdc5bf5f024085a150700b8d91070a6eec2322d1fe9c5e4cd65c9648918"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/re2-source-page.html",
+      "bytes": 157467,
+      "sha256": "60f701023eb29e9a7f08c30932e41b36a40ec01b943ec85272da8e02172a6885"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/re2r-zombie-dog-bing.html",
+      "bytes": 165844,
+      "sha256": "f5abd27524b70a4cb3b99487fd5cad5cd45a06919308ef80cff6f5962c9971af"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/re2r-zombie-dog-candidates.json",
+      "bytes": 361,
+      "sha256": "aa3712a9ea2764cef60c6c5072aad907b07a1b45a953c3ec13bd8d222856569e"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/re2r-zombie-dog-google.html",
+      "bytes": 92436,
+      "sha256": "f5eb421871e37d6fb46a955464cdd83ff96463f1b740701d29fe449a9c3082b6"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/re3r-zombie-dog-bing.html",
+      "bytes": 166900,
+      "sha256": "b0cd22ac7aa42ac5442dff61fad0a54da134e105b3bd68d058a01a1cf198bcdc"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/re3r-zombie-dog-candidates.json",
+      "bytes": 604,
+      "sha256": "ca544993e6420af226681a9487ab97d7c9edb566d249292e11f9be394641f708"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/re3r-zombie-dog-google.html",
+      "bytes": 92783,
+      "sha256": "007d22b31b74a9c81017ee4cc70d570bbd006662c96d2e53f6fa760d357f7914"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/re6-meset-bing.html",
+      "bytes": 288949,
+      "sha256": "627241cf3e7f22d735e4f2e2f80aceae9e44a3e686033b1fa61ea9aef8296c4d"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/re6-meset-candidates.json",
+      "bytes": 12089,
+      "sha256": "6c11ff8e1fc804702f5d675e12c42c9d431890ac994447c09305dcb7a7e18976"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/re6-meset-google.html",
+      "bytes": 92568,
+      "sha256": "577feb2a301d84dc2d769cf8a39cb7ac9d039f4340a9ddd39dc06d42886622b7"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/recv-bat-bing.html",
+      "bytes": 305964,
+      "sha256": "1eae20e3350404892aca37dde9192632174ca508d45d9afb5ead140b115c86cb"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/recv-bat-candidates.json",
+      "bytes": 14080,
+      "sha256": "86b79d0a62ef9b3011c990f7946bf7606602fd4c357e4952ebc29a4818c1b973"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/recv-bat-google.html",
+      "bytes": 92663,
+      "sha256": "1e865ce4d9983eb9901862fbacd16fa5c100cb5ed3a897b84d5f23ffb04424be"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/assessment.json",
+      "bytes": 10129,
+      "sha256": "d41b37218f321c4e1da755d6b78bb850ae6dd09062bb73b78480671979a067ff"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/blog-krauser-search.html",
+      "bytes": 191856,
+      "sha256": "3da3b9081c8241c30ded4b561f94f70909cc8ca49a9dc10fae7ab071531c9f80"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/blog-nemesis-search.html",
+      "bytes": 175947,
+      "sha256": "6eb307a11b5dca592550b0a2e01bb8b9a38d38e44a6ad5d775ed03e1ce0fef28"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/blog-remake-zombie-search.html",
+      "bytes": 159036,
+      "sha256": "ea083830a8e8c611bd0b184f6cdcdfaaee5f5dfc3d957dd1186c1d703439b53d"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/bogleech-re3-original.html",
+      "bytes": 10306,
+      "sha256": "6c9449709ddcd073389bdbcd8e086b06fc081aa94263d1f4eed052d4038f85e9"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/bogleech-village.html",
+      "bytes": 28745,
+      "sha256": "88c0540947f91a73df4bda11ad190a6449c8c56a23d2ecb7fe83f68e4f8ae51a"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/captures.json",
+      "bytes": 28766,
+      "sha256": "e21dad9328c179e10bf6c4b878c084984719f2365e7685bf0c66acdadd727c7f"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/dimitrescu-bing-exact-candidates.json",
+      "bytes": 21606,
+      "sha256": "3dad73b73b112352b57b5f2272371afbfe6dae24492a485e7ceefc856464e64a"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/dimitrescu-bing-exact.html",
+      "bytes": 271026,
+      "sha256": "2f77b3668091a8ee89e973d9998312b5b1f8d97e7c1307cde72f668ffd3b5e51"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/dimitrescu-bing-images-candidates.json",
+      "bytes": 23636,
+      "sha256": "bb6d6602b7d68c78a8bdb0215d38ef8705b5b94a0b6840602a9b3c35236f5a74"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/dimitrescu-bing-images.html",
+      "bytes": 299527,
+      "sha256": "a469bf1b495bf43c6e04a817eb25e0e9060d7569f8427fc39192d7a7b436ab7c"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/dimitrescu-google-images.html",
+      "bytes": 92595,
+      "sha256": "a0031e7497453678376df5d5cf2e6003b68f5e2f4a42261b87a2fa77a65abcdc"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/dimitrescu-google.html",
+      "bytes": 92439,
+      "sha256": "eed54219bcfe8f40e07bda6d48f47135c406b03c1ea5a0a76a0c9cfc8a1752c0"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/krauser-bing-exact-candidates.json",
+      "bytes": 21618,
+      "sha256": "3778e08b665a75233612d7a350a4b5c1a6fc4d1c8fecf6aba58dc26ee7fea490"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/krauser-bing-exact.html",
+      "bytes": 285499,
+      "sha256": "ad22fc7ecb244c771d273f59ef7ed9f752febff5bc0a894df59bdd81ce97663c"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/krauser-bing-images-candidates.json",
+      "bytes": 21618,
+      "sha256": "3778e08b665a75233612d7a350a4b5c1a6fc4d1c8fecf6aba58dc26ee7fea490"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/krauser-bing-images.html",
+      "bytes": 291522,
+      "sha256": "9579f3a3adceca63abffc631e17b9d4f4b16d60e47dabf5926ce2690bdd9ad67"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/krauser-google.html",
+      "bytes": 92521,
+      "sha256": "7130cf84f5006a2a27a76bd9cc9f2292034bbd01e06e438c1942f005354f2ce1"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/models-village.html",
+      "bytes": 31740,
+      "sha256": "db576b8f3f10720aea80119f9cb3234978fd40ea5e7162438ab42d4e17a1eb3c"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/nemesis-article.html",
+      "bytes": 126647,
+      "sha256": "bde976977e336cd954525e13e45bf26f4cd46a7d3766ccc30a57b77d94eaaa7f"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/nemesis-bing-exact-candidates.json",
+      "bytes": 23231,
+      "sha256": "aa1cd2cdb508d00149275a216959d591f95a98e5b1775b219e8aeed75706fac6"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/nemesis-bing-exact.html",
+      "bytes": 323508,
+      "sha256": "4c87cb3db63bc89e26074c7e4d841a7abecfdf0a053df6e74d57f84457870447"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/nemesis-bing-images-candidates.json",
+      "bytes": 23231,
+      "sha256": "aa1cd2cdb508d00149275a216959d591f95a98e5b1775b219e8aeed75706fac6"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/nemesis-bing-images.html",
+      "bytes": 325391,
+      "sha256": "caaeb9a3650f142d6a30cd06a394a5ec57262912bfb1ab168f099a8d042ca115"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/nemesis-google.html",
+      "bytes": 92476,
+      "sha256": "9f445a153b916dcac014ca38923c2f0e895f8f699c9049fb134a42170653b891"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/zombie-bing-exact-candidates.json",
+      "bytes": 22758,
+      "sha256": "92fef3259b98320c727a567f3f0156ecbf66bb6b1256bc4c6525532ef0c2ce0d"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/zombie-bing-exact.html",
+      "bytes": 296944,
+      "sha256": "01392fc52b47f985a9f59ae31ab8c77037c312b95aa1d62f1d6ea4e2fafbf3ef"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/zombie-bing-images-candidates.json",
+      "bytes": 24316,
+      "sha256": "2ff2a58860e5e66402d4a952654f8650bfb3cd95b618dae7c3ee7757758e6972"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/zombie-bing-images.html",
+      "bytes": 303800,
+      "sha256": "d6cd11d46da7661c6f4d7b4e595deed349b121256cc7b288f4d5712b233d479d"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/zombie-google.html",
+      "bytes": 92602,
+      "sha256": "ef8cf264fd6e80497e059db74eecf4d0edc4bcbf5185b64c65b1dbb19a3ec511"
     },
     {
       "path": "modules/fidelity-r34/assets/source-research-extra/pipeline-extra-five/assessment.json",
@@ -11874,7 +12143,7 @@
     {
       "path": "modules/fidelity-r34/combat/manifest.json",
       "bytes": 1941894,
-      "sha256": "a969673c8d9bff7cf66b6ab12c15ef67a703a4c0e4d0606784dae48f3d8880b2"
+      "sha256": "3744e749576e14f50338b7bfe2d923e41e59c7c75d2dd0900c2e536d04393134"
     },
     {
       "path": "modules/fidelity-r34/evolutions/index.html",
@@ -11899,7 +12168,7 @@
     {
       "path": "modules/fidelity-r34/selection/manifest.json",
       "bytes": 658071,
-      "sha256": "a93aed44bfbd43419e3652a2bce95659067d546d7a97aff041acbd473ae7f293"
+      "sha256": "d505192cbc7ad51a6fd0baa607c2910e5bb3be9025f1072b37f45403ce94d2f3"
     },
     {
       "path": "modules/fidelity-r34/selection/prepare.js",
@@ -12048,8 +12317,8 @@
     },
     {
       "path": "scripts/audit-delivery-r34.py",
-      "bytes": 4551,
-      "sha256": "26147dfbe9c66c3559484ae47b80458565619ee06e49c85baee0e26c1f484562"
+      "bytes": 5867,
+      "sha256": "56c1fb40e82e1ab832a5ce8527e48f771a5b6626e71ca8dc4897fca95bd5fb39"
     },
     {
       "path": "scripts/audit-delivery-v072.mjs",
@@ -12658,8 +12927,8 @@
     },
     {
       "path": "scripts/import-roster-asset-r34.py",
-      "bytes": 24375,
-      "sha256": "055f50204ef267c15726443cfc4c6de9b6a1b055f34b4b30ac12d8d76d6feeef"
+      "bytes": 24437,
+      "sha256": "86ec798cf7a00b53d0bd5fa99f5804d46c97ec6d0e95809a6db39747e26dd2b8"
     },
     {
       "path": "scripts/import-source-references-r21.py",
@@ -13048,8 +13317,8 @@
     },
     {
       "path": "scripts/run-current-isolated-r34.py",
-      "bytes": 14992,
-      "sha256": "b5242e98f6b02adb74328dee718f55e43eecd0e057beda0f40d02e1369a03126"
+      "bytes": 18815,
+      "sha256": "a764b4de5109c3f09e0b52c48425786a8bb7f0c3c72e2fd820ce9e24991cb169"
     },
     {
       "path": "scripts/run-published-release-r29.py",
@@ -13093,8 +13362,8 @@
     },
     {
       "path": "scripts/validate-fidelity-ci-r34.py",
-      "bytes": 19665,
-      "sha256": "ff9064e3e04063522ee5deec51beb3ec2e489ab5e70cc204ce3d07688565b9f9"
+      "bytes": 24181,
+      "sha256": "ec06ff9f80a7edcd6f849fee38663b70c38244e4a6b37f06ff9054c77c54ea44"
     },
     {
       "path": "scripts/verify-body-sources-r28.py",
@@ -13138,8 +13407,8 @@
     },
     {
       "path": "scripts/verify-current-r34.mjs",
-      "bytes": 11060,
-      "sha256": "f8a4a78e10eb3a565659a149bb9965040ab7fd882dabca232cce0b15a96418e3"
+      "bytes": 17218,
+      "sha256": "111b45a045052149778f1e2fb3744a6d572474fa59cff0345279a6ca54c166b9"
     },
     {
       "path": "scripts/verify-directional-browser-r3.py",
@@ -13688,8 +13957,8 @@
     },
     {
       "path": "tests/browser-compat-r34.mjs",
-      "bytes": 1465,
-      "sha256": "9b3b6c6c7c70656aa934ff19ba526aa03461b329f5207b513b69128870396cce"
+      "bytes": 2591,
+      "sha256": "da455e381356d79eca39dcaa7d4078c659ed70e0ad1d9082640c82891b271fce"
     },
     {
       "path": "tests/browser-delivery-r10-http.mjs",
@@ -13728,8 +13997,8 @@
     },
     {
       "path": "tests/browser-fidelity-dashboard-r24.mjs",
-      "bytes": 14028,
-      "sha256": "d3dcb1ca877db4f63329de7b7e75a0b2faedaa312a4a70563aca4e470755c6de"
+      "bytes": 14257,
+      "sha256": "b0cf6c95e19ad26e059beadfc027947868c3f2db8f560b1739939bb48676271d"
     },
     {
       "path": "tests/browser-fidelity-dashboard-r25.mjs",
@@ -14348,8 +14617,8 @@
     },
     {
       "path": "tests/test_roster_assets_r34.py",
-      "bytes": 31027,
-      "sha256": "cc0d44deda835ca80b6a8391181364e28c18fa087b933f77f733966f7673ff62"
+      "bytes": 33882,
+      "sha256": "fba011c29d8d886d6b83f371e5b1a5e1d29880e3ca235a342eacabad5bd410a8"
     },
     {
       "path": "tests/test_selection_avatars_r30.py",
@@ -14488,8 +14757,8 @@
     },
     {
       "path": "tests/verify-current-guard-r34.mjs",
-      "bytes": 7495,
-      "sha256": "1b42f63a21a4104914515e47c446127541bbe1d20b3358d8df3c44d6c37304b3"
+      "bytes": 9162,
+      "sha256": "881e60380c5298730b5f07d708ac3d79604b6a5d2ee47dcde8503399797d45fd"
     },
     {
       "path": "tests/verify-delivery-r10.mjs",
@@ -14847,26 +15116,26 @@
       "sha256": "4d1682b62042a243fc56b5ab5de9060c3d615fc3b45511fae3d6d9ccf1848292"
     }
   ],
-  "sourceInventorySha256": "5f9d73c845476a88ed905a54179bed2a4f9bad29de7f893cebfdc77eb0a23c40",
+  "sourceInventorySha256": "c7555096d25ceea5ceccb12d770c77b114af85ad993e63e957d43ec7bea17012",
   "executedSourceDifferencesAfterRun": [],
   "parentSourceDifferencesAfterRun": [],
   "parentFrozenCheckpointUnchanged": true,
   "executedFrozenCheckpointUnchanged": true,
   "log": {
     "path": "docs/R34_CURRENT_TESTS.log",
-    "bytes": 62014,
-    "sha256": "e138d605fa0f2835f07a4bf494e6e7da328b177f9cb441e1c697dc272f24454b"
+    "bytes": 64201,
+    "sha256": "5b0151ba78a6a5e44d31d66e4323b2d4d18dc07bd9cd02fac7aec4ff3f75b0fc"
   },
   "executionEvidence": [
     {
       "path": "docs/R34_CURRENT_TESTS_EVIDENCE/qa-fidelity-r34/current-guard.json",
-      "bytes": 5727,
-      "sha256": "a07628ad226f6cc46d81dad27e5f78e15457fbc18b3e559ad2a9d7278da57f54"
+      "bytes": 12492,
+      "sha256": "27ed89c0694cd6996ee412ab2a95f802c8239bec5c7628ba487661499c923212"
     },
     {
       "path": "docs/R34_CURRENT_TESTS_EVIDENCE/qa-fidelity-r34/current-scope.json",
-      "bytes": 192963,
-      "sha256": "530c54e474f3c2c30af96dcb3c040bb53ee352a0fd82cbcfe06c8a0be5124981"
+      "bytes": 208497,
+      "sha256": "e638ce0409a1914129a8c89b61573f913a823b6a2384df6f4d102c5b0f2c93e7"
     },
     {
       "path": "docs/R34_CURRENT_TESTS_EVIDENCE/qa-gamedev-r32/historical-r31/command-00.log",
@@ -14886,7 +15155,7 @@
     {
       "path": "docs/R34_CURRENT_TESTS_EVIDENCE/qa-gamedev-r32/historical-r31/report.json",
       "bytes": 1395,
-      "sha256": "a37463235bb3679810982ee9cfeb332ab679c1258155b2aad544f68eb78a928f"
+      "sha256": "8de7cc0e68479fbe973afed26ddbe090a8dcba464ec823f9fe60c4731aa47d66"
     },
     {
       "path": "docs/R34_CURRENT_TESTS_EVIDENCE/qa-gamedev-r32/input.json",
@@ -14897,8 +15166,8 @@
   "sourceFiles": [
     {
       "path": "scripts/run-current-isolated-r34.py",
-      "bytes": 14992,
-      "sha256": "b5242e98f6b02adb74328dee718f55e43eecd0e057beda0f40d02e1369a03126"
+      "bytes": 18815,
+      "sha256": "a764b4de5109c3f09e0b52c48425786a8bb7f0c3c72e2fd820ce9e24991cb169"
     }
   ],
   "scope": "One actually executed original npm verification pipeline on an isolated copy of current R34 sources.38 original functional commands and R32 input assertions remain current; only the two original preservation commands use exact published R31. The source inventory describes copied verified inputs, not a claim that every file was evaluated. This does not certify the new R34 media or default browser flow, which have separate recipes, or global artistic fidelity."

@@ -1,0 +1,119 @@
+{
+  "suite": "trial-audio-r16-http",
+  "passed": 12,
+  "failed": 0,
+  "physicalDevices": false,
+  "canonAudio": false,
+  "checks": [
+    {
+      "name": "No autoplay; native activation and workbook download match the repository",
+      "width": 1440,
+      "pass": true,
+      "nativeActivation": true,
+      "realAudioContext": true,
+      "noAutoplay": true,
+      "xlsxBytes": 17179
+    },
+    {
+      "name": "Native attack releases six audible shots; pause and step do not replay pending sound",
+      "width": 1440,
+      "pass": true,
+      "nativeKeyboard": true,
+      "shots": [
+        26,
+        31,
+        36,
+        41,
+        46,
+        51
+      ],
+      "singleStepSilent": true
+    },
+    {
+      "name": "Non-real-time speed is silent; bus volumes and resume apply without historical bursts",
+      "width": 1440,
+      "pass": true,
+      "speedHalfSilent": true,
+      "independentVolumes": true
+    },
+    {
+      "name": "Native replay download/import/seek are silent and preserve all existing storage",
+      "width": 1440,
+      "pass": true,
+      "downloadAndImport": true,
+      "seek": 38,
+      "corruptionInjected": true,
+      "storageUnchanged": true
+    },
+    {
+      "name": "Natural CPU result ends ambience once; cached-page fixture requires deliberate reactivation",
+      "width": 1440,
+      "pass": true,
+      "realCPUAccelerated": true,
+      "frame": 1920,
+      "persistedEventsSynthetic": true
+    },
+    {
+      "name": "An unavailable AudioContext reports the problem and never prevents play",
+      "width": 1440,
+      "pass": true,
+      "AudioContextDenialInjected": true,
+      "gameStillRunning": true
+    },
+    {
+      "name": "No autoplay; native activation and workbook download match the repository",
+      "width": 390,
+      "pass": true,
+      "nativeActivation": true,
+      "realAudioContext": true,
+      "noAutoplay": true,
+      "xlsxBytes": 17179
+    },
+    {
+      "name": "Native attack releases six audible shots; pause and step do not replay pending sound",
+      "width": 390,
+      "pass": true,
+      "nativeKeyboard": true,
+      "shots": [
+        26,
+        31,
+        36,
+        41,
+        46,
+        51
+      ],
+      "singleStepSilent": true
+    },
+    {
+      "name": "Non-real-time speed is silent; bus volumes and resume apply without historical bursts",
+      "width": 390,
+      "pass": true,
+      "speedHalfSilent": true,
+      "independentVolumes": true
+    },
+    {
+      "name": "Native replay download/import/seek are silent and preserve all existing storage",
+      "width": 390,
+      "pass": true,
+      "downloadAndImport": true,
+      "seek": 37,
+      "corruptionInjected": true,
+      "storageUnchanged": true
+    },
+    {
+      "name": "Natural CPU result ends ambience once; cached-page fixture requires deliberate reactivation",
+      "width": 390,
+      "pass": true,
+      "realCPUAccelerated": true,
+      "frame": 1920,
+      "persistedEventsSynthetic": true
+    },
+    {
+      "name": "An unavailable AudioContext reports the problem and never prevents play",
+      "width": 390,
+      "pass": true,
+      "AudioContextDenialInjected": true,
+      "gameStillRunning": true
+    }
+  ]
+}

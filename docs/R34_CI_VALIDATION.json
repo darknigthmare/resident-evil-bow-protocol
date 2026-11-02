@@ -1,24 +1,27 @@
 {
   "schema": "re.bow.ci-validation-r34/1",
   "baseline": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
-  "passed": 6,
+  "passed": 7,
   "failed": 0,
   "skipped": 0,
   "counts": {
     "workflows": 7,
     "jobs": 15,
-    "bash_blocks": 69,
+    "bash_blocks": 134,
     "python_blocks": 2,
     "javascript_blocks": 12,
-    "compiled_scripts": 137,
-    "current_script_bindings": 90,
+    "compiled_scripts": 151,
+    "current_script_bindings": 104,
     "historical_script_bindings": 47,
     "r34_source_reports": 3,
     "r34_browser_recipes": 3,
     "preserved_current_engine_commands": 38,
     "preserved_input_assertions": 1,
     "unchanged_r32_compatibility_recipes": 9,
-    "unchanged_r33_compatibility_recipes": 6
+    "unchanged_r33_compatibility_recipes": 6,
+    "legacy_compatibility_workflows": 21,
+    "legacy_browser_teststeps": 65,
+    "unchanged_legacy_browser_assertions": 12
   },
   "checks": [
     {
@@ -92,18 +95,131 @@
         "publishedR31SourceAndBuildRef": "413b89bfafc18abc55be1404ff77bdaf573b1334",
         "r31AndR33BrowserControllers": "current submitted HEAD with explicit legacy presentation"
       }
+    },
+    {
+      "name": "Affected current legacy browser teststeps declare an exact reversible preload without changing assertions or published matrices",
+      "pass": true,
+      "detail": {
+        "workflows": 21,
+        "teststeps": 65,
+        "unchangedAssertions": 12,
+        "inversePublishedBytesExact": true,
+        "bootstrapOnlyAtTeststep": true,
+        "publishedR25ToR30MatricesUnchanged": true,
+        "dashboardPrimaryOwnerDiscoveryOnly": "tests/browser-fidelity-dashboard-r24.mjs"
+      }
     }
   ],
   "sourceFiles": [
+    {
+      "path": ".github/workflows/access-r18-integration.yml",
+      "bytes": 3969,
+      "sha256": "dcb3e880b9e715041f4f0aaf83bb1daafdabd551434a9b163fabbe984a537b64"
+    },
+    {
+      "path": ".github/workflows/audit-r9-browser.yml",
+      "bytes": 1198,
+      "sha256": "d849bdd78bd064d33c49d8c01ecbcd50b86867cb581e07e203b3da91b6562d70"
+    },
+    {
+      "path": ".github/workflows/baker-audio-r15-browser.yml",
+      "bytes": 1425,
+      "sha256": "43cda4254de1abda0c392f2a90ee115d869f95f324ccb92d619a89717dcc3f30"
+    },
+    {
+      "path": ".github/workflows/baker-audio-r15-integration.yml",
+      "bytes": 3514,
+      "sha256": "68942ead523555f5251bc9df0cc050173efd41800eba6ac38abf39164218a3df"
+    },
+    {
+      "path": ".github/workflows/baker-r14-browser.yml",
+      "bytes": 1398,
+      "sha256": "b25d453a1a1248d23385ee53e4759a3e50984c062539285e0cca881a107995f7"
+    },
+    {
+      "path": ".github/workflows/baker-r14-integration.yml",
+      "bytes": 3837,
+      "sha256": "ce713df01691f1117105236fb3be22377fda44e091ada3d7cb8bbd7debb72fb8"
+    },
+    {
+      "path": ".github/workflows/baker-r14-workbook.yml",
+      "bytes": 2507,
+      "sha256": "7ca0cba2921fb4396334ebdab95f4ad16521460d817bb46dfae794a781d67b96"
+    },
+    {
+      "path": ".github/workflows/catalog-replay-r7.yml",
+      "bytes": 2637,
+      "sha256": "e289c5e497b32fc95d0f8e4df05f7cd75ba3148ce9d978d0b52ac0a703c2d44f"
+    },
     {
       "path": ".github/workflows/ci.yml",
       "bytes": 2974,
       "sha256": "4a97b6db37f7cab887c8eb329350a7b24d6f3f222cb454980070874cee061929"
     },
     {
+      "path": ".github/workflows/combat-text-r17-browser.yml",
+      "bytes": 1561,
+      "sha256": "8930c5f58bea36d891ce54f5f42a15be4380bab49e38b2de75ad47079d8d9bb1"
+    },
+    {
+      "path": ".github/workflows/combat-text-r17-integration.yml",
+      "bytes": 3811,
+      "sha256": "82575b4bbf5c011c55fb5c5a5eb415ccee05b566b08329174c3707708767a84b"
+    },
+    {
+      "path": ".github/workflows/finalize-audit-r9.yml",
+      "bytes": 3757,
+      "sha256": "bc29c2826968f529108c29fb37c3f718fd58b8a1cb253776fec9f30242d2e370"
+    },
+    {
+      "path": ".github/workflows/flight-r12-browser.yml",
+      "bytes": 1355,
+      "sha256": "54981806377f2b697edd527157b1da0a60d933ce859aafe87783617a94acf150"
+    },
+    {
+      "path": ".github/workflows/flight-r12-integration.yml",
+      "bytes": 3684,
+      "sha256": "b071aa2fee435ce41fe4fd905d565872be9d498aca01feb57dd7d96e25e2f8d9"
+    },
+    {
       "path": ".github/workflows/gamedev-r32.yml",
       "bytes": 1950,
       "sha256": "808326e876551fe5727bc292a489bd8b4f0374e09058063646a72559c5cb6912"
+    },
+    {
+      "path": ".github/workflows/lucas-r11-browser.yml",
+      "bytes": 1358,
+      "sha256": "a1335e4506eea6b47790865ac15e5d2d0c11ad50dd31a5c1b6ac13f1b2680e1f"
+    },
+    {
+      "path": ".github/workflows/lucas-r11-integration.yml",
+      "bytes": 4404,
+      "sha256": "3110de33c1275a9bfbc5f99d0cc8f47105dd633a58f982f6102938fa66127efa"
+    },
+    {
+      "path": ".github/workflows/package-direction-r4.yml",
+      "bytes": 2648,
+      "sha256": "c2d2a13ae90548b65d57ec8ea1762c384a8d3dd9cfde81df0cb5dda298a22205"
+    },
+    {
+      "path": ".github/workflows/r10-browser.yml",
+      "bytes": 1293,
+      "sha256": "ba55baca3e97ffab593a9f1cc58c227fca1ed485beaac5611fc6f4dbb5cf3048"
+    },
+    {
+      "path": ".github/workflows/replay-r13-browser.yml",
+      "bytes": 1370,
+      "sha256": "c197120e4c38ba803edb728a97d7a361d9467cf2080c378b65566cd8d0b3a87e"
+    },
+    {
+      "path": ".github/workflows/replay-r13-integration.yml",
+      "bytes": 3513,
+      "sha256": "81fa098cfc5dd8a1a7b74d0085213d4f69ace70e4b1bac73e0f9bce62ad33a5f"
+    },
+    {
+      "path": ".github/workflows/saves-r19-integration.yml",
+      "bytes": 4694,
+      "sha256": "6ef256864ed237f823b5e3ba0a12720a7be3152fa12dffc2449ed62f54a758fb"
     },
     {
       "path": ".github/workflows/source-fidelity-r25.yml",
@@ -114,6 +230,26 @@
       "path": ".github/workflows/source-fidelity-r26.yml",
       "bytes": 9443,
       "sha256": "73d0c41bf610928dbb54a9a539b616916971a4784587af77e255cb678027a373"
+    },
+    {
+      "path": ".github/workflows/source-fidelity-r27.yml",
+      "bytes": 7407,
+      "sha256": "353c2b55ccdf9319c49e072044d7a8248529cbd4ac3167673aead7961984c61a"
+    },
+    {
+      "path": ".github/workflows/source-fidelity-r28.yml",
+      "bytes": 13163,
+      "sha256": "4cd54bd8467001f0e41ebe4190cf9150daf1a0b4c34c0af16e06631e3738b231"
+    },
+    {
+      "path": ".github/workflows/source-fidelity-r29.yml",
+      "bytes": 12457,
+      "sha256": "f275c54c8432b6f1dc42b82788d458a8ee5c3c866e03562e6c40b7eca40f6d51"
+    },
+    {
+      "path": ".github/workflows/source-fidelity-r30.yml",
+      "bytes": 11518,
+      "sha256": "9e26dcce387ecf4a50c41fa2e44f21b746b0a838a3a58d5c879cd25627ebcceb"
     },
     {
       "path": ".github/workflows/source-fidelity-r31.yml",
@@ -131,14 +267,19 @@
       "sha256": "e88e1793e28f2973253a7b2283e8475dc23691df81753580958a72a4eb7c99fa"
     },
     {
+      "path": ".github/workflows/trial-audio-r16-integration.yml",
+      "bytes": 3621,
+      "sha256": "2887e6186fe9ca0f688937cc6f1c4998896fa15a06908a9f925a3751eac30481"
+    },
+    {
       "path": "package.json",
       "bytes": 5074,
       "sha256": "68f418971d66ca7d801728336c827f66c7c0bd8ec31d9fd743f607cd4177a461"
     },
     {
       "path": "scripts/audit-delivery-r34.py",
-      "bytes": 4551,
-      "sha256": "26147dfbe9c66c3559484ae47b80458565619ee06e49c85baee0e26c1f484562"
+      "bytes": 5867,
+      "sha256": "56c1fb40e82e1ab832a5ce8527e48f771a5b6626e71ca8dc4897fca95bd5fb39"
     },
     {
       "path": "scripts/audit-delivery-v072.mjs",
@@ -262,8 +403,8 @@
     },
     {
       "path": "scripts/validate-fidelity-ci-r34.py",
-      "bytes": 19665,
-      "sha256": "ff9064e3e04063522ee5deec51beb3ec2e489ab5e70cc204ce3d07688565b9f9"
+      "bytes": 24181,
+      "sha256": "ec06ff9f80a7edcd6f849fee38663b70c38244e4a6b37f06ff9054c77c54ea44"
     },
     {
       "path": "scripts/verify-build-r34.py",
@@ -272,13 +413,28 @@
     },
     {
       "path": "scripts/verify-current-r34.mjs",
-      "bytes": 11060,
-      "sha256": "f8a4a78e10eb3a565659a149bb9965040ab7fd882dabca232cce0b15a96418e3"
+      "bytes": 17218,
+      "sha256": "111b45a045052149778f1e2fb3744a6d572474fa59cff0345279a6ca54c166b9"
     },
     {
       "path": "tests/browser-audio-r31.mjs",
       "bytes": 13690,
       "sha256": "de5f5fe3fcfd1548153b2ca068532ebc4d5a2290e5e669a86d66887f45eccdb8"
+    },
+    {
+      "path": "tests/browser-audit-r9.mjs",
+      "bytes": 8778,
+      "sha256": "99191b05ee97bcf35e6d23a05524b880f4962d950eaa340cf639e35e3b4d5fa6"
+    },
+    {
+      "path": "tests/browser-baker-audio-r15.mjs",
+      "bytes": 8850,
+      "sha256": "0fd5bf6c42201c38107298eabe7cde798decca11033431fc82adb1f9192554cf"
+    },
+    {
+      "path": "tests/browser-baker-r14.mjs",
+      "bytes": 5535,
+      "sha256": "304b8c27a5b3b30455c98a38c2df863ce6c79d8321e7b5051fedadaa9c450484"
     },
     {
       "path": "tests/browser-canonical-r31.mjs",
@@ -296,9 +452,29 @@
       "sha256": "25f0ea4efecb7ef98d42a1ea2c2ac52ee71399c5d7747be9ced39738a710ecfa"
     },
     {
+      "path": "tests/browser-catalog-replay-r7.mjs",
+      "bytes": 6005,
+      "sha256": "7be51ddca576f9e9c0c45893cd489e3e08148f67954a3b86fcdedb0547cd3576"
+    },
+    {
+      "path": "tests/browser-combat-text-r17.mjs",
+      "bytes": 9358,
+      "sha256": "27fd52be5cdeaf259d5aa347c3d7a0d40755a341fa840af982560ff9dbb36cb4"
+    },
+    {
       "path": "tests/browser-compat-r34.mjs",
-      "bytes": 1465,
-      "sha256": "9b3b6c6c7c70656aa934ff19ba526aa03461b329f5207b513b69128870396cce"
+      "bytes": 2591,
+      "sha256": "da455e381356d79eca39dcaa7d4078c659ed70e0ad1d9082640c82891b271fce"
+    },
+    {
+      "path": "tests/browser-delivery-r10-http.mjs",
+      "bytes": 9363,
+      "sha256": "79eaeea764deb17f53f37b70b814bfa0b755218069519482a0a0186b25c99d87"
+    },
+    {
+      "path": "tests/browser-directional-r4.mjs",
+      "bytes": 4929,
+      "sha256": "9c258f14f0fd5b84b45090e74644c86d7cc912f821a862349f60af56fbc55ad2"
     },
     {
       "path": "tests/browser-evidence-r33.mjs",
@@ -311,6 +487,11 @@
       "sha256": "657b6a07c9cb85bcb34d9525eb831838511a2674791acaf3bff4e83bb9149d38"
     },
     {
+      "path": "tests/browser-fidelity-dashboard-r24.mjs",
+      "bytes": 14257,
+      "sha256": "b0cf6c95e19ad26e059beadfc027947868c3f2db8f560b1739939bb48676271d"
+    },
+    {
       "path": "tests/browser-fidelity-r31.mjs",
       "bytes": 14521,
       "sha256": "adf0d7bc53fbbc60cdfaa7ae69248545375d208c49639254c0692e7e9a4f23db"
@@ -319,6 +500,11 @@
       "path": "tests/browser-fidelity-r33.mjs",
       "bytes": 18180,
       "sha256": "81aecc2b7cd4ca8cf513fa099e908991d33ce295107e65b87a3067033414c4a0"
+    },
+    {
+      "path": "tests/browser-flight-r12.mjs",
+      "bytes": 5616,
+      "sha256": "3113c94c165e199a4fba81d813560641d9ebfa10589463f70c3a33d02ffd0995"
     },
     {
       "path": "tests/browser-generated-sprites-r31.mjs",
@@ -334,6 +520,16 @@
       "path": "tests/browser-input-r32.mjs",
       "bytes": 7926,
       "sha256": "c98a167ec2c2eca8d4e832aabe4aafedfd471cfe2c30978b7b07441009d8c609"
+    },
+    {
+      "path": "tests/browser-lucas-r11.mjs",
+      "bytes": 5340,
+      "sha256": "f62fb9fc439b65b3b7e417145a79319c9ed72a6b1eb521171a73c56a463fcd3d"
+    },
+    {
+      "path": "tests/browser-match-sequences-r8.mjs",
+      "bytes": 6246,
+      "sha256": "5b2389cefaf0e9a6ff6008f6b58a272ef51e2d3704521385a9e8dbbe5a80f9ce"
     },
     {
       "path": "tests/browser-menu-input-r32.mjs",
@@ -381,6 +577,11 @@
       "sha256": "6829f406e031390bb0879204e80b0a6abb030ec2e7c4b48ea755763e4dbcf257"
     },
     {
+      "path": "tests/browser-replay-vault-r13.mjs",
+      "bytes": 7822,
+      "sha256": "1f0c332cd14c56a3219c94b857b8d27200425735c94c146cd1cdc1203d077d31"
+    },
+    {
       "path": "tests/browser-roster-assets-r34.mjs",
       "bytes": 14853,
       "sha256": "a4c1066247591a13597221a9b8d65b11a2952364e6fd7800a055ff17282dddce"
@@ -406,9 +607,14 @@
       "sha256": "6a0231ca94a882a8e1f994e70a5d8c4b941c66a1e168af57cfe56519f23bf96b"
     },
     {
+      "path": "tests/browser-trial-audio-r16.mjs",
+      "bytes": 9502,
+      "sha256": "4aef12467caa2769e2764a2048facd025270d2db724630eedc366789b80bd3bb"
+    },
+    {
       "path": "tests/test_roster_assets_r34.py",
-      "bytes": 31027,
-      "sha256": "cc0d44deda835ca80b6a8391181364e28c18fa087b933f77f733966f7673ff62"
+      "bytes": 33882,
+      "sha256": "fba011c29d8d886d6b83f371e5b1a5e1d29880e3ca235a342eacabad5bd410a8"
     },
     {
       "path": "tests/verify-access-context-r18.mjs",
@@ -452,8 +658,8 @@
     },
     {
       "path": "tests/verify-current-guard-r34.mjs",
-      "bytes": 7495,
-      "sha256": "1b42f63a21a4104914515e47c446127541bbe1d20b3358d8df3c44d6c37304b3"
+      "bytes": 9162,
+      "sha256": "881e60380c5298730b5f07d708ac3d79604b6a5d2ee47dcde8503399797d45fd"
     },
     {
       "path": "tests/verify-delivery-r10.mjs",
@@ -848,6 +1054,168 @@
     },
     {
       "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+      "path": ".github/workflows/access-r18-integration.yml",
+      "bytes": 3649,
+      "sha256": "ba93524624011d514176a576155d20c11f55bc9b77d75d0032eb7bff1d263b00"
+    },
+    {
+      "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+      "path": ".github/workflows/audit-r9-browser.yml",
+      "bytes": 1158,
+      "sha256": "617f8dfa20739d593e97caf51625b375c26aa1fc134b5dc46dad48ac5d125563"
+    },
+    {
+      "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+      "path": ".github/workflows/baker-audio-r15-browser.yml",
+      "bytes": 1385,
+      "sha256": "7d39b680cc8546b3e24cf56ade63b4ecdcd2a1d321f0f02932e44360c72d3f3e"
+    },
+    {
+      "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+      "path": ".github/workflows/baker-audio-r15-integration.yml",
+      "bytes": 3274,
+      "sha256": "31c6d273e03f1eb43191bf93e7a5b6f69db73d499dd2cdc2a116a3e734ce73a2"
+    },
+    {
+      "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+      "path": ".github/workflows/baker-r14-browser.yml",
+      "bytes": 1358,
+      "sha256": "c82afdf3c2e15e86cb11bd24932fd9f582bfe6d3ca87fe7c3844216f1df3fab0"
+    },
+    {
+      "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+      "path": ".github/workflows/baker-r14-integration.yml",
+      "bytes": 3637,
+      "sha256": "a529239bfb4334a1db3f96552e506ab44b362bbab0672392d2dd83837939c4de"
+    },
+    {
+      "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+      "path": ".github/workflows/baker-r14-workbook.yml",
+      "bytes": 2467,
+      "sha256": "7512eb72a92f339ee6936984d1a1826e5258c8d7824a1b9f848fd7d3fd8207ca"
+    },
+    {
+      "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+      "path": ".github/workflows/catalog-replay-r7.yml",
+      "bytes": 2597,
+      "sha256": "0915e2619c7f177b74a035167daa2f80dd8c8258ecb3a42b5a4d83c27a976a67"
+    },
+    {
+      "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+      "path": ".github/workflows/combat-text-r17-browser.yml",
+      "bytes": 1481,
+      "sha256": "09f29e3ac61355dc42b500f19aeaad2be4139f2090ce89426dc2d081e5c33941"
+    },
+    {
+      "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+      "path": ".github/workflows/combat-text-r17-integration.yml",
+      "bytes": 3491,
+      "sha256": "5ac24f4ccbe759234b475d41add0b8044882ae9904c779f8b3f37b0707e70d84"
+    },
+    {
+      "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+      "path": ".github/workflows/finalize-audit-r9.yml",
+      "bytes": 3677,
+      "sha256": "9c2b118faa2f198c0ce0be47bc66a7ef5bca2339f5b70fa68ca7c3325a478e63"
+    },
+    {
+      "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+      "path": ".github/workflows/flight-r12-browser.yml",
+      "bytes": 1315,
+      "sha256": "f46105bb2e1e3205634f0f919650d7a053a573dd99f41d42f24cb7919a7d5806"
+    },
+    {
+      "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+      "path": ".github/workflows/flight-r12-integration.yml",
+      "bytes": 3564,
+      "sha256": "cee6970cadda3efc23d57215c876c5db82fd5c93aee46f294ade12a2e2dd9fbd"
+    },
+    {
+      "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+      "path": ".github/workflows/lucas-r11-browser.yml",
+      "bytes": 1318,
+      "sha256": "dd6a7fa09f4438b08b8a532b9847ab38d518f1b64b4d1db810c131ff7705fce6"
+    },
+    {
+      "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+      "path": ".github/workflows/lucas-r11-integration.yml",
+      "bytes": 4324,
+      "sha256": "91ea6c22ca924b837dfa65b2e82b231927fa39d6a90d566032de345bffe2db58"
+    },
+    {
+      "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+      "path": ".github/workflows/package-direction-r4.yml",
+      "bytes": 2608,
+      "sha256": "d99e651a41792aad600f36a132dbffff41ee0e7c6a66a4eee17fc38571ceecb8"
+    },
+    {
+      "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+      "path": ".github/workflows/r10-browser.yml",
+      "bytes": 1253,
+      "sha256": "384ed3f7be1025969b31f109c157441d51707a367427250b0fe6a67c51cf1692"
+    },
+    {
+      "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+      "path": ".github/workflows/replay-r13-browser.yml",
+      "bytes": 1330,
+      "sha256": "fc23877f59aca8efed9f7c7661a272c1a9fcd2c5c8fe01d122197c35fde26a72"
+    },
+    {
+      "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+      "path": ".github/workflows/replay-r13-integration.yml",
+      "bytes": 3353,
+      "sha256": "7a23cad3ea781be65bc798dfac3c9d2b1041bfa051243fce485b005c3ec54634"
+    },
+    {
+      "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+      "path": ".github/workflows/saves-r19-integration.yml",
+      "bytes": 4374,
+      "sha256": "f6ac31ce0c0e2e33683ad1bb5c66fb6b082887c5914763e84af30258692101bf"
+    },
+    {
+      "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+      "path": ".github/workflows/source-fidelity-r25.yml",
+      "bytes": 8429,
+      "sha256": "22cb92a9e8e266977c14dd234166c4fdf71f912b3937fbd8edb0ec42780570de"
+    },
+    {
+      "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+      "path": ".github/workflows/source-fidelity-r26.yml",
+      "bytes": 9443,
+      "sha256": "a7ba4ae44a6c829c1b8c7e1c4e57b49d19a3157f306150c5481ce89999a48100"
+    },
+    {
+      "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+      "path": ".github/workflows/source-fidelity-r27.yml",
+      "bytes": 7407,
+      "sha256": "353c2b55ccdf9319c49e072044d7a8248529cbd4ac3167673aead7961984c61a"
+    },
+    {
+      "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+      "path": ".github/workflows/source-fidelity-r28.yml",
+      "bytes": 13163,
+      "sha256": "4cd54bd8467001f0e41ebe4190cf9150daf1a0b4c34c0af16e06631e3738b231"
+    },
+    {
+      "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+      "path": ".github/workflows/source-fidelity-r29.yml",
+      "bytes": 12457,
+      "sha256": "f275c54c8432b6f1dc42b82788d458a8ee5c3c866e03562e6c40b7eca40f6d51"
+    },
+    {
+      "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+      "path": ".github/workflows/source-fidelity-r30.yml",
+      "bytes": 11518,
+      "sha256": "9e26dcce387ecf4a50c41fa2e44f21b746b0a838a3a58d5c879cd25627ebcceb"
+    },
+    {
+      "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+      "path": ".github/workflows/trial-audio-r16-integration.yml",
+      "bytes": 3341,
+      "sha256": "e13d1381d0b87463bb125fe33bb8e29ff4872ec71e5cb630aa61c4fc47c92bb1"
+    },
+    {
+      "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
       "path": "package.json",
       "bytes": 5303,
       "sha256": "5281abb9be78e71b9330bfd8cba709849c25aebda5bbb4ff35061216a39060ca"
@@ -866,6 +1234,24 @@
     },
     {
       "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+      "path": "tests/browser-audit-r9.mjs",
+      "bytes": 8778,
+      "sha256": "99191b05ee97bcf35e6d23a05524b880f4962d950eaa340cf639e35e3b4d5fa6"
+    },
+    {
+      "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+      "path": "tests/browser-baker-audio-r15.mjs",
+      "bytes": 8850,
+      "sha256": "0fd5bf6c42201c38107298eabe7cde798decca11033431fc82adb1f9192554cf"
+    },
+    {
+      "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+      "path": "tests/browser-baker-r14.mjs",
+      "bytes": 5535,
+      "sha256": "304b8c27a5b3b30455c98a38c2df863ce6c79d8321e7b5051fedadaa9c450484"
+    },
+    {
+      "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
       "path": "tests/browser-catalog-controls-r32.mjs",
       "bytes": 16851,
       "sha256": "a11df567db59bc4dbedde172da2999b39d4773ce9073ded954bd6a568f264732"
@@ -875,6 +1261,30 @@
       "path": "tests/browser-catalog-focus-r32.mjs",
       "bytes": 17445,
       "sha256": "25f0ea4efecb7ef98d42a1ea2c2ac52ee71399c5d7747be9ced39738a710ecfa"
+    },
+    {
+      "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+      "path": "tests/browser-catalog-replay-r7.mjs",
+      "bytes": 6005,
+      "sha256": "7be51ddca576f9e9c0c45893cd489e3e08148f67954a3b86fcdedb0547cd3576"
+    },
+    {
+      "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+      "path": "tests/browser-combat-text-r17.mjs",
+      "bytes": 9358,
+      "sha256": "27fd52be5cdeaf259d5aa347c3d7a0d40755a341fa840af982560ff9dbb36cb4"
+    },
+    {
+      "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+      "path": "tests/browser-delivery-r10-http.mjs",
+      "bytes": 9363,
+      "sha256": "79eaeea764deb17f53f37b70b814bfa0b755218069519482a0a0186b25c99d87"
+    },
+    {
+      "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+      "path": "tests/browser-directional-r4.mjs",
+      "bytes": 4929,
+      "sha256": "9c258f14f0fd5b84b45090e74644c86d7cc912f821a862349f60af56fbc55ad2"
     },
     {
       "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
@@ -890,9 +1300,21 @@
     },
     {
       "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+      "path": "tests/browser-fidelity-dashboard-r24.mjs",
+      "bytes": 14028,
+      "sha256": "d3dcb1ca877db4f63329de7b7e75a0b2faedaa312a4a70563aca4e470755c6de"
+    },
+    {
+      "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
       "path": "tests/browser-fidelity-r33.mjs",
       "bytes": 18180,
       "sha256": "81aecc2b7cd4ca8cf513fa099e908991d33ce295107e65b87a3067033414c4a0"
+    },
+    {
+      "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+      "path": "tests/browser-flight-r12.mjs",
+      "bytes": 5616,
+      "sha256": "3113c94c165e199a4fba81d813560641d9ebfa10589463f70c3a33d02ffd0995"
     },
     {
       "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
@@ -905,6 +1327,18 @@
       "path": "tests/browser-input-r32.mjs",
       "bytes": 7926,
       "sha256": "c98a167ec2c2eca8d4e832aabe4aafedfd471cfe2c30978b7b07441009d8c609"
+    },
+    {
+      "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+      "path": "tests/browser-lucas-r11.mjs",
+      "bytes": 5340,
+      "sha256": "f62fb9fc439b65b3b7e417145a79319c9ed72a6b1eb521171a73c56a463fcd3d"
+    },
+    {
+      "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+      "path": "tests/browser-match-sequences-r8.mjs",
+      "bytes": 6246,
+      "sha256": "5b2389cefaf0e9a6ff6008f6b58a272ef51e2d3704521385a9e8dbbe5a80f9ce"
     },
     {
       "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
@@ -944,6 +1378,12 @@
     },
     {
       "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+      "path": "tests/browser-replay-vault-r13.mjs",
+      "bytes": 7822,
+      "sha256": "1f0c332cd14c56a3219c94b857b8d27200425735c94c146cd1cdc1203d077d31"
+    },
+    {
+      "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
       "path": "tests/browser-runtime-r33.mjs",
       "bytes": 21204,
       "sha256": "ba46130be48a4227adb39587782560c7db6cc905f3cdddca6078f014b222b667"
@@ -953,6 +1393,12 @@
       "path": "tests/browser-sprite-gallery-r32.mjs",
       "bytes": 23926,
       "sha256": "6a0231ca94a882a8e1f994e70a5d8c4b941c66a1e168af57cfe56519f23bf96b"
+    },
+    {
+      "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
+      "path": "tests/browser-trial-audio-r16.mjs",
+      "bytes": 9502,
+      "sha256": "4aef12467caa2769e2764a2048facd025270d2db724630eedc366789b80bd3bb"
     },
     {
       "ref": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
@@ -1021,5 +1467,5 @@
       "sha256": "b5f2c23302eabce76eb88fcd2e266135338fe2896ad493a9595b9151341372cb"
     }
   ],
-  "scope": "Actually executed local parsing of seven CI definitions, Bash/Python/JavaScript compilation and execution-ref-aware source-path checks. Definition coverage and preserved recipe contracts are verified locally; no remote CI, gameplay, new media, original-animation or global1:1 result is inferred."
+  "scope": "Actually executed local parsing of seven main CI definitions and 21 exact legacy teststep adaptations, Bash/Python/JavaScript compilation and execution-ref-aware source-path checks. All 65 legacy preloads restore published workflow bytes on inverse projection and leave 12 browser assertions unchanged. Definition coverage and preserved recipe contracts are verified locally; no remote CI, gameplay, new media, original-animation or global 1:1 result is inferred."
 }

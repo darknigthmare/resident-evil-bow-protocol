@@ -284,6 +284,74 @@ def run():
 
     check('Original engine/input assertions remain current and unchanged legacy browser assertions use explicit published-derived compatibility', inherited)
 
+    def legacy_browser_steps():
+        read('scripts/verify-current-r34.mjs')
+        metadata = json.loads(subprocess.check_output([
+            'node', '--input-type=module', '-e',
+            "import {LEGACY_BROWSER_WORKFLOWS,DISCOVERY_TEST,DISCOVERY_SUBSTITUTION} from './scripts/verify-current-r34.mjs';"
+            "console.log(JSON.stringify({workflows:LEGACY_BROWSER_WORKFLOWS,test:DISCOVERY_TEST,discovery:DISCOVERY_SUBSTITUTION}));"
+        ], cwd=ROOT))
+        mapping = metadata['workflows']
+        assert len(mapping) == 21 and sum(map(len, mapping.values())) == 65
+        distinct_scripts = set()
+        for name, scripts in mapping.items():
+            original = read(name, BASELINE).decode()
+            expected = original
+            for script in scripts:
+                before = 'node ' + script
+                assert expected.count(before) == 1, name + ':' + script
+                expected = expected.replace(before, 'node --import=./tests/browser-compat-r34.mjs ' + script)
+                assert read(script) == read(script, BASELINE), 'A legacy browser assertion changed: ' + script
+                compile_script(script, None)
+                distinct_scripts.add(script)
+            current = read(name).decode()
+            assert current == expected, 'Only exact teststep preloads may change: ' + name
+            workflow = yaml.load(current, Loader=yaml.BaseLoader)
+            assert 'NODE_OPTIONS' not in workflow.get('env', {})
+            located = []
+            for job in workflow['jobs'].values():
+                assert 'NODE_OPTIONS' not in job.get('env', {})
+                for step in job['steps']:
+                    code = step.get('run', '')
+                    for script in scripts:
+                        command = 'node --import=./tests/browser-compat-r34.mjs ' + script
+                        if command in code:
+                            assert checkout(job).get('ref', '${{ github.sha }}') == '${{ github.sha }}'
+                            compile_process(['bash', '-n'], code, name + ':' + script)
+                            located.append(script)
+                            counts['bash_blocks'] += 1
+            assert sorted(located) == sorted(scripts), name
+            inverse = current
+            for script in scripts:
+                inverse = inverse.replace('node --import=./tests/browser-compat-r34.mjs ' + script, 'node ' + script)
+            assert inverse == original, 'Legacy workflow inverse is not exact: ' + name
+        compile_script('tests/browser-compat-r34.mjs', None)
+        discovery = read(metadata['test'], BASELINE).decode()
+        before, after = metadata['discovery']
+        assert discovery.count(before) == 1
+        corrected = read(metadata['test']).decode()
+        assert corrected == discovery.replace(before, after)
+        assert corrected.count(after) == 1 and corrected.replace(after, before) == discovery
+        compile_script(metadata['test'], None)
+        for release in range(25, 31):
+            name = f'.github/workflows/source-fidelity-r{release}.yml'
+            original = yaml.load(read(name, BASELINE), Loader=yaml.BaseLoader)
+            current = yaml.load(read(name), Loader=yaml.BaseLoader)
+            assert current['jobs']['browser'] == original['jobs']['browser'], name
+            ref = checkout(current['jobs']['browser']).get('ref')
+            assert re.fullmatch(r'[a-f0-9]{40}', ref), name
+        counts['legacy_compatibility_workflows'] = len(mapping)
+        counts['legacy_browser_teststeps'] = sum(map(len, mapping.values()))
+        counts['unchanged_legacy_browser_assertions'] = len(distinct_scripts)
+        return {'workflows': len(mapping), 'teststeps': counts['legacy_browser_teststeps'],
+                'unchangedAssertions': len(distinct_scripts), 'inversePublishedBytesExact': True,
+                'bootstrapOnlyAtTeststep': True, 'publishedR25ToR30MatricesUnchanged': True,
+                'dashboardPrimaryOwnerDiscoveryOnly': metadata['test']}
+
+    check('Affected current legacy browser teststeps declare an exact reversible preload without changing assertions or published matrices', legacy_browser_steps)
+
+    counts['current_script_bindings'] = sum(key[0] is None for key in compiled)
+    counts['historical_script_bindings'] = len(compiled) - counts['current_script_bindings']
     read('scripts/validate-fidelity-ci-r34.py')
     report = {'schema': 're.bow.ci-validation-r34/1', 'baseline': BASELINE,
               'passed': sum(item['pass'] for item in checks), 'failed': sum(not item['pass'] for item in checks), 'skipped': 0,
@@ -291,7 +359,7 @@ def run():
               'sourceFiles': [{'path': name, 'bytes': len(raw), 'sha256': sha(raw)} for name, raw in sorted(source_inputs.items())],
               'historicalInputs': [{'ref': revision, 'path': name, 'bytes': len(raw), 'sha256': sha(raw)}
                                    for (revision, name), raw in sorted(historical_inputs.items())],
-              'scope': 'Actually executed local parsing of seven CI definitions, Bash/Python/JavaScript compilation and execution-ref-aware source-path checks. Definition coverage and preserved recipe contracts are verified locally; no remote CI, gameplay, new media, original-animation or global1:1 result is inferred.'}
+              'scope': 'Actually executed local parsing of seven main CI definitions and 21 exact legacy teststep adaptations, Bash/Python/JavaScript compilation and execution-ref-aware source-path checks. All 65 legacy preloads restore published workflow bytes on inverse projection and leave 12 browser assertions unchanged. Definition coverage and preserved recipe contracts are verified locally; no remote CI, gameplay, new media, original-animation or global 1:1 result is inferred.'}
     (ROOT / 'docs/R34_CI_VALIDATION.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
     print(json.dumps({key: report[key] for key in ['passed', 'failed', 'counts']}))
     return int(bool(report['failed']))

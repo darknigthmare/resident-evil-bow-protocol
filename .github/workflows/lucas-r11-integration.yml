@@ -37,8 +37,8 @@ jobs:
       - name: Locate Chromium
         run: |
           if command -v google-chrome >/dev/null; then echo "CHROME_BIN=$(command -v google-chrome)" >> "$GITHUB_ENV"; else npx playwright install --with-deps chromium; fi
-      - run: node tests/browser-lucas-r11.mjs
-      - run: node tests/browser-delivery-r10-http.mjs
+      - run: node --import=./tests/browser-compat-r34.mjs tests/browser-lucas-r11.mjs
+      - run: node --import=./tests/browser-compat-r34.mjs tests/browser-delivery-r10-http.mjs
       - name: Commit verified candidate only on the integration branch
         run: |
           git config user.name 'B.O.W. Protocol CI'

@@ -6,10 +6,10 @@
     {
       "path": "docs/R34_ASSETS_TESTS.json",
       "bytes": 1384,
-      "sha256": "a72dedc5e4e3b8c1b0f92ec1ce90127831735c18a086389e79e9450c5163fce7",
+      "sha256": "c6cd09ccc695175e2fca1d7e9ac499b0c97ce00df5a0f385fb1bd5759f2f4c22",
       "label": "Intégrité des ressources",
       "kind": "unit",
-      "passed": 28,
+      "passed": 30,
       "failed": 0,
       "sourceCurrent": true,
       "sourceBindings": 6,
@@ -19,7 +19,7 @@
     {
       "path": "docs/R34_ASSETS_BROWSER.json",
       "bytes": 4218,
-      "sha256": "c566ce587504b50b5799e23cb587c8700279f48b5f99a39cab426d082be7b347",
+      "sha256": "23b9a79a1a8822a56bf39692c7b38860ff90809f14dc810806f99f313ffe7b8d",
       "label": "Galerie et vrais PNG",
       "kind": "browser",
       "passed": 8,
@@ -45,7 +45,7 @@
     {
       "path": "docs/R34_ROSTER_RUNTIME_TESTS.json",
       "bytes": 94297,
-      "sha256": "5ddb1fb6e9066e73115e41f187b2ec4e34046bdf8338aadf4e25a0f317f25d0b",
+      "sha256": "cc6c0ba43a84505667302ec23bc7defb7685ec54df02775cb06691302aa40300",
       "label": "Lecture des portraits et poses",
       "kind": "unit",
       "passed": 15,
@@ -57,8 +57,8 @@
     },
     {
       "path": "docs/R34_ROSTER_RUNTIME_BROWSER.json",
-      "bytes": 248769,
-      "sha256": "65df3fd6fda85ef157306e4a408436036669c8db74256acb98d2780e3d3a6556",
+      "bytes": 248770,
+      "sha256": "1819a77a4468c5065214895dd21d058ff14f63acc9781f20017abe25cb0abd68",
       "label": "Intégration du roster",
       "kind": "browser",
       "passed": 12,
@@ -70,36 +70,36 @@
     },
     {
       "path": "docs/R34_CURRENT_GUARD_TESTS.json",
-      "bytes": 5727,
-      "sha256": "a07628ad226f6cc46d81dad27e5f78e15457fbc18b3e559ad2a9d7278da57f54",
+      "bytes": 12492,
+      "sha256": "27ed89c0694cd6996ee412ab2a95f802c8239bec5c7628ba487661499c923212",
       "label": "Garde courant R34",
       "kind": "guard",
-      "passed": 32,
+      "passed": 58,
       "failed": 0,
       "sourceCurrent": true,
-      "sourceBindings": 12,
+      "sourceBindings": 34,
       "staleSources": [],
       "scope": "R34 boundary fault injections. The original39 R33 and40 R32 cases execute unchanged after the exact reviewed R34 mount/pipeline projection; no original current functional assertion is removed."
     },
     {
       "path": "docs/R34_CI_VALIDATION.json",
-      "bytes": 35871,
-      "sha256": "a7870093c79b433c94dadca080c882d08fbb33ad052771d35c1dfdda956a173c",
+      "bytes": 52521,
+      "sha256": "e562a6f35aa317c7a86c5b174a7b3dd050c44c667d6d77915735af33ebde1160",
       "label": "Intégration continue R34",
       "kind": "ci",
-      "passed": 6,
+      "passed": 7,
       "failed": 0,
       "sourceCurrent": true,
-      "sourceBindings": 109,
+      "sourceBindings": 147,
       "staleSources": [],
-      "scope": "Actually executed local parsing of seven CI definitions, Bash/Python/JavaScript compilation and execution-ref-aware source-path checks. Definition coverage and preserved recipe contracts are verified locally; no remote CI, gameplay, new media, original-animation or global1:1 result is inferred."
+      "scope": "Actually executed local parsing of seven main CI definitions and 21 exact legacy teststep adaptations, Bash/Python/JavaScript compilation and execution-ref-aware source-path checks. All 65 legacy preloads restore published workflow bytes on inverse projection and leave 12 browser assertions unchanged. Definition coverage and preserved recipe contracts are verified locally; no remote CI, gameplay, new media, original-animation or global 1:1 result is inferred."
     }
   ],
   "totals": {
-    "unit": 43,
+    "unit": 45,
     "browser": 36,
-    "guard": 32,
-    "ci": 6
+    "guard": 58,
+    "ci": 7
   },
   "pendingReports": [],
   "invalidReports": [],

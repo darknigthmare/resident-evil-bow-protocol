@@ -1,0 +1,205 @@
+{
+  "schema": "re.bow.source-research-r35/1",
+  "baseline": "730ededd457c1a4c8cf09db4f5a8a4938626f17d",
+  "createdAt": "2026-11-02T05:00:38.724829+00:00",
+  "scope": "Readonly source investigation; no image generation, import, game modification, or old report rewritten.",
+  "guide": {
+    "path": "/workspace/scratch/r33-root-guides/create-game-assets.md",
+    "upstreamCommit": "19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9"
+  },
+  "qualifiedSourceBodies": 1,
+  "newGeneratedImages": 0,
+  "entries": [
+    {
+      "uid": "re3-nemesis-second-form",
+      "label": "Nemesis (Second Form)",
+      "incarnation": "Resident Evil 3: Nemesis (1999)",
+      "category": "experimental",
+      "historicalRefusalPreserved": false,
+      "idleReceipt": {
+        "path": "/workspace/resident-evil-bow-protocol/modules/fidelity-r34/assets/lots/lot_2/re3-nemesis-second-form/idle.json",
+        "bytes": 3501,
+        "sha256": "ccb9a9c85df19a24d99b5de58887b238f9d993ea07c049b65f248ad254424c7e"
+      },
+      "idleStatus": "HELD_REFERENCE",
+      "portraitStatus": "GENERATED",
+      "decision": "SOURCE_BODY_QUALIFIED_FOR_GENERATION_REVIEW",
+      "candidate": {
+        "path": "/workspace/scratch/r35-source-research/nemesis-render-old.png",
+        "bytes": 68292,
+        "sha256": "f6902f9971152d3ce0f67030912fd6fdb924c111678d56ee9286498d2848c413"
+      },
+      "sourceUrl": "https://static.wikia.nocookie.net/residentevil/images/3/3e/RE3Nemesis.png/revision/latest?cb=20120212204327",
+      "sourcePage": "https://blackjackrants.blogspot.com/2020/10/reviewing-monsters-resident-evil-3.html",
+      "sourcePageCapture": {
+        "path": "/workspace/scratch/r35-source-research/nemesis-article.html",
+        "bytes": 126647,
+        "sha256": "bde976977e336cd954525e13e45bf26f4cd46a7d3766ccc30a57b77d94eaaa7f"
+      },
+      "imageFormat": "WEBP",
+      "imageExtensionWarning": "Fetched bytes are WEBP RGB despite historical .png source filename; preserve bytes and record MIME or rename .webp without conversion.",
+      "size": [
+        351,
+        600
+      ],
+      "inspection": {
+        "actuallyOpened": true,
+        "completeVisibleBody": true,
+        "visibleNonblackBoundsThreshold12": [
+          31,
+          8,
+          328,
+          591
+        ],
+        "reviewedAppearance": [
+          "Original1999second-form Nemesis, without trenchcoat upper half; scarred pale head with stitched crown, one pale eye and exposed teeth.",
+          "Large exposed red shoulder muscles, scarred upper torso, many dark-purple looping parasite tubes.",
+          "Both long hands/fingers, ragged dark trousers, both heavy black shoes and the long trailing purple tentacles are visible with an outer margin.",
+          "The source is in an asymmetric three-quarter standing view; it does not certify a right-facing adaptation or invisible anatomy. Never auto-mirror anatomical asymmetries."
+        ],
+        "knownMissingSourceEvidence": [
+          "No animation or original idle timing is supplied.",
+          "No geometric certification for concealed back surfaces."
+        ],
+        "attribution": "The retained2020article groups original1999and remake separately; immediately after RE3Nemesis.png it describes1999Nemesis exposing the body under the coat after its first defeat. The following two image files are NemesisII/III and the text labels that next morphology as third form. The visible appearance agrees with exact held catalogue re3-nemesis-second-form, rather than the remake mutation."
+      },
+      "originalNativeSprite": false,
+      "animationCertified": false,
+      "canonicalFidelityCertified": false
+    },
+    {
+      "uid": "revillage-alcina-dimitrescu",
+      "label": "Alcina Dimitrescu — forme humaine",
+      "incarnation": "Resident Evil Village (2021)",
+      "category": "main",
+      "historicalRefusalPreserved": false,
+      "idleReceipt": {
+        "path": "/workspace/resident-evil-bow-protocol/modules/fidelity-r34/assets/lots/lot_1/revillage-alcina-dimitrescu/idle.json",
+        "bytes": 4011,
+        "sha256": "de923b0e3a9f8a3e4474598721306a7746598239611fffd8036116f81c0a671f"
+      },
+      "idleStatus": "HELD_REFERENCE",
+      "portraitStatus": "GENERATED",
+      "decision": "HOLD_LATERALITY_NOT_ESTABLISHED",
+      "candidate": {
+        "path": "/workspace/scratch/r35-source-research/dimitrescu-bogleech.png",
+        "bytes": 472310,
+        "sha256": "2dcd57501d2e22f7e3ae3ff5459f141cac997cdca3db4def70ec1345e7588c77"
+      },
+      "sourceUrl": "https://bogleech.com/re/re8-dimitrescu.png",
+      "sourcePage": "https://bogleech.com/halloween/hall21-re8.html",
+      "sourcePageCapture": {
+        "path": "/workspace/scratch/r35-source-research/bogleech-village.html",
+        "bytes": 28745,
+        "sha256": "88c0540947f91a73df4bda11ad190a6449c8c56a23d2ecb7fe83f68e4f8ae51a"
+      },
+      "inspection": {
+        "actuallyOpened": true,
+        "visibleWholeDressHatAndCigaretteHolder": true,
+        "unresolved": "New render carries cigarette holder on viewer-left whereas qualifiedR22render holds it on viewer-right. Different pose/hand or horizontal reversal is not established from primary gameplay. Flower and hat details must not be silently mirrored.",
+        "newBodyGenerationAdmitted": false
+      },
+      "primaryRetrievalAttempts": [
+        {
+          "url": "https://www.residentevil.com/village/us/character.html",
+          "result": "HTTP403"
+        },
+        {
+          "url": "https://www.residentevil.com/village/us/",
+          "result": "HTTP403"
+        },
+        {
+          "url": "https://residentevil.fandom.com/api.php?action=parse&page=Alcina_Dimitrescu&prop=wikitext&format=json",
+          "result": "HTTP402"
+        }
+      ]
+    },
+    {
+      "uid": "re1r-zombie",
+      "label": "Zombie",
+      "incarnation": "Resident Evil remake (2002)",
+      "category": "experimental",
+      "historicalRefusalPreserved": false,
+      "idleReceipt": {
+        "path": "/workspace/resident-evil-bow-protocol/modules/fidelity-r34/assets/lots/lot_1/re1r-zombie/idle.json",
+        "bytes": 3216,
+        "sha256": "3377e1e80c887004aeff98c216ef8e18dad721b38d8551a38fd5eb48b89d4227"
+      },
+      "idleStatus": "HELD_REFERENCE",
+      "portraitStatus": "GENERATED",
+      "decision": "EXCLUDED_COSTUME_VARIANT_MISMATCH",
+      "candidate": {
+        "path": "/workspace/scratch/r35-source-research/zombie-remake-artwork.png",
+        "bytes": 39920,
+        "sha256": "9d860ac79b2db6fa95875398f38466dc5be4436f487a51f2e7e3fa0febf1da32"
+      },
+      "sourceUrl": "https://static.wikia.nocookie.net/residentevil/images/7/7a/REmake_artwork_-_Zombie.jpg/revision/latest?cb=20150930204937",
+      "sourcePage": "https://blackjackrants.blogspot.com/search?q=resident+evil+remake",
+      "inspection": {
+        "actuallyOpened": true,
+        "visibleWholeBody": true,
+        "mismatch": "Target catalogue depicts green jacket over pale shirt and very skeletal decomposed head; the fetched remake artwork depicts an open grey shirt without green jacket and different face/wounds. A real source for a different zombie costume does not complete this exact target.",
+        "newBodyGenerationAdmitted": false
+      }
+    },
+    {
+      "uid": "re3-nemesis",
+      "label": "Nemesis",
+      "incarnation": "Resident Evil 3: Nemesis (1999)",
+      "category": "experimental",
+      "historicalRefusalPreserved": false,
+      "idleReceipt": {
+        "path": "/workspace/resident-evil-bow-protocol/modules/fidelity-r34/assets/lots/lot_1/re3-nemesis/idle.json",
+        "bytes": 3242,
+        "sha256": "578426b175926988305c54e37a2a3d30ccf134f59d2044a103d58d5fdc1ea638"
+      },
+      "idleStatus": "HELD_REFERENCE",
+      "portraitStatus": "GENERATED",
+      "decision": "EXCLUDED_EDITION_NOT_ESTABLISHED",
+      "candidate": {
+        "path": "/workspace/scratch/r35-source-research/nemesis-render-static.png",
+        "bytes": 125604,
+        "sha256": "958032afc685339b978b1066536b8ae495da538b7c461a8a91197f46efcdb042"
+      },
+      "sourceUrl": "https://static.wikia.nocookie.net/residentevil/images/b/b2/Nemesis-T_Type.png/revision/latest?cb=20161202232515",
+      "inspection": {
+        "actuallyOpened": true,
+        "visibleWholeBody": true,
+        "edition": "Higher-definition trenchcoat render has no targetPlayStation1999attribution established. Do not assign equivalence because the general design is classic.",
+        "newBodyGenerationAdmitted": false
+      },
+      "additionalCandidate": {
+        "path": "/workspace/scratch/r35-source-research/nemesis-bogleech.png",
+        "inspection": "Overhead view holdingBradVickers does not establish all supports and hidden limb details in a clean isolated body."
+      }
+    },
+    {
+      "uid": "re4r-jack-krauser",
+      "label": "Jack Krauser",
+      "incarnation": "Resident Evil 4 remake (2023)",
+      "category": "experimental",
+      "historicalRefusalPreserved": false,
+      "idleReceipt": {
+        "path": "/workspace/resident-evil-bow-protocol/modules/fidelity-r34/assets/lots/lot_1/re4r-jack-krauser/idle.json",
+        "bytes": 3307,
+        "sha256": "4602c52afefc0bd6b0f2854ee959a271a7c30713813e9655ff4d7e1fe953dc9b"
+      },
+      "idleStatus": "HELD_REFERENCE",
+      "portraitStatus": "GENERATED",
+      "decision": "NO_NEW_MATCHING_BODY_SOURCE",
+      "attempts": [
+        "Google results were a JavaScript redirect, not image evidence.",
+        "Bing captures returned unrelatedJack1996film images despite query title; these search results are not admitted.",
+        "Fandom gallery HTTP402.",
+        "The retrievedBlackjackKrausersearch returned original2005andDarksideChronicles context, not a qualified2023body."
+      ],
+      "newBodyGenerationAdmitted": false
+    }
+  ],
+  "captureIndex": {
+    "path": "/workspace/scratch/r35-source-research/captures.json",
+    "bytes": 28766,
+    "sha256": "e21dad9328c179e10bf6c4b878c084984719f2365e7685bf0c66acdadd727c7f"
+  },
+  "policy": "No known image-tool refusal was retried; all examined exactUIDs have HELDidleand no historicalRefusal flag. Separate laterality/edition conflicts remain held."
+}

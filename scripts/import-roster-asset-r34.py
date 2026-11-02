@@ -378,6 +378,8 @@ def _import_output_locked(receipt, source=None, replace_sha256=None, replace_rec
             atomic_write(image, old_image_raw)
         if old_receipt_raw is not None:
             atomic_write(destination, old_receipt_raw)
+        else:
+            destination.unlink(missing_ok=True)
         raise
     return receipt, destination
 

@@ -2,36 +2,72 @@
   "schema": "re.bow.current-scope-r34/1",
   "baselineCommit": "6c2d0d91f4dd79eff1190cd50a352feb2a05dfe5",
   "modified": [
+    ".github/workflows/access-r18-integration.yml",
+    ".github/workflows/audit-r9-browser.yml",
+    ".github/workflows/baker-audio-r15-browser.yml",
+    ".github/workflows/baker-audio-r15-integration.yml",
+    ".github/workflows/baker-r14-browser.yml",
+    ".github/workflows/baker-r14-integration.yml",
+    ".github/workflows/baker-r14-workbook.yml",
+    ".github/workflows/catalog-replay-r7.yml",
+    ".github/workflows/combat-text-r17-browser.yml",
+    ".github/workflows/combat-text-r17-integration.yml",
+    ".github/workflows/finalize-audit-r9.yml",
+    ".github/workflows/flight-r12-browser.yml",
+    ".github/workflows/flight-r12-integration.yml",
     ".github/workflows/gamedev-r32.yml",
+    ".github/workflows/lucas-r11-browser.yml",
+    ".github/workflows/lucas-r11-integration.yml",
+    ".github/workflows/package-direction-r4.yml",
+    ".github/workflows/r10-browser.yml",
+    ".github/workflows/replay-r13-browser.yml",
+    ".github/workflows/replay-r13-integration.yml",
+    ".github/workflows/saves-r19-integration.yml",
     ".github/workflows/source-fidelity-r25.yml",
     ".github/workflows/source-fidelity-r26.yml",
     ".github/workflows/source-fidelity-r31.yml",
     ".github/workflows/source-fidelity-r33.yml",
+    ".github/workflows/trial-audio-r16-integration.yml",
     "catalog-duel.html",
     "modules/versus.html",
-    "package.json"
+    "package.json",
+    "tests/browser-fidelity-dashboard-r24.mjs"
   ],
   "added": [
     ".github/workflows/source-fidelity-r34.yml",
     "docs/BOW_FIDELITE_R34.xlsx",
     "docs/FIDELITE_R34.md",
     "docs/GAMEDEV_APPLIED_R34.md",
+    "docs/R34_ASSETS_BROWSER.json",
     "docs/R34_ASSETS_TESTS.json",
     "docs/R34_ASSET_PIPELINE.md",
     "docs/R34_BODY_REVIEW_SAMPLE.png",
     "docs/R34_BROWSER_COMPAT.json",
+    "docs/R34_BROWSER_COMPAT_EVIDENCE/diagnostics/evolution-targeted-after-fix.log",
+    "docs/R34_BROWSER_COMPAT_EVIDENCE/diagnostics/lifecycle-targeted.log",
+    "docs/R34_BROWSER_COMPAT_EVIDENCE/diagnostics/r32-before-nested-fix.log",
+    "docs/R34_BROWSER_COMPAT_EVIDENCE/diagnostics/r32-initial.log",
     "docs/R34_BROWSER_COMPAT_EVIDENCE/r31/audio/R31_AUDIO_BROWSER.json",
+    "docs/R34_BROWSER_COMPAT_EVIDENCE/r31/audio/execution.log",
     "docs/R34_BROWSER_COMPAT_EVIDENCE/r31/canonical/R31_CANONICAL_BROWSER.json",
+    "docs/R34_BROWSER_COMPAT_EVIDENCE/r31/canonical/execution.log",
+    "docs/R34_BROWSER_COMPAT_EVIDENCE/r31/command.log",
     "docs/R34_BROWSER_COMPAT_EVIDENCE/r31/execution.json",
     "docs/R34_BROWSER_COMPAT_EVIDENCE/r31/motion-commands/R31_MOTION_BROWSER.json",
+    "docs/R34_BROWSER_COMPAT_EVIDENCE/r31/motion-commands/execution.log",
     "docs/R34_BROWSER_COMPAT_EVIDENCE/r31/performance-access/R31_PERFORMANCE_ACCESS_BROWSER.json",
+    "docs/R34_BROWSER_COMPAT_EVIDENCE/r31/performance-access/execution.log",
     "docs/R34_BROWSER_COMPAT_EVIDENCE/r31/restore-replays/R31_PERSISTENCE_BROWSER.json",
+    "docs/R34_BROWSER_COMPAT_EVIDENCE/r31/restore-replays/execution.log",
     "docs/R34_BROWSER_COMPAT_EVIDENCE/r31/sprites/R31_SPRITES_BROWSER.json",
+    "docs/R34_BROWSER_COMPAT_EVIDENCE/r31/sprites/execution.log",
     "docs/R34_BROWSER_COMPAT_EVIDENCE/r31/tracking-dossiers/R31_DASHBOARD_BROWSER.json",
     "docs/R34_BROWSER_COMPAT_EVIDENCE/r31/tracking-dossiers/R31_DOSSIER_BROWSER.json",
+    "docs/R34_BROWSER_COMPAT_EVIDENCE/r31/tracking-dossiers/execution.log",
     "docs/R34_BROWSER_COMPAT_EVIDENCE/r32/browser-catalog-focus.json",
     "docs/R34_BROWSER_COMPAT_EVIDENCE/r32/browser-input.json",
     "docs/R34_BROWSER_COMPAT_EVIDENCE/r32/catalog-controls.json",
+    "docs/R34_BROWSER_COMPAT_EVIDENCE/r32/command.log",
     "docs/R34_BROWSER_COMPAT_EVIDENCE/r32/evolution-input.json",
     "docs/R34_BROWSER_COMPAT_EVIDENCE/r32/execution.json",
     "docs/R34_BROWSER_COMPAT_EVIDENCE/r32/existing-r28.json",
@@ -47,9 +83,23 @@
     "docs/R34_BROWSER_COMPAT_EVIDENCE/r33/R33_PERSISTENCE_BROWSER.json",
     "docs/R34_BROWSER_COMPAT_EVIDENCE/r33/R33_RUNTIME_BROWSER.json",
     "docs/R34_BROWSER_COMPAT_EVIDENCE/r33/R33_SPRITES_BROWSER.json",
+    "docs/R34_BROWSER_COMPAT_EVIDENCE/r33/command.log",
     "docs/R34_BROWSER_COMPAT_EVIDENCE/r33/execution.json",
+    "docs/R34_BUILD.json",
+    "docs/R34_BUILD_COMMAND.log",
     "docs/R34_CI_VALIDATION.json",
     "docs/R34_CURRENT_GUARD_TESTS.json",
+    "docs/R34_CURRENT_TESTS.json",
+    "docs/R34_CURRENT_TESTS.log",
+    "docs/R34_CURRENT_TESTS_EVIDENCE/qa-fidelity-r34/current-guard.json",
+    "docs/R34_CURRENT_TESTS_EVIDENCE/qa-fidelity-r34/current-scope.json",
+    "docs/R34_CURRENT_TESTS_EVIDENCE/qa-gamedev-r32/historical-r31/command-00.log",
+    "docs/R34_CURRENT_TESTS_EVIDENCE/qa-gamedev-r32/historical-r31/command-01.log",
+    "docs/R34_CURRENT_TESTS_EVIDENCE/qa-gamedev-r32/historical-r31/execution.log",
+    "docs/R34_CURRENT_TESTS_EVIDENCE/qa-gamedev-r32/historical-r31/report.json",
+    "docs/R34_CURRENT_TESTS_EVIDENCE/qa-gamedev-r32/input.json",
+    "docs/R34_DELIVERY.json",
+    "docs/R34_DELIVERY.md",
     "docs/R34_EXPORT.json",
     "docs/R34_EXPORT_TESTS.json",
     "docs/R34_GENERATION_A.md",
@@ -58,15 +108,45 @@
     "docs/R34_GENERATION_C_PROGRESS.json",
     "docs/R34_GENERATION_C_REJECTED.json",
     "docs/R34_GENERATION_D.md",
+    "docs/R34_INTEGRATION_TESTS.json",
+    "docs/R34_LEGACY_BROWSER.json",
+    "docs/R34_LEGACY_BROWSER_EVIDENCE/diagnostics/r9-compat-after-bar-fix-failure.json",
+    "docs/R34_LEGACY_BROWSER_EVIDENCE/diagnostics/r9-compat-initial-failure.json",
+    "docs/R34_LEGACY_BROWSER_EVIDENCE/r10/report.json",
+    "docs/R34_LEGACY_BROWSER_EVIDENCE/r11/report.json",
+    "docs/R34_LEGACY_BROWSER_EVIDENCE/r12-final/report.json",
+    "docs/R34_LEGACY_BROWSER_EVIDENCE/r13/report.json",
+    "docs/R34_LEGACY_BROWSER_EVIDENCE/r14-final/report.json",
+    "docs/R34_LEGACY_BROWSER_EVIDENCE/r15/report.json",
+    "docs/R34_LEGACY_BROWSER_EVIDENCE/r16/report.json",
+    "docs/R34_LEGACY_BROWSER_EVIDENCE/r17/report.json",
+    "docs/R34_LEGACY_BROWSER_EVIDENCE/r4/report.json",
+    "docs/R34_LEGACY_BROWSER_EVIDENCE/r7/report.json",
+    "docs/R34_LEGACY_BROWSER_EVIDENCE/r8/report.json",
+    "docs/R34_LEGACY_BROWSER_EVIDENCE/r9/report.json",
+    "docs/R34_LEGACY_BROWSER_EVIDENCE/raw-batch.json",
     "docs/R34_MEDIA_FINISH.md",
+    "docs/R34_MERGE_FIXES.md",
+    "docs/R34_NATURAL_RENDER_EVIDENCE/executed-script.mjs.txt",
+    "docs/R34_NATURAL_RENDER_EVIDENCE/execution-output.txt",
+    "docs/R34_NATURAL_RENDER_EVIDENCE/raw-report.json",
+    "docs/R34_NATURAL_RENDER_EVIDENCE/re1-cerberus.png",
+    "docs/R34_NATURAL_RENDER_EVIDENCE/re7-flying-bug.png",
+    "docs/R34_NATURAL_RENDER_SMOKE.json",
     "docs/R34_R31_BROWSER.json",
+    "docs/R34_REPRODUCTION.json",
     "docs/R34_ROSTER_RUNTIME_BROWSER.json",
     "docs/R34_ROSTER_RUNTIME_TESTS.json",
     "docs/R34_SELECTION.json",
     "docs/R34_SELECTION.md",
     "docs/R34_SELECTION_BROWSER.json",
+    "docs/R34_SOURCE_ADDITIONS.json",
+    "docs/R34_STAGED_CONSERVATION.json",
     "docs/R34_TRACKING.json",
     "docs/R34_VALIDATION.json",
+    "docs/R34_VISUAL_REVIEW.json",
+    "docs/R34_VISUAL_REVIEW_SCRIPT.mjs.txt",
+    "docs/R34_WHITESPACE_CHECK.json",
     "modules/fidelity-r34/assets/body-source-inspections.json",
     "modules/fidelity-r34/assets/body-source-research.json",
     "modules/fidelity-r34/assets/generated/re0-bat/idle-right.png",
@@ -2071,6 +2151,72 @@
     "modules/fidelity-r34/assets/source-research-extra/lot3/steve-context-3.png",
     "modules/fidelity-r34/assets/source-research-extra/lot3/steve-context-4.png",
     "modules/fidelity-r34/assets/source-research-extra/lot3/steve-context-5.png",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/copy-index.json",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/generation/DECISION.md",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/generation/nemesis-second-form-request.json",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/generation/nemesis-second-form-study.json",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/generation/studies/re3-nemesis-second-form-idle-first-pass.png",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/generation/unchanged-held-receipt.json",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/assessment.json",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/attempts.json",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/bat-rss.xml",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/cv-bat-google-basic.html",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/dog2-google-basic.html",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/dog2-rss.xml",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/meset-blog.html",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/meset-bogleech.png",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/meset-google-basic.html",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/meset-rss.xml",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/re2-original-dog-candidate.jpg",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/re2-source-page.html",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/re2r-zombie-dog-bing.html",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/re2r-zombie-dog-candidates.json",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/re2r-zombie-dog-google.html",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/re3r-zombie-dog-bing.html",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/re3r-zombie-dog-candidates.json",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/re3r-zombie-dog-google.html",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/re6-meset-bing.html",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/re6-meset-candidates.json",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/re6-meset-google.html",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/recv-bat-bing.html",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/recv-bat-candidates.json",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-creature-sources/recv-bat-google.html",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/ASSESSMENT.md",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/assessment.json",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/blog-krauser-search.html",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/blog-nemesis-search.html",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/blog-remake-zombie-search.html",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/bogleech-re3-original.html",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/bogleech-village.html",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/captures.json",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/dimitrescu-bing-exact-candidates.json",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/dimitrescu-bing-exact.html",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/dimitrescu-bing-images-candidates.json",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/dimitrescu-bing-images.html",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/dimitrescu-bogleech.png",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/dimitrescu-google-images.html",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/dimitrescu-google.html",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/krauser-bing-exact-candidates.json",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/krauser-bing-exact.html",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/krauser-bing-images-candidates.json",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/krauser-bing-images.html",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/krauser-google.html",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/models-village.html",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/nemesis-article.html",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/nemesis-bing-exact-candidates.json",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/nemesis-bing-exact.html",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/nemesis-bing-images-candidates.json",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/nemesis-bing-images.html",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/nemesis-bogleech.png",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/nemesis-google.html",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/nemesis-render-old.png",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/nemesis-render-static.png",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/zombie-bing-exact-candidates.json",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/zombie-bing-exact.html",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/zombie-bing-images-candidates.json",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/zombie-bing-images.html",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/zombie-google.html",
+    "modules/fidelity-r34/assets/source-research-extra/merge-research/r35-source-research/zombie-remake-artwork.png",
     "modules/fidelity-r34/assets/source-research-extra/pipeline-extra-five/assessment.json",
     "modules/fidelity-r34/assets/source-research-extra/pipeline-extra-five/attempts.json",
     "modules/fidelity-r34/assets/source-research-extra/pipeline-extra-five/re2-blog-search.html",
@@ -2289,11 +2435,11 @@
   "sourceFiles": [
     {
       "path": "scripts/verify-current-r34.mjs",
-      "sha256": "f8a4a78e10eb3a565659a149bb9965040ab7fd882dabca232cce0b15a96418e3"
+      "sha256": "111b45a045052149778f1e2fb3744a6d572474fa59cff0345279a6ca54c166b9"
     },
     {
       "path": "tests/verify-current-guard-r34.mjs",
-      "sha256": "1b42f63a21a4104914515e47c446127541bbe1d20b3358d8df3c44d6c37304b3"
+      "sha256": "881e60380c5298730b5f07d708ac3d79604b6a5d2ee47dcde8503399797d45fd"
     },
     {
       "path": "scripts/verify-current-r33.mjs",
@@ -2316,6 +2462,10 @@
       "sha256": "68f418971d66ca7d801728336c827f66c7c0bd8ec31d9fd743f607cd4177a461"
     },
     {
+      "path": "tests/browser-fidelity-dashboard-r24.mjs",
+      "sha256": "b0cf6c95e19ad26e059beadfc027947868c3f2db8f560b1739939bb48676271d"
+    },
+    {
       "path": ".github/workflows/source-fidelity-r25.yml",
       "sha256": "418fe9510f6036793f23adf3f85f625f7240e6a331c8b4771d978772a89f9bf7"
     },
@@ -2334,6 +2484,90 @@
     {
       "path": ".github/workflows/source-fidelity-r33.yml",
       "sha256": "289a566d58e9e68503ac9dbc2bf5322216a6e0e271fd997bba15187e65873908"
+    },
+    {
+      "path": ".github/workflows/access-r18-integration.yml",
+      "sha256": "dcb3e880b9e715041f4f0aaf83bb1daafdabd551434a9b163fabbe984a537b64"
+    },
+    {
+      "path": ".github/workflows/audit-r9-browser.yml",
+      "sha256": "d849bdd78bd064d33c49d8c01ecbcd50b86867cb581e07e203b3da91b6562d70"
+    },
+    {
+      "path": ".github/workflows/baker-audio-r15-browser.yml",
+      "sha256": "43cda4254de1abda0c392f2a90ee115d869f95f324ccb92d619a89717dcc3f30"
+    },
+    {
+      "path": ".github/workflows/baker-audio-r15-integration.yml",
+      "sha256": "68942ead523555f5251bc9df0cc050173efd41800eba6ac38abf39164218a3df"
+    },
+    {
+      "path": ".github/workflows/baker-r14-browser.yml",
+      "sha256": "b25d453a1a1248d23385ee53e4759a3e50984c062539285e0cca881a107995f7"
+    },
+    {
+      "path": ".github/workflows/baker-r14-integration.yml",
+      "sha256": "ce713df01691f1117105236fb3be22377fda44e091ada3d7cb8bbd7debb72fb8"
+    },
+    {
+      "path": ".github/workflows/baker-r14-workbook.yml",
+      "sha256": "7ca0cba2921fb4396334ebdab95f4ad16521460d817bb46dfae794a781d67b96"
+    },
+    {
+      "path": ".github/workflows/catalog-replay-r7.yml",
+      "sha256": "e289c5e497b32fc95d0f8e4df05f7cd75ba3148ce9d978d0b52ac0a703c2d44f"
+    },
+    {
+      "path": ".github/workflows/combat-text-r17-browser.yml",
+      "sha256": "8930c5f58bea36d891ce54f5f42a15be4380bab49e38b2de75ad47079d8d9bb1"
+    },
+    {
+      "path": ".github/workflows/combat-text-r17-integration.yml",
+      "sha256": "82575b4bbf5c011c55fb5c5a5eb415ccee05b566b08329174c3707708767a84b"
+    },
+    {
+      "path": ".github/workflows/finalize-audit-r9.yml",
+      "sha256": "bc29c2826968f529108c29fb37c3f718fd58b8a1cb253776fec9f30242d2e370"
+    },
+    {
+      "path": ".github/workflows/flight-r12-browser.yml",
+      "sha256": "54981806377f2b697edd527157b1da0a60d933ce859aafe87783617a94acf150"
+    },
+    {
+      "path": ".github/workflows/flight-r12-integration.yml",
+      "sha256": "b071aa2fee435ce41fe4fd905d565872be9d498aca01feb57dd7d96e25e2f8d9"
+    },
+    {
+      "path": ".github/workflows/lucas-r11-browser.yml",
+      "sha256": "a1335e4506eea6b47790865ac15e5d2d0c11ad50dd31a5c1b6ac13f1b2680e1f"
+    },
+    {
+      "path": ".github/workflows/lucas-r11-integration.yml",
+      "sha256": "3110de33c1275a9bfbc5f99d0cc8f47105dd633a58f982f6102938fa66127efa"
+    },
+    {
+      "path": ".github/workflows/package-direction-r4.yml",
+      "sha256": "c2d2a13ae90548b65d57ec8ea1762c384a8d3dd9cfde81df0cb5dda298a22205"
+    },
+    {
+      "path": ".github/workflows/r10-browser.yml",
+      "sha256": "ba55baca3e97ffab593a9f1cc58c227fca1ed485beaac5611fc6f4dbb5cf3048"
+    },
+    {
+      "path": ".github/workflows/replay-r13-browser.yml",
+      "sha256": "c197120e4c38ba803edb728a97d7a361d9467cf2080c378b65566cd8d0b3a87e"
+    },
+    {
+      "path": ".github/workflows/replay-r13-integration.yml",
+      "sha256": "81fa098cfc5dd8a1a7b74d0085213d4f69ace70e4b1bac73e0f9bce62ad33a5f"
+    },
+    {
+      "path": ".github/workflows/saves-r19-integration.yml",
+      "sha256": "6ef256864ed237f823b5e3ba0a12720a7be3152fa12dffc2449ed62f54a758fb"
+    },
+    {
+      "path": ".github/workflows/trial-audio-r16-integration.yml",
+      "sha256": "2887e6186fe9ca0f688937cc6f1c4998896fa15a06908a9f925a3751eac30481"
     }
   ]
 }

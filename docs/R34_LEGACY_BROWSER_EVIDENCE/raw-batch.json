@@ -1,0 +1,289 @@
+{
+  "schema": "re.bow.legacy-compat-batch-r35/1",
+  "startedAt": "2026-11-02T05:04:18.982538+00:00",
+  "inputFiles": [
+    {
+      "path": "tests/browser-baker-audio-r15.mjs",
+      "sha256": "0fd5bf6c42201c38107298eabe7cde798decca11033431fc82adb1f9192554cf",
+      "copyExact": true
+    },
+    {
+      "path": "tests/browser-catalog-replay-r7.mjs",
+      "sha256": "7be51ddca576f9e9c0c45893cd489e3e08148f67954a3b86fcdedb0547cd3576",
+      "copyExact": true
+    },
+    {
+      "path": "tests/browser-combat-text-r17.mjs",
+      "sha256": "27fd52be5cdeaf259d5aa347c3d7a0d40755a341fa840af982560ff9dbb36cb4",
+      "copyExact": true
+    },
+    {
+      "path": "tests/browser-delivery-r10-http.mjs",
+      "sha256": "79eaeea764deb17f53f37b70b814bfa0b755218069519482a0a0186b25c99d87",
+      "copyExact": true
+    },
+    {
+      "path": "tests/browser-directional-r4.mjs",
+      "sha256": "9c258f14f0fd5b84b45090e74644c86d7cc912f821a862349f60af56fbc55ad2",
+      "copyExact": true
+    },
+    {
+      "path": "tests/browser-lucas-r11.mjs",
+      "sha256": "f62fb9fc439b65b3b7e417145a79319c9ed72a6b1eb521171a73c56a463fcd3d",
+      "copyExact": true
+    },
+    {
+      "path": "tests/browser-match-sequences-r8.mjs",
+      "sha256": "5b2389cefaf0e9a6ff6008f6b58a272ef51e2d3704521385a9e8dbbe5a80f9ce",
+      "copyExact": true
+    },
+    {
+      "path": "tests/browser-replay-vault-r13.mjs",
+      "sha256": "1f0c332cd14c56a3219c94b857b8d27200425735c94c146cd1cdc1203d077d31",
+      "copyExact": true
+    },
+    {
+      "path": "tests/browser-trial-audio-r16.mjs",
+      "sha256": "4aef12467caa2769e2764a2048facd025270d2db724630eedc366789b80bd3bb",
+      "copyExact": true
+    },
+    {
+      "path": "tests/browser-flight-r12.mjs",
+      "sha256": "3113c94c165e199a4fba81d813560641d9ebfa10589463f70c3a33d02ffd0995",
+      "copyExact": true
+    },
+    {
+      "path": "tests/browser-baker-r14.mjs",
+      "sha256": "304b8c27a5b3b30455c98a38c2df863ce6c79d8321e7b5051fedadaa9c450484",
+      "copyExact": true
+    },
+    {
+      "path": "tests/browser-audit-r9.mjs",
+      "sha256": "99191b05ee97bcf35e6d23a05524b880f4962d950eaa340cf639e35e3b4d5fa6",
+      "copyExact": true
+    },
+    {
+      "path": "tests/browser-compat-r34.mjs",
+      "sha256": "da455e381356d79eca39dcaa7d4078c659ed70e0ad1d9082640c82891b271fce",
+      "copyExact": true
+    }
+  ],
+  "commands": [
+    {
+      "suite": "r9",
+      "command": [
+        "/workspace/.tools/node-v22.16.0-linux-x64/bin/node",
+        "--import=./tests/browser-compat-r34.mjs",
+        "tests/browser-audit-r9.mjs"
+      ],
+      "exitCode": 0,
+      "passed": 10,
+      "failed": 0,
+      "log": "/workspace/scratch/r35-ci/repro/r9-compat.log",
+      "logSha256": "33abd1c3c7eb63f2dbc8b2363d588e883821ddfd50cf4141ee456acbb134efe7",
+      "report": "/workspace/scratch/r35-ci/repro/checkout/qa-audit-r9/BROWSER_AUDIT_R9_RESULTS.json",
+      "reportSha256": "d768b30c3d3777ec6ee6949ba931f4a41e53a999b16954308347df3942504cea"
+    },
+    {
+      "suite": "r15",
+      "command": [
+        "/workspace/.tools/node-v22.16.0-linux-x64/bin/node",
+        "--import=./tests/browser-compat-r34.mjs",
+        "tests/browser-baker-audio-r15.mjs"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 33.756,
+      "log": "/workspace/scratch/r35-ci/repro/r15-compat.log",
+      "logSha256": "7392a633ed88c03763fc5350c7787b8a54f291f1350a46371f6bf14b52226e4d",
+      "passed": 10,
+      "failed": 0,
+      "report": "/workspace/scratch/r35-ci/repro/checkout/qa-audio-r15-http/BROWSER_AUDIO_R15_RESULTS.json",
+      "reportSha256": "b3fa9f219738439a9349ffd7eddfbf02be745541417c6a57985ed4b4c60572b3"
+    },
+    {
+      "suite": "r7",
+      "command": [
+        "/workspace/.tools/node-v22.16.0-linux-x64/bin/node",
+        "--import=./tests/browser-compat-r34.mjs",
+        "tests/browser-catalog-replay-r7.mjs"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 8.208,
+      "log": "/workspace/scratch/r35-ci/repro/r7-compat.log",
+      "logSha256": "b2b88b1f286943deb300d50a06bbb3676431d8d27b3685203b9a0cc92979bcbf",
+      "passed": 8,
+      "failed": 0,
+      "report": "/workspace/scratch/r35-ci/repro/checkout/qa-catalog-replay-r7/BROWSER_R7_RESULTS.json",
+      "reportSha256": "08030c701e24e9193e2fd789770899a5ba42eb4f99a2af8b56ce28d737425152"
+    },
+    {
+      "suite": "r17",
+      "command": [
+        "/workspace/.tools/node-v22.16.0-linux-x64/bin/node",
+        "--import=./tests/browser-compat-r34.mjs",
+        "tests/browser-combat-text-r17.mjs"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 13.779,
+      "log": "/workspace/scratch/r35-ci/repro/r17-compat.log",
+      "logSha256": "924269d1ff76b3f429c08ed5fb7f63ae72bd97dca6c429a2fbb1e3ae02b3341d",
+      "passed": 12,
+      "failed": 0,
+      "report": "/workspace/scratch/r35-ci/repro/checkout/qa-combat-text-r17/BROWSER_COMBAT_TEXT_R17_RESULTS.json",
+      "reportSha256": "cc56b9dd39b9a42797efcbedf1048238f2604ff3ba62f09292ebe4c39e2f42aa"
+    },
+    {
+      "suite": "r10",
+      "command": [
+        "/workspace/.tools/node-v22.16.0-linux-x64/bin/node",
+        "--import=./tests/browser-compat-r34.mjs",
+        "tests/browser-delivery-r10-http.mjs"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 16.23,
+      "log": "/workspace/scratch/r35-ci/repro/r10-compat.log",
+      "logSha256": "2b89a36b59195a78b5e3870ee7efd67640cf27d42af312f6a51cb3b373a22a03",
+      "passed": 22,
+      "failed": 0,
+      "report": "/workspace/scratch/r35-ci/repro/checkout/qa-r10-http/R10_HTTP_RESULTS.json",
+      "reportSha256": "ebe919a1cdffc132a604204fb762e01c25f2e0ee2d48f2de903674b6b4191b8d"
+    },
+    {
+      "suite": "r4",
+      "command": [
+        "/workspace/.tools/node-v22.16.0-linux-x64/bin/node",
+        "--import=./tests/browser-compat-r34.mjs",
+        "tests/browser-directional-r4.mjs"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 17.588,
+      "log": "/workspace/scratch/r35-ci/repro/r4-compat.log",
+      "logSha256": "04000584702f538b50666543f5edefee44c4ea5adaaf0f41adc7d7be2010f6ce",
+      "passed": 6,
+      "failed": 0,
+      "report": "/workspace/scratch/r35-ci/repro/checkout/qa-directional-r4/BROWSER_R4_RESULTS.json",
+      "reportSha256": "44b7939303f948ab1f1d79e961a70105acc16eab6304676c5da8a4945dbb8a37"
+    },
+    {
+      "suite": "r11",
+      "command": [
+        "/workspace/.tools/node-v22.16.0-linux-x64/bin/node",
+        "--import=./tests/browser-compat-r34.mjs",
+        "tests/browser-lucas-r11.mjs"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 15.145,
+      "log": "/workspace/scratch/r35-ci/repro/r11-compat.log",
+      "logSha256": "571a157c8cf1a159b755a27af1e95da91b18770fdc7565a0b49e02cec24f3630",
+      "passed": 8,
+      "failed": 0,
+      "report": "/workspace/scratch/r35-ci/repro/checkout/qa-lucas-r11/BROWSER_LUCAS_R11_RESULTS.json",
+      "reportSha256": "81a8062931f16dad19e2575b28c5c818cb768d288149963aca36701ce699df1d"
+    },
+    {
+      "suite": "r8",
+      "command": [
+        "/workspace/.tools/node-v22.16.0-linux-x64/bin/node",
+        "--import=./tests/browser-compat-r34.mjs",
+        "tests/browser-match-sequences-r8.mjs"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 8.586,
+      "log": "/workspace/scratch/r35-ci/repro/r8-compat.log",
+      "logSha256": "04000584702f538b50666543f5edefee44c4ea5adaaf0f41adc7d7be2010f6ce",
+      "passed": 6,
+      "failed": 0,
+      "report": "/workspace/scratch/r35-ci/repro/checkout/qa-sequences-r8/BROWSER_R8_RESULTS.json",
+      "reportSha256": "b2e06a91b317f6aef5e4668d9b26c6a87408f580cd0ada5c998513f771c5d11c"
+    },
+    {
+      "suite": "r13",
+      "command": [
+        "/workspace/.tools/node-v22.16.0-linux-x64/bin/node",
+        "--import=./tests/browser-compat-r34.mjs",
+        "tests/browser-replay-vault-r13.mjs"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 19.653,
+      "log": "/workspace/scratch/r35-ci/repro/r13-compat.log",
+      "logSha256": "00ae4ffc4ecbc948d75d87d47c559e89f5fed67942d1cf150d4061fa9aabbc88",
+      "passed": 8,
+      "failed": 0,
+      "report": "/workspace/scratch/r35-ci/repro/checkout/qa-replay-r13/BROWSER_REPLAY_R13_RESULTS.json",
+      "reportSha256": "201c54009ce6a5fc404f2ea1af112053f1d9463e45284f5a6403d193e4096baf"
+    },
+    {
+      "suite": "r16",
+      "command": [
+        "/workspace/.tools/node-v22.16.0-linux-x64/bin/node",
+        "--import=./tests/browser-compat-r34.mjs",
+        "tests/browser-trial-audio-r16.mjs"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 20.06,
+      "log": "/workspace/scratch/r35-ci/repro/r16-compat.log",
+      "logSha256": "62c801195ca7071cdb95ae0cca85ca4ee168bfe28bda49c9b53ba99905046a39",
+      "passed": 12,
+      "failed": 0,
+      "report": "/workspace/scratch/r35-ci/repro/checkout/qa-trial-audio-r16/BROWSER_TRIAL_AUDIO_R16_RESULTS.json",
+      "reportSha256": "40a665f6a1e8c7f1419d2eaa897cf5e17f92091db09fd3d8f7c1278874fc55b1"
+    },
+    {
+      "suite": "r12-final",
+      "command": [
+        "/workspace/.tools/node-v22.16.0-linux-x64/bin/node",
+        "--import=./tests/browser-compat-r34.mjs",
+        "tests/browser-flight-r12.mjs"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 16.28,
+      "log": "/workspace/scratch/r35-ci/repro/r12-final-compat.log",
+      "logSha256": "5282be29ffd5af2525cb7b0cd2fac2fc22788ed4b13e1019834b705b4fa50177",
+      "passed": 8,
+      "failed": 0,
+      "report": "/workspace/scratch/r35-ci/repro/checkout/qa-flight-r12/BROWSER_FLIGHT_R12_RESULTS.json",
+      "reportSha256": "5a4bdf872ebc62afb4b1492bb6922a14f10f6d7b9125948057aa21b7606e0bd5"
+    },
+    {
+      "suite": "r14-final",
+      "command": [
+        "/workspace/.tools/node-v22.16.0-linux-x64/bin/node",
+        "--import=./tests/browser-compat-r34.mjs",
+        "tests/browser-baker-r14.mjs"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 23.646,
+      "log": "/workspace/scratch/r35-ci/repro/r14-final-compat.log",
+      "logSha256": "e185ca95095e8ceac8ee2460e1d2dd907615f6853a57463c9842b584744b906f",
+      "passed": 8,
+      "failed": 0,
+      "report": "/workspace/scratch/r35-ci/repro/checkout/qa-baker-r14-http/BROWSER_BAKER_R14_RESULTS.json",
+      "reportSha256": "7242ba295bd1c6146f937b4873791dfc365fa83e2b26120d53101e48a9926dce"
+    }
+  ],
+  "expectedCommands": 12,
+  "complete": true,
+  "scope": "Unchanged historical assertions on current controllers with explicit R34 legacy presentation fixture; no default character-arena flow or art certification.",
+  "finishedAt": "2026-11-02T05:07:34.574171+00:00",
+  "parentFilesChanged": [],
+  "totalPassedGroups": 118,
+  "totalFailedGroups": 0,
+  "diagnosticFailuresPreserved": [
+    {
+      "path": "/workspace/scratch/r35-ci/repro/r9-compat-initial-failure.log",
+      "sha256": "0df6661bacc709050f998c3287514c8b1a9bc2cdc736f90caa9bd76fdedc8e58"
+    },
+    {
+      "path": "/workspace/scratch/r35-ci/repro/r9-compat-initial-failure.json",
+      "sha256": "02294ebb8a4022e543e6a99c84656c13a9c09b75b96b7a49428fe5a0e0f643cf"
+    },
+    {
+      "path": "/workspace/scratch/r35-ci/repro/r9-compat-after-bar-fix-failure.log",
+      "sha256": "daaa3f7653465f6177e859888ff0e87711c0dc427e112f48d531c716115c2e2a"
+    },
+    {
+      "path": "/workspace/scratch/r35-ci/repro/r9-compat-after-bar-fix-failure.json",
+      "sha256": "49fa3def8cc19e44c838a0f49754507bb1a53a2566b76b6a59d10648809d6f68"
+    }
+  ]
+}

@@ -6,7 +6,7 @@
 > resident-evil-bow-protocol@0.7.3 verify:current
 > node scripts/verify-current-r34.mjs && node tests/verify-current-guard-r34.mjs && node scripts/contract.mjs && node scripts/context-contract.mjs && node tests/verify-lore.mjs && node tests/verify-engine.mjs && node tests/verify-pages.mjs && node tests/verify-ui.mjs && node tests/verify-v060.mjs && node tests/verify-v061.mjs && node tests/verify-v070.mjs && node tests/verify-v071.mjs && node tests/verify-v072.mjs && node scripts/audit-delivery-v072.mjs && node tests/verify-v073.mjs && node scripts/compile-directions.mjs && node tests/verify-directions.mjs && node tests/verify-directional-animation.mjs && node tests/verify-directional-r3.mjs && node tests/verify-directional-r4.mjs && node tests/verify-renderer-recovery-r5.mjs && node tests/verify-combat-stage-r6.mjs && node scripts/catalog-replay-contract.mjs && node tests/verify-catalog-replay-r7.mjs && node tests/verify-match-sequences-r8.mjs && node tests/verify-sequences-r8-addendum.mjs && node tests/verify-planning-integration-r8.mjs && node tests/verify-audit-r9.mjs && node tests/verify-delivery-r10.mjs && node tests/verify-lucas-r11.mjs && node tests/verify-lucas-continuity-r11.mjs && node tests/verify-flight-r12.mjs && node tests/verify-replay-vault-r13.mjs && node tests/verify-baker-stages-r14.mjs && node tests/verify-baker-audio-r15.mjs && node tests/verify-trial-audio-r16.mjs && node tests/verify-combat-text-r17.mjs && node tests/verify-access-context-r18.mjs && node tests/verify-menu-r20.mjs && node tests/verify-sprites-r20.mjs && node tests/verify-input-r32.mjs
 
-{"modified":8,"added":2261,"preservedGuardsVerified":true}
+{"modified":30,"added":2385,"preservedGuardsVerified":true}
 PASS The actual R34 boundary preserves both previous source guards
 PASS Previously published source remains frozen: src/catalog-duel-v070.js
 PASS Previously published source remains frozen: src/unified-engine-v060.js
@@ -37,6 +37,32 @@ PASS A workflow cannot bypass assertions: .github/workflows/source-fidelity-r26.
 PASS A workflow cannot bypass assertions: .github/workflows/source-fidelity-r31.yml
 PASS A workflow cannot bypass assertions: .github/workflows/gamedev-r32.yml
 PASS A workflow cannot bypass assertions: .github/workflows/source-fidelity-r33.yml
+PASS A workflow cannot bypass assertions: .github/workflows/access-r18-integration.yml
+PASS A workflow cannot bypass assertions: .github/workflows/audit-r9-browser.yml
+PASS A workflow cannot bypass assertions: .github/workflows/baker-audio-r15-browser.yml
+PASS A workflow cannot bypass assertions: .github/workflows/baker-audio-r15-integration.yml
+PASS A workflow cannot bypass assertions: .github/workflows/baker-r14-browser.yml
+PASS A workflow cannot bypass assertions: .github/workflows/baker-r14-integration.yml
+PASS A workflow cannot bypass assertions: .github/workflows/baker-r14-workbook.yml
+PASS A workflow cannot bypass assertions: .github/workflows/catalog-replay-r7.yml
+PASS A workflow cannot bypass assertions: .github/workflows/combat-text-r17-browser.yml
+PASS A workflow cannot bypass assertions: .github/workflows/combat-text-r17-integration.yml
+PASS A workflow cannot bypass assertions: .github/workflows/finalize-audit-r9.yml
+PASS A workflow cannot bypass assertions: .github/workflows/flight-r12-browser.yml
+PASS A workflow cannot bypass assertions: .github/workflows/flight-r12-integration.yml
+PASS A workflow cannot bypass assertions: .github/workflows/lucas-r11-browser.yml
+PASS A workflow cannot bypass assertions: .github/workflows/lucas-r11-integration.yml
+PASS A workflow cannot bypass assertions: .github/workflows/package-direction-r4.yml
+PASS A workflow cannot bypass assertions: .github/workflows/r10-browser.yml
+PASS A workflow cannot bypass assertions: .github/workflows/replay-r13-browser.yml
+PASS A workflow cannot bypass assertions: .github/workflows/replay-r13-integration.yml
+PASS A workflow cannot bypass assertions: .github/workflows/saves-r19-integration.yml
+PASS A workflow cannot bypass assertions: .github/workflows/trial-audio-r16-integration.yml
+PASS Every legacy teststep preload has an exact inverse to the published workflow
+PASS A legacy test cannot remove its explicitly scoped preload
+PASS A legacy test cannot use a job-wide preload before dependencies exist
+PASS The dashboard discovery correction restores every original assertion byte on inverse projection
+PASS A dashboard assertion cannot be removed with its discovery correction
 PASS Published R33 source validation cannot silently become an arbitrary checkout
 PASS The report writer cannot replace another release or follow a symlink
 PASS The current R33 delta and inherited current sources are admitted together
@@ -120,7 +146,7 @@ PASS The new browser suites cannot be made nonblocking
 PASS A package version change cannot invalidate old replay contracts unnoticed
 {"suite":"r32-current-guard","passed":40,"failed":0,"input":"Current inherited sources with strictly verified R33-only wiring projected in memory"}
 {"suite":"r33-current-guard","passed":39,"failed":0,"historicalPassed":40,"historicalFailed":0}
-{"passed":32,"failed":0,"inheritedR33":39,"inheritedR32":40}
+{"passed":58,"failed":0,"inheritedR33":39,"inheritedR32":40}
 Runtime contract 0.7.3 612953ce952cdd2bd6b5dd21a489bc961c2bfcc3ff1321d15528e341f34ee67d
 Context contract 4af946077d25392fb409ab18d6ed619bc955610ab4a17c38863a2921513977f6
 {
@@ -758,4 +784,4 @@ PASS Guard, throw escape, jump and dash retain their original action semantics
 
 PUBLISHED CHECK 1 exit=0 node tests/verify-save-center-r19.mjs
 PUBLISHED CHECK 2 exit=0 node tests/verify-preservation-r20.mjs
-{"schema": "re.bow.published-assertions-r29/1", "published_commit": "413b89bfafc18abc55be1404ff77bdaf573b1334", "plan": {"path": "tests/r32-historical-plan.json", "sha256": "8155777be8c063cd2098de3d23c30abf592067b7b0bea5ef2129e56474537764"}, "executions": [{"command": ["node", "tests/verify-save-center-r19.mjs"], "exit_code": 0, "executed_assertions": {"passed": 25, "failed": 0}, "log": "command-00.log", "log_sha256": "cf57302fd4f517d13718b3a1b63ffc41632dcb845442ccba12511f7642315a8d"}, {"command": ["node", "tests/verify-preservation-r20.mjs"], "exit_code": 0, "executed_assertions": {"passed": 8, "failed": 0}, "log": "command-01.log", "log_sha256": "68f41c950c00c05634aa10d00d0761d16b4fac53e2cc6dc90f570cd7f3c8daf1"}], "exit_code": 0, "duration_seconds": 11.546, "log_sha256": "0f0928fe285b9b9cb8c3e6ebcced8ceee49b829d2af46d3c4f810309a4350e4f", "runner_sha256": "0c452dfe4a21591c6237a634f1efad0b45feb0ac1079950deaabee94afb3f568", "git_archive_with_original_head_and_index": true, "historical_assertions_modified": false, "calling_checkout_sources_modified": false, "scope": "The published release and its recorded source hashes; current release tests remain separate."}
+{"schema": "re.bow.published-assertions-r29/1", "published_commit": "413b89bfafc18abc55be1404ff77bdaf573b1334", "plan": {"path": "tests/r32-historical-plan.json", "sha256": "8155777be8c063cd2098de3d23c30abf592067b7b0bea5ef2129e56474537764"}, "executions": [{"command": ["node", "tests/verify-save-center-r19.mjs"], "exit_code": 0, "executed_assertions": {"passed": 25, "failed": 0}, "log": "command-00.log", "log_sha256": "cf57302fd4f517d13718b3a1b63ffc41632dcb845442ccba12511f7642315a8d"}, {"command": ["node", "tests/verify-preservation-r20.mjs"], "exit_code": 0, "executed_assertions": {"passed": 8, "failed": 0}, "log": "command-01.log", "log_sha256": "68f41c950c00c05634aa10d00d0761d16b4fac53e2cc6dc90f570cd7f3c8daf1"}], "exit_code": 0, "duration_seconds": 11.639, "log_sha256": "0f0928fe285b9b9cb8c3e6ebcced8ceee49b829d2af46d3c4f810309a4350e4f", "runner_sha256": "0c452dfe4a21591c6237a634f1efad0b45feb0ac1079950deaabee94afb3f568", "git_archive_with_original_head_and_index": true, "historical_assertions_modified": false, "calling_checkout_sources_modified": false, "scope": "The published release and its recorded source hashes; current release tests remain separate."}

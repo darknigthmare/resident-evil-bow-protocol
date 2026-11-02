@@ -1,6 +1,6 @@
 {
   "schema": "re.bow.current-guard-tests-r34/1",
-  "passed": 32,
+  "passed": 58,
   "failed": 0,
   "checks": [
     {
@@ -124,6 +124,110 @@
       "pass": true
     },
     {
+      "name": "A workflow cannot bypass assertions: .github/workflows/access-r18-integration.yml",
+      "pass": true
+    },
+    {
+      "name": "A workflow cannot bypass assertions: .github/workflows/audit-r9-browser.yml",
+      "pass": true
+    },
+    {
+      "name": "A workflow cannot bypass assertions: .github/workflows/baker-audio-r15-browser.yml",
+      "pass": true
+    },
+    {
+      "name": "A workflow cannot bypass assertions: .github/workflows/baker-audio-r15-integration.yml",
+      "pass": true
+    },
+    {
+      "name": "A workflow cannot bypass assertions: .github/workflows/baker-r14-browser.yml",
+      "pass": true
+    },
+    {
+      "name": "A workflow cannot bypass assertions: .github/workflows/baker-r14-integration.yml",
+      "pass": true
+    },
+    {
+      "name": "A workflow cannot bypass assertions: .github/workflows/baker-r14-workbook.yml",
+      "pass": true
+    },
+    {
+      "name": "A workflow cannot bypass assertions: .github/workflows/catalog-replay-r7.yml",
+      "pass": true
+    },
+    {
+      "name": "A workflow cannot bypass assertions: .github/workflows/combat-text-r17-browser.yml",
+      "pass": true
+    },
+    {
+      "name": "A workflow cannot bypass assertions: .github/workflows/combat-text-r17-integration.yml",
+      "pass": true
+    },
+    {
+      "name": "A workflow cannot bypass assertions: .github/workflows/finalize-audit-r9.yml",
+      "pass": true
+    },
+    {
+      "name": "A workflow cannot bypass assertions: .github/workflows/flight-r12-browser.yml",
+      "pass": true
+    },
+    {
+      "name": "A workflow cannot bypass assertions: .github/workflows/flight-r12-integration.yml",
+      "pass": true
+    },
+    {
+      "name": "A workflow cannot bypass assertions: .github/workflows/lucas-r11-browser.yml",
+      "pass": true
+    },
+    {
+      "name": "A workflow cannot bypass assertions: .github/workflows/lucas-r11-integration.yml",
+      "pass": true
+    },
+    {
+      "name": "A workflow cannot bypass assertions: .github/workflows/package-direction-r4.yml",
+      "pass": true
+    },
+    {
+      "name": "A workflow cannot bypass assertions: .github/workflows/r10-browser.yml",
+      "pass": true
+    },
+    {
+      "name": "A workflow cannot bypass assertions: .github/workflows/replay-r13-browser.yml",
+      "pass": true
+    },
+    {
+      "name": "A workflow cannot bypass assertions: .github/workflows/replay-r13-integration.yml",
+      "pass": true
+    },
+    {
+      "name": "A workflow cannot bypass assertions: .github/workflows/saves-r19-integration.yml",
+      "pass": true
+    },
+    {
+      "name": "A workflow cannot bypass assertions: .github/workflows/trial-audio-r16-integration.yml",
+      "pass": true
+    },
+    {
+      "name": "Every legacy teststep preload has an exact inverse to the published workflow",
+      "pass": true
+    },
+    {
+      "name": "A legacy test cannot remove its explicitly scoped preload",
+      "pass": true
+    },
+    {
+      "name": "A legacy test cannot use a job-wide preload before dependencies exist",
+      "pass": true
+    },
+    {
+      "name": "The dashboard discovery correction restores every original assertion byte on inverse projection",
+      "pass": true
+    },
+    {
+      "name": "A dashboard assertion cannot be removed with its discovery correction",
+      "pass": true
+    },
+    {
       "name": "Published R33 source validation cannot silently become an arbitrary checkout",
       "pass": true
     },
@@ -139,11 +243,11 @@
   "sourceFiles": [
     {
       "path": "scripts/verify-current-r34.mjs",
-      "sha256": "f8a4a78e10eb3a565659a149bb9965040ab7fd882dabca232cce0b15a96418e3"
+      "sha256": "111b45a045052149778f1e2fb3744a6d572474fa59cff0345279a6ca54c166b9"
     },
     {
       "path": "tests/verify-current-guard-r34.mjs",
-      "sha256": "1b42f63a21a4104914515e47c446127541bbe1d20b3358d8df3c44d6c37304b3"
+      "sha256": "881e60380c5298730b5f07d708ac3d79604b6a5d2ee47dcde8503399797d45fd"
     },
     {
       "path": "scripts/verify-current-r33.mjs",
@@ -166,6 +270,10 @@
       "sha256": "68f418971d66ca7d801728336c827f66c7c0bd8ec31d9fd743f607cd4177a461"
     },
     {
+      "path": "tests/browser-fidelity-dashboard-r24.mjs",
+      "sha256": "b0cf6c95e19ad26e059beadfc027947868c3f2db8f560b1739939bb48676271d"
+    },
+    {
       "path": ".github/workflows/source-fidelity-r25.yml",
       "sha256": "418fe9510f6036793f23adf3f85f625f7240e6a331c8b4771d978772a89f9bf7"
     },
@@ -184,6 +292,90 @@
     {
       "path": ".github/workflows/source-fidelity-r33.yml",
       "sha256": "289a566d58e9e68503ac9dbc2bf5322216a6e0e271fd997bba15187e65873908"
+    },
+    {
+      "path": ".github/workflows/access-r18-integration.yml",
+      "sha256": "dcb3e880b9e715041f4f0aaf83bb1daafdabd551434a9b163fabbe984a537b64"
+    },
+    {
+      "path": ".github/workflows/audit-r9-browser.yml",
+      "sha256": "d849bdd78bd064d33c49d8c01ecbcd50b86867cb581e07e203b3da91b6562d70"
+    },
+    {
+      "path": ".github/workflows/baker-audio-r15-browser.yml",
+      "sha256": "43cda4254de1abda0c392f2a90ee115d869f95f324ccb92d619a89717dcc3f30"
+    },
+    {
+      "path": ".github/workflows/baker-audio-r15-integration.yml",
+      "sha256": "68942ead523555f5251bc9df0cc050173efd41800eba6ac38abf39164218a3df"
+    },
+    {
+      "path": ".github/workflows/baker-r14-browser.yml",
+      "sha256": "b25d453a1a1248d23385ee53e4759a3e50984c062539285e0cca881a107995f7"
+    },
+    {
+      "path": ".github/workflows/baker-r14-integration.yml",
+      "sha256": "ce713df01691f1117105236fb3be22377fda44e091ada3d7cb8bbd7debb72fb8"
+    },
+    {
+      "path": ".github/workflows/baker-r14-workbook.yml",
+      "sha256": "7ca0cba2921fb4396334ebdab95f4ad16521460d817bb46dfae794a781d67b96"
+    },
+    {
+      "path": ".github/workflows/catalog-replay-r7.yml",
+      "sha256": "e289c5e497b32fc95d0f8e4df05f7cd75ba3148ce9d978d0b52ac0a703c2d44f"
+    },
+    {
+      "path": ".github/workflows/combat-text-r17-browser.yml",
+      "sha256": "8930c5f58bea36d891ce54f5f42a15be4380bab49e38b2de75ad47079d8d9bb1"
+    },
+    {
+      "path": ".github/workflows/combat-text-r17-integration.yml",
+      "sha256": "82575b4bbf5c011c55fb5c5a5eb415ccee05b566b08329174c3707708767a84b"
+    },
+    {
+      "path": ".github/workflows/finalize-audit-r9.yml",
+      "sha256": "bc29c2826968f529108c29fb37c3f718fd58b8a1cb253776fec9f30242d2e370"
+    },
+    {
+      "path": ".github/workflows/flight-r12-browser.yml",
+      "sha256": "54981806377f2b697edd527157b1da0a60d933ce859aafe87783617a94acf150"
+    },
+    {
+      "path": ".github/workflows/flight-r12-integration.yml",
+      "sha256": "b071aa2fee435ce41fe4fd905d565872be9d498aca01feb57dd7d96e25e2f8d9"
+    },
+    {
+      "path": ".github/workflows/lucas-r11-browser.yml",
+      "sha256": "a1335e4506eea6b47790865ac15e5d2d0c11ad50dd31a5c1b6ac13f1b2680e1f"
+    },
+    {
+      "path": ".github/workflows/lucas-r11-integration.yml",
+      "sha256": "3110de33c1275a9bfbc5f99d0cc8f47105dd633a58f982f6102938fa66127efa"
+    },
+    {
+      "path": ".github/workflows/package-direction-r4.yml",
+      "sha256": "c2d2a13ae90548b65d57ec8ea1762c384a8d3dd9cfde81df0cb5dda298a22205"
+    },
+    {
+      "path": ".github/workflows/r10-browser.yml",
+      "sha256": "ba55baca3e97ffab593a9f1cc58c227fca1ed485beaac5611fc6f4dbb5cf3048"
+    },
+    {
+      "path": ".github/workflows/replay-r13-browser.yml",
+      "sha256": "c197120e4c38ba803edb728a97d7a361d9467cf2080c378b65566cd8d0b3a87e"
+    },
+    {
+      "path": ".github/workflows/replay-r13-integration.yml",
+      "sha256": "81fa098cfc5dd8a1a7b74d0085213d4f69ace70e4b1bac73e0f9bce62ad33a5f"
+    },
+    {
+      "path": ".github/workflows/saves-r19-integration.yml",
+      "sha256": "6ef256864ed237f823b5e3ba0a12720a7be3152fa12dffc2449ed62f54a758fb"
+    },
+    {
+      "path": ".github/workflows/trial-audio-r16-integration.yml",
+      "sha256": "2887e6186fe9ca0f688937cc6f1c4998896fa15a06908a9f925a3751eac30481"
     }
   ],
   "scope": "R34 boundary fault injections. The original39 R33 and40 R32 cases execute unchanged after the exact reviewed R34 mount/pipeline projection; no original current functional assertion is removed."
