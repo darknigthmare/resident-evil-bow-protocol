@@ -126,7 +126,15 @@ export const WORKFLOWS = ['.github/workflows/source-fidelity-r25.yml', '.github/
   ...Object.keys(LEGACY_BROWSER_WORKFLOWS)];
 export const DISCOVERY_TEST = "tests/browser-fidelity-dashboard-r24.mjs";
 export const DISCOVERY_SUBSTITUTION = ["// The header always points to the latest installed adapter; historical dashboards stay independently checked.\nconst installedAdapters = [...codex.matchAll(/<script src=\"modules\\/fidelity-r(\\d+)\\/dossier-link\\.js\"><\\/script>/g)].map(match => Number(match[1]));\n", "// Only adapters owning the primary source entry determine its current dashboard.\n// Separately owned developer additions keep their own links and do not replace it.\nconst installedAdapters = [...codex.matchAll(/<script src=\"modules\\/fidelity-r(\\d+)\\/dossier-link\\.js\"><\\/script>/g)]\n  .filter(match => /getElementById\\(\\s*['\"]fidelityR23Link['\"]\\s*\\)/.test(fs.readFileSync(path.join(root, 'modules/fidelity-r' + match[1] + '/dossier-link.js'), 'utf8')))\n  .map(match => Number(match[1]));\n"];
-export const REVIEWED_MODIFIED_PATHS = ['package.json', ...MOUNTS, ...WORKFLOWS, DISCOVERY_TEST];
+// The developer-tool integration has a closed path list. It adds no runtime
+// namespace, client settings or hook configuration to the R34 boundary.
+export const AI_TOOLING_ADDITIONS = Object.freeze([
+  '.ai-tools/.gitignore', '.ai-tools/README.md', '.ai-tools/setup.py',
+  '.ai-tools/sources.json', '.ai-tools/tests/test_setup.py', 'CLAUDE.md',
+]);
+const AI_TOOLING_PATHS = new Set(AI_TOOLING_ADDITIONS);
+const AI_TOOLING_AGENTS_APPEND_SHA256 = '5a5ed7cf0d3167a4df3f3fcb2327072bbfc5306fb62e98ed74e8135d33babb28';
+export const REVIEWED_MODIFIED_PATHS = ['package.json', ...MOUNTS, ...WORKFLOWS, DISCOVERY_TEST, 'AGENTS.md'];
 const MODIFIED = new Set(REVIEWED_MODIFIED_PATHS);
 export const SUBSTITUTIONS = [
   ['fidelity-r33/combat/generated-runtime.js', 'fidelity-r34/combat/generated-runtime.js'],
@@ -138,6 +146,7 @@ function once(source, before, after) {assert.equal(source.split(before).length -
 export function allowedAddition(file) {
   if (typeof file !== 'string' || file.includes('\\') || file.includes('\0') || path.posix.normalize(file) !== file || file.startsWith('/')
       || file.split('/').some(part => !part || part === '.' || part === '..') || /\.(?:tmp|part)$/.test(file)) return false;
+  if (AI_TOOLING_PATHS.has(file)) return true;
   if (file.startsWith('modules/fidelity-r34/')) return /^(?:assets|combat|selection|evolutions|validation)\//.test(file.slice('modules/fidelity-r34/'.length));
   return /^(?:scripts|tests)\/[a-z0-9][a-z0-9_-]*r34[a-z0-9_-]*\.(?:mjs|js|py)$/.test(file)
     || /^docs\/[^/]*R34[^/]*(?:\/[^/]+)*$/.test(file) || file === '.github/workflows/source-fidelity-r34.yml';
@@ -189,6 +198,22 @@ export function expectedWorkflow(file, source) {
   source = once(source, 'name: Current R33 browser -', 'name: Current R33 browser compatibility view -');
   return once(source, "          node '${{ matrix.script }}'\n", "          node --import=./tests/browser-compat-r34.mjs '${{ matrix.script }}'\n");
 }
+export function validateAITooling(snapshot) {
+  const additions = new Map(snapshot.changes.map(item => [item.file, item.status]));
+  const active = additions.has('AGENTS.md') || AI_TOOLING_ADDITIONS.some(file => additions.has(file));
+  if (!active) return false;
+  assert.equal(additions.get('AGENTS.md'), 'M', 'The AI tooling requires its reviewed AGENTS.md append');
+  for (const file of AI_TOOLING_ADDITIONS) {
+    assert.equal(additions.get(file), 'A', 'The complete reviewed AI tooling file set is required: ' + file);
+  }
+  const baseline = snapshot.baseline.get('AGENTS.md');
+  const current = snapshot.current.get('AGENTS.md');
+  assert(typeof baseline === 'string' && typeof current === 'string' && current.startsWith(baseline),
+    'All published agent instructions must remain byte-for-byte before the tooling append');
+  assert.equal(createHash('sha256').update(current.slice(baseline.length)).digest('hex'), AI_TOOLING_AGENTS_APPEND_SHA256,
+    'Only the reviewed AI tooling appendix may be added to AGENTS.md');
+  return true;
+}
 function git(root, ...args) {return execFileSync('git', args, {cwd: root, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024});}
 function changes(raw) {const values = raw.split('\0').filter(Boolean); assert.equal(values.length % 2, 0); const out = []; for (let i = 0; i < values.length; i += 2) out.push({status: values[i], file: values[i + 1]}); return out;}
 export function collectSnapshot(root = ROOT) {
@@ -227,6 +252,7 @@ export function validateSnapshot(snapshot) {
     const stat = snapshot.files.get(item.file); assert(stat?.regular && !stat.symlink && stat.bytes > 0 && stat.bytes < 100 * 1024 * 1024, 'A delivered file must be regular, nonempty and below100MiB');
   }
   for (const file of ['package.json', ...WORKFLOWS]) assert(seen.has(file), 'Required reviewed pipeline boundary absent: ' + file);
+  const aiTooling = validateAITooling(snapshot);
   assert.deepEqual(JSON.parse(snapshot.current.get('package.json')), expectedPackage(JSON.parse(snapshot.baseline.get('package.json'))), 'All original functional commands and explicit compatibility suites must remain');
   for (const file of WORKFLOWS) assert.equal(snapshot.current.get(file), expectedWorkflow(file, snapshot.baseline.get(file)), 'Workflow changes exceed the reviewed scope: ' + file);
   assert(seen.has(DISCOVERY_TEST), 'The reviewed primary-link discovery correction is required');
@@ -236,7 +262,8 @@ export function validateSnapshot(snapshot) {
   return {schema: 're.bow.current-scope-r34/1', baselineCommit: BASE_COMMIT,
     modified: snapshot.changes.filter(item => item.status === 'M').map(item => item.file).sort(), added: snapshot.changes.filter(item => item.status === 'A').map(item => item.file).sort(),
     preservedR33Guard: {modified: inherited.modified.length, added: inherited.added.length, inheritedR32Guard: inherited.inheritedGuard},
-    functionalTestsArchived: false, scope: 'R34 art and presentation boundary. All original engine functions remain current; legacy interaction assertions use a declared current-code compatibility view, while new sequential selection is tested by default.'};
+    functionalTestsArchived: false, aiTooling,
+    scope: 'R34 art and presentation boundary, with the exact optional developer-tool files and additive agent instructions. All original engine functions remain current; legacy interaction assertions use a declared current-code compatibility view, while new sequential selection is tested by default.'};
 }
 export function sourceFiles(root = ROOT) {return ['scripts/verify-current-r34.mjs', 'tests/verify-current-guard-r34.mjs', 'scripts/verify-current-r33.mjs', 'tests/verify-current-guard-r33.mjs',
   'scripts/verify-current-r32.mjs', 'tests/verify-current-guard-r32.mjs', 'package.json', DISCOVERY_TEST, ...WORKFLOWS].map(file => ({path: file, sha256: createHash('sha256').update(fs.readFileSync(path.join(root, file))).digest('hex')}));}
