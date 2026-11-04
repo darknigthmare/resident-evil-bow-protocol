@@ -1,0 +1,9 @@
+{
+  "schema": "re.bow.published-check-plan-r29/1",
+  "commands": [
+    ["{python}", "scripts/fidelity-progress-r34.py", "check"],
+    ["{python}", "scripts/fidelity-progress-r34.py", "reproduce"],
+    ["{python}", "scripts/audit-delivery-r34.py", "--check"],
+    ["node", "tests/verify-r34-integration.mjs"]
+  ]
+}
