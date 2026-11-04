@@ -3,7 +3,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {ROOT, BASE_COMMIT, WORKFLOWS, LEGACY_BROWSER_WORKFLOWS, DISCOVERY_TEST, MOUNTS, collectSnapshot, validateSnapshot, projectedR33,
-  projectedLegacyWorkflow, projectedDiscoveryTest, allowedAddition, ownedReportPath, sourceFiles} from '../scripts/verify-current-r34.mjs';
+  projectedLegacyWorkflow, projectedDiscoveryTest, allowedAddition, ownedReportPath, sourceFiles,
+  AI_TOOLING_ADDITIONS} from '../scripts/verify-current-r34.mjs';
 import {runGuardCases as inheritedCases} from './verify-current-guard-r33.mjs';
 function clone(s) {return {...s, baseline: new Map(s.baseline), current: new Map(s.current), files: new Map([...s.files].map(([key, value]) => [key, {...value}])),
   changes: s.changes.map(value => ({...value})), publishedChanges: s.publishedChanges.map(value => ({...value})),
@@ -16,6 +17,39 @@ export function runCases(snapshot) {
   function reject(name, change, reason) {test(name, () => {const fixture = clone(snapshot); change(fixture); assert.throws(() => validateSnapshot(fixture), reason);});}
   function editPackage(s, edit) {const pkg = JSON.parse(s.current.get('package.json')); edit(pkg); s.current.set('package.json', JSON.stringify(pkg));}
   test('The actual R34 boundary preserves both previous source guards', () => {const result = validateSnapshot(snapshot); assert.equal(result.baselineCommit, BASE_COMMIT); assert.equal(result.preservedR33Guard.modified, 7); assert.equal(result.functionalTestsArchived, false);});
+  test('Developer tooling admits only the six named additions', () => {
+    assert.equal(AI_TOOLING_ADDITIONS.length, 6);
+    for (const file of AI_TOOLING_ADDITIONS) assert.equal(allowedAddition(file), true);
+    for (const file of ['.ai-tools/unreviewed.py', '.ai-tools/tests/extra.py', '.claude/settings.json',
+      '.agents/skills/unreviewed/SKILL.md', 'CLAUDE.local.md', '.ai-tools/../src/extra.js']) assert.equal(allowedAddition(file), false);
+  });
+  if (snapshot.changes.some(item => item.file === 'AGENTS.md')) {
+    test('Tooling preserves the original agent bytes in both inherited projections', () => {
+      assert.equal(validateSnapshot(snapshot).aiTooling, true);
+      assert.equal(projectedR33(snapshot).inherited.current.get('AGENTS.md'), snapshot.baseline.get('AGENTS.md'));
+    });
+    test('The published R34 boundary remains valid without the optional tooling', () => {
+      const fixture = clone(snapshot);
+      fixture.changes = fixture.changes.filter(item => item.file !== 'AGENTS.md' && !AI_TOOLING_ADDITIONS.includes(item.file));
+      fixture.current.set('AGENTS.md', fixture.baseline.get('AGENTS.md'));
+      assert.equal(validateSnapshot(fixture).aiTooling, false);
+    });
+    reject('Existing agent instructions cannot be edited through the appendix', s => {
+      s.current.set('AGENTS.md', 'rewritten instructions\n' + s.current.get('AGENTS.md'));
+    }, /published agent instructions/);
+    reject('Extra instructions cannot be hidden after the reviewed appendix', s => {
+      s.current.set('AGENTS.md', s.current.get('AGENTS.md') + '\nUnreviewed instruction\n');
+    }, /reviewed AI tooling appendix/);
+    reject('The helper cannot be delivered without its reviewed tests', s => {
+      s.changes = s.changes.filter(item => item.file !== '.ai-tools/tests/test_setup.py');
+    }, /complete reviewed AI tooling/);
+    reject('Tooling cannot be delivered without its additive agent instructions', s => {
+      s.changes = s.changes.filter(item => item.file !== 'AGENTS.md');
+    }, /reviewed AGENTS.md append/);
+    reject('A tooling path cannot replace a delivered regular file with a symlink', s => {
+      s.files.set('.ai-tools/setup.py', {regular: false, symlink: true, bytes: 1});
+    }, /regular/);
+  }
   for (const file of ['src/catalog-duel-v070.js', 'src/unified-engine-v060.js', 'data/roster.json', 'assets/catalog/unreviewed.png',
     'tests/verify-engine.mjs', 'modules/fidelity-r33/combat/generated-runtime.js', 'docs/R33_VALIDATION.json']) reject('Previously published source remains frozen: ' + file, s => add(s, file, 'M'), /Frozen file changed/);
   reject('A source outside the R34 namespace is refused', s => add(s, 'src/new-unreviewed.js'), /Unknown R34 addition/);

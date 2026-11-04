@@ -15,7 +15,7 @@ defaults:
     shell: bash
 jobs:
   source:
-    name: Current R34 receipts, admission boundaries and original engine
+    name: Current tooling and engine, published R34 receipts
     runs-on: ubuntu-latest
     timeout-minutes: 35
     steps:
@@ -35,17 +35,17 @@ jobs:
           "$RUNNER_TEMP/fidelity-r34-venv/bin/python" -m pip install --timeout 60 --retries 2 Pillow==12.3.0 openpyxl==3.1.5 lxml==6.1.1 PyYAML==6.0.3
           echo "$RUNNER_TEMP/fidelity-r34-venv/bin" >> "$GITHUB_PATH"
           npm install --no-audit --no-fund --no-save --package-lock=false --fetch-timeout=60000 --fetch-retries=2 @napi-rs/canvas@0.1.80
-      - name: Verify the delivered source and media bindings before any report refresh
+      - name: Verify current tooling and media, then published R34 receipts before report refresh
         run: |
           node scripts/verify-current-r34.mjs
+          node scripts/verify-ai-tooling-r34.mjs
+          node tests/verify-ai-tooling-guard-r34.mjs
+          python3 -B -m unittest discover -s .ai-tools/tests -v
           python3 scripts/build-roster-jobs-r34.py --check
           python3 scripts/build-roster-assets-r34.py --check
           python3 scripts/build-roster-runtime-r34.py --check
           python3 scripts/build-selection-r34.py --check
-          python3 scripts/fidelity-progress-r34.py check
-          python3 scripts/fidelity-progress-r34.py reproduce
-          python3 scripts/audit-delivery-r34.py --check
-          node tests/verify-r34-integration.mjs
+          python3 scripts/run-published-release-r29.py --commit b1ec3d3e193d7e629079ad390d73652c17b868c1 --evidence qa-fidelity-r34-ci/published-r34-receipts --plan docs/AI_TOOLING_R34_RECEIPT_PLAN.json
       - name: Execute new source assertions with fresh reports
         run: |
           mkdir -p qa-fidelity-r34-ci
