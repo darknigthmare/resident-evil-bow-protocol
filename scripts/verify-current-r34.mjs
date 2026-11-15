@@ -131,6 +131,12 @@ export const DISCOVERY_SUBSTITUTION = ["// The header always points to the lates
 export const AI_TOOLING_ADDITIONS = Object.freeze([
   '.ai-tools/.gitignore', '.ai-tools/README.md', '.ai-tools/setup.py',
   '.ai-tools/sources.json', '.ai-tools/tests/test_setup.py', 'CLAUDE.md',
+  '.agents/skills/obscura/LICENSE',
+  '.agents/skills/obscura/SKILL.md',
+  '.ai-tools/obscura/README.md',
+  '.ai-tools/obscura/source.json',
+  '.claude/skills/obscura/LICENSE',
+  '.claude/skills/obscura/SKILL.md',
 ]);
 const AI_TOOLING_PATHS = new Set(AI_TOOLING_ADDITIONS);
 const AI_TOOLING_AGENTS_APPEND_SHA256 = '5a5ed7cf0d3167a4df3f3fcb2327072bbfc5306fb62e98ed74e8135d33babb28';

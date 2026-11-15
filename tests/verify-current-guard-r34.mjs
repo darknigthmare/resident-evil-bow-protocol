@@ -17,11 +17,13 @@ export function runCases(snapshot) {
   function reject(name, change, reason) {test(name, () => {const fixture = clone(snapshot); change(fixture); assert.throws(() => validateSnapshot(fixture), reason);});}
   function editPackage(s, edit) {const pkg = JSON.parse(s.current.get('package.json')); edit(pkg); s.current.set('package.json', JSON.stringify(pkg));}
   test('The actual R34 boundary preserves both previous source guards', () => {const result = validateSnapshot(snapshot); assert.equal(result.baselineCommit, BASE_COMMIT); assert.equal(result.preservedR33Guard.modified, 7); assert.equal(result.functionalTestsArchived, false);});
-  test('Developer tooling admits only the six named additions', () => {
-    assert.equal(AI_TOOLING_ADDITIONS.length, 6);
+  test('Developer tooling admits only the twelve named additions', () => {
+    assert.equal(AI_TOOLING_ADDITIONS.length, 12);
     for (const file of AI_TOOLING_ADDITIONS) assert.equal(allowedAddition(file), true);
     for (const file of ['.ai-tools/unreviewed.py', '.ai-tools/tests/extra.py', '.claude/settings.json',
-      '.agents/skills/unreviewed/SKILL.md', 'CLAUDE.local.md', '.ai-tools/../src/extra.js']) assert.equal(allowedAddition(file), false);
+      '.agents/skills/unreviewed/SKILL.md', '.agents/skills/obscura/hook.js',
+      '.claude/skills/obscura/settings.json', '.ai-tools/obscura/private.json',
+      'CLAUDE.local.md', '.ai-tools/../src/extra.js']) assert.equal(allowedAddition(file), false);
   });
   if (snapshot.changes.some(item => item.file === 'AGENTS.md')) {
     test('Tooling preserves the original agent bytes in both inherited projections', () => {
