@@ -14,6 +14,12 @@ export const DECLARATION_PATH = 'docs/AI_TOOLING_SUCCESSOR_R34.json';
 export const PLAN_PATH = 'docs/AI_TOOLING_R34_RECEIPT_PLAN.json';
 export const WORKFLOW_PATH = '.github/workflows/source-fidelity-r34.yml';
 export const EXPECTED_PATHS = Object.freeze({
+  '.agents/skills/obscura/LICENSE': 'A',
+  '.agents/skills/obscura/SKILL.md': 'A',
+  '.ai-tools/obscura/README.md': 'A',
+  '.ai-tools/obscura/source.json': 'A',
+  '.claude/skills/obscura/LICENSE': 'A',
+  '.claude/skills/obscura/SKILL.md': 'A',
   '.ai-tools/.gitignore': 'A',
   '.ai-tools/README.md': 'A',
   '.ai-tools/setup.py': 'A',
@@ -28,6 +34,17 @@ export const EXPECTED_PATHS = Object.freeze({
   'tests/verify-ai-tooling-guard-r34.mjs': 'A',
   [PLAN_PATH]: 'A',
   [DECLARATION_PATH]: 'A',
+});
+// Obscura source admission after 7017eb29b3206b947ed02d2bd7fccb066492aa87.
+// These exact reviewed bytes cannot be replaced by merely editing the mutable
+// source-scope declaration. Published R34/R31 receipts keep their own revisions.
+export const OBSCURA_SOURCE_SHA256 = Object.freeze({
+  ".agents/skills/obscura/LICENSE": "50e6751797c50dedd75ef1b8a0d9e42f5f8472e9fbce91f34718e9f97b0c780a",
+  ".agents/skills/obscura/SKILL.md": "2ab71d43ffa87c4d0fa0efcd895258a7319592f4949bf18a2294a9953ad9a065",
+  ".ai-tools/obscura/README.md": "c856d14393876f06b04d579a4ea7e34add28522f943ffcf8edca0c105314ed6d",
+  ".ai-tools/obscura/source.json": "272e03889f6bf42c5c77bb8718f49954d858d839266f7e4f6103d84d92e23368",
+  ".claude/skills/obscura/LICENSE": "50e6751797c50dedd75ef1b8a0d9e42f5f8472e9fbce91f34718e9f97b0c780a",
+  ".claude/skills/obscura/SKILL.md": "2ab71d43ffa87c4d0fa0efcd895258a7319592f4949bf18a2294a9953ad9a065"
 });
 export const RECEIPT_PLAN = Object.freeze({
   schema: 're.bow.published-check-plan-r29/1',
@@ -123,6 +140,9 @@ export function validateSnapshot(snapshot) {
   }
   assert.deepEqual([...declared].sort(), Object.keys(EXPECTED_PATHS).filter(file => file !== DECLARATION_PATH).sort(),
     'Every successor source must have a declared binding');
+  for (const [file, expected] of Object.entries(OBSCURA_SOURCE_SHA256)) {
+    assert.equal(hash(snapshot.current.get(file)), expected, 'Reviewed Obscura bytes differ: ' + file);
+  }
   const before = snapshot.baseline.get('AGENTS.md'), after = snapshot.current.get('AGENTS.md');
   assert(after.subarray(0, before.length).equals(before), 'Published agent instructions must remain exact');
   assert.equal(hash(after.subarray(before.length)), AGENTS_APPEND_SHA256, 'Only the reviewed tooling appendix is admitted');

@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {ROOT, BASE_COMMIT, DECLARATION_PATH, PLAN_PATH, WORKFLOW_PATH, hash,
-  collectSnapshot, validateSnapshot} from '../scripts/verify-ai-tooling-r34.mjs';
+  collectSnapshot, validateSnapshot, OBSCURA_SOURCE_SHA256} from '../scripts/verify-ai-tooling-r34.mjs';
 import {ownedReportPath} from '../scripts/verify-current-r33.mjs';
 
 function clone(snapshot) {
@@ -37,7 +37,7 @@ export function runCases(snapshot) {
     assert.equal(result.publishedPredecessor, BASE_COMMIT);
     assert.equal(result.currentRuntimeInputsUnchanged, true);
     assert.equal(result.historicalEvidenceTransferred, false);
-    assert.equal(result.changedPaths.length, 14);
+    assert.equal(result.changedPaths.length, 20);
   });
   for (const file of ['src/unified-engine-v060.js', 'data/roster.json', 'assets/catalog/new.png',
     'docs/R34_CURRENT_GUARD_TESTS.json', 'docs/R34_CI_VALIDATION.json', 'docs/BOW_FIDELITE_R34.xlsx']) {
@@ -46,6 +46,15 @@ export function runCases(snapshot) {
   }
   reject('No broad new skill namespace is admitted', s => s.changes.push({file: '.claude/skills/unreviewed/SKILL.md', status: 'A'}),
     /outside the tooling scope/);
+  for (const file of Object.keys(OBSCURA_SOURCE_SHA256)) {
+    reject('Obscura bytes stay exact even with a forged source declaration: ' + file,
+      s => editBoundFile(s, file, source => source + '\nchanged\n'), /Reviewed Obscura bytes differ/);
+  }
+  reject('Obscura cannot omit its upstream licence', s => {
+    s.changes = s.changes.filter(item => item.file !== '.claude/skills/obscura/LICENSE');
+  }, /complete tooling successor/);
+  reject('An unreviewed Obscura hook cannot be added',
+    s => s.changes.push({file: '.agents/skills/obscura/hook.js', status: 'A'}), /outside the tooling scope/);
   reject('A declared file cannot be removed', s => {s.changes.find(item => item.file === '.ai-tools/setup.py').status = 'D';},
     /Unreviewed change kind/);
   reject('A duplicate delta entry is rejected', s => s.changes.push({...s.changes[0]}), /Duplicate tooling path/);
