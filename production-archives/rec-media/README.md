@@ -1,6 +1,28 @@
 # Resident Evil Combat - publication des lots de production
 
-Cette branche de la [PR #22](https://github.com/darknigthmare/resident-evil-bow-protocol/pull/22) conserve les snapshots V5 et V6 pour revue. Les fichiers figés de chaque lot et leurs archives ne sont pas réécrits lors de leur publication.
+Cette branche de la [PR #22](https://github.com/darknigthmare/resident-evil-bow-protocol/pull/22) conserve les snapshots V5, V6 et V7 pour revue. Les fichiers figés de chaque lot et leurs archives ne sont pas réécrits lors de leur publication.
+
+## Lot B.O.W. V7 du 19 novembre 2026
+
+Le [snapshot V7](v7/README.md) conserve **six poses gauches candidates après revue**, **trois essais non retenus** et leurs preuves : Fumer WM-002 RE7 Not a Hero, Bandersnatch CODE: Veronica, Iron Maiden RE4 2005, Verdugo RE4 Remake 2023, Soldat Jet Village et Vârcolac Village.
+
+Fumer 02 réduit le défaut de détourage de 01 ; Soldat Jet 02 corrige l’orientation globale trop frontale de 01. Mama Mold 01 reste un essai non retenu ; sa correction 02 a été refusée. Les deux appels refusés du lot sont Molded 01 et Mama Mold 02, sans nouvel appel après refus. Little Crawler et Iron Maiden 2023 restent sans génération, respectivement faute de topologie suffisamment lisible et d’épines entièrement cadrées.
+
+Les [rapports QA](v7/manifests/ASSET_MANIFEST_V7.json) conservent les limites de contours, marges et surfaces cachées. La fidélité 1:1 et l’admission moteur restent fausses ; aucune animation ou intégration de jeu n’est validée. Le [rapport sur Eliminator blanc RE0](v7/docs/REFERENCE_RECOVERY_AFTER_V6_ELIMINATOR.md) est inclus sous forme textuelle ; sa référence reste tenue, sans image produite.
+
+| Conservation V7 | Résultat |
+| --- | --- |
+| PNG originaux | 9 : 6 candidats et 3 essais ; 7 sujets avec au moins un PNG |
+| Fichiers directement consultables | 30 sous `v7/` |
+| Taille du ZIP | 11 736 976 octets |
+| SHA-256 du ZIP | `6253627cbc7af95ae2251eb37d4788824203784cee7650f10d4781063a802ba8` |
+| Intégrité | 30 membres identiques, CRC valides, 29 empreintes internes vérifiées |
+| Conservation des entrées gelées | 26 fichiers inchangés ; 9 PNG identiques aux originaux de génération et aux SHA des QA |
+| Liens internes du README | 29 résolus |
+
+**Le [ZIP V7 monolithique](Resident_Evil_Combat_Generation_V7.zip) est directement disponible**, sa taille encodée restant sous la limite de transport. Le ZIP est voisin du contenu décompressé et ne s’inclut pas lui-même. Le [rapport de publication V7](V7_PUBLICATION.json) contient les tailles, empreintes et identifiants Git attendus.
+
+Aucun bitmap source, modèle ou téléchargement de référence n’est inclus. Les chemins locaux et `references/` dans les reçus sont des traces de travail documentées, pas des fichiers promis dans l’archive. Les statuts initiaux des reçus sont conservés ; les QA finales et le manifeste V7 définissent les décisions finales. Les futurs éléments de la file de recherche ne sont pas comptés dans les résultats V7.
 
 ## Lot B.O.W. V6 du 19 novembre 2026
 
@@ -85,7 +107,11 @@ La vérification de cette publication porte sur les chemins, les liens, les empr
 
 Sur le commit V5 `a539a93b862fc12738abf7f9045cea96c6da54df`, les 25 workflows automatiques sont terminés : **19 réussis et 6 en échec**. Les logs des workflows QA générale, R25, R26, R28, R32 et R34 confirment tous `AssertionError [ERR_ASSERTION]: Unknown R34 addition: production-archives/rec-media/README.md`, avec code de sortie 1. Les trois jobs navigateur R34 (runtime, galerie et personnages-arène-combat) ont réussi ; son job de contrôle du périmètre a échoué. [Exécution R34 observée](https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/44555774286).
 
-La garde courante [`verify-current-r34.mjs`](../../scripts/verify-current-r34.mjs) possède une liste fermée d'ajouts et n'admet pas ce dossier. **La compatibilité avec cette garde reste ouverte.** Elle n'est ni modifiée ni désactivée ; les anciennes assertions et empreintes sont conservées. Les résultats ci-dessus sont ceux du commit V5 et ne sont pas attribués au nouveau commit V6. Cette PR de conservation reste en brouillon, sans fusion.
+Sur le commit V6 `4e374e87c240656d99e676bae005af6ae7d04e98`, un relevé distinct du 19 novembre 2026 à 16:33:34 UTC confirme également **25 workflows terminés : 19 succès et 6 échecs**. Les logs des six échecs (QA générale, R25, R26, R28, R32 et R34) ont été lus et confirment la même assertion `Unknown R34 addition: production-archives/rec-media/README.md`, code de sortie 1. Les trois jobs navigateur R34 du head V6 ont réussi. [QA V6](https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/44560451561), [R34 V6](https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/44560451793).
+
+Ces résultats appartiennent à V5 et V6. Ils ne sont pas attribués au commit qui publiera V7 ; son état CI doit être lu séparément sur la PR.
+
+La garde courante [`verify-current-r34.mjs`](../../scripts/verify-current-r34.mjs) possède une liste fermée d'ajouts et n'admet pas ce dossier. **La compatibilité avec cette garde reste ouverte.** Elle n'est ni modifiée ni désactivée ; les anciennes assertions et empreintes sont conservées. Les résultats ci-dessus gardent chacun leur commit V5 ou V6 et ne préjugent pas de la CI du nouveau head V7. Cette PR de conservation reste en brouillon, sans fusion.
 
 Les suites de gameplay, le build complet et les recettes navigateur ne sont pas annoncés comme exécutés pour cet ajout documentaire et média. Les résultats CI doivent être lus sur le commit réel de la PR ; une preuve historique R34 ne certifie pas le présent lot.
 

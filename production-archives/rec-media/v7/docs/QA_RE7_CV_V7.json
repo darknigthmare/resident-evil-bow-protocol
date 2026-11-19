@@ -1,0 +1,716 @@
+{
+  "schema": "rec-v7-re7-cv-independent-visual-qa-v1",
+  "reviewed_at": "2026-11-19T16:23:41.260280+00:00",
+  "report_status": "CLOSED_AFTER_FUMER_02_REVIEW",
+  "scope": "Fumer, Mama Mold et Bandersnatch V7 comparés uniquement à leurs références exactes V7. Aucune sortie générée R34 comme référence d’apparence.",
+  "method": {
+    "visual": "Inspection des pixels des originaux source et sortie, sans retouche ni dérivé d’image.",
+    "metrics": "Pillow/Numpy/Scipy sur les PNG inchangés. Bornes exclusives à droite/en bas. Alpha 16 sépare le résidu presque invisible de la silhouette utile ; alpha 1 conserve tout pixel non nul.",
+    "acceptance": "Le minimum de marge de 7 % est mesuré comme écart au prompt ; ce seul écart ne rejette pas un corps entier. Les grands résidus gris-brun visibles motivent la correction des essais RE7.",
+    "alpha_caution": "Un cœur à alpha 252/253 sur 255 est presque opaque. Une forte proportion de pixels intermédiaires ne suffit pas à prouver un mauvais détourage.",
+    "limits": "Une seule référence documentaire frontale ou oblique par sujet. Le profil reconstruit et les surfaces cachées ne sont pas certifiés 1:1 ; aucun test moteur ou animation."
+  },
+  "results": [
+    {
+      "uid": "re7-fumer",
+      "label": "Fumer premier essai",
+      "status": "TRIAL_SUPERSEDED_BY_REVIEWED_02",
+      "decision": "Essai conservé pour traçabilité dans trials ; remplacé par Fumer 02 après contrôle de la correction.",
+      "observations": [
+        "Un seul sujet mince, deux bras longs, deux jambes, un cou allongé, un abdomen inférieur arrondi. La tête et la posture lisent vers la gauche. Les deux mains et les deux pieds restent dans le cadre ; aucun membre majeur supplémentaire observé.",
+        "Défaut visible : larges plaques gris-brun semi-transparentes derrière la tête, le haut du dos et les avant-bras, plus étendues que de simples fils fins ou un bord anti-crénelé. Le résidu alpha faible s’étend au-delà de la silhouette utile.",
+        "Au seuil alpha ≥ 16, la marge verticale vaut 19 px en haut et en bas, soit 1,279 % de la hauteur. Les extrémités ne sont pas coupées ; ce manque de marge est un écart au prompt, distinct du motif de correction du détourage.",
+        "La trame pâle apparaît plus épaisse et plus continue que sur la source, avec un profil crânien plus arrondi. Une source frontale unique ne certifie pas les surfaces arrière, les ouvertures fibreuses exactes ni les détails de doigts masqués."
+      ],
+      "edition": "Resident Evil 7 Biohazard (2017) — Not a Hero",
+      "asset": {
+        "path": "trials/REC_FUMER_RE7_FULLBODY_LEFT_V7_01.png",
+        "sha256": "4ef5324b8a899c69357458795f5c8a26933b706b6fa0918b8dc571159f44ee5a",
+        "bytes": 1213942,
+        "dimensions": [
+          1059,
+          1486
+        ],
+        "mode": "RGBA"
+      },
+      "reference": {
+        "path": "references/re7-fumer__6ac0e3713bb5.png",
+        "sha256": "6ac0e3713bb5994d313bdc7d515479b8324fb9ff8b6e836e082188d9a24a1b07",
+        "bytes": 978067,
+        "dimensions": [
+          1000,
+          1403
+        ],
+        "mode": "RGB",
+        "source_url": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+        "repository_source_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/assets/catalog/re7-fumer.png",
+        "source_generated": false,
+        "sha_matches_recovery_manifest": true
+      },
+      "measurements": {
+        "alpha_zero_percent": 73.82088,
+        "alpha_255_percent": 0.042321,
+        "alpha_1_254_percent": 26.136798,
+        "thresholds": {
+          "1": {
+            "bbox_xyxy_exclusive": [
+              25,
+              15,
+              1033,
+              1470
+            ],
+            "padding_ltrb_pixels": [
+              25,
+              15,
+              26,
+              16
+            ],
+            "padding_ltrb_percent": [
+              2.361,
+              1.009,
+              2.455,
+              1.077
+            ],
+            "border_pixel_count": 0,
+            "connected_components_4way": 570,
+            "components_at_least_64_pixels": 1
+          },
+          "16": {
+            "bbox_xyxy_exclusive": [
+              231,
+              19,
+              801,
+              1467
+            ],
+            "padding_ltrb_pixels": [
+              231,
+              19,
+              258,
+              19
+            ],
+            "padding_ltrb_percent": [
+              21.813,
+              1.279,
+              24.363,
+              1.279
+            ],
+            "border_pixel_count": 0,
+            "connected_components_4way": 33,
+            "components_at_least_64_pixels": 1
+          },
+          "128": {
+            "bbox_xyxy_exclusive": [
+              232,
+              20,
+              792,
+              1466
+            ],
+            "padding_ltrb_pixels": [
+              232,
+              20,
+              267,
+              20
+            ],
+            "padding_ltrb_percent": [
+              21.907,
+              1.346,
+              25.212,
+              1.346
+            ],
+            "border_pixel_count": 0,
+            "connected_components_4way": 238,
+            "components_at_least_64_pixels": 2
+          },
+          "254": {
+            "bbox_xyxy_exclusive": [
+              236,
+              25,
+              772,
+              1464
+            ],
+            "padding_ltrb_pixels": [
+              236,
+              25,
+              287,
+              22
+            ],
+            "padding_ltrb_percent": [
+              22.285,
+              1.682,
+              27.101,
+              1.48
+            ],
+            "border_pixel_count": 0,
+            "connected_components_4way": 529,
+            "components_at_least_64_pixels": 2
+          }
+        },
+        "interior_alpha_quantiles_0_10_25_50_75_90_100": [
+          130.0,
+          252.0,
+          252.0,
+          253.0,
+          253.0,
+          253.0,
+          255.0
+        ],
+        "high_chroma_pixels_alpha_ge16": 0,
+        "highest_alpha_in_high_chroma_pixels": 2,
+        "alpha_1_15_pixel_count": 38831,
+        "alpha_16_127_pixel_count": 21330,
+        "alpha_ge128_pixel_count": 351813,
+        "alpha_16_127_to_ge128_percent": 6.063,
+        "prompt_minimum_padding_percent": 7,
+        "prompt_padding_7_percent_met_alpha_ge16": false,
+        "padding_miss_alone_is_rejection": false
+      },
+      "single_subject_observed": true,
+      "screen_left_observed": true,
+      "visible_body_extremities_contained": true,
+      "gross_limb_count_defect_observed": false,
+      "independent_left_reference_available": false,
+      "canonical_one_to_one_certified": false,
+      "engine_or_animation_tested": false,
+      "png_modified_by_this_review": false
+    },
+    {
+      "uid": "re7-mama-mold",
+      "label": "Mama Mold premier essai",
+      "status": "TRIAL_NOT_ADMITTED_CORRECTION_BLOCKED",
+      "decision": "Non retenu dans les candidats finaux. Le défaut de détourage persiste sur cet essai ; la correction 02 a été refusée et aucun nouveau PNG ni nouvel essai n’existent.",
+      "observations": [
+        "La masse reste distincte de Fumer : ventre et hanches larges, jambes épaisses, bras pendants, doigts longs et transition courte entre tête et épaules. Un seul corps orienté vers la gauche, avec les deux pieds et les deux mains contenus.",
+        "Défaut de finition : régions grises semi-transparentes irrégulières autour du dos et du bras éloigné. Quatre pixels de bord ont un alpha inférieur à 16 ; ils ne prouvent pas une coupe du corps visible.",
+        "Les marges alpha ≥ 16 sont 5,802 %,3,195%,8,861%,2,532% G/H/D/B. Le minimum de 7 % n’est pas tenu sur trois côtés, mais les grandes extrémités sont présentes.",
+        "Le réseau clair et les cavités rouges sont plus contrastés que le gris-brun assourdi de la source. La bouche et les détails latéraux plus exposés ne sont pas vérifiables depuis une seule vue oblique. Aucun membre majeur supplémentaire ni inversion flagrante d’asymétrie observés."
+      ],
+      "edition": "Resident Evil 7 biohazard (2017)",
+      "asset": {
+        "path": "trials/REC_MAMA_MOLD_RE7_FULLBODY_LEFT_V7_01.png",
+        "sha256": "49c3079dcba79cada4776dba0a94753c31f72ebf0052295a52059c2c3cd9ccdd",
+        "bytes": 2039369,
+        "dimensions": [
+          948,
+          1659
+        ],
+        "mode": "RGBA"
+      },
+      "reference": {
+        "path": "references/re7-mama-mold__02c8fb9b0bf4.png",
+        "sha256": "02c8fb9b0bf49d3460d350013338c40acdd6cb500e147e751f33596f1412d163",
+        "bytes": 695756,
+        "dimensions": [
+          572,
+          1000
+        ],
+        "mode": "RGBA",
+        "source_url": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+        "repository_source_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/assets/catalog/re7-mama-mold.png",
+        "source_generated": false,
+        "sha_matches_recovery_manifest": true
+      },
+      "measurements": {
+        "alpha_zero_percent": 52.250606,
+        "alpha_255_percent": 0.026069,
+        "alpha_1_254_percent": 47.723325,
+        "thresholds": {
+          "1": {
+            "bbox_xyxy_exclusive": [
+              0,
+              19,
+              934,
+              1635
+            ],
+            "padding_ltrb_pixels": [
+              0,
+              19,
+              14,
+              24
+            ],
+            "padding_ltrb_percent": [
+              0.0,
+              1.145,
+              1.477,
+              1.447
+            ],
+            "border_pixel_count": 4,
+            "connected_components_4way": 636,
+            "components_at_least_64_pixels": 1
+          },
+          "16": {
+            "bbox_xyxy_exclusive": [
+              55,
+              53,
+              864,
+              1617
+            ],
+            "padding_ltrb_pixels": [
+              55,
+              53,
+              84,
+              42
+            ],
+            "padding_ltrb_percent": [
+              5.802,
+              3.195,
+              8.861,
+              2.532
+            ],
+            "border_pixel_count": 0,
+            "connected_components_4way": 24,
+            "components_at_least_64_pixels": 1
+          },
+          "128": {
+            "bbox_xyxy_exclusive": [
+              55,
+              54,
+              863,
+              1617
+            ],
+            "padding_ltrb_pixels": [
+              55,
+              54,
+              85,
+              42
+            ],
+            "padding_ltrb_percent": [
+              5.802,
+              3.255,
+              8.966,
+              2.532
+            ],
+            "border_pixel_count": 0,
+            "connected_components_4way": 41,
+            "components_at_least_64_pixels": 1
+          },
+          "254": {
+            "bbox_xyxy_exclusive": [
+              58,
+              59,
+              833,
+              1616
+            ],
+            "padding_ltrb_pixels": [
+              58,
+              59,
+              115,
+              43
+            ],
+            "padding_ltrb_percent": [
+              6.118,
+              3.556,
+              12.131,
+              2.592
+            ],
+            "border_pixel_count": 0,
+            "connected_components_4way": 430,
+            "components_at_least_64_pixels": 0
+          }
+        },
+        "interior_alpha_quantiles_0_10_25_50_75_90_100": [
+          133.0,
+          251.0,
+          252.0,
+          252.0,
+          252.0,
+          253.0,
+          255.0
+        ],
+        "high_chroma_pixels_alpha_ge16": 0,
+        "highest_alpha_in_high_chroma_pixels": 2,
+        "alpha_1_15_pixel_count": 56318,
+        "alpha_16_127_pixel_count": 12884,
+        "alpha_ge128_pixel_count": 681768,
+        "alpha_16_127_to_ge128_percent": 1.89,
+        "prompt_minimum_padding_percent": 7,
+        "prompt_padding_7_percent_met_alpha_ge16": false,
+        "padding_miss_alone_is_rejection": false
+      },
+      "single_subject_observed": true,
+      "screen_left_observed": true,
+      "visible_body_extremities_contained": true,
+      "gross_limb_count_defect_observed": false,
+      "independent_left_reference_available": false,
+      "canonical_one_to_one_certified": false,
+      "engine_or_animation_tested": false,
+      "png_modified_by_this_review": false
+    },
+    {
+      "uid": "recv-bandersnatch",
+      "label": "Bandersnatch premier essai",
+      "status": "VISUAL_ACCEPTED_WITH_LIMITS",
+      "decision": "Acceptable comme nouvelle vue gauche documentaire ; ni profil natif ni fidélité 1:1 certifiés. Le seul manque de marge ne motive pas une correction.",
+      "observations": [
+        "L’asymétrie principale est conservée visuellement : énorme bras anatomique droit sur le côté éloigné du point de vue gauche, visible à gauche de l’image ; appendice anatomique gauche atrophié du côté proche, visible à droite. Aucun miroir de cette asymétrie observé.",
+        "La tête vise la gauche. La grande main, le petit appendice, les deux jambes et les deux pieds restent contenus. Peau bronze-orangé, gros volumes musculaires et veines pâles cohérents avec la source exacte.",
+        "Le contour utile est plus net que pour les deux essais RE7. 185 pixels de bord portent un alpha positif, tous inférieur à 16 : bruit faible, sans main ni pied coupé. Les marges alpha ≥ 16 sont 5,249 %,6,285%,7,090%,3,867% G/H/D/B ; cet écart de marge est accepté avec réserve.",
+        "Ramifications des veines, détails du visage, ongles et doigts nouvellement révélés ne sont pas certifiables depuis la source 430 × 573. Les veines paraissent davantage argentées que vert-gris. L’identité visuelle est préservée à grande échelle ; les détails fins restent une reconstruction."
+      ],
+      "edition": "Resident Evil CODE: Veronica (2000)",
+      "asset": {
+        "path": "assets/REC_BANDERSNATCH_RECV_FULLBODY_LEFT_V7_01.png",
+        "sha256": "1d8b9d03ece05845101328e1754ce9f9f618b15c64670b279aea28848fc69b44",
+        "bytes": 1388809,
+        "dimensions": [
+          1086,
+          1448
+        ],
+        "mode": "RGBA"
+      },
+      "reference": {
+        "path": "references/recv-bandersnatch__08ab8205051d.png",
+        "sha256": "08ab8205051d053daf9ecead5591d7601b7c9011becdc947e2dd65e1f3a960fc",
+        "bytes": 250700,
+        "dimensions": [
+          430,
+          573
+        ],
+        "mode": "RGBA",
+        "source_url": "https://bogleech.com/halloween/hall18-recv",
+        "repository_source_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/assets/specimens/recv-bandersnatch.png",
+        "source_generated": false,
+        "sha_matches_recovery_manifest": true
+      },
+      "measurements": {
+        "alpha_zero_percent": 56.032516,
+        "alpha_255_percent": 0.018823,
+        "alpha_1_254_percent": 43.948661,
+        "thresholds": {
+          "1": {
+            "bbox_xyxy_exclusive": [
+              0,
+              0,
+              1080,
+              1448
+            ],
+            "padding_ltrb_pixels": [
+              0,
+              0,
+              6,
+              0
+            ],
+            "padding_ltrb_percent": [
+              0.0,
+              0.0,
+              0.552,
+              0.0
+            ],
+            "border_pixel_count": 185,
+            "connected_components_4way": 4641,
+            "components_at_least_64_pixels": 35
+          },
+          "16": {
+            "bbox_xyxy_exclusive": [
+              57,
+              91,
+              1009,
+              1392
+            ],
+            "padding_ltrb_pixels": [
+              57,
+              91,
+              77,
+              56
+            ],
+            "padding_ltrb_percent": [
+              5.249,
+              6.285,
+              7.09,
+              3.867
+            ],
+            "border_pixel_count": 0,
+            "connected_components_4way": 1,
+            "components_at_least_64_pixels": 1
+          },
+          "128": {
+            "bbox_xyxy_exclusive": [
+              58,
+              92,
+              1008,
+              1391
+            ],
+            "padding_ltrb_pixels": [
+              58,
+              92,
+              78,
+              57
+            ],
+            "padding_ltrb_percent": [
+              5.341,
+              6.354,
+              7.182,
+              3.936
+            ],
+            "border_pixel_count": 0,
+            "connected_components_4way": 1,
+            "components_at_least_64_pixels": 1
+          },
+          "254": {
+            "bbox_xyxy_exclusive": [
+              98,
+              93,
+              999,
+              1390
+            ],
+            "padding_ltrb_pixels": [
+              98,
+              93,
+              87,
+              58
+            ],
+            "padding_ltrb_percent": [
+              9.024,
+              6.423,
+              8.011,
+              4.006
+            ],
+            "border_pixel_count": 0,
+            "connected_components_4way": 355,
+            "components_at_least_64_pixels": 0
+          }
+        },
+        "interior_alpha_quantiles_0_10_25_50_75_90_100": [
+          243.0,
+          252.0,
+          252.0,
+          252.0,
+          252.0,
+          253.0,
+          254.0
+        ],
+        "high_chroma_pixels_alpha_ge16": 0,
+        "highest_alpha_in_high_chroma_pixels": 2,
+        "alpha_1_15_pixel_count": 61501,
+        "alpha_16_127_pixel_count": 7535,
+        "alpha_ge128_pixel_count": 622365,
+        "alpha_16_127_to_ge128_percent": 1.211,
+        "prompt_minimum_padding_percent": 7,
+        "prompt_padding_7_percent_met_alpha_ge16": false,
+        "padding_miss_alone_is_rejection": false
+      },
+      "single_subject_observed": true,
+      "screen_left_observed": true,
+      "visible_body_extremities_contained": true,
+      "gross_limb_count_defect_observed": false,
+      "independent_left_reference_available": false,
+      "canonical_one_to_one_certified": false,
+      "engine_or_animation_tested": false,
+      "png_modified_by_this_review": false
+    },
+    {
+      "uid": "re7-fumer",
+      "label": "Fumer correction contrôlée",
+      "status": "VISUAL_ACCEPTED_WITH_LIMITS",
+      "decision": "Acceptable comme candidat final gauche avec réserve sur les fins résidus de détourage et les détails de surface ; ne pas qualifier le détourage de parfait.",
+      "observations": [
+        "Un seul Fumer entier, vraie lecture gauche en trois-quarts, tête et cou allongé, deux bras longs, deux jambes, mains et pieds contenus. Le nettoyage n’a pas entraîné de perte manifeste des grandes formes ou d’ajout de membre.",
+        "Les larges plaques gris-brun du premier essai sont nettement réduites. Il reste un fin résidu derrière le crâne, le cou, le dos et quelques fibres du flanc. Le second regard indépendant de qa_stage_v5 ne relève aucune grande plaque opaque évidente et accepte cette version avec ces limites.",
+        "Les pixels alpha 16–127 rapportés à la surface alpha ≥ 128 passent de 6,063 % pour 01 à 4,684 % pour 02. Cette mesure complète l’inspection visuelle ; elle ne certifie pas seule un détourage. Aucun pixel alpha positif ne touche le bord du PNG 02.",
+        "Marges alpha ≥ 16 : 26,062 %, 7,268 %, 26,818 %, 4,172 % G/H/D/B. La marge basse reste inférieure à 7 %, mais tous les orteils sont présents et cette réserve ne motive pas un rejet.",
+        "Les points rouges ou jaunes très saturés dans les aperçus sont portés par des pixels alpha 1–3 ; aucun pixel très chromatique n’existe à alpha ≥ 16. Ils ne constituent pas une tache rouge opaque sur le corps.",
+        "La source exacte reste le PNG documentaire frontal, jamais une sortie R34. Les projections de fibres, le profil et les détails des doigts sont régénérés ; l’identité générale est cohérente, mais la fidélité fine 1:1 n’est pas certifiée."
+      ],
+      "comparison_to_trial_01": {
+        "trial_filename": "REC_FUMER_RE7_FULLBODY_LEFT_V7_01.png",
+        "trial_sha256": "4ef5324b8a899c69357458795f5c8a26933b706b6fa0918b8dc571159f44ee5a",
+        "alpha16_127_per_alpha_ge128_trial_percent": 6.063,
+        "alpha16_127_per_alpha_ge128_corrected_percent": 4.684,
+        "interpretation": "Diminution relative du résidu alpha intermédiaire, après normalisation par la surface du corps ; appréciation visuelle nécessaire."
+      },
+      "edition": "Resident Evil 7 Biohazard (2017) — Not a Hero",
+      "asset": {
+        "path": "assets/REC_FUMER_RE7_FULLBODY_LEFT_V7_02.png",
+        "sha256": "bb3951fcdb6728ba75f2c53c1e39048d00cf17e0f2594aab3b060b35ee33f1bc",
+        "bytes": 1046727,
+        "dimensions": [
+          1059,
+          1486
+        ],
+        "mode": "RGBA"
+      },
+      "reference": {
+        "path": "references/re7-fumer__6ac0e3713bb5.png",
+        "sha256": "6ac0e3713bb5994d313bdc7d515479b8324fb9ff8b6e836e082188d9a24a1b07",
+        "bytes": 978067,
+        "dimensions": [
+          1000,
+          1403
+        ],
+        "mode": "RGB",
+        "source_url": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+        "repository_source_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/assets/catalog/re7-fumer.png",
+        "source_generated": false,
+        "sha_matches_recovery_manifest": true
+      },
+      "measurements": {
+        "alpha_zero_percent": 79.09853,
+        "alpha_255_percent": 0.061258,
+        "alpha_1_254_percent": 20.840212,
+        "thresholds": {
+          "1": {
+            "bbox_xyxy_exclusive": [
+              272,
+              105,
+              951,
+              1426
+            ],
+            "padding_ltrb_pixels": [
+              272,
+              105,
+              108,
+              60
+            ],
+            "padding_ltrb_percent": [
+              25.685,
+              7.066,
+              10.198,
+              4.038
+            ],
+            "border_pixel_count": 0,
+            "connected_components_4way": 448,
+            "components_at_least_64_pixels": 2
+          },
+          "16": {
+            "bbox_xyxy_exclusive": [
+              276,
+              108,
+              775,
+              1424
+            ],
+            "padding_ltrb_pixels": [
+              276,
+              108,
+              284,
+              62
+            ],
+            "padding_ltrb_percent": [
+              26.062,
+              7.268,
+              26.818,
+              4.172
+            ],
+            "border_pixel_count": 0,
+            "connected_components_4way": 87,
+            "components_at_least_64_pixels": 1
+          },
+          "128": {
+            "bbox_xyxy_exclusive": [
+              277,
+              109,
+              769,
+              1423
+            ],
+            "padding_ltrb_pixels": [
+              277,
+              109,
+              290,
+              63
+            ],
+            "padding_ltrb_percent": [
+              26.157,
+              7.335,
+              27.384,
+              4.24
+            ],
+            "border_pixel_count": 0,
+            "connected_components_4way": 139,
+            "components_at_least_64_pixels": 1
+          },
+          "254": {
+            "bbox_xyxy_exclusive": [
+              278,
+              133,
+              769,
+              1422
+            ],
+            "padding_ltrb_pixels": [
+              278,
+              133,
+              290,
+              64
+            ],
+            "padding_ltrb_percent": [
+              26.251,
+              8.95,
+              27.384,
+              4.307
+            ],
+            "border_pixel_count": 0,
+            "connected_components_4way": 820,
+            "components_at_least_64_pixels": 36
+          }
+        },
+        "interior_alpha_quantiles_0_10_25_50_75_90_100": [
+          174.0,
+          253.0,
+          253.0,
+          253.0,
+          253.0,
+          253.0,
+          254.0
+        ],
+        "high_chroma_pixels_alpha_ge16": 0,
+        "highest_alpha_in_high_chroma_pixels": 3,
+        "alpha_1_15_pixel_count": 27114,
+        "alpha_16_127_pixel_count": 13505,
+        "alpha_ge128_pixel_count": 288302,
+        "alpha_16_127_to_ge128_percent": 4.684,
+        "prompt_minimum_padding_percent": 7,
+        "prompt_padding_7_percent_met_alpha_ge16": false,
+        "padding_miss_alone_is_rejection": false
+      },
+      "single_subject_observed": true,
+      "screen_left_observed": true,
+      "visible_body_extremities_contained": true,
+      "gross_limb_count_defect_observed": false,
+      "independent_left_reference_available": false,
+      "canonical_one_to_one_certified": false,
+      "engine_or_animation_tested": false,
+      "png_modified_by_this_review": false
+    }
+  ],
+  "new_refusals": [
+    {
+      "uid": "re7-molded",
+      "phase": "V7 generation",
+      "status": "BLOCKED_BY_TOOL_V7_NO_RETRY",
+      "requestId": "e67478da-b7af-4357-be94-ecdec07b861a",
+      "error": "moderation_blocked",
+      "category": "violence",
+      "pngProduced": false,
+      "retryAllowedInThisContinuation": false,
+      "evidence": "Parent reported the current image_gen refusal in the active session.",
+      "receiptPath": null,
+      "no_retry_performed": true,
+      "visual_qa": "Sans objet : aucun PNG produit."
+    },
+    {
+      "uid": "re7-mama-mold",
+      "phase": "V7 correction02",
+      "status": "BLOCKED_BY_TOOL_V7_NO_RETRY",
+      "requestId": "072090a9-b154-4b4f-9259-bbe0a875c804",
+      "error": "moderation_blocked",
+      "category": "violence",
+      "pngProducedByRefusedRequest": false,
+      "existingTrial": "trials/REC_MAMA_MOLD_RE7_FULLBODY_LEFT_V7_01.png",
+      "existingTrialAdmission": false,
+      "retryAllowedInThisContinuation": false,
+      "evidence": "Parent reported the current image_gen correction refusal; no02 produced.",
+      "receiptPath": null,
+      "no_retry_performed": true,
+      "visual_qa": "Sans objet : aucun PNG produit."
+    }
+  ],
+  "pending": [],
+  "independent_second_look": [
+    {
+      "agent": "/root/qa_stage_v5",
+      "asset": "assets/REC_FUMER_RE7_FULLBODY_LEFT_V7_02.png",
+      "reference": "references/re7-fumer__6ac0e3713bb5.png",
+      "conclusion": "Corps entier, vraie lecture gauche, éléments principaux cohérents. Fin résidu gris-brun derrière crâne/cou/dos/flanc, aucune grande plaque opaque évidente. Acceptable avec limites de détourage et détails de surface ; pas un détourage parfait, pas de certification1:1.",
+      "image_modified": false
+    }
+  ],
+  "images_modified": false,
+  "v5_v6_modified": false
+}
