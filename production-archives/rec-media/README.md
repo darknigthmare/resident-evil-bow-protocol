@@ -1,5 +1,38 @@
 # Resident Evil Combat - publication des lots de production
 
+Cette branche de la [PR #22](https://github.com/darknigthmare/resident-evil-bow-protocol/pull/22) conserve les snapshots V5 et V6 pour revue. Les fichiers figés de chaque lot et leurs archives ne sont pas réécrits lors de leur publication.
+
+## Lot B.O.W. V6 du 19 novembre 2026
+
+Le [snapshot V6](v6/README.md) contient **10 poses gauches candidates pour 10 incarnations** et **2 essais remplacés**, soit 12 PNG : Reaper RE5, Regenerador RE4 Remake, Licker RE2 Remake, Ivy RE2 Remake, Verdugo RE4 2005, Popokarimu RE5, Hunter beta RE3 Remake, Drain Deimos RE3 Remake, Cerberus RE1 1996 et Chimera RE1 Remake 2002.
+
+La revue a conduit à deux corrections documentées : déplacement de la lésion de Cerberus sur son épaule droite anatomique et réduction de Chimera à quatre appendices dorsaux fins. Les variantes `02` sont retenues ; les deux variantes `01` restent dans `v6/trials/`, avec leurs prompts et les raisons du remplacement.
+
+Les 24 fichiers du lot sont disponibles directement dans `v6/` : images générées, docs de revue, manifestes, prompts et empreintes. **Les images de référence, modèles, textures et téléchargements V2 sont exclus**, y compris du ZIP. Les documents conservent les URLs et métadonnées de provenance utiles.
+
+| Contrôle V6 | Résultat |
+| --- | --- |
+| Taille du ZIP original | 16 383 109 octets |
+| SHA-256 du ZIP | `c034adb0bace27bd440d49b169cd857a8196f68240f9a835c9eea48023beb659` |
+| Intégrité et copie | 24 membres, CRC valides, 24 identités exactes avec le snapshot |
+| Empreintes | 23 entrées du fichier de contrôle vérifiées ; 12 SHA de PNG concordants |
+| README du snapshot | 21 liens relatifs résolus |
+| État artistique et moteur | 10 candidats retenus + 2 essais ; tous les indicateurs de certification 1:1 et d'admission moteur restent `false` |
+
+Le ZIP est conservé sans recompression en [partie 1](Resident_Evil_Combat_Generation_V6.zip.part01) et [partie 2](Resident_Evil_Combat_Generation_V6.zip.part02), chacune sous 10 MiB ou égale à cette limite. **Le ZIP monolithique n'est pas directement disponible dans la branche.** Le [manifeste des parties V6](V6_ARCHIVE_PARTS.json), le [rapport de conservation V6](V6_PUBLICATION.json) et le [script de reconstruction V6](reconstruct_v6_archive.py) permettent de retrouver et contrôler les octets exacts :
+
+```sh
+python3 production-archives/rec-media/reconstruct_v6_archive.py
+```
+
+Le script vérifie chaque partie, le SHA-256 global, les 24 membres et leurs CRC, sans écraser un fichier existant différent. La reconstruction a été exécutée et comparée octet par octet au ZIP figé avant publication.
+
+### Réserves V6 conservées
+
+**U-8 RE5 et Licker beta RE5 restent `HELD_REFERENCE`** : aucune référence corporelle complète suffisamment qualifiée n'a permis de produire ces deux lignes. Les refus historiques restent conservés, sans nouvelle tentative. La variante blanche d'Eliminator RE0 reste à documenter.
+
+L'objectif est une fidélité 1:1, mais **elle n'est pas certifiée**. Les surfaces cachées, certains profils, proportions et détails sont reconstruits par génération ; les sources communautaires restent identifiées comme telles. Les poses sont statiques, leurs marges n'atteignent pas toutes la cible des prompts, et pivots, échelle, appuis, contacts, collisions, changements de côté et animations restent à vérifier ou intégrer. Aucun miroir logiciel n'a été utilisé. L'audit V2/R34 ne prouve pas l'absence de tout doublon dans les archives V3/V4 indisponibles.
+
 ## Lot V5 du 19 novembre 2026
 
 Cette publication conserve le lot V5 pour revue, sous deux formes complémentaires :
@@ -46,11 +79,13 @@ Les candidats ne sont pas certifiés en fidélité visuelle 1:1. Les poses reste
 
 Les trois plans du décor ont reçu une correction géométrique, avec joint de sol, contours, couverture caméra et intégration encore à vérifier. La cible de six plans maîtres de 7680 × 2160 reste ouverte. Les essais remplacés conservent leur statut et ne doivent pas être choisis par défaut.
 
-## Vérification et limite CI
+## Vérification commune et CI observée
 
-La vérification de cette publication porte sur les chemins, les liens, les empreintes du ZIP et de ses membres, les identifiants des blobs Git et l'absence de changement hors du répertoire d'archives. Le catalogue PDF de cinq pages a été rendu et inspecté lors de sa création. Ces contrôles ne remplacent pas une recette de jeu.
+La vérification de cette publication porte sur les chemins, les liens, les empreintes des ZIP et de leurs membres, les identifiants des blobs Git et l'absence de changement hors du répertoire d'archives. Le catalogue PDF V5 de cinq pages a été rendu et inspecté lors de sa création. Ces contrôles ne remplacent pas une recette de jeu.
 
-La garde courante [`verify-current-r34.mjs`](../../scripts/verify-current-r34.mjs) possède une liste fermée d'ajouts et n'admet pas `production-archives/rec-media/`. **La compatibilité avec cette garde reste ouverte.** Elle n'est ni modifiée ni désactivée pour cette publication ; les anciennes assertions et empreintes sont conservées. Cette PR de conservation reste en brouillon pendant la poursuite des lots et l'examen de cette frontière de validation.
+Sur le commit V5 `a539a93b862fc12738abf7f9045cea96c6da54df`, les 25 workflows automatiques sont terminés : **19 réussis et 6 en échec**. Les logs des workflows QA générale, R25, R26, R28, R32 et R34 confirment tous `AssertionError [ERR_ASSERTION]: Unknown R34 addition: production-archives/rec-media/README.md`, avec code de sortie 1. Les trois jobs navigateur R34 (runtime, galerie et personnages-arène-combat) ont réussi ; son job de contrôle du périmètre a échoué. [Exécution R34 observée](https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/44555774286).
+
+La garde courante [`verify-current-r34.mjs`](../../scripts/verify-current-r34.mjs) possède une liste fermée d'ajouts et n'admet pas ce dossier. **La compatibilité avec cette garde reste ouverte.** Elle n'est ni modifiée ni désactivée ; les anciennes assertions et empreintes sont conservées. Les résultats ci-dessus sont ceux du commit V5 et ne sont pas attribués au nouveau commit V6. Cette PR de conservation reste en brouillon, sans fusion.
 
 Les suites de gameplay, le build complet et les recettes navigateur ne sont pas annoncés comme exécutés pour cet ajout documentaire et média. Les résultats CI doivent être lus sur le commit réel de la PR ; une preuve historique R34 ne certifie pas le présent lot.
 
