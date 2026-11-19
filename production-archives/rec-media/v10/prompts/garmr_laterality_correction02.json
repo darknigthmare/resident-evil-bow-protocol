@@ -1,0 +1,24 @@
+{
+  "schema": "rec-imagegen-targeted-correction-v10-v1",
+  "jobs": [
+    {
+      "uid": "rerequiem-garmr",
+      "attempt_id": "rerequiem-garmr-left02",
+      "edition": "Resident Evil Requiem (2026)",
+      "filename": "REC_GARMR_REQUIEM2026_FULLBODY_LEFT_V10_02.png",
+      "referenced_image_paths": [
+        "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v10/references/rerequiem-garmr__44c00aa5981a.png",
+        "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v10/trials/REC_GARMR_REQUIEM2026_FULLBODY_LEFT_V10_01.png"
+      ],
+      "source_path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v10/references/rerequiem-garmr__44c00aa5981a.png",
+      "prompt": "Use case: stylized-concept / single targeted laterality correction.\nInput image 1 is the exact documentary source of Garmr CM-G-002, Resident Evil Requiem (2026). It faces SCREEN RIGHT, showing the creature's anatomical RIGHT side. Input image 2 is a successful generated LEFT-facing candidate with a specific QA defect: it incorrectly copied the source's long exposed rib/skin patch onto the nearer LEFT flank. Correct this lateral placement without mirroring the whole figure.\n\nPreserve the complete LEFT-facing pose of input 2: same head, four legs and paws, large mouth, full long tongue, long raised furry tail, body proportions, coherent dark fur and clean whole-body framing. The anatomical LEFT flank is the side nearer the camera in this pose. Remove the copied long rib/skin patch from that near LEFT flank. Keep the documented patch on the anatomical RIGHT side, which is now the FAR flank: it may be mostly occluded by the body and only partly visible where the far-side contour naturally allows. Do not force it onto the visible near flank, duplicate it across both sides or invent additional injury. A coherent continuation of dark fur for the partially shown undocumented LEFT flank is an interpretive reconstruction, not proof that the source documents that hidden side.\n\nNo change to edition or subject. No additional limbs, heads, tail, tongue, spikes, accessories or anatomy. Retain exactly four complete paws with the same readable leg chains, the entire tongue free tip and the entire tail tip inside generous transparent margins. No scene, haze, painted backdrop, floor, shadows, labels, text or effects. Output a genuinely transparent RGBA cutout with natural fur edges; do not reproduce the low-alpha RGB preview halo of input 2 as visible background. No software mirror or postprocessing. This remains a limited generated visual candidate, with no native-model or canonical one-to-one certification.",
+      "transparent_background": true,
+      "tool": "tools.image_gen__imagegen",
+      "status": "prepared",
+      "reason": "Independent QA confirmed known right-flank patch was reproduced on near left side; correct only laterality.",
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "retry_after_refusal_permitted": false
+    }
+  ]
+}

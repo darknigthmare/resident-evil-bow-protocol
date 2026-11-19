@@ -1,0 +1,24 @@
+{
+  "schema": "rec-imagegen-targeted-correction-v10-v1",
+  "jobs": [
+    {
+      "uid": "reoutbreak2-wasp",
+      "attempt_id": "reoutbreak2-wasp-left02",
+      "edition": "Resident Evil Outbreak File #2 (2004)",
+      "filename": "REC_WASP_OUTBREAK2_FULLBODY_LEFT_V10_02.png",
+      "referenced_image_paths": [
+        "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v10/references/reoutbreak2-wasp__9d823482eb46.png",
+        "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v10/trials/REC_WASP_OUTBREAK2_FULLBODY_LEFT_V10_01.png"
+      ],
+      "source_path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v10/references/reoutbreak2-wasp__9d823482eb46.png",
+      "prompt": "Use case: stylized-concept / targeted correction of a successful generated game-character candidate.\nInput image 1 is the exact documentary Wasp model from Resident Evil Outbreak File #2 (2004). Input image 2 is the generated LEFT-facing candidate to repair. Preserve its current LEFT orientation, single-subject composition, body proportions, orange-and-black markings, head, abdomen, terminal point, wing outlines and material rendering. This is a correction of two concrete QA defects, not a new variant.\n\nRepair the leg anatomy with exactly SIX complete walking-leg chains in total, matching the three anatomical pairs visible in input 1. Input 2 currently has FIVE long articulated chains ending in distinct tips plus an ambiguous short central fragment. Resolve that fragment into the one missing complete far-side leg, with a continuous readable attachment from the thorax through its joints to one separate terminal tip. Preserve the existing five complete chains; do not add two new legs, a seventh tip, extra detached stubs, duplicate joints or abdominal legs. Stagger the six tips so each of the six chains can be counted without a fused overlap.\n\nRemove ONLY the two added long arching antenna-like appendages that project from above the generated face. Input 1 does not show those long antennae; do not add a new horn, feeler or substitute appendage. Preserve the source-like face and eyes.\n\nExactly one airborne Wasp. Keep both complete wing outlines, all six leg tips, the full abdomen point and head within generous clear margins. No scene, floor, shadow, words, annotation, watermark, effects or additional insect. Genuinely transparent RGBA background with clean natural edges; preserve full alpha. No horizontal mirroring, no software retouch. This remains a static generated candidate for independent review, not a certified one-to-one native asset.",
+      "transparent_background": true,
+      "tool": "tools.image_gen__imagegen",
+      "status": "prepared",
+      "reason": "Independent QA found five complete leg chains and unsupported long antennae in successful01.",
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "retry_after_refusal_permitted": false
+    }
+  ]
+}

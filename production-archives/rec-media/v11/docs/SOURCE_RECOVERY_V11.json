@@ -1,0 +1,429 @@
+{
+  "schema": "rec.direction-repair.source-audit.v11",
+  "date": "2026-11-19",
+  "baseCommit": "12deacf4cf9b7706eba69fecc1c13593d030180b",
+  "scope": "Manual review of six old orientation studies that were not admitted; no automatic generation or claim of a completed gap.",
+  "records": [
+    {
+      "uid": "re5-uroboros-mkono",
+      "label": "Uroboros Mkono",
+      "edition": "Resident Evil 5 (2009)",
+      "status": "EXISTING_GENERATED_STUDY_NOT_ADMITTED",
+      "eligibleForAutomaticNewGeneration": false,
+      "sourceFacing": "front",
+      "fullBodyReviewed": true,
+      "completeBodyReferenceVerified": true,
+      "defaultAdmission": false,
+      "observations": [
+        "Entire2009 crouched black Uroboros mass: visible head, swollen orange growths, both long arms with all hand/finger tips, tucked legs/feet and dorsal outer mass lie inside the frame.",
+        "The initial whole-body image is near-frontal rather than the requested right-facing stance. Its correction moves the large growth-bearing arm to the other image side while retaining a near-frontal torso, so the fixed shoulder/arm relationship is unqualified and the correction is not admitted.",
+        "The original complete positive is retained as a source presentation only. The idle-right output filename is a fixed job path, not a declaration of its actual direction. No right-facing combat state or original idle animation is qualified."
+      ],
+      "knownAppearanceGaps": [
+        "The initial whole-body image is near-frontal rather than the requested right-facing stance. Its correction moves the large growth-bearing arm to the other image side while retaining a near-frontal torso, so the fixed shoulder/arm relationship is unqualified and the correction is not admitted."
+      ],
+      "receipt": {
+        "path": "modules/fidelity-r34/assets/lots/lot_3/re5-uroboros-mkono/idle.json",
+        "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_3/re5-uroboros-mkono/idle.json",
+        "sha256": "08af5c6edac6d45e034f7de8bc54603dd73ce021284d9025b3d3c4def8a4e236"
+      },
+      "references": [
+        {
+          "path": "assets/catalog/re5-uroboros-mkono.png",
+          "sha256": "0ca5122cbd1477d938a273a439c0beb30234321eadfc37b77c115599778bdd00",
+          "repositoryUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/assets/catalog/re5-uroboros-mkono.png",
+          "sourceEdition": "Resident Evil 5 (2009)",
+          "sourceUrl": "https://www.evilresource.com/resident-evil-5/enemies/uroboros-mkono",
+          "observation": "Entire2009 crouched black Uroboros mass: visible head, swollen orange growths, both long arms with all hand/finger tips, tucked legs/feet and dorsal outer mass lie inside the frame.",
+          "qualificationBasis": "R34 receipt completeBodyReferences; local V7 review recorded separately",
+          "generatedReference": false,
+          "locallyViewedForV7": false
+        }
+      ],
+      "requiredNextStep": "Revoir la cause de non-admission et les preuves d'asymétrie/orientation avant d'allouer une nouvelle variante ; ne pas compter la présence du PNG comme réussite.",
+      "receipt_sha_verified": true,
+      "receipt_moderation_block_marker_found": false,
+      "current_status": "RIGHT_CANDIDATE_PREEXISTS_LEFT_REQUEST_REFUSAL",
+      "local_references": [
+        {
+          "path": "assets/catalog/re5-uroboros-mkono.png",
+          "sha256": "0ca5122cbd1477d938a273a439c0beb30234321eadfc37b77c115599778bdd00",
+          "repositoryUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/assets/catalog/re5-uroboros-mkono.png",
+          "sourceEdition": "Resident Evil 5 (2009)",
+          "sourceUrl": "https://www.evilresource.com/resident-evil-5/enemies/uroboros-mkono",
+          "observation": "Entire2009 crouched black Uroboros mass: visible head, swollen orange growths, both long arms with all hand/finger tips, tucked legs/feet and dorsal outer mass lie inside the frame.",
+          "qualificationBasis": "R34 receipt completeBodyReferences; local V7 review recorded separately",
+          "generatedReference": false,
+          "locallyViewedForV7": false,
+          "local_path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v11/references/re5-uroboros-mkono__0ca5122cbd14.png",
+          "bytes": 161601,
+          "format": "PNG",
+          "dimensions": [
+            450,
+            360
+          ],
+          "visual_inspection_pending": false,
+          "published": false,
+          "locallyViewedForV11": true
+        }
+      ],
+      "manual_review_note": "Source physically opened: entire crouched body and extremities visible. Orange growth-bearing arm is anatomical LEFT, image-right in frontal view; new right pose must preserve it on near side.450x360 limits fine detail.",
+      "locallyViewedForV11": true,
+      "generation_planned": true,
+      "current_review_note": "Orange growth-bearing anatomical LEFT arm stays far in a correct right-facing view; lean anatomical RIGHT arm near. Earlier near-side planning note was erroneous; see erratum.",
+      "refusal_request_id": "2d59b1b8-616d-4ec8-85f8-50134e28f6cd",
+      "refusal_category": "violence",
+      "further_requests_prohibited": true,
+      "left_gap_remains": true
+    },
+    {
+      "uid": "re7-lucas-baker-mutated",
+      "label": "Lucas Baker — forme mutée",
+      "edition": "Resident Evil 7 Biohazard (2017) — Not a Hero",
+      "status": "EXISTING_GENERATED_STUDY_NOT_ADMITTED",
+      "eligibleForAutomaticNewGeneration": false,
+      "sourceFacing": "front",
+      "fullBodyReviewed": true,
+      "completeBodyReferenceVerified": true,
+      "defaultAdmission": false,
+      "observations": [
+        "After two targeted positive corrections, raw alpha composite shows the entire Lucas mutation with generous padding and original asymmetric mouth-bearing limb. Body orientation remains insufficiently lateral; retained as a source-presentation study, not a forced right-facing default.",
+        "Actually rendered through Chromium native alpha compositing on neutral background; RGB under alpha0 is not a visible halo.",
+        "Generated single static adaptation; no original-game frame, original idle loop, geometric or global1:1 certification."
+      ],
+      "knownAppearanceGaps": [
+        "The complete corrected Lucas figure retains a predominantly frontal thorax/pelvis despite rightward head and appendages; a clear right-facing combat body is not qualified."
+      ],
+      "receipt": {
+        "path": "modules/fidelity-r34/assets/lots/lot_1/re7-lucas-baker-mutated/idle.json",
+        "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_1/re7-lucas-baker-mutated/idle.json",
+        "sha256": "63dc367b4774f3ba8e7448a81f446dc1dacc814f3a9c45c7384415588f5cb018"
+      },
+      "references": [
+        {
+          "path": "modules/source-motion-r22/media/native-portraits/re7-lucas-baker-mutated.png",
+          "sha256": "39128a9eb2c95783415b3a66ade80c6b5f304b6b14065c59737385ad175dccec",
+          "repositoryUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/source-motion-r22/media/native-portraits/re7-lucas-baker-mutated.png",
+          "sourceEdition": "Resident Evil 7 Biohazard (2017) — Not a Hero",
+          "sourceUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg8a7n5EpEe3ziCEgql_Gv-_oiICLoT1IjFnc4SI_mkS4cAfxE2Rsvthjn8XdQEiIPdVAoNrkbzb9KYDsxyayWg46PL8_Q21E2Ov6O0a_mKOCkD8RAR7PV5tPRL6IKgTTVTpilJJULkdWIp/s0/image.png",
+          "observation": "Whole Not-a-Hero Lucas mutation secondary model render presents head, ribbed upper torso, all asymmetric overgrown limbs and both feet within the 2048x1085 image.",
+          "qualificationBasis": "R34 receipt completeBodyReferences; local V7 review recorded separately",
+          "generatedReference": false,
+          "locallyViewedForV7": false
+        }
+      ],
+      "requiredNextStep": "Revoir la cause de non-admission et les preuves d'asymétrie/orientation avant d'allouer une nouvelle variante ; ne pas compter la présence du PNG comme réussite.",
+      "receipt_sha_verified": true,
+      "receipt_moderation_block_marker_found": false,
+      "current_status": "RIGHT_CANDIDATE_PREEXISTS_LEFT_REQUEST_REFUSAL",
+      "local_references": [
+        {
+          "path": "modules/source-motion-r22/media/native-portraits/re7-lucas-baker-mutated.png",
+          "sha256": "39128a9eb2c95783415b3a66ade80c6b5f304b6b14065c59737385ad175dccec",
+          "repositoryUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/source-motion-r22/media/native-portraits/re7-lucas-baker-mutated.png",
+          "sourceEdition": "Resident Evil 7 Biohazard (2017) — Not a Hero",
+          "sourceUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg8a7n5EpEe3ziCEgql_Gv-_oiICLoT1IjFnc4SI_mkS4cAfxE2Rsvthjn8XdQEiIPdVAoNrkbzb9KYDsxyayWg46PL8_Q21E2Ov6O0a_mKOCkD8RAR7PV5tPRL6IKgTTVTpilJJULkdWIp/s0/image.png",
+          "observation": "Whole Not-a-Hero Lucas mutation secondary model render presents head, ribbed upper torso, all asymmetric overgrown limbs and both feet within the 2048x1085 image.",
+          "qualificationBasis": "R34 receipt completeBodyReferences; local V7 review recorded separately",
+          "generatedReference": false,
+          "locallyViewedForV7": false,
+          "local_path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v11/references/re7-lucas-baker-mutated__39128a9eb2c9.png",
+          "bytes": 1216166,
+          "format": "PNG",
+          "dimensions": [
+            2048,
+            1085
+          ],
+          "visual_inspection_pending": false,
+          "published": false,
+          "locallyViewedForV11": true
+        }
+      ],
+      "manual_review_note": "Source physically opened: whole2048x1085 model render. Anatomical right pointed blade arm at source image-left, anatomical left mouth-bearing limb at source image-right, two central legs/feet. New right pose may preserve this topology; hidden surfaces remain unverified.",
+      "locallyViewedForV11": true,
+      "generation_planned": true,
+      "current_review_note": "For a right-facing view the anatomical RIGHT blade arm is near, LEFT mouth-bearing arm far. Earlier prompt near-side wording was erroneous; independent QA must verify actual output.",
+      "refusal_request_id": "f2899657-518d-469b-a06c-af2fc6733ac4",
+      "refusal_category": "violence",
+      "further_requests_prohibited": true,
+      "left_gap_remains": true
+    },
+    {
+      "uid": "revillage-soldat-panzer",
+      "label": "Soldat Panzer",
+      "edition": "Resident Evil Village (2021)",
+      "status": "EXISTING_GENERATED_STUDY_NOT_ADMITTED",
+      "eligibleForAutomaticNewGeneration": false,
+      "sourceFacing": "front",
+      "fullBodyReviewed": true,
+      "completeBodyReferenceVerified": true,
+      "defaultAdmission": false,
+      "observations": [
+        "The independently opened full source establishes the armored helmet/tubes, asymmetric chest plates, source arm-specific drill assemblies and both boots.",
+        "The refined raw output preserves the whole body, all drill tips, helmet tubes, straps and boots in a grounded ready stance. Its presentation still reads predominantly frontal rather than an unambiguous right-facing sprite, so it is retained as a source presentation and not promoted by a false direction flag.",
+        "Raw generator pixels remain unchanged; the true browser alpha composite was inspected. This is one generated static adaptation, not original Capcom pixels or a certified original idle cycle."
+      ],
+      "knownAppearanceGaps": [],
+      "receipt": {
+        "path": "modules/fidelity-r34/assets/lots/lot_2/revillage-soldat-panzer/idle.json",
+        "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_2/revillage-soldat-panzer/idle.json",
+        "sha256": "04bb5a6e22acd4f968f8d924301ef44e357db15a2ebebe2caa8d51733850b883"
+      },
+      "references": [
+        {
+          "path": "assets/specimens/revillage-soldat-panzer.png",
+          "sha256": "e0dc60f210ece6e19d947e0c094ea515c461825542a305b771bb58ad3cc06130",
+          "repositoryUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/assets/specimens/revillage-soldat-panzer.png",
+          "sourceEdition": "Resident Evil Village (2021)",
+          "sourceUrl": "https://blackjackrants.blogspot.com/2021/06/reviewing-monsters-resident-evil-village.html",
+          "observation": "Entire plated soldier: box respirator helmet with tubes, layered armored torso, both arms carrying multiple long drills and two armored boots visible. Outermost drill tips are inside the square frame, near edges; preserve both feet and all actual drills.",
+          "qualificationBasis": "R34 receipt completeBodyReferences; local V7 review recorded separately",
+          "generatedReference": false,
+          "locallyViewedForV7": false
+        }
+      ],
+      "requiredNextStep": "Revoir la cause de non-admission et les preuves d'asymétrie/orientation avant d'allouer une nouvelle variante ; ne pas compter la présence du PNG comme réussite.",
+      "receipt_sha_verified": true,
+      "receipt_moderation_block_marker_found": false,
+      "current_status": "BLOCKED_BY_TOOL_V11_NO_RETRY",
+      "local_references": [
+        {
+          "path": "assets/specimens/revillage-soldat-panzer.png",
+          "sha256": "e0dc60f210ece6e19d947e0c094ea515c461825542a305b771bb58ad3cc06130",
+          "repositoryUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/assets/specimens/revillage-soldat-panzer.png",
+          "sourceEdition": "Resident Evil Village (2021)",
+          "sourceUrl": "https://blackjackrants.blogspot.com/2021/06/reviewing-monsters-resident-evil-village.html",
+          "observation": "Entire plated soldier: box respirator helmet with tubes, layered armored torso, both arms carrying multiple long drills and two armored boots visible. Outermost drill tips are inside the square frame, near edges; preserve both feet and all actual drills.",
+          "qualificationBasis": "R34 receipt completeBodyReferences; local V7 review recorded separately",
+          "generatedReference": false,
+          "locallyViewedForV7": false,
+          "local_path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v11/references/revillage-soldat-panzer__e0dc60f210ec.png",
+          "bytes": 342402,
+          "format": "PNG",
+          "dimensions": [
+            620,
+            618
+          ],
+          "visual_inspection_pending": false,
+          "published": false,
+          "locallyViewedForV11": true
+        }
+      ],
+      "manual_review_note": "Physically opened complete620x618 source. Appears three drills per arm; awaiting independent confirmation before generation. Endpoints are close to canvas sides.",
+      "locallyViewedForV11": true,
+      "generation_planned": true,
+      "independent_review": "qa_stage_v5 visually confirmed three drill axes and complete endpoints per arm, six total. Both lateral extrema close to source canvas; require margins.",
+      "refusal_request_id": "36a05a95-41e9-4d60-9823-4af371a5b778",
+      "refusal_category": "other"
+    },
+    {
+      "uid": "revillage-urias",
+      "label": "Uriaș",
+      "edition": "Resident Evil Village (2021)",
+      "status": "EXISTING_GENERATED_STUDY_NOT_ADMITTED",
+      "eligibleForAutomaticNewGeneration": false,
+      "sourceFacing": "front",
+      "fullBodyReviewed": true,
+      "completeBodyReferenceVerified": true,
+      "defaultAdmission": false,
+      "observations": [
+        "The retained corrected raw PNG contains the entire Urias, both boots, torn coat panels, complete hammer head and far shaft end, with clear transparent padding. Source costume, white hair/beard and anatomical grip remain recognisable.",
+        "The head looks to the right while the chest, waist and stance remain predominantly front-on despite targeted corrections. This is recorded as a frontal whole-body presentation rather than a proved right combat pose. The original hand near the hammer head and the other farther along the shaft are not silently swapped.",
+        "Viewed raw source and generated PNG through Chromium native alpha compositing. Hidden RGB at alpha0 is not a halo. Raw PNG bytes remain exactly the image generator output.",
+        "Static generated adaptation only; no original game sprite, original idle cycle or geometric/global1:1 certification."
+      ],
+      "knownAppearanceGaps": [
+        "Head attention turns right but the complete shoulders/pelvis/legs do not establish the requested three-quarter right combat-facing posture."
+      ],
+      "receipt": {
+        "path": "modules/fidelity-r34/assets/lots/lot_1/revillage-urias/idle.json",
+        "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_1/revillage-urias/idle.json",
+        "sha256": "73bf497701bea9b37d0f151536ef80b3dd236dc93ad5d4cadfa2af0241e7551e"
+      },
+      "references": [
+        {
+          "path": "modules/fidelity-r34/assets/source-research-extra/pipeline-extra-five/urias-full.png",
+          "sha256": "6c4328ad70c980816988577c3806f1e2982adfd2efe666cb276d3f9e52d36076",
+          "repositoryUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/source-research-extra/pipeline-extra-five/urias-full.png",
+          "sourceEdition": "Resident Evil Village (2021)",
+          "sourceUrl": null,
+          "observation": "Exact retained Urias view extended to show both boots, whole hammer shaft and hammer head. Alpha16bounds(1,23,619,510) inside620x536frame; the hammer silhouette is close to the left edge but no visiblealpha16pixel reaches a border. All major equipment endpoints are visible.",
+          "qualificationBasis": "R34 receipt completeBodyReferences; local V7 review recorded separately",
+          "generatedReference": false,
+          "locallyViewedForV7": false
+        }
+      ],
+      "requiredNextStep": "Revoir la cause de non-admission et les preuves d'asymétrie/orientation avant d'allouer une nouvelle variante ; ne pas compter la présence du PNG comme réussite.",
+      "receipt_sha_verified": true,
+      "receipt_moderation_block_marker_found": false,
+      "current_status": "HELD_RELATED_IDENTITY_REFUSAL",
+      "local_references": [
+        {
+          "path": "modules/fidelity-r34/assets/source-research-extra/pipeline-extra-five/urias-full.png",
+          "sha256": "6c4328ad70c980816988577c3806f1e2982adfd2efe666cb276d3f9e52d36076",
+          "repositoryUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/source-research-extra/pipeline-extra-five/urias-full.png",
+          "sourceEdition": "Resident Evil Village (2021)",
+          "sourceUrl": null,
+          "observation": "Exact retained Urias view extended to show both boots, whole hammer shaft and hammer head. Alpha16bounds(1,23,619,510) inside620x536frame; the hammer silhouette is close to the left edge but no visiblealpha16pixel reaches a border. All major equipment endpoints are visible.",
+          "qualificationBasis": "R34 receipt completeBodyReferences; local V7 review recorded separately",
+          "generatedReference": false,
+          "locallyViewedForV7": false,
+          "local_path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v11/references/revillage-urias__6c4328ad70c9.png",
+          "bytes": 288181,
+          "format": "PNG",
+          "dimensions": [
+            620,
+            536
+          ],
+          "visual_inspection_pending": false,
+          "published": false,
+          "locallyViewedForV11": true
+        }
+      ],
+      "manual_review_note": "Physically opened. Historical Urias Drac refusal found in pinned R34 tracking; this related named variant is not retried. This is not a new own-UID tool refusal.",
+      "locallyViewedForV11": true,
+      "generation_planned": false
+    },
+    {
+      "uid": "re0-queen-leech",
+      "label": "Queen Leech",
+      "edition": "Resident Evil 0 (2002)",
+      "status": "EXISTING_GENERATED_STUDY_NOT_ADMITTED",
+      "eligibleForAutomaticNewGeneration": false,
+      "sourceFacing": "right",
+      "fullBodyReviewed": true,
+      "completeBodyReferenceVerified": true,
+      "defaultAdmission": false,
+      "observations": [
+        "Whole matching first-form QueenLeech: pale pointed crown, red/black upright segmented trunk, both blade-like shoulder/arm structures, all curling long tentacle tips and both flared clawed feet contained in frame. Matches catalogue crop; exclude sprawling final phase from candidate2.",
+        "The corrected upright first-form QueenLeech is complete and points toward image-right, with both flared feet and every long tentacle/blade tip inside the canvas. Its right-facing correction resembles a reversal of the source presentation; the single whole-body view does not independently establish the new anatomical laterality. Keep it as a generated study outside default combat admission rather than assert a verified rotation.",
+        "The exact raw PNG was displayed with native browser alpha over a checkerboard. RGB under alpha0 does not create a visible halo. This is one generated static pose, not an original game frame or original idle loop."
+      ],
+      "knownAppearanceGaps": [
+        "Anatomical laterality of the corrected right-facing QueenLeech presentation remains unverified from the opposite single source view; the output is held as a study rather than an admitted combat default."
+      ],
+      "receipt": {
+        "path": "modules/fidelity-r34/assets/lots/lot_4/re0-queen-leech/idle.json",
+        "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/re0-queen-leech/idle.json",
+        "sha256": "2461079f2e75318d672e2d807cbfa936708b6944d3510a8ef558310d4cc63525"
+      },
+      "references": [
+        {
+          "path": "modules/fidelity-r34/assets/source-research/re0-queenleech-candidate-1.png",
+          "sha256": "178e8117a97079bf56b58b5f4d95118ac3259c05505947c13e351c37974c1e7d",
+          "repositoryUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/source-research/re0-queenleech-candidate-1.png",
+          "sourceEdition": "Resident Evil 0 (2002)",
+          "sourceUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgPdKXChB_h_WaS2JUcQd544jX_UBkcCHoanpu8ROmLL9-D5CRFrz-qUl3ZKapDfjDcDp-SdE8ZA47rrYM2lRLqEcrFHw_aWDeoXN18d-2YE2zntx2TROCQ1ZBfoVC5GbuYKCtVwcWCwKsS/",
+          "observation": "Whole matching first-form QueenLeech: pale pointed crown, red/black upright segmented trunk, both blade-like shoulder/arm structures, all curling long tentacle tips and both flared clawed feet contained in frame. Matches catalogue crop; exclude sprawling final phase from candidate2.",
+          "qualificationBasis": "R34 receipt completeBodyReferences; local V7 review recorded separately",
+          "generatedReference": false,
+          "locallyViewedForV7": false
+        }
+      ],
+      "requiredNextStep": "Revoir la cause de non-admission et les preuves d'asymétrie/orientation avant d'allouer une nouvelle variante ; ne pas compter la présence du PNG comme réussite.",
+      "receipt_sha_verified": true,
+      "receipt_moderation_block_marker_found": false,
+      "current_status": "HELD_LATERALITY_REFERENCE",
+      "local_references": [
+        {
+          "path": "modules/fidelity-r34/assets/source-research/re0-queenleech-candidate-1.png",
+          "sha256": "178e8117a97079bf56b58b5f4d95118ac3259c05505947c13e351c37974c1e7d",
+          "repositoryUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/source-research/re0-queenleech-candidate-1.png",
+          "sourceEdition": "Resident Evil 0 (2002)",
+          "sourceUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgPdKXChB_h_WaS2JUcQd544jX_UBkcCHoanpu8ROmLL9-D5CRFrz-qUl3ZKapDfjDcDp-SdE8ZA47rrYM2lRLqEcrFHw_aWDeoXN18d-2YE2zntx2TROCQ1ZBfoVC5GbuYKCtVwcWCwKsS/",
+          "observation": "Whole matching first-form QueenLeech: pale pointed crown, red/black upright segmented trunk, both blade-like shoulder/arm structures, all curling long tentacle tips and both flared clawed feet contained in frame. Matches catalogue crop; exclude sprawling final phase from candidate2.",
+          "qualificationBasis": "R34 receipt completeBodyReferences; local V7 review recorded separately",
+          "generatedReference": false,
+          "locallyViewedForV7": false,
+          "local_path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v11/references/re0-queen-leech__178e8117a970.png",
+          "bytes": 168492,
+          "format": "PNG",
+          "dimensions": [
+            363,
+            491
+          ],
+          "visual_inspection_pending": false,
+          "published": false,
+          "locallyViewedForV11": true
+        }
+      ],
+      "manual_review_note": "Physically opened complete363x491 first-form source. Existing opposite-facing study could be a reflection; one source view does not prove tentacle/shoulder laterality. No new view invented.",
+      "locallyViewedForV11": true,
+      "generation_planned": false
+    },
+    {
+      "uid": "re5-duvalia",
+      "label": "Duvalia",
+      "edition": "Resident Evil 5 (2009)",
+      "status": "EXISTING_GENERATED_STUDY_NOT_ADMITTED",
+      "eligibleForAutomaticNewGeneration": false,
+      "sourceFacing": "front",
+      "fullBodyReviewed": true,
+      "completeBodyReferenceVerified": true,
+      "defaultAdmission": false,
+      "observations": [
+        "The corrected opened-shell Duvalia preserves whole shell-lobe ends, central tooth ring, fleshy side appendage, remnant belt/camouflage trousers and both boots. Its feet turn right but the actual shell/tooth-ring presentation remains primarily FRONT, so it is kept as a complete documentary study rather than a qualified right-facing idle base.",
+        "Native Chromium alpha composite was actually inspected against the complete documentary source. Raw generated PNG bytes remain intact. One static generated adaptation; neither original frames nor global geometric1:1 certified."
+      ],
+      "knownAppearanceGaps": [
+        "Natural shell/tooth-ring attack-front remains frontal after a targeted view correction; a right-facing side combat pose is not qualified."
+      ],
+      "receipt": {
+        "path": "modules/fidelity-r34/assets/lots/lot_4/re5-duvalia/idle.json",
+        "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/re5-duvalia/idle.json",
+        "sha256": "6b16fabdd7eb72ee3a76e0d72a5274ce874691babeaeb77a93afa964ad533a2e"
+      },
+      "references": [
+        {
+          "path": "modules/fidelity-r34/assets/lots/lot_4/research/re5-duvalia-candidate-0.png",
+          "sha256": "ed11fb54fd31297766bfa74f82918f93756ea9bdaa59028362abe9c70c6d5363",
+          "repositoryUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/research/re5-duvalia-candidate-0.png",
+          "sourceEdition": "Resident Evil 5 (2009)",
+          "sourceUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjBOi6sezE4_0VtFBqcE25K9PFXcrHEShykXNeKKVzPFxypQv3UCm5mhTh-SDRLm0qEV7MBWUHao8SMkV5b0A_4TK3Xh60AYPiHjyrZCyLwylVfjG6zaRi8HRCn3cGHMDPhjgLmedfyr94m/",
+          "observation": "Complete matching opened-shell Duvalia source: upper shell lobes with all tips, central tooth ring, remnant torso with belt/trousers, both bent legs and complete black boots; long fleshy side appendage contained.",
+          "qualificationBasis": "R34 receipt completeBodyReferences; local V7 review recorded separately",
+          "generatedReference": false,
+          "locallyViewedForV7": false
+        }
+      ],
+      "requiredNextStep": "Revoir la cause de non-admission et les preuves d'asymétrie/orientation avant d'allouer une nouvelle variante ; ne pas compter la présence du PNG comme réussite.",
+      "receipt_sha_verified": true,
+      "receipt_moderation_block_marker_found": false,
+      "current_status": "BLOCKED_BY_TOOL_V11_NO_RETRY",
+      "local_references": [
+        {
+          "path": "modules/fidelity-r34/assets/lots/lot_4/research/re5-duvalia-candidate-0.png",
+          "sha256": "ed11fb54fd31297766bfa74f82918f93756ea9bdaa59028362abe9c70c6d5363",
+          "repositoryUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/research/re5-duvalia-candidate-0.png",
+          "sourceEdition": "Resident Evil 5 (2009)",
+          "sourceUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjBOi6sezE4_0VtFBqcE25K9PFXcrHEShykXNeKKVzPFxypQv3UCm5mhTh-SDRLm0qEV7MBWUHao8SMkV5b0A_4TK3Xh60AYPiHjyrZCyLwylVfjG6zaRi8HRCn3cGHMDPhjgLmedfyr94m/",
+          "observation": "Complete matching opened-shell Duvalia source: upper shell lobes with all tips, central tooth ring, remnant torso with belt/trousers, both bent legs and complete black boots; long fleshy side appendage contained.",
+          "qualificationBasis": "R34 receipt completeBodyReferences; local V7 review recorded separately",
+          "generatedReference": false,
+          "locallyViewedForV7": false,
+          "local_path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v11/references/re5-duvalia__ed11fb54fd31.png",
+          "bytes": 226989,
+          "format": "PNG",
+          "dimensions": [
+            397,
+            500
+          ],
+          "visual_inspection_pending": false,
+          "published": false,
+          "locallyViewedForV11": true
+        }
+      ],
+      "manual_review_note": "Physically opened complete397x500 opened-shell source, central tooth ring, anatomical-left side appendage/source image-right, camouflage trousers/belt and two black boots. New right-facing shell and lower body must rotate together; fine geometry remains unverified.",
+      "locallyViewedForV11": true,
+      "generation_planned": true,
+      "refusal_request_id": "a7f425ec-5165-44bf-98d8-a687e3612e6a",
+      "refusal_category": "violence"
+    }
+  ],
+  "originalReferencesPublished": false,
+  "globalFidelity1to1Certified": false,
+  "direction_geometry_erratum": "The executed V11 right-view prompts incorrectly requested anatomical left flank near. For a normal right-facing side view, anatomical RIGHT is near and LEFT far. Executed prompt text is preserved unchanged as evidence; final QA uses the correct rule. Mkono02 consequently remains a nonadmitted trial, and03 addresses this concrete error. No refused request is retried.",
+  "review_state": "COMPLETE",
+  "calls_complete": true,
+  "generated_reference_bitmaps_published": false
+}

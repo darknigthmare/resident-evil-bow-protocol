@@ -1,6 +1,50 @@
-# Resident Evil Combat - publication des lots de production
+# Resident Evil Combat — publication des lots de production
 
-Cette branche de la [PR #22](https://github.com/darknigthmare/resident-evil-bow-protocol/pull/22) conserve les snapshots V5, V6 et V7 pour revue. Les fichiers figés de chaque lot et leurs archives ne sont pas réécrits lors de leur publication.
+La [PR #22](https://github.com/darknigthmare/resident-evil-bow-protocol/pull/22) conserve les snapshots **V5 à V11** pour revue. Chaque lot garde les octets de ses images, documents et archives figés. Les sources documentaires originales et les modèles restent exclus de cette publication.
+
+## Ajout commun des lots B.O.W. V8 à V11
+
+Les quatre lots ajoutent **49 PNG : 33 candidats visuels et 16 essais conservés**. Parmi les candidats, 31 sont des poses gauches de V8 à V10 ; les deux candidats V11 sont des vues droites antérieures aux refus ultérieurs de leurs demandes gauches. Les 57 appels ont produit 49 images et 8 refus. Les huit sujets tenus sans appel restent distincts de Gatling Majini, tenu après trois essais réussis mais non qualifiés.
+
+| Lot | PNG | Candidats | Essais | Appels | Refus | Tenus sans appel |
+|---|---:|---:|---:|---:|---:|---:|
+| [V8](v8/README.md) | 17 | 9 gauches | 8 | 20 | 3 | 1 |
+| [V9](v9/README.md) | 13 | 9 gauches | 4 | 14 | 1 | 4 |
+| [V10](v10/README.md) | 15 | 13 gauches | 2 | 15 | 0 | 1 |
+| [V11](v11/README.md) | 4 | 2 droits | 2 | 8 | 4 | 2 |
+
+Le [bilan cumulatif](CONTINUATION_20261119.md) et sa [version structurée](CONTINUATION_20261119.json) rattachent ces résultats à la file des 42 références et aux six anciens essais examinés. Une image présente dans un dossier ne suffit pas à la déclarer retenue : les manifestes finaux et les QA indépendantes portent les décisions.
+
+### Corrections et limites maintenues
+
+Les revues ont notamment corrigé le compte des membres de Flying Bug, la main supplémentaire de Giant Bat, les pattes de Wasp, et la latéralité de Garmr et de Mkono. Les sorties remplacées restent dans `trials/`. Les prises de l’arme de Gatling Majini n’ont pas atteint une lecture conforme après trois essais ; aucune de ces trois images n’est retenue.
+
+Lucas et Mkono V11 conservent chacun un candidat droit créé et revu **avant** le refus de leur appel gauche. Ces refus ne sont pas décrits comme des images produites, et aucun nouvel appel sur ces sujets ne les suit. Les refus, sources tenues et limites d’anatomie sont conservés dans les registres propres à chaque lot.
+
+La fidélité 1:1 demeure un objectif, sans certification. Les côtés cachés, microtextures et certains détails de perspective sont reconstruits. Les marges ne sont pas toutes généreuses et des fibres ou résidus de faible alpha subsistent ; les PNG n’ont pas été retouchés pour masquer ces limites. Aucun pivot, contact, collision, animation ou import moteur n’est admis par ce lot. Les indicateurs `canonical_one_to_one_certified` et `engine_admitted` restent `false`.
+
+### Archives V8 à V11
+
+Les fichiers extraits restent directement consultables sous `v8/`, `v9/`, `v10/` et `v11/`. Le ZIP d’origine est conservé en parallèle. Pour V8, V9 et V10, les segments binaires de 10 MiB maximum reconstituent les octets exacts du ZIP sans recompression ; ces trois ZIP monolithiques ne sont pas directement présents dans Git.
+
+| Lot | Octets du ZIP | Membres / checksums | Conservation de l’archive |
+|---|---:|---:|---|
+| V8 | 21 953 833 | 29 / 28 | [partie 1](Resident_Evil_Combat_Generation_V8.zip.part01) · [partie 2](Resident_Evil_Combat_Generation_V8.zip.part02) · [partie 3](Resident_Evil_Combat_Generation_V8.zip.part03) · [manifeste](V8_ARCHIVE_PARTS.json) · [reconstruction](reconstruct_v8_archive.py) |
+| V9 | 13 134 434 | 34 / 33 | [partie 1](Resident_Evil_Combat_Generation_V9.zip.part01) · [partie 2](Resident_Evil_Combat_Generation_V9.zip.part02) · [manifeste](V9_ARCHIVE_PARTS.json) · [reconstruction](reconstruct_v9_archive.py) |
+| V10 | 19 691 077 | 34 / 33 | [partie 1](Resident_Evil_Combat_Generation_V10.zip.part01) · [partie 2](Resident_Evil_Combat_Generation_V10.zip.part02) · [manifeste](V10_ARCHIVE_PARTS.json) · [reconstruction](reconstruct_v10_archive.py) |
+| V11 | 6 585 221 | 20 / 19 | [ZIP direct](Resident_Evil_Combat_Generation_V11.zip) |
+
+Le ZIP V9 conserve son dossier racine `resident_evil_combat_v9/`. Les mêmes fichiers sont publiés sous `v9/` ; les noms de membres et les octets de l’archive restent inchangés. Les autres trois ZIP contiennent leurs fichiers directement à la racine. Aucun ZIP ne s’inclut lui-même.
+
+```sh
+python3 production-archives/rec-media/reconstruct_v8_archive.py
+python3 production-archives/rec-media/reconstruct_v9_archive.py
+python3 production-archives/rec-media/reconstruct_v10_archive.py
+```
+
+Les scripts utilisent uniquement Python standard. Ils vérifient l’ordre, la taille et le SHA256 de chaque segment, le SHA256 global, le nombre de membres et leurs CRC. Ils refusent d’écraser un fichier existant différent. Les reconstructions ont été exécutées et comparées octet pour octet aux archives figées.
+
+Les rapports [V8](V8_PUBLICATION.json), [V9](V9_PUBLICATION.json), [V10](V10_PUBLICATION.json), [V11](V11_PUBLICATION.json) et le [rapport commun](V8_V11_PUBLICATION.json) donnent les empreintes et la correspondance avec les fichiers de revue. Les chemins locaux présents dans les anciens reçus sont des traces de travail, pas des bitmaps promis dans Git.
 
 ## Lot B.O.W. V7 du 19 novembre 2026
 
@@ -93,7 +137,7 @@ Les documents sous `v5/` et le ZIP sont figés à leurs octets de création. La 
 
 Cette note extérieure documente la publication ultérieure sans réécrire le snapshot, son manifeste ou ses empreintes. La présence de ces phrases historiques dans `v5/` ne signifie donc pas que les fichiers n'ont pas rejoint une branche de revue.
 
-## Portée artistique et fonctionnelle
+## Portée artistique et fonctionnelle du lot V5
 
 Le lot propose un portrait et une pose gauche de Raymond Vester, une pose gauche d'Alcina Dimitrescu, une étude originale de décor pour `re5_060_reaper`, trois plans candidats et un complément de bible pour Moira Burton. Les références initiales des personnages sont textuelles ; les références d'édition employées ensuite sont génératives.
 
@@ -103,16 +147,20 @@ Les trois plans du décor ont reçu une correction géométrique, avec joint de 
 
 ## Vérification commune et CI observée
 
-La vérification de cette publication porte sur les chemins, les liens, les empreintes des ZIP et de leurs membres, les identifiants des blobs Git et l'absence de changement hors du répertoire d'archives. Le catalogue PDF V5 de cinq pages a été rendu et inspecté lors de sa création. Ces contrôles ne remplacent pas une recette de jeu.
+La conservation est contrôlée par les SHA256 des fichiers et archives, les CRC ZIP, les empreintes internes, les identifiants Git des blobs et le périmètre du diff. Les PNG sont identiques aux sorties originales, sans miroir logiciel ni retouche. Les anciens snapshots V5/V6/V7 et leurs archives restent protégés. Cette vérification documentaire ne remplace pas une recette de jeu.
 
-Sur le commit V5 `a539a93b862fc12738abf7f9045cea96c6da54df`, les 25 workflows automatiques sont terminés : **19 réussis et 6 en échec**. Les logs des workflows QA générale, R25, R26, R28, R32 et R34 confirment tous `AssertionError [ERR_ASSERTION]: Unknown R34 addition: production-archives/rec-media/README.md`, avec code de sortie 1. Les trois jobs navigateur R34 (runtime, galerie et personnages-arène-combat) ont réussi ; son job de contrôle du périmètre a échoué. [Exécution R34 observée](https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/44555774286).
+Les résultats CI ci-dessous ont chacun été lus sur leur propre commit :
 
-Sur le commit V6 `4e374e87c240656d99e676bae005af6ae7d04e98`, un relevé distinct du 19 novembre 2026 à 16:33:34 UTC confirme également **25 workflows terminés : 19 succès et 6 échecs**. Les logs des six échecs (QA générale, R25, R26, R28, R32 et R34) ont été lus et confirment la même assertion `Unknown R34 addition: production-archives/rec-media/README.md`, code de sortie 1. Les trois jobs navigateur R34 du head V6 ont réussi. [QA V6](https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/44560451561), [R34 V6](https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/44560451793).
+| Commit publié | Workflows achevés | Succès | Échecs | Exécution R34 |
+|---|---:|---:|---:|---|
+| V5 `a539a93b862fc12738abf7f9045cea96c6da54df` | 25 | 19 | 6 | [R34 V5](https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/44555774286) |
+| V6 `4e374e87c240656d99e676bae005af6ae7d04e98` | 25 | 19 | 6 | [R34 V6](https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/44560451793) |
+| V7 `67ad2430f17c40e64686f32918cc20fe3b43f7af` | 25 | 19 | 6 | [R34 V7](https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/44569070097) |
 
-Ces résultats appartiennent à V5 et V6. Ils ne sont pas attribués au commit qui publiera V7 ; son état CI doit être lu séparément sur la PR.
+Pour chacun de ces commits, les logs des six échecs — QA générale, R25, R26, R28, R32 et R34 — confirment `AssertionError [ERR_ASSERTION]: Unknown R34 addition: production-archives/rec-media/README.md`, avec code de sortie 1. Les trois parcours navigateur R34 ont réussi. Le relevé final V7 est distinct des deux relevés antérieurs.
 
-La garde courante [`verify-current-r34.mjs`](../../scripts/verify-current-r34.mjs) possède une liste fermée d'ajouts et n'admet pas ce dossier. **La compatibilité avec cette garde reste ouverte.** Elle n'est ni modifiée ni désactivée ; les anciennes assertions et empreintes sont conservées. Les résultats ci-dessus gardent chacun leur commit V5 ou V6 et ne préjugent pas de la CI du nouveau head V7. Cette PR de conservation reste en brouillon, sans fusion.
+Ces résultats ne sont pas attribués au nouveau commit qui ajoute V8 à V11. Son état exact doit être consulté sur la PR et son propre SHA ; il peut être encore en cours au moment de la publication.
 
-Les suites de gameplay, le build complet et les recettes navigateur ne sont pas annoncés comme exécutés pour cet ajout documentaire et média. Les résultats CI doivent être lus sur le commit réel de la PR ; une preuve historique R34 ne certifie pas le présent lot.
+La garde [`verify-current-r34.mjs`](../../scripts/verify-current-r34.mjs) utilise une liste fermée d’ajouts qui n’admet pas ce dossier. **La compatibilité avec cette garde reste ouverte.** Aucune garde, assertion, empreinte historique, configuration de workflow ou partie du moteur n’est modifiée pour l’assouplir. La PR reste en brouillon, sans fusion.
 
 Références du périmètre : [consignes des agents](../../AGENTS.md), [guide gamedev](../../docs/GAMEDEV_GUIDANCE.md), [livraison R34](../../docs/R34_DELIVERY.md), [partage des validations R32](../../docs/GAMEDEV_APPLIED_R32.md).

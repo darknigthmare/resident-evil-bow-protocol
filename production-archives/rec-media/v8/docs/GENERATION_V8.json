@@ -1,0 +1,608 @@
+{
+  "schema": "rec-v8-generation-v1",
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "records": [
+    {
+      "uid": "re1-chimera",
+      "status": "CANDIDATE_LEFT_WITH_LIMITS",
+      "reason": null,
+      "attempts": [
+        {
+          "job_id": "REC_RE1_CHIMERA_FULLBODY_LEFT_V8_01",
+          "status": "TRIAL_REJECTED_LEFT_ORIENTATION",
+          "original_path": "/workspace/scratch/fc109c251847/generated_images/exec-d8d8840a-05ec-40c8-aa86-32908611e465.png",
+          "asset_path": "trials/REC_RE1_CHIMERA_FULLBODY_LEFT_V8_01.png",
+          "sha256": "71b8efa07838ccbc7ba54ab0e2ad8df8a7562fe262f704cf00aad8f0a12a7bc4",
+          "copy_sha_matches_original": true,
+          "bytes": 1545621,
+          "dimensions": [
+            987,
+            1594
+          ],
+          "mode": "RGBA",
+          "png_produced": true,
+          "canonical_one_to_one_certified": false,
+          "engine_admitted": false,
+          "qa_reason": "The first output keeps chest and pelvis nearly frontal, with the near foot turned right. A left body orientation must be read across head, thorax, pelvis and both feet.",
+          "retained_candidate": false,
+          "generated_bytes_edited": false,
+          "software_mirror_used": false,
+          "review_report": "docs/QA_INDEPENDENT_V8.json"
+        },
+        {
+          "job_id": "REC_RE1_CHIMERA_FULLBODY_LEFT_V8_02",
+          "status": "CANDIDATE_LEFT_WITH_LIMITS",
+          "original_path": "/workspace/scratch/fc109c251847/generated_images/exec-d1a54e13-4db9-4b98-928b-dd774a73436d.png",
+          "asset_path": "assets/REC_RE1_CHIMERA_FULLBODY_LEFT_V8_02.png",
+          "sha256": "344ceac4c6e2114d6c101f60e58abdfbe2ab7570fbcbf708f6912244ca14205c",
+          "copy_sha_matches_original": true,
+          "bytes": 1368409,
+          "dimensions": [
+            987,
+            1594
+          ],
+          "mode": "RGBA",
+          "png_produced": true,
+          "canonical_one_to_one_certified": false,
+          "engine_admitted": false,
+          "retained_candidate": true,
+          "observations": [
+            "En02, thorax, bassin et deux pieds tournés à gauche ; bras gauche griffu proche et long bras droit à crochet éloigné.",
+            "Le crochet terminal appartient au bras droit, pas à une queue. Surfaces arrière et textures restent reconstruites depuis une source unique."
+          ],
+          "generated_bytes_edited": false,
+          "software_mirror_used": false,
+          "review_report": "docs/QA_INDEPENDENT_V8.json"
+        }
+      ],
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "retained_job_id": "REC_RE1_CHIMERA_FULLBODY_LEFT_V8_02"
+    },
+    {
+      "uid": "re4r-garrador",
+      "status": "BLOCKED_BY_TOOL_V8_NO_RETRY",
+      "reason": null,
+      "attempts": [
+        {
+          "job_id": "REC_RE4R_GARRADOR_FULLBODY_LEFT_V8_01",
+          "status": "BLOCKED_BY_TOOL_V8_NO_RETRY",
+          "error": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 024ef6bf-6422-4d75-a0ee-0c7d90280af7. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+          "request_id": "024ef6bf-6422-4d75-a0ee-0c7d90280af7",
+          "png_produced": false,
+          "no_retry": true,
+          "canonical_one_to_one_certified": false,
+          "engine_admitted": false,
+          "moderation_stage": "output",
+          "moderation_categories": [
+            "violence"
+          ],
+          "error_code": "moderation_blocked"
+        }
+      ],
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false
+    },
+    {
+      "uid": "re5-big-man-majini",
+      "status": "CANDIDATE_LEFT_WITH_LIMITS",
+      "reason": null,
+      "attempts": [
+        {
+          "job_id": "REC_RE5_BIG_MAN_MAJINI_FULLBODY_LEFT_V8_01",
+          "status": "CANDIDATE_LEFT_WITH_LIMITS",
+          "original_path": "/workspace/scratch/fc109c251847/generated_images/exec-d222ad14-1c64-4bf9-82c1-25f6cbbb4e85.png",
+          "asset_path": "assets/REC_RE5_BIG_MAN_MAJINI_FULLBODY_LEFT_V8_01.png",
+          "sha256": "d9df4794ac5810d31cc3a08f938f764ff193a81fea6234633d1a5aa9689cc514",
+          "copy_sha_matches_original": true,
+          "bytes": 1999490,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "canonical_one_to_one_certified": false,
+          "engine_admitted": false,
+          "png_produced": true,
+          "retained_candidate": true,
+          "observations": [
+            "Un sujet, corps complet et lecture gauche ; grandes mains et pieds entièrement contenus.",
+            "Le fond brun du preview brut est porté par des RGB sous alpha0 ; détourage neutre propre. Détails de peau et proportions fines non certifiés."
+          ],
+          "generated_bytes_edited": false,
+          "software_mirror_used": false,
+          "review_report": "docs/QA_INDEPENDENT_V8.json"
+        }
+      ],
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "retained_job_id": "REC_RE5_BIG_MAN_MAJINI_FULLBODY_LEFT_V8_01"
+    },
+    {
+      "uid": "re5-gatling-gun-majini",
+      "status": "HELD_NO_QUALIFIED_LEFT_VIEW_AFTER_TRIALS",
+      "reason": "Trois sorties réussies mais prises et raccords des bras non conformes à la source ; une nouvelle référence gauche avec prises établies serait nécessaire pour une reprise.",
+      "attempts": [
+        {
+          "job_id": "REC_RE5_GATLING_GUN_MAJINI_FULLBODY_LEFT_V8_01",
+          "status": "TRIAL_REJECTED_GRIP_LATERALITY",
+          "original_path": "/workspace/scratch/fc109c251847/generated_images/exec-e660c3a3-7520-4cf6-a989-05c3e1e54239.png",
+          "asset_path": "trials/REC_RE5_GATLING_GUN_MAJINI_FULLBODY_LEFT_V8_01.png",
+          "sha256": "546cde4487782838d27746cfa38f2596baf22aa1e4e693ffa09e766a82faceb5",
+          "copy_sha_matches_original": true,
+          "bytes": 1297064,
+          "dimensions": [
+            1142,
+            1377
+          ],
+          "mode": "RGBA",
+          "png_produced": true,
+          "canonical_one_to_one_certified": false,
+          "engine_admitted": false,
+          "qa_reason": "Source right hand grips rear control; source left hand grips forward support. The first generated left view swapped these anatomical hands.",
+          "retained_candidate": false,
+          "generated_bytes_edited": false,
+          "software_mirror_used": false,
+          "review_report": "docs/QA_INDEPENDENT_V8.json"
+        },
+        {
+          "job_id": "REC_RE5_GATLING_GUN_MAJINI_FULLBODY_LEFT_V8_02",
+          "status": "TRIAL_REJECTED_GRIP_LATERALITY_AND_ADDED_HANDLE",
+          "original_path": "/workspace/scratch/fc109c251847/generated_images/exec-98575a80-84b6-45ad-b051-9b68c36c22cf.png",
+          "asset_path": "trials/REC_RE5_GATLING_GUN_MAJINI_FULLBODY_LEFT_V8_02.png",
+          "sha256": "60f999260c583dd95e8e70738c8aee75e629af6b850fd24388ec41f2f0b85113",
+          "copy_sha_matches_original": true,
+          "bytes": 1389924,
+          "dimensions": [
+            1142,
+            1377
+          ],
+          "mode": "RGBA",
+          "png_produced": true,
+          "canonical_one_to_one_certified": false,
+          "engine_admitted": false,
+          "qa_reason": "Correction02 still assigns the right anatomical hand to the forward grip and left hand to the rear; it also invented an unsupported U-shaped forward handle.",
+          "retained_candidate": false,
+          "generated_bytes_edited": false,
+          "software_mirror_used": false,
+          "review_report": "docs/QA_INDEPENDENT_V8.json"
+        },
+        {
+          "job_id": "REC_RE5_GATLING_GUN_MAJINI_FULLBODY_LEFT_V8_03",
+          "status": "TRIAL_REJECTED_REAR_GRIP_UNOCCUPIED",
+          "original_path": "/workspace/scratch/fc109c251847/generated_images/exec-e8ae7e87-07b9-4beb-b994-3645518ba60c.png",
+          "asset_path": "trials/REC_RE5_GATLING_GUN_MAJINI_FULLBODY_LEFT_V8_03.png",
+          "sha256": "4af19b3339a56ed939965468ee08581dca1094aa1ec0514208476b6dd63d5a63",
+          "copy_sha_matches_original": true,
+          "bytes": 1451846,
+          "dimensions": [
+            1142,
+            1377
+          ],
+          "mode": "RGBA",
+          "png_produced": true,
+          "canonical_one_to_one_certified": false,
+          "engine_admitted": false,
+          "retained_candidate": false,
+          "qa_reason": "Les deux mains restent à l’avant de l’arme et la vraie prise arrière est libre. La latéralité demandée n’est pas établie après03 ; aucun nouvel appel dans ce lot.",
+          "generated_bytes_edited": false,
+          "software_mirror_used": false,
+          "review_report": "docs/QA_INDEPENDENT_V8.json"
+        }
+      ],
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "additional_calls_in_batch_allowed": false
+    },
+    {
+      "uid": "re5-ndesu",
+      "status": "CANDIDATE_LEFT_WITH_LIMITS",
+      "reason": null,
+      "attempts": [
+        {
+          "job_id": "REC_RE5_NDESU_FULLBODY_LEFT_V8_01",
+          "status": "CANDIDATE_LEFT_WITH_LIMITS",
+          "original_path": "/workspace/scratch/fc109c251847/generated_images/exec-299d2b77-8533-499f-8b2e-07921819e233.png",
+          "asset_path": "assets/REC_RE5_NDESU_FULLBODY_LEFT_V8_01.png",
+          "sha256": "fe96e8207ccf0f414145a1d5dd7595a163a3197b16db70f21d2fd2c16285e722",
+          "copy_sha_matches_original": true,
+          "bytes": 2031154,
+          "dimensions": [
+            1122,
+            1402
+          ],
+          "mode": "RGBA",
+          "png_produced": true,
+          "canonical_one_to_one_certified": false,
+          "engine_admitted": false,
+          "retained_candidate": true,
+          "observations": [
+            "Grand corps complet et lisible vers la gauche, deux bras et deux jambes, accessoires principaux conservés.",
+            "La source montre déjà trois petites terminaisons en forme de mains dans l’ensemble suspendu à la ceinture ; ne pas retirer arbitrairement ce détail source ambigu. Le nombre d’éléments superposés de cet ornement n’est pas certifié."
+          ],
+          "generated_bytes_edited": false,
+          "software_mirror_used": false,
+          "review_report": "docs/QA_INDEPENDENT_V8.json"
+        }
+      ],
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "retained_job_id": "REC_RE5_NDESU_FULLBODY_LEFT_V8_01"
+    },
+    {
+      "uid": "re7-flying-bug",
+      "status": "CANDIDATE_LEFT_WITH_LIMITS",
+      "reason": null,
+      "attempts": [
+        {
+          "job_id": "REC_RE7_FLYING_BUG_FULLBODY_LEFT_V8_01",
+          "status": "TRIAL_REJECTED_LEG_TOPOLOGY",
+          "original_path": "/workspace/scratch/fc109c251847/generated_images/exec-b8928ffa-4b35-44d5-9a22-21d3270b030f.png",
+          "asset_path": "trials/REC_RE7_FLYING_BUG_FULLBODY_LEFT_V8_01.png",
+          "sha256": "a3039a548a33a156cc55d02f97113be07c426a4acc22c7d2325ee4758ba9b7a1",
+          "copy_sha_matches_original": true,
+          "bytes": 836188,
+          "dimensions": [
+            1674,
+            940
+          ],
+          "mode": "RGBA",
+          "png_produced": true,
+          "canonical_one_to_one_certified": false,
+          "engine_admitted": false,
+          "qa_reason": "Only five long leg terminals plus a short unresolved loop beneath the throat are readable. Six complete attached legs are required by the source anatomy.",
+          "retained_candidate": false,
+          "generated_bytes_edited": false,
+          "software_mirror_used": false,
+          "review_report": "docs/QA_INDEPENDENT_V8.json"
+        },
+        {
+          "job_id": "REC_RE7_FLYING_BUG_FULLBODY_LEFT_V8_02",
+          "status": "TRIAL_REJECTED_SEVEN_LEGS",
+          "original_path": "/workspace/scratch/fc109c251847/generated_images/exec-dcd161af-fc4e-409e-ac2e-17a3ca82d371.png",
+          "asset_path": "trials/REC_RE7_FLYING_BUG_FULLBODY_LEFT_V8_02.png",
+          "sha256": "7c11e1b14a9e9fc8412a9f00a5832fb36b0a9c0ae90b767cae4a21dbc2196e38",
+          "copy_sha_matches_original": true,
+          "bytes": 925634,
+          "dimensions": [
+            1673,
+            940
+          ],
+          "mode": "RGBA",
+          "png_produced": true,
+          "canonical_one_to_one_certified": false,
+          "engine_admitted": false,
+          "qa_reason": "The successful correction02 has seven leg terminals: six complete long legs and one extra shorter central leg.",
+          "retained_candidate": false,
+          "generated_bytes_edited": false,
+          "software_mirror_used": false,
+          "review_report": "docs/QA_INDEPENDENT_V8.json"
+        },
+        {
+          "job_id": "REC_RE7_FLYING_BUG_FULLBODY_LEFT_V8_03",
+          "status": "CANDIDATE_LEFT_WITH_LIMITS",
+          "original_path": "/workspace/scratch/fc109c251847/generated_images/exec-92afe0ab-d644-48ca-87ce-83985d6496bf.png",
+          "asset_path": "assets/REC_RE7_FLYING_BUG_FULLBODY_LEFT_V8_03.png",
+          "sha256": "7a5f4308367379404e9bdd9a857bfcf7f6207381e0d8098ae777f398c6044dfb",
+          "copy_sha_matches_original": true,
+          "bytes": 952382,
+          "dimensions": [
+            1673,
+            940
+          ],
+          "mode": "RGBA",
+          "png_produced": true,
+          "canonical_one_to_one_certified": false,
+          "engine_admitted": false,
+          "retained_candidate": true,
+          "observations": [
+            "La courte septième patte de02 est supprimée en03 ; six longues chaînes continues, deux ailes et abdomen complets.",
+            "Lecture gauche aérienne ; les joints et nervures fins restent générés depuis le visuel documentaire."
+          ],
+          "generated_bytes_edited": false,
+          "software_mirror_used": false,
+          "review_report": "docs/QA_INDEPENDENT_V8.json"
+        }
+      ],
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "retained_job_id": "REC_RE7_FLYING_BUG_FULLBODY_LEFT_V8_03"
+    },
+    {
+      "uid": "revillage-hauler",
+      "status": "BLOCKED_BY_TOOL_V8_NO_RETRY",
+      "reason": null,
+      "attempts": [
+        {
+          "job_id": "REC_REVILLAGE_HAULER_FULLBODY_LEFT_V8_01",
+          "status": "BLOCKED_BY_TOOL_V8_NO_RETRY",
+          "error": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 77a3a161-8e66-49b7-ab2e-328f29d1728b. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+          "request_id": "77a3a161-8e66-49b7-ab2e-328f29d1728b",
+          "png_produced": false,
+          "no_retry": true,
+          "canonical_one_to_one_certified": false,
+          "engine_admitted": false,
+          "moderation_stage": "output",
+          "moderation_categories": [
+            "violence"
+          ],
+          "error_code": "moderation_blocked"
+        }
+      ],
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false
+    },
+    {
+      "uid": "revillage-moroaica",
+      "status": "HELD_RELATED_IDENTITY_REFUSAL",
+      "reason": "similar_visual_variant",
+      "attempts": [],
+      "related_refusal_uid": "revillage-hauler",
+      "related_request_id": "77a3a161-8e66-49b7-ab2e-328f29d1728b",
+      "tool_call_performed": false,
+      "own_moderation_refusal": false,
+      "parent_decision": "After viewing both sources, parent identified closely similar pale ragged melee-weapon silhouette within same edition; no substitution after Hauler refusal.",
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false
+    },
+    {
+      "uid": "re0-bat",
+      "status": "CANDIDATE_LEFT_WITH_LIMITS",
+      "reason": null,
+      "attempts": [
+        {
+          "job_id": "REC_RE0_BAT_FULLBODY_LEFT_V8_01",
+          "status": "CANDIDATE_LEFT_WITH_LIMITS",
+          "original_path": "/workspace/scratch/fc109c251847/generated_images/exec-d44c859d-80cb-4352-bdfd-02e8276350d6.png",
+          "asset_path": "assets/REC_RE0_BAT_FULLBODY_LEFT_V8_01.png",
+          "sha256": "1d4d9cb669562bf0fdca4cd4d699824c6d62ca620963703b84180670d2542071",
+          "copy_sha_matches_original": true,
+          "bytes": 850738,
+          "dimensions": [
+            1402,
+            1122
+          ],
+          "mode": "RGBA",
+          "png_produced": true,
+          "canonical_one_to_one_certified": false,
+          "engine_admitted": false,
+          "retained_candidate": true,
+          "observations": [
+            "Deux membres alaires et deux membres postérieurs, deux pieds, tête et pose aérienne vers la gauche ; membranes contenues.",
+            "Fourrure et visage reconstruits depuis une petite source documentaire."
+          ],
+          "generated_bytes_edited": false,
+          "software_mirror_used": false,
+          "review_report": "docs/QA_INDEPENDENT_V8.json"
+        }
+      ],
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "retained_job_id": "REC_RE0_BAT_FULLBODY_LEFT_V8_01"
+    },
+    {
+      "uid": "re0-crow",
+      "status": "CANDIDATE_LEFT_WITH_LIMITS",
+      "reason": null,
+      "attempts": [
+        {
+          "job_id": "REC_RE0_CROW_FULLBODY_LEFT_V8_01",
+          "status": "CANDIDATE_LEFT_WITH_LIMITS",
+          "original_path": "/workspace/scratch/fc109c251847/generated_images/exec-d1712f0c-8c65-46f6-b611-cc2014781877.png",
+          "asset_path": "assets/REC_RE0_CROW_FULLBODY_LEFT_V8_01.png",
+          "sha256": "063e353a8ef47057d0cfa89cabeb52fa88584a8506cce31d9a8094f06d7cfa72",
+          "copy_sha_matches_original": true,
+          "bytes": 875013,
+          "dimensions": [
+            1402,
+            1122
+          ],
+          "mode": "RGBA",
+          "png_produced": true,
+          "canonical_one_to_one_certified": false,
+          "engine_admitted": false,
+          "retained_candidate": true,
+          "observations": [
+            "Deux ailes, deux pattes, queue et bec complets, lecture gauche cohérente.",
+            "Plumage et intensité du petit œil rouge reconstruits ; correspondance fine non certifiée."
+          ],
+          "generated_bytes_edited": false,
+          "software_mirror_used": false,
+          "review_report": "docs/QA_INDEPENDENT_V8.json"
+        }
+      ],
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "retained_job_id": "REC_RE0_CROW_FULLBODY_LEFT_V8_01"
+    },
+    {
+      "uid": "re0-giant-bat",
+      "status": "CANDIDATE_LEFT_WITH_LIMITS",
+      "reason": null,
+      "attempts": [
+        {
+          "job_id": "REC_RE0_GIANT_BAT_FULLBODY_LEFT_V8_01",
+          "status": "TRIAL_REJECTED_EXTRA_CHEST_HAND",
+          "original_path": "/workspace/scratch/fc109c251847/generated_images/exec-83d723d2-32ba-49c4-ae67-ea7b29efab82.png",
+          "asset_path": "trials/REC_RE0_GIANT_BAT_FULLBODY_LEFT_V8_01.png",
+          "sha256": "cce0fd144f5556c605c34aa247cbeeac395c3b7139ab62100bbaad3a93d3091e",
+          "copy_sha_matches_original": true,
+          "bytes": 1645055,
+          "dimensions": [
+            1601,
+            982
+          ],
+          "mode": "RGBA",
+          "png_produced": true,
+          "canonical_one_to_one_certified": false,
+          "engine_admitted": false,
+          "qa_reason": "A hand-like form with fingers appears on the thorax in addition to two wing forelimbs and two hind legs; it is not supported by the source.",
+          "retained_candidate": false,
+          "generated_bytes_edited": false,
+          "software_mirror_used": false,
+          "review_report": "docs/QA_INDEPENDENT_V8.json"
+        },
+        {
+          "job_id": "REC_RE0_GIANT_BAT_FULLBODY_LEFT_V8_02",
+          "status": "CANDIDATE_LEFT_WITH_LIMITS",
+          "original_path": "/workspace/scratch/fc109c251847/generated_images/exec-e99887a6-a3c2-4038-8096-3a4fca2fce59.png",
+          "asset_path": "assets/REC_RE0_GIANT_BAT_FULLBODY_LEFT_V8_02.png",
+          "sha256": "5624538952739dfb99eeffc690a25b02f6640287ff90a7e00c106373fa5de6c7",
+          "copy_sha_matches_original": true,
+          "bytes": 1733349,
+          "dimensions": [
+            1601,
+            982
+          ],
+          "mode": "RGBA",
+          "png_produced": true,
+          "canonical_one_to_one_certified": false,
+          "engine_admitted": false,
+          "retained_candidate": true,
+          "observations": [
+            "La main supplémentaire du thorax a été retirée en02 ; restent deux membres alaires et deux jambes.",
+            "Envergure et deux pieds complets, lecture gauche en trois-quarts ; source250×161 limite fortement la certification du détail de surface."
+          ],
+          "generated_bytes_edited": false,
+          "software_mirror_used": false,
+          "review_report": "docs/QA_INDEPENDENT_V8.json"
+        }
+      ],
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "retained_job_id": "REC_RE0_GIANT_BAT_FULLBODY_LEFT_V8_02"
+    },
+    {
+      "uid": "re1-wasp",
+      "status": "CANDIDATE_LEFT_WITH_LIMITS",
+      "reason": null,
+      "attempts": [
+        {
+          "job_id": "REC_RE1_WASP_FULLBODY_LEFT_V8_01",
+          "status": "TRIAL_REJECTED_WING_TOPOLOGY",
+          "original_path": "/workspace/scratch/fc109c251847/generated_images/exec-38aa603c-80de-44db-a5bf-897aa487a379.png",
+          "asset_path": "trials/REC_RE1_WASP_FULLBODY_LEFT_V8_01.png",
+          "sha256": "f1c0191d63029adaf133044b924b2d6583f93eb73659bc45d116a7a141dabd1b",
+          "copy_sha_matches_original": true,
+          "bytes": 787708,
+          "dimensions": [
+            1402,
+            1122
+          ],
+          "mode": "RGBA",
+          "png_produced": true,
+          "canonical_one_to_one_certified": false,
+          "engine_admitted": false,
+          "qa_reason": "Only three separate wing tips are readable although the source documents four wings in two pairs; the missing far hind wing cannot be assumed.",
+          "retained_candidate": false,
+          "generated_bytes_edited": false,
+          "software_mirror_used": false,
+          "review_report": "docs/QA_INDEPENDENT_V8.json"
+        },
+        {
+          "job_id": "REC_RE1_WASP_FULLBODY_LEFT_V8_02",
+          "status": "CANDIDATE_LEFT_WITH_LIMITS",
+          "original_path": "/workspace/scratch/fc109c251847/generated_images/exec-4940393c-568e-468c-bf94-4842eb8bf520.png",
+          "asset_path": "assets/REC_RE1_WASP_FULLBODY_LEFT_V8_02.png",
+          "sha256": "5732e3197f1ce3f883fd210699ff1b6e3cba9506fd8882ce772af8f62530fc37",
+          "copy_sha_matches_original": true,
+          "bytes": 886456,
+          "dimensions": [
+            1402,
+            1122
+          ],
+          "mode": "RGBA",
+          "png_produced": true,
+          "canonical_one_to_one_certified": false,
+          "engine_admitted": false,
+          "retained_candidate": true,
+          "observations": [
+            "Quatre ailes distinctes en02 et six pattes présentes. La sixième longe le côté de l’abdomen et se termine en petit crochet versx875,y705, naturellement superposé au corps.",
+            "Aucune patte supplémentaire ni dard tronqué. Palette et pose gauche conservées, détail des nervures non certifié."
+          ],
+          "generated_bytes_edited": false,
+          "software_mirror_used": false,
+          "review_report": "docs/QA_INDEPENDENT_V8.json"
+        }
+      ],
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "retained_job_id": "REC_RE1_WASP_FULLBODY_LEFT_V8_02"
+    },
+    {
+      "uid": "re1-web-spinner",
+      "status": "CANDIDATE_LEFT_WITH_LIMITS",
+      "reason": null,
+      "attempts": [
+        {
+          "job_id": "REC_RE1_WEB_SPINNER_FULLBODY_LEFT_V8_01",
+          "status": "CANDIDATE_LEFT_WITH_LIMITS",
+          "original_path": "/workspace/scratch/fc109c251847/generated_images/exec-587b68eb-60c1-4961-aca4-6cf5fdf32091.png",
+          "asset_path": "assets/REC_RE1_WEB_SPINNER_FULLBODY_LEFT_V8_01.png",
+          "sha256": "2b2929a0133a6a242eb15266956aad0e5f00cf8f6eee6bc6edb14c0d3b46b8db",
+          "copy_sha_matches_original": true,
+          "bytes": 1996754,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGBA",
+          "png_produced": true,
+          "canonical_one_to_one_certified": false,
+          "engine_admitted": false,
+          "retained_candidate": true,
+          "observations": [
+            "Huit pattes jointées terminées et deux chélicères ; abdomen et face dirigés à gauche, silhouette entière.",
+            "Détourage vérifié sur alpha neutre, sans large plaque visible. Poils et petits reliefs reconstruits."
+          ],
+          "generated_bytes_edited": false,
+          "software_mirror_used": false,
+          "review_report": "docs/QA_INDEPENDENT_V8.json"
+        }
+      ],
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "retained_job_id": "REC_RE1_WEB_SPINNER_FULLBODY_LEFT_V8_01"
+    },
+    {
+      "uid": "re1-yawn",
+      "status": "BLOCKED_BY_TOOL_V8_NO_RETRY",
+      "reason": null,
+      "attempts": [
+        {
+          "job_id": "REC_RE1_YAWN_FULLBODY_LEFT_V8_01",
+          "status": "BLOCKED_BY_TOOL_V8_NO_RETRY",
+          "error": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 96ca1866-1a11-4d2c-8213-6938aa219f1b.\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"other\\\"\\n      ]\\n    }\\n  }\\n}\")",
+          "request_id": "96ca1866-1a11-4d2c-8213-6938aa219f1b",
+          "png_produced": false,
+          "no_retry": true,
+          "canonical_one_to_one_certified": false,
+          "engine_admitted": false,
+          "moderation_stage": "output",
+          "moderation_categories": [
+            "other"
+          ],
+          "error_code": "moderation_blocked"
+        }
+      ],
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false
+    }
+  ],
+  "state": "FINAL_AFTER_INDEPENDENT_QA",
+  "summary": {
+    "identities_in_queue": 14,
+    "prompt_jobs": 21,
+    "tool_calls": 20,
+    "png_outputs": 17,
+    "retained_candidates": 9,
+    "trials": 8,
+    "refused_calls": 3,
+    "held_without_call": 1,
+    "held_after_trials": 1,
+    "new_left_candidates": 9
+  },
+  "updated_at": "2026-11-19T17:16:17.854853+00:00",
+  "source_bitmaps_included": false
+}
