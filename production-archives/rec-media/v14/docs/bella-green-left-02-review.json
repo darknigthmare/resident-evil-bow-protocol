@@ -1,0 +1,70 @@
+{
+  "schema": "rec.static-candidate-independent-review.v14",
+  "reviewed_at": "2026-11-20",
+  "reviewer": "review_v14",
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "original_bytes_modified": false,
+  "one_subject_per_image_reviewed": true,
+  "animation_frames": 1,
+  "inspection_method": "Original RGBA composited over gray RGB128 and light RGB235; both composites personally inspected with tools.view_image. Original PNG bytes preserved.",
+  "asset": "Bella Sister — green skirt, RE4 original 2005, left 02",
+  "original_path": "/workspace/scratch/3fced93cfb0a/generated_images/exec-c837d4c8-2074-420a-ac1c-556d5fda9112.png",
+  "sha256": "d51670efefa690377f640a4d02d37d788295f1c3b88c26d03e912cd21d69ddc7",
+  "bytes": 2043259,
+  "verdict": "TRIAL_NEEDS_GRIP_CORRECTION",
+  "source_refs_reviewed": [
+    "references-v14/bella_re4original_steam.jpg",
+    "references-v14/bella_re4original_evilresource.png",
+    "V14 corresponding left 01 trial and its independent review"
+  ],
+  "visual_checks": {
+    "orientation": "Head and saw blade face screen left, but chest remains front-left. The more visible near-side arm still runs to the rear grip, retaining the earlier hand-assignment error.",
+    "costume": "Ochre/olive-brown blouse with pale chest pleats, long dark green skirt with lower dark bands, brown shoes and bandaged head remain the correct original-game sister.",
+    "hands": "Correction NOT successful: tracing the arm visible at image left to its anatomical right shoulder shows RIGHT hand still on the forward/top wrap handle; anatomical LEFT hand holds rear trigger grip. Hands are attached and otherwise plausible, but ownership remains opposite the prompt.",
+    "framing": "Exactly one complete woman, one complete red chainsaw, full bar tip, bandaged head, skirt hem and both shoes contained. No pedestal, labels, floor or second woman.",
+    "blocking_defects": [
+      "Anatomical hand ownership on chainsaw remains reversed."
+    ],
+    "limits": [
+      "Requested 8 percent empty border is not met; exact measurements recorded.",
+      "Exact native face, bandage pattern, cloth texture and weapon mechanics are not certified.",
+      "One generated static pose; no animation, contacts, pivots or engine admission.",
+      "Only 14 px left and 9 px right margin at alpha>=16; no clipping observed but silhouette is very close to canvas edges."
+    ]
+  },
+  "alpha": {
+    "mode": "RGBA",
+    "size": [
+      1024,
+      1536
+    ],
+    "extrema": [
+      0,
+      254
+    ],
+    "bbox_alpha_gte16": [
+      14,
+      94,
+      1015,
+      1475
+    ],
+    "margins_alpha16_left_top_right_bottom": [
+      14,
+      94,
+      9,
+      61
+    ],
+    "pixels_alpha0": 906796,
+    "pixels_alpha1_to15": 19131,
+    "pixels_alpha1_to3": 16969,
+    "pixels_alpha255": 0,
+    "halo_finding": "Genuine transparency confirmed. No substantial opaque backdrop or broad halo visible in actual gray/light composites. Low-alpha residual pixels remain; subject is not uniformly alpha255.",
+    "all_subject_alpha_255": false
+  },
+  "qa_previews_only": [
+    "qa-v14-v15-next/bella-green-left-02-gray.jpg",
+    "qa-v14-v15-next/bella-green-left-02-light.jpg"
+  ],
+  "recommended_action": "Preserve this 02 output as a second trial. Do not count as a corrected candidate. Further correction should use an actually correct left-hand-front body pose rather than retain this frontal arm layout."
+}

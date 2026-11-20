@@ -1,6 +1,23 @@
 # Resident Evil Combat — publication des lots de production
 
-La [PR #22](https://github.com/darknigthmare/resident-evil-bow-protocol/pull/22) conserve les snapshots **V5 à V11** pour revue. Chaque lot garde les octets de ses images, documents et archives figés. Les sources documentaires originales et les modèles restent exclus de cette publication.
+La [PR #22](https://github.com/darknigthmare/resident-evil-bow-protocol/pull/22) conserve les snapshots **V5 à V11 et V14–V15** pour revue. Chaque lot garde les octets de ses images, documents et archives figés. Les sources documentaires originales et les modèles restent exclus de cette publication.
+
+## Reprise du 20 novembre 2026 — V14 et V15
+
+Le [nouveau bilan](CONTINUATION_20261120.md) et son [inventaire structuré de 346 identités](CONTINUATION_20261120.json) ajoutent **16 PNG V14–V15 : 13 poses candidates et 3 essais conservés**. Trois PNG V14 étaient déjà publiés au point de reprise ; cette continuation ajoute donc **13 PNG à la PR**, dont 10 nouvellement générés et 3 récupérés parmi les sorties antérieures.
+
+| Lot | PNG | Candidats | Essais | Contenu |
+| --- | ---: | ---: | ---: | --- |
+| [V14](v14/README.md) | 14 | 11 | 3 | Jill Battle Suit, deux Bella Sisters corrigées, Leader Zealot, Castle Ganado et Yawn gauche |
+| [V15](v15/README.md) | 2 | 2 | 0 | Hunter Gamma Outbreak 2003, vues gauche et droite |
+
+Les prises de tronçonneuse des Bella sont corrigées dans des fichiers distincts ; leurs trois essais restent conservés. Le refus de Yawn droite est documenté sans image et sans nouvel appel sur ce sujet. Les 44 PNG historiquement annoncés pour V12/V13 restent non récupérés et exclus du décompte.
+
+Le [journal de génération](GENERATION_LEDGER_20261120.json) et le [contrôle d'intégrité V14–V15](V14_V15_VALIDATION_20261120.json) conservent les références, empreintes et décisions. Les [prochaines recherches](v15/docs/NEXT_SOURCE_TARGETS.json) restent ouvertes. Les **98 PNG archivés** au total représentent **69 candidats visuels et 29 essais**, avec des poses opposées et des décors V5 ; ce ne sont pas 98 personnages.
+
+Les médias restent des poses générées statiques. La fidélité globale 1:1, les animations et l'admission moteur ne sont pas certifiées. La [preuve CI du checkpoint 2](CI_CHECKPOINT2_20261120.json) confirme que la garde R34 rejette le bilan historique V5–V11 avant les autres suites ; elle n'est pas une recette réussie du nouveau contenu. Les gardes et le runtime restent inchangés.
+
+Les sections suivantes conservent l'historique des lots V5–V11.
 
 ## Ajout commun des lots B.O.W. V8 à V11
 

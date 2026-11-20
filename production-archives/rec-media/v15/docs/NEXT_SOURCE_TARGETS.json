@@ -1,0 +1,222 @@
+{
+  "schema": "rec.media.next-source-targets.v15/1",
+  "date": "2026-11-20",
+  "language": "fr",
+  "repository": "darknigthmare/resident-evil-bow-protocol",
+  "scope": "Prochaines recherches de références et vues directionnelles, après les candidats V14 et V15. Ce suivi ne réécrit aucun reçu historique et ne constitue pas un inventaire exhaustif de tous les manques du jeu.",
+  "evidence_path_base": "Racine du dépôt",
+  "status_rules": [
+    "Un candidat statique généré ne prouve ni une animation complète, ni son intégration au moteur, ni une fidélité canonique certifiée.",
+    "tool_refusal=false signifie qu'aucun refus n'est consigné dans les preuves citées pour cette entrée ; ce n'est pas une garantie d'acceptation d'une future demande.",
+    "Les références d'édition, de variante et de corps entier doivent être résolues avant toute nouvelle génération déclarée fidèle.",
+    "Les noms de fichiers directionnels ne remplacent pas la vérification de l'orientation réellement visible."
+  ],
+  "source_records": [
+    "production-archives/rec-media/CONTINUATION_20261119.json",
+    "production-archives/rec-media/v14/docs/REFERENCE_REVIEW_V14.json",
+    "production-archives/rec-media/v14/docs/yawn-right-refusal.json",
+    "production-archives/rec-media/v15/docs/HUNTER_GAMMA_SOURCE_RECOVERY.json"
+  ],
+  "targets": [
+    {
+      "priority": 1,
+      "uid": "recv-sweeper",
+      "edition": "Resident Evil CODE: Veronica (2000)",
+      "status": "SOURCE_HOLD_MODEL_APPEARANCE_CONFLICT",
+      "reason": "Le rendu de catalogue coupe les mains et les pieds. Une illustration complète est disponible, mais ses tissus orange-brun et ses plaques bordées de violet ne suffisent pas à établir les textures mauves et grises du modèle final. Le conflit reste ouvert.",
+      "evidence": [
+        {"path": "production-archives/rec-media/CONTINUATION_20261119.json", "entry_uid": "recv-sweeper"},
+        {"path": "production-archives/rec-media/v14/docs/REFERENCE_REVIEW_V14.json", "entry_uid": "recv-sweeper"},
+        {"source_url": "https://www.evilresource.com/resident-evil-code-veronica/enemies/sweeper"},
+        {"source_url": "https://les-archives-resident-evil-biohazard.fr/lore-sweeper/"}
+      ],
+      "next_action": "Retrouver et inspecter une capture du modèle final CODE: Veronica avec les deux mains, les deux pieds et les textures lisibles ; confronter cette capture au catalogue avant de lever la suspension.",
+      "forbidden_substitution": [
+        "Hunter II vert utilisé comme preuve du Sweeper violet",
+        "Illustration complète promue en modèle final sans vérification",
+        "Textures ou incarnation Darkside Chronicles substituées au jeu de 2000"
+      ],
+      "tool_refusal": false,
+      "tool_refusal_evidence": "CONTINUATION_20261119.json : current_tool_refusals vide et further_generation_blocked_by_current_refusal=false."
+    },
+    {
+      "priority": 2,
+      "uid": "recv-moth",
+      "edition": "Resident Evil CODE: Veronica (2000)",
+      "status": "SOURCE_HOLD_EDITION_CONFLICT",
+      "reason": "Le catalogue CODE: Veronica présente une silhouette proche d'une image légendée Darkside Chronicles sur une autre source. L'art du guide Kaitai Shinsho montre une autre silhouette et reste une illustration conceptuelle ; les bouts d'ailes du catalogue sont aussi coupés.",
+      "evidence": [
+        {"path": "production-archives/rec-media/CONTINUATION_20261119.json", "entry_uid": "recv-moth"},
+        {"path": "production-archives/rec-media/v14/docs/REFERENCE_REVIEW_V14.json", "entry_uid": "recv-moth"},
+        {"source_url": "https://www.evilresource.com/resident-evil-code-veronica/enemies/moth"},
+        {"source_url": "https://les-archives-resident-evil-biohazard.fr/lore-moth/"},
+        {"source_url": "https://www.projectumbrella.net/biohazard-codeveronica-complete-edition-kaitai-shinsho.html"}
+      ],
+      "next_action": "Identifier le modèle effectivement présent dans CODE: Veronica, puis obtenir une vue entière avec ailes, antennes, abdomen et pattes dans le cadre. Documenter explicitement la résolution du conflit d'édition.",
+      "forbidden_substitution": [
+        "Modèle Darkside Chronicles attribué silencieusement à CODE: Veronica",
+        "Mélange entre l'art conceptuel Kaitai Shinsho et le rendu final",
+        "Bouts d'ailes inventés depuis le seul catalogue coupé"
+      ],
+      "tool_refusal": false,
+      "tool_refusal_evidence": "CONTINUATION_20261119.json : current_tool_refusals vide et further_generation_blocked_by_current_refusal=false."
+    },
+    {
+      "priority": 3,
+      "uid": "re0-eliminator",
+      "edition": "Resident Evil 0 (2002), variante au pelage blanc",
+      "status": "SOURCE_HOLD_EXACT_VARIANT_LOWER_BODY",
+      "reason": "La variante blanche retenue n'a pas de bas du corps complet vérifié. Le rendu entier retrouvé présente un pelage brun ; la capture de cinématique HD Remaster montre surtout le haut du corps et ne résout pas les pieds ni la pigmentation exacte de l'édition ciblée.",
+      "evidence": [
+        {"path": "production-archives/rec-media/CONTINUATION_20261119.json", "entry_uid": "re0-eliminator"},
+        {"path": "production-archives/rec-media/v14/docs/REFERENCE_REVIEW_V14.json", "entry_uid": "re0-eliminator"},
+        {"source_url": "https://les-archives-resident-evil-biohazard.fr/lore-eliminator/"},
+        {"source_url": "https://www.techtudo.com.br/noticias/2016/01/como-matar-inimigos-comuns-de-resident-evil-0-hd-remaster.ghtml"}
+      ],
+      "next_action": "Trouver une vue native entière de la variante blanche de RE0, avec pieds et membres inférieurs visibles ; qualifier séparément une éventuelle preuve issue du remaster et vérifier sa correspondance à l'original de 2002.",
+      "forbidden_substitution": [
+        "Variante brune recolorée en blanc sans preuve de la variante exacte",
+        "Rendu Umbrella Chronicles utilisé comme original RE0",
+        "Capture de buste comptée comme preuve de corps entier"
+      ],
+      "tool_refusal": false,
+      "tool_refusal_evidence": "CONTINUATION_20261119.json : current_tool_refusals vide et further_generation_blocked_by_current_refusal=false."
+    },
+    {
+      "priority": 4,
+      "uid": "recv-bat",
+      "edition": "Resident Evil CODE: Veronica (2000)",
+      "status": "SOURCE_HOLD_CROPPED_WING_TIP",
+      "reason": "La pointe d'une aile levée reste hors cadre dans la référence R34. La recherche V14 n'a pas apporté de vue complète vérifiée de la même incarnation.",
+      "evidence": [
+        {"path": "production-archives/rec-media/CONTINUATION_20261119.json", "entry_uid": "recv-bat"},
+        {"path": "production-archives/rec-media/v14/docs/REFERENCE_REVIEW_V14.json", "entry_uid": "recv-bat"},
+        {"source_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_1/recv-bat/idle.json"}
+      ],
+      "next_action": "Obtenir une capture ou un aperçu du modèle exact où les deux ailes, leurs pointes, le corps et les pattes sont entièrement cadrés, puis vérifier visuellement la source.",
+      "forbidden_substitution": [
+        "Chauve-souris générique ou d'un autre Resident Evil",
+        "Aile reconstruite depuis une référence dont la pointe manque"
+      ],
+      "tool_refusal": false,
+      "tool_refusal_evidence": "CONTINUATION_20261119.json : current_tool_refusals vide et further_generation_blocked_by_current_refusal=false."
+    },
+    {
+      "priority": 5,
+      "uid": "re5-executioner",
+      "edition": "Resident Evil 5 (2009), variante normale à cagoule en tissu",
+      "status": "RIGHT_VIEW_REQUIRES_CORRECT_ORIENTATION_AND_FRAMING",
+      "reason": "Un corps R34 existe déjà. Malgré son nom idle-right.png, le reçu décrit une vue presque frontale ou orientée à gauche, non admise comme pose de combat droite. La correction droite historique coupe une extrémité de la hache et révèle une chaussure masquée dans la référence.",
+      "evidence": [
+        {"path": "production-archives/rec-media/CONTINUATION_20261119.json", "entry_uid": "re5-executioner"},
+        {"source_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_3/re5-executioner/idle.json"},
+        {"source_url": "https://blackjackrants.blogspot.com/2020/10/reviewing-monsters-resident-evil-5.html", "reference_path": "modules/fidelity-r34/assets/source-research/re5-miniboss-1.png"}
+      ],
+      "next_action": "Revoir la source complète et produire une vraie vue droite seulement après vérification des surfaces montrées. Garder toute la hache dans le cadre et respecter l'occlusion naturelle du tablier ; conserver les études historiques.",
+      "forbidden_substitution": [
+        "Nom idle-right.png considéré comme preuve suffisante de l'orientation",
+        "Variante rouge, cagoule en cuir, hache enflammée ou version des films",
+        "Chaussure ou surface cachée inventée pour supprimer une occlusion naturelle",
+        "Personnage déclaré entièrement absent alors qu'un candidat R34 existe"
+      ],
+      "tool_refusal": false,
+      "tool_refusal_evidence": "CONTINUATION_20261119.json : aucun refus consigné pour cet UID ; le reçu R34 décrit des limites visuelles, pas un refus de génération."
+    },
+    {
+      "priority": 6,
+      "uid": "re5-chainsaw-majini",
+      "edition": "Resident Evil 5 (2009), variante au pantalon rose",
+      "status": "LEFT_VIEW_TO_PRODUCE_AFTER_DEDUPLICATION",
+      "reason": "Le reçu R34 qualifie déjà une pose entière vers la droite. La suite concerne une vue gauche indépendante et sa vérification ; ce personnage ne doit pas être compté comme entièrement absent.",
+      "evidence": [
+        {"path": "production-archives/rec-media/CONTINUATION_20261119.json", "entry_uid": "re5-chainsaw-majini"},
+        {"source_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_2/re5-chainsaw-majini/idle.json"},
+        {"source_url": "https://blackjackrants.blogspot.com/2020/10/reviewing-monsters-resident-evil-5.html", "reference_path": "modules/fidelity-r34/assets/source-research/re5-miniboss-3.png"}
+      ],
+      "next_action": "Vérifier l'absence d'une vue gauche équivalente dans les nouveaux lots, puis préparer une réorientation physique à partir des sources exactes. Conserver le sac, le côté de l'œil, les cordes, le pantalon rose, les pieds nus et toute la tronçonneuse jaune.",
+      "forbidden_substitution": [
+        "Miroir logiciel déplaçant les asymétries anatomiques ou l'œil du sac",
+        "Dr Salvador ou Chainsaw Villager de RE4 substitué au Majini RE5",
+        "Pose droite existante présentée comme nouvelle vue gauche",
+        "Variante vestimentaire différente mélangée à celle du reçu"
+      ],
+      "tool_refusal": false,
+      "tool_refusal_evidence": "CONTINUATION_20261119.json : current_tool_refusals vide et further_generation_blocked_by_current_refusal=false."
+    }
+  ],
+  "excluded_from_source_hold": [
+    {
+      "uid": "reoutbreak-hunter-gamma",
+      "edition": "Resident Evil Outbreak (2003)",
+      "status": "SOURCE_RECOVERED_LEFT_AND_RIGHT_STATIC_CANDIDATES",
+      "reason": "Les nouvelles captures natives complètes résolvent le manque de mains et de pieds ; deux vues générées gauche et droite sont présentes en V15 et restent des candidats statiques avec limites documentées.",
+      "evidence": [
+        {"path": "production-archives/rec-media/v15/docs/HUNTER_GAMMA_SOURCE_RECOVERY.json"},
+        {"path": "production-archives/rec-media/v15/docs/hunter-gamma-left-review.json"},
+        {"path": "production-archives/rec-media/v15/docs/hunter-gamma-right-review.json"}
+      ],
+      "next_action": "Poursuivre uniquement les critères encore ouverts dans les revues : pose, marges, surfaces cachées et future intégration. Ne pas réintroduire le blocage historique de source complète.",
+      "forbidden_substitution": ["RE3 original", "RE3 Remake", "Re:Verse", "Darkside Chronicles"],
+      "tool_refusal": false
+    },
+    {
+      "uid": "re5-jill-valentine-enemy",
+      "edition": "Resident Evil 5 (2009), Battle Suit avec P30",
+      "status": "V14_STATIC_CANDIDATES_AVAILABLE",
+      "reason": "Les sources et les candidats V14 existent désormais ; la suspension de source de l'ancien suivi ne décrit plus ce lot.",
+      "evidence": [{"path": "production-archives/rec-media/v14/manifests/ASSET_MANIFEST_V14.json"}],
+      "next_action": "Consulter les statuts et limites de V14 avant toute nouvelle pose ; ne pas relancer une récupération de source déjà résolue.",
+      "forbidden_substitution": ["Jill RE3 Remake", "Jill Re:Verse", "Variante sans P30 attribuée à la rencontre contrôlée"],
+      "tool_refusal": false
+    },
+    {
+      "uid": "re4-bella-sisters",
+      "edition": "Resident Evil 4 (2005), deux apparences distinctes",
+      "status": "V14_STATIC_CANDIDATES_AVAILABLE",
+      "reason": "Les deux sœurs disposent de candidats séparés en V14. Les itérations et orientations effectivement retenues doivent être lues dans le manifeste ; l'existence de ces candidats ne certifie pas toutes les poses.",
+      "evidence": [{"path": "production-archives/rec-media/v14/manifests/ASSET_MANIFEST_V14.json"}],
+      "next_action": "Conserver une sœur par image et reprendre les éventuels écarts documentés dans les revues V14.",
+      "forbidden_substitution": ["Chainsaw Sisters RE4 Remake 2023", "Mélange du tablier crème et de la jupe verte", "Deux sœurs dans un seul asset"],
+      "tool_refusal": false
+    },
+    {
+      "uid": "re4-castle-ganado",
+      "edition": "Resident Evil 4 (2005)",
+      "status": "V14_STATIC_CANDIDATES_AVAILABLE",
+      "reason": "Des candidats gauche et droite sont présents en V14 ; l'ancien statut de source manquante est dépassé pour ce lot.",
+      "evidence": [{"path": "production-archives/rec-media/v14/manifests/ASSET_MANIFEST_V14.json"}],
+      "next_action": "S'appuyer sur les revues V14 pour les prochaines poses et la préparation à l'animation.",
+      "forbidden_substitution": ["Ganado de RE4 Remake 2023", "Leader Zealot utilisé comme même apparence"],
+      "tool_refusal": false
+    },
+    {
+      "uid": "re4-castle-ganado-leader-zealot",
+      "edition": "Resident Evil 4 (2005)",
+      "status": "V14_STATIC_CANDIDATES_AVAILABLE",
+      "reason": "Des candidats gauche et droite sont présents en V14 ; cette identité doit rester distincte du Castle Ganado ordinaire.",
+      "evidence": [{"path": "production-archives/rec-media/v14/manifests/ASSET_MANIFEST_V14.json"}],
+      "next_action": "Conserver la référence d'édition et les réserves des revues V14 pour les prochains travaux.",
+      "forbidden_substitution": ["Zealot de RE4 Remake 2023", "Castle Ganado ordinaire substitué au chef"],
+      "tool_refusal": false
+    }
+  ],
+  "generation_blocked": [
+    {
+      "uid": "re1r-yawn",
+      "edition": "Resident Evil remake (2002)",
+      "requested_view": "right",
+      "status": "TOOL_REFUSAL_NO_IMAGE",
+      "reason": "La demande de vue droite a reçu un refus du système de sécurité à l'étape de sortie. Aucune image droite n'a été livrée. Le candidat gauche antérieur est conservé.",
+      "evidence": [{"path": "production-archives/rec-media/v14/docs/yawn-right-refusal.json"}],
+      "next_action": "Conserver le reçu de refus et le candidat gauche. Ne pas réessayer ni contourner le refus en changeant le prompt, l'identité ou l'outil.",
+      "forbidden_substitution": ["Candidat gauche présenté comme vue droite", "Nouvelle tentative destinée à contourner le refus"],
+      "tool_refusal": true,
+      "further_generation_blocked_by_current_refusal": true,
+      "no_retry_after_refusal": true
+    }
+  ],
+  "canonical_one_to_one_certified": false,
+  "engine_integration_claimed": false,
+  "all_missing_completed": false,
+  "generation_performed_by_this_file": false
+}

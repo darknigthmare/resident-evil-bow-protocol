@@ -1,0 +1,66 @@
+{
+  "reviewed_at": "2026-11-20",
+  "reviewer": "review_v14",
+  "verdict": "CANDIDATE_STATIC_WITH_LIMITS",
+  "original_bytes_modified": false,
+  "one_subject_per_image_reviewed": true,
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "animation_frames": 1,
+  "inspection_method": "Original RGBA composited over RGB128 gray and RGB235 light backgrounds; both composites personally inspected with tools.view_image.",
+  "schema": "rec.static-candidate-independent-review.v14",
+  "asset": "Bella Sister — green skirt, RE4 original 2005, left 03",
+  "original_path": "/workspace/scratch/3fced93cfb0a/generated_images/exec-3d6201e0-068a-4b89-84ed-a9490cb7bea8.png",
+  "sha256": "9790f98ea5a72ebb893b31fa05e7b15169fbc0591eafccbfae1eb377290f389d",
+  "bytes": 1351016,
+  "source_refs_reviewed": [
+    "references-v14/bella_re4original_steam.jpg",
+    "references-v14/bella_re4original_evilresource.png",
+    "V14 cream LEFT 02 correct pose and V14 green LEFT 01 costume study"
+  ],
+  "visual_checks": {
+    "orientation": "Head, shoulder line, body and shoes turn screen left with a side-dominant three-quarter silhouette. Chainsaw bar points left. Torso pose now follows the corrected cream LEFT 02 rather than the near-frontal green LEFT 01/02 arrangement.",
+    "costume": "Ochre/olive-brown blouse with narrow pale chest pleats, long dark green skirt with lower dark bands, brown shoes and original-style bandages. Cream apron is absent, with no residual blue-gray blouse or purple skirt.",
+    "hands": "Grip correction successful: anatomical LEFT near arm extends diagonally across the body and forward to the top/front handle; anatomical RIGHT far arm reaches down from the far sleeve to the rear trigger handle. Wrist/hand endpoints belong to the intended shoulders, with two separate plausible grips and no hand on chain teeth.",
+    "framing": "One complete woman and one complete red chainsaw. Full head, blade tip, hem and both shoes inside canvas. No second sister, backdrop, floor, labels or base.",
+    "limits": [
+      "Clear margins are small: 28/38/35/21 px at alpha>=16.",
+      "Exact face, bandage pattern, hidden anatomy and costume texture are generated interpretations.",
+      "Single static candidate; no animation, contacts, pivots or engine admission."
+    ]
+  },
+  "alpha": {
+    "mode": "RGBA",
+    "size": [
+      1199,
+      1312
+    ],
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox_alpha_gte16": [
+      28,
+      38,
+      1164,
+      1291
+    ],
+    "margins_alpha16_left_top_right_bottom": [
+      28,
+      38,
+      35,
+      21
+    ],
+    "pixels_alpha0": 951144,
+    "pixels_alpha1_to15": 20078,
+    "pixels_alpha1_to3": 16327,
+    "pixels_alpha255": 407,
+    "halo_finding": "Real alpha transparency verified. No substantial broad halo or opaque backdrop visible on gray/light composites. Low-alpha residual pixels remain; not all subject pixels are alpha255.",
+    "all_subject_alpha_255": false
+  },
+  "qa_previews_only": [
+    "qa-v14-v15-final/bella-green-left-03-gray.jpg",
+    "qa-v14-v15-final/bella-green-left-03-light.jpg"
+  ],
+  "recommended_action": "Retain LEFT 03 as corrected green-skirt candidate; preserve LEFT 01 and LEFT 02 unchanged as grip-error trials."
+}
