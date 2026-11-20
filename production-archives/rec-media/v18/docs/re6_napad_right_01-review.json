@@ -1,0 +1,134 @@
+{
+  "schema": "rec.static-candidate-independent-review.v18",
+  "asset": "Napad — Resident Evil 6 (2012), RIGHT 01, carapace intacte",
+  "id": "re6_napad_right_01",
+  "uid": "re6-napad",
+  "variant": "re6_2012_intact_carapace",
+  "reviewed_at": "2026-11-20T17:08:31.203231+00:00",
+  "reviewer": "audit_missing",
+  "pull_request": 23,
+  "asset_path": "assets/re6_napad_right_01.png",
+  "original_path": "/workspace/scratch/3fced93cfb0a/generated_images/exec-312a4454-8f81-4e3c-991a-d25e0ff3f240.png",
+  "sha256": "8b130b252abeb833425edd5aae5f222a456914aa88053d835a864b0b96c07b26",
+  "bytes": 1616969,
+  "verdict": "CANDIDATE_STATIC_WITH_LIMITS",
+  "review_status": "CANDIDATE_STATIC_WITH_LIMITS",
+  "excluded_from_candidate_count": false,
+  "source_refs_reviewed": [
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-napad-blackjack-original.png",
+      "sha256": "1d7cd73020e66a4c0c54e745095aa51956bbe4021f0847435fa272493991a6fe",
+      "bytes": 360446,
+      "source_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjysDOFQqhk4qOIOqk03hB0UX8flOSUSQXHWgnP6DIRAH_UdwPqheIrjtEbNoLvfypjfbjcUEh07JEeemwTlvFonDWPjx0sNWcwSqwXOvwaFDom1VXaJ3uCiC-0uRfcPYx91p3qrDS3mZmb/s0/image.png",
+      "role": "Rendu RE6 complet de la carapace intacte ; fumée, surfaces arrière et plusieurs ancrages de pointes masquent des détails.",
+      "actually_visually_inspected": true
+    }
+  ],
+  "source_document": "docs/SOURCES_RE6_NAPAD_WHOPPER_V18.json",
+  "source_document_sha256_at_review": "25f74ddb545e2b7a5182c1784f655e41886fd72cce3fd8f89542fae8e462322e",
+  "prompt_record": "prompts/re6_napad_right_01.json",
+  "technical_record": "docs/re6_napad_right_01-technical.json",
+  "visual_checks": {
+    "orientation": "Tête rentrée et visage tournés vers la droite de l’image, bras anatomique droit plus proche à gauche de l’image. Le buste reste en trois quarts avant-droit, avec les deux bras et deux pieds visibles.",
+    "variant": "Silhouette massive voûtée à épaules hautes, petite tête encastrée, deux très gros bras pendants, jambes courtes et pieds irréguliers. La carapace épaulière et dorsale demeure entière ; aucun noyau exposé ou état de carapace détruite ajouté.",
+    "carapace_major_structure": "Une grande pointe dorsale centrale monte au-dessus du dos et reste rattachée au massif de plaques. Les deux épaules ne sont pas rendues symétriques : le côté proche à gauche de l’image a une large arche oblique, tandis que les lames du côté éloigné à droite restent plus verticales. Le visage est enchâssé dans le collier de plaques, sans plaque flottante évidente.",
+    "asymmetry_qualification": "L’arrangement majeur n’est pas une copie symétrisée évidente. Les rangs de plaques conservent des hauteurs et inclinaisons différentes. En revanche, la pointe latérale arrière visible à gauche du candidat ne peut pas être attribuée avec certitude à une pointe précise de la source, qui montre l’autre obliquité. Cette revue ne certifie pas le côté anatomique de chaque petite plaque ni une correspondance pointe par pointe.",
+    "limb_connections": "Deux épaules rejoignent deux bras continus et deux poings bas ; deux cuisses rejoignent les genoux puis deux pieds distincts. Aucun coude inversé, membre libre, troisième main ou pied supplémentaire évident. Les doigts repliés et orteils se superposent naturellement.",
+    "anatomy_count_review": {
+      "arms_visible": 2,
+      "hands_visible": 2,
+      "legs_visible": 2,
+      "feet_visible": 2,
+      "major_dorsal_apex_visible": 1,
+      "detached_or_extra_limb_observed": false,
+      "each_plate_anatomical_side_certified": false
+    },
+    "framing": "Un seul sujet entier : apex dorsal, plaques externes, deux poings et deux pieds contenus. Aucun panache de vapeur de la référence, sol, décor ou texte.",
+    "padding_target": {
+      "requested_percent_each_side": 10,
+      "achieved": false,
+      "margins_alpha16_left_top_right_bottom": [
+        115,
+        57,
+        115,
+        53
+      ],
+      "margins_alpha16_percent_left_top_right_bottom": [
+        10.35,
+        4.03,
+        10.35,
+        3.74
+      ],
+      "principal_extremity_clipped": false
+    },
+    "limits": [
+      "Marges principales alpha≥16 gauche/haut/droite/bas : [115, 57, 115, 53] px, soit [10.35, 4.03, 10.35, 3.74] %. La cible de 10 % sur chaque bord n’est pas atteinte ; aucune extrémité principale ne touche le cadre.",
+      "Le rendu de référence ne documente pas toutes les racines des pointes ni la face dorsale opposée. Le maintien de chaque petite plaque sur un côté anatomique précis n’est pas certifié.",
+      "La carapace et les grosses masses sont reconnaissables, mais le relief, l’orientation des lames, les fissures, le visage et les surfaces nouvellement visibles sont interprétés.",
+      "La posture au sol et les pieds plus écartés diffèrent de la pose de pas du rendu. Aucune dynamique, hauteur native ou contact exact n’en est déduit.",
+      "Aucune géométrie 1:1, extraction native, phase de destruction, animation, collision ou admission moteur n’est validée."
+    ]
+  },
+  "failed_gates": [],
+  "uncertain_gates": [
+    {
+      "gate": "source_specific_plate_side_and_rear_roots",
+      "reason": "Pas de symétrisation globale évidente, mais une seule vue oblique ne suffit pas à faire correspondre chaque pointe latérale et dorsale après rotation. Attribution fine des plaques maintenue non certifiée."
+    }
+  ],
+  "alpha": {
+    "mode": "RGBA",
+    "size": [
+      1111,
+      1416
+    ],
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox_alpha_gte16": [
+      115,
+      57,
+      996,
+      1363
+    ],
+    "margins_alpha16_left_top_right_bottom": [
+      115,
+      57,
+      115,
+      53
+    ],
+    "margins_alpha16_percent_left_top_right_bottom": [
+      10.35,
+      4.03,
+      10.35,
+      3.74
+    ],
+    "bbox_all_nonzero_alpha": [
+      0,
+      12,
+      1101,
+      1416
+    ],
+    "pixels_alpha0": 856152,
+    "pixels_alpha1_to15": 42485,
+    "pixels_alpha1_to3": 38345,
+    "pixels_alpha255": 400,
+    "all_subject_alpha_255": false,
+    "halo_finding": "PNG RGBA original et composites gris/clair personnellement inspectés. Transparence réelle, sans fond opaque ni halo large substantiel sur les compositions alpha. Des résidus de très faible alpha s’étendent hors de la silhouette, parfois aux bords. Ils ne constituent pas des extrémités principales coupées. Aucun nettoyage appliqué."
+  },
+  "qa_previews_only": [
+    "/workspace/scratch/3fced93cfb0a/qa-v18/re6_napad_right_01-gray.jpg",
+    "/workspace/scratch/3fced93cfb0a/qa-v18/re6_napad_right_01-light.jpg"
+  ],
+  "inspection_method": "Inspection indépendante personnelle des références jointes au prompt, du PNG RGBA et des deux composites gris/clair. Recalcul des dimensions, bbox alpha≥16, marges, extrema alpha, comptes alpha0/1–3/1–15/255, SHA256 et égalité exacte des octets original/archive. Aucun nettoyage, recadrage, padding ou autre retouche du PNG livré.",
+  "original_bytes_modified": false,
+  "original_generated_bytes_verified_identical": true,
+  "one_subject_per_image_reviewed": true,
+  "quality_rejection_is_tool_refusal": false,
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "animation_frames": 1,
+  "can_mirror": false,
+  "recommended_action": "Conserver RIGHT 01 comme candidat statique de Napad à carapace intacte avec limite explicite sur l’attribution fine des plaques. Ne pas transformer la cohérence générale en certification d’asymétrie 1:1, et ne pas mirrorer ce PNG."
+}

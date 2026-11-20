@@ -1,0 +1,735 @@
+{
+  "schema": "rec.source-audit.re6-bloodshot-ustanak.v18",
+  "date": "2026-11-20",
+  "reviewer": "review_v14",
+  "language": "fr",
+  "repository": "darknigthmare/resident-evil-bow-protocol",
+  "pull_request": 23,
+  "resume_base_commit": "8073338896937faef6f1718387c1c9b3a4be6b72",
+  "delivery_parent_commit": "935f44716b890303982c4cc384140cf54f4058b5",
+  "scope": "Audit de sources et d’historique. Aucun appel imagegen, aucun bitmap source copié au dépôt, aucun staging/commit/publication/runtime. Seul ce rapport est livré dans V18.",
+  "summary": {
+    "ready_for_scoped_candidate": [
+      "re6-bloodshot"
+    ],
+    "source_hold_after_current_research": [
+      "re6-ustanak"
+    ],
+    "historical_snapshot_preserved": true,
+    "inventory_mutated": false,
+    "new_generated_assets": 0,
+    "source_bitmaps_copied_to_repository": false,
+    "canonical_one_to_one_certified": false,
+    "native_mesh_authentication_performed": false
+  },
+  "historical_snapshot": {
+    "repository_path": "production-archives/rec-media/CONTINUATION_V17_20261120.json",
+    "bytes": 574615,
+    "sha256": "79170b2c132b1c200cc0d0dbfa11e76c658fe40e7572c0e35afb9fe6f0787823",
+    "target_entries_unchanged": [
+      {
+        "uid": "re6-bloodshot",
+        "label": "Bloodshot",
+        "edition": "Resident Evil 6 (2012)",
+        "fighter_category": "experimental",
+        "baseline_status": "HELD_COMPLETE_OR_EXACT_REFERENCE",
+        "current_outcome": "SOURCE_HOLD",
+        "retained_assets": [],
+        "trials": [],
+        "current_tool_refusals": [],
+        "current_hold_decisions": [],
+        "further_generation_blocked_by_current_refusal": false,
+        "later_left_request_refused_after_right_candidate": false,
+        "canonical_one_to_one_certified": false,
+        "engine_admitted_by_this_continuation": false,
+        "baseline_evidence": {
+          "manifestUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/manifest.json",
+          "bodyReceiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_1/re6-bloodshot/idle.json",
+          "portraitReceiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_1/re6-bloodshot/portrait.json",
+          "blockedOutputs": []
+        }
+      },
+      {
+        "uid": "re6-ustanak",
+        "label": "Ustanak",
+        "edition": "Resident Evil 6 (2012)",
+        "fighter_category": "main",
+        "baseline_status": "HELD_COMPLETE_OR_EXACT_REFERENCE",
+        "current_outcome": "SOURCE_HOLD",
+        "retained_assets": [],
+        "trials": [],
+        "current_tool_refusals": [],
+        "current_hold_decisions": [],
+        "further_generation_blocked_by_current_refusal": false,
+        "later_left_request_refused_after_right_candidate": false,
+        "canonical_one_to_one_certified": false,
+        "engine_admitted_by_this_continuation": false,
+        "baseline_evidence": {
+          "manifestUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/manifest.json",
+          "bodyReceiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_1/re6-ustanak/idle.json",
+          "portraitReceiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_1/re6-ustanak/portrait.json",
+          "blockedOutputs": []
+        }
+      }
+    ]
+  },
+  "history_review_scope": [
+    "Entrées V17 des deux UID et inventaire des identités RE6 liés/contemporaines. Aucun refus propre ni variante Ustanak supplémentaire trouvés dans les chemins cibles R27–R34 et inventaire V17 examinés. Ce périmètre ne prétend pas couvrir des journaux externes au dépôt.",
+    "Reçus R34 réels de corps/portrait/recherche et revue R28 Bloodshot, R29 Ustanak récupérés au commit base807333. Les PNG de portrait R34 et anciens candidats R27 n’ont pas été rouverts : leurs qualités et limites sont rapportées depuis les reçus, sans nouvelle qualification de ces PNG.",
+    "Les deux corps R34 étaient HELD_REFERENCE et les deux portraits GENERATED. Aucun corps complet ni direction de combat qualifiée ne se déduit des portraits."
+  ],
+  "related_refusal_context": {
+    "re6_zombie": {
+      "receipt": {
+        "repository_path": "modules/fidelity-r34/assets/lots/lot_2/re6-zombie/portrait.json",
+        "repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/8073338896937faef6f1718387c1c9b3a4be6b72/modules/fidelity-r34/assets/lots/lot_2/re6-zombie/portrait.json",
+        "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/history/modules__fidelity-r34__assets__lots__lot_2__re6-zombie__portrait.json",
+        "bytes": 2582,
+        "sha256": "f8bf66e71d27e8661e792f6ed0e8e2b554a6c996c8d6ac35025fd1b0cdaa6dc7",
+        "status": "BLOCKED_BY_TOOL",
+        "kind": "portrait",
+        "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 376f741c-a864-4a42-9cf4-3c74a1d04a83. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")"
+      },
+      "preserved_status": "BLOCKED_BY_TOOL",
+      "request_id": "376f741c-a864-4a42-9cf4-3c74a1d04a83",
+      "error_code": "moderation_blocked",
+      "moderation_stage": "output",
+      "categories": [
+        "violence"
+      ],
+      "exact_reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 376f741c-a864-4a42-9cf4-3c74a1d04a83. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "refused_visual_identity": "Zombie au Virus-C, Resident Evil 6 (2012), portrait tête et buste depuis assets/catalog/re6-zombie.png.",
+      "refused_reference": {
+        "path": "assets/catalog/re6-zombie.png",
+        "bytes": 122736,
+        "sha256": "306fb184f9c68d5b14487d030fc726b3a023ddd80f4bf63ad245cb61e7228e5a",
+        "role": "catalogue-reference",
+        "bodyCoverage": "unknown",
+        "exactIdentity": true,
+        "sourceUrl": "https://www.evilresource.com/resident-evil-6/enemies/zombie",
+        "sourceEdition": "Resident Evil 6 (2012)",
+        "targetEditionAdmitted": true,
+        "bodyCompletenessIndependentReviewRequired": true
+      },
+      "scope_for_bloodshot": "Lien biologique attesté, mais entrée, apparence et source Bloodshot distinctes. Ce refus n’est ni un refus propre Bloodshot ni une preuve automatique de blocage global de cette transformation. Le portrait Bloodshot R34 est GENERATED. Aucun nouvel appel sur re6-zombie ; décision de génération Bloodshot laissée au responsable du lot.",
+      "no_new_refusal_created": true
+    },
+    "other_preserved_identity_holds": [
+      {
+        "uid": "re6-deborah-harper",
+        "label": "Deborah Harper",
+        "current_outcome": "HISTORICAL_TOOL_REFUSAL",
+        "current_tool_refusals": [],
+        "further_generation_blocked_by_current_refusal": false,
+        "blockedOutputs": [
+          {
+            "kind": "portrait",
+            "status": "BLOCKED_BY_TOOL",
+            "receiptPath": "modules/fidelity-r34/assets/lots/lot_2/re6-deborah-harper/portrait.json",
+            "receiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_2/re6-deborah-harper/portrait.json",
+            "trackingUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json"
+          },
+          {
+            "kind": "idle",
+            "status": "BLOCKED_BY_TOOL_PRIOR_PHASE",
+            "receiptPath": null,
+            "receiptUrl": null,
+            "trackingUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json"
+          }
+        ]
+      },
+      {
+        "uid": "re6-javo",
+        "label": "J'avo",
+        "current_outcome": "HISTORICAL_TOOL_REFUSAL",
+        "current_tool_refusals": [],
+        "further_generation_blocked_by_current_refusal": false,
+        "blockedOutputs": [
+          {
+            "kind": "portrait",
+            "status": "BLOCKED_HISTORICAL_REFUSAL",
+            "receiptPath": null,
+            "receiptUrl": null,
+            "trackingUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json"
+          },
+          {
+            "kind": "idle",
+            "status": "BLOCKED_HISTORICAL_REFUSAL",
+            "receiptPath": null,
+            "receiptUrl": null,
+            "trackingUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json"
+          }
+        ]
+      }
+    ],
+    "no_retry_on_refused_identities": [
+      "re6-zombie",
+      "re6-javo",
+      "re6-deborah-harper"
+    ]
+  },
+  "targets": [
+    {
+      "uid": "re6-bloodshot",
+      "edition": "Resident Evil 6 (2012)",
+      "historical_body_receipt": {
+        "repository_path": "modules/fidelity-r34/assets/lots/lot_1/re6-bloodshot/idle.json",
+        "repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/8073338896937faef6f1718387c1c9b3a4be6b72/modules/fidelity-r34/assets/lots/lot_1/re6-bloodshot/idle.json",
+        "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/history/modules__fidelity-r34__assets__lots__lot_1__re6-bloodshot__idle.json",
+        "bytes": 3164,
+        "sha256": "756767756f30773d39e85ca29e3d08057de00f38eabc43ec86e0b57c8d01efa9",
+        "status": "HELD_REFERENCE",
+        "kind": "idle",
+        "reason": "The Bloodshot source cuts arms and the lower body below the chest. Complete feet and all limb/neck extremities are absent."
+      },
+      "historical_portrait_receipt": {
+        "repository_path": "modules/fidelity-r34/assets/lots/lot_1/re6-bloodshot/portrait.json",
+        "repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/8073338896937faef6f1718387c1c9b3a4be6b72/modules/fidelity-r34/assets/lots/lot_1/re6-bloodshot/portrait.json",
+        "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/history/modules__fidelity-r34__assets__lots__lot_1__re6-bloodshot__portrait.json",
+        "bytes": 3706,
+        "sha256": "595814603dac4c7ae2798cb275b7401357c082b74096fa5b2fa9068fa727c550",
+        "status": "GENERATED",
+        "kind": "portrait",
+        "reason": null
+      },
+      "historical_portrait_output": {
+        "review": {
+          "visuallyReviewed": true,
+          "sourceFacing": "front",
+          "portraitIdentityReviewed": true,
+          "portraitDisplayRegionReviewed": true,
+          "fullBodyVisible": false,
+          "completeBodyReferenceVerified": false,
+          "fightingPoseReviewed": false,
+          "knownAppearanceGaps": [],
+          "observations": [
+            "Tête ouverte dressée, stries musculaires et ligaments pâles revus sur le catalogue BloodshotRE6.",
+            "La posture du buste reprend la source ; les zones inférieures non visibles ne sont pas reconstruites."
+          ],
+          "canonicalFidelityCertified": false,
+          "originalIdleAnimationCertified": false
+        },
+        "bytes": 2336099,
+        "sha256": "c26d5ebb18b16f7a5ab5e7b6fc5aeaa4b3e0c3e476889bc022e1afaa37864224"
+      },
+      "earlier_pose_review": {
+        "repository_path": "docs/R28_SPRITE_REVIEW/re6-bloodshot.json",
+        "bytes": 1493,
+        "sha256": "aca64cffb1f5b4d0024e173632475f7201a2ba1012dc3229d2bdd3d3d0ca25e4",
+        "image": "modules/fidelity-r27/sprites/generated/re6-bloodshot/idle-right.png",
+        "image_sha256": "496190b4759a539ae258eb182a3f74d85a2f7433a63f2252a43831f2b097802e",
+        "actual_facing": "right",
+        "pose_kind": "source-presentation",
+        "complete_body": false,
+        "notes": "Only upward-tilted head and shoulder/back crop are shown; arms and lower body absent."
+      },
+      "own_tool_refusal_found": false,
+      "own_tool_refusal_receipts": [],
+      "existing_qualified_fullbody_directions": [],
+      "fullbody_directions_missing_before_v18": [
+        "LEFT",
+        "RIGHT"
+      ],
+      "canonical_one_to_one_certified": false,
+      "decision": "READY_FOR_SCOPED_STATIC_CANDIDATE",
+      "exact_phase": "re6_2012_bloodshot_baseline_thorax_no_exposed_heart",
+      "generation_performed_by_this_audit": false,
+      "primary_reference": "re6-bloodshot-blackjack-1.png",
+      "corroborating_references": [
+        "re6-bloodshot-figure-center.png",
+        "re6-bloodshot-r34-catalog.png",
+        "re6-bloodshot-blackjack-2.png"
+      ],
+      "phase_and_asymmetry_constraints": [
+        "Garder l’identité Bloodshot musculaire, mâchoire/fente dentée et tendons du cou ; aucun costume ou équipement du zombie refusé.",
+        "Corps complet découvert dans le même rendu visuel que le catalogue historique, corroboré par la figurine ; deux mains et deux pieds inclus, anatomie distincte d’un Licker quadrupède.",
+        "Ne pas ouvrir le thorax ni ajouter le cœur de la phase de dégâts. Aucun œil humain inventé.",
+        "Une orientation gauche/droite doit être construite comme une vraie nouvelle vue depuis les références, jamais affirmée à partir du nom idle-right R27. Pas de miroir mécanique des détails anatomiques."
+      ],
+      "remaining_limits": [
+        "Dos et faces cachées non établis ; tolérer les occultations naturelles sans certifier les surfaces invisibles.",
+        "L’origine d’un rendu 3D Capcom précis est corroborée visuellement, pas authentifiée par les fichiers du maillage. Le blog ne constitue pas une source primaire du modèle.",
+        "La pose source diagonale est expressive ; elle ne qualifie pas une animation de locomotion ou de combat."
+      ]
+    },
+    {
+      "uid": "re6-ustanak",
+      "edition": "Resident Evil 6 (2012)",
+      "historical_body_receipt": {
+        "repository_path": "modules/fidelity-r34/assets/lots/lot_1/re6-ustanak/idle.json",
+        "repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/8073338896937faef6f1718387c1c9b3a4be6b72/modules/fidelity-r34/assets/lots/lot_1/re6-ustanak/idle.json",
+        "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/history/modules__fidelity-r34__assets__lots__lot_1__re6-ustanak__idle.json",
+        "bytes": 3467,
+        "sha256": "53282b3f5545e1f7ad0232b278f84a570f1a07a787f2fcd83ebd3f2c2b81b37c",
+        "status": "HELD_REFERENCE",
+        "kind": "idle",
+        "reason": "The retained3Dview cuts the weapon/arm and lower legs. The additional complete drawing is not qualified as the2012game model, and ModelsResource does not supply an exact Ustanak source."
+      },
+      "historical_portrait_receipt": {
+        "repository_path": "modules/fidelity-r34/assets/lots/lot_1/re6-ustanak/portrait.json",
+        "repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/8073338896937faef6f1718387c1c9b3a4be6b72/modules/fidelity-r34/assets/lots/lot_1/re6-ustanak/portrait.json",
+        "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/history/modules__fidelity-r34__assets__lots__lot_1__re6-ustanak__portrait.json",
+        "bytes": 4333,
+        "sha256": "c7f4cf1d4a74cd491d0cf30dd78af16eb07e538d744627b079103341912e41a0",
+        "status": "GENERATED",
+        "kind": "portrait",
+        "reason": null
+      },
+      "historical_portrait_output": {
+        "review": {
+          "visuallyReviewed": true,
+          "sourceFacing": "front",
+          "portraitIdentityReviewed": true,
+          "portraitDisplayRegionReviewed": true,
+          "fullBodyVisible": false,
+          "completeBodyReferenceVerified": false,
+          "fightingPoseReviewed": false,
+          "knownAppearanceGaps": [],
+          "observations": [
+            "Only the visible specimen reference was supplied; the nearly empty catalogue crop was excluded.",
+            "The portrait preserves the scarred pale head, sparse blond hair and dark chest harness. Selection focuses on the face/upper torso; full weapon and lower body remain unverified."
+          ],
+          "canonicalFidelityCertified": false,
+          "originalIdleAnimationCertified": false,
+          "portraitCrop": {
+            "x": 290,
+            "y": 45,
+            "width": 850,
+            "height": 970
+          }
+        },
+        "bytes": 2498899,
+        "sha256": "4a7b84ecdd34a41ebe6295114e453333333c34bb98c5b293347ea43b31df039b"
+      },
+      "earlier_pose_review": {
+        "repository_path": "docs/R29_POSE_REVIEW/re6-ustanak.json",
+        "bytes": 1643,
+        "sha256": "3da84fe1fcf0e5c3036ff66afcc6a800c2aa9d32d4f7c8ec29266c706eccf322",
+        "image": "modules/fidelity-r27/sprites/generated/re6-ustanak/idle-right.png",
+        "image_sha256": "d812489ee194b2fc17d98941e7a8d8870a33a317ab099cdb4e30eb6abfffc063",
+        "actual_facing": "front",
+        "pose_kind": "source-presentation",
+        "complete_body": false,
+        "notes": "Both Ustanak references crop the mechanical arm and lower legs; generated torso cannot establish the whole equipped fighter."
+      },
+      "own_tool_refusal_found": false,
+      "own_tool_refusal_receipts": [],
+      "existing_qualified_fullbody_directions": [],
+      "fullbody_directions_missing_before_v18": [
+        "LEFT",
+        "RIGHT"
+      ],
+      "canonical_one_to_one_certified": false,
+      "decision": "SOURCE_HOLD",
+      "generation_performed_by_this_audit": false,
+      "scope_of_hold": "Absence d’une source détaillée intégralement lisible du même Ustanak équipé, avec arme droite, corps et pieds complets dans une configuration unique.",
+      "phase_constraints": [
+        "Ustanak non brûlé / corps pâle / harnais sombre du catalogue ; ne pas ajouter le corps carbonisé ou une phase avec cœur exposé.",
+        "Bras anatomique droit mécanique ; bras anatomique gauche organique ganté. Les rôles ne changent pas selon le côté affiché.",
+        "Pince de capture, fusil et autres accessoires sont des configurations distinctes. La figurine avec Jake capturé ne constitue pas une pose neutre entière.",
+        "Pas d’assemblage entre l’illustration stylisée, une vignette 175×185, des concepts d’artbook et les surfaces cachées de la figurine."
+      ],
+      "new_evidence": "Deux figurines montrent le corps et une partie/variante de la pince ; l’une coupe la terminaison haute du mécanisme, l’autre coupe les jambes et contient Jake. Une minuscule silhouette équipée entière existe, mais le détail de l’accessoire n’est pas suffisamment contrôlable.",
+      "remaining_requirements": [
+        "Rendu ou capture entière lisible du modèle RE6 non brûlé avec la configuration droite explicitement identifiée.",
+        "Pieds et extrémités du mécanisme entier ; assez de détail pour distinguer pince, canons ou autre accessoire.",
+        "Vues arrière utiles au harnais et à la cage ; ne pas inventer les surfaces actuellement masquées."
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "local_reference_file": "re6-bloodshot-blackjack-1.png",
+      "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-bloodshot-blackjack-1.png",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi9xpVnUu32R4AZhStCCJHe6mj231qHC7Bkwhe4Xvjfl1FlDiq0YHlz3vyaIydoO9p7fSjdKGbNLf6EWkAu1GmiEyiG41EqeK4mFpgzmW_SmxqkmZoU8XZa8_F8Hg8T4K7renCyKN1m5GsH/",
+      "source_page": "https://blackjackrants.blogspot.com/2020/08/reviewing-monsters-resident-evil-6.html",
+      "kind": "third-party-hosted-3d-render",
+      "bytes": 314751,
+      "sha256": "5e1b9d846068ad402accdfc1584f3a3305f139c9df48fea8d1850cd4dc7dc650",
+      "width": 620,
+      "height": 870,
+      "mode": "RGB",
+      "format": "PNG",
+      "alpha_range": null,
+      "native_bytes_unmodified": true,
+      "visually_inspected": true,
+      "complete_visible_body": true,
+      "decision": "QUALIFIED_FOR_SCOPED_STATIC_ADAPTATION",
+      "observations_and_limits": [
+        "Un seul Bloodshot entier, sans décor ni corps annexe : tête, deux mains, deux jambes et deux pieds entièrement dans le cadre.",
+        "La tête rejetée en arrière, la bouche ouverte, les filaments du cou, les dents et les reliefs du thorax correspondent visuellement au même rendu recadré du catalogue R34. Ce constat est visuel ; aucune identité de maillage ni égalité pixel à pixel entre résolutions n’est certifiée.",
+        "Thorax dans son apparence habituelle, sans cœur déployé. Aucune arme, chaussure, tenue humaine ou accessoire à transposer depuis le zombie.",
+        "Bras droit anatomique ouvert vers la gauche de l’image ; bras gauche anatomique abaissé à droite. Jambe droite pliée en arrière ; jambe gauche davantage étendue. La pose diagonale et la tête orientée vers le haut ne constituent pas à elles seules une vue latérale de combat qualifiée.",
+        "Hébergement tiers, rendu sans preuve directe de téléchargement Capcom et sans maillage natif. Le catalogue historique exact et une figurine de jeu indépendante corroborent l’incarnation. Les surfaces arrière restent non documentées par ce seul rendu.",
+        "Fond gris opaque : aucun alpha transparent revendiqué. Ne pas recopier la pose en lévitation comme une animation de combat native."
+      ]
+    },
+    {
+      "local_reference_file": "re6-bloodshot-figure-center.png",
+      "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-bloodshot-figure-center.png",
+      "url": "https://residentevilcenter.net/images/games/residentevil6/figuras/Bloodshot.png",
+      "source_page": "https://www.residentevilcenter.net/figuras-resident-evil-6",
+      "kind": "third-party-hosted-native-game-figure-capture",
+      "bytes": 948106,
+      "sha256": "569c43744757611ad3e3d2e2c56d43458cf0213a423a7c947fdef5c928db6416",
+      "width": 1280,
+      "height": 720,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_range": [
+        255,
+        255
+      ],
+      "native_bytes_unmodified": true,
+      "visually_inspected": true,
+      "complete_visible_body": true,
+      "decision": "CORROBORATION_FULL_SILHOUETTE",
+      "observations_and_limits": [
+        "Capture de la visionneuse de figurines RE6 : silhouette entière en position basse, deux mains et deux pieds visibles, aucun corps annexe.",
+        "Corrobore l’anatomie des membres inférieurs et l’absence de costume/arme ; torse et tête compatibles avec le rendu complet et le catalogue historique.",
+        "Sujet assez petit dans une image 1280×720 avec décor et éclairage sombre. Plateforme et date de capture non authentifiées ; la page datée de 2018 ne prouve pas à elle seule une capture de la version console 2012.",
+        "La page de collecte réellement sauvegardée est la page collaborative qui inclut la section Figuras ; la page dédiée fournit le même intitulé et le même classement. Aucun détourage de la source n’a été effectué."
+      ]
+    },
+    {
+      "local_reference_file": "re6-bloodshot-r34-catalog.png",
+      "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-bloodshot-r34-catalog.png",
+      "url": "https://www.evilresource.com/images/data/full/re6/bloodshot.png?5a84062c",
+      "source_page": "https://www.evilresource.com/resident-evil-6/enemies/bloodshot",
+      "kind": "historical-catalogue-source",
+      "bytes": 195035,
+      "sha256": "5be74aef3b797d29a3132d2b45f7c87a899346acd36bad96e6a738b950e41b37",
+      "width": 450,
+      "height": 360,
+      "mode": "RGB",
+      "format": "PNG",
+      "alpha_range": null,
+      "native_bytes_unmodified": true,
+      "visually_inspected": true,
+      "complete_visible_body": false,
+      "decision": "IDENTITY_CORROBORATION_ONLY",
+      "observations_and_limits": [
+        "Crop tête/épaules/thorax ; les mains et tout le bas du corps manquent. R34 avait correctement laissé le corps en HELD_REFERENCE.",
+        "La source nouvellement trouvée montre visuellement la continuation de ce même rendu : tête, dents, tendons et reliefs du torse concordent. Ne pas présenter le catalogue seul comme une source entière."
+      ]
+    },
+    {
+      "local_reference_file": "re6-bloodshot-blackjack-2.png",
+      "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-bloodshot-blackjack-2.png",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj_sVZmiFLc7WlEw8OrlkXPdaYr9crDdrmdBUQNnSYwdJU2elWXbN0XFMPKGg0mVdIMqmSuOuq0nyUJPJodnkRLouGFI1zmb2z6WOj20tktBaPM3uhq-9X56u9h9frYapADZTynVo3jelA9/",
+      "source_page": "https://blackjackrants.blogspot.com/2020/08/reviewing-monsters-resident-evil-6.html",
+      "kind": "third-party-hosted-native-gameplay-capture",
+      "bytes": 800501,
+      "sha256": "e98d05cd225555581ee19efe049672c0545b86604e4604c9eed019b447832091",
+      "width": 1360,
+      "height": 768,
+      "mode": "RGB",
+      "format": "PNG",
+      "alpha_range": null,
+      "native_bytes_unmodified": true,
+      "visually_inspected": true,
+      "complete_visible_body": false,
+      "decision": "CORROBORATION_HEAD_TORSO_ONLY",
+      "observations_and_limits": [
+        "Capture du jeu dans une lunette avec HUD ; tête, mâchoire et torse visibles, bas du corps coupé. Ne complète pas seule la silhouette.",
+        "Corrobore l’apparence dans le jeu, sans authentifier une plateforme ni une version de build."
+      ]
+    },
+    {
+      "local_reference_file": "re6-bloodshot-refr.png",
+      "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-bloodshot-refr.png",
+      "url": "https://residentevilfr.com/jeux_avant/RE6/images/monstres/bloodshot.png",
+      "source_page": "https://www.residentevilfr.com/jeux/resident_evil_6_infos.html",
+      "kind": "third-party-hosted-native-game-crop",
+      "bytes": 20226,
+      "sha256": "3332a7af9b46c216a4d8b0c1ef061ecb8339946433b21034f420595ff068349c",
+      "width": 200,
+      "height": 150,
+      "mode": "P",
+      "format": "PNG",
+      "alpha_range": null,
+      "native_bytes_unmodified": true,
+      "visually_inspected": true,
+      "complete_visible_body": false,
+      "decision": "EXCLUDED_AS_FULL_BODY_SOURCE",
+      "observations_and_limits": [
+        "Petite image 200×150 : tête/torse, bras coupés aux bords, jambes absentes. Aucun gain de complétude par rapport à R34."
+      ]
+    },
+    {
+      "local_reference_file": "re6-ustanak-r34-specimen.png",
+      "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-ustanak-r34-specimen.png",
+      "url": "https://www.evilresource.com/resident-evil-6/enemies/ustanak",
+      "source_page": "https://www.evilresource.com/resident-evil-6/enemies/ustanak",
+      "kind": "historical-specimen-source",
+      "bytes": 200235,
+      "sha256": "8bdb8d23190597015f3f7ffc15c779d284ee45f661fbaccfb8f72ded4740c0fa",
+      "width": 450,
+      "height": 360,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "native_bytes_unmodified": true,
+      "visually_inspected": true,
+      "complete_visible_body": false,
+      "decision": "IDENTITY_CORROBORATION_ONLY",
+      "observations_and_limits": [
+        "Ustanak pâle non brûlé, crâne clair avec cheveux blonds clairsemés, harnais sombre et coutures/plaies ; bras mécanique anatomique droit à gauche de l’image.",
+        "Mécanisme droit et jambes coupés. Le bras organique gauche et son gant ne doivent pas être intervertis avec le bras mécanique. Ne suffit pas à reconstruire une configuration d’arme entière."
+      ]
+    },
+    {
+      "local_reference_file": "re6-ustanak-r34-bogleech.png",
+      "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-ustanak-r34-bogleech.png",
+      "url": "https://bogleech.com/re/re6-ustanak.png",
+      "source_page": "https://bogleech.com/halloween/hall18-re6.html",
+      "kind": "stylized-illustration",
+      "bytes": 47437,
+      "sha256": "d60a0bc982a01a73154e8862f5272dd0d985951c9cf227149175c6c6c572d3a5",
+      "width": 390,
+      "height": 390,
+      "mode": "P",
+      "format": "PNG",
+      "alpha_range": null,
+      "native_bytes_unmodified": true,
+      "visually_inspected": true,
+      "complete_visible_body": true,
+      "decision": "EXCLUDED_UNVERIFIED_MODEL_CORRESPONDENCE",
+      "observations_and_limits": [
+        "Illustration entière avec bottes et bras droit mécanique, mais contours noirs épais et aplats stylisés. Ce n’est pas une preuve visuelle directe du modèle 3D exact.",
+        "Exclusion historique conservée : aucune greffe des parties dessinées sur le crop 3D R34."
+      ]
+    },
+    {
+      "local_reference_file": "re6-ustanak-refr.png",
+      "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-ustanak-refr.png",
+      "url": "https://residentevilfr.com/jeux_avant/RE6/images/monstres/ustanak.png",
+      "source_page": "https://www.residentevilfr.com/jeux/resident_evil_6_infos.html",
+      "kind": "third-party-montage",
+      "bytes": 21582,
+      "sha256": "ea91818dd8d725b91110096db6d27ba3095938554b1231380e6a108083b34c5a",
+      "width": 200,
+      "height": 150,
+      "mode": "P",
+      "format": "PNG",
+      "alpha_range": null,
+      "native_bytes_unmodified": true,
+      "visually_inspected": true,
+      "complete_visible_body": false,
+      "decision": "EXCLUDED_AS_FULL_BODY_SOURCE",
+      "observations_and_limits": [
+        "Montage 200×150 avec figure partielle et gros plan du visage. Extrémités de l’arme et bas des jambes absents."
+      ]
+    },
+    {
+      "local_reference_file": "re6-ustanak-artworks-famitsu.jpg",
+      "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-ustanak-artworks-famitsu.jpg",
+      "url": "https://www.famitsu.com/images/000/028/447/l_51146ee93fffb.jpg",
+      "source_page": "https://www.famitsu.com/news/201302/08028447.html",
+      "kind": "official-capcom-artbook-sample-hosted-by-press",
+      "bytes": 56935,
+      "sha256": "043bbf8981d456dd8f96fea527492b47cbda98efa20aea8cea13bf6eac608be6",
+      "width": 460,
+      "height": 325,
+      "mode": "RGB",
+      "format": "JPEG",
+      "alpha_range": null,
+      "native_bytes_unmodified": true,
+      "visually_inspected": true,
+      "complete_visible_body": false,
+      "decision": "CORROBORATION_NOT_GENERATION_REFERENCE",
+      "observations_and_limits": [
+        "Extrait officiel publié par Famitsu pour l’artbook Capcom de 2013 consacré à RE6 2012 : mélange dessins préparatoires, renders et captures.",
+        "Le grand filigrane SAMPLE masque de nombreuses surfaces du corps et de l’arme ; image 460×325. Les concepts ne peuvent pas être assemblés aux rendus.",
+        "Le filigrane reste intact. L’article confirme le bras à mécanisme anatomique droit, mais cet échantillon ne fournit pas une configuration intégralement lisible."
+      ]
+    },
+    {
+      "local_reference_file": "re6-ustanak-press-4gamer-20121001.jpg",
+      "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-ustanak-press-4gamer-20121001.jpg",
+      "url": "https://www.4gamer.net/games/146/G014637/20121001041/SS/012.jpg",
+      "source_page": "https://www.4gamer.net/games/146/G014637/20121001041/",
+      "kind": "official-capcom-2012-press-screenshot",
+      "bytes": 31831,
+      "sha256": "e1ab472aab18b9c59f86b8117b9cc611582a4b35d875b6c518d80c4b96d2d229",
+      "width": 640,
+      "height": 360,
+      "mode": "RGB",
+      "format": "JPEG",
+      "alpha_range": null,
+      "native_bytes_unmodified": true,
+      "visually_inspected": true,
+      "complete_visible_body": false,
+      "decision": "CORROBORATION_HEAD_TORSO_ONLY",
+      "observations_and_limits": [
+        "Capture diffusée dans la présentation Capcom du 1 octobre 2012 : visage et haut du torse, mais pieds et arme entière absents.",
+        "Source contemporaine 2012 utile pour l’identité ; ne résout pas la couverture corporelle."
+      ]
+    },
+    {
+      "local_reference_file": "re6-ustanak-figure-center.png",
+      "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-ustanak-figure-center.png",
+      "url": "https://residentevilcenter.net/images/games/residentevil6/figuras/Ustanak.png",
+      "source_page": "https://www.residentevilcenter.net/figuras-resident-evil-6",
+      "kind": "third-party-hosted-native-game-figure-capture",
+      "bytes": 976390,
+      "sha256": "8306449e42a1c0e2353518499d9f42541caa0f36fdfec11b38ad0770ff65ea68",
+      "width": 1280,
+      "height": 720,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_range": [
+        255,
+        255
+      ],
+      "native_bytes_unmodified": true,
+      "visually_inspected": true,
+      "complete_visible_body": false,
+      "decision": "SOURCE_HOLD_EQUIPMENT_COVERAGE",
+      "observations_and_limits": [
+        "Figure principale RE6 : tête, torse, deux bottes, main gauche organique gantée et bras mécanique droit visibles. L’arme est dressée vers le haut de l’image.",
+        "Le mécanisme droit arrive au bord supérieur et se confond avec le fond sombre : sa terminaison intégrale n’est pas vérifiée. Le corps biologique est entier ; la silhouette équipée complète ne l’est pas.",
+        "Une asymétrie est claire : membre mécanique à droite anatomique, main organique à gauche ; pantalon avec sangles et bottes épaisses.",
+        "Plateforme et build de la capture non authentifiés ; la vue ne prouve pas les détails cachés du harnais/cage arrière."
+      ]
+    },
+    {
+      "local_reference_file": "re6-ustanak_alternativo-figure-center.png",
+      "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-ustanak_alternativo-figure-center.png",
+      "url": "https://residentevilcenter.net/images/games/residentevil6/figuras/Ustanak_alternativo.png",
+      "source_page": "https://www.residentevilcenter.net/figuras-resident-evil-6",
+      "kind": "third-party-hosted-native-game-figure-capture",
+      "bytes": 1011811,
+      "sha256": "f52c42a91830c64e136eb463e4d7633c6c154a68c15d4cce2f859b42e3d90f37",
+      "width": 1280,
+      "height": 720,
+      "mode": "RGBA",
+      "format": "PNG",
+      "alpha_range": [
+        255,
+        255
+      ],
+      "native_bytes_unmodified": true,
+      "visually_inspected": true,
+      "complete_visible_body": false,
+      "decision": "EXCLUDED_AS_SINGLE_FULL_BODY_SOURCE",
+      "observations_and_limits": [
+        "Ustanak non brûlé en figurine alternative, pince mécanique droite déployée et Jake capturé. Configuration de capture distincte d’une pose neutre.",
+        "Le haut de la pince est visible, mais Ustanak est coupé au bas du cadre et le prisonnier masque une partie du mécanisme. Aucun assemblage avec la figurine principale n’est autorisé par cette recherche.",
+        "Ne pas introduire Jake ou une victime dans le candidat ; ne pas combiner cette pince déployée avec une autre arme/phase."
+      ]
+    },
+    {
+      "local_reference_file": "re6-ustanak-blackjack-1.png",
+      "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-ustanak-blackjack-1.png",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgX5RXTeIl0I0W1B2N7WETKM1WqoLG8JbPV3qBXdv5L-gTzchLxnrSYclzNBNvHbCbWt9qKSymIOUDbgUVUVUgrxMVgV21WuBE1Z99iaKJJYaEwbJz-e7zUIPXXY9rRK8M4LfmZSpGU8L3x/w189-h200/image.png",
+      "source_page": "https://blackjackrants.blogspot.com/2020/10/reviewing-monsters-resident-evil-6.html?m=0",
+      "kind": "small-third-party-hosted-render",
+      "bytes": 32542,
+      "sha256": "1721467f9925093a68aa4c22cabe6b173917b080da8afbb5a5392b0f5a4dca7b",
+      "width": 175,
+      "height": 185,
+      "mode": "RGB",
+      "format": "PNG",
+      "alpha_range": null,
+      "native_bytes_unmodified": true,
+      "visually_inspected": true,
+      "complete_visible_body": true,
+      "decision": "SOURCE_HOLD_INSUFFICIENT_EQUIPMENT_DETAIL",
+      "observations_and_limits": [
+        "Petit rendu entier 175×185 : personnage, bottes, main gauche et terminaison d’un bras mécanique droit dans le cadre.",
+        "Le détail insuffisant ne permet pas de qualifier précisément le type de mécanisme et ses éléments par rapport à la pince/cage de la figurine. Aucune configuration 3D entière et détaillée n’est admise sur cette seule vignette.",
+        "La silhouette paraît en déplacement ; fond blanc, pas d’alpha exploitable. Ne pas inventer un modèle haute définition à partir de cette vignette."
+      ]
+    },
+    {
+      "local_reference_file": "re6-ustanak-blackjack-2.png",
+      "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-ustanak-blackjack-2.png",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiCOR33GvCOBUAVWcuo6xj8j38o_p2uQCIWEiynKiQEIzR3zCVnsWJhM2rtyvZWxvPVmX-2iN77f4Z9r-8pBYxV7TBQ5Gl9FyVN7_vqRPJH44xIaihq7PdSQZ0aUF9aYBLL1DwM0hwK-wz0/w182-h200/image.png",
+      "source_page": "https://blackjackrants.blogspot.com/2020/10/reviewing-monsters-resident-evil-6.html?m=0",
+      "kind": "small-third-party-hosted-render",
+      "bytes": 31580,
+      "sha256": "176beed0d662d4b6d997572e8d7cb5e2d898314d1edd424deb49e632aaf94752",
+      "width": 168,
+      "height": 185,
+      "mode": "RGB",
+      "format": "PNG",
+      "alpha_range": null,
+      "native_bytes_unmodified": true,
+      "visually_inspected": true,
+      "complete_visible_body": true,
+      "decision": "EXCLUDED_OTHER_IDENTITY_OKO",
+      "observations_and_limits": [
+        "Image annexe de la section Ustanak and Oko : créature volante Oko, pas le corps d’Ustanak. Nom local issu de l’ordre d’extraction, sans attribution d’identité au fichier.",
+        "N’entre dans aucune référence de génération Ustanak."
+      ]
+    }
+  ],
+  "primary_context_sources": [
+    {
+      "url": "https://game.capcom.com/residentevil/en/exfile-2-2.html?site=pc",
+      "kind": "official-capcom-file",
+      "evidence": "Contenu indexé : transformation Bloodshot depuis zombie C-virus, thorax pouvant révéler le cœur après dégâts. Accès direct 403 ; aucune image prétendument extraite.",
+      "use": "Séparer identité Bloodshot et phase du cœur exposé ; ne qualifie aucune silhouette."
+    },
+    {
+      "url": "https://game.capcom.com/residentevil/en/exfile-2-28.html",
+      "kind": "official-capcom-file",
+      "evidence": "Contenu indexé : bras à accessoires interchangeables et capture. Accès direct 403 ; aucune image obtenue.",
+      "use": "Séparer configurations Ustanak."
+    },
+    {
+      "url": "https://game.capcom.com/manual/bio6/fr/page-93.html",
+      "kind": "official-capcom-manual",
+      "evidence": "Manuel Predator : bras à pince et bras fusil, captures de la version Xbox360 annoncées.",
+      "use": "Configurations distinctes, pas de synthèse du bras à pince, du fusil ou d’autres phases."
+    },
+    {
+      "url": "https://www.famitsu.com/news/201302/08028447.html",
+      "kind": "capcom-release-excerpt-hosted-by-press",
+      "local_snapshot": "re6-artworks-famitsu.html",
+      "bytes": 322999,
+      "sha256": "787decf4285b109645265a2f89c5c0dd1286d06557e64ee8d16d668f124e8c21",
+      "use": "Attribution artbook officiel et bras droit ; l’échantillon est masqué par SAMPLE."
+    },
+    {
+      "url": "https://www.4gamer.net/games/146/G014637/20121001041/",
+      "kind": "capcom-2012-press-release-hosted-by-press",
+      "local_snapshot": "re6-press-4gamer-20121001.html",
+      "bytes": 299985,
+      "sha256": "9df07311fcff668800a092e1f53f4a852761ade7aa365d7cdf10155f9b221adc",
+      "use": "Corroboration contemporaine 2012 d’Ustanak ; capture partielle."
+    }
+  ],
+  "access_limits_and_excluded_leads": [
+    {
+      "url": "https://cucdn.creativeuncut.com/gallery-21/art/re6-ustanak-render.jpg",
+      "status": "HTTP_403",
+      "note": "Lien observé depuis la galerie CreativeUncut ; pas de fichier téléchargé ni de contenu visuel certifié. Aucune conclusion tirée du descriptif généré par la recherche d’images."
+    },
+    {
+      "url": "https://residentevil.fandom.com/wiki/File:Blood_Shoot_Render.PNG",
+      "status": "NOT_RETRIEVED",
+      "note": "Nom de fichier indexé ; pas de bitmap ni de preuve visuelle extraits via ce lien."
+    },
+    {
+      "url": "https://www.spriters-resource.com/pc_computer/residentevil6/asset/509466/",
+      "status": "INDEXED_NOT_DOWNLOADED",
+      "note": "Artbook numérique anglais annoncé en 32 PNG/144.81 MB. ZIP non récupéré dans cette passe ; aucune page non vue utilisée pour qualifier un personnage."
+    },
+    {
+      "identity": "Bloodshot film Anderson / modèles Steam ou fan art DeviantArt",
+      "status": "EXCLUDED_EDITION_OR_PROVENANCE",
+      "note": "Aucun emprunt aux adaptations cinéma, mods ou autres incarnations."
+    }
+  ],
+  "global_limits": [
+    "Références visuelles de jeu/rendu et adaptations statiques : aucune certification géométrique 1:1, aucun contrôle du maillage natif, de l’animation ou du moteur.",
+    "La disponibilité de nouvelles références n’efface pas les anciens HELD_REFERENCE ni les refus réellement enregistrés.",
+    "Le fichier initial INITIAL_WORKPLAN_V18.json reste un checkpoint historique figé ; ce rapport présente une conclusion de recherche postérieure.",
+    "Les fichiers sources sont conservés bruts hors dépôt. Les sources Ustanak provenant de configurations différentes ne sont pas assemblées pour prétendre à une source entière."
+  ]
+}

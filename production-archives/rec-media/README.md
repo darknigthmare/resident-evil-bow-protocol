@@ -1,6 +1,18 @@
 # Resident Evil Combat — publication des lots de production
 
-La [PR #22](https://github.com/darknigthmare/resident-evil-bow-protocol/pull/22) conserve les snapshots **V5 à V11 et V14–V17** pour revue. Chaque lot garde les octets de ses images, documents et archives figés. Les sources documentaires originales et les modèles restent exclus de cette publication.
+Les snapshots **V5 à V11 et V14–V17**, intégrés via la [PR #22 fusionnée](https://github.com/darknigthmare/resident-evil-bow-protocol/pull/22), restent figés. La [PR #23](https://github.com/darknigthmare/resident-evil-bow-protocol/pull/23) ajoute **V18** pour revue. Chaque lot conserve ses images, documents et archives d’origine ; les bitmaps de référence et modèles sources restent hors dépôt.
+
+## Nouvelle continuation du 20 novembre 2026 — V18
+
+Le [bilan V18](CONTINUATION_V18_20261120.md) ajoute **12 PNG : 12 candidats statiques et 0 essais pour 6 identités RE6 (2012)**. Les sources auditées couvrent Napad, Whopper, Meset, Iluzija, Ogroman, Bloodshot et Ustanak ; ce dernier reste sans appel et sa ligne `SOURCE_HOLD` n’est pas modifiée.
+
+Le [lot V18](v18/README.md), son [manifeste](v18/manifests/ASSET_MANIFEST_V18.json), le [journal](GENERATION_LEDGER_V18_20261120.json), les [décisions de source](v18/docs/SOURCE_DECISIONS_V18.json) et la [validation](V18_VALIDATION_20261120.json) relient les sorties aux sources, prompts, empreintes et revues. L’[inventaire de 346 UID](CONTINUATION_V18_20261120.json) actualise 6 entrées ; les **340 autres sont identiques à V17**. Les refus historiques restent conservés sans relance de leurs identités.
+
+**Le corpus atteint 133 PNG : 97 candidats visuels et 36 essais.** Il inclut des directions et des décors, pas 133 personnages. Les 43 entrées contextuelles restent séparées ; les 44 PNG V12/V13 annoncés mais non récupérés restent exclus des totaux.
+
+La reprise logique est main `8073338`, le parent de livraison `935f447`. Le [plan initial](v18/docs/INITIAL_WORKPLAN_V18.json) reste figé et le [plan final](v18/docs/WORKPLAN_V18.json) est séparé. La [CI de la base 807333](v18/docs/CI_BASELINE_V18.json) donne **17 succès et 7 échecs sur 24 workflows** : six gardes R34 et un timeout d’installation ffmpeg R23. Cette preuve ne décrit pas le futur head V18.
+
+Les PNG conservent leurs octets ; les vues sont indépendantes, sans miroir. Les détails cachés, animations, fidélité 1:1 et admission moteur restent non certifiés. Aucun runtime, test, garde ou workflow n’est modifié. Les sections suivantes décrivent leurs propres points historiques.
 
 ## Nouvelle continuation du 20 novembre 2026 — V17
 

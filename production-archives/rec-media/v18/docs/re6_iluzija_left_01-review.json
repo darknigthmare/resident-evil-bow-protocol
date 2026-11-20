@@ -1,0 +1,142 @@
+{
+  "schema": "rec.static-candidate-independent-review.v18",
+  "asset": "Iluzija — Resident Evil 6 (2012), LEFT 01, forme visible opaque enroulée",
+  "id": "re6_iluzija_left_01",
+  "uid": "re6-iluzija",
+  "variant": "re6_2012_visible_opaque_coiled",
+  "reviewed_at": "2026-11-20T17:01:55.002212+00:00",
+  "reviewer": "audit_missing",
+  "pull_request": 23,
+  "asset_path": "assets/re6_iluzija_left_01.png",
+  "original_path": "/workspace/scratch/3fced93cfb0a/generated_images/exec-602bbb0c-0dcf-4b40-b96c-fa6e78b168bd.png",
+  "sha256": "f065a2faf6524a58330d28995a8632589d5e6b50ffb6ed33119cee907e8d1726",
+  "bytes": 1636308,
+  "verdict": "CANDIDATE_STATIC_WITH_LIMITS",
+  "review_status": "CANDIDATE_STATIC_WITH_LIMITS",
+  "excluded_from_candidate_count": false,
+  "source_refs_reviewed": [
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-iluzija-blackjack.png",
+      "sha256": "aa449fd52cafa482d0a602b1f58229539f13642ca9c352e53ba9d52d4dd49202",
+      "bytes": 433931,
+      "source_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi2hfenE0ZWtlDhdZLRlFxKNLvBbU0Uxy3zPkdp3ZQ_B0EuGSX7kt394oxz0rqoPjDC43AHFlWvXNaVGg3NhF8pFT7ayX7QmwwpyKbKmk2Oz-_h6DUMVNn955q63tvovY2X2xGChXzhwzam/",
+      "role": "Rendu complet de la phase visible opaque, tête relevée, deux grandes boucles et queue intégrale.",
+      "actually_visually_inspected": true
+    },
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-iluzija-figure-center.png",
+      "sha256": "861a5a97dcecca5544a22c76b5ce8cf0f6ff4f95cda008ec2412b1f046e10a47",
+      "bytes": 817684,
+      "source_url": "https://www.residentevilcenter.net/images/games/residentevil6/figuras/Iluzija.png",
+      "role": "Capture RE6 de la même forme enroulée, corroborant silhouette, tête et terminaison de queue sous un autre éclairage.",
+      "actually_visually_inspected": true
+    }
+  ],
+  "source_document": "docs/SOURCES_RE6_MESET_ILUZIJA_OGROMAN_V18.json",
+  "source_document_sha256_at_review": "8a8995a2822c975d26b268415319932c2f4a0a52436e26875756a1e651ea458d",
+  "prompt_record": "prompts/re6_iluzija_left_01.json",
+  "technical_record": "docs/re6_iluzija_left_01-technical.json",
+  "visual_checks": {
+    "orientation": "Tête relevée, gueule et langue dirigées vers la gauche. Cou tourné dans le même sens ; les boucles conservent une disposition compacte cohérente avec cette présentation en trois quarts.",
+    "variant": "Un seul grand corps serpentin sans membres, phase visible opaque bleu-noir/vert, plaques irrégulières claires et zones rougeâtres limitées. Pas de camouflage, de capuchon de cobra, d’ailes, de cornes ou de substitution par Yawn.",
+    "head_and_mouth": "Tête large et émoussée à plaques irrégulières, gueule très ouverte et dents longues de tailles variables. Une seule langue rouge se divise à son extrémité en deux pointes ; les deux branches sont reliées à une même base dans la gueule.",
+    "coil_continuity": "Le cou descend continûment depuis l’arrière de la tête puis se courbe vers la boucle supérieure. Le corps poursuit un anneau épais en retrait, partiellement masqué par le cou et le segment antérieur. Le large tour inférieur se lit de la gauche jusqu’au devant et repart vers la terminaison à droite. Les superpositions conservent un ordre devant/derrière plausible ; aucune jonction en T, branche de corps, anneau détaché, deuxième tête ou section visiblement interrompue observée.",
+    "tail": "Une seule queue quitte le grand tour inférieur vers la droite de l’image et se rétrécit en un crochet pointu vers le bas. Sa liaison au corps et son extrémité sont visibles et contenues ; aucune queue dupliquée.",
+    "topology_review": {
+      "visible_heads": 1,
+      "visible_tails": 1,
+      "major_layered_loops": 2,
+      "legs_or_wings_observed": 0,
+      "visible_disconnected_coil_observed": false,
+      "visible_body_branch_observed": false,
+      "all_hidden_connections_certified": false
+    },
+    "framing": "Tête, dents, langue bifide, deux grandes boucles et queue entière dans le canvas. Les ouvertures entre cou et boucles restent transparentes. Aucun décor, sol, grille, socle, texte ou second sujet.",
+    "padding_target": {
+      "requested_percent_each_side": 10,
+      "achieved": false,
+      "margins_alpha16_left_top_right_bottom": [
+        142,
+        80,
+        105,
+        89
+      ],
+      "margins_alpha16_percent_left_top_right_bottom": [
+        10.84,
+        6.67,
+        8.02,
+        7.42
+      ],
+      "principal_extremity_clipped": false
+    },
+    "limits": [
+      "Marges principales alpha≥16 gauche/haut/droite/bas : [142, 80, 105, 89] px, soit [10.84, 6.67, 8.02, 7.42] %. La cible de 10 % sur chaque bord n’est pas atteinte ; aucune extrémité principale ne touche le cadre.",
+      "La continuité est qualifiée sur les surfaces visibles. Les passages sous les boucles ne peuvent pas être inspectés comme un modèle 3D ; aucune longueur déroulée ni topologie native complète n’est certifiée.",
+      "Le volume du cou, la distribution des petites écailles, les dents et plaques sont une interprétation générée. La source complète et la figurine n’offrent pas toutes les faces opposées.",
+      "La langue, les plaques et les boucles ne prouvent ni un squelette animé, ni un contact au sol, ni une phase de camouflage.",
+      "Aucune précision 1:1, animation originale, collision, rig ou admission moteur n’est validée."
+    ]
+  },
+  "failed_gates": [],
+  "uncertain_gates": [
+    {
+      "gate": "occluded_continuous_body_topology",
+      "reason": "Les tronçons cachés sous les deux boucles ne sont pas directement vérifiables ; aucun trajet visible impossible n’a été repéré, mais la topologie 3D complète n’est pas certifiée."
+    }
+  ],
+  "alpha": {
+    "mode": "RGBA",
+    "size": [
+      1310,
+      1200
+    ],
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox_alpha_gte16": [
+      142,
+      80,
+      1205,
+      1111
+    ],
+    "margins_alpha16_left_top_right_bottom": [
+      142,
+      80,
+      105,
+      89
+    ],
+    "margins_alpha16_percent_left_top_right_bottom": [
+      10.84,
+      6.67,
+      8.02,
+      7.42
+    ],
+    "bbox_all_nonzero_alpha": [
+      0,
+      17,
+      1296,
+      1200
+    ],
+    "pixels_alpha0": 895462,
+    "pixels_alpha1_to15": 24793,
+    "pixels_alpha1_to3": 20475,
+    "pixels_alpha255": 230,
+    "all_subject_alpha_255": false,
+    "halo_finding": "PNG RGBA original et composites gris/clair personnellement inspectés. Vraie transparence ; pas de fond opaque ou de halo large substantiel observé sur les composites. Des résidus de très faible alpha s’étendent hors de la silhouette et parfois jusqu’aux bords ; ils ne sont pas interprétés comme des extrémités coupées. Octets originaux conservés."
+  },
+  "qa_previews_only": [
+    "/workspace/scratch/3fced93cfb0a/qa-v18/re6_iluzija_left_01-gray.jpg",
+    "/workspace/scratch/3fced93cfb0a/qa-v18/re6_iluzija_left_01-light.jpg"
+  ],
+  "inspection_method": "Inspection indépendante personnelle de chaque référence réellement jointe au prompt, du PNG original et de ses composites gris et clair. Vérification séparée des dimensions, de la bounding box alpha≥16, du nombre de pixels transparents, du SHA256 et de l’égalité des octets entre original et archive. Aucun nettoyage, recadrage, padding ou autre retouche du PNG livré.",
+  "original_bytes_modified": false,
+  "original_generated_bytes_verified_identical": true,
+  "one_subject_per_image_reviewed": true,
+  "quality_rejection_is_tool_refusal": false,
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "animation_frames": 1,
+  "can_mirror": false,
+  "recommended_action": "Conserver LEFT 01 comme candidat statique de la forme opaque enroulée. Aucune coupure visible de boucle ou duplication de queue ne justifie une correction dans cette revue. Maintenir les limites sur les raccords cachés et les faces opposées."
+}

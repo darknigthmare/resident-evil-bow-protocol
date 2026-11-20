@@ -1,0 +1,135 @@
+{
+  "schema": "rec.static-candidate-independent-review.v18",
+  "asset": "Bloodshot au thorax fermé — Resident Evil 6 (2012), RIGHT 01",
+  "id": "re6_bloodshot_right_01",
+  "uid": "re6-bloodshot",
+  "variant": "re6_2012_closed_thorax",
+  "reviewed_at": "2026-11-20T17:09:41.992274+00:00",
+  "reviewer": "reference_research",
+  "asset_path": "assets/re6_bloodshot_right_01.png",
+  "original_path": "/workspace/scratch/3fced93cfb0a/generated_images/exec-2f0b8ef1-1c25-45b7-aec1-bc5984c92ca9.png",
+  "sha256": "b8bf45a6254fdf3d9b79bdcea33a8411702d6728ff8ac236d124b9e47aca1264",
+  "bytes": 1593666,
+  "verdict": "CANDIDATE_STATIC_WITH_LIMITS",
+  "review_status": "CANDIDATE_STATIC_WITH_LIMITS",
+  "excluded_from_candidate_count": false,
+  "source_refs_reviewed": [
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-bloodshot-blackjack-1.png",
+      "sha256": "5e1b9d846068ad402accdfc1584f3a3305f139c9df48fea8d1850cd4dc7dc650",
+      "bytes": 314751,
+      "role": "Original joint à la requête, personnellement inspecté et comparé ; provenance et limites dans le rapport source V18.",
+      "native_reference_bytes_modified": false
+    },
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-bloodshot-figure-center.png",
+      "sha256": "569c43744757611ad3e3d2e2c56d43458cf0213a423a7c947fdef5c928db6416",
+      "bytes": 948106,
+      "role": "Original joint à la requête, personnellement inspecté et comparé ; provenance et limites dans le rapport source V18.",
+      "native_reference_bytes_modified": false
+    }
+  ],
+  "source_document": "docs/SOURCES_RE6_BLOODSHOT_USTANAK_V18.json",
+  "source_documents_reviewed": [
+    "docs/SOURCES_RE6_BLOODSHOT_USTANAK_V18.json"
+  ],
+  "source_document_sha256": "9cf06876fad603c21f356a2d975148cf579424f6eb220e1aba356564b045286e",
+  "prompt_record": "prompts/re6_bloodshot_right_01.json",
+  "prompt_record_sha256": "991c6e9c52dfadf08a067764ebd6b82a4b04a13702de28f5d799f823c42bd334",
+  "technical_record": "docs/re6_bloodshot_right_01-technical.json",
+  "technical_record_sha256": "9099772ac32530074a18f6a1990416a96725307ace084141018ca3c1b413b766",
+  "visual_checks": {
+    "orientation": "Tête allongée et gueule tournées vers la droite et légèrement relevées, torse en trois quarts droit. La stance basse et largement écartée reprend l’idée de la figurine ; le pied proche à gauche de l’image est ouvert vers l’extérieur, pas parallèle à la direction du museau.",
+    "arms_hands": "Deux bras continus depuis les épaules jusqu’aux poignets et mains griffues ouvertes. La main proche à gauche de l’image et la main éloignée à droite sont séparées du corps et lisibles. Aucun bras supplémentaire, main flottante ou membre fusionné observé.",
+    "legs_feet": "Deux jambes reliées au bassin, une allongée vers la gauche de l’image et l’autre fléchie vers la droite. Deux pieds nus griffus intégraux ; les pointes restent dans le cadre malgré la faible marge basse.",
+    "thorax_phase": "Thorax fermé avec surfaces musculaires/fibreuses continues ; les creux et stries du tronc ne forment pas une cavité ouverte et aucun cœur saillant n’est ajouté. Pas de phase endommagée distincte.",
+    "variant": "Silhouette élancée musculeuse rouge/brun sombre, stries fibreuses pâles, cou allongé et tête presque sans œil lisible à mâchoire dentée. Pas de vêtement, arme, victime, corps séparé ou autre forme de créature.",
+    "framing": "Un sujet complet, mâchoire supérieure, mains et deux pieds dans le cadre ; pas de socle, ombre au sol, second sujet ou décor.",
+    "limits": [
+      "La marge de 10 % demandée n’est pas atteinte sur tous les côtés : gauche/haut/droite/bas [196, 36, 233, 28] px, soit [12.76, 3.52, 15.17, 2.73] %. La silhouette principale reste complète ; ne pas déclarer une marge totalement transparente de 10 %.",
+      "La pose est un trois quarts droit ouvert en stance écartée ; le pied proche pointe vers le bas/gauche de l’image. L’exigence littérale de tous les genoux/orteils orientés à droite n’est donc pas entièrement remplie.",
+      "Le matériau généré est plus uniformément rouge/brun que certaines plages claires/verdâtres du rendu source. Les stries, doigts, ongles, dentition et faces cachées ne sont pas certifiés 1:1.",
+      "Le canal alpha maximum vaut 254, et aucun pixel n’est à 255. Cela conserve une transparence réelle, mais il ne faut pas décrire le sujet comme entièrement alpha-255.",
+      "Les RGB non nuls sous alpha zéro sont invisibles en composition correcte ; l’aperçu brut ne suffit pas à conclure à un fond ou un halo visible.",
+      "Des résidus de très faible alpha subsistent hors silhouette ; aucun nettoyage du PNG n’a été effectué.",
+      "Candidat statique généré uniquement : ni certification de fidélité 1:1, ni maillage natif, ni animation, ni validation de contacts/collisions, ni admission moteur."
+    ]
+  },
+  "failed_gates": [],
+  "candidate_blocking_failed_gates": [],
+  "uncertain_gates": [
+    "fine_digit_teeth_and_fibrous_texture_unverified",
+    "hidden_back_surfaces_unverified"
+  ],
+  "alpha": {
+    "mode": "RGBA",
+    "size": [
+      1536,
+      1024
+    ],
+    "extrema": [
+      0,
+      254
+    ],
+    "bbox_alpha_gte16": [
+      196,
+      36,
+      1303,
+      996
+    ],
+    "margins_alpha16_left_top_right_bottom": [
+      196,
+      36,
+      233,
+      28
+    ],
+    "margins_alpha16_percent_left_top_right_bottom": [
+      12.76,
+      3.52,
+      15.17,
+      2.73
+    ],
+    "bbox_all_nonzero_alpha": [
+      0,
+      33,
+      1522,
+      1024
+    ],
+    "pixels_alpha0": 1255932,
+    "pixels_alpha1_to15": 22808,
+    "pixels_alpha1_to3": 20234,
+    "pixels_alpha255": 0,
+    "hidden_nonzero_rgb_under_alpha0_pixels": 910127,
+    "all_subject_alpha_255": false,
+    "halo_finding": "Alpha réel mesuré. Les composites gris et clair ont été personnellement inspectés : pas de fond opaque, de grille ou de large halo visible substantiel. Des résidus de faible alpha subsistent et atteignent certains bords ; les octets originaux sont préservés. 910 127 pixels ont des RGB non nuls sous alpha zéro : ces valeurs sont invisibles lorsque l’alpha est appliqué et ne constituent pas un halo visible."
+  },
+  "qa_previews_only": [
+    "/workspace/scratch/3fced93cfb0a/qa-v18/re6_bloodshot_right_01-gray.jpg",
+    "/workspace/scratch/3fced93cfb0a/qa-v18/re6_bloodshot_right_01-light.jpg"
+  ],
+  "inspection_method": "Comparaison indépendante des originaux effectivement joints, du prompt complet, du rapport source et des deux composites calculés avec le vrai alpha. Suivi visuel des membres, appendices ou boucles et de leurs occlusions ; contrôle du cadre complet. SHA, égalité raw/archive, dimensions, alpha, histogrammes et bbox recalculés indépendamment et rapprochés de la fiche technique. Aucun retouchage du livrable.",
+  "original_bytes_modified": false,
+  "original_generated_bytes_verified_identical": true,
+  "one_subject": true,
+  "one_subject_per_image_reviewed": true,
+  "quality_rejection_is_tool_refusal": false,
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "animation_frames": 1,
+  "can_mirror": false,
+  "recommended_action": "Conserver RIGHT 01 comme candidat statique au thorax fermé, avec la stance ouverte et les faibles marges verticales explicitement documentées. Pas de halo visible substantiel sur les composites réels ; aucune retouche ni correction concrète nécessaire.",
+  "non_blocking_deviations": [
+    {
+      "gate": "requested_10_percent_completely_transparent_margin",
+      "blocks_static_candidate": false,
+      "status": "NOT_MET",
+      "detail": "La marge de 10 % demandée n’est pas atteinte sur tous les côtés : gauche/haut/droite/bas [196, 36, 233, 28] px, soit [12.76, 3.52, 15.17, 2.73] %. La silhouette principale reste complète ; ne pas déclarer une marge totalement transparente de 10 %."
+    },
+    {
+      "gate": "all_knees_and_toes_point_screen_right",
+      "blocks_static_candidate": false,
+      "status": "PARTIALLY_MET",
+      "detail": "Le pied proche est tourné vers l’extérieur dans une stance très ouverte ; la tête et le buste établissent néanmoins une orientation droite."
+    }
+  ]
+}
