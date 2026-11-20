@@ -1,0 +1,545 @@
+{
+  "schema": "rec.media.source-decisions.v16/1",
+  "date": "2026-11-20",
+  "language": "fr",
+  "repository": "darknigthmare/resident-evil-bow-protocol",
+  "pull_request": 22,
+  "parent_commit": "6599f75c88472351aacaf19e7a6b1197e6c58625",
+  "scope": "Synthèse des décisions de référence pour dix UID ciblés et contrôle de non-duplication Big Man en onzième entrée. Les validations de sorties générées restent séparées.",
+  "historical_snapshot_path": "production-archives/rec-media/CONTINUATION_20261120.json",
+  "historical_snapshot_sha256": "6573433621dfafb9c6e8e672ae62be2354a38046bba6885dbb7f15edbbcfeee2",
+  "historical_statuses_modified": false,
+  "runtime_modified": false,
+  "generation_performed_by_this_document": false,
+  "canonical_one_to_one_certified": false,
+  "engine_admitted_by_this_document": false,
+  "summary": {
+    "target_uid_count": 10,
+    "source_available_for_scoped_candidate_uid_count": 5,
+    "source_hold_uid_count": 5,
+    "additional_already_represented_uid_count": 1,
+    "note": "Ces nombres décrivent les décisions de source, pas des combattants terminés, images admises, appels réussis ou nouvelles identités publiées."
+  },
+  "status_rules": [
+    "historical_snapshot copie les valeurs du point de continuation sans les remplacer par les décisions V16.",
+    "source_decision reprend le statut du rapport source lorsqu’il existe ; Executioner et Chainsaw portent une synthèse source explicitement nouvelle.",
+    "Un cadrage ou une prise anatomique refusés en QA ne sont pas un refus de génération de l’outil.",
+    "Une référence complète diffusée par un tiers reste distincte d’un modèle natif original certifié.",
+    "La présence de sources autorise une revue de candidats dans leur portée documentée ; elle ne préjuge pas des résultats générés ni de leur admission."
+  ],
+  "entries": [
+    {
+      "uid": "re5-executioner",
+      "edition": "Resident Evil 5 (2009)",
+      "fighter_category": "main",
+      "audit_role": "target",
+      "historical_snapshot": {
+        "baseline_status": "EXISTING_NATIVE_LIBRARY_REQUIRES_EDITION_AND_RUNTIME_REVIEW",
+        "current_outcome": "EXISTING_NATIVE_LIBRARY_REQUIRES_REVIEW",
+        "current_tool_refusals": [],
+        "current_hold_decisions": [],
+        "further_generation_blocked_by_current_refusal": false,
+        "blocked_outputs": []
+      },
+      "source_decision": "COMPLETE_EQUIPPED_SOURCE_AND_NATIVE_BODY_VIEWS_AVAILABLE",
+      "decision_category": "SOURCE_AVAILABLE",
+      "source_available_for_scoped_candidate": true,
+      "reason": "Rendu complet du corps équipé et de la hache, complété par quatre vues dérivées du même modèle PC 2009 identifié dans R29. Le dos, les profils et les deux bottes sont désormais documentés.",
+      "limits": [
+        "Les vues natives dérivées n’ont pas de hache ; le rendu équipé reste la preuve des mains et de l’arme.",
+        "La pose bras écartés ne prouve pas une garde équipée. La visibilité des bottes dépend de la nouvelle pose et des occlusions.",
+        "Le fichier historique idle-right est une présentation frontale : son nom ne qualifie pas une direction droite. Les essais antérieurs coupés ont été rejetés pour qualité, sans refus outil."
+      ],
+      "next_action": "Contrôler séparément toute nouvelle pose droite : vraie direction, hache complète, crochet arrière et main droite près de la tête de hache / main gauche près du talon du manche.",
+      "evidence": [
+        "production-archives/rec-media/v16/docs/SOURCES_RE5_V16.json",
+        "production-archives/rec-media/v16/docs/SOURCES_EXECUTIONER_NATIVE_V16.json"
+      ],
+      "tool_refusal_found_in_inspected_history": false,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted_by_this_document": false,
+      "requested_direction": "right",
+      "source_scope": "RE5 ordinaire, cagoule textile, hache normale",
+      "source_urls": [
+        "https://blackjackrants.blogspot.com/2020/10/reviewing-monsters-resident-evil-5.html"
+      ],
+      "source_decision_note": "Synthèse nouvelle ; les deux rapports de preuve conservent leurs constats historiques. Aucun statut d’acceptation des images V16 n’est attribué ici."
+    },
+    {
+      "uid": "re5-chainsaw-majini",
+      "edition": "Resident Evil 5 (2009)",
+      "fighter_category": "main",
+      "audit_role": "target",
+      "historical_snapshot": {
+        "baseline_status": "EXISTING_NATIVE_LIBRARY_REQUIRES_EDITION_AND_RUNTIME_REVIEW",
+        "current_outcome": "EXISTING_NATIVE_LIBRARY_REQUIRES_REVIEW",
+        "current_tool_refusals": [],
+        "current_hold_decisions": [],
+        "further_generation_blocked_by_current_refusal": false,
+        "blocked_outputs": []
+      },
+      "source_decision": "COMPLETE_SOURCE_AVAILABLE_FOR_INDEPENDENT_LEFT_CANDIDATE",
+      "decision_category": "SOURCE_AVAILABLE",
+      "source_available_for_scoped_candidate": true,
+      "reason": "Rendu source entier avec sac, œil unique, deux mains, moteur, poignées, lame et pieds nus. Un candidat R34 orienté droite existe déjà ; le besoin examiné est la gauche.",
+      "limits": [
+        "Aucune vue native indépendante de gauche ajoutée par cet audit.",
+        "L’œil unique appartient au côté anatomique droit ; en gauche il peut être éloigné ou masqué.",
+        "La main droite tient la poignée arrière et la gauche l’arceau avant ; les trous du vêtement et l’objet de ceinture ne doivent pas être inversés.",
+        "Les anciens PNG coupés sont des sorties positives insuffisantes, pas des refus outil."
+      ],
+      "next_action": "Revoir la nouvelle vue gauche sur l’image réelle, en suivant les raccords épaules-coudes-poignets jusqu’aux deux poignées et en conservant la lame complète.",
+      "evidence": [
+        "production-archives/rec-media/v16/docs/SOURCES_RE5_V16.json"
+      ],
+      "tool_refusal_found_in_inspected_history": false,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted_by_this_document": false,
+      "requested_direction": "left",
+      "source_scope": "RE5, sac cousu à œil rouge unique, débardeur noir, pantalon rose",
+      "source_urls": [
+        "https://blackjackrants.blogspot.com/2020/10/reviewing-monsters-resident-evil-5.html"
+      ]
+    },
+    {
+      "uid": "re5-giant-majini",
+      "edition": "Resident Evil 5 (2009)",
+      "fighter_category": "experimental",
+      "audit_role": "target",
+      "historical_snapshot": {
+        "baseline_status": "HELD_COMPLETE_OR_EXACT_REFERENCE",
+        "current_outcome": "SOURCE_HOLD",
+        "current_tool_refusals": [],
+        "current_hold_decisions": [],
+        "further_generation_blocked_by_current_refusal": false,
+        "blocked_outputs": []
+      },
+      "source_decision": "QUALIFIED_COMPLETE_VISUAL_REFERENCE_WITH_PROVENANCE_LIMITS",
+      "decision_category": "SOURCE_AVAILABLE",
+      "source_available_for_scoped_candidate": true,
+      "reason": "Le rendu publié par le site Pachislot Biohazard 5 expose la pointe de massue auparavant coupée. La correspondance avec le rendu historique est documentée visuellement et par recalage numérique sans retouche.",
+      "limits": [
+        "Hébergement Fields/Capcom Pachislot : ce n’est pas une capture native de RE5 2009. La chaîne d’extraction du modèle reste non établie.",
+        "Cette présentation 2D complète ne certifie ni les surfaces arrière cachées ni une animation.",
+        "La massue appartient à la main anatomique droite ; la main gauche reste vide. Préserver la bande du haut du bras gauche et les attaches de chevilles asymétriques."
+      ],
+      "next_action": "Revoir les candidats gauche/droite séparément, avec toutes les pointes de massue dans le cadre et la latéralité anatomique conservée.",
+      "evidence": [
+        "production-archives/rec-media/v16/docs/SOURCES_RE5_EXTRA_V16.json",
+        "production-archives/rec-media/v16/docs/GIANT_SOURCE_CORRESPONDENCE_V16.json"
+      ],
+      "tool_refusal_found_in_inspected_history": false,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted_by_this_document": false,
+      "requested_directions": [
+        "right",
+        "left"
+      ],
+      "source_scope": "The retained source render with club in anatomical RIGHT hand; do not silently swap to a left-handed variant.",
+      "source_urls": [
+        "https://www.slot-bio5.jp/worldview_03.html",
+        "https://www.slot-bio5.jp/images/worldview/creature/c06.jpg"
+      ]
+    },
+    {
+      "uid": "re5-adjule",
+      "edition": "Resident Evil 5 (2009)",
+      "fighter_category": "main",
+      "audit_role": "target",
+      "historical_snapshot": {
+        "baseline_status": "HELD_COMPLETE_OR_EXACT_REFERENCE",
+        "current_outcome": "SOURCE_HOLD",
+        "current_tool_refusals": [],
+        "current_hold_decisions": [],
+        "further_generation_blocked_by_current_refusal": false,
+        "blocked_outputs": []
+      },
+      "source_decision": "COMPLETE_ATTRIBUTED_SOURCE_FOR_SCOPED_CANDIDATE",
+      "decision_category": "SOURCE_AVAILABLE",
+      "source_available_for_scoped_candidate": true,
+      "reason": "Le crop R34 coupait le bas des pattes, les pieds, l’arrière du corps et la queue. Tous ces éléments sont présents sur la source complète publiée, sans agrandissement artificiel du champ.",
+      "limits": [
+        "Aucune vue indépendante du côté opposé ou de l’arrière n’a été obtenue.",
+        "La version mutée à tête scindée est une phase séparée ; elle ne doit pas servir à compléter cette variante fermée.",
+        "La variante plus claire, à grandes oreilles dressées, visible dans l’image 3 des Archives est également distincte.",
+        "Le diffuseur secondaire attribue ce rendu à RE5 ; l’archive originale Capcom et un fichier de modèle natif vérifié ne sont pas fournis."
+      ],
+      "next_action": "Revue du candidat par le responsable de génération, limitée explicitement à cette variante canine sombre non scindée. Toute paire gauche/droite produite reste un candidat à contrôler ; elle ne certifie pas une vue native opposée.",
+      "evidence": [
+        "production-archives/rec-media/v16/docs/SOURCES_RE5_CREATURES_V16.json"
+      ],
+      "tool_refusal_found_in_inspected_history": false,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted_by_this_document": false,
+      "requested_directions": [
+        "right",
+        "left"
+      ],
+      "source_scope": "Tête canine non scindée ; gueule ouverte ordinaire du rendu. « Tête fermée » signifie ici absence d’ouverture parasitaire de la tête, pas mâchoires closes.",
+      "preferred_source_id": "adjule-blackjack-full",
+      "forbidden_substitution": [
+        "Pas de tête scindée, parasite, tentacules ou gueule en pétales sur cette phase.",
+        "Pas de Colmillos RE4/RE4 Remake, Cerberus d’un autre épisode ou chien d’Umbrella Corps.",
+        "Pas de variante claire à grandes oreilles dressées ajoutée à cette silhouette.",
+        "Pas de recoloration, queue allongée, langue nouvellement déployée ou modification du nombre des pattes."
+      ],
+      "source_urls": [
+        "https://blackjackrants.blogspot.com/2020/10/reviewing-monsters-resident-evil-5.html",
+        "https://les-archives-resident-evil-biohazard.fr/lore-adjule/"
+      ]
+    },
+    {
+      "uid": "re5-licker-beta",
+      "edition": "Resident Evil 5 (2009)",
+      "fighter_category": "main",
+      "audit_role": "target",
+      "historical_snapshot": {
+        "baseline_status": "HELD_COMPLETE_OR_EXACT_REFERENCE",
+        "current_outcome": "SOURCE_HOLD",
+        "current_tool_refusals": [],
+        "current_hold_decisions": [],
+        "further_generation_blocked_by_current_refusal": false,
+        "blocked_outputs": []
+      },
+      "source_decision": "COMPLETE_ATTRIBUTED_SOURCE_FOR_SCOPED_CANDIDATE",
+      "decision_category": "SOURCE_AVAILABLE",
+      "source_available_for_scoped_candidate": true,
+      "reason": "Une image publiée complète expose les extrémités que les crops historiques coupaient. Aucune extension de cadre ou génération des parties manquantes n’a été employée.",
+      "limits": [
+        "Une seule pose complète récupérée ; la face opposée et les détails sous les membres restent non documentés.",
+        "Le logo gris du diffuseur et le cadre rouge ne font pas partie du modèle.",
+        "La source est un site secondaire avec légende explicite RE5, recoupée visuellement avec Evil Resource. Aucun modèle extrait natif ni chaîne de distribution originale Capcom vérifiés.",
+        "La seconde image du même carrousel est explicitement Resident Evil Damnation ; elle est exclue.",
+        "Le refus historique de Regis Licker Outbreak reste distinct, conservé et non retenté."
+      ],
+      "next_action": "Le responsable peut examiner une génération candidate à partir du rendu complet RE5, en conservant la langue non déployée et la silhouette documentée. Contrôler ensuite les pointes des griffes, la tête et le nombre/implantation des extrémités ; ne pas certifier le 1:1 sur la seule présence du corps dans le cadre.",
+      "evidence": [
+        "production-archives/rec-media/v16/docs/SOURCES_RE5_CREATURES_V16.json"
+      ],
+      "tool_refusal_found_in_inspected_history": false,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted_by_this_document": false,
+      "requested_directions": [
+        "right",
+        "left"
+      ],
+      "source_scope": "Licker β RE5 dans la pose du rendu, gueule ouverte, sans langue étirée hors de la bouche.",
+      "preferred_source_id": "licker-beta-archives-full",
+      "forbidden_substitution": [
+        "Pas de Regis Licker, Licker RE2/RE2 Remake, Licker Operation Raccoon City ou Licker β2 Requiem.",
+        "Pas de modèle du film Damnation ni d’élément du carrousel voisin.",
+        "Pas de langue étirée, de queue ajoutée ou d’anatomie cachée inventée.",
+        "Ne pas imposer cinq doigts humains à la créature : conserver le nombre et la disposition des griffes réellement visibles."
+      ],
+      "source_urls": [
+        "https://les-archives-resident-evil-biohazard.fr/lore-licker-b/",
+        "https://www.evilresource.com/resident-evil-5/enemies/licker-beta"
+      ]
+    },
+    {
+      "uid": "recv-sweeper",
+      "edition": "Resident Evil CODE: Veronica (2000)",
+      "fighter_category": "experimental",
+      "audit_role": "target",
+      "historical_snapshot": {
+        "baseline_status": "HELD_COMPLETE_OR_EXACT_REFERENCE",
+        "current_outcome": "SOURCE_HOLD",
+        "current_tool_refusals": [],
+        "current_hold_decisions": [],
+        "further_generation_blocked_by_current_refusal": false,
+        "blocked_outputs": []
+      },
+      "source_decision": "SOURCE_HOLD_WITH_EDITION_CONFLICT_EXPLAINED",
+      "decision_category": "SOURCE_HOLD",
+      "source_available_for_scoped_candidate": false,
+      "reason": "Le conflit de texture V14 venait du rendu Darkside présent dans le catalogue CV. La nouvelle capture native du guide X confirme la palette CV, mais reste petite et occultée. Aucun nouveau modèle natif complet attribué de façon sûre à Dreamcast 2000 n’a été récupéré.",
+      "limits": [
+        "Le rendu frontal du catalogue CV est attribué à Darkside ; il ne doit pas remplacer la palette et le modèle de l’édition 2000.",
+        "Les nouvelles preuves du guide X ne sont pas une preuve complète attribuée Dreamcast 2000."
+      ],
+      "next_action": "Obtenir une capture complète identifiée Dreamcast 2000 dans la Chemical Storage Room ou la Water Tank Room, ou une extraction du modèle final avec provenance. Une source vidéo originale explicitement Dreamcast est repérée mais non inspectée : https://www.youtube.com/watch?v=gtG_z7ufEaA . Ne pas redéfinir le sujet à partir du crop catalogue.",
+      "evidence": [
+        "production-archives/rec-media/v16/docs/SOURCES_SWEEPER_MOTH_V16.json"
+      ],
+      "tool_refusal_found_in_inspected_history": false,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted_by_this_document": false,
+      "ready_for_exact_edition_generation": false,
+      "forbidden_substitution": [
+        "Rendu Darkside frontal du catalogue Evil Resource",
+        "Hunter II vert",
+        "Hunter alpha rouge de RE1/REmake",
+        "Modèle Survivor 2 traité comme Dreamcast 2000 sans vérification",
+        "Fusion palette Darkside et anatomie du rendu CV"
+      ],
+      "hold_kind": "EDITION_AND_NATIVE_MODEL_PROVENANCE"
+    },
+    {
+      "uid": "recv-moth",
+      "edition": "Resident Evil CODE: Veronica (2000)",
+      "fighter_category": "experimental",
+      "audit_role": "target",
+      "historical_snapshot": {
+        "baseline_status": "HELD_COMPLETE_OR_EXACT_REFERENCE",
+        "current_outcome": "SOURCE_HOLD",
+        "current_tool_refusals": [],
+        "current_hold_decisions": [],
+        "further_generation_blocked_by_current_refusal": false,
+        "blocked_outputs": []
+      },
+      "source_decision": "NATIVE_FAMILY_FULL_SILHOUETTE_FOUND_EXACT_PLATFORM_HOLD",
+      "decision_category": "SOURCE_HOLD",
+      "source_available_for_scoped_candidate": false,
+      "reason": "Une capture de jeu avec silhouette centrale complète a été retrouvée ; elle concorde avec deux autres captures et le bestiaire Prima X. Le design CV final à longues extensions est donc mieux établi et distinct du rendu Darkside du catalogue. Les plateformes des captures publiques restent inconnues et les petits détails du dessous ne sont pas résolus.",
+      "limits": [
+        "Les captures montrent mieux la silhouette finale de la famille CV, mais leur plateforme exacte reste inconnue.",
+        "Le dessous et les pattes ne sont pas détaillés par les seules vues dorsales sombres."
+      ],
+      "next_action": "Réutiliser ces vraies captures comme base de comparaison puis obtenir une capture complète et attribuée Dreamcast 2000 du couloir antarctique, avec dessous/pattes lisibles si la pose de combat les montre. Le cadrage est désormais mieux documenté ; la plateforme reste la question précise à résoudre.",
+      "evidence": [
+        "production-archives/rec-media/v16/docs/SOURCES_SWEEPER_MOTH_V16.json"
+      ],
+      "tool_refusal_found_in_inspected_history": false,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted_by_this_document": false,
+      "ready_for_exact_edition_generation": false,
+      "forbidden_substitution": [
+        "Grand papillon gris Darkside du catalogue CV",
+        "Giant Moth RE2",
+        "Concept Kaitai utilisé comme preuve du modèle final",
+        "Six pattes détaillées ou anatomie ventrale inventées à partir d’une vue dorsale sombre",
+        "Capture X/HD déclarée Dreamcast 2000 sans provenance"
+      ],
+      "hold_kind": "EDITION_AND_NATIVE_MODEL_PROVENANCE"
+    },
+    {
+      "uid": "recv-bat",
+      "edition": "Resident Evil CODE: Veronica (2000)",
+      "fighter_category": "experimental",
+      "audit_role": "target",
+      "historical_snapshot": {
+        "baseline_status": "HELD_COMPLETE_OR_EXACT_REFERENCE",
+        "current_outcome": "SOURCE_HOLD",
+        "current_tool_refusals": [],
+        "current_hold_decisions": [],
+        "further_generation_blocked_by_current_refusal": false,
+        "blocked_outputs": []
+      },
+      "source_decision": "HOLD_RETAINED_NO_INDEPENDENT_WING_TIP_GEOMETRY",
+      "decision_category": "SOURCE_HOLD",
+      "source_available_for_scoped_candidate": false,
+      "reason": "Le nouveau cadre blanc reprend la même pose et le même contour distal que le catalogue tenu en attente. Il ne fournit pas de géométrie nouvelle de la pointe d’aile.",
+      "limits": [
+        "Le reçu ancien mentionne une aile sortant du cadre. Le raster repris montre une marge, mais conserve le contour distal problématique : une marge ajoutée ne résout pas l’anatomie.",
+        "Les illustrations de concept et modèles d’autres épisodes sont exclus ; l’extraction de l’édition 2000 n’est pas établie."
+      ],
+      "next_action": "Obtain a separate native model angle or gameplay frame of the CODE: Veronica incarnation with the entire distal wings visible; do not infer new anatomy merely from the Archives white margins.",
+      "evidence": [
+        "production-archives/rec-media/v16/docs/SOURCES_BAT_ELIMINATOR_V16.json"
+      ],
+      "tool_refusal_found_in_inspected_history": false,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted_by_this_document": false,
+      "hold_kind": "INDEPENDENT_DISTAL_WING_GEOMETRY",
+      "complete_exact_reference_newly_verified": false
+    },
+    {
+      "uid": "re0-eliminator",
+      "edition": "Resident Evil 0 (2002)",
+      "fighter_category": "experimental",
+      "audit_role": "target",
+      "historical_snapshot": {
+        "baseline_status": "HELD_COMPLETE_OR_EXACT_REFERENCE",
+        "current_outcome": "SOURCE_HOLD",
+        "current_tool_refusals": [],
+        "current_hold_decisions": [],
+        "further_generation_blocked_by_current_refusal": false,
+        "blocked_outputs": []
+      },
+      "source_decision": "HOLD_RETAINED_NATIVE_2002_WHITE_LOWER_BODY_UNVERIFIED",
+      "decision_category": "SOURCE_HOLD",
+      "source_available_for_scoped_candidate": false,
+      "reason": "Une vue du corps blanc/gris complet provient d’un port Left 4 Dead 2 explicitement édité ; la provenance ne distingue pas le modèle original 2002 du HD Remaster.",
+      "limits": [
+        "Le catalogue exact reste coupé au bas des membres.",
+        "La nouvelle vue crédite rigging/editing et représente un remplacement de Jockey ; elle est complémentaire, sans qualification native originale.",
+        "Ne pas recolorer en blanc une variante brune ni utiliser Umbrella Chronicles à la place de RE0."
+      ],
+      "next_action": "Locate a native original 2002 model or gameplay view of the white variant showing both lower limbs and feet; qualify any HD Remaster evidence separately. The edited port can be retained as supplementary only.",
+      "evidence": [
+        "production-archives/rec-media/v16/docs/SOURCES_BAT_ELIMINATOR_V16.json"
+      ],
+      "tool_refusal_found_in_inspected_history": false,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted_by_this_document": false,
+      "hold_kind": "EXACT_EDITION_VARIANT_AND_LOWER_BODY",
+      "complete_exact_reference_newly_verified": false
+    },
+    {
+      "uid": "re5-gatling-gun-majini",
+      "edition": "Resident Evil 5 (2009)",
+      "fighter_category": "main",
+      "audit_role": "target",
+      "historical_snapshot": {
+        "baseline_status": "LEFT_GAP_SOURCE_AVAILABLE",
+        "current_outcome": "TRIALS_ONLY_NOT_ADMITTED",
+        "current_tool_refusals": [],
+        "current_hold_decisions": [
+          {
+            "batch": "V8",
+            "manifest": "v8/manifests/ASSET_MANIFEST_V8.json",
+            "decision": {
+              "uid": "re5-gatling-gun-majini",
+              "edition": "Resident Evil 5 (2009)",
+              "status": "HELD_NO_QUALIFIED_LEFT_VIEW_AFTER_TRIALS",
+              "reason": "Trois sorties réussies mais prises et raccords des bras non conformes à la source ; une nouvelle référence gauche avec prises établies serait nécessaire pour une reprise.",
+              "tool_call_performed": true,
+              "canonical_one_to_one_certified": false,
+              "engine_admitted": false
+            }
+          }
+        ],
+        "further_generation_blocked_by_current_refusal": false,
+        "blocked_outputs": []
+      },
+      "source_decision": "KEEP_LEFT_VIEW_GRIP_HOLD_NO_NEW_OPPOSITE_REFERENCE",
+      "decision_category": "SOURCE_HOLD",
+      "source_available_for_scoped_candidate": false,
+      "reason": "Une source complète droite existe, mais aucune nouvelle vue gauche indépendante n’établit le raccord anatomique des deux bras et des deux prises. Le rendu Pachislot reprend la même pose droite.",
+      "limits": [
+        "Les trois sorties V8 sont des PNG positifs rejetés pour prises/bras incorrects, pas des refus de l’outil.",
+        "Le statut historique HELD_NO_QUALIFIED_LEFT_VIEW_AFTER_TRIALS et l’arrêt de lot V8 additional_calls_in_batch_allowed=false restent conservés.",
+        "Main anatomique droite sur la commande arrière ; main gauche sur le support avant. Ne pas ajouter d’arceau en U absent de la source, ni laisser la poignée arrière vide."
+      ],
+      "next_action": "Obtain a native left-side gameplay/figurine/model view showing shoulder-to-hand connections on both grips. A repeat from the same right pose does not add the requested reference evidence.",
+      "evidence": [
+        "production-archives/rec-media/v16/docs/SOURCES_RE5_EXTRA_V16.json"
+      ],
+      "tool_refusal_found_in_inspected_history": false,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted_by_this_document": false,
+      "requested_direction": "left",
+      "hold_kind": "QUALITY_GRIP_AND_MISSING_INDEPENDENT_LEFT_SOURCE",
+      "historical_batch_stop_preserved": true,
+      "source_urls": [
+        "https://blackjackrants.blogspot.com/2020/10/reviewing-monsters-resident-evil-5.html",
+        "https://www.slot-bio5.jp/worldview_03.html"
+      ]
+    },
+    {
+      "uid": "re5-big-man-majini",
+      "edition": "Resident Evil 5 (2009)",
+      "fighter_category": "main",
+      "audit_role": "outside_missing_target_scope",
+      "historical_snapshot": {
+        "baseline_status": "LEFT_GAP_SOURCE_AVAILABLE",
+        "current_outcome": "RETAINED_STATIC_CANDIDATE",
+        "current_tool_refusals": [],
+        "current_hold_decisions": [],
+        "further_generation_blocked_by_current_refusal": false,
+        "blocked_outputs": []
+      },
+      "source_decision": "NOT_A_NEW_OPPOSITE_DIRECTION_GAP",
+      "decision_category": "ALREADY_REPRESENTED",
+      "source_available_for_scoped_candidate": false,
+      "reason": "Les deux directions ont déjà une représentation candidate : droite R34 et gauche V8. La liste retained_assets de la continuation ne récapitule pas toutes les images R34 ; son unique gauche ne prouve pas une droite manquante.",
+      "limits": [
+        "Ces candidats statiques ne certifient pas une animation ni une fidélité 1:1.",
+        "L’image droite a été réinspectée dans l’audit source ; la gauche est corroborée par le manifeste V8 et la continuation, sans réinspection du PNG dans cet audit."
+      ],
+      "next_action": "Ne pas compter Big Man comme nouvelle identité ou direction manquante de ce lot ; conserver les preuves des deux candidats existants.",
+      "evidence": [
+        "production-archives/rec-media/v16/docs/SOURCES_RE5_EXTRA_V16.json"
+      ],
+      "tool_refusal_found_in_inspected_history": false,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted_by_this_document": false,
+      "existing_directions": [
+        {
+          "direction": "right",
+          "path": "modules/fidelity-r34/assets/generated/re5-big-man-majini/idle-right.png",
+          "sha256": "43d551d394a65f9316505127deef1500f3fe92e4b5f95869b93066b84b758577"
+        },
+        {
+          "direction": "left",
+          "path": "production-archives/rec-media/v8/assets/REC_RE5_BIG_MAN_MAJINI_FULLBODY_LEFT_V8_01.png",
+          "sha256": "d9df4794ac5810d31cc3a08f938f764ff193a81fea6234633d1a5aa9689cc514"
+        }
+      ]
+    }
+  ],
+  "historical_refusal_context_outside_targets": [
+    {
+      "uid": "reoutbreak-regis-licker",
+      "edition": "Resident Evil Outbreak (2003)",
+      "baseline_status": "BLOCKED_HISTORICAL_IDENTITY_NO_RETRY",
+      "current_outcome": "HISTORICAL_TOOL_REFUSAL",
+      "current_tool_refusals": [],
+      "blocked_outputs": [
+        {
+          "kind": "portrait",
+          "status": "BLOCKED_HISTORICAL_REFUSAL",
+          "receiptPath": null,
+          "receiptUrl": null,
+          "trackingUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json"
+        },
+        {
+          "kind": "idle",
+          "status": "BLOCKED_HISTORICAL_REFUSAL",
+          "receiptPath": null,
+          "receiptUrl": null,
+          "trackingUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json"
+        }
+      ],
+      "decision": "Blocage conservé ; aucune substitution ni nouvelle tentative proposée dans cette synthèse."
+    },
+    {
+      "uid": "re1r-yawn",
+      "edition": "Resident Evil remake (2002)",
+      "baseline_status": "HELD_COMPLETE_OR_EXACT_REFERENCE",
+      "current_outcome": "CANDIDATE_WITH_LATER_DIRECTION_REFUSAL",
+      "current_tool_refusals": [
+        {
+          "batch": "V14",
+          "receipt": "v14/docs/yawn-right-refusal.json",
+          "request_id": "5fa3884a-eab3-40ae-80ee-0a0008197edf",
+          "requested_direction": "right",
+          "status": "TOOL_REFUSAL_NO_IMAGE"
+        }
+      ],
+      "blocked_outputs": [],
+      "decision": "Blocage conservé ; aucune substitution ni nouvelle tentative proposée dans cette synthèse."
+    }
+  ],
+  "evidence_reports": [
+    {
+      "path": "production-archives/rec-media/v16/docs/SOURCES_RE5_V16.json",
+      "sha256": "f3deacb40f61e0bc0a112acb7281ee0a8e7f4996756cf2cfb5d244d9b559b0c6"
+    },
+    {
+      "path": "production-archives/rec-media/v16/docs/SOURCES_EXECUTIONER_NATIVE_V16.json",
+      "sha256": "6d07ad17e3e4f09b2f150006f297466995e0ef8fcfb39ce6a9e06260e5fdbbd8"
+    },
+    {
+      "path": "production-archives/rec-media/v16/docs/SOURCES_RE5_EXTRA_V16.json",
+      "sha256": "18128084c8e14fb010fe4df6d244e78e6ef3a0763e6e5675651daf78f06c2707"
+    },
+    {
+      "path": "production-archives/rec-media/v16/docs/GIANT_SOURCE_CORRESPONDENCE_V16.json",
+      "sha256": "298af5b9a41f1d19b3eeb51147444b51561d2e038a07b1718476dd12720392d3"
+    },
+    {
+      "path": "production-archives/rec-media/v16/docs/SOURCES_RE5_CREATURES_V16.json",
+      "sha256": "455ab52ad36afc076e16281a5816ad851980c44eeac34814585f282ef179c9d4"
+    },
+    {
+      "path": "production-archives/rec-media/v16/docs/SOURCES_SWEEPER_MOTH_V16.json",
+      "sha256": "feef795063c3beccc64cd58884759ed21e6b2e50525837956b46ec469e0e9281"
+    },
+    {
+      "path": "production-archives/rec-media/v16/docs/SOURCES_BAT_ELIMINATOR_V16.json",
+      "sha256": "403cb20f449cd781f2ed63b784c8e0f586bcf03caf5fbcde4065e15706662016"
+    }
+  ],
+  "publication_note": "Ce document ne publie ni bitmap tiers, ni modèle source. Il ne modifie aucun manifeste ou résultat historique."
+}

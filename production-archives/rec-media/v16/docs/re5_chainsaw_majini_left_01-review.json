@@ -1,0 +1,94 @@
+{
+  "schema": "rec.static-candidate-independent-review.v16",
+  "asset": "Chainsaw Majini — Resident Evil 5 (2009), LEFT 01",
+  "id": "re5_chainsaw_majini_left_01",
+  "uid": "re5-chainsaw-majini",
+  "reviewed_at": "2026-11-20T12:46:43.039575+00:00",
+  "reviewer": "review_v14",
+  "asset_path": "assets/re5_chainsaw_majini_left_01.png",
+  "original_path": "/workspace/scratch/3fced93cfb0a/generated_images/exec-720cf2ca-1dce-44b0-b4d6-54289eb089e2.png",
+  "sha256": "ef84d639731c7cdda11bf46f38bbffdfd3df7db476b55c1b8cf539c3a2e1c74c",
+  "bytes": 1877033,
+  "verdict": "TRIAL_NEEDS_ASYMMETRY_CORRECTION",
+  "review_status": "TRIAL_NEEDS_ASYMMETRY_CORRECTION",
+  "excluded_from_candidate_count": true,
+  "source_refs_reviewed": [
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v16/re5-miniboss-3.png",
+      "sha256": "ca68500b128067b0b374c851d119b073005ed1580d1dd5cfe4c0a01e21471d5a",
+      "role": "Complete original-edition reference recovered from R34"
+    }
+  ],
+  "prompt_record": "prompts/re5_chainsaw_majini_left_01.json",
+  "technical_record": "docs/re5_chainsaw_majini_left_01-technical.json",
+  "visual_checks": {
+    "orientation": "Clear left-facing side-dominant presentation: hood, torso, knees, feet and entire guide bar aim screen left.",
+    "costume": "Stitched sack with crossing ropes, black sleeveless shirt, rose-pink trousers, gray bare arms and two bare feet match the broad source identity. Yellow/orange chainsaw motor, both handles and complete long toothed guide bar are present.",
+    "hands": "Correct two-hand ownership: near anatomical LEFT arm reaches forward to the wrap handle at image left, and far anatomical RIGHT arm reaches the rear trigger handle at image right. No extra arm or unsupported grip is visible.",
+    "eyes": "The single anatomical RIGHT eye is on the far side and naturally hidden. No replacement opening appears on the visible left side of the sack.",
+    "shirt_asymmetry": "The conspicuous clustered horizontal shirt tears are visible on the near anatomical LEFT flank. In the source this documented cluster is on the RIGHT flank. The new view appears to transfer the recognizable cluster to the opposite visible side; this prevents source-asymmetry acceptance.",
+    "belt_attachment": "Metal object hangs at the rear silhouette of the pelvis, image right. Its exact hip attachment is obscured by the oblique projection; an anatomical RIGHT attachment is not demonstrable from this image. It may have migrated to the near left/rear side, but that is an uncertainty, not a separately proven anatomical fact.",
+    "framing": "One complete person with two feet, both hands and complete chainsaw, no scene, floor, text or second figure. Principal left margin is only 26 px and right 44 px; all tips remain contained.",
+    "limits": [
+      "The shirt tear cluster fails the preserved-anatomical-side gate; the belt attachment also needs a clearer source-consistent placement or natural far-side occlusion.",
+      "Requested 8% empty space on all sides is not met: left 2.54%, top 6.32%, right 4.30%, bottom 6.45%. No principal silhouette is clipped.",
+      "The chainsaw reverse side, cloth folds, rope path and hidden body surfaces are generated interpretations.",
+      "Single static image: no original animation, contacts, pivot, runtime validation or engine admission."
+    ]
+  },
+  "failed_gates": [
+    "source_clothing_asymmetry"
+  ],
+  "uncertain_gates": [
+    "anatomical_right_hip_attachment"
+  ],
+  "alpha": {
+    "mode": "RGBA",
+    "size": [
+      1024,
+      1536
+    ],
+    "extrema": [
+      0,
+      254
+    ],
+    "bbox_alpha_gte16": [
+      26,
+      97,
+      980,
+      1437
+    ],
+    "margins_alpha16_left_top_right_bottom": [
+      26,
+      97,
+      44,
+      99
+    ],
+    "bbox_all_nonzero_alpha": [
+      21,
+      52,
+      1010,
+      1513
+    ],
+    "pixels_alpha0": 1166873,
+    "pixels_alpha1_to15": 31465,
+    "pixels_alpha1_to3": 27995,
+    "pixels_alpha255": 0,
+    "all_subject_alpha_255": false,
+    "halo_finding": "Real alpha verified. Both gray and light composites show the principal subject without an opaque backdrop or substantial broad halo. Very low-alpha residual pixels remain beyond the principal silhouette; original bytes are preserved."
+  },
+  "qa_previews_only": [
+    "/workspace/scratch/3fced93cfb0a/qa-v16/re5_chainsaw_majini_left_01-gray.jpg",
+    "/workspace/scratch/3fced93cfb0a/qa-v16/re5_chainsaw_majini_left_01-light.jpg"
+  ],
+  "inspection_method": "Personally inspected the complete native reference and both true-alpha composites over gray and light backgrounds. Metadata measured from original PNG; no image repair or transformation applied to the deliverable.",
+  "original_bytes_modified": false,
+  "original_generated_bytes_verified_identical": true,
+  "one_subject_per_image_reviewed": true,
+  "quality_rejection_is_tool_refusal": false,
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "animation_frames": 1,
+  "can_mirror": false,
+  "recommended_action": "Preserve this positive PNG unchanged as a trial. Generate a separately numbered correction retaining the correct LEFT orientation, two-handed grip and hidden right eye, while keeping the source tear cluster and belt attachment on the far anatomical RIGHT side, naturally occluded if needed. Do not mirror or transplant them onto the visible left flank."
+}

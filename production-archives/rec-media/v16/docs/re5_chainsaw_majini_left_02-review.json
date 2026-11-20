@@ -1,0 +1,92 @@
+{
+  "schema": "rec.static-candidate-independent-review.v16",
+  "asset": "Chainsaw Majini — Resident Evil 5 (2009), LEFT 02",
+  "id": "re5_chainsaw_majini_left_02",
+  "uid": "re5-chainsaw-majini",
+  "reviewed_at": "2026-11-20T12:51:13.778538+00:00",
+  "reviewer": "review_v14",
+  "asset_path": "assets/re5_chainsaw_majini_left_02.png",
+  "original_path": "/workspace/scratch/3fced93cfb0a/generated_images/exec-a359b6b9-58e4-45c0-b110-4509f28db153.png",
+  "sha256": "6daea19d3bf23c15b880494ca0fe9214de3fc90295c9b3c8b7e495794bdfb757",
+  "bytes": 1881963,
+  "verdict": "CANDIDATE_STATIC_WITH_LIMITS",
+  "review_status": "CANDIDATE_STATIC_WITH_LIMITS",
+  "excluded_from_candidate_count": false,
+  "source_refs_reviewed": [
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v16/re5-miniboss-3.png",
+      "sha256": "ca68500b128067b0b374c851d119b073005ed1580d1dd5cfe4c0a01e21471d5a",
+      "role": "Complete original-edition reference recovered from R34"
+    }
+  ],
+  "prompt_record": "prompts/re5_chainsaw_majini_left_02.json",
+  "technical_record": "docs/re5_chainsaw_majini_left_02-technical.json",
+  "visual_checks": {
+    "orientation": "Clear left-facing side-dominant presentation: hood, torso, knees, feet and entire guide bar aim screen left.",
+    "costume": "Stitched sack with crossing ropes, black sleeveless shirt, rose-pink trousers, gray bare arms and two bare feet match the broad source identity. Yellow/orange chainsaw motor, both handles and complete long toothed guide bar are present.",
+    "hands": "Correct two-hand ownership: near anatomical LEFT arm reaches forward to the wrap handle at image left, and far anatomical RIGHT arm reaches the rear trigger handle at image right. No extra arm or unsupported grip is visible.",
+    "eyes": "The single anatomical RIGHT eye is on the far side and naturally hidden. No replacement opening appears on the visible left side of the sack.",
+    "shirt_asymmetry": "Corrected visible-side clothing: the near anatomical LEFT flank has comparatively intact black fabric, with no migrated cluster of open horizontal red tears. The source RIGHT-side pectoral/flank damage is naturally outside this left-side view; no claim is made about hidden pixels.",
+    "belt_attachment": "The questionable visible near/rear belt object from LEFT 01 is removed. The source RIGHT-hip object can be naturally occluded behind the pelvis. No duplicate has been placed elsewhere on the visible left side. Hidden-side attachment geometry is not independently proven by this image.",
+    "framing": "One complete person, both feet and hands, entire chainsaw motor/handles/guide bar, all within the canvas. No second figure, floor, scenery or text. Principal margins [40,96,43,100] px.",
+    "limits": [
+      "Requested 8% transparent padding on every side is not achieved: left 3.91%, top 6.25%, right 4.20%, bottom 6.51%; nevertheless no principal tip or foot is clipped.",
+      "Occlusion is consistent with the source asymmetries but cannot certify exact geometry or placement of hidden right-side details.",
+      "Reverse-side chainsaw surfaces, rope path, folds and texture are generated interpretations, not a geometric 1:1 reproduction.",
+      "Static candidate only, without original animation, contacts, pivot or engine admission."
+    ]
+  },
+  "failed_gates": [],
+  "uncertain_gates": [],
+  "alpha": {
+    "mode": "RGBA",
+    "size": [
+      1024,
+      1536
+    ],
+    "extrema": [
+      0,
+      254
+    ],
+    "bbox_alpha_gte16": [
+      40,
+      96,
+      981,
+      1436
+    ],
+    "margins_alpha16_left_top_right_bottom": [
+      40,
+      96,
+      43,
+      100
+    ],
+    "bbox_all_nonzero_alpha": [
+      33,
+      41,
+      1000,
+      1536
+    ],
+    "pixels_alpha0": 1167773,
+    "pixels_alpha1_to15": 26531,
+    "pixels_alpha1_to3": 23499,
+    "pixels_alpha255": 0,
+    "all_subject_alpha_255": false,
+    "halo_finding": "Real alpha verified. Both gray and light composites show the principal subject without an opaque backdrop or substantial broad halo. Very low-alpha residual pixels remain beyond the principal silhouette; original bytes are preserved."
+  },
+  "qa_previews_only": [
+    "/workspace/scratch/3fced93cfb0a/qa-v16/re5_chainsaw_majini_left_02-gray.jpg",
+    "/workspace/scratch/3fced93cfb0a/qa-v16/re5_chainsaw_majini_left_02-light.jpg"
+  ],
+  "inspection_method": "Personally inspected the complete native reference and both true-alpha composites over gray and light backgrounds. Metadata measured from original PNG; no image repair or transformation applied to the deliverable.",
+  "original_bytes_modified": false,
+  "original_generated_bytes_verified_identical": true,
+  "one_subject_per_image_reviewed": true,
+  "quality_rejection_is_tool_refusal": false,
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "animation_frames": 1,
+  "can_mirror": false,
+  "recommended_action": "Retain LEFT 02 as the corrected static candidate with the documented margins and hidden-surface limits; keep LEFT 01 unchanged as the asymmetry trial. Existing R34 RIGHT remains a separate prior candidate, not a newly generated V16 image.",
+  "previous_trial": "re5_chainsaw_majini_left_01",
+  "supersedes": "re5_chainsaw_majini_left_01"
+}

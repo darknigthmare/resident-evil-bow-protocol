@@ -1,0 +1,90 @@
+{
+  "schema": "rec.static-candidate-independent-review.v16",
+  "asset": "Executioner Majini — Resident Evil 5 (2009), RIGHT 01",
+  "id": "re5_executioner_right_01",
+  "uid": "re5-executioner",
+  "reviewed_at": "2026-11-20T12:46:42.843282+00:00",
+  "reviewer": "review_v14",
+  "asset_path": "assets/re5_executioner_right_01.png",
+  "original_path": "/workspace/scratch/3fced93cfb0a/generated_images/exec-feee8499-2bf0-4275-837f-6f4ae92ff484.png",
+  "sha256": "5e35938c7ab08ec3646dd415339a517f08448ea25d66b3e58b3f1465ebcf8566",
+  "bytes": 1146269,
+  "verdict": "TRIAL_NEEDS_GRIP_CORRECTION",
+  "review_status": "TRIAL_NEEDS_GRIP_CORRECTION",
+  "excluded_from_candidate_count": true,
+  "source_refs_reviewed": [
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v16/re5-miniboss-1.png",
+      "sha256": "624fe9554a3055f7eba2474bb44da346d785a28d4f6b560e40ff60f0090e7963",
+      "role": "Complete original-edition reference recovered from R34"
+    }
+  ],
+  "prompt_record": "prompts/re5_executioner_right_01.json",
+  "technical_record": "docs/re5_executioner_right_01-technical.json",
+  "visual_checks": {
+    "orientation": "Clear physical right-facing three-quarter presentation: pointed hood, torso, visible boot and axe action aim right. Rear hook remains behind the torso at image left.",
+    "costume": "Normal pointed cloth hood with pins, exposed stitched gray-purple muscular shoulders, long red gloves, heavy ragged apron and normal chained axe. No leather helmet/flaming-weapon variant.",
+    "hands": "Both hands visibly contact the shaft, but their anatomical ownership is reversed relative to the source. The near RIGHT arm descends to the shaft butt at image left; the far LEFT arm reaches forward toward the axe head at image right. In the source, RIGHT holds nearer the head and LEFT nearer the butt.",
+    "framing": "One complete subject; all axe teeth and blade extrema, shaft butt, hood pins, rear hook, apron hem and single visible boot fit within the canvas. Other leg remains naturally hidden. The historical clipped-axe failure is corrected.",
+    "eyes": "No eye invented under the opaque cloth hood.",
+    "limits": [
+      "The grip is mechanically plausible as an alternate pose but does not preserve the source-specific anatomical hand assignment, so this output is excluded from the candidate count.",
+      "Bottom principal-silhouette margin is 96 px / 1293 = 7.42%, below the requested 8%; no principal clipping is visible.",
+      "Exact hood fold, spike placement, chain geometry and previously unseen surfaces remain generated interpretations.",
+      "Single static image: no original animation, contacts, pivot, runtime validation or engine admission."
+    ]
+  },
+  "failed_gates": [
+    "source_anatomical_hand_assignment"
+  ],
+  "uncertain_gates": [],
+  "alpha": {
+    "mode": "RGBA",
+    "size": [
+      1216,
+      1293
+    ],
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox_alpha_gte16": [
+      133,
+      145,
+      1084,
+      1197
+    ],
+    "margins_alpha16_left_top_right_bottom": [
+      133,
+      145,
+      132,
+      96
+    ],
+    "bbox_all_nonzero_alpha": [
+      0,
+      9,
+      1204,
+      1293
+    ],
+    "pixels_alpha0": 1126444,
+    "pixels_alpha1_to15": 42626,
+    "pixels_alpha1_to3": 35620,
+    "pixels_alpha255": 394,
+    "all_subject_alpha_255": false,
+    "halo_finding": "Real alpha verified. Both gray and light composites show the principal subject without an opaque backdrop or substantial broad halo. Very low-alpha residual pixels remain beyond the principal silhouette; original bytes are preserved."
+  },
+  "qa_previews_only": [
+    "/workspace/scratch/3fced93cfb0a/qa-v16/re5_executioner_right_01-gray.jpg",
+    "/workspace/scratch/3fced93cfb0a/qa-v16/re5_executioner_right_01-light.jpg"
+  ],
+  "inspection_method": "Personally inspected the complete native reference and both true-alpha composites over gray and light backgrounds. Metadata measured from original PNG; no image repair or transformation applied to the deliverable.",
+  "original_bytes_modified": false,
+  "original_generated_bytes_verified_identical": true,
+  "one_subject_per_image_reviewed": true,
+  "quality_rejection_is_tool_refusal": false,
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "animation_frames": 1,
+  "can_mirror": false,
+  "recommended_action": "Preserve this positive PNG unchanged as a trial. Generate a separately numbered correction with anatomical RIGHT hand forward near the axe head and LEFT hand toward the shaft butt; keep current direction, complete axe and natural apron occlusion."
+}

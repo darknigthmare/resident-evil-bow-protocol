@@ -1,0 +1,326 @@
+{
+  "schema": "rec.reference-source-review.v16/1",
+  "date": "2026-11-20",
+  "language": "fr",
+  "scope": "Références seulement : deux identités RE5 encore SOURCE_HOLD au point de reprise. Aucune génération, aucun changement de runtime ni de statut historique.",
+  "reference_directory": "/workspace/scratch/3fced93cfb0a/references-v16",
+  "repository": "darknigthmare/resident-evil-bow-protocol",
+  "baseline_commit": "12deacf4cf9b7706eba69fecc1c13593d030180b",
+  "continuation_evidence": "production-archives/rec-media/CONTINUATION_20261120.json",
+  "canonical_one_to_one_certified": false,
+  "generation_performed": false,
+  "runtime_modified": false,
+  "source_files_modified": false,
+  "method": "Lecture des reçus R34 et de la continuation, récupération des fichiers publiés, inspection visuelle de chaque référence retenue et comparaison au crop historique. Les rendus complets ont été récupérés auprès de leurs diffuseurs ; aucune extension de cadre, reconstruction, retouche ou extrapolation des pixels n’a été faite.",
+  "summary": "Deux références complètes d’édition attribuée RE5 sont maintenant disponibles pour des candidats à portée limitée : Adjule canin sombre à tête non scindée, et Licker β langue non déployée. Ce sont des rendus repris sur des sites secondaires, visuellement concordants avec le catalogue historique ; la chaîne du fichier original Capcom n’est pas démontrée. Les autres phases et les vues opposées natives ne sont pas documentées par ces seules images.",
+  "historical_refusal_review": {
+    "evidence": "production-archives/rec-media/CONTINUATION_20261120.json#/global_inventory",
+    "subjects": [
+      {
+        "uid": "re5-adjule",
+        "baseline_status": "HELD_COMPLETE_OR_EXACT_REFERENCE",
+        "current_outcome": "SOURCE_HOLD",
+        "own_historical_tool_refusal_found": false,
+        "current_tool_refusals": [],
+        "blocked_outputs": [],
+        "r34_body_request_issued": false,
+        "receipt": "adjule-r34-idle.json"
+      },
+      {
+        "uid": "re5-licker-beta",
+        "baseline_status": "HELD_COMPLETE_OR_EXACT_REFERENCE",
+        "current_outcome": "SOURCE_HOLD",
+        "own_historical_tool_refusal_found": false,
+        "current_tool_refusals": [],
+        "blocked_outputs": [],
+        "r34_body_request_issued": false,
+        "receipt": "licker-beta-r34-idle.json"
+      }
+    ],
+    "related_identity_block": {
+      "uid": "reoutbreak-regis-licker",
+      "edition": "Resident Evil Outbreak (2003)",
+      "baseline_status": "BLOCKED_HISTORICAL_IDENTITY_NO_RETRY",
+      "current_outcome": "HISTORICAL_TOOL_REFUSAL",
+      "tool_refusal": true,
+      "evidence": "production-archives/rec-media/CONTINUATION_20261120.json#/global_inventory/240",
+      "tracking_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "decision": "Blocage historique de Regis Licker conservé intégralement. Identité et édition distinctes ; aucune nouvelle tentative ni substitution de cette identité n’est proposée."
+    }
+  },
+  "targets": [
+    {
+      "uid": "re5-adjule",
+      "edition": "Resident Evil 5 (2009)",
+      "label": "Adjule — variante canine sombre, tête non scindée",
+      "baseline_status": "SOURCE_HOLD",
+      "proposed_reference_status": "COMPLETE_ATTRIBUTED_SOURCE_FOR_SCOPED_CANDIDATE",
+      "canonical_one_to_one_certified": false,
+      "phase_scope": "Tête canine non scindée ; gueule ouverte ordinaire du rendu. « Tête fermée » signifie ici absence d’ouverture parasitaire de la tête, pas mâchoires closes.",
+      "preferred_source_id": "adjule-blackjack-full",
+      "corroborating_source_ids": [
+        "adjule-archives-closed",
+        "adjule-r34-crop"
+      ],
+      "tool_refusal": false,
+      "observation": [
+        "Rendu entier, trois quarts dirigé vers la gauche de l’image ; museau, arrière-train, quatre pattes/pieds et extrémité de la courte queue sont dans le cadre.",
+        "Peau/pelage sombre moucheté brun-olive/noir, corps maigre et long, museau canin, dents blanches saillantes. Les appendices sombres pendants sous le museau doivent être conservés tels que vus ; leur interprétation anatomique n’est pas imposée.",
+        "Le rendu complet reprend la même pose, la même texture et la même tête que le crop Evil Resource utilisé par R34.",
+        "L’image 1 des Archives est explicitement légendée Resident Evil 5/Biohazard 5 et confirme le même rendu complet. Elle ajoute le logo du site et un cadre ; le fichier Blackjack est préféré pour éviter ces éléments de page."
+      ],
+      "resolved_hold": "Le crop R34 coupait le bas des pattes, les pieds, l’arrière du corps et la queue. Tous ces éléments sont présents sur la source complète publiée, sans agrandissement artificiel du champ.",
+      "native_source_facing": "gauche, trois quarts",
+      "opposite_native_view_verified": false,
+      "open_head_phase_verified_for_generation": false,
+      "remaining_limits": [
+        "Aucune vue indépendante du côté opposé ou de l’arrière n’a été obtenue.",
+        "La version mutée à tête scindée est une phase séparée ; elle ne doit pas servir à compléter cette variante fermée.",
+        "La variante plus claire, à grandes oreilles dressées, visible dans l’image 3 des Archives est également distincte.",
+        "Le diffuseur secondaire attribue ce rendu à RE5 ; l’archive originale Capcom et un fichier de modèle natif vérifié ne sont pas fournis."
+      ],
+      "next_action": "Revue du candidat par le responsable de génération, limitée explicitement à cette variante canine sombre non scindée. Toute paire gauche/droite produite reste un candidat à contrôler ; elle ne certifie pas une vue native opposée.",
+      "forbidden_substitution": [
+        "Pas de tête scindée, parasite, tentacules ou gueule en pétales sur cette phase.",
+        "Pas de Colmillos RE4/RE4 Remake, Cerberus d’un autre épisode ou chien d’Umbrella Corps.",
+        "Pas de variante claire à grandes oreilles dressées ajoutée à cette silhouette.",
+        "Pas de recoloration, queue allongée, langue nouvellement déployée ou modification du nombre des pattes."
+      ]
+    },
+    {
+      "uid": "re5-licker-beta",
+      "edition": "Resident Evil 5 (2009)",
+      "label": "Licker β — rendu complet, langue non déployée",
+      "baseline_status": "SOURCE_HOLD",
+      "proposed_reference_status": "COMPLETE_ATTRIBUTED_SOURCE_FOR_SCOPED_CANDIDATE",
+      "canonical_one_to_one_certified": false,
+      "phase_scope": "Licker β RE5 dans la pose du rendu, gueule ouverte, sans langue étirée hors de la bouche.",
+      "preferred_source_id": "licker-beta-archives-full",
+      "corroborating_source_ids": [
+        "licker-beta-r34-crop",
+        "licker-beta-blackjack-crop"
+      ],
+      "tool_refusal": false,
+      "observation": [
+        "La source des Archives montre le corps au complet dans le cadre, dirigé vers la droite, avec les grandes griffes antérieures dont les pointes étaient coupées dans R34 et Blackjack.",
+        "Épaules massives, tête cérébrale sans yeux apparents, surface musculaire rouge/rose parcourue de bandes claires, bouche noire ouverte avec dents, longs avant-bras et grandes griffes claires.",
+        "La patte arrière visible à gauche a ses extrémités dans le cadre ; la patte éloignée est partiellement masquée naturellement par le corps. Cette occlusion ne donne pas une vue anatomique complète de sa face cachée.",
+        "La pose, les volumes de tête, l’implantation des dents, la distribution des textures et les bras correspondent au crop historique Evil Resource. Les Archives ont conservé le champ plus large du même rendu.",
+        "Aucune langue allongée n’est visible ; ne pas transformer cette absence de vue en preuve d’une langue amputée ou en autorisation d’en inventer une."
+      ],
+      "resolved_hold": "Une image publiée complète expose les extrémités que les crops historiques coupaient. Aucune extension de cadre ou génération des parties manquantes n’a été employée.",
+      "native_source_facing": "droite, trois quarts",
+      "opposite_native_view_verified": false,
+      "deployed_tongue_reference_verified": false,
+      "remaining_limits": [
+        "Une seule pose complète récupérée ; la face opposée et les détails sous les membres restent non documentés.",
+        "Le logo gris du diffuseur et le cadre rouge ne font pas partie du modèle.",
+        "La source est un site secondaire avec légende explicite RE5, recoupée visuellement avec Evil Resource. Aucun modèle extrait natif ni chaîne de distribution originale Capcom vérifiés.",
+        "La seconde image du même carrousel est explicitement Resident Evil Damnation ; elle est exclue.",
+        "Le refus historique de Regis Licker Outbreak reste distinct, conservé et non retenté."
+      ],
+      "next_action": "Le responsable peut examiner une génération candidate à partir du rendu complet RE5, en conservant la langue non déployée et la silhouette documentée. Contrôler ensuite les pointes des griffes, la tête et le nombre/implantation des extrémités ; ne pas certifier le 1:1 sur la seule présence du corps dans le cadre.",
+      "forbidden_substitution": [
+        "Pas de Regis Licker, Licker RE2/RE2 Remake, Licker Operation Raccoon City ou Licker β2 Requiem.",
+        "Pas de modèle du film Damnation ni d’élément du carrousel voisin.",
+        "Pas de langue étirée, de queue ajoutée ou d’anatomie cachée inventée.",
+        "Ne pas imposer cinq doigts humains à la créature : conserver le nombre et la disposition des griffes réellement visibles."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "adjule-blackjack-full",
+      "uid": "re5-adjule",
+      "local_path": "adjule-blackjack-full.png",
+      "page_url": "https://blackjackrants.blogspot.com/2020/10/reviewing-monsters-resident-evil-5.html",
+      "image_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiZRfRtWm34aez3zX_P6F2jDqwoECM88fHT4XdPJ0r2mgbTrcSQndNKPyCgrl6UilsDSLaivuhBtoKH2zt4XwSln46FyJEHEwdrCDvrnfuFvBP4MXSqmsao_eDOhaExEXv8RnHL8D-t5z3_/s600/image.png",
+      "sha256": "bc991ae093026d3a42caf797f5dd41c1f75b4bd6c2d0fc8947e84141f07ebf6c",
+      "bytes": 297463,
+      "width": 600,
+      "height": 600,
+      "source_type": "Rendu final attribué RE5, reproduit par un site secondaire.",
+      "attribution_evidence": "Article titré Reviewing Monsters: Resident Evil 5, sous-titre Resident Evil 5 [2009], section Adjule.",
+      "fetched_native_declared_resolution": true,
+      "resolution_evidence": "HTML enregistré dans re5-blackjack.html : data-original-height=\"600\" et data-original-width=\"600\". Le lien original miniature w200-h200 conserve déjà le corps entier ; s600 récupère la résolution déclarée.",
+      "visually_inspected": true,
+      "complete_body_in_frame": true,
+      "derivatives_applied": [],
+      "preferred_for_generation": true,
+      "limitations": [
+        "Chaîne originale Capcom non établie.",
+        "Une seule pose ; aucune vue native opposée."
+      ]
+    },
+    {
+      "id": "adjule-archives-closed",
+      "uid": "re5-adjule",
+      "local_path": "adjule-archives-1.png",
+      "page_url": "https://les-archives-resident-evil-biohazard.fr/lore-adjule/",
+      "image_url": "https://les-archives-resident-evil-biohazard.fr/wp-content/uploads/2025/05/1Adjule-2009-1%C2%B2-768x434.png",
+      "sha256": "26d62e02bb3353fd8a697c8e3a4cc1bb2ae3b0efdf65df2b1f69c9d68319c3cc",
+      "bytes": 58011,
+      "width": 768,
+      "height": 434,
+      "attribution_evidence": "Image 1 légendée Resident Evil 5/Biohazard 5 ; présence de RE5 (2009) dans la liste des apparitions.",
+      "visually_inspected": true,
+      "complete_body_in_frame": true,
+      "preferred_for_generation": false,
+      "observation": "Même rendu complet que Blackjack, avec fond blanc, logo gris et cadre rouge ajoutés par le site.",
+      "limitations": [
+        "Ne pas copier le logo ou le cadre.",
+        "Corroboration de l’attribution, pas vue native indépendante."
+      ]
+    },
+    {
+      "id": "adjule-r34-crop",
+      "uid": "re5-adjule",
+      "local_path": "adjule-catalog.png",
+      "page_url": "https://www.evilresource.com/resident-evil-5/enemies/adjule",
+      "image_url": "https://www.evilresource.com/images/data/full/re5/adjule.png?139f1146",
+      "sha256": "7f846302755a693c9b4fc1b6556e0d04277291133db0003f4e8779624f01b068",
+      "bytes": 164996,
+      "width": 450,
+      "height": 360,
+      "visually_inspected": true,
+      "complete_body_in_frame": false,
+      "preferred_for_generation": false,
+      "observation": "Octets identiques au hash du crop R34. Phase canine non scindée ; bas des membres et arrière coupés."
+    },
+    {
+      "id": "adjule-blackjack-open",
+      "uid": "re5-adjule",
+      "local_path": "adjule-blackjack-2.png",
+      "page_url": "https://blackjackrants.blogspot.com/2020/10/reviewing-monsters-resident-evil-5.html",
+      "image_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhIllTzI9c8cgr1p5Dn0bYbrRo6IBkYgyxzrJcL7BN-CBeUvxIY7DXwfVnX-PQMhi51t96AFrZ9jRQudL_DKiyRc_uIzGkcTBD3x9N-5bjPm7KqLala12MaHdmHrs6Jsdxd4Nh9Dui91hLB/",
+      "sha256": "3dc5e3870e71abefcd1e3144160b79786a89d23f21ac6184fd77579bd83fa4fd",
+      "bytes": 422524,
+      "width": 1023,
+      "height": 823,
+      "visually_inspected": true,
+      "preferred_for_generation": false,
+      "excluded_from_current_phase": true,
+      "observation": "Autre phase, tête ouverte scindée ; vue frontale masquant fortement le corps arrière. Ne pas mélanger au chien non scindé."
+    },
+    {
+      "id": "adjule-archives-open",
+      "uid": "re5-adjule",
+      "local_path": "adjule-archives-2.png",
+      "page_url": "https://les-archives-resident-evil-biohazard.fr/lore-adjule/",
+      "image_url": "https://les-archives-resident-evil-biohazard.fr/wp-content/uploads/2025/05/2Adjule-2009-2%C2%B2-768x434.png",
+      "sha256": "899c93788e569fb0c4236e2e7cc177fe9034f0171a4e13606df24f872ca5663a",
+      "bytes": 53884,
+      "width": 768,
+      "height": 434,
+      "visually_inspected": true,
+      "preferred_for_generation": false,
+      "excluded_from_current_phase": true,
+      "observation": "Image 2 RE5, phase tête scindée, frontale. Le corps et les membres arrière restent masqués par le premier plan ; phase tenue séparée."
+    },
+    {
+      "id": "adjule-archives-light-variant",
+      "uid": "re5-adjule",
+      "local_path": "adjule-archives-3.png",
+      "page_url": "https://les-archives-resident-evil-biohazard.fr/lore-adjule/",
+      "image_url": "https://les-archives-resident-evil-biohazard.fr/wp-content/uploads/2025/05/3Adjule-2009-3%C2%B2-768x434.png",
+      "sha256": "5b38e9ab6a429917b77456dfe84ed38f1747bb1f1687570b6e3b86e6b9c433e9",
+      "bytes": 43680,
+      "width": 768,
+      "height": 434,
+      "visually_inspected": true,
+      "preferred_for_generation": false,
+      "excluded_from_current_phase": true,
+      "observation": "Image 3 RE5, variante canine plus claire, grandes oreilles dressées ; la queue touche/coupe le bord supérieur. Ne pas fusionner la texture ou les oreilles avec le chien sombre."
+    },
+    {
+      "id": "licker-beta-archives-full",
+      "uid": "re5-licker-beta",
+      "local_path": "licker-beta-archives-1.png",
+      "page_url": "https://les-archives-resident-evil-biohazard.fr/lore-licker-b/",
+      "image_url": "https://les-archives-resident-evil-biohazard.fr/wp-content/uploads/2025/05/1Licker-Beta%C2%B2-768x434.png",
+      "sha256": "0407878b7e171822ed0fa2253c35632508c086f1600044f841452d76b5a68413",
+      "bytes": 61890,
+      "width": 768,
+      "height": 434,
+      "attribution_evidence": "HTML sauvegardé dans licker-beta-archives.html : première image alt=\"Resident Evil 5/Biohazard 5\" ; seconde alt=\"Resident Evil Damnation/Biohazard Damnation\". La liste des apparitions identifie Resident Evil 5 (2009).",
+      "visually_inspected": true,
+      "complete_body_in_frame": true,
+      "preferred_for_generation": true,
+      "source_type": "Rendu final attribué à RE5, reproduit avec logo/cadre par un site secondaire.",
+      "derivatives_applied": [],
+      "observation": "Pose complète du même rendu que le catalogue R34, pointes des grandes griffes et pied arrière visible inclus, langue non déployée.",
+      "limitations": [
+        "Vue opposée non documentée.",
+        "Patte éloignée naturellement partiellement masquée.",
+        "Logo gris et cadre rouge du site à exclure.",
+        "Fichier original Capcom non retrouvé."
+      ]
+    },
+    {
+      "id": "licker-beta-r34-crop",
+      "uid": "re5-licker-beta",
+      "local_path": "licker-beta-catalog.png",
+      "page_url": "https://www.evilresource.com/resident-evil-5/enemies/licker-beta",
+      "image_url": "https://www.evilresource.com/images/data/full/re5/licker-beta.png?1c3f8478",
+      "sha256": "4d5fe9086af10fd09f071ed49ae2bc12a4e1574170c9ef711d520b2bedd22a51",
+      "bytes": 173360,
+      "width": 450,
+      "height": 360,
+      "visually_inspected": true,
+      "complete_body_in_frame": false,
+      "preferred_for_generation": false,
+      "observation": "Octets identiques au crop R34. Tête/torse et bras partiels ; pointes des griffes et arrière coupés. Sert seulement à confirmer la concordance de modèle et texture."
+    },
+    {
+      "id": "licker-beta-blackjack-crop",
+      "uid": "re5-licker-beta",
+      "local_path": "licker-beta-blackjack-1.png",
+      "page_url": "https://blackjackrants.blogspot.com/2020/10/reviewing-monsters-resident-evil-5.html",
+      "image_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEidNrGTzte3Ixr0T1G8wYniwzpsPqjogem4jOx4E4K3FFzacOLqB9v4XMJPgdU8WFARiQWqhqE8Hevez6ArpWhFeS14vgzZjrBmta6Ss_c19ykyqNyL8uq9G0qtC8u8H-__4C4Dxi-i-IOU/",
+      "sha256": "e6958787a0a074a4400b4c8068e9828b84317d2a48f283791f11d564aaf16ac3",
+      "bytes": 164488,
+      "width": 619,
+      "height": 358,
+      "visually_inspected": true,
+      "complete_body_in_frame": false,
+      "preferred_for_generation": false,
+      "observation": "Même rendu, champ plus large que R34 mais les grandes griffes du premier plan restent coupées. Non retenu comme source entière."
+    }
+  ],
+  "rejected_or_unused_leads": [
+    {
+      "url": "https://www.tombraiderforums.com/showthread.php?page=954&t=151335",
+      "finding": "Résultat de recherche mentionnant RE5: Licker ß by Ventrue. Ouverture du forum en erreur HTTP 403 ; aucun modèle ni aperçu natif inspecté.",
+      "accepted": false
+    },
+    {
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=1736195496",
+      "finding": "Collection indexée mentionnant Licker + Licker B, port SFM [FR] nighty à partir de RE5 et Operation Raccoon City. Les deux origines sont mélangées dans la description ; aucune séparation inspectée. Piste abandonnée après découverte du rendu complet attribué RE5.",
+      "accepted": false
+    },
+    {
+      "url": "https://les-archives-resident-evil-biohazard.fr/wp-content/uploads/2025/05/2Licker-Beta%C2%B2-768x434.png",
+      "finding": "Seconde image explicitement légendée Resident Evil Damnation : exclue de RE5, non téléchargée.",
+      "accepted": false
+    }
+  ],
+  "receipts": [
+    {
+      "uid": "re5-adjule",
+      "local_path": "adjule-r34-idle.json",
+      "sha256": "d69ab233ccd9a77774359b5abb9a99adaaf10ca5f6e5194524f98b1d0ee542eb",
+      "bytes": 1297,
+      "github_blob_sha": "ebc94af6a67a0af86023844942c4a37e0bc39f7f",
+      "source_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_3/re5-adjule/idle.json"
+    },
+    {
+      "uid": "re5-licker-beta",
+      "local_path": "licker-beta-r34-idle.json",
+      "sha256": "4e7416bb4efacf3d834d1be14a00a9d3541b6620badc470a00e00b32a18ce8f6",
+      "bytes": 1427,
+      "github_blob_sha": "17eaac4050edd6c55c73cc2e8f661b3f68f2ed86",
+      "source_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_3/re5-licker-beta/idle.json"
+    }
+  ],
+  "publication_note": "Rapport et reçus seulement si archivage dans la PR. Les bitmaps tiers sont des références locales de travail ; aucune instruction ne demande ici leur publication dans le dépôt."
+}

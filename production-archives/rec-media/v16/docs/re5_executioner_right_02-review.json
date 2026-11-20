@@ -1,0 +1,91 @@
+{
+  "schema": "rec.static-candidate-independent-review.v16",
+  "asset": "Executioner Majini — Resident Evil 5 (2009), RIGHT 02",
+  "id": "re5_executioner_right_02",
+  "uid": "re5-executioner",
+  "reviewed_at": "2026-11-20T12:51:13.682528+00:00",
+  "reviewer": "review_v14",
+  "asset_path": "assets/re5_executioner_right_02.png",
+  "original_path": "/workspace/scratch/3fced93cfb0a/generated_images/exec-830eb5cc-976d-42db-adb9-76c67dfe4472.png",
+  "sha256": "67bf285285d4b6a30269ea06f18466516a305598fa1fd4554e1a51085ca81d05",
+  "bytes": 1370934,
+  "verdict": "TRIAL_NEEDS_GRIP_CORRECTION",
+  "review_status": "TRIAL_NEEDS_GRIP_CORRECTION",
+  "excluded_from_candidate_count": true,
+  "source_refs_reviewed": [
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v16/re5-miniboss-1.png",
+      "sha256": "624fe9554a3055f7eba2474bb44da346d785a28d4f6b560e40ff60f0090e7963",
+      "role": "Complete original-edition reference recovered from R34"
+    }
+  ],
+  "prompt_record": "prompts/re5_executioner_right_02.json",
+  "technical_record": "docs/re5_executioner_right_02-technical.json",
+  "visual_checks": {
+    "orientation": "Clear physical right-facing three-quarter presentation: pointed hood, torso, visible boot and axe action aim right. Rear hook remains behind the torso at image left.",
+    "costume": "Normal pointed cloth hood with pins, exposed stitched gray-purple muscular shoulders, long red gloves, heavy ragged apron and normal chained axe. No leather helmet/flaming-weapon variant.",
+    "hands": "The requested anatomical correction did not occur. The near RIGHT shoulder/arm at image left still descends to the rear shaft butt, while the far LEFT arm extends to the forward grip near the axe head. Separating the hands farther apart has not restored the source assignment: RIGHT forward, LEFT rear.",
+    "framing": "One complete subject; all axe teeth and blade extrema, shaft butt, hood pins, rear hook, apron hem and single visible boot fit within the canvas. Other leg remains naturally hidden. The historical clipped-axe failure is corrected.",
+    "eyes": "No eye invented under the opaque cloth hood.",
+    "limits": [
+      "The grip remains mechanically plausible as an alternate pose but does not preserve the source-specific anatomical hand assignment; this second output remains excluded from the candidate count.",
+      "Principal margins [126,100,119,70] px keep the entire subject and axe contained; top 7.73% and bottom 5.41% fall below the requested 8%.",
+      "Exact hood folds, pin layout, chains and newly projected surfaces remain generated interpretations.",
+      "Single static image; no animation, contact, pivot or engine admission."
+    ]
+  },
+  "failed_gates": [
+    "source_anatomical_hand_assignment"
+  ],
+  "uncertain_gates": [],
+  "alpha": {
+    "mode": "RGBA",
+    "size": [
+      1216,
+      1294
+    ],
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox_alpha_gte16": [
+      126,
+      100,
+      1097,
+      1224
+    ],
+    "margins_alpha16_left_top_right_bottom": [
+      126,
+      100,
+      119,
+      70
+    ],
+    "bbox_all_nonzero_alpha": [
+      0,
+      15,
+      1204,
+      1294
+    ],
+    "pixels_alpha0": 1042126,
+    "pixels_alpha1_to15": 38892,
+    "pixels_alpha1_to3": 32278,
+    "pixels_alpha255": 344,
+    "all_subject_alpha_255": false,
+    "halo_finding": "Real alpha verified. Both gray and light composites show the principal subject without an opaque backdrop or substantial broad halo. Very low-alpha residual pixels remain beyond the principal silhouette; original bytes are preserved."
+  },
+  "qa_previews_only": [
+    "/workspace/scratch/3fced93cfb0a/qa-v16/re5_executioner_right_02-gray.jpg",
+    "/workspace/scratch/3fced93cfb0a/qa-v16/re5_executioner_right_02-light.jpg"
+  ],
+  "inspection_method": "Personally inspected the complete native reference and both true-alpha composites over gray and light backgrounds. Metadata measured from original PNG; no image repair or transformation applied to the deliverable.",
+  "original_bytes_modified": false,
+  "original_generated_bytes_verified_identical": true,
+  "one_subject_per_image_reviewed": true,
+  "quality_rejection_is_tool_refusal": false,
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "animation_frames": 1,
+  "can_mirror": false,
+  "recommended_action": "Preserve as a second positive trial. A new source-guided pose may be attempted independently with a visibly continuous RIGHT arm reaching the forward grip and LEFT arm holding the rear grip. The recovered native model views can support back/side/boot anatomy, but they contain no axe and do not themselves establish the weapon-held pose.",
+  "previous_trial": "re5_executioner_right_01"
+}

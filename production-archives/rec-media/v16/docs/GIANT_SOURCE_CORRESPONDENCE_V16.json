@@ -1,0 +1,57 @@
+{
+  "method": "Numeric similarity-transform registration of unchanged downloaded images; no transformed image saved and no source pixels edited. Foreground grayscale samples from cropped R34 source, bilinear target sampling, normalized luminance correlation optimized with deterministic samples.",
+  "source": "re5-miniboss-4.png",
+  "target": "re5-giant-slot-c06.jpg",
+  "sampled_known_source_pixels": 6000,
+  "scale": 1.5428462423787628,
+  "rotation_degrees": 7.823593006788632,
+  "translation_target_pixels": [
+    85.87879838378774,
+    -16.62334027563573
+  ],
+  "normalized_luminance_correlation": 0.9371046251806365,
+  "success": true,
+  "limitation": "This supports identification of a shared source render in its visible region; it does not certify native game assets or undocumented rear geometry. Target extra club tip remains evaluated visually.",
+  "regional_checks": {
+    "mask_and_headdress": {
+      "source_box_xyxy": [
+        130,
+        2,
+        270,
+        135
+      ],
+      "samples": 12227,
+      "normalized_luminance_correlation": 0.9626579283835438
+    },
+    "torso_and_arms": {
+      "source_box_xyxy": [
+        100,
+        100,
+        299,
+        245
+      ],
+      "samples": 16584,
+      "normalized_luminance_correlation": 0.9417163511734346
+    },
+    "legs_and_feet": {
+      "source_box_xyxy": [
+        140,
+        215,
+        285,
+        394
+      ],
+      "samples": 8539,
+      "normalized_luminance_correlation": 0.8847918643024206
+    },
+    "club_known_region": {
+      "source_box_xyxy": [
+        4,
+        195,
+        150,
+        380
+      ],
+      "samples": 11154,
+      "normalized_luminance_correlation": 0.9016258282996803
+    }
+  }
+}

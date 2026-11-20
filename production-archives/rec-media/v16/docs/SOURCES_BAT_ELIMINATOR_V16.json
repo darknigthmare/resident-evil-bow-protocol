@@ -1,0 +1,255 @@
+{
+  "schema": "rec-media.reference-research.v16/1",
+  "reviewed_at_utc": "2026-11-20T12:43:24.387885+00:00",
+  "baseline_pr": 22,
+  "baseline_head": "6599f75c88472351aacaf19e7a6b1197e6c58625",
+  "scope": "Bounded source research and real image inspection only. No generation, no asset publication, no repository status changes.",
+  "baseline_evidence": [
+    "production-archives/rec-media/v15/docs/NEXT_SOURCE_TARGETS.json",
+    "production-archives/rec-media/CONTINUATION_20261120.json",
+    "production-archives/rec-media/v14/docs/REFERENCE_REVIEW_V14.json"
+  ],
+  "results": [
+    {
+      "uid": "recv-bat",
+      "edition": "Resident Evil CODE: Veronica (2000)",
+      "baseline_status": "SOURCE_HOLD_CROPPED_WING_TIP",
+      "historical_tool_refusal": false,
+      "decision": "HOLD_RETAINED_NO_INDEPENDENT_WING_TIP_GEOMETRY",
+      "complete_exact_reference_newly_verified": false,
+      "summary": "The new Archives image has visible margins around both wings, body and feet, but visually reproduces the held catalogue pose and distal wing contour. It supplies no independent missing wing-tip anatomy. The original catalogue download is byte-identical to the R34 retained reference.",
+      "important_discrepancy": "The old receipt describes a wing exiting the upper frame. In the downloaded raster the outer silhouette is inset from the image edge; the concern is the already truncated-looking distal contour, not a newly discovered larger original canvas. Neither simple re-framing nor re-inspecting identical bytes is counted as new anatomy.",
+      "r34_retained_sha256": "3dc32e4cb52139ca544ebb064c832dbaa69b3417aeee17125f81b05740cabe6f",
+      "r34_receipt": {
+        "local_path": "/workspace/scratch/3fced93cfb0a/references-v16/r34-bat-held-receipt.json",
+        "source_commit": "12deacf4cf9b7706eba69fecc1c13593d030180b",
+        "source_path": "modules/fidelity-r34/assets/lots/lot_1/recv-bat/idle.json",
+        "exact_reason": "One raised wing exits the upper frame. Its complete wing tip/span is not established by the retained image."
+      },
+      "references": [
+        {
+          "filename": "bat-cv-catalog.png",
+          "local_path": "/workspace/scratch/3fced93cfb0a/references-v16/bat-cv-catalog.png",
+          "url": "https://www.evilresource.com/images/data/full/recv/bat.png?386a447b",
+          "source_page": "https://www.evilresource.com/resident-evil-code-veronica/enemies/bat",
+          "bytes": 62657,
+          "sha256": "3dc32e4cb52139ca544ebb064c832dbaa69b3417aeee17125f81b05740cabe6f",
+          "dimensions": [
+            450,
+            360
+          ],
+          "visually_inspected": true,
+          "role": "duplicate-held-reference",
+          "observations": [
+            "Dark blue-grey low-polygon Bat, narrow pointed ears, small torso, two tiny rear feet, asymmetric V-shaped wings.",
+            "Matches the R34 reference byte for byte; exact source page is the CODE: Veronica enemy catalogue."
+          ],
+          "limitations": [
+            "No independent hidden geometry or new angle.",
+            "Original 2000 versus later port model extraction is not specified on the source page."
+          ]
+        },
+        {
+          "filename": "bat-archives-1.png",
+          "local_path": "/workspace/scratch/3fced93cfb0a/references-v16/bat-archives-1.png",
+          "url": "https://les-archives-resident-evil-biohazard.fr/wp-content/uploads/2024/07/1Chauve-souris-Type-T%C2%B2-768x434.png",
+          "source_page": "https://les-archives-resident-evil-biohazard.fr/lore-chauve-souris-type-t/",
+          "bytes": 113113,
+          "sha256": "549abb2ca5fd26b8106683e3396efa63346a69e2ada6f77d29d81a7a93c28031",
+          "dimensions": [
+            768,
+            434
+          ],
+          "visually_inspected": true,
+          "role": "supplementary-reframed-same-pose",
+          "observations": [
+            "Both wing silhouettes, pointed ears, torso and feet are visibly inside the white frame.",
+            "Blue-grey model, pose, membrane veins and distal contour match the CODE: Veronica catalogue image by visual comparison."
+          ],
+          "limitations": [
+            "Attribution to CODE: Veronica is an inference from matching the catalogue; page covers several games and captions this only as Chauve-souris (Type-T).",
+            "Appears to be the same raster pose enlarged/reframed, not an independently documented model view.",
+            "No newly visible distal wing geometry."
+          ]
+        },
+        {
+          "filename": "bat-archives-2.png",
+          "local_path": "/workspace/scratch/3fced93cfb0a/references-v16/bat-archives-2.png",
+          "url": "https://les-archives-resident-evil-biohazard.fr/wp-content/uploads/2024/07/2Chauve-souris-Type-T%C2%B2-768x434.png",
+          "source_page": "https://les-archives-resident-evil-biohazard.fr/lore-chauve-souris-type-t/",
+          "bytes": 109259,
+          "sha256": "4e4434689ca812d53ccf462afc6671748eeff5828267cc214cd3c1dedcc2a788",
+          "dimensions": [
+            768,
+            434
+          ],
+          "visually_inspected": true,
+          "role": "excluded-unattributed-other-model",
+          "observations": [
+            "Different model with red exposed-looking head, long fangs, predominantly purple/black membrane, reversed wing silhouette."
+          ],
+          "limitations": [
+            "Mixed-game source page has no per-image edition attribution.",
+            "Does not match the blue-grey CODE: Veronica catalogue model; cannot substitute for its missing anatomy."
+          ]
+        },
+        {
+          "filename": "bat-cv-kaitai-art.jpg",
+          "local_path": "/workspace/scratch/3fced93cfb0a/references-v16/bat-cv-kaitai-art.jpg",
+          "url": "https://www.projectumbrella.net/uploads/1/3/0/6/130616230/batcvks_orig.jpg",
+          "source_page": "https://www.projectumbrella.net/biohazard-codeveronica-complete-edition-kaitai-shinsho.html",
+          "bytes": 57946,
+          "sha256": "051800408cfa115ac465aa8f1f268f81c31a66420feaa1732c94b5f27f10aed2",
+          "dimensions": [
+            681,
+            454
+          ],
+          "visually_inspected": true,
+          "role": "excluded-concept-art-not-final-model",
+          "observations": [
+            "Illustration reproduced in the setting original drawing collection, pages 274-287.",
+            "Pale grey muscular bat, large open muzzle, broad horizontal wings and visible lower body."
+          ],
+          "limitations": [
+            "Outer left wing edge touches/crops the image.",
+            "Concept/design drawing differs from the retained final game model proportions and is not proof of the exact 2000 geometry."
+          ]
+        },
+        {
+          "filename": "bat-cv-roh.jpg",
+          "local_path": "/workspace/scratch/3fced93cfb0a/references-v16/bat-cv-roh.jpg",
+          "url": "https://www.relyonhorror.com/recv_bat.jpg",
+          "source_page": "https://www.relyonhorror.com/in-depth/resident-evil-in-depth/resident-evil-code-veronica-resident-evil-in-depth-in-depth/resident-evil-code-veronica-enemies/",
+          "bytes": 18322,
+          "sha256": "486966110418f478098fc6e6b9e61208f611d429298e1cb16c36d25960e5180c",
+          "dimensions": [
+            190,
+            190
+          ],
+          "visually_inspected": true,
+          "role": "excluded-cropped-illustration",
+          "observations": [
+            "Grey frontal Bat with head, torso and lower feet visible."
+          ],
+          "limitations": [
+            "Both wing edges are cropped by the small square frame.",
+            "Cannot resolve full wing span or native final model."
+          ]
+        }
+      ],
+      "next_action": "Obtain a separate native model angle or gameplay frame of the CODE: Veronica incarnation with the entire distal wings visible; do not infer new anatomy merely from the Archives white margins."
+    },
+    {
+      "uid": "re0-eliminator",
+      "edition": "Resident Evil 0 (2002), white-furred variant",
+      "baseline_status": "SOURCE_HOLD_EXACT_VARIANT_LOWER_BODY",
+      "historical_tool_refusal": false,
+      "decision": "HOLD_RETAINED_NATIVE_2002_WHITE_LOWER_BODY_UNVERIFIED",
+      "complete_exact_reference_newly_verified": false,
+      "summary": "A white/grey full-body model view was found, including feet, but it belongs to an edited Left 4 Dead 2 port. The source credits Resident Evil 0 without distinguishing 2002 original from HD Remaster, and explicitly credits rigging/editing. It is useful supplementary anatomy, not a verified native original reference.",
+      "references": [
+        {
+          "filename": "eliminator-re0-catalog.png",
+          "local_path": "/workspace/scratch/3fced93cfb0a/references-v16/eliminator-re0-catalog.png",
+          "url": "https://www.evilresource.com/images/data/full/re0/eliminator.png?881603b2",
+          "source_page": "https://www.evilresource.com/resident-evil-zero/enemies/eliminator",
+          "bytes": 150133,
+          "sha256": "047290e6841d56e5bfc80a7989dd953158259f545de8966695fcfd344d78b656",
+          "dimensions": [
+            450,
+            360
+          ],
+          "visually_inspected": true,
+          "role": "partial-exact-catalogue-reference",
+          "observations": [
+            "White/grey fur, black face, large open mouth and fangs, red exposed shoulder/arm tissue."
+          ],
+          "limitations": [
+            "Lower legs and feet are outside the frame.",
+            "Cannot establish full original variant geometry."
+          ]
+        },
+        {
+          "filename": "eliminator-steam-preview.jpg",
+          "local_path": "/workspace/scratch/3fced93cfb0a/references-v16/eliminator-steam-preview.jpg",
+          "url": "https://images.steamusercontent.com/ugc/1775002489616375496/119B2E916B7275277FC2ED893D2815CF6879065E/",
+          "source_page": "https://steamcommunity.com/sharedfiles/filedetails/?id=2856016708",
+          "bytes": 219754,
+          "sha256": "3675e734f78ccdfc032af335c45f8710158cebf0d2bf509de1771b012433209c",
+          "dimensions": [
+            640,
+            360
+          ],
+          "visually_inspected": true,
+          "role": "supplementary-edited-port-preview",
+          "observations": [
+            "Grey/white-furred ape with black face, orange eyes, exposed shoulder/arm muscle and long fangs."
+          ],
+          "limitations": [
+            "Promotional image includes JOCKEY text covering lower anatomy.",
+            "Edited Left 4 Dead 2 port; not native RE0 capture."
+          ]
+        },
+        {
+          "filename": "eliminator-steam-gameplay.jpg",
+          "local_path": "/workspace/scratch/3fced93cfb0a/references-v16/eliminator-steam-gameplay.jpg",
+          "url": "https://images.steamusercontent.com/ugc/1775002489616379024/F53AADFAC5E8342F6E04A4C11FCA711B8DA6CF7F/",
+          "source_page": "https://steamcommunity.com/sharedfiles/filedetails/?id=2856016708",
+          "bytes": 416174,
+          "sha256": "206e0258c5837dd7d158d0d6da4fc427dfda4c2d0473519bf08f5a0c46af7092",
+          "dimensions": [
+            1920,
+            767
+          ],
+          "visually_inspected": true,
+          "role": "supplementary-full-body-edited-port-model-view",
+          "observations": [
+            "Whole white/grey creature inside frame; head, crouched torso, both bent legs, both dark bare feet and crossing long forearms visible.",
+            "Shoulders and one knee show exposed reddish muscle; small head relative to broad hunched upper body; long forearms and shortened bent hind legs."
+          ],
+          "limitations": [
+            "Workshop item COMM: Eliminator [Jockey] explicitly describes a Jockey replacement.",
+            "Model origin says Resident Evil 0 without edition/year.",
+            "Rigging and Editing by ErichGrooms1 is explicitly credited; pose and geometry may have been altered.",
+            "Hands overlap one another and torso; this is not an unobstructed multi-angle anatomical record.",
+            "No native 2002 versus HD Remaster equivalence established."
+          ]
+        }
+      ],
+      "source_provenance_exact_excerpt": "Model from: Resident Evil 0. Rigging and Editing by: ErichGrooms1",
+      "next_action": "Locate a native original 2002 model or gameplay view of the white variant showing both lower limbs and feet; qualify any HD Remaster evidence separately. The edited port can be retained as supplementary only.",
+      "forbidden_substitutions_preserved": [
+        "Brown variant recoloured white without proof",
+        "Umbrella Chronicles substituted as original RE0",
+        "Bust presented as whole-body proof",
+        "Edited L4D2 port presented as native 2002 geometry"
+      ]
+    }
+  ],
+  "inaccessible_sources": [
+    {
+      "url": "https://residentevil.fandom.com/wiki/Eliminator/gallery",
+      "outcome": "Browser/web retrieval restricted; image bytes not inspected; no access-control bypass attempted."
+    },
+    {
+      "url": "https://www.creativeuncut.com/gallery-08/re0-eliminator.html",
+      "image_url": "https://cucdn.creativeuncut.com/gallery-08/art/re0-eliminator.jpg",
+      "outcome": "Page accessible, linked image retrieval failed through the supported web tool; not inspected and not counted."
+    }
+  ],
+  "uninspected_leads": [
+    {
+      "url": "https://www.youtube.com/watch?v=TKBerLHo3hA",
+      "note": "CODE: Veronica enemies video, search snippet identifies Bat around 07:55; frames not obtained or inspected."
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=CPpMNtGrfdk",
+      "note": "CODE: Veronica Bat Attack gameplay lead; frames not obtained or inspected."
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=A9fW2pzarWU",
+      "note": "RE0 all enemies, PS4 remaster; Eliminator around 19:32 according to search snippet. Not original 2002 proof; frames not inspected."
+    }
+  ],
+  "publication_note": "Reference bitmaps and saved source HTML remain research inputs. No asset or completed-body admission was created by this research."
+}

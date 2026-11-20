@@ -1,6 +1,16 @@
 # Resident Evil Combat — publication des lots de production
 
-La [PR #22](https://github.com/darknigthmare/resident-evil-bow-protocol/pull/22) conserve les snapshots **V5 à V11 et V14–V15** pour revue. Chaque lot garde les octets de ses images, documents et archives figés. Les sources documentaires originales et les modèles restent exclus de cette publication.
+La [PR #22](https://github.com/darknigthmare/resident-evil-bow-protocol/pull/22) conserve les snapshots **V5 à V11 et V14–V16** pour revue. Chaque lot garde les octets de ses images, documents et archives figés. Les sources documentaires originales et les modèles restent exclus de cette publication.
+
+## Nouvelle continuation du 20 novembre 2026 — V16
+
+Le [bilan V16](CONTINUATION_V16_20261120.md) ajoute **11 nouveaux PNG : 8 poses candidates et 3 essais conservés, pour 5 identités RE5**. Executioner obtient une droite avec la prise de hache corrigée ; Chainsaw Majini obtient une gauche avec ses asymétries préservées ; Giant Majini, Adjule sombre à tête non scindée et Licker β sans langue déployée obtiennent chacun une paire gauche/droite.
+
+Le [lot V16](v16/README.md), son [manifeste](v16/manifests/ASSET_MANIFEST_V16.json), le [journal des appels](GENERATION_LEDGER_V16_20261120.json) et le [contrôle d’intégrité](V16_VALIDATION_20261120.json) conservent les sources, prompts, revues et empreintes. Les cinq entrées concernées sont actualisées dans l’[inventaire de 346 identités](CONTINUATION_V16_20261120.json) ; les 341 autres restent identiques au point précédent.
+
+**Le corpus atteint 109 PNG : 77 candidats visuels et 32 essais.** Ce compte comprend des poses opposées et les décors V5, pas 109 personnages. Les 44 PNG annoncés pour V12/V13 restent non récupérés. Les [décisions de source](v16/docs/SOURCE_DECISIONS_V16.json) expliquent pourquoi Sweeper, Moth, Bat, Eliminator blanc et Gatling gauche restent en attente. Big Man possède déjà ses deux directions ; aucun doublon n’a été généré.
+
+La [CI du parent 6599f75](v16/docs/CI_PARENT_6599F75.json) confirme 19 workflows réussis et six échecs sur la même garde R34 refusant le dossier d’archives. Les étapes aval sautées ne sont pas déclarées validées. Les octets des snapshots antérieurs, les refus historiques, le runtime et les gardes restent inchangés. Les sections suivantes décrivent leurs propres points historiques.
 
 ## Reprise du 20 novembre 2026 — V14 et V15
 

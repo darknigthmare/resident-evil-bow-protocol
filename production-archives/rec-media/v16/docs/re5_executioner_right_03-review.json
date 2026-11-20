@@ -1,0 +1,110 @@
+{
+  "schema": "rec.static-candidate-independent-review.v16",
+  "asset": "Executioner Majini — Resident Evil 5 (2009), RIGHT 03",
+  "id": "re5_executioner_right_03",
+  "uid": "re5-executioner",
+  "reviewed_at": "2026-11-20T12:59:39.564682+00:00",
+  "reviewer": "review_v14",
+  "asset_path": "assets/re5_executioner_right_03.png",
+  "original_path": "/workspace/scratch/3fced93cfb0a/generated_images/exec-329e6cf4-364c-4475-8b11-4f6fc444a68a.png",
+  "sha256": "40eda2583dbb795d7f9ce64416d2800d27bb26a821bdbb7fa797745f30b2d23e",
+  "bytes": 828926,
+  "verdict": "CANDIDATE_STATIC_WITH_LIMITS",
+  "review_status": "CANDIDATE_STATIC_WITH_LIMITS",
+  "excluded_from_candidate_count": false,
+  "source_refs_reviewed": [
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v16/re5-miniboss-1.png",
+      "sha256": "624fe9554a3055f7eba2474bb44da346d785a28d4f6b560e40ff60f0090e7963",
+      "role": "Original-edition complete equipped reference; source hand ownership and axe"
+    },
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v16/executioner-native-source-270.png",
+      "sha256": "041f1619e2a78755529505534906b3bb3c4ff1e85c4b6204c1645d56148bdf3f",
+      "role": "R29-qualified native PC body render; right profile, no axe"
+    },
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v16/executioner-native-source-180.png",
+      "sha256": "8ece70718f30b8463ce7e4709d68973873c815c669e761ffacc16c6682db800d",
+      "role": "Same native body; back and both boots"
+    },
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v16/executioner-native-source-0.png",
+      "sha256": "7055bdf43c1e425e4738887234e01ea2b02f0b6558990af4e11cf4daf497e51e",
+      "role": "Same native body; front and both boots"
+    }
+  ],
+  "source_documents_reviewed": [
+    "docs/SOURCES_RE5_V16.json",
+    "docs/SOURCES_EXECUTIONER_NATIVE_V16.json"
+  ],
+  "prompt_record": "prompts/re5_executioner_right_03.json",
+  "technical_record": "docs/re5_executioner_right_03-technical.json",
+  "visual_checks": {
+    "orientation": "Clear right-facing near-profile with some rear torso visible. Hood tip, body depth, boot and complete forward axe point screen right. This is a materially different side pose from trials 01/02.",
+    "costume": "Normal pointed textile hood, pins, shoulder stitches, long red forearm coverings, long torn apron, dark trousers/boot and rear hooks match the documented source family. Newly exposed side/back and lower-body surfaces are supported by the recovered native PC body views, which have no axe.",
+    "hands": "Correct source-specific anatomical assignment is now traceable: the near RIGHT shoulder continues into the arm extended forward to the grip near the axe head at image right. The far LEFT arm bends back toward the waist and its left hand holds the rear shaft end at image left. Two arms, two hands and two attached grips; no exchanged glove-texture shortcut.",
+    "framing": "One complete subject and entire axe, including every principal tooth, chain extremity, shaft butt, hood pin, rear hook and visible boot. No principal clipping, second subject, scene or text.",
+    "asymmetry": "Rear hooks remain behind the body and hand ownership is corrected. The leg/boot projection and apron occlusion differ from the single equipped render, but the recovered same-body native front/back/profile views now document the relevant lower-body surfaces.",
+    "limits": [
+      "Principal margins [222,135,191,107] px = [16.92%,11.26%,14.56%,8.92%]; bottom is below the requested 10%, while the full silhouette remains comfortably contained.",
+      "Exact pins, stitches, rear hook geometry, chain routing and rotated axe surface remain generated interpretations.",
+      "The native body renders certify neither an equipped ready pose nor the generated output geometry.",
+      "One static candidate: original animation, contacts, pivot and runtime admission are unverified."
+    ]
+  },
+  "failed_gates": [],
+  "alpha": {
+    "mode": "RGBA",
+    "size": [
+      1312,
+      1199
+    ],
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox_alpha_gte16": [
+      222,
+      135,
+      1121,
+      1092
+    ],
+    "margins_alpha16_left_top_right_bottom": [
+      222,
+      135,
+      191,
+      107
+    ],
+    "bbox_all_nonzero_alpha": [
+      39,
+      23,
+      1306,
+      1180
+    ],
+    "pixels_alpha0": 1251941,
+    "pixels_alpha1_to15": 33109,
+    "pixels_alpha1_to3": 27516,
+    "pixels_alpha255": 370,
+    "all_subject_alpha_255": false,
+    "halo_finding": "Real transparency verified; personally inspected gray and light alpha composites show no opaque backdrop or substantial broad halo. Low-alpha residuals remain outside the principal silhouette. Originals unchanged."
+  },
+  "qa_previews_only": [
+    "/workspace/scratch/3fced93cfb0a/qa-v16/re5_executioner_right_03-gray.jpg",
+    "/workspace/scratch/3fced93cfb0a/qa-v16/re5_executioner_right_03-light.jpg"
+  ],
+  "inspection_method": "Source images and both actual alpha composites inspected independently. Dimensions, alpha, bounding boxes and SHA verified directly from the original PNG, including identity with the generated output.",
+  "original_bytes_modified": false,
+  "original_generated_bytes_verified_identical": true,
+  "one_subject_per_image_reviewed": true,
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "animation_frames": 1,
+  "can_mirror": false,
+  "recommended_action": "Retain RIGHT 03 as the corrected static candidate, preserving RIGHT 01/02 unchanged as grip trials. Keep the R34 front presentation separate from an actually right-facing pose.",
+  "supersedes": "re5_executioner_right_02",
+  "previous_trials": [
+    "re5_executioner_right_01",
+    "re5_executioner_right_02"
+  ]
+}
