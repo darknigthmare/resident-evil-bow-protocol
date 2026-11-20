@@ -1,0 +1,130 @@
+{
+  "schema": "rec.static-candidate-independent-review.v18",
+  "asset": "Whopper red/yellow released-render variant — Resident Evil 6 (2012), LEFT 01",
+  "id": "re6_whopper_left_01",
+  "uid": "re6-whopper",
+  "variant": "re6_2012_red_yellow_shirt_final_render",
+  "reviewed_at": "2026-11-20T16:59:23.513703+00:00",
+  "reviewer": "review_v14",
+  "asset_path": "assets/re6_whopper_left_01.png",
+  "original_path": "/workspace/scratch/3fced93cfb0a/generated_images/exec-c3097353-0ca5-437b-8446-bf3927ae89b7.png",
+  "sha256": "bca7e46ae3fc71dd58cd46cc72f16c58985c68158e5ca6f79c2a3db8bbeb8e33",
+  "bytes": 1463086,
+  "verdict": "CANDIDATE_STATIC_WITH_LIMITS",
+  "review_status": "CANDIDATE_STATIC_WITH_LIMITS",
+  "excluded_from_candidate_count": false,
+  "source_refs_reviewed": [
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-whopper-cgworld-native.jpg",
+      "sha256": "187cac7a82fdd75029a78558050cc7b8398cf84c609750ab272bfcffefc33fa4",
+      "bytes": 405889,
+      "role": "Capcom interview comparison: ONLY the right-hand final CG render is the appearance reference. The left painted concept is inspected for exclusion, not used as native geometry.",
+      "native_reference_bytes_modified": false
+    }
+  ],
+  "source_documents_reviewed": [
+    "docs/SOURCES_RE6_NAPAD_WHOPPER_V18.json"
+  ],
+  "source_document_sha256": "25f74ddb545e2b7a5182c1784f655e41886fd72cce3fd8f89542fae8e462322e",
+  "prompt_record": "prompts/re6_whopper_left_01.json",
+  "prompt_record_sha256": "d6e807ff6ef22078d1dc90ebfd2da148973ffeec71710cd4a8ceb6bc349db2b6",
+  "technical_record": "docs/re6_whopper_left_01-technical.json",
+  "technical_record_sha256": "42876e39b778d281d55caaf5573f705be31d59100e8319e3667f89f0d0aa94b4",
+  "visual_checks": {
+    "orientation": "Clear left-facing three-quarter presentation: face profile, protruding belly, knees and feet point screen-left. The anatomical LEFT shoulder/upper arm are near the viewer on screen-right; the raised RIGHT arm lies beyond the torso toward screen-left.",
+    "costume": "Broad heavy body, protruding belly, pale-gray skin, short dark hair, torn red shirt with a broad distressed yellow band, dark ragged lower garment and bare feet. There is one character only; neither the source comparison layout nor the painted-concept lighting is copied.",
+    "hands": "PASS: the far anatomical RIGHT shoulder connects to the arm raised in front at head/shoulder height; its open hand is fully inside the frame. The near anatomical LEFT shoulder connects to the low hanging arm and loosely open hand at screen-right. There is no anatomical role swap or extra hand.",
+    "phase": "The requested released red/yellow-shirt source identity is retained. No weapon, gloves, shoes, victim or alternative mutated phase. Clothing alone is not treated as proof of a Supreme gameplay/stat classification.",
+    "framing": "One complete heavy figure, two hands and two bare feet; hair, fingertips, toes and ragged hems are inside the canvas. The near foot is close to the lower edge but not cut.",
+    "asymmetry": "The large pale belly opening lies at the forward/far edge toward screen-left, consistent with the anatomical RIGHT location under this rotation; it has not been placed beneath the near LEFT sleeve/flank. The exact hidden extent of that tear is not visible. The near-left shirt area stays covered. Garment hems remain uneven and ragged rather than two clean matching cuffs.",
+    "limits": [
+      "Requested TEN PERCENT completely transparent margin is not met vertically. Principal alpha≥16 margins left/top/right/bottom are [138,36,197,27] px = [12.06,2.62,17.22,1.96] %. Hair and near foot remain complete, with tight top/bottom clearance.",
+      "Nonzero low-alpha residuals reach the left/top frame boundaries. Gray/light composites show no opaque rectangle or substantial broad visible halo; hidden RGB is not visible background content.",
+      "The final source is a dark photographed/reproduced comparison render. Exact cloth-to-skin boundaries below the ragged hems, precise torn-fabric shapes and inferred far-side surfaces are not certified.",
+      "The generated planted pose changes the source stepping arrangement. Broad heavy proportions remain recognizable, but head-to-body ratio, hair strands, belly folds and exact garment dimensions are not measured native geometry.",
+      "The right-panel source is a final CG render used in a Capcom interview, not a native-mesh extraction. No original animation, scale/pivot/contact system or engine admission is established."
+    ]
+  },
+  "failed_gates": [],
+  "candidate_blocking_failed_gates": [],
+  "uncertain_gates": [
+    {
+      "gate": "exact_far_side_belly_tear_continuation",
+      "status": "PARTLY_OCCLUDED",
+      "detail": "Visible far-front location is coherent; the full tear shape around the unseen right flank cannot be certified."
+    },
+    {
+      "gate": "exact_ragged_hem_and_skin_boundaries",
+      "status": "NOT_CERTIFIED",
+      "detail": "Dark source lighting and the new planted pose limit exact fabric-shape comparison."
+    },
+    {
+      "gate": "native_proportions_and_microdetail",
+      "status": "NOT_CERTIFIED",
+      "detail": "Recognizable heavy body, without a measured geometric 1:1 claim."
+    }
+  ],
+  "alpha": {
+    "mode": "RGBA",
+    "size": [
+      1144,
+      1375
+    ],
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox_alpha_gte16": [
+      138,
+      36,
+      947,
+      1348
+    ],
+    "margins_alpha16_left_top_right_bottom": [
+      138,
+      36,
+      197,
+      27
+    ],
+    "margins_alpha16_percent": [
+      12.063,
+      2.618,
+      17.22,
+      1.964
+    ],
+    "bbox_all_nonzero_alpha": [
+      0,
+      0,
+      1132,
+      1351
+    ],
+    "pixels_alpha0": 907890,
+    "pixels_alpha1_to15": 22601,
+    "pixels_alpha1_to3": 18763,
+    "pixels_alpha255": 610,
+    "all_subject_alpha_255": false,
+    "halo_finding": "Actual gray/light alpha composites personally inspected. No opaque backdrop or substantial broad visible halo. Some low-alpha residuals reach boundaries; all visible body endpoints are inside the canvas. Hidden RGB was not judged as visible content."
+  },
+  "qa_previews_only": [
+    "/workspace/scratch/3fced93cfb0a/qa-v18/re6_whopper_left_01-gray.jpg",
+    "/workspace/scratch/3fced93cfb0a/qa-v18/re6_whopper_left_01-light.jpg"
+  ],
+  "inspection_method": "Independent direct comparison of the exact supplied source, the complete prompt, source audit and gray/light alpha composites. Anatomical chains and asymmetric features traced. SHA/dimensions/alpha/bbox independently recomputed; original/archive byte equality verified.",
+  "original_bytes_modified": false,
+  "original_generated_bytes_verified_identical": true,
+  "one_subject": true,
+  "one_subject_per_image_reviewed": true,
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "animation_frames": 1,
+  "can_mirror": false,
+  "recommended_action": "Retain as a complete LEFT static candidate with correct arm ownership and a plausibly far-side right belly tear. Record tight vertical margins and garment/proportion limits. Do not mirror to obtain RIGHT.",
+  "non_blocking_deviations": [
+    {
+      "gate": "requested_10_percent_completely_transparent_margin",
+      "blocks_static_candidate": false,
+      "status": "NOT_MET",
+      "detail": "Principal margins below 10% and low-alpha boundary residuals; complete subject observed. This is a prompt deviation retained as a limitation, not a full-framing pass."
+    }
+  ]
+}

@@ -1,0 +1,696 @@
+{
+  "schema": "re.bow.source-audit-v18/1",
+  "created_at_utc": "2026-11-20T16:53:24.076869+00:00",
+  "pull_request": 23,
+  "base_pr": 23,
+  "baseline_commit": "8073338896937faef6f1718387c1c9b3a4be6b72",
+  "resume_commit": "8073338896937faef6f1718387c1c9b3a4be6b72",
+  "research_head_commit": "935f44716b890303982c4cc384140cf54f4058b5",
+  "scope": [
+    "re6-napad",
+    "re6-whopper"
+  ],
+  "task_mode": "source_research_only_no_generation_no_staging_no_publication",
+  "summary": {
+    "qualified_complete_static_reference_count": 2,
+    "source_images_visually_inspected": 10,
+    "historical_subject_images_visually_inspected": 2,
+    "generated_images": 0,
+    "historically_refused_subjects_retried": 0,
+    "source_bitmaps_added_to_git": 0,
+    "canonical_one_to_one_certified": false,
+    "engine_admission": false
+  },
+  "recommendations": [
+    {
+      "uid": "re6-napad",
+      "decision": "REFERENCE_QUALIFIED_FOR_ROOT_STATIC_CANDIDATE_REVIEW",
+      "variant": "Napad, RE6, complete mutation with outer armour still present; hanging massive arms, uneven tall dorsal/shoulder plates. No broken-shell/fully exposed-muscle phase.",
+      "primary_reference": "/workspace/scratch/3fced93cfb0a/references-v18/re6-napad-blackjack-original.png",
+      "supporting_reference": "/workspace/scratch/3fced93cfb0a/references-v18/re6-napad-artbook-page.jpg",
+      "allowable_claim": "Generated static interpretation anchored to the complete visible RE6 armoured Napad render.",
+      "do_not_claim": [
+        "Native original frame",
+        "Exact geometry/animation",
+        "Independent left and right viewpoints",
+        "Broken-shell anatomy or cross-game port equivalence"
+      ],
+      "source_facing": "front_three_quarter",
+      "asymmetry_notes": "Preserve unequal shoulder/dorsal plate profiles and differing hands/leg positions. Hidden surfaces remain unsupported."
+    },
+    {
+      "uid": "re6-whopper",
+      "decision": "REFERENCE_QUALIFIED_FOR_ROOT_STATIC_CANDIDATE_REVIEW",
+      "variant": "Whopper released CG render with short brown hair, torn red shirt and distressed yellow bands, dark ragged lower garment, bare feet; source-matched to re6-whopper R34 catalogue. Supreme game-stat classification not established from shirt alone.",
+      "primary_reference": "/workspace/scratch/3fced93cfb0a/references-v18/re6-whopper-cgworld-native.jpg",
+      "primary_reference_region": "right half, approximately x=1100..2199; use full raw file with right-panel-only instruction",
+      "supporting_reference": "/workspace/scratch/3fced93cfb0a/references-v18/re6-whopper-artbook-page.jpg",
+      "allowable_claim": "Generated static interpretation of the exact released RE6 red/yellow Whopper render used in R34.",
+      "do_not_claim": [
+        "Concept panel is native geometry",
+        "Supreme variant established only by clothing",
+        "Original transparent source",
+        "Native mesh/1:1/opposite view/animation accuracy"
+      ],
+      "source_facing": "front_three_quarter",
+      "asymmetry_notes": "Anatomical right hand raised, left lowered; asymmetric shirt tears and uneven leg pose; no automatic mirror."
+    }
+  ],
+  "history_audit": {
+    "baseline_evidence": {
+      "repo_path": "production-archives/rec-media/CONTINUATION_V17_20261120.json",
+      "commit": "8073338896937faef6f1718387c1c9b3a4be6b72",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/8073338896937faef6f1718387c1c9b3a4be6b72/production-archives/rec-media/CONTINUATION_V17_20261120.json",
+      "bytes": 574615,
+      "sha256": "79170b2c132b1c200cc0d0dbfa11e76c658fe40e7572c0e35afb9fe6f0787823"
+    },
+    "r34_tracking": {
+      "repo_path": "docs/R34_TRACKING.json",
+      "commit": "8073338896937faef6f1718387c1c9b3a4be6b72",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/8073338896937faef6f1718387c1c9b3a4be6b72/docs/R34_TRACKING.json",
+      "bytes": 2009160,
+      "sha256": "98114fb305d7bde056f7ff0052016c5bfbd0be4582a46e88c67499ec13a16a3e"
+    },
+    "targets": [
+      {
+        "uid": "re6-napad",
+        "v17_inventory": {
+          "uid": "re6-napad",
+          "label": "Napad",
+          "edition": "Resident Evil 6 (2012)",
+          "fighter_category": "experimental",
+          "baseline_status": "HELD_COMPLETE_OR_EXACT_REFERENCE",
+          "current_outcome": "SOURCE_HOLD",
+          "retained_assets": [],
+          "trials": [],
+          "current_tool_refusals": [],
+          "current_hold_decisions": [],
+          "further_generation_blocked_by_current_refusal": false,
+          "later_left_request_refused_after_right_candidate": false,
+          "canonical_one_to_one_certified": false,
+          "engine_admitted_by_this_continuation": false,
+          "baseline_evidence": {
+            "manifestUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/manifest.json",
+            "bodyReceiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_3/re6-napad/idle.json",
+            "portraitReceiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_3/re6-napad/portrait.json",
+            "blockedOutputs": []
+          }
+        },
+        "r34_receipts": [
+          {
+            "repo_path": "modules/fidelity-r34/assets/lots/lot_3/re6-napad/portrait.json",
+            "commit": "8073338896937faef6f1718387c1c9b3a4be6b72",
+            "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/8073338896937faef6f1718387c1c9b3a4be6b72/modules/fidelity-r34/assets/lots/lot_3/re6-napad/portrait.json",
+            "bytes": 3880,
+            "sha256": "82592122db7c05f3c6025ab34d0ab6e9ea25a5f24490710d2f7774015a886c72",
+            "uid": "re6-napad",
+            "kind": "portrait",
+            "status": "GENERATED",
+            "reason": null,
+            "review": {
+              "visuallyReviewed": true,
+              "portraitIdentityReviewed": true,
+              "portraitDisplayRegionReviewed": true,
+              "sourceFacing": "left",
+              "fullBodyVisible": false,
+              "completeBodyReferenceVerified": false,
+              "fightingPoseReviewed": false,
+              "knownAppearanceGaps": [],
+              "observations": [
+                "2012 massive hunched shoulder plates, crusted small face and asymmetric spike arrangement reviewed against the source.",
+                "Generated reconstruction, not native geometry or 1:1 certification."
+              ],
+              "canonicalFidelityCertified": false,
+              "originalIdleAnimationCertified": false
+            }
+          },
+          {
+            "repo_path": "modules/fidelity-r34/assets/lots/lot_3/re6-napad/idle.json",
+            "commit": "8073338896937faef6f1718387c1c9b3a4be6b72",
+            "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/8073338896937faef6f1718387c1c9b3a4be6b72/modules/fidelity-r34/assets/lots/lot_3/re6-napad/idle.json",
+            "bytes": 1358,
+            "sha256": "41170893616a2716bce531f4e35e3ccc49ff99a18cb6c5c2be864ef90fb55050",
+            "uid": "re6-napad",
+            "kind": "idle",
+            "status": "HELD_REFERENCE",
+            "reason": "The armoured head/upper torso and part of the bulky arms are shown, without all lower limb/foot and dorsal endpoints. No image_gen body request was issued from insufficient original references.",
+            "review": null
+          }
+        ],
+        "r27_record": {
+          "repo_path": "modules/fidelity-r27/sprites/records/re6-napad.json",
+          "commit": "8073338896937faef6f1718387c1c9b3a4be6b72",
+          "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/8073338896937faef6f1718387c1c9b3a4be6b72/modules/fidelity-r27/sprites/records/re6-napad.json",
+          "bytes": 5249,
+          "sha256": "25ce58d21977c060dd7b7e985e0bfde0b6b635989829a48bf0fe6cc8eb90cbb6"
+        },
+        "own_historical_tool_refusal_found": false
+      },
+      {
+        "uid": "re6-whopper",
+        "v17_inventory": {
+          "uid": "re6-whopper",
+          "label": "Whopper",
+          "edition": "Resident Evil 6 (2012)",
+          "fighter_category": "experimental",
+          "baseline_status": "HELD_COMPLETE_OR_EXACT_REFERENCE",
+          "current_outcome": "SOURCE_HOLD",
+          "retained_assets": [],
+          "trials": [],
+          "current_tool_refusals": [],
+          "current_hold_decisions": [],
+          "further_generation_blocked_by_current_refusal": false,
+          "later_left_request_refused_after_right_candidate": false,
+          "canonical_one_to_one_certified": false,
+          "engine_admitted_by_this_continuation": false,
+          "baseline_evidence": {
+            "manifestUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/manifest.json",
+            "bodyReceiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/re6-whopper/idle.json",
+            "portraitReceiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/re6-whopper/portrait.json",
+            "blockedOutputs": []
+          }
+        },
+        "r34_receipts": [
+          {
+            "repo_path": "modules/fidelity-r34/assets/lots/lot_4/re6-whopper/portrait.json",
+            "commit": "8073338896937faef6f1718387c1c9b3a4be6b72",
+            "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/8073338896937faef6f1718387c1c9b3a4be6b72/modules/fidelity-r34/assets/lots/lot_4/re6-whopper/portrait.json",
+            "bytes": 2632,
+            "sha256": "ac846fec8cfca40d8212d498b9b0cc1b584eadae27c6d72b436731230ab715f2",
+            "uid": "re6-whopper",
+            "kind": "portrait",
+            "status": "GENERATED",
+            "reason": null,
+            "review": {
+              "visuallyReviewed": true,
+              "sourceFacing": "front",
+              "portraitIdentityReviewed": true,
+              "portraitDisplayRegionReviewed": true,
+              "fullBodyVisible": false,
+              "completeBodyReferenceVerified": false,
+              "fightingPoseReviewed": false,
+              "knownAppearanceGaps": [],
+              "observations": [
+                "Whopper cropped brown hair, swollen face, raised hand and torn red shirt with broad yellow print follow the RE6reference."
+              ],
+              "canonicalFidelityCertified": false,
+              "originalIdleAnimationCertified": false
+            }
+          },
+          {
+            "repo_path": "modules/fidelity-r34/assets/lots/lot_4/re6-whopper/idle.json",
+            "commit": "8073338896937faef6f1718387c1c9b3a4be6b72",
+            "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/8073338896937faef6f1718387c1c9b3a4be6b72/modules/fidelity-r34/assets/lots/lot_4/re6-whopper/idle.json",
+            "bytes": 3760,
+            "sha256": "2be0c17acae1bc5f702d39b0b3305c5a5ac6b321eecf524bba7454963e40f1cb",
+            "uid": "re6-whopper",
+            "kind": "idle",
+            "status": "HELD_REFERENCE",
+            "reason": "Only the raised hand, face and torn red/yellow shirt upper body are shown. The swollen lower body, trousers, legs and full footwear are undocumented.",
+            "review": null
+          }
+        ],
+        "r27_record": {
+          "repo_path": "modules/fidelity-r27/sprites/records/re6-whopper.json",
+          "commit": "8073338896937faef6f1718387c1c9b3a4be6b72",
+          "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/8073338896937faef6f1718387c1c9b3a4be6b72/modules/fidelity-r27/sprites/records/re6-whopper.json",
+          "bytes": 5197,
+          "sha256": "1245769ffe0dbb6bfb633bc6125cf60af2df2521fac8d1af4c694bd77e7e0650"
+        },
+        "own_historical_tool_refusal_found": false
+      }
+    ],
+    "related_historical_refusals": [
+      {
+        "uid": "re6-javo",
+        "outputs": [
+          {
+            "kind": "portrait",
+            "status": "BLOCKED_HISTORICAL_REFUSAL",
+            "reason_exact": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID a76fb7c0-cf8b-41bf-be7c-740e1691c9e8. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+            "receipt": null
+          },
+          {
+            "kind": "idle",
+            "status": "BLOCKED_HISTORICAL_REFUSAL",
+            "reason_exact": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID a76fb7c0-cf8b-41bf-be7c-740e1691c9e8. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+            "receipt": null
+          }
+        ],
+        "receipt": {
+          "repo_path": "modules/fidelity-r27/sprites/failures/re6-javo.json",
+          "commit": "8073338896937faef6f1718387c1c9b3a4be6b72",
+          "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/8073338896937faef6f1718387c1c9b3a4be6b72/modules/fidelity-r27/sprites/failures/re6-javo.json",
+          "bytes": 2927,
+          "sha256": "00b4acfde32d023809ec346ea19dd4d969ffa92d0febd563696c091ed75ef92e"
+        },
+        "original_prompt": "Create one independent transparent-background sprite for J'avo, exact incarnation: Resident Evil 6 (2012). Use only the attached local references for appearance. Preserve the documented anatomy, proportions, clothing, equipment, damage, materials and silhouette of this incarnation. Do not mix other games or forms. A single neutral idle/presentation pose, no text, labels, frame, floor, shadow backdrop, montage or duplicate bodies. Use a right-facing three-quarter view only where supported by the references; never mirror asymmetric details. Preserve the visible source crop if the full body is undocumented rather than inventing missing limbs or equipment. Faithful survival-horror pre-rendered appearance, with a clean alpha edge; no new stylization, decoration or generic monster substitution. This is a generated project asset, not a claim of being an official or geometrically exact original-game frame. Preserve this specific J'avo's visible red/gold mask, blue clothing, yellow armband, ammunition and shown firearm in the same source pose/crop. No hidden lower body, firing, victim, new weapons or another variant. Keep this a nonsexual, non-graphic game illustration, with no added sexual anatomy, nudity, excessive blood or exaggerated injuries."
+      },
+      {
+        "uid": "re6-zombie",
+        "outputs": [
+          {
+            "kind": "portrait",
+            "status": "BLOCKED_BY_TOOL",
+            "reason_exact": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 376f741c-a864-4a42-9cf4-3c74a1d04a83. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+            "receipt": "modules/fidelity-r34/assets/lots/lot_2/re6-zombie/portrait.json"
+          },
+          {
+            "kind": "idle",
+            "status": "BLOCKED_BY_TOOL_PRIOR_PHASE",
+            "reason_exact": "The portrait request for this subject was refused; no body retry.",
+            "receipt": null
+          }
+        ],
+        "receipt": {
+          "repo_path": "modules/fidelity-r34/assets/lots/lot_2/re6-zombie/portrait.json",
+          "commit": "8073338896937faef6f1718387c1c9b3a4be6b72",
+          "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/8073338896937faef6f1718387c1c9b3a4be6b72/modules/fidelity-r34/assets/lots/lot_2/re6-zombie/portrait.json",
+          "bytes": 2582,
+          "sha256": "f8bf66e71d27e8661e792f6ed0e8e2b554a6c996c8d6ac35025fd1b0cdaa6dc7"
+        },
+        "original_prompt": "Create a faithful generated game asset for Zombie au Virus-C, exact incarnation Resident Evil 6 (2012). Use the attached verified references only. Preserve the precise head, anatomy, proportions, costume, equipment, material colours and asymmetric details. Do not mix games, phases or editions. Match the source appearance without added cartoon outlines, coloured halos or decoration. One subject only, no text, labels, scenery, floor, montage or frame. Clean transparent alpha. This remains a generated adaptation, not an original Capcom frame or a geometric 1:1 certificate. A square selection portrait showing the head and upper body, with the characteristic face and equipment readable at thumbnail size. Keep the visible identity complete inside this portrait crop; do not invent undocumented features."
+      },
+      {
+        "uid": "re6-deborah-harper",
+        "outputs": [
+          {
+            "kind": "portrait",
+            "status": "BLOCKED_BY_TOOL",
+            "reason_exact": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 74a8665f-688e-4c07-a4f5-7ecd30ef63b2. safety_violations=[violence, sexual].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"sexual\\\",\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+            "receipt": "modules/fidelity-r34/assets/lots/lot_2/re6-deborah-harper/portrait.json"
+          },
+          {
+            "kind": "idle",
+            "status": "BLOCKED_BY_TOOL_PRIOR_PHASE",
+            "reason_exact": "The portrait request for this subject was refused; no body retry.",
+            "receipt": null
+          }
+        ],
+        "receipt": {
+          "repo_path": "modules/fidelity-r34/assets/lots/lot_2/re6-deborah-harper/portrait.json",
+          "commit": "8073338896937faef6f1718387c1c9b3a4be6b72",
+          "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/8073338896937faef6f1718387c1c9b3a4be6b72/modules/fidelity-r34/assets/lots/lot_2/re6-deborah-harper/portrait.json",
+          "bytes": 2637,
+          "sha256": "7600ea55eb130148361fe17f869d36895d0bb617206b501ca68b1812e0c18c01"
+        },
+        "original_prompt": "Create a faithful generated game asset for Deborah Harper, exact incarnation Resident Evil 6 (2012). Use the attached verified references only. Preserve the precise head, anatomy, proportions, costume, equipment, material colours and asymmetric details. Do not mix games, phases or editions. Match the source appearance without added cartoon outlines, coloured halos or decoration. One subject only, no text, labels, scenery, floor, montage or frame. Clean transparent alpha. This remains a generated adaptation, not an original Capcom frame or a geometric 1:1 certificate. A square selection portrait showing the head and upper body, with the characteristic face and equipment readable at thumbnail size. Keep the visible identity complete inside this portrait crop; do not invent undocumented features."
+      }
+    ],
+    "refusal_scope_assessment": {
+      "same_refused_subject_under_new_label": false,
+      "reasoning": "Targets have distinct named canonical RE6 designs, their own successful R34 portrait receipts, and reference-only body holds. J'avo refusal prompt specifies a masked armed blue-clothed human-scale subject; C-zombie refusal specifies its grey-shirt catalogue subject. Neither prompt is Napad or Whopper. Biological C-virus/chrysalid relationships are documented context, not evidence that the target is an alias or repeat of those refused visual requests.",
+      "not_a_refusal_override": true,
+      "historical_refusals_preserved": true,
+      "prohibited_retries": [
+        "re6-javo",
+        "re6-zombie",
+        "re6-deborah-harper"
+      ],
+      "generation_decision_left_to_root": true
+    },
+    "audit_limitations": [
+      "R27 J'avo original refusal found and read; R34 Zombie/Deborah exact portrait receipts read. No failed request was repeated.",
+      "Review covers named UIDs, their R27/R34 receipts, V17 continuation and biological-family records; it does not invent a universal all-C-virus permission or prohibition."
+    ]
+  },
+  "images": [
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-napad-evilresource.png",
+      "bytes": 170338,
+      "sha256": "93214ebca7f45eb64d98a3612add449e1eae9aab1eb611f377a56f1bd6f16e29",
+      "format": "PNG",
+      "dimensions": [
+        450,
+        360
+      ],
+      "mode": "RGB",
+      "page_url": "https://www.evilresource.com/resident-evil-6/enemies/napad",
+      "image_url": "https://www.evilresource.com/images/data/full/re6/napad.png?f10579ce",
+      "role": "prior_catalog_crop",
+      "actually_visually_inspected": true,
+      "observations": [
+        "Byte-identical to prior R34 catalogue crop; only head, upper torso and partial arms visible."
+      ],
+      "limitations": [
+        "Top plates and lower body cut by frame. Not a complete-body reference."
+      ],
+      "qualified_variant": "Napad, RE6, complete mutation with outer armour still present; hanging massive arms, uneven tall dorsal/shoulder plates. No broken-shell/fully exposed-muscle phase.",
+      "edition_evidence": "Page explicitly within Resident Evil 6.",
+      "raw_download_bytes_unchanged": true,
+      "source_bitmap_to_be_committed": false
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-napad-refr.png",
+      "bytes": 24703,
+      "sha256": "d8acbcf70ae296dde8a40bccc3708cf4009cb91c8a838d7aebd7de755e51fda8",
+      "format": "PNG",
+      "dimensions": [
+        200,
+        150
+      ],
+      "mode": "P",
+      "page_url": "https://www.residentevilfr.com/jeux/resident_evil_6_infos.html",
+      "image_url": "https://residentevilfr.com/jeux_avant/RE6/images/monstres/napad.png",
+      "role": "excluded_incomplete_montage",
+      "actually_visually_inspected": true,
+      "observations": [
+        "200x150 two-view montage of the same armoured creature."
+      ],
+      "limitations": [
+        "Body/feet and some plate endpoints cut; tiny resolution."
+      ],
+      "qualified_variant": "Napad, RE6, complete mutation with outer armour still present; hanging massive arms, uneven tall dorsal/shoulder plates. No broken-shell/fully exposed-muscle phase.",
+      "edition_evidence": "RE6 enemy page, but image is not full body.",
+      "raw_download_bytes_unchanged": true,
+      "source_bitmap_to_be_committed": false
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-napad-blackjack.png",
+      "bytes": 80454,
+      "sha256": "62aea9577210110acffbd258463d88c56aee755166e0b0c9cfd46c8a8792995d",
+      "format": "PNG",
+      "dimensions": [
+        251,
+        320
+      ],
+      "mode": "RGB",
+      "page_url": "https://blackjackrants.blogspot.com/2020/08/reviewing-monsters-resident-evil-6.html",
+      "image_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjysDOFQqhk4qOIOqk03hB0UX8flOSUSQXHWgnP6DIRAH_UdwPqheIrjtEbNoLvfypjfbjcUEh07JEeemwTlvFonDWPjx0sNWcwSqwXOvwaFDom1VXaJ3uCiC-0uRfcPYx91p3qrDS3mZmb/w251-h320/image.png",
+      "role": "display_size_complete_outline",
+      "actually_visually_inspected": true,
+      "observations": [
+        "Full visible two-dimensional body outline including two hands, two feet and dorsal plate tips. Same render as original-size image."
+      ],
+      "limitations": [
+        "251x320 display transform; not independent view."
+      ],
+      "qualified_variant": "Napad, RE6, complete mutation with outer armour still present; hanging massive arms, uneven tall dorsal/shoulder plates. No broken-shell/fully exposed-muscle phase.",
+      "edition_evidence": "Article explicitly identifies RE6 [2012] and captions this image Napad.",
+      "raw_download_bytes_unchanged": true,
+      "source_bitmap_to_be_committed": false
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-napad-blackjack-original.png",
+      "bytes": 360446,
+      "sha256": "1d7cd73020e66a4c0c54e745095aa51956bbe4021f0847435fa272493991a6fe",
+      "format": "PNG",
+      "dimensions": [
+        620,
+        790
+      ],
+      "mode": "RGB",
+      "page_url": "https://blackjackrants.blogspot.com/2020/08/reviewing-monsters-resident-evil-6.html",
+      "image_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjysDOFQqhk4qOIOqk03hB0UX8flOSUSQXHWgnP6DIRAH_UdwPqheIrjtEbNoLvfypjfbjcUEh07JEeemwTlvFonDWPjx0sNWcwSqwXOvwaFDom1VXaJ3uCiC-0uRfcPYx91p3qrDS3mZmb/s0/image.png",
+      "role": "primary_static_reference",
+      "actually_visually_inspected": true,
+      "observations": [
+        "620x790 native hosted raster retrieved by the public Blogger original-size transform; page metadata declares this exact size. No local upscale or edit.",
+        "Full outer outline inspected: both large hanging hands, both feet and all exposed dorsal/shoulder tip endpoints lie inside the image.",
+        "Very large forearms and hands, relatively short bent legs, hunched shell and small recessed face. Near foot lower in image, far foot lifted higher.",
+        "Highest rear plate leans into image right; shoulders and hand silhouettes differ. Face and upper-arm/carapace landmarks match the R34 crop."
+      ],
+      "limitations": [
+        "One frontal three-quarter render only; hidden back surfaces, soles and occluded fingers are not documented.",
+        "Opaque grey backdrop and steam; removal cannot be claimed to recover original alpha.",
+        "Secondary hosting and uncertain original render platform; RE6 design corroborated by artbook and prior crop, not a native mesh extraction.",
+        "Visual complete-outline qualification is not 1:1 geometry, pose, animation, orthographic or opposite-view proof."
+      ],
+      "qualified_variant": "Napad, RE6, complete mutation with outer armour still present; hanging massive arms, uneven tall dorsal/shoulder plates. No broken-shell/fully exposed-muscle phase.",
+      "edition_evidence": "RE6 [2012] article plus source-matched R34 crop and Capcom RE6 artbook Napad spread. Excludes Revelations 2 Raid and Left 4 Dead 2 port.",
+      "raw_download_bytes_unchanged": true,
+      "source_bitmap_to_be_committed": false
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-napad-artbook-page.jpg",
+      "bytes": 191848,
+      "sha256": "08c671544a1e913bc7f38e884a36c107765c023d1c0a7bb489f5e76792df09ea",
+      "format": "WEBP",
+      "dimensions": [
+        2048,
+        1323
+      ],
+      "mode": "RGB",
+      "page_url": "https://www.slideshare.net/slideshow/resident-evil-6-digital-artbook/18446993",
+      "image_url": "https://image.slidesharecdn.com/residentevil6digitalartbookeng-130408233254-phpapp02/75/Resident-Evil-6-Digital-Artbook-21-2048.jpg",
+      "role": "supporting_design_attribution",
+      "actually_visually_inspected": true,
+      "observations": [
+        "Visually inspected page 40-41 of Capcom RE6 artbook reproduction, headed Napad / Complete Mutations.",
+        "Large CG pose supplies separate design corroboration; lower panels are painted final-design studies and right panels are concept/detail drawings."
+      ],
+      "limitations": [
+        "Third-party reproduction. Concept/detail panels are not native mesh proof or permission to mix broken-shell anatomy into intact-armour reference.",
+        "Artwork pose differs from primary render; not an orthographic back-view source. Actual downloaded format is WEBP despite jpg URL/filename."
+      ],
+      "qualified_variant": "Napad, RE6, complete mutation with outer armour still present; hanging massive arms, uneven tall dorsal/shoulder plates. No broken-shell/fully exposed-muscle phase.",
+      "edition_evidence": "Original artwork attributed to Capcom RE6 design team; book copyright 2012,2013. This is an RE6 design source reproduced later, not a 2012 screenshot.",
+      "raw_download_bytes_unchanged": true,
+      "source_bitmap_to_be_committed": false
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-whopper-evilresource.png",
+      "bytes": 167147,
+      "sha256": "18de904de9e56831fde063b3b66058d30530d77d6b9709362234562af82cac97",
+      "format": "PNG",
+      "dimensions": [
+        450,
+        360
+      ],
+      "mode": "RGB",
+      "page_url": "https://www.evilresource.com/resident-evil-6/enemies/whopper",
+      "image_url": "https://www.evilresource.com/images/data/full/re6/whopper.png?cfc3c3c5",
+      "role": "prior_catalog_crop",
+      "actually_visually_inspected": true,
+      "observations": [
+        "Byte-identical to R34 crop; raised hand, brown-haired head and torn red/yellow shirt match the CGWorld right panel."
+      ],
+      "limitations": [
+        "Hips, legs, feet and lowered hand missing."
+      ],
+      "qualified_variant": "Whopper released CG render with short brown hair, torn red shirt and distressed yellow bands, dark ragged lower garment, bare feet; source-matched to re6-whopper R34 catalogue. Supreme game-stat classification not established from shirt alone.",
+      "edition_evidence": "Page explicitly within Resident Evil 6.",
+      "raw_download_bytes_unchanged": true,
+      "source_bitmap_to_be_committed": false
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-whopper-refr.png",
+      "bytes": 24333,
+      "sha256": "6395b3b2b4d4ebf3343d0a4d259c6b9c325d5e7e3ca665df4130ed4eede80bd6",
+      "format": "PNG",
+      "dimensions": [
+        200,
+        150
+      ],
+      "mode": "P",
+      "page_url": "https://www.residentevilfr.com/jeux/resident_evil_6_infos.html",
+      "image_url": "https://residentevilfr.com/jeux_avant/RE6/images/monstres/whopper.png",
+      "role": "excluded_different_appearance_crop",
+      "actually_visually_inspected": true,
+      "observations": [
+        "Tiny close shot of a differently clothed/grey upper torso."
+      ],
+      "limitations": [
+        "No complete body; not used to replace or complete the red/yellow render."
+      ],
+      "qualified_variant": null,
+      "edition_evidence": "RE6 page; exact body variant not qualified.",
+      "raw_download_bytes_unchanged": true,
+      "source_bitmap_to_be_committed": false
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-whopper-blackjack.png",
+      "bytes": 31703,
+      "sha256": "0f1abe51b3c17a05954e37498e3a4f4e0e68e401207a559654173a16284900c5",
+      "format": "PNG",
+      "dimensions": [
+        185,
+        111
+      ],
+      "mode": "RGB",
+      "page_url": "https://blackjackrants.blogspot.com/2020/08/reviewing-monsters-resident-evil-6.html",
+      "image_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgunH1yDr8CCEy9nXiZbIttxobggtmyADAe6Dg8_Aicmmy7AF1oUSQcTs5BjdVb4mhgNWJlPjUIhQxdyyDPwqkXKfMYoQBJ1-jHyIEZdr0-ELGz13TzyapTN30byl0P8vxYC0Py7TEhaWia/w200-h120/image.png",
+      "role": "excluded_incomplete_gameplay_crop",
+      "actually_visually_inspected": true,
+      "observations": [
+        "185x111 low-angle red/yellow-shirt torso shot."
+      ],
+      "limitations": [
+        "No complete feet or hands; no precise geometry improvement."
+      ],
+      "qualified_variant": "Whopper released CG render with short brown hair, torn red shirt and distressed yellow bands, dark ragged lower garment, bare feet; source-matched to re6-whopper R34 catalogue. Supreme game-stat classification not established from shirt alone.",
+      "edition_evidence": "Article RE6 [2012].",
+      "raw_download_bytes_unchanged": true,
+      "source_bitmap_to_be_committed": false
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-whopper-cgworld-native.jpg",
+      "bytes": 405889,
+      "sha256": "187cac7a82fdd75029a78558050cc7b8398cf84c609750ab272bfcffefc33fa4",
+      "format": "JPEG",
+      "dimensions": [
+        2200,
+        1573
+      ],
+      "mode": "RGB",
+      "page_url": "https://cgworld.jp/interview/201701-capcom.html",
+      "image_url": "https://cgworld.jp/interview/images/201701_capcom/capcom_u2.jpg",
+      "role": "primary_static_reference_right_panel_only",
+      "actually_visually_inspected": true,
+      "observations": [
+        "Unedited 2200x1573 image. Left panel is a painted scene/concept; right panel, on white, is the released CG graphic described in the adjacent article caption.",
+        "Right panel fully contains head, raised anatomical right hand (image left), lowered anatomical left hand (image right), massive torso, both legs and both bare feet. Bottom foot has tight but visible white margin.",
+        "Same render as R34 crop: brown side-swept hair, raised curled fingers, tilted open mouth, diagonally stretched shirt and broad distressed yellow chest/belly band.",
+        "Lower shirt tears expose an uneven lower abdomen, especially image left; garment hem is ragged and asymmetric. One leg is lifted behind, other extends lower. Preserve those asymmetries."
+      ],
+      "limitations": [
+        "Use right panel only. Left concept has different silhouette, clothing tears and pose; it is not completion evidence.",
+        "One released CG angle; rear garment pattern, hidden arm surfaces and opposite side are undocumented. No claim of opposite-view or animation accuracy.",
+        "Source article dated 2017-01-13 discusses RE7 but caption explicitly identifies this creature and graphic as RE6. Date is not a new RE7 incarnation.",
+        "Article calls creature Whopper, not a validated Whopper Supreme stat variant. Qualify by exact red/yellow visual variant; do not infer size class from shirt.",
+        "White/background-scanned presentation is not original transparent alpha; no geometric 1:1 certification."
+      ],
+      "qualified_variant": "Whopper released CG render with short brown hair, torn red shirt and distressed yellow bands, dark ragged lower garment, bare feet; source-matched to re6-whopper R34 catalogue. Supreme game-stat classification not established from shirt alone.",
+      "edition_evidence": "Primary artist interview with Capcom character artist Nakaoka; caption identifies RE6 Whopper and distinguishes final concept from published graphic. The R34 crop is the same released render.",
+      "raw_download_bytes_unchanged": true,
+      "source_bitmap_to_be_committed": false
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-whopper-artbook-page.jpg",
+      "bytes": 167574,
+      "sha256": "8563d7b1cb03a5ba246f1e459d60d3dff454c15af477e235df6617cd3afd6542",
+      "format": "WEBP",
+      "dimensions": [
+        2048,
+        1323
+      ],
+      "mode": "RGB",
+      "page_url": "https://www.slideshare.net/slideshow/resident-evil-6-digital-artbook/18446993",
+      "image_url": "https://image.slidesharecdn.com/residentevil6digitalartbookeng-130408233254-phpapp02/75/Resident-Evil-6-Digital-Artbook-7-2048.jpg",
+      "role": "supporting_same_render_attribution",
+      "actually_visually_inspected": true,
+      "observations": [
+        "Capcom RE6 artbook pages 12-13 reproduce the same large red/yellow CG render. The large foreground foot is clipped by page boundary.",
+        "Lower painted concepts and action diagrams are explicitly separate from the large CG render."
+      ],
+      "limitations": [
+        "Same render, not an independent opposite view. Page composition is incomplete; CGWorld right panel supplies the complete outline.",
+        "Third-party book reproduction; actual WEBP despite jpg filename. Concepts not admitted as final-body anatomy."
+      ],
+      "qualified_variant": "Whopper released CG render with short brown hair, torn red shirt and distressed yellow bands, dark ragged lower garment, bare feet; source-matched to re6-whopper R34 catalogue. Supreme game-stat classification not established from shirt alone.",
+      "edition_evidence": "Capcom RE6 artbook, copyright 2012,2013, Whopper spread. Supports exact RE6 design attribution.",
+      "raw_download_bytes_unchanged": true,
+      "source_bitmap_to_be_committed": false
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v18/history/re6-javo-historical-subject-catalog.png",
+      "bytes": 175661,
+      "sha256": "4aeb33495ef05d742c422e7734087ebd6d5616535deb33f6ec2634626f474f09",
+      "format": "PNG",
+      "dimensions": [
+        450,
+        360
+      ],
+      "mode": "RGB",
+      "role": "read_only_historical_refusal_identity_comparison",
+      "repo_path": "assets/catalog/re6-javo.png",
+      "repo_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/8073338896937faef6f1718387c1c9b3a4be6b72/assets/catalog/re6-javo.png",
+      "actually_visually_inspected": true,
+      "observations": [
+        "Specific masked human-scale Chinese J'avo: red/gold mask, blue sleeveless clothes, yellow arm band, ammunition belt and firearm. Visually distinct from the armoured Napad."
+      ],
+      "generation_prohibited_for_this_historically_refused_subject": true,
+      "raw_download_bytes_unchanged": true,
+      "source_bitmap_to_be_committed": false
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v18/history/re6-zombie-historical-subject-catalog.png",
+      "bytes": 122736,
+      "sha256": "306fb184f9c68d5b14487d030fc726b3a023ddd80f4bf63ad245cb61e7228e5a",
+      "format": "PNG",
+      "dimensions": [
+        450,
+        360
+      ],
+      "mode": "RGB",
+      "role": "read_only_historical_refusal_identity_comparison",
+      "repo_path": "assets/catalog/re6-zombie.png",
+      "repo_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/8073338896937faef6f1718387c1c9b3a4be6b72/assets/catalog/re6-zombie.png",
+      "actually_visually_inspected": true,
+      "observations": [
+        "Specific comparatively slender grey-shirt C-zombie. Visually distinct from the released Whopper red/yellow CG design."
+      ],
+      "generation_prohibited_for_this_historically_refused_subject": true,
+      "raw_download_bytes_unchanged": true,
+      "source_bitmap_to_be_committed": false
+    }
+  ],
+  "documentary_sources": [
+    {
+      "url": "https://blackjackrants.blogspot.com/2020/08/reviewing-monsters-resident-evil-6.html",
+      "local_html": "/workspace/scratch/3fced93cfb0a/references-v18/re6-blackjack.html",
+      "evidence": "RE6 [2012] title; image immediately preceding Napad heading declares original size 620x790. Secondary render host.",
+      "web_ref": "turn162856311view0"
+    },
+    {
+      "url": "https://cgworld.jp/interview/201701-capcom.html",
+      "local_html": "/workspace/scratch/3fced93cfb0a/references-v18/re6-whopper-cgworld.html",
+      "evidence": "2017-01-13 interview with Capcom artist; caption attributes Whopper to RE6 and identifies the right image as released graphic, contrasting the left final concept.",
+      "web_ref": "turn448549317view0"
+    },
+    {
+      "url": "https://www.slideshare.net/slideshow/resident-evil-6-digital-artbook/18446993",
+      "evidence": "Public artbook reproduction. Contents and copyright 2012,2013 attribute designs to Capcom RE6 team; Whopper spread p12-13, Napad spread p40-41.",
+      "web_ref": "turn726055750view0"
+    },
+    {
+      "url": "https://www.evilresource.com/resident-evil-6/files/napad-file",
+      "evidence": "Transcription of RE6 Napad file distinguishes hard outer shell from exposed softer tissue after damage and a back weak point; helps avoid phase mixing.",
+      "web_ref": "turn388543084view2"
+    },
+    {
+      "url": "https://www.evilresource.com/resident-evil-6/enemies/napad",
+      "local_html": "/workspace/scratch/3fced93cfb0a/references-v18/napad-evilresource.html",
+      "evidence": "Existing exact target crop; downloaded full URL returns same 450x360 incomplete raster.",
+      "web_ref": "turn168718015view0"
+    },
+    {
+      "url": "https://www.evilresource.com/resident-evil-6/enemies/whopper",
+      "local_html": "/workspace/scratch/3fced93cfb0a/references-v18/whopper-evilresource.html",
+      "evidence": "Existing exact red/yellow target crop matches the released full-body render.",
+      "web_ref": "turn168718015view1"
+    },
+    {
+      "url": "https://www.residentevilfr.com/jeux/resident_evil_6_infos.html",
+      "local_html": "/workspace/scratch/3fced93cfb0a/references-v18/re6-refr.html",
+      "evidence": "RE6-specific enemy page. Its two images are incomplete and not used as primary whole-body references.",
+      "web_ref": "turn168718015view3"
+    }
+  ],
+  "access_and_search_limits": [
+    {
+      "url": "https://residentevil.fandom.com/wiki/Napad/gallery",
+      "result": "Web open restricted URL; not bypassed or retried by another route."
+    },
+    {
+      "url": "https://residentevil.fandom.com/wiki/Whopper/gallery",
+      "result": "Web open restricted URL; not bypassed or retried by another route."
+    },
+    {
+      "url": "https://www.biohazardfrance.net/dossiers/Resident_Evil_6_Director_Art_Notebook/whopper.html",
+      "result": "403; no bypass. Concept drawings would not replace final render."
+    },
+    {
+      "url": "https://blackjackrants.blogspot.com/2020/08/reviewing-monsters-resident-evil-6.html",
+      "result": "Initial normal web open and already-started normal HTML retrieval succeeded. A later web find hit CAPTCHA; page was not retried afterward. Public image CDN remains independently accessible; original-size transform returned page-declared raster without local upscaling."
+    },
+    {
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=136304810",
+      "result": "Napad L4D2 crossover/port was excluded as native RE6 geometry evidence."
+    },
+    {
+      "url": "https://gamefaqs.gamespot.com/boards/605603-resident-evil-6/65066591",
+      "result": "Forum answers conflict on shirt versus Supreme classification; not used to assert a game-stat variant."
+    }
+  ]
+}

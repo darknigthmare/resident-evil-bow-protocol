@@ -1,0 +1,127 @@
+{
+  "schema": "rec.static-candidate-independent-review.v18",
+  "asset": "Ogroman, dispositif dorsal cylindrique — Resident Evil 6 (2012), RIGHT 01",
+  "id": "re6_ogroman_right_01",
+  "uid": "re6-ogroman",
+  "variant": "re6_2012_cylindrical_dorsal_device",
+  "reviewed_at": "2026-11-20T17:09:41.974925+00:00",
+  "reviewer": "reference_research",
+  "asset_path": "assets/re6_ogroman_right_01.png",
+  "original_path": "/workspace/scratch/3fced93cfb0a/generated_images/exec-0098c237-0f59-4940-9767-70d8fe9a0405.png",
+  "sha256": "0b654641e8b6b144ff30a3d0d2d20e537a645f85b1b52dc7bc1774730754fa81",
+  "bytes": 1341022,
+  "verdict": "CANDIDATE_STATIC_WITH_LIMITS",
+  "review_status": "CANDIDATE_STATIC_WITH_LIMITS",
+  "excluded_from_candidate_count": false,
+  "source_refs_reviewed": [
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-ogroman-blackjack-render.png",
+      "sha256": "1f4edef1200b70a4f6927f5df8a7c3d8c15ff551e790699c05682c764c064e51",
+      "bytes": 382861,
+      "role": "Original joint à la requête, personnellement inspecté et comparé ; provenance et limites dans le rapport source V18.",
+      "native_reference_bytes_modified": false
+    }
+  ],
+  "source_document": "docs/SOURCES_RE6_MESET_ILUZIJA_OGROMAN_V18.json",
+  "source_documents_reviewed": [
+    "docs/SOURCES_RE6_MESET_ILUZIJA_OGROMAN_V18.json"
+  ],
+  "source_document_sha256": "8a8995a2822c975d26b268415319932c2f4a0a52436e26875756a1e651ea458d",
+  "prompt_record": "prompts/re6_ogroman_right_01.json",
+  "prompt_record_sha256": "6f7019b6e69e1a83c03e75df8f4f0de476feac8470de83ad51324aa7e37e3df0",
+  "technical_record": "docs/re6_ogroman_right_01-technical.json",
+  "technical_record_sha256": "00fa9f9628894ab4ba7a22c5955c13c30cafdc4b6a1f7d209d0287b8427a87f3",
+  "visual_checks": {
+    "orientation": "Tête et gueule orientées vers la droite, buste encore largement frontal en trois quarts. Épaule et bras anatomiques droits proches, à gauche de l’image. La direction droite est lisible sans être un profil strict.",
+    "arms_hands": "Deux chaînes épaule-bras-avant-bras-main continues. Grande main proche basse à gauche de l’image et main éloignée à droite ; toutes les extrémités visibles restent cadrées. Aucun bras ou main détaché/dupliqué.",
+    "legs_feet": "Deux jambes reliées au bassin, deux pieds nus complets. Le pied proche avance vers l’observateur, tandis que le pied éloigné se dirige davantage à droite ; ce n’est pas une pose où tous les orteils sont parallèles.",
+    "dorsal_fitting": "Un seul dispositif court à segments/anneaux gris dépasse du haut du dos derrière les épaules, à gauche de l’image dans cette vue. Son insertion profonde reste occultée par le volume de l’épaule. Aucun long pédoncule, bulbe rouge ou organe dorsal dressé de la figurine ajouté.",
+    "variant": "Masse humanoïde gris-vert voûtée, grandes épaules, bras longs, mains/pieds massifs, tête allongée et gueule très ouverte, reliefs aux hanches et épaules. Pas de vêtement, arme ni équipement étranger.",
+    "framing": "Un sujet entier, avec sommet de tête, dispositif visible, doigts et pieds complets. Pas de coupe des extrémités, sol, ombre portée, autre personnage ou scène.",
+    "limits": [
+      "La marge de 10 % demandée n’est pas atteinte sur tous les côtés : gauche/haut/droite/bas [117, 76, 102, 77] px, soit [10.45, 5.41, 9.11, 5.48] %. La silhouette principale reste complète ; ne pas déclarer une marge totalement transparente de 10 %.",
+      "L’insertion du cylindre et la géométrie dorsale profonde restent masquées : aucun emplacement précis de socket ou détail de dos invisible n’est certifié.",
+      "Le nombre/espacement des doigts et orteils cachés, les reverse-faces, les plis, la dentition et les textures restent interprétés. Les deux membres de chaque paire sont cohérents mais cela ne certifie pas un maillage natif.",
+      "La présentation est frontale en trois quarts, avec le pied proche vers l’observateur, et non un profil dominant où tête, genoux et tous les orteils seraient alignés à droite.",
+      "Des résidus de très faible alpha subsistent hors silhouette ; aucun nettoyage du PNG n’a été effectué.",
+      "Candidat statique généré uniquement : ni certification de fidélité 1:1, ni maillage natif, ni animation, ni validation de contacts/collisions, ni admission moteur."
+    ]
+  },
+  "failed_gates": [],
+  "candidate_blocking_failed_gates": [],
+  "uncertain_gates": [
+    "dorsal_fitting_attachment_hidden",
+    "fine_digit_and_reverse_surface_geometry_unverified"
+  ],
+  "alpha": {
+    "mode": "RGBA",
+    "size": [
+      1120,
+      1404
+    ],
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox_alpha_gte16": [
+      117,
+      76,
+      1018,
+      1327
+    ],
+    "margins_alpha16_left_top_right_bottom": [
+      117,
+      76,
+      102,
+      77
+    ],
+    "margins_alpha16_percent_left_top_right_bottom": [
+      10.45,
+      5.41,
+      9.11,
+      5.48
+    ],
+    "bbox_all_nonzero_alpha": [
+      0,
+      21,
+      1104,
+      1404
+    ],
+    "pixels_alpha0": 1005047,
+    "pixels_alpha1_to15": 30441,
+    "pixels_alpha1_to3": 25078,
+    "pixels_alpha255": 206,
+    "hidden_nonzero_rgb_under_alpha0_pixels": 147,
+    "all_subject_alpha_255": false,
+    "halo_finding": "Alpha réel mesuré. Les composites gris et clair ont été personnellement inspectés : pas de fond opaque, de grille ou de large halo visible substantiel. Des résidus de faible alpha subsistent et atteignent certains bords ; les octets originaux sont préservés."
+  },
+  "qa_previews_only": [
+    "/workspace/scratch/3fced93cfb0a/qa-v18/re6_ogroman_right_01-gray.jpg",
+    "/workspace/scratch/3fced93cfb0a/qa-v18/re6_ogroman_right_01-light.jpg"
+  ],
+  "inspection_method": "Comparaison indépendante des originaux effectivement joints, du prompt complet, du rapport source et des deux composites calculés avec le vrai alpha. Suivi visuel des membres, appendices ou boucles et de leurs occlusions ; contrôle du cadre complet. SHA, égalité raw/archive, dimensions, alpha, histogrammes et bbox recalculés indépendamment et rapprochés de la fiche technique. Aucun retouchage du livrable.",
+  "original_bytes_modified": false,
+  "original_generated_bytes_verified_identical": true,
+  "one_subject": true,
+  "one_subject_per_image_reviewed": true,
+  "quality_rejection_is_tool_refusal": false,
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "animation_frames": 1,
+  "can_mirror": false,
+  "recommended_action": "Conserver RIGHT 01 comme candidat statique de la variante au cylindre compact, avec l’insertion naturellement masquée et la pose frontale en trois quarts documentée. Aucune correction concrète nécessaire.",
+  "non_blocking_deviations": [
+    {
+      "gate": "requested_10_percent_completely_transparent_margin",
+      "blocks_static_candidate": false,
+      "status": "NOT_MET",
+      "detail": "La marge de 10 % demandée n’est pas atteinte sur tous les côtés : gauche/haut/droite/bas [117, 76, 102, 77] px, soit [10.45, 5.41, 9.11, 5.48] %. La silhouette principale reste complète ; ne pas déclarer une marge totalement transparente de 10 %."
+    },
+    {
+      "gate": "strict_side_dominant_pose_with_all_toes_right",
+      "blocks_static_candidate": false,
+      "status": "PARTIALLY_MET",
+      "detail": "Direction droite lisible par la tête et le buste, mais le pied proche et le torse restent plus frontaux que demandé."
+    }
+  ]
+}

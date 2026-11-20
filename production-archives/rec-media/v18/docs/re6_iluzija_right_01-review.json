@@ -1,0 +1,127 @@
+{
+  "schema": "rec.static-candidate-independent-review.v18",
+  "asset": "Iluzija opaque enroulé — Resident Evil 6 (2012), RIGHT 01",
+  "id": "re6_iluzija_right_01",
+  "uid": "re6-iluzija",
+  "variant": "re6_2012_visible_opaque_coiled",
+  "reviewed_at": "2026-11-20T17:09:41.962358+00:00",
+  "reviewer": "reference_research",
+  "asset_path": "assets/re6_iluzija_right_01.png",
+  "original_path": "/workspace/scratch/3fced93cfb0a/generated_images/exec-2fd4e011-486a-4532-b44f-8eeae1a3ad18.png",
+  "sha256": "e1cdad3516506c3c2cd60a7c22efcc68cc41c25212dddd1c4b3b5368b1c9706c",
+  "bytes": 1397687,
+  "verdict": "CANDIDATE_STATIC_WITH_LIMITS",
+  "review_status": "CANDIDATE_STATIC_WITH_LIMITS",
+  "excluded_from_candidate_count": false,
+  "source_refs_reviewed": [
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-iluzija-blackjack.png",
+      "sha256": "aa449fd52cafa482d0a602b1f58229539f13642ca9c352e53ba9d52d4dd49202",
+      "bytes": 433931,
+      "role": "Original joint à la requête, personnellement inspecté et comparé ; provenance et limites dans le rapport source V18.",
+      "native_reference_bytes_modified": false
+    },
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-iluzija-figure-center.png",
+      "sha256": "861a5a97dcecca5544a22c76b5ce8cf0f6ff4f95cda008ec2412b1f046e10a47",
+      "bytes": 817684,
+      "role": "Original joint à la requête, personnellement inspecté et comparé ; provenance et limites dans le rapport source V18.",
+      "native_reference_bytes_modified": false
+    }
+  ],
+  "source_document": "docs/SOURCES_RE6_MESET_ILUZIJA_OGROMAN_V18.json",
+  "source_documents_reviewed": [
+    "docs/SOURCES_RE6_MESET_ILUZIJA_OGROMAN_V18.json"
+  ],
+  "source_document_sha256": "8a8995a2822c975d26b268415319932c2f4a0a52436e26875756a1e651ea458d",
+  "prompt_record": "prompts/re6_iluzija_right_01.json",
+  "prompt_record_sha256": "71aef60f47e2481dda0fd6b1b72a5542bda66b674c4ac0f513dd00a884b8d136",
+  "technical_record": "docs/re6_iluzija_right_01-technical.json",
+  "technical_record_sha256": "63a51295c382cced7ebd6c21d3526c210b5873ac8dca6ce5e9fb1b75794f25da",
+  "visual_checks": {
+    "orientation": "Tête relevée, museau, gueule et langue dirigés vers la droite. Le côté droit de la tête/cou est le plus visible ; le corps reste en boucles compactes dans une présentation trois quarts.",
+    "body_continuity": "Une seule tête et un seul cou continu rejoignent les boucles épaisses. La boucle médiane se poursuit derrière le cou, puis la boucle basse avance jusqu’à une seule terminaison de queue à droite. Les croisements restent des occlusions compatibles avec les sources ; aucun anneau détaché, nœud supplémentaire manifeste ou queue dupliquée observé.",
+    "mouth_and_tail": "Gueule largement ouverte avec dents irrégulières et une langue rouge fourchue unique. Les deux pointes de la langue, la mandibule et la pointe incurvée de queue sont entièrement contenues dans le cadre.",
+    "phase": "Corps opaque noir/bleu-vert avec plaques irrégulières olive claires et marques rougeâtres conservées. Aucun membre, aile, corne, capuchon de cobra ou phase camouflée ajouté.",
+    "framing": "Une seule créature complète et enroulée, sans allongement inventé du corps, sol, socle, visualiseur ou autre sujet.",
+    "limits": [
+      "La marge de 10 % demandée n’est pas atteinte sur tous les côtés : gauche/haut/droite/bas [145, 89, 169, 78] px, soit [11.05, 7.42, 12.88, 6.51] %. La silhouette principale reste complète ; ne pas déclarer une marge totalement transparente de 10 %.",
+      "La continuité est vérifiée sur les segments visibles et les croisements plausibles ; les connexions totalement masquées ne constituent pas une reconstruction certifiée du maillage.",
+      "Le détail de l’œil visible, le compte et les formes exactes des dents, les plaques/écailles et leur coloration sont des interprétations générées. Aucune microtexture 1:1 ni face cachée authentifiée.",
+      "Cette vue ne démontre ni la phase de camouflage, ni le dessous complet des boucles, ni la longueur corporelle déployée.",
+      "Des résidus de très faible alpha subsistent hors silhouette ; aucun nettoyage du PNG n’a été effectué.",
+      "Candidat statique généré uniquement : ni certification de fidélité 1:1, ni maillage natif, ni animation, ni validation de contacts/collisions, ni admission moteur."
+    ]
+  },
+  "failed_gates": [],
+  "candidate_blocking_failed_gates": [],
+  "uncertain_gates": [
+    "hidden_coil_connections_and_undersides_not_mesh_verified",
+    "fine_teeth_eye_scale_geometry_unverified"
+  ],
+  "alpha": {
+    "mode": "RGBA",
+    "size": [
+      1312,
+      1199
+    ],
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox_alpha_gte16": [
+      145,
+      89,
+      1143,
+      1121
+    ],
+    "margins_alpha16_left_top_right_bottom": [
+      145,
+      89,
+      169,
+      78
+    ],
+    "margins_alpha16_percent_left_top_right_bottom": [
+      11.05,
+      7.42,
+      12.88,
+      6.51
+    ],
+    "bbox_all_nonzero_alpha": [
+      0,
+      19,
+      1298,
+      1199
+    ],
+    "pixels_alpha0": 993702,
+    "pixels_alpha1_to15": 24571,
+    "pixels_alpha1_to3": 20524,
+    "pixels_alpha255": 242,
+    "hidden_nonzero_rgb_under_alpha0_pixels": 121,
+    "all_subject_alpha_255": false,
+    "halo_finding": "Alpha réel mesuré. Les composites gris et clair ont été personnellement inspectés : pas de fond opaque, de grille ou de large halo visible substantiel. Des résidus de faible alpha subsistent et atteignent certains bords ; les octets originaux sont préservés."
+  },
+  "qa_previews_only": [
+    "/workspace/scratch/3fced93cfb0a/qa-v18/re6_iluzija_right_01-gray.jpg",
+    "/workspace/scratch/3fced93cfb0a/qa-v18/re6_iluzija_right_01-light.jpg"
+  ],
+  "inspection_method": "Comparaison indépendante des originaux effectivement joints, du prompt complet, du rapport source et des deux composites calculés avec le vrai alpha. Suivi visuel des membres, appendices ou boucles et de leurs occlusions ; contrôle du cadre complet. SHA, égalité raw/archive, dimensions, alpha, histogrammes et bbox recalculés indépendamment et rapprochés de la fiche technique. Aucun retouchage du livrable.",
+  "original_bytes_modified": false,
+  "original_generated_bytes_verified_identical": true,
+  "one_subject": true,
+  "one_subject_per_image_reviewed": true,
+  "quality_rejection_is_tool_refusal": false,
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "animation_frames": 1,
+  "can_mirror": false,
+  "recommended_action": "Conserver RIGHT 01 comme candidat statique de la phase visible opaque enroulée, avec une continuité unique lisible et une queue entière. Aucune correction concrète nécessaire ; ne pas étendre cette qualification à une autre phase.",
+  "non_blocking_deviations": [
+    {
+      "gate": "requested_10_percent_completely_transparent_margin",
+      "blocks_static_candidate": false,
+      "status": "NOT_MET",
+      "detail": "La marge de 10 % demandée n’est pas atteinte sur tous les côtés : gauche/haut/droite/bas [145, 89, 169, 78] px, soit [11.05, 7.42, 12.88, 6.51] %. La silhouette principale reste complète ; ne pas déclarer une marge totalement transparente de 10 %."
+    }
+  ]
+}

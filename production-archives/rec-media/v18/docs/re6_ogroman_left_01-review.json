@@ -1,0 +1,134 @@
+{
+  "schema": "rec.static-candidate-independent-review.v18",
+  "asset": "Ogroman — Resident Evil 6 (2012), LEFT 01, dispositif dorsal cylindrique compact",
+  "id": "re6_ogroman_left_01",
+  "uid": "re6-ogroman",
+  "variant": "re6_2012_cylindrical_dorsal_device",
+  "reviewed_at": "2026-11-20T17:01:55.100755+00:00",
+  "reviewer": "audit_missing",
+  "pull_request": 23,
+  "asset_path": "assets/re6_ogroman_left_01.png",
+  "original_path": "/workspace/scratch/3fced93cfb0a/generated_images/exec-93fc72bb-0c23-42ee-a106-e04c3a091d12.png",
+  "sha256": "a8330965babaea63055f7b6a66504a9742ef7ef470c5fd478b6f711a52799403",
+  "bytes": 1430364,
+  "verdict": "CANDIDATE_STATIC_WITH_LIMITS",
+  "review_status": "CANDIDATE_STATIC_WITH_LIMITS",
+  "excluded_from_candidate_count": false,
+  "source_refs_reviewed": [
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-ogroman-blackjack-render.png",
+      "sha256": "1f4edef1200b70a4f6927f5df8a7c3d8c15ff551e790699c05682c764c064e51",
+      "bytes": 382861,
+      "source_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhYpc5OdjPjx87tR-1yC84qJOQ6u-sacsI6ek0JZU29vohqj_HsG0Mv6naY_2ez5Ws2vijNncl3aVXDvcXc_bS44Xn-0awLsmJj7WYVTB3XHdXqR4Srzn79zdUl1ZHKb6Yk8eO77r5Mxf5f/",
+      "role": "Rendu complet RE6 de la variante à dispositif dorsal gris annelé ; insertion et arrière du dos naturellement masqués.",
+      "actually_visually_inspected": true
+    }
+  ],
+  "source_document": "docs/SOURCES_RE6_MESET_ILUZIJA_OGROMAN_V18.json",
+  "source_document_sha256_at_review": "8a8995a2822c975d26b268415319932c2f4a0a52436e26875756a1e651ea458d",
+  "prompt_record": "prompts/re6_ogroman_left_01.json",
+  "technical_record": "docs/re6_ogroman_left_01-technical.json",
+  "visual_checks": {
+    "orientation": "Tête et ouverture faciale projetées vers la gauche ; genou et pied avancé orientés vers la gauche. Le thorax conserve une large composante frontale : il s’agit d’une présentation avant-gauche proche de la source, pas d’un profil latéral strict ni d’un retournement arrière.",
+    "variant": "Géant humanoïde pâle gris-vert, torse massif voûté, visage très allongé et grande gueule ouverte, bras longs, hanches irrégulières, mains et pieds larges. Pas de vêtement, arme ou équipement supplémentaire.",
+    "limb_connections": "Deux épaules reliées à deux bras et mains basses ouvertes ; deux jambes reliées au bassin avec deux pieds distincts. Les membres ont des contours continus et des articulations plausibles. Les doigts et orteils lointains se superposent naturellement ; aucun membre détaché ou supplémentaire évident.",
+    "dorsal_device": "Un seul embout compact cylindrique à bandes/anneaux gris dépasse du haut du dos, derrière les épaules, vers la droite de l’image. Son extrémité et ses petites projections terminales restent dans le canvas. La base reste masquée par le dos, sans ouverture artificielle pour montrer un ancrage inventé.",
+    "dorsal_phase": "Aucune longue tige organique dressée, aucun bulbe rouge et aucune fusion avec l’autre état dorsal montré dans la figurine exclue du prompt.",
+    "framing": "Un seul Ogroman entier, tête, mains, doigts visibles, deux pieds et extrémité dorsale contenus. Aucun personnage tenu dans la main, socle, texte, décor ou ombre de sol.",
+    "anatomy_count_review": {
+      "arms_visible": 2,
+      "hands_visible": 2,
+      "legs_visible": 2,
+      "feet_visible": 2,
+      "compact_dorsal_device_visible": 1,
+      "deployed_red_stalk_observed": false,
+      "detached_or_extra_limb_observed": false
+    },
+    "padding_target": {
+      "requested_percent_each_side": 10,
+      "achieved": false,
+      "margins_alpha16_left_top_right_bottom": [
+        73,
+        124,
+        75,
+        95
+      ],
+      "margins_alpha16_percent_left_top_right_bottom": [
+        6.51,
+        8.84,
+        6.68,
+        6.78
+      ],
+      "principal_extremity_clipped": false
+    },
+    "limits": [
+      "Marges principales alpha≥16 gauche/haut/droite/bas : [73, 124, 75, 95] px, soit [6.51, 8.84, 6.68, 6.78] %. La cible de 10 % sur chaque bord n’est pas atteinte ; aucune extrémité principale ne touche le cadre.",
+      "La vue reste assez frontale malgré la direction gauche lisible. Elle ne documente pas le dos complet ni un profil latéral strict.",
+      "L’insertion du dispositif dorsal est masquée dans la source et le candidat. Sa géométrie interne, son orientation exacte en volume et les surfaces arrière ne sont pas certifiées.",
+      "Les doigts éloignés, replis cutanés, plaques et textures sont interprétés ; la revue ne garantit pas une correspondance native de chaque détail.",
+      "La pose de pas ne prouve pas un cycle animé, deux contacts simultanés au sol, une échelle physique, une collision, un rig ou une admission moteur."
+    ]
+  },
+  "failed_gates": [],
+  "uncertain_gates": [
+    {
+      "gate": "hidden_dorsal_attachment_geometry",
+      "reason": "Insertion derrière les épaules non exposée par la référence ; conservation d’une occlusion naturelle, sans preuve de géométrie 1:1."
+    }
+  ],
+  "alpha": {
+    "mode": "RGBA",
+    "size": [
+      1122,
+      1402
+    ],
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox_alpha_gte16": [
+      73,
+      124,
+      1047,
+      1307
+    ],
+    "margins_alpha16_left_top_right_bottom": [
+      73,
+      124,
+      75,
+      95
+    ],
+    "margins_alpha16_percent_left_top_right_bottom": [
+      6.51,
+      8.84,
+      6.68,
+      6.78
+    ],
+    "bbox_all_nonzero_alpha": [
+      0,
+      20,
+      1108,
+      1402
+    ],
+    "pixels_alpha0": 992104,
+    "pixels_alpha1_to15": 48231,
+    "pixels_alpha1_to3": 40825,
+    "pixels_alpha255": 904,
+    "all_subject_alpha_255": false,
+    "halo_finding": "PNG RGBA original et composites gris/clair personnellement inspectés. Vraie transparence ; pas de fond opaque ou de halo large substantiel observé sur les composites. Des résidus de très faible alpha s’étendent hors de la silhouette et parfois jusqu’aux bords ; ils ne sont pas interprétés comme des extrémités coupées. Octets originaux conservés."
+  },
+  "qa_previews_only": [
+    "/workspace/scratch/3fced93cfb0a/qa-v18/re6_ogroman_left_01-gray.jpg",
+    "/workspace/scratch/3fced93cfb0a/qa-v18/re6_ogroman_left_01-light.jpg"
+  ],
+  "inspection_method": "Inspection indépendante personnelle de chaque référence réellement jointe au prompt, du PNG original et de ses composites gris et clair. Vérification séparée des dimensions, de la bounding box alpha≥16, du nombre de pixels transparents, du SHA256 et de l’égalité des octets entre original et archive. Aucun nettoyage, recadrage, padding ou autre retouche du PNG livré.",
+  "original_bytes_modified": false,
+  "original_generated_bytes_verified_identical": true,
+  "one_subject_per_image_reviewed": true,
+  "quality_rejection_is_tool_refusal": false,
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "animation_frames": 1,
+  "can_mirror": false,
+  "recommended_action": "Conserver LEFT 01 comme candidat statique avant-gauche de la variante au dispositif cylindrique compact. Aucune correction du nombre de membres ou du dispositif dorsal n’est requise par cette revue. Ne pas transformer le cylindre en appendice rouge ni présenter cette image comme une vue arrière documentée."
+}

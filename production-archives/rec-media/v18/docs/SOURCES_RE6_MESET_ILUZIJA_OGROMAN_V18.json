@@ -1,0 +1,1302 @@
+{
+  "schema": "rec.source-audit.re6-meset-iluzija-ogroman.v18",
+  "date": "2026-11-20",
+  "reviewer": "reference_research",
+  "language": "fr",
+  "repository": "darknigthmare/resident-evil-bow-protocol",
+  "pull_request": 23,
+  "resume_base_commit": "8073338896937faef6f1718387c1c9b3a4be6b72",
+  "delivery_parent_commit": "935f44716b890303982c4cc384140cf54f4058b5",
+  "scope": "Recherche et inspection de sources exactes pour trois UID RE6 (2012). Aucun appel de génération, aucune mutation du runtime, aucun staging, commit ou publication. Seul ce rapport est copié dans V18.",
+  "summary": {
+    "ready_for_scoped_candidate": [
+      "re6-meset",
+      "re6-iluzija",
+      "re6-ogroman"
+    ],
+    "source_hold_preserved_in_historical_snapshot": [
+      "re6-meset",
+      "re6-iluzija",
+      "re6-ogroman"
+    ],
+    "inventory_mutated": false,
+    "new_generated_assets": 0,
+    "source_bitmaps_copied_to_repository": false,
+    "canonical_one_to_one_certified": false,
+    "native_mesh_authentication_performed": false
+  },
+  "historical_snapshot": {
+    "workspace_path": "/workspace/scratch/3fced93cfb0a/repo/production-archives/rec-media/CONTINUATION_V17_20261120.json",
+    "local_reference_file": "CONTINUATION_V17_20261120.json",
+    "bytes": 574615,
+    "sha256": "79170b2c132b1c200cc0d0dbfa11e76c658fe40e7572c0e35afb9fe6f0787823",
+    "repository_path": "production-archives/rec-media/CONTINUATION_V17_20261120.json"
+  },
+  "r34_tracking_snapshot": {
+    "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/R34_TRACKING_reference_snapshot.json",
+    "local_reference_file": "R34_TRACKING_reference_snapshot.json",
+    "bytes": 2009160,
+    "sha256": "98114fb305d7bde056f7ff0052016c5bfbd0be4582a46e88c67499ec13a16a3e",
+    "repository_path": "docs/R34_TRACKING.json"
+  },
+  "historical_review_scope": [
+    "Entrées V17 des trois UID et de cinq identités liées/contextuelles ; baseline, refus propres, flags actuels et blockedOutputs contrôlés.",
+    "Six reçus R34 réels (corps/portrait) récupérés depuis le dépôt ; les corps étaient HELD_REFERENCE et les portraits GENERATED, sans requête corps envoyée par ces reçus.",
+    "R34_TRACKING.json réel contrôlé : aucun refus propre trouvé pour Meset, Iluzija ou Ogroman.",
+    "Aucun refus propre ou lié connu n’est effacé ou converti en simple problème de source. Le présent rapport ne modifie pas les états de l’inventaire."
+  ],
+  "related_history_preserved": [
+    {
+      "uid": "re6-javo",
+      "historical_entry_unchanged": {
+        "uid": "re6-javo",
+        "label": "J'avo",
+        "edition": "Resident Evil 6 (2012)",
+        "fighter_category": "experimental",
+        "baseline_status": "BLOCKED_HISTORICAL_IDENTITY_NO_RETRY",
+        "current_outcome": "HISTORICAL_TOOL_REFUSAL",
+        "retained_assets": [],
+        "trials": [],
+        "current_tool_refusals": [],
+        "current_hold_decisions": [],
+        "further_generation_blocked_by_current_refusal": false,
+        "later_left_request_refused_after_right_candidate": false,
+        "canonical_one_to_one_certified": false,
+        "engine_admitted_by_this_continuation": false,
+        "baseline_evidence": {
+          "manifestUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/manifest.json",
+          "bodyReceiptUrl": null,
+          "portraitReceiptUrl": null,
+          "blockedOutputs": [
+            {
+              "kind": "portrait",
+              "status": "BLOCKED_HISTORICAL_REFUSAL",
+              "receiptPath": null,
+              "receiptUrl": null,
+              "trackingUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json"
+            },
+            {
+              "kind": "idle",
+              "status": "BLOCKED_HISTORICAL_REFUSAL",
+              "receiptPath": null,
+              "receiptUrl": null,
+              "trackingUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json"
+            }
+          ]
+        }
+      },
+      "tool_refusal": true,
+      "decision": "Conserver le blocage ; aucune relance ni substitution de ce sujet."
+    },
+    {
+      "uid": "re6-zombie",
+      "historical_entry_unchanged": {
+        "uid": "re6-zombie",
+        "label": "Zombie au Virus-C",
+        "edition": "Resident Evil 6 (2012)",
+        "fighter_category": "main",
+        "baseline_status": "BLOCKED_HISTORICAL_IDENTITY_NO_RETRY",
+        "current_outcome": "HISTORICAL_TOOL_REFUSAL",
+        "retained_assets": [],
+        "trials": [],
+        "current_tool_refusals": [],
+        "current_hold_decisions": [],
+        "further_generation_blocked_by_current_refusal": false,
+        "later_left_request_refused_after_right_candidate": false,
+        "canonical_one_to_one_certified": false,
+        "engine_admitted_by_this_continuation": false,
+        "baseline_evidence": {
+          "manifestUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/manifest.json",
+          "bodyReceiptUrl": null,
+          "portraitReceiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_2/re6-zombie/portrait.json",
+          "blockedOutputs": [
+            {
+              "kind": "portrait",
+              "status": "BLOCKED_BY_TOOL",
+              "receiptPath": "modules/fidelity-r34/assets/lots/lot_2/re6-zombie/portrait.json",
+              "receiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_2/re6-zombie/portrait.json",
+              "trackingUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json"
+            },
+            {
+              "kind": "idle",
+              "status": "BLOCKED_BY_TOOL_PRIOR_PHASE",
+              "receiptPath": null,
+              "receiptUrl": null,
+              "trackingUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json"
+            }
+          ]
+        }
+      },
+      "tool_refusal": true,
+      "decision": "Conserver le blocage ; aucune relance ni substitution de ce sujet."
+    },
+    {
+      "uid": "re6-deborah-harper",
+      "historical_entry_unchanged": {
+        "uid": "re6-deborah-harper",
+        "label": "Deborah Harper",
+        "edition": "Resident Evil 6 (2012)",
+        "fighter_category": "experimental",
+        "baseline_status": "BLOCKED_HISTORICAL_IDENTITY_NO_RETRY",
+        "current_outcome": "HISTORICAL_TOOL_REFUSAL",
+        "retained_assets": [],
+        "trials": [],
+        "current_tool_refusals": [],
+        "current_hold_decisions": [],
+        "further_generation_blocked_by_current_refusal": false,
+        "later_left_request_refused_after_right_candidate": false,
+        "canonical_one_to_one_certified": false,
+        "engine_admitted_by_this_continuation": false,
+        "baseline_evidence": {
+          "manifestUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/manifest.json",
+          "bodyReceiptUrl": null,
+          "portraitReceiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_2/re6-deborah-harper/portrait.json",
+          "blockedOutputs": [
+            {
+              "kind": "portrait",
+              "status": "BLOCKED_BY_TOOL",
+              "receiptPath": "modules/fidelity-r34/assets/lots/lot_2/re6-deborah-harper/portrait.json",
+              "receiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_2/re6-deborah-harper/portrait.json",
+              "trackingUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json"
+            },
+            {
+              "kind": "idle",
+              "status": "BLOCKED_BY_TOOL_PRIOR_PHASE",
+              "receiptPath": null,
+              "receiptUrl": null,
+              "trackingUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json"
+            }
+          ]
+        }
+      },
+      "tool_refusal": true,
+      "decision": "Conserver le blocage ; aucune relance ni substitution de ce sujet."
+    },
+    {
+      "uid": "re1-yawn",
+      "historical_entry_unchanged": {
+        "uid": "re1-yawn",
+        "label": "Yawn",
+        "edition": "Resident Evil (1996)",
+        "fighter_category": "experimental",
+        "baseline_status": "LEFT_GAP_SOURCE_AVAILABLE",
+        "current_outcome": "OWN_TOOL_REFUSAL",
+        "retained_assets": [],
+        "trials": [],
+        "current_tool_refusals": [
+          {
+            "batch": "V8",
+            "manifest": "v8/manifests/ASSET_MANIFEST_V8.json",
+            "receipt": {
+              "uid": "re1-yawn",
+              "edition": "Resident Evil (1996)",
+              "job_id": "REC_RE1_YAWN_FULLBODY_LEFT_V8_01",
+              "status": "BLOCKED_BY_TOOL_V8_NO_RETRY",
+              "error": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 96ca1866-1a11-4d2c-8213-6938aa219f1b.\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"other\\\"\\n      ]\\n    }\\n  }\\n}\")",
+              "request_id": "96ca1866-1a11-4d2c-8213-6938aa219f1b",
+              "png_produced": false,
+              "no_retry": true,
+              "canonical_one_to_one_certified": false,
+              "engine_admitted": false,
+              "moderation_stage": "output",
+              "moderation_categories": [
+                "other"
+              ],
+              "error_code": "moderation_blocked"
+            }
+          }
+        ],
+        "current_hold_decisions": [],
+        "further_generation_blocked_by_current_refusal": true,
+        "later_left_request_refused_after_right_candidate": false,
+        "canonical_one_to_one_certified": false,
+        "engine_admitted_by_this_continuation": false,
+        "baseline_evidence": {
+          "manifestUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/manifest.json",
+          "bodyReceiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/re1-yawn/idle.json",
+          "portraitReceiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/re1-yawn/portrait.json",
+          "blockedOutputs": []
+        }
+      },
+      "tool_refusal": true,
+      "decision": "Conserver le blocage ; aucune relance ni substitution de ce sujet."
+    },
+    {
+      "uid": "re1r-yawn",
+      "historical_entry_unchanged": {
+        "uid": "re1r-yawn",
+        "label": "Yawn",
+        "edition": "Resident Evil remake (2002)",
+        "fighter_category": "experimental",
+        "baseline_status": "HELD_COMPLETE_OR_EXACT_REFERENCE",
+        "current_outcome": "CANDIDATE_WITH_LATER_DIRECTION_REFUSAL",
+        "retained_assets": [
+          {
+            "uid": "re1r-yawn",
+            "label": "Yawn",
+            "edition": "Resident Evil remake (2002)",
+            "batch": "V14",
+            "path": "v14/assets/REC_YAWN_REMAKE_2002_FULLBODY_LEFT_V14_01.png",
+            "sha256": "c4c4fe544a24afee82e7c359439acfdae49bc6adf68053a30009f7987dcc3c19",
+            "dimensions": [
+              1754,
+              897
+            ],
+            "direction": "left",
+            "variant": null,
+            "retained_candidate": true,
+            "review_status": "CANDIDATE_STATIC_WITH_LIMITS",
+            "review": "v14/docs/yawn-left-review.json",
+            "manifest": "v14/manifests/ASSET_MANIFEST_V14.json",
+            "canonical_one_to_one_certified": false,
+            "engine_admitted": false
+          }
+        ],
+        "trials": [],
+        "current_tool_refusals": [
+          {
+            "batch": "V14",
+            "receipt": "v14/docs/yawn-right-refusal.json",
+            "request_id": "5fa3884a-eab3-40ae-80ee-0a0008197edf",
+            "requested_direction": "right",
+            "status": "TOOL_REFUSAL_NO_IMAGE"
+          }
+        ],
+        "current_hold_decisions": [],
+        "further_generation_blocked_by_current_refusal": true,
+        "later_left_request_refused_after_right_candidate": false,
+        "canonical_one_to_one_certified": false,
+        "engine_admitted_by_this_continuation": false,
+        "baseline_evidence": {
+          "manifestUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/manifest.json",
+          "bodyReceiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/re1r-yawn/idle.json",
+          "portraitReceiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/re1r-yawn/portrait.json",
+          "blockedOutputs": []
+        },
+        "previous_snapshot_outcome": "SOURCE_HOLD",
+        "previous_source_hold_decisions": [],
+        "new_static_direction_variants": [
+          {
+            "direction": "left",
+            "variant": null,
+            "asset": "v14/assets/REC_YAWN_REMAKE_2002_FULLBODY_LEFT_V14_01.png"
+          }
+        ],
+        "updated_by_continuation": "2026-11-20",
+        "source_hold_resolution": "Références corporelles complètes retrouvées et inspectées ; voir les dossiers V14/V15. Cela ne valide pas le mesh, les textures cachées, les animations ou le runtime.",
+        "later_right_request_refused_after_left_candidate": true,
+        "no_retry_after_current_refusal": true
+      },
+      "tool_refusal": true,
+      "decision": "Conserver le blocage ; aucune relance ni substitution de ce sujet."
+    }
+  ],
+  "related_identity_scope": "Le lien narratif général au virus C ou une silhouette vaguement similaire ne transforme pas ces trois UID distincts en versions de J’avo, Deborah, Zombie ou Yawn. L’audit ne propose aucune image de ces identités refusées, aucune phase de leurs corps ni changement d’édition pour les contourner.",
+  "source_pages": [
+    {
+      "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-blackjack-enemies.html",
+      "local_reference_file": "re6-blackjack-enemies.html",
+      "bytes": 142456,
+      "sha256": "8310af68c7fc1b058679fdcfbb7852895454f615fa55f84cde72b458691a0a81",
+      "url": "https://blackjackrants.blogspot.com/2020/08/reviewing-monsters-resident-evil-6.html?m=0"
+    },
+    {
+      "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-blackjack-bosses.html",
+      "local_reference_file": "re6-blackjack-bosses.html",
+      "bytes": 116692,
+      "sha256": "10563ac572f56e0bd55fbca6ea85125fac8c1f9b719fc6c247d579933949b813",
+      "url": "https://blackjackrants.blogspot.com/2020/10/reviewing-monsters-resident-evil-6.html?m=0"
+    },
+    {
+      "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-center-figures.html",
+      "local_reference_file": "re6-center-figures.html",
+      "bytes": 125100,
+      "sha256": "b369719fd48df40d2773c5a708b7856997b1caa9ae23300c15bcb6f175364213",
+      "url": "https://www.residentevilcenter.net/especiales/43-colaboracion"
+    },
+    {
+      "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-iluzija-umbrella.html",
+      "local_reference_file": "re6-iluzija-umbrella.html",
+      "bytes": 52001,
+      "sha256": "08d90a8ab566e8e6682bbeba4cf9dfec8fb0f2028628f37d4b1c0b789767d973",
+      "url": "https://umbrella-online.co.uk/wiki/iluzija/"
+    },
+    {
+      "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-refr-infos.html",
+      "local_reference_file": "re6-refr-infos.html",
+      "bytes": 56457,
+      "sha256": "40d593482b7dad72f32b8165f33decc10f3b0ef5c00f0935241fdb90adca8669",
+      "url": "https://www.residentevilfr.com/jeux/resident_evil_6_infos.html"
+    }
+  ],
+  "primary_text_context": [
+    {
+      "url": "https://game.capcom.com/residentevil/en/exfile-2-38.html",
+      "title": "Iluzija — fichier officiel Capcom",
+      "retrieval": "Texte retrouvé par recherche web. Téléchargement direct HTTP 403 ; pas de contournement ni de fichier HTML local.",
+      "support": "Iluzija est une mutation humaine spontanée du virus C après chrysalidification, avec camouflage ; ce n’est pas un serpent infecté emprunté à un ancien épisode.",
+      "not_visual_proof": true
+    },
+    {
+      "url": "https://www.projectumbrella.net/mesets.html",
+      "title": "Transcription du fichier Mesets",
+      "support": "Mutation avancée du virus C à aspect de corbeau ; contexte d’identité uniquement.",
+      "not_visual_proof": true
+    },
+    {
+      "url": "https://www.evilresource.com/resident-evil-6/files/mesets-file",
+      "title": "Mesets — transcription du fichier RE6",
+      "support": "Identité et comportement aérien corroborés par le fichier de jeu.",
+      "not_visual_proof": true
+    }
+  ],
+  "sources": [
+    {
+      "id": "meset_native_figure",
+      "uid": "re6-meset",
+      "source_class": "Capture native du visualiseur Figurines de RE6, hébergée par Resident Evil Center",
+      "qualification": "QUALIFIED_COMPLETE_SILHOUETTE",
+      "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-meset-figure-center.png",
+      "local_reference_file": "re6-meset-figure-center.png",
+      "bytes": 1002971,
+      "sha256": "8f72bbb33f209ef212b0ce903946b68eb3798f47fd11196a5ed662c5c567b6c3",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "url": "https://www.residentevilcenter.net/images/games/residentevil6/figuras/Mesets.png",
+      "inspection": [
+        "Sujet entier et unique dans le visualiseur : deux ailes déployées, pointes latérales, tête et appendices inférieurs contenus dans l’image.",
+        "La vue résout les extrémités d’ailes coupées dans les deux autres rendus ; les raccords centraux restent en partie superposés naturellement.",
+        "Pose suspendue/en vol, avec anatomie de mutation complète : longues ailes mêlant plumes et lames membraneuses, tête orientée vers le bas et plusieurs appendices préhensiles articulés.",
+        "Aucune preuve d’une posture debout ou d’un appui au sol : la source doit rester une référence de vol."
+      ],
+      "limits": [
+        "Éclairage sombre ; ne pas dériver une microtexture nouvelle des zones noires.",
+        "Plateforme et version technique de la capture non attestées. La page l’attribue au visualiseur RE6, pas à un remake ; aucune extraction ni authentification de mesh n’a été effectuée.",
+        "Une vue ne démontre ni toutes les faces cachées ni tous les ancrages de chaque appendice.",
+        "Les lumières, grillages et éléments du visualiseur ne font pas partie de la créature."
+      ],
+      "raw_bytes_preserved": true,
+      "native_mesh_authentication_performed": false,
+      "source_page_url": "https://www.residentevilcenter.net/especiales/43-colaboracion",
+      "visually_inspected": true
+    },
+    {
+      "id": "meset_render_partial",
+      "uid": "re6-meset",
+      "source_class": "Rendu de présentation final reproduit dans un article consacré à RE6 (2012)",
+      "qualification": "QUALIFIED_DETAIL_ONLY_WITH_NATIVE_COMPLETION",
+      "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-meset-blackjack.png",
+      "local_reference_file": "re6-meset-blackjack.png",
+      "bytes": 133141,
+      "sha256": "f987a8b11dc79c26ebd8820ea64a510eb8e55dbe0889e0745f3adb32bf8a859d",
+      "dimensions": [
+        559,
+        422
+      ],
+      "mode": "RGB",
+      "format": "PNG",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjGxFAdFD3f15_Kkre4BMQiRubcK3uKwlXVkY2Sl1xhyphenhyphenavVjMPi55dVnhm2H_AagkvoPS_1al4yjN6_5aEvKJL-UNCA94bDotQ0gNE2MZSQj1rRjP2IrC6olnTRXnGy7DCdxwvuPGYVCQDP/",
+      "inspection": [
+        "Même pose et même tête que le catalogue R34, dans un cadrage élargi, avec appendices inférieurs complets.",
+        "Extrémité de l’aile à gauche de l’image coupée au bord : cette image seule ne lève pas le hold corps entier.",
+        "Les textures sombres brun/noir, les zones membraneuses, les lames/plumes et les pinces/griffes recourbées sont plus lisibles que sur la capture native."
+      ],
+      "limits": [
+        "Ne pas étendre artificiellement la toile ni inventer la pointe manquante.",
+        "La preuve de silhouette complète vient de meset_native_figure, pas de ce rendu.",
+        "Hébergeur secondaire ; attribution à RE6 et correspondance visuelle contrôlées, mais origine du fichier/mesh non authentifiée."
+      ],
+      "raw_bytes_preserved": true,
+      "native_mesh_authentication_performed": false,
+      "source_page_url": "https://blackjackrants.blogspot.com/2020/08/reviewing-monsters-resident-evil-6.html?m=0",
+      "visually_inspected": true
+    },
+    {
+      "id": "iluzija_render_complete",
+      "uid": "re6-iluzija",
+      "source_class": "Rendu de présentation final reproduit dans un article consacré aux boss de RE6",
+      "qualification": "QUALIFIED_COMPLETE_VISIBLE_COILED_PHASE",
+      "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-iluzija-blackjack.png",
+      "local_reference_file": "re6-iluzija-blackjack.png",
+      "bytes": 433931,
+      "sha256": "aa449fd52cafa482d0a602b1f58229539f13642ca9c352e53ba9d52d4dd49202",
+      "dimensions": [
+        619,
+        843
+      ],
+      "mode": "RGB",
+      "format": "PNG",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi2hfenE0ZWtlDhdZLRlFxKNLvBbU0Uxy3zPkdp3ZQ_B0EuGSX7kt394oxz0rqoPjDC43AHFlWvXNaVGg3NhF8pFT7ayX7QmwwpyKbKmk2Oz-_h6DUMVNn955q63tvovY2X2xGChXzhwzam/",
+      "inspection": [
+        "Tête, gueule ouverte, langue, boucles corporelles et pointe de queue intégrales, avec marge sur tous les côtés.",
+        "Le rendu reprend exactement l’apparence et la pose du portrait R34 ; la partie autrefois absente révèle les boucles et la terminaison de queue.",
+        "Phase visible opaque : corps sombre bleu/noir à reflets verts, écailles et plaques irrégulières, plaques plus claires et rouges ; gueule large garnie de structures pointues, langue rouge mince visible.",
+        "Aucun membre ni aile ; les croisements de boucles correspondent à une seule continuité corporelle, pas à plusieurs sujets.",
+        "La queue se rétrécit à droite de l’image et se termine entièrement avant le bord."
+      ],
+      "limits": [
+        "Ne démontre pas la phase camouflée/transparente, la longueur complètement déployée, le dessous de toutes les boucles ni le côté opposé de la tête.",
+        "Ne pas remplacer ses dents/appendices buccaux par un schéma de python générique, ni emprunter le corps de Yawn.",
+        "Attribution d’édition et silhouette corroborées par la capture native ; origine du fichier/mesh non authentifiée."
+      ],
+      "raw_bytes_preserved": true,
+      "native_mesh_authentication_performed": false,
+      "source_page_url": "https://blackjackrants.blogspot.com/2020/10/reviewing-monsters-resident-evil-6.html?m=0",
+      "visually_inspected": true
+    },
+    {
+      "id": "iluzija_native_figure",
+      "uid": "re6-iluzija",
+      "source_class": "Capture native du visualiseur Figurines de RE6, hébergée par Resident Evil Center",
+      "qualification": "QUALIFIED_COMPLETE_NATIVE_CORROBORATION",
+      "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-iluzija-figure-center.png",
+      "local_reference_file": "re6-iluzija-figure-center.png",
+      "bytes": 817684,
+      "sha256": "861a5a97dcecca5544a22c76b5ce8cf0f6ff4f95cda008ec2412b1f046e10a47",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "url": "https://www.residentevilcenter.net/images/games/residentevil6/figuras/Iluzija.png",
+      "inspection": [
+        "Sujet entier visible dans le visualiseur, tête relevée, gueule ouverte, corps enroulé et pointe de queue à droite de l’image.",
+        "La forme des boucles, la peau opaque et la queue corroborent le rendu complet, sous un autre éclairage et un angle légèrement différent.",
+        "L’image atteste une silhouette finale en jeu et ne constitue pas un dessin de conception."
+      ],
+      "limits": [
+        "Capture sombre ; ne certifie pas les microtextures cachées ni une autre phase.",
+        "Plateforme de capture non attestée ; aucune donnée de mesh extraite."
+      ],
+      "raw_bytes_preserved": true,
+      "native_mesh_authentication_performed": false,
+      "source_page_url": "https://www.residentevilcenter.net/especiales/43-colaboracion",
+      "visually_inspected": true
+    },
+    {
+      "id": "ogroman_render_complete",
+      "uid": "re6-ogroman",
+      "source_class": "Rendu de présentation final reproduit dans l’article RE6 (2012) de Blackjack",
+      "qualification": "QUALIFIED_COMPLETE_CYLINDRICAL_DORSAL_VARIANT",
+      "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-ogroman-blackjack-render.png",
+      "local_reference_file": "re6-ogroman-blackjack-render.png",
+      "bytes": 382861,
+      "sha256": "1f4edef1200b70a4f6927f5df8a7c3d8c15ff551e790699c05682c764c064e51",
+      "dimensions": [
+        620,
+        778
+      ],
+      "mode": "RGB",
+      "format": "PNG",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhYpc5OdjPjx87tR-1yC84qJOQ6u-sacsI6ek0JZU29vohqj_HsG0Mv6naY_2ez5Ws2vijNncl3aVXDvcXc_bS44Xn-0awLsmJj7WYVTB3XHdXqR4Srzn79zdUl1ZHKb6Yk8eO77r5Mxf5f/",
+      "inspection": [
+        "Tête, deux bras avec mains, deux jambes avec pieds, et extrémité visible du dispositif dorsal cylindrique entièrement dans le cadre.",
+        "Géant humanoïde gris/verdâtre, crâne massif, gueule très ouverte et allongée, saillies osseuses/plaques aux épaules et aux hanches, bras très longs, mains et pieds larges.",
+        "Vue frontale en trois quarts : la main à droite de l’image est proche ; le pied à gauche de l’image est projeté vers l’avant.",
+        "Le dispositif dorsal à segments/anneaux gris dépasse derrière l’épaule à droite de l’image ; son insertion profonde et une partie du dos sont masquées naturellement.",
+        "Même tête et mêmes détails thoraciques que le catalogue R34, maintenant avec corps complet."
+      ],
+      "limits": [
+        "Conserver le dispositif cylindrique représenté et l’occlusion de son insertion. Ne pas inventer toute la géométrie dorsale ni déplacer arbitrairement le dispositif.",
+        "La vue ne prouve pas tous les dos des doigts/orteils, leurs espacements cachés, le dos entier ou les surfaces masquées par la pose.",
+        "Ne pas fusionner avec l’organe dorsal charnu dressé de la figurine native, qui montre un autre état du dos.",
+        "Ce rendu n’authentifie pas les meshes ou les textures natives ; attribution finale corroborée par catalogue et capture de jeu."
+      ],
+      "raw_bytes_preserved": true,
+      "native_mesh_authentication_performed": false,
+      "source_page_url": "https://blackjackrants.blogspot.com/2020/08/reviewing-monsters-resident-evil-6.html?m=0",
+      "visually_inspected": true
+    },
+    {
+      "id": "ogroman_native_partial",
+      "uid": "re6-ogroman",
+      "source_class": "Capture native RE6 reproduite par Blackjack",
+      "qualification": "CORROBORATION_HEAD_ONLY",
+      "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-ogroman-blackjack-native.png",
+      "local_reference_file": "re6-ogroman-blackjack-native.png",
+      "bytes": 253443,
+      "sha256": "d7de09e02ad75db85c47ca65eb90100773fe66ccd97ff93408c2a3e723abdd97",
+      "dimensions": [
+        640,
+        360
+      ],
+      "mode": "RGB",
+      "format": "PNG",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhOi6Rgz1a0m0lbsBa3avbibMf51JzPaTPQdlWdQ6u2AJ9mOegNGhy-i9JWtc4KEy7-CuALgXCrfbtDEdQ3r4hF9Afp8N3kvTwgVCl0sV43KgcyZnfbUQR7IsggcQATxe_owG89cSbFDSW3/",
+      "inspection": [
+        "Gros plan natif du visage d’Ogroman lors d’une interaction avec un personnage, permettant la comparaison du crâne et de la bouche.",
+        "Le personnage humain et l’action de la capture ne constituent pas une cible de génération."
+      ],
+      "limits": [
+        "Corps d’Ogroman coupé ; aucune preuve de pieds ou de dos entier.",
+        "Ne pas reprendre la scène, l’autre personnage ou les interactions de la capture dans un asset mono-sujet."
+      ],
+      "raw_bytes_preserved": true,
+      "native_mesh_authentication_performed": false,
+      "source_page_url": "https://blackjackrants.blogspot.com/2020/08/reviewing-monsters-resident-evil-6.html?m=0",
+      "visually_inspected": true
+    },
+    {
+      "id": "ogroman_figure_different_dorsal_state",
+      "uid": "re6-ogroman",
+      "source_class": "Capture native du visualiseur Figurines de RE6, hébergée par Resident Evil Center",
+      "qualification": "PARTIAL_DIFFERENT_DORSAL_STATE_NOT_TO_MIX",
+      "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-ogroman-figure-center.png",
+      "local_reference_file": "re6-ogroman-figure-center.png",
+      "bytes": 869230,
+      "sha256": "7fcc904b20b34c0aa267ee1c393173587d76c8b0b0d62a7d9f8664a284b872c8",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "url": "https://www.residentevilcenter.net/images/games/residentevil6/figuras/Ogroman.png",
+      "inspection": [
+        "Vue frontale native du torse et des membres supérieurs ; les proportions, plaques osseuses et forme générale de tête concordent.",
+        "L’appendice dorsal charnu est dressé derrière la tête, différent du dispositif cylindrique gris du rendu choisi."
+      ],
+      "limits": [
+        "Pieds/jambes basses et sommet de l’appendice dorsal hors cadre : ce n’est pas une source corporelle complète.",
+        "Ne pas transformer le dos du rendu complet à partir de cet autre état."
+      ],
+      "raw_bytes_preserved": true,
+      "native_mesh_authentication_performed": false,
+      "source_page_url": "https://www.residentevilcenter.net/especiales/43-colaboracion",
+      "visually_inspected": true
+    },
+    {
+      "id": "iluzija_umbrella_cut",
+      "uid": "re6-iluzija",
+      "source_class": "Détourage secondaire du même rendu",
+      "qualification": "REJECTED_AS_COMPLETE_BODY",
+      "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-iluzija-umbrella.png",
+      "local_reference_file": "re6-iluzija-umbrella.png",
+      "bytes": 268219,
+      "sha256": "76c4136b27354708467141ce8f64bceeb7eaff67ba0277cb634a57ed08659e2d",
+      "dimensions": [
+        367,
+        419
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "url": "https://umbrella-online.co.uk/wiki_files/characters/iluzija.png",
+      "inspection": [
+        "Tête, boucles et queue visibles, mais limite horizontale tronquée dans la partie basse de la boucle.",
+        "Le rendu Blackjack complet révèle ce qui manque ; cette version ne doit pas être invoquée comme preuve de totalité."
+      ],
+      "limits": [
+        "Ne pas confondre les marges transparentes ajoutées et une silhouette vraiment complète."
+      ],
+      "raw_bytes_preserved": true,
+      "native_mesh_authentication_performed": false,
+      "source_page_url": "https://umbrella-online.co.uk/wiki/iluzija/",
+      "visually_inspected": true
+    },
+    {
+      "id": "meset_refr_native_partial",
+      "uid": "re6-meset",
+      "source_class": "Petite capture native RE6 reproduite par REFR",
+      "qualification": "PARTIAL_CORROBORATION_ONLY",
+      "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-meset-refr.png",
+      "local_reference_file": "re6-meset-refr.png",
+      "bytes": 22141,
+      "sha256": "2f8acce200a71f9385785e82f6667943bddcc91e0b4a0376013151d222c3c9a0",
+      "dimensions": [
+        200,
+        150
+      ],
+      "mode": "P",
+      "format": "PNG",
+      "url": "https://residentevilfr.com/jeux_avant/RE6/images/monstres/mesets.png",
+      "inspection": [
+        "Mutation ailée de RE6 en scène, mais ailes et corps hors cadre."
+      ],
+      "limits": [
+        "200×150 seulement ; ne résout pas les extrémités."
+      ],
+      "raw_bytes_preserved": true,
+      "native_mesh_authentication_performed": false,
+      "source_page_url": "https://www.residentevilfr.com/jeux/resident_evil_6_infos.html",
+      "visually_inspected": true
+    },
+    {
+      "id": "iluzija_refr_partial",
+      "uid": "re6-iluzija",
+      "source_class": "Petit portrait RE6 reproduit par REFR",
+      "qualification": "PARTIAL_CORROBORATION_ONLY",
+      "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-iluzija-refr.png",
+      "local_reference_file": "re6-iluzija-refr.png",
+      "bytes": 24205,
+      "sha256": "c85da3a5eaf9d2bf0d2e0590e993dd19cf1e3ff21dbcf4503a3adaac03173f01",
+      "dimensions": [
+        150,
+        200
+      ],
+      "mode": "P",
+      "format": "PNG",
+      "url": "https://residentevilfr.com/jeux_avant/RE6/images/monstres/iluzija.png",
+      "inspection": [
+        "Gueule et haut du corps concordants ; corps/queue coupés."
+      ],
+      "limits": [
+        "150×200 seulement ; ne résout pas la totalité."
+      ],
+      "raw_bytes_preserved": true,
+      "native_mesh_authentication_performed": false,
+      "source_page_url": "https://www.residentevilfr.com/jeux/resident_evil_6_infos.html",
+      "visually_inspected": true
+    },
+    {
+      "id": "ogroman_refr_partial",
+      "uid": "re6-ogroman",
+      "source_class": "Petite image RE6 reproduite par REFR",
+      "qualification": "PARTIAL_NOT_USED_FOR_COMPLETION",
+      "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-ogroman-refr.png",
+      "local_reference_file": "re6-ogroman-refr.png",
+      "bytes": 19022,
+      "sha256": "3098b5d2706ba9eb152ebc874b78561ef6e2cfc997671849baae5111670bdd58",
+      "dimensions": [
+        200,
+        150
+      ],
+      "mode": "P",
+      "format": "PNG",
+      "url": "https://residentevilfr.com/jeux_avant/RE6/images/monstres/ogroman.png",
+      "inspection": [
+        "Image secondaire de la fiche RE6 conservée pour provenance, non utilisée pour résoudre le cadrage du corps."
+      ],
+      "limits": [
+        "200×150 ; la preuve de totalité est le rendu complet inspecté, pas cette miniature."
+      ],
+      "raw_bytes_preserved": true,
+      "native_mesh_authentication_performed": false,
+      "source_page_url": "https://www.residentevilfr.com/jeux/resident_evil_6_infos.html",
+      "visually_inspected": false
+    }
+  ],
+  "targets": [
+    {
+      "uid": "re6-meset",
+      "edition": "Resident Evil 6 (2012)",
+      "historical_entry_unchanged": {
+        "uid": "re6-meset",
+        "label": "Meset",
+        "edition": "Resident Evil 6 (2012)",
+        "fighter_category": "experimental",
+        "baseline_status": "HELD_COMPLETE_OR_EXACT_REFERENCE",
+        "current_outcome": "SOURCE_HOLD",
+        "retained_assets": [],
+        "trials": [],
+        "current_tool_refusals": [],
+        "current_hold_decisions": [],
+        "further_generation_blocked_by_current_refusal": false,
+        "later_left_request_refused_after_right_candidate": false,
+        "canonical_one_to_one_certified": false,
+        "engine_admitted_by_this_continuation": false,
+        "baseline_evidence": {
+          "manifestUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/manifest.json",
+          "bodyReceiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_2/re6-meset/idle.json",
+          "portraitReceiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_2/re6-meset/portrait.json",
+          "blockedOutputs": []
+        }
+      },
+      "r34_receipts": {
+        "idle": {
+          "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-meset-r34-idle.json",
+          "local_reference_file": "re6-meset-r34-idle.json",
+          "bytes": 3423,
+          "sha256": "db59fd66775d60cd7d78f7fb0fe8519fcd75d7027d1cdbb829b8c4987cdbf0a9",
+          "repository_path": "modules/fidelity-r34/assets/lots/lot_2/re6-meset/idle.json",
+          "receipt": {
+            "schema": "re.bow.generated-output-r34/1",
+            "uid": "re6-meset",
+            "kind": "idle",
+            "lotId": "lot_2",
+            "status": "HELD_REFERENCE",
+            "generator": "image_gen",
+            "prompt": "Create a faithful generated game asset for Meset, exact incarnation Resident Evil 6 (2012). Use the attached verified references only. Preserve the precise head, anatomy, proportions, costume, equipment, material colours and asymmetric details. Do not mix games, phases or editions. Match the source appearance without added cartoon outlines, coloured halos or decoration. One subject only, no text, labels, scenery, floor, montage or frame. Clean transparent alpha. This remains a generated adaptation, not an original Capcom frame or a geometric 1:1 certificate. One complete full-body static combat idle base pose, facing right in a side/three-quarter fighting-game view. Keep every source-documented limb, foot, tail, wing, tentacle, horn and equipment inside the image with generous transparent padding. Preserve actual locomotion and support points; do not turn a quadruped or aquatic creature into a humanoid. Produce the entire body in this one image, not separate pieces. No motion blur, duplicate bodies or animation-frame grid. Only proceed after actually reviewing a complete source body reference.",
+            "references": [
+              {
+                "path": "assets/catalog/re6-meset.png",
+                "bytes": 113724,
+                "sha256": "1adb618123119053c6975135b0204e082f6eadf40885e12f82fcb06859409661",
+                "role": "catalogue-reference",
+                "bodyCoverage": "unknown",
+                "exactIdentity": true,
+                "sourceUrl": "https://www.evilresource.com/resident-evil-6/enemies/meset",
+                "sourceEdition": "Resident Evil 6 (2012)",
+                "targetEditionAdmitted": true,
+                "bodyCompletenessIndependentReviewRequired": true
+              }
+            ],
+            "generatedBytesEdited": false,
+            "canonicalFidelityCertified": false,
+            "reason": "Complete original-body evidence remains insufficient for this exact identity: Wing tips and lower endpoints are cropped by the original reference; no full silhouette or new grounded support is certified. No body image request was sent, so unseen anatomy or equipment is not represented as verified.",
+            "research": [
+              {
+                "path": "assets/catalog/re6-meset.png",
+                "sha256": "1adb618123119053c6975135b0204e082f6eadf40885e12f82fcb06859409661",
+                "bytes": 113724,
+                "sourceUrl": "https://www.evilresource.com/resident-evil-6/enemies/meset",
+                "actuallyVisuallyInspected": true,
+                "observation": "Compared RE6 Meset: elongated open muzzle, dark maroon leathery body, feather-like torn wing margins and multiple long hooked limbs retained. Wing tips and lower endpoints are cropped by the original reference; no full silhouette or new grounded support is certified.",
+                "conclusion": "The inspected portrait reference does not establish every lower support, limb, appendage and equipment endpoint. A portrait or generated interpretation is not complete-body evidence."
+              }
+            ],
+            "review": {
+              "visuallyReviewed": false,
+              "sourceFacing": "unknown",
+              "fullBodyVisible": false,
+              "fullBodyReviewed": false,
+              "completeBodyReferenceVerified": false,
+              "fightingPoseReviewed": false,
+              "knownAppearanceGaps": [
+                "Complete source coverage remains missing or unresolved."
+              ],
+              "observations": [],
+              "canonicalFidelityCertified": false,
+              "originalIdleAnimationCertified": false
+            }
+          }
+        },
+        "portrait": {
+          "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-meset-r34-portrait.json",
+          "local_reference_file": "re6-meset-r34-portrait.json",
+          "bytes": 3603,
+          "sha256": "1967aa11e395b777e9118e50df2fec67b3a63b47d8b7ddabf353e113869024e3",
+          "repository_path": "modules/fidelity-r34/assets/lots/lot_2/re6-meset/portrait.json",
+          "receipt": {
+            "schema": "re.bow.generated-output-r34/1",
+            "uid": "re6-meset",
+            "kind": "portrait",
+            "lotId": "lot_2",
+            "generator": "image_gen",
+            "prompt": "Create a faithful generated game asset for Meset, exact incarnation Resident Evil 6 (2012). Use the attached verified references only. Preserve the precise head, anatomy, proportions, costume, equipment, material colours and asymmetric details. Do not mix games, phases or editions. Match the source appearance without added cartoon outlines, coloured halos or decoration. One subject only, no text, labels, scenery, floor, montage or frame. Clean transparent alpha. This remains a generated adaptation, not an original Capcom frame or a geometric 1:1 certificate. A square selection portrait showing the head and upper body, with the characteristic face and equipment readable at thumbnail size. Keep the visible identity complete inside this portrait crop; do not invent undocumented features. Preserve the exact nonhuman anatomy, appendages, wings or canine muzzle visible in the source, no human face or torso added.",
+            "references": [
+              {
+                "path": "assets/catalog/re6-meset.png",
+                "bytes": 113724,
+                "sha256": "1adb618123119053c6975135b0204e082f6eadf40885e12f82fcb06859409661",
+                "role": "catalogue-reference",
+                "bodyCoverage": "unknown",
+                "exactIdentity": true,
+                "sourceUrl": "https://www.evilresource.com/resident-evil-6/enemies/meset",
+                "sourceEdition": "Resident Evil 6 (2012)",
+                "targetEditionAdmitted": true,
+                "bodyCompletenessIndependentReviewRequired": true
+              }
+            ],
+            "generatedBytesEdited": false,
+            "canonicalFidelityCertified": false,
+            "review": {
+              "visuallyReviewed": true,
+              "sourceFacing": "front",
+              "portraitIdentityReviewed": true,
+              "fullBodyVisible": false,
+              "completeBodyReferenceVerified": false,
+              "fightingPoseReviewed": false,
+              "knownAppearanceGaps": [],
+              "observations": [
+                "Compared RE6 Meset: elongated open muzzle, dark maroon leathery body, feather-like torn wing margins and multiple long hooked limbs retained.",
+                "Wing tips and lower endpoints are cropped by the original reference; no full silhouette or new grounded support is certified."
+              ],
+              "canonicalFidelityCertified": false,
+              "originalIdleAnimationCertified": false
+            },
+            "status": "GENERATED",
+            "image": "modules/fidelity-r34/assets/generated/re6-meset/portrait.png",
+            "sourceOutputPath": "/workspace/generated_images/exec-4b732afd-340e-4dc4-8574-39631387ee2a.png",
+            "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-4b732afd-340e-4dc4-8574-39631387ee2a.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+            "sha256": "684859febdecff9909e1c4db7946af6954e7633c19c0d9e47f7e8a9d92e59d00",
+            "bytes": 1425743,
+            "technical": {
+              "format": "PNG",
+              "width": 1254,
+              "height": 1254,
+              "bounds": {
+                "x": 0,
+                "y": 9,
+                "width": 1254,
+                "height": 1234
+              },
+              "pivot": {
+                "x": 627.0,
+                "y": 1243
+              },
+              "alpha": {
+                "channel": true,
+                "min": 0,
+                "max": 255,
+                "visibleThreshold": 16,
+                "transparentPixels": 1011429,
+                "totalPixels": 1572516
+              },
+              "silhouetteTouchesCanvasEdge": true,
+              "decodedRgbaSha256": "c0c20389e3e25064a855f483fe2b4a4651b12d5c978802b1e6cd62b0794a42a9"
+            }
+          }
+        }
+      },
+      "r34_catalog": {
+        "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-meset-r34-catalog.png",
+        "local_reference_file": "re6-meset-r34-catalog.png",
+        "bytes": 113724,
+        "sha256": "1adb618123119053c6975135b0204e082f6eadf40885e12f82fcb06859409661",
+        "dimensions": [
+          450,
+          360
+        ],
+        "mode": "RGB",
+        "format": "PNG",
+        "source_url": "https://www.evilresource.com/resident-evil-6/enemies/meset",
+        "visually_inspected": true,
+        "qualification": "Cadrage incomplet historique ; jamais utilisé seul pour reconstituer le corps."
+      },
+      "own_tool_refusal_found": false,
+      "current_refusal_flag_preserved": false,
+      "baseline_status_preserved": "HELD_COMPLETE_OR_EXACT_REFERENCE",
+      "historical_current_outcome_preserved": "SOURCE_HOLD",
+      "source_readiness_only": true,
+      "source_ids": [
+        "meset_native_figure",
+        "meset_render_partial"
+      ],
+      "variant": "Mutation complète ailée RE6, suspendue/en vol, sans proie ni accessoire.",
+      "decision": "SOURCE_AVAILABLE_FOR_SCOPED_STATIC_CANDIDATE",
+      "reason": "Silhouette native entière avec les deux extrémités d’ailes + détail du même modèle dans un rendu plus lisible ; les limites des deux preuves sont documentées séparément.",
+      "next_action": "Réexaminer ces deux originaux avant tout candidat. Conserver toutes les pointes et appendices ; aucune pose debout au sol, aucune normalisation en oiseau à deux pattes, aucun J’avo humain.",
+      "forbidden_substitution": [
+        "Corbeau ordinaire ou infecté d’un autre épisode",
+        "Noga-Let/J’avo ailé ou forme humaine de J’avo",
+        "Aile complétée sans la source native",
+        "Pose avec appui au sol non documenté"
+      ],
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "generation_performed_by_this_audit": false,
+      "anatomy_count_review": {
+        "wings_visible": 2,
+        "clawed_feet_visible": 2,
+        "clawed_feet_visibility": "Un pied central-bas clairement lisible, l’autre derrière à gauche de l’image partiellement masqué.",
+        "independent_arthropod_appendage_count_certified": null,
+        "reason": "Des crochets latéraux partagent visuellement des segments ou se superposent ; plusieurs racines au thorax restent masquées. Le nombre de crochets visibles ne démontre pas autant de membres indépendants.",
+        "instruction": "Reprendre les trajets et bifurcations visibles des deux sources, conserver les occlusions naturelles et ne pas imposer quatre racines arthropodes indépendantes non démontrées.",
+        "temporary_inspection_enlargements": [
+          "/workspace/scratch/3fced93cfb0a/qa-v18/meset-source-appendages-inspection.png",
+          "/workspace/scratch/3fced93cfb0a/qa-v18/meset-native-appendages-inspection.png"
+        ],
+        "enlargements_are_not_new_source_evidence": true
+      }
+    },
+    {
+      "uid": "re6-iluzija",
+      "edition": "Resident Evil 6 (2012)",
+      "historical_entry_unchanged": {
+        "uid": "re6-iluzija",
+        "label": "Iluzija",
+        "edition": "Resident Evil 6 (2012)",
+        "fighter_category": "experimental",
+        "baseline_status": "HELD_COMPLETE_OR_EXACT_REFERENCE",
+        "current_outcome": "SOURCE_HOLD",
+        "retained_assets": [],
+        "trials": [],
+        "current_tool_refusals": [],
+        "current_hold_decisions": [],
+        "further_generation_blocked_by_current_refusal": false,
+        "later_left_request_refused_after_right_candidate": false,
+        "canonical_one_to_one_certified": false,
+        "engine_admitted_by_this_continuation": false,
+        "baseline_evidence": {
+          "manifestUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/manifest.json",
+          "bodyReceiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_3/re6-iluzija/idle.json",
+          "portraitReceiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_3/re6-iluzija/portrait.json",
+          "blockedOutputs": []
+        }
+      },
+      "r34_receipts": {
+        "idle": {
+          "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-iluzija-r34-idle.json",
+          "local_reference_file": "re6-iluzija-r34-idle.json",
+          "bytes": 1374,
+          "sha256": "8b81ea305119e75c19abf1e2de11544b691b6e0447538c16d7ed83f0e4f23803",
+          "repository_path": "modules/fidelity-r34/assets/lots/lot_3/re6-iluzija/idle.json",
+          "receipt": {
+            "schema": "re.bow.generated-output-r34/1",
+            "uid": "re6-iluzija",
+            "lotId": "lot_3",
+            "kind": "idle",
+            "generator": "image_gen",
+            "status": "HELD_REFERENCE",
+            "reason": "Only the snake head and partial neck are visible; the entire serpentine body/tail cannot be reconstructed from this crop. No image_gen body request was issued from insufficient original references.",
+            "research": [
+              {
+                "kind": "ACTUAL_SOURCE_INSPECTION",
+                "path": "assets/catalog/re6-iluzija.png",
+                "sha256": "9bced95e1df57539687982ca541e3dea454ce63a8e03fe786d94ddc1bf4bfd01",
+                "bytes": 196135,
+                "sourceUrl": "https://www.evilresource.com/resident-evil-6/enemies/iluzija",
+                "observation": "Only the snake head and partial neck are visible; the entire serpentine body/tail cannot be reconstructed from this crop.",
+                "actuallyInspected": true,
+                "completeBodyReferenceVerified": false
+              },
+              {
+                "kind": "PUBLIC_SOURCE_REFRESH",
+                "path": "modules/fidelity-r34/assets/lots/lot_3/re6-iluzija/research/source-refresh.json",
+                "sha256": "97e1efede0ba268afb26346518caa4656345f351691c7a27ac06366b4308ea07",
+                "observation": "The exact public enemy page and its own full image URL were checked; any returned image matches retained cropped bytes. A full URL is not a complete-body proof."
+              }
+            ],
+            "canonicalFidelityCertified": false
+          }
+        },
+        "portrait": {
+          "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-iluzija-r34-portrait.json",
+          "local_reference_file": "re6-iluzija-r34-portrait.json",
+          "bytes": 3848,
+          "sha256": "e78f76066503ca0e7d5ba2ca230e1f534004c1519f6b669b62eeddfe0b9d28b9",
+          "repository_path": "modules/fidelity-r34/assets/lots/lot_3/re6-iluzija/portrait.json",
+          "receipt": {
+            "schema": "re.bow.generated-output-r34/1",
+            "uid": "re6-iluzija",
+            "kind": "portrait",
+            "lotId": "lot_3",
+            "status": "GENERATED",
+            "generator": "image_gen",
+            "prompt": "Create a faithful generated game asset for Iluzija, exact incarnation Resident Evil 6 (2012). Use the attached verified references only. Preserve the precise head, anatomy, proportions, costume, equipment, material colours and asymmetric details. Do not mix games, phases or editions. Match the source appearance without added cartoon outlines, coloured halos or decoration. One subject only, no text, labels, scenery, floor, montage or frame. Clean transparent alpha. This remains a generated adaptation, not an original Capcom frame or a geometric 1:1 certificate. A square selection portrait showing the head and upper body, with the characteristic face and equipment readable at thumbnail size. Keep the visible identity complete inside this portrait crop; do not invent undocumented features. Character-select portrait only: frame the source's identifying head/core and upper body large and readable, retaining the actual age, costume, head angle, source colours and phase. Use transparent padding around the face/core; peripheral limb cropping is allowed for the portrait but do not invent body parts. Preserve the 2012 enormous snake's scaly blue-grey and red head, open fanged jaw and narrow tongue, matching the source head presentation.",
+            "references": [
+              {
+                "path": "assets/catalog/re6-iluzija.png",
+                "bytes": 196135,
+                "sha256": "9bced95e1df57539687982ca541e3dea454ce63a8e03fe786d94ddc1bf4bfd01",
+                "role": "catalogue-reference",
+                "bodyCoverage": "unknown",
+                "exactIdentity": true,
+                "sourceUrl": "https://www.evilresource.com/resident-evil-6/enemies/iluzija",
+                "sourceEdition": "Resident Evil 6 (2012)",
+                "targetEditionAdmitted": true,
+                "bodyCompletenessIndependentReviewRequired": true
+              }
+            ],
+            "image": "modules/fidelity-r34/assets/generated/re6-iluzija/portrait.png",
+            "sourceOutputPath": "/workspace/generated_images/exec-2bdea5f7-3538-41e8-b84b-bc726cfeba50.png",
+            "generatedBytesEdited": false,
+            "toolOutputHint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-2bdea5f7-3538-41e8-b84b-bc726cfeba50.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+            "review": {
+              "visuallyReviewed": true,
+              "portraitIdentityReviewed": true,
+              "portraitDisplayRegionReviewed": true,
+              "sourceFacing": "right",
+              "fullBodyVisible": false,
+              "completeBodyReferenceVerified": false,
+              "fightingPoseReviewed": false,
+              "knownAppearanceGaps": [],
+              "observations": [
+                "2012 scaly snake head, open fanged jaw and red tongue reviewed; portrait follows the source head angle.",
+                "Generated reconstruction, not native geometry or 1:1 certification."
+              ],
+              "canonicalFidelityCertified": false,
+              "originalIdleAnimationCertified": false
+            },
+            "bytes": 2638597,
+            "sha256": "623dcdc903061aef0c5466de3a6b17a7485a3ee9a603077e9fabaa83e6fee692",
+            "technical": {
+              "format": "PNG",
+              "width": 1254,
+              "height": 1254,
+              "bounds": {
+                "x": 0,
+                "y": 19,
+                "width": 1254,
+                "height": 1235
+              },
+              "pivot": {
+                "x": 627.0,
+                "y": 1254
+              },
+              "alpha": {
+                "channel": true,
+                "min": 0,
+                "max": 255,
+                "visibleThreshold": 16,
+                "transparentPixels": 451845,
+                "totalPixels": 1572516
+              },
+              "silhouetteTouchesCanvasEdge": true,
+              "decodedRgbaSha256": "2a4a1dd723d9efd5e7527355b514433c64ca40f552b3e32f294e68d44cc25617"
+            }
+          }
+        }
+      },
+      "r34_catalog": {
+        "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-iluzija-r34-catalog.png",
+        "local_reference_file": "re6-iluzija-r34-catalog.png",
+        "bytes": 196135,
+        "sha256": "9bced95e1df57539687982ca541e3dea454ce63a8e03fe786d94ddc1bf4bfd01",
+        "dimensions": [
+          450,
+          360
+        ],
+        "mode": "RGB",
+        "format": "PNG",
+        "source_url": "https://www.evilresource.com/resident-evil-6/enemies/iluzija",
+        "visually_inspected": true,
+        "qualification": "Cadrage incomplet historique ; jamais utilisé seul pour reconstituer le corps."
+      },
+      "own_tool_refusal_found": false,
+      "current_refusal_flag_preserved": false,
+      "baseline_status_preserved": "HELD_COMPLETE_OR_EXACT_REFERENCE",
+      "historical_current_outcome_preserved": "SOURCE_HOLD",
+      "source_readiness_only": true,
+      "source_ids": [
+        "iluzija_render_complete",
+        "iluzija_native_figure"
+      ],
+      "variant": "Phase visible opaque, gueule ouverte et corps bouclé, RE6 (2012).",
+      "decision": "SOURCE_AVAILABLE_FOR_SCOPED_STATIC_CANDIDATE",
+      "reason": "Rendu complet du sujet avec queue terminale, corroboré par une capture native entière du visualiseur.",
+      "next_action": "Limiter le candidat à la phase opaque enroulée ; garder la gueule, la continuité des boucles et la pointe de queue dans le cadre. Toute phase camouflée ou corps déplié réclame une nouvelle preuve.",
+      "forbidden_substitution": [
+        "Yawn RE1 1996 ou remake 2002, refus propres maintenus",
+        "Serpent générique ou corps de python",
+        "Concept art de taille/forme antérieure",
+        "Phase transparente/camouflée non documentée"
+      ],
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "generation_performed_by_this_audit": false
+    },
+    {
+      "uid": "re6-ogroman",
+      "edition": "Resident Evil 6 (2012)",
+      "historical_entry_unchanged": {
+        "uid": "re6-ogroman",
+        "label": "Ogroman",
+        "edition": "Resident Evil 6 (2012)",
+        "fighter_category": "experimental",
+        "baseline_status": "HELD_COMPLETE_OR_EXACT_REFERENCE",
+        "current_outcome": "SOURCE_HOLD",
+        "retained_assets": [],
+        "trials": [],
+        "current_tool_refusals": [],
+        "current_hold_decisions": [],
+        "further_generation_blocked_by_current_refusal": false,
+        "later_left_request_refused_after_right_candidate": false,
+        "canonical_one_to_one_certified": false,
+        "engine_admitted_by_this_continuation": false,
+        "baseline_evidence": {
+          "manifestUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/manifest.json",
+          "bodyReceiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/re6-ogroman/idle.json",
+          "portraitReceiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/re6-ogroman/portrait.json",
+          "blockedOutputs": []
+        }
+      },
+      "r34_receipts": {
+        "idle": {
+          "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-ogroman-r34-idle.json",
+          "local_reference_file": "re6-ogroman-r34-idle.json",
+          "bytes": 3802,
+          "sha256": "8a3007da185777a7a4a29af5c2bb13048c40a6c0ae8fda5c82193a3f821b0151",
+          "repository_path": "modules/fidelity-r34/assets/lots/lot_4/re6-ogroman/idle.json",
+          "receipt": {
+            "schema": "re.bow.generated-output-r34/1",
+            "uid": "re6-ogroman",
+            "lotId": "lot_4",
+            "kind": "idle",
+            "generator": "image_gen",
+            "status": "HELD_REFERENCE",
+            "reason": "Only the giant head, shoulders and part of its cylindrical back fixture are visible. Full arms/hands, legs/feet and complete fixture/rear silhouette remain outside frame.",
+            "toolCallMade": false,
+            "promptRole": "planned-not-submitted",
+            "prompt": "Create a faithful generated game asset for Ogroman, exact incarnation Resident Evil 6 (2012). Use the attached verified references only. Preserve the precise head, anatomy, proportions, costume, equipment, material colours and asymmetric details. Do not mix games, phases or editions. Match the source appearance without added cartoon outlines, coloured halos or decoration. One subject only, no text, labels, scenery, floor, montage or frame. Clean transparent alpha. This remains a generated adaptation, not an original Capcom frame or a geometric 1:1 certificate. One complete full-body static combat idle base pose, facing right in a side/three-quarter fighting-game view. Keep every source-documented limb, foot, tail, wing, tentacle, horn and equipment inside the image with generous transparent padding. Preserve actual locomotion and support points; do not turn a quadruped or aquatic creature into a humanoid. Produce the entire body in this one image, not separate pieces. No motion blur, duplicate bodies or animation-frame grid. Only proceed after actually reviewing a complete source body reference.",
+            "references": [
+              {
+                "path": "assets/catalog/re6-ogroman.png",
+                "bytes": 180130,
+                "sha256": "b945c6d5f14ba741a8049301b2b015b184fa1c9c163686f7c9a576751478ac4e",
+                "role": "catalogue-reference",
+                "bodyCoverage": "unknown",
+                "exactIdentity": true,
+                "sourceUrl": "https://www.evilresource.com/resident-evil-6/enemies/ogroman",
+                "sourceEdition": "Resident Evil 6 (2012)",
+                "targetEditionAdmitted": true,
+                "bodyCompletenessIndependentReviewRequired": true
+              }
+            ],
+            "research": [
+              {
+                "kind": "ACTUAL_RETAINED_SOURCE_INSPECTION",
+                "sources": [
+                  {
+                    "path": "assets/catalog/re6-ogroman.png",
+                    "bytes": 180130,
+                    "sha256": "b945c6d5f14ba741a8049301b2b015b184fa1c9c163686f7c9a576751478ac4e",
+                    "sourceUrl": "https://www.evilresource.com/resident-evil-6/enemies/ogroman",
+                    "role": "catalogue-reference"
+                  }
+                ],
+                "selectedCandidateSource": {
+                  "path": "assets/catalog/re6-ogroman.png",
+                  "bytes": 180130,
+                  "sha256": "b945c6d5f14ba741a8049301b2b015b184fa1c9c163686f7c9a576751478ac4e"
+                },
+                "qaCapture": {
+                  "path": "modules/fidelity-r34/assets/lots/lot_4/reviews/held-source-sheet-4.png",
+                  "bytes": 1111815,
+                  "sha256": "cc25abfa02b4aed2c252260ecfdf88a6de674f584ca08b7fd8abe7c11a307c8a"
+                },
+                "observation": "Only the giant head, shoulders and part of its cylindrical back fixture are visible. Full arms/hands, legs/feet and complete fixture/rear silhouette remain outside frame.",
+                "priorPortraitReview": {
+                  "path": "modules/fidelity-r34/assets/lots/lot_4/re6-ogroman/portrait.json",
+                  "bytes": 2686,
+                  "sha256": "8c38c24e9747168e7e736d6a5509c1bb53906b3d48fce6e9e68f9c21591ecd15"
+                },
+                "newGeneratedAsset": false
+              },
+              {
+                "kind": "RETAINED_GAME_LEVEL_WEB_RESEARCH",
+                "records": {
+                  "path": "modules/fidelity-r34/assets/lots/lot_4/research/game-blog-searches.json",
+                  "bytes": 8729,
+                  "sha256": "eee9ddadfe0025a7ffd6ae1fbf5148e4393db97f541fba6e4385d8a37d17bce4"
+                },
+                "scope": "Actual retained game-level public search responses and article links; not an exhaustive per-UID internet claim."
+              }
+            ]
+          }
+        },
+        "portrait": {
+          "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-ogroman-r34-portrait.json",
+          "local_reference_file": "re6-ogroman-r34-portrait.json",
+          "bytes": 2686,
+          "sha256": "8c38c24e9747168e7e736d6a5509c1bb53906b3d48fce6e9e68f9c21591ecd15",
+          "repository_path": "modules/fidelity-r34/assets/lots/lot_4/re6-ogroman/portrait.json",
+          "receipt": {
+            "schema": "re.bow.generated-output-r34/1",
+            "uid": "re6-ogroman",
+            "kind": "portrait",
+            "lotId": "lot_4",
+            "status": "GENERATED",
+            "generator": "image_gen",
+            "prompt": "Create a faithful generated game asset for Ogroman, exact incarnation Resident Evil 6 (2012). Use the attached verified references only. Preserve the precise head, anatomy, proportions, costume, equipment, material colours and asymmetric details. Do not mix games, phases or editions. Match the source appearance without added cartoon outlines, coloured halos or decoration. One subject only, no text, labels, scenery, floor, montage or frame. Clean transparent alpha. This remains a generated adaptation, not an original Capcom frame or a geometric 1:1 certificate. A square selection portrait showing the head and upper body, with the characteristic face and equipment readable at thumbnail size. Keep the visible identity complete inside this portrait crop; do not invent undocumented features.",
+            "references": [
+              {
+                "path": "assets/catalog/re6-ogroman.png",
+                "bytes": 180130,
+                "sha256": "b945c6d5f14ba741a8049301b2b015b184fa1c9c163686f7c9a576751478ac4e",
+                "role": "catalogue-reference",
+                "bodyCoverage": "unknown",
+                "exactIdentity": true,
+                "sourceUrl": "https://www.evilresource.com/resident-evil-6/enemies/ogroman",
+                "sourceEdition": "Resident Evil 6 (2012)",
+                "targetEditionAdmitted": true,
+                "bodyCompletenessIndependentReviewRequired": true
+              }
+            ],
+            "image": "modules/fidelity-r34/assets/generated/re6-ogroman/portrait.png",
+            "generatedBytesEdited": false,
+            "canonicalFidelityCertified": false,
+            "originalIdleAnimationCertified": false,
+            "sha256": "adb1d4c7aaccb22305f8a49625af30dc3a88da9fb641b590466c3a9b9e171950",
+            "bytes": 2394832,
+            "sourceOutputPath": "/workspace/generated_images/exec-9a15e884-eaf8-458a-9ce3-27a19bf02259.png",
+            "width": 1254,
+            "height": 1254,
+            "format": "PNG",
+            "bounds": {
+              "x": 52,
+              "y": 52,
+              "width": 1202,
+              "height": 1202
+            },
+            "alpha": {
+              "channel": true,
+              "min": 0,
+              "max": 255
+            },
+            "review": {
+              "visuallyReviewed": true,
+              "sourceFacing": "front",
+              "portraitIdentityReviewed": true,
+              "portraitDisplayRegionReviewed": true,
+              "fullBodyVisible": false,
+              "completeBodyReferenceVerified": false,
+              "fightingPoseReviewed": false,
+              "knownAppearanceGaps": [],
+              "observations": [
+                "Ogroman upper silhouette retains small recessed eyes, distended jaw opening with hanging flesh, pale cracked skin and the protruding cylindrical back fixture from the source."
+              ],
+              "canonicalFidelityCertified": false,
+              "originalIdleAnimationCertified": false
+            }
+          }
+        }
+      },
+      "r34_catalog": {
+        "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-ogroman-r34-catalog.png",
+        "local_reference_file": "re6-ogroman-r34-catalog.png",
+        "bytes": 180130,
+        "sha256": "b945c6d5f14ba741a8049301b2b015b184fa1c9c163686f7c9a576751478ac4e",
+        "dimensions": [
+          450,
+          360
+        ],
+        "mode": "RGB",
+        "format": "PNG",
+        "source_url": "https://www.evilresource.com/resident-evil-6/enemies/ogroman",
+        "visually_inspected": true,
+        "qualification": "Cadrage incomplet historique ; jamais utilisé seul pour reconstituer le corps."
+      },
+      "own_tool_refusal_found": false,
+      "current_refusal_flag_preserved": false,
+      "baseline_status_preserved": "HELD_COMPLETE_OR_EXACT_REFERENCE",
+      "historical_current_outcome_preserved": "SOURCE_HOLD",
+      "source_readiness_only": true,
+      "source_ids": [
+        "ogroman_render_complete",
+        "ogroman_native_partial"
+      ],
+      "variant": "Ogroman gris/verdâtre au dispositif dorsal cylindrique/annelé, corps entier du rendu.",
+      "decision": "SOURCE_AVAILABLE_FOR_SCOPED_STATIC_CANDIDATE",
+      "reason": "Même rendu que le portrait R34, maintenant entièrement cadré ; forme finale corroborée par captures natives partielles.",
+      "next_action": "Conserver la variante du dispositif cylindrique et une pose où son insertion profonde reste masquée. Vérifier séparément les mains et pieds, sans inventer leurs faces cachées.",
+      "forbidden_substitution": [
+        "Organe dorsal charnu dressé de la figurine, autre état",
+        "El Gigante RE4 ou Ndesu RE5",
+        "Dos entièrement découvert sans source supplémentaire",
+        "Modèle générique de géant"
+      ],
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "generation_performed_by_this_audit": false
+    }
+  ],
+  "other_searches_and_exclusions": [
+    {
+      "url": "https://resident-evil.wifeo.com/personnages-creatures-resident-evil-6-page-3.php",
+      "outcome": "HTTP 503 ; aucun visuel récupéré, aucune conclusion visuelle tirée."
+    },
+    {
+      "url": "https://www.spriters-resource.com/pc_computer/residentevil6/asset/509466/",
+      "outcome": "Artbook numérique comprenant concepts et propositions. Non utilisé comme preuve d’un corps natif final ; aucun dessin préparatoire promu en référence finale."
+    },
+    {
+      "url": "https://models.spriters-resource.com/pc_computer/residentevil6/",
+      "outcome": "Aucun modèle exact des trois cibles récupéré ou authentifié dans cette recherche bornée. Aucune prétention d’extraction native."
+    }
+  ],
+  "completion": {
+    "report_complete": true,
+    "scope_limits_explicit": true,
+    "raw_reference_directory": "/workspace/scratch/3fced93cfb0a/references-v18",
+    "source_images_kept_outside_repository": true,
+    "repository_report": "production-archives/rec-media/v18/docs/SOURCES_RE6_MESET_ILUZIJA_OGROMAN_V18.json",
+    "future_generated_image_requires_independent_review": true,
+    "history_rewritten": false
+  }
+}

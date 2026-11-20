@@ -1,0 +1,133 @@
+{
+  "schema": "rec.static-candidate-independent-review.v18",
+  "asset": "Whopper — Resident Evil 6 (2012), RIGHT 01, chemise rouge et jaune du rendu final",
+  "id": "re6_whopper_right_01",
+  "uid": "re6-whopper",
+  "variant": "re6_2012_red_yellow_shirt_final_render",
+  "reviewed_at": "2026-11-20T17:08:31.105140+00:00",
+  "reviewer": "audit_missing",
+  "pull_request": 23,
+  "asset_path": "assets/re6_whopper_right_01.png",
+  "original_path": "/workspace/scratch/3fced93cfb0a/generated_images/exec-fb5f2452-07ba-423d-8282-3f7520528b1f.png",
+  "sha256": "bf6b8a23024bdb2132d6c6a927fe21850799ef530b4511f9d38bdbd04ba79a64",
+  "bytes": 1455312,
+  "verdict": "CANDIDATE_STATIC_WITH_LIMITS",
+  "review_status": "CANDIDATE_STATIC_WITH_LIMITS",
+  "excluded_from_candidate_count": false,
+  "source_refs_reviewed": [
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-whopper-cgworld-native.jpg",
+      "sha256": "187cac7a82fdd75029a78558050cc7b8398cf84c609750ab272bfcffefc33fa4",
+      "bytes": 405889,
+      "source_url": "https://cgworld.jp/interview/images/201701_capcom/capcom_u2.jpg",
+      "role": "Panneau droit du comparatif CGWorld : rendu final RE6 complet. Le panneau concept peint à gauche est exclu de la qualification géométrique.",
+      "actually_visually_inspected": true
+    }
+  ],
+  "source_document": "docs/SOURCES_RE6_NAPAD_WHOPPER_V18.json",
+  "source_document_sha256_at_review": "25f74ddb545e2b7a5182c1784f655e41886fd72cce3fd8f89542fae8e462322e",
+  "prompt_record": "prompts/re6_whopper_right_01.json",
+  "technical_record": "docs/re6_whopper_right_01-technical.json",
+  "visual_checks": {
+    "orientation": "Le visage et le volume ventral se projettent vers la droite de l’image. Le thorax garde une composante frontale, avec le côté anatomique droit plus proche : trois quarts avant-droit, pas profil strict.",
+    "variant": "Corps très large et lourd, petite tête aux cheveux courts, peau pâle, chemise rouge déchirée à large bande jaune délavée et bande inférieure irrégulière, vêtement inférieur sombre déchiqueté, pieds nus. Le candidat suit le rendu final de droite ; aucune classification Supreme n’est déduite de la couleur de chemise.",
+    "right_arm_ownership": "L’épaule proche située à gauche de l’image rejoint sans rupture le gros bras levé puis la paume au-dessus de la tête. Il s’agit du bras anatomique droit. Cinq doigts sont lisibles, pouce vers la droite de cette paume ; aucun bras supplémentaire.",
+    "left_arm_ownership": "L’épaule éloignée est partiellement masquée par le thorax. Un bras anatomique gauche continu descend et ressort vers la droite de l’image, avec main ouverte basse. Les deux hauteurs de bras n’ont pas été interverties.",
+    "shirt_and_belly_asymmetry": "La grande ouverture de chemise et le ventre exposé occupent le côté anatomique droit proche, à gauche du centre de l’image sous le bras levé. L’autre flanc reste davantage couvert. Les déchirures sont interprétées et ne reproduisent pas chaque contour de la source, mais l’asymétrie majeure n’a pas été déplacée à gauche anatomique.",
+    "lower_body": "Deux jambes courtes et épaisses, deux pieds nus distincts intégralement contenus. La jambe proche avance et descend à gauche de l’image ; la jambe éloignée reste en retrait à droite. Les deux pieds ne prouvent pas deux contacts au sol simultanés.",
+    "anatomy_count_review": {
+      "arms_visible": 2,
+      "hands_visible": 2,
+      "legs_visible": 2,
+      "feet_visible": 2,
+      "detached_or_extra_limb_observed": false
+    },
+    "framing": "Un seul sujet ; cheveux, doigts levés, main basse, pans déchirés et deux pieds entièrement dans le canvas. Pas de décor, sol, accessoire, chaussures, victime ou texte ajouté.",
+    "padding_target": {
+      "requested_percent_each_side": 10,
+      "achieved": false,
+      "margins_alpha16_left_top_right_bottom": [
+        162,
+        49,
+        113,
+        26
+      ],
+      "margins_alpha16_percent_left_top_right_bottom": [
+        15.28,
+        3.3,
+        10.66,
+        1.75
+      ],
+      "principal_extremity_clipped": false
+    },
+    "limits": [
+      "Marges principales alpha≥16 gauche/haut/droite/bas : [162, 49, 113, 26] px, soit [15.28, 3.3, 10.66, 1.75] %. La cible de 10 % sur chaque bord n’est pas atteinte ; aucune extrémité principale ne touche le cadre.",
+      "Le torse reste assez frontal et la rotation est une interprétation du rendu final. La source ne fournit pas un profil droit ni les surfaces arrière complètes.",
+      "La position générale de la déchirure est conservée, mais contours des trous, plis, doigts, orteils et texture ne sont pas certifiés 1:1.",
+      "La faible marge basse de 26 px (1,75 %) impose de conserver le cadrage original et de ne pas présumer une réserve suffisante pour une animation.",
+      "Aucune extraction native, animation, contact physique, rig, collision ou admission moteur n’est validé."
+    ]
+  },
+  "failed_gates": [],
+  "uncertain_gates": [
+    {
+      "gate": "hidden_surfaces_and_exact_shirt_topology",
+      "reason": "Une seule vue finale documente l’avant ; arrière, profondeur des déchirures et microdétails du côté opposé ne sont pas directement vérifiables."
+    }
+  ],
+  "alpha": {
+    "mode": "RGBA",
+    "size": [
+      1060,
+      1484
+    ],
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox_alpha_gte16": [
+      162,
+      49,
+      947,
+      1458
+    ],
+    "margins_alpha16_left_top_right_bottom": [
+      162,
+      49,
+      113,
+      26
+    ],
+    "margins_alpha16_percent_left_top_right_bottom": [
+      15.28,
+      3.3,
+      10.66,
+      1.75
+    ],
+    "bbox_all_nonzero_alpha": [
+      0,
+      46,
+      1034,
+      1484
+    ],
+    "pixels_alpha0": 927366,
+    "pixels_alpha1_to15": 22155,
+    "pixels_alpha1_to3": 17530,
+    "pixels_alpha255": 443,
+    "all_subject_alpha_255": false,
+    "halo_finding": "PNG RGBA original et composites gris/clair personnellement inspectés. Transparence réelle, sans fond opaque ni halo large substantiel sur les compositions alpha. Des résidus de très faible alpha s’étendent hors de la silhouette, parfois aux bords. Ils ne constituent pas des extrémités principales coupées. Aucun nettoyage appliqué."
+  },
+  "qa_previews_only": [
+    "/workspace/scratch/3fced93cfb0a/qa-v18/re6_whopper_right_01-gray.jpg",
+    "/workspace/scratch/3fced93cfb0a/qa-v18/re6_whopper_right_01-light.jpg"
+  ],
+  "inspection_method": "Inspection indépendante personnelle des références jointes au prompt, du PNG RGBA et des deux composites gris/clair. Recalcul des dimensions, bbox alpha≥16, marges, extrema alpha, comptes alpha0/1–3/1–15/255, SHA256 et égalité exacte des octets original/archive. Aucun nettoyage, recadrage, padding ou autre retouche du PNG livré.",
+  "original_bytes_modified": false,
+  "original_generated_bytes_verified_identical": true,
+  "one_subject_per_image_reviewed": true,
+  "quality_rejection_is_tool_refusal": false,
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "animation_frames": 1,
+  "can_mirror": false,
+  "recommended_action": "Conserver RIGHT 01 comme candidat statique avant-droit avec asymétries principales cohérentes et limites de source/marges. Aucune inversion du bras levé ou du flanc déchiré observée. Ne pas présenter cette image comme un profil natif ni autoriser le miroir."
+}

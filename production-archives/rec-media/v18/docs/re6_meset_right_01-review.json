@@ -1,0 +1,129 @@
+{
+  "schema": "rec.static-candidate-independent-review.v18",
+  "asset": "Meset, mutation ailée — Resident Evil 6 (2012), RIGHT 01",
+  "id": "re6_meset_right_01",
+  "uid": "re6-meset",
+  "variant": "re6_2012_wings_spread_figure_correlated",
+  "reviewed_at": "2026-11-20T17:09:41.939162+00:00",
+  "reviewer": "reference_research",
+  "asset_path": "assets/re6_meset_right_01.png",
+  "original_path": "/workspace/scratch/3fced93cfb0a/generated_images/exec-b8fc5e06-a5c7-42cf-b250-d6bb128bd400.png",
+  "sha256": "f7d2ade7f33178e7d87b0e338edc292d939f79abd8c7f77e11f3e920c82a1068",
+  "bytes": 849414,
+  "verdict": "CANDIDATE_STATIC_WITH_LIMITS",
+  "review_status": "CANDIDATE_STATIC_WITH_LIMITS",
+  "excluded_from_candidate_count": false,
+  "source_refs_reviewed": [
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-meset-blackjack.png",
+      "sha256": "f987a8b11dc79c26ebd8820ea64a510eb8e55dbe0889e0745f3adb32bf8a859d",
+      "bytes": 133141,
+      "role": "Original joint à la requête, personnellement inspecté et comparé ; provenance et limites dans le rapport source V18.",
+      "native_reference_bytes_modified": false
+    },
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-meset-figure-center.png",
+      "sha256": "8f72bbb33f209ef212b0ce903946b68eb3798f47fd11196a5ed662c5c567b6c3",
+      "bytes": 1002971,
+      "role": "Original joint à la requête, personnellement inspecté et comparé ; provenance et limites dans le rapport source V18.",
+      "native_reference_bytes_modified": false
+    }
+  ],
+  "source_document": "docs/SOURCES_RE6_MESET_ILUZIJA_OGROMAN_V18.json",
+  "source_documents_reviewed": [
+    "docs/SOURCES_RE6_MESET_ILUZIJA_OGROMAN_V18.json"
+  ],
+  "source_document_sha256": "8a8995a2822c975d26b268415319932c2f4a0a52436e26875756a1e651ea458d",
+  "prompt_record": "prompts/re6_meset_right_01.json",
+  "prompt_record_sha256": "6423a49a9266f584ce9b9c04f5fe9ff705e495c18f9ba2f98057ac6b34408cb4",
+  "technical_record": "docs/re6_meset_right_01-technical.json",
+  "technical_record_sha256": "b72391ad3450ad8358046b6fa55e5941bcc3aff28fc8700c11d4bbaf1bb5c88e",
+  "visual_checks": {
+    "orientation": "Tête et gueule tournées vers la droite, thorax en trois quarts frontal modéré. Le corps reste suspendu, sans appui au sol. Direction droite lisible ; ce n’est pas un profil latéral strict.",
+    "wings": "Deux ailes complètes, avec leurs pointes externes entièrement cadrées. L’aile à gauche de l’image est plus basse ; celle à droite est relevée. Alternance de structures plumeuses sombres et de lames veinées conservée, sans grande membrane de chauve-souris, troisième aile ou nouvelle crête.",
+    "appendage_paths": "Les appendices latéraux gardent des trajets anguleux et des crochets recourbés proches de l’agencement des sources. Les raccords se superposent sous le thorax ; ils ne sont pas transformés en quatre racines indépendantes prétendument certaines. Pas de membre flottant ni de crochet isolé observé. La revue suit les segments visibles sans déduire un nombre de membres du nombre de pointes.",
+    "feet": "Deux extrémités pendantes à doigts griffus visibles : une sous l’avant du corps, une plus en arrière à gauche de l’image. La seconde chaîne est partiellement masquée/croisée par les appendices latéraux. Aucun troisième pied ni ajout de queue observé.",
+    "phase": "Mutation complète sombre brun/noir de RE6, avec thorax organique compact et longue tête basse à gueule ouverte. Ni corbeau ordinaire, ni J’avo humain, ni proie, accessoire, cavalier ou forme debout.",
+    "framing": "Un seul sujet entier, comprenant les deux bouts d’ailes, tous les crochets visibles et les deux pieds. Aucun élément du visualiseur, éclairage de scène, décor ou ombre au sol repris.",
+    "limits": [
+      "La marge de 10 % demandée n’est pas atteinte sur tous les côtés : gauche/haut/droite/bas [98, 97, 90, 82] px, soit [5.86, 10.31, 5.38, 8.71] %. La silhouette principale reste complète ; ne pas déclarer une marge totalement transparente de 10 %.",
+      "Les racines de plusieurs appendices restent naturellement masquées. Leur nombre exact et toute la géométrie thoracique cachée demeurent non certifiés, comme dans le rapport source.",
+      "La densité des plumes/lames et le détail des nervures, des griffes, de la dentition et des zones brillantes sont interprétés par la génération ; aucune correspondance de texture pixel par pixel n’est certifiée.",
+      "La nouvelle rotation est modeste et ne prouve pas une vue latérale native indépendante. La répartition précise de l’usure sur les faces cachées ne peut pas être démontrée.",
+      "Des résidus de très faible alpha subsistent hors silhouette ; aucun nettoyage du PNG n’a été effectué.",
+      "Candidat statique généré uniquement : ni certification de fidélité 1:1, ni maillage natif, ni animation, ni validation de contacts/collisions, ni admission moteur."
+    ]
+  },
+  "failed_gates": [],
+  "candidate_blocking_failed_gates": [],
+  "uncertain_gates": [
+    "independent_hook_appendage_root_count_occluded",
+    "hidden_thorax_and_reverse_wing_surfaces_unverified",
+    "fine_feather_vein_and_claw_geometry_unverified"
+  ],
+  "alpha": {
+    "mode": "RGBA",
+    "size": [
+      1672,
+      941
+    ],
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox_alpha_gte16": [
+      98,
+      97,
+      1582,
+      859
+    ],
+    "margins_alpha16_left_top_right_bottom": [
+      98,
+      97,
+      90,
+      82
+    ],
+    "margins_alpha16_percent_left_top_right_bottom": [
+      5.86,
+      10.31,
+      5.38,
+      8.71
+    ],
+    "bbox_all_nonzero_alpha": [
+      41,
+      52,
+      1644,
+      941
+    ],
+    "pixels_alpha0": 1241173,
+    "pixels_alpha1_to15": 37987,
+    "pixels_alpha1_to3": 28719,
+    "pixels_alpha255": 1361,
+    "hidden_nonzero_rgb_under_alpha0_pixels": 379,
+    "all_subject_alpha_255": false,
+    "halo_finding": "Alpha réel mesuré. Les composites gris et clair ont été personnellement inspectés : pas de fond opaque, de grille ou de large halo visible substantiel. Des résidus de faible alpha subsistent et atteignent certains bords ; les octets originaux sont préservés."
+  },
+  "qa_previews_only": [
+    "/workspace/scratch/3fced93cfb0a/qa-v18/re6_meset_right_01-gray.jpg",
+    "/workspace/scratch/3fced93cfb0a/qa-v18/re6_meset_right_01-light.jpg"
+  ],
+  "inspection_method": "Comparaison indépendante des originaux effectivement joints, du prompt complet, du rapport source et des deux composites calculés avec le vrai alpha. Suivi visuel des membres, appendices ou boucles et de leurs occlusions ; contrôle du cadre complet. SHA, égalité raw/archive, dimensions, alpha, histogrammes et bbox recalculés indépendamment et rapprochés de la fiche technique. Aucun retouchage du livrable.",
+  "original_bytes_modified": false,
+  "original_generated_bytes_verified_identical": true,
+  "one_subject": true,
+  "one_subject_per_image_reviewed": true,
+  "quality_rejection_is_tool_refusal": false,
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "animation_frames": 1,
+  "can_mirror": false,
+  "recommended_action": "Conserver RIGHT 01 comme candidat statique en vol avec limites explicites. Ne pas inventer de racines supplémentaires ou qualifier une posture au sol ; aucune correction concrète nécessaire dans cette revue.",
+  "non_blocking_deviations": [
+    {
+      "gate": "requested_10_percent_completely_transparent_margin",
+      "blocks_static_candidate": false,
+      "status": "NOT_MET",
+      "detail": "La marge de 10 % demandée n’est pas atteinte sur tous les côtés : gauche/haut/droite/bas [98, 97, 90, 82] px, soit [5.86, 10.31, 5.38, 8.71] %. La silhouette principale reste complète ; ne pas déclarer une marge totalement transparente de 10 %."
+    }
+  ]
+}

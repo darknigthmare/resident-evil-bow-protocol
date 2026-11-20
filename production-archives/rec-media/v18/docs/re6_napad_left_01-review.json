@@ -1,0 +1,125 @@
+{
+  "schema": "rec.static-candidate-independent-review.v18",
+  "asset": "Napad intact carapace — Resident Evil 6 (2012), LEFT 01",
+  "id": "re6_napad_left_01",
+  "uid": "re6-napad",
+  "variant": "re6_2012_intact_carapace",
+  "reviewed_at": "2026-11-20T16:59:23.434841+00:00",
+  "reviewer": "review_v14",
+  "asset_path": "assets/re6_napad_left_01.png",
+  "original_path": "/workspace/scratch/3fced93cfb0a/generated_images/exec-712dbfa6-78c5-4da9-96a8-c350fcfbb891.png",
+  "sha256": "553ddf72ee2efef7a0e55a115c3bc4987783f065f161d10629fc37063a4b1036",
+  "bytes": 1618127,
+  "verdict": "CANDIDATE_STATIC_WITH_LIMITS",
+  "review_status": "CANDIDATE_STATIC_WITH_LIMITS",
+  "excluded_from_candidate_count": false,
+  "source_refs_reviewed": [
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-napad-blackjack-original.png",
+      "sha256": "1d7cd73020e66a4c0c54e745095aa51956bbe4021f0847435fa272493991a6fe",
+      "bytes": 360446,
+      "role": "Complete visible 3D render of the intact-carapace form, hosted by a secondary site and qualified by the V18 source audit. The source smoke and solid background are not target anatomy.",
+      "native_reference_bytes_modified": false
+    }
+  ],
+  "source_documents_reviewed": [
+    "docs/SOURCES_RE6_NAPAD_WHOPPER_V18.json"
+  ],
+  "source_document_sha256": "25f74ddb545e2b7a5182c1784f655e41886fd72cce3fd8f89542fae8e462322e",
+  "prompt_record": "prompts/re6_napad_left_01.json",
+  "prompt_record_sha256": "ffe047365314e560cb83fbecd5c6803fe828b46aab8319ab7ebacc651509ed32",
+  "technical_record": "docs/re6_napad_left_01-technical.json",
+  "technical_record_sha256": "149e9fa148060053bed7d7ecef3fe26e6e64b41a63bdc0a2b6e51c7a33003d23",
+  "visual_checks": {
+    "orientation": "A modest but readable front-left three-quarter direction. The recessed face, jaw projection and leading toes point screen-left. The anatomical LEFT shoulder and arm are prominent on screen-right, and some left side/back plate depth is visible. The chest remains broad and front-readable; this is not a pure lateral profile or a strong side-dominant view.",
+    "costume": "No clothing, boots or equipment. The heavy crouched reddish-brown body, short thick legs, massive hanging arms and deeply recessed head retain the source family.",
+    "hands": "Two coherent shoulder-to-arm-to-hand chains; both large hands/fists and both feet remain fully framed. No detached or additional arm. Fine digits and nails are generated interpretation rather than an authenticated count from the dark low-resolution source.",
+    "phase": "The jagged outer carapace remains present over shoulders and upper back. The high central dorsal plate is attached, and the irregular lateral plates remain asymmetrical. No broken-shell phase, exposed luminous core, new weapon or steam effect is introduced.",
+    "framing": "One complete creature. Highest plate tip, lateral projections, both hands and both feet remain inside the canvas. No floor, pedestal, cast floor shadow, second subject or scene.",
+    "asymmetry": "The prominent slanted layered plates beside the anatomical LEFT shoulder remain on that side under the modest rotation; the far shoulder has a different outline. Newly exposed posterior segmented surfaces and precise plate topology cannot be independently reconstructed from the source angle.",
+    "limits": [
+      "Requested TEN PERCENT completely transparent margin is not met. Principal alpha≥16 margins left/top/right/bottom are [104,70,113,84] px = [9.36,4.94,10.17,5.93] %. This is a documented framing deviation, not observed clipping of the subject.",
+      "Nonzero alpha reaches canvas edges because of low-alpha residuals. The gray/light composites show no opaque backdrop or substantial visible broad halo; the principal silhouette stays inside the frame. Do not describe the full edge band as strictly alpha-zero.",
+      "The direction is front-left with a modest rotation. It supports a LEFT static presentation but does not meet a strict pure-profile requirement.",
+      "Exact number, thickness and reverse-side topology of all rocklike plates are not independently proven. The more rounded posterior plates and detailed toes/nails are generated interpretations.",
+      "The supplied full render is hosted by a third party. Native mesh, physical scale, original motion, pivot/contact setup and engine admission remain unverified."
+    ]
+  },
+  "failed_gates": [],
+  "candidate_blocking_failed_gates": [],
+  "uncertain_gates": [
+    {
+      "gate": "exact_hidden_carapace_topology",
+      "status": "NOT_CERTIFIED",
+      "detail": "The source is one frontal three-quarter render, without an authenticated backside."
+    },
+    {
+      "gate": "fine_digit_and_plate_geometry",
+      "status": "NOT_CERTIFIED",
+      "detail": "Fine geometry and irregular relief are not certified 1:1."
+    }
+  ],
+  "alpha": {
+    "mode": "RGBA",
+    "size": [
+      1111,
+      1416
+    ],
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox_alpha_gte16": [
+      104,
+      70,
+      998,
+      1332
+    ],
+    "margins_alpha16_left_top_right_bottom": [
+      104,
+      70,
+      113,
+      84
+    ],
+    "margins_alpha16_percent": [
+      9.361,
+      4.944,
+      10.171,
+      5.932
+    ],
+    "bbox_all_nonzero_alpha": [
+      0,
+      17,
+      1111,
+      1416
+    ],
+    "pixels_alpha0": 885137,
+    "pixels_alpha1_to15": 33155,
+    "pixels_alpha1_to3": 27842,
+    "pixels_alpha255": 761,
+    "all_subject_alpha_255": false,
+    "halo_finding": "Actual gray/light alpha composites personally inspected. No opaque backdrop or substantial broad visible halo. Some low-alpha residuals reach boundaries; all visible body endpoints are inside the canvas. Hidden RGB was not judged as visible content."
+  },
+  "qa_previews_only": [
+    "/workspace/scratch/3fced93cfb0a/qa-v18/re6_napad_left_01-gray.jpg",
+    "/workspace/scratch/3fced93cfb0a/qa-v18/re6_napad_left_01-light.jpg"
+  ],
+  "inspection_method": "Independent direct comparison of the exact supplied source, the complete prompt, source audit and gray/light alpha composites. Anatomical chains and asymmetric features traced. SHA/dimensions/alpha/bbox independently recomputed; original/archive byte equality verified.",
+  "original_bytes_modified": false,
+  "original_generated_bytes_verified_identical": true,
+  "one_subject": true,
+  "one_subject_per_image_reviewed": true,
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "animation_frames": 1,
+  "can_mirror": false,
+  "recommended_action": "Retain as a complete front-left static candidate of the intact-carapace form, with modest-angle, margin and inferred-geometry limitations. Pair only with an independently generated/reviewed RIGHT; do not mirror.",
+  "non_blocking_deviations": [
+    {
+      "gate": "requested_10_percent_completely_transparent_margin",
+      "blocks_static_candidate": false,
+      "status": "NOT_MET",
+      "detail": "Principal margins below 10% and low-alpha boundary residuals; complete subject observed. This is a prompt deviation retained as a limitation, not a full-framing pass."
+    }
+  ]
+}

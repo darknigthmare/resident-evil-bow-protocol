@@ -1,0 +1,142 @@
+{
+  "schema": "rec.static-candidate-independent-review.v18",
+  "asset": "Meset — Resident Evil 6 (2012), LEFT 01, mutation ailée en vol",
+  "id": "re6_meset_left_01",
+  "uid": "re6-meset",
+  "variant": "re6_2012_wings_spread_figure_correlated",
+  "reviewed_at": "2026-11-20T17:01:54.744951+00:00",
+  "reviewer": "audit_missing",
+  "pull_request": 23,
+  "asset_path": "assets/re6_meset_left_01.png",
+  "original_path": "/workspace/scratch/3fced93cfb0a/generated_images/exec-607b25d9-53fa-48b9-8483-f85e8c3db026.png",
+  "sha256": "4b7524de32d098d478a5ca7621e902f010932196000647a58f470e45a6ff27c4",
+  "bytes": 810323,
+  "verdict": "CANDIDATE_STATIC_WITH_LIMITS",
+  "review_status": "CANDIDATE_STATIC_WITH_LIMITS",
+  "excluded_from_candidate_count": false,
+  "source_refs_reviewed": [
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-meset-blackjack.png",
+      "sha256": "f987a8b11dc79c26ebd8820ea64a510eb8e55dbe0889e0745f3adb32bf8a859d",
+      "bytes": 133141,
+      "source_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjGxFAdFD3f15_Kkre4BMQiRubcK3uKwlXVkY2Sl1xhyphenhyphenavVjMPi55dVnhm2H_AagkvoPS_1al4yjN6_5aEvKJL-UNCA94bDotQ0gNE2MZSQj1rRjP2IrC6olnTRXnGy7DCdxwvuPGYVCQDP/",
+      "role": "Rendu de détail RE6, avec une pointe d’aile coupée ; ne suffit pas seul à documenter la silhouette entière.",
+      "actually_visually_inspected": true
+    },
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v18/re6-meset-figure-center.png",
+      "sha256": "8f72bbb33f209ef212b0ce903946b68eb3798f47fd11196a5ed662c5c567b6c3",
+      "bytes": 1002971,
+      "source_url": "https://www.residentevilcenter.net/images/games/residentevil6/figuras/Mesets.png",
+      "role": "Capture du visualiseur RE6 : silhouette des deux ailes et des appendices entière ; ancrages centraux partiellement masqués.",
+      "actually_visually_inspected": true
+    }
+  ],
+  "source_document": "docs/SOURCES_RE6_MESET_ILUZIJA_OGROMAN_V18.json",
+  "source_document_sha256_at_review": "8a8995a2822c975d26b268415319932c2f4a0a52436e26875756a1e651ea458d",
+  "prompt_record": "prompts/re6_meset_left_01.json",
+  "technical_record": "docs/re6_meset_left_01-technical.json",
+  "visual_checks": {
+    "orientation": "Long museau et gueule dirigés nettement vers la gauche de l’image ; thorax tourné modérément, vue encore frontale en trois quarts. Cette orientation évite d’exposer une reconstitution complète du dos.",
+    "variant": "Une mutation complète ailée sombre brun-noir, thorax organique compact, tête allongée et ailes à vanes irrégulières. Pas d’humain, de Noga-Let, de cavalier, de proie ou d’oiseau ordinaire ajouté.",
+    "wings": "Deux ailes reliées au thorax : l’une déployée bas vers la gauche de l’image, l’autre relevée vers la droite. Les vanes, articulations et deux pointes externes sont contenues. Aucun troisième départ d’aile, membrane de chauve-souris ou bout d’aile détaché observé.",
+    "clawed_feet": "Deux pieds griffus distincts pendent sous le thorax. Le pied inférieur central est porté par une jambe assez droite ; le second, plus haut et légèrement à gauche, est porté par une jambe fléchie, avec raccord proximal en partie masqué. Les griffes restent reliées aux pieds ; pas de troisième pied évident.",
+    "hooked_appendages": "Les segments coudés et leurs pointes recourbées reprennent l’arrangement visible des références : groupe bas à gauche, long trajet supérieur à droite et crochets plus bas à droite. Les croisements sont accompagnés de chevauchements et d’occlusions proches du thorax. Aucun segment libre, trajet manifestement impossible ou crochet isolé supplémentaire évident n’est observé. Cette inspection ne résout pas chaque racine cachée ni le nombre exact de membres indépendants.",
+    "anatomy_count_review": {
+      "wings_visible": 2,
+      "clawed_feet_visible": 2,
+      "independent_hook_bearing_root_count_certified": null,
+      "four_independent_roots_required": false,
+      "detached_or_extra_appendage_observed": false,
+      "all_proximal_connections_exposed": false
+    },
+    "locomotion": "Pose suspendue/en vol, sans appui au sol. Aucune posture debout, marche ou garde au sol n’est validée.",
+    "framing": "Un seul sujet ; ailes, crochets, deux pieds, museau et gueule entièrement contenus. Pas de grille, lumière de visualiseur, socle, texte, décor ou ombre de sol.",
+    "padding_target": {
+      "requested_percent_each_side": 10,
+      "achieved": false,
+      "margins_alpha16_left_top_right_bottom": [
+        92,
+        114,
+        72,
+        68
+      ],
+      "margins_alpha16_percent_left_top_right_bottom": [
+        5.5,
+        12.11,
+        4.31,
+        7.23
+      ],
+      "principal_extremity_clipped": false
+    },
+    "limits": [
+      "Marges principales alpha≥16 gauche/haut/droite/bas : [92, 114, 72, 68] px, soit [5.5, 12.11, 4.31, 7.23] %. La cible de 10 % sur chaque bord n’est pas atteinte ; aucune extrémité principale ne touche le cadre.",
+      "La source de détail coupe une pointe d’aile ; le cadrage complet repose sur la figurine native sombre. Cette combinaison ne permet pas de mesurer toutes les microtextures ou faces cachées.",
+      "Les crochets visibles ne prouvent pas autant de racines indépendantes. Raccords et bifurcations centraux demeurent partiellement masqués ; aucune exigence inventée de quatre racines n’est appliquée.",
+      "La répartition précise des vanes, griffes et déchirures est interprétée par génération. Deux ailes et deux pieds lisibles ne certifient pas le maillage ni l’animation originale.",
+      "Aucune extraction native, vue arrière, cycle de vol, contacts physiques, collision ou admission moteur n’est validé."
+    ]
+  },
+  "failed_gates": [],
+  "uncertain_gates": [
+    {
+      "gate": "source_specific_hook_root_topology",
+      "reason": "Racines et plusieurs croisements masqués dans les sources comme dans le candidat. Silhouette et trajets visibles plausibles, sans certification du nombre de chaînes arthropodes indépendantes."
+    }
+  ],
+  "alpha": {
+    "mode": "RGBA",
+    "size": [
+      1672,
+      941
+    ],
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox_alpha_gte16": [
+      92,
+      114,
+      1600,
+      873
+    ],
+    "margins_alpha16_left_top_right_bottom": [
+      92,
+      114,
+      72,
+      68
+    ],
+    "margins_alpha16_percent_left_top_right_bottom": [
+      5.5,
+      12.11,
+      4.31,
+      7.23
+    ],
+    "bbox_all_nonzero_alpha": [
+      0,
+      0,
+      1646,
+      941
+    ],
+    "pixels_alpha0": 1235293,
+    "pixels_alpha1_to15": 41779,
+    "pixels_alpha1_to3": 33155,
+    "pixels_alpha255": 460,
+    "all_subject_alpha_255": false,
+    "halo_finding": "PNG RGBA original et composites gris/clair personnellement inspectés. Vraie transparence ; pas de fond opaque ou de halo large substantiel observé sur les composites. Des résidus de très faible alpha s’étendent hors de la silhouette et parfois jusqu’aux bords ; ils ne sont pas interprétés comme des extrémités coupées. Octets originaux conservés."
+  },
+  "qa_previews_only": [
+    "/workspace/scratch/3fced93cfb0a/qa-v18/re6_meset_left_01-gray.jpg",
+    "/workspace/scratch/3fced93cfb0a/qa-v18/re6_meset_left_01-light.jpg"
+  ],
+  "inspection_method": "Inspection indépendante personnelle de chaque référence réellement jointe au prompt, du PNG original et de ses composites gris et clair. Vérification séparée des dimensions, de la bounding box alpha≥16, du nombre de pixels transparents, du SHA256 et de l’égalité des octets entre original et archive. Aucun nettoyage, recadrage, padding ou autre retouche du PNG livré.",
+  "original_bytes_modified": false,
+  "original_generated_bytes_verified_identical": true,
+  "one_subject_per_image_reviewed": true,
+  "quality_rejection_is_tool_refusal": false,
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "animation_frames": 1,
+  "can_mirror": false,
+  "recommended_action": "Conserver LEFT 01 comme candidat statique en vol avec limites de source, de topologie masquée et de marges. Aucun défaut visible de membre ou de coupe principale ne justifie une correction dans cette revue. Ne pas extrapoler une posture au sol ni des racines supplémentaires."
+}
