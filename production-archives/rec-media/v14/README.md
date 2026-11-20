@@ -1,19 +1,40 @@
-# V14 — Reprise publiée du 20 novembre 2026
+# V14 — Reprise du 20 novembre 2026, checkpoint 2
 
-Premier point de reprise : **3 PNG candidats statiques**, un personnage par image, avec transparence réelle. Les originaux de V12/V13 ne sont pas récupérés ; aucune nouvelle image V14 ne les remplace silencieusement.
+Ce point de reprise conserve **9 PNG : 7 candidats statiques revus et 2 essais Bella Sisters à corriger**, avec un seul personnage par image et une transparence réelle. Les 9 images couvrent **5 identifiants de catalogue** ; les 7 candidats retenus concernent 4 de ces identifiants, avec 4 vues gauches et 3 vues droites.
+
+Le checkpoint 1 publié dans la [PR #22](https://github.com/darknigthmare/resident-evil-bow-protocol/pull/22) est conservé. La reprise part du commit `ed99a1dde54b3344b1c8ed1b688f26aab59c180d` : elle ajoute la vue droite du Leader Zealot retrouvée localement, les deux essais Bella jusque-là non répertoriés, puis les nouvelles vues gauche/droite de Jill et droite du Castle Ganado. Les trois entrées initiales du manifeste restent intactes.
+
+## Candidats de poses fixes
 
 | Identité | Édition | Vue | PNG |
 | --- | --- | --- | --- |
-| Leader Zealot — robe rouge | Resident Evil 4 (2005) | Gauche, trois quarts | [REC_LEADER_ZEALOT_RE4_2005_FULLBODY_LEFT_V14_01.png](assets/REC_LEADER_ZEALOT_RE4_2005_FULLBODY_LEFT_V14_01.png) |
-| Castle Ganado — moine chauve à faux | Resident Evil 4 (2005) | Gauche, trois quarts | [REC_CASTLE_GANADO_RE4_2005_FULLBODY_LEFT_V14_01.png](assets/REC_CASTLE_GANADO_RE4_2005_FULLBODY_LEFT_V14_01.png) |
-| Yawn | Resident Evil remake (2002) | Gauche, trois quarts | [REC_YAWN_REMAKE_2002_FULLBODY_LEFT_V14_01.png](assets/REC_YAWN_REMAKE_2002_FULLBODY_LEFT_V14_01.png) |
+| Leader Zealot — robe rouge | Resident Evil 4 (2005) | Gauche, trois quarts | [Gauche 01](assets/REC_LEADER_ZEALOT_RE4_2005_FULLBODY_LEFT_V14_01.png) |
+| Leader Zealot — robe rouge | Resident Evil 4 (2005) | Droite, trois quarts | [Droite 01](assets/REC_LEADER_ZEALOT_RE4_2005_FULLBODY_RIGHT_V14_01.png) |
+| Castle Ganado — moine chauve à faux | Resident Evil 4 (2005) | Gauche, trois quarts | [Gauche 01](assets/REC_CASTLE_GANADO_RE4_2005_FULLBODY_LEFT_V14_01.png) |
+| Castle Ganado — moine chauve à faux | Resident Evil 4 (2005) | Droite, trois quarts | [Droite 01](assets/REC_CASTLE_GANADO_RE4_2005_FULLBODY_RIGHT_V14_01.png) |
+| Yawn | Resident Evil remake (2002) | Gauche, trois quarts | [Gauche 01](assets/REC_YAWN_REMAKE_2002_FULLBODY_LEFT_V14_01.png) |
+| Jill Valentine — Battle Suit avec P30 | Resident Evil 5 (2009) | Gauche, buste presque frontal | [Gauche 01](assets/REC_JILL_VALENTINE_RE5_BATTLESUIT_FULLBODY_LEFT_V14_01.png) |
+| Jill Valentine — Battle Suit avec P30 | Resident Evil 5 (2009) | Droite, trois quarts | [Droite 01](assets/REC_JILL_VALENTINE_RE5_BATTLESUIT_FULLBODY_RIGHT_V14_01.png) |
+
+## Essais conservés et correction ouverte
+
+| Variante originale RE4 (2005) | Image conservée | Défaut observé |
+| --- | --- | --- |
+| Bella Sister — blouse bleu-gris, tablier crème | [Gauche 01](assets/REC_BELLA_SISTER_CREAM_APRON_RE4_2005_FULLBODY_LEFT_V14_01.png) | Main droite anatomique sur la poignée avant, main gauche sur la poignée arrière : prise inversée par rapport à la demande. |
+| Bella Sister — blouse ocre, jupe verte | [Gauche 01](assets/REC_BELLA_SISTER_GREEN_SKIRT_RE4_2005_FULLBODY_LEFT_V14_01.png) | Même inversion des mains ; buste presque frontal. |
+
+Les deux PNG restent conservés octet pour octet avec le statut `TRIAL_NEEDS_GRIP_CORRECTION` et `excluded_from_candidate_count: true`. Les revues [tablier crème](docs/bella-cream-left-review.json) et [jupe verte](docs/bella-green-left-review.json) documentent le contrôle des épaules, bras et poignées. La correction doit placer la **main gauche sur la poignée avant et la main droite sur la poignée arrière**, sans échanger leurs costumes. Une nouvelle sortie devra porter une révision distincte.
 
 ## Preuves et limites
 
-[Manifeste](manifests/ASSET_MANIFEST_V14.json) : empreintes SHA256, dimensions, alpha et liens vers prompts/revues. Les trois images ont été comparées à leurs références et compositées pour inspection sur fond gris et clair. Les petites marges et résidus alpha faibles restent documentés. Les PNG originaux sont conservés octet pour octet.
+Le [manifeste](manifests/ASSET_MANIFEST_V14.json) contient les SHA256, dimensions, mesures alpha, statuts et liens vers les prompts et revues des 9 PNG. Les trois entrées initiales sont préservées ; les six entrées ajoutées ont été vérifiées par empreinte et par existence de leurs fichiers, prompts et revues. Chaque nouveau contrôle visuel utilise un vrai compositing alpha sur fond gris et clair. Les RGB cachés sous un alpha nul ne sont pas confondus avec un fond opaque.
 
-[Références des moines](docs/ZEALOT_SOURCES_V14.json), [Yawn et recherche des références encore ouvertes](docs/REFERENCE_REVIEW_V14.json), [sources retrouvées pour Jill et Bella Sisters](docs/SOURCE_RECOVERY_JILL_BELLA_V14.json). Ces deux dernières identités sont à produire/revoir dans la suite du lot. Les bitmaps documentaires ne sont pas ajoutés ici.
+Les silhouettes complètes sont visibles, mais les marges demandées ne sont pas atteintes partout et des résidus alpha faibles persistent. Les vues sont des poses trois quarts ; le buste de Jill gauche est encore presque frontal. Les détails cachés, proportions exactes, motifs, visages et mécanismes des armes ne sont pas certifiés identiques aux modèles natifs.
 
-Ces images sont des candidats de poses fixes. Elles ne certifient pas la fidélité globale 1:1, une animation originale, un pivot ou une admission moteur. L'intégration présente est leur conservation dans la PR, avec provenance.
+Sources documentées : [moines](docs/ZEALOT_SOURCES_V14.json), [Yawn et références encore ouvertes](docs/REFERENCE_REVIEW_V14.json), [Jill et Bella Sisters](docs/SOURCE_RECOVERY_JILL_BELLA_V14.json). Les bitmaps documentaires ne sont pas ajoutés à ce lot.
 
-La CI R34 du parent dc9e217 rejette déjà les ajouts production-archives ; garde et assertions historiques préservées.
+Les **44 PNG historiquement annoncés pour V12/V13 restent non récupérés**. Ces nouveaux fichiers V14 ne sont pas présentés comme leurs originaux retrouvés. Les lots V5–V11 sont conservés.
+
+Ces images n'attestent ni fidélité globale 1:1, ni animation originale, ni pivot, contact, collision ou admission moteur. Les indicateurs correspondants restent faux. Cette livraison porte sur des images conservées avec leur provenance et leur revue.
+
+La CI R34 précédemment observée sur `dc9e217` rejetait les ajouts `production-archives`. Ce constat historique ne constitue pas un résultat de test sur le nouveau checkpoint. Les gardes et assertions historiques restent inchangées ; aucune recette de gameplay n'est revendiquée pour cette publication de médias.

@@ -1,0 +1,66 @@
+{
+  "schema": "rec.static-candidate-independent-review.v14",
+  "reviewed_at": "2026-11-20",
+  "reviewer": "review_v14",
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "original_bytes_modified": false,
+  "one_subject_per_image_reviewed": true,
+  "animation_frames": 1,
+  "inspection_method": "Original RGBA files composited over RGB (128,128,128) and (235,235,235), then personally viewed with tools.view_image; original files preserved.",
+  "asset": "Leader Zealot RE4 original 2005 — right",
+  "original_path": "/workspace/scratch/f967ba67c530/generated_images/exec-4486f427-2fdf-4bb9-803c-b761e6bb1122.png",
+  "sha256": "699a87a33d1600547b22fc68a70b90c860d78cd4622e69ad100e353b97dbc108",
+  "bytes": 2174844,
+  "verdict": "CANDIDATE_STATIC_WITH_LIMITS",
+  "source_refs_reviewed": [
+    "references-v14/re4-leader-zealot-catalog.png",
+    "references-v14/re4-2005-los-iluminados-lineup.jpg"
+  ],
+  "visual_checks": {
+    "orientation": "Skull muzzle and extended hand face screen right, with torso, robe and leading shoe turned to a front-right three-quarter view. The second shoe remains more frontal. Rightward pose is visibly distinct from the left reference.",
+    "costume": "Crimson hooded robe, gold shoulder necklace and red pendant, maroon embroidered central tabard, pale rope waist belt, large horned goat skull, pale hands and low black shoes correspond to the source identity and the selected left V14 candidate. Generated ornament and geometry detail remain interpretive.",
+    "hands": "Two complete hands; five identifiable digits on the extended hand and five on the lowered hand, with no obvious duplicate limbs or merged digits at inspection resolution.",
+    "framing": "Exactly one complete character, both horn tips, both hands, robe hem and two shoes contained. No weapon, floor, scenery, UI or printed text.",
+    "limits": [
+      "Top margin is 33 px and bottom margin 23 px at alpha>=16, below the requested 8 percent border.",
+      "Pose is three-quarter front-right, not strict lateral profile.",
+      "Horns, embroidery and hidden costume surfaces are not certified as exact original geometry/textures.",
+      "Single static generated pose; no animation or engine admission."
+    ]
+  },
+  "alpha": {
+    "mode": "RGBA",
+    "size": [
+      1024,
+      1536
+    ],
+    "extrema": [
+      0,
+      254
+    ],
+    "bbox_alpha_gte16": [
+      108,
+      33,
+      957,
+      1513
+    ],
+    "margins_alpha16_left_top_right_bottom": [
+      108,
+      33,
+      67,
+      23
+    ],
+    "pixels_alpha0": 934729,
+    "pixels_alpha1_to15": 21952,
+    "pixels_alpha1_to3": 20018,
+    "pixels_alpha255": 0,
+    "halo_finding": "Real transparency confirmed by 934729 fully transparent pixels and alpha compositing. The brown/black RGB visible when alpha is ignored is not an opaque backdrop. No substantial background halo is visible on the reviewed light and gray composites. Low-alpha residual pixels remain.",
+    "all_subject_alpha_255": false
+  },
+  "qa_previews_only": [
+    "qa-v14-recovered/leader-right-gray.jpg",
+    "qa-v14-recovered/leader-right-light.jpg"
+  ],
+  "recommended_action": "Retain as a reviewed static right-facing candidate with explicit margins and geometry limits."
+}
