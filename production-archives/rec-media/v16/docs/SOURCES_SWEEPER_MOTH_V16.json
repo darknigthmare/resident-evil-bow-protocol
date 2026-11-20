@@ -1,0 +1,251 @@
+{
+  "schema": "rec.reference-research.v16.1",
+  "date": "2026-11-20",
+  "scope": "Recherche de références uniquement pour Sweeper et Moth CODE: Veronica original 2000. Aucun asset généré, aucune publication, aucun fichier historique modifié.",
+  "resumed_commit": "6599f75c88472351aacaf19e7a6b1197e6c58625",
+  "refusal_check": {
+    "evidence_path": "production-archives/rec-media/CONTINUATION_20261120.json",
+    "local_sha256": "6573433621dfafb9c6e8e672ae62be2354a38046bba6885dbb7f15edbbcfeee2",
+    "uids": [
+      "recv-sweeper",
+      "recv-moth"
+    ],
+    "current_tool_refusals": [],
+    "further_generation_blocked_by_current_refusal": false,
+    "limit": "Absence de refus dans les deux entrées de ce point de continuation ; cela ne valide pas les références."
+  },
+  "baseline_review_paths": [
+    "production-archives/rec-media/v14/docs/REFERENCE_REVIEW_V14.json",
+    "production-archives/rec-media/v15/docs/NEXT_SOURCE_TARGETS.json"
+  ],
+  "decisions": [
+    {
+      "uid": "recv-sweeper",
+      "edition": "Resident Evil CODE: Veronica (2000)",
+      "status": "SOURCE_HOLD_WITH_EDITION_CONFLICT_EXPLAINED",
+      "tool_refusal": false,
+      "ready_for_exact_edition_generation": false,
+      "reason": "Le conflit de texture V14 venait du rendu Darkside présent dans le catalogue CV. La nouvelle capture native du guide X confirme la palette CV, mais reste petite et occultée. Aucun nouveau modèle natif complet attribué de façon sûre à Dreamcast 2000 n’a été récupéré.",
+      "new_evidence": [
+        "sweeper-archives-darkside.png",
+        "hunter-sweeper-refr.jpg",
+        "cvx-prima-page-012.png"
+      ],
+      "previous_full_artwork": {
+        "path": "/workspace/scratch/f967ba67c530/references-v14/sweeper-cv.png",
+        "source_url": "https://les-archives-resident-evil-biohazard.fr/wp-content/uploads/2026/06/1Sweeper%C2%B2-768x434.png",
+        "assessment": "Corps entier brun/magenta légendé CODE: Veronica, cohérent dans ses grandes formes avec la comparaison promotionnelle. Toujours aucun rattachement vérifié à un modèle final natif ou à une planche Capcom datée ; ne pas le déclarer automatiquement 1:1."
+      },
+      "forbidden_substitution": [
+        "Rendu Darkside frontal du catalogue Evil Resource",
+        "Hunter II vert",
+        "Hunter alpha rouge de RE1/REmake",
+        "Modèle Survivor 2 traité comme Dreamcast 2000 sans vérification",
+        "Fusion palette Darkside et anatomie du rendu CV"
+      ],
+      "next_action": "Obtenir une capture complète identifiée Dreamcast 2000 dans la Chemical Storage Room ou la Water Tank Room, ou une extraction du modèle final avec provenance. Une source vidéo originale explicitement Dreamcast est repérée mais non inspectée : https://www.youtube.com/watch?v=gtG_z7ufEaA . Ne pas redéfinir le sujet à partir du crop catalogue."
+    },
+    {
+      "uid": "recv-moth",
+      "edition": "Resident Evil CODE: Veronica (2000)",
+      "status": "NATIVE_FAMILY_FULL_SILHOUETTE_FOUND_EXACT_PLATFORM_HOLD",
+      "tool_refusal": false,
+      "ready_for_exact_edition_generation": false,
+      "reason": "Une capture de jeu avec silhouette centrale complète a été retrouvée ; elle concorde avec deux autres captures et le bestiaire Prima X. Le design CV final à longues extensions est donc mieux établi et distinct du rendu Darkside du catalogue. Les plateformes des captures publiques restent inconnues et les petits détails du dessous ne sont pas résolus.",
+      "new_evidence": [
+        "moth-whatculture.jpg",
+        "moth-gametyrant.jpg",
+        "moth-renote.jpg",
+        "cvx-prima-page-011.png"
+      ],
+      "primary_shape_reference": "moth-whatculture.jpg",
+      "supplementary_texture_reference": "moth-gametyrant.jpg",
+      "observed_shape": "Ailes antérieures larges, ailes inférieures lobées avec deux longues extensions étroites, ocelles circulaires, antennes plumeuses, abdomen allongé segmenté. Préserver ces signes de CV.",
+      "forbidden_substitution": [
+        "Grand papillon gris Darkside du catalogue CV",
+        "Giant Moth RE2",
+        "Concept Kaitai utilisé comme preuve du modèle final",
+        "Six pattes détaillées ou anatomie ventrale inventées à partir d’une vue dorsale sombre",
+        "Capture X/HD déclarée Dreamcast 2000 sans provenance"
+      ],
+      "next_action": "Réutiliser ces vraies captures comme base de comparaison puis obtenir une capture complète et attribuée Dreamcast 2000 du couloir antarctique, avec dessous/pattes lisibles si la pose de combat les montre. Le cadrage est désormais mieux documenté ; la plateforme reste la question précise à résoudre."
+    }
+  ],
+  "source_files": [
+    {
+      "file": "sweeper-archives-darkside.png",
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v16/sweeper-archives-darkside.png",
+      "url": "https://les-archives-resident-evil-biohazard.fr/wp-content/uploads/2026/06/2Sweeper%C2%B2-768x434.png",
+      "source_page": "https://les-archives-resident-evil-biohazard.fr/lore-sweeper/",
+      "kind": "preuve_exclusion_edition",
+      "bytes": 180248,
+      "sha256": "109f86873cf09ba12fcc76aa60449391ad515ec0a6f49668615b6ee8208cc9a8",
+      "visually_inspected": true,
+      "inspection": "Le rendu complet est légendé The Darkside Chronicles. Même pose, bouche béante, épaule rose réticulée et torse sombre que le crop Sweeper du catalogue Evil Resource. La différence avec le rendu brun/magenta V14 est donc une différence de version, pas une simple correction de couleur.",
+      "limits": "À exclure de toute génération recv-sweeper 2000. La légende est une attribution secondaire ; la concordance de rendu avec le crop est une observation visuelle directe.",
+      "edition_evidence": "The Darkside Chronicles (2009), légende explicite de la page.",
+      "size_px": [
+        768,
+        434
+      ]
+    },
+    {
+      "file": "hunter-sweeper-refr.jpg",
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v16/hunter-sweeper-refr.jpg",
+      "url": "http://residentevilfr1.free.fr/recv/monstres/hunters.jpg",
+      "source_page": "https://www.residentevilfr.com/jeux/resident_evil_code_veronica_infos.html",
+      "kind": "comparaison_promotionnelle_partielle",
+      "bytes": 10749,
+      "sha256": "7a861351e2577d679ca6e39fa55ff76071eff400121ae7baaf02bdeff31e4c55",
+      "visually_inspected": true,
+      "inspection": "Visuel comparatif Hunter vert et Sweeper violet ; large tête capuchonnée, plaques lisses, bouche dentée. Aspect plus proche du rendu CV brun/magenta que du Darkside frontal.",
+      "limits": "Très petit visuel ; pas de bras, mains, jambes ou pieds complets. Ni auteur original ni extraction du jeu identifiés. Ne lève pas le hold.",
+      "edition_evidence": "Page consacrée à CODE: Veronica ; la plateforme du visuel n’est pas spécifiée."
+    },
+    {
+      "file": "moth-gametyrant.jpg",
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v16/moth-gametyrant.jpg",
+      "url": "https://images.squarespace-cdn.com/content/v1/55ef0e29e4b099e22cdc9eea/9d0d5486-4ea1-4060-a6de-a8ee970c6df1/top-5-scariest-resident-evil-enemies-moth.jpg",
+      "source_page": "https://gametyrant.com/news/top-5-scariest-resident-evil-enemies",
+      "kind": "capture_jeu_modele_final_partielle",
+      "bytes": 142457,
+      "sha256": "36eecfe4e764f3ebc1799e7c25c29a306b6ff616cc4a8f2154f2a3a15b861559",
+      "visually_inspected": true,
+      "inspection": "Capture basse définition native dans cadre 1920×1080 avec bandes latérales et watermark Resident Evil / Biohazard Portal. Vue frontale/dorsale lisible : antennes plumeuses, ailes brun/olive rayées, deux ocelles pâles à centre sombre, abdomen annelé, longues extensions inférieures.",
+      "limits": "Les deux longues extensions quittent le cadre en bas. Extrémité extérieure gauche au bord de la zone de jeu. Le watermark ne prouve pas à lui seul la plateforme. À employer seulement comme détail complémentaire.",
+      "edition_evidence": "Article : Code Veronica ; source officielle d’origine et plateforme de la capture non retrouvées."
+    },
+    {
+      "file": "moth-whatculture.jpg",
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v16/moth-whatculture.jpg",
+      "url": "https://d2thvodm3xyo6j.cloudfront.net/media/2023/04/c12afdaa8c2e6089-600x338.jpg",
+      "source_page": "https://whatculture.com/gaming/10-most-infuriating-enemies-in-horror-video-games?page=5",
+      "kind": "capture_jeu_silhouette_complete_plateforme_non_etablie",
+      "bytes": 41412,
+      "sha256": "78994341b2f00c5a89ca0d498253c572b8a494ab66745eeda65e5d22672f9342",
+      "visually_inspected": true,
+      "inspection": "Le moth central est entièrement dans l’image : bouts des ailes, abdomen et deux longues extensions inférieures. Un second moth supérieur est coupé et doit être ignoré. La silhouette confirme le modèle final CV et les extensions vues dans la capture GameTyrant.",
+      "limits": "Image 600×338 ; sujet central petit et sombre, pattes et dessous mal distingués. Effets de jeu et Claire en arrière-plan. L’article nomme CV (2000), mais n’identifie pas la machine, le port ou le jeu capturé. Ne certifie pas Dreamcast 2000 ; aucune vue latérale complète.",
+      "edition_evidence": "Titre de section : Moths — Resident Evil — Code: Veronica (2000) ; crédit Capcom. Plateforme de la capture non indiquée."
+    },
+    {
+      "file": "moth-renote.jpg",
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v16/moth-renote.jpg",
+      "url": "https://renote.net/files/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NzQyODMsInB1ciI6ImJsb2JfaWQifX0=--24166a828fd8784aaab8e9f12a431aa0b8f096d1/20110130193312.jpg",
+      "source_page": "https://renote.net/articles/11542/page/3",
+      "kind": "capture_jeu_partielle",
+      "bytes": 17544,
+      "sha256": "72d8e25a20520dfd51c5393edc2e82195c7c0a5c4e4aa354fc937e6a8593dfd0",
+      "visually_inspected": true,
+      "inspection": "Capture 394×295 avec Claire et un moth très proche du bord gauche ; longues extensions inférieures et ailes lobées visibles, concordantes avec la famille de modèles CV.",
+      "limits": "L’aile gauche sort du cadre. Le nom de fichier comporte une date 20110130, mais un nom de fichier ne constitue pas une preuve de plateforme ou de date de capture.",
+      "edition_evidence": "Page décrit Dreamcast 2000 et porte © 2000 Capcom ; plateforme du screenshot non établie."
+    },
+    {
+      "file": "moth-roh.jpg",
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v16/moth-roh.jpg",
+      "url": "https://www.relyonhorror.com/recv_moth.jpg",
+      "source_page": "https://www.relyonhorror.com/in-depth/resident-evil-in-depth/resident-evil-code-veronica-resident-evil-in-depth-in-depth/resident-evil-code-veronica-enemies/",
+      "kind": "petit_rendu_catalogue_edition_non_resolue",
+      "bytes": 8219,
+      "sha256": "768a5f6c491ca91319425d28c118a659954f22cd6998c34080dc1341575c36e3",
+      "visually_inspected": true,
+      "inspection": "Petit rendu de profil gris, pattes et antennes très fines, grands ocelles.",
+      "limits": "190×190 et contours coupés/trop peu lisibles. Ne permet pas de choisir entre modèle CV et Darkside ; ne pas utiliser pour compléter la silhouette originale.",
+      "edition_evidence": "Page CV, sans provenance détaillée du rendu."
+    },
+    {
+      "file": "cvx-prima-page-011.png",
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v16/cvx-prima-page-011.png",
+      "url": "https://datassette.s3.us-west-004.backblazeb2.com/revistas/resident_evil_-_code_-_veronica_x_primas_official_strategy_guide_-_2001.pdf?VersionId=4_zd2580b9b75789e418f390019_f117ed71b9c5a59f0_d20230603_m054219_c004_v0402017_t0053_u01685770939627",
+      "source_page": "https://datassette.org/pt-br/revistas/videogames/us-estados-unidos/primas-strategy-guide/resident-evil-code-veronica-x-primas",
+      "kind": "page_guide_officiel_capture_native",
+      "bytes": 1594615,
+      "sha256": "c1dfc9545daa0fb00a29477a56c8d985e27700b4101980a863dcb240852e0cbb",
+      "visually_inspected": true,
+      "inspection": "Page imprimée 10 : capture Giant Moth concordante avec le modèle CV à longues extensions ; sujet partiellement cadré.",
+      "limits": "Guide CODE: Veronica X (2001), pas preuve de l’édition Dreamcast 2000. Capture petite/partiellement occultée, insuffisante pour extrémités ou dessous.",
+      "edition_evidence": "Titre CODE: Veronica X imprimé dans le guide Prima ; 2001 selon la fiche documentaire.",
+      "size_px": [
+        804,
+        1100
+      ],
+      "printed_page": 10,
+      "pdf_page_1_based": 11,
+      "derived_from_file": "cvx-prima-2001.pdf",
+      "derivation": "Rendu de la page PDF par pdftoppm, scale-to 1100, sans modification du contenu."
+    },
+    {
+      "file": "cvx-prima-page-012.png",
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v16/cvx-prima-page-012.png",
+      "url": "https://datassette.s3.us-west-004.backblazeb2.com/revistas/resident_evil_-_code_-_veronica_x_primas_official_strategy_guide_-_2001.pdf?VersionId=4_zd2580b9b75789e418f390019_f117ed71b9c5a59f0_d20230603_m054219_c004_v0402017_t0053_u01685770939627",
+      "source_page": "https://datassette.org/pt-br/revistas/videogames/us-estados-unidos/primas-strategy-guide/resident-evil-code-veronica-x-primas",
+      "kind": "page_guide_officiel_capture_native",
+      "bytes": 1697751,
+      "sha256": "2232138333210dd099da90a77e85e900ac32f47828756909a997a289081300d4",
+      "visually_inspected": true,
+      "inspection": "Page imprimée 11 : capture légendée Sweeper en extérieur. Peau jaune/olive claire et zones violacées visibles ; rendu natif sans ressemblance avec le torse presque noir Darkside. Le personnage, le décor et la petite taille masquent des détails.",
+      "limits": "Guide CODE: Veronica X (2001), pas preuve de l’édition Dreamcast 2000. Capture petite/partiellement occultée, insuffisante pour extrémités ou dessous.",
+      "edition_evidence": "Titre CODE: Veronica X imprimé dans le guide Prima ; 2001 selon la fiche documentaire.",
+      "size_px": [
+        832,
+        1100
+      ],
+      "printed_page": 11,
+      "pdf_page_1_based": 12,
+      "derived_from_file": "cvx-prima-2001.pdf",
+      "derivation": "Rendu de la page PDF par pdftoppm, scale-to 1100, sans modification du contenu."
+    }
+  ],
+  "document_files": [
+    {
+      "file": "cvx-prima-2001.pdf",
+      "url": "https://datassette.s3.us-west-004.backblazeb2.com/revistas/resident_evil_-_code_-_veronica_x_primas_official_strategy_guide_-_2001.pdf?VersionId=4_zd2580b9b75789e418f390019_f117ed71b9c5a59f0_d20230603_m054219_c004_v0402017_t0053_u01685770939627",
+      "source_page": "https://datassette.org/pt-br/revistas/videogames/us-estados-unidos/primas-strategy-guide/resident-evil-code-veronica-x-primas",
+      "sha256": "f45b4b62bf6455b7d324ab7c94c11805578898bbe7e28f2173dd8f1fe0f50649",
+      "bytes": 161542239,
+      "inspection": "Pages PDF 11 à 14 rendues et vues ; seules pages imprimées 10 et 11 pertinentes. Référence locale de vérification, pas un asset à publier."
+    },
+    {
+      "file": "cv-2000-gamespot-guide.pdf",
+      "url": "https://www.digitpress.com/library/manuals/dreamcast/re_veronica_guide.pdf",
+      "sha256": "613ac968f699eb4d80aa5a9ad79e5e1439125d9ebbfdfef11b063f3c67e9520a",
+      "bytes": 1135995,
+      "inspection": "Texte et inventaire des images consultés. Guide indépendant 2000 ; pas de nouvelle vue complète pertinente trouvée. Aucune preuve visuelle tirée de ce fichier."
+    }
+  ],
+  "unresolved_or_excluded_leads": [
+    {
+      "url": "https://www.tumgik.com/howlingday",
+      "observation": "Le moteur indexe un ancien billet parlant de quatre images Sweeper CV ; le flux ouvert ne contient plus ce billet. Aucune image de ce billet récupérée ou inspectée.",
+      "status": "UNRESOLVED_PUBLIC_POST"
+    },
+    {
+      "url": "https://howlingday.tumblr.com/tagged/sweeper",
+      "observation": "Accès HTTP 403 ; aucune tentative de contournement.",
+      "status": "ACCESS_FAILED"
+    },
+    {
+      "url": "https://raccooninsider.com/posts/code-veronica-x-enemy-attack-damage/",
+      "observation": "Image Sweeper annoncée par l’index ; page HTTP 403 et non accessible au lecteur web. Non inspectée.",
+      "status": "ACCESS_FAILED"
+    },
+    {
+      "url": "https://images.wikia.com/residentevil/images/a/ae/HunterSweeper.png",
+      "observation": "HTTP 403 au téléchargement. Le fichier est indexé dans la catégorie The Darkside Chronicles Enemy Images de Capcom Database ; aucune raison de l’utiliser comme CV 2000.",
+      "classification_source_url": "https://capcom.fandom.com/wiki/Category:Resident_Evil:_The_Darkside_Chronicles_Enemy_Images",
+      "status": "WRONG_EDITION_LEAD"
+    },
+    {
+      "url": "https://residentevil.fandom.com/fr/wiki/Sweeper",
+      "observation": "Galerie indexée avec une référence au guide Prima page 11 ; page HTTP 402. Le guide trouvé sur Datassette a permis une inspection directe de cette page, sans contourner Fandom.",
+      "status": "PRIMARY_PAGE_CHECKED_ELSEWHERE"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=gtG_z7ufEaA",
+      "observation": "Longplay intitulé original Code: Veronica, description indexée citant la sortie du 29 février 2000. Vidéo non récupérée et aucun frame inspecté ; piste future seulement.",
+      "status": "NOT_VISUALLY_INSPECTED"
+    }
+  ],
+  "publication_policy": "Références tierces conservées dans references-v16 uniquement. Le rapport ne modifie pas les compteurs du corpus, ne lève pas un hold historique, ne certifie pas 1:1 et ne compte aucun nouveau personnage."
+}

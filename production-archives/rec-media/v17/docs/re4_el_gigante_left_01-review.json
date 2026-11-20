@@ -1,0 +1,110 @@
+{
+  "schema": "rec.static-candidate-independent-review.v17",
+  "asset": "El Gigante — Resident Evil 4 (2005), LEFT 01",
+  "id": "re4_el_gigante_left_01",
+  "uid": "re4-el-gigante",
+  "variant": "original_2005_unarmored_no_exposed_parasite",
+  "reviewed_at": "2026-11-20T13:33:51.733963+00:00",
+  "reviewer": "review_v14",
+  "asset_path": "assets/re4_el_gigante_left_01.png",
+  "original_path": "/workspace/scratch/3fced93cfb0a/generated_images/exec-226204f1-512a-4688-bf92-06c46c07831f.png",
+  "sha256": "a7418d21ad975895a4d59cbfbff477aaa4aa136976c0f91c33cac75058b58b90",
+  "bytes": 1509886,
+  "verdict": "TRIAL_NEEDS_ASYMMETRY_CORRECTION",
+  "review_status": "TRIAL_NEEDS_ASYMMETRY_CORRECTION",
+  "excluded_from_candidate_count": true,
+  "source_refs_reviewed": [
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v17/el-gigante-2005-source.png",
+      "git_path": "assets/specimens/re4-el-gigante.png",
+      "sha256": "49724b770e307b1f93ce8be468508d6298b63df1c412a0f063786e99bf0870d6",
+      "role": "Retained original-2005 complete giant render; unrelated small bodies excluded from target"
+    },
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v17/el-gigante-2005-catalog.png",
+      "git_path": "assets/catalog/re4-el-gigante.png",
+      "sha256": "1f82210d4fe4acc69d55fa26672ad88e916a02b5675215d48d31709b49c93286",
+      "role": "Original-2005 cropped head/torso details"
+    },
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v17/el-gigante-r34-right.png",
+      "git_path": "modules/fidelity-r34/assets/generated/re4-el-gigante/idle-right.png",
+      "sha256": "116b2c268a11e6135abe581767cd1b379bf7a59b67a98771d23b3fd3985cf0ee",
+      "role": "Existing RIGHT generated static candidate inspected for coverage comparison, not a native fidelity reference"
+    }
+  ],
+  "source_documents_reviewed": [
+    "docs/SOURCES_RE4_SALVADOR_GIGANTE_V17.json"
+  ],
+  "prompt_record": "prompts/re4_el_gigante_left_01.json",
+  "technical_record": "docs/re4_el_gigante_left_01-technical.json",
+  "visual_checks": {
+    "orientation": "Actual front-left three-quarter. Nose, mouth and gaze clearly project screen left; the farther foot and knee point left. The nearer foot and much of the torso remain frontal. Direction is adequate for a LEFT static presentation, but does not achieve the requested side-dominant narrow torso profile.",
+    "costume": "One unarmored gray giant with hunched massive shoulders, low bald head, textured skin, long arms, dark nails, bare feet and ragged dark short trousers. No emerging parasite, weapon or new armor.",
+    "hands_and_feet": "Two connected arms/hands and two connected legs/feet, with complete visible extremities inside the frame. Several fingers overlap naturally in projection; exact hidden digit shape/count is not independently certified. No principal anatomical cut was seen.",
+    "framing": "One isolated complete giant. No small human body, second subject, floor, label or scene is visible. All principal extremities and cord tip are inside the canvas.",
+    "asymmetry": "FAIL: the long twisted cord/braid-like element descends beside the near cheek and neck, screen-right of the head, over the near upper torso. In this physically left-facing front-three-quarter view that is the anatomical LEFT side. The source locates its long descending segment on anatomical RIGHT. The visible path does not support an interpretation as merely a far-right segment partly showing behind the head; it reads as transferred to the near side.",
+    "limits": [
+      "Principal alpha≥16 margins left/top/right/bottom are [93,84,119,44] px = [7.416%,6.699%,9.490%,3.509%]. The requested 10% transparent padding on every side is not achieved, though no principal extremity is clipped.",
+      "The orientation is directional front-left three-quarter, not an orthographic or strongly lateral combat profile.",
+      "Exact cord material, hidden surfaces, small garment tears, teeth and digit geometry remain generated interpretations. The source supports the side of the descending cord, not a claim that its material is hair.",
+      "No original game geometry, animation, scale, pivot, contacts or engine admission is certified."
+    ]
+  },
+  "failed_gates": [
+    {
+      "gate": "source_specific_anatomical_laterality",
+      "feature": "long descending twisted cord/braid-like element",
+      "expected": "anatomical right, naturally far/partly occluded in a left view",
+      "observed": "anatomical left, near side of visible face and upper torso"
+    }
+  ],
+  "alpha": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox_alpha_gte16": [
+      93,
+      84,
+      1135,
+      1210
+    ],
+    "margins_alpha16_left_top_right_bottom": [
+      93,
+      84,
+      119,
+      44
+    ],
+    "bbox_all_nonzero_alpha": [
+      0,
+      9,
+      1254,
+      1254
+    ],
+    "pixels_alpha0": 930880,
+    "pixels_alpha1_to15": 42654,
+    "pixels_alpha1_to3": 36353,
+    "pixels_alpha255": 850,
+    "all_subject_alpha_255": false,
+    "halo_finding": "Actual gray and light alpha composites personally inspected. Real transparency and no opaque backdrop or substantial broad visible halo. Faint low-alpha residuals extend outside the principal silhouette and to some canvas edges; original PNG bytes are retained."
+  },
+  "qa_previews_only": [
+    "/workspace/scratch/3fced93cfb0a/qa-v17/re4_el_gigante_left_01-gray.jpg",
+    "/workspace/scratch/3fced93cfb0a/qa-v17/re4_el_gigante_left_01-light.jpg"
+  ],
+  "inspection_method": "Independent inspection of original-edition complete source, crop, retained RIGHT candidate and both actual alpha composites of LEFT01. Dimensions, alpha, bboxes and SHA measured from unchanged generated PNG bytes.",
+  "original_bytes_modified": false,
+  "original_generated_bytes_verified_identical": true,
+  "one_subject_per_image_reviewed": true,
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "animation_frames": 1,
+  "can_mirror": false,
+  "recommended_action": "Retain LEFT01 unchanged as an excluded asymmetry trial. A corrected independent LEFT view must keep the descending cord on anatomical right, allowing it to disappear behind the far shoulder/head instead of transferring it to the near side. The existing R34 RIGHT remains the qualified opposite direction."
+}

@@ -1,0 +1,1080 @@
+{
+  "schema": "rec.bow-qa.v6",
+  "reviewDate": "2026-11-19",
+  "phase": "After generation of twelve V6 PNG files and after review of the two corrected variants; before final packaging/publication by the parent task.",
+  "readOnlyImageReview": true,
+  "summary": {
+    "filesReviewed": 12,
+    "retainedCandidateCount": 10,
+    "rejectedSupersededTrialCount": 2,
+    "referenceBitmapsEdited": false,
+    "generatedPngEdited": false,
+    "exactFidelityCertified": false,
+    "runtimeValidated": false
+  },
+  "statusDefinitions": {
+    "CANDIDATE_REVIEWED_WITH_LIMITATIONS": "Candidat statique dont l'identité, l'orientation et l'anatomie visible ont été comparées aux références ; limites documentées, aucune admission moteur ni certification 1:1.",
+    "REJECTED_SUPERSEDED": "Essai écarté pour défaut anatomique concret, conservé dans trials/ et remplacé par une variante corrigée revue séparément."
+  },
+  "method": {
+    "visual": "Ouverture séparée des sorties et références locales ; comparaison des membres, appendices, asymétries, détails identitaires, orientation et cadrage.",
+    "numeric": "Lecture seule avec Pillow, NumPy et scipy.ndimage.distance_transform_edt ; aucune transformation ni écriture des images.",
+    "bboxConvention": "Coordonnées inclusives [xmin,ymin,xmax,ymax] ; marges L/T/R/B = xmin,ymin,width-1-xmax,height-1-ymax. Les maxima inclusifs sont inférieurs de 1 aux bornes exclusives de PIL.getbbox().",
+    "alphaThreshold": 16,
+    "coreAlphaThreshold": 128,
+    "farZoneDefinition": "Distance euclidienne >=12 pixels depuis la zone alpha>=128. Cette zone peut contenir des éléments très fins ; son maximum alpha n'est pas à lui seul une preuve de fond.",
+    "redRgbDefinition": "R>210,G<70,B<70 ; mesure ciblée des pixels rouges visibles dans certains previews.",
+    "padding": "Les marges réelles sont consignées. Les marges de 5–7% souhaitées ne sont pas atteintes partout ; une silhouette complète reste un candidat de recherche, pas un sprite normalisé prêt pour le moteur."
+  },
+  "limitations": [
+    "Les surfaces opposées aux références principalement frontales restent partiellement inférées.",
+    "Les textures, reliefs et proportions régénérés ne sont pas certifiés fidèles 1:1.",
+    "Le changement de côté, les animations, appuis, échelle, atlas, hitboxes et intégration au moteur ne sont pas validés.",
+    "Des RGB colorés sous alpha très faible persistent autour de contours ; aucun large fond opaque n'a été établi sur les dix candidats retenus. Leur recette de compositing au moteur reste à faire.",
+    "L'audit antérieur d'absence de PR reste une observation avant génération, pas une affirmation de l'état courant du dépôt."
+  ],
+  "promptEvidence": "prompts/GENERATION_PROMPTS_V6.json",
+  "referenceEvidence": [
+    "docs/REFERENCE_RECOVERY_V6.json",
+    "docs/REFERENCES_BOW_V6.json"
+  ],
+  "records": [
+    {
+      "assetFilename": "REC_CERBERUS_RE1_1996_FULLBODY_LEFT_V6_02.png",
+      "path": "assets/REC_CERBERUS_RE1_1996_FULLBODY_LEFT_V6_02.png",
+      "subjectId": "re1-cerberus",
+      "subject": "Cerberus",
+      "edition": "Resident Evil (1996)",
+      "status": "CANDIDATE_REVIEWED_WITH_LIMITATIONS",
+      "eligibleForRetainedCandidate": true,
+      "orientationObserved": "SCREEN_LEFT_THREE_QUARTER",
+      "subjectCountObserved": 1,
+      "visibleExtremitiesContained": true,
+      "fidelity1to1Certified": false,
+      "runtimeValidated": false,
+      "observations": [
+        "Un chien noir et feu entier, quatre membres et queue courte, tête dirigée vers la gauche.",
+        "Variante02 : épaule et antérieur proches (gauche anatomique) recouverts de pelage intact ; grande lésion reportée sur l'antérieur éloigné (droit anatomique).",
+        "Oreille intacte du côté droit anatomique éloigné et côté gauche de la tête endommagé conservés ; latéralité de la référence respectée après correction.",
+        "Source de 238 × 499 pixels : détail du pelage, dents, reliefs et surfaces opposées générés ; marge haute de 8 pixels seulement, pointe d'oreille visible entière."
+      ],
+      "references": [
+        {
+          "path": "references/cerberus_re1_1996_full_legacy.webp",
+          "sha256": "0e5ff5e671131d3efada93ad702fb5d612aee3091a74cf7fba58029d3d3a3474",
+          "sourceUrls": [
+            "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/assets/specimens/re1-cerberus.webp"
+          ],
+          "referenceClass": "project_archived_reference",
+          "referenceLimitations": "Source visuelle héritée du dépôt ; surfaces cachées et proportions métriques non certifiées."
+        }
+      ],
+      "sourceBitmapsPublishedByThisReview": false,
+      "sha256": "e05ff08d35dcba8ba725919dfec7fc199053fe253d29805857b32f3b39f06af2",
+      "bytes": 965777,
+      "dimensions": {
+        "width": 1494,
+        "height": 1052,
+        "mode": "RGBA"
+      },
+      "numericQa": {
+        "alphaMin": 0,
+        "alphaMax": 255,
+        "transparentPct": 76.3458,
+        "bboxAlphaGt16Inclusive": [
+          291,
+          8,
+          1226,
+          1034
+        ],
+        "bboxAlphaGt127Inclusive": [
+          292,
+          9,
+          1225,
+          1033
+        ],
+        "marginsLTRB": [
+          291,
+          8,
+          267,
+          17
+        ],
+        "marginsLTRBPercent": [
+          19.478,
+          0.76,
+          17.871,
+          1.616
+        ],
+        "borderMaxAlpha": 1,
+        "cornerAlphas": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "farPixels": 1155766,
+        "farAlphaMax": 1,
+        "farAlphaP99": 0,
+        "farPixelsAlphaGt16": 0,
+        "farPixelsAlphaEq0": 1154731,
+        "redRgbPixels": 3365,
+        "redRgbMaxAlpha": 2,
+        "redRgbPixelsAlphaGt16": 0
+      },
+      "supersedes": "REC_CERBERUS_RE1_1996_FULLBODY_LEFT_V6_01.png"
+    },
+    {
+      "assetFilename": "REC_CHIMERA_RE1R_2002_FULLBODY_LEFT_V6_02.png",
+      "path": "assets/REC_CHIMERA_RE1R_2002_FULLBODY_LEFT_V6_02.png",
+      "subjectId": "re1r-chimera",
+      "subject": "Chimera",
+      "edition": "Resident Evil remake (2002)",
+      "status": "CANDIDATE_REVIEWED_WITH_LIMITATIONS",
+      "eligibleForRetainedCandidate": true,
+      "orientationObserved": "SCREEN_LEFT_THREE_QUARTER",
+      "subjectCountObserved": 1,
+      "visibleExtremitiesContained": true,
+      "fidelity1to1Certified": false,
+      "runtimeValidated": false,
+      "observations": [
+        "Un sujet entier, tête orientée vers la gauche, grand crochet asymétrique, deux bras principaux et deux jambes.",
+        "Variante02 : quatre appendices dorsaux fins visibles ; le cinquième appendice montant au centre dans la variante01 a été supprimé.",
+        "Yeux composés, large bouche, thorax annelé et abdomen segmenté conservés ; reliefs, attaches occultées et position spatiale précise non certifiés 1:1.",
+        "Marges verticales très serrées : 12 pixels en haut, 9 en bas à alpha >16 ; aucune extrémité représentée visiblement coupée."
+      ],
+      "references": [
+        {
+          "path": "references/chimera_re1r_2002_full_legacy.png",
+          "sha256": "e0035a770dd991b0110bd48ea8fec2fc671775e4ab7ec449c93e448138931c82",
+          "sourceUrls": [
+            "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/assets/specimens/re1r-chimera.png"
+          ],
+          "referenceClass": "project_archived_reference",
+          "referenceLimitations": "Source visuelle héritée du dépôt ; surfaces cachées et proportions métriques non certifiées."
+        }
+      ],
+      "sourceBitmapsPublishedByThisReview": false,
+      "sha256": "7dccb64a2a54b6784cf8187f44b774603be93b06e53ff5356649624a7b817a06",
+      "bytes": 1317810,
+      "dimensions": {
+        "width": 1010,
+        "height": 1557,
+        "mode": "RGBA"
+      },
+      "numericQa": {
+        "alphaMin": 0,
+        "alphaMax": 255,
+        "transparentPct": 69.23,
+        "bboxAlphaGt16Inclusive": [
+          54,
+          12,
+          969,
+          1547
+        ],
+        "bboxAlphaGt127Inclusive": [
+          55,
+          20,
+          967,
+          1546
+        ],
+        "marginsLTRB": [
+          54,
+          12,
+          40,
+          9
+        ],
+        "marginsLTRBPercent": [
+          5.347,
+          0.771,
+          3.96,
+          0.578
+        ],
+        "borderMaxAlpha": 1,
+        "cornerAlphas": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "farPixels": 1027056,
+        "farAlphaMax": 13,
+        "farAlphaP99": 0,
+        "farPixelsAlphaGt16": 0,
+        "farPixelsAlphaEq0": 1021364,
+        "redRgbPixels": 538,
+        "redRgbMaxAlpha": 2,
+        "redRgbPixelsAlphaGt16": 0
+      },
+      "supersedes": "REC_CHIMERA_RE1R_2002_FULLBODY_LEFT_V6_01.png"
+    },
+    {
+      "assetFilename": "REC_DRAIN_DEIMOS_RE3R_FULLBODY_LEFT_V6_01.png",
+      "path": "assets/REC_DRAIN_DEIMOS_RE3R_FULLBODY_LEFT_V6_01.png",
+      "subjectId": "re3r-drain-deimos",
+      "subject": "Drain Deimos",
+      "edition": "Resident Evil 3 remake (2020)",
+      "status": "CANDIDATE_REVIEWED_WITH_LIMITATIONS",
+      "eligibleForRetainedCandidate": true,
+      "orientationObserved": "SCREEN_LEFT_THREE_QUARTER",
+      "subjectCountObserved": 1,
+      "visibleExtremitiesContained": true,
+      "fidelity1to1Certified": false,
+      "runtimeValidated": false,
+      "observations": [
+        "Un sujet bas orienté vers la gauche ; six grands membres articulés terminés en griffes sont distinguables.",
+        "Deux longues faux dorsales séparées des membres porteurs et petits appendices antérieurs/buccaux conservés ; les faux ne sont pas comptées comme une quatrième paire de pattes.",
+        "Carapace lamellaire, abdomen et zones charnues cohérents avec les rendus qualifiés ; pose abaissée et disposition spatiale modifiées, surfaces détaillées non certifiées 1:1.",
+        "Tous les grands membres et les deux faux restent à l'intérieur de l'image ; aucune suppression ou duplication majeure démontrée."
+      ],
+      "references": [
+        {
+          "path": "references/drain_deimos_re3r_qualified_side.png",
+          "sha256": "0d87073af175784222a857894eca1bd6b064b2d11cb2a3020f5b04fdf527a574",
+          "sourceUrls": [
+            "https://model-index-site.pages.dev/",
+            "https://model-archive.shaydexxx.workers.dev/models",
+            "https://www.deviantart.com/breadgamer123/art/Drain-Deimos-Model-Resident-Evil-3-Remake-1258859898",
+            "https://drive.google.com/uc?export=download&id=1yGG_z_x-j-pXNevESnfY0VI2DwGm7rlR"
+          ],
+          "referenceClass": "community_game_extraction",
+          "referenceLimitations": "Pose technique, pas animation idle. Certains membres se superposent en profil ; consulter aussi la vue trois quarts. Version .blend 4.5.87 ouverte par 4.3.2 ; rendu inspecté. Page DeviantArt HTTP403 ; catalogue, téléchargement public et identifiants em3500 effectivement vérifiés."
+        },
+        {
+          "path": "references/drain_deimos_re3r_qualified_three_quarter.png",
+          "sha256": "e2e9abd285dfc3c796f4eb04c478c3d41d70acf6429e02bb1ed7553fa6eea619",
+          "sourceUrls": [
+            "https://model-index-site.pages.dev/",
+            "https://model-archive.shaydexxx.workers.dev/models",
+            "https://www.deviantart.com/breadgamer123/art/Drain-Deimos-Model-Resident-Evil-3-Remake-1258859898",
+            "https://drive.google.com/uc?export=download&id=1yGG_z_x-j-pXNevESnfY0VI2DwGm7rlR"
+          ],
+          "referenceClass": "community_game_extraction",
+          "referenceLimitations": "Pose technique, pas animation idle. Certains membres se superposent en profil ; consulter aussi la vue trois quarts. Version .blend 4.5.87 ouverte par 4.3.2 ; rendu inspecté. Page DeviantArt HTTP403 ; catalogue, téléchargement public et identifiants em3500 effectivement vérifiés."
+        }
+      ],
+      "sourceBitmapsPublishedByThisReview": false,
+      "sha256": "f78005e01e86b60ca225ccbb9d2e43ced1efdfb74198cea36f3e22b0d2e44726",
+      "bytes": 1246312,
+      "dimensions": {
+        "width": 1448,
+        "height": 1086,
+        "mode": "RGBA"
+      },
+      "numericQa": {
+        "alphaMin": 0,
+        "alphaMax": 255,
+        "transparentPct": 73.1673,
+        "bboxAlphaGt16Inclusive": [
+          56,
+          129,
+          1374,
+          928
+        ],
+        "bboxAlphaGt127Inclusive": [
+          57,
+          130,
+          1373,
+          928
+        ],
+        "marginsLTRB": [
+          56,
+          129,
+          73,
+          157
+        ],
+        "marginsLTRBPercent": [
+          3.867,
+          11.878,
+          5.041,
+          14.457
+        ],
+        "borderMaxAlpha": 1,
+        "cornerAlphas": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "farPixels": 1115557,
+        "farAlphaMax": 2,
+        "farAlphaP99": 0,
+        "farPixelsAlphaGt16": 0,
+        "farPixelsAlphaEq0": 1104850,
+        "redRgbPixels": 3548,
+        "redRgbMaxAlpha": 2,
+        "redRgbPixelsAlphaGt16": 0
+      }
+    },
+    {
+      "assetFilename": "REC_HUNTER_BETA_RE3R_FULLBODY_LEFT_V6_01.png",
+      "path": "assets/REC_HUNTER_BETA_RE3R_FULLBODY_LEFT_V6_01.png",
+      "subjectId": "re3r-hunter-beta",
+      "subject": "Hunter Beta",
+      "edition": "Resident Evil 3 remake (2020)",
+      "status": "CANDIDATE_REVIEWED_WITH_LIMITATIONS",
+      "eligibleForRetainedCandidate": true,
+      "orientationObserved": "SCREEN_LEFT_THREE_QUARTER",
+      "subjectCountObserved": 1,
+      "visibleExtremitiesContained": true,
+      "fidelity1to1Certified": false,
+      "runtimeValidated": false,
+      "observations": [
+        "Un sujet entier orienté vers la gauche ; deux bras, deux jambes, dos très bombé, tête blindée basse et crocs pendants.",
+        "L'avant-bras et la main gauches anatomiques massifs restent au premier plan ; le bras opposé plus fin et les longues griffes sont conservés.",
+        "Plaques gris olive, zones charnues rouges et asymétrie principale cohérentes avec le modèle qualifié ; détails de plaques, pose et proportions non certifiés 1:1.",
+        "Marges verticales serrées de 17 et 19 pixels à alpha >16 ; pointes visibles dans le cadre."
+      ],
+      "references": [
+        {
+          "path": "references/hunter_beta_re3r_qualified_side.png",
+          "sha256": "ceaf18ffc773ebe7ce5c3b1de1d8d15b49c418eb12ec2b99f85c34c15819de3a",
+          "sourceUrls": [
+            "https://model-index-site.pages.dev/",
+            "https://model-archive.shaydexxx.workers.dev/models",
+            "https://www.deviantart.com/breadgamer123/art/Hunter-Model-Resident-Evil-3-Remake-1258857063",
+            "https://drive.google.com/uc?export=download&id=1WG9trCYM1JuTsq-64XAoofximNuNhwpK"
+          ],
+          "referenceClass": "community_game_extraction",
+          "referenceLimitations": "Pose technique du modèle, pas idle canonique. Version .blend 4.5.87 ouverte par 4.3.2 ; rendu inspecté. Matériaux et éclairage de consultation, pas rendu du moteur du jeu. Page DeviantArt HTTP403 ; catalogue, téléchargement public et identifiants em3300 effectivement vérifiés."
+        },
+        {
+          "path": "references/hunter_beta_re3r_qualified_three_quarter.png",
+          "sha256": "f14a4a1f33b804d42f5b073501fdb8fb4a06ab1a93b260f9ddfec2d26a22e86c",
+          "sourceUrls": [
+            "https://model-index-site.pages.dev/",
+            "https://model-archive.shaydexxx.workers.dev/models",
+            "https://www.deviantart.com/breadgamer123/art/Hunter-Model-Resident-Evil-3-Remake-1258857063",
+            "https://drive.google.com/uc?export=download&id=1WG9trCYM1JuTsq-64XAoofximNuNhwpK"
+          ],
+          "referenceClass": "community_game_extraction",
+          "referenceLimitations": "Pose technique du modèle, pas idle canonique. Version .blend 4.5.87 ouverte par 4.3.2 ; rendu inspecté. Matériaux et éclairage de consultation, pas rendu du moteur du jeu. Page DeviantArt HTTP403 ; catalogue, téléchargement public et identifiants em3300 effectivement vérifiés."
+        }
+      ],
+      "sourceBitmapsPublishedByThisReview": false,
+      "sha256": "cb384c9a3b4ee85cdf1be271edb88465d5cee174d06cac75f6d3a3173fbae136",
+      "bytes": 1752941,
+      "dimensions": {
+        "width": 1448,
+        "height": 1086,
+        "mode": "RGBA"
+      },
+      "numericQa": {
+        "alphaMin": 0,
+        "alphaMax": 255,
+        "transparentPct": 61.3836,
+        "bboxAlphaGt16Inclusive": [
+          179,
+          17,
+          1286,
+          1066
+        ],
+        "bboxAlphaGt127Inclusive": [
+          180,
+          18,
+          1285,
+          1065
+        ],
+        "marginsLTRB": [
+          179,
+          17,
+          161,
+          19
+        ],
+        "marginsLTRBPercent": [
+          12.362,
+          1.565,
+          11.119,
+          1.75
+        ],
+        "borderMaxAlpha": 1,
+        "cornerAlphas": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "farPixels": 931221,
+        "farAlphaMax": 1,
+        "farAlphaP99": 0,
+        "farPixelsAlphaGt16": 0,
+        "farPixelsAlphaEq0": 922013,
+        "redRgbPixels": 5681,
+        "redRgbMaxAlpha": 2,
+        "redRgbPixelsAlphaGt16": 0
+      }
+    },
+    {
+      "assetFilename": "REC_IVY_RE2R_FULLBODY_LEFT_V6_01.png",
+      "path": "assets/REC_IVY_RE2R_FULLBODY_LEFT_V6_01.png",
+      "subjectId": "re2r-ivy",
+      "subject": "Ivy",
+      "edition": "Resident Evil 2 remake (2019)",
+      "status": "CANDIDATE_REVIEWED_WITH_LIMITATIONS",
+      "eligibleForRetainedCandidate": true,
+      "orientationObserved": "SCREEN_LEFT_THREE_QUARTER",
+      "subjectCountObserved": 1,
+      "visibleExtremitiesContained": true,
+      "fidelity1to1Certified": false,
+      "runtimeValidated": false,
+      "observations": [
+        "Un seul sujet avec tête fermée fendue verticalement, orientée à gauche ; mains, pieds et lianes visibles entiers.",
+        "Lianes vertes, nodules ambrés, orbites sombres et corps humanoïde racinaire présents ; pas de substitution de la tête florale de 1998.",
+        "Agencement, nombre exact et position des lianes/nodules reconstruits et non certifiés 1:1 ; la référence est un montage de deux états du même type."
+      ],
+      "references": [
+        {
+          "path": "references/ivy_re2r_full_candidate.png",
+          "sha256": "50c4f8123c2a154b25af328abe75c07c6fc137d4581b10d7b115fe81c082e5b6",
+          "sourceUrls": [
+            "https://videogamepro.jimdofree.com/resident-evil-%D1%81%D0%B5%D1%80%D0%B8%D1%8F-%D0%B8%D0%B3%D1%80/resident-evil-2-2019/%D0%B2%D1%80%D0%B0%D0%B3%D0%B8/",
+            "https://image.jimcdn.com/app/cms/image/transf/dimension%3Dorigxorig%3Aformat%3Dpng/path/s66765e01ba4c0b38/image/if8b69bee8204c253/version/1567355452/image.png"
+          ],
+          "referenceClass": "community_rehosted_visual_unverified_original",
+          "referenceLimitations": "Source communautaire, publication indiquée au 1er septembre 2019. Provenance officielle de l’image non certifiée. Montage de deux états, pas une scène avec deux espèces. Pas de profil orthographique garanti."
+        }
+      ],
+      "sourceBitmapsPublishedByThisReview": false,
+      "sha256": "e0d088565eb5fbd2ce90772aa946fc1f016b006408dcbe99f17ef4d88e96ee37",
+      "bytes": 2030549,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "mode": "RGBA"
+      },
+      "numericQa": {
+        "alphaMin": 0,
+        "alphaMax": 254,
+        "transparentPct": 71.2659,
+        "bboxAlphaGt16Inclusive": [
+          138,
+          41,
+          938,
+          1492
+        ],
+        "bboxAlphaGt127Inclusive": [
+          139,
+          42,
+          937,
+          1491
+        ],
+        "marginsLTRB": [
+          138,
+          41,
+          85,
+          43
+        ],
+        "marginsLTRBPercent": [
+          13.477,
+          2.669,
+          8.301,
+          2.799
+        ],
+        "borderMaxAlpha": 1,
+        "cornerAlphas": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "farPixels": 1041990,
+        "farAlphaMax": 1,
+        "farAlphaP99": 0,
+        "farPixelsAlphaGt16": 0,
+        "farPixelsAlphaEq0": 1039935,
+        "redRgbPixels": 0,
+        "redRgbMaxAlpha": null,
+        "redRgbPixelsAlphaGt16": 0
+      }
+    },
+    {
+      "assetFilename": "REC_LICKER_RE2R_FULLBODY_LEFT_V6_01.png",
+      "path": "assets/REC_LICKER_RE2R_FULLBODY_LEFT_V6_01.png",
+      "subjectId": "re2r-licker",
+      "subject": "Licker",
+      "edition": "Resident Evil 2 remake (2019)",
+      "status": "CANDIDATE_REVIEWED_WITH_LIMITATIONS",
+      "eligibleForRetainedCandidate": true,
+      "orientationObserved": "SCREEN_LEFT_THREE_QUARTER",
+      "subjectCountObserved": 1,
+      "visibleExtremitiesContained": true,
+      "fidelity1to1Certified": false,
+      "runtimeValidated": false,
+      "observations": [
+        "Un sujet bas en trois-quarts gauche, cerveau exposé, mâchoires dentées, reliefs dorsaux et quatre membres griffus entiers.",
+        "La langue rétractée est une adaptation explicite du prompt ; elle n'est pas traitée comme une extrémité coupée.",
+        "Tête et reliefs accentués, appuis changés depuis le modèle ; aucune correspondance métrique exacte ni animation validée."
+      ],
+      "references": [
+        {
+          "path": "references/licker_re2r_model_side.png",
+          "sha256": "3afb2b2d6cca4fa15d1cca47de829c8189f5206437b8cd8c718891fbee5f2bd2",
+          "sourceUrls": [
+            "https://models.spriters-resource.com/playstation_4/residentevil2remake/asset/326332/",
+            "https://models.spriters-resource.com/media/assets/323/326332.zip?updated=1755507075"
+          ],
+          "referenceClass": "community_game_extraction",
+          "referenceLimitations": "Fiche PS4 Resident Evil 2 Remake, soumission LWG_ datée du 2 octobre 2021. Extraction/port communautaire, pas distribution officielle Capcom. La grande langue rend le corps petit en profil ; compléter par la vue de face. Gauche indépendante à privilégier car droite ancienne existante selon audit."
+        },
+        {
+          "path": "references/licker_re2r_model_three_quarter.png",
+          "sha256": "8fd3614b25137e1d3a7e1082f9bb4372cadbcf115c9c91c944eaa6df7302f92a",
+          "sourceUrls": [
+            "https://models.spriters-resource.com/playstation_4/residentevil2remake/asset/326332/",
+            "https://models.spriters-resource.com/media/assets/323/326332.zip?updated=1755507075"
+          ],
+          "referenceClass": "community_game_extraction",
+          "referenceLimitations": "Fiche PS4 Resident Evil 2 Remake, soumission LWG_ datée du 2 octobre 2021. Extraction/port communautaire, pas distribution officielle Capcom. La grande langue rend le corps petit en profil ; compléter par la vue de face. Gauche indépendante à privilégier car droite ancienne existante selon audit."
+        }
+      ],
+      "sourceBitmapsPublishedByThisReview": false,
+      "sha256": "f7bdc0c7470197f08155d98c793c5970860e6bea08d51ee36ca453f454df90ec",
+      "bytes": 2049559,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGBA"
+      },
+      "numericQa": {
+        "alphaMin": 0,
+        "alphaMax": 254,
+        "transparentPct": 66.5854,
+        "bboxAlphaGt16Inclusive": [
+          59,
+          135,
+          1461,
+          952
+        ],
+        "bboxAlphaGt127Inclusive": [
+          60,
+          136,
+          1460,
+          951
+        ],
+        "marginsLTRB": [
+          59,
+          135,
+          74,
+          71
+        ],
+        "marginsLTRBPercent": [
+          3.841,
+          13.184,
+          4.818,
+          6.934
+        ],
+        "borderMaxAlpha": 1,
+        "cornerAlphas": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "farPixels": 1049131,
+        "farAlphaMax": 2,
+        "farAlphaP99": 1,
+        "farPixelsAlphaGt16": 0,
+        "farPixelsAlphaEq0": 1008890,
+        "redRgbPixels": 0,
+        "redRgbMaxAlpha": null,
+        "redRgbPixelsAlphaGt16": 0
+      }
+    },
+    {
+      "assetFilename": "REC_POPOKARIMU_RE5_FULLBODY_LEFT_V6_01.png",
+      "path": "assets/REC_POPOKARIMU_RE5_FULLBODY_LEFT_V6_01.png",
+      "subjectId": "re5-popokarimu",
+      "subject": "Popokarimu",
+      "edition": "Resident Evil 5 (2009)",
+      "status": "CANDIDATE_REVIEWED_WITH_LIMITATIONS",
+      "eligibleForRetainedCandidate": true,
+      "orientationObserved": "SCREEN_LEFT_THREE_QUARTER",
+      "subjectCountObserved": 1,
+      "visibleExtremitiesContained": true,
+      "fidelity1to1Certified": false,
+      "runtimeValidated": false,
+      "observations": [
+        "Un sujet bas orienté vers la gauche ; ailes repliées, tête, membres visibles et énorme abdomen recourbé entièrement contenus dans le cadre.",
+        "Motifs tachetés clairs et sombres, face ventrale rouge segmentée et crochets terminaux conservés ; pas d'ajout anatomique manifeste identifié.",
+        "Référence illustrative, pas modèle natif ; orientation de tête et position des ailes adaptées, surfaces latérales et textures reconstruites."
+      ],
+      "references": [
+        {
+          "path": "references/popokarimu_re5_2009_full_legacy.png",
+          "sha256": "84c7640d37a564f2f2dc5a3e2e897dc8b46c5e79dc79cab3d945d5e498fcd4ac",
+          "sourceUrls": [
+            "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/source-research/re5-popokarimu-candidate-1.png"
+          ],
+          "referenceClass": "project_archived_reference",
+          "referenceLimitations": "Source visuelle héritée du dépôt ; surfaces cachées et proportions métriques non certifiées."
+        }
+      ],
+      "sourceBitmapsPublishedByThisReview": false,
+      "sha256": "8a0b6050e3a8dbc6462c678a4eed6b1b3fa075a121138f7f87f315e55cbc8230",
+      "bytes": 1535246,
+      "dimensions": {
+        "width": 1312,
+        "height": 1199,
+        "mode": "RGBA"
+      },
+      "numericQa": {
+        "alphaMin": 0,
+        "alphaMax": 255,
+        "transparentPct": 62.0609,
+        "bboxAlphaGt16Inclusive": [
+          46,
+          31,
+          1279,
+          1155
+        ],
+        "bboxAlphaGt127Inclusive": [
+          47,
+          32,
+          1279,
+          1154
+        ],
+        "marginsLTRB": [
+          46,
+          31,
+          32,
+          43
+        ],
+        "marginsLTRBPercent": [
+          3.506,
+          2.585,
+          2.439,
+          3.586
+        ],
+        "borderMaxAlpha": 1,
+        "cornerAlphas": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "farPixels": 922730,
+        "farAlphaMax": 9,
+        "farAlphaP99": 0,
+        "farPixelsAlphaGt16": 0,
+        "farPixelsAlphaEq0": 918137,
+        "redRgbPixels": 335,
+        "redRgbMaxAlpha": 2,
+        "redRgbPixelsAlphaGt16": 0
+      }
+    },
+    {
+      "assetFilename": "REC_REAPER_RE5_FULLBODY_LEFT_V6_01.png",
+      "path": "assets/REC_REAPER_RE5_FULLBODY_LEFT_V6_01.png",
+      "subjectId": "re5-reaper",
+      "subject": "Reaper",
+      "edition": "Resident Evil 5 (2009)",
+      "status": "CANDIDATE_REVIEWED_WITH_LIMITATIONS",
+      "eligibleForRetainedCandidate": true,
+      "orientationObserved": "SCREEN_LEFT_THREE_QUARTER",
+      "subjectCountObserved": 1,
+      "visibleExtremitiesContained": true,
+      "fidelity1to1Certified": false,
+      "runtimeValidated": false,
+      "observations": [
+        "Un sujet, tête et silhouette orientées vers la gauche en trois-quarts ; toutes les extrémités représentées restent dans le cadre.",
+        "Quatre membres supérieurs en faux, deux pattes porteuses, deux antennes, abdomen segmenté et thorax clair conservés.",
+        "Profil de tête allongé, surfaces opposées, reliefs fins et brillance reconstruits ; fidélité métrique 1:1 non certifiée."
+      ],
+      "references": [
+        {
+          "path": "references/reaper_re5_full_legacy.png",
+          "sha256": "6cbaf43440a50f0f05a3a4349e57471a5f2b6c468ece3151027cb2bb0676d193",
+          "sourceUrls": [
+            "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_2/source-research/re5-reaper-candidate-1.png",
+            "https://raw.githubusercontent.com/darknigthmare/resident-evil-bow-protocol/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_2/source-research/re5-reaper-candidate-1.png"
+          ],
+          "referenceClass": "project_archived_reference",
+          "referenceLimitations": "Origine primaire et licence non réétablies dans cette recherche. Le reçu de projet identifie RE5 ; vue majoritairement frontale. Gauche indépendante uniquement, droite déjà admise."
+        }
+      ],
+      "sourceBitmapsPublishedByThisReview": false,
+      "sha256": "1f939efb2881c7dce4e607c3021a830b884d865abc55100af8b9c5730968ae38",
+      "bytes": 1336851,
+      "dimensions": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGBA"
+      },
+      "numericQa": {
+        "alphaMin": 0,
+        "alphaMax": 255,
+        "transparentPct": 70.2913,
+        "bboxAlphaGt16Inclusive": [
+          88,
+          55,
+          1134,
+          1179
+        ],
+        "bboxAlphaGt127Inclusive": [
+          91,
+          55,
+          1133,
+          1178
+        ],
+        "marginsLTRB": [
+          88,
+          55,
+          119,
+          74
+        ],
+        "marginsLTRBPercent": [
+          7.018,
+          4.386,
+          9.49,
+          5.901
+        ],
+        "borderMaxAlpha": 1,
+        "cornerAlphas": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "farPixels": 1048343,
+        "farAlphaMax": 2,
+        "farAlphaP99": 1,
+        "farPixelsAlphaGt16": 0,
+        "farPixelsAlphaEq0": 1032611,
+        "redRgbPixels": 9169,
+        "redRgbMaxAlpha": 2,
+        "redRgbPixelsAlphaGt16": 0
+      }
+    },
+    {
+      "assetFilename": "REC_REGENERADOR_RE4R_FULLBODY_LEFT_V6_01.png",
+      "path": "assets/REC_REGENERADOR_RE4R_FULLBODY_LEFT_V6_01.png",
+      "subjectId": "re4r-regenerador",
+      "subject": "Regenerador",
+      "edition": "Resident Evil 4 remake (2023)",
+      "status": "CANDIDATE_REVIEWED_WITH_LIMITATIONS",
+      "eligibleForRetainedCandidate": true,
+      "orientationObserved": "SCREEN_LEFT_THREE_QUARTER",
+      "subjectCountObserved": 1,
+      "visibleExtremitiesContained": true,
+      "fidelity1to1Certified": false,
+      "runtimeValidated": false,
+      "observations": [
+        "Un sujet de la forme régulière du remake, orienté à gauche ; bras, doigts et pieds entiers.",
+        "Corps arrondi, ventre, longs membres et peau grise plissée présents ; aucune rangée d'épines d'Iron Maiden observée.",
+        "Le crâne paraît relativement accentué ; dents, ongles et profil reconstruits depuis une référence principalement frontale."
+      ],
+      "references": [
+        {
+          "path": "references/regenerador_re4r_full_legacy.jpg",
+          "sha256": "3433957fd1337a240cfe816b600b3a79a598df54b12419b1bda72e56f2b90308",
+          "sourceUrls": [
+            "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/research/re4r-regenerador-candidate-1.jpg",
+            "https://raw.githubusercontent.com/darknigthmare/resident-evil-bow-protocol/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/research/re4r-regenerador-candidate-1.jpg"
+          ],
+          "referenceClass": "project_archived_reference",
+          "referenceLimitations": "Origine primaire et licence non réétablies dans cette recherche. Le reçu de projet identifie le remake 2023 ; ne pas employer la page encyclopédie du Regenerador original 2005 pour certifier cette forme. Gauche indépendante uniquement, droite déjà admise."
+        }
+      ],
+      "sourceBitmapsPublishedByThisReview": false,
+      "sha256": "7dfbb0091763e64d934af346232eb3b64dc452c9f401f1b9f8bf1407778be326",
+      "bytes": 1301200,
+      "dimensions": {
+        "width": 974,
+        "height": 1614,
+        "mode": "RGBA"
+      },
+      "numericQa": {
+        "alphaMin": 0,
+        "alphaMax": 255,
+        "transparentPct": 67.6017,
+        "bboxAlphaGt16Inclusive": [
+          115,
+          98,
+          800,
+          1546
+        ],
+        "bboxAlphaGt127Inclusive": [
+          116,
+          99,
+          799,
+          1545
+        ],
+        "marginsLTRB": [
+          115,
+          98,
+          173,
+          67
+        ],
+        "marginsLTRBPercent": [
+          11.807,
+          6.072,
+          17.762,
+          4.151
+        ],
+        "borderMaxAlpha": 1,
+        "cornerAlphas": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "farPixels": 1009958,
+        "farAlphaMax": 1,
+        "farAlphaP99": 0,
+        "farPixelsAlphaGt16": 0,
+        "farPixelsAlphaEq0": 1008809,
+        "redRgbPixels": 49,
+        "redRgbMaxAlpha": 1,
+        "redRgbPixelsAlphaGt16": 0
+      }
+    },
+    {
+      "assetFilename": "REC_VERDUGO_RE4_2005_FULLBODY_LEFT_V6_01.png",
+      "path": "assets/REC_VERDUGO_RE4_2005_FULLBODY_LEFT_V6_01.png",
+      "subjectId": "re4-verdugo",
+      "subject": "Verdugo",
+      "edition": "Resident Evil 4 (2005)",
+      "status": "CANDIDATE_REVIEWED_WITH_LIMITATIONS",
+      "eligibleForRetainedCandidate": true,
+      "orientationObserved": "SCREEN_LEFT_THREE_QUARTER",
+      "subjectCountObserved": 1,
+      "visibleExtremitiesContained": true,
+      "fidelity1to1Certified": false,
+      "runtimeValidated": false,
+      "observations": [
+        "Un sujet en trois-quarts gauche ; deux mains à trois grands crochets, pieds et longue queue segmentée entièrement contenus dans l'image.",
+        "Carapace sombre, thorax annelé, yeux orangés, mandibules et grande lame caudale reconnaissables et cohérents avec la source.",
+        "Pose proche de la source mais tête tournée davantage à gauche ; écailles, reflets et surfaces latérales régénérés, sans certification 1:1."
+      ],
+      "references": [
+        {
+          "path": "references/verdugo_re4_2005_full_legacy.webp",
+          "sha256": "b17cc038a0adb07115d2891f9adf703141d401bed09e9aeb30d222b32735c11b",
+          "sourceUrls": [
+            "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/assets/specimens/re4-verdugo.webp"
+          ],
+          "referenceClass": "project_archived_reference",
+          "referenceLimitations": "Source visuelle héritée du dépôt ; surfaces cachées et proportions métriques non certifiées."
+        }
+      ],
+      "sourceBitmapsPublishedByThisReview": false,
+      "sha256": "67346ba2c1acf6cee07f68f1ad4ad2ef22165f237947fdb2c05c66a12e572d48",
+      "bytes": 997023,
+      "dimensions": {
+        "width": 1193,
+        "height": 1319,
+        "mode": "RGBA"
+      },
+      "numericQa": {
+        "alphaMin": 0,
+        "alphaMax": 255,
+        "transparentPct": 74.062,
+        "bboxAlphaGt16Inclusive": [
+          41,
+          37,
+          1154,
+          1281
+        ],
+        "bboxAlphaGt127Inclusive": [
+          42,
+          39,
+          1154,
+          1279
+        ],
+        "marginsLTRB": [
+          41,
+          37,
+          38,
+          37
+        ],
+        "marginsLTRBPercent": [
+          3.437,
+          2.805,
+          3.185,
+          2.805
+        ],
+        "borderMaxAlpha": 0,
+        "cornerAlphas": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "farPixels": 1111620,
+        "farAlphaMax": 3,
+        "farAlphaP99": 0,
+        "farPixelsAlphaGt16": 0,
+        "farPixelsAlphaEq0": 1108716,
+        "redRgbPixels": 315,
+        "redRgbMaxAlpha": 2,
+        "redRgbPixelsAlphaGt16": 0
+      }
+    },
+    {
+      "assetFilename": "REC_CERBERUS_RE1_1996_FULLBODY_LEFT_V6_01.png",
+      "path": "trials/REC_CERBERUS_RE1_1996_FULLBODY_LEFT_V6_01.png",
+      "subjectId": "re1-cerberus",
+      "subject": "Cerberus",
+      "edition": "Resident Evil (1996)",
+      "status": "REJECTED_SUPERSEDED",
+      "eligibleForRetainedCandidate": false,
+      "orientationObserved": "SCREEN_LEFT_THREE_QUARTER",
+      "subjectCountObserved": 1,
+      "visibleExtremitiesContained": true,
+      "fidelity1to1Certified": false,
+      "runtimeValidated": false,
+      "observations": [
+        "Un sujet complet orienté vers la gauche, avec tête dont les oreilles gardent la latéralité de la source.",
+        "Défaut anatomique confirmé : grande lésion d'épaule et d'antérieur placée sur le côté proche gauche anatomique, alors que la source la place à droite anatomique.",
+        "Variante01 écartée et conservée dans trials/ ; remplacée par la variante02 contrôlée séparément."
+      ],
+      "references": [
+        {
+          "path": "references/cerberus_re1_1996_full_legacy.webp",
+          "sha256": "0e5ff5e671131d3efada93ad702fb5d612aee3091a74cf7fba58029d3d3a3474",
+          "sourceUrls": [
+            "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/assets/specimens/re1-cerberus.webp"
+          ],
+          "referenceClass": "project_archived_reference",
+          "referenceLimitations": "Source visuelle héritée du dépôt ; surfaces cachées et proportions métriques non certifiées."
+        }
+      ],
+      "sourceBitmapsPublishedByThisReview": false,
+      "sha256": "8dabfb852b0835e5896c041ccb106c3bee9ff5f51678d63c2651486b96e408c8",
+      "bytes": 887666,
+      "dimensions": {
+        "width": 1494,
+        "height": 1052,
+        "mode": "RGBA"
+      },
+      "numericQa": {
+        "alphaMin": 0,
+        "alphaMax": 255,
+        "transparentPct": 76.4149,
+        "bboxAlphaGt16Inclusive": [
+          293,
+          13,
+          1225,
+          1032
+        ],
+        "bboxAlphaGt127Inclusive": [
+          294,
+          14,
+          1224,
+          1031
+        ],
+        "marginsLTRB": [
+          293,
+          13,
+          268,
+          19
+        ],
+        "marginsLTRBPercent": [
+          19.612,
+          1.236,
+          17.938,
+          1.806
+        ],
+        "borderMaxAlpha": 0,
+        "cornerAlphas": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "farPixels": 1174571,
+        "farAlphaMax": 1,
+        "farAlphaP99": 0,
+        "farPixelsAlphaGt16": 0,
+        "farPixelsAlphaEq0": 1165520,
+        "redRgbPixels": 4296,
+        "redRgbMaxAlpha": 4,
+        "redRgbPixelsAlphaGt16": 0
+      },
+      "replacedBy": "REC_CERBERUS_RE1_1996_FULLBODY_LEFT_V6_02.png"
+    },
+    {
+      "assetFilename": "REC_CHIMERA_RE1R_2002_FULLBODY_LEFT_V6_01.png",
+      "path": "trials/REC_CHIMERA_RE1R_2002_FULLBODY_LEFT_V6_01.png",
+      "subjectId": "re1r-chimera",
+      "subject": "Chimera",
+      "edition": "Resident Evil remake (2002)",
+      "status": "REJECTED_SUPERSEDED",
+      "eligibleForRetainedCandidate": false,
+      "orientationObserved": "SCREEN_LEFT_THREE_QUARTER",
+      "subjectCountObserved": 1,
+      "visibleExtremitiesContained": true,
+      "fidelity1to1Certified": false,
+      "runtimeValidated": false,
+      "observations": [
+        "Un sujet complet avec deux bras principaux et deux jambes.",
+        "Défaut anatomique confirmé : cinq appendices dorsaux fins visibles au lieu des quatre de la référence, dont un supplémentaire montant au centre derrière la tête.",
+        "Variante01 écartée et conservée dans trials/ ; remplacée par la variante02 contrôlée séparément.",
+        "Le test numérique de zone éloignée relève 515 pixels alpha >16, maximum116 ; cette mesure peut inclure des éléments fins et ne prouve pas seule un fond opaque."
+      ],
+      "references": [
+        {
+          "path": "references/chimera_re1r_2002_full_legacy.png",
+          "sha256": "e0035a770dd991b0110bd48ea8fec2fc671775e4ab7ec449c93e448138931c82",
+          "sourceUrls": [
+            "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/assets/specimens/re1r-chimera.png"
+          ],
+          "referenceClass": "project_archived_reference",
+          "referenceLimitations": "Source visuelle héritée du dépôt ; surfaces cachées et proportions métriques non certifiées."
+        }
+      ],
+      "sourceBitmapsPublishedByThisReview": false,
+      "sha256": "8bdef13b907f0bf0fe4254db9a16f2556d3c18516526326d0e0443d5a2693aa2",
+      "bytes": 1310670,
+      "dimensions": {
+        "width": 1010,
+        "height": 1557,
+        "mode": "RGBA"
+      },
+      "numericQa": {
+        "alphaMin": 0,
+        "alphaMax": 255,
+        "transparentPct": 68.3158,
+        "bboxAlphaGt16Inclusive": [
+          58,
+          11,
+          971,
+          1545
+        ],
+        "bboxAlphaGt127Inclusive": [
+          58,
+          20,
+          968,
+          1544
+        ],
+        "marginsLTRB": [
+          58,
+          11,
+          38,
+          11
+        ],
+        "marginsLTRBPercent": [
+          5.743,
+          0.706,
+          3.762,
+          0.706
+        ],
+        "borderMaxAlpha": 1,
+        "cornerAlphas": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "farPixels": 1037486,
+        "farAlphaMax": 116,
+        "farAlphaP99": 1,
+        "farPixelsAlphaGt16": 515,
+        "farPixelsAlphaEq0": 1021486,
+        "redRgbPixels": 355,
+        "redRgbMaxAlpha": 2,
+        "redRgbPixelsAlphaGt16": 0
+      },
+      "replacedBy": "REC_CHIMERA_RE1R_2002_FULLBODY_LEFT_V6_02.png"
+    }
+  ]
+}

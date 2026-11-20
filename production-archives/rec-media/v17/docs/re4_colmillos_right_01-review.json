@@ -1,0 +1,135 @@
+{
+  "schema": "rec.static-candidate-independent-review.v17",
+  "asset": "Colmillos — Resident Evil 4 (2005), RIGHT 01, Plaga dorsal déployé",
+  "id": "re4_colmillos_right_01",
+  "uid": "re4-colmillos",
+  "variant": "original_2005_dorsal_plaga_deployed",
+  "reviewed_at": "2026-11-20T13:37:41.074525+00:00",
+  "reviewer": "audit_missing",
+  "asset_path": "assets/re4_colmillos_right_01.png",
+  "original_path": "/workspace/scratch/3fced93cfb0a/generated_images/exec-c3937134-6bad-481e-a74b-98c04723a9cd.png",
+  "sha256": "9355e46e905053c4322d0fb5915545aaf578ed564069a0f6d9af707aa72efb23",
+  "bytes": 550842,
+  "verdict": "CANDIDATE_STATIC_WITH_LIMITS",
+  "review_status": "CANDIDATE_STATIC_WITH_LIMITS",
+  "excluded_from_candidate_count": false,
+  "source_refs_reviewed": [
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-colmillos-blackjack.jpg",
+      "sha256": "0f3201df4f17b17cb9d7f0473834bfffe8186cb8a7f2907373e69379e02eb9a8",
+      "role": "Rendu original RE4 2005 à droite, 380×285, octet pour octet identique au candidat de recherche R34 ; pointe supérieure effilée jusqu’au bord et détail limité."
+    },
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-colmillos-archives.png",
+      "sha256": "42f68c1c116d8ce8ce0436b84baa0ffb39f87158ec577853fa43f152aa1184a5",
+      "role": "Même rendu recomposé, légende explicite RE4 2005 ; confirme l’édition et la silhouette mais ne fournit pas une nouvelle vue native."
+    }
+  ],
+  "source_document": "docs/SOURCES_RE4_ARMADURA_COLMILLOS_V17.json",
+  "prompt_record": "prompts/re4_colmillos_right_01.json",
+  "technical_record": "docs/re4_colmillos_right_01-technical.json",
+  "visual_checks": {
+    "orientation": "Museau et poitrail tournés vers la droite, arrière-train et queue à gauche ; présentation trois-quarts droite proche du rendu source. Aucune reconstruction de vue opposée revendiquée.",
+    "variant": "Un seul canidé gris-brun sombre, pelage grossier, oreilles pointues, gueule canine ouverte et dents longues ; tête non scindée et réseau d’appendices fins déployés depuis le dos. Ni Adjule à crâne fendu, ni Colmillos remake 2023, ni forme forte du remake.",
+    "four_limb_connections": "Quatre pieds distincts sont présents. Membre postérieur proche visible à gauche depuis le bassin jusqu’au pied ; membre postérieur éloigné partiellement masqué sous le corps, partie distale et pied visibles. Deux membres antérieurs reliés au thorax, l’un descendant presque verticalement et l’autre fléchi vers la droite. Aucune patte supplémentaire, pied détaché ou fusion évidente observée.",
+    "limb_visibility": {
+      "expected_anatomical_limb_count": 4,
+      "distal_limbs_visibly_present": 4,
+      "all_four_complete_chains_exposed": false,
+      "occlusion": "Raccord proximal du membre postérieur éloigné masqué par le corps ; chevauchements naturels des membres dans cette perspective.",
+      "detached_or_extra_limb_observed": false
+    },
+    "tail": "Queue courte et touffue dirigée vers le haut-gauche, continûment reliée à la croupe et entièrement contenue, proche de l’arrangement source.",
+    "dorsal_appendages": "Six extrémités libres peuvent être suivies visuellement dans le candidat : grande pointe haute à droite, grande boucle à gauche, pointe longue descendante à droite, pointe interne plus courte, petite boucle basse à gauche et petite boucle basse à droite. L’arrangement général reprend celui de la source. Les tiges paraissent reliées au dos ; leurs croisements et occlusions ne permettent pas de certifier chaque trajet individuel ou insertion. Aucun nouvel organe, tête, ventouse ou branche supplémentaire évident observé.",
+    "highest_tip": "Pointe supérieure visible, fine et progressivement effilée, terminée à l’intérieur du canvas. Limite principale alpha≥16 à y17 ; premiers résidus non nuls à y16. Aucune extrémité principale ne touche le bord. Le cadrage demeure serré, sans les 10 % de marge demandés.",
+    "framing": "Un seul canidé entier avec queue, quatre pieds et appendices contenus. Aucun décor, sol, texte, cadre, emblème ou watermark visible dans les composites gris et clair.",
+    "padding_target": {
+      "requested_percent_each_side": 10,
+      "achieved": false,
+      "margins_alpha16_left_top_right_bottom": [
+        263,
+        17,
+        281,
+        35
+      ],
+      "margins_alpha16_percent_left_top_right_bottom": [
+        18.163,
+        1.565,
+        19.406,
+        3.223
+      ],
+      "principal_extremity_clipped": false
+    },
+    "limits": [
+      "Marges alpha≥16 gauche/haut/droite/bas : [263,17,281,35] px, soit [18,163 %,1,565 %,19,406 %,3,223 %]. Les marges haute et basse n’atteignent pas les 10 % demandés ; aucune extrémité principale n’est coupée.",
+      "La source native de recherche est basse résolution et déjà présente dans R34. L’image Archives recompose le même rendu ; elle ne constitue ni une nouvelle géométrie ni une seconde vue indépendante.",
+      "La pointe supérieure de la source est extrêmement serrée et faiblement définie. La pointe générée complète reste une interprétation visuelle, pas une récupération mesurée de sa géométrie originale.",
+      "Le nombre exact de racines, les croisements, les occlusions et la topologie 3D des appendices ne sont pas certifiés par les références. Six extrémités observables dans le candidat ne constituent pas une preuve de six chaînes de maillage originales.",
+      "Les détails de pelage, dents, griffes, épaississement des tiges et textures sont générés ; aucune identité pixel à pixel avec Capcom n’est revendiquée.",
+      "Le membre arrière éloigné reste partiellement masqué. La pose dynamique ne prouve pas quatre appuis simultanés sur un sol commun, un pivot ou une garde animée.",
+      "Aucune vue gauche indépendante, animation originale, collision, rig, ancrage, fidélité 1:1 ni admission moteur n’est validée."
+    ]
+  },
+  "failed_gates": [],
+  "uncertain_gates": [
+    {
+      "gate": "source_specific_tentacle_topology",
+      "reason": "Faible résolution, croisements et racines partiellement superposées dans la source ; qualification limitée à la silhouette et à une présentation statique."
+    }
+  ],
+  "alpha": {
+    "mode": "RGBA",
+    "size": [
+      1448,
+      1086
+    ],
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox_alpha_gte16": [
+      263,
+      17,
+      1167,
+      1051
+    ],
+    "margins_alpha16_left_top_right_bottom": [
+      263,
+      17,
+      281,
+      35
+    ],
+    "margins_alpha16_percent_left_top_right_bottom": [
+      18.163,
+      1.565,
+      19.406,
+      3.223
+    ],
+    "bbox_all_nonzero_alpha": [
+      65,
+      16,
+      1428,
+      1056
+    ],
+    "pixels_alpha0": 1382992,
+    "pixels_alpha1_to15": 47602,
+    "pixels_alpha1_to3": 39051,
+    "pixels_alpha255": 220,
+    "all_subject_alpha_255": false,
+    "halo_finding": "Vrai alpha vérifié sur le PNG original et personnellement inspecté sur composites gris et clair. Pas de fond opaque ni de halo large substantiel. Des résidus alpha très faibles existent hors silhouette ; ils restent dans le canvas et les octets originaux sont conservés."
+  },
+  "qa_previews_only": [
+    "/workspace/scratch/3fced93cfb0a/qa-v17/re4_colmillos_right_01-gray.jpg",
+    "/workspace/scratch/3fced93cfb0a/qa-v17/re4_colmillos_right_01-light.jpg"
+  ],
+  "inspection_method": "Inspection indépendante personnelle du PNG généré, des deux composites construits avec son vrai canal alpha et des deux références effectivement jointes au prompt. Dimensions, marges et distribution alpha mesurées sur les octets originaux. Copie dans assets vérifiée identique par comparaison des octets et SHA256 ; aucun nettoyage, recadrage, padding ou autre retouche du PNG livré.",
+  "original_bytes_modified": false,
+  "original_generated_bytes_verified_identical": true,
+  "one_subject_per_image_reviewed": true,
+  "quality_rejection_is_tool_refusal": false,
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "animation_frames": 1,
+  "can_mirror": false,
+  "recommended_action": "Conserver RIGHT 01 comme candidat statique avec limites explicites de cadrage et de source. Ne pas compter cette réévaluation comme récupération d’une nouvelle source native, ne pas générer de vue gauche à partir d’un miroir et ne pas certifier la topologie ou les extrémités 1:1. Aucune correction de coupe d’extrémité ou de nombre de pattes visible n’est requise par cette revue."
+}

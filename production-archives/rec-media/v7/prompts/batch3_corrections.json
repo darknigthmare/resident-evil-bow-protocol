@@ -1,0 +1,28 @@
+{
+  "jobs": [
+    {
+      "id": "REC_FUMER_RE7_FULLBODY_LEFT_V7_02",
+      "uid": "re7-fumer",
+      "subject": "Fumer WM-002 — edge cleanup",
+      "replaces": "REC_FUMER_RE7_FULLBODY_LEFT_V7_01",
+      "references": [
+        "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v7/trials/REC_FUMER_RE7_FULLBODY_LEFT_V7_01.png",
+        "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v7/references/re7-fumer__6ac0e3713bb5.png"
+      ],
+      "source_type": "targeted cutout cleanup of generated trial, original reference retained for identity",
+      "prompt": "Use case: targeted background cleanup and identity preservation. Image1 is the full-body left-facing Fumer candidate to edit. Image2 is its original RE7 Not a Hero Fumer reference, included only to distinguish genuine organic fibers from background artifacts. Keep the exact single character design, anatomy, pose, left-facing direction, proportions, texture colors, hands, feet and facial details of image1. Remove the broad flat grey-brown semi-transparent background patches behind the head and neck, along the back and outside the forearms; remove detached stray background pixels. Those flat matte patches are not parts of the creature. Retain the actual fine source-defined fungal threads and irregular body-edge fibers; do not erase them or flatten the creature into a smooth shape. Produce a clean transparent cutout with alpha zero in all empty regions, including between the arms and torso and between the legs. Preserve soft antialiasing only at true filament and silhouette edges, without a grey halo, tinted veil, paper-like fringe, matte border or cast shadow. Increase the empty canvas around the unchanged figure so its height occupies at most80 percent of the image height, leaving at least10 percent clear padding above its head and below its toes. Do not add limbs, clothing, anatomy, effects, a floor, background, text or another pose. One intact static creature only. This is a finishing correction of an existing accepted design, not a new design."
+    },
+    {
+      "id": "REC_MAMA_MOLD_RE7_FULLBODY_LEFT_V7_02",
+      "uid": "re7-mama-mold",
+      "subject": "Mama Mold WM-001 — edge cleanup",
+      "replaces": "REC_MAMA_MOLD_RE7_FULLBODY_LEFT_V7_01",
+      "references": [
+        "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v7/trials/REC_MAMA_MOLD_RE7_FULLBODY_LEFT_V7_01.png",
+        "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v7/references/re7-mama-mold__02c8fb9b0bf4.png"
+      ],
+      "source_type": "targeted cutout cleanup of generated trial, original reference retained for identity",
+      "prompt": "Use case: targeted background cleanup and identity preservation. Image1 is the existing full-body left-facing Mama Mold candidate to EDIT. Image2 is the original RE7 Mama Mold reference, included to identify genuine surface fibers. Preserve image1's exact one-creature anatomy, heavy proportions, pose, orientation, face, hand and foot shapes, source colors and fibrous details. Correct only the cutout finish: remove the broad flat grey-brown semi-transparent matte fringe outside the back, shoulders and arms and remove detached background residues. Keep actual individual fungal fibers that originate from the creature and are represented in the source; do not strip them away or redesign the surface. Empty areas must be truly transparent alpha zero, including all gaps between the limbs and torso. Keep fine antialiasing only on true anatomical fibers and silhouette edges, with no grey veil, glow, cast shadow, matte border or broad flat background patches. Enlarge transparent padding so the complete creature height is at most80 percent of total canvas height, with at least10 percent blank margin above the head and below the toes. Keep all fingertips and wisps in frame. No new character design, no extra appendages, added damage, effects, floor, backdrop, text or second creature. Preserve the original static asset appearance while delivering a clean transparent PNG."
+    }
+  ]
+}

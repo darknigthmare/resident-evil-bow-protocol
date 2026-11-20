@@ -1,0 +1,1123 @@
+{
+  "schema": "rec.independent-scope-audit.20261119",
+  "state": "FINAL_FROZEN",
+  "created_at_utc": "2026-11-19T17:27:06.278042+00:00",
+  "reviewer": "bible_docx_v5",
+  "scope": "Recoupement des 42 UID de la file après V7 avec les résultats finaux V8/V9/V10, puis examen séparé des 6 anciens essais réexaminés en V11.",
+  "method": "Lecture des métadonnées et des QA finales figées. Les statuts définitifs de QA prévalent sur les anciens statuts provisoires de génération. Pas de nouvelle inspection des pixels dans ce contrôle de portée.",
+  "new_generations": 0,
+  "new_pixel_review_performed": false,
+  "snapshots_v5_through_v11_modified": false,
+  "category_definitions": {
+    "CANDIDATE": "Au moins une vue retenue après QA, avec limites et sans admission moteur. Dans V11, une vue droite peut coexister avec un refus gauche ultérieur.",
+    "OWN_TOOL_REFUSAL": "Refus propre de l’outil pour cet UID, sans candidat retenu dans la partition exclusive. Un essai antérieur peut exister.",
+    "HELD_RELATED_REFUSAL": "Aucun refus propre ; attente liée à une identité ou variante apparentée déjà refusée.",
+    "INSUFFICIENT_REFERENCE": "Référence insuffisante pour la topologie, une extrémité ou la latéralité requise ; aucun nouveau candidat qualifié.",
+    "TRIALS_ONLY": "Sorties PNG non retenues, aucun candidat et aucun refus propre. Ici uniquement Gatling Gun Majini."
+  },
+  "exclusive_classification_priority": [
+    "retained_candidate",
+    "own_refusal_without_retained_candidate",
+    "related_refusal_hold",
+    "insufficient_reference",
+    "only_unqualified_trials"
+  ],
+  "queue42": {
+    "source_file": "outputs/resident_evil_combat_v7/docs/SOURCE_REVIEW_QUEUE_AFTER_V7.json",
+    "declared_entries": 42,
+    "unique_uids": 42,
+    "allocation_by_batch": {
+      "V8": 14,
+      "V9": 14,
+      "V10": 14
+    },
+    "queue_duplicate_uids": [],
+    "allocation_duplicate_uids": [],
+    "missing_from_allocations": [],
+    "allocated_outside_queue": [],
+    "missing_final_result": [],
+    "unresolved_result": [],
+    "exclusive_counts": {
+      "CANDIDATE": 31,
+      "OWN_TOOL_REFUSAL": 4,
+      "HELD_RELATED_REFUSAL": 2,
+      "INSUFFICIENT_REFERENCE": 4,
+      "TRIALS_ONLY": 1
+    },
+    "counts_by_batch": {
+      "V8": {
+        "CANDIDATE": 9,
+        "OWN_TOOL_REFUSAL": 3,
+        "HELD_RELATED_REFUSAL": 1,
+        "INSUFFICIENT_REFERENCE": 0,
+        "TRIALS_ONLY": 1
+      },
+      "V9": {
+        "CANDIDATE": 9,
+        "OWN_TOOL_REFUSAL": 1,
+        "HELD_RELATED_REFUSAL": 1,
+        "INSUFFICIENT_REFERENCE": 3,
+        "TRIALS_ONLY": 0
+      },
+      "V10": {
+        "CANDIDATE": 13,
+        "OWN_TOOL_REFUSAL": 0,
+        "HELD_RELATED_REFUSAL": 0,
+        "INSUFFICIENT_REFERENCE": 1,
+        "TRIALS_ONLY": 0
+      }
+    },
+    "retained_left_candidate_uids": 31,
+    "left_gaps_not_closed": 11,
+    "records": [
+      {
+        "uid": "re1-chimera",
+        "label": "Chimera",
+        "edition": "Resident Evil (1996)",
+        "batch": "V8",
+        "requested_direction": "left",
+        "exclusive_result": "CANDIDATE",
+        "retained_candidate_paths": [
+          "assets/REC_RE1_CHIMERA_FULLBODY_LEFT_V8_02.png"
+        ],
+        "trial_paths": [
+          "trials/REC_RE1_CHIMERA_FULLBODY_LEFT_V8_01.png"
+        ],
+        "own_refusal_request_ids": [],
+        "source_decision": "QUALIFIED_DOCUMENTARY_FULLBODY_ASYMMETRIC",
+        "final_qa_evidence": "outputs/resident_evil_combat_v8/docs/QA_INDEPENDENT_V8.json",
+        "source_evidence": "outputs/resident_evil_combat_v8/docs/SOURCE_RECOVERY_V8.json",
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false
+      },
+      {
+        "uid": "re4r-garrador",
+        "label": "Garrador",
+        "edition": "Resident Evil 4 remake (2023)",
+        "batch": "V8",
+        "requested_direction": "left",
+        "exclusive_result": "OWN_TOOL_REFUSAL",
+        "retained_candidate_paths": [],
+        "trial_paths": [],
+        "own_refusal_request_ids": [
+          "024ef6bf-6422-4d75-a0ee-0c7d90280af7"
+        ],
+        "source_decision": "QUALIFIED_DOCUMENTARY_FULLBODY",
+        "final_qa_evidence": "outputs/resident_evil_combat_v8/docs/QA_INDEPENDENT_V8.json",
+        "source_evidence": "outputs/resident_evil_combat_v8/docs/SOURCE_RECOVERY_V8.json",
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false
+      },
+      {
+        "uid": "re5-big-man-majini",
+        "label": "Big Man Majini",
+        "edition": "Resident Evil 5 (2009)",
+        "batch": "V8",
+        "requested_direction": "left",
+        "exclusive_result": "CANDIDATE",
+        "retained_candidate_paths": [
+          "assets/REC_RE5_BIG_MAN_MAJINI_FULLBODY_LEFT_V8_01.png"
+        ],
+        "trial_paths": [],
+        "own_refusal_request_ids": [],
+        "source_decision": "QUALIFIED_DOCUMENTARY_FULLBODY",
+        "final_qa_evidence": "outputs/resident_evil_combat_v8/docs/QA_INDEPENDENT_V8.json",
+        "source_evidence": "outputs/resident_evil_combat_v8/docs/SOURCE_RECOVERY_V8.json",
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false
+      },
+      {
+        "uid": "re5-gatling-gun-majini",
+        "label": "Gatling Gun Majini",
+        "edition": "Resident Evil 5 (2009)",
+        "batch": "V8",
+        "requested_direction": "left",
+        "exclusive_result": "TRIALS_ONLY",
+        "retained_candidate_paths": [],
+        "trial_paths": [
+          "trials/REC_RE5_GATLING_GUN_MAJINI_FULLBODY_LEFT_V8_01.png",
+          "trials/REC_RE5_GATLING_GUN_MAJINI_FULLBODY_LEFT_V8_02.png",
+          "trials/REC_RE5_GATLING_GUN_MAJINI_FULLBODY_LEFT_V8_03.png"
+        ],
+        "own_refusal_request_ids": [],
+        "source_decision": "QUALIFIED_DOCUMENTARY_FULLBODY",
+        "final_qa_evidence": "outputs/resident_evil_combat_v8/docs/QA_INDEPENDENT_V8.json",
+        "source_evidence": "outputs/resident_evil_combat_v8/docs/SOURCE_RECOVERY_V8.json",
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false,
+        "classification_note": "Trois PNG réussis techniquement, aucun candidat retenu pour les prises anatomiques ; aucun refus propre. Classé seulement essais."
+      },
+      {
+        "uid": "re5-ndesu",
+        "label": "Ndesu",
+        "edition": "Resident Evil 5 (2009)",
+        "batch": "V8",
+        "requested_direction": "left",
+        "exclusive_result": "CANDIDATE",
+        "retained_candidate_paths": [
+          "assets/REC_RE5_NDESU_FULLBODY_LEFT_V8_01.png"
+        ],
+        "trial_paths": [],
+        "own_refusal_request_ids": [],
+        "source_decision": "QUALIFIED_DOCUMENTARY_FULLBODY",
+        "final_qa_evidence": "outputs/resident_evil_combat_v8/docs/QA_INDEPENDENT_V8.json",
+        "source_evidence": "outputs/resident_evil_combat_v8/docs/SOURCE_RECOVERY_V8.json",
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false
+      },
+      {
+        "uid": "re7-flying-bug",
+        "label": "Flying Bug",
+        "edition": "Resident Evil 7 biohazard (2017)",
+        "batch": "V8",
+        "requested_direction": "left",
+        "exclusive_result": "CANDIDATE",
+        "retained_candidate_paths": [
+          "assets/REC_RE7_FLYING_BUG_FULLBODY_LEFT_V8_03.png"
+        ],
+        "trial_paths": [
+          "trials/REC_RE7_FLYING_BUG_FULLBODY_LEFT_V8_01.png",
+          "trials/REC_RE7_FLYING_BUG_FULLBODY_LEFT_V8_02.png"
+        ],
+        "own_refusal_request_ids": [],
+        "source_decision": "QUALIFIED_DOCUMENTARY_FULLBODY",
+        "final_qa_evidence": "outputs/resident_evil_combat_v8/docs/QA_INDEPENDENT_V8.json",
+        "source_evidence": "outputs/resident_evil_combat_v8/docs/SOURCE_RECOVERY_V8.json",
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false
+      },
+      {
+        "uid": "revillage-hauler",
+        "label": "Hauler",
+        "edition": "Resident Evil Village (2021)",
+        "batch": "V8",
+        "requested_direction": "left",
+        "exclusive_result": "OWN_TOOL_REFUSAL",
+        "retained_candidate_paths": [],
+        "trial_paths": [],
+        "own_refusal_request_ids": [
+          "77a3a161-8e66-49b7-ab2e-328f29d1728b"
+        ],
+        "source_decision": "QUALIFIED_DOCUMENTARY_FULLBODY_WITH_OCCLUSION",
+        "final_qa_evidence": "outputs/resident_evil_combat_v8/docs/QA_INDEPENDENT_V8.json",
+        "source_evidence": "outputs/resident_evil_combat_v8/docs/SOURCE_RECOVERY_V8.json",
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false
+      },
+      {
+        "uid": "revillage-moroaica",
+        "label": "Moroaică",
+        "edition": "Resident Evil Village (2021)",
+        "batch": "V8",
+        "requested_direction": "left",
+        "exclusive_result": "HELD_RELATED_REFUSAL",
+        "retained_candidate_paths": [],
+        "trial_paths": [],
+        "own_refusal_request_ids": [],
+        "source_decision": "QUALIFIED_DOCUMENTARY_FULLBODY",
+        "final_qa_evidence": "outputs/resident_evil_combat_v8/docs/QA_INDEPENDENT_V8.json",
+        "source_evidence": "outputs/resident_evil_combat_v8/docs/SOURCE_RECOVERY_V8.json",
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false,
+        "own_uid_refusal_performed": false
+      },
+      {
+        "uid": "re0-bat",
+        "label": "Bat",
+        "edition": "Resident Evil 0 (2002)",
+        "batch": "V8",
+        "requested_direction": "left",
+        "exclusive_result": "CANDIDATE",
+        "retained_candidate_paths": [
+          "assets/REC_RE0_BAT_FULLBODY_LEFT_V8_01.png"
+        ],
+        "trial_paths": [],
+        "own_refusal_request_ids": [],
+        "source_decision": "QUALIFIED_DOCUMENTARY_FULLBODY_LOW_DETAIL",
+        "final_qa_evidence": "outputs/resident_evil_combat_v8/docs/QA_INDEPENDENT_V8.json",
+        "source_evidence": "outputs/resident_evil_combat_v8/docs/SOURCE_RECOVERY_V8.json",
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false
+      },
+      {
+        "uid": "re0-crow",
+        "label": "Crow",
+        "edition": "Resident Evil 0 (2002)",
+        "batch": "V8",
+        "requested_direction": "left",
+        "exclusive_result": "CANDIDATE",
+        "retained_candidate_paths": [
+          "assets/REC_RE0_CROW_FULLBODY_LEFT_V8_01.png"
+        ],
+        "trial_paths": [],
+        "own_refusal_request_ids": [],
+        "source_decision": "QUALIFIED_DOCUMENTARY_FULLBODY_LOW_DETAIL",
+        "final_qa_evidence": "outputs/resident_evil_combat_v8/docs/QA_INDEPENDENT_V8.json",
+        "source_evidence": "outputs/resident_evil_combat_v8/docs/SOURCE_RECOVERY_V8.json",
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false
+      },
+      {
+        "uid": "re0-giant-bat",
+        "label": "Giant Bat",
+        "edition": "Resident Evil 0 (2002)",
+        "batch": "V8",
+        "requested_direction": "left",
+        "exclusive_result": "CANDIDATE",
+        "retained_candidate_paths": [
+          "assets/REC_RE0_GIANT_BAT_FULLBODY_LEFT_V8_02.png"
+        ],
+        "trial_paths": [
+          "trials/REC_RE0_GIANT_BAT_FULLBODY_LEFT_V8_01.png"
+        ],
+        "own_refusal_request_ids": [],
+        "source_decision": "QUALIFIED_DOCUMENTARY_FULLBODY_LOW_DETAIL",
+        "final_qa_evidence": "outputs/resident_evil_combat_v8/docs/QA_INDEPENDENT_V8.json",
+        "source_evidence": "outputs/resident_evil_combat_v8/docs/SOURCE_RECOVERY_V8.json",
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false
+      },
+      {
+        "uid": "re1-wasp",
+        "label": "Wasp",
+        "edition": "Resident Evil (1996)",
+        "batch": "V8",
+        "requested_direction": "left",
+        "exclusive_result": "CANDIDATE",
+        "retained_candidate_paths": [
+          "assets/REC_RE1_WASP_FULLBODY_LEFT_V8_02.png"
+        ],
+        "trial_paths": [
+          "trials/REC_RE1_WASP_FULLBODY_LEFT_V8_01.png"
+        ],
+        "own_refusal_request_ids": [],
+        "source_decision": "QUALIFIED_DOCUMENTARY_FULLBODY",
+        "final_qa_evidence": "outputs/resident_evil_combat_v8/docs/QA_INDEPENDENT_V8.json",
+        "source_evidence": "outputs/resident_evil_combat_v8/docs/SOURCE_RECOVERY_V8.json",
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false
+      },
+      {
+        "uid": "re1-web-spinner",
+        "label": "Web Spinner",
+        "edition": "Resident Evil (1996)",
+        "batch": "V8",
+        "requested_direction": "left",
+        "exclusive_result": "CANDIDATE",
+        "retained_candidate_paths": [
+          "assets/REC_RE1_WEB_SPINNER_FULLBODY_LEFT_V8_01.png"
+        ],
+        "trial_paths": [],
+        "own_refusal_request_ids": [],
+        "source_decision": "QUALIFIED_DOCUMENTARY_FULLBODY_WITH_OCCLUSION",
+        "final_qa_evidence": "outputs/resident_evil_combat_v8/docs/QA_INDEPENDENT_V8.json",
+        "source_evidence": "outputs/resident_evil_combat_v8/docs/SOURCE_RECOVERY_V8.json",
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false
+      },
+      {
+        "uid": "re1-yawn",
+        "label": "Yawn",
+        "edition": "Resident Evil (1996)",
+        "batch": "V8",
+        "requested_direction": "left",
+        "exclusive_result": "OWN_TOOL_REFUSAL",
+        "retained_candidate_paths": [],
+        "trial_paths": [],
+        "own_refusal_request_ids": [
+          "96ca1866-1a11-4d2c-8213-6938aa219f1b"
+        ],
+        "source_decision": "QUALIFIED_DOCUMENTARY_FULLBODY_LOW_DETAIL_COILED",
+        "final_qa_evidence": "outputs/resident_evil_combat_v8/docs/QA_INDEPENDENT_V8.json",
+        "source_evidence": "outputs/resident_evil_combat_v8/docs/SOURCE_RECOVERY_V8.json",
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false
+      },
+      {
+        "uid": "re1r-adder",
+        "label": "Adder",
+        "edition": "Resident Evil remake (2002)",
+        "batch": "V9",
+        "requested_direction": "left",
+        "exclusive_result": "CANDIDATE",
+        "retained_candidate_paths": [
+          "assets/REC_ADDER_RE1R_2002_FULLBODY_LEFT_V9_01.png"
+        ],
+        "trial_paths": [],
+        "own_refusal_request_ids": [],
+        "source_decision": "QUALIFIED_DOCUMENTARY_FULL_BODY",
+        "final_qa_evidence": "outputs/resident_evil_combat_v9/docs/QA_INDEPENDENT_V9.json",
+        "source_evidence": "outputs/resident_evil_combat_v9/docs/SOURCE_RECOVERY_V9.json",
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false
+      },
+      {
+        "uid": "re1r-crimson-head",
+        "label": "Crimson Head",
+        "edition": "Resident Evil remake (2002)",
+        "batch": "V9",
+        "requested_direction": "left",
+        "exclusive_result": "CANDIDATE",
+        "retained_candidate_paths": [
+          "assets/REC_CRIMSON_HEAD_RE1R_2002_FULLBODY_LEFT_V9_01.png"
+        ],
+        "trial_paths": [],
+        "own_refusal_request_ids": [],
+        "source_decision": "QUALIFIED_DOCUMENTARY_FULL_BODY",
+        "final_qa_evidence": "outputs/resident_evil_combat_v9/docs/QA_INDEPENDENT_V9.json",
+        "source_evidence": "outputs/resident_evil_combat_v9/docs/SOURCE_RECOVERY_V9.json",
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false
+      },
+      {
+        "uid": "re1r-wasp",
+        "label": "Wasp",
+        "edition": "Resident Evil remake (2002)",
+        "batch": "V9",
+        "requested_direction": "left",
+        "exclusive_result": "CANDIDATE",
+        "retained_candidate_paths": [
+          "assets/REC_WASP_RE1R_2002_FULLBODY_LEFT_V9_01.png"
+        ],
+        "trial_paths": [],
+        "own_refusal_request_ids": [],
+        "source_decision": "QUALIFIED_DOCUMENTARY_FULL_BODY",
+        "final_qa_evidence": "outputs/resident_evil_combat_v9/docs/QA_INDEPENDENT_V9.json",
+        "source_evidence": "outputs/resident_evil_combat_v9/docs/SOURCE_RECOVERY_V9.json",
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false
+      },
+      {
+        "uid": "re2r-g-fourth-form",
+        "label": "G (Fourth Form)",
+        "edition": "Resident Evil 2 remake (2019)",
+        "batch": "V9",
+        "requested_direction": "left",
+        "exclusive_result": "OWN_TOOL_REFUSAL",
+        "retained_candidate_paths": [],
+        "trial_paths": [
+          "trials/REC_G_FOURTH_FORM_RE2R_2019_FULLBODY_LEFT_V9_01.png"
+        ],
+        "own_refusal_request_ids": [
+          "e6321677-42d0-43d8-9376-df84eba0f25e"
+        ],
+        "source_decision": "QUALIFIED_DOCUMENTARY_FULL_BODY",
+        "final_qa_evidence": "outputs/resident_evil_combat_v9/docs/QA_INDEPENDENT_V9.json",
+        "source_evidence": "outputs/resident_evil_combat_v9/docs/SOURCE_RECOVERY_V9.json",
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false,
+        "classification_note": "Un essai existe, mais la correction a été refusée. Le refus propre prévaut dans cette partition exclusive ; ne pas compter ce même UID une seconde fois dans seulement essais."
+      },
+      {
+        "uid": "re2r-g-young",
+        "label": "G-Young",
+        "edition": "Resident Evil 2 remake (2019)",
+        "batch": "V9",
+        "requested_direction": "left",
+        "exclusive_result": "INSUFFICIENT_REFERENCE",
+        "retained_candidate_paths": [],
+        "trial_paths": [],
+        "own_refusal_request_ids": [],
+        "source_decision": "HELD_ANATOMY_REFERENCE",
+        "final_qa_evidence": "outputs/resident_evil_combat_v9/docs/QA_INDEPENDENT_V9.json",
+        "source_evidence": "outputs/resident_evil_combat_v9/docs/SOURCE_RECOVERY_V9.json",
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false
+      },
+      {
+        "uid": "re4-garrador",
+        "label": "Garrador",
+        "edition": "Resident Evil 4 (2005)",
+        "batch": "V9",
+        "requested_direction": "left",
+        "exclusive_result": "HELD_RELATED_REFUSAL",
+        "retained_candidate_paths": [],
+        "trial_paths": [],
+        "own_refusal_request_ids": [],
+        "source_decision": "HELD_RELATED_IDENTITY_REFUSAL",
+        "final_qa_evidence": "outputs/resident_evil_combat_v9/docs/QA_INDEPENDENT_V9.json",
+        "source_evidence": "outputs/resident_evil_combat_v9/docs/SOURCE_RECOVERY_V9.json",
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false,
+        "own_uid_refusal_performed": false
+      },
+      {
+        "uid": "re4r-el-gigante",
+        "label": "El Gigante",
+        "edition": "Resident Evil 4 remake (2023)",
+        "batch": "V9",
+        "requested_direction": "left",
+        "exclusive_result": "CANDIDATE",
+        "retained_candidate_paths": [
+          "assets/REC_EL_GIGANTE_RE4R_2023_FULLBODY_LEFT_V9_01.png"
+        ],
+        "trial_paths": [],
+        "own_refusal_request_ids": [],
+        "source_decision": "QUALIFIED_DOCUMENTARY_FULL_BODY",
+        "final_qa_evidence": "outputs/resident_evil_combat_v9/docs/QA_INDEPENDENT_V9.json",
+        "source_evidence": "outputs/resident_evil_combat_v9/docs/SOURCE_RECOVERY_V9.json",
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false
+      },
+      {
+        "uid": "re5-kipepeo",
+        "label": "Kipepeo",
+        "edition": "Resident Evil 5 (2009)",
+        "batch": "V9",
+        "requested_direction": "left",
+        "exclusive_result": "INSUFFICIENT_REFERENCE",
+        "retained_candidate_paths": [],
+        "trial_paths": [],
+        "own_refusal_request_ids": [],
+        "source_decision": "HELD_ANATOMY_REFERENCE",
+        "final_qa_evidence": "outputs/resident_evil_combat_v9/docs/QA_INDEPENDENT_V9.json",
+        "source_evidence": "outputs/resident_evil_combat_v9/docs/SOURCE_RECOVERY_V9.json",
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false
+      },
+      {
+        "uid": "recv-nosferatu",
+        "label": "Nosferatu",
+        "edition": "Resident Evil CODE: Veronica (2000)",
+        "batch": "V9",
+        "requested_direction": "left",
+        "exclusive_result": "CANDIDATE",
+        "retained_candidate_paths": [
+          "assets/REC_NOSFERATU_CODE_VERONICA_2000_FULLBODY_LEFT_V9_02.png"
+        ],
+        "trial_paths": [
+          "trials/REC_NOSFERATU_CODE_VERONICA_2000_FULLBODY_LEFT_V9_01.png"
+        ],
+        "own_refusal_request_ids": [],
+        "source_decision": "QUALIFIED_DOCUMENTARY_FULL_BODY",
+        "final_qa_evidence": "outputs/resident_evil_combat_v9/docs/QA_INDEPENDENT_V9.json",
+        "source_evidence": "outputs/resident_evil_combat_v9/docs/SOURCE_RECOVERY_V9.json",
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false
+      },
+      {
+        "uid": "reoutbreak-baby-moth",
+        "label": "Baby Moth",
+        "edition": "Resident Evil Outbreak (2003)",
+        "batch": "V9",
+        "requested_direction": "left",
+        "exclusive_result": "INSUFFICIENT_REFERENCE",
+        "retained_candidate_paths": [],
+        "trial_paths": [],
+        "own_refusal_request_ids": [],
+        "source_decision": "HELD_ANATOMY_REFERENCE",
+        "final_qa_evidence": "outputs/resident_evil_combat_v9/docs/QA_INDEPENDENT_V9.json",
+        "source_evidence": "outputs/resident_evil_combat_v9/docs/SOURCE_RECOVERY_V9.json",
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false
+      },
+      {
+        "uid": "reoutbreak-g-embryo",
+        "label": "G-Embryo",
+        "edition": "Resident Evil Outbreak (2003)",
+        "batch": "V9",
+        "requested_direction": "left",
+        "exclusive_result": "CANDIDATE",
+        "retained_candidate_paths": [
+          "assets/REC_G_EMBRYO_OUTBREAK_2003_FULLBODY_LEFT_V9_01.png"
+        ],
+        "trial_paths": [],
+        "own_refusal_request_ids": [],
+        "source_decision": "QUALIFIED_DOCUMENTARY_FULL_BODY",
+        "final_qa_evidence": "outputs/resident_evil_combat_v9/docs/QA_INDEPENDENT_V9.json",
+        "source_evidence": "outputs/resident_evil_combat_v9/docs/SOURCE_RECOVERY_V9.json",
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false
+      },
+      {
+        "uid": "reoutbreak-giant-wasp",
+        "label": "Giant Wasp",
+        "edition": "Resident Evil Outbreak (2003)",
+        "batch": "V9",
+        "requested_direction": "left",
+        "exclusive_result": "CANDIDATE",
+        "retained_candidate_paths": [
+          "assets/REC_GIANT_WASP_OUTBREAK_2003_FULLBODY_LEFT_V9_03.png"
+        ],
+        "trial_paths": [
+          "trials/REC_GIANT_WASP_OUTBREAK_2003_FULLBODY_LEFT_V9_01.png",
+          "trials/REC_GIANT_WASP_OUTBREAK_2003_FULLBODY_LEFT_V9_02.png"
+        ],
+        "own_refusal_request_ids": [],
+        "source_decision": "QUALIFIED_DOCUMENTARY_FULL_BODY",
+        "final_qa_evidence": "outputs/resident_evil_combat_v9/docs/QA_INDEPENDENT_V9.json",
+        "source_evidence": "outputs/resident_evil_combat_v9/docs/SOURCE_RECOVERY_V9.json",
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false
+      },
+      {
+        "uid": "reoutbreak-small-leech",
+        "label": "Small Leech",
+        "edition": "Resident Evil Outbreak (2003)",
+        "batch": "V9",
+        "requested_direction": "left",
+        "exclusive_result": "CANDIDATE",
+        "retained_candidate_paths": [
+          "assets/REC_SMALL_LEECH_OUTBREAK_2003_FULLBODY_LEFT_V9_01.png"
+        ],
+        "trial_paths": [],
+        "own_refusal_request_ids": [],
+        "source_decision": "QUALIFIED_DOCUMENTARY_FULL_BODY",
+        "final_qa_evidence": "outputs/resident_evil_combat_v9/docs/QA_INDEPENDENT_V9.json",
+        "source_evidence": "outputs/resident_evil_combat_v9/docs/SOURCE_RECOVERY_V9.json",
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false
+      },
+      {
+        "uid": "reoutbreak-thanatos-r",
+        "label": "Thanatos-R",
+        "edition": "Resident Evil Outbreak (2003)",
+        "batch": "V9",
+        "requested_direction": "left",
+        "exclusive_result": "CANDIDATE",
+        "retained_candidate_paths": [
+          "assets/REC_THANATOS_R_OUTBREAK_2003_FULLBODY_LEFT_V9_01.png"
+        ],
+        "trial_paths": [],
+        "own_refusal_request_ids": [],
+        "source_decision": "QUALIFIED_WITH_COMPLEMENTARY_TOPOLOGY_SOURCE",
+        "final_qa_evidence": "outputs/resident_evil_combat_v9/docs/QA_INDEPENDENT_V9.json",
+        "source_evidence": "outputs/resident_evil_combat_v9/docs/SOURCE_RECOVERY_V9.json",
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false
+      },
+      {
+        "uid": "reoutbreak2-scissor-tail",
+        "label": "Scissor Tail",
+        "edition": "Resident Evil Outbreak File #2 (2004)",
+        "batch": "V10",
+        "requested_direction": "left",
+        "exclusive_result": "CANDIDATE",
+        "retained_candidate_paths": [
+          "assets/REC_SCISSOR_TAIL_OUTBREAK2_FULLBODY_LEFT_V10_01.png"
+        ],
+        "trial_paths": [],
+        "own_refusal_request_ids": [],
+        "source_decision": "QUALIFIED_DOCUMENTARY_SOURCE",
+        "final_qa_evidence": "outputs/resident_evil_combat_v10/docs/QA_INDEPENDENT_V10.json",
+        "source_evidence": "outputs/resident_evil_combat_v10/docs/SOURCE_RECOVERY_V10.json",
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false
+      },
+      {
+        "uid": "reoutbreak2-wasp",
+        "label": "Wasp",
+        "edition": "Resident Evil Outbreak File #2 (2004)",
+        "batch": "V10",
+        "requested_direction": "left",
+        "exclusive_result": "CANDIDATE",
+        "retained_candidate_paths": [
+          "assets/REC_WASP_OUTBREAK2_FULLBODY_LEFT_V10_02.png"
+        ],
+        "trial_paths": [
+          "trials/REC_WASP_OUTBREAK2_FULLBODY_LEFT_V10_01.png"
+        ],
+        "own_refusal_request_ids": [],
+        "source_decision": "QUALIFIED_DOCUMENTARY_SOURCE",
+        "final_qa_evidence": "outputs/resident_evil_combat_v10/docs/QA_INDEPENDENT_V10.json",
+        "source_evidence": "outputs/resident_evil_combat_v10/docs/SOURCE_RECOVERY_V10.json",
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false
+      },
+      {
+        "uid": "rerequiem-garmr",
+        "label": "Garmr",
+        "edition": "Resident Evil Requiem (2026)",
+        "batch": "V10",
+        "requested_direction": "left",
+        "exclusive_result": "CANDIDATE",
+        "retained_candidate_paths": [
+          "assets/REC_GARMR_REQUIEM2026_FULLBODY_LEFT_V10_02.png"
+        ],
+        "trial_paths": [
+          "trials/REC_GARMR_REQUIEM2026_FULLBODY_LEFT_V10_01.png"
+        ],
+        "own_refusal_request_ids": [],
+        "source_decision": "QUALIFIED_DOCUMENTARY_SOURCE",
+        "final_qa_evidence": "outputs/resident_evil_combat_v10/docs/QA_INDEPENDENT_V10.json",
+        "source_evidence": "outputs/resident_evil_combat_v10/docs/SOURCE_RECOVERY_V10.json",
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false
+      },
+      {
+        "uid": "rerequiem-licker-beta2",
+        "label": "Licker β2",
+        "edition": "Resident Evil Requiem (2026)",
+        "batch": "V10",
+        "requested_direction": "left",
+        "exclusive_result": "CANDIDATE",
+        "retained_candidate_paths": [
+          "assets/REC_LICKER_BETA2_REQUIEM2026_FULLBODY_LEFT_V10_01.png"
+        ],
+        "trial_paths": [],
+        "own_refusal_request_ids": [],
+        "source_decision": "QUALIFIED_DOCUMENTARY_SOURCE",
+        "final_qa_evidence": "outputs/resident_evil_combat_v10/docs/QA_INDEPENDENT_V10.json",
+        "source_evidence": "outputs/resident_evil_combat_v10/docs/SOURCE_RECOVERY_V10.json",
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false
+      },
+      {
+        "uid": "rerequiem-tyrant-t-501",
+        "label": "Tyrant T-501",
+        "edition": "Resident Evil Requiem (2026)",
+        "batch": "V10",
+        "requested_direction": "left",
+        "exclusive_result": "CANDIDATE",
+        "retained_candidate_paths": [
+          "assets/REC_TYRANT_T501_REQUIEM2026_FULLBODY_LEFT_V10_01.png"
+        ],
+        "trial_paths": [],
+        "own_refusal_request_ids": [],
+        "source_decision": "QUALIFIED_DOCUMENTARY_SOURCE",
+        "final_qa_evidence": "outputs/resident_evil_combat_v10/docs/QA_INDEPENDENT_V10.json",
+        "source_evidence": "outputs/resident_evil_combat_v10/docs/SOURCE_RECOVERY_V10.json",
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false
+      },
+      {
+        "uid": "rerev2-giant-whip-spider",
+        "label": "Giant Whip Spider",
+        "edition": "Resident Evil Revelations 2 (2015)",
+        "batch": "V10",
+        "requested_direction": "left",
+        "exclusive_result": "INSUFFICIENT_REFERENCE",
+        "retained_candidate_paths": [],
+        "trial_paths": [],
+        "own_refusal_request_ids": [],
+        "source_decision": "HELD_ANATOMY_REFERENCE",
+        "final_qa_evidence": "outputs/resident_evil_combat_v10/docs/QA_INDEPENDENT_V10.json",
+        "source_evidence": "outputs/resident_evil_combat_v10/docs/SOURCE_RECOVERY_V10.json",
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false
+      },
+      {
+        "uid": "rerev2-monster-neil",
+        "label": "Monster Neil",
+        "edition": "Resident Evil Revelations 2 (2015)",
+        "batch": "V10",
+        "requested_direction": "left",
+        "exclusive_result": "CANDIDATE",
+        "retained_candidate_paths": [
+          "assets/REC_MONSTER_NEIL_REV2_FULLBODY_LEFT_V10_01.png"
+        ],
+        "trial_paths": [],
+        "own_refusal_request_ids": [],
+        "source_decision": "QUALIFIED_DOCUMENTARY_SOURCE",
+        "final_qa_evidence": "outputs/resident_evil_combat_v10/docs/QA_INDEPENDENT_V10.json",
+        "source_evidence": "outputs/resident_evil_combat_v10/docs/SOURCE_RECOVERY_V10.json",
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false
+      },
+      {
+        "uid": "rerev2-orthrus",
+        "label": "Orthrus",
+        "edition": "Resident Evil Revelations 2 (2015)",
+        "batch": "V10",
+        "requested_direction": "left",
+        "exclusive_result": "CANDIDATE",
+        "retained_candidate_paths": [
+          "assets/REC_ORTHRUS_REV2_FULLBODY_LEFT_V10_01.png"
+        ],
+        "trial_paths": [],
+        "own_refusal_request_ids": [],
+        "source_decision": "QUALIFIED_DOCUMENTARY_SOURCE",
+        "final_qa_evidence": "outputs/resident_evil_combat_v10/docs/QA_INDEPENDENT_V10.json",
+        "source_evidence": "outputs/resident_evil_combat_v10/docs/SOURCE_RECOVERY_V10.json",
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false
+      },
+      {
+        "uid": "rerev2-rotten",
+        "label": "Rotten",
+        "edition": "Resident Evil Revelations 2 (2015)",
+        "batch": "V10",
+        "requested_direction": "left",
+        "exclusive_result": "CANDIDATE",
+        "retained_candidate_paths": [
+          "assets/REC_ROTTEN_REV2_FULLBODY_LEFT_V10_01.png"
+        ],
+        "trial_paths": [],
+        "own_refusal_request_ids": [],
+        "source_decision": "QUALIFIED_DOCUMENTARY_SOURCE",
+        "final_qa_evidence": "outputs/resident_evil_combat_v10/docs/QA_INDEPENDENT_V10.json",
+        "source_evidence": "outputs/resident_evil_combat_v10/docs/SOURCE_RECOVERY_V10.json",
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false
+      },
+      {
+        "uid": "rerev2-vulcanblubber",
+        "label": "Vulcanblubber",
+        "edition": "Resident Evil Revelations 2 (2015)",
+        "batch": "V10",
+        "requested_direction": "left",
+        "exclusive_result": "CANDIDATE",
+        "retained_candidate_paths": [
+          "assets/REC_VULCANBLUBBER_REV2_FULLBODY_LEFT_V10_01.png"
+        ],
+        "trial_paths": [],
+        "own_refusal_request_ids": [],
+        "source_decision": "QUALIFIED_DOCUMENTARY_SOURCE",
+        "final_qa_evidence": "outputs/resident_evil_combat_v10/docs/QA_INDEPENDENT_V10.json",
+        "source_evidence": "outputs/resident_evil_combat_v10/docs/SOURCE_RECOVERY_V10.json",
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false
+      },
+      {
+        "uid": "re4-regenerator",
+        "label": "Regenerator",
+        "edition": "Resident Evil 4 (2005)",
+        "batch": "V10",
+        "requested_direction": "left",
+        "exclusive_result": "CANDIDATE",
+        "retained_candidate_paths": [
+          "assets/REC_REGENERATOR_RE4_2005_FULLBODY_LEFT_V10_01.png"
+        ],
+        "trial_paths": [],
+        "own_refusal_request_ids": [],
+        "source_decision": "QUALIFIED_DOCUMENTARY_SOURCE",
+        "final_qa_evidence": "outputs/resident_evil_combat_v10/docs/QA_INDEPENDENT_V10.json",
+        "source_evidence": "outputs/resident_evil_combat_v10/docs/SOURCE_RECOVERY_V10.json",
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false
+      },
+      {
+        "uid": "re4r-chainsaw-sisters",
+        "label": "Chainsaw Sisters",
+        "edition": "Resident Evil 4 remake (2023)",
+        "batch": "V10",
+        "requested_direction": "left",
+        "exclusive_result": "CANDIDATE",
+        "retained_candidate_paths": [
+          "assets/REC_CHAINSAW_SISTER_LIGHT_DRESS_RE4R_FULLBODY_LEFT_V10_01.png"
+        ],
+        "trial_paths": [],
+        "own_refusal_request_ids": [],
+        "source_decision": "QUALIFIED_DOCUMENTARY_SOURCE",
+        "final_qa_evidence": "outputs/resident_evil_combat_v10/docs/QA_INDEPENDENT_V10.json",
+        "source_evidence": "outputs/resident_evil_combat_v10/docs/SOURCE_RECOVERY_V10.json",
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false
+      },
+      {
+        "uid": "reoutbreak2-horn-bill",
+        "label": "Horn Bill",
+        "edition": "Resident Evil Outbreak File #2 (2004)",
+        "batch": "V10",
+        "requested_direction": "left",
+        "exclusive_result": "CANDIDATE",
+        "retained_candidate_paths": [
+          "assets/REC_HORN_BILL_OUTBREAK2_FULLBODY_LEFT_V10_01.png"
+        ],
+        "trial_paths": [],
+        "own_refusal_request_ids": [],
+        "source_decision": "QUALIFIED_DOCUMENTARY_SOURCE",
+        "final_qa_evidence": "outputs/resident_evil_combat_v10/docs/QA_INDEPENDENT_V10.json",
+        "source_evidence": "outputs/resident_evil_combat_v10/docs/SOURCE_RECOVERY_V10.json",
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false
+      },
+      {
+        "uid": "reoutbreak2-tyrant-r",
+        "label": "Tyrant R",
+        "edition": "Resident Evil Outbreak File #2 (2004)",
+        "batch": "V10",
+        "requested_direction": "left",
+        "exclusive_result": "CANDIDATE",
+        "retained_candidate_paths": [
+          "assets/REC_TYRANT_R_OUTBREAK2_FULLBODY_LEFT_V10_01.png"
+        ],
+        "trial_paths": [],
+        "own_refusal_request_ids": [],
+        "source_decision": "QUALIFIED_DOCUMENTARY_SOURCE",
+        "final_qa_evidence": "outputs/resident_evil_combat_v10/docs/QA_INDEPENDENT_V10.json",
+        "source_evidence": "outputs/resident_evil_combat_v10/docs/SOURCE_RECOVERY_V10.json",
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false
+      }
+    ]
+  },
+  "additional_v11": {
+    "unique_uids": 6,
+    "intersection_with_queue42": [],
+    "exclusive_counts": {
+      "CANDIDATE": 2,
+      "OWN_TOOL_REFUSAL": 2,
+      "HELD_RELATED_REFUSAL": 1,
+      "INSUFFICIENT_REFERENCE": 1,
+      "TRIALS_ONLY": 0
+    },
+    "retained_right_candidate_uids": 2,
+    "retained_left_candidate_uids": 0,
+    "own_refusal_uid_count_nonexclusive": 4,
+    "records": [
+      {
+        "uid": "re5-uroboros-mkono",
+        "label": "Uroboros Mkono",
+        "edition": "Resident Evil 5 (2009)",
+        "batch": "V11",
+        "outside_queue42": true,
+        "exclusive_result": "CANDIDATE",
+        "retained_candidates": [
+          {
+            "direction": "right",
+            "path": "assets/REC_UROBOROS_MKONO_RE5_FULLBODY_RIGHT_V11_03.png",
+            "status": "CANDIDATE_RIGHT_ASYMMETRY_CORRECTED_WITH_LIMITS"
+          }
+        ],
+        "trials": [
+          "trials/REC_UROBOROS_MKONO_RE5_FULLBODY_RIGHT_V11_01.png",
+          "trials/REC_UROBOROS_MKONO_RE5_FULLBODY_RIGHT_V11_02.png"
+        ],
+        "own_refusals": [
+          {
+            "direction": "left",
+            "attempt_id": "REC_UROBOROS_MKONO_RE5_FULLBODY_LEFT_V11_01",
+            "request_id": "2d59b1b8-616d-4ec8-85f8-50134e28f6cd",
+            "stage": "output",
+            "category": "violence",
+            "png_produced": false,
+            "no_retry": true
+          }
+        ],
+        "hold": null,
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false,
+        "directional_overlap_note": "La vue droite retenue précède le refus de la demande gauche. Un seul UID, deux résultats de direction ; le candidat droit ne clôt pas la gauche manquante."
+      },
+      {
+        "uid": "re7-lucas-baker-mutated",
+        "label": "Lucas Baker — forme mutée",
+        "edition": "Resident Evil 7 Biohazard (2017) — Not a Hero",
+        "batch": "V11",
+        "outside_queue42": true,
+        "exclusive_result": "CANDIDATE",
+        "retained_candidates": [
+          {
+            "direction": "right",
+            "path": "assets/REC_LUCAS_MUTATED_RE7_FULLBODY_RIGHT_V11_01.png",
+            "status": "CANDIDATE_RIGHT_THREE_QUARTER_WITH_LIMITS"
+          }
+        ],
+        "trials": [],
+        "own_refusals": [
+          {
+            "direction": "left",
+            "attempt_id": "REC_LUCAS_MUTATED_RE7_FULLBODY_LEFT_V11_01",
+            "request_id": "f2899657-518d-469b-a06c-af2fc6733ac4",
+            "stage": "output",
+            "category": "violence",
+            "png_produced": false,
+            "no_retry": true
+          }
+        ],
+        "hold": null,
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false,
+        "directional_overlap_note": "La vue droite retenue précède le refus de la demande gauche. Un seul UID, deux résultats de direction ; le candidat droit ne clôt pas la gauche manquante."
+      },
+      {
+        "uid": "revillage-soldat-panzer",
+        "label": "Soldat Panzer",
+        "edition": "Resident Evil Village (2021)",
+        "batch": "V11",
+        "outside_queue42": true,
+        "exclusive_result": "OWN_TOOL_REFUSAL",
+        "retained_candidates": [],
+        "trials": [],
+        "own_refusals": [
+          {
+            "direction": "right",
+            "attempt_id": "REC_SOLDAT_PANZER_VILLAGE_FULLBODY_RIGHT_V11_01",
+            "request_id": "36a05a95-41e9-4d60-9823-4af371a5b778",
+            "stage": "output",
+            "category": "other",
+            "png_produced": false,
+            "no_retry": true
+          }
+        ],
+        "hold": null,
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false
+      },
+      {
+        "uid": "revillage-urias",
+        "label": "Uriaș",
+        "edition": "Resident Evil Village (2021)",
+        "batch": "V11",
+        "outside_queue42": true,
+        "exclusive_result": "HELD_RELATED_REFUSAL",
+        "retained_candidates": [],
+        "trials": [],
+        "own_refusals": [],
+        "hold": {
+          "uid": "revillage-urias",
+          "status": "HELD_RELATED_IDENTITY_REFUSAL",
+          "generation_performed": false,
+          "reason": "Physically opened. Historical Urias Drac refusal found in pinned R34 tracking; this related named variant is not retried. This is not a new own-UID tool refusal."
+        },
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false
+      },
+      {
+        "uid": "re0-queen-leech",
+        "label": "Queen Leech",
+        "edition": "Resident Evil 0 (2002)",
+        "batch": "V11",
+        "outside_queue42": true,
+        "exclusive_result": "INSUFFICIENT_REFERENCE",
+        "retained_candidates": [],
+        "trials": [],
+        "own_refusals": [],
+        "hold": {
+          "uid": "re0-queen-leech",
+          "status": "HELD_LATERALITY_REFERENCE",
+          "generation_performed": false,
+          "reason": "Physically opened complete363x491 first-form source. Existing opposite-facing study could be a reflection; one source view does not prove tentacle/shoulder laterality. No new view invented."
+        },
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false
+      },
+      {
+        "uid": "re5-duvalia",
+        "label": "Duvalia",
+        "edition": "Resident Evil 5 (2009)",
+        "batch": "V11",
+        "outside_queue42": true,
+        "exclusive_result": "OWN_TOOL_REFUSAL",
+        "retained_candidates": [],
+        "trials": [],
+        "own_refusals": [
+          {
+            "direction": "right",
+            "attempt_id": "REC_DUVALIA_RE5_FULLBODY_RIGHT_V11_01",
+            "request_id": "a7f425ec-5165-44bf-98d8-a687e3612e6a",
+            "stage": "output",
+            "category": "violence",
+            "png_produced": false,
+            "no_retry": true
+          }
+        ],
+        "hold": null,
+        "canonical_one_to_one_certified": false,
+        "engine_admitted": false
+      }
+    ],
+    "directional_overlap_not_new_uids": [
+      {
+        "uid": "re5-uroboros-mkono",
+        "retained_right_candidate": "assets/REC_UROBOROS_MKONO_RE5_FULLBODY_RIGHT_V11_03.png",
+        "later_left_refusal_request_id": "2d59b1b8-616d-4ec8-85f8-50134e28f6cd",
+        "left_png_produced": false,
+        "left_gap_closed": false,
+        "counted_once_in_combined_candidate_uid_class": true
+      },
+      {
+        "uid": "re7-lucas-baker-mutated",
+        "retained_right_candidate": "assets/REC_LUCAS_MUTATED_RE7_FULLBODY_RIGHT_V11_01.png",
+        "later_left_refusal_request_id": "f2899657-518d-469b-a06c-af2fc6733ac4",
+        "left_png_produced": false,
+        "left_gap_closed": false,
+        "counted_once_in_combined_candidate_uid_class": true
+      }
+    ]
+  },
+  "combined_uid_scope": {
+    "unique_uids_reviewed": 48,
+    "exclusive_counts": {
+      "CANDIDATE": 33,
+      "OWN_TOOL_REFUSAL": 6,
+      "HELD_RELATED_REFUSAL": 3,
+      "INSUFFICIENT_REFERENCE": 5,
+      "TRIALS_ONLY": 1
+    },
+    "candidate_uid_count": 33,
+    "left_candidate_uid_count": 31,
+    "right_candidate_uid_count": 2,
+    "own_refusal_uid_count_nonexclusive": 8,
+    "candidate_uids_also_having_later_left_refusal": [
+      "re5-uroboros-mkono",
+      "re7-lucas-baker-mutated"
+    ],
+    "double_counting_warning": "Les 2 candidats droits Lucas/Mkono appartiennent déjà aux 33 UID candidats. Leurs refus gauches portent le total non exclusif des UID avec refus propre à 8, sans ajouter 2 nouveaux UID à la partition de 48."
+  },
+  "production_counts_distinct_from_uid_counts": {
+    "tool_calls": 57,
+    "png_outputs": 49,
+    "retained_candidate_png": 33,
+    "trial_png": 16,
+    "refused_calls": 8
+  },
+  "limits": [
+    "Ce contrôle donne un résultat aux 42 entrées de la file et couvre 6 UID supplémentaires de V11 ; il ne clôt pas le catalogue global de 346 identités.",
+    "Un candidat visuel statique ne constitue pas une fidélité canonique 1:1, une animation ou une admission moteur.",
+    "Les résultats par direction et les appels de correction ne sont pas des identités supplémentaires.",
+    "La déduplication historique intégrale contre les archives V3/V4 non disponibles n’est pas certifiée."
+  ],
+  "input_snapshot_fingerprints_at_audit_time": {
+    "outputs/resident_evil_combat_v7/docs/SOURCE_REVIEW_QUEUE_AFTER_V7.json": {
+      "sha256": "f886b93e631d7180e8d501558bda3c7df8602978b1e390883ada486bc949bde5",
+      "bytes": 131539
+    },
+    "outputs/resident_evil_combat_v8/docs/SOURCE_QUEUE_V8.json": {
+      "sha256": "45ba0a2f7d1b85b8309b8905afbd613583a97db3d4bfad98f0451fc0933c79c5",
+      "bytes": 42453
+    },
+    "outputs/resident_evil_combat_v8/docs/QA_INDEPENDENT_V8.json": {
+      "sha256": "1fa37c54587923cb7e6f79a86ea2984be3e64ad04f3d31e2e9838b4749aea14f",
+      "bytes": 26240
+    },
+    "outputs/resident_evil_combat_v8/docs/SOURCE_RECOVERY_V8.json": {
+      "sha256": "f476831d57ad711109057d5bdd8e9a9e22ee0b36ad8cd700faabb8c2a716bf79",
+      "bytes": 42334
+    },
+    "outputs/resident_evil_combat_v8/docs/GENERATION_V8.json": {
+      "sha256": "6fd6bf5797c43b96ed9491f07d2d50b8d31761ab2c7aac99818a26f25be5c43f",
+      "bytes": 27629
+    },
+    "outputs/resident_evil_combat_v9/docs/SOURCE_QUEUE_V9.json": {
+      "sha256": "742e3dfe398eb7b58b1908481d56fb5dc6e4f186b36823d2f5935afc63a6ae94",
+      "bytes": 43949
+    },
+    "outputs/resident_evil_combat_v9/docs/QA_INDEPENDENT_V9.json": {
+      "sha256": "2351dc102c27088d89d2781c2b0f304f6f83730bf3a0aa5cfd401e97889994e7",
+      "bytes": 38960
+    },
+    "outputs/resident_evil_combat_v9/docs/SOURCE_RECOVERY_V9.json": {
+      "sha256": "e9fc579e67b9a9b7cc68fd6e734ef5b55d36e707b313176b0826273939881311",
+      "bytes": 40494
+    },
+    "outputs/resident_evil_combat_v10/docs/SOURCE_QUEUE_V10.json": {
+      "sha256": "f48ac827973bafb0d37f9b5d25502f6d054c8ddc568b85f44200e3a916dfb295",
+      "bytes": 45378
+    },
+    "outputs/resident_evil_combat_v10/docs/QA_INDEPENDENT_V10.json": {
+      "sha256": "6b787b8d0db8fc19f5778d4f0f77d32e197089b9e94b164b743c579584b200ea",
+      "bytes": 48539
+    },
+    "outputs/resident_evil_combat_v10/docs/SOURCE_RECOVERY_V10.json": {
+      "sha256": "abedf3657c6de725dd0a1dd732a1152bf9fc2ace6b64bb98d0e07cec1d3ea3f4",
+      "bytes": 51482
+    },
+    "outputs/resident_evil_combat_v10/docs/GENERATION_V10.json": {
+      "sha256": "a891919f2a06f97a4bbad59b8a1b73f433201a49340b3ff96f7cbe5da97df7c0",
+      "bytes": 47002
+    },
+    "outputs/resident_evil_combat_v11/docs/SOURCE_RECOVERY_V11.json": {
+      "sha256": "5b8e2b4590f2fe2553289c5c38f828dcc2890450f5be93462ee2acf1f3982253",
+      "bytes": 31798
+    },
+    "outputs/resident_evil_combat_v11/manifests/ASSET_MANIFEST_V11.json": {
+      "sha256": "b1936111821efe990e9fce0ed3a894b53232862ef6eba05f303f1f303da40480",
+      "bytes": 13470
+    }
+  },
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "frozen_at_utc": "2026-11-19T17:27:47.847132+00:00"
+}

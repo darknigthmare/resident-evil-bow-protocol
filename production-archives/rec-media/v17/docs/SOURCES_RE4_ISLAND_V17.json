@@ -1,0 +1,636 @@
+{
+  "schema": "rec.source-audit.re4-island.v17",
+  "date": "2026-11-20",
+  "reviewer": "reference_research",
+  "language": "fr",
+  "repository": "darknigthmare/resident-evil-bow-protocol",
+  "pull_request": 22,
+  "resumed_commit": "1ed251b8b7c719c81a7ae16319ca3fc9b9f168d8",
+  "scope": "Recherche et inspection de sources pour trois UID RE4 original 2005. Aucun appel de génération, aucune modification runtime ni publication.",
+  "summary": {
+    "ready_for_scoped_candidate": [
+      "re4-jj",
+      "re4-soldier-ganado"
+    ],
+    "source_hold_preserved": [
+      "re4-hammer-ganado"
+    ],
+    "new_generated_assets": 0,
+    "source_bitmaps_copied_to_repository": false,
+    "canonical_one_to_one_certified": false,
+    "native_mesh_authentication_performed": false
+  },
+  "historical_snapshot": {
+    "workspace_path": "/workspace/scratch/3fced93cfb0a/repo/production-archives/rec-media/CONTINUATION_V16_20261120.json",
+    "local_reference_file": "CONTINUATION_V16_20261120.json",
+    "bytes": 561880,
+    "sha256": "e2b162500cd79c4113fb6db930a7563718d440d995f02144ead12613e0271582",
+    "repository_path": "production-archives/rec-media/CONTINUATION_V16_20261120.json"
+  },
+  "historical_review_scope": [
+    "Les entrées des trois UID et leurs blockedOutputs/refus/essais dans le snapshot V16.",
+    "Les six reçus R34 corps/portrait récupérés depuis le dépôt, plus les trois images de catalogue effectivement inspectées.",
+    "Les entrées liées re4r-brute et re5-gatling-gun-majini du même snapshot."
+  ],
+  "related_history_preserved": [
+    {
+      "uid": "re4r-brute",
+      "edition": "Resident Evil 4 remake (2023)",
+      "baseline_status": "BLOCKED_HISTORICAL_IDENTITY_NO_RETRY",
+      "current_outcome": "HISTORICAL_TOOL_REFUSAL",
+      "tool_refusal": true,
+      "historical_entry_unchanged": {
+        "uid": "re4r-brute",
+        "label": "Brute",
+        "edition": "Resident Evil 4 remake (2023)",
+        "fighter_category": "experimental",
+        "baseline_status": "BLOCKED_HISTORICAL_IDENTITY_NO_RETRY",
+        "current_outcome": "HISTORICAL_TOOL_REFUSAL",
+        "retained_assets": [],
+        "trials": [],
+        "current_tool_refusals": [],
+        "current_hold_decisions": [],
+        "further_generation_blocked_by_current_refusal": false,
+        "later_left_request_refused_after_right_candidate": false,
+        "canonical_one_to_one_certified": false,
+        "engine_admitted_by_this_continuation": false,
+        "baseline_evidence": {
+          "manifestUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/manifest.json",
+          "bodyReceiptUrl": null,
+          "portraitReceiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_3/re4r-brute/portrait.json",
+          "blockedOutputs": [
+            {
+              "kind": "portrait",
+              "status": "BLOCKED_BY_TOOL",
+              "receiptPath": "modules/fidelity-r34/assets/lots/lot_3/re4r-brute/portrait.json",
+              "receiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_3/re4r-brute/portrait.json",
+              "trackingUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json"
+            },
+            {
+              "kind": "idle",
+              "status": "BLOCKED_BY_TOOL_PRIOR_PHASE",
+              "receiptPath": null,
+              "receiptUrl": null,
+              "trackingUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json"
+            }
+          ]
+        }
+      },
+      "decision": "Sujet historiquement refusé exclu. Aucun essai, changement de nom, emprunt de référence ou substitution vers ce sujet."
+    },
+    {
+      "uid": "re5-gatling-gun-majini",
+      "edition": "Resident Evil 5 (2009)",
+      "baseline_status": "LEFT_GAP_SOURCE_AVAILABLE",
+      "current_outcome": "TRIALS_ONLY_NOT_ADMITTED",
+      "tool_refusal": false,
+      "current_hold_decisions_unchanged": [
+        {
+          "batch": "V8",
+          "manifest": "v8/manifests/ASSET_MANIFEST_V8.json",
+          "decision": {
+            "uid": "re5-gatling-gun-majini",
+            "edition": "Resident Evil 5 (2009)",
+            "status": "HELD_NO_QUALIFIED_LEFT_VIEW_AFTER_TRIALS",
+            "reason": "Trois sorties réussies mais prises et raccords des bras non conformes à la source ; une nouvelle référence gauche avec prises établies serait nécessaire pour une reprise.",
+            "tool_call_performed": true,
+            "canonical_one_to_one_certified": false,
+            "engine_admitted": false
+          }
+        }
+      ],
+      "decision": "Les essais gauches V8 ont échoué au contrôle de prise ; statut conservé. J.J. RE4 est une identité et une arme distinctes, pas une manière de reprendre ce hold."
+    }
+  ],
+  "sources": {
+    "refr_original_game_page": {
+      "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-enemies-refr.html",
+      "local_reference_file": "re4-enemies-refr.html",
+      "bytes": 164516,
+      "sha256": "39853d61da620d1c6539bbcb001d0e78d17c92dece434d1b8470120dd324721a",
+      "url": "https://www.residentevilfr.com/v3/resident-evil-4-ennemis/",
+      "role": "Attribution de la galerie au Resident Evil 4 original ; le texte et les plateformes de la page renvoient au jeu original. La date 2023 dans le chemin WordPress est une date de téléversement, pas une preuve d’édition Remake."
+    },
+    "jj_full_render": {
+      "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-jj-refr-full.png",
+      "local_reference_file": "re4-jj-refr-full.png",
+      "bytes": 188930,
+      "sha256": "54ab2432f1010117b4328be48713214d6c741a3b98555ca5ed7b8a21b9579eb5",
+      "dimensions": [
+        810,
+        1080
+      ],
+      "format": "PNG",
+      "mode": "P",
+      "url": "https://www.residentevilfr.com/v3/wp-content/uploads/2023/03/resident-evil-4-jj-810x1080.png",
+      "source_page": "https://www.residentevilfr.com/v3/resident-evil-4-ennemis/",
+      "retrieval": "URL exacte du lien de galerie observé dans la page ; octets enregistrés sans recadrage, ajout, agrandissement ou retouche.",
+      "visual_inspection_performed": true,
+      "source_kind": "Rendu final attribué par un site secondaire au jeu original ; aucune extraction de mesh certifiée."
+    },
+    "soldiers_full_sheet": {
+      "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-soldiers-refr-full.png",
+      "local_reference_file": "re4-soldiers-refr-full.png",
+      "bytes": 391761,
+      "sha256": "0fbecd6721b042c1ef1c883bb151bf4ba153a65d671c027e3600dc6078e9b662",
+      "dimensions": [
+        1300,
+        1080
+      ],
+      "format": "PNG",
+      "mode": "P",
+      "url": "https://www.residentevilfr.com/v3/wp-content/uploads/2023/03/resident-evil-4-soldats-1300x1080.png",
+      "source_page": "https://www.residentevilfr.com/v3/resident-evil-4-ennemis/",
+      "retrieval": "URL exacte du lien de galerie observé dans la page ; planche complète conservée.",
+      "visual_inspection_performed": true,
+      "source_kind": "Planche de quatre rendus finaux attribuée par un site secondaire au jeu original."
+    },
+    "hammer_archive_page": {
+      "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-las-plagas-archives.html",
+      "local_reference_file": "re4-las-plagas-archives.html",
+      "bytes": 221542,
+      "sha256": "3c6a875a2670fe2af2f34aedd20a7bda0d836cb3116ff44bf46da21cb73d423e",
+      "url": "https://les-archives-resident-evil-biohazard.fr/lore-parasite-las-plagas/",
+      "role": "Galerie multi-jeux/multi-éditions ; la seule légende du sujet est « Ganado au Marteau ». Cette page ne suffit pas à authentifier l’édition exacte de la vignette."
+    },
+    "hammer_archive_public_metadata": {
+      "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-hammer-archives-media.json",
+      "local_reference_file": "re4-hammer-archives-media.json",
+      "bytes": 5123,
+      "sha256": "626e9bfe45badd332996b95dd56820cbe26dc57509e4fe69b2bf46b5caebb14e",
+      "url": "https://les-archives-resident-evil-biohazard.fr/wp-json/wp/v2/media?search=22Ganado-au-Marteau&per_page=10",
+      "media_id": 29571,
+      "role": "API publique WordPress : source_url et dimensions 1030×582 ; crédit/copyright/description de l’origine du rendu non établis. La taille déclarée côté WordPress n’est pas substituée à la taille des octets effectivement reçus."
+    },
+    "hammer_archive_full": {
+      "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-hammer-archives-full.png",
+      "local_reference_file": "re4-hammer-archives-full.png",
+      "bytes": 134564,
+      "sha256": "62cc0cfd8d987f2debe297b914e30f3a264d24caa0e3bc3ac25e8eb69e216a11",
+      "dimensions": [
+        1030,
+        582
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "url": "https://les-archives-resident-evil-biohazard.fr/wp-content/uploads/2025/02/22Ganado-au-Marteau%C2%B2.png",
+      "source_page": "https://les-archives-resident-evil-biohazard.fr/lore-parasite-las-plagas/",
+      "retrieval": "source_url du media public 29571, non deviné à partir du nom de vignette ; octets effectivement reçus conservés.",
+      "visual_inspection_performed": true,
+      "source_kind": "Image secondaire complète, édition native non authentifiée."
+    },
+    "hammer_archive_thumbnail": {
+      "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-hammer-archives.png",
+      "local_reference_file": "re4-hammer-archives.png",
+      "bytes": 85452,
+      "sha256": "3d166b94b9b8bf18bb746c64c967280b2382ac26e7e5422031c7dc55893727c9",
+      "dimensions": [
+        768,
+        434
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "url": "https://les-archives-resident-evil-biohazard.fr/wp-content/uploads/2025/02/22Ganado-au-Marteau%C2%B2-768x434.png",
+      "source_page": "https://les-archives-resident-evil-biohazard.fr/lore-parasite-las-plagas/",
+      "visual_inspection_performed": true,
+      "source_kind": "Variante medium_large du même média, pas une seconde vue indépendante."
+    },
+    "archives_soldier_page": {
+      "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-ganado-archives.html",
+      "local_reference_file": "re4-ganado-archives.html",
+      "bytes": 184728,
+      "sha256": "9ac542b1f5569a8f461898f57dca720974eba1b3e3459316805021242899882d",
+      "url": "https://les-archives-resident-evil-biohazard.fr/lore-ganado-type-1/",
+      "role": "Les légendes distinguent explicitement les soldats 2005 des soldats 2023. Les deux rendus 2005 téléchargés sont d’autres variantes que le soldat RPG du catalogue."
+    },
+    "archives_soldier_crossbow": {
+      "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-soldier-archives-1.png",
+      "local_reference_file": "re4-soldier-archives-1.png",
+      "bytes": 107529,
+      "sha256": "1f7bd10a7b96fa918452945856f12b8aa851b0ca75b811bcebf1d76cf3850cc1",
+      "dimensions": [
+        768,
+        434
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "url": "https://les-archives-resident-evil-biohazard.fr/wp-content/uploads/2025/02/8Ganado-Soldat-2005-1%C2%B2-768x434.png",
+      "visual_inspection_performed": true,
+      "source_kind": "Soldat 2005 casqué/masqué à l’arbalète ; exclu comme substitution du soldat chauve au lance-roquettes."
+    },
+    "archives_soldier_stun_rod": {
+      "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-soldier-archives-2.png",
+      "local_reference_file": "re4-soldier-archives-2.png",
+      "bytes": 90094,
+      "sha256": "f4fc1af13b7e8b958dfbc685b2266aad628f99e22d48f0fdce4235bb8c17d280",
+      "dimensions": [
+        768,
+        434
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "url": "https://les-archives-resident-evil-biohazard.fr/wp-content/uploads/2025/02/10Ganado-Soldat-2005-2%C2%B2-768x434.png",
+      "visual_inspection_performed": true,
+      "source_kind": "Soldat 2005 en combinaison brune et masque à gaz au bâton électrique ; exclu comme substitution du soldat chauve au lance-roquettes."
+    }
+  },
+  "targets": [
+    {
+      "uid": "re4-hammer-ganado",
+      "edition_requested": "Resident Evil 4 (2005)",
+      "variant_requested": "Soldat humain avec demi-masque métallique et armure à pointes, distinct du Brute animalier 2023.",
+      "historical_status_preserved": "SOURCE_HOLD",
+      "source_audit_decision": "SOURCE_HOLD_COMPLETE_IMAGE_EDITION_ATTRIBUTION_LIMITED",
+      "source_ready_for_scoped_candidate": false,
+      "tool_refusal": false,
+      "history": {
+        "continuation_v16_entry_unchanged": {
+          "uid": "re4-hammer-ganado",
+          "label": "Hammer Ganado",
+          "edition": "Resident Evil 4 (2005)",
+          "fighter_category": "experimental",
+          "baseline_status": "HELD_COMPLETE_OR_EXACT_REFERENCE",
+          "current_outcome": "SOURCE_HOLD",
+          "retained_assets": [],
+          "trials": [],
+          "current_tool_refusals": [],
+          "current_hold_decisions": [],
+          "further_generation_blocked_by_current_refusal": false,
+          "later_left_request_refused_after_right_candidate": false,
+          "canonical_one_to_one_certified": false,
+          "engine_admitted_by_this_continuation": false,
+          "baseline_evidence": {
+            "manifestUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/manifest.json",
+            "bodyReceiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_1/re4-hammer-ganado/idle.json",
+            "portraitReceiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_1/re4-hammer-ganado/portrait.json",
+            "blockedOutputs": []
+          }
+        },
+        "r34_body_receipt": {
+          "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-hammer-ganado-r34-idle.json",
+          "local_reference_file": "re4-hammer-ganado-r34-idle.json",
+          "bytes": 3194,
+          "sha256": "3cbf4f6ffbaf5476c31a9b32fe26bba70188f58c8700b52f9d3924baa10b3421",
+          "repository_path": "modules/fidelity-r34/assets/lots/lot_1/re4-hammer-ganado/idle.json",
+          "status": "HELD_REFERENCE",
+          "reason_verbatim": "The armored HammerGanado source is an upper-body portrait. Its lower costume, feet and complete hammer are outside the frame."
+        },
+        "r34_portrait_receipt": {
+          "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-hammer-ganado-r34-portrait.json",
+          "local_reference_file": "re4-hammer-ganado-r34-portrait.json",
+          "bytes": 3703,
+          "sha256": "9872019e2b86a2bd3925e195075ae81be7f5c99dda1d86066357a8fb31b56256",
+          "repository_path": "modules/fidelity-r34/assets/lots/lot_1/re4-hammer-ganado/portrait.json",
+          "status": "GENERATED"
+        },
+        "catalog_source": {
+          "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-hammer-ganado-r34-catalog.png",
+          "local_reference_file": "re4-hammer-ganado-r34-catalog.png",
+          "bytes": 135344,
+          "sha256": "61e0b06d2598e9baebe5a66d33b34a4d6a8842fa660f55a66f79c38f61935b11",
+          "dimensions": [
+            450,
+            360
+          ],
+          "format": "PNG",
+          "mode": "RGB",
+          "repository_path": "assets/catalog/re4-hammer-ganado.png",
+          "source_page": "https://www.evilresource.com/resident-evil-4/enemies/hammer-ganado"
+        },
+        "own_tool_refusal_found_in_inspected_evidence": false,
+        "interpretation": "Le blocage R34 est un manque de référence complète. Le portrait a été généré ; le corps a été tenu en attente. Le snapshot V16 ne porte aucun refus propre ni essai corps pour cet UID. Cela ne prouve pas l’absence de tout événement hors du corpus examiné."
+      },
+      "source_ids": [
+        "hammer_archive_page",
+        "hammer_archive_public_metadata",
+        "hammer_archive_full",
+        "hammer_archive_thumbnail"
+      ],
+      "inspection": {
+        "source_actually_inspected": true,
+        "full_body_and_visible_weapon_in_frame": true,
+        "observed_clipping": false,
+        "reference_subject_count": 1,
+        "appearance_correspondence": "Le demi-masque métallique côté gauche anatomique, les épaulières à pointes et le plastron rappellent directement le crop R34. Cette correspondance visuelle reste une inférence, pas la preuve de l’édition du rendu.",
+        "visible_features": [
+          "Deux bottes et pantalon noir entièrement visibles.",
+          "Marteau à tête sombre pointue posé derrière l’épaule, manche se terminant à gauche de l’image.",
+          "Main anatomique droite levée sur le manche près de l’épaule ; main gauche abaissée près du bassin.",
+          "Pointe supérieure et pieds à quelques pixels du bord ; faible réserve de cadre."
+        ],
+        "source_overlay": "Fond blanc, bordure rouge et filigrane du site visibles. Aucune suppression/retouche effectuée.",
+        "edition_proof": "La page Las Plagas regroupe plusieurs jeux et les éditions 2005/2023. La vignette dit seulement « Ganado au Marteau ». Les champs de crédit/copyright des métadonnées du média sont vides. Aucun fichier de jeu, rendu daté de l’édition originale ou capture native indépendante n’a été obtenu dans cette passe.",
+        "resolution_limit": "Le fichier original servi mesure 1030×582, mais le sujet n’occupe qu’une partie de sa largeur. Les détails de texture et certaines surfaces cachées restent peu lisibles.",
+        "independent_second_view": false,
+        "full_file_is_upscale_created_by_this_audit": false
+      },
+      "limits": [
+        "Les images retenues sont des rendus publiés sur des sites secondaires ; aucune chaîne de hash d’un mesh natif Capcom n’est établie.",
+        "Une seule vue ne documente pas les surfaces cachées ni une vue opposée native. Conserver une occlusion naturelle est admissible ; inventer des détails invisibles ne l’est pas.",
+        "Une source complète ne certifie aucune future génération, aucune fidélité canonique 1:1, aucune animation et aucune intégration moteur.",
+        "Les fichiers locaux sont des références de travail, non des nouveaux assets générés. Aucun bitmap source n’est copié dans le dépôt.",
+        "Le fichier complet et la vignette sont deux tailles du même média, pas deux sources indépendantes.",
+        "La disponibilité d’un corps entier ne lève pas l’incertitude d’édition. Ce rapport ne déclare pas cette piste prête."
+      ],
+      "forbidden_substitution": [
+        "Brute RE4 Remake 2023, historiquement refusé ; ne pas tenter de le reprendre sous ce nom.",
+        "Charm Soldier w/ hammer de 2023, même lorsqu’il ressemble à une bouteille-cap ancienne.",
+        "Mod Nexus OG Soldier/JJ dans le moteur du remake, variantes HD Project.",
+        "STL Cults3D décrit comme interprétation artistique non officielle.",
+        "Complétion du corps et de l’arme à partir du seul buste R34."
+      ],
+      "next_action": "Conserver SOURCE_HOLD. Une reprise demande une capture native originale ou un rendu attribué explicitement à RE4 original avec origine démontrable ; ne pas relancer la génération sur simple similitude."
+    },
+    {
+      "uid": "re4-jj",
+      "edition": "Resident Evil 4 (2005)",
+      "variant": "J.J. original, béret bordeaux, cache-œil droit anatomique, minigun et bande de munitions libre.",
+      "historical_status_preserved": "SOURCE_HOLD",
+      "source_audit_decision": "COMPLETE_ATTRIBUTED_SOURCE_FOR_SCOPED_CANDIDATE",
+      "source_ready_for_scoped_candidate": true,
+      "tool_refusal": false,
+      "history": {
+        "continuation_v16_entry_unchanged": {
+          "uid": "re4-jj",
+          "label": "J.J.",
+          "edition": "Resident Evil 4 (2005)",
+          "fighter_category": "experimental",
+          "baseline_status": "HELD_COMPLETE_OR_EXACT_REFERENCE",
+          "current_outcome": "SOURCE_HOLD",
+          "retained_assets": [],
+          "trials": [],
+          "current_tool_refusals": [],
+          "current_hold_decisions": [],
+          "further_generation_blocked_by_current_refusal": false,
+          "later_left_request_refused_after_right_candidate": false,
+          "canonical_one_to_one_certified": false,
+          "engine_admitted_by_this_continuation": false,
+          "baseline_evidence": {
+            "manifestUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/manifest.json",
+            "bodyReceiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_3/re4-jj/idle.json",
+            "portraitReceiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_3/re4-jj/portrait.json",
+            "blockedOutputs": []
+          }
+        },
+        "r34_body_receipt": {
+          "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-jj-r34-idle.json",
+          "local_reference_file": "re4-jj-r34-idle.json",
+          "bytes": 1356,
+          "sha256": "0550537d94661a067dbce884ba7d8c1896a758be2631c4da80c5244d4193cc79",
+          "repository_path": "modules/fidelity-r34/assets/lots/lot_3/re4-jj/idle.json",
+          "status": "HELD_REFERENCE",
+          "reason_verbatim": "The soldier head/upper torso and partial gatling weapon are shown, with lower body and complete weapon ends outside frame. No image_gen body request was issued from insufficient original references."
+        },
+        "r34_portrait_receipt": {
+          "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-jj-r34-portrait.json",
+          "local_reference_file": "re4-jj-r34-portrait.json",
+          "bytes": 3795,
+          "sha256": "15e54f6aee4eafbcf88e60ddf87ec8bea1fff4e17738808974ace364eff75b53",
+          "repository_path": "modules/fidelity-r34/assets/lots/lot_3/re4-jj/portrait.json",
+          "status": "GENERATED"
+        },
+        "catalog_source": {
+          "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-jj-r34-catalog.png",
+          "local_reference_file": "re4-jj-r34-catalog.png",
+          "bytes": 149837,
+          "sha256": "8a6344490095304b2301f6c309982cd171bde0ad37ec70341fa13ba702a5d319",
+          "dimensions": [
+            450,
+            360
+          ],
+          "format": "PNG",
+          "mode": "RGB",
+          "repository_path": "assets/catalog/re4-jj.png",
+          "source_page": "https://www.evilresource.com/resident-evil-4/enemies/jj"
+        },
+        "own_tool_refusal_found_in_inspected_evidence": false,
+        "interpretation": "Le blocage R34 est un manque de référence complète. Le portrait a été généré ; le corps a été tenu en attente. Le snapshot V16 ne porte aucun refus propre ni essai corps pour cet UID. Cela ne prouve pas l’absence de tout événement hors du corpus examiné."
+      },
+      "source_ids": [
+        "refr_original_game_page",
+        "jj_full_render"
+      ],
+      "inspection": {
+        "source_actually_inspected": true,
+        "same_variant_as_r34_catalog_observed": true,
+        "matching_evidence": "Même pose, même béret, visage/cache-œil, foulard, bandoulières et portions du minigun que le crop R34 ; le rendu retrouvé étend réellement le cadre aux jambes, chaussures, extrémité des canons et bout de bande.",
+        "one_subject_in_reference": true,
+        "whole_body_visible_with_natural_occlusions": true,
+        "all_visible_weapon_and_ammo_termini_inside_frame": true,
+        "observed_clipping": false,
+        "frame_notes": "Les deux chaussures, six ouvertures de canons et le dernier groupe de cartouches de la bande libre se terminent dans le cadre. La marge latérale est faible près du bout de bande et de la chaussure droite dans l’image, environ 6 px ; ce n’est pas une marge de production généreuse.",
+        "orientation": "Trois quarts frontal ; arme projetée vers la droite et le haut de l’image. Ce n’est pas une vue de profil native gauche/droite.",
+        "identity_features": [
+          "Béret bordeaux, écusson côté droit de l’image.",
+          "Un seul cache-œil sur l’œil anatomique droit, donc à gauche dans cette vue frontale ; motif blanc visible dessus.",
+          "Foulard brun rouge, plusieurs rangées de munitions autour du haut du corps.",
+          "Pantalon brun sale ample et court aux bas effilochés ; bas des mollets exposés, chaussures foncées.",
+          "Minigun noir à six bouches visibles, bande de munitions libre longue aboutissant en bas à gauche du cadre."
+        ],
+        "hand_placement": {
+          "anatomical_left_hand": "Nettement visible : depuis l’épaule et l’avant-bras du côté droit de l’image, elle repose/serre la poignée supérieure transversale près du bloc de l’arme, au-dessus et derrière l’arc de support et avant les longs canons.",
+          "anatomical_right_hand": "Le bras descend sur le côté gauche du torse dans l’image et arrive vers l’arrière du boîtier. La main et la commande sont largement masquées par l’arme et les munitions : leur prise exacte ne peut pas être certifiée depuis ce rendu.",
+          "both_hand_grips_independently_proven": false,
+          "required_review": "Tracer chaque bras jusqu’à sa propre main visible, conserver l’occlusion de la main arrière lorsqu’elle reste naturelle, refuser mains doublées, bras déconnectés et inversion du cache-œil. Ne pas importer la prise d’un Gatling Gun Majini RE5."
+        }
+      },
+      "limits": [
+        "Les images retenues sont des rendus publiés sur des sites secondaires ; aucune chaîne de hash d’un mesh natif Capcom n’est établie.",
+        "Une seule vue ne documente pas les surfaces cachées ni une vue opposée native. Conserver une occlusion naturelle est admissible ; inventer des détails invisibles ne l’est pas.",
+        "Une source complète ne certifie aucune future génération, aucune fidélité canonique 1:1, aucune animation et aucune intégration moteur.",
+        "Les fichiers locaux sont des références de travail, non des nouveaux assets générés. Aucun bitmap source n’est copié dans le dépôt.",
+        "La main arrière et les faces arrière du mécanisme ne sont pas démontrées par une seconde vue. Une génération exposant ces faces doit rester en attente si elle requiert une invention."
+      ],
+      "forbidden_substitution": [
+        "Gatling Gun Majini RE5 et son équipement.",
+        "Brute RE4 Remake 2023, charm RE4 Remake, pack Nexus transformant le modèle dans le remake.",
+        "Lunettes, cigare ou sac à munitions non présents sur la référence.",
+        "Cache-œil déplacé à gauche anatomique par simple miroir."
+      ],
+      "next_action": "Une paire de candidats statiques peut être tentée à partir de ce rendu, sous revue indépendante de l’identité, du cadre et des raccords bras/arme. Cette décision source ne vaut pas admission de sorties."
+    },
+    {
+      "uid": "re4-soldier-ganado",
+      "edition": "Resident Evil 4 (2005)",
+      "variant": "Soldat chauve, veste brune ouverte, pantalon gris brun et lance-roquettes porté vers le haut ; deuxième sujet depuis la gauche de la planche REFR.",
+      "historical_status_preserved": "SOURCE_HOLD",
+      "source_audit_decision": "COMPLETE_ATTRIBUTED_SOURCE_FOR_SCOPED_CANDIDATE",
+      "source_ready_for_scoped_candidate": true,
+      "tool_refusal": false,
+      "history": {
+        "continuation_v16_entry_unchanged": {
+          "uid": "re4-soldier-ganado",
+          "label": "Soldier Ganado",
+          "edition": "Resident Evil 4 (2005)",
+          "fighter_category": "experimental",
+          "baseline_status": "HELD_COMPLETE_OR_EXACT_REFERENCE",
+          "current_outcome": "SOURCE_HOLD",
+          "retained_assets": [],
+          "trials": [],
+          "current_tool_refusals": [],
+          "current_hold_decisions": [],
+          "further_generation_blocked_by_current_refusal": false,
+          "later_left_request_refused_after_right_candidate": false,
+          "canonical_one_to_one_certified": false,
+          "engine_admitted_by_this_continuation": false,
+          "baseline_evidence": {
+            "manifestUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/manifest.json",
+            "bodyReceiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_1/re4-soldier-ganado/idle.json",
+            "portraitReceiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_1/re4-soldier-ganado/portrait.json",
+            "blockedOutputs": []
+          }
+        },
+        "r34_body_receipt": {
+          "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-soldier-ganado-r34-idle.json",
+          "local_reference_file": "re4-soldier-ganado-r34-idle.json",
+          "bytes": 3262,
+          "sha256": "4be7868e54f6200bbc3994b78aa1d3871a37ad0357ace71edfeacd17818a51d8",
+          "repository_path": "modules/fidelity-r34/assets/lots/lot_1/re4-soldier-ganado/idle.json",
+          "status": "HELD_REFERENCE",
+          "reason_verbatim": "The exact soldier costume is cropped through its upper body, and raised equipment is not complete. Lower clothing and boots are not documented by this view."
+        },
+        "r34_portrait_receipt": {
+          "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-soldier-ganado-r34-portrait.json",
+          "local_reference_file": "re4-soldier-ganado-r34-portrait.json",
+          "bytes": 3727,
+          "sha256": "3a2061be3682c457ffb09dfbacf3fd59d9427afba2506d623bce0c81780dbc7e",
+          "repository_path": "modules/fidelity-r34/assets/lots/lot_1/re4-soldier-ganado/portrait.json",
+          "status": "GENERATED"
+        },
+        "catalog_source": {
+          "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-soldier-ganado-r34-catalog.png",
+          "local_reference_file": "re4-soldier-ganado-r34-catalog.png",
+          "bytes": 138949,
+          "sha256": "9244787edbd649d6ada667b3fb2945ae8126463187d827b20aaefee171df2a4d",
+          "dimensions": [
+            450,
+            360
+          ],
+          "format": "PNG",
+          "mode": "RGB",
+          "repository_path": "assets/catalog/re4-soldier-ganado.png",
+          "source_page": "https://www.evilresource.com/resident-evil-4/enemies/soldier-ganado"
+        },
+        "own_tool_refusal_found_in_inspected_evidence": false,
+        "interpretation": "Le blocage R34 est un manque de référence complète. Le portrait a été généré ; le corps a été tenu en attente. Le snapshot V16 ne porte aucun refus propre ni essai corps pour cet UID. Cela ne prouve pas l’absence de tout événement hors du corpus examiné."
+      },
+      "source_ids": [
+        "refr_original_game_page",
+        "soldiers_full_sheet"
+      ],
+      "inspection": {
+        "source_actually_inspected": true,
+        "same_variant_as_r34_catalog_observed": true,
+        "matching_evidence": "Le deuxième sujet de la planche reprend la pose du crop R34 : crâne chauve, lésions faciales, veste ouverte, main anatomique droite levée portant le lanceur. Les deux jambes et chaussures sont désormais visibles.",
+        "reference_subject_count": 4,
+        "selected_subject": "Deuxième depuis la gauche uniquement ; aucun transfert du casque/arbalète du premier, du masque à gaz/bâton électrique du troisième ou du fléau du quatrième.",
+        "whole_body_visible_with_natural_occlusions": true,
+        "visible_weapon_extent_complete_in_frame": true,
+        "hidden_weapon_surface_fully_documented": false,
+        "observed_clipping_on_selected_subject": false,
+        "frame_notes": "Pointe de la roquette incluse près du haut de la planche, deux chaussures complètes et détachées des bords. Le corps sélectionné ne doit pas être confondu avec ses voisins.",
+        "orientation": "Frontal léger trois quarts ; lanceur monté en diagonale vers le coin haut gauche de l’image.",
+        "identity_features": [
+          "Tête chauve et visage altéré correspondant au crop R34.",
+          "Veste brune usée ouverte sur torse nu ; pas de casque, masque à gaz ou gilet sans manches.",
+          "Pantalon gris brun court/effiloché au bas, chevilles visibles et chaussures brunes.",
+          "Main anatomique droite levée sur la poignée du lanceur ; main anatomique gauche relâchée le long du corps.",
+          "Roquette à pointe fine et tête conique allongée, corps de lanceur passant près de l’épaule droite anatomique."
+        ],
+        "weapon_occlusion": "La partie arrière du lanceur se confond/est naturellement masquée près de l’épaule droite anatomique. Aucun autre angle ne démontre sa terminaison cachée ; la source résout le cadrage coupé, pas toutes les faces du mécanisme.",
+        "generation_scope": "Conserver la variante et la position générale du lanceur permettant cette occlusion ; ne pas transformer cette source en schéma technique complet ni ajouter un second équipement."
+      },
+      "limits": [
+        "Les images retenues sont des rendus publiés sur des sites secondaires ; aucune chaîne de hash d’un mesh natif Capcom n’est établie.",
+        "Une seule vue ne documente pas les surfaces cachées ni une vue opposée native. Conserver une occlusion naturelle est admissible ; inventer des détails invisibles ne l’est pas.",
+        "Une source complète ne certifie aucune future génération, aucune fidélité canonique 1:1, aucune animation et aucune intégration moteur.",
+        "Les fichiers locaux sont des références de travail, non des nouveaux assets générés. Aucun bitmap source n’est copié dans le dépôt.",
+        "La planche est multi-sujets. Toute future sortie doit contenir uniquement la variante sélectionnée.",
+        "Une pose découvrant entièrement l’arrière du lanceur nécessiterait une source supplémentaire ; une simple similitude avec un RPG réel ne suffit pas."
+      ],
+      "forbidden_substitution": [
+        "Autres soldats de la même planche.",
+        "Soldats RE4 Remake 2023, Umbrella Corps ou textures HD de fan non identifiées.",
+        "Arbalète, bâton électrique, fléau, casque ou masque à gaz empruntés aux voisins."
+      ],
+      "next_action": "Possible candidat statique limité à cette variante et à une arme dont les zones non prouvées restent naturellement masquées ; vérifier corps entier et sortie à un seul sujet."
+    }
+  ],
+  "other_searches_and_exclusions": [
+    {
+      "page": "https://blackjackrants.blogspot.com/2020/10/reviewing-monsters-resident-evil-4.html",
+      "local_page": {
+        "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-blackjack.html",
+        "local_reference_file": "re4-blackjack.html",
+        "bytes": 170552,
+        "sha256": "529641d1dd7d6c62fce8a5fa02c0f027ffdfdebac6f28acf752319d4873cb71e"
+      },
+      "status": "NO_MATCHING_ISLAND_FULL_RENDER_OBTAINED",
+      "inspection": "Les deux planches téléchargées et inspectées montrent respectivement les villageois et les fanatiques du château. Elles ne complètent pas les variantes de l’île demandées.",
+      "visual_files": [
+        {
+          "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-blackjack-ganados-2.png",
+          "local_reference_file": "re4-blackjack-ganados-2.png",
+          "bytes": 869555,
+          "sha256": "7f475341a6058d3fba3109aa4791f5edce8a2a0aefc45505036e4cedb9b1605e",
+          "dimensions": [
+            1000,
+            694
+          ],
+          "format": "PNG",
+          "mode": "RGBA"
+        },
+        {
+          "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-blackjack-ganados-3.jpg",
+          "local_reference_file": "re4-blackjack-ganados-3.jpg",
+          "bytes": 101004,
+          "sha256": "e46031e6a3d370c82ff7aad81949964cd398d4b8f0c0da41f18ecf7ad1e25f9a",
+          "dimensions": [
+            1000,
+            659
+          ],
+          "format": "JPEG",
+          "mode": "RGB"
+        }
+      ],
+      "uninspected_not_used": "re4-blackjack-small-4.png, minuscule image non utilisée comme preuve."
+    },
+    {
+      "page": "https://residentevil.fandom.com/wiki/Soldier_w/_Hammer",
+      "status": "TEXT_ONLY_NO_USABLE_IMAGE_RETRIEVED",
+      "observation": "Le résultat de recherche distingue le soldat original du Brute 2023 et renvoie à biohazard4 kaitaishinsho révisé, p.382. L’ouverture a répondu HTTP 402 ; aucun contournement, aucune image native obtenue. La bibliographie n’authentifie pas à elle seule le PNG Les Archives."
+    },
+    {
+      "page": "https://cults3d.com/en/3d-model/art/soldier-w-hammer-bottle-cap-trophy-3d-print-file",
+      "status": "EXCLUDED_FAN_INTERPRETATION",
+      "observation": "La fiche décrit explicitement une interprétation artistique non officielle destinée à l’impression 3D. Ce n’est pas une preuve de modèle natif complet."
+    },
+    {
+      "page": "https://www.nexusmods.com/residentevil42023/mods/1171",
+      "status": "EXCLUDED_CROSS_EDITION_MOD",
+      "observation": "Mod OG Soldier/JJ remplaçant les Brutes de 2023 ; options textures 2005/HD Project. Une capture du mod ne vaut pas source native originale."
+    },
+    {
+      "page": "https://residentevil.fandom.com/wiki/Soldier_w/_hammer_%28charm%29",
+      "status": "EXCLUDED_REMAKE_CHARM",
+      "observation": "Objet charm explicitement lié à l’édition 2023, pas une nouvelle preuve d’ennemi natif 2005."
+    },
+    {
+      "page": "https://models.spriters-resource.com/pc_computer/residentevil4/",
+      "status": "NO_MATCHING_MODEL_OBTAINED",
+      "observation": "Page indexée RE4 (2007) : ennemis listés Del Lago, Dr. Salvador et El Gigante ; aucun modèle marteau natif récupéré dans cette passe."
+    },
+    {
+      "page": "https://jaderlink.blogspot.com/2025/01/re4-descricao-dos-arquivos.html",
+      "status": "FILE_INDEX_ONLY",
+      "observation": "L’index distingue em1400.pmd (J.J. corps + mitrailleuse) et em2000a.pmd (armure pointue et marteau). Il ne fournit dans cette passe ni vue complète authentifiée ni téléchargement de modèle inspecté."
+    }
+  ],
+  "raw_download_index": {
+    "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-island-downloads.json",
+    "local_reference_file": "re4-island-downloads.json",
+    "bytes": 4970,
+    "sha256": "667923904c75c9e34724fa32b7c9db5d5161253476138c76eca4c8d7a40706fd"
+  },
+  "completion": "Recherche bornée terminée. Les deux sources REFR peuvent alimenter des candidats sous contraintes. Le marteau reste en attente d’attribution suffisante. Aucun statut historique de génération/refus n’a été réécrit."
+}

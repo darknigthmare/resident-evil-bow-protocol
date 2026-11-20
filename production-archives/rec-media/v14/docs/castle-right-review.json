@@ -1,0 +1,66 @@
+{
+  "schema": "rec.static-candidate-independent-review.v14",
+  "reviewed_at": "2026-11-20",
+  "reviewer": "review_v14",
+  "verdict": "CANDIDATE_STATIC_WITH_LIMITS",
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "original_bytes_modified": false,
+  "one_subject_per_image_reviewed": true,
+  "animation_frames": 1,
+  "inspection_method": "Original RGBA files composited over RGB (128,128,128) and (235,235,235), then personally inspected with tools.view_image. Original bytes preserved.",
+  "asset": "Castle Ganado — bald scythe monk, RE4 original 2005, right",
+  "original_path": "/workspace/scratch/3fced93cfb0a/generated_images/exec-9b367578-cce4-4979-9eb2-15c57bea40d7.png",
+  "sha256": "47fdfc097f27e5ae8277d65db685c27d6bad0d9b5941401003c7a6d55497d53f",
+  "bytes": 996889,
+  "source_refs_reviewed": [
+    "references-v14/re4-castle-ganado-catalog.png",
+    "references-v14/re4-2005-los-iluminados-lineup.jpg",
+    "V14 generated Castle Ganado left candidate, SHA256 2cd08bdf20cd5db41daf912f48e6c1c2f36105db43c281273322b62c77c00939"
+  ],
+  "visual_checks": {
+    "orientation": "Head and leading shoe point screen right; chest and robe turn to a front-right three-quarter stance. Scythe shaft rises from low screen left to upper screen right and the complete blade remains ahead on screen right.",
+    "costume": "Gaunt pale bald monk, plain ankle-length brown robe, pale rope belt, broad rectangular-link metal necklace and low black footwear match the original identity and the generated left companion. No red robe, hood, skull head, shield or added armor.",
+    "hands_and_weapon": "Two hands wrap separate positions on one continuous wooden shaft; no detached shaft or hand at the blade. Visible fingers are anatomically plausible; rear thumb remains partly hidden by the grip. One complete curved metal scythe blade with tip inside frame.",
+    "framing": "One complete cultist with both shoes, entire robe and whole scythe. No text, UI, duplicate character, floor or scenery.",
+    "limits": [
+      "Top margin 43 px and bottom margin 37 px at alpha>=16, below requested 8 percent.",
+      "Pose is front-right three-quarter, not strict lateral.",
+      "Exact blade curvature, face and material details are generated interpretations.",
+      "One static pose; no native animation, pivots or engine admission."
+    ]
+  },
+  "alpha": {
+    "mode": "RGBA",
+    "size": [
+      1448,
+      1086
+    ],
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox_alpha_gte16": [
+      243,
+      43,
+      1317,
+      1049
+    ],
+    "margins_alpha16_left_top_right_bottom": [
+      243,
+      43,
+      131,
+      37
+    ],
+    "pixels_alpha0": 1106097,
+    "pixels_alpha1_to15": 23699,
+    "pixels_alpha1_to3": 20002,
+    "pixels_alpha255": 822,
+    "halo_finding": "Real alpha transparency confirmed, with no substantial backdrop or broad halo visible in light/gray composites. Low-alpha fringe remains. Subject is not uniformly alpha255.",
+    "all_subject_alpha_255": false
+  },
+  "qa_previews_only": [
+    "qa-v14-checkpoint2/castle-right-gray.jpg",
+    "qa-v14-checkpoint2/castle-right-light.jpg"
+  ]
+}

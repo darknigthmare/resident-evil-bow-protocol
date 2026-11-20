@@ -1,0 +1,103 @@
+{
+  "schema": "rec.static-candidate-independent-review.v16",
+  "asset": "Licker β, langue non déployée — Resident Evil 5 (2009), RIGHT 01",
+  "id": "re5_licker_beta_right_01",
+  "uid": "re5-licker-beta",
+  "variant": "re5_tongue_not_deployed",
+  "reviewed_at": "2026-11-20T13:05:43.581404+00:00",
+  "reviewer": "reference_research",
+  "asset_path": "assets/re5_licker_beta_right_01.png",
+  "original_path": "/workspace/scratch/3fced93cfb0a/generated_images/exec-70fc2c9d-1c8a-4253-a50f-6e963d747bb7.png",
+  "sha256": "f86db25e03bb00d156e254555affa2e1592b8d2eef2433b72393ab217ed28525",
+  "bytes": 2117292,
+  "verdict": "CANDIDATE_STATIC_WITH_LIMITS",
+  "review_status": "CANDIDATE_STATIC_WITH_LIMITS",
+  "excluded_from_candidate_count": false,
+  "source_refs_reviewed": [
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v16/licker-beta-archives-1.png",
+      "sha256": "0407878b7e171822ed0fa2253c35632508c086f1600044f841452d76b5a68413",
+      "role": "Rendu entier attribué à RE5 sur site secondaire, recoupé avec le crop historique ; chaîne originale Capcom non certifiée."
+    }
+  ],
+  "source_document": "docs/SOURCES_RE5_CREATURES_V16.json",
+  "prompt_record": "prompts/re5_licker_beta_right_01.json",
+  "technical_record": "docs/re5_licker_beta_right_01-technical.json",
+  "visual_checks": {
+    "orientation": "Tête et deux mains antérieures dirigées vers la droite ; hanches et postérieur proche à gauche. Silhouette droite cohérente, sans retournement de tête incompatible avec le corps.",
+    "variant": "Forme RE5 à tête cérébrale sans yeux, gueule dentée sombre et langue non déployée, épaules volumineuses, longs avant-bras et grandes griffes ivoire. Aucune queue ni mutation d’un autre épisode ; aucun cadre rouge ou logo de la référence.",
+    "four_limb_connections": "Les deux bras sont continus de l’épaule aux mains. Le postérieur proche est continu de la cuisse au pied situé à gauche. Le postérieur éloigné apparaît sous le corps avec un segment fléchi et son pied ; la connexion haute au bassin est cachée derrière le tronc. Quatre extrémités de membres sont visibles, sans pied détaché ou cinquième chaîne.",
+    "framing": "Un seul sujet, tête et dos entiers ; chaque grande griffe antérieure et les extrémités des deux pieds arrière visibles restent dans le cadre. La griffe inférieure la plus proche a une marge réduite mais se termine avant le bord.",
+    "limb_visibility": {
+      "expected_anatomical_limb_count": 4,
+      "distal_limbs_visibly_present": 4,
+      "occlusion": "Membre arrière éloigné : segment distal et pied sous le tronc, raccord proximal au bassin masqué.",
+      "all_four_complete_chains_exposed": false,
+      "detached_or_extra_limb_observed": false
+    },
+    "limits": [
+      "La marge transparente de 10 % demandée sur chaque côté n’est pas atteinte. Marges de silhouette alpha >= 16, gauche/haut/droite/bas : [70, 78, 72, 35] px, soit [4.56, 7.62, 4.69, 3.42] %. Aucune extrémité principale n’est coupée.",
+      "Le raccord proximal du membre arrière éloigné reste naturellement occulté ; seule sa portion distale est directement vérifiable.",
+      "Les rapports exacts de longueur des phalanges/griffes, la dentition et les surfaces générées ne sont pas certifiés à partir d’un seul rendu 2D.",
+      "La pose ne prouve ni quatre contacts au sol simultanés, ni animation, pivot ou collision de combat.",
+      "Candidat statique généré uniquement : aucune certification 1:1, animation originale, intégration moteur, collision, ancrage ou validation dans le jeu."
+    ]
+  },
+  "failed_gates": [],
+  "uncertain_gates": [],
+  "alpha": {
+    "mode": "RGBA",
+    "size": [
+      1536,
+      1024
+    ],
+    "extrema": [
+      0,
+      254
+    ],
+    "bbox_alpha_gte16": [
+      70,
+      78,
+      1464,
+      989
+    ],
+    "margins_alpha16_left_top_right_bottom": [
+      70,
+      78,
+      72,
+      35
+    ],
+    "margins_alpha16_percent_left_top_right_bottom": [
+      4.56,
+      7.62,
+      4.69,
+      3.42
+    ],
+    "bbox_all_nonzero_alpha": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "pixels_alpha0": 1075769,
+    "pixels_alpha1_to15": 42861,
+    "pixels_alpha1_to3": 40034,
+    "pixels_alpha255": 0,
+    "all_subject_alpha_255": false,
+    "halo_finding": "Alpha réel vérifié dans le PNG original. Les composites gris et clair montrent le sujet principal sans fond opaque ni halo large substantiel. Des résidus alpha très faibles subsistent hors de la silhouette principale, jusqu’à certains bords ; les octets originaux sont conservés."
+  },
+  "qa_previews_only": [
+    "/workspace/scratch/3fced93cfb0a/qa-v16/re5_licker_beta_right_01-gray.jpg",
+    "/workspace/scratch/3fced93cfb0a/qa-v16/re5_licker_beta_right_01-light.jpg"
+  ],
+  "inspection_method": "Inspection indépendante personnelle du rendu source entier et des deux composites calculés avec le vrai canal alpha, gris et clair. Empreinte, dimensions et distribution alpha remesurées sur le PNG original ; comparaison exacte avec la sortie de génération. Aucune retouche ou réparation du livrable.",
+  "original_bytes_modified": false,
+  "original_generated_bytes_verified_identical": true,
+  "one_subject_per_image_reviewed": true,
+  "quality_rejection_is_tool_refusal": false,
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "animation_frames": 1,
+  "can_mirror": false,
+  "recommended_action": "Conserver RIGHT 01 comme candidat statique de Licker β RE5 à langue non déployée, avec les limites de géométrie, d’occlusion et de marges. Les pointes de griffes sont complètes ; aucune correction concrète n’est requise par cette revue."
+}

@@ -1,0 +1,292 @@
+{
+  "schema": "rec-media.ci-parent-evidence.v16/1",
+  "observed_at_utc": "2026-11-20 12:58:18 UTC",
+  "repository": "darknigthmare/resident-evil-bow-protocol",
+  "pull_request": 22,
+  "pr_head_sha": "6599f75c88472351aacaf19e7a6b1197e6c58625",
+  "actual_checkout_ref": "refs/remotes/pull/22/merge",
+  "actual_checkout_merge_sha": "ebaa8ecab80a63bcad7095c66228289d606fa0ff",
+  "merge_base_sha": "12deacf4cf9b7706eba69fecc1c13593d030180b",
+  "scope": "Observed GitHub Actions results for the pre-V16 parent head 6599f75 only. These runs checked out its synthetic PR merge commit. This is not a CI result for the later V16 deliverable.",
+  "summary": {
+    "workflows_returned_by_commit_query": 25,
+    "success": 19,
+    "failure": 6,
+    "failed_workflows_with_logs_inspected": 6,
+    "independent_failure_classes_observed": 1,
+    "other_terminal_failures_found_in_the_six_failing_job_logs": false,
+    "finding": "All six failed workflows stop at the same R34 current-snapshot allowlist assertion on production-archives/rec-media/CI_CHECKPOINT2_20261120.json. No separate R25, R26, R28, R32 or gameplay failure was reached in these jobs.",
+    "first_rejected_path": "production-archives/rec-media/CI_CHECKPOINT2_20261120.json",
+    "exact_assertion": "AssertionError [ERR_ASSERTION]: Unknown R34 addition: production-archives/rec-media/CI_CHECKPOINT2_20261120.json",
+    "guard_path": "scripts/verify-current-r34.mjs",
+    "guard_location": {
+      "line": 257,
+      "column": 92
+    },
+    "guard_source_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/6599f75c88472351aacaf19e7a6b1197e6c58625/scripts/verify-current-r34.mjs#L257",
+    "cause_explanation": "validateSnapshot rejects additions outside allowedAddition. The archive path is not in the allowed R34 namespaces; this is a delivery-scope guard failure, before downstream verification. The reported path is the first observed rejected addition, not an exhaustive list of rejected archive files."
+  },
+  "workflow_query_evidence": {
+    "method": "GitHub connector fetch_commit_workflow_runs",
+    "queried_commit": "6599f75c88472351aacaf19e7a6b1197e6c58625",
+    "endpoint": "https://api.github.com/repos/darknigthmare/resident-evil-bow-protocol/actions/runs?event=pull_request&head_sha=6599f75c88472351aacaf19e7a6b1197e6c58625",
+    "wrapper_scope": "Pull-request-triggered runs, first page only; all 25 returned rows completed.",
+    "successful_run_ids": [
+      44727779170,
+      44727779097,
+      44727779280,
+      44727779081,
+      44727779180,
+      44727779152,
+      44727779247,
+      44727779219,
+      44727779100,
+      44727779167,
+      44727778983,
+      44727779277,
+      44727778996,
+      44727779220,
+      44727779090,
+      44727779137,
+      44727779099,
+      44727779298,
+      44727779188
+    ],
+    "failed_run_ids": [
+      44727779017,
+      44727779224,
+      44727779201,
+      44727779144,
+      44727779139,
+      44727779146
+    ]
+  },
+  "failures": [
+    {
+      "workflow_name": "B.O.W. Protocol QA",
+      "workflow_path": ".github/workflows/ci.yml",
+      "run_id": 44727779017,
+      "run_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/44727779017",
+      "run_status": "completed",
+      "run_conclusion": "failure",
+      "job_id": 136259475573,
+      "job_name": "verify",
+      "job_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/44727779017/job/136259475573",
+      "log_api_url": "https://api.github.com/repos/darknigthmare/resident-evil-bow-protocol/actions/jobs/136259475573/logs",
+      "job_status": "completed",
+      "job_conclusion": "failure",
+      "failed_step": {
+        "name": "Run npm run verify",
+        "status": "completed",
+        "conclusion": "failure",
+        "number": 5
+      },
+      "failing_command_chain": "npm run verify → npm run verify:current → node scripts/verify-current-r34.mjs",
+      "checkout_log_line": "2026-11-20T11:29:15.6234132Z HEAD is now at ebaa8eca Merge 6599f75c88472351aacaf19e7a6b1197e6c58625 into 12deacf4cf9b7706eba69fecc1c13593d030180b",
+      "exact_log_excerpt": "2026-11-20T11:29:24.2342039Z AssertionError [ERR_ASSERTION]: Unknown R34 addition: production-archives/rec-media/CI_CHECKPOINT2_20261120.json\n2026-11-20T11:29:24.2342960Z     at validateSnapshot (file:///home/runner/work/resident-evil-bow-protocol/resident-evil-bow-protocol/scripts/verify-current-r34.mjs:257:92)\n2026-11-20T11:29:24.2343813Z     at file:///home/runner/work/resident-evil-bow-protocol/resident-evil-bow-protocol/scripts/verify-current-r34.mjs:278:20\n2026-11-20T11:29:24.2480638Z ##[error]Process completed with exit code 1.",
+      "failure_class": "R34_ADDITION_ALLOWLIST_ARCHIVE_PATH",
+      "subsequent_skipped_steps": [
+        "Run npm run build",
+        "Validate main roster and isolated annex against release manifest"
+      ]
+    },
+    {
+      "workflow_name": "R25 cumulative sources, archives and reader access",
+      "workflow_path": ".github/workflows/source-fidelity-r25.yml",
+      "run_id": 44727779224,
+      "run_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/44727779224",
+      "run_status": "completed",
+      "run_conclusion": "failure",
+      "job_id": 136259476159,
+      "job_name": "provenance",
+      "job_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/44727779224/job/136259476159",
+      "log_api_url": "https://api.github.com/repos/darknigthmare/resident-evil-bow-protocol/actions/jobs/136259476159/logs",
+      "job_status": "completed",
+      "job_conclusion": "failure",
+      "failed_step": {
+        "name": "Verify the reviewed current delta before any R25 report refresh",
+        "status": "completed",
+        "conclusion": "failure",
+        "number": 6
+      },
+      "failing_command_chain": "node scripts/verify-current-r34.mjs",
+      "checkout_log_line": "2026-11-20T11:29:08.7090459Z HEAD is now at ebaa8eca Merge 6599f75c88472351aacaf19e7a6b1197e6c58625 into 12deacf4cf9b7706eba69fecc1c13593d030180b",
+      "exact_log_excerpt": "2026-11-20T11:29:20.7768413Z AssertionError [ERR_ASSERTION]: Unknown R34 addition: production-archives/rec-media/CI_CHECKPOINT2_20261120.json\n2026-11-20T11:29:20.7769483Z     at validateSnapshot (file:///home/runner/work/resident-evil-bow-protocol/resident-evil-bow-protocol/scripts/verify-current-r34.mjs:257:92)\n2026-11-20T11:29:20.7770507Z     at file:///home/runner/work/resident-evil-bow-protocol/resident-evil-bow-protocol/scripts/verify-current-r34.mjs:278:20\n2026-11-20T11:29:20.7833174Z ##[error]Process completed with exit code 1.",
+      "failure_class": "R34_ADDITION_ALLOWLIST_ARCHIVE_PATH",
+      "subsequent_skipped_steps": [
+        "Reproduce frozen source catalogue and workbook before evidence reports are regenerated",
+        "Validate bounded imports, published provenance and export guards",
+        "Validate CI diagnostic boundaries",
+        "Validate bounded source archive streaming and integrity",
+        "Decode every new published model and native texture reference",
+        "Validate all new source skeletons and positive-time deformation",
+        "Reconstruct archive selections with the original engines",
+        "Verify all 115 recorded match outcomes and targeted original-engine replay regressions"
+      ]
+    },
+    {
+      "workflow_name": "R26 cumulative sources, archives and reader access",
+      "workflow_path": ".github/workflows/source-fidelity-r26.yml",
+      "run_id": 44727779201,
+      "run_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/44727779201",
+      "run_status": "completed",
+      "run_conclusion": "failure",
+      "job_id": 136259476598,
+      "job_name": "provenance",
+      "job_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/44727779201/job/136259476598",
+      "log_api_url": "https://api.github.com/repos/darknigthmare/resident-evil-bow-protocol/actions/jobs/136259476598/logs",
+      "job_status": "completed",
+      "job_conclusion": "failure",
+      "failed_step": {
+        "name": "Verify the reviewed current delta before any R26 report refresh",
+        "status": "completed",
+        "conclusion": "failure",
+        "number": 6
+      },
+      "failing_command_chain": "node scripts/verify-current-r34.mjs",
+      "checkout_log_line": "2026-11-20T11:29:44.5046070Z HEAD is now at ebaa8eca Merge 6599f75c88472351aacaf19e7a6b1197e6c58625 into 12deacf4cf9b7706eba69fecc1c13593d030180b",
+      "exact_log_excerpt": "2026-11-20T11:29:55.7140032Z AssertionError [ERR_ASSERTION]: Unknown R34 addition: production-archives/rec-media/CI_CHECKPOINT2_20261120.json\n2026-11-20T11:29:55.7141940Z     at validateSnapshot (file:///home/runner/work/resident-evil-bow-protocol/resident-evil-bow-protocol/scripts/verify-current-r34.mjs:257:92)\n2026-11-20T11:29:55.7143975Z     at file:///home/runner/work/resident-evil-bow-protocol/resident-evil-bow-protocol/scripts/verify-current-r34.mjs:278:20\n2026-11-20T11:29:55.7207447Z ##[error]Process completed with exit code 1.",
+      "failure_class": "R34_ADDITION_ALLOWLIST_ARCHIVE_PATH",
+      "subsequent_skipped_steps": [
+        "Reproduce frozen source catalogue and workbook before evidence reports are regenerated",
+        "Validate bounded imports, published provenance and export guards",
+        "Validate CI diagnostic boundaries",
+        "Validate bounded source archive streaming and integrity",
+        "Decode every new published model and native texture reference",
+        "Validate all new source skeletons and positive-time deformation",
+        "Reconstruct archive selections with the original engines",
+        "Verify all recorded normal-life match outcomes and targeted original-engine replay regressions"
+      ]
+    },
+    {
+      "workflow_name": "R32 current controls in the explicit legacy selection view",
+      "workflow_path": ".github/workflows/gamedev-r32.yml",
+      "run_id": 44727779144,
+      "run_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/44727779144",
+      "run_status": "completed",
+      "run_conclusion": "failure",
+      "job_id": 136259476499,
+      "job_name": "current",
+      "job_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/44727779144/job/136259476499",
+      "log_api_url": "https://api.github.com/repos/darknigthmare/resident-evil-bow-protocol/actions/jobs/136259476499/logs",
+      "job_status": "completed",
+      "job_conclusion": "failure",
+      "failed_step": {
+        "name": "Check the current delta and input regression before any report refresh",
+        "status": "completed",
+        "conclusion": "failure",
+        "number": 6
+      },
+      "failing_command_chain": "npm run verify:r32 → node scripts/verify-current-r34.mjs",
+      "checkout_log_line": "2026-11-20T11:30:50.1520055Z HEAD is now at ebaa8eca Merge 6599f75c88472351aacaf19e7a6b1197e6c58625 into 12deacf4cf9b7706eba69fecc1c13593d030180b",
+      "exact_log_excerpt": "2026-11-20T11:31:06.1337180Z AssertionError [ERR_ASSERTION]: Unknown R34 addition: production-archives/rec-media/CI_CHECKPOINT2_20261120.json\n2026-11-20T11:31:06.1338476Z     at validateSnapshot (file:///home/runner/work/resident-evil-bow-protocol/resident-evil-bow-protocol/scripts/verify-current-r34.mjs:257:92)\n2026-11-20T11:31:06.1339542Z     at file:///home/runner/work/resident-evil-bow-protocol/resident-evil-bow-protocol/scripts/verify-current-r34.mjs:278:20\n2026-11-20T11:31:06.1483011Z ##[error]Process completed with exit code 1.",
+      "failure_class": "R34_ADDITION_ALLOWLIST_ARCHIVE_PATH",
+      "subsequent_skipped_steps": [
+        "Exercise delivered inputs, menu keys, measurement lifecycle and reflow"
+      ]
+    },
+    {
+      "workflow_name": "R34 generated roster and characters then arena selection",
+      "workflow_path": ".github/workflows/source-fidelity-r34.yml",
+      "run_id": 44727779139,
+      "run_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/44727779139",
+      "run_status": "completed",
+      "run_conclusion": "failure",
+      "job_id": 136259476023,
+      "job_name": "Current tooling and engine, published R34 receipts",
+      "job_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/44727779139/job/136259476023",
+      "log_api_url": "https://api.github.com/repos/darknigthmare/resident-evil-bow-protocol/actions/jobs/136259476023/logs",
+      "job_status": "completed",
+      "job_conclusion": "failure",
+      "failed_step": {
+        "name": "Verify current tooling and media, then published R34 receipts before report refresh",
+        "status": "completed",
+        "conclusion": "failure",
+        "number": 6
+      },
+      "failing_command_chain": "node scripts/verify-current-r34.mjs",
+      "checkout_log_line": "2026-11-20T11:29:07.6515379Z HEAD is now at ebaa8eca Merge 6599f75c88472351aacaf19e7a6b1197e6c58625 into 12deacf4cf9b7706eba69fecc1c13593d030180b",
+      "exact_log_excerpt": "2026-11-20T11:29:19.2813754Z AssertionError [ERR_ASSERTION]: Unknown R34 addition: production-archives/rec-media/CI_CHECKPOINT2_20261120.json\n2026-11-20T11:29:19.2814897Z     at validateSnapshot (file:///home/runner/work/resident-evil-bow-protocol/resident-evil-bow-protocol/scripts/verify-current-r34.mjs:257:92)\n2026-11-20T11:29:19.2815980Z     at file:///home/runner/work/resident-evil-bow-protocol/resident-evil-bow-protocol/scripts/verify-current-r34.mjs:278:20\n2026-11-20T11:29:19.2874292Z ##[error]Process completed with exit code 1.",
+      "failure_class": "R34_ADDITION_ALLOWLIST_ARCHIVE_PATH",
+      "subsequent_skipped_steps": [
+        "Execute new source assertions with fresh reports",
+        "Keep the original engine assertions current and their historical conservation exact",
+        "Build the current complete static delivery"
+      ]
+    },
+    {
+      "workflow_name": "R28 reviewed bodies, voluntary evolutions and source evidence",
+      "workflow_path": ".github/workflows/source-fidelity-r28.yml",
+      "run_id": 44727779146,
+      "run_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/44727779146",
+      "run_status": "completed",
+      "run_conclusion": "failure",
+      "job_id": 136259476478,
+      "job_name": "provenance",
+      "job_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/44727779146/job/136259476478",
+      "log_api_url": "https://api.github.com/repos/darknigthmare/resident-evil-bow-protocol/actions/jobs/136259476478/logs",
+      "job_status": "completed",
+      "job_conclusion": "failure",
+      "failed_step": {
+        "name": "Validate current engine and historical assertions before report generation",
+        "status": "completed",
+        "conclusion": "failure",
+        "number": 7
+      },
+      "failing_command_chain": "node scripts/verify-current-r34.mjs",
+      "checkout_log_line": "2026-11-20T11:31:05.4615772Z HEAD is now at ebaa8eca Merge 6599f75c88472351aacaf19e7a6b1197e6c58625 into 12deacf4cf9b7706eba69fecc1c13593d030180b",
+      "exact_log_excerpt": "2026-11-20T11:32:24.4051849Z AssertionError [ERR_ASSERTION]: Unknown R34 addition: production-archives/rec-media/CI_CHECKPOINT2_20261120.json\n2026-11-20T11:32:24.4053476Z     at validateSnapshot (file:///home/runner/work/resident-evil-bow-protocol/resident-evil-bow-protocol/scripts/verify-current-r34.mjs:257:92)\n2026-11-20T11:32:24.4054703Z     at file:///home/runner/work/resident-evil-bow-protocol/resident-evil-bow-protocol/scripts/verify-current-r34.mjs:278:20\n2026-11-20T11:32:24.4212559Z ##[error]Process completed with exit code 1.",
+      "failure_class": "R34_ADDITION_ALLOWLIST_ARCHIVE_PATH",
+      "subsequent_skipped_steps": [
+        "Invalidate the previous test reports before this execution",
+        "Execute the body, sprite, workbook and canonical Python suites",
+        "Execute the archive suite and write its actual runner results",
+        "Execute current renderer, voluntary evolution and replay boundaries",
+        "Require newly executed nonempty reports with no failures"
+      ]
+    }
+  ],
+  "successful_r34_browser_jobs": [
+    {
+      "job_id": 136259476364,
+      "name": "Current R34 default player view - generated-roster-runtime",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/44727779139/job/136259476364"
+    },
+    {
+      "job_id": 136259476683,
+      "name": "Current R34 default player view - generated-assets-gallery",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/44727779139/job/136259476683"
+    },
+    {
+      "job_id": 136259476697,
+      "name": "Current R34 default player view - characters-arena-combat",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/44727779139/job/136259476697"
+    }
+  ],
+  "comparison_with_prior_checkpoint": {
+    "previous_head_sha": "0ecb6d595c67fbca6783dab309a32f8947516faa",
+    "previous_evidence_path": "production-archives/rec-media/CI_CHECKPOINT2_20261120.json",
+    "previous_run_id": 44725868460,
+    "previous_job_id": 136252990706,
+    "previous_job_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/44725868460/job/136252990706",
+    "previous_exact_failure_line": "2026-11-20T11:18:03.9983967Z AssertionError [ERR_ASSERTION]: Unknown R34 addition: production-archives/rec-media/CONTINUATION_20261119.json",
+    "distinction": "Same R34 allowlist failure class as checkpoint2; the first rejected archive filename is now CI_CHECKPOINT2_20261120.json rather than CONTINUATION_20261119.json. No other root cause was established for the six parent failures."
+  },
+  "limitations": [
+    "Skipped downstream suites are untested in the failed jobs; this evidence does not claim they would pass.",
+    "The three successful R34 browser jobs are reported separately from the failed tooling/receipts job.",
+    "No workflow rerun, local test execution, guard/test/runtime edit, or branch publication was performed for this audit.",
+    "Only this dated evidence file was added to the repository by this audit; other ongoing V16 work belongs to the parent task."
+  ],
+  "guards_modified": false,
+  "tests_modified": false,
+  "runtime_modified": false,
+  "workflow_rerun": false,
+  "branch_published": false
+}

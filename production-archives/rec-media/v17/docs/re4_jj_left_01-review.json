@@ -1,0 +1,111 @@
+{
+  "schema": "rec.static-candidate-independent-review.v17",
+  "asset": "J.J. original — Resident Evil 4 (2005), LEFT 01",
+  "id": "re4_jj_left_01",
+  "uid": "re4-jj",
+  "variant": "original_2005_beret_eyepatch_minigun",
+  "reviewed_at": "2026-11-20T13:45:32.992782+00:00",
+  "reviewer": "reference_research",
+  "asset_path": "assets/re4_jj_left_01.png",
+  "original_path": "/workspace/scratch/3fced93cfb0a/generated_images/exec-b2d9e03a-c162-4523-aee0-d813136f8f71.png",
+  "sha256": "c0d637d3f4dbb4d3ddcf51cee45d9350e704f8d419bda8b9743925c4843f8840",
+  "bytes": 1215696,
+  "verdict": "CANDIDATE_STATIC_WITH_LIMITS",
+  "review_status": "CANDIDATE_STATIC_WITH_LIMITS",
+  "excluded_from_candidate_count": false,
+  "source_refs_reviewed": [
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-jj-refr-full.png",
+      "sha256": "54ab2432f1010117b4328be48713214d6c741a3b98555ca5ed7b8a21b9579eb5",
+      "role": "Rendu complet attribué à RE4 original par REFR, recoupé avec le crop R34 ; modèle natif et textures 1:1 non certifiés."
+    }
+  ],
+  "source_document": "docs/SOURCES_RE4_ISLAND_V17.json",
+  "prompt_record": "prompts/re4_jj_left_01.json",
+  "technical_record": "docs/re4_jj_left_01-technical.json",
+  "visual_checks": {
+    "orientation": "Tête, corps vu depuis le côté gauche proche et minigun orientés vers la gauche ; pose trois quarts latérale lisible. Pied avant tourné vers la gauche, pied arrière plus frontal. Nouvelle composition distincte du RIGHT, sans inversion du cache-œil.",
+    "variant": "Béret bordeaux avec écusson visible du côté proche, foulard brun rouge, haut sombre sans manches, bandoulières de munitions, pantalon brun court effiloché, bas des mollets nus et chaussures sombres. Aucune variante RE5 ou 2023 empruntée.",
+    "eyepatch_laterality": "Œil anatomique gauche proche ouvert et découvert. Le cache-œil droit reste du côté éloigné, largement masqué ; son bord sombre est partiellement perceptible près du nez. Aucun patch ne recouvre l’œil proche.",
+    "arm_and_hand_connections": {
+      "expected_arm_count": 2,
+      "anatomical_left": "Bras proche bien visible : épaule, bras, coude et avant-bras continus jusqu’à la main sur la poignée supérieure transversale. Les doigts enroulés appartiennent à cette main.",
+      "anatomical_right": "Bras éloigné principalement caché par le torse et l’arme. Une petite zone de chair au-dessus de l’arrière du boîtier et quelques doigts sous/derrière celui-ci sont visibles ; ils ne forment pas une troisième main. La chaîne proximale et la commande complète restent cachées.",
+      "both_hand_grips_fully_exposed": false,
+      "rear_hand_control_geometry_certified": false,
+      "limitation": "L’occlusion empêche de certifier tout le bras droit et sa prise arrière. Aucun raccord visible impossible, membre supplémentaire ou main flottante évidente observé ; cette absence d’anomalie n’est pas une preuve des surfaces cachées."
+    },
+    "weapon": "Six ouvertures distinctes à la bouche du minigun, assemblage des canons relié aux anneaux et au boîtier. Poignée haute raccordée à la main gauche, arme portée sans tir. La face latérale opposée et ses détails mécaniques sont interprétés depuis une source unique.",
+    "ammunition_belt": "Long ruban raccordé sous la zone du boîtier, courbe continue descendante, extrémité libre complète en bas à gauche. Pas de rupture évidente, de second ruban indépendant ou de terminaison coupée.",
+    "legs_and_feet": "Deux jambes connectées au bassin, deux mollets et chaussures complets. Pose fléchie écartée ; aucun pied détaché, jambe supplémentaire ou fusion évidente observé. Appuis moteur non validés.",
+    "clothing_and_wear": "Silhouette et palette du costume concordent globalement avec la source. Le côté du pantalon maintenant exposé porte un trou marqué et une répartition d’usure que la source ne permet pas de certifier. Les coutures, semelles, marques du visage, cartouches et surfaces du dos sont des détails générés, pas une reproduction de toutes les microtextures.",
+    "framing": "Un seul homme, arme et ruban entiers, deux chaussures à l’intérieur du cadre ; ni sol, décor, texte, logo, bordure, grille ou deuxième sujet.",
+    "limits": [
+      "Aucune marge n’atteint les 10 % demandés : gauche/haut/droite/bas 53/89/97/68 px, soit 4,46/6,72/8,16/5,14 %. Toutes les extrémités principales restent dans le cadre.",
+      "La prise arrière et une grande partie du bras droit sont naturellement masquées. Le détail complet du patch éloigné n’est pas exposé.",
+      "La source ne fournit pas de vue native gauche indépendante. L’usure latérale du pantalon, les détails du dos et la face opposée du minigun sont interprétés.",
+      "Alpha réel présent, avec résidus de très faible alpha hors de la silhouette ; aucune retouche effectuée.",
+      "Candidat statique généré uniquement : aucune certification 1:1, animation originale, intégration moteur, collision, ancrage ou validation dans le jeu."
+    ]
+  },
+  "failed_gates": [],
+  "uncertain_gates": [
+    "far_right_arm_and_rear_hand_geometry_occluded",
+    "unseen_native_surfaces_and_wear_unverified"
+  ],
+  "alpha": {
+    "mode": "RGBA",
+    "size": [
+      1188,
+      1324
+    ],
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox_alpha_gte16": [
+      53,
+      89,
+      1091,
+      1256
+    ],
+    "margins_alpha16_left_top_right_bottom": [
+      53,
+      89,
+      97,
+      68
+    ],
+    "margins_alpha16_percent_left_top_right_bottom": [
+      4.46,
+      6.72,
+      8.16,
+      5.14
+    ],
+    "bbox_all_nonzero_alpha": [
+      0,
+      9,
+      1188,
+      1324
+    ],
+    "pixels_alpha0": 1088399,
+    "pixels_alpha1_to15": 41246,
+    "pixels_alpha1_to3": 32594,
+    "pixels_alpha255": 722,
+    "all_subject_alpha_255": false,
+    "halo_finding": "Composites gris et clair inspectés avec le vrai canal alpha : aucun fond opaque ni large halo substantiel observé. Des résidus d’alpha très faible subsistent hors de la silhouette et près de certains bords ; les octets originaux sont conservés."
+  },
+  "qa_previews_only": [
+    "/workspace/scratch/3fced93cfb0a/qa-v17/re4_jj_left_01-gray.jpg",
+    "/workspace/scratch/3fced93cfb0a/qa-v17/re4_jj_left_01-light.jpg"
+  ],
+  "inspection_method": "Inspection personnelle du rendu source entier et des composites gris/clair calculés avec le vrai alpha. Contrôle de l’œil gauche proche découvert, de la position éloignée du patch droit, de la main gauche de support, des six ouvertures, de la bande terminée et des deux chaussures. Mesures sur l’original, copie exacte vérifiée. Aucun miroir ni retouche appliqué au livrable.",
+  "original_bytes_modified": false,
+  "original_generated_bytes_verified_identical": true,
+  "one_subject_per_image_reviewed": true,
+  "quality_rejection_is_tool_refusal": false,
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "animation_frames": 1,
+  "can_mirror": false,
+  "recommended_action": "Conserver LEFT 01 comme candidat statique J.J. original avec limites documentées. Aucun défaut concret bloquant observé ; ne pas certifier la prise arrière cachée, l’usure non documentée ou toutes les faces natives de l’arme."
+}

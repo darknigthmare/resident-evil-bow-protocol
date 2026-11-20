@@ -1,0 +1,68 @@
+{
+  "schema": "rec.static-candidate-independent-review.v15",
+  "reviewed_at": "2026-11-20",
+  "reviewer": "review_v14",
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "original_bytes_modified": false,
+  "one_subject_per_image_reviewed": true,
+  "animation_frames": 1,
+  "inspection_method": "Original RGBA composited over gray RGB128 and light RGB235; both composites personally inspected with tools.view_image. Original PNG bytes preserved.",
+  "asset": "Hunter Gamma — Resident Evil Outbreak (2003), left 01",
+  "original_path": "/workspace/scratch/3fced93cfb0a/generated_images/exec-526163c2-2195-4f85-baf4-087f7d7a8e56.png",
+  "sha256": "45d02eff27b5d08c0f474b72e040e883f19139d96d02bbcb9aace7c8efc216a8",
+  "bytes": 1420079,
+  "verdict": "CANDIDATE_STATIC_WITH_LIMITS",
+  "source_refs_reviewed": [
+    "reference-new/hunter-gamma-native-light.png",
+    "reference-new/hunter-gamma-outbreak-archives.png",
+    "docs/HUNTER_GAMMA_SOURCE_RECOVERY.json"
+  ],
+  "visual_checks": {
+    "orientation": "Broad snout and mouth face screen left, body sits in a front-left three-quarter crouch with spread webbed hands and feet. This is not a strict side profile.",
+    "edition_and_identity": "Outbreak slate-blue eyeless amphibian with rough dorsal bumps, red-brown throat and large pale blue-gray belly plates with reddish seams. Native screenshot and full-body model supplement support this incarnation; no RE3 remake costume or anatomy substitution observed.",
+    "head_and_surface": "No visible eyeballs, teeth, external horns, tail, clothing or weapon. Small dorsal bumps and ridge points correspond to the source type; their exact number and shape are generated interpretations. Mouth is only slightly open, with no added teeth.",
+    "limbs": "Two long forearms, two hands, two flexed hind legs and two webbed feet, all visibly complete. Blunt nonhuman digits and webbing are present; no added long claws. Exact digit count on overlapping/foreshortened far extremities and mesh-level webbing cannot be certified from the supplied views.",
+    "framing": "One creature alone with complete head crown, hands and feet; no separate human, scenery, floor, UI, watermark or damage effects.",
+    "limits": [
+      "Pose is lower and more crouched than the supplied standing/stun references; relative head breadth, limb thickness and ventral plate layout remain generative interpretations.",
+      "All-side 8 percent margin requirement is not achieved (60/30/56/36 px at alpha>=16).",
+      "Exact rear surfaces, mesh, textures and original console pixels are not certified.",
+      "Single static generated candidate; no native idle cycle, animation, contacts, pivot or engine admission."
+    ]
+  },
+  "alpha": {
+    "mode": "RGBA",
+    "size": [
+      1312,
+      1199
+    ],
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox_alpha_gte16": [
+      60,
+      30,
+      1256,
+      1163
+    ],
+    "margins_alpha16_left_top_right_bottom": [
+      60,
+      30,
+      56,
+      36
+    ],
+    "pixels_alpha0": 1003507,
+    "pixels_alpha1_to15": 43784,
+    "pixels_alpha1_to3": 38650,
+    "pixels_alpha255": 197,
+    "halo_finding": "Real alpha confirmed by 1003507 fully transparent pixels and compositing. No substantial broad halo or opaque backdrop visible on gray/light backgrounds. Low-alpha residual pixels remain; not all subject pixels are alpha255.",
+    "all_subject_alpha_255": false
+  },
+  "qa_previews_only": [
+    "qa-v14-v15-next/hunter-gamma-left-gray.jpg",
+    "qa-v14-v15-next/hunter-gamma-left-light.jpg"
+  ],
+  "recommended_action": "Retain as a source-supported static Outbreak candidate with stated pose, margin and anatomical-detail limits; do not label as original game pixels or a complete combat animation."
+}

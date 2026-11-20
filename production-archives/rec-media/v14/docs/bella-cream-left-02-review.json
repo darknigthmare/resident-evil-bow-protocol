@@ -1,0 +1,67 @@
+{
+  "schema": "rec.static-candidate-independent-review.v14",
+  "reviewed_at": "2026-11-20",
+  "reviewer": "review_v14",
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "original_bytes_modified": false,
+  "one_subject_per_image_reviewed": true,
+  "animation_frames": 1,
+  "inspection_method": "Original RGBA composited over gray RGB128 and light RGB235; both composites personally inspected with tools.view_image. Original PNG bytes preserved.",
+  "asset": "Bella Sister — cream apron, RE4 original 2005, left 02",
+  "original_path": "/workspace/scratch/3fced93cfb0a/generated_images/exec-8baf2f72-8eb7-4cd5-9148-40bbab444bdd.png",
+  "sha256": "c2f01f1dec182161363bf6bf4303fb80a0dd8c6c18a19911a365d788c728f1f8",
+  "bytes": 1368707,
+  "verdict": "CANDIDATE_STATIC_WITH_LIMITS",
+  "source_refs_reviewed": [
+    "references-v14/bella_re4original_steam.jpg",
+    "references-v14/bella_re4original_evilresource.png",
+    "V14 corresponding left 01 trial and its independent review"
+  ],
+  "visual_checks": {
+    "orientation": "Head, body and both feet turn screen left in a substantially more lateral three-quarter stance than left 01. The left-side shoulder is nearest the viewer and its forearm reaches forward across the silhouette.",
+    "costume": "Blue-gray blouse, pale collar, cream full apron, dark purplish/brown long skirt, brown shoes and bandaged head remain the correct original-game sister.",
+    "hands": "Correction successful on visible arm tracing: anatomical LEFT near shoulder/arm reaches forward to the top/front wrap-around handle; anatomical RIGHT farther arm reaches back to the rear grip. Two separate hands each wrap their own handle; no hand touches chain teeth. Foreground hand shows plausible curled digits; portions of the far arm/hand are naturally occluded.",
+    "framing": "Exactly one complete woman, one complete red chainsaw, full bar tip, bandaged head, skirt hem and both shoes contained. No pedestal, labels, floor or second woman.",
+    "blocking_defects": [],
+    "limits": [
+      "Requested 8 percent empty border is not met; exact measurements recorded.",
+      "Exact native face, bandage pattern, cloth texture and weapon mechanics are not certified.",
+      "One generated static pose; no animation, contacts, pivots or engine admission."
+    ]
+  },
+  "alpha": {
+    "mode": "RGBA",
+    "size": [
+      1199,
+      1312
+    ],
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox_alpha_gte16": [
+      52,
+      40,
+      1136,
+      1277
+    ],
+    "margins_alpha16_left_top_right_bottom": [
+      52,
+      40,
+      63,
+      35
+    ],
+    "pixels_alpha0": 987512,
+    "pixels_alpha1_to15": 19843,
+    "pixels_alpha1_to3": 16070,
+    "pixels_alpha255": 535,
+    "halo_finding": "Genuine transparency confirmed. No substantial opaque backdrop or broad halo visible in actual gray/light composites. Low-alpha residual pixels remain; subject is not uniformly alpha255.",
+    "all_subject_alpha_255": false
+  },
+  "qa_previews_only": [
+    "qa-v14-v15-next/bella-cream-left-02-gray.jpg",
+    "qa-v14-v15-next/bella-cream-left-02-light.jpg"
+  ],
+  "recommended_action": "Retain this 02 candidate while preserving left 01 unchanged as a grip-error trial."
+}

@@ -1,0 +1,982 @@
+{
+  "schema": "rec-independent-qa-v10-1",
+  "reviewer": "/root/qa_stage_v5",
+  "producer": "/root/audit_depot",
+  "reviewed_at_utc": "2026-11-19T17:19:21.351768+00:00",
+  "review_frozen": true,
+  "method": "Comparaison visuelle des13 sources documentaires et15 PNG; vérification SHA des sources/reçus/copies; calculs PIL/NumPy/SciPy en lecture seule sans modification des pixels.",
+  "counts": {
+    "png_physically_reviewed": 15,
+    "candidate_png": 13,
+    "trial_png": 2,
+    "source_identities_reviewed": 13,
+    "generation_refusals_in_producer_ledger": 0,
+    "source_holds_reported_by_producer": 1
+  },
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "global_limits": [
+    "Les sorties sont des études générées; elles ne sont ni des pixels natifs Capcom ni une conformité anatomique/texture1:1 certifiée.",
+    "Une seule référence documentaire peut laisser des surfaces opposées cachées. Leur reconstruction est explicitement signalée.",
+    "Alpha réel vérifié, mais le corps est souvent légèrement inférieur à255; résidus fins et cheveux/fourrures semi-transparents possibles. Aucun import moteur, animation, pivot, taille standard ou collision testé.",
+    "Les références originales et copies de reçus sous references/ sont hors publication.",
+    "Les marges demandées ne sont pas uniformément atteintes; les valeurs réelles sont fournies et aucune silhouette significative ne touche le bord à alpha≥16."
+  ],
+  "records": [
+    {
+      "uid": "reoutbreak2-scissor-tail",
+      "filename": "REC_SCISSOR_TAIL_OUTBREAK2_FULLBODY_LEFT_V10_01.png",
+      "path": "assets/REC_SCISSOR_TAIL_OUTBREAK2_FULLBODY_LEFT_V10_01.png",
+      "edition": "Resident Evil Outbreak File #2 (2004)",
+      "status": "CANDIDATE_WITH_LIMITS",
+      "subject_count": 1,
+      "observations": [
+        "Tête et axe du corps dirigés à gauche, une seule créature complète.",
+        "Six pattes traçables : trois grandes proches et trois éloignées plus petites/partiellement superposées, sans septième terminaison observée.",
+        "Deux antennes et deux pointes de la pince terminale sont entières. Abdomen segmenté relevé conservé.",
+        "Texture et profil reconstruits depuis le modèle documentaire; pas de certification pixel ou topologique1:1. Antenne gauche proche du bord mais entière (marge alpha≥16 de26px)."
+      ],
+      "references": [
+        {
+          "repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/research/reoutbreak2-scissor-tail-article-candidate-1.png",
+          "documentary_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWC0biawu839TdB3hrnPf1262bBacRrBWg-PIQrzWLFUNYRWVcf4Jx9lRJj356W-yKIsegfo44qJKSfbiu30BYWV7B2yj7Vyn0iJawj9hyphenhyphentLpRsu-7B7NSgPwHAeu_w1CHeWo2aVNb3SeW/",
+          "local_path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v10/references/reoutbreak2-scissor-tail__08af2279d322.png",
+          "sha256": "08af2279d322dd6f7bb30aacc0e3bd69b276e0a8548c83b77cdcd2eb10a4872c",
+          "source_physically_opened": true,
+          "source_edition_claimed": "Resident Evil Outbreak File #2 (2004)",
+          "original_publishable": false
+        }
+      ],
+      "historical_receipt_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/reoutbreak2-scissor-tail/idle.json",
+      "historical_receipt_sha_verified": true,
+      "generated_original_path": "/workspace/scratch/fc109c251847/generated_images/exec-cb728ba5-a893-41b2-a595-4110f1446184.png",
+      "generated_png_physically_opened": true,
+      "numeric_qa": {
+        "uid": "reoutbreak2-scissor-tail",
+        "path": "assets/REC_SCISSOR_TAIL_OUTBREAK2_FULLBODY_LEFT_V10_01.png",
+        "sha256": "bee3f5873e71ff8cf3574dcbbf2cc0917002928c389743b589a6c69a4465a863",
+        "copy_identical": true,
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_zero_fraction": 0.8297098407901732,
+        "alpha_ge16_bbox": [
+          26,
+          74,
+          1203,
+          1125
+        ],
+        "margins_ge16": [
+          26,
+          74,
+          51,
+          129
+        ],
+        "border_pixels_alpha_ge16": 0,
+        "far_from_core12px_max_alpha": 1,
+        "far_from_core12px_pixels_alpha_ge16": 0,
+        "nonzero_alpha_median": 253.0
+      },
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "pixel_transform_applied": false
+    },
+    {
+      "uid": "reoutbreak2-wasp",
+      "filename": "REC_WASP_OUTBREAK2_FULLBODY_LEFT_V10_01.png",
+      "path": "trials/REC_WASP_OUTBREAK2_FULLBODY_LEFT_V10_01.png",
+      "edition": "Resident Evil Outbreak File #2 (2004)",
+      "status": "TRIAL_ANATOMY_UNRESOLVED",
+      "subject_count": 1,
+      "observations": [
+        "Silhouette entière dirigée à gauche, dard et deux surfaces alaires contenus.",
+        "Seulement cinq chaînes de pattes terminées sont traçables sans hypothèse (pointes approximatives x206/y878,359/978,505/902,654/1015,838/975). Un petit fragment au croisement central ne justifie pas une sixième patte.",
+        "Deux longues antennes frontales ajoutées, absentes de la référence frontale fournie; fidélité source non établie pour ces appendices.",
+        "Revue indépendante ne valide pas le compte anatomique; correction ciblée nécessaire avant admission comme candidat."
+      ],
+      "references": [
+        {
+          "repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/assets/catalog/reoutbreak2-wasp.png",
+          "documentary_url": "https://www.evilresource.com/resident-evil-outbreak-file-2/enemies/wasp",
+          "local_path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v10/references/reoutbreak2-wasp__9d823482eb46.png",
+          "sha256": "9d823482eb46218b61fc2016dcffb1b7900ae402115fb9a9e1346023d34b1567",
+          "source_physically_opened": true,
+          "source_edition_claimed": "Resident Evil Outbreak File #2 (2004)",
+          "original_publishable": false
+        }
+      ],
+      "historical_receipt_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_1/reoutbreak2-wasp/idle.json",
+      "historical_receipt_sha_verified": true,
+      "generated_original_path": "/workspace/scratch/fc109c251847/generated_images/exec-b7026554-4d2a-4a5e-9d55-aef0dc643ff4.png",
+      "generated_png_physically_opened": true,
+      "numeric_qa": {
+        "uid": "reoutbreak2-wasp",
+        "path": "trials/REC_WASP_OUTBREAK2_FULLBODY_LEFT_V10_01.png",
+        "sha256": "2cb42a4369ef6552329bee6b2bfcf44f7c0e00620d09f45e6782a97255e5d8c4",
+        "copy_identical": true,
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_zero_fraction": 0.8444715347888352,
+        "alpha_ge16_bbox": [
+          117,
+          123,
+          1184,
+          1019
+        ],
+        "margins_ge16": [
+          117,
+          123,
+          70,
+          235
+        ],
+        "border_pixels_alpha_ge16": 0,
+        "far_from_core12px_max_alpha": 1,
+        "far_from_core12px_pixels_alpha_ge16": 0,
+        "nonzero_alpha_median": 252.0
+      },
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "pixel_transform_applied": false
+    },
+    {
+      "uid": "re4-regenerator",
+      "filename": "REC_REGENERATOR_RE4_2005_FULLBODY_LEFT_V10_01.png",
+      "path": "assets/REC_REGENERATOR_RE4_2005_FULLBODY_LEFT_V10_01.png",
+      "edition": "Resident Evil 4 (2005)",
+      "status": "CANDIDATE_WITH_LIMITS",
+      "subject_count": 1,
+      "observations": [
+        "Édition2005 cohérente avec la source: corps long et relativement mince, tête lisse/grise, dents aiguës, longues mains, absence de piques Iron Maiden.",
+        "Tête, buste, bassin et appuis tournés vers la gauche en trois-quarts; deux bras et deux pieds nus entiers.",
+        "Microtexture et surfaces opposées reconstruites; détail dentaire et contour des doigts non certifiés1:1.",
+        "Pas de coupe observée; marge basse alpha≥16 de82px(4,38%)."
+      ],
+      "references": [
+        {
+          "repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/research/re4-regenerator-source.jpeg",
+          "documentary_url": "https://vignette.wikia.nocookie.net/residentevil/images/8/89/Regenerador.jpeg/revision/latest?cb=20200510182313",
+          "local_path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v10/references/re4-regenerator__55cb7aa834b3.webp",
+          "sha256": "55cb7aa834b32e2e93feac929b5a3c66997a03c9efd0e95f520154ab27690ea2",
+          "source_physically_opened": true,
+          "source_edition_claimed": "Resident Evil 4 (2005)",
+          "original_publishable": false
+        }
+      ],
+      "historical_receipt_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/re4-regenerator/idle.json",
+      "historical_receipt_sha_verified": true,
+      "generated_original_path": "/workspace/scratch/fc109c251847/generated_images/exec-0a2a2efa-1dde-4b15-acb6-c35e1f9f2c0e.png",
+      "generated_png_physically_opened": true,
+      "numeric_qa": {
+        "uid": "re4-regenerator",
+        "path": "assets/REC_REGENERATOR_RE4_2005_FULLBODY_LEFT_V10_01.png",
+        "sha256": "261bbcbb289d3b5676e602efa6b5ea1ca5f61b473a391bcfe8a2e603307a1b6b",
+        "copy_identical": true,
+        "dimensions": [
+          840,
+          1871
+        ],
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_zero_fraction": 0.6683807996742257,
+        "alpha_ge16_bbox": [
+          80,
+          104,
+          743,
+          1789
+        ],
+        "margins_ge16": [
+          80,
+          104,
+          97,
+          82
+        ],
+        "border_pixels_alpha_ge16": 0,
+        "far_from_core12px_max_alpha": 1,
+        "far_from_core12px_pixels_alpha_ge16": 0,
+        "nonzero_alpha_median": 252.0
+      },
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "pixel_transform_applied": false
+    },
+    {
+      "uid": "reoutbreak2-horn-bill",
+      "filename": "REC_HORN_BILL_OUTBREAK2_FULLBODY_LEFT_V10_01.png",
+      "path": "assets/REC_HORN_BILL_OUTBREAK2_FULLBODY_LEFT_V10_01.png",
+      "edition": "Resident Evil Outbreak File #2 (2004)",
+      "status": "CANDIDATE_WITH_LIMITS",
+      "subject_count": 1,
+      "observations": [
+        "Une créature volante dirigée vers la gauche; deux ailes, queue, bec/casque et deux pieds complets.",
+        "Casque jaune sombre, bec très ouvert, plumage noir à bandes claires cohérents avec la référence.",
+        "Pose d’ailes différente et pied éloigné reconstruit; détail/longueur des plumes et doigts non certifiés1:1.",
+        "Toutes les pointes principales restent contenues; pas de coupe observée."
+      ],
+      "references": [
+        {
+          "repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/research/reoutbreak2-scissor-tail-article-candidate-0.png",
+          "documentary_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgWRbjMw1gJshJQCCqG6ZS6FaJ7hkx47kXaDW5OxDAVQZKuxENVvFmQIJ2ktdFhD-Vk112S4ohanDLxOhXwxtXsfwVKV8igThtVpFwtdjuVWk6NeWl3ZeFJMAkWvJGBW0xwGEEorUJBFbfr/",
+          "local_path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v10/references/reoutbreak2-horn-bill__675c44d812fb.png",
+          "sha256": "675c44d812fb0e1c1c4a3159e137ed6a38d8f7ceee3e1e346574382ae399d62a",
+          "source_physically_opened": true,
+          "source_edition_claimed": "Resident Evil Outbreak File #2 (2004)",
+          "original_publishable": false
+        }
+      ],
+      "historical_receipt_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/reoutbreak2-horn-bill/idle.json",
+      "historical_receipt_sha_verified": true,
+      "generated_original_path": "/workspace/scratch/fc109c251847/generated_images/exec-83cc02bf-ea34-48da-8d53-0985b8b1692d.png",
+      "generated_png_physically_opened": true,
+      "numeric_qa": {
+        "uid": "reoutbreak2-horn-bill",
+        "path": "assets/REC_HORN_BILL_OUTBREAK2_FULLBODY_LEFT_V10_01.png",
+        "sha256": "fb016b705ebe1fb73f857bbd7e9aaa673a643411823deac4767318fbc35857cc",
+        "copy_identical": true,
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_zero_fraction": 0.7066827936885857,
+        "alpha_ge16_bbox": [
+          93,
+          89,
+          1186,
+          1127
+        ],
+        "margins_ge16": [
+          93,
+          89,
+          68,
+          127
+        ],
+        "border_pixels_alpha_ge16": 0,
+        "far_from_core12px_max_alpha": 2,
+        "far_from_core12px_pixels_alpha_ge16": 0,
+        "nonzero_alpha_median": 252.0
+      },
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "pixel_transform_applied": false
+    },
+    {
+      "uid": "rerev2-orthrus",
+      "filename": "REC_ORTHRUS_REV2_FULLBODY_LEFT_V10_01.png",
+      "path": "assets/REC_ORTHRUS_REV2_FULLBODY_LEFT_V10_01.png",
+      "edition": "Resident Evil Revelations 2 (2015)",
+      "status": "CANDIDATE_WITH_LIMITS",
+      "subject_count": 1,
+      "observations": [
+        "Quadrupède tourné à gauche, quatre pattes entières, queue et tiges métalliques contenues.",
+        "Dos bombé, tête osseuse allongée et matériaux du corps cohérents avec la référence.",
+        "Les positions précises des tiges et marques cutanées sur le côté nouvellement visible sont reconstruites, sans preuve de latéralité1:1 depuis cette seule référence.",
+        "Nappe brune visible dans RGB brut: verdict de transparence fondé sur la mesure alpha, pas sur l’aperçu. Marge haute27px(2,64%) serrée mais pointe entière.",
+        "24pixels alpha≥16 hors rayon12px du noyau alpha128, groupés x409–417/y256–261, max42/255: petit résidu près d’une tige, aucune grande plaque de fond."
+      ],
+      "references": [
+        {
+          "repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/assets/catalog/rerev2-orthrus.png",
+          "documentary_url": "https://www.evilresource.com/resident-evil-revelations-2/enemies/orthrus",
+          "local_path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v10/references/rerev2-orthrus__bc74eb9f39d1.png",
+          "sha256": "bc74eb9f39d1ccd369c90860dacc8552900a4ae49b2fa7ada74c36e3749d7591",
+          "source_physically_opened": true,
+          "source_edition_claimed": "Resident Evil Revelations 2 (2015)",
+          "original_publishable": false
+        }
+      ],
+      "historical_receipt_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_2/rerev2-orthrus/idle.json",
+      "historical_receipt_sha_verified": true,
+      "generated_original_path": "/workspace/scratch/fc109c251847/generated_images/exec-0b2d8654-c293-43ac-b352-aa7ebb9824e7.png",
+      "generated_png_physically_opened": true,
+      "numeric_qa": {
+        "uid": "rerev2-orthrus",
+        "path": "assets/REC_ORTHRUS_REV2_FULLBODY_LEFT_V10_01.png",
+        "sha256": "7d645b2f385767fb729d10e84beab9f4b518c35a92fcce94a0d853aae8d9594a",
+        "copy_identical": true,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_zero_fraction": 0.6654408772786459,
+        "alpha_ge16_bbox": [
+          125,
+          27,
+          1407,
+          938
+        ],
+        "margins_ge16": [
+          125,
+          27,
+          129,
+          86
+        ],
+        "border_pixels_alpha_ge16": 0,
+        "far_from_core12px_max_alpha": 42,
+        "far_from_core12px_pixels_alpha_ge16": 24,
+        "nonzero_alpha_median": 252.0
+      },
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "pixel_transform_applied": false
+    },
+    {
+      "uid": "reoutbreak2-tyrant-r",
+      "filename": "REC_TYRANT_R_OUTBREAK2_FULLBODY_LEFT_V10_01.png",
+      "path": "assets/REC_TYRANT_R_OUTBREAK2_FULLBODY_LEFT_V10_01.png",
+      "edition": "Resident Evil Outbreak File #2 (2004)",
+      "status": "CANDIDATE_WITH_LIMITS",
+      "subject_count": 1,
+      "observations": [
+        "Tête, buste et appuis donnent une lecture gauche en trois-quarts; deux mains à longues lames et deux pieds entiers.",
+        "Cavités orange thoraciques restent sur le côté anatomique droit éloigné, cohérent avec la source frontale; pas d’inversion évidente.",
+        "Carapace à pics, teintes grises/vertes, grandes lames digitales conservées. Découpe des plaques, détails des doigts et pieds reconstruits.",
+        "Pas de coupe; quelques contours fins colorés visibles dans RGB brut à distinguer des pixels réellement opaques."
+      ],
+      "references": [
+        {
+          "repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/research/reoutbreak2-tyrant-r-heading-candidate-0.png",
+          "documentary_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsslDDs-tqubat4UGGT5aaosHXiN7KTRFy51ZKjDN1OM8Kf7FTDz57v5lE6A_D-BwcD8bMjjH1FUyT5GOSWXwni2C_gcq5LC0zRC8PLqyGRLtr2H_mXltfY3WWqiXSzlBOMgOf7xkmyj7n/",
+          "local_path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v10/references/reoutbreak2-tyrant-r__93185539ae21.png",
+          "sha256": "93185539ae21532386f10b43afc81b50c79329ba326e544affe957602cad0c20",
+          "source_physically_opened": true,
+          "source_edition_claimed": "Resident Evil Outbreak File #2 (2004)",
+          "original_publishable": false
+        }
+      ],
+      "historical_receipt_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/reoutbreak2-tyrant-r/idle.json",
+      "historical_receipt_sha_verified": true,
+      "generated_original_path": "/workspace/scratch/fc109c251847/generated_images/exec-d13fa587-0c30-4e47-8c1e-689362b476c3.png",
+      "generated_png_physically_opened": true,
+      "numeric_qa": {
+        "uid": "reoutbreak2-tyrant-r",
+        "path": "assets/REC_TYRANT_R_OUTBREAK2_FULLBODY_LEFT_V10_01.png",
+        "sha256": "a54333dbe6180edd09625d24aabba86c4d2e018ec9e5e55b19b2286912abe97d",
+        "copy_identical": true,
+        "dimensions": [
+          992,
+          1586
+        ],
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_zero_fraction": 0.61172926921043,
+        "alpha_ge16_bbox": [
+          46,
+          87,
+          943,
+          1500
+        ],
+        "margins_ge16": [
+          46,
+          87,
+          49,
+          86
+        ],
+        "border_pixels_alpha_ge16": 0,
+        "far_from_core12px_max_alpha": 1,
+        "far_from_core12px_pixels_alpha_ge16": 0,
+        "nonzero_alpha_median": 253.0
+      },
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "pixel_transform_applied": false
+    },
+    {
+      "uid": "rerev2-monster-neil",
+      "filename": "REC_MONSTER_NEIL_REV2_FULLBODY_LEFT_V10_01.png",
+      "path": "assets/REC_MONSTER_NEIL_REV2_FULLBODY_LEFT_V10_01.png",
+      "edition": "Resident Evil Revelations 2 (2015)",
+      "status": "CANDIDATE_WITH_LIMITS",
+      "subject_count": 1,
+      "observations": [
+        "Asymétrie conservée: bras gauche rouge à excroissances du côté proche, énorme croissance noire du bras droit du côté éloigné.",
+        "Deux appuis nus, grande griffe noire et extrémités des pointes rouges contenus; tête et appuis lisibles vers la gauche, torse assez ouvert.",
+        "Pantalon déchiré et bracelet de cheville anatomique droite restent cohérents avec la source.",
+        "Cadrage très serré:9px haut et17px bas à alpha≥16, sans contact ni coupe observée; texture et nouvelles surfaces reconstruites."
+      ],
+      "references": [
+        {
+          "repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/research/rerev2-monster-neil-heading-candidate-1.png",
+          "documentary_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhTeWrpVYz1ym5hrObFiUqIrGnZ8wCLDcG1k25TBq1xCxKcVazmtTEW78J2Xo1Ud8f7KMLtT-OWweNgK5_te7n7YpD0-Ttr9RouQUDNQVpqD3bNwBOVkNvTAU557dl76WjAwuTpis7Innkv/",
+          "local_path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v10/references/rerev2-monster-neil__2bfe080e2818.png",
+          "sha256": "2bfe080e281852c91afb2b70dd0696c4176a674f269a73e9086c7e0428e019df",
+          "source_physically_opened": true,
+          "source_edition_claimed": "Resident Evil Revelations 2 (2015)",
+          "original_publishable": false
+        }
+      ],
+      "historical_receipt_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/rerev2-monster-neil/idle.json",
+      "historical_receipt_sha_verified": true,
+      "generated_original_path": "/workspace/scratch/fc109c251847/generated_images/exec-4664e2c3-15ed-4c8a-9234-05354210d74f.png",
+      "generated_png_physically_opened": true,
+      "numeric_qa": {
+        "uid": "rerev2-monster-neil",
+        "path": "assets/REC_MONSTER_NEIL_REV2_FULLBODY_LEFT_V10_01.png",
+        "sha256": "09e9745ca6be63d5754d58cd7d62af189c7230cb0d80bd3cc4be16db1e045bf1",
+        "copy_identical": true,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_zero_fraction": 0.7116508483886719,
+        "alpha_ge16_bbox": [
+          241,
+          9,
+          1238,
+          1007
+        ],
+        "margins_ge16": [
+          241,
+          9,
+          298,
+          17
+        ],
+        "border_pixels_alpha_ge16": 0,
+        "far_from_core12px_max_alpha": 1,
+        "far_from_core12px_pixels_alpha_ge16": 0,
+        "nonzero_alpha_median": 252.0
+      },
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "pixel_transform_applied": false
+    },
+    {
+      "uid": "rerev2-vulcanblubber",
+      "filename": "REC_VULCANBLUBBER_REV2_FULLBODY_LEFT_V10_01.png",
+      "path": "assets/REC_VULCANBLUBBER_REV2_FULLBODY_LEFT_V10_01.png",
+      "edition": "Resident Evil Revelations 2 (2015)",
+      "status": "CANDIDATE_WITH_LIMITS",
+      "subject_count": 1,
+      "observations": [
+        "Asymétrie conservée: masse levée dans la main gauche proche, canon porté du côté droit éloigné; sac/bouteilles restent sur la hanche gauche proche.",
+        "Une figure complète, masse, canon, casque à pics et deux bottes contenus.",
+        "Tête et bottes orientées gauche en trois-quarts; buste encore assez ouvert. Détails de tissu, peau et ferrures reconstruits.",
+        "Cadrage haut/bas serré (16px/18px à alpha≥16) sans coupe constatée."
+      ],
+      "references": [
+        {
+          "repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/assets/specimens/rerev2-ironhead.png",
+          "documentary_url": "https://blackjackrants.blogspot.com/2021/07/reviewing-monsters-resident-evil_02047146349.html",
+          "local_path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v10/references/rerev2-vulcanblubber__7088f4388283.png",
+          "sha256": "7088f43882833697d324e7fe986da23d9655918848d26399288a8aa0a3472de9",
+          "source_physically_opened": true,
+          "source_edition_claimed": "Resident Evil Revelations 2 (2015)",
+          "original_publishable": false
+        }
+      ],
+      "historical_receipt_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_2/rerev2-vulcanblubber/idle.json",
+      "historical_receipt_sha_verified": true,
+      "generated_original_path": "/workspace/scratch/fc109c251847/generated_images/exec-cb6bc337-1671-4fcd-86e0-95ab12f2f932.png",
+      "generated_png_physically_opened": true,
+      "numeric_qa": {
+        "uid": "rerev2-vulcanblubber",
+        "path": "assets/REC_VULCANBLUBBER_REV2_FULLBODY_LEFT_V10_01.png",
+        "sha256": "8cd158ac70a1d52147f949c4233f7945cd9a909735f728f4fc7b960d13d4e10f",
+        "copy_identical": true,
+        "dimensions": [
+          1100,
+          1430
+        ],
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_zero_fraction": 0.6293572790845519,
+        "alpha_ge16_bbox": [
+          84,
+          16,
+          953,
+          1412
+        ],
+        "margins_ge16": [
+          84,
+          16,
+          147,
+          18
+        ],
+        "border_pixels_alpha_ge16": 0,
+        "far_from_core12px_max_alpha": 1,
+        "far_from_core12px_pixels_alpha_ge16": 0,
+        "nonzero_alpha_median": 253.0
+      },
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "pixel_transform_applied": false
+    },
+    {
+      "uid": "rerev2-rotten",
+      "filename": "REC_ROTTEN_REV2_FULLBODY_LEFT_V10_01.png",
+      "path": "assets/REC_ROTTEN_REV2_FULLBODY_LEFT_V10_01.png",
+      "edition": "Resident Evil Revelations 2 (2015)",
+      "status": "CANDIDATE_WITH_LIMITS",
+      "subject_count": 1,
+      "observations": [
+        "Asymétrie conservée: manche gauche longue du côté proche, bras droit dénudé éloigné; laçage sur la hanche gauche proche.",
+        "Une figure entière orientée gauche, deux mains et pieds nus complets, bonnet, veste et pantalon cohérents avec la source.",
+        "Pose des bras adaptée; détails de peau, doigts et déchirures reconstruits.",
+        "Pas de coupe constatée; marges haut/bas55px/48px à alpha≥16."
+      ],
+      "references": [
+        {
+          "repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/research/rerev2-rotten-article-candidate-1.png",
+          "documentary_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjDN1IMazQnsZPzAndoHQ1_n9RVwoVsVb71SLiDihlMeXhCZwsjNob_zPMg0k2QBmxvuLmdUKgaGoxsHI0IKvFKLkYSYpqHqiewCDXIZZKsVhe5sEyE80H64VTLjJ18Uw9tnjVWGDqoLohyphenhyphen/",
+          "local_path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v10/references/rerev2-rotten__a714af6abbd6.png",
+          "sha256": "a714af6abbd667232229218a468c95dd34221f52174221796cb5cc784698f168",
+          "source_physically_opened": true,
+          "source_edition_claimed": "Resident Evil Revelations 2 (2015)",
+          "original_publishable": false
+        }
+      ],
+      "historical_receipt_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/rerev2-rotten/idle.json",
+      "historical_receipt_sha_verified": true,
+      "generated_original_path": "/workspace/scratch/fc109c251847/generated_images/exec-663278cc-eaa3-4aeb-b0bd-702864b104b8.png",
+      "generated_png_physically_opened": true,
+      "numeric_qa": {
+        "uid": "rerev2-rotten",
+        "path": "assets/REC_ROTTEN_REV2_FULLBODY_LEFT_V10_01.png",
+        "sha256": "4e646f78f10f3f156512082260adfd0083f4e95e31bd998c48898bf1a0226698",
+        "copy_identical": true,
+        "dimensions": [
+          998,
+          1575
+        ],
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_zero_fraction": 0.7224716098864395,
+        "alpha_ge16_bbox": [
+          170,
+          55,
+          813,
+          1527
+        ],
+        "margins_ge16": [
+          170,
+          55,
+          185,
+          48
+        ],
+        "border_pixels_alpha_ge16": 0,
+        "far_from_core12px_max_alpha": 1,
+        "far_from_core12px_pixels_alpha_ge16": 0,
+        "nonzero_alpha_median": 253.0
+      },
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "pixel_transform_applied": false
+    },
+    {
+      "uid": "rerequiem-garmr",
+      "filename": "REC_GARMR_REQUIEM2026_FULLBODY_LEFT_V10_01.png",
+      "path": "trials/REC_GARMR_REQUIEM2026_FULLBODY_LEFT_V10_01.png",
+      "edition": "Resident Evil Requiem (2026)",
+      "status": "TRIAL_LATERALITY_ERROR",
+      "subject_count": 1,
+      "observations": [
+        "Quatre membres, queue et langue entière; silhouette gauche contenue.",
+        "La lésion longitudinale à côtes du flanc droit proche dans la source tournée à droite est reportée sur le flanc gauche proche de la sortie gauche: détail latéral inversé.",
+        "La référence ne documente pas le flanc gauche caché; même une correction devra garder une limite explicite de reconstruction de ce côté.",
+        "Nappe RGB de l’aperçu ne vaut pas fond opaque; vérifier alpha réel séparément.",
+        "276pixels alpha≥16 hors rayon12px du noyau alpha128, max80/255: fibres/résidus surtout autour de la queue et fourrure. Finition non parfaite; aucune nappe opaque détectée."
+      ],
+      "references": [
+        {
+          "repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/assets/catalog/rerequiem-garmr.png",
+          "documentary_url": "https://www.evilresource.com/resident-evil-requiem/enemies/garmr",
+          "local_path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v10/references/rerequiem-garmr__44c00aa5981a.png",
+          "sha256": "44c00aa5981a1cece0dc670bcaf88d71e996787b2f130198d1c586dfe5513382",
+          "source_physically_opened": true,
+          "source_edition_claimed": "Resident Evil Requiem (2026)",
+          "original_publishable": false
+        }
+      ],
+      "historical_receipt_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_3/rerequiem-garmr/idle.json",
+      "historical_receipt_sha_verified": true,
+      "generated_original_path": "/workspace/scratch/fc109c251847/generated_images/exec-cdef61bd-a2a2-4d47-9fd9-bd0c4e7654f8.png",
+      "generated_png_physically_opened": true,
+      "numeric_qa": {
+        "uid": "rerequiem-garmr",
+        "path": "trials/REC_GARMR_REQUIEM2026_FULLBODY_LEFT_V10_01.png",
+        "sha256": "70881621ad8b16961169a9ac1b057d7290002e47f44c481d2fc3da9ba0ae1616",
+        "copy_identical": true,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_zero_fraction": 0.7311598459879557,
+        "alpha_ge16_bbox": [
+          154,
+          38,
+          1481,
+          972
+        ],
+        "margins_ge16": [
+          154,
+          38,
+          55,
+          52
+        ],
+        "border_pixels_alpha_ge16": 0,
+        "far_from_core12px_max_alpha": 80,
+        "far_from_core12px_pixels_alpha_ge16": 276,
+        "nonzero_alpha_median": 253.0
+      },
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "pixel_transform_applied": false
+    },
+    {
+      "uid": "rerequiem-licker-beta2",
+      "filename": "REC_LICKER_BETA2_REQUIEM2026_FULLBODY_LEFT_V10_01.png",
+      "path": "assets/REC_LICKER_BETA2_REQUIEM2026_FULLBODY_LEFT_V10_01.png",
+      "edition": "Resident Evil Requiem (2026)",
+      "status": "CANDIDATE_WITH_LIMITS",
+      "subject_count": 1,
+      "observations": [
+        "Corps bas dirigé à gauche, quatre membres distincts reliés au tronc, griffes terminales et boucle linguale complètes.",
+        "Longue langue à extrémité élargie/dentelée conservée comme un seul appendice continu depuis la bouche; pas de queue supplémentaire observée.",
+        "Cerveau exposé, musculature et palette rouge-brun cohérents avec la source attribuée àRequiem2026.",
+        "Pose des membres dégagée et nouvelle surface latérale reconstruites; nombre exact des petites dents/griffes et microtexture non certifiés."
+      ],
+      "references": [
+        {
+          "repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/research/rerequiem-licker-beta2-heading-candidate-1.png",
+          "documentary_url": "https://blogger.googleusercontent.com/img/a/AVvXsEg6cIZOTM8kw4PIP8tki17MVtGHRZj_ddugO9CfnzvCe_Jry2zUWr6FwZjDUj8QYQvZk0yts58WxjxqtjC5G6PTuOgVWy7csOhAkewNJTsPc3GVIh1s4n8bR6I8FODlp0XitYeuCk2DQHnJstZzPQjOqJnXbkBOpvbudrFBAZzeo6StvrdLor9IrwXKomI",
+          "local_path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v10/references/rerequiem-licker-beta2__eb83d1ae4eca.png",
+          "sha256": "eb83d1ae4ecaa5b80bea41c86cd9547b394d586350a92d6f34abc7679081c548",
+          "source_physically_opened": true,
+          "source_edition_claimed": "Resident Evil Requiem (2026)",
+          "original_publishable": false
+        }
+      ],
+      "historical_receipt_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/rerequiem-licker-beta2/idle.json",
+      "historical_receipt_sha_verified": true,
+      "generated_original_path": "/workspace/scratch/fc109c251847/generated_images/exec-871c0563-ac15-4744-98a3-96b0d97be974.png",
+      "generated_png_physically_opened": true,
+      "numeric_qa": {
+        "uid": "rerequiem-licker-beta2",
+        "path": "assets/REC_LICKER_BETA2_REQUIEM2026_FULLBODY_LEFT_V10_01.png",
+        "sha256": "f17fec32a0f434d0e3ad18e28fe746a5c14f9db12977616473e6d77c20877961",
+        "copy_identical": true,
+        "dimensions": [
+          1672,
+          941
+        ],
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_zero_fraction": 0.7379162450614992,
+        "alpha_ge16_bbox": [
+          80,
+          69,
+          1593,
+          896
+        ],
+        "margins_ge16": [
+          80,
+          69,
+          79,
+          45
+        ],
+        "border_pixels_alpha_ge16": 0,
+        "far_from_core12px_max_alpha": 1,
+        "far_from_core12px_pixels_alpha_ge16": 0,
+        "nonzero_alpha_median": 253.0
+      },
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "pixel_transform_applied": false
+    },
+    {
+      "uid": "rerequiem-tyrant-t-501",
+      "filename": "REC_TYRANT_T501_REQUIEM2026_FULLBODY_LEFT_V10_01.png",
+      "path": "assets/REC_TYRANT_T501_REQUIEM2026_FULLBODY_LEFT_V10_01.png",
+      "edition": "Resident Evil Requiem (2026)",
+      "status": "CANDIDATE_WITH_LIMITS",
+      "subject_count": 1,
+      "observations": [
+        "Une figure complète en trois-quarts gauche, tête/buste et deux bottes dirigés gauche; deux mains gantées contenues.",
+        "Fermeture/boutons restent du côté anatomique droit éloigné; grand ensemble de pochettes et cylindres sur hanche gauche proche, cohérent avec la source.",
+        "Manteau long noir, tête nue grisâtre, col haut et équipement conservés sans ajout d’arme.",
+        "Détail des rides, panneaux du manteau, gants et accessoires reconstruit; pas de certification des pixels natifs."
+      ],
+      "references": [
+        {
+          "repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/research/rerequiem-tyrant-t-501-article-candidate-0.png",
+          "documentary_url": "https://blogger.googleusercontent.com/img/a/AVvXsEjutL-GT4ixZPRdAny8okwavHASTSoimzbzup4plfsU8vWU1SKKnY0xp6NWBMRjMZakwGYAhLD0n-z8OnDScVR9ds5_PoxDtkQtp7HOxwnf_0vjkVjy6aJKFzXBYSHfYdIsn5TohRtsO9viX-QWPiJAMDJBMWevNVUz2Dp4KmmyQyiDPNAAYS8ZXlL3yFw",
+          "local_path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v10/references/rerequiem-tyrant-t-501__60fdb5aed462.png",
+          "sha256": "60fdb5aed46241ad77fe1aa08c13919a6adb8de2ed24d24388722793b2f4e1cc",
+          "source_physically_opened": true,
+          "source_edition_claimed": "Resident Evil Requiem (2026)",
+          "original_publishable": false
+        }
+      ],
+      "historical_receipt_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/rerequiem-tyrant-t-501/idle.json",
+      "historical_receipt_sha_verified": true,
+      "generated_original_path": "/workspace/scratch/fc109c251847/generated_images/exec-f36234c2-7540-46d5-9403-cb27c2eb219e.png",
+      "generated_png_physically_opened": true,
+      "numeric_qa": {
+        "uid": "rerequiem-tyrant-t-501",
+        "path": "assets/REC_TYRANT_T501_REQUIEM2026_FULLBODY_LEFT_V10_01.png",
+        "sha256": "cd336c8ad135a7b43f405bd6d92c9877f1d5901b86c7e69b6cd1a0cfb87b64aa",
+        "copy_identical": true,
+        "dimensions": [
+          875,
+          1797
+        ],
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_zero_fraction": 0.5064256300182844,
+        "alpha_ge16_bbox": [
+          77,
+          27,
+          779,
+          1773
+        ],
+        "margins_ge16": [
+          77,
+          27,
+          96,
+          24
+        ],
+        "border_pixels_alpha_ge16": 0,
+        "far_from_core12px_max_alpha": 1,
+        "far_from_core12px_pixels_alpha_ge16": 0,
+        "nonzero_alpha_median": 253.0
+      },
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "pixel_transform_applied": false
+    },
+    {
+      "uid": "re4r-chainsaw-sisters",
+      "filename": "REC_CHAINSAW_SISTER_LIGHT_DRESS_RE4R_FULLBODY_LEFT_V10_01.png",
+      "path": "assets/REC_CHAINSAW_SISTER_LIGHT_DRESS_RE4R_FULLBODY_LEFT_V10_01.png",
+      "edition": "Resident Evil 4 remake (2023)",
+      "status": "CANDIDATE_WITH_LIMITS",
+      "subject_count": 1,
+      "observations": [
+        "Une seule sœur retenue: robe claire à manches courtes et tête bandée, conforme à la figure au premier plan de la source; aucun mélange avec la sœur au long manteau/jupe verte.",
+        "Corps gauche entier, deux mains sur la tronçonneuse rouge, lame complète et deux chaussures visibles.",
+        "Pas de doublon de personnage ni de second outil. Pose, plis, cheveux, pansement et détails de chaîne reconstruits.",
+        "Fidélité d’édition soutenue par la référence fournie; pas de certification du profil caché1:1.",
+        "180pixels alpha≥16 hors rayon12px du noyau alpha128, max73/255, répartis autour des cheveux; détails semi-transparents à contrôler dans le moteur."
+      ],
+      "references": [
+        {
+          "repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/research/re4r-chainsaw-sisters-candidate-6.jpg",
+          "documentary_url": "https://blogger.googleusercontent.com/img/a/AVvXsEg3KLlshHqPIpKdT57T1bW0dl-bM2SEXk3f5Nj-gA8w8XlR73IAGgr7FcCHE1kcb-CZbGkSxLhnjxqTy2FWBKm6q1uzNYAlEc0fgl-3SG7C1qZgk9AlQokmB-vlQAK9SpYfX8IB7YlFJS3Hed4UHL5jrPsmMr2UiC1hzz3IxaEr8cXG9vvnluyM4A5v72L6",
+          "local_path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v10/references/re4r-chainsaw-sisters__9cda22e0b87b.jpg",
+          "sha256": "9cda22e0b87b57b93d7b26d77772820cec4d86ba338a612421ce5f1cd2c2744f",
+          "source_physically_opened": true,
+          "source_edition_claimed": "Resident Evil 4 remake (2023)",
+          "original_publishable": false
+        }
+      ],
+      "historical_receipt_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/re4r-chainsaw-sisters/idle.json",
+      "historical_receipt_sha_verified": true,
+      "generated_original_path": "/workspace/scratch/fc109c251847/generated_images/exec-7f9983b8-5eb9-4afd-9ce6-52c1a9aa39e4.png",
+      "generated_png_physically_opened": true,
+      "numeric_qa": {
+        "uid": "re4r-chainsaw-sisters",
+        "path": "assets/REC_CHAINSAW_SISTER_LIGHT_DRESS_RE4R_FULLBODY_LEFT_V10_01.png",
+        "sha256": "641814994c87fa4d750e47e6c86436dd5089ddc783eb286394634ee77bb6c93e",
+        "copy_identical": true,
+        "dimensions": [
+          1196,
+          1315
+        ],
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_zero_fraction": 0.680412528453527,
+        "alpha_ge16_bbox": [
+          78,
+          78,
+          1120,
+          1253
+        ],
+        "margins_ge16": [
+          78,
+          78,
+          76,
+          62
+        ],
+        "border_pixels_alpha_ge16": 0,
+        "far_from_core12px_max_alpha": 73,
+        "far_from_core12px_pixels_alpha_ge16": 180,
+        "nonzero_alpha_median": 253.0
+      },
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "pixel_transform_applied": false
+    },
+    {
+      "uid": "reoutbreak2-wasp",
+      "filename": "REC_WASP_OUTBREAK2_FULLBODY_LEFT_V10_02.png",
+      "path": "assets/REC_WASP_OUTBREAK2_FULLBODY_LEFT_V10_02.png",
+      "edition": "Resident Evil Outbreak File #2 (2004)",
+      "status": "CANDIDATE_WITH_LIMITS",
+      "subject_count": 1,
+      "observations": [
+        "Six chaînes de pattes distinctes et terminées sont désormais traçables, aux extrémités approximatives x161/y942,331/941,357/1078,532/980,711/1107,918/1034 sur1312×1199.",
+        "Les deux longues antennes ajoutées en01 ont disparu; les deux surfaces alaires et le dard restent entiers.",
+        "Tête, thorax et abdomen gardent une lecture gauche. Correction du compte anatomique confirmée; veines et dents des ailes restent une reconstruction.",
+        "Marge droite31px(2,36%) serrée mais aile contenue; aucun ajout d’un septième membre observé."
+      ],
+      "references": [
+        {
+          "repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/assets/catalog/reoutbreak2-wasp.png",
+          "documentary_url": "https://www.evilresource.com/resident-evil-outbreak-file-2/enemies/wasp",
+          "local_path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v10/references/reoutbreak2-wasp__9d823482eb46.png",
+          "sha256": "9d823482eb46218b61fc2016dcffb1b7900ae402115fb9a9e1346023d34b1567",
+          "source_physically_opened": true,
+          "source_edition_claimed": "Resident Evil Outbreak File #2 (2004)",
+          "original_publishable": false
+        }
+      ],
+      "historical_receipt_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_1/reoutbreak2-wasp/idle.json",
+      "historical_receipt_sha_verified": true,
+      "generated_original_path": "/workspace/scratch/fc109c251847/generated_images/exec-78d94725-bad9-4673-bc99-baa01f13d386.png",
+      "generated_png_physically_opened": true,
+      "numeric_qa": {
+        "uid": "reoutbreak2-wasp",
+        "path": "assets/REC_WASP_OUTBREAK2_FULLBODY_LEFT_V10_02.png",
+        "sha256": "4666dfc0aec5b7efaca46994a14feda24a2ad8f8c4ecd9ba6cc7de25b4c036be",
+        "copy_identical": true,
+        "dimensions": [
+          1312,
+          1199
+        ],
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_zero_fraction": 0.7826930216237108,
+        "alpha_ge16_bbox": [
+          159,
+          52,
+          1281,
+          1111
+        ],
+        "margins_ge16": [
+          159,
+          52,
+          31,
+          88
+        ],
+        "border_pixels_alpha_ge16": 0,
+        "far_from_core12px_max_alpha": 1,
+        "far_from_core12px_pixels_alpha_ge16": 0,
+        "nonzero_alpha_median": 252.0
+      },
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "pixel_transform_applied": false
+    },
+    {
+      "uid": "rerequiem-garmr",
+      "filename": "REC_GARMR_REQUIEM2026_FULLBODY_LEFT_V10_02.png",
+      "path": "assets/REC_GARMR_REQUIEM2026_FULLBODY_LEFT_V10_02.png",
+      "edition": "Resident Evil Requiem (2026)",
+      "status": "CANDIDATE_WITH_LIMITS",
+      "subject_count": 1,
+      "observations": [
+        "La longue lésion précédemment copiée sur le flanc gauche proche a été retirée. Une trace apparaît derrière le dos côté droit éloigné, compatible avec la latéralité source.",
+        "Quatre pattes, queue, oreilles et langue sont complètes et lisibles vers la gauche; pas de miroir de la silhouette.",
+        "Le flanc gauche maintenant couvert de fourrure demeure une interprétation du côté absent de la référence; ce correctif ne prouve pas une apparence canonique1:1.",
+        "Fibres de fourrure semi-transparentes et faible résidu autour de la queue restent à examiner dans un import; aucun fond opaque ne doit être déduit du seul RGB d’aperçu.",
+        "576pixels alpha≥16 hors rayon12px du noyau alpha128, max90/255: fibres/résidus surtout autour de la queue et fourrure. Finition non parfaite; aucune nappe opaque détectée."
+      ],
+      "references": [
+        {
+          "repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/assets/catalog/rerequiem-garmr.png",
+          "documentary_url": "https://www.evilresource.com/resident-evil-requiem/enemies/garmr",
+          "local_path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v10/references/rerequiem-garmr__44c00aa5981a.png",
+          "sha256": "44c00aa5981a1cece0dc670bcaf88d71e996787b2f130198d1c586dfe5513382",
+          "source_physically_opened": true,
+          "source_edition_claimed": "Resident Evil Requiem (2026)",
+          "original_publishable": false
+        }
+      ],
+      "historical_receipt_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_3/rerequiem-garmr/idle.json",
+      "historical_receipt_sha_verified": true,
+      "generated_original_path": "/workspace/scratch/fc109c251847/generated_images/exec-22cb0ba1-dc03-45d9-9f22-229a6e83430e.png",
+      "generated_png_physically_opened": true,
+      "numeric_qa": {
+        "uid": "rerequiem-garmr",
+        "path": "assets/REC_GARMR_REQUIEM2026_FULLBODY_LEFT_V10_02.png",
+        "sha256": "b927a1282237de06e253b8c2addce08c7bfa3110ed8d2efe88effb125512fb9e",
+        "copy_identical": true,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_zero_fraction": 0.7331536610921224,
+        "alpha_ge16_bbox": [
+          154,
+          31,
+          1494,
+          974
+        ],
+        "margins_ge16": [
+          154,
+          31,
+          42,
+          50
+        ],
+        "border_pixels_alpha_ge16": 0,
+        "far_from_core12px_max_alpha": 90,
+        "far_from_core12px_pixels_alpha_ge16": 576,
+        "nonzero_alpha_median": 253.0
+      },
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "pixel_transform_applied": false
+    }
+  ],
+  "unreviewed_hold_carried_from_producer": {
+    "uid": "rerev2-giant-whip-spider",
+    "status": "HELD_ANATOMY_REFERENCE",
+    "no_generation": true,
+    "basis": "SOURCE_RECOVERY_V10.json: attaches et compte des appendices non établis depuis la vue450×360; cette source tenue n’a pas fait partie des13 comparaisons de sorties."
+  }
+}

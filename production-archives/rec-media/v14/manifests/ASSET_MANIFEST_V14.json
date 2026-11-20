@@ -1,0 +1,606 @@
+{
+  "schema": "rec.media.v14.manifest",
+  "date": "2026-11-20",
+  "repository": "darknigthmare/resident-evil-bow-protocol",
+  "pull_request": 22,
+  "baseline_commit": "dc9e217a34d5ad41cd6009a750b112b84038f33c",
+  "state": "CHECKPOINT_3",
+  "summary": {
+    "png": 14,
+    "candidates": 11,
+    "trials": 3,
+    "unique_uids": 5,
+    "unique_candidate_uids": 5,
+    "candidate_left": 6,
+    "candidate_right": 5,
+    "complete_directional_subject_pairs": 5,
+    "tool_refusals_no_image": 1
+  },
+  "assets": [
+    {
+      "id": "re4-leader-zealot-left-01",
+      "uid": "re4-castle-ganado-leader-zealot",
+      "label": "Leader Zealot — robe rouge",
+      "edition": "Resident Evil 4 (2005)",
+      "file": "assets/REC_LEADER_ZEALOT_RE4_2005_FULLBODY_LEFT_V14_01.png",
+      "direction": "left",
+      "sha256": "19328945c2eb51037008b0c479409f875e5022a457b8aff92808893b49bd881c",
+      "bytes": 2076091,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_pixels": 967424,
+      "bbox_alpha16": [
+        71,
+        15,
+        833,
+        1525
+      ],
+      "review_status": "CANDIDATE_STATIC_WITH_LIMITS",
+      "review": "docs/leader-left-review.json",
+      "prompt": "prompts/re4-leader-zealot-left-01.json",
+      "one_subject_per_image_reviewed": true,
+      "original_generated_bytes_unchanged": true,
+      "mirror_performed": false,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "animation_frames": 1
+    },
+    {
+      "id": "re4-castle-ganado-left-01",
+      "uid": "re4-castle-ganado",
+      "label": "Castle Ganado — moine chauve à faux",
+      "edition": "Resident Evil 4 (2005)",
+      "file": "assets/REC_CASTLE_GANADO_RE4_2005_FULLBODY_LEFT_V14_01.png",
+      "direction": "left",
+      "sha256": "2cd08bdf20cd5db41daf912f48e6c1c2f36105db43c281273322b62c77c00939",
+      "bytes": 1257567,
+      "dimensions": [
+        1218,
+        1292
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 965113,
+      "bbox_alpha16": [
+        25,
+        95,
+        1161,
+        1253
+      ],
+      "review_status": "CANDIDATE_STATIC_WITH_LIMITS",
+      "review": "docs/castle-left-review.json",
+      "prompt": "prompts/re4-castle-ganado-left-01.json",
+      "one_subject_per_image_reviewed": true,
+      "original_generated_bytes_unchanged": true,
+      "mirror_performed": false,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "animation_frames": 1
+    },
+    {
+      "id": "re1r-yawn-left-01",
+      "uid": "re1r-yawn",
+      "label": "Yawn",
+      "edition": "Resident Evil remake (2002)",
+      "file": "assets/REC_YAWN_REMAKE_2002_FULLBODY_LEFT_V14_01.png",
+      "direction": "left",
+      "sha256": "c4c4fe544a24afee82e7c359439acfdae49bc6adf68053a30009f7987dcc3c19",
+      "bytes": 1389006,
+      "dimensions": [
+        1754,
+        897
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 1031440,
+      "bbox_alpha16": [
+        90,
+        20,
+        1701,
+        870
+      ],
+      "review_status": "CANDIDATE_STATIC_WITH_LIMITS",
+      "review": "docs/yawn-left-review.json",
+      "prompt": "prompts/re1r-yawn-left-01.json",
+      "one_subject_per_image_reviewed": true,
+      "original_generated_bytes_unchanged": true,
+      "mirror_performed": false,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "animation_frames": 1
+    },
+    {
+      "id": "re4-bella-cream-apron-left-01",
+      "uid": "re4-bella-sisters",
+      "label": "Bella Sister — tablier crème",
+      "edition": "Resident Evil 4 (2005)",
+      "file": "assets/REC_BELLA_SISTER_CREAM_APRON_RE4_2005_FULLBODY_LEFT_V14_01.png",
+      "direction": "left",
+      "sha256": "bae56a615e4164a92a4499216dad1740286060894dc15a5c30d289a65ee8d210",
+      "bytes": 1223681,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 1047467,
+      "bbox_alpha16": [
+        160,
+        55,
+        1041,
+        1266
+      ],
+      "review_status": "TRIAL_NEEDS_GRIP_CORRECTION",
+      "review": "docs/bella-cream-left-review.json",
+      "prompt": "prompts/re4-bella-cream-apron-left-01.json",
+      "one_subject_per_image_reviewed": true,
+      "original_generated_bytes_unchanged": true,
+      "mirror_performed": false,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "animation_frames": 1,
+      "variant": "blue-gray-blouse-cream-apron",
+      "excluded_from_candidate_count": true,
+      "pending_correction": "Anatomical right hand must grip rear trigger handle; left hand must grip forward top handle. Original retained unchanged.",
+      "superseded_by": "re4-bella-cream-apron-left-02",
+      "correction_status": "RESOLVED_BY_DISTINCT_CANDIDATE"
+    },
+    {
+      "id": "re4-bella-green-skirt-left-01",
+      "uid": "re4-bella-sisters",
+      "label": "Bella Sister — jupe verte",
+      "edition": "Resident Evil 4 (2005)",
+      "file": "assets/REC_BELLA_SISTER_GREEN_SKIRT_RE4_2005_FULLBODY_LEFT_V14_01.png",
+      "direction": "left",
+      "sha256": "cb4e5e97a85e2afeea936da32ee0f8ee707144b31d48d64f0fa74242b2a5bda1",
+      "bytes": 1983392,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_pixels": 887044,
+      "bbox_alpha16": [
+        38,
+        94,
+        998,
+        1477
+      ],
+      "review_status": "TRIAL_NEEDS_GRIP_CORRECTION",
+      "review": "docs/bella-green-left-review.json",
+      "prompt": "prompts/re4-bella-green-skirt-left-01.json",
+      "one_subject_per_image_reviewed": true,
+      "original_generated_bytes_unchanged": true,
+      "mirror_performed": false,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "animation_frames": 1,
+      "variant": "ochre-blouse-green-skirt",
+      "excluded_from_candidate_count": true,
+      "pending_correction": "Anatomical right hand must grip rear trigger handle; left hand must grip forward top handle. Original retained unchanged.",
+      "superseded_by": "re4-bella-green-skirt-left-03",
+      "correction_status": "RESOLVED_BY_DISTINCT_CANDIDATE"
+    },
+    {
+      "id": "re4-leader-zealot-right-01",
+      "uid": "re4-castle-ganado-leader-zealot",
+      "label": "Leader Zealot — robe rouge",
+      "edition": "Resident Evil 4 (2005)",
+      "file": "assets/REC_LEADER_ZEALOT_RE4_2005_FULLBODY_RIGHT_V14_01.png",
+      "direction": "right",
+      "sha256": "699a87a33d1600547b22fc68a70b90c860d78cd4622e69ad100e353b97dbc108",
+      "bytes": 2174844,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_pixels": 934729,
+      "bbox_alpha16": [
+        108,
+        33,
+        957,
+        1513
+      ],
+      "review_status": "CANDIDATE_STATIC_WITH_LIMITS",
+      "review": "docs/leader-right-review.json",
+      "prompt": "prompts/re4-leader-zealot-right-01.json",
+      "one_subject_per_image_reviewed": true,
+      "original_generated_bytes_unchanged": true,
+      "mirror_performed": false,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "animation_frames": 1
+    },
+    {
+      "id": "re5-jill-battlesuit-left-01",
+      "uid": "re5-jill-valentine-enemy",
+      "label": "Jill Valentine — Battle Suit avec P30",
+      "edition": "Resident Evil 5 (2009)",
+      "file": "assets/REC_JILL_VALENTINE_RE5_BATTLESUIT_FULLBODY_LEFT_V14_01.png",
+      "direction": "left",
+      "sha256": "3d384a84fee48fc179cda22d6f03a96282d71ad56890e666a683f2155b7023cc",
+      "bytes": 2026215,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_pixels": 1074214,
+      "bbox_alpha16": [
+        31,
+        26,
+        966,
+        1517
+      ],
+      "review_status": "CANDIDATE_STATIC_WITH_LIMITS",
+      "review": "docs/jill-left-review.json",
+      "prompt": "prompts/re5-jill-battlesuit-left-01.json",
+      "one_subject_per_image_reviewed": true,
+      "original_generated_bytes_unchanged": true,
+      "mirror_performed": false,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "animation_frames": 1
+    },
+    {
+      "id": "re5-jill-battlesuit-right-01",
+      "uid": "re5-jill-valentine-enemy",
+      "label": "Jill Valentine — Battle Suit avec P30",
+      "edition": "Resident Evil 5 (2009)",
+      "file": "assets/REC_JILL_VALENTINE_RE5_BATTLESUIT_FULLBODY_RIGHT_V14_01.png",
+      "direction": "right",
+      "sha256": "0375e81611dc0593af1f95857ef2f3c92e6cd0625005e5ab8c66752978849632",
+      "bytes": 1950661,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_pixels": 1107126,
+      "bbox_alpha16": [
+        83,
+        37,
+        912,
+        1507
+      ],
+      "review_status": "CANDIDATE_STATIC_WITH_LIMITS",
+      "review": "docs/jill-right-review.json",
+      "prompt": "prompts/re5-jill-battlesuit-right-01.json",
+      "one_subject_per_image_reviewed": true,
+      "original_generated_bytes_unchanged": true,
+      "mirror_performed": false,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "animation_frames": 1
+    },
+    {
+      "id": "re4-castle-ganado-right-01",
+      "uid": "re4-castle-ganado",
+      "label": "Castle Ganado — moine chauve à faux",
+      "edition": "Resident Evil 4 (2005)",
+      "file": "assets/REC_CASTLE_GANADO_RE4_2005_FULLBODY_RIGHT_V14_01.png",
+      "direction": "right",
+      "sha256": "47fdfc097f27e5ae8277d65db685c27d6bad0d9b5941401003c7a6d55497d53f",
+      "bytes": 996889,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 1106097,
+      "bbox_alpha16": [
+        243,
+        43,
+        1317,
+        1049
+      ],
+      "review_status": "CANDIDATE_STATIC_WITH_LIMITS",
+      "review": "docs/castle-right-review.json",
+      "prompt": "prompts/re4-castle-ganado-right-01.json",
+      "one_subject_per_image_reviewed": true,
+      "original_generated_bytes_unchanged": true,
+      "mirror_performed": false,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "animation_frames": 1
+    },
+    {
+      "id": "re4-bella-cream-apron-left-02",
+      "uid": "re4-bella-sisters",
+      "label": "Bella Sister — tablier crème",
+      "edition": "Resident Evil 4 (2005)",
+      "file": "assets/REC_BELLA_SISTER_CREAM_APRON_RE4_2005_FULLBODY_LEFT_V14_02.png",
+      "direction": "left",
+      "sha256": "c2f01f1dec182161363bf6bf4303fb80a0dd8c6c18a19911a365d788c728f1f8",
+      "bytes": 1368707,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 987512,
+      "bbox_alpha16": [
+        52,
+        40,
+        1136,
+        1277
+      ],
+      "review_status": "CANDIDATE_STATIC_WITH_LIMITS",
+      "review": "docs/bella-cream-left-02-review.json",
+      "prompt": "prompts/re4-bella-cream-apron-left-02.json",
+      "one_subject_per_image_reviewed": true,
+      "original_generated_bytes_unchanged": true,
+      "mirror_performed": false,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "animation_frames": 1,
+      "variant": "blue-gray-blouse-cream-apron"
+    },
+    {
+      "id": "re4-bella-green-skirt-left-02",
+      "uid": "re4-bella-sisters",
+      "label": "Bella Sister — jupe verte",
+      "edition": "Resident Evil 4 (2005)",
+      "file": "assets/REC_BELLA_SISTER_GREEN_SKIRT_RE4_2005_FULLBODY_LEFT_V14_02.png",
+      "direction": "left",
+      "sha256": "d51670efefa690377f640a4d02d37d788295f1c3b88c26d03e912cd21d69ddc7",
+      "bytes": 2043259,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_pixels": 906796,
+      "bbox_alpha16": [
+        14,
+        94,
+        1015,
+        1475
+      ],
+      "review_status": "TRIAL_NEEDS_GRIP_CORRECTION",
+      "review": "docs/bella-green-left-02-review.json",
+      "prompt": "prompts/re4-bella-green-skirt-left-02.json",
+      "one_subject_per_image_reviewed": true,
+      "original_generated_bytes_unchanged": true,
+      "mirror_performed": false,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "animation_frames": 1,
+      "variant": "ochre-blouse-green-skirt",
+      "excluded_from_candidate_count": true,
+      "superseded_by": "re4-bella-green-skirt-left-03",
+      "correction_status": "RESOLVED_BY_DISTINCT_CANDIDATE"
+    },
+    {
+      "id": "re4-bella-cream-apron-right-01",
+      "uid": "re4-bella-sisters",
+      "label": "Bella Sister — tablier crème",
+      "edition": "Resident Evil 4 (2005)",
+      "file": "assets/REC_BELLA_SISTER_CREAM_APRON_RE4_2005_FULLBODY_RIGHT_V14_01.png",
+      "direction": "right",
+      "sha256": "99d94443daab27c8f179f3a04518a3b62be87ef209423267c16cba363dce8d79",
+      "bytes": 1343383,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 983242,
+      "bbox_alpha16": [
+        57,
+        37,
+        1141,
+        1284
+      ],
+      "review_status": "CANDIDATE_STATIC_WITH_LIMITS",
+      "review": "docs/bella-cream-right-review.json",
+      "prompt": "prompts/re4-bella-cream-apron-right-01.json",
+      "one_subject_per_image_reviewed": true,
+      "original_generated_bytes_unchanged": true,
+      "mirror_performed": false,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "animation_frames": 1,
+      "variant": "blue-gray-blouse-cream-apron"
+    },
+    {
+      "id": "re4-bella-green-skirt-left-03",
+      "uid": "re4-bella-sisters",
+      "label": "Bella Sister — jupe verte",
+      "edition": "Resident Evil 4 (2005)",
+      "file": "assets/REC_BELLA_SISTER_GREEN_SKIRT_RE4_2005_FULLBODY_LEFT_V14_03.png",
+      "direction": "left",
+      "sha256": "9790f98ea5a72ebb893b31fa05e7b15169fbc0591eafccbfae1eb377290f389d",
+      "bytes": 1351016,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 951144,
+      "bbox_alpha16": [
+        28,
+        38,
+        1164,
+        1291
+      ],
+      "review_status": "CANDIDATE_STATIC_WITH_LIMITS",
+      "review": "docs/bella-green-left-03-review.json",
+      "prompt": "prompts/re4-bella-green-skirt-left-03.json",
+      "one_subject_per_image_reviewed": true,
+      "original_generated_bytes_unchanged": true,
+      "mirror_performed": false,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "animation_frames": 1,
+      "variant": "ochre-blouse-green-skirt"
+    },
+    {
+      "id": "re4-bella-green-skirt-right-01",
+      "uid": "re4-bella-sisters",
+      "label": "Bella Sister — jupe verte",
+      "edition": "Resident Evil 4 (2005)",
+      "file": "assets/REC_BELLA_SISTER_GREEN_SKIRT_RE4_2005_FULLBODY_RIGHT_V14_01.png",
+      "direction": "right",
+      "sha256": "91116886d5b6e81f1cbab7d64b5a6bbee7d2a86bda501f70b0d492898fba2578",
+      "bytes": 1230382,
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 1020414,
+      "bbox_alpha16": [
+        104,
+        26,
+        1204,
+        1188
+      ],
+      "review_status": "CANDIDATE_STATIC_WITH_LIMITS",
+      "review": "docs/bella-green-right-review.json",
+      "prompt": "prompts/re4-bella-green-skirt-right-01.json",
+      "one_subject_per_image_reviewed": true,
+      "original_generated_bytes_unchanged": true,
+      "mirror_performed": false,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "animation_frames": 1,
+      "variant": "ochre-blouse-green-skirt"
+    }
+  ],
+  "recovery_v12_v13": {
+    "historically_announced_png": 44,
+    "recovered_original_png": 0,
+    "published_in_this_batch": 0,
+    "status": "ORIGINAL_BYTES_NOT_FOUND_IN_ACCESSIBLE_SOURCES",
+    "note": "V12/V13 numbering reserved; newly generated V14 outputs must never be presented as recovered V12/V13 originals."
+  },
+  "runtime_modified": false,
+  "canonical_one_to_one_certified": false,
+  "animation_complete": false,
+  "engine_admitted": false,
+  "source_bitmaps_included": false,
+  "limits": [
+    "Static generated candidates and preserved trials only; hidden anatomy, exact original geometry and textures are not certified.",
+    "No engine import, pivots, contacts, collisions or animation validation.",
+    "All V5-V11 historical files remain unchanged.",
+    "Existing R34 CI rejects production-archives additions; no assertion or guard is modified.",
+    "Three Bella left trials remain excluded from candidate counts; corrected cream left 02 and green left 03 have their own preserved files and reviews.",
+    "Five left/right subject pairs are static generated candidates, not animation sequences or engine-admitted fighters.",
+    "Yawn right returned no image after an output moderation refusal; no retry followed and its older left candidate remains preserved."
+  ],
+  "continuation_base_commit": "0ecb6d595c67fbca6783dab309a32f8947516faa",
+  "current_continuation_generation": {
+    "png_returned": 8,
+    "tool_refusals_no_image": 1,
+    "newly_included_png_since_checkpoint_2": 5
+  },
+  "refusals": [
+    {
+      "id": "re1r-yawn-right-01",
+      "uid": "re1r-yawn",
+      "direction": "right",
+      "status": "TOOL_REFUSAL_NO_IMAGE",
+      "images_returned": 0,
+      "prompt": "prompts/re1r-yawn-right-01.json",
+      "receipt": "docs/yawn-right-refusal.json",
+      "further_generation_blocked_by_current_refusal": true,
+      "no_retry_after_refusal": true
+    }
+  ],
+  "directional_pairs": [
+    {
+      "uid": "re4-castle-ganado-leader-zealot",
+      "left": "re4-leader-zealot-left-01",
+      "right": "re4-leader-zealot-right-01"
+    },
+    {
+      "uid": "re4-castle-ganado",
+      "left": "re4-castle-ganado-left-01",
+      "right": "re4-castle-ganado-right-01"
+    },
+    {
+      "uid": "re5-jill-valentine-enemy",
+      "left": "re5-jill-battlesuit-left-01",
+      "right": "re5-jill-battlesuit-right-01"
+    },
+    {
+      "uid": "re4-bella-sisters",
+      "variant": "blue-gray-blouse-cream-apron",
+      "left": "re4-bella-cream-apron-left-02",
+      "right": "re4-bella-cream-apron-right-01"
+    },
+    {
+      "uid": "re4-bella-sisters",
+      "variant": "ochre-blouse-green-skirt",
+      "left": "re4-bella-green-skirt-left-03",
+      "right": "re4-bella-green-skirt-right-01"
+    }
+  ],
+  "unpaired_candidates": [
+    {
+      "uid": "re1r-yawn",
+      "left": "re1r-yawn-left-01",
+      "right_status": "TOOL_REFUSAL_NO_IMAGE",
+      "receipt": "docs/yawn-right-refusal.json"
+    }
+  ]
+}

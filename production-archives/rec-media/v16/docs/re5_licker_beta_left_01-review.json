@@ -1,0 +1,106 @@
+{
+  "schema": "rec.static-candidate-independent-review.v16",
+  "asset": "Licker β, langue non déployée — Resident Evil 5 (2009), LEFT 01",
+  "id": "re5_licker_beta_left_01",
+  "uid": "re5-licker-beta",
+  "variant": "re5_tongue_not_deployed",
+  "reviewed_at": "2026-11-20T13:05:43.476478+00:00",
+  "reviewer": "reference_research",
+  "asset_path": "assets/re5_licker_beta_left_01.png",
+  "original_path": "/workspace/scratch/3fced93cfb0a/generated_images/exec-1a5de6c4-60ec-404a-b182-a21f5587fecc.png",
+  "sha256": "01a19325f4245e472486c388745adf5155ce155708a68ca5946f497fc6ab27e3",
+  "bytes": 2053991,
+  "verdict": "CANDIDATE_STATIC_WITH_LIMITS",
+  "review_status": "CANDIDATE_STATIC_WITH_LIMITS",
+  "excluded_from_candidate_count": false,
+  "source_refs_reviewed": [
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v16/licker-beta-archives-1.png",
+      "sha256": "0407878b7e171822ed0fa2253c35632508c086f1600044f841452d76b5a68413",
+      "role": "Rendu entier attribué à RE5 sur site secondaire, recoupé avec le crop historique ; chaîne originale Capcom non certifiée."
+    }
+  ],
+  "source_document": "docs/SOURCES_RE5_CREATURES_V16.json",
+  "prompt_record": "prompts/re5_licker_beta_left_01.json",
+  "technical_record": "docs/re5_licker_beta_left_01-technical.json",
+  "visual_checks": {
+    "orientation": "Tête, grandes épaules et griffes antérieures mènent clairement vers la gauche ; les hanches et le membre arrière visible restent à droite. Direction gauche observable sur la silhouette, pas seulement dans le nom du fichier.",
+    "variant": "Tête cérébrale large sans œil ajouté, bouche dentée sans langue étirée, épaules massives, avant-bras disproportionnés, longues griffes ivoire et surfaces musculaires rouges proches des grands signes du rendu RE5. Aucune queue, vêtement, mutation différente, cadre rouge ou emblème du site.",
+    "four_limb_connections": "Trois chaînes visibles sont continues : antérieur proche de l’épaule jusqu’à la grande main du premier plan, antérieur éloigné passant derrière la tête/thorax jusqu’à la main à gauche, et postérieur proche du bassin jusqu’au pied à droite. Le quatrième membre, arrière éloigné, est caché par le volume du corps et la cuisse proche. Aucun fragment détaché ni membre surnuméraire visible ; cette image seule ne montre pas sa connexion.",
+    "framing": "Corps complet dans le cadre avec tête, dos arqué, griffes antérieures et extrémités du pied arrière visible. Les grandes pointes qui manquaient dans le crop R34 sont ici terminées avant les bords. Un seul sujet et aucun logo.",
+    "limb_visibility": {
+      "expected_anatomical_limb_count": 4,
+      "distal_limbs_visibly_present": 3,
+      "occlusion": "Membre arrière éloigné entièrement occulté par la silhouette ; aucun pied ajouté pour le rendre artificiellement visible.",
+      "all_four_complete_chains_exposed": false,
+      "detached_or_extra_limb_observed": false
+    },
+    "limits": [
+      "La marge transparente de 10 % demandée sur chaque côté n’est pas atteinte. Marges de silhouette alpha >= 16, gauche/haut/droite/bas : [60, 70, 40, 57] px, soit [3.91, 6.84, 2.6, 5.57] %. Aucune extrémité principale n’est coupée.",
+      "Le membre arrière éloigné n’est pas visible : une occlusion naturelle est compatible avec la pose, mais le nombre exact de connexions anatomiques ne peut pas être prouvé intégralement dans cette seule projection.",
+      "Seulement trois chaînes de membres sont directement examinables ; ne pas annoncer quatre membres entièrement visibles ou une anatomie cachée certifiée.",
+      "La vue native opposée n’est pas disponible. Les surfaces du côté gauche, les détails des griffes et des dents restent des interprétations générées.",
+      "Les griffes ont des appuis à des profondeurs différentes ; aucun sol commun, pivot de combat ou mouvement n’a été validé.",
+      "Candidat statique généré uniquement : aucune certification 1:1, animation originale, intégration moteur, collision, ancrage ou validation dans le jeu."
+    ]
+  },
+  "failed_gates": [],
+  "uncertain_gates": [
+    "far_hind_limb_connection_occluded"
+  ],
+  "alpha": {
+    "mode": "RGBA",
+    "size": [
+      1536,
+      1024
+    ],
+    "extrema": [
+      0,
+      254
+    ],
+    "bbox_alpha_gte16": [
+      60,
+      70,
+      1496,
+      967
+    ],
+    "margins_alpha16_left_top_right_bottom": [
+      60,
+      70,
+      40,
+      57
+    ],
+    "margins_alpha16_percent_left_top_right_bottom": [
+      3.91,
+      6.84,
+      2.6,
+      5.57
+    ],
+    "bbox_all_nonzero_alpha": [
+      0,
+      15,
+      1535,
+      1024
+    ],
+    "pixels_alpha0": 1041954,
+    "pixels_alpha1_to15": 50812,
+    "pixels_alpha1_to3": 46210,
+    "pixels_alpha255": 0,
+    "all_subject_alpha_255": false,
+    "halo_finding": "Alpha réel vérifié dans le PNG original. Les composites gris et clair montrent le sujet principal sans fond opaque ni halo large substantiel. Des résidus alpha très faibles subsistent hors de la silhouette principale, jusqu’à certains bords ; les octets originaux sont conservés."
+  },
+  "qa_previews_only": [
+    "/workspace/scratch/3fced93cfb0a/qa-v16/re5_licker_beta_left_01-gray.jpg",
+    "/workspace/scratch/3fced93cfb0a/qa-v16/re5_licker_beta_left_01-light.jpg"
+  ],
+  "inspection_method": "Inspection indépendante personnelle du rendu source entier et des deux composites calculés avec le vrai canal alpha, gris et clair. Empreinte, dimensions et distribution alpha remesurées sur le PNG original ; comparaison exacte avec la sortie de génération. Aucune retouche ou réparation du livrable.",
+  "original_bytes_modified": false,
+  "original_generated_bytes_verified_identical": true,
+  "one_subject_per_image_reviewed": true,
+  "quality_rejection_is_tool_refusal": false,
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "animation_frames": 1,
+  "can_mirror": false,
+  "recommended_action": "Conserver LEFT 01 comme candidat statique avec la réserve explicite sur le quatrième membre occulté. Ne pas affirmer une anatomie à quatre chaînes intégralement visible. Une nouvelle correction n’est pas imposée seulement pour cette occlusion naturelle ; une future pose montrant ce membre demanderait une revue dédiée."
+}

@@ -1,0 +1,66 @@
+{
+  "schema": "rec.static-candidate-independent-review.v14",
+  "asset": "Bella Sister — cream apron, RE4 original 2005, right 01",
+  "reviewed_at": "2026-11-20",
+  "reviewer": "review_v14",
+  "original_path": "/workspace/scratch/3fced93cfb0a/generated_images/exec-9ca729ab-95fa-4a3f-8d80-9468c5cd5fed.png",
+  "sha256": "99d94443daab27c8f179f3a04518a3b62be87ef209423267c16cba363dce8d79",
+  "bytes": 1343383,
+  "verdict": "CANDIDATE_STATIC_WITH_LIMITS",
+  "source_refs_reviewed": [
+    "references-v14/bella_re4original_steam.jpg",
+    "references-v14/bella_re4original_evilresource.png",
+    "V14 corrected cream LEFT 02, SHA256 c2f01f1dec182161363bf6bf4303fb80a0dd8c6c18a19911a365d788c728f1f8"
+  ],
+  "visual_checks": {
+    "orientation": "Head, trunk, hips, leading boot and chainsaw bar point screen right. Rear boot is partly frontal; pose is front-right three-quarter rather than strict profile.",
+    "costume": "Same original-game cream-apron sister: faded blue-gray blouse with pale collar and gathered sleeves, long purple-brown skirt beneath full cream apron, brown work shoes and original-style bandaged head. No ochre/green costume substitution.",
+    "hands": "Correct ownership retained under turn: the near anatomical RIGHT arm runs back/down from its visible shoulder to the rear trigger handle at image left; farther anatomical LEFT arm extends to the forward wrap handle at image right. Two hands wrap their respective grips with plausible visible digits, no extra limb, no hand on chain teeth. No simple flat flip of the corrected left arm arrangement.",
+    "framing": "One complete woman and one red chainsaw. Entire blade tip, motor, handles, head, hem and both shoes remain inside canvas. No floor, UI, text, pedestal, victim or second person.",
+    "limits": [
+      "Margins remain modest: 57/37/58/28 px at alpha>=16.",
+      "Exact bandage arrangement, cloth pattern, opposite-side weapon geometry and hidden anatomy are generated interpretations.",
+      "Single static candidate; no animation continuity, contacts, pivots or engine admission."
+    ]
+  },
+  "alpha": {
+    "mode": "RGBA",
+    "size": [
+      1199,
+      1312
+    ],
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox_alpha_gte16": [
+      57,
+      37,
+      1141,
+      1284
+    ],
+    "margins_alpha16_left_top_right_bottom": [
+      57,
+      37,
+      58,
+      28
+    ],
+    "pixels_alpha0": 983242,
+    "pixels_alpha1_to15": 19149,
+    "pixels_alpha1_to3": 15550,
+    "pixels_alpha255": 374,
+    "halo_finding": "Real transparency confirmed by 983242 fully transparent pixels and light/gray compositing. No substantial broad halo or opaque backdrop observed; low-alpha residual pixels remain.",
+    "all_subject_alpha_255": false
+  },
+  "qa_previews_only": [
+    "qa-v14-bella-right/gray.jpg",
+    "qa-v14-bella-right/light.jpg"
+  ],
+  "inspection_method": "Both actual RGBA composites over gray RGB128 and light RGB235 were personally viewed with tools.view_image. Original PNG unchanged.",
+  "original_bytes_modified": false,
+  "one_subject_per_image_reviewed": true,
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "animation_frames": 1,
+  "recommended_action": "Retain as a reviewed static right-facing cream-apron candidate alongside corrected left 02; keep the initial left 01 trial unchanged."
+}

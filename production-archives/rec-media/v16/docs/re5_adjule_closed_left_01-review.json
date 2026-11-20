@@ -1,0 +1,103 @@
+{
+  "schema": "rec.static-candidate-independent-review.v16",
+  "asset": "Adjule sombre à tête non scindée — Resident Evil 5 (2009), LEFT 01",
+  "id": "re5_adjule_closed_left_01",
+  "uid": "re5-adjule",
+  "variant": "dark_canine_head_unsplit",
+  "reviewed_at": "2026-11-20T13:05:43.287420+00:00",
+  "reviewer": "reference_research",
+  "asset_path": "assets/re5_adjule_closed_left_01.png",
+  "original_path": "/workspace/scratch/3fced93cfb0a/generated_images/exec-ca7c95ad-7f69-4fc5-8025-107dc20c9050.png",
+  "sha256": "ec5e1136e8be64db4efe6dd243c89ed9383164f8115b26f13b7de604c2137662",
+  "bytes": 1152159,
+  "verdict": "CANDIDATE_STATIC_WITH_LIMITS",
+  "review_status": "CANDIDATE_STATIC_WITH_LIMITS",
+  "excluded_from_candidate_count": false,
+  "source_refs_reviewed": [
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v16/adjule-blackjack-full.png",
+      "sha256": "bc991ae093026d3a42caf797f5dd41c1f75b4bd6c2d0fc8947e84141f07ebf6c",
+      "role": "Rendu entier attribué à RE5 sur site secondaire, recoupé avec le crop historique ; chaîne originale Capcom non certifiée."
+    }
+  ],
+  "source_document": "docs/SOURCES_RE5_CREATURES_V16.json",
+  "prompt_record": "prompts/re5_adjule_closed_left_01.json",
+  "technical_record": "docs/re5_adjule_closed_left_01-technical.json",
+  "visual_checks": {
+    "orientation": "Tête et museau clairement dirigés vers la gauche, colonne et thorax suivent cette direction, arrière-train et courte queue à droite. Vue trois quarts cohérente avec la source.",
+    "variant": "Canidé sombre brun-olive/noir à tête non scindée, museau large, nez sombre brillant, œil pâle, dents saillantes et deux appendices pendants de la région buccale. Aucune tête parasitaire ouverte, aucune variante claire à oreilles dressées, aucun nouvel appendice allongé.",
+    "four_limb_connections": "Deux membres antérieurs continus depuis le thorax jusqu’aux pieds. Le membre postérieur proche est continu depuis la cuisse jusqu’au jarret et au pied à droite. Le quatrième pied et son segment inférieur sont visibles derrière l’antérieur proche ; la jonction proximale est naturellement cachée par le corps et les autres membres. Aucun cinquième pied ou fragment détaché visible.",
+    "framing": "Un seul corps entier ; museau, appendices buccaux, quatre pieds et extrémité de queue sont inclus. Le sujet reprend une pose dynamique proche de la référence ; aucune extrémité principale n’est coupée.",
+    "limb_visibility": {
+      "expected_anatomical_limb_count": 4,
+      "distal_limbs_visibly_present": 4,
+      "occlusion": "Membre arrière éloigné : raccord proximal masqué, pied et segment inférieur visibles.",
+      "all_four_complete_chains_exposed": false,
+      "detached_or_extra_limb_observed": false
+    },
+    "limits": [
+      "La marge transparente de 10 % demandée sur chaque côté n’est pas atteinte. Marges de silhouette alpha >= 16, gauche/haut/droite/bas : [81, 183, 53, 150] px, soit [6.46, 14.59, 4.23, 11.96] %. Aucune extrémité principale n’est coupée.",
+      "La jonction proximale du membre arrière éloigné reste cachée ; quatre raccords intégralement exposés ne sont pas certifiés.",
+      "La pose est une présentation dynamique avec des pieds à des hauteurs différentes. Une garde au sol à quatre appuis simultanés, un pivot de jeu ou un idle ne sont pas démontrés.",
+      "Détails des dents, doigts, pelage et contours restent générés ; ressemblance au rendu source ne signifie pas reconstruction géométrique 1:1.",
+      "Candidat statique généré uniquement : aucune certification 1:1, animation originale, intégration moteur, collision, ancrage ou validation dans le jeu."
+    ]
+  },
+  "failed_gates": [],
+  "uncertain_gates": [],
+  "alpha": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox_alpha_gte16": [
+      81,
+      183,
+      1201,
+      1104
+    ],
+    "margins_alpha16_left_top_right_bottom": [
+      81,
+      183,
+      53,
+      150
+    ],
+    "margins_alpha16_percent_left_top_right_bottom": [
+      6.46,
+      14.59,
+      4.23,
+      11.96
+    ],
+    "bbox_all_nonzero_alpha": [
+      0,
+      0,
+      1251,
+      1254
+    ],
+    "pixels_alpha0": 1077025,
+    "pixels_alpha1_to15": 41832,
+    "pixels_alpha1_to3": 37051,
+    "pixels_alpha255": 926,
+    "all_subject_alpha_255": false,
+    "halo_finding": "Alpha réel vérifié dans le PNG original. Les composites gris et clair montrent le sujet principal sans fond opaque ni halo large substantiel. Des résidus alpha très faibles subsistent hors de la silhouette principale, jusqu’à certains bords ; les octets originaux sont conservés."
+  },
+  "qa_previews_only": [
+    "/workspace/scratch/3fced93cfb0a/qa-v16/re5_adjule_closed_left_01-gray.jpg",
+    "/workspace/scratch/3fced93cfb0a/qa-v16/re5_adjule_closed_left_01-light.jpg"
+  ],
+  "inspection_method": "Inspection indépendante personnelle du rendu source entier et des deux composites calculés avec le vrai canal alpha, gris et clair. Empreinte, dimensions et distribution alpha remesurées sur le PNG original ; comparaison exacte avec la sortie de génération. Aucune retouche ou réparation du livrable.",
+  "original_bytes_modified": false,
+  "original_generated_bytes_verified_identical": true,
+  "one_subject_per_image_reviewed": true,
+  "quality_rejection_is_tool_refusal": false,
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "animation_frames": 1,
+  "can_mirror": false,
+  "recommended_action": "Conserver LEFT 01 comme candidat statique de la variante canine sombre non scindée, avec les limites de pose, d’occlusion et de marges. Ne pas le qualifier comme garde plantée, animation ou phase tête ouverte."
+}

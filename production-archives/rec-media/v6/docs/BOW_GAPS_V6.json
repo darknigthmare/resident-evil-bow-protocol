@@ -1,0 +1,1628 @@
+{
+  "schema": "rec.bow-gap-audit.v6",
+  "checkedDate": "2026-11-19",
+  "repository": "darknigthmare/resident-evil-bow-protocol",
+  "head": "12deacf4cf9b7706eba69fecc1c13593d030180b",
+  "scope": "Read-only audit. Candidate missing independent left-facing static combat poses in the surveyed current manifests; not an inventory of every historical unpublished file.",
+  "allMissingCompleted": false,
+  "globalHistoricalDeduplicationCertified": false,
+  "canonicalOneToOneCertified": false,
+  "sourceProofs": [
+    {
+      "path": "docs/R34_TRACKING.json",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/manifest.json",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/manifest.json"
+    },
+    {
+      "path": "modules/fidelity-r34/assets/jobs.json",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/jobs.json"
+    },
+    {
+      "path": "modules/fidelity-r34/selection/manifest.json",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/selection/manifest.json"
+    },
+    {
+      "path": "modules/fidelity-r27/sprites/manifest.json",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r27/sprites/manifest.json"
+    },
+    {
+      "path": "modules/fidelity-r30/native/new-sources/renders.json",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r30/native/new-sources/renders.json"
+    },
+    {
+      "path": "modules/fidelity-r30/native/other-games/renders.json",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r30/native/other-games/renders.json"
+    },
+    {
+      "path": "modules/fidelity-r33/native/manifest.json",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r33/native/manifest.json"
+    },
+    {
+      "path": "data/directional-art.json",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/data/directional-art.json"
+    },
+    {
+      "path": "docs/R34_DELIVERY.md",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_DELIVERY.md"
+    }
+  ],
+  "openPullRequests": [],
+  "openPullRequestsObservation": {
+    "date": "2026-11-19",
+    "phase": "Read-only audit before V6 generation and any V6 publication or pull request creation",
+    "isLiveCurrentClaimAfterPublication": false
+  },
+  "backup": {
+    "branch": "chore/rec-media-v3-v4-backup-20261119",
+    "head": "85e8daf871ed71291a961bde3acc0ed3011ced80",
+    "scope": "RECOVERY.md and one Alcina portrait only",
+    "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/85e8daf871ed71291a961bde3acc0ed3011ced80/production-archives/rec-media/RECOVERY.md"
+  },
+  "v2Check": {
+    "archive": "references_bow_v6/v2_archive/Resident_Evil_Combat_Generation_V2.zip",
+    "members": 212,
+    "manifestAssets": 49,
+    "fighterEntries": 24,
+    "selectedCreatureMatchesInAssets": 0,
+    "selectedCreatureMatchesInUnproducedJobs": 0,
+    "selectedCreatureMatchesInZipMemberNames": 0
+  },
+  "v3v4Check": {
+    "completeInventoriesAvailable": false,
+    "note": "Archive hashes and prior counts exist; full inventories unavailable in this environment. No global no-duplicate claim. Backed-up branch does not establish missing creatures."
+  },
+  "primaryLeftTargets": [
+    {
+      "id": "re5-reaper",
+      "label": "Reaper",
+      "incarnation": "Resident Evil 5 (2009)",
+      "fighterCategory": "main",
+      "requestedOutput": "idle-left static candidate",
+      "r34Right": {
+        "status": "GENERATED",
+        "admitted": true,
+        "fullBodyReviewed": true,
+        "sourceFacing": "right",
+        "image": "modules/fidelity-r34/assets/generated/re5-reaper/idle-right.png",
+        "receipt": {
+          "path": "modules/fidelity-r34/assets/lots/lot_2/re5-reaper/idle.json",
+          "bytes": 5012,
+          "sha256": "2078c112f773b90867df1fa0980f90b853e52e21c5159f77f1e6a208faa75041"
+        }
+      },
+      "priorFallback": {
+        "id": "re5-reaper",
+        "label": "Reaper",
+        "image": "modules/fidelity-r27/sprites/generated/re5-reaper/idle-right.png",
+        "width": 1402,
+        "height": 1122,
+        "bytes": 2040537,
+        "sha256": "06663c1f1720937a4f25faa5e195b73c604cf312160f0611f34a972972f873d7",
+        "format": "PNG",
+        "bounds": {
+          "x": 13,
+          "y": 2,
+          "width": 1378,
+          "height": 1120
+        },
+        "pivot": {
+          "x": 702,
+          "y": 1122
+        },
+        "sourceFacing": "front",
+        "canMirror": false,
+        "availableStates": [],
+        "fullBodyReviewed": false,
+        "poseKind": "source-presentation",
+        "scope": "combatant-neutral-pose",
+        "status": "REUSED",
+        "generatedByR34": false,
+        "canonicalFidelityCertified": false,
+        "sourceKind": "historical-generated-pose"
+      },
+      "fullBodyReferences": [
+        {
+          "path": "modules/fidelity-r34/assets/lots/lot_2/source-research/re5-reaper-candidate-1.png",
+          "sha256": "6cbaf43440a50f0f05a3a4349e57471a5f2b6c468ece3151027cb2bb0676d193",
+          "observation": "Complete RE5 Reaper game render: two long antennae, four long hooked arms, wing/abdomen plates, luminous pale thorax and two lower jointed legs with hooked feet all end inside the frame. Entire insect support and scythe endpoints visible with margin.",
+          "bytes": 295032,
+          "sourceUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjnaOaZOneAzzJajBDntIvFIgMFpgz3U-0Mi3oeT2eI4gD5PFqzIt0BTjHoBREa_DGgyd-6w4L1RMwwFcHq3XaONamlpuVAuoq1652Ac6P0qhGtW66IRiJMx2FppOAEExbiJftzwqKs1ULP/",
+          "sourceEdition": "Resident Evil 5 (2009)",
+          "exactIdentity": true,
+          "targetEditionAdmitted": true,
+          "role": "actually-inspected-complete-body-source",
+          "repositoryUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_2/source-research/re5-reaper-candidate-1.png",
+          "referenceKind": "retained secondary appearance reference; no primary Capcom asset certification"
+        }
+      ],
+      "historicalRefusalPreserved": false,
+      "portrait": {
+        "status": "GENERATED",
+        "image": "modules/fidelity-r34/assets/generated/re5-reaper/portrait.png"
+      },
+      "sourceFidelityCertified": false,
+      "oppositeSideSurfacesCertified": false,
+      "productionGate": "Reinspect full references; bind exact edition; qualify left geometry, asymmetries and margins; retain historical images.",
+      "existingRightUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/generated/re5-reaper/idle-right.png",
+      "receiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_2/re5-reaper/idle.json"
+    },
+    {
+      "id": "re4r-regenerador",
+      "label": "Regenerador",
+      "incarnation": "Resident Evil 4 remake (2023)",
+      "fighterCategory": "experimental",
+      "requestedOutput": "idle-left static candidate",
+      "r34Right": {
+        "status": "GENERATED",
+        "admitted": true,
+        "fullBodyReviewed": true,
+        "sourceFacing": "right",
+        "image": "modules/fidelity-r34/assets/generated/re4r-regenerador/idle-right.png",
+        "receipt": {
+          "path": "modules/fidelity-r34/assets/lots/lot_4/re4r-regenerador/idle.json",
+          "bytes": 5922,
+          "sha256": "5e5aa6d7e132ebad386d09ad1470c0c7ce2a4c52ea9d60ad2383e0921e2408db"
+        }
+      },
+      "priorFallback": {
+        "id": "re4r-regenerador",
+        "label": "Regenerador",
+        "image": "modules/fidelity-r27/sprites/generated/re4r-regenerador/idle-right.png",
+        "width": 1402,
+        "height": 1122,
+        "bytes": 1304273,
+        "sha256": "7dc946c540e9ed8e5b63bfc2803cde9f41cb9c69964497012cce8848d05b238f",
+        "format": "PNG",
+        "bounds": {
+          "x": 208,
+          "y": 58,
+          "width": 956,
+          "height": 1064
+        },
+        "pivot": {
+          "x": 686,
+          "y": 1122
+        },
+        "sourceFacing": "front",
+        "canMirror": false,
+        "availableStates": [],
+        "fullBodyReviewed": false,
+        "poseKind": "source-presentation",
+        "scope": "combatant-neutral-pose",
+        "status": "REUSED",
+        "generatedByR34": false,
+        "canonicalFidelityCertified": false,
+        "sourceKind": "historical-generated-pose"
+      },
+      "fullBodyReferences": [
+        {
+          "path": "modules/fidelity-r34/assets/lots/lot_4/research/re4r-regenerador-candidate-1.jpg",
+          "sha256": "3433957fd1337a240cfe816b600b3a79a598df54b12419b1bda72e56f2b90308",
+          "observation": "Matching2023Regenerador entirely visible: pale grey rounded body, vertical mouth teeth and small eyes, both long arms with fingers, both wrinkled legs and toes; no2023IronMaiden spikes mixed.",
+          "bytes": 73518,
+          "sourceUrl": "https://blogger.googleusercontent.com/img/a/AVvXsEhKLbnO1GmxQWifQxJTZJAMSh1I-W7IXLvPJzx4DTY-zUo8Op37aKOpIMqk-NVPXAnfAjQGgRPn2v4vGVg2ghzVUSwnIBnXlleFTUT6ayiZVW8psSpxRMTli2i3pLT7B547wGXgh0S849ANe9AT-lOlOlScVmxNQD3y45VuPcaye34IPuUWhg1T7Xv-WahH",
+          "role": "independently-reviewed-whole-body-reference",
+          "bodyCoverage": "whole-visible-subject",
+          "exactIdentity": true,
+          "targetEditionAdmitted": true,
+          "sourceEdition": "Resident Evil 4 remake (2023)",
+          "bodyCompletenessIndependentReviewRequired": false,
+          "repositoryUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/research/re4r-regenerador-candidate-1.jpg",
+          "referenceKind": "retained secondary appearance reference; no primary Capcom asset certification"
+        }
+      ],
+      "historicalRefusalPreserved": false,
+      "portrait": {
+        "status": "GENERATED",
+        "image": "modules/fidelity-r34/assets/generated/re4r-regenerador/portrait.png"
+      },
+      "sourceFidelityCertified": false,
+      "oppositeSideSurfacesCertified": false,
+      "productionGate": "Reinspect full references; bind exact edition; qualify left geometry, asymmetries and margins; retain historical images.",
+      "existingRightUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/generated/re4r-regenerador/idle-right.png",
+      "receiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/re4r-regenerador/idle.json"
+    },
+    {
+      "id": "re4-verdugo",
+      "label": "Verdugo",
+      "incarnation": "Resident Evil 4 (2005)",
+      "fighterCategory": "main",
+      "requestedOutput": "idle-left static candidate",
+      "r34Right": {
+        "status": "GENERATED",
+        "admitted": true,
+        "fullBodyReviewed": true,
+        "sourceFacing": "right",
+        "image": "modules/fidelity-r34/assets/generated/re4-verdugo/idle-right.png",
+        "receipt": {
+          "path": "modules/fidelity-r34/assets/lots/lot_2/re4-verdugo/idle.json",
+          "bytes": 5852,
+          "sha256": "7f19c9b3dd64f0465403a44ace69fa7d29512882f502808147188df7befab9d4"
+        }
+      },
+      "priorFallback": {
+        "id": "re4-verdugo",
+        "label": "Verdugo",
+        "image": "modules/fidelity-r27/sprites/generated/re4-verdugo/idle-right.png",
+        "width": 1193,
+        "height": 1319,
+        "bytes": 1164525,
+        "sha256": "2b9df4091aba6f5fb1c2fded600e086130ea773551be2692de887151f87f1f6e",
+        "format": "PNG",
+        "bounds": {
+          "x": 37,
+          "y": 23,
+          "width": 1145,
+          "height": 1251
+        },
+        "pivot": {
+          "x": 609.5,
+          "y": 1274
+        },
+        "sourceFacing": "front",
+        "canMirror": false,
+        "availableStates": [],
+        "fullBodyReviewed": true,
+        "poseKind": "source-presentation",
+        "scope": "combatant-neutral-pose",
+        "status": "REUSED",
+        "generatedByR34": false,
+        "canonicalFidelityCertified": false,
+        "sourceKind": "historical-generated-pose"
+      },
+      "fullBodyReferences": [
+        {
+          "path": "assets/specimens/re4-verdugo.webp",
+          "sha256": "b17cc038a0adb07115d2891f9adf703141d401bed09e9aeb30d222b32735c11b",
+          "observation": "The full white-background original-game render contains armored body, orange eyes, long hand claws, both feet and the whole segmented blade-ended tail. None of the tail blade or foot tips is cut.",
+          "bytes": 296852,
+          "role": "full-body-reference",
+          "bodyCoverage": "full",
+          "exactIdentity": true,
+          "sourceUrl": "https://blackjackrants.blogspot.com/2020/10/reviewing-monsters-resident-evil-4.html",
+          "sourceEdition": "Resident Evil 4 (2005)",
+          "targetEditionAdmitted": true,
+          "bodyCompletenessIndependentReviewRequired": true,
+          "actuallyInspected": true,
+          "originalToolInputPath": "/workspace/resident-evil-bow-protocol/assets/specimens/re4-verdugo.webp",
+          "independentlyVisuallyReviewedByTransferAgent": true,
+          "repositoryUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/assets/specimens/re4-verdugo.webp",
+          "referenceKind": "retained secondary appearance reference; no primary Capcom asset certification"
+        }
+      ],
+      "historicalRefusalPreserved": false,
+      "portrait": {
+        "status": "GENERATED",
+        "image": "modules/fidelity-r34/assets/generated/re4-verdugo/portrait.png"
+      },
+      "sourceFidelityCertified": false,
+      "oppositeSideSurfacesCertified": false,
+      "productionGate": "Reinspect full references; bind exact edition; qualify left geometry, asymmetries and margins; retain historical images.",
+      "existingRightUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/generated/re4-verdugo/idle-right.png",
+      "receiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_2/re4-verdugo/idle.json"
+    },
+    {
+      "id": "re1-cerberus",
+      "label": "Cerberus",
+      "incarnation": "Resident Evil (1996)",
+      "fighterCategory": "main",
+      "requestedOutput": "idle-left static candidate",
+      "r34Right": {
+        "status": "GENERATED",
+        "admitted": true,
+        "fullBodyReviewed": true,
+        "sourceFacing": "right",
+        "image": "modules/fidelity-r34/assets/generated/re1-cerberus/idle-right.png",
+        "receipt": {
+          "path": "modules/fidelity-r34/assets/lots/lot_3/re1-cerberus/idle.json",
+          "bytes": 5325,
+          "sha256": "982fef825840724704ef77718e86aae3c9290328f11453834e4697c8fbbba906"
+        }
+      },
+      "priorFallback": {
+        "id": "re1-cerberus",
+        "label": "Cerberus",
+        "image": "modules/fidelity-r27/sprites/generated/re1-cerberus/idle-right.png",
+        "width": 1462,
+        "height": 1076,
+        "bytes": 1164620,
+        "sha256": "8ead8fcbbbc032b14f268010f56847aaf4ece7d764255223fd4c9a8a2b9ee2f1",
+        "format": "PNG",
+        "bounds": {
+          "x": 223,
+          "y": 9,
+          "width": 1037,
+          "height": 1057
+        },
+        "pivot": {
+          "x": 741.5,
+          "y": 1066
+        },
+        "sourceFacing": "right",
+        "canMirror": false,
+        "availableStates": [
+          "idle"
+        ],
+        "fullBodyReviewed": true,
+        "poseKind": "neutral-base",
+        "scope": "combatant-neutral-pose",
+        "status": "REUSED",
+        "generatedByR34": false,
+        "canonicalFidelityCertified": false,
+        "sourceKind": "historical-generated-pose"
+      },
+      "fullBodyReferences": [
+        {
+          "path": "assets/specimens/re1-cerberus.webp",
+          "sha256": "0e5ff5e671131d3efada93ad702fb5d612aee3091a74cf7fba58029d3d3a3474",
+          "observation": "The actual1996 full Doberman source contains the high ear and damaged opposite ear/head, black/tan torso, short tail, all four complete paw endpoints subject to natural occlusion and the exposed shoulder; no equipment or amputated body segment is assumed.",
+          "bytes": 39754,
+          "role": "full-body-reference",
+          "bodyCoverage": "partial",
+          "exactIdentity": true,
+          "sourceUrl": "https://blackjackrants.blogspot.com/2020/09/reviewing-monsters-resident-evil-1.html",
+          "sourceEdition": "Resident Evil (1996)",
+          "targetEditionAdmitted": true,
+          "bodyCompletenessIndependentReviewRequired": true,
+          "repositoryUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/assets/specimens/re1-cerberus.webp",
+          "referenceKind": "retained secondary appearance reference; no primary Capcom asset certification"
+        }
+      ],
+      "historicalRefusalPreserved": false,
+      "portrait": {
+        "status": "GENERATED",
+        "image": "modules/fidelity-r34/assets/generated/re1-cerberus/portrait.png"
+      },
+      "sourceFidelityCertified": false,
+      "oppositeSideSurfacesCertified": false,
+      "productionGate": "Reinspect full references; bind exact edition; qualify left geometry, asymmetries and margins; retain historical images.",
+      "existingRightUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/generated/re1-cerberus/idle-right.png",
+      "receiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_3/re1-cerberus/idle.json"
+    },
+    {
+      "id": "re1r-chimera",
+      "label": "Chimera",
+      "incarnation": "Resident Evil remake (2002)",
+      "fighterCategory": "main",
+      "requestedOutput": "idle-left static candidate",
+      "r34Right": {
+        "status": "GENERATED",
+        "admitted": true,
+        "fullBodyReviewed": true,
+        "sourceFacing": "right",
+        "image": "modules/fidelity-r34/assets/generated/re1r-chimera/idle-right.png",
+        "receipt": {
+          "path": "modules/fidelity-r34/assets/lots/lot_2/re1r-chimera/idle.json",
+          "bytes": 5023,
+          "sha256": "44ca2883c90db7acb779cc69bbbf1e29b74462d551aff58af420327062cb61c4"
+        }
+      },
+      "priorFallback": {
+        "id": "re1r-chimera",
+        "label": "Chimera",
+        "image": "modules/fidelity-r27/sprites/generated/re1r-chimera/idle-right.png",
+        "width": 1198,
+        "height": 1313,
+        "bytes": 1314712,
+        "sha256": "2ddce2e0d2429ee71451302dfd6ef70b19ca9d9c50871d9e348fa3976d1efca7",
+        "format": "PNG",
+        "bounds": {
+          "x": 21,
+          "y": 26,
+          "width": 1158,
+          "height": 1271
+        },
+        "pivot": {
+          "x": 600,
+          "y": 1297
+        },
+        "sourceFacing": "right",
+        "canMirror": false,
+        "availableStates": [],
+        "fullBodyReviewed": true,
+        "poseKind": "source-presentation",
+        "scope": "combatant-neutral-pose",
+        "status": "REUSED",
+        "generatedByR34": false,
+        "canonicalFidelityCertified": false,
+        "sourceKind": "historical-generated-pose"
+      },
+      "fullBodyReferences": [
+        {
+          "path": "assets/specimens/re1r-chimera.png",
+          "sha256": "e0035a770dd991b0110bd48ea8fec2fc671775e4ab7ec449c93e448138931c82",
+          "observation": "The inspected full source shows the dark insect/human hybrid, ribbed torso, raised curved hook, other jointed appendages, long mouth, both lower limbs and clawed feet inside the image.",
+          "bytes": 271321,
+          "role": "full-body-reference",
+          "bodyCoverage": "full",
+          "exactIdentity": true,
+          "sourceUrl": "https://bogleech.com/halloween/hall18-re",
+          "sourceEdition": "Resident Evil remake (2002)",
+          "targetEditionAdmitted": true,
+          "bodyCompletenessIndependentReviewRequired": true,
+          "independentlyVisuallyReviewedByTransferAgent": true,
+          "repositoryUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/assets/specimens/re1r-chimera.png",
+          "referenceKind": "retained secondary appearance reference; no primary Capcom asset certification"
+        }
+      ],
+      "historicalRefusalPreserved": false,
+      "portrait": {
+        "status": "GENERATED",
+        "image": "modules/fidelity-r34/assets/generated/re1r-chimera/portrait.png"
+      },
+      "sourceFidelityCertified": false,
+      "oppositeSideSurfacesCertified": false,
+      "productionGate": "Reinspect full references; bind exact edition; qualify left geometry, asymmetries and margins; retain historical images.",
+      "existingRightUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/generated/re1r-chimera/idle-right.png",
+      "receiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_2/re1r-chimera/idle.json"
+    },
+    {
+      "id": "re5-popokarimu",
+      "label": "Popokarimu",
+      "incarnation": "Resident Evil 5 (2009)",
+      "fighterCategory": "main",
+      "requestedOutput": "idle-left static candidate",
+      "r34Right": {
+        "status": "GENERATED",
+        "admitted": true,
+        "fullBodyReviewed": true,
+        "sourceFacing": "right",
+        "image": "modules/fidelity-r34/assets/generated/re5-popokarimu/idle-right.png",
+        "receipt": {
+          "path": "modules/fidelity-r34/assets/lots/lot_1/re5-popokarimu/idle.json",
+          "bytes": 6094,
+          "sha256": "f854a0f7dcdb7dc30008051400e0f8b4080e0f8e097e1748fcb8ba66a46a73d4"
+        }
+      },
+      "priorFallback": {
+        "id": "re5-popokarimu",
+        "label": "Popokarimu",
+        "image": "modules/fidelity-r27/sprites/generated/re5-popokarimu/idle-right.png",
+        "width": 1402,
+        "height": 1122,
+        "bytes": 2452758,
+        "sha256": "03049feb7e191763508fae1c1dfa69cf743d86d2f4d5bed5c6eddcca5773b8f7",
+        "format": "PNG",
+        "bounds": {
+          "x": 7,
+          "y": 3,
+          "width": 1388,
+          "height": 1115
+        },
+        "pivot": {
+          "x": 701,
+          "y": 1118
+        },
+        "sourceFacing": "front",
+        "canMirror": false,
+        "availableStates": [],
+        "fullBodyReviewed": false,
+        "poseKind": "source-presentation",
+        "scope": "combatant-neutral-pose",
+        "status": "REUSED",
+        "generatedByR34": false,
+        "canonicalFidelityCertified": false,
+        "sourceKind": "historical-generated-pose"
+      },
+      "fullBodyReferences": [
+        {
+          "path": "modules/fidelity-r34/assets/source-research/re5-popokarimu-candidate-1.png",
+          "sha256": "84c7640d37a564f2f2dc5a3e2e897dc8b46c5e79dc79cab3d945d5e498fcd4ac",
+          "observation": "Complete brown RE5 Popokarimu concept body fits within frame including folded wing extremities, feet/claws, raised abdomen/tail and terminal appendages.",
+          "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgZ3rMtsxm_NFuXaujJtcF5TXV1626G-2kfZCbOzm620mjwDZpiysgBWB10DpG1DHvDYu314A-oHkCpeo-VQMR2nZdq0VVQX_h4u1si7xKpbfJYo0NrzAMI3Jx1M9XrAHBiEPPD52cNYIPC/",
+          "bytes": 345311,
+          "format": "PNG",
+          "width": 560,
+          "height": 618,
+          "actuallyInspected": true,
+          "fullVisibleBody": true,
+          "observations": [
+            "Source illustration shows the entire low crouched creature: folded wings with terminal claws, head/mandibles, hind appendages and the raised segmented abdomen/tail ending inside the frame. It is an illustrated appearance reference, not raw mesh geometry."
+          ],
+          "limitations": [
+            "Independent generating-agent review remains required; no original geometry, hidden surfaces or original idle animation is certified."
+          ],
+          "generatedMedia": false,
+          "nativeAssetCertified": false,
+          "exactIdentity": true,
+          "targetEditionAdmitted": true,
+          "sourceEdition": "Resident Evil 5 (2009)",
+          "repositoryUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/source-research/re5-popokarimu-candidate-1.png",
+          "referenceKind": "retained secondary appearance reference; no primary Capcom asset certification"
+        }
+      ],
+      "historicalRefusalPreserved": false,
+      "portrait": {
+        "status": "GENERATED",
+        "image": "modules/fidelity-r34/assets/generated/re5-popokarimu/portrait.png"
+      },
+      "sourceFidelityCertified": false,
+      "oppositeSideSurfacesCertified": false,
+      "productionGate": "Reinspect full references; bind exact edition; qualify left geometry, asymmetries and margins; retain historical images.",
+      "existingRightUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/generated/re5-popokarimu/idle-right.png",
+      "receiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_1/re5-popokarimu/idle.json"
+    }
+  ],
+  "additionalCandidate": {
+    "id": "re2r-licker",
+    "incarnation": "Resident Evil 2 remake (2019)",
+    "requestedOutput": "left-facing whole-body static candidate from verified community model",
+    "existingRight": "assets/sprites/bow/re2r-licker/idle-right.png",
+    "existingRightUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/assets/sprites/bow/re2r-licker/idle-right.png",
+    "r34IdleStatus": "HELD_REFERENCE",
+    "reason": "New R34 source was cropped. An older full right pose remains; avoid another right as a purported missing output.",
+    "newSourceCandidate": "https://models.spriters-resource.com/playstation_4/residentevil2remake/asset/326332/",
+    "newSourceNote": "Reference researcher reports complete DAE/FBX and textures downloaded; render and anatomy qualification belongs to that reference task."
+  },
+  "heldFullBodies": [
+    {
+      "id": "re3r-hunter-beta",
+      "label": "Hunter β",
+      "incarnation": "Resident Evil 3 remake (2020)",
+      "fighterCategory": "experimental",
+      "portrait": {
+        "status": "GENERATED",
+        "image": "modules/fidelity-r34/assets/generated/re3r-hunter-beta/portrait.png"
+      },
+      "idle": {
+        "status": "HELD_REFERENCE",
+        "reason": "The2020head, chest and shoulders are visible, but side limbs and lower body are cut. No complete same-form claws, hind feet and rear contour established.",
+        "receipt": {
+          "path": "modules/fidelity-r34/assets/lots/lot_4/re3r-hunter-beta/idle.json",
+          "bytes": 4783,
+          "sha256": "816bcb426b274c16b7c077165a6a63c6c856b6fc7de40421f39b06173c102bce"
+        },
+        "generatedByR34": false
+      },
+      "oldIdle": {
+        "id": "re3r-hunter-beta",
+        "label": "Hunter β",
+        "image": "modules/fidelity-r27/sprites/generated/re3r-hunter-beta/idle-right.png",
+        "width": 1402,
+        "height": 1122,
+        "bytes": 2362719,
+        "sha256": "cb8100c746055d84274d38cdf0485a83432b5d8099dc3242174b76c217f09f0a",
+        "format": "PNG",
+        "bounds": {
+          "x": 6,
+          "y": 65,
+          "width": 1396,
+          "height": 1057
+        },
+        "pivot": {
+          "x": 704,
+          "y": 1122
+        },
+        "sourceFacing": "front",
+        "canMirror": false,
+        "availableStates": [],
+        "fullBodyReviewed": false,
+        "poseKind": "source-presentation",
+        "scope": "combatant-neutral-pose",
+        "status": "REUSED",
+        "generatedByR34": false,
+        "canonicalFidelityCertified": false,
+        "sourceKind": "historical-generated-pose"
+      },
+      "references": [
+        {
+          "path": "assets/catalog/re3r-hunter-beta.png",
+          "bytes": 177607,
+          "sha256": "5107f213efc7861449c61f6de53470a0cb5681912c42cfcd0a42ad5cd0eeeac4",
+          "role": "catalogue-reference",
+          "bodyCoverage": "unknown",
+          "exactIdentity": true,
+          "sourceUrl": "https://www.evilresource.com/resident-evil-3-remake/enemies/hunter-beta",
+          "sourceEdition": "Resident Evil 3 remake (2020)",
+          "targetEditionAdmitted": true,
+          "bodyCompletenessIndependentReviewRequired": true
+        }
+      ],
+      "historicalRefusalPreserved": false,
+      "bodyResearch": [],
+      "directional": null,
+      "receiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/re3r-hunter-beta/idle.json",
+      "decision": "HELD_NEW_COMPLETE_REFERENCE_REQUIRED"
+    },
+    {
+      "id": "re2r-ivy",
+      "label": "Ivy",
+      "incarnation": "Resident Evil 2 remake (2019)",
+      "fighterCategory": "experimental",
+      "portrait": {
+        "status": "GENERATED",
+        "image": "modules/fidelity-r34/assets/generated/re2r-ivy/portrait.png"
+      },
+      "idle": {
+        "status": "HELD_REFERENCE",
+        "reason": "Only the root-wrapped head, shoulders and upper vine cage are visible. Lower root limbs, hands and foot/tendril termini leave the frame; the1998flower-Ivy is a different form.",
+        "receipt": {
+          "path": "modules/fidelity-r34/assets/lots/lot_4/re2r-ivy/idle.json",
+          "bytes": 4146,
+          "sha256": "dd2b6b740bdb3c0130d67774649487e7abcbd380668d1c3fbd832db9db35217f"
+        },
+        "generatedByR34": false
+      },
+      "oldIdle": {
+        "id": "re2r-ivy",
+        "label": "Ivy",
+        "image": "modules/fidelity-r27/sprites/generated/re2r-ivy/idle-right.png",
+        "width": 1402,
+        "height": 1122,
+        "bytes": 1853174,
+        "sha256": "7d2be6bfc17b516f9fabf03d02b96d69bc82b856c9c88cffc61ed42e245d14d9",
+        "format": "PNG",
+        "bounds": {
+          "x": 0,
+          "y": 45,
+          "width": 1402,
+          "height": 1077
+        },
+        "pivot": {
+          "x": 701,
+          "y": 1122
+        },
+        "sourceFacing": "front",
+        "canMirror": false,
+        "availableStates": [],
+        "fullBodyReviewed": false,
+        "poseKind": "source-presentation",
+        "scope": "combatant-neutral-pose",
+        "status": "REUSED",
+        "generatedByR34": false,
+        "canonicalFidelityCertified": false,
+        "sourceKind": "historical-generated-pose"
+      },
+      "references": [
+        {
+          "path": "assets/catalog/re2r-ivy.png",
+          "bytes": 137485,
+          "sha256": "3d479d05044734b9e74ac35aed35696a61dd56235f12f1139fc51986a94b2fc4",
+          "role": "catalogue-reference",
+          "bodyCoverage": "unknown",
+          "exactIdentity": true,
+          "sourceUrl": "https://www.evilresource.com/resident-evil-2-remake/enemies/ivy",
+          "sourceEdition": "Resident Evil 2 remake (2019)",
+          "targetEditionAdmitted": true,
+          "bodyCompletenessIndependentReviewRequired": true
+        }
+      ],
+      "historicalRefusalPreserved": false,
+      "bodyResearch": [],
+      "directional": null,
+      "receiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/re2r-ivy/idle.json",
+      "decision": "HELD_NEW_COMPLETE_REFERENCE_REQUIRED"
+    },
+    {
+      "id": "re3r-drain-deimos",
+      "label": "Drain Deimos",
+      "incarnation": "Resident Evil 3 remake (2020)",
+      "fighterCategory": "experimental",
+      "portrait": {
+        "status": "GENERATED",
+        "image": "modules/fidelity-r34/assets/generated/re3r-drain-deimos/portrait.png"
+      },
+      "idle": {
+        "status": "HELD_REFERENCE",
+        "reason": "An enlarged lateral limb/claw is cut at the left boundary; the full appendage perimeter is not documented. No image_gen body request was issued from insufficient original references.",
+        "receipt": {
+          "path": "modules/fidelity-r34/assets/lots/lot_3/re3r-drain-deimos/idle.json",
+          "bytes": 1374,
+          "sha256": "ad6abebd3bb2ae940d2767ce0cf937df7f7923634ce0e4b8d7268c93a425e54d"
+        },
+        "generatedByR34": false
+      },
+      "oldIdle": {
+        "id": "re3r-drain-deimos",
+        "label": "Drain Deimos",
+        "image": "modules/fidelity-r27/sprites/generated/re3r-drain-deimos/idle-right.png",
+        "width": 1402,
+        "height": 1122,
+        "bytes": 1533960,
+        "sha256": "4bae0486c0e635632d7159aafca1c9f10f5dfca42e0801a97f668d05117183cb",
+        "format": "PNG",
+        "bounds": {
+          "x": 0,
+          "y": 64,
+          "width": 1402,
+          "height": 1057
+        },
+        "pivot": {
+          "x": 701,
+          "y": 1121
+        },
+        "sourceFacing": "front",
+        "canMirror": false,
+        "availableStates": [],
+        "fullBodyReviewed": false,
+        "poseKind": "source-presentation",
+        "scope": "combatant-neutral-pose",
+        "status": "REUSED",
+        "generatedByR34": false,
+        "canonicalFidelityCertified": false,
+        "sourceKind": "historical-generated-pose"
+      },
+      "references": [
+        {
+          "path": "assets/catalog/re3r-drain-deimos.png",
+          "bytes": 121064,
+          "sha256": "6402741774dfcf343dfca22fb06f506bf1a26970b10564448a96f2a563f83712",
+          "role": "catalogue-reference",
+          "bodyCoverage": "unknown",
+          "exactIdentity": true,
+          "sourceUrl": "https://www.evilresource.com/resident-evil-3-remake/enemies/drain-deimos",
+          "sourceEdition": "Resident Evil 3 remake (2020)",
+          "targetEditionAdmitted": true,
+          "bodyCompletenessIndependentReviewRequired": true
+        }
+      ],
+      "historicalRefusalPreserved": false,
+      "bodyResearch": [],
+      "directional": null,
+      "receiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_3/re3r-drain-deimos/idle.json",
+      "decision": "HELD_NEW_COMPLETE_REFERENCE_REQUIRED"
+    },
+    {
+      "id": "re5-u-8",
+      "label": "U-8",
+      "incarnation": "Resident Evil 5 (2009)",
+      "fighterCategory": "main",
+      "portrait": {
+        "status": "GENERATED",
+        "image": "modules/fidelity-r34/assets/generated/re5-u-8/portrait.png"
+      },
+      "idle": {
+        "status": "HELD_REFERENCE",
+        "reason": "The large crustacean limbs/abdomen and sharp lateral points extend outside the image; its extreme leg/equipment ends are not all documented. No image_gen body request was issued from insufficient original references.",
+        "receipt": {
+          "path": "modules/fidelity-r34/assets/lots/lot_3/re5-u-8/idle.json",
+          "bytes": 1396,
+          "sha256": "f42b13d468d3036ca6722cdb279f3b1602e3167116632f02f27eb427a11b0601"
+        },
+        "generatedByR34": false
+      },
+      "oldIdle": {
+        "id": "re5-u-8",
+        "label": "U-8",
+        "image": "modules/fidelity-r27/sprites/generated/re5-u-8/idle-right.png",
+        "width": 1402,
+        "height": 1122,
+        "bytes": 1437199,
+        "sha256": "8ccd431dc936f37297a77170a96f629b89dc5d2004ecee891d7183848a425a16",
+        "format": "PNG",
+        "bounds": {
+          "x": 3,
+          "y": 16,
+          "width": 1386,
+          "height": 1102
+        },
+        "pivot": {
+          "x": 696,
+          "y": 1118
+        },
+        "sourceFacing": "front",
+        "canMirror": false,
+        "availableStates": [],
+        "fullBodyReviewed": false,
+        "poseKind": "source-presentation",
+        "scope": "combatant-neutral-pose",
+        "status": "REUSED",
+        "generatedByR34": false,
+        "canonicalFidelityCertified": false,
+        "sourceKind": "historical-generated-pose"
+      },
+      "references": [
+        {
+          "path": "assets/catalog/re5-u-8.png",
+          "bytes": 118825,
+          "sha256": "4b7eff8896333b104898dec04c8a8c067a81b3ea062ddae0789841b00f866d4e",
+          "role": "catalogue-reference",
+          "bodyCoverage": "unknown",
+          "exactIdentity": true,
+          "sourceUrl": "https://www.evilresource.com/resident-evil-5/enemies/u-8",
+          "sourceEdition": "Resident Evil 5 (2009)",
+          "targetEditionAdmitted": true,
+          "bodyCompletenessIndependentReviewRequired": true
+        }
+      ],
+      "historicalRefusalPreserved": false,
+      "bodyResearch": [],
+      "directional": null,
+      "receiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_3/re5-u-8/idle.json",
+      "decision": "HELD_NEW_COMPLETE_REFERENCE_REQUIRED"
+    },
+    {
+      "id": "re5-licker-beta",
+      "label": "Licker beta",
+      "incarnation": "Resident Evil 5 (2009)",
+      "fighterCategory": "main",
+      "portrait": {
+        "status": "GENERATED",
+        "image": "modules/fidelity-r34/assets/generated/re5-licker-beta/portrait.png"
+      },
+      "idle": {
+        "status": "HELD_REFERENCE",
+        "reason": "The head/upper torso and some reaching limbs are shown, with limbs and rear body cut by the frame; no complete beta silhouette is verified. No image_gen body request was issued from insufficient original references.",
+        "receipt": {
+          "path": "modules/fidelity-r34/assets/lots/lot_3/re5-licker-beta/idle.json",
+          "bytes": 1426,
+          "sha256": "201d94a6d37355b04ce84a3831214a33984bc55523ce8d2dcf694204023e1c55"
+        },
+        "generatedByR34": false
+      },
+      "oldIdle": {
+        "id": "re5-licker-beta",
+        "label": "Licker beta",
+        "image": "modules/fidelity-r27/sprites/generated/re5-licker-beta/idle-right.png",
+        "width": 1402,
+        "height": 1122,
+        "bytes": 1858241,
+        "sha256": "57abb05b2cfff53546096c4aee8180a2ae91f669abb8d5f406a80c004a52436d",
+        "format": "PNG",
+        "bounds": {
+          "x": 0,
+          "y": 64,
+          "width": 1394,
+          "height": 1051
+        },
+        "pivot": {
+          "x": 697,
+          "y": 1115
+        },
+        "sourceFacing": "right",
+        "canMirror": false,
+        "availableStates": [],
+        "fullBodyReviewed": false,
+        "poseKind": "source-presentation",
+        "scope": "combatant-neutral-pose",
+        "status": "REUSED",
+        "generatedByR34": false,
+        "canonicalFidelityCertified": false,
+        "sourceKind": "historical-generated-pose"
+      },
+      "references": [
+        {
+          "path": "assets/catalog/re5-licker-beta.png",
+          "bytes": 173360,
+          "sha256": "4d5fe9086af10fd09f071ed49ae2bc12a4e1574170c9ef711d520b2bedd22a51",
+          "role": "catalogue-reference",
+          "bodyCoverage": "unknown",
+          "exactIdentity": true,
+          "sourceUrl": "https://www.evilresource.com/resident-evil-5/enemies/licker-beta",
+          "sourceEdition": "Resident Evil 5 (2009)",
+          "targetEditionAdmitted": true,
+          "bodyCompletenessIndependentReviewRequired": true
+        }
+      ],
+      "historicalRefusalPreserved": false,
+      "bodyResearch": [],
+      "directional": null,
+      "receiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_3/re5-licker-beta/idle.json",
+      "decision": "HELD_NEW_COMPLETE_REFERENCE_REQUIRED"
+    }
+  ],
+  "excludedFromPriority": [
+    {
+      "id": "re3r-hunter-gamma",
+      "reason": "Already has R34 right, R27 sourceFacing left/fullBodyReviewed true and R30 native views at 0/90/180/270 degrees."
+    },
+    {
+      "id": "re4-novistador",
+      "reason": "Already has R34 right and old R27 sourceFacing left; not a clean missing-left priority."
+    },
+    {
+      "id": "re0-eliminator",
+      "reason": "R34 full body held: white variant lower body not established by complete brown variant; old image already left."
+    },
+    {
+      "id": "re1r-tyrant",
+      "reason": "Historical tool refusal preserved. Do not retry or reinterpret the incarnation to bypass the refusal."
+    }
+  ],
+  "blockedOutputsPreserved": [
+    {
+      "id": "re1r-tyrant",
+      "kind": "portrait",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": null,
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "re1r-tyrant",
+      "kind": "idle",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": null,
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "re2-g",
+      "kind": "portrait",
+      "status": "BLOCKED_BY_TOOL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 96d4bdcf-49bc-48db-aac4-dac111a5cfe3. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/re2-g/portrait.json"
+    },
+    {
+      "id": "re2-g",
+      "kind": "idle",
+      "status": "BLOCKED_BY_TOOL_PRIOR_PHASE",
+      "reason": "The portrait request for this subject was refused; no body retry.",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "re4-bitores-mendez-mutated",
+      "kind": "idle",
+      "status": "BLOCKED_BY_TOOL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 0858d04f-c612-4e88-938c-a98fc5aba6e7. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/re4-bitores-mendez-mutated/idle.json"
+    },
+    {
+      "id": "re5-uroboros",
+      "kind": "portrait",
+      "status": "BLOCKED_BY_TOOL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 41e5390e-6287-4aa0-ae06-71cbbefefbc8. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/re5-uroboros/portrait.json"
+    },
+    {
+      "id": "re5-uroboros",
+      "kind": "idle",
+      "status": "BLOCKED_BY_TOOL_PRIOR_PHASE",
+      "reason": "The portrait request for this subject was refused; no body retry.",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "re6-zombie",
+      "kind": "portrait",
+      "status": "BLOCKED_BY_TOOL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 376f741c-a864-4a42-9cf4-3c74a1d04a83. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_2/re6-zombie/portrait.json"
+    },
+    {
+      "id": "re6-zombie",
+      "kind": "idle",
+      "status": "BLOCKED_BY_TOOL_PRIOR_PHASE",
+      "reason": "The portrait request for this subject was refused; no body retry.",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "re7-jack-baker-scissor",
+      "kind": "portrait",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "{\"error\":\"image generation failed: http 400 Bad Request: Some(\\\"{\\\\n  \\\\\\\"error\\\\\\\": {\\\\n    \\\\\\\"message\\\\\\\": \\\\\\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID bd9d7cde-ed6a-4814-9ed2-7ad0168a6494. safety_violations=[violence].\\\\\\\",\\\\n    \\\\\\\"type\\\\\\\": \\\\\\\"image_generation_user_error\\\\\\\",\\\\n    \\\\\\\"param\\\\\\\": null,\\\\n    \\\\\\\"code\\\\\\\": \\\\\\\"moderation_blocked\\\\\\\",\\\\n    \\\\\\\"moderation_details\\\\\\\": {\\\\n      \\\\\\\"moderation_stage\\\\\\\": \\\\\\\"output\\\\\\\",\\\\n      \\\\\\\"categories\\\\\\\": [\\\\n        \\\\\\\"violence\\\\\\\"\\\\n      ]\\\\n    }\\\\n  }\\\\n}\\\")\",\"keys\":[\"error\"]}",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "re7-jack-baker-scissor",
+      "kind": "idle",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "{\"error\":\"image generation failed: http 400 Bad Request: Some(\\\"{\\\\n  \\\\\\\"error\\\\\\\": {\\\\n    \\\\\\\"message\\\\\\\": \\\\\\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID bd9d7cde-ed6a-4814-9ed2-7ad0168a6494. safety_violations=[violence].\\\\\\\",\\\\n    \\\\\\\"type\\\\\\\": \\\\\\\"image_generation_user_error\\\\\\\",\\\\n    \\\\\\\"param\\\\\\\": null,\\\\n    \\\\\\\"code\\\\\\\": \\\\\\\"moderation_blocked\\\\\\\",\\\\n    \\\\\\\"moderation_details\\\\\\\": {\\\\n      \\\\\\\"moderation_stage\\\\\\\": \\\\\\\"output\\\\\\\",\\\\n      \\\\\\\"categories\\\\\\\": [\\\\n        \\\\\\\"violence\\\\\\\"\\\\n      ]\\\\n    }\\\\n  }\\\\n}\\\")\",\"keys\":[\"error\"]}",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "re7-marguerite-baker-mutated",
+      "kind": "portrait",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 39d7c3d3-9342-4ca5-bd8e-e67e47260939. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "re7-marguerite-baker-mutated",
+      "kind": "idle",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 39d7c3d3-9342-4ca5-bd8e-e67e47260939. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "recv-alexia",
+      "kind": "portrait",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "Image generation safety system rejected supplied request as sexual content; no artifact delivered. No sprite counted.",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "recv-alexia",
+      "kind": "idle",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "Image generation safety system rejected supplied request as sexual content; no artifact delivered. No sprite counted.",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "recv-alexia-ashford-third-form",
+      "kind": "portrait",
+      "status": "BLOCKED_BY_TOOL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID dfb361e8-1370-4f0d-9014-46abedf89b50. safety_violations=[sexual].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"sexual\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_2/recv-alexia-ashford-third-form/portrait.json"
+    },
+    {
+      "id": "recv-alexia-ashford-third-form",
+      "kind": "idle",
+      "status": "BLOCKED_BY_TOOL_PRIOR_PHASE",
+      "reason": "The portrait request for this subject was refused; no body retry.",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "recv-tyrant",
+      "kind": "portrait",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "Image generation safety system rejected output as sexual content; no artifact delivered. No sprite counted.",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "recv-tyrant",
+      "kind": "idle",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "Image generation safety system rejected output as sexual content; no artifact delivered. No sprite counted.",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "rerev2-splasher",
+      "kind": "portrait",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 01aed0a4-4ecc-46f6-9ca9-22a707c6fc14. safety_violations=[violence, sexual].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"sexual\\\",\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "rerev2-splasher",
+      "kind": "idle",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 01aed0a4-4ecc-46f6-9ca9-22a707c6fc14. safety_violations=[violence, sexual].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"sexual\\\",\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "revillage-lycan",
+      "kind": "portrait",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 45aa3f81-156d-4c74-8434-e1f59a9fe88e. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "revillage-lycan",
+      "kind": "idle",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 45aa3f81-156d-4c74-8434-e1f59a9fe88e. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "revillage-soldat-zwei",
+      "kind": "portrait",
+      "status": "BLOCKED_BY_TOOL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID a33bf075-1973-4bb1-acf3-5ee55108e7c3. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_3/revillage-soldat-zwei/portrait.json"
+    },
+    {
+      "id": "revillage-soldat-zwei",
+      "kind": "idle",
+      "status": "BLOCKED_BY_TOOL_PRIOR_PHASE",
+      "reason": "The portrait request for this subject was refused; no body retry.",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "revillage-sturm",
+      "kind": "portrait",
+      "status": "BLOCKED_BY_TOOL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 765effc2-8d84-41d6-bd1b-55eb62ae6975. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/revillage-sturm/portrait.json"
+    },
+    {
+      "id": "revillage-sturm",
+      "kind": "idle",
+      "status": "BLOCKED_BY_TOOL_PRIOR_PHASE",
+      "reason": "The portrait request for this subject was refused; no body retry.",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "re0-zombie",
+      "kind": "portrait",
+      "status": "BLOCKED_BY_TOOL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 78fe43dd-f12e-4669-9b8d-2e346a97a55f. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_3/re0-zombie/portrait.json"
+    },
+    {
+      "id": "re0-zombie",
+      "kind": "idle",
+      "status": "BLOCKED_BY_TOOL_PRIOR_PHASE",
+      "reason": "The portrait request for this subject was refused; no body retry.",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "re1r-crimson-head-prototype-1",
+      "kind": "portrait",
+      "status": "BLOCKED_BY_TOOL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 15d6369d-8d27-4194-ade2-ed386dcb170d. safety_violations=[sexual, violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"sexual\\\",\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_2/re1r-crimson-head-prototype-1/portrait.json"
+    },
+    {
+      "id": "re1r-crimson-head-prototype-1",
+      "kind": "idle",
+      "status": "BLOCKED_BY_TOOL_PRIOR_PHASE",
+      "reason": "The portrait request for this subject was refused; no body retry.",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "re2r-g-first-form",
+      "kind": "portrait",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 5588e3c1-2507-4f09-8827-fac4a9da7c92. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "re2r-g-first-form",
+      "kind": "idle",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 5588e3c1-2507-4f09-8827-fac4a9da7c92. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "re2r-zombie",
+      "kind": "portrait",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "{\"error\":\"image generation failed: http 400 Bad Request: Some(\\\"{\\\\n  \\\\\\\"error\\\\\\\": {\\\\n    \\\\\\\"message\\\\\\\": \\\\\\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 5a42909a-4c24-4cdf-b9fe-4ccea6896c13. safety_violations=[violence].\\\\\\\",\\\\n    \\\\\\\"type\\\\\\\": \\\\\\\"image_generation_user_error\\\\\\\",\\\\n    \\\\\\\"param\\\\\\\": null,\\\\n    \\\\\\\"code\\\\\\\": \\\\\\\"moderation_blocked\\\\\\\",\\\\n    \\\\\\\"moderation_details\\\\\\\": {\\\\n      \\\\\\\"moderation_stage\\\\\\\": \\\\\\\"output\\\\\\\",\\\\n      \\\\\\\"categories\\\\\\\": [\\\\n        \\\\\\\"violence\\\\\\\"\\\\n      ]\\\\n    }\\\\n  }\\\\n}\\\")\",\"keys\":[\"error\"]}",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "re2r-zombie",
+      "kind": "idle",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "{\"error\":\"image generation failed: http 400 Bad Request: Some(\\\"{\\\\n  \\\\\\\"error\\\\\\\": {\\\\n    \\\\\\\"message\\\\\\\": \\\\\\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 5a42909a-4c24-4cdf-b9fe-4ccea6896c13. safety_violations=[violence].\\\\\\\",\\\\n    \\\\\\\"type\\\\\\\": \\\\\\\"image_generation_user_error\\\\\\\",\\\\n    \\\\\\\"param\\\\\\\": null,\\\\n    \\\\\\\"code\\\\\\\": \\\\\\\"moderation_blocked\\\\\\\",\\\\n    \\\\\\\"moderation_details\\\\\\\": {\\\\n      \\\\\\\"moderation_stage\\\\\\\": \\\\\\\"output\\\\\\\",\\\\n      \\\\\\\"categories\\\\\\\": [\\\\n        \\\\\\\"violence\\\\\\\"\\\\n      ]\\\\n    }\\\\n  }\\\\n}\\\")\",\"keys\":[\"error\"]}",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "re3-zombie",
+      "kind": "portrait",
+      "status": "BLOCKED_BY_TOOL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 1f84159c-98ad-4e9c-8b7e-4b2dff569586. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_1/re3-zombie/portrait.json"
+    },
+    {
+      "id": "re3-zombie",
+      "kind": "idle",
+      "status": "BLOCKED_BY_TOOL_PRIOR_PHASE",
+      "reason": "The portrait request for this subject was refused; no body retry.",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "re3r-zombie",
+      "kind": "portrait",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "image generation failed: http 400 Bad Request: Your request was rejected by the safety system. safety_violations=[violence]. moderation_stage=output; categories=[violence].",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "re3r-zombie",
+      "kind": "idle",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "image generation failed: http 400 Bad Request: Your request was rejected by the safety system. safety_violations=[violence]. moderation_stage=output; categories=[violence].",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "re4r-bitores-mendez-first-mutation",
+      "kind": "portrait",
+      "status": "BLOCKED_BY_TOOL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 1b17306a-2cda-4b8d-b08a-3cef46629129. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_1/re4r-bitores-mendez-first-mutation/portrait.json"
+    },
+    {
+      "id": "re4r-bitores-mendez-first-mutation",
+      "kind": "idle",
+      "status": "BLOCKED_BY_TOOL_PRIOR_PHASE",
+      "reason": "The portrait request for this subject was refused; no body retry.",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "re4r-bitores-mendez-second-mutation",
+      "kind": "portrait",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 8874efed-21c3-4c49-acc8-af432dc854d2. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "re4r-bitores-mendez-second-mutation",
+      "kind": "idle",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 8874efed-21c3-4c49-acc8-af432dc854d2. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "re4r-brute",
+      "kind": "portrait",
+      "status": "BLOCKED_BY_TOOL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 026675fe-650a-409c-a32b-3652c390bfac. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_3/re4r-brute/portrait.json"
+    },
+    {
+      "id": "re4r-brute",
+      "kind": "idle",
+      "status": "BLOCKED_BY_TOOL_PRIOR_PHASE",
+      "reason": "The portrait request for this subject was refused; no body retry.",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "re4r-chainsaw-villager",
+      "kind": "portrait",
+      "status": "BLOCKED_BY_TOOL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 7e6f6c80-eaa5-4f1c-be0d-8e8e80118f72. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_1/re4r-chainsaw-villager/portrait.json"
+    },
+    {
+      "id": "re4r-chainsaw-villager",
+      "kind": "idle",
+      "status": "BLOCKED_BY_TOOL_PRIOR_PHASE",
+      "reason": "The portrait request for this subject was refused; no body retry.",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "re5-town-majini",
+      "kind": "portrait",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 03bc4c13-39ca-4a56-9efe-ce5f404d83e5. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "re5-town-majini",
+      "kind": "idle",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 03bc4c13-39ca-4a56-9efe-ce5f404d83e5. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "re6-deborah-harper",
+      "kind": "portrait",
+      "status": "BLOCKED_BY_TOOL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 74a8665f-688e-4c07-a4f5-7ecd30ef63b2. safety_violations=[violence, sexual].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"sexual\\\",\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_2/re6-deborah-harper/portrait.json"
+    },
+    {
+      "id": "re6-deborah-harper",
+      "kind": "idle",
+      "status": "BLOCKED_BY_TOOL_PRIOR_PHASE",
+      "reason": "The portrait request for this subject was refused; no body retry.",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "re6-javo",
+      "kind": "portrait",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID a76fb7c0-cf8b-41bf-be7c-740e1691c9e8. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "re6-javo",
+      "kind": "idle",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID a76fb7c0-cf8b-41bf-be7c-740e1691c9e8. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "reoutbreak-regis-licker",
+      "kind": "portrait",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 0ca8cc99-c573-4326-a27c-91ebbcccfcf1. safety_violations=[sexual, violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"sexual\\\",\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "reoutbreak-regis-licker",
+      "kind": "idle",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 0ca8cc99-c573-4326-a27c-91ebbcccfcf1. safety_violations=[sexual, violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"sexual\\\",\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "reoutbreak-thanatos",
+      "kind": "portrait",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 9e26c58b-a395-4238-8912-b5e7e33ea3bb. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "reoutbreak-thanatos",
+      "kind": "idle",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 9e26c58b-a395-4238-8912-b5e7e33ea3bb. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "reoutbreak-zombie",
+      "kind": "portrait",
+      "status": "BLOCKED_BY_TOOL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 92faf89d-fd29-44e6-bad7-95023528d179. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_1/reoutbreak-zombie/portrait.json"
+    },
+    {
+      "id": "reoutbreak-zombie",
+      "kind": "idle",
+      "status": "BLOCKED_BY_TOOL_PRIOR_PHASE",
+      "reason": "The portrait request for this subject was refused; no body retry.",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "reoutbreak2-zombie",
+      "kind": "portrait",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 4f1d020a-cf2d-4051-98b8-ee3eab0879ec. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "reoutbreak2-zombie",
+      "kind": "idle",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 4f1d020a-cf2d-4051-98b8-ee3eab0879ec. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "rerequiem-blister-head",
+      "kind": "portrait",
+      "status": "BLOCKED_BY_TOOL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 578850c7-4c75-4ac0-b9a7-8a0271d3bb32. safety_violations=[violence, sexual].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"sexual\\\",\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_3/rerequiem-blister-head/portrait.json"
+    },
+    {
+      "id": "rerequiem-blister-head",
+      "kind": "idle",
+      "status": "BLOCKED_BY_TOOL_PRIOR_PHASE",
+      "reason": "The portrait request for this subject was refused; no body retry.",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "rerequiem-chef-zombie",
+      "kind": "portrait",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "{\"error\":\"image generation failed: http 400 Bad Request: Some(\\\"{\\\\n  \\\\\\\"error\\\\\\\": {\\\\n    \\\\\\\"message\\\\\\\": \\\\\\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID ffe580b7-2e33-4d3b-a9c7-41fdbb1ec1c5. safety_violations=[violence].\\\\\\\",\\\\n    \\\\\\\"type\\\\\\\": \\\\\\\"image_generation_user_error\\\\\\\",\\\\n    \\\\\\\"param\\\\\\\": null,\\\\n    \\\\\\\"code\\\\\\\": \\\\\\\"moderation_blocked\\\\\\\",\\\\n    \\\\\\\"moderation_details\\\\\\\": {\\\\n      \\\\\\\"moderation_stage\\\\\\\": \\\\\\\"output\\\\\\\",\\\\n      \\\\\\\"categories\\\\\\\": [\\\\n        \\\\\\\"violence\\\\\\\"\\\\n      ]\\\\n    }\\\\n  }\\\\n}\\\")\",\"keys\":[\"error\"]}",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "rerequiem-chef-zombie",
+      "kind": "idle",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "{\"error\":\"image generation failed: http 400 Bad Request: Some(\\\"{\\\\n  \\\\\\\"error\\\\\\\": {\\\\n    \\\\\\\"message\\\\\\\": \\\\\\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID ffe580b7-2e33-4d3b-a9c7-41fdbb1ec1c5. safety_violations=[violence].\\\\\\\",\\\\n    \\\\\\\"type\\\\\\\": \\\\\\\"image_generation_user_error\\\\\\\",\\\\n    \\\\\\\"param\\\\\\\": null,\\\\n    \\\\\\\"code\\\\\\\": \\\\\\\"moderation_blocked\\\\\\\",\\\\n    \\\\\\\"moderation_details\\\\\\\": {\\\\n      \\\\\\\"moderation_stage\\\\\\\": \\\\\\\"output\\\\\\\",\\\\n      \\\\\\\"categories\\\\\\\": [\\\\n        \\\\\\\"violence\\\\\\\"\\\\n      ]\\\\n    }\\\\n  }\\\\n}\\\")\",\"keys\":[\"error\"]}",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "rerequiem-wrenwood-zombie",
+      "kind": "portrait",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 6cbefcdd-cbd7-4e56-9036-7225c104ebd3. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "rerequiem-wrenwood-zombie",
+      "kind": "idle",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 6cbefcdd-cbd7-4e56-9036-7225c104ebd3. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "rerequiem-zombie-blind-patient",
+      "kind": "portrait",
+      "status": "BLOCKED_BY_TOOL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID c742ed29-3094-496a-abd9-a7aa92c75d06. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_2/rerequiem-zombie-blind-patient/portrait.json"
+    },
+    {
+      "id": "rerequiem-zombie-blind-patient",
+      "kind": "idle",
+      "status": "BLOCKED_BY_TOOL_PRIOR_PHASE",
+      "reason": "The portrait request for this subject was refused; no body retry.",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "rerequiem-zombie-doctor",
+      "kind": "portrait",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 028292d0-cdae-4f6e-8aa0-a68602526e7a. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "rerequiem-zombie-doctor",
+      "kind": "idle",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 028292d0-cdae-4f6e-8aa0-a68602526e7a. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "rerequiem-zombie-patient",
+      "kind": "portrait",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID e9d10049-7305-4781-aa5a-0efc030b1316. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "rerequiem-zombie-patient",
+      "kind": "idle",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID e9d10049-7305-4781-aa5a-0efc030b1316. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "rerequiem-zombie-staff-member",
+      "kind": "portrait",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "{\"error\":\"image generation failed: http 400 Bad Request: Some(\\\"{\\\\n  \\\\\\\"error\\\\\\\": {\\\\n    \\\\\\\"message\\\\\\\": \\\\\\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 71259198-f839-42b6-b20c-b113162e0835. safety_violations=[violence].\\\\\\\",\\\\n    \\\\\\\"type\\\\\\\": \\\\\\\"image_generation_user_error\\\\\\\",\\\\n    \\\\\\\"param\\\\\\\": null,\\\\n    \\\\\\\"code\\\\\\\": \\\\\\\"moderation_blocked\\\\\\\",\\\\n    \\\\\\\"moderation_details\\\\\\\": {\\\\n      \\\\\\\"moderation_stage\\\\\\\": \\\\\\\"output\\\\\\\",\\\\n      \\\\\\\"categories\\\\\\\": [\\\\n        \\\\\\\"violence\\\\\\\"\\\\n      ]\\\\n    }\\\\n  }\\\\n}\\\")\",\"keys\":[\"error\"]}",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "rerequiem-zombie-staff-member",
+      "kind": "idle",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "{\"error\":\"image generation failed: http 400 Bad Request: Some(\\\"{\\\\n  \\\\\\\"error\\\\\\\": {\\\\n    \\\\\\\"message\\\\\\\": \\\\\\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 71259198-f839-42b6-b20c-b113162e0835. safety_violations=[violence].\\\\\\\",\\\\n    \\\\\\\"type\\\\\\\": \\\\\\\"image_generation_user_error\\\\\\\",\\\\n    \\\\\\\"param\\\\\\\": null,\\\\n    \\\\\\\"code\\\\\\\": \\\\\\\"moderation_blocked\\\\\\\",\\\\n    \\\\\\\"moderation_details\\\\\\\": {\\\\n      \\\\\\\"moderation_stage\\\\\\\": \\\\\\\"output\\\\\\\",\\\\n      \\\\\\\"categories\\\\\\\": [\\\\n        \\\\\\\"violence\\\\\\\"\\\\n      ]\\\\n    }\\\\n  }\\\\n}\\\")\",\"keys\":[\"error\"]}",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "rerev2-afflicted",
+      "kind": "portrait",
+      "status": "BLOCKED_BY_TOOL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID f0962a33-df68-4e35-8577-4db4ae47d916. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_3/rerev2-afflicted/portrait.json"
+    },
+    {
+      "id": "rerev2-afflicted",
+      "kind": "idle",
+      "status": "BLOCKED_BY_TOOL_PRIOR_PHASE",
+      "reason": "The portrait request for this subject was refused; no body retry.",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "revillage-bela-dimitrescu",
+      "kind": "portrait",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 4cad7715-e615-47ec-92e8-eabc613122bf. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "revillage-bela-dimitrescu",
+      "kind": "idle",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 4cad7715-e615-47ec-92e8-eabc613122bf. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "revillage-urias-drac",
+      "kind": "portrait",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "{\"error\":\"image generation failed: http 400 Bad Request: Some(\\\"{\\\\n  \\\\\\\"error\\\\\\\": {\\\\n    \\\\\\\"message\\\\\\\": \\\\\\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 88b3b5a5-a492-4141-9d29-64530ea9534b. safety_violations=[violence].\\\\\\\",\\\\n    \\\\\\\"type\\\\\\\": \\\\\\\"image_generation_user_error\\\\\\\",\\\\n    \\\\\\\"param\\\\\\\": null,\\\\n    \\\\\\\"code\\\\\\\": \\\\\\\"moderation_blocked\\\\\\\",\\\\n    \\\\\\\"moderation_details\\\\\\\": {\\\\n      \\\\\\\"moderation_stage\\\\\\\": \\\\\\\"output\\\\\\\",\\\\n      \\\\\\\"categories\\\\\\\": [\\\\n        \\\\\\\"violence\\\\\\\"\\\\n      ]\\\\n    }\\\\n  }\\\\n}\\\")\",\"keys\":[\"error\"]}",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    },
+    {
+      "id": "revillage-urias-drac",
+      "kind": "idle",
+      "status": "BLOCKED_HISTORICAL_REFUSAL",
+      "reason": "{\"error\":\"image generation failed: http 400 Bad Request: Some(\\\"{\\\\n  \\\\\\\"error\\\\\\\": {\\\\n    \\\\\\\"message\\\\\\\": \\\\\\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 88b3b5a5-a492-4141-9d29-64530ea9534b. safety_violations=[violence].\\\\\\\",\\\\n    \\\\\\\"type\\\\\\\": \\\\\\\"image_generation_user_error\\\\\\\",\\\\n    \\\\\\\"param\\\\\\\": null,\\\\n    \\\\\\\"code\\\\\\\": \\\\\\\"moderation_blocked\\\\\\\",\\\\n    \\\\\\\"moderation_details\\\\\\\": {\\\\n      \\\\\\\"moderation_stage\\\\\\\": \\\\\\\"output\\\\\\\",\\\\n      \\\\\\\"categories\\\\\\\": [\\\\n        \\\\\\\"violence\\\\\\\"\\\\n      ]\\\\n    }\\\\n  }\\\\n}\\\")\",\"keys\":[\"error\"]}",
+      "receiptUrl": null,
+      "trackingEvidenceUrl": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_TRACKING.json",
+      "receiptEvidenceNote": "No individual receipt path supplied by the tracking entry; use the dated R34 tracking record."
+    }
+  ],
+  "limits": [
+    "No image generation in this audit.",
+    "Portraits already exist for all six primary targets.",
+    "A whole-body source does not certify hidden opposite-side surfaces.",
+    "No software mirroring of asymmetric bodies.",
+    "No source native/official claim for reposted secondary illustrations.",
+    "No game integration, camera test or animation certification."
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "schema": "rec.static-candidate-independent-review.v14",
+  "asset": "Bella Sister — green skirt, RE4 original 2005, right 01",
+  "reviewed_at": "2026-11-20",
+  "reviewer": "review_v14",
+  "original_path": "/workspace/scratch/3fced93cfb0a/generated_images/exec-647b0a1a-44a1-4cfc-a970-5a1683497ff0.png",
+  "sha256": "91116886d5b6e81f1cbab7d64b5a6bbee7d2a86bda501f70b0d492898fba2578",
+  "bytes": 1230382,
+  "verdict": "CANDIDATE_STATIC_WITH_LIMITS",
+  "source_refs_reviewed": [
+    "references-v14/bella_re4original_steam.jpg",
+    "references-v14/bella_re4original_evilresource.png",
+    "V14 corrected cream RIGHT 01 pose, SHA256 99d94443daab27c8f179f3a04518a3b62be87ef209423267c16cba363dce8d79",
+    "V14 green LEFT 03 costume, SHA256 9790f98ea5a72ebb893b31fa05e7b15169fbc0591eafccbfae1eb377290f389d"
+  ],
+  "visual_checks": {
+    "orientation": "Head, shoulders, torso, hips and leading shoe point screen right; rear shoe is more frontal. Chainsaw bar points diagonally down-right, fully clear of the figure. Front-right three-quarter stance.",
+    "costume": "Ochre/olive-brown blouse with pale narrow chest pleats, gathered sleeves, dark green long skirt with lower dark bands, brown worn shoes and original-style bandaged head. No residual cream apron, blue-gray blouse or purple-brown skirt.",
+    "hands": "Correct anatomical ownership inherited from reviewed right pose: near RIGHT shoulder/arm stays behind at image left and reaches to rear trigger handle; far LEFT arm reaches forward to the wrap handle at image right. Both grips are attached and plausible, with no extra arm or fingers contacting chain teeth.",
+    "framing": "One full woman and one complete red chainsaw. Both shoes, full hem, head and blade tip lie inside canvas. No second figure, floor, pedestal, scenery, text or watermark.",
+    "limits": [
+      "Bottom margin only 11 px and top 26 px at alpha>=16; full silhouette remains contained but vertical margins are narrow.",
+      "Exact head wrapping, face, cloth texture and hidden weapon geometry are generated interpretations.",
+      "Single static view; no animation, contacts, pivot or engine admission."
+    ]
+  },
+  "alpha": {
+    "mode": "RGBA",
+    "size": [
+      1312,
+      1199
+    ],
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox_alpha_gte16": [
+      104,
+      26,
+      1204,
+      1188
+    ],
+    "margins_alpha16_left_top_right_bottom": [
+      104,
+      26,
+      108,
+      11
+    ],
+    "pixels_alpha0": 1020414,
+    "pixels_alpha1_to15": 21753,
+    "pixels_alpha1_to3": 18142,
+    "pixels_alpha255": 266,
+    "halo_finding": "Real transparency verified with 1020414 fully transparent pixels. No substantial broad halo or opaque backdrop seen on actual light/gray composites; low-alpha residuals remain.",
+    "all_subject_alpha_255": false
+  },
+  "qa_previews_only": [
+    "qa-v14-bella-green-right/gray.jpg",
+    "qa-v14-bella-green-right/light.jpg"
+  ],
+  "inspection_method": "Both actual alpha composites over RGB128 gray and RGB235 light were personally inspected with tools.view_image.",
+  "original_bytes_modified": false,
+  "one_subject_per_image_reviewed": true,
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "animation_frames": 1,
+  "recommended_action": "Retain as the green-skirt right candidate alongside corrected LEFT 03; preserve preceding left 01/02 trials unchanged."
+}

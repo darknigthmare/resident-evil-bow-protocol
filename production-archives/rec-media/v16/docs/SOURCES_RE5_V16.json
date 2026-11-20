@@ -1,0 +1,409 @@
+{
+  "schema": "rec.media.source-recovery.v16/1",
+  "reviewed_at_utc": "2026-11-20T12:43:42.601184+00:00",
+  "repository_read_commit": "6599f75c88472351aacaf19e7a6b1197e6c58625",
+  "scope": "Préparation V16 : sources et directions existantes Executioner / Chainsaw Majini RE5, sans génération ni modification du dépôt.",
+  "method": {
+    "retrieval": "Lecture git show HEAD:path dans le clone local ; octets des quatre PNG récupérés sans modification.",
+    "source_inspection": "Les deux PNG sources RGB complets ont été examinés visuellement.",
+    "candidate_inspection": "Les PNG candidats ont été examinés sur des composites gris qui respectent leur canal alpha ; les composites sont des aperçus de contrôle séparés.",
+    "alpha_measurement": "Dimensions, SHA256, alpha et boîtes mesurés depuis les PNG originaux. Les boîtes alpha>=16 reproduisent les mesures R34 ; alpha>0 détecte aussi des traces presque transparentes.",
+    "web_provenance": "URL reprise des reçus R34 archivés. Pas de nouvelle qualification web de cette URL dans cet audit.",
+    "historical_refusal_scope": "Reçus R27/R29, générations R29, corps/portraits et études/requêtes R34 listés, puis deux entrées CONTINUATION_20261119. L’absence de refus est limitée à ce corpus inspecté, pas une affirmation sur tout historique externe."
+  },
+  "subjects": [
+    {
+      "uid": "re5-executioner",
+      "label": "Executioner Majini",
+      "incarnation": "Resident Evil 5 (2009), forme ordinaire à cagoule textile et hache normale",
+      "source": {
+        "local_path": "/workspace/scratch/3fced93cfb0a/references-v16/re5-miniboss-1.png",
+        "git_path": "modules/fidelity-r34/assets/source-research/re5-miniboss-1.png",
+        "bytes": 373546,
+        "sha256": "624fe9554a3055f7eba2474bb44da346d785a28d4f6b560e40ff60f0090e7963",
+        "original_bytes_unchanged": true,
+        "width": 619,
+        "height": 658,
+        "mode": "RGB",
+        "recorded_source_url": "https://blackjackrants.blogspot.com/2020/10/reviewing-monsters-resident-evil-5.html"
+      },
+      "source_body_coverage": {
+        "complete_visible_silhouette": true,
+        "equipment_complete_in_source": true,
+        "front_near_three_quarter": true,
+        "occlusion": "Un seul pied/une seule botte apparaît sous le tablier ; l’autre jambe est naturellement cachée. La source ne justifie pas l’exposition d’une seconde botte.",
+        "source_edges": "Cagoule, clous, crochet arrière, mains, hache entière et botte visible sont inclus dans le PNG source ; marge gauche étroite autour de la hache."
+      },
+      "anatomical_asymmetry": {
+        "coordinate_rule": "Dans cette source principalement frontale, le bras à gauche de l’image est le bras droit anatomique.",
+        "right_arm": "Bras situé à gauche de la source, descendant vers le manche ; main droite tenant le manche plus près de la tête de hache.",
+        "left_arm": "Bras situé à droite de la source, plié devant le torse ; main gauche tenant le manche plus près de son talon arrière.",
+        "eyes": "Aucun œil directement visible sous la cagoule textile. Ne pas en créer.",
+        "head_and_body": "Grande cagoule textile irrégulière, coutures et nombreux clous/spikes sur tête/épaules ; peau exposée cousue aux épaules, longs gants rouges, tablier lourd déchiré. Les gros clous/bolts ne sont pas symétriques.",
+        "rear_hook": "Grand crochet derrière le dos/à hauteur de taille, dépassant à droite de la projection source ; rester derrière le sujet dans une rotation. L’ancrage anatomique exact est partiellement caché et n’est pas certifié par cette seule vue.",
+        "weapon": "Grande tête de hache normale chaînée, découpe inférieure irrégulière et dents/pointes ; toutes les extrémités doivent rester dans le cadre.",
+        "boot": "Une botte visible sous le tablier ; son attribution anatomique n’est pas assez certaine pour être imposée depuis cette seule projection."
+      },
+      "existing_r34_candidate": {
+        "local_path": "/workspace/scratch/3fced93cfb0a/references-v16/executioner-r34-idle-right-name.png",
+        "git_path": "modules/fidelity-r34/assets/generated/re5-executioner/idle-right.png",
+        "bytes": 1817299,
+        "sha256": "5cf19f3ebba9369e656d35bd1f7f4bc7b21538e19f76694dcc57d262a2b61e8a",
+        "original_bytes_unchanged": true,
+        "width": 1216,
+        "height": 1293,
+        "mode": "RGBA",
+        "alpha": {
+          "min": 0,
+          "max": 255,
+          "transparent_pixels": 899977,
+          "opaque_pixels": 655,
+          "partial_pixels": 671656
+        },
+        "all_nonzero_alpha": {
+          "bbox_xyxy_exclusive": [
+            21,
+            19,
+            1203,
+            1293
+          ],
+          "bbox_xywh": [
+            21,
+            19,
+            1182,
+            1274
+          ],
+          "margins_left_top_right_bottom": [
+            21,
+            19,
+            13,
+            0
+          ]
+        },
+        "principal_silhouette_alpha_gte_16": {
+          "bbox_xyxy_exclusive": [
+            23,
+            24,
+            1200,
+            1281
+          ],
+          "bbox_xywh": [
+            23,
+            24,
+            1177,
+            1257
+          ],
+          "margins_left_top_right_bottom": [
+            23,
+            24,
+            16,
+            12
+          ]
+        }
+      },
+      "existing_direction_assessment": {
+        "expected_filename": "idle-right.png",
+        "receipt_sourceFacing": "front",
+        "independently_observed_facing": "Présentation frontale à trois quarts, hache projetée vers la gauche ; aucune vraie pose de combat clairement orientée droite.",
+        "right_facing_qualified": false,
+        "left_facing_combat_qualified": false,
+        "retained_role": "Présentation source complète uniquement ; ne pas compter comme sprite de combat RIGHT ni comme animation idle.",
+        "frame": "Silhouette principale incluse : marges alpha>=16 [23,24,16,12]. Quelques traces alpha très faibles atteignent le bord inférieur ; elles ne sont pas la botte principale."
+      },
+      "known_positive_trial": {
+        "git_path": "modules/fidelity-r34/assets/lots/lot_3/re5-executioner/research/right-facing-correction-study.png",
+        "sha256": "cd8c579cca92a4efed2ecd8c3a94e7c967cbdc2b897b97ad3014ecdfa817ddbe",
+        "bytes": 2131353,
+        "status": "GENERATED_BUT_NOT_ADMITTED",
+        "evidence_kind": "Reçu historique inspecté, PNG de cette étude non réexaminé dans cet audit.",
+        "failures": [
+          "Une extrémité de la lame de hache est coupée par le bord du canevas.",
+          "La correction expose une surface de botte qui était masquée par le tablier dans la source qualifiée."
+        ],
+        "is_tool_moderation_refusal": false
+      },
+      "direction_inventory": [
+        {
+          "version": "R27",
+          "direction": "unknown",
+          "role": "Source portrait recadrée ; aucun corps équipé complet qualifié."
+        },
+        {
+          "version": "R29",
+          "direction": "front",
+          "role": "Corps PC documenté en pose bras écartés ; modèle source sans maillage de hache, pas une pose de combat équipée."
+        },
+        {
+          "version": "R34",
+          "direction": "front / near-left presentation",
+          "role": "Corps complet équipé ci-dessus, fichier trompeusement nommé idle-right."
+        },
+        {
+          "version": "R34 correction",
+          "direction": "right requested/positive",
+          "role": "Étude exclue pour coupe de hache et botte nouvellement exposée."
+        }
+      ],
+      "priority_generation_target": "Nouvelle vraie pose RIGHT indépendante : tête/torse et arme vers la droite, crochet restant arrière, hache entièrement incluse, occlusion naturelle du pied respectée, sans miroir.",
+      "exclude_variant": "Le portrait catalogue à casque/cagoule cuir et arme enflammée n’est pas cette incarnation visuelle ordinaire.",
+      "historical_refusal_assessment": {
+        "confirmed_tool_refusal_found": false,
+        "current_continuation_block": false,
+        "prior_quality_rejection_only": true,
+        "new_request_barrier_from_inspected_refusal_records": false
+      }
+    },
+    {
+      "uid": "re5-chainsaw-majini",
+      "label": "Chainsaw Majini",
+      "incarnation": "Resident Evil 5 (2009), sac cousu à œil rouge unique, débardeur noir, pantalon rose",
+      "source": {
+        "local_path": "/workspace/scratch/3fced93cfb0a/references-v16/re5-miniboss-3.png",
+        "git_path": "modules/fidelity-r34/assets/source-research/re5-miniboss-3.png",
+        "bytes": 382769,
+        "sha256": "ca68500b128067b0b374c851d119b073005ed1580d1dd5cfe4c0a01e21471d5a",
+        "original_bytes_unchanged": true,
+        "width": 600,
+        "height": 900,
+        "mode": "RGB",
+        "recorded_source_url": "https://blackjackrants.blogspot.com/2020/10/reviewing-monsters-resident-evil-5.html"
+      },
+      "source_body_coverage": {
+        "complete_visible_silhouette": true,
+        "equipment_complete_in_source": true,
+        "view": "Trois quarts proche frontal, tronçonneuse vers la droite de l’image.",
+        "included": "Sac entier, deux bras/mains, haut noir déchiré, pantalon rose, deux pieds nus, objet de ceinture, moteur jaune, deux poignées et lame entière."
+      },
+      "anatomical_asymmetry": {
+        "coordinate_rule": "Dans la source proche frontale, le côté gauche de l’image correspond au côté anatomique droit.",
+        "visible_eye": "Œil rouge unique du côté anatomique DROIT, à gauche de la source frontale ; ne pas le déplacer sur le côté gauche anatomique lors du passage à LEFT.",
+        "eye_laterality_evidence": "Observation indépendante de la source et de la continuité tête/cou/torse. Les reçus R34 demandent de préserver œil/cordes sans indiquer explicitement le mot droit.",
+        "left_target_eye_visibility": "En LEFT, l’œil droit est sur le côté éloigné et peut être moins visible ou caché ; ne pas ouvrir un second œil pour conserver artificiellement sa visibilité.",
+        "right_arm": "Bras proche, à gauche dans la source ; main droite sur la poignée arrière, derrière le bloc moteur.",
+        "left_arm": "Bras éloigné, à droite dans la source ; main gauche sur l’arceau/poignée avant près de la base de la lame.",
+        "shirt": "Gros trou sur le pectoral droit et déchirures sur le flanc/abdomen droit, petit dommage au côté gauche du col ; ne pas inverser ces détails pour une nouvelle direction.",
+        "belt_object": "Objet métallique suspendu avec cordon au côté anatomique droit, à gauche de la source ; nature fonctionnelle exacte non certifiée ici.",
+        "sack_ropes": "Cordes diagonales autour du haut du sac et du trou de l’œil, autre passage autour du bas du visage ; conserver leur configuration anatomique et les occlusions, sans miroir.",
+        "weapon": "Moteur jaune/orange rectangulaire, poignée arrière, arceau avant, longue lame dentée ; les deux mains doivent conserver leur poignée anatomique et la lame entière doit rester dans le cadre.",
+        "feet": "Deux pieds nus, pas de chaussures."
+      },
+      "existing_r34_candidate": {
+        "local_path": "/workspace/scratch/3fced93cfb0a/references-v16/chainsaw-majini-r34-idle-right.png",
+        "git_path": "modules/fidelity-r34/assets/generated/re5-chainsaw-majini/idle-right.png",
+        "bytes": 1995064,
+        "sha256": "7629fcadb0beeb8d53993ab4ac7d62ede459486589778a4306db93d132448ce1",
+        "original_bytes_unchanged": true,
+        "width": 1024,
+        "height": 1536,
+        "mode": "RGBA",
+        "alpha": {
+          "min": 0,
+          "max": 254,
+          "transparent_pixels": 1139863,
+          "opaque_pixels": 0,
+          "partial_pixels": 433001
+        },
+        "all_nonzero_alpha": {
+          "bbox_xyxy_exclusive": [
+            0,
+            41,
+            1023,
+            1512
+          ],
+          "bbox_xywh": [
+            0,
+            41,
+            1023,
+            1471
+          ],
+          "margins_left_top_right_bottom": [
+            0,
+            41,
+            1,
+            24
+          ]
+        },
+        "principal_silhouette_alpha_gte_16": {
+          "bbox_xyxy_exclusive": [
+            90,
+            47,
+            1015,
+            1505
+          ],
+          "bbox_xywh": [
+            90,
+            47,
+            925,
+            1458
+          ],
+          "margins_left_top_right_bottom": [
+            90,
+            47,
+            9,
+            31
+          ]
+        }
+      },
+      "existing_direction_assessment": {
+        "expected_filename": "idle-right.png",
+        "receipt_sourceFacing": "right",
+        "independently_observed_facing": "Vraie présentation de combat statique orientée droite, poitrine plus étroite et tronçonneuse vers la droite.",
+        "right_facing_qualified_by_r34_review": true,
+        "left_facing_combat_qualified": false,
+        "anatomy_matches_source": "Œil du même côté anatomique, bras droit sur poignée arrière et gauche sur arceau avant, objet de ceinture du côté droit, pantalon rose et pieds nus.",
+        "frame": "Silhouette principale incluse : marges alpha>=16 [90,47,9,31]. Marge de lame droite seulement 9 px, inférieure à la demande de 10 % ; traces alpha très faibles au bord gauche. Aucun recadrage du PNG effectué."
+      },
+      "direction_inventory": [
+        {
+          "version": "R27",
+          "direction": "unknown",
+          "role": "Portrait recadré ; bas du corps/équipement non qualifiés."
+        },
+        {
+          "version": "R29",
+          "direction": "front",
+          "role": "Corps PC documenté bras écartés ; modèle source sans maillage de tronçonneuse, pas une pose de combat équipée."
+        },
+        {
+          "version": "R34 early studies",
+          "direction": "frontal or insufficiently right",
+          "role": "Études positives conservées, supplantées par la pose affinée."
+        },
+        {
+          "version": "R34 retained",
+          "direction": "right",
+          "role": "Candidat statique équipé complet ci-dessus."
+        }
+      ],
+      "priority_generation_target": "Nouvelle pose LEFT indépendante : main droite arrière, main gauche arceau avant ; œil droit et objet de ceinture gardés du même côté anatomique, même si partiellement cachés. Aucun miroir logiciel.",
+      "historical_refusal_assessment": {
+        "confirmed_tool_refusal_found": false,
+        "current_continuation_block": false,
+        "new_request_barrier_from_inspected_refusal_records": false,
+        "explicit_evidence": [
+          "idle-02-correction.json : interruptionReview.noKnownModerationRefusalForUid = true.",
+          "idle-03-refined-source-pose.json : scope indique explicitement qu’aucun refus de modération n’a eu lieu pour cet UID."
+        ],
+        "previous_clipped_v1": "Le nom R29 previous-output/re5-chainsaw-majini-clipped-v1.png désigne une génération positive recadrée/insuffisante, pas un refus outil."
+      }
+    }
+  ],
+  "receipts": [
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v16/executioner-r34-idle-receipt.json",
+      "git_path": "modules/fidelity-r34/assets/lots/lot_3/re5-executioner/idle.json",
+      "bytes": 6064,
+      "sha256": "078aadc66ef5449675f13122c1df000ba21e6e4bcce8ab2ace551204e4992fb4",
+      "original_bytes_unchanged": true
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v16/chainsaw-majini-r34-idle-receipt.json",
+      "git_path": "modules/fidelity-r34/assets/lots/lot_2/re5-chainsaw-majini/idle.json",
+      "bytes": 4725,
+      "sha256": "7adcd38b1bc4aa4a463043307752059b2e99a4d92be39bde2b57c6309873e735",
+      "original_bytes_unchanged": true
+    }
+  ],
+  "historical_documents": [
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v16/history/continuation-20261119-re5-extract.json",
+      "bytes": 2537,
+      "sha256": "2a6e5c27efb0ee9723ed8c19d0325138c512ceabf4be6c60e919639fea54e690",
+      "extracted_from": "production-archives/rec-media/CONTINUATION_20261119.json"
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v16/history/modules__fidelity-r27__sprites__records__re5-chainsaw-majini.json",
+      "bytes": 5452,
+      "sha256": "3c65d91c4b22219d284ccbeeaa8399c8a5d0142a5d8c83f2d28f4845049adc54",
+      "git_path": "modules/fidelity-r27/sprites/records/re5-chainsaw-majini.json"
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v16/history/modules__fidelity-r27__sprites__records__re5-executioner.json",
+      "bytes": 5477,
+      "sha256": "44b5a2d72df67f030e0241bc67867ed35a533740844de03401b2ea234d5146c9",
+      "git_path": "modules/fidelity-r27/sprites/records/re5-executioner.json"
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v16/history/modules__fidelity-r29__sources__revelations-generation__re5-chainsaw-majini.json",
+      "bytes": 3973,
+      "sha256": "866a3638b1f514178be7840a2533cca106ff09872115bf2beaa8442d9a071368",
+      "git_path": "modules/fidelity-r29/sources/revelations-generation/re5-chainsaw-majini.json"
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v16/history/modules__fidelity-r29__sources__revelations-generation__re5-executioner.json",
+      "bytes": 3738,
+      "sha256": "cbe7113bb632215e17a80a639d9be87fee2123eeb85fa83749ca6b1e5993855b",
+      "git_path": "modules/fidelity-r29/sources/revelations-generation/re5-executioner.json"
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v16/history/modules__fidelity-r29__sprites__records__re5-chainsaw-majini.json",
+      "bytes": 8087,
+      "sha256": "f5b6ad9af1588f251a10b227ce2cf5eeb1bec40313a418ad152a6d071d6954d8",
+      "git_path": "modules/fidelity-r29/sprites/records/re5-chainsaw-majini.json"
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v16/history/modules__fidelity-r29__sprites__records__re5-executioner.json",
+      "bytes": 7896,
+      "sha256": "e71cecffc8f6081e6592c480768e7decde744ccf27a55b45a6a459568ff6e803",
+      "git_path": "modules/fidelity-r29/sprites/records/re5-executioner.json"
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v16/history/modules__fidelity-r34__assets__lots__lot_2__production-attempts__re5-chainsaw-majini__idle-02-correction.json",
+      "bytes": 5504,
+      "sha256": "07175998c1d82020dd0c7003b4cb89ec00ab363607f1c99c658ce509180d4fff",
+      "git_path": "modules/fidelity-r34/assets/lots/lot_2/production-attempts/re5-chainsaw-majini/idle-02-correction.json"
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v16/history/modules__fidelity-r34__assets__lots__lot_2__production-attempts__re5-chainsaw-majini__idle-03-refined-source-pose.json",
+      "bytes": 4849,
+      "sha256": "f779d51d4c36bd90202c0a897ed1fd00ddf4b3b0c46ac6371ace2f7c27e5a310",
+      "git_path": "modules/fidelity-r34/assets/lots/lot_2/production-attempts/re5-chainsaw-majini/idle-03-refined-source-pose.json"
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v16/history/modules__fidelity-r34__assets__lots__lot_2__re5-chainsaw-majini__portrait.json",
+      "bytes": 4171,
+      "sha256": "b35f4b6226e7e9aaa9d9daae61c49d8ad258646c4f8717fece6e30c6d77a7d9a",
+      "git_path": "modules/fidelity-r34/assets/lots/lot_2/re5-chainsaw-majini/portrait.json"
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v16/history/modules__fidelity-r34__assets__lots__lot_3__re5-executioner__portrait.json",
+      "bytes": 4790,
+      "sha256": "9dbaf06fea3e034c32369f0ec55152abcd33f55212bb1a735a9e4203151e6827",
+      "git_path": "modules/fidelity-r34/assets/lots/lot_3/re5-executioner/portrait.json"
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v16/history/modules__fidelity-r34__assets__lots__lot_3__re5-executioner__research__documented-first-body-study.json",
+      "bytes": 3299,
+      "sha256": "faad0419862edc64775138b1d3191359b52b80458ef6a1e5305ecb7ad499b451",
+      "git_path": "modules/fidelity-r34/assets/lots/lot_3/re5-executioner/research/documented-first-body-study.json"
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v16/history/modules__fidelity-r34__assets__lots__lot_3__re5-executioner__research__right-facing-correction-study.json",
+      "bytes": 2590,
+      "sha256": "98b77ac69c62c08e8343dd50c21291d9e9af7d7ab0145c73a4889ef1c32200c3",
+      "git_path": "modules/fidelity-r34/assets/lots/lot_3/re5-executioner/research/right-facing-correction-study.json"
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v16/history/modules__fidelity-r34__assets__lots__lot_3__recovery-requests__re5-executioner-correction-01.json",
+      "bytes": 3215,
+      "sha256": "4e9027cd528c925aae83b0aabd1f51b569250cc4c8eff8388df7ff5c2be3ee3c",
+      "git_path": "modules/fidelity-r34/assets/lots/lot_3/recovery-requests/re5-executioner-correction-01.json"
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v16/history/modules__fidelity-r34__assets__lots__lot_3__recovery-requests__re5-executioner-documented-01.json",
+      "bytes": 3993,
+      "sha256": "38a8541793e97df9a4d03071c9791ed40fdcc015fb3fc550f48057118ca34db4",
+      "git_path": "modules/fidelity-r34/assets/lots/lot_3/recovery-requests/re5-executioner-documented-01.json"
+    }
+  ],
+  "limitations": [
+    "Une source 2D complète qualifie ce qui y est visible, pas la géométrie exacte des surfaces cachées ni une identité géométrique 1:1 dans une nouvelle rotation.",
+    "Les chemins R33 native/poses left/right présents dans l’arbre Git sont des vues de sources ; ils ne sont pas assimilés ici à des états de combat générés ou à des animations. Leurs PNG n’ont pas été récupérés/examinés dans cet audit.",
+    "Les états front/right ci-dessus se rapportent aux images examinées ou aux reçus identifiés, jamais au seul nom idle-right.",
+    "Aucune animation, admission moteur, qualification de toutes les phases ou conformité canonique 1:1 n’est déduite de ces images.",
+    "Aucun octet de PNG original et aucun fichier du dépôt n’a été modifié par cette récupération."
+  ],
+  "canonical_1to1_certified": false,
+  "engine_admitted_by_this_audit": false,
+  "generation_performed_by_this_audit": false
+}

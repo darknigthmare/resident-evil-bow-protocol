@@ -1,0 +1,69 @@
+{
+  "schema": "rec.static-candidate-independent-review.v14",
+  "reviewed_at": "2026-11-20",
+  "reviewer": "review_v14",
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "original_bytes_modified": false,
+  "one_subject_per_image_reviewed": true,
+  "animation_frames": 1,
+  "inspection_method": "Original RGBA files composited over RGB (128,128,128) and (235,235,235), then personally viewed with tools.view_image; original files preserved.",
+  "asset": "Bella Sister — green skirt, RE4 original 2005, left",
+  "original_path": "/workspace/scratch/f967ba67c530/generated_images/exec-2e9ca8e0-dbf0-4539-9c74-c122f0039d0c.png",
+  "sha256": "cb4e5e97a85e2afeea936da32ee0f8ee707144b31d48d64f0fa74242b2a5bda1",
+  "bytes": 1983392,
+  "verdict": "TRIAL_NEEDS_GRIP_CORRECTION",
+  "source_refs_reviewed": [
+    "references-v14/bella_re4original_steam.jpg",
+    "references-v14/bella_re4original_evilresource.png"
+  ],
+  "visual_checks": {
+    "orientation": "Head and chainsaw blade face screen left; torso remains largely frontal with a slight leftward turn. This is not a strict lateral combat stance.",
+    "costume": "Ochre/brown blouse with pale chest bands, dark green long skirt with darker horizontal hem lines, brown shoes and bandaged head match the intended original-game sister. No cream-apron costume substitution.",
+    "hands": "Two hands are physically attached to handles and neither touches chain teeth. However, tracing each visible arm to its shoulder shows the character’s anatomical RIGHT hand on the forward/top wrap handle and her anatomical LEFT hand on the rear trigger handle. The request specifies LEFT on forward handle and RIGHT on rear handle. This is a grip-laterality mismatch, not an acceptable finalized candidate.",
+    "framing": "Exactly one full-body woman and one complete chainsaw; bandaged head, both footwear silhouettes, garment hem and blade tip all inside canvas. No base, UI, text, victim or duplicate figure.",
+    "blocking_defects": [
+      "Chainsaw grip reverses requested anatomical hand ownership."
+    ],
+    "limits": [
+      "Near-frontal torso does not fully match requested three-quarter side combat stance.",
+      "All-side 8 percent margin request is not achieved.",
+      "Generated costume texture and exact model geometry are not certified.",
+      "Single static pose; no animation, contacts or engine admission."
+    ]
+  },
+  "alpha": {
+    "mode": "RGBA",
+    "size": [
+      1024,
+      1536
+    ],
+    "extrema": [
+      0,
+      254
+    ],
+    "bbox_alpha_gte16": [
+      38,
+      94,
+      998,
+      1477
+    ],
+    "margins_alpha16_left_top_right_bottom": [
+      38,
+      94,
+      26,
+      59
+    ],
+    "pixels_alpha0": 887044,
+    "pixels_alpha1_to15": 22908,
+    "pixels_alpha1_to3": 19092,
+    "pixels_alpha255": 0,
+    "halo_finding": "Real alpha transparency confirmed. No broad backdrop or substantial halo visible in actual light/gray composites. Low-alpha residual pixels remain; maximum alpha and opaque pixel counts are recorded rather than assumed.",
+    "all_subject_alpha_255": false
+  },
+  "qa_previews_only": [
+    "qa-v14-recovered/bella-green-left-gray.jpg",
+    "qa-v14-recovered/bella-green-left-light.jpg"
+  ],
+  "recommended_action": "Preserve original PNG as a trial and request a targeted new pose with anatomical left hand on the forward handle and right hand on the rear trigger handle. Keep identity, costume and original-game edition fixed."
+}

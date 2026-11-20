@@ -1,0 +1,96 @@
+{
+  "schema": "rec.static-candidate-independent-review.v16",
+  "asset": "Giant Majini — Resident Evil 5 visual incarnation, RIGHT 01",
+  "id": "re5_giant_majini_right_01",
+  "uid": "re5-giant-majini",
+  "reviewed_at": "2026-11-20T12:59:39.667597+00:00",
+  "reviewer": "review_v14",
+  "asset_path": "assets/re5_giant_majini_right_01.png",
+  "original_path": "/workspace/scratch/3fced93cfb0a/generated_images/exec-903acef5-4170-4075-905e-020367d3411e.png",
+  "sha256": "59d451e50047a85c3f74dd48febdc110a21f3f5c92bcab589f5f0396a913a060",
+  "bytes": 1167512,
+  "verdict": "CANDIDATE_STATIC_WITH_LIMITS",
+  "review_status": "CANDIDATE_STATIC_WITH_LIMITS",
+  "excluded_from_candidate_count": false,
+  "source_refs_reviewed": [
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v16/re5-giant-slot-c06.jpg",
+      "sha256": "9258c811d8631a474a6fd7e5a79fab2c2ae6469e11e8227bb4390758f998039e",
+      "role": "Complete corroborated render hosted on Fields/Capcom Pachislot Biohazard 5 site"
+    },
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v16/re5-miniboss-4.png",
+      "sha256": "fc00a8fc837f2718a7f147c6573d689e645f58186ac3128612f8e9d7300f2503",
+      "role": "Previously retained RE5 documentary render, cropped at club tip"
+    }
+  ],
+  "source_documents_reviewed": [
+    "docs/SOURCES_RE5_EXTRA_V16.json",
+    "docs/GIANT_SOURCE_CORRESPONDENCE_V16.json"
+  ],
+  "prompt_record": "prompts/re5_giant_majini_right_01.json",
+  "technical_record": "docs/re5_giant_majini_right_01-technical.json",
+  "visual_checks": {
+    "orientation": "Front-right three-quarter stance. Mask/nose projection, torso, forward knee/foot and low club point right. Rear foot is more frontal. A clear right presentation, not a pure side profile.",
+    "costume": "Tall gray-green humanoid, long bare legs, pale front torso markings, green rope waist covering, red/green wrist bundles, large four-opening mask with tusks/teeth and layered crest remain consistent with the qualified visual reference.",
+    "hands": "Near anatomical RIGHT shoulder/arm continues to the sole hand wrapped around the club handle. Far anatomical LEFT arm is free, with its hand open above and behind the club. No hand swap or added grip.",
+    "framing": "One full figure and entire right-projecting club, all principal spike/crest/foot/finger endpoints inside the canvas. No floor, scene, text, duplicate figure or clipped club tip.",
+    "asymmetry": "Upper-arm band stays on anatomical LEFT, now the far free arm; anatomical RIGHT carrying arm has no duplicate band. Unequal ankle ring stacks keep the source anatomical assignment.",
+    "limits": [
+      "Principal margins [188,50,151,64] px = [15.68%,3.81%,12.59%,4.88%]; top and bottom do not achieve the requested 10% padding, without principal clipping.",
+      "View retains frontal depth rather than a pure profile. The longer exposed club-shaft projection and changed skull/spike arrangement do not establish exact source weapon dimensions.",
+      "The complete corroborated source is hosted on the Fields/Capcom Pachislot Biohazard 5 site, not a certified native 2009 frame; the underlying mesh/version extraction chain remains undocumented.",
+      "Exact mask/ornament/weapon geometry and hidden surfaces are generated interpretations, not 1:1 certification.",
+      "No physical scale, original animation, contact, pivot or engine admission is certified."
+    ]
+  },
+  "failed_gates": [],
+  "alpha": {
+    "mode": "RGBA",
+    "size": [
+      1199,
+      1312
+    ],
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox_alpha_gte16": [
+      188,
+      50,
+      1048,
+      1248
+    ],
+    "margins_alpha16_left_top_right_bottom": [
+      188,
+      50,
+      151,
+      64
+    ],
+    "bbox_all_nonzero_alpha": [
+      0,
+      17,
+      1196,
+      1312
+    ],
+    "pixels_alpha0": 1128692,
+    "pixels_alpha1_to15": 53482,
+    "pixels_alpha1_to3": 46820,
+    "pixels_alpha255": 221,
+    "all_subject_alpha_255": false,
+    "halo_finding": "Real transparency verified; personally inspected gray and light alpha composites show no opaque backdrop or substantial broad halo. Low-alpha residuals remain outside the principal silhouette. Originals unchanged."
+  },
+  "qa_previews_only": [
+    "/workspace/scratch/3fced93cfb0a/qa-v16/re5_giant_majini_right_01-gray.jpg",
+    "/workspace/scratch/3fced93cfb0a/qa-v16/re5_giant_majini_right_01-light.jpg"
+  ],
+  "inspection_method": "Source images and both actual alpha composites inspected independently. Dimensions, alpha, bounding boxes and SHA verified directly from the original PNG, including identity with the generated output.",
+  "original_bytes_modified": false,
+  "original_generated_bytes_verified_identical": true,
+  "one_subject_per_image_reviewed": true,
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "animation_frames": 1,
+  "can_mirror": false,
+  "recommended_action": "Retain as a RIGHT static candidate with the recorded source, geometry and margin limits; preserve the independent LEFT candidate as a separate view."
+}

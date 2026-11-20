@@ -1,0 +1,321 @@
+{
+  "schema": "rec-v9-bounded-held-reference-search-1",
+  "completedAtUtc": "2026-11-19T17:21:01.953584+00:00",
+  "phase": "Après qualification initiale des14 sources et pendant productionV9; recherche complémentaire bornée sur les4 holds anatomiques initiaux.",
+  "scope": [
+    "re2r-g-young",
+    "re5-kipepeo",
+    "reoutbreak-baby-moth",
+    "reoutbreak-thanatos-r"
+  ],
+  "exhaustiveWebAbsenceClaimed": false,
+  "sourcesPublishable": false,
+  "summary": {
+    "initialAnatomyHolds": 4,
+    "liftedWithLimitedComplement": 1,
+    "remainingAnatomyHolds": 3,
+    "retrievedBitmapsPhysicallyViewed": 15,
+    "usableVideoFrames": 0
+  },
+  "entries": [
+    {
+      "uid": "re2r-g-young",
+      "edition": "Resident Evil2 remake(2019)",
+      "finalStatus": "HELD_ANATOMY_REFERENCE",
+      "evidence": [
+        {
+          "url": "https://www.youtube.com/watch?v=ws_3j4LeGfU",
+          "role": "rotation vidéo annoncée; miniature et page accessibles",
+          "result": "La miniature1280×720 est ouverte, mais ses membres se superposent encore. Le fichier téléchargé est invalide et ne fournit aucune vue de rotation exploitable.",
+          "mediaRetrieval": {
+            "url": "https://www.youtube.com/watch?v=ws_3j4LeGfU",
+            "startedAtUtc": "2026-11-19T17:02:06.172589+00:00",
+            "authenticationUsed": false,
+            "cookiesUsed": false,
+            "status": "UNUSABLE_INVALID_MEDIA",
+            "title": "RESIDENT EVIL 2 [G- YOUNG - ANIMATIONS & ROTATION]",
+            "duration": 52,
+            "filename": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v9/references/hold_research/g_young_rotation.mp4",
+            "finishedAtUtc": "2026-11-19T17:02:31.419028+00:00",
+            "downloadToolReportedStatus": "DOWNLOADED",
+            "decodeStatus": "FAILED",
+            "decodeError": "moov atom not found; Invalid data found when processing input",
+            "decodedFrames": 0,
+            "mediaPhysicallyViewed": false,
+            "qualifiedReference": false,
+            "bytes": 195,
+            "sha256": "5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7",
+            "reviewedAtUtc": "2026-11-19T17:21:01.953584+00:00"
+          }
+        },
+        {
+          "url": "https://models.spriters-resource.com/gamecube/residentevil2/",
+          "result": "Piste RE2 GameCube, édition différente; aucune substitution au modèle remake2019."
+        }
+      ],
+      "reason": "Attaches et compte des membres fins non établis par les pixels effectivement consultés. Aucune génération."
+    },
+    {
+      "uid": "re5-kipepeo",
+      "edition": "Resident Evil5(2009)",
+      "finalStatus": "HELD_ANATOMY_REFERENCE",
+      "evidence": [
+        {
+          "url": "https://www.residentevilcenter.net/old/re5fig.html",
+          "bitmapUrl": "https://www.residentevilcenter.net/old/games/residentevil5/figura33.jpg",
+          "result": "Miniature150×168 effectivement ouverte. Figure entière sur socle mais résolution insuffisante pour continuité des filaments et attaches."
+        }
+      ],
+      "reason": "La miniature ne lève pas l’ambiguïté de la source536×580. Aucune génération."
+    },
+    {
+      "uid": "reoutbreak-baby-moth",
+      "edition": "Resident Evil Outbreak(2003)",
+      "finalStatus": "HELD_ANATOMY_REFERENCE",
+      "evidence": [
+        {
+          "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2025039352",
+          "result": "Six captures du port communautaire Below Freezing Point ouvertes. La larve blanche montrée ne documente pas suffisamment la présentation violette/antennes/prolegs de la cible. Rigging communautaire récréé mentionné; aucune assimilation automatique de variante."
+        },
+        {
+          "url": "https://outbreak-research.github.io/Documentation/3D/",
+          "result": "Index technique consulté, identifie la larve de moth(E39) mais ne fournit pas les pixels nécessaires aux prolegs cachés."
+        }
+      ],
+      "reason": "Nombre et attaches des prolegs de la cible non résolus. Aucune génération."
+    },
+    {
+      "uid": "reoutbreak-thanatos-r",
+      "edition": "Resident Evil Outbreak(2003)",
+      "initialStatus": "HELD_OCCLUDED_EXTREMITY_REFERENCE",
+      "finalStatus": "QUALIFIED_WITH_COMPLEMENTARY_TOPOLOGY_SOURCE",
+      "evidence": [
+        {
+          "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2041957312",
+          "result": "Sept captures du port communautaire Decisions Decisions ouvertes. Capture04 compatible avec la phase retail à moignon droit et grand bras gauche; deux pieds nus dégagés.",
+          "qualifiedBitmap": {
+            "packId": "2041957312",
+            "index": 4,
+            "url": "https://images.steamusercontent.com/ugc/1016066093536901951/3030E8D00870132740FD7F083175CE626B972E59/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
+            "localPath": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v9/references/hold_research/steam_2041957312_screen_04.jpg",
+            "sha256": "55f118497adb7c04d3697028392925ea7032fda0ac36b33cfc81e7e2bb781d4d",
+            "dimensions": [
+              1366,
+              768
+            ],
+            "format": "JPEG",
+            "bytes": 103650,
+            "status": "RETRIEVED"
+          },
+          "provenance": "Description attribue les modèles à Resident Evil Outbreak/CAPCOM et leur port/setup à Genuline; aucune modification géométrique pertinente déclarée. Cette absence de déclaration ne prouve pas une géométrie native inchangée.",
+          "permittedRole": "Bas de jambe et pieds/topologie seulement. La source figée reste autorité pour la palette, les matériaux et la phase; lumière bleue et décor du port exclus.",
+          "reviewers": [
+            "/root/qa_stage_v5",
+            "/root"
+          ],
+          "canonicalGeometryCertified": false
+        },
+        {
+          "url": "https://outbreak-research.github.io/Documentation/3D/",
+          "result": "Les variantes prototypes et retail y sont distinguées; pas de mélange de phase accepté."
+        }
+      ],
+      "resultingCandidate": "assets/REC_THANATOS_R_OUTBREAK_2003_FULLBODY_LEFT_V9_01.png",
+      "independentOutputQa": "docs/QA_INDEPENDENT_V9.json"
+    }
+  ],
+  "retrievedBitmaps": [
+    {
+      "url": "https://www.residentevilcenter.net/old/games/residentevil5/figura33.jpg",
+      "localPath": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v9/references/hold_research/kipepeo_figure.jpg",
+      "sha256": "59db9fab1c430c0b5dff02f30aa09c724ced6517accb10e97e90a630480195dd",
+      "dimensions": [
+        150,
+        168
+      ],
+      "bytes": 61675,
+      "physicallyViewed": true,
+      "publishable": false
+    },
+    {
+      "url": "https://i.ytimg.com/vi/ws_3j4LeGfU/maxresdefault.jpg",
+      "localPath": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v9/references/hold_research/g_young_video_thumbnail.jpg",
+      "sha256": "51f5094b0f70c2fb27f2a62e48eaf157824570cde932270cf8f2760abd51f9e2",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 63543,
+      "physicallyViewed": true,
+      "publishable": false
+    },
+    {
+      "url": "https://images.steamusercontent.com/ugc/781877653686412261/3ABBD4BFBAFEC431909910C1193018EEEE97791C/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
+      "localPath": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v9/references/hold_research/steam_2025039352_screen_01.jpg",
+      "sha256": "676876d7735379abecf817c07258aacbe1487e11d6fd9024de4ac6a8963bd4ad",
+      "dimensions": [
+        1366,
+        768
+      ],
+      "bytes": 65311,
+      "physicallyViewed": true,
+      "publishable": false
+    },
+    {
+      "url": "https://images.steamusercontent.com/ugc/781877653686412593/4699340B61F6E687E636CD1B46B9FDF4120F492A/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
+      "localPath": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v9/references/hold_research/steam_2025039352_screen_02.jpg",
+      "sha256": "939ef5e64dae66fdd0b86a605797c5982b0c210f9bc95636964a8e230c37db75",
+      "dimensions": [
+        1366,
+        768
+      ],
+      "bytes": 271824,
+      "physicallyViewed": true,
+      "publishable": false
+    },
+    {
+      "url": "https://images.steamusercontent.com/ugc/781877653686413127/5CD7957D0D0E2A4AFFBE61D5BCB8A7567A6CF70B/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
+      "localPath": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v9/references/hold_research/steam_2025039352_screen_03.jpg",
+      "sha256": "5962b3aa3cb531c0df157fbe7499d4146a6d08b2e8b78e03e6c498844b0b6e1c",
+      "dimensions": [
+        1366,
+        768
+      ],
+      "bytes": 111428,
+      "physicallyViewed": true,
+      "publishable": false
+    },
+    {
+      "url": "https://images.steamusercontent.com/ugc/781877653686413427/CCB548F9295BD6453B04AF6661F11FA0E7EC315F/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
+      "localPath": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v9/references/hold_research/steam_2025039352_screen_04.jpg",
+      "sha256": "4e4dab39d59de12cfab0680f183b37b906f17ef700808e4c7552b5f3acda6b27",
+      "dimensions": [
+        1366,
+        768
+      ],
+      "bytes": 171311,
+      "physicallyViewed": true,
+      "publishable": false
+    },
+    {
+      "url": "https://images.steamusercontent.com/ugc/781877653686413757/A9F227BE69361A92BC71F83232AFF3EBC02D744C/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
+      "localPath": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v9/references/hold_research/steam_2025039352_screen_05.jpg",
+      "sha256": "0ac1ac7325766ed9d0ea11aed2402249777a32cfbfc0b25b990f7b3f3025789f",
+      "dimensions": [
+        1366,
+        768
+      ],
+      "bytes": 93438,
+      "physicallyViewed": true,
+      "publishable": false
+    },
+    {
+      "url": "https://images.steamusercontent.com/ugc/781877653686409275/9F8814D59A504005EDD8FF3746BB3D508C1D0A8D/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
+      "localPath": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v9/references/hold_research/steam_2025039352_screen_06.jpg",
+      "sha256": "02f5e766dc92ab1c011380a1b032437425b98fe74abb4740f0069d3812d84787",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 29926,
+      "physicallyViewed": true,
+      "publishable": false
+    },
+    {
+      "url": "https://images.steamusercontent.com/ugc/1011562860900064156/A3251E47DBA215BB7786C72F845292B858535016/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
+      "localPath": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v9/references/hold_research/steam_2041957312_screen_01.jpg",
+      "sha256": "d2e9c06cc6f014bd44d95fbd8bbf12bef8f3d17b30afe9400fafc81425da97f8",
+      "dimensions": [
+        1366,
+        768
+      ],
+      "bytes": 54429,
+      "physicallyViewed": true,
+      "publishable": false
+    },
+    {
+      "url": "https://images.steamusercontent.com/ugc/1016066093536901343/6C6D9F99855F071DDCE256C49EF7958232049F21/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
+      "localPath": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v9/references/hold_research/steam_2041957312_screen_02.jpg",
+      "sha256": "1346ac3dda3731051b35ed9be9e7a59de502b1cf3391cb38bcaa04763bd56d2b",
+      "dimensions": [
+        1366,
+        768
+      ],
+      "bytes": 99490,
+      "physicallyViewed": true,
+      "publishable": false
+    },
+    {
+      "url": "https://images.steamusercontent.com/ugc/1016066093536901615/451314B2EF4AC6DCBF8A2F5E2D5EC6925FE4C906/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
+      "localPath": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v9/references/hold_research/steam_2041957312_screen_03.jpg",
+      "sha256": "f6271cae7cc64b07d820fe37d516995a968bc4375a639422405ce31b6a87a292",
+      "dimensions": [
+        1366,
+        768
+      ],
+      "bytes": 112065,
+      "physicallyViewed": true,
+      "publishable": false
+    },
+    {
+      "url": "https://images.steamusercontent.com/ugc/1016066093536901951/3030E8D00870132740FD7F083175CE626B972E59/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
+      "localPath": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v9/references/hold_research/steam_2041957312_screen_04.jpg",
+      "sha256": "55f118497adb7c04d3697028392925ea7032fda0ac36b33cfc81e7e2bb781d4d",
+      "dimensions": [
+        1366,
+        768
+      ],
+      "bytes": 103650,
+      "physicallyViewed": true,
+      "publishable": false
+    },
+    {
+      "url": "https://images.steamusercontent.com/ugc/1016066093536902341/BF8819FB5E1AA31E8E27D3D9AE3864A096312F81/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
+      "localPath": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v9/references/hold_research/steam_2041957312_screen_05.jpg",
+      "sha256": "22303a4d201238afdfa8a8a471a0474e946294377b932cd6243f6be431f2adb0",
+      "dimensions": [
+        1366,
+        768
+      ],
+      "bytes": 138045,
+      "physicallyViewed": true,
+      "publishable": false
+    },
+    {
+      "url": "https://images.steamusercontent.com/ugc/1011562860900063369/63223832E50F9EBCC525D15EC17C211886EA47B8/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
+      "localPath": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v9/references/hold_research/steam_2041957312_screen_06.jpg",
+      "sha256": "9d36350fc064b681c2ff9b66b86b0747300187cabf50ee9cddc4f6a376d5f42a",
+      "dimensions": [
+        1366,
+        768
+      ],
+      "bytes": 146313,
+      "physicallyViewed": true,
+      "publishable": false
+    },
+    {
+      "url": "https://images.steamusercontent.com/ugc/1016066093536884905/BCF2E0FAD46F98A836EFD3BA57FF310F6F2317E3/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
+      "localPath": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v9/references/hold_research/steam_2041957312_screen_07.jpg",
+      "sha256": "bf809eea463b605c63f6000e6bd465ae295bae7e8426f2029316eac2f4abe262",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 33585,
+      "physicallyViewed": true,
+      "publishable": false
+    }
+  ],
+  "additionalPages": [
+    {
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3336205870",
+      "role": "index de collections communautaires pour retrouver les deux packs Outbreak"
+    }
+  ],
+  "limits": [
+    "La recherche est bornée et ne démontre pas l’absence mondiale d’une source plus complète.",
+    "Aucun pixel d’une capture communautaire ne reçoit automatiquement le statut officiel Capcom.",
+    "Aucune tentative de génération n’a été effectuée pour les trois holds restants.",
+    "La présence d’un fichier téléchargé ne prouve pas son décodage: la rotation G-Young a échoué,0frame exploitable."
+  ]
+}

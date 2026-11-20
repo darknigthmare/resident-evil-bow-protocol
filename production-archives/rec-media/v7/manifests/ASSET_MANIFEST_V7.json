@@ -1,0 +1,551 @@
+{
+  "schema": "rec-media-v7-delivery-manifest-v1",
+  "date": "2026-11-19",
+  "base_commit": "12deacf4cf9b7706eba69fecc1c13593d030180b",
+  "publication_parent_commit": "4e374e87c240656d99e676bae005af6ae7d04e98",
+  "purpose": "Conservation et revue de poses générées, hors runtime",
+  "summary": {
+    "pngs": 9,
+    "retained_candidates": 6,
+    "trials": 3,
+    "subjects_with_png": 7,
+    "generation_calls": 11,
+    "tool_refusals": 2,
+    "current_reference_holds": 2,
+    "new_engine_admissions": 0
+  },
+  "assets": [
+    {
+      "uid": "recv-bandersnatch",
+      "edition": "Resident Evil CODE: Veronica (2000)",
+      "image": "assets/REC_BANDERSNATCH_RECV_FULLBODY_LEFT_V7_01.png",
+      "sha256": "1d8b9d03ece05845101328e1754ce9f9f618b15c64670b279aea28848fc69b44",
+      "bytes": 1388809,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "role": "CANDIDATE_REVIEWED_WITH_LIMITATIONS",
+      "retained_candidate": true,
+      "review_status": "VISUAL_ACCEPTED_WITH_LIMITS",
+      "review_report": "docs/QA_RE7_CV_V7.json",
+      "observations": [
+        "L’asymétrie principale est conservée visuellement : énorme bras anatomique droit sur le côté éloigné du point de vue gauche, visible à gauche de l’image ; appendice anatomique gauche atrophié du côté proche, visible à droite. Aucun miroir de cette asymétrie observé.",
+        "La tête vise la gauche. La grande main, le petit appendice, les deux jambes et les deux pieds restent contenus. Peau bronze-orangé, gros volumes musculaires et veines pâles cohérents avec la source exacte.",
+        "Le contour utile est plus net que pour les deux essais RE7. 185 pixels de bord portent un alpha positif, tous inférieur à 16 : bruit faible, sans main ni pied coupé. Les marges alpha ≥ 16 sont 5,249 %,6,285%,7,090%,3,867% G/H/D/B ; cet écart de marge est accepté avec réserve.",
+        "Ramifications des veines, détails du visage, ongles et doigts nouvellement révélés ne sont pas certifiables depuis la source 430 × 573. Les veines paraissent davantage argentées que vert-gris. L’identité visuelle est préservée à grande échelle ; les détails fins restent une reconstruction."
+      ],
+      "generator": "image_gen.imagegen",
+      "generated_original_work_path": "/workspace/scratch/fc109c251847/generated_images/exec-dfa6675a-2f16-4140-93d0-b5eb55fad805.png",
+      "generated_bytes_edited": false,
+      "binary_identity_to_tool_output_verified": true,
+      "prompt": {
+        "path": "prompts/batch2.json",
+        "uid": "recv-bandersnatch",
+        "exact_prompt_sha256": "291f96ca1749d17b4c61b8ce6156dfd759574bcd866dba8f231bc8006f3ed9ff",
+        "source_type": "complete archived appearance reference verified against R34 receipt"
+      },
+      "documentary_reference": {
+        "repository_path": "assets/specimens/recv-bandersnatch.png",
+        "repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/assets/specimens/recv-bandersnatch.png",
+        "source_url": "https://bogleech.com/halloween/hall18-recv",
+        "sha256": "08ab8205051d053daf9ecead5591d7601b7c9011becdc947e2dd65e1f3a960fc",
+        "generated_reference": false,
+        "bitmap_included_in_delivery": false
+      },
+      "canonical_one_to_one_certified": false,
+      "native_model_certified": false,
+      "engine_admitted": false,
+      "animation_validated": false,
+      "pivot_validated": false,
+      "collision_validated": false,
+      "display_scale_validated": false,
+      "native_independent_left_reference_verified": false
+    },
+    {
+      "uid": "re7-fumer",
+      "edition": "Resident Evil 7 Biohazard (2017) — Not a Hero",
+      "image": "assets/REC_FUMER_RE7_FULLBODY_LEFT_V7_02.png",
+      "sha256": "bb3951fcdb6728ba75f2c53c1e39048d00cf17e0f2594aab3b060b35ee33f1bc",
+      "bytes": 1046727,
+      "dimensions": [
+        1059,
+        1486
+      ],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "role": "CANDIDATE_REVIEWED_WITH_LIMITATIONS",
+      "retained_candidate": true,
+      "review_status": "VISUAL_ACCEPTED_WITH_LIMITS",
+      "review_report": "docs/QA_RE7_CV_V7.json",
+      "observations": [
+        "Un seul Fumer entier, vraie lecture gauche en trois-quarts, tête et cou allongé, deux bras longs, deux jambes, mains et pieds contenus. Le nettoyage n’a pas entraîné de perte manifeste des grandes formes ou d’ajout de membre.",
+        "Les larges plaques gris-brun du premier essai sont nettement réduites. Il reste un fin résidu derrière le crâne, le cou, le dos et quelques fibres du flanc. Le second regard indépendant de qa_stage_v5 ne relève aucune grande plaque opaque évidente et accepte cette version avec ces limites.",
+        "Les pixels alpha 16–127 rapportés à la surface alpha ≥ 128 passent de 6,063 % pour 01 à 4,684 % pour 02. Cette mesure complète l’inspection visuelle ; elle ne certifie pas seule un détourage. Aucun pixel alpha positif ne touche le bord du PNG 02.",
+        "Marges alpha ≥ 16 : 26,062 %, 7,268 %, 26,818 %, 4,172 % G/H/D/B. La marge basse reste inférieure à 7 %, mais tous les orteils sont présents et cette réserve ne motive pas un rejet.",
+        "Les points rouges ou jaunes très saturés dans les aperçus sont portés par des pixels alpha 1–3 ; aucun pixel très chromatique n’existe à alpha ≥ 16. Ils ne constituent pas une tache rouge opaque sur le corps.",
+        "La source exacte reste le PNG documentaire frontal, jamais une sortie R34. Les projections de fibres, le profil et les détails des doigts sont régénérés ; l’identité générale est cohérente, mais la fidélité fine 1:1 n’est pas certifiée."
+      ],
+      "generator": "image_gen.imagegen",
+      "generated_original_work_path": "/workspace/scratch/fc109c251847/generated_images/exec-828d4137-2aab-4f0f-8083-d81d33c25421.png",
+      "generated_bytes_edited": false,
+      "binary_identity_to_tool_output_verified": true,
+      "prompt": {
+        "path": "prompts/batch3_corrections.json",
+        "uid": "re7-fumer",
+        "exact_prompt_sha256": "306c2bea6af14609e50b3bb184a46d1103f91c674e8d41e9f166012114381d9c",
+        "source_type": "targeted cutout cleanup of generated trial, original reference retained for identity"
+      },
+      "documentary_reference": {
+        "repository_path": "assets/catalog/re7-fumer.png",
+        "repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/assets/catalog/re7-fumer.png",
+        "source_url": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+        "sha256": "6ac0e3713bb5994d313bdc7d515479b8324fb9ff8b6e836e082188d9a24a1b07",
+        "generated_reference": false,
+        "bitmap_included_in_delivery": false
+      },
+      "canonical_one_to_one_certified": false,
+      "native_model_certified": false,
+      "engine_admitted": false,
+      "animation_validated": false,
+      "pivot_validated": false,
+      "collision_validated": false,
+      "display_scale_validated": false,
+      "native_independent_left_reference_verified": false
+    },
+    {
+      "uid": "re4-iron-maiden",
+      "edition": "Resident Evil 4 (2005)",
+      "image": "assets/REC_IRON_MAIDEN_RE4_2005_FULLBODY_LEFT_V7_01.png",
+      "sha256": "9c8e37202a94c7e01a66ea3d9babf6a3e6778b22878192f2b41c1e2626e94335",
+      "bytes": 1038152,
+      "dimensions": [
+        1085,
+        1449
+      ],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "role": "CANDIDATE_REVIEWED_WITH_LIMITATIONS",
+      "retained_candidate": true,
+      "review_status": "CANDIDATE_REVIEWED_WITH_LIMITATIONS",
+      "review_report": "docs/QA_RE4_VILLAGE_V7.json",
+      "observations": [
+        "Un sujet entier orienté vers la gauche en trois-quarts ; deux bras, mains griffues, deux jambes et pieds complets.",
+        "Corps gris relativement mince, cou allongé, bouche dentée et épines courtes cohérents avec la variante2005 ; pas de substitution du corps gonflé2023.",
+        "Le crâne paraît plus massif et la disposition des épines a été reconstruite ; ni leurs coordonnées ni les proportions ne sont certifiées1:1.",
+        "Aucune extrémité représentée coupée. Les contours rouges saturés du preview sont à alpha≤4, sans pixel correspondant alpha>16."
+      ],
+      "generator": "image_gen.imagegen",
+      "generated_original_work_path": "/workspace/scratch/fc109c251847/generated_images/exec-59316263-748b-4361-b5ad-62ecaa0f2413.png",
+      "generated_bytes_edited": false,
+      "binary_identity_to_tool_output_verified": true,
+      "prompt": {
+        "path": "prompts/batch_re4_village.json",
+        "uid": "re4-iron-maiden",
+        "exact_prompt_sha256": "1c1a4f115e6a5afd10b3ed7f23e5d02958e7c0d0bc987d70f6dfa629dbbcea2a",
+        "source_type": null
+      },
+      "documentary_reference": {
+        "repository_path": "assets/specimens/re4-iron-maiden.png",
+        "repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/assets/specimens/re4-iron-maiden.png",
+        "source_url": "https://bogleech.com/halloween/hall18-re4",
+        "sha256": "36e3ea48ac98978a928a74f88ad9a9066ce3fe33b9559f328ad69273b2358aab",
+        "generated_reference": false,
+        "bitmap_included_in_delivery": false
+      },
+      "canonical_one_to_one_certified": false,
+      "native_model_certified": false,
+      "engine_admitted": false,
+      "animation_validated": false,
+      "pivot_validated": false,
+      "collision_validated": false,
+      "display_scale_validated": false,
+      "native_independent_left_reference_verified": false
+    },
+    {
+      "uid": "revillage-soldat-jet",
+      "edition": "Resident Evil Village (2021)",
+      "image": "assets/REC_SOLDAT_JET_VILLAGE_FULLBODY_LEFT_V7_02.png",
+      "sha256": "56fefe61bcf7b75d37b6aa948e6dfaba6f1beb453bc8e2e0bb0c82b31a964c97",
+      "bytes": 1194315,
+      "dimensions": [
+        1151,
+        1366
+      ],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "role": "CANDIDATE_REVIEWED_WITH_LIMITATIONS",
+      "retained_candidate": true,
+      "review_status": "CANDIDATE_REVIEWED_WITH_LIMITATIONS",
+      "review_report": "docs/QA_RE4_VILLAGE_V7.json",
+      "observations": [
+        "Correction02 : la tête, le thorax, le bassin et les deux bottes sont désormais orientés vers la gauche.",
+        "Les deux foreuses projettent vers la gauche avec leurs pointes entières et séparées ; structure dorsale, tuyaux, équipements et appuis représentés sont contenus dans le cadre.",
+        "L'image corrige le défaut d'orientation01 ; les détails latéraux/dorsaux exposés par la rotation sont régénérés et non certifiés1:1.",
+        "Copie du PNG comparée à l'original de génération : SHA-256 identique, aucune retouche ni transformation."
+      ],
+      "generator": "image_gen.imagegen",
+      "generated_original_work_path": "/workspace/scratch/fc109c251847/generated_images/exec-60ff0a6b-154b-4f29-b6bf-e8aa46fe149b.png",
+      "generated_bytes_edited": false,
+      "binary_identity_to_tool_output_verified": true,
+      "prompt": {
+        "path": "prompts/soldat_jet_orientation_correction_v7_02.json",
+        "uid": "revillage-soldat-jet",
+        "exact_prompt_sha256": "b233fa7d176090e195194054e9c311dd87e3794d099ccb08077d49901dfbfb18",
+        "source_type": null
+      },
+      "documentary_reference": {
+        "repository_path": "modules/fidelity-r34/assets/source-research-extra/pipeline-extra-five/soldatjet-full.png",
+        "repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/source-research-extra/pipeline-extra-five/soldatjet-full.png",
+        "source_url": "http://blackjackrants.blogspot.com/2021/06/reviewing-monsters-resident-evil-village.html",
+        "sha256": "9e3ad02e97383aa52e870c4ce6569c75e9d1c5e2325b75cc3d9f98364e920b51",
+        "generated_reference": false,
+        "bitmap_included_in_delivery": false
+      },
+      "canonical_one_to_one_certified": false,
+      "native_model_certified": false,
+      "engine_admitted": false,
+      "animation_validated": false,
+      "pivot_validated": false,
+      "collision_validated": false,
+      "display_scale_validated": false,
+      "native_independent_left_reference_verified": false
+    },
+    {
+      "uid": "revillage-varcolac",
+      "edition": "Resident Evil Village (2021)",
+      "image": "assets/REC_VARCOLAC_VILLAGE_FULLBODY_LEFT_V7_01.png",
+      "sha256": "580d2c7d95943d563097d9f86cf7a71d1257e12ecf564a1c169ec02da4176410",
+      "bytes": 1673583,
+      "dimensions": [
+        1200,
+        1310
+      ],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "role": "CANDIDATE_REVIEWED_WITH_LIMITATIONS",
+      "retained_candidate": true,
+      "review_status": "CANDIDATE_REVIEWED_WITH_LIMITATIONS",
+      "review_report": "docs/QA_RE4_VILLAGE_V7.json",
+      "observations": [
+        "Un sujet bas en trois-quarts gauche, avec deux grandes mains et deux pieds, crinière grise, gueule ouverte et vêtements déchirés conservés.",
+        "Tous les appuis et la silhouette représentée sont dans le cadre ; aucun membre supplémentaire ni queue ajoutée observé.",
+        "La crinière est plus ample et son arrangement détaillé est régénéré ; une partie des yeux/traits reste naturellement occultée.",
+        "Limite concrète de détourage :2275pixels alpha>16 à au moins12px du corps alpha≥128, maximum126. Le résidu gris/brun parmi les fibres peut contribuer au composite ; absence de fond opaque ne signifie pas contours parfaits."
+      ],
+      "generator": "image_gen.imagegen",
+      "generated_original_work_path": "/workspace/scratch/fc109c251847/generated_images/exec-91bc62c8-79ae-404f-b2b7-d77f37005593.png",
+      "generated_bytes_edited": false,
+      "binary_identity_to_tool_output_verified": true,
+      "prompt": {
+        "path": "prompts/batch_re4_village.json",
+        "uid": "revillage-varcolac",
+        "exact_prompt_sha256": "a7cadce788e6b3ad11fd1804bc5a05b40d3fe0cf43c41703e77ebb3d91bdab63",
+        "source_type": null
+      },
+      "documentary_reference": {
+        "repository_path": "assets/specimens/revillage-varcolac.png",
+        "repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/assets/specimens/revillage-varcolac.png",
+        "source_url": "https://blackjackrants.blogspot.com/2021/06/reviewing-monsters-resident-evil-village.html",
+        "sha256": "6b1fa95e3409d5afad07b3362578bc682a50608f8afe245fdfc4a1ccd45e0e2a",
+        "generated_reference": false,
+        "bitmap_included_in_delivery": false
+      },
+      "canonical_one_to_one_certified": false,
+      "native_model_certified": false,
+      "engine_admitted": false,
+      "animation_validated": false,
+      "pivot_validated": false,
+      "collision_validated": false,
+      "display_scale_validated": false,
+      "native_independent_left_reference_verified": false
+    },
+    {
+      "uid": "re4r-verdugo",
+      "edition": "Resident Evil 4 remake (2023)",
+      "image": "assets/REC_VERDUGO_RE4R_2023_FULLBODY_LEFT_V7_01.png",
+      "sha256": "3ff296a43c627f905aabe2d29fe641d8a5c2b5437cde13a4d086b773ba4f86e2",
+      "bytes": 1126232,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "role": "CANDIDATE_REVIEWED_WITH_LIMITATIONS",
+      "retained_candidate": true,
+      "review_status": "CANDIDATE_REVIEWED_WITH_LIMITATIONS",
+      "review_report": "docs/QA_RE4_VILLAGE_V7.json",
+      "observations": [
+        "Un sujet en trois-quarts gauche ; deux mains à trois grands crochets, deux pieds et longue queue segmentée terminée en lame sont entiers.",
+        "Mandibules, face claire, carapace épineuse et boucle caudale cohérentes avec la source du remake ; aucune barre horizontale parasite de la source reprise comme anatomie.",
+        "La queue change sa courbure avec la pose et les plaques/reliefs sont régénérés ; surfaces cachées et proportions non certifiées1:1.",
+        "Marges verticales de22pixels seulement, sans coupe visible des pointes."
+      ],
+      "generator": "image_gen.imagegen",
+      "generated_original_work_path": "/workspace/scratch/fc109c251847/generated_images/exec-b8611521-1252-4f7f-aeda-952983b83d37.png",
+      "generated_bytes_edited": false,
+      "binary_identity_to_tool_output_verified": true,
+      "prompt": {
+        "path": "prompts/batch_re4_village.json",
+        "uid": "re4r-verdugo",
+        "exact_prompt_sha256": "36d81ea87319a3ac74f2bd6b723113890717151f83c2f95517c53471b813cd4a",
+        "source_type": null
+      },
+      "documentary_reference": {
+        "repository_path": "assets/specimens/re4r-verdugo.png",
+        "repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/assets/specimens/re4r-verdugo.png",
+        "source_url": "https://blackjackrants.blogspot.com/2023/10/reviewing-monsters-resident-evil-4.html?m=1",
+        "sha256": "4f27d408f91c009f2de69137d72917d8f50f7168d1a9a2e7e1111f6af9fcd9bd",
+        "generated_reference": false,
+        "bitmap_included_in_delivery": false
+      },
+      "canonical_one_to_one_certified": false,
+      "native_model_certified": false,
+      "engine_admitted": false,
+      "animation_validated": false,
+      "pivot_validated": false,
+      "collision_validated": false,
+      "display_scale_validated": false,
+      "native_independent_left_reference_verified": false
+    },
+    {
+      "uid": "re7-fumer",
+      "edition": "Resident Evil 7 Biohazard (2017) — Not a Hero",
+      "image": "trials/REC_FUMER_RE7_FULLBODY_LEFT_V7_01.png",
+      "sha256": "4ef5324b8a899c69357458795f5c8a26933b706b6fa0918b8dc571159f44ee5a",
+      "bytes": 1213942,
+      "dimensions": [
+        1059,
+        1486
+      ],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "role": "TRIAL_NOT_RETAINED",
+      "retained_candidate": false,
+      "review_status": "TRIAL_SUPERSEDED_BY_REVIEWED_02",
+      "review_report": "docs/QA_RE7_CV_V7.json",
+      "observations": [
+        "Un seul sujet mince, deux bras longs, deux jambes, un cou allongé, un abdomen inférieur arrondi. La tête et la posture lisent vers la gauche. Les deux mains et les deux pieds restent dans le cadre ; aucun membre majeur supplémentaire observé.",
+        "Défaut visible : larges plaques gris-brun semi-transparentes derrière la tête, le haut du dos et les avant-bras, plus étendues que de simples fils fins ou un bord anti-crénelé. Le résidu alpha faible s’étend au-delà de la silhouette utile.",
+        "Au seuil alpha ≥ 16, la marge verticale vaut 19 px en haut et en bas, soit 1,279 % de la hauteur. Les extrémités ne sont pas coupées ; ce manque de marge est un écart au prompt, distinct du motif de correction du détourage.",
+        "La trame pâle apparaît plus épaisse et plus continue que sur la source, avec un profil crânien plus arrondi. Une source frontale unique ne certifie pas les surfaces arrière, les ouvertures fibreuses exactes ni les détails de doigts masqués."
+      ],
+      "generator": "image_gen.imagegen",
+      "generated_original_work_path": "/workspace/scratch/fc109c251847/generated_images/exec-02a72f4b-01e1-49c2-97aa-273e6bc61cf4.png",
+      "generated_bytes_edited": false,
+      "binary_identity_to_tool_output_verified": true,
+      "prompt": {
+        "path": "prompts/batch1.json",
+        "uid": "re7-fumer",
+        "exact_prompt_sha256": "fe22df7d6d791185b35947ed63dc7ad28111698b3e3fb30d171069513f6373d2",
+        "source_type": "complete archived source, matching R34 receipt at pinned repository commit"
+      },
+      "documentary_reference": {
+        "repository_path": "assets/catalog/re7-fumer.png",
+        "repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/assets/catalog/re7-fumer.png",
+        "source_url": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+        "sha256": "6ac0e3713bb5994d313bdc7d515479b8324fb9ff8b6e836e082188d9a24a1b07",
+        "generated_reference": false,
+        "bitmap_included_in_delivery": false
+      },
+      "canonical_one_to_one_certified": false,
+      "native_model_certified": false,
+      "engine_admitted": false,
+      "animation_validated": false,
+      "pivot_validated": false,
+      "collision_validated": false,
+      "display_scale_validated": false,
+      "native_independent_left_reference_verified": false
+    },
+    {
+      "uid": "re7-mama-mold",
+      "edition": "Resident Evil 7 biohazard (2017)",
+      "image": "trials/REC_MAMA_MOLD_RE7_FULLBODY_LEFT_V7_01.png",
+      "sha256": "49c3079dcba79cada4776dba0a94753c31f72ebf0052295a52059c2c3cd9ccdd",
+      "bytes": 2039369,
+      "dimensions": [
+        948,
+        1659
+      ],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "role": "TRIAL_NOT_RETAINED",
+      "retained_candidate": false,
+      "review_status": "TRIAL_NOT_ADMITTED_CORRECTION_BLOCKED",
+      "review_report": "docs/QA_RE7_CV_V7.json",
+      "observations": [
+        "La masse reste distincte de Fumer : ventre et hanches larges, jambes épaisses, bras pendants, doigts longs et transition courte entre tête et épaules. Un seul corps orienté vers la gauche, avec les deux pieds et les deux mains contenus.",
+        "Défaut de finition : régions grises semi-transparentes irrégulières autour du dos et du bras éloigné. Quatre pixels de bord ont un alpha inférieur à 16 ; ils ne prouvent pas une coupe du corps visible.",
+        "Les marges alpha ≥ 16 sont 5,802 %,3,195%,8,861%,2,532% G/H/D/B. Le minimum de 7 % n’est pas tenu sur trois côtés, mais les grandes extrémités sont présentes.",
+        "Le réseau clair et les cavités rouges sont plus contrastés que le gris-brun assourdi de la source. La bouche et les détails latéraux plus exposés ne sont pas vérifiables depuis une seule vue oblique. Aucun membre majeur supplémentaire ni inversion flagrante d’asymétrie observés."
+      ],
+      "generator": "image_gen.imagegen",
+      "generated_original_work_path": "/workspace/scratch/fc109c251847/generated_images/exec-7ac6ee83-a53d-4573-a21e-827ef08233db.png",
+      "generated_bytes_edited": false,
+      "binary_identity_to_tool_output_verified": true,
+      "prompt": {
+        "path": "prompts/batch2.json",
+        "uid": "re7-mama-mold",
+        "exact_prompt_sha256": "306e121aa3492052abc4fe4ddc34cb2bbac91340e0fb5910c1bbb1bae34237f7",
+        "source_type": "complete archived appearance reference verified against R34 receipt"
+      },
+      "documentary_reference": {
+        "repository_path": "assets/catalog/re7-mama-mold.png",
+        "repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/assets/catalog/re7-mama-mold.png",
+        "source_url": "https://blackjackrants.blogspot.com/2020/11/reviewing-monsters-resident-evil-7.html",
+        "sha256": "02c8fb9b0bf49d3460d350013338c40acdd6cb500e147e751f33596f1412d163",
+        "generated_reference": false,
+        "bitmap_included_in_delivery": false
+      },
+      "canonical_one_to_one_certified": false,
+      "native_model_certified": false,
+      "engine_admitted": false,
+      "animation_validated": false,
+      "pivot_validated": false,
+      "collision_validated": false,
+      "display_scale_validated": false,
+      "native_independent_left_reference_verified": false
+    },
+    {
+      "uid": "revillage-soldat-jet",
+      "edition": "Resident Evil Village (2021)",
+      "image": "trials/REC_SOLDAT_JET_VILLAGE_FULLBODY_LEFT_V7_01.png",
+      "sha256": "02ed9d11f877392141af3a137569be0f195d338d372d7412be6bcecad28745ad",
+      "bytes": 1303739,
+      "dimensions": [
+        1152,
+        1366
+      ],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "role": "TRIAL_NOT_RETAINED",
+      "retained_candidate": false,
+      "review_status": "REJECTED_SUPERSEDED",
+      "review_report": "docs/QA_RE4_VILLAGE_V7.json",
+      "observations": [
+        "Deux foreuses, deux bottes, tête mécanique, cœur thoracique rouge et structure dorsale sont contenus dans le cadre.",
+        "La tête pointe vers la gauche, mais plastron, ceinture, bassin et jambes restent presque frontaux ; les foreuses s'ouvrent de part et d'autre comme dans la source.",
+        "Cette01 ne démontre pas suffisamment une nouvelle orientation gauche du corps entier ; conserver comme essai en attente d'une correction.",
+        "La correction02 a ensuite établi la gauche et remplacé cet essai ;01 est conservé inchangé dans trials/."
+      ],
+      "generator": "image_gen.imagegen",
+      "generated_original_work_path": "/workspace/scratch/fc109c251847/generated_images/exec-35784068-1c12-4d8e-b765-837464d59fc5.png",
+      "generated_bytes_edited": false,
+      "binary_identity_to_tool_output_verified": true,
+      "prompt": {
+        "path": "prompts/batch_re4_village.json",
+        "uid": "revillage-soldat-jet",
+        "exact_prompt_sha256": "8806b6ea80b4f4ee7a250f67f25e0d8e4f24761d4d0b9fec4be60ac480be5d23",
+        "source_type": null
+      },
+      "documentary_reference": {
+        "repository_path": "modules/fidelity-r34/assets/source-research-extra/pipeline-extra-five/soldatjet-full.png",
+        "repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/source-research-extra/pipeline-extra-five/soldatjet-full.png",
+        "source_url": "http://blackjackrants.blogspot.com/2021/06/reviewing-monsters-resident-evil-village.html",
+        "sha256": "9e3ad02e97383aa52e870c4ce6569c75e9d1c5e2325b75cc3d9f98364e920b51",
+        "generated_reference": false,
+        "bitmap_included_in_delivery": false
+      },
+      "canonical_one_to_one_certified": false,
+      "native_model_certified": false,
+      "engine_admitted": false,
+      "animation_validated": false,
+      "pivot_validated": false,
+      "collision_validated": false,
+      "display_scale_validated": false,
+      "native_independent_left_reference_verified": false
+    }
+  ],
+  "blocked_attempts": [
+    {
+      "uid": "re7-molded",
+      "attempt_id": "REC_MOLDED_RE7_FULLBODY_LEFT_V7_01",
+      "status": "BLOCKED_BY_TOOL",
+      "code": "moderation_blocked",
+      "category": "violence",
+      "stage": "output",
+      "output_image": null,
+      "retry_performed": false,
+      "evidence": "manifests/ROOT_GENERATION_STATUS_V7.json"
+    },
+    {
+      "uid": "re7-mama-mold",
+      "attempt_id": "REC_MAMA_MOLD_RE7_FULLBODY_LEFT_V7_02",
+      "status": "BLOCKED_BY_TOOL",
+      "code": "moderation_blocked",
+      "category": "violence",
+      "stage": "output",
+      "output_image": null,
+      "retry_performed": false,
+      "evidence": "manifests/ROOT_GENERATION_STATUS_V7.json"
+    }
+  ],
+  "held_references": [
+    {
+      "uid": "re7-little-crawler",
+      "status": "HELD_ANATOMY_REFERENCE",
+      "generation_performed": false,
+      "reason": "Attaches et occlusions des appendices ne permettent pas de certifier leur topologie ; ni quatre ni six membres imposés."
+    },
+    {
+      "uid": "re4r-iron-maiden",
+      "status": "HELD_SPINE_EXTENT_REFERENCE",
+      "generation_performed": false,
+      "reason": "Plusieurs longues épines sortent du cadrage de la source ; leurs extrémités complètes ne sont pas établies."
+    }
+  ],
+  "carry_forward_eliminator": {
+    "uid": "re0-eliminator",
+    "variant": "blanche",
+    "status": "HELD_REFERENCE",
+    "generation_performed": false,
+    "report": "docs/REFERENCE_RECOVERY_AFTER_V6_ELIMINATOR.json"
+  },
+  "source_bitmaps_included": false,
+  "models_included": false,
+  "v2_downloads_included": false,
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "historical_v3_v4_deduplication_proven": false,
+  "status_precedence": "La QA finale et ce manifeste priment sur les statuts initiaux des prompts et reçus conservés.",
+  "work_path_policy": "Les chemins absolus et references/ des rapports sont des traces de travail ; les originaux documentaires sont exclus du paquet."
+}

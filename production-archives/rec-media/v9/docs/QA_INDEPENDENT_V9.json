@@ -1,0 +1,843 @@
+{
+  "schema": "rec-v9-independent-visual-qa-v1",
+  "reviewer": "bible_docx_v5",
+  "producer": "qa_stage_v5",
+  "updated_at": "2026-11-19T17:17:28.368706+00:00",
+  "review_frozen": true,
+  "scope": "Independent physical visual comparisons against exact documentary reference files, not against prior generated R34 outputs. New generation originals and copied PNGs checked separately.",
+  "method": [
+    "Every reviewed source and PNG opened visually; source edition and anatomical asymmetries compared.",
+    "SHA256, copy equality, dimensions, alpha range, silhouette bbox at alpha>=16 and frame contacts independently recalculated.",
+    "Alpha composited on neutral grey only in scratch for inspection; original PNG bytes never edited.",
+    "Exterior check measures pixels at least12px from the alpha>=128 core. Hidden RGB at alpha0 is not counted as a visible matte."
+  ],
+  "counts": {
+    "png_physically_reviewed": 13,
+    "candidate_png": 9,
+    "candidate_identities": 9,
+    "trial_png": 4,
+    "generation_refusals_seen": 1
+  },
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "source_bitmaps_publishable": false,
+  "global_limits": [
+    "A candidate is a reviewed generated still, not an engine-admitted sprite, animation, certified extraction or pixel-accurate canonical1:1 reproduction.",
+    "Unseen surfaces, microtextures and many joints are inferred by generation from documentary views; source license and official provenance are not certified by this QA.",
+    "Small positive margins do not imply a cropped silhouette. Full extremities are assessed visually and by alpha, rather than enforcing a cosmetic percentage alone."
+  ],
+  "records": [
+    {
+      "filename": "REC_ADDER_RE1R_2002_FULLBODY_LEFT_V9_01.png",
+      "uid": "re1r-adder",
+      "edition": "Resident Evil remake (2002)",
+      "path": "assets/REC_ADDER_RE1R_2002_FULLBODY_LEFT_V9_01.png",
+      "sha256": "e44b62dc0b7610f51319be5d74b5f18b936199773c830adbb5c5cbb7fc52d46c",
+      "original_path": "/workspace/scratch/fc109c251847/generated_images/exec-55723381-30c8-4eb7-a9fd-da260ead70e7.png",
+      "original_sha256": "e44b62dc0b7610f51319be5d74b5f18b936199773c830adbb5c5cbb7fc52d46c",
+      "copy_identical": true,
+      "bytes": 425882,
+      "dimensions": [
+        1983,
+        793
+      ],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_zero_ratio": 0.88827416,
+      "bbox_alpha_ge16_xyxy_exclusive": [
+        72,
+        224,
+        1915,
+        547
+      ],
+      "margins_alpha_ge16_ltrb_pixels": [
+        72,
+        224,
+        68,
+        246
+      ],
+      "border_pixels_alpha_ge16": 0,
+      "outside_12px_of_alpha128_core": {
+        "max_alpha": 1,
+        "pixels_alpha_ge16": 0
+      },
+      "source_path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v9/references/re1r-adder__6050dc970518.png",
+      "source_sha256": "6050dc9705184ad1999ec3217d1d013b488aa268a1158eb9deaa38a6b7d01fe0",
+      "source_sha_matches_metadata": true,
+      "source_repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/assets/catalog/re1r-adder.png",
+      "source_documentary_url": "https://www.evilresource.com/resident-evil-remake/enemies/adder",
+      "source_physically_viewed_by_independent_reviewer": true,
+      "generated_png_physically_viewed_by_independent_reviewer": true,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "complementary_sources": [],
+      "status": "CANDIDATE_WITH_LIMITS",
+      "subject_count": 1,
+      "left_orientation": "READABLE_LEFT_BODY",
+      "anatomy": [
+        "Serpent sans membres, corps continu en S, tête fermée à gauche et pointe de queue à droite entièrement contenus.",
+        "Marques claires de tête et bandes brun-or cohérentes avec la source du remake 2002."
+      ],
+      "limits": [
+        "Écailles et surface reconstruits à partir d’une source 450×360 ; leur correspondance pixel à pixel n’est pas établie."
+      ],
+      "alpha_review": "PASS_NO_VISIBLE_BROAD_MATTE_ON_NEUTRAL_COMPOSITE"
+    },
+    {
+      "filename": "REC_CRIMSON_HEAD_RE1R_2002_FULLBODY_LEFT_V9_01.png",
+      "uid": "re1r-crimson-head",
+      "edition": "Resident Evil remake (2002)",
+      "path": "assets/REC_CRIMSON_HEAD_RE1R_2002_FULLBODY_LEFT_V9_01.png",
+      "sha256": "0544982c268c0ee46b096d166e383cce89b66f8cc9b76572203824fabcb06d3d",
+      "original_path": "/workspace/scratch/fc109c251847/generated_images/exec-3dbd191c-a783-4b8e-91e4-e2ecd8f0e8c1.png",
+      "original_sha256": "0544982c268c0ee46b096d166e383cce89b66f8cc9b76572203824fabcb06d3d",
+      "copy_identical": true,
+      "bytes": 1078176,
+      "dimensions": [
+        1085,
+        1450
+      ],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_zero_ratio": 0.71174448,
+      "bbox_alpha_ge16_xyxy_exclusive": [
+        190,
+        63,
+        930,
+        1386
+      ],
+      "margins_alpha_ge16_ltrb_pixels": [
+        190,
+        63,
+        155,
+        64
+      ],
+      "border_pixels_alpha_ge16": 0,
+      "outside_12px_of_alpha128_core": {
+        "max_alpha": 2,
+        "pixels_alpha_ge16": 0
+      },
+      "source_path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v9/references/re1r-crimson-head__f8571e33c997.webp",
+      "source_sha256": "f8571e33c997e072bafbf36cdd081d83cf3b1c8a1bc254fbac11d29cdb0ffa9b",
+      "source_sha_matches_metadata": true,
+      "source_repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/source-research-extra/pipeline-five/crimson-zombie-full.png",
+      "source_documentary_url": null,
+      "source_physically_viewed_by_independent_reviewer": true,
+      "generated_png_physically_viewed_by_independent_reviewer": true,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "complementary_sources": [],
+      "status": "CANDIDATE_WITH_LIMITS",
+      "subject_count": 1,
+      "left_orientation": "READABLE_LEFT_THREE_QUARTER",
+      "anatomy": [
+        "Tête, torse penché, bassin et pieds lisibles vers la gauche ; deux bras, deux jambes et toutes les extrémités sont visibles.",
+        "Déchirure d’épaule anatomique gauche conservée sur le côté proche, vêtement brun, yeux pâles et peau rouge cohérents."
+      ],
+      "limits": [
+        "Pose, visage, doigts et déchirures détaillées régénérés ; source peu définie, aucun contrôle d’un modèle natif."
+      ],
+      "alpha_review": "PASS_NO_VISIBLE_BROAD_MATTE_ON_NEUTRAL_COMPOSITE"
+    },
+    {
+      "filename": "REC_WASP_RE1R_2002_FULLBODY_LEFT_V9_01.png",
+      "uid": "re1r-wasp",
+      "edition": "Resident Evil remake (2002)",
+      "path": "assets/REC_WASP_RE1R_2002_FULLBODY_LEFT_V9_01.png",
+      "sha256": "960c75b3164a5f7912ce981d34771a663689fe73a82f29eeb584ba6e33235898",
+      "original_path": "/workspace/scratch/fc109c251847/generated_images/exec-7d72ac23-949c-4e58-bcc5-8d60c378bea8.png",
+      "original_sha256": "960c75b3164a5f7912ce981d34771a663689fe73a82f29eeb584ba6e33235898",
+      "copy_identical": true,
+      "bytes": 675044,
+      "dimensions": [
+        1402,
+        1122
+      ],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_zero_ratio": 0.83285019,
+      "bbox_alpha_ge16_xyxy_exclusive": [
+        95,
+        61,
+        1308,
+        1022
+      ],
+      "margins_alpha_ge16_ltrb_pixels": [
+        95,
+        61,
+        94,
+        100
+      ],
+      "border_pixels_alpha_ge16": 0,
+      "outside_12px_of_alpha128_core": {
+        "max_alpha": 1,
+        "pixels_alpha_ge16": 0
+      },
+      "source_path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v9/references/re1r-wasp__0dc50891066f.png",
+      "source_sha256": "0dc50891066fd4f2fb09077e84740f2e07675321f7302ba8b9b62a04d2ee3002",
+      "source_sha_matches_metadata": true,
+      "source_repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/assets/catalog/re1r-wasp.png",
+      "source_documentary_url": "https://www.evilresource.com/resident-evil-remake/enemies/wasp",
+      "source_physically_viewed_by_independent_reviewer": true,
+      "generated_png_physically_viewed_by_independent_reviewer": true,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "complementary_sources": [],
+      "status": "CANDIDATE_WITH_LIMITS",
+      "subject_count": 1,
+      "left_orientation": "READABLE_LEFT_FLIGHT",
+      "anatomy": [
+        "Six pattes jointées traçables, deux surfaces alaires principales cohérentes avec le visuel 2002, dard et extrémités entiers.",
+        "Tête ocre et yeux noirs, abdomen rayé et membranes claires maintenus ; sujet volant sans transformation bipède."
+      ],
+      "limits": [
+        "Nervures et microrelief reconstruits ; ne pas lui appliquer le dessin à quatre ailes dorées du visuel RE1 1996."
+      ],
+      "alpha_review": "PASS_NO_VISIBLE_BROAD_MATTE_ON_NEUTRAL_COMPOSITE"
+    },
+    {
+      "filename": "REC_G_FOURTH_FORM_RE2R_2019_FULLBODY_LEFT_V9_01.png",
+      "uid": "re2r-g-fourth-form",
+      "edition": "Resident Evil 2 remake (2019)",
+      "path": "trials/REC_G_FOURTH_FORM_RE2R_2019_FULLBODY_LEFT_V9_01.png",
+      "sha256": "62f1da4ff4adcef5a82c67696989dc9056b5c2ba026c9ec3bfe8b285e907e666",
+      "original_path": "/workspace/scratch/fc109c251847/generated_images/exec-6b1233d6-0c60-454c-9851-000ac1100ac8.png",
+      "original_sha256": "62f1da4ff4adcef5a82c67696989dc9056b5c2ba026c9ec3bfe8b285e907e666",
+      "copy_identical": true,
+      "bytes": 1709121,
+      "dimensions": [
+        1478,
+        1064
+      ],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_zero_ratio": 0.57174143,
+      "bbox_alpha_ge16_xyxy_exclusive": [
+        55,
+        20,
+        1376,
+        1042
+      ],
+      "margins_alpha_ge16_ltrb_pixels": [
+        55,
+        20,
+        102,
+        22
+      ],
+      "border_pixels_alpha_ge16": 0,
+      "outside_12px_of_alpha128_core": {
+        "max_alpha": 1,
+        "pixels_alpha_ge16": 0
+      },
+      "source_path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v9/references/re2r-g-fourth-form__cdd536038ca4.webp",
+      "source_sha256": "cdd536038ca4bba7519734dfbdeed9843f750e4e65d1044110a177f80b20aca7",
+      "source_sha_matches_metadata": true,
+      "source_repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/research/re2r-g-fourth-form-article-candidate-1.webp",
+      "source_documentary_url": "https://vignette.wikia.nocookie.net/residentevil/images/f/f3/G_Model_%283%29.jpg/revision/latest?cb=20190322105931",
+      "source_physically_viewed_by_independent_reviewer": true,
+      "generated_png_physically_viewed_by_independent_reviewer": true,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "complementary_sources": [],
+      "status": "TRIAL_REJECTED_LEFT_ORIENTATION",
+      "subject_count": 1,
+      "left_orientation": "INSUFFICIENT_MOSTLY_FRONTAL",
+      "anatomy": [
+        "Corps entier, deux bras fortement asymétriques et deux jambes conservés, sans inversion évidente des appendices principaux.",
+        "Thorax ouvert et bassin restent presque frontaux ; seuls les pieds et légèrement le museau suggèrent la gauche."
+      ],
+      "limits": [
+        "Ne remplit pas le gap de vue corporelle gauche indépendante.",
+        "Correction 02 refusée au stade output/violence, request e6321677-42d0-43d8-9376-df84eba0f25e ; aucun PNG02 et aucune nouvelle tentative."
+      ],
+      "alpha_review": "PASS_NO_VISIBLE_BROAD_MATTE_ON_NEUTRAL_COMPOSITE"
+    },
+    {
+      "filename": "REC_EL_GIGANTE_RE4R_2023_FULLBODY_LEFT_V9_01.png",
+      "uid": "re4r-el-gigante",
+      "edition": "Resident Evil 4 remake (2023)",
+      "path": "assets/REC_EL_GIGANTE_RE4R_2023_FULLBODY_LEFT_V9_01.png",
+      "sha256": "6ee4c20e86eb132ad86ea62f634841992cf020c387ee63535a2a8a6ec07944c6",
+      "original_path": "/workspace/scratch/fc109c251847/generated_images/exec-81d95291-e60a-44a1-a1be-c7f36ff350c5.png",
+      "original_sha256": "6ee4c20e86eb132ad86ea62f634841992cf020c387ee63535a2a8a6ec07944c6",
+      "copy_identical": true,
+      "bytes": 1748933,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_zero_ratio": 0.59356946,
+      "bbox_alpha_ge16_xyxy_exclusive": [
+        39,
+        21,
+        1095,
+        1276
+      ],
+      "margins_alpha_ge16_ltrb_pixels": [
+        39,
+        21,
+        104,
+        36
+      ],
+      "border_pixels_alpha_ge16": 0,
+      "outside_12px_of_alpha128_core": {
+        "max_alpha": 1,
+        "pixels_alpha_ge16": 0
+      },
+      "source_path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v9/references/re4r-el-gigante__8091d46a3122.jpg",
+      "source_sha256": "8091d46a31220af44c5c502c049aed1125765b798856ba337ed40fa5b17fda2d",
+      "source_sha_matches_metadata": true,
+      "source_repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/research/re4r-el-gigante-candidate-3.jpg",
+      "source_documentary_url": "https://blogger.googleusercontent.com/img/a/AVvXsEiUkggog-efAoaZnLX9w8XcWF2zPh1SFuEeNNp9j8JLf6s6qlLAhx7kueiaNRLE7T4c9eO7HDQ2ece5m2gCXtlKo4FVMw5MhgUEVSuCbWKnGXQq7bf63CPG6iwXRJn84VpnQBVOZifPZn_66uhzADDCq2Z6sJ0BeChYgWiq-UE0vCc0Q7av7dlFjFHqnY4z",
+      "source_physically_viewed_by_independent_reviewer": true,
+      "generated_png_physically_viewed_by_independent_reviewer": true,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "complementary_sources": [],
+      "status": "CANDIDATE_WITH_LIMITS",
+      "subject_count": 1,
+      "left_orientation": "READABLE_LEFT_THREE_QUARTER",
+      "anatomy": [
+        "Grand corps gris, deux bras et deux jambes, tête dirigée à gauche, cordes cervicales et tissu de taille cohérents.",
+        "Parasite dorsal et ses filaments, mains et pieds complets dans le cadre."
+      ],
+      "limits": [
+        "Trois-quarts ouvert plutôt qu’un profil strict ; nouveaux plis, doigts et surfaces éloignées reconstruits.",
+        "Marge supérieure réduite mais extrémités contenues ; aucun pixel alpha≥16 au bord."
+      ],
+      "alpha_review": "PASS_NO_VISIBLE_BROAD_MATTE_ON_NEUTRAL_COMPOSITE"
+    },
+    {
+      "filename": "REC_NOSFERATU_CODE_VERONICA_2000_FULLBODY_LEFT_V9_01.png",
+      "uid": "recv-nosferatu",
+      "edition": "Resident Evil CODE: Veronica (2000)",
+      "path": "trials/REC_NOSFERATU_CODE_VERONICA_2000_FULLBODY_LEFT_V9_01.png",
+      "sha256": "aba2e2e31dcb6a34b07453198f456d84b769a6d7e1c8cbec4472f03275645a1b",
+      "original_path": "/workspace/scratch/fc109c251847/generated_images/exec-9568a841-9add-42b5-9c0b-c6432d1dcafc.png",
+      "original_sha256": "aba2e2e31dcb6a34b07453198f456d84b769a6d7e1c8cbec4472f03275645a1b",
+      "copy_identical": true,
+      "bytes": 1229533,
+      "dimensions": [
+        1130,
+        1392
+      ],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_zero_ratio": 0.66039696,
+      "bbox_alpha_ge16_xyxy_exclusive": [
+        83,
+        35,
+        977,
+        1366
+      ],
+      "margins_alpha_ge16_ltrb_pixels": [
+        83,
+        35,
+        153,
+        26
+      ],
+      "border_pixels_alpha_ge16": 0,
+      "outside_12px_of_alpha128_core": {
+        "max_alpha": 1,
+        "pixels_alpha_ge16": 0
+      },
+      "source_path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v9/references/recv-nosferatu__4f082ca16a2e.png",
+      "source_sha256": "4f082ca16a2e7d8bb892912fed041963a2fa9be24655cc261c5aaea9ba284814",
+      "source_sha_matches_metadata": true,
+      "source_repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/research/recv-nosferatu-article-candidate-0.png",
+      "source_documentary_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgPgSFh-sZ4g_unzhhwymZ9O8YGCF-QOXnLI4hnDbWccbbA4-rBWGrRWv9g7F81ilyoEHpzZkka5E67I4NNLLXRksAWyAdoqOKA7ldESWxhmM8lOlt8dNHQJ8pwuVrtCYy54FTIHq5wXIt4/",
+      "source_physically_viewed_by_independent_reviewer": true,
+      "generated_png_physically_viewed_by_independent_reviewer": true,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "complementary_sources": [],
+      "status": "TRIAL_REJECTED_APPENDAGE_LATERALITY",
+      "subject_count": 1,
+      "left_orientation": "READABLE_LEFT_BUT_WRONG_ASYMMETRY",
+      "anatomy": [
+        "La racine du très grand appendice apparaît sur l’épaule proche de la vue gauche, donc du côté anatomique gauche.",
+        "La source situe cette grande racine du côté anatomique droit ; 01 reproduit une disposition ressemblant à un miroir."
+      ],
+      "limits": [
+        "Latéralité majeure erronée ; cet essai ne doit pas être compté comme candidat fidèle."
+      ],
+      "alpha_review": "PASS_NO_VISIBLE_BROAD_MATTE_ON_NEUTRAL_COMPOSITE"
+    },
+    {
+      "filename": "REC_G_EMBRYO_OUTBREAK_2003_FULLBODY_LEFT_V9_01.png",
+      "uid": "reoutbreak-g-embryo",
+      "edition": "Resident Evil Outbreak (2003)",
+      "path": "assets/REC_G_EMBRYO_OUTBREAK_2003_FULLBODY_LEFT_V9_01.png",
+      "sha256": "3d818d8ae7363f069b17603b1a753ca37387731bc16c23ff43ff08c48a4bb3c9",
+      "original_path": "/workspace/scratch/fc109c251847/generated_images/exec-efa4952c-6bd9-4055-a426-a66b7cf76bb0.png",
+      "original_sha256": "3d818d8ae7363f069b17603b1a753ca37387731bc16c23ff43ff08c48a4bb3c9",
+      "copy_identical": true,
+      "bytes": 1366796,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "alpha_zero_ratio": 0.79323069,
+      "bbox_alpha_ge16_xyxy_exclusive": [
+        88,
+        156,
+        1458,
+        863
+      ],
+      "margins_alpha_ge16_ltrb_pixels": [
+        88,
+        156,
+        78,
+        161
+      ],
+      "border_pixels_alpha_ge16": 0,
+      "outside_12px_of_alpha128_core": {
+        "max_alpha": 1,
+        "pixels_alpha_ge16": 0
+      },
+      "source_path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v9/references/reoutbreak-g-embryo__580eefbb96dc.png",
+      "source_sha256": "580eefbb96dce8829b4b8fa30d738a6d6e726477720d6e6fb517c31366c683d8",
+      "source_sha_matches_metadata": true,
+      "source_repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/assets/catalog/reoutbreak-g-embryo.png",
+      "source_documentary_url": "https://www.evilresource.com/resident-evil-outbreak/enemies/g-embryo",
+      "source_physically_viewed_by_independent_reviewer": true,
+      "generated_png_physically_viewed_by_independent_reviewer": true,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "complementary_sources": [],
+      "status": "CANDIDATE_WITH_LIMITS",
+      "subject_count": 1,
+      "left_orientation": "READABLE_LEFT_BODY",
+      "anatomy": [
+        "Deux membres antérieurs porteurs, tête arrondie sans yeux visibles, bouche ouverte et longue queue complète ; silhouette rose et appendice ventral cohérents.",
+        "Tête et axe corporel dirigés à gauche sans membres supplémentaires."
+      ],
+      "limits": [
+        "Dentition et plis amplifiés par génération ; pas de certification géométrique.",
+        "Le grand halo du preview brut n’est pas une plaque visible : recomposition neutre propre, maximum alpha 1 à 12 pixels du noyau alpha 128."
+      ],
+      "alpha_review": "PASS_NO_VISIBLE_BROAD_MATTE_ON_NEUTRAL_COMPOSITE"
+    },
+    {
+      "filename": "REC_GIANT_WASP_OUTBREAK_2003_FULLBODY_LEFT_V9_01.png",
+      "uid": "reoutbreak-giant-wasp",
+      "edition": "Resident Evil Outbreak (2003)",
+      "path": "trials/REC_GIANT_WASP_OUTBREAK_2003_FULLBODY_LEFT_V9_01.png",
+      "sha256": "59f955930c99b4dc7aa8b046f99ab58452988b23eaee10c9f8c0d27a18759cc6",
+      "original_path": "/workspace/scratch/fc109c251847/generated_images/exec-fc556836-59c9-49fd-82d6-f00b565eae2a.png",
+      "original_sha256": "59f955930c99b4dc7aa8b046f99ab58452988b23eaee10c9f8c0d27a18759cc6",
+      "copy_identical": true,
+      "bytes": 707948,
+      "dimensions": [
+        1402,
+        1122
+      ],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_zero_ratio": 0.83467214,
+      "bbox_alpha_ge16_xyxy_exclusive": [
+        179,
+        62,
+        1289,
+        1032
+      ],
+      "margins_alpha_ge16_ltrb_pixels": [
+        179,
+        62,
+        113,
+        90
+      ],
+      "border_pixels_alpha_ge16": 0,
+      "outside_12px_of_alpha128_core": {
+        "max_alpha": 1,
+        "pixels_alpha_ge16": 0
+      },
+      "source_path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v9/references/reoutbreak-giant-wasp__13f8c0e93ba8.png",
+      "source_sha256": "13f8c0e93ba85d3cc3cbbd057ce63a805a14627151d9667939a389e76d9c7820",
+      "source_sha_matches_metadata": true,
+      "source_repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/assets/catalog/reoutbreak-giant-wasp.png",
+      "source_documentary_url": "https://www.evilresource.com/resident-evil-outbreak/enemies/giant-wasp",
+      "source_physically_viewed_by_independent_reviewer": true,
+      "generated_png_physically_viewed_by_independent_reviewer": true,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "complementary_sources": [],
+      "status": "TRIAL_REJECTED_UNRESOLVED_LEG_TOPOLOGY",
+      "subject_count": 1,
+      "left_orientation": "READABLE_LEFT_FLIGHT",
+      "anatomy": [
+        "Ailes déchirées, tête et abdomen rayé, dard et contours entiers cohérents avec la source Outbreak.",
+        "Cinq longues pattes peuvent être suivies ; le petit crochet superposé vers x490,y820 ne peut pas être relié de façon sûre au thorax comme sixième patte indépendante."
+      ],
+      "limits": [
+        "Le comptage de six pattes est non confirmé. Le producteur a relu et retiré son premier comptage trop affirmatif.",
+        "Essai conservé ; correction de séparation autorisée par root."
+      ],
+      "alpha_review": "PASS_NO_VISIBLE_BROAD_MATTE_ON_NEUTRAL_COMPOSITE"
+    },
+    {
+      "filename": "REC_SMALL_LEECH_OUTBREAK_2003_FULLBODY_LEFT_V9_01.png",
+      "uid": "reoutbreak-small-leech",
+      "edition": "Resident Evil Outbreak (2003)",
+      "path": "assets/REC_SMALL_LEECH_OUTBREAK_2003_FULLBODY_LEFT_V9_01.png",
+      "sha256": "825bda98e9ffd360fc859cf062d1c20a86419fd0a9640f9780dc42e6da13f1c4",
+      "original_path": "/workspace/scratch/fc109c251847/generated_images/exec-190c97d6-0e37-440e-a54c-14460cfe0820.png",
+      "original_sha256": "825bda98e9ffd360fc859cf062d1c20a86419fd0a9640f9780dc42e6da13f1c4",
+      "copy_identical": true,
+      "bytes": 474677,
+      "dimensions": [
+        1774,
+        887
+      ],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_zero_ratio": 0.82827043,
+      "bbox_alpha_ge16_xyxy_exclusive": [
+        273,
+        262,
+        1591,
+        674
+      ],
+      "margins_alpha_ge16_ltrb_pixels": [
+        273,
+        262,
+        183,
+        213
+      ],
+      "border_pixels_alpha_ge16": 0,
+      "outside_12px_of_alpha128_core": {
+        "max_alpha": 1,
+        "pixels_alpha_ge16": 0
+      },
+      "source_path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v9/references/reoutbreak-small-leech__1fa1d11da8ad.png",
+      "source_sha256": "1fa1d11da8add9e4366d62f4561312119090cd7ced8a624b81f0ea4c4c596b2e",
+      "source_sha_matches_metadata": true,
+      "source_repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/assets/catalog/reoutbreak-small-leech.png",
+      "source_documentary_url": "https://www.evilresource.com/resident-evil-outbreak/enemies/small-leech",
+      "source_physically_viewed_by_independent_reviewer": true,
+      "generated_png_physically_viewed_by_independent_reviewer": true,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "complementary_sources": [],
+      "status": "CANDIDATE_WITH_LIMITS",
+      "subject_count": 1,
+      "left_orientation": "READABLE_LEFT_BODY",
+      "anatomy": [
+        "Un seul organisme sans membres, extrémité arrondie à gauche et queue effilée complète ; teinte brun sombre et stries cohérentes.",
+        "Courbe distincte du visuel source, sans retournement logiciel observé."
+      ],
+      "limits": [
+        "Source de petite définition ; fines stries et reflets régénérés, géométrie ventrale non documentée."
+      ],
+      "alpha_review": "PASS_NO_VISIBLE_BROAD_MATTE_ON_NEUTRAL_COMPOSITE"
+    },
+    {
+      "filename": "REC_NOSFERATU_CODE_VERONICA_2000_FULLBODY_LEFT_V9_02.png",
+      "uid": "recv-nosferatu",
+      "edition": "Resident Evil CODE: Veronica (2000)",
+      "path": "assets/REC_NOSFERATU_CODE_VERONICA_2000_FULLBODY_LEFT_V9_02.png",
+      "sha256": "46219a71299e22e17bf12c9a7e1ad48c0b9b45e24896412acb62cda06b275077",
+      "original_path": "/workspace/scratch/fc109c251847/generated_images/exec-919964ac-5084-4af8-8412-216ed76fb5a5.png",
+      "original_sha256": "46219a71299e22e17bf12c9a7e1ad48c0b9b45e24896412acb62cda06b275077",
+      "copy_identical": true,
+      "bytes": 1291132,
+      "dimensions": [
+        1130,
+        1392
+      ],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_zero_ratio": 0.65267966,
+      "bbox_alpha_ge16_xyxy_exclusive": [
+        80,
+        32,
+        982,
+        1365
+      ],
+      "margins_alpha_ge16_ltrb_pixels": [
+        80,
+        32,
+        148,
+        27
+      ],
+      "border_pixels_alpha_ge16": 0,
+      "outside_12px_of_alpha128_core": {
+        "max_alpha": 1,
+        "pixels_alpha_ge16": 0
+      },
+      "source_path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v9/references/recv-nosferatu__4f082ca16a2e.png",
+      "source_sha256": "4f082ca16a2e7d8bb892912fed041963a2fa9be24655cc261c5aaea9ba284814",
+      "source_sha_matches_metadata": true,
+      "source_repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/research/recv-nosferatu-article-candidate-0.png",
+      "source_documentary_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgPgSFh-sZ4g_unzhhwymZ9O8YGCF-QOXnLI4hnDbWccbbA4-rBWGrRWv9g7F81ilyoEHpzZkka5E67I4NNLLXRksAWyAdoqOKA7ldESWxhmM8lOlt8dNHQJ8pwuVrtCYy54FTIHq5wXIt4/",
+      "source_physically_viewed_by_independent_reviewer": true,
+      "generated_png_physically_viewed_by_independent_reviewer": true,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "complementary_sources": [],
+      "status": "CANDIDATE_WITH_LIMITS",
+      "subject_count": 1,
+      "left_orientation": "READABLE_LEFT_THREE_QUARTER",
+      "anatomy": [
+        "La grande racine passe maintenant derrière le torse, compatible avec le côté anatomique droit éloigné ; les deux petits crochets sont du côté proche.",
+        "Tête, bassin, jambes et pieds dirigés à gauche ; toutes les pointes, mains corporelles, pieds et vêtements sont contenus."
+      ],
+      "limits": [
+        "Orientation en trois-quarts encore ouverte ; surfaces arrière et tissu reconstruits depuis une source unique.",
+        "Correction latérale convaincante, sans certification 1:1 de chaque relief."
+      ],
+      "alpha_review": "PASS_NO_VISIBLE_BROAD_MATTE_ON_NEUTRAL_COMPOSITE"
+    },
+    {
+      "filename": "REC_THANATOS_R_OUTBREAK_2003_FULLBODY_LEFT_V9_01.png",
+      "uid": "reoutbreak-thanatos-r",
+      "edition": "Resident Evil Outbreak (2003)",
+      "path": "assets/REC_THANATOS_R_OUTBREAK_2003_FULLBODY_LEFT_V9_01.png",
+      "sha256": "fe3993a3378a9611a1371d40b9f05d46ceed3b688bcfb6c74f487127cb7d59b5",
+      "original_path": "/workspace/scratch/fc109c251847/generated_images/exec-3fef5296-4040-4413-beb4-094f41814c80.png",
+      "original_sha256": "fe3993a3378a9611a1371d40b9f05d46ceed3b688bcfb6c74f487127cb7d59b5",
+      "copy_identical": true,
+      "bytes": 1327224,
+      "dimensions": [
+        1133,
+        1388
+      ],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_zero_ratio": 0.64264367,
+      "bbox_alpha_ge16_xyxy_exclusive": [
+        131,
+        37,
+        1046,
+        1344
+      ],
+      "margins_alpha_ge16_ltrb_pixels": [
+        131,
+        37,
+        87,
+        44
+      ],
+      "border_pixels_alpha_ge16": 0,
+      "outside_12px_of_alpha128_core": {
+        "max_alpha": 1,
+        "pixels_alpha_ge16": 0
+      },
+      "source_path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v9/references/reoutbreak-thanatos-r__48bcb2d8069e.png",
+      "source_sha256": "48bcb2d8069edfad865c497105cff4a28ae9bf9deb6959c20c41d9d73b2300ef",
+      "source_sha_matches_metadata": true,
+      "source_repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/lots/lot_4/research/reoutbreak-thanatos-r-article-candidate-1.png",
+      "source_documentary_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEipP1MOG52nFwqH9a1Bn0EuLkIgPKNzHgPXyFvjLDXwGfyUU21ejdEK64BEXvBPU3FzF_7SzbwZTLFZLS7Cv0gIS3s_Y8R1kO__2C9ezOhwVr9j9vm_syL6L7CFKv2HJDpF5VXDCVkM53sQ/",
+      "source_physically_viewed_by_independent_reviewer": true,
+      "generated_png_physically_viewed_by_independent_reviewer": true,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "complementary_sources": [
+        {
+          "path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v9/references/hold_research/steam_2041957312_screen_04.jpg",
+          "sha256": "55f118497adb7c04d3697028392925ea7032fda0ac36b33cfc81e7e2bb781d4d",
+          "sha_matches_metadata": true,
+          "url": "https://images.steamusercontent.com/ugc/1016066093536901951/3030E8D00870132740FD7F083175CE626B972E59/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
+          "source_page": "https://steamcommunity.com/sharedfiles/filedetails/?id=2041957312",
+          "source_type": "community model port screenshot",
+          "role": "complementary lower-leg and foot topology only",
+          "physically_viewed_by_independent_reviewer": true,
+          "native_unmodified_geometry_certified": false
+        }
+      ],
+      "status": "CANDIDATE_WITH_LIMITS",
+      "subject_count": 1,
+      "left_orientation": "READABLE_LEFT_THREE_QUARTER",
+      "anatomy": [
+        "Un bras complet géant anatomique gauche proche, un moignon droit éloigné, deux jambes et deux pieds nus dégagés ; aucun bras droit régénéré.",
+        "Jambe gauche irrégulière et jambe droite plus lisse, petite tenue noire et grande main à quatre terminaisons cohérentes avec le visuel source.",
+        "Tête et pieds se lisent vers la gauche ; le thorax reste ouvert en trois-quarts."
+      ],
+      "limits": [
+        "La référence documentaire principale occulte une partie du bas de jambe. La capture Steam d’un port communautaire de Genuline sert seulement de complément topologique pour ce bas de jambe et ce pied.",
+        "Crédit Outbreak déclaré par le port ; aucune certification de géométrie native inchangée, de provenance officielle ou de fidélité 1:1. La lumière bleue de la scène communautaire n’a pas été reprise.",
+        "Nouveaux reliefs, pieds et surfaces non vus sous cet angle restent reconstruits."
+      ],
+      "alpha_review": "PASS_NO_VISIBLE_BROAD_MATTE_ON_NEUTRAL_COMPOSITE"
+    },
+    {
+      "filename": "REC_GIANT_WASP_OUTBREAK_2003_FULLBODY_LEFT_V9_02.png",
+      "uid": "reoutbreak-giant-wasp",
+      "edition": "Resident Evil Outbreak (2003)",
+      "path": "trials/REC_GIANT_WASP_OUTBREAK_2003_FULLBODY_LEFT_V9_02.png",
+      "sha256": "7ec5fd916cf70a21cd2b5938c54e62393ea62d99ead60547ac18c52585e58c38",
+      "original_path": "/workspace/scratch/fc109c251847/generated_images/exec-f19cbc8f-3962-4957-ad8f-e6b4426f0755.png",
+      "original_sha256": "7ec5fd916cf70a21cd2b5938c54e62393ea62d99ead60547ac18c52585e58c38",
+      "copy_identical": true,
+      "bytes": 803740,
+      "dimensions": [
+        1402,
+        1122
+      ],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_zero_ratio": 0.8190235,
+      "bbox_alpha_ge16_xyxy_exclusive": [
+        177,
+        58,
+        1294,
+        1032
+      ],
+      "margins_alpha_ge16_ltrb_pixels": [
+        177,
+        58,
+        108,
+        90
+      ],
+      "border_pixels_alpha_ge16": 0,
+      "outside_12px_of_alpha128_core": {
+        "max_alpha": 2,
+        "pixels_alpha_ge16": 0
+      },
+      "source_path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v9/references/reoutbreak-giant-wasp__13f8c0e93ba8.png",
+      "source_sha256": "13f8c0e93ba85d3cc3cbbd057ce63a805a14627151d9667939a389e76d9c7820",
+      "source_sha_matches_metadata": true,
+      "source_repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/assets/catalog/reoutbreak-giant-wasp.png",
+      "source_documentary_url": "https://www.evilresource.com/resident-evil-outbreak/enemies/giant-wasp",
+      "source_physically_viewed_by_independent_reviewer": true,
+      "generated_png_physically_viewed_by_independent_reviewer": true,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "complementary_sources": [],
+      "status": "TRIAL_REJECTED_SEVEN_LEGS",
+      "subject_count": 1,
+      "left_orientation": "READABLE_LEFT_FLIGHT",
+      "anatomy": [
+        "Sept terminaisons de pattes distinctes sont visibles, approximativement aux abscisses 267,407,475,584,776,781,872 dans le PNG 1402×1122.",
+        "La courte chaîne centrale finissant vers x584,y883 ajoute un membre au lieu de seulement clarifier les six membres attendus."
+      ],
+      "limits": [
+        "Essai non retenu pour membre supplémentaire ; deux ailes et dard restent contenus. Correction 03 limitée à retirer la courte septième patte."
+      ],
+      "alpha_review": "PASS_NO_VISIBLE_BROAD_MATTE_ON_NEUTRAL_COMPOSITE"
+    },
+    {
+      "filename": "REC_GIANT_WASP_OUTBREAK_2003_FULLBODY_LEFT_V9_03.png",
+      "uid": "reoutbreak-giant-wasp",
+      "edition": "Resident Evil Outbreak (2003)",
+      "path": "assets/REC_GIANT_WASP_OUTBREAK_2003_FULLBODY_LEFT_V9_03.png",
+      "sha256": "cc32d64405865da748d122697e35eabd6a13ef4941f7e0776af220fa1c754760",
+      "original_path": "/workspace/scratch/fc109c251847/generated_images/exec-89ea90c2-69d5-4ac4-8937-1fd88206f2ca.png",
+      "original_sha256": "cc32d64405865da748d122697e35eabd6a13ef4941f7e0776af220fa1c754760",
+      "copy_identical": true,
+      "bytes": 779364,
+      "dimensions": [
+        1402,
+        1122
+      ],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_zero_ratio": 0.82371758,
+      "bbox_alpha_ge16_xyxy_exclusive": [
+        176,
+        55,
+        1293,
+        1034
+      ],
+      "margins_alpha_ge16_ltrb_pixels": [
+        176,
+        55,
+        109,
+        88
+      ],
+      "border_pixels_alpha_ge16": 0,
+      "outside_12px_of_alpha128_core": {
+        "max_alpha": 1,
+        "pixels_alpha_ge16": 0
+      },
+      "source_path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v9/references/reoutbreak-giant-wasp__13f8c0e93ba8.png",
+      "source_sha256": "13f8c0e93ba85d3cc3cbbd057ce63a805a14627151d9667939a389e76d9c7820",
+      "source_sha_matches_metadata": true,
+      "source_repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/assets/catalog/reoutbreak-giant-wasp.png",
+      "source_documentary_url": "https://www.evilresource.com/resident-evil-outbreak/enemies/giant-wasp",
+      "source_physically_viewed_by_independent_reviewer": true,
+      "generated_png_physically_viewed_by_independent_reviewer": true,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "complementary_sources": [],
+      "status": "CANDIDATE_WITH_LIMITS",
+      "subject_count": 1,
+      "left_orientation": "READABLE_LEFT_FLIGHT",
+      "anatomy": [
+        "Six pattes continues et six terminaux distincts après suppression de la courte patte centrale surnuméraire.",
+        "Les deux surfaces alaires avec leurs déchirures, le dard entier, la palette ocre-noir et le corps dirigé à gauche sont préservés."
+      ],
+      "limits": [
+        "Géométrie fine des articulations, veines et déchirures régénérée depuis le visuel documentaire ; pas de certification 1:1.",
+        "Les 02 et 01 restent des essais séparés, sans être comptés comme nouvelles vues retenues."
+      ],
+      "alpha_review": "PASS_NO_VISIBLE_BROAD_MATTE_ON_NEUTRAL_COMPOSITE"
+    }
+  ],
+  "refusals": [
+    {
+      "uid": "re2r-g-fourth-form",
+      "attempt": "REC_G_FOURTH_FORM_RE2R_2019_FULLBODY_LEFT_V9_02.png",
+      "status": "BLOCKED_BY_TOOL",
+      "request_id": "e6321677-42d0-43d8-9376-df84eba0f25e",
+      "png_produced": false,
+      "no_retry": true,
+      "error": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID e6321677-42d0-43d8-9376-df84eba0f25e. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")"
+    }
+  ]
+}

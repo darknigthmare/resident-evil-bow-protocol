@@ -1,0 +1,327 @@
+{
+  "schema": "rec.qa.re4-village.v7",
+  "date": "2026-11-19",
+  "phase": "Final review after Soldat Jet02 correction: four retained static candidates with limitations, one superseded orientation trial.",
+  "readOnlyImageReview": true,
+  "pngPixelsEdited": false,
+  "method": {
+    "bbox": "Inclusive coordinates for alpha>16; margins left/top/right/bottom.",
+    "farAlpha": "Euclidean distance>=12px from alpha>=128 core. Hair/fibres can contribute to this zone; not a background classification on its own.",
+    "redRgb": "R>210,G<70,B<70; subject lights can be genuine red pixels.",
+    "inspection": "Generated PNGs and exact source bitmaps opened separately at native framing."
+  },
+  "records": [
+    {
+      "assetFilename": "REC_IRON_MAIDEN_RE4_2005_FULLBODY_LEFT_V7_01.png",
+      "path": "assets/REC_IRON_MAIDEN_RE4_2005_FULLBODY_LEFT_V7_01.png",
+      "uid": "re4-iron-maiden",
+      "label": "Iron Maiden — RE4 (2005)",
+      "status": "CANDIDATE_REVIEWED_WITH_LIMITATIONS",
+      "retainedCandidate": true,
+      "observations": [
+        "Un sujet entier orienté vers la gauche en trois-quarts ; deux bras, mains griffues, deux jambes et pieds complets.",
+        "Corps gris relativement mince, cou allongé, bouche dentée et épines courtes cohérents avec la variante2005 ; pas de substitution du corps gonflé2023.",
+        "Le crâne paraît plus massif et la disposition des épines a été reconstruite ; ni leurs coordonnées ni les proportions ne sont certifiées1:1.",
+        "Aucune extrémité représentée coupée. Les contours rouges saturés du preview sont à alpha≤4, sans pixel correspondant alpha>16."
+      ],
+      "reference": {
+        "path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v7/references/re4-iron-maiden__36e3ea48ac98.png",
+        "repositoryPath": "assets/specimens/re4-iron-maiden.png",
+        "sha256": "36e3ea48ac98978a928a74f88ad9a9066ce3fe33b9559f328ad69273b2358aab",
+        "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/assets/specimens/re4-iron-maiden.png"
+      },
+      "numericQa": {
+        "path": "assets/REC_IRON_MAIDEN_RE4_2005_FULLBODY_LEFT_V7_01.png",
+        "sha256": "9c8e37202a94c7e01a66ea3d9babf6a3e6778b22878192f2b41c1e2626e94335",
+        "bytes": 1038152,
+        "width": 1085,
+        "height": 1449,
+        "mode": "RGBA",
+        "alphaMin": 0,
+        "alphaMax": 255,
+        "fullyTransparentPct": 76.2639,
+        "alphaMedianNonzero": 253,
+        "bboxAlphaGt16Inclusive": [
+          50,
+          73,
+          962,
+          1364
+        ],
+        "marginsLTRB": [
+          50,
+          73,
+          122,
+          84
+        ],
+        "marginsLTRBPercent": [
+          4.608,
+          5.038,
+          11.244,
+          5.797
+        ],
+        "borderMaxAlpha": 0,
+        "farPixels": 1138986,
+        "farAlphaMax": 1,
+        "farPixelsAlphaGt16": 0,
+        "alpha16To127RelativeToCorePct": 2.4142,
+        "redRgbMaxAlpha": 4,
+        "redRgbPixelsAlphaGt16": 0
+      },
+      "canonicalFidelityCertified": false,
+      "runtimeValidated": false
+    },
+    {
+      "assetFilename": "REC_VERDUGO_RE4R_2023_FULLBODY_LEFT_V7_01.png",
+      "path": "assets/REC_VERDUGO_RE4R_2023_FULLBODY_LEFT_V7_01.png",
+      "uid": "re4r-verdugo",
+      "label": "Verdugo — RE4 remake (2023)",
+      "status": "CANDIDATE_REVIEWED_WITH_LIMITATIONS",
+      "retainedCandidate": true,
+      "observations": [
+        "Un sujet en trois-quarts gauche ; deux mains à trois grands crochets, deux pieds et longue queue segmentée terminée en lame sont entiers.",
+        "Mandibules, face claire, carapace épineuse et boucle caudale cohérentes avec la source du remake ; aucune barre horizontale parasite de la source reprise comme anatomie.",
+        "La queue change sa courbure avec la pose et les plaques/reliefs sont régénérés ; surfaces cachées et proportions non certifiées1:1.",
+        "Marges verticales de22pixels seulement, sans coupe visible des pointes."
+      ],
+      "reference": {
+        "path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v7/references/re4r-verdugo__4f27d408f91c.png",
+        "repositoryPath": "assets/specimens/re4r-verdugo.png",
+        "sha256": "4f27d408f91c009f2de69137d72917d8f50f7168d1a9a2e7e1111f6af9fcd9bd",
+        "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/assets/specimens/re4r-verdugo.png"
+      },
+      "numericQa": {
+        "path": "assets/REC_VERDUGO_RE4R_2023_FULLBODY_LEFT_V7_01.png",
+        "sha256": "3ff296a43c627f905aabe2d29fe641d8a5c2b5437cde13a4d086b773ba4f86e2",
+        "bytes": 1126232,
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGBA",
+        "alphaMin": 0,
+        "alphaMax": 255,
+        "fullyTransparentPct": 73.804,
+        "alphaMedianNonzero": 252,
+        "bboxAlphaGt16Inclusive": [
+          59,
+          22,
+          1143,
+          1231
+        ],
+        "marginsLTRB": [
+          59,
+          22,
+          110,
+          22
+        ],
+        "marginsLTRBPercent": [
+          4.705,
+          1.754,
+          8.772,
+          1.754
+        ],
+        "borderMaxAlpha": 0,
+        "farPixels": 1067524,
+        "farAlphaMax": 1,
+        "farPixelsAlphaGt16": 0,
+        "alpha16To127RelativeToCorePct": 2.5467,
+        "redRgbMaxAlpha": 2,
+        "redRgbPixelsAlphaGt16": 0
+      },
+      "canonicalFidelityCertified": false,
+      "runtimeValidated": false
+    },
+    {
+      "assetFilename": "REC_SOLDAT_JET_VILLAGE_FULLBODY_LEFT_V7_01.png",
+      "path": "trials/REC_SOLDAT_JET_VILLAGE_FULLBODY_LEFT_V7_01.png",
+      "uid": "revillage-soldat-jet",
+      "label": "Soldat Jet — Village (2021)",
+      "status": "REJECTED_SUPERSEDED",
+      "retainedCandidate": false,
+      "observations": [
+        "Deux foreuses, deux bottes, tête mécanique, cœur thoracique rouge et structure dorsale sont contenus dans le cadre.",
+        "La tête pointe vers la gauche, mais plastron, ceinture, bassin et jambes restent presque frontaux ; les foreuses s'ouvrent de part et d'autre comme dans la source.",
+        "Cette01 ne démontre pas suffisamment une nouvelle orientation gauche du corps entier ; conserver comme essai en attente d'une correction.",
+        "La correction02 a ensuite établi la gauche et remplacé cet essai ;01 est conservé inchangé dans trials/."
+      ],
+      "reference": {
+        "path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v7/references/revillage-soldat-jet__9e3ad02e9738.png",
+        "repositoryPath": "modules/fidelity-r34/assets/source-research-extra/pipeline-extra-five/soldatjet-full.png",
+        "sha256": "9e3ad02e97383aa52e870c4ce6569c75e9d1c5e2325b75cc3d9f98364e920b51",
+        "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/source-research-extra/pipeline-extra-five/soldatjet-full.png"
+      },
+      "numericQa": {
+        "path": "trials/REC_SOLDAT_JET_VILLAGE_FULLBODY_LEFT_V7_01.png",
+        "sha256": "02ed9d11f877392141af3a137569be0f195d338d372d7412be6bcecad28745ad",
+        "bytes": 1303739,
+        "width": 1152,
+        "height": 1366,
+        "mode": "RGBA",
+        "alphaMin": 0,
+        "alphaMax": 255,
+        "fullyTransparentPct": 68.8305,
+        "alphaMedianNonzero": 253,
+        "bboxAlphaGt16Inclusive": [
+          35,
+          106,
+          1128,
+          1247
+        ],
+        "marginsLTRB": [
+          35,
+          106,
+          23,
+          118
+        ],
+        "marginsLTRBPercent": [
+          3.038,
+          7.76,
+          1.997,
+          8.638
+        ],
+        "borderMaxAlpha": 1,
+        "farPixels": 1030332,
+        "farAlphaMax": 1,
+        "farPixelsAlphaGt16": 0,
+        "alpha16To127RelativeToCorePct": 1.5916,
+        "redRgbMaxAlpha": 253,
+        "redRgbPixelsAlphaGt16": 67
+      },
+      "canonicalFidelityCertified": false,
+      "runtimeValidated": false,
+      "replacedBy": "REC_SOLDAT_JET_VILLAGE_FULLBODY_LEFT_V7_02.png"
+    },
+    {
+      "assetFilename": "REC_VARCOLAC_VILLAGE_FULLBODY_LEFT_V7_01.png",
+      "path": "assets/REC_VARCOLAC_VILLAGE_FULLBODY_LEFT_V7_01.png",
+      "uid": "revillage-varcolac",
+      "label": "Vârcolac — Village (2021)",
+      "status": "CANDIDATE_REVIEWED_WITH_LIMITATIONS",
+      "retainedCandidate": true,
+      "observations": [
+        "Un sujet bas en trois-quarts gauche, avec deux grandes mains et deux pieds, crinière grise, gueule ouverte et vêtements déchirés conservés.",
+        "Tous les appuis et la silhouette représentée sont dans le cadre ; aucun membre supplémentaire ni queue ajoutée observé.",
+        "La crinière est plus ample et son arrangement détaillé est régénéré ; une partie des yeux/traits reste naturellement occultée.",
+        "Limite concrète de détourage :2275pixels alpha>16 à au moins12px du corps alpha≥128, maximum126. Le résidu gris/brun parmi les fibres peut contribuer au composite ; absence de fond opaque ne signifie pas contours parfaits."
+      ],
+      "reference": {
+        "path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v7/references/revillage-varcolac__6b1fa95e3409.png",
+        "repositoryPath": "assets/specimens/revillage-varcolac.png",
+        "sha256": "6b1fa95e3409d5afad07b3362578bc682a50608f8afe245fdfc4a1ccd45e0e2a",
+        "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/assets/specimens/revillage-varcolac.png"
+      },
+      "numericQa": {
+        "path": "assets/REC_VARCOLAC_VILLAGE_FULLBODY_LEFT_V7_01.png",
+        "sha256": "580d2c7d95943d563097d9f86cf7a71d1257e12ecf564a1c169ec02da4176410",
+        "bytes": 1673583,
+        "width": 1200,
+        "height": 1310,
+        "mode": "RGBA",
+        "alphaMin": 0,
+        "alphaMax": 255,
+        "fullyTransparentPct": 60.8531,
+        "alphaMedianNonzero": 253,
+        "bboxAlphaGt16Inclusive": [
+          46,
+          104,
+          1155,
+          1231
+        ],
+        "marginsLTRB": [
+          46,
+          104,
+          44,
+          78
+        ],
+        "marginsLTRBPercent": [
+          3.833,
+          7.939,
+          3.667,
+          5.954
+        ],
+        "borderMaxAlpha": 1,
+        "farPixels": 952959,
+        "farAlphaMax": 126,
+        "farPixelsAlphaGt16": 2275,
+        "alpha16To127RelativeToCorePct": 6.9836,
+        "redRgbMaxAlpha": 1,
+        "redRgbPixelsAlphaGt16": 0
+      },
+      "canonicalFidelityCertified": false,
+      "runtimeValidated": false
+    },
+    {
+      "assetFilename": "REC_SOLDAT_JET_VILLAGE_FULLBODY_LEFT_V7_02.png",
+      "path": "assets/REC_SOLDAT_JET_VILLAGE_FULLBODY_LEFT_V7_02.png",
+      "uid": "revillage-soldat-jet",
+      "label": "Soldat Jet — Village (2021)",
+      "status": "CANDIDATE_REVIEWED_WITH_LIMITATIONS",
+      "retainedCandidate": true,
+      "supersedes": "REC_SOLDAT_JET_VILLAGE_FULLBODY_LEFT_V7_01.png",
+      "reference": {
+        "path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v7/references/revillage-soldat-jet__9e3ad02e9738.png",
+        "repositoryPath": "modules/fidelity-r34/assets/source-research-extra/pipeline-extra-five/soldatjet-full.png",
+        "sha256": "9e3ad02e97383aa52e870c4ce6569c75e9d1c5e2325b75cc3d9f98364e920b51",
+        "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/modules/fidelity-r34/assets/source-research-extra/pipeline-extra-five/soldatjet-full.png"
+      },
+      "numericQa": {
+        "path": "assets/REC_SOLDAT_JET_VILLAGE_FULLBODY_LEFT_V7_02.png",
+        "sha256": "56fefe61bcf7b75d37b6aa948e6dfaba6f1beb453bc8e2e0bb0c82b31a964c97",
+        "bytes": 1194315,
+        "width": 1151,
+        "height": 1366,
+        "mode": "RGBA",
+        "alphaMin": 0,
+        "alphaMax": 255,
+        "fullyTransparentPct": 69.7633,
+        "alphaMedianNonzero": 253,
+        "bboxAlphaGt16Inclusive": [
+          104,
+          94,
+          1073,
+          1305
+        ],
+        "marginsLTRB": [
+          104,
+          94,
+          77,
+          60
+        ],
+        "marginsLTRBPercent": [
+          9.036,
+          6.881,
+          6.69,
+          4.392
+        ],
+        "borderMaxAlpha": 1,
+        "farPixels": 1050534,
+        "farAlphaMax": 1,
+        "farPixelsAlphaGt16": 0,
+        "alpha16To127RelativeToCorePct": 1.4857,
+        "redRgbMaxAlpha": 253,
+        "redRgbPixelsAlphaGt16": 19
+      },
+      "observations": [
+        "Correction02 : la tête, le thorax, le bassin et les deux bottes sont désormais orientés vers la gauche.",
+        "Les deux foreuses projettent vers la gauche avec leurs pointes entières et séparées ; structure dorsale, tuyaux, équipements et appuis représentés sont contenus dans le cadre.",
+        "L'image corrige le défaut d'orientation01 ; les détails latéraux/dorsaux exposés par la rotation sont régénérés et non certifiés1:1.",
+        "Copie du PNG comparée à l'original de génération : SHA-256 identique, aucune retouche ni transformation."
+      ],
+      "correctionReceipt": "docs/SOLDAT_JET_CORRECTION_V7_02_RECEIPT.json",
+      "canonicalFidelityCertified": false,
+      "runtimeValidated": false
+    }
+  ],
+  "limits": [
+    "Static candidate QA only; no native geometry, exact1:1, opposite hidden surfaces or animation certification.",
+    "No combat engine or image atlas test performed.",
+    "Reference bitmaps are not included for automatic publication."
+  ],
+  "summary": {
+    "reviewedPngs": 5,
+    "retainedCandidates": 4,
+    "rejectedSupersededTrials": 1,
+    "sourcePngsEdited": false,
+    "generatedPngsEdited": false,
+    "runtimeValidated": false,
+    "canonicalFidelityCertified": false
+  }
+}

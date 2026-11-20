@@ -1,0 +1,85 @@
+{
+  "schema": "rec.media.continuation.v16.workplan",
+  "date": "2026-11-20",
+  "repository": "darknigthmare/resident-evil-bow-protocol",
+  "pull_request": 22,
+  "parent_commit": "6599f75c88472351aacaf19e7a6b1197e6c58625",
+  "state": "LOT_COMPLETED_WITH_DOCUMENTED_SOURCE_HOLDS",
+  "targets": [
+    {
+      "uid": "re5-executioner",
+      "direction": "right",
+      "action": "Correct actual facing and preserve complete axe; review native occlusions.",
+      "result": "CANDIDATE_STATIC_RIGHT_03"
+    },
+    {
+      "uid": "re5-chainsaw-majini",
+      "direction": "left",
+      "action": "Independent left pose with exact eye side and anatomical weapon grip.",
+      "result": "CANDIDATE_STATIC_LEFT_02"
+    },
+    {
+      "uid": "recv-sweeper",
+      "action": "Resolve exact final model texture and full-body reference.",
+      "result": "SOURCE_HOLD_PRESERVED"
+    },
+    {
+      "uid": "recv-moth",
+      "action": "Resolve original CODE Veronica versus Darkside model reference.",
+      "result": "SOURCE_HOLD_PRESERVED"
+    },
+    {
+      "uid": "recv-bat",
+      "action": "Find exact full wingspan reference.",
+      "result": "SOURCE_HOLD_PRESERVED"
+    },
+    {
+      "uid": "re0-eliminator",
+      "action": "Find exact complete white-furred RE0 variant.",
+      "result": "SOURCE_HOLD_PRESERVED"
+    }
+  ],
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "unresolved_refusals_preserved": [
+    "re1r-yawn"
+  ],
+  "source_bitmaps_for_publication": false,
+  "initial_state": "SOURCE_REVIEW_IN_PROGRESS",
+  "additional_completed_targets": [
+    {
+      "uid": "re5-giant-majini",
+      "directions": [
+        "left",
+        "right"
+      ]
+    },
+    {
+      "uid": "re5-adjule",
+      "directions": [
+        "left",
+        "right"
+      ]
+    },
+    {
+      "uid": "re5-licker-beta",
+      "directions": [
+        "left",
+        "right"
+      ]
+    }
+  ],
+  "additional_source_audits": [
+    {
+      "uid": "re5-gatling-gun-majini",
+      "result": "LEFT_HOLD_PRESERVED"
+    },
+    {
+      "uid": "re5-big-man-majini",
+      "result": "BOTH_DIRECTIONS_ALREADY_EXIST_NO_NEW_GENERATION"
+    }
+  ],
+  "source_decisions": "SOURCE_DECISIONS_V16.json",
+  "final_manifest": "../manifests/ASSET_MANIFEST_V16.json",
+  "all_missing_completed": false
+}

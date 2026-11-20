@@ -1,0 +1,116 @@
+{
+  "schema": "rec.media.v15.manifest",
+  "date": "2026-11-20",
+  "repository": "darknigthmare/resident-evil-bow-protocol",
+  "pull_request": 22,
+  "baseline_commit": "0ecb6d595c67fbca6783dab309a32f8947516faa",
+  "state": "CHECKPOINT_1",
+  "summary": {
+    "png": 2,
+    "candidates": 2,
+    "trials": 0,
+    "unique_uids": 1,
+    "unique_candidate_uids": 1,
+    "candidate_left": 1,
+    "candidate_right": 1,
+    "complete_directional_subject_pairs": 1,
+    "tool_refusals_no_image": 0
+  },
+  "current_continuation_generation": {
+    "png_returned": 2,
+    "tool_refusals_no_image": 0
+  },
+  "assets": [
+    {
+      "id": "reoutbreak-hunter-gamma-left-01",
+      "uid": "reoutbreak-hunter-gamma",
+      "label": "Hunter Gamma — Outbreak",
+      "edition": "Resident Evil Outbreak (2003)",
+      "file": "assets/REC_HUNTER_GAMMA_OUTBREAK_2003_FULLBODY_LEFT_V15_01.png",
+      "direction": "left",
+      "sha256": "45d02eff27b5d08c0f474b72e040e883f19139d96d02bbcb9aace7c8efc216a8",
+      "bytes": 1420079,
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 1003507,
+      "bbox_alpha16": [
+        60,
+        30,
+        1256,
+        1163
+      ],
+      "review_status": "CANDIDATE_STATIC_WITH_LIMITS",
+      "review": "docs/hunter-gamma-left-review.json",
+      "prompt": "prompts/reoutbreak-hunter-gamma-left-01.json",
+      "one_subject_per_image_reviewed": true,
+      "original_generated_bytes_unchanged": true,
+      "mirror_performed": false,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "animation_frames": 1
+    },
+    {
+      "id": "reoutbreak-hunter-gamma-right-01",
+      "uid": "reoutbreak-hunter-gamma",
+      "label": "Hunter Gamma — Outbreak",
+      "edition": "Resident Evil Outbreak (2003)",
+      "file": "assets/REC_HUNTER_GAMMA_OUTBREAK_2003_FULLBODY_RIGHT_V15_01.png",
+      "direction": "right",
+      "sha256": "9afa7c9823987c771e08755f5a4fb4624fb4bd8d304c66426f240b4855b4acc8",
+      "bytes": 1449858,
+      "dimensions": [
+        1401,
+        1123
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 998011,
+      "bbox_alpha16": [
+        55,
+        20,
+        1346,
+        1106
+      ],
+      "review_status": "CANDIDATE_STATIC_WITH_LIMITS",
+      "review": "docs/hunter-gamma-right-review.json",
+      "prompt": "prompts/reoutbreak-hunter-gamma-right-01.json",
+      "one_subject_per_image_reviewed": true,
+      "original_generated_bytes_unchanged": true,
+      "mirror_performed": false,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "animation_frames": 1
+    }
+  ],
+  "source_recovery": "docs/HUNTER_GAMMA_SOURCE_RECOVERY.json",
+  "next_source_targets": "docs/NEXT_SOURCE_TARGETS.json",
+  "directional_pairs": [
+    {
+      "uid": "reoutbreak-hunter-gamma",
+      "left": "reoutbreak-hunter-gamma-left-01",
+      "right": "reoutbreak-hunter-gamma-right-01"
+    }
+  ],
+  "runtime_modified": false,
+  "canonical_one_to_one_certified": false,
+  "animation_complete": false,
+  "engine_admitted": false,
+  "source_bitmaps_included": false,
+  "limits": [
+    "Original Outbreak edition is documented by community PCSX2 final-game captures and a supplementary model render; original-console pixel identity is not certified.",
+    "Generated low crouches, hidden anatomy, exact digit webbing, surfaces and textures remain interpretive.",
+    "Small margins and low-alpha fringe are documented; original generated PNG bytes are unmodified.",
+    "Two static poses only; no native idle cycle, movement, contacts, collisions, pivots or engine admission.",
+    "All earlier lots and historical guards/assertions remain unchanged."
+  ]
+}

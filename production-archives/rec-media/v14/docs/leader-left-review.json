@@ -1,0 +1,64 @@
+{
+  "schema": "rec.static-candidate-independent-review.v14",
+  "asset": "Leader Zealot RE4 original 2005 — left",
+  "reviewed_at": "2026-11-20",
+  "reviewer": "audit_pr",
+  "original_path": "/workspace/scratch/f967ba67c530/generated_images/exec-1efc8972-0a9c-44b9-8dd2-bb485302b148.png",
+  "sha256": "19328945c2eb51037008b0c479409f875e5022a457b8aff92808893b49bd881c",
+  "verdict": "CANDIDATE_STATIC_WITH_LIMITS",
+  "source_refs_reviewed": [
+    "references-v14/re4-leader-zealot-catalog.png",
+    "references-v14/re4-2005-los-iluminados-lineup.jpg",
+    "references-v14/re4-zealots-steam-1.jpg"
+  ],
+  "visual_checks": {
+    "orientation": "Face/skull and extended hand directed toward screen left, front three-quarter view; not a strict side profile.",
+    "costume": "Crimson hooded robe, dark maroon central stole with gold floral trim and cult emblem, cream rope belt, gold necklace/red pendant, exposed pale hands and black shoes correspond to the provided original-RE4 sources. High-detail material and ornament interpretation, not a geometry-perfect copy.",
+    "hands": "Two hands visible; five distinguishable digits on each; no obvious duplicated or fused fingers at inspection resolution.",
+    "framing": "Single complete character, both horns and both shoes visible. No staff, scythe, adjacent cultist, scenery or printed text.",
+    "limits": [
+      "Head/costume details are a generated interpretation; no canonical one-to-one certification.",
+      "Upper horn and lower shoe margins are small.",
+      "One pose only; no animation or engine admission."
+    ]
+  },
+  "alpha": {
+    "mode": "RGBA",
+    "size": [
+      1024,
+      1536
+    ],
+    "extrema": [
+      0,
+      254
+    ],
+    "bbox_alpha_gte16": [
+      71,
+      15,
+      833,
+      1525
+    ],
+    "margins_alpha16_left_top_right_bottom": [
+      71,
+      15,
+      191,
+      11
+    ],
+    "pixels_alpha0": 967424,
+    "pixels_alpha1_to15": 31455,
+    "pixels_alpha1_to3": 28058,
+    "halo_finding": "No broad dark halo or opaque backdrop observed in actual alpha compositing on light and mid-gray backgrounds. Dark RGB exists under alpha0 and is fully invisible. A real but very low-alpha fringe remains, mostly alpha1–3; the full nonzero bbox touching edges must not be treated as opaque subject clipping.",
+    "outside_bbox16_nonzero_pixels": 3906,
+    "outside_bbox16_alpha1_pixels": 3742,
+    "outside_bbox16_max_alpha": 15,
+    "interpretation": "Not purely hidden RGB: low-alpha residual pixels exist. They do not produce a visibly substantial dark halo in reviewed composites.",
+    "all_subject_alpha_255": false
+  },
+  "qa_previews_only": [
+    "review-v14/leader-left-on-light.jpg",
+    "review-v14/leader-left-on-gray.jpg"
+  ],
+  "original_bytes_modified": false,
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false
+}

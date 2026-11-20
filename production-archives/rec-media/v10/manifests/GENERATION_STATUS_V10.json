@@ -1,0 +1,57 @@
+{
+  "schema": "rec.generation-status.v10",
+  "state": "FINAL",
+  "summary": {
+    "allocated_subjects": 14,
+    "calls": 15,
+    "png_outputs": 15,
+    "subjects_with_png": 13,
+    "retained_candidates": 13,
+    "trials": 2,
+    "refused_calls": 0,
+    "held_without_call": 1,
+    "new_left_candidates": 13
+  },
+  "call_ledger": "manifests/TOOL_CALLS_V10.json",
+  "executed_prompt_files": [
+    "prompts/batch_v10_01.json",
+    "prompts/batch_v10_02.json",
+    "prompts/batch_v10_03.json",
+    "prompts/batch_v10_04.json",
+    "prompts/batch_v10_05.json",
+    "prompts/garmr_laterality_correction02.json",
+    "prompts/wasp_correction02.json"
+  ],
+  "all_calls_completed": true,
+  "blocked_attempts": [],
+  "held_without_calls": [
+    {
+      "uid": "rerev2-giant-whip-spider",
+      "edition": "Resident Evil Revelations 2 (2015)",
+      "status": "HELD_ANATOMY_REFERENCE",
+      "no_generation": true,
+      "reason": "Image entière sans coupe manifeste, mais longues pièces antérieures et pattes se recouvrent dans cette vue 450×360. Leurs attaches et le nombre exact d’appendices à restituer ne sont pas suffisamment lisibles pour une nouvelle gauche. Aucune génération.",
+      "source_report": "docs/SOURCE_RECOVERY_V10.json",
+      "source_sha256": "0f10052d011a85912d820aef827375673925268581d9c5d9bdee689be259f503",
+      "source_repository_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/assets/catalog/rerev2-giant-whip-spider.png",
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false
+    }
+  ],
+  "successful_corrections": [
+    {
+      "uid": "reoutbreak2-wasp",
+      "from_trial": "trials/REC_WASP_OUTBREAK2_FULLBODY_LEFT_V10_01.png",
+      "retained": "assets/REC_WASP_OUTBREAK2_FULLBODY_LEFT_V10_02.png",
+      "reason": "Five traceable leg chains and unsupported antennae in01; six chains and removed extra antennae verified in02."
+    },
+    {
+      "uid": "rerequiem-garmr",
+      "from_trial": "trials/REC_GARMR_REQUIEM2026_FULLBODY_LEFT_V10_01.png",
+      "retained": "assets/REC_GARMR_REQUIEM2026_FULLBODY_LEFT_V10_02.png",
+      "reason": "Known right-flank motif appeared on near left flank in01; corrected placement reviewed in02, undocumented left surface remains interpreted."
+    }
+  ],
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false
+}

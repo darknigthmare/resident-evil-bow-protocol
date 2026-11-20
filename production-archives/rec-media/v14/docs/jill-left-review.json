@@ -1,0 +1,64 @@
+{
+  "schema": "rec.static-candidate-independent-review.v14",
+  "reviewed_at": "2026-11-20",
+  "reviewer": "review_v14",
+  "verdict": "CANDIDATE_STATIC_WITH_LIMITS",
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "original_bytes_modified": false,
+  "one_subject_per_image_reviewed": true,
+  "animation_frames": 1,
+  "inspection_method": "Original RGBA files composited over RGB (128,128,128) and (235,235,235), then personally inspected with tools.view_image. Original bytes preserved.",
+  "asset": "Jill Valentine — RE5 (2009) Battle Suit with P30, left",
+  "original_path": "/workspace/scratch/3fced93cfb0a/generated_images/exec-e359bd64-9bd3-475c-b3dc-643339faaa95.png",
+  "sha256": "3d384a84fee48fc179cda22d6f03a96282d71ad56890e666a683f2155b7023cc",
+  "bytes": 2026215,
+  "source_refs_reviewed": [
+    "references-v14/jill_re5_imfdb_figure.jpg"
+  ],
+  "visual_checks": {
+    "orientation": "Head and upper weapon clearly point screen left; both weapon muzzles face left. Torso and hips are mostly frontal with a small leftward turn, and the boots are splayed. This is a front-left three-quarter static stance, not a strict lateral pose.",
+    "identity_and_costume": "Adult blonde Jill with short tied-back ponytail and side-swept fringe; indigo-purple torso, shoulder panels and long boots; dark ribbed sleeves and thigh panels; dark shoulder harness, thigh straps and gloves; centered red oval P30 with dark mounting points. These details correspond to the native RE5 figure reference. Face, exact cloth topology, straps and device fastenings are generated interpretations, not pixel-identical native data.",
+    "hands_and_weapons": "Two separate compact black Skorpion-shaped weapons with brown grips, one held in each gloved hand. No visibly duplicated hand, merged gun, detached limb or clipped muzzle. Finger detail around triggers remains partly occluded by grips; exact weapon mechanics and hidden fingers are not certified.",
+    "framing": "Exactly one complete character, full ponytail, two guns, two boots and soles contained. No pedestal, UI, text, floor, scenery or second character.",
+    "limits": [
+      "Top/bottom and some lateral margins do not meet the generous border requested; measurements recorded.",
+      "No exact native geometry, texture, hidden anatomy or pixel-level fidelity certification.",
+      "Single independently generated static pose; no idle cycle, animation continuity, pivots or engine admission.",
+      "Requested leftward torso/hip rotation is only partial; retained as a front-left candidate with this orientation limit."
+    ]
+  },
+  "alpha": {
+    "mode": "RGBA",
+    "size": [
+      1024,
+      1536
+    ],
+    "extrema": [
+      0,
+      254
+    ],
+    "bbox_alpha_gte16": [
+      31,
+      26,
+      966,
+      1517
+    ],
+    "margins_alpha16_left_top_right_bottom": [
+      31,
+      26,
+      58,
+      19
+    ],
+    "pixels_alpha0": 1074214,
+    "pixels_alpha1_to15": 44752,
+    "pixels_alpha1_to3": 40831,
+    "pixels_alpha255": 0,
+    "halo_finding": "Real transparent background confirmed. No substantial opaque backdrop or broad halo seen on light/gray compositing. Low-alpha residual pixels remain, including near canvas edges; the entirely solid alpha255 requirement was not achieved.",
+    "all_subject_alpha_255": false
+  },
+  "qa_previews_only": [
+    "qa-v14-checkpoint2/jill-left-gray.jpg",
+    "qa-v14-checkpoint2/jill-left-light.jpg"
+  ]
+}

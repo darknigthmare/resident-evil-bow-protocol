@@ -1,0 +1,195 @@
+{
+  "schema": "rec.generation-receipts.v11",
+  "state": "COMPLETE",
+  "calls": 8,
+  "png_outputs": 4,
+  "refused_calls": 4,
+  "submitted_batches": [
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      5
+    ],
+    [
+      6
+    ],
+    [
+      7
+    ],
+    [
+      8
+    ]
+  ],
+  "batch_note": "This records submission grouping, not exclusive runtime intervals; batches could overlap. Each creature/view used its own imagegen request.",
+  "chronology_note": "Lucas right01 and Mkono right03 were produced and independently reviewed before the separate left requests for those identities. Both later left requests were refused. No further request follows any identity refusal.",
+  "records": [
+    {
+      "sequence": 1,
+      "uid": "re5-uroboros-mkono",
+      "asset_id": "REC_UROBOROS_MKONO_RE5_FULLBODY_RIGHT_V11_01",
+      "requested_direction": "right",
+      "tool_status": "fulfilled",
+      "error": null,
+      "request_id": null,
+      "refusal_category": null,
+      "original_output_path": "/workspace/scratch/fc109c251847/generated_images/exec-77c36dad-3c7a-4f22-8ba2-87842d7d074b.png",
+      "current_local_path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v11/trials/REC_UROBOROS_MKONO_RE5_FULLBODY_RIGHT_V11_01.png",
+      "input_references": [
+        "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v11/references/re5-uroboros-mkono__0ca5122cbd14.png"
+      ],
+      "prompt_file": "prompts/batch1.json",
+      "raw_png_edited": false,
+      "software_mirror_used": false,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false
+    },
+    {
+      "sequence": 2,
+      "uid": "re7-lucas-baker-mutated",
+      "asset_id": "REC_LUCAS_MUTATED_RE7_FULLBODY_RIGHT_V11_01",
+      "requested_direction": "right",
+      "tool_status": "fulfilled",
+      "error": null,
+      "request_id": null,
+      "refusal_category": null,
+      "original_output_path": "/workspace/scratch/fc109c251847/generated_images/exec-a55c0d90-744a-4b11-9be4-46a93f90c84e.png",
+      "current_local_path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v11/assets/REC_LUCAS_MUTATED_RE7_FULLBODY_RIGHT_V11_01.png",
+      "input_references": [
+        "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v11/references/re7-lucas-baker-mutated__39128a9eb2c9.png"
+      ],
+      "prompt_file": "prompts/batch1.json",
+      "raw_png_edited": false,
+      "software_mirror_used": false,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false
+    },
+    {
+      "sequence": 3,
+      "uid": "revillage-soldat-panzer",
+      "asset_id": "REC_SOLDAT_PANZER_VILLAGE_FULLBODY_RIGHT_V11_01",
+      "requested_direction": "right",
+      "tool_status": "rejected",
+      "error": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 36a05a95-41e9-4d60-9823-4af371a5b778.\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"other\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "request_id": "36a05a95-41e9-4d60-9823-4af371a5b778",
+      "refusal_category": "other",
+      "original_output_path": null,
+      "current_local_path": null,
+      "input_references": [
+        "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v11/references/revillage-soldat-panzer__e0dc60f210ec.png"
+      ],
+      "prompt_file": "prompts/batch2.json",
+      "raw_png_edited": false,
+      "software_mirror_used": false,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false
+    },
+    {
+      "sequence": 4,
+      "uid": "re5-duvalia",
+      "asset_id": "REC_DUVALIA_RE5_FULLBODY_RIGHT_V11_01",
+      "requested_direction": "right",
+      "tool_status": "rejected",
+      "error": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID a7f425ec-5165-44bf-98d8-a687e3612e6a. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "request_id": "a7f425ec-5165-44bf-98d8-a687e3612e6a",
+      "refusal_category": "violence",
+      "original_output_path": null,
+      "current_local_path": null,
+      "input_references": [
+        "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v11/references/re5-duvalia__ed11fb54fd31.png"
+      ],
+      "prompt_file": "prompts/batch2.json",
+      "raw_png_edited": false,
+      "software_mirror_used": false,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false
+    },
+    {
+      "sequence": 5,
+      "uid": "re5-uroboros-mkono",
+      "asset_id": "REC_UROBOROS_MKONO_RE5_FULLBODY_RIGHT_V11_02",
+      "requested_direction": "right",
+      "tool_status": "fulfilled",
+      "error": null,
+      "request_id": null,
+      "refusal_category": null,
+      "original_output_path": "/workspace/scratch/fc109c251847/generated_images/exec-54c107e4-a0dc-4747-ae07-9451349c77c4.png",
+      "current_local_path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v11/trials/REC_UROBOROS_MKONO_RE5_FULLBODY_RIGHT_V11_02.png",
+      "input_references": [
+        "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v11/trials/REC_UROBOROS_MKONO_RE5_FULLBODY_RIGHT_V11_01.png",
+        "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v11/references/re5-uroboros-mkono__0ca5122cbd14.png"
+      ],
+      "prompt_file": "prompts/mkono_orientation_correction02.json",
+      "raw_png_edited": false,
+      "software_mirror_used": false,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false
+    },
+    {
+      "sequence": 6,
+      "uid": "re5-uroboros-mkono",
+      "asset_id": "REC_UROBOROS_MKONO_RE5_FULLBODY_RIGHT_V11_03",
+      "requested_direction": "right",
+      "tool_status": "fulfilled",
+      "error": null,
+      "request_id": null,
+      "refusal_category": null,
+      "original_output_path": "/workspace/scratch/fc109c251847/generated_images/exec-f06d8a95-e220-414b-84d5-ead13498e566.png",
+      "current_local_path": "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v11/assets/REC_UROBOROS_MKONO_RE5_FULLBODY_RIGHT_V11_03.png",
+      "input_references": [
+        "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v11/references/re5-uroboros-mkono__0ca5122cbd14.png",
+        "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v11/trials/REC_UROBOROS_MKONO_RE5_FULLBODY_RIGHT_V11_02.png"
+      ],
+      "prompt_file": "prompts/mkono_laterality_correction03.json",
+      "raw_png_edited": false,
+      "software_mirror_used": false,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false
+    },
+    {
+      "sequence": 7,
+      "uid": "re7-lucas-baker-mutated",
+      "asset_id": "REC_LUCAS_MUTATED_RE7_FULLBODY_LEFT_V11_01",
+      "requested_direction": "left",
+      "tool_status": "rejected",
+      "error": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID f2899657-518d-469b-a06c-af2fc6733ac4. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "request_id": "f2899657-518d-469b-a06c-af2fc6733ac4",
+      "refusal_category": "violence",
+      "original_output_path": null,
+      "current_local_path": null,
+      "input_references": [
+        "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v11/references/re7-lucas-baker-mutated__39128a9eb2c9.png"
+      ],
+      "prompt_file": "prompts/lucas_left01.json",
+      "raw_png_edited": false,
+      "software_mirror_used": false,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false
+    },
+    {
+      "sequence": 8,
+      "uid": "re5-uroboros-mkono",
+      "asset_id": "REC_UROBOROS_MKONO_RE5_FULLBODY_LEFT_V11_01",
+      "requested_direction": "left",
+      "tool_status": "rejected",
+      "error": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 2d59b1b8-616d-4ec8-85f8-50134e28f6cd. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "request_id": "2d59b1b8-616d-4ec8-85f8-50134e28f6cd",
+      "refusal_category": "violence",
+      "original_output_path": null,
+      "current_local_path": null,
+      "input_references": [
+        "/workspace/scratch/fc109c251847/outputs/resident_evil_combat_v11/references/re5-uroboros-mkono__0ca5122cbd14.png"
+      ],
+      "prompt_file": "prompts/mkono_left01.json",
+      "raw_png_edited": false,
+      "software_mirror_used": false,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false
+    }
+  ]
+}

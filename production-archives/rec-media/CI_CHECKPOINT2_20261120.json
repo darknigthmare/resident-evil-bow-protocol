@@ -1,0 +1,39 @@
+{
+  "schema": "rec.ci-evidence.checkpoint2",
+  "observed_at_utc": "2026-11-20 11:22:52 UTC",
+  "repository": "darknigthmare/resident-evil-bow-protocol",
+  "pull_request": 22,
+  "head_sha": "0ecb6d595c67fbca6783dab309a32f8947516faa",
+  "scope": "Evidence for published checkpoint2 parent only; does not report status of later checkpoint commits.",
+  "workflow_name": "B.O.W. Protocol QA",
+  "workflow_path": ".github/workflows/ci.yml",
+  "run_id": 44725868460,
+  "run_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/44725868460",
+  "run_status": "completed",
+  "run_conclusion": "failure",
+  "run_attempt": 1,
+  "run_created_at": "2026-11-20T11:13:48Z",
+  "run_updated_at": "2026-11-20T11:18:06Z",
+  "job_id": 136252990706,
+  "job_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/44725868460/job/136252990706",
+  "job_name": "verify",
+  "job_status": "completed",
+  "job_conclusion": "failure",
+  "job_started_at": "2026-11-20T11:16:29Z",
+  "job_completed_at": "2026-11-20T11:18:05Z",
+  "failed_step": [
+    {
+      "name": "Run npm run verify",
+      "number": 5,
+      "status": "completed",
+      "conclusion": "failure"
+    }
+  ],
+  "failure": "AssertionError [ERR_ASSERTION]: Unknown R34 addition: production-archives/rec-media/CONTINUATION_20261119.json",
+  "script": "scripts/verify-current-r34.mjs",
+  "exact_log_excerpt": "2026-11-20T11:18:03.9983967Z AssertionError [ERR_ASSERTION]: Unknown R34 addition: production-archives/rec-media/CONTINUATION_20261119.json\n2026-11-20T11:18:03.9985091Z     at validateSnapshot (file:///home/runner/work/resident-evil-bow-protocol/resident-evil-bow-protocol/scripts/verify-current-r34.mjs:257:92)\n2026-11-20T11:18:03.9986159Z     at file:///home/runner/work/resident-evil-bow-protocol/resident-evil-bow-protocol/scripts/verify-current-r34.mjs:278:20\n2026-11-20T11:18:03.9987281Z     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n2026-11-20T11:18:04.0214025Z ##[error]Process completed with exit code 1.",
+  "conclusion": "The QA log confirms failure in the R34 current-snapshot guard before the rest of npm run verify and before build. The first rejected path is the pre-existing V5–V11 continuation JSON. This evidence does not claim that later suites would pass.",
+  "build_step_conclusion": "skipped",
+  "safeguards_modified": false,
+  "branch_modified_by_this_audit": false
+}

@@ -1,0 +1,112 @@
+{
+  "schema": "rec.static-candidate-independent-review.v17",
+  "asset": "Soldier Ganado chauve au lance-roquettes — Resident Evil 4 (2005), RIGHT 02, correction d’occlusion",
+  "id": "re4_soldier_rpg_right_02",
+  "uid": "re4-soldier-ganado",
+  "variant": "original_2005_bald_brown_open_jacket_rpg",
+  "reviewed_at": "2026-11-20T13:50:00.233693+00:00",
+  "reviewer": "reference_research",
+  "asset_path": "assets/re4_soldier_rpg_right_02.png",
+  "original_path": "/workspace/scratch/3fced93cfb0a/generated_images/exec-08ced2cc-4cc0-44b7-a0f7-0683b06e0ae1.png",
+  "sha256": "2b2776f8652f6b8dae01e4326940ba1e131ddeccbe54d9ae6aa2c0b62bb69bc7",
+  "bytes": 1421999,
+  "verdict": "CANDIDATE_STATIC_WITH_LIMITS",
+  "review_status": "CANDIDATE_STATIC_WITH_LIMITS",
+  "excluded_from_candidate_count": false,
+  "source_refs_reviewed": [
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-soldiers-refr-full.png",
+      "sha256": "0fbecd6721b042c1ef1c883bb151bf4ba153a65d671c027e3600dc6078e9b662",
+      "role": "Planche REFR de RE4 original, deuxième personnage depuis la gauche uniquement : soldat chauve à veste brune ouverte au lance-roquettes ; recoupé avec le crop R34."
+    }
+  ],
+  "source_document": "docs/SOURCES_RE4_ISLAND_V17.json",
+  "prompt_record": "prompts/re4_soldier_rpg_right_02.json",
+  "technical_record": "docs/re4_soldier_rpg_right_02-technical.json",
+  "visual_checks": {
+    "orientation": "Tête et pieds orientés à droite, buste en trois quarts droit, lanceur fortement montant vers la droite ; direction droite cohérente.",
+    "variant": "Le deuxième soldat de la planche est seul : homme chauve, veste brune ouverte, torse nu, ceinture sombre, pantalon cargo gris brun court, chevilles visibles et chaussures brunes. Aucun équipement d’un autre soldat de la planche.",
+    "right_shoulder_and_hand": "Bras droit proche relevé : épaule, coude, avant-bras et main sont continus. La main droite serre la poignée près de la tête. Le tube descend derrière ce bras au niveau de l’épaule droite ; sa terminaison arrière est cachée de façon naturelle.",
+    "left_arm": "Bras anatomique gauche éloigné descendant sur le côté droit de l’image, main relâchée complète et connectée. Aucune main supplémentaire ou fusion évidente.",
+    "weapon": "Lanceur orienté fortement en diagonale haut-droite, plus proche de la présentation source ; roquette conique et pointe complète, tube et visée dans le cadre. Pas de tir, de projectile séparé, ni de terminaison arrière évasée visible.",
+    "weapon_source_limit": {
+      "rear_section_exposed_in_output": false,
+      "rear_section_fully_proven_by_source": false,
+      "native_rear_geometry_certified": false,
+      "finding": "La terminaison arrière non documentée est masquée par le bras/épaule relevés. Le défaut source_weapon_rear_exposure de RIGHT01 n’est plus observé. L’occlusion ne prouve pas la géométrie cachée, mais évite de l’exposer ou de l’inventer comme détail visible.",
+      "consequence": "La correction respecte la limite de présentation source et peut être retenue comme candidat statique. RIGHT01 reste conservé comme essai exclu ; aucune limite source n’est assouplie."
+    },
+    "legs_and_feet": "Deux jambes reliées au bassin, deux chevilles et deux chaussures complètes. Aucun membre supplémentaire, pied détaché ou coupe visible. Appuis et ancrage moteur non qualifiés.",
+    "clothing_and_wear": "Coupe et palette générales cohérentes avec le soldat de référence. Les marques cutanées, plis, coutures, poches, lacets et petits éléments de visée demeurent interprétés : pas de certification de toutes les microtextures.",
+    "framing": "Un sujet entier et les parties visibles de l’arme entièrement dans le cadre, pointe haute et pieds compris. L’arrière disparaît derrière le corps, pas au bord de l’image. Aucun décor, sol, texte, logo ou second sujet.",
+    "limits": [
+      "Marges principales gauche/haut/droite/bas : 306/69/292/52 px, soit 29,88/4,49/28,52/3,39 %. Les 10 % demandés ne sont pas atteints en haut et en bas ; aucune extrémité principale n’est coupée.",
+      "La terminaison arrière du lanceur reste naturellement cachée ; cette pose ne certifie pas sa forme native.",
+      "Les textures, surfaces opposées et détails de costume/visée restent générés à partir d’un seul rendu attribué au jeu original.",
+      "Des valeurs RGB existent sous une partie des pixels alpha 0 ; elles ne forment pas un fond visible sur les composites. Résidus alpha très faibles conservés, sans nettoyage.",
+      "Candidat statique généré uniquement : aucune certification 1:1, animation originale, intégration moteur, collision, ancrage ou validation dans le jeu."
+    ]
+  },
+  "failed_gates": [],
+  "uncertain_gates": [
+    "launcher_rear_geometry_naturally_occluded",
+    "unseen_native_surfaces_and_wear_unverified"
+  ],
+  "alpha": {
+    "mode": "RGBA",
+    "size": [
+      1024,
+      1536
+    ],
+    "extrema": [
+      0,
+      254
+    ],
+    "bbox_alpha_gte16": [
+      306,
+      69,
+      732,
+      1484
+    ],
+    "margins_alpha16_left_top_right_bottom": [
+      306,
+      69,
+      292,
+      52
+    ],
+    "margins_alpha16_percent_left_top_right_bottom": [
+      29.88,
+      4.49,
+      28.52,
+      3.39
+    ],
+    "bbox_all_nonzero_alpha": [
+      89,
+      30,
+      996,
+      1488
+    ],
+    "pixels_alpha0": 1287182,
+    "pixels_alpha1_to15": 16252,
+    "pixels_alpha1_to3": 14079,
+    "pixels_alpha255": 0,
+    "pixels_with_nonzero_rgb_and_alpha0": 842444,
+    "all_subject_alpha_255": false,
+    "halo_finding": "Vérification spécifique du halo apparent dans l’aperçu brut : les composites gris et clair utilisant le vrai alpha ne présentent pas de halo brun/gris substantiel ni de fond opaque. Des RGB non nuls existent dans les pixels alpha 0 et sont invisibles lors du compositing ; des résidus alpha de très faible intensité subsistent hors silhouette. PNG original inchangé."
+  },
+  "qa_previews_only": [
+    "/workspace/scratch/3fced93cfb0a/qa-v17/re4_soldier_rpg_right_02-gray.jpg",
+    "/workspace/scratch/3fced93cfb0a/qa-v17/re4_soldier_rpg_right_02-light.jpg"
+  ],
+  "inspection_method": "Inspection personnelle du rendu source et des composites gris/clair calculés avec le canal alpha réel. Contrôle spécifique du halo apparent, du bras droit élevé, de l’arrière masqué, de la roquette haute et des deux chaussures. Comptage alpha et RGB cachés sur le PNG original ; copie exacte vérifiée. Aucun nettoyage, recadrage, détourage ou retouche.",
+  "original_bytes_modified": false,
+  "original_generated_bytes_verified_identical": true,
+  "one_subject_per_image_reviewed": true,
+  "quality_rejection_is_tool_refusal": false,
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "animation_frames": 1,
+  "can_mirror": false,
+  "recommended_action": "Conserver RIGHT02 comme candidat statique remplaçant RIGHT01 pour la direction droite. Le défaut d’exposition de l’arrière non documenté est résolu par l’occlusion naturelle ; garder RIGHT01 comme essai. Aucun halo réellement visible ou défaut anatomique bloquant observé ; conserver les limites de marges et de source.",
+  "correction_of": "re4_soldier_rpg_right_01"
+}
