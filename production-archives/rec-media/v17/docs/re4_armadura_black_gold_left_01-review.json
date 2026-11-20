@@ -1,0 +1,98 @@
+{
+  "schema": "rec.static-candidate-independent-review.v17",
+  "asset": "Armadura black/gold red-plume axe variant — Resident Evil 4 (2005), LEFT 01",
+  "id": "re4_armadura_black_gold_left_01",
+  "uid": "re4-armadura",
+  "variant": "original_2005_black_gold_red_plume_axe_closed_helmet",
+  "reviewed_at": "2026-11-20T13:38:34.266963+00:00",
+  "reviewer": "review_v14",
+  "asset_path": "assets/re4_armadura_black_gold_left_01.png",
+  "original_path": "/workspace/scratch/3fced93cfb0a/generated_images/exec-f8f2734d-98a2-4aad-936b-42c06a4dcb86.png",
+  "sha256": "13d203a81345db82732ae35e98dccf31c16c159618b69aa2eb6bfffd6a15e3cb",
+  "bytes": 839124,
+  "verdict": "CANDIDATE_STATIC_WITH_LIMITS",
+  "review_status": "CANDIDATE_STATIC_WITH_LIMITS",
+  "excluded_from_candidate_count": false,
+  "source_refs_reviewed": [
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-armadura-renote.jpg",
+      "sha256": "2d39317e23c91dd82ce7b6d1d180fff6844196f7c24e41873d599e8d118e46e7",
+      "role": "Complete foreground black/gold original-2005 variant render, secondary host with adjacent Capcom2005 attribution; excludes other two figures"
+    },
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-armadura-nabiki-1.jpg",
+      "sha256": "f54b3f3405cce528528cb020f3a994828dbe7cfa196848b700d547fe3389de2d",
+      "role": "Original-game-family gameplay corroboration of black/gold variant and hand spacing; exact port and texture settings unverified"
+    }
+  ],
+  "source_documents_reviewed": [
+    "docs/SOURCES_RE4_ARMADURA_COLMILLOS_V17.json"
+  ],
+  "prompt_record": "prompts/re4_armadura_black_gold_left_01.json",
+  "technical_record": "docs/re4_armadura_black_gold_left_01-technical.json",
+  "visual_checks": {
+    "orientation": "Modest front-left three-quarter presentation. The helmet front/cross plane sits toward screen left with the near side of the cylinder visible at screen right; the nearer left shoulder and flank are more exposed than the farther right. The forward right knee/pointed foot and complete axe head aim left. The rear left foot remains open toward the viewer/right. This gives a readable LEFT presentation, but the torso remains broad and frontal rather than the requested side-dominant profile.",
+    "costume": "One black/dark-metal armour with worn gold borders and central strips, closed narrow cylindrical cross-front helmet, red plume, angular broad pauldrons, pointed waist tassets, segmented long leg armour and pointed shoes. No silver-background variant blended in, exposed head, parasite or glowing eye added.",
+    "hands": "Two coherent arms and two attached gripping gauntlets. The farther anatomical RIGHT shoulder/arm at screen left extends toward the hand closer to the blade. The nearer anatomical LEFT arm at screen right ends at the rear grip toward the shaft butt. The source-specific hand assignment is retained.",
+    "weapon": "Complete reddish-brown shaft, projecting forward point, small upper blade and broad curved lower axe blade, with a complete rear shaft endpoint. Source weapon family and horizontal two-handed presentation are recognizable. Exact blade thickness, upper fin shape, metal fittings and surface marks are generated interpretations.",
+    "framing": "Exactly one armour figure and one complete equipped axe. Entire plume, both feet, both gauntlets, spear/axe endpoints and butt remain within the canvas. No additional knight, Leon, HUD, floor, scene or text.",
+    "asymmetry": "Hand ownership and forward/rear weapon geometry are consistent with the sources. No opposite-side native source was recovered, so hidden armour surfaces and precise plate arrangement are not certified.",
+    "limits": [
+      "Principal alpha≥16 margins left/top/right/bottom are [42,16,38,57] px = [3.503%,1.220%,3.169%,4.345%]. The requested10% padding is not achieved; the plume sits close to the upper edge but its principal outline remains complete.",
+      "The pose is front-left three-quarter rather than a strongly lateral fighting profile. Rear foot opens toward the viewer/right, so both feet do not point strictly left.",
+      "The complete reference is a low-resolution render on a secondary host with adjacent2005Capcom attribution. It is not a verified native mesh extraction or original publication chain.",
+      "The corroborating gameplay screenshot belongs to the original-game family, but its exact port, platform and texture settings are not verified.",
+      "Gold engraving, plume strands, plate depth, blade geometry and newly visible surfaces are generated interpretations. This variant does not establish the complete silver Armadura body or exposed-parasite phases.",
+      "No original animation, geometric1:1 fidelity, physical scale, contacts, pivot or engine admission is certified."
+    ]
+  },
+  "failed_gates": [],
+  "alpha": {
+    "mode": "RGBA",
+    "size": [
+      1199,
+      1312
+    ],
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox_alpha_gte16": [
+      42,
+      16,
+      1161,
+      1255
+    ],
+    "margins_alpha16_left_top_right_bottom": [
+      42,
+      16,
+      38,
+      57
+    ],
+    "bbox_all_nonzero_alpha": [
+      0,
+      13,
+      1193,
+      1261
+    ],
+    "pixels_alpha0": 1199604,
+    "pixels_alpha1_to15": 25993,
+    "pixels_alpha1_to3": 21260,
+    "pixels_alpha255": 390,
+    "all_subject_alpha_255": false,
+    "halo_finding": "Actual gray and light alpha composites personally inspected. Real transparency and no opaque backdrop or substantial broad visible halo. Low-alpha residuals extend outside the principal silhouette; original PNG bytes unchanged."
+  },
+  "qa_previews_only": [
+    "/workspace/scratch/3fced93cfb0a/qa-v17/re4_armadura_black_gold_left_01-gray.jpg",
+    "/workspace/scratch/3fced93cfb0a/qa-v17/re4_armadura_black_gold_left_01-light.jpg"
+  ],
+  "inspection_method": "Independent inspection of both qualified same-variant sources, prompt and both actual alpha composites. Direct measurement of dimensions, alpha, bboxes and SHA from the generated PNG, and byte equality verified between original and archive copy.",
+  "original_bytes_modified": false,
+  "original_generated_bytes_verified_identical": true,
+  "one_subject_per_image_reviewed": true,
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "animation_frames": 1,
+  "can_mirror": false,
+  "recommended_action": "Retain as a LEFT static candidate of this specific black/gold red-plume closed-helmet axe variant, with explicit perspective, margin and source limits. Generate any opposite view independently; do not treat this as coverage of the silver or exposed-parasite variants."
+}

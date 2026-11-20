@@ -1,0 +1,108 @@
+{
+  "schema": "rec.static-candidate-independent-review.v17",
+  "asset": "El Gigante — Resident Evil 4 (2005), LEFT02",
+  "id": "re4_el_gigante_left_02",
+  "uid": "re4-el-gigante",
+  "variant": "original_2005_unarmored_no_exposed_parasite",
+  "reviewed_at": "2026-11-20T13:39:39.668551+00:00",
+  "reviewer": "review_v14",
+  "asset_path": "assets/re4_el_gigante_left_02.png",
+  "original_path": "/workspace/scratch/3fced93cfb0a/generated_images/exec-2c0696c2-a3e2-47f4-98ad-d2464bccb238.png",
+  "sha256": "04f50604a0d71c5a2b315616384b2fb406591a6a7d5d5d2dc7e9af99d85fb04f",
+  "bytes": 1326347,
+  "verdict": "CANDIDATE_STATIC_WITH_LIMITS",
+  "review_status": "CANDIDATE_STATIC_WITH_LIMITS",
+  "excluded_from_candidate_count": false,
+  "source_refs_reviewed": [
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v17/el-gigante-2005-source.png",
+      "git_path": "assets/specimens/re4-el-gigante.png",
+      "sha256": "49724b770e307b1f93ce8be468508d6298b63df1c412a0f063786e99bf0870d6",
+      "role": "Retained original-2005 complete giant render; unrelated small bodies excluded from target"
+    },
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v17/el-gigante-2005-catalog.png",
+      "git_path": "assets/catalog/re4-el-gigante.png",
+      "sha256": "1f82210d4fe4acc69d55fa26672ad88e916a02b5675215d48d31709b49c93286",
+      "role": "Original-2005 cropped head/torso details"
+    },
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v17/el-gigante-r34-right.png",
+      "git_path": "modules/fidelity-r34/assets/generated/re4-el-gigante/idle-right.png",
+      "sha256": "116b2c268a11e6135abe581767cd1b379bf7a59b67a98771d23b3fd3985cf0ee",
+      "role": "Existing RIGHT generated static candidate inspected for coverage comparison, not a native fidelity reference"
+    }
+  ],
+  "source_documents_reviewed": [
+    "docs/SOURCES_RE4_SALVADOR_GIGANTE_V17.json"
+  ],
+  "prompt_record": "prompts/re4_el_gigante_left_02.json",
+  "technical_record": "docs/re4_el_gigante_left_02-technical.json",
+  "visual_checks": {
+    "orientation": "Clear front-left three-quarter with a more compressed chest projection than LEFT01. Nose, mouth, gaze, knees and both feet project toward screen left, though the nearer foot still shows its toe row from the front. Anatomical left shoulder/arm and left flank dominate the near view; the farther right chest/neck is partly hidden by the head and arm. This is a directional static presentation, not a pure lateral profile.",
+    "costume": "One unarmored gray giant with source-family hunched shoulders, low bald head, wrinkled muscular torso, long thick arms, dark nails, bare feet and ragged dark short trousers. No armor, weapon or emerging parasite.",
+    "hands_and_feet": "Two coherent shoulders/arms/hands and two legs/feet. Both hands and both bare feet are complete in the visible silhouette; fingers overlap in projection, with no obvious disconnected or additional principal limb. Fine hidden digit geometry is not certified.",
+    "framing": "One complete isolated giant, without the source small human bodies, a second subject, floor, backdrop or labels. All principal fingers, toes and body extremities remain inside the frame.",
+    "asymmetry": "No descending cord is visible on the near anatomical LEFT neck, shoulder or chest, correcting the visible side transfer in LEFT01. The source-right neck/chest is sufficiently turned away and occluded by the low head/shoulder/arm that a far-side cord could be hidden. This is a plausible occlusion interpretation, not proof that the cord exists on the unseen right surface. The visible trousers retain asymmetric tears; exact hidden hem geometry is inferred.",
+    "limits": [
+      "Principal alpha≥16 margins left/top/right/bottom are [151,84,168,61] px = [12.041%,6.699%,13.397%,4.864%]. Top and bottom do not achieve the requested10% padding, although all principal extremities are complete.",
+      "View remains front-left three-quarter rather than an orthographic or fully side-dominant profile.",
+      "The cord is not visible. Its absence from the near-left surface removes the observed laterality error, but neither its presence nor exact placement behind the far shoulder can be certified from this image.",
+      "Exact garment tears, teeth, skin markings, finger shape and newly exposed surfaces remain generated interpretations. Reference provenance is a retained original-edition render, not native geometry certification.",
+      "No original animation, physical scale, pivot, contact behavior or engine admission is certified."
+    ]
+  },
+  "failed_gates": [],
+  "alpha": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox_alpha_gte16": [
+      151,
+      84,
+      1086,
+      1193
+    ],
+    "margins_alpha16_left_top_right_bottom": [
+      151,
+      84,
+      168,
+      61
+    ],
+    "bbox_all_nonzero_alpha": [
+      0,
+      13,
+      1240,
+      1254
+    ],
+    "pixels_alpha0": 988963,
+    "pixels_alpha1_to15": 37047,
+    "pixels_alpha1_to3": 31639,
+    "pixels_alpha255": 683,
+    "all_subject_alpha_255": false,
+    "halo_finding": "Actual gray and light alpha composites personally inspected. Real transparency and no opaque backdrop or substantial broad visible halo. Low-alpha residuals extend outside the principal silhouette and to some canvas edges; original PNG bytes unchanged."
+  },
+  "qa_previews_only": [
+    "/workspace/scratch/3fced93cfb0a/qa-v17/re4_el_gigante_left_02-gray.jpg",
+    "/workspace/scratch/3fced93cfb0a/qa-v17/re4_el_gigante_left_02-light.jpg"
+  ],
+  "inspection_method": "Independent inspection of original-edition complete source/crop, retained RIGHT, previous LEFT01 trial, prompt and both actual alpha composites of LEFT02. Direct measurement of dimensions, alpha, bboxes and SHA, with byte equality verified between raw generation and archive copy.",
+  "original_bytes_modified": false,
+  "original_generated_bytes_verified_identical": true,
+  "one_subject_per_image_reviewed": true,
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "animation_frames": 1,
+  "can_mirror": false,
+  "recommended_action": "Retain LEFT02 as the corrected static LEFT candidate with explicit perspective, padding and unseen-cord limits; keep LEFT01 unchanged as an excluded asymmetry trial. Pair with the already qualified R34 RIGHT rather than generating a duplicate right or mirroring either output.",
+  "supersedes": "re4_el_gigante_left_01",
+  "previous_trials": [
+    "re4_el_gigante_left_01"
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "schema": "rec.static-candidate-independent-review.v17",
+  "asset": "Armadura black/gold red-plume axe variant — Resident Evil 4 (2005), RIGHT 02",
+  "id": "re4_armadura_black_gold_right_02",
+  "uid": "re4-armadura",
+  "variant": "original_2005_black_gold_red_plume_axe_closed_helmet",
+  "reviewed_at": "2026-11-20T13:50:29.526880+00:00",
+  "reviewer": "review_v14",
+  "asset_path": "assets/re4_armadura_black_gold_right_02.png",
+  "original_path": "/workspace/scratch/3fced93cfb0a/generated_images/exec-a7debd72-2e00-42be-a864-0f0c1cfc8d00.png",
+  "sha256": "d7526e384aaf2343877b52d8d36a32f8ccb402eeb55b377601f5a2e336ed55d5",
+  "bytes": 1592423,
+  "verdict": "TRIAL_NEEDS_GRIP_CORRECTION",
+  "review_status": "TRIAL_NEEDS_GRIP_CORRECTION",
+  "excluded_from_candidate_count": true,
+  "source_refs_reviewed": [
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-armadura-renote.jpg",
+      "sha256": "2d39317e23c91dd82ce7b6d1d180fff6844196f7c24e41873d599e8d118e46e7",
+      "role": "Complete foreground black/gold original-2005 variant render, secondary host with adjacent Capcom2005 attribution; excludes other two figures"
+    },
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-armadura-nabiki-1.jpg",
+      "sha256": "f54b3f3405cce528528cb020f3a994828dbe7cfa196848b700d547fe3389de2d",
+      "role": "Original-game-family gameplay corroboration of black/gold variant and hand spacing; exact port and texture settings unverified"
+    }
+  ],
+  "source_documents_reviewed": [
+    "docs/SOURCES_RE4_ARMADURA_COLMILLOS_V17.json"
+  ],
+  "prompt_record": "prompts/re4_armadura_black_gold_right_02.json",
+  "technical_record": "docs/re4_armadura_black_gold_right_02-technical.json",
+  "visual_checks": {
+    "orientation": "Clear right-facing three-quarter with a narrowed chest projection. Helmet front/cross plane, torso, knees, pointed shoes and complete poleaxe head point screen right. The near visible anatomical RIGHT shoulder/arm is at screen left; the farther LEFT arm projects forward at screen right.",
+    "costume": "One dark black/gold closed-helmet Armadura with red plume, source-family angular plates, gold cross visor, pointed waist armour, segmented leg armour and pointed shoes. No exposed head, parasite, extra figure or variant blend.",
+    "hands": "FAIL persists: the near anatomical RIGHT upper arm descends from the large shoulder at screen left, through the lowered elbow/forearm, to the REAR grip beside the body and blunt butt. The farther anatomical LEFT arm extends forward across the right side to the grip near the axe head. Correct source ownership is still reversed despite the explicit correction prompt. Two coherent attached hands do not make this the required RIGHT-forward/LEFT-rear hold.",
+    "weapon": "The rear shaft endpoint at screen left is now plain/blunt; the extra rear conical spike in RIGHT01 is removed. The forward spear point, upper blade and broad curved lower blade remain complete at screen right. This weapon-end correction passes, while the hand-role inversion remains blocking.",
+    "framing": "One complete armour and complete weapon, including plume tip, both pointed shoes, both gauntlets, rear butt and forward blade/point. No principal clipping, floor, scene, text or additional subject.",
+    "asymmetry": "The directional pose remains valid, but the source-specific handedness remains inverted. No software mirror or interpretation of screen coordinates changes the traced anatomical ownership.",
+    "limits": [
+      "Principal alpha≥16 margins left/top/right/bottom are [105,21,52,33] px = [8.868%,1.581%,4.392%,2.485%]. All are below the requested 10%; principal endpoints are still complete.",
+      "Alpha maximum is 254 rather than 255. The actual gray/light composites show real transparency and no substantial broad halo or opaque backdrop; hidden RGB is not used to judge visible content.",
+      "Low-resolution complete reference and gameplay corroboration have the previously documented secondary-host, exact-port and single-view limitations.",
+      "Fine plume strands, plate depth, trim patterns, metal fittings and unseen surfaces remain generated interpretations. No native geometry, animation, physical scale, pivot, contact behavior or engine admission is certified."
+    ]
+  },
+  "failed_gates": [
+    {
+      "gate": "source_specific_hand_ownership",
+      "expected": "anatomical RIGHT hand forward near weapon head; anatomical LEFT hand rear near shaft butt",
+      "observed": "anatomical RIGHT hand rear; anatomical LEFT hand forward"
+    }
+  ],
+  "alpha": {
+    "mode": "RGBA",
+    "size": [
+      1184,
+      1328
+    ],
+    "extrema": [
+      0,
+      254
+    ],
+    "bbox_alpha_gte16": [
+      105,
+      21,
+      1132,
+      1295
+    ],
+    "margins_alpha16_left_top_right_bottom": [
+      105,
+      21,
+      52,
+      33
+    ],
+    "bbox_all_nonzero_alpha": [
+      49,
+      16,
+      1168,
+      1328
+    ],
+    "pixels_alpha0": 1195298,
+    "pixels_alpha1_to15": 28914,
+    "pixels_alpha1_to3": 24649,
+    "pixels_alpha255": 0,
+    "all_subject_alpha_255": false,
+    "halo_finding": "Actual gray and light alpha composites personally inspected. Real transparency, no opaque backdrop and no substantial broad visible halo. Alpha ranges 0–254 with no fully255 pixels; faint low-alpha residuals remain outside the principal silhouette. Raw hidden RGB has not been treated as visible content. Original PNG bytes unchanged."
+  },
+  "qa_previews_only": [
+    "/workspace/scratch/3fced93cfb0a/qa-v17/re4_armadura_black_gold_right_02-gray.jpg",
+    "/workspace/scratch/3fced93cfb0a/qa-v17/re4_armadura_black_gold_right_02-light.jpg"
+  ],
+  "inspection_method": "Independent comparison of the qualified same-variant sources, correction prompt and gray/light actual alpha composites, tracing each shoulder through its elbow to its own hand. Direct measurement of dimensions, alpha, bboxes and SHA, with original/archive byte equality.",
+  "original_bytes_modified": false,
+  "original_generated_bytes_verified_identical": true,
+  "one_subject_per_image_reviewed": true,
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "animation_frames": 1,
+  "can_mirror": false,
+  "recommended_action": "Preserve RIGHT02 unchanged as a second excluded grip trial, without reclassifying RIGHT01. Correct the near anatomical RIGHT arm so it extends to the forward grip by the axe head, and move the far anatomical LEFT hand to the rear grip. Preserve the corrected blunt butt and the complete right-facing silhouette; review any edited result independently.",
+  "correction_attempt_of": "re4_armadura_black_gold_right_01",
+  "supersedes": null,
+  "corrected_since_previous_trial": [
+    "Rear shaft butt is now plain/blunt; no added rear spear point."
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "schema": "rec.static-candidate-independent-review.v17",
+  "asset": "Soldier Ganado chauve au lance-roquettes — Resident Evil 4 (2005), RIGHT 01",
+  "id": "re4_soldier_rpg_right_01",
+  "uid": "re4-soldier-ganado",
+  "variant": "original_2005_bald_brown_open_jacket_rpg",
+  "reviewed_at": "2026-11-20T13:47:25.166221+00:00",
+  "reviewer": "reference_research",
+  "asset_path": "assets/re4_soldier_rpg_right_01.png",
+  "original_path": "/workspace/scratch/3fced93cfb0a/generated_images/exec-9ec3fefd-dafd-4dd2-8fb2-960b42645e94.png",
+  "sha256": "1e2d6071523164e93248b567da1a96921029b0757642c20d97b44625e0f5dd24",
+  "bytes": 764552,
+  "verdict": "TRIAL_NEEDS_SOURCE_OCCLUSION_CORRECTION",
+  "review_status": "TRIAL_NEEDS_SOURCE_OCCLUSION_CORRECTION",
+  "excluded_from_candidate_count": true,
+  "source_refs_reviewed": [
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-soldiers-refr-full.png",
+      "sha256": "0fbecd6721b042c1ef1c883bb151bf4ba153a65d671c027e3600dc6078e9b662",
+      "role": "Planche REFR de RE4 original, deuxième personnage depuis la gauche uniquement : soldat chauve à veste brune ouverte au lance-roquettes ; recoupé avec le crop R34."
+    }
+  ],
+  "source_document": "docs/SOURCES_RE4_ISLAND_V17.json",
+  "prompt_record": "prompts/re4_soldier_rpg_right_01.json",
+  "technical_record": "docs/re4_soldier_rpg_right_01-technical.json",
+  "visual_checks": {
+    "orientation": "Tête, torse en trois quarts, pied avancé et avant du lanceur orientés à droite ; présentation droite cohérente, sans simple inversion de la main porteuse.",
+    "variant": "Un seul soldat chauve à veste brune usée ouverte sur torse nu, ceinture sombre, pantalon gris brun cargo court, chevilles visibles et chaussures brunes. Aucun casque/arbalète, masque à gaz/bâton électrique ou gilet/fléau des trois voisins de la planche.",
+    "right_shoulder_and_hand": "Le tube passe au niveau de l’épaule droite anatomique proche, avec son extrémité arrière derrière l’épaule. Le bras droit visible part du côté gauche de l’image, descend au coude puis remonte vers la poignée ; la main droite serre cette poignée sous le tube. Aucun raccord de bras impossible ou main supplémentaire observé.",
+    "left_arm": "Bras anatomique gauche éloigné relâché, main pendante sur le côté droit de l’image ; continuité manche-poignet-main lisible.",
+    "weapon": "Roquette conique complète, tube, organes de visée simplifiés et extrémité arrière entière dans le cadre. Arme orientée en diagonale peu ascendante vers la droite ; nettement plus horizontale que le rendu source. Aucun tir ni projectile séparé.",
+    "weapon_source_limit": {
+      "rear_section_exposed_in_output": true,
+      "rear_section_fully_proven_by_source": false,
+      "native_rear_geometry_certified": false,
+      "finding": "Le rendu source masque en grande partie l’arrière du lanceur près de l’épaule. La sortie révèle une terminaison évasée et une portion arrière ; ce sont des formes générées interprétées, non démontrées par la source unique. L’audit source recommandait de conserver cette zone masquée : cette recommandation de présentation n’est pas entièrement suivie.",
+      "consequence": "La source exige de garder cette zone non documentée masquée ; RIGHT01 l’expose. Cette sortie est donc conservée comme essai exclu des candidats, sans réécrire ou assouplir la limite source. Une correction doit utiliser un angle montant et une occlusion naturelle de l’arrière."
+    },
+    "legs_and_feet": "Deux jambes raccordées au bassin, deux chevilles et deux chaussures complètes, pas de fusion ou pied détaché observé. Pose statique sans validation d’ancrage ou d’appuis moteur.",
+    "framing": "Un seul personnage entier et une seule arme, y compris pointe avant et terminaison arrière, contenus dans l’image. Aucun cadre, texte, logo, sol, décor ou deuxième sujet.",
+    "limits": [
+      "Les marges de 10 % demandées ne sont pas atteintes en haut et en bas : gauche/haut/droite/bas 239/136/130/90 px, soit 22,01/9,39/11,97/6,22 %. Les extrémités principales restent complètes.",
+      "La position du lanceur est plus horizontale que dans le rendu source, et son arrière est désormais exposé. Cette géométrie cachée dans la source est interprétée ; aucune certification native.",
+      "La vue opposée native, la disposition exacte des marques cutanées, les plis, les semelles et les détails de visée ne sont pas établis par une seconde référence. Ces détails restent générés.",
+      "Alpha réel présent avec des résidus de faible intensité hors silhouette ; aucune retouche du fichier.",
+      "Candidat statique généré uniquement : aucune certification 1:1, animation originale, intégration moteur, collision, ancrage ou validation dans le jeu."
+    ]
+  },
+  "failed_gates": [
+    "source_weapon_rear_exposure"
+  ],
+  "uncertain_gates": [
+    "launcher_rear_native_geometry_not_proven",
+    "unseen_native_surfaces_unverified"
+  ],
+  "alpha": {
+    "mode": "RGBA",
+    "size": [
+      1086,
+      1448
+    ],
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox_alpha_gte16": [
+      239,
+      136,
+      956,
+      1358
+    ],
+    "margins_alpha16_left_top_right_bottom": [
+      239,
+      136,
+      130,
+      90
+    ],
+    "margins_alpha16_percent_left_top_right_bottom": [
+      22.01,
+      9.39,
+      11.97,
+      6.22
+    ],
+    "bbox_all_nonzero_alpha": [
+      0,
+      19,
+      1072,
+      1448
+    ],
+    "pixels_alpha0": 1247318,
+    "pixels_alpha1_to15": 21403,
+    "pixels_alpha1_to3": 17091,
+    "pixels_alpha255": 691,
+    "all_subject_alpha_255": false,
+    "halo_finding": "Inspection des composites gris et clair : aucun fond opaque ni large halo substantiel. Des résidus alpha très faibles persistent hors silhouette jusque sur certains bords ; aucune suppression appliquée."
+  },
+  "qa_previews_only": [
+    "/workspace/scratch/3fced93cfb0a/qa-v17/re4_soldier_rpg_right_01-gray.jpg",
+    "/workspace/scratch/3fced93cfb0a/qa-v17/re4_soldier_rpg_right_01-light.jpg"
+  ],
+  "inspection_method": "Inspection personnelle de la planche source entière, de son deuxième sujet et des deux composites gris/clair calculés avec l’alpha réel. Suivi du bras droit vers sa poignée, contrôle de l’épaule, du bras gauche, des deux pieds et du cadre. Mesures sur le PNG original et copie vérifiée par comparaison exacte des octets. Aucune retouche du livrable.",
+  "original_bytes_modified": false,
+  "original_generated_bytes_verified_identical": true,
+  "one_subject_per_image_reviewed": true,
+  "quality_rejection_is_tool_refusal": false,
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "animation_frames": 1,
+  "can_mirror": false,
+  "recommended_action": "Conserver RIGHT01 comme essai TRIAL_NEEDS_SOURCE_OCCLUSION_CORRECTION, exclu du compte candidat. Corriger la pose avec lanceur montant et terminaison arrière naturellement masquée par l’épaule/tête, conformément au périmètre source ; ne pas certifier ni inventer les faces cachées. Aucun défaut anatomique ou de cadre supplémentaire observé.",
+  "decision_update": {
+    "date": "2026-11-20",
+    "reason": "Alignement du verdict avec la contrainte source déjà documentée : arrière du lanceur exposé sans preuve. Le dépassement devient un échec de qualification, pas une simple réserve.",
+    "previous_review_status": "CANDIDATE_STATIC_WITH_LIMITS",
+    "source_constraint_relaxed": false,
+    "png_or_technical_modified": false
+  }
+}

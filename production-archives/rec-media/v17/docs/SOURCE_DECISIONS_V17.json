@@ -1,0 +1,563 @@
+{
+  "schema": "rec.media.v17.source-decisions",
+  "date": "2026-11-20",
+  "created_at_utc": "2026-11-20T13:43:46.401633+00:00",
+  "repository": "darknigthmare/resident-evil-bow-protocol",
+  "pr": 22,
+  "base_commit": "1ed251b8b7c719c81a7ae16319ca3fc9b9f168d8",
+  "reviewer": "review_v14",
+  "scope": "Synthesis of the three source-audit reports and the agreed V17 generation/hold scope. Source qualification is separate from output review, candidate admission and global inventory integration.",
+  "source_reports": [
+    {
+      "path": "docs/SOURCES_RE4_SALVADOR_GIGANTE_V17.json",
+      "sha256": "46f3ce08f6a0038e3b7248d91304a45b19dd73150a95e3d36b0d0de916370921",
+      "bytes": 32300
+    },
+    {
+      "path": "docs/SOURCES_RE4_ARMADURA_COLMILLOS_V17.json",
+      "sha256": "adfd44342f00b1e5971c68f17d88a0d1ad883692fba810f9d7fa320070561d67",
+      "bytes": 28774
+    },
+    {
+      "path": "docs/SOURCES_RE4_ISLAND_V17.json",
+      "sha256": "a4ac77e11781f0a4f5f700baf07148b3b7a30ea6c5cadb640df11dab284fa74c",
+      "bytes": 40000
+    }
+  ],
+  "summary": {
+    "audited_uid_count": 7,
+    "generation_scope_uid_count": 5,
+    "generation_scope_uids": [
+      "re4-el-gigante",
+      "re4-armadura",
+      "re4-colmillos",
+      "re4-jj",
+      "re4-soldier-ganado"
+    ],
+    "no_generation_uid_count": 2,
+    "no_generation_uids": [
+      "re4-hammer-ganado",
+      "re4-dr-salvador"
+    ],
+    "unchanged_source_hold_uid": "re4-hammer-ganado",
+    "new_dated_related_refusal_hold_uid": "re4-dr-salvador",
+    "global_inventory_update_scope_intended": {
+      "generated_uids": 5,
+      "audited_only_uid_with_new_current_outcome": 1,
+      "unchanged_hammer_uid": 1,
+      "explanation": "Seven UIDs were audited. The planned inventory changes concern five generated UIDs plus Salvador with RELATED_REFUSAL_HOLD. Hammer remains SOURCE_HOLD and requires no changed inventory row."
+    },
+    "new_own_tool_refusals_asserted_by_this_document": 0,
+    "generated_png_count_asserted_by_this_document": null,
+    "output_admission_authority": "Individual V17 visual reviews and final manifest; this source synthesis does not count pending or rejected outputs."
+  },
+  "decisions": [
+    {
+      "uid": "re4-el-gigante",
+      "edition": "Resident Evil 4 (original 2005)",
+      "variant_or_phase": "Unarmored original giant; no exposed parasite",
+      "decision": "GENERATE_MISSING_LEFT_ONLY",
+      "source_document": "docs/SOURCES_RE4_SALVADOR_GIGANTE_V17.json",
+      "generation_in_v17_scope": true,
+      "requested_directions_this_pass": [
+        "left"
+      ],
+      "reason": "The complete original-edition specimen is usable. A genuinely right-facing complete static candidate is already qualified in R34; V17 only fills LEFT.",
+      "source_evidence": [
+        {
+          "local_path": "/workspace/scratch/3fced93cfb0a/references-v17/el-gigante-2005-source.png",
+          "git_path": "assets/specimens/re4-el-gigante.png",
+          "sha256": "49724b770e307b1f93ce8be468508d6298b63df1c412a0f063786e99bf0870d6",
+          "bytes": 525046,
+          "width": 777,
+          "height": 777,
+          "source_url": "https://bogleech.com/halloween/hall18-re4",
+          "role": "complete-body retained reference render",
+          "target_edition_admitted": true,
+          "source_edition": "Resident Evil 4 (2005)"
+        },
+        {
+          "local_path": "/workspace/scratch/3fced93cfb0a/references-v17/el-gigante-2005-catalog.png",
+          "git_path": "assets/catalog/re4-el-gigante.png",
+          "sha256": "1f82210d4fe4acc69d55fa26672ad88e916a02b5675215d48d31709b49c93286",
+          "bytes": 209921,
+          "width": 450,
+          "height": 360,
+          "source_url": "https://www.evilresource.com/resident-evil-4/enemies/el-gigante",
+          "role": "head and torso detail crop",
+          "target_edition_admitted": true,
+          "source_edition": "Resident Evil 4 (2005)"
+        }
+      ],
+      "limits": [
+        "The retained specimen is a rendered reference, not authenticated native geometry. Exclude the small human bodies below the feet and near the hand.",
+        "Keep the single descending twisted cord on anatomical RIGHT; its material is uncertain. Natural occlusion in LEFT is permissible, but does not prove its presence behind hidden surfaces.",
+        "R27 idle-right.png is a front presentation and must not be used to infer RIGHT coverage. The separate R34 right candidate has actual visual qualification.",
+        "Generated static outputs require their own anatomy, framing, alpha and laterality review; no animation or geometry certificate follows from this source."
+      ],
+      "canonical_one_to_one_certified": false,
+      "native_mesh_authentication_performed": false,
+      "original_animation_certified": false,
+      "engine_admitted_by_this_decision": false,
+      "horizontal_mirroring_admitted": false,
+      "existing_right_candidate": {
+        "repository_path": "modules/fidelity-r34/assets/generated/re4-el-gigante/idle-right.png",
+        "receipt": "modules/fidelity-r34/assets/lots/lot_1/re4-el-gigante/idle.json",
+        "sha256": "116b2c268a11e6135abe581767cd1b379bf7a59b67a98771d23b3fd3985cf0ee",
+        "actual_facing": "right",
+        "qualified_before_v17": true,
+        "copied_into_v17_assets": false,
+        "regenerated_in_v17": false,
+        "counted_as_new_v17_png": false
+      },
+      "historical_refusal_scope": {
+        "own_refusal_found_in_inspected_records": false,
+        "own_new_refusal": false
+      }
+    },
+    {
+      "uid": "re4-armadura",
+      "edition": "Resident Evil 4 (original 2005)",
+      "variant_or_phase": "Black/gold armour, red plume, cylindrical closed helmet with gold cross, poleaxe/halberd, parasite concealed",
+      "decision": "GENERATE_QUALIFIED_BLACK_GOLD_VARIANT_WITH_LIMITS",
+      "source_document": "docs/SOURCES_RE4_ARMADURA_COLMILLOS_V17.json",
+      "generation_in_v17_scope": true,
+      "requested_directions_this_pass": [
+        "left",
+        "right"
+      ],
+      "reason": "New complete evidence qualifies the foreground black/gold variant specifically, corroborated by original-game-family gameplay; it does not complete the silver variant.",
+      "source_evidence": [
+        {
+          "local_path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-armadura-renote.jpg",
+          "sha256": "2d39317e23c91dd82ce7b6d1d180fff6844196f7c24e41873d599e8d118e46e7",
+          "bytes": 23032,
+          "dimensions": [
+            430,
+            446
+          ],
+          "page_url": "https://renote.net/en/articles/11329/page/5",
+          "image_url": "https://renote.net/files/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NzE2MzUsInB1ciI6ImJsb2JfaWQifX0=--dd51f6c7a8f636c3dc02392a004e98af68f1efc3/BJbrGunCYAEErl1.jpg",
+          "role": "primary-visible-full-body-render"
+        },
+        {
+          "local_path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-armadura-nabiki-1.jpg",
+          "sha256": "f54b3f3405cce528528cb020f3a994828dbe7cfa196848b700d547fe3389de2d",
+          "bytes": 601397,
+          "dimensions": [
+            1200,
+            675
+          ],
+          "page_url": "https://nabiki.hatenablog.com/entry/2026/07/07/220458",
+          "image_url": "https://cdn-ak.f.st-hatena.com/images/fotolife/N/NABIKI/20260521/20260521220633.jpg",
+          "role": "gameplay-corroboration"
+        }
+      ],
+      "limits": [
+        "Complete render is a 430×446 secondary-hosted image with adjacent © 2005 Capcom attribution. The original publication chain and mesh are not authenticated.",
+        "Use only the foreground black/gold axe bearer. Do not blend the smaller black background figure or silver sword bearer into the result.",
+        "Preserve anatomical RIGHT gauntlet nearer the weapon head, LEFT nearer the shaft butt, complete forward point, lower axe blade and plume.",
+        "The supporting gameplay screenshot has no verified exact port/platform or texture settings. Neither source supplies an independent opposite-side geometry view.",
+        "The separate silver closed-helmet R34 portrait and partial render do not establish its full lower armour, feet and carried weapon. Its full-body source hold remains unresolved.",
+        "No exposed-Plaga Armadura phase, original idle animation or native geometry is qualified by this decision."
+      ],
+      "canonical_one_to_one_certified": false,
+      "native_mesh_authentication_performed": false,
+      "original_animation_certified": false,
+      "engine_admitted_by_this_decision": false,
+      "horizontal_mirroring_admitted": false,
+      "separate_variant_hold": {
+        "variant": "silver/grey closed-helmet Armadura from R34 catalog",
+        "decision": "SOURCE_HOLD",
+        "complete_body_established": false,
+        "evidence": {
+          "local_path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-armadura-evilresource.png",
+          "sha256": "f691005e7e377caa4850ffdb81980b88bae7282a9458cc4a74c06bc9db0e1811",
+          "bytes": 141942,
+          "dimensions": [
+            450,
+            360
+          ],
+          "page_url": "https://www.evilresource.com/resident-evil-4/enemies/armadura",
+          "image_url": "https://www.evilresource.com/images/data/full/re4/armadura.png?73274ea9",
+          "role": "baseline-portrait-only"
+        },
+        "unchanged_historical_body_receipt": "modules/fidelity-r34/assets/lots/lot_2/re4-armadura/idle.json"
+      },
+      "historical_refusal_scope": {
+        "own_refusal_found_in_inspected_records": false,
+        "historical_body_status": "HELD_REFERENCE",
+        "own_new_refusal": false
+      }
+    },
+    {
+      "uid": "re4-colmillos",
+      "edition": "Resident Evil 4 (original 2005)",
+      "variant_or_phase": "Grey-brown original canine with dorsal Plaga tendrils deployed and unsplit canine skull",
+      "decision": "GENERATE_SOURCE_MATCHING_RIGHT_ONLY_WITH_ENDPOINT_LIMIT",
+      "source_document": "docs/SOURCES_RE4_ARMADURA_COLMILLOS_V17.json",
+      "generation_in_v17_scope": true,
+      "requested_directions_this_pass": [
+        "right"
+      ],
+      "reason": "Bounded reassessment of the same existing R34 right-facing source, with additional edition and framing corroboration. This is not newly recovered independent native anatomy.",
+      "source_evidence": [
+        {
+          "local_path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-colmillos-blackjack.jpg",
+          "sha256": "0f3201df4f17b17cb9d7f0473834bfffe8186cb8a7f2907373e69379e02eb9a8",
+          "bytes": 9024,
+          "dimensions": [
+            380,
+            285
+          ],
+          "page_url": "https://blackjackrants.blogspot.com/2020/10/reviewing-monsters-resident-evil-4.html",
+          "image_url": "https://vignette.wikia.nocookie.net/residentevil/images/9/9a/Colmillos.jpg/revision/latest?cb=20060714013831",
+          "role": "existing-r34-candidate-reassessed"
+        },
+        {
+          "local_path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-colmillos-evilresource.png",
+          "sha256": "13a85555e6d85b4252a1f4fbe029ec1147ff1e758bb42aa5b234bd3f978764ce",
+          "bytes": 128072,
+          "dimensions": [
+            450,
+            360
+          ],
+          "page_url": "https://www.evilresource.com/resident-evil-4/enemies/colmillos",
+          "image_url": "https://www.evilresource.com/images/data/full/re4/colmillos.png?040b2552",
+          "role": "baseline-higher-detail-body-crop"
+        },
+        {
+          "local_path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-colmillos-archives.png",
+          "sha256": "42f68c1c116d8ce8ce0436b84baa0ffb39f87158ec577853fa43f152aa1184a5",
+          "bytes": 34555,
+          "dimensions": [
+            768,
+            434
+          ],
+          "page_url": "https://les-archives-resident-evil-biohazard.fr/lore-colmillos/",
+          "image_url": "https://les-archives-resident-evil-biohazard.fr/wp-content/uploads/2025/05/1Colmillos-2005%C2%B2-768x434.png",
+          "role": "edition-and-silhouette-corroboration"
+        }
+      ],
+      "limits": [
+        "The principal 380×285 source is byte-identical to the pre-existing R34 research candidate. Its highest tendril has effectively no margin and faint compressed pixels reach the top edge; exact endpoint geometry remains unresolved.",
+        "The Archives image supplies edition attribution and white framing around the same render. Added padding is not new native geometry, independent camera evidence or proof of precise tip recovery.",
+        "The higher-detail Evil Resource crop cuts dorsal appendages and cannot alone establish their endpoints.",
+        "RIGHT only: no independent LEFT view, hidden-side tendril roots or underside is documented. Do not certify a left-facing reconstruction from this evidence.",
+        "Do not substitute RE5 Adjule split skull, remake2023 Colmillos, strong-threat mutation or generic dog. Outputs remain static source-matching interpretations with explicit tip/resolution limits."
+      ],
+      "canonical_one_to_one_certified": false,
+      "native_mesh_authentication_performed": false,
+      "original_animation_certified": false,
+      "engine_admitted_by_this_decision": false,
+      "horizontal_mirroring_admitted": false,
+      "reused_r34_source": {
+        "repository_path": "modules/fidelity-r34/assets/lots/lot_2/source-research/re4-colmillos-candidate.png",
+        "sha256": "0f3201df4f17b17cb9d7f0473834bfffe8186cb8a7f2907373e69379e02eb9a8",
+        "current_file": "re4-colmillos-blackjack.jpg",
+        "byte_identical": true,
+        "new_independent_source_recovery": false
+      },
+      "unresolved_coverage": [
+        "left",
+        "exact highest tendril endpoint geometry"
+      ],
+      "historical_refusal_scope": {
+        "own_refusal_found_in_inspected_records": false,
+        "historical_body_status": "HELD_REFERENCE",
+        "own_new_refusal": false
+      }
+    },
+    {
+      "uid": "re4-jj",
+      "edition": "Resident Evil 4 (original 2005)",
+      "variant_or_phase": "J.J. original, béret bordeaux, cache-œil droit anatomique, minigun et bande de munitions libre.",
+      "decision": "GENERATE_SCOPED_STATIC_PAIR_FROM_ATTRIBUTED_COMPLETE_RENDER",
+      "source_document": "docs/SOURCES_RE4_ISLAND_V17.json",
+      "generation_in_v17_scope": true,
+      "requested_directions_this_pass": [
+        "left",
+        "right"
+      ],
+      "reason": "Même pose, même béret, visage/cache-œil, foulard, bandoulières et portions du minigun que le crop R34 ; le rendu retrouvé étend réellement le cadre aux jambes, chaussures, extrémité des canons et bout de bande.",
+      "source_evidence": [
+        {
+          "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-enemies-refr.html",
+          "sha256": "39853d61da620d1c6539bbcb001d0e78d17c92dece434d1b8470120dd324721a",
+          "bytes": 164516,
+          "url": "https://www.residentevilfr.com/v3/resident-evil-4-ennemis/",
+          "role": "Attribution de la galerie au Resident Evil 4 original ; le texte et les plateformes de la page renvoient au jeu original. La date 2023 dans le chemin WordPress est une date de téléversement, pas une preuve d’édition Remake."
+        },
+        {
+          "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-jj-refr-full.png",
+          "sha256": "54ab2432f1010117b4328be48713214d6c741a3b98555ca5ed7b8a21b9579eb5",
+          "bytes": 188930,
+          "dimensions": [
+            810,
+            1080
+          ],
+          "source_page": "https://www.residentevilfr.com/v3/resident-evil-4-ennemis/",
+          "url": "https://www.residentevilfr.com/v3/wp-content/uploads/2023/03/resident-evil-4-jj-810x1080.png",
+          "source_kind": "Rendu final attribué par un site secondaire au jeu original ; aucune extraction de mesh certifiée."
+        }
+      ],
+      "limits": [
+        "Les images retenues sont des rendus publiés sur des sites secondaires ; aucune chaîne de hash d’un mesh natif Capcom n’est établie.",
+        "Une seule vue ne documente pas les surfaces cachées ni une vue opposée native. Conserver une occlusion naturelle est admissible ; inventer des détails invisibles ne l’est pas.",
+        "Une source complète ne certifie aucune future génération, aucune fidélité canonique 1:1, aucune animation et aucune intégration moteur.",
+        "Les fichiers locaux sont des références de travail, non des nouveaux assets générés. Aucun bitmap source n’est copié dans le dépôt.",
+        "La main arrière et les faces arrière du mécanisme ne sont pas démontrées par une seconde vue. Une génération exposant ces faces doit rester en attente si elle requiert une invention."
+      ],
+      "canonical_one_to_one_certified": false,
+      "native_mesh_authentication_performed": false,
+      "original_animation_certified": false,
+      "engine_admitted_by_this_decision": false,
+      "horizontal_mirroring_admitted": false,
+      "anatomy_and_equipment_constraints": [
+        "Béret bordeaux, écusson côté droit de l’image.",
+        "Un seul cache-œil sur l’œil anatomique droit, donc à gauche dans cette vue frontale ; motif blanc visible dessus.",
+        "Foulard brun rouge, plusieurs rangées de munitions autour du haut du corps.",
+        "Pantalon brun sale ample et court aux bas effilochés ; bas des mollets exposés, chaussures foncées.",
+        "Minigun noir à six bouches visibles, bande de munitions libre longue aboutissant en bas à gauche du cadre."
+      ],
+      "hand_placement_limits": {
+        "anatomical_left_hand": "Nettement visible : depuis l’épaule et l’avant-bras du côté droit de l’image, elle repose/serre la poignée supérieure transversale près du bloc de l’arme, au-dessus et derrière l’arc de support et avant les longs canons.",
+        "anatomical_right_hand": "Le bras descend sur le côté gauche du torse dans l’image et arrive vers l’arrière du boîtier. La main et la commande sont largement masquées par l’arme et les munitions : leur prise exacte ne peut pas être certifiée depuis ce rendu.",
+        "both_hand_grips_independently_proven": false,
+        "required_review": "Tracer chaque bras jusqu’à sa propre main visible, conserver l’occlusion de la main arrière lorsqu’elle reste naturelle, refuser mains doublées, bras déconnectés et inversion du cache-œil. Ne pas importer la prise d’un Gatling Gun Majini RE5."
+      },
+      "critical_laterality": "The eyepatch remains on anatomical RIGHT. The anatomical LEFT hand is documented at the upper transverse handle; the rear right hand/control is largely occluded and exact grip is unproven.",
+      "forbidden_substitution": [
+        "Gatling Gun Majini RE5 et son équipement.",
+        "Brute RE4 Remake 2023, charm RE4 Remake, pack Nexus transformant le modèle dans le remake.",
+        "Lunettes, cigare ou sac à munitions non présents sur la référence.",
+        "Cache-œil déplacé à gauche anatomique par simple miroir."
+      ],
+      "historical_refusal_scope": {
+        "own_refusal_found_in_inspected_records": false,
+        "historical_body_status": "HELD_REFERENCE",
+        "own_new_refusal": false
+      }
+    },
+    {
+      "uid": "re4-soldier-ganado",
+      "edition": "Resident Evil 4 (original 2005)",
+      "variant_or_phase": "Soldat chauve, veste brune ouverte, pantalon gris brun et lance-roquettes porté vers le haut ; deuxième sujet depuis la gauche de la planche REFR.",
+      "decision": "GENERATE_SCOPED_STATIC_PAIR_FROM_ATTRIBUTED_COMPLETE_RENDER",
+      "source_document": "docs/SOURCES_RE4_ISLAND_V17.json",
+      "generation_in_v17_scope": true,
+      "requested_directions_this_pass": [
+        "left",
+        "right"
+      ],
+      "reason": "Le deuxième sujet de la planche reprend la pose du crop R34 : crâne chauve, lésions faciales, veste ouverte, main anatomique droite levée portant le lanceur. Les deux jambes et chaussures sont désormais visibles.",
+      "source_evidence": [
+        {
+          "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-enemies-refr.html",
+          "sha256": "39853d61da620d1c6539bbcb001d0e78d17c92dece434d1b8470120dd324721a",
+          "bytes": 164516,
+          "url": "https://www.residentevilfr.com/v3/resident-evil-4-ennemis/",
+          "role": "Attribution de la galerie au Resident Evil 4 original ; le texte et les plateformes de la page renvoient au jeu original. La date 2023 dans le chemin WordPress est une date de téléversement, pas une preuve d’édition Remake."
+        },
+        {
+          "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-soldiers-refr-full.png",
+          "sha256": "0fbecd6721b042c1ef1c883bb151bf4ba153a65d671c027e3600dc6078e9b662",
+          "bytes": 391761,
+          "dimensions": [
+            1300,
+            1080
+          ],
+          "source_page": "https://www.residentevilfr.com/v3/resident-evil-4-ennemis/",
+          "url": "https://www.residentevilfr.com/v3/wp-content/uploads/2023/03/resident-evil-4-soldats-1300x1080.png",
+          "source_kind": "Planche de quatre rendus finaux attribuée par un site secondaire au jeu original."
+        }
+      ],
+      "limits": [
+        "Les images retenues sont des rendus publiés sur des sites secondaires ; aucune chaîne de hash d’un mesh natif Capcom n’est établie.",
+        "Une seule vue ne documente pas les surfaces cachées ni une vue opposée native. Conserver une occlusion naturelle est admissible ; inventer des détails invisibles ne l’est pas.",
+        "Une source complète ne certifie aucune future génération, aucune fidélité canonique 1:1, aucune animation et aucune intégration moteur.",
+        "Les fichiers locaux sont des références de travail, non des nouveaux assets générés. Aucun bitmap source n’est copié dans le dépôt.",
+        "La planche est multi-sujets. Toute future sortie doit contenir uniquement la variante sélectionnée.",
+        "Une pose découvrant entièrement l’arrière du lanceur nécessiterait une source supplémentaire ; une simple similitude avec un RPG réel ne suffit pas."
+      ],
+      "canonical_one_to_one_certified": false,
+      "native_mesh_authentication_performed": false,
+      "original_animation_certified": false,
+      "engine_admitted_by_this_decision": false,
+      "horizontal_mirroring_admitted": false,
+      "anatomy_and_equipment_constraints": [
+        "Tête chauve et visage altéré correspondant au crop R34.",
+        "Veste brune usée ouverte sur torse nu ; pas de casque, masque à gaz ou gilet sans manches.",
+        "Pantalon gris brun court/effiloché au bas, chevilles visibles et chaussures brunes.",
+        "Main anatomique droite levée sur la poignée du lanceur ; main anatomique gauche relâchée le long du corps.",
+        "Roquette à pointe fine et tête conique allongée, corps de lanceur passant près de l’épaule droite anatomique."
+      ],
+      "selected_subject": "Deuxième depuis la gauche uniquement ; aucun transfert du casque/arbalète du premier, du masque à gaz/bâton électrique du troisième ou du fléau du quatrième.",
+      "weapon_occlusion_limit": "La partie arrière du lanceur se confond/est naturellement masquée près de l’épaule droite anatomique. Aucun autre angle ne démontre sa terminaison cachée ; la source résout le cadrage coupé, pas toutes les faces du mécanisme.",
+      "generation_scope": "Conserver la variante et la position générale du lanceur permettant cette occlusion ; ne pas transformer cette source en schéma technique complet ni ajouter un second équipement.",
+      "critical_laterality": "Raised anatomical RIGHT hand supports the launcher near the right shoulder; anatomical LEFT hand remains lowered. Preserve natural rear-launcher occlusion rather than inventing newly exposed machinery.",
+      "forbidden_substitution": [
+        "Autres soldats de la même planche.",
+        "Soldats RE4 Remake 2023, Umbrella Corps ou textures HD de fan non identifiées.",
+        "Arbalète, bâton électrique, fléau, casque ou masque à gaz empruntés aux voisins."
+      ],
+      "historical_refusal_scope": {
+        "own_refusal_found_in_inspected_records": false,
+        "historical_body_status": "HELD_REFERENCE",
+        "own_new_refusal": false
+      }
+    },
+    {
+      "uid": "re4-hammer-ganado",
+      "edition": "Resident Evil 4 (original 2005)",
+      "variant_or_phase": "Soldat humain avec demi-masque métallique et armure à pointes, distinct du Brute animalier 2023.",
+      "decision": "SOURCE_HOLD",
+      "source_document": "docs/SOURCES_RE4_ISLAND_V17.json",
+      "generation_in_v17_scope": false,
+      "requested_directions_this_pass": [],
+      "reason": "La page Las Plagas regroupe plusieurs jeux et les éditions 2005/2023. La vignette dit seulement « Ganado au Marteau ». Les champs de crédit/copyright des métadonnées du média sont vides. Aucun fichier de jeu, rendu daté de l’édition originale ou capture native indépendante n’a été obtenu dans cette passe.",
+      "source_evidence": [
+        {
+          "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-las-plagas-archives.html",
+          "sha256": "3c6a875a2670fe2af2f34aedd20a7bda0d836cb3116ff44bf46da21cb73d423e",
+          "bytes": 221542,
+          "url": "https://les-archives-resident-evil-biohazard.fr/lore-parasite-las-plagas/",
+          "role": "Galerie multi-jeux/multi-éditions ; la seule légende du sujet est « Ganado au Marteau ». Cette page ne suffit pas à authentifier l’édition exacte de la vignette."
+        },
+        {
+          "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-hammer-archives-media.json",
+          "sha256": "626e9bfe45badd332996b95dd56820cbe26dc57509e4fe69b2bf46b5caebb14e",
+          "bytes": 5123,
+          "url": "https://les-archives-resident-evil-biohazard.fr/wp-json/wp/v2/media?search=22Ganado-au-Marteau&per_page=10",
+          "role": "API publique WordPress : source_url et dimensions 1030×582 ; crédit/copyright/description de l’origine du rendu non établis. La taille déclarée côté WordPress n’est pas substituée à la taille des octets effectivement reçus."
+        },
+        {
+          "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-hammer-archives-full.png",
+          "sha256": "62cc0cfd8d987f2debe297b914e30f3a264d24caa0e3bc3ac25e8eb69e216a11",
+          "bytes": 134564,
+          "dimensions": [
+            1030,
+            582
+          ],
+          "source_page": "https://les-archives-resident-evil-biohazard.fr/lore-parasite-las-plagas/",
+          "url": "https://les-archives-resident-evil-biohazard.fr/wp-content/uploads/2025/02/22Ganado-au-Marteau%C2%B2.png",
+          "source_kind": "Image secondaire complète, édition native non authentifiée."
+        },
+        {
+          "workspace_path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-hammer-archives.png",
+          "sha256": "3d166b94b9b8bf18bb746c64c967280b2382ac26e7e5422031c7dc55893727c9",
+          "bytes": 85452,
+          "dimensions": [
+            768,
+            434
+          ],
+          "source_page": "https://les-archives-resident-evil-biohazard.fr/lore-parasite-las-plagas/",
+          "url": "https://les-archives-resident-evil-biohazard.fr/wp-content/uploads/2025/02/22Ganado-au-Marteau%C2%B2-768x434.png",
+          "source_kind": "Variante medium_large du même média, pas une seconde vue indépendante."
+        }
+      ],
+      "limits": [
+        "Les images retenues sont des rendus publiés sur des sites secondaires ; aucune chaîne de hash d’un mesh natif Capcom n’est établie.",
+        "Une seule vue ne documente pas les surfaces cachées ni une vue opposée native. Conserver une occlusion naturelle est admissible ; inventer des détails invisibles ne l’est pas.",
+        "Une source complète ne certifie aucune future génération, aucune fidélité canonique 1:1, aucune animation et aucune intégration moteur.",
+        "Les fichiers locaux sont des références de travail, non des nouveaux assets générés. Aucun bitmap source n’est copié dans le dépôt.",
+        "Le fichier complet et la vignette sont deux tailles du même média, pas deux sources indépendantes.",
+        "La disponibilité d’un corps entier ne lève pas l’incertitude d’édition. Ce rapport ne déclare pas cette piste prête."
+      ],
+      "canonical_one_to_one_certified": false,
+      "native_mesh_authentication_performed": false,
+      "original_animation_certified": false,
+      "engine_admitted_by_this_decision": false,
+      "horizontal_mirroring_admitted": false,
+      "detailed_source_decision": "SOURCE_HOLD_COMPLETE_IMAGE_EDITION_ATTRIBUTION_LIMITED",
+      "full_body_image_found": true,
+      "exact_edition_attribution_established": false,
+      "appearance_correspondence_is_inference_only": true,
+      "required_next_evidence": "Conserver SOURCE_HOLD. Une reprise demande une capture native originale ou un rendu attribué explicitement à RE4 original avec origine démontrable ; ne pas relancer la génération sur simple similitude.",
+      "historical_status_unchanged": "SOURCE_HOLD",
+      "global_inventory_row_change_required_by_this_decision": false,
+      "own_generation_tool_refusal": false,
+      "v17_imagegen_calls": 0,
+      "forbidden_substitution": [
+        "Brute RE4 Remake 2023, historiquement refusé ; ne pas tenter de le reprendre sous ce nom.",
+        "Charm Soldier w/ hammer de 2023, même lorsqu’il ressemble à une bouteille-cap ancienne.",
+        "Mod Nexus OG Soldier/JJ dans le moteur du remake, variantes HD Project.",
+        "STL Cults3D décrit comme interprétation artistique non officielle.",
+        "Complétion du corps et de l’arme à partir du seul buste R34."
+      ]
+    },
+    {
+      "uid": "re4-dr-salvador",
+      "edition": "Resident Evil 4 (original 2005)",
+      "variant_or_phase": "Original2005 burlap-sack chainsaw wielder; exact complete equipped body not established",
+      "decision": "RELATED_REFUSAL_HOLD",
+      "source_document": "docs/SOURCES_RE4_SALVADOR_GIGANTE_V17.json",
+      "generation_in_v17_scope": false,
+      "requested_directions_this_pass": [],
+      "reason": "No call in this pass. The related remake2023 Chainsaw Villager has a confirmed historical refusal, retained separately. Original2005 full-body and complete-weapon sources also remain insufficient; this continuation hold is not an original2005 tool rejection.",
+      "source_evidence": [
+        {
+          "local_path": "/workspace/scratch/3fced93cfb0a/references-v17/dr-salvador-2005-catalog.png",
+          "git_path": "assets/catalog/re4-dr-salvador.png",
+          "sha256": "260597821fd8f2d727964d9f2936f339fd6aad1a91041982c6d16f9949e5d83c",
+          "bytes": 138805,
+          "width": 450,
+          "height": 360,
+          "source_url": "https://www.evilresource.com/resident-evil-4/enemies/dr-salvador",
+          "role": "exact-2005 partial head torso and chainsaw source",
+          "target_edition_admitted": true,
+          "source_edition": "Resident Evil 4 (2005)"
+        }
+      ],
+      "limits": [
+        "The exact2005 source and R27 generated study are cropped upper-body presentations. Neither qualifies a LEFT or RIGHT complete equipped pose.",
+        "Recovered PC2007 native T-pose views show the complete dressed model without a chainsaw. Edition equivalence to original2005 remains unverified, so these are held references only.",
+        "A refusal of re4r-chainsaw-villager must not be relabeled as a historical or newly returned tool refusal for re4-dr-salvador.",
+        "Baseline evidence, blocked-output arrays and historical receipts remain unchanged. This is a new dated V17 continuation hold decision only."
+      ],
+      "canonical_one_to_one_certified": false,
+      "native_mesh_authentication_performed": false,
+      "original_animation_certified": false,
+      "engine_admitted_by_this_decision": false,
+      "horizontal_mirroring_admitted": false,
+      "decision_date_utc": "2026-11-20",
+      "v17_imagegen_calls": 0,
+      "own_current_tool_refusal": false,
+      "own_historical_tool_refusal_found_in_inspected_records": false,
+      "related_refusal": {
+        "uid": "re4r-chainsaw-villager",
+        "edition": "Resident Evil 4 remake (2023)",
+        "kind": "portrait",
+        "repository_receipt": "modules/fidelity-r34/assets/lots/lot_1/re4r-chainsaw-villager/portrait.json",
+        "status": "BLOCKED_BY_TOOL",
+        "error_code": "moderation_blocked",
+        "stage": "output",
+        "request_id": "7e6f6c80-eaa5-4f1c-be0d-8e8e80118f72",
+        "retry_prohibited": true,
+        "idle_status": "BLOCKED_BY_TOOL_PRIOR_PHASE",
+        "historical_record_unchanged": true
+      },
+      "inventory_intent": {
+        "current_outcome": "RELATED_REFUSAL_HOLD",
+        "append_dated_hold_decision_only": true,
+        "preserve_baseline_evidence": true,
+        "preserve_existing_tool_refusal_arrays": true,
+        "write_new_own_tool_refusal": false,
+        "mutation_owner": "root integration; this source-decision document does not modify the inventory"
+      }
+    }
+  ],
+  "preservation_and_limits": {
+    "historical_receipts_modified": false,
+    "baseline_evidence_modified": false,
+    "historical_refusals_revoked": false,
+    "runtime_modified": false,
+    "manifest_or_global_inventory_modified_by_this_document": false,
+    "source_bitmap_bytes_modified": false,
+    "canonical_one_to_one_certified": false,
+    "original_animation_certified": false,
+    "engine_admission": false,
+    "hidden_surface_geometry_certified": false,
+    "note": "Decisions distinguish edition, variant, phase, source evidence, generated static adaptations and related-identity holds. They do not certify any unseen output or native mesh. Source research images stay working references; the existing El Gigante R34 RIGHT is referenced rather than copied or counted as a new V17 image."
+  }
+}

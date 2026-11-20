@@ -1,0 +1,111 @@
+{
+  "schema": "rec.static-candidate-independent-review.v17",
+  "asset": "Soldier Ganado chauve au lance-roquettes — Resident Evil 4 (2005), LEFT 01",
+  "id": "re4_soldier_rpg_left_01",
+  "uid": "re4-soldier-ganado",
+  "variant": "original_2005_bald_brown_open_jacket_rpg",
+  "reviewed_at": "2026-11-20T13:45:32.993062+00:00",
+  "reviewer": "reference_research",
+  "asset_path": "assets/re4_soldier_rpg_left_01.png",
+  "original_path": "/workspace/scratch/3fced93cfb0a/generated_images/exec-cc4b47d9-0368-4348-bdb3-74c664873073.png",
+  "sha256": "6200311b68fe64ee27c53bdb589047c9606e5721a00319b4645008f78c66b8d0",
+  "bytes": 866374,
+  "verdict": "CANDIDATE_STATIC_WITH_LIMITS",
+  "review_status": "CANDIDATE_STATIC_WITH_LIMITS",
+  "excluded_from_candidate_count": false,
+  "source_refs_reviewed": [
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-soldiers-refr-full.png",
+      "sha256": "0fbecd6721b042c1ef1c883bb151bf4ba153a65d671c027e3600dc6078e9b662",
+      "role": "Planche REFR de RE4 original, deuxième personnage depuis la gauche uniquement : soldat chauve à veste brune ouverte au lance-roquettes ; recoupé avec le crop R34."
+    }
+  ],
+  "source_document": "docs/SOURCES_RE4_ISLAND_V17.json",
+  "prompt_record": "prompts/re4_soldier_rpg_left_01.json",
+  "technical_record": "docs/re4_soldier_rpg_left_01-technical.json",
+  "visual_checks": {
+    "orientation": "Tête, buste en trois quarts et lanceur tournés à gauche ; pied avant orienté à gauche et pied arrière plus frontal. Le torse reste assez frontal par rapport au profil dominant demandé, mais la direction gauche est claire.",
+    "variant": "Deuxième soldat de la source uniquement : crâne chauve, veste brune ouverte sur torse nu, ceinture sombre, pantalon gris brun cargo court, chevilles et chaussures brunes. Aucun casque, masque à gaz, lunettes, arbalète, bâton électrique, gilet noir ou fléau.",
+    "right_shoulder_and_hand": "Le lanceur passe vers l’épaule anatomique droite éloignée, derrière le côté du cou et de la tête. Le bras droit éloigné, visible à gauche du torse dans l’image, rejoint le coude puis remonte à la main sur la poignée. Cette main reste droite anatomique ; aucun transfert de l’arme à l’épaule gauche proche observé.",
+    "left_arm": "Le bras anatomique gauche proche, grand bras situé à droite dans l’image, descend librement. Son poignet et sa main sont connectés et ne saisissent pas l’arme.",
+    "weapon": "Pointe avant et roquette conique entièrement visibles, tube et organes de visée simplifiés cohérents, lanceur montant en diagonale vers la gauche. Angle moins vertical que dans la référence mais plus proche de sa présentation ascendante que RIGHT 01.",
+    "weapon_source_limit": {
+      "rear_section_exposed_in_output": false,
+      "rear_section_fully_proven_by_source": false,
+      "native_rear_geometry_certified": false,
+      "finding": "L’arrière du tube disparaît naturellement derrière la tête/épaule droite éloignée. Aucune terminaison évasée entièrement exposée ni mécanisme interne ajouté visible. La recommandation de conserver l’occlusion de cette zone est suivie, sans prétendre connaître ce qui est caché.",
+      "consequence": "La pose évite d’exposer la principale zone d’arme non documentée. Les détails de visée, proportions mécaniques et surfaces opposées demeurent générés et non certifiés natifs."
+    },
+    "legs_and_feet": "Deux jambes raccordées au bassin, deux chevilles et deux chaussures complètes. Aucun membre supplémentaire, pied détaché ou fusion évidente ; appuis et ancrages moteur non validés.",
+    "clothing_and_wear": "Veste brune ouverte, pantalon gris brun à poches cargo et coupe courte cohérents globalement avec le deuxième rendu de la planche. Répartition exacte des lésions/taches, coutures, poches, lacets et plis interprétée ; aucune affirmation que toutes les microtextures source sont reproduites.",
+    "framing": "Un seul personnage entier et une seule arme, pointe avant entièrement dans le cadre. Arrière naturellement occlus par le corps, non coupé par le bord. Pas de décor, sol, texte, logo, bordure ou deuxième sujet.",
+    "limits": [
+      "Marges de 10 % non atteintes à gauche, en haut et en bas : 95/91/181/65 px, soit 8,75/6,28/16,67/4,49 % gauche/haut/droite/bas. Aucune coupe principale.",
+      "Torse assez frontal et lanceur moins vertical que dans le rendu source ; orientation gauche néanmoins claire.",
+      "Arrière du lanceur et connexion proximale côté éloigné partiellement masqués. Leur occlusion n’est pas une preuve de géométrie native.",
+      "Usure, peau, détails vestimentaires et visée restent des interprétations générées à partir d’un seul rendu attribué au jeu original.",
+      "Alpha réel présent avec quelques résidus très faibles hors silhouette ; aucun nettoyage appliqué.",
+      "Candidat statique généré uniquement : aucune certification 1:1, animation originale, intégration moteur, collision, ancrage ou validation dans le jeu."
+    ]
+  },
+  "failed_gates": [],
+  "uncertain_gates": [
+    "launcher_rear_geometry_naturally_occluded",
+    "unseen_native_surfaces_and_wear_unverified"
+  ],
+  "alpha": {
+    "mode": "RGBA",
+    "size": [
+      1086,
+      1448
+    ],
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox_alpha_gte16": [
+      95,
+      91,
+      905,
+      1383
+    ],
+    "margins_alpha16_left_top_right_bottom": [
+      95,
+      91,
+      181,
+      65
+    ],
+    "margins_alpha16_percent_left_top_right_bottom": [
+      8.75,
+      6.28,
+      16.67,
+      4.49
+    ],
+    "bbox_all_nonzero_alpha": [
+      58,
+      24,
+      1076,
+      1426
+    ],
+    "pixels_alpha0": 1186338,
+    "pixels_alpha1_to15": 22161,
+    "pixels_alpha1_to3": 17228,
+    "pixels_alpha255": 800,
+    "all_subject_alpha_255": false,
+    "halo_finding": "Composites gris et clair inspectés avec le vrai canal alpha : aucun fond opaque ni large halo substantiel observé. Des résidus d’alpha très faible subsistent hors de la silhouette et près de certains bords ; les octets originaux sont conservés."
+  },
+  "qa_previews_only": [
+    "/workspace/scratch/3fced93cfb0a/qa-v17/re4_soldier_rpg_left_01-gray.jpg",
+    "/workspace/scratch/3fced93cfb0a/qa-v17/re4_soldier_rpg_left_01-light.jpg"
+  ],
+  "inspection_method": "Inspection personnelle de la planche source et de son deuxième sujet, puis des composites gris/clair à alpha réel. Contrôle de la main droite éloignée sur la poignée, du bras gauche proche libre, de l’épaule porteuse, de l’arrière naturellement masqué, de la pointe et des deux chaussures. Mesures sur l’original et comparaison exacte des octets copiés ; aucune retouche.",
+  "original_bytes_modified": false,
+  "original_generated_bytes_verified_identical": true,
+  "one_subject_per_image_reviewed": true,
+  "quality_rejection_is_tool_refusal": false,
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "animation_frames": 1,
+  "can_mirror": false,
+  "recommended_action": "Conserver LEFT 01 comme candidat statique de cette variante, avec l’arrière de l’arme naturellement caché et les limites de source documentées. Aucun défaut concret bloquant observé. Ne pas assimiler cette occlusion à une certification de géométrie native."
+}

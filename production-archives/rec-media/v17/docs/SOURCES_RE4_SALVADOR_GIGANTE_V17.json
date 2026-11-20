@@ -1,0 +1,718 @@
+{
+  "schema": "rec-source-recovery-review-v17-1",
+  "reviewed_at_utc": "2026-11-20",
+  "reviewer": "independent source and visual audit /root/review_v14",
+  "repository": "darknigthmare/resident-evil-bow-protocol",
+  "pr": 22,
+  "baseline_commit": "1ed251b8b7c719c81a7ae16319ca3fc9b9f168d8",
+  "scope": {
+    "uids": [
+      "re4-dr-salvador",
+      "re4-el-gigante"
+    ],
+    "target_edition": "Resident Evil 4 (original 2005)",
+    "operation": "Historical and source audit; original image bytes recovered unchanged into scratch; source report copied into V17 documentation. No image generation, publication, runtime change or historical admission mutation by this audit.",
+    "review_method": "Historical receipts plus actual source and generated image inspection. Transparent PNGs were composited over gray for inspection; hidden RGB at alpha 0 is not visible content. QA JPGs are temporary derivatives and do not replace originals.",
+    "limits": [
+      "No original game geometry, animation, engine readiness or global 1:1 certification.",
+      "A filename ending idle-right.png does not establish pose, full-body coverage or actual direction.",
+      "Absence of a refusal is limited to the inspected receipts and continuation records; it is not a claim about every possible historical conversation."
+    ]
+  },
+  "decision_summary": [
+    {
+      "uid": "re4-el-gigante",
+      "qualified_existing_full_body_directions": [
+        "right"
+      ],
+      "missing_full_body_directions": [
+        "left"
+      ],
+      "recommended_v17_action": "Generate only the missing LEFT static candidate from the complete original-2005 specimen; retain the already reviewed R34 RIGHT.",
+      "generation_performed_by_this_audit": false
+    },
+    {
+      "uid": "re4-dr-salvador",
+      "qualified_existing_full_body_directions": [],
+      "missing_full_body_directions": [
+        "left",
+        "right"
+      ],
+      "recommended_v17_action": "Source research only; no generation in this pass. Exact-2005 complete body plus complete weapon is still unqualified, and the related remake UID has a confirmed historical tool refusal.",
+      "own_new_refusal": false,
+      "generation_performed_by_this_audit": false
+    }
+  ],
+  "subjects": [
+    {
+      "uid": "re4-el-gigante",
+      "edition": "Resident Evil 4 (2005)",
+      "phase": "Unarmored giant, no parasite deployed",
+      "continuation_v16_status": "EXISTING_NATIVE_LIBRARY_REQUIRES_REVIEW",
+      "r29_r30_lookup": {
+        "r29_per_uid_records_found": false,
+        "evidence": "history/native-path-audit.json",
+        "observation": "No target-UID path was present in the R29 tree searched. The qualified body candidate for this UID is R34 generated art, not a recovered native R29 pose."
+      },
+      "source_images": [
+        {
+          "local_path": "/workspace/scratch/3fced93cfb0a/references-v17/el-gigante-2005-source.png",
+          "bytes": 525046,
+          "sha256": "49724b770e307b1f93ce8be468508d6298b63df1c412a0f063786e99bf0870d6",
+          "width": 777,
+          "height": 777,
+          "mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "transparent_pixels": 394804,
+          "opaque_pixels": 200838,
+          "bbox_xyxy_by_alpha_threshold": {
+            "1": [
+              11,
+              64,
+              767,
+              713
+            ],
+            "16": [
+              11,
+              64,
+              767,
+              713
+            ],
+            "128": [
+              11,
+              64,
+              766,
+              712
+            ]
+          },
+          "native_bytes_unchanged": true,
+          "git_path": "assets/specimens/re4-el-gigante.png",
+          "role": "complete-body retained reference render",
+          "visually_inspected": true,
+          "source_url": "https://bogleech.com/halloween/hall18-re4",
+          "source_edition": "Resident Evil 4 (2005)",
+          "target_edition_admitted": true,
+          "complete_body_reference_verified": true,
+          "observed_facing": "front three-quarter with head directed screen right",
+          "observation": "Whole gray giant with both hands, both bare feet and torn dark waist garment. The render includes unrelated small bodies below the feet and held near the left hand; these must be excluded from the single-character result. The source is a retained rendered illustration, not a native mesh certification."
+        },
+        {
+          "local_path": "/workspace/scratch/3fced93cfb0a/references-v17/el-gigante-2005-catalog.png",
+          "bytes": 209921,
+          "sha256": "1f82210d4fe4acc69d55fa26672ad88e916a02b5675215d48d31709b49c93286",
+          "width": 450,
+          "height": 360,
+          "mode": "RGB",
+          "alpha_extrema": [
+            255,
+            255
+          ],
+          "transparent_pixels": 0,
+          "opaque_pixels": 162000,
+          "bbox_xyxy_by_alpha_threshold": {
+            "1": [
+              0,
+              0,
+              450,
+              360
+            ],
+            "16": [
+              0,
+              0,
+              450,
+              360
+            ],
+            "128": [
+              0,
+              0,
+              450,
+              360
+            ]
+          },
+          "native_bytes_unchanged": true,
+          "git_path": "assets/catalog/re4-el-gigante.png",
+          "role": "head and torso detail crop",
+          "visually_inspected": true,
+          "source_url": "https://www.evilresource.com/resident-evil-4/enemies/el-gigante",
+          "source_edition": "Resident Evil 4 (2005)",
+          "target_edition_admitted": true,
+          "complete_body_reference_verified": false,
+          "observation": "450×360 image crops torso and limbs. Corroborates head, gray texture and twisted cord by the head; cannot independently prove body completeness."
+        }
+      ],
+      "source_laterality_observations": [
+        {
+          "feature": "Twisted cord or braid-like element",
+          "anatomical_side": "right",
+          "observation": "Runs over or behind the nape and down the anatomical right side of the head onto the front torso. Preserve that anatomical side when reposing LEFT. Material is not settled; do not certify that it is hair."
+        },
+        {
+          "feature": "Torn dark waist garment",
+          "observation": "Asymmetric openings and hem; do not mirror the source to produce the opposite facing. Fine tears are not separately certified."
+        },
+        {
+          "feature": "Hands and equipment",
+          "observation": "No weapon, armor or emerging parasite. Both giant hands and both bare feet belong to the body; small human bodies are unrelated source clutter."
+        },
+        {
+          "feature": "Dark edge at anatomical left wrist",
+          "observation": "Visible in the source near the held small body. Its interpretation as a separate bracelet is uncertain; do not promote this to a certified costume accessory."
+        }
+      ],
+      "existing_candidates": [
+        {
+          "local_path": "/workspace/scratch/3fced93cfb0a/references-v17/el-gigante-r34-right.png",
+          "bytes": 1849276,
+          "sha256": "116b2c268a11e6135abe581767cd1b379bf7a59b67a98771d23b3fd3985cf0ee",
+          "width": 1402,
+          "height": 1122,
+          "mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "transparent_pixels": 883142,
+          "opaque_pixels": 830,
+          "bbox_xyxy_by_alpha_threshold": {
+            "1": [
+              0,
+              18,
+              1384,
+              1122
+            ],
+            "16": [
+              56,
+              27,
+              1375,
+              1102
+            ],
+            "128": [
+              57,
+              28,
+              1374,
+              1102
+            ]
+          },
+          "native_bytes_unchanged": true,
+          "git_path": "modules/fidelity-r34/assets/generated/re4-el-gigante/idle-right.png",
+          "role": "R34 qualified static generated candidate",
+          "visually_inspected": true,
+          "source_output": "exec-0616bbf6-014f-4736-b1fc-8979f972d63f.png",
+          "expected_name_direction": "right",
+          "actual_facing": "right",
+          "pose_kind": "low three-quarter ready stance",
+          "full_body_visible": true,
+          "receipt": "modules/fidelity-r34/assets/lots/lot_1/re4-el-gigante/idle.json",
+          "receipt_status": "GENERATED",
+          "original_receipt_review": {
+            "visuallyReviewed": true,
+            "canonicalFidelityCertified": false,
+            "originalIdleAnimationCertified": false,
+            "knownAppearanceGaps": [],
+            "sourceFacing": "right",
+            "sourceEdition": "Resident Evil 4 (2005)",
+            "fullBodyVisible": true,
+            "fullBodyReviewed": true,
+            "completeBodyReferenceVerified": true,
+            "fightingPoseReviewed": true,
+            "completeBodyReferences": [
+              {
+                "path": "assets/specimens/re4-el-gigante.png",
+                "sha256": "49724b770e307b1f93ce8be468508d6298b63df1c412a0f063786e99bf0870d6",
+                "observation": "The retained original-game specimen presents whole gray giant with two feet, hands and waist covering; background reference corpses are separate and must not be reproduced."
+              }
+            ],
+            "observations": [
+              "Actual alpha-composited raw PNG shows the whole gray giant in a low right-facing three-quarter ready stance with both bare feet and both hands complete. The unrelated corpses from the original reference are absent. Source waist covering and body proportions are retained.",
+              "Raw PNG was actually rendered by Chromium on a neutral background with native alpha compositing. Transparent RGB under alpha0 is not treated as a visible halo.",
+              "This is a generated single static base pose, not an original game sprite, original idle cycle, geometric certification or global1:1 certification."
+            ],
+            "qaComposite": {
+              "path": "modules/fidelity-r34/assets/lots/lot_1/reviews/resume-qa-1.png",
+              "bytes": 1009165,
+              "sha256": "4597571034e6bd1396ccc202a9198f076c334a733d6a2bf4c781f4be2d43b76f"
+            }
+          },
+          "independent_observations": [
+            "Both hands and both bare feet are visible and complete. Head and stance are directed right despite the torso remaining substantially frontal.",
+            "Unrelated bodies from the source are absent. Gray hunch, large hands, feet and waist garment broadly follow the reference; this is an adaptation rather than geometric certification.",
+            "Principal bbox alpha≥16 is [56,27,1375,1102], margins left/top/right/bottom [56,27,27,20]. Alpha>0 bbox is [0,18,1384,1122], so weak alpha pixels reach some frame boundaries. No visible principal body crop was observed."
+          ],
+          "already_qualified_direction": "right",
+          "do_not_regenerate_duplicate": true
+        },
+        {
+          "git_path": "modules/fidelity-r27/sprites/generated/re4-el-gigante/idle-right.png",
+          "receipt": "modules/fidelity-r27/sprites/records/re4-el-gigante.json",
+          "receipt_sha256": "7a74652cabc49f0a46082e67b381858d2a60abfe5d4ab06272377488fa465de7",
+          "receipt_bytes": 1897738,
+          "receipt_dimensions": [
+            1254,
+            1254
+          ],
+          "expected_name_direction": "right",
+          "reviewed_actual_facing": "front",
+          "pose_kind": "source-presentation",
+          "available_states": [],
+          "png_visually_inspected_in_this_audit": false,
+          "counts_as_right_candidate": false,
+          "observation": "Historical R27/R28 pose-kind records identify a frontal source presentation; do not infer RIGHT from its filename."
+        }
+      ],
+      "refusal_audit": {
+        "own_historical_refusal_found": false,
+        "own_current_refusal": false,
+        "current_v16_refusal_arrays": [],
+        "r34_body_status": "GENERATED",
+        "r34_portrait_status": "GENERATED",
+        "resume_call_note": "R34 resume-call-1 explains recovery after a restart and loss of the exact old prompt, explicitly not a retry after moderation refusal.",
+        "related_remake_uid": "re4r-el-gigante",
+        "related_remake_refusal_found": false,
+        "related_remake_candidate_note": "A V9 LEFT belongs to remake 2023 and is not coverage for this original-2005 UID."
+      }
+    },
+    {
+      "uid": "re4-dr-salvador",
+      "edition": "Resident Evil 4 (2005)",
+      "continuation_v16_status": "EXISTING_NATIVE_LIBRARY_REQUIRES_REVIEW",
+      "r34_body_receipt": "modules/fidelity-r34/assets/lots/lot_3/re4-dr-salvador/idle.json",
+      "r34_body_status": "HELD_REFERENCE",
+      "r34_body_hold_reason": "The2005head/torso and part of the chainsaw are shown, while legs/feet and the complete saw/handle endpoints are missing. No image_gen body request was issued from insufficient original references.",
+      "source_images": [
+        {
+          "local_path": "/workspace/scratch/3fced93cfb0a/references-v17/dr-salvador-2005-catalog.png",
+          "bytes": 138805,
+          "sha256": "260597821fd8f2d727964d9f2936f339fd6aad1a91041982c6d16f9949e5d83c",
+          "width": 450,
+          "height": 360,
+          "mode": "RGB",
+          "alpha_extrema": [
+            255,
+            255
+          ],
+          "transparent_pixels": 0,
+          "opaque_pixels": 162000,
+          "bbox_xyxy_by_alpha_threshold": {
+            "1": [
+              0,
+              0,
+              450,
+              360
+            ],
+            "16": [
+              0,
+              0,
+              450,
+              360
+            ],
+            "128": [
+              0,
+              0,
+              450,
+              360
+            ]
+          },
+          "native_bytes_unchanged": true,
+          "git_path": "assets/catalog/re4-dr-salvador.png",
+          "role": "exact-2005 partial head torso and chainsaw source",
+          "visually_inspected": true,
+          "source_url": "https://www.evilresource.com/resident-evil-4/enemies/dr-salvador",
+          "source_edition": "Resident Evil 4 (2005)",
+          "target_edition_admitted": true,
+          "complete_body_reference_verified": false,
+          "observation": "Burlap sack with two eye holes, gray rolled-sleeve shirt, reddish brown suspenders and top of trousers. Raised yellow/ochre chainsaw and lower body are cut by the image boundary."
+        }
+      ],
+      "source_refresh": {
+        "url": "https://www.evilresource.com/images/data/full/re4/dr-salvador.png?fcfde79a",
+        "receipt": "modules/fidelity-r34/assets/lots/lot_3/re4-dr-salvador/research/source-refresh.json",
+        "result": "The full-named public URL returns the same 138805 cropped bytes, SHA256 260597821fd8f2d727964d9f2936f339fd6aad1a91041982c6d16f9949e5d83c. A URL containing full does not prove complete anatomy."
+      },
+      "source_laterality_observations": [
+        {
+          "feature": "Arms in partial raised-saw image",
+          "observation": "Anatomical right arm starts at the left screen shoulder and crosses diagonally upward in front of the body to the chainsaw grip. Anatomical left forearm on the right side of the image rises toward the other saw grip."
+        },
+        {
+          "feature": "Complete weapon grip assignment",
+          "status": "not_qualified",
+          "observation": "The saw is raised and its guide-bar and complete handle endpoints are outside the frame. Do not certify a front/rear handle reconstruction from this cropped image alone."
+        },
+        {
+          "feature": "Costume lower body and shoes",
+          "status": "not_qualified_for_original_2005",
+          "observation": "Legs and shoes are absent from the exact-edition catalog image. PC2007 native views show them but remain edition-held."
+        }
+      ],
+      "existing_generated_image": {
+        "local_path": "/workspace/scratch/3fced93cfb0a/references-v17/dr-salvador-r27-cropped-presentation.png",
+        "bytes": 1803180,
+        "sha256": "f653318b54483934e9b0b8e85c226d97154f7ac18bbe8fc4a16ec322f1417454",
+        "width": 1402,
+        "height": 1122,
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "transparent_pixels": 742676,
+        "opaque_pixels": 374,
+        "bbox_xyxy_by_alpha_threshold": {
+          "1": [
+            0,
+            0,
+            1340,
+            1122
+          ],
+          "16": [
+            162,
+            0,
+            1308,
+            1122
+          ],
+          "128": [
+            163,
+            0,
+            1307,
+            1122
+          ]
+        },
+        "native_bytes_unchanged": true,
+        "git_path": "modules/fidelity-r27/sprites/generated/re4-dr-salvador/idle-right.png",
+        "role": "R27 cropped source-presentation study",
+        "visually_inspected": true,
+        "expected_name_direction": "right",
+        "actual_facing": "front",
+        "full_body_visible": false,
+        "receipt": "modules/fidelity-r27/sprites/records/re4-dr-salvador.json",
+        "later_review": "docs/R28_SPRITE_REVIEW/re4-dr-salvador.json",
+        "qualified_combat_directions": [],
+        "observations": [
+          "The subject is a frontal upper-body presentation. Lower body is cut at the waist and upper chainsaw is cut at the top edge.",
+          "Alpha≥16 bbox [162,0,1308,1122] touches the top and bottom boundaries; missing complete anatomy is visible, not just an alpha-fringe issue.",
+          "The right-looking filename is not a qualified RIGHT full-body pose."
+        ]
+      },
+      "r29_r30_lookup": {
+        "r29_per_uid_records_found": false,
+        "evidence": "history/native-path-audit.json",
+        "r30_other_edition_sources": [
+          {
+            "local_path": "/workspace/scratch/3fced93cfb0a/references-v17/held-pc2007/dr-salvador-pc2007-native-0.png",
+            "bytes": 82951,
+            "sha256": "fac6eab1762fe3913921360ea6bea2bf5c4263f741c402f5db45818ca3cd9f04",
+            "width": 512,
+            "height": 512,
+            "mode": "RGBA",
+            "alpha_extrema": [
+              0,
+              255
+            ],
+            "transparent_pixels": 234311,
+            "opaque_pixels": 26584,
+            "bbox_xyxy_by_alpha_threshold": {
+              "1": [
+                99,
+                82,
+                413,
+                430
+              ],
+              "16": [
+                99,
+                82,
+                413,
+                430
+              ],
+              "128": [
+                99,
+                82,
+                413,
+                430
+              ]
+            },
+            "native_bytes_unchanged": true,
+            "git_path": "modules/fidelity-r30/native/other-games/poses/re4-dr-salvador-pc-published/native-0.png",
+            "source_url": "https://models.spriters-resource.com/pc_computer/residentevil4/asset/284058/",
+            "source_edition": "PC port 2007, equivalence to target original 2005 unverified",
+            "target_edition_admitted": false,
+            "visually_inspected": true,
+            "observed_facing": "front",
+            "pose_kind": "native model T pose",
+            "complete_body_visible": true,
+            "complete_chainsaw_visible": false,
+            "observation": "Whole dressed model with sack, sleeves, suspenders, worn trousers and shoes; no equipped chainsaw. These are source studies of a different port, not qualified original-2005 combat candidates."
+          },
+          {
+            "local_path": "/workspace/scratch/3fced93cfb0a/references-v17/held-pc2007/dr-salvador-pc2007-native-90.png",
+            "bytes": 54219,
+            "sha256": "16fa5f5157c4e796f19a0698d9889bb7262ffa6922a76f614217dc1ee486d275",
+            "width": 512,
+            "height": 512,
+            "mode": "RGBA",
+            "alpha_extrema": [
+              0,
+              255
+            ],
+            "transparent_pixels": 245427,
+            "opaque_pixels": 15986,
+            "bbox_xyxy_by_alpha_threshold": {
+              "1": [
+                219,
+                82,
+                293,
+                430
+              ],
+              "16": [
+                219,
+                82,
+                293,
+                430
+              ],
+              "128": [
+                219,
+                82,
+                293,
+                430
+              ]
+            },
+            "native_bytes_unchanged": true,
+            "git_path": "modules/fidelity-r30/native/other-games/poses/re4-dr-salvador-pc-published/native-90.png",
+            "source_url": "https://models.spriters-resource.com/pc_computer/residentevil4/asset/284058/",
+            "source_edition": "PC port 2007, equivalence to target original 2005 unverified",
+            "target_edition_admitted": false,
+            "visually_inspected": true,
+            "observed_facing": "left",
+            "pose_kind": "native model T pose",
+            "complete_body_visible": true,
+            "complete_chainsaw_visible": false,
+            "observation": "Whole dressed model with sack, sleeves, suspenders, worn trousers and shoes; no equipped chainsaw. These are source studies of a different port, not qualified original-2005 combat candidates."
+          },
+          {
+            "local_path": "/workspace/scratch/3fced93cfb0a/references-v17/held-pc2007/dr-salvador-pc2007-native-270.png",
+            "bytes": 52878,
+            "sha256": "7c2befc94038d5a7c5bf690946a8d179b17597ebb5618b47bdb06f419288e324",
+            "width": 512,
+            "height": 512,
+            "mode": "RGBA",
+            "alpha_extrema": [
+              0,
+              255
+            ],
+            "transparent_pixels": 245393,
+            "opaque_pixels": 16029,
+            "bbox_xyxy_by_alpha_threshold": {
+              "1": [
+                219,
+                82,
+                293,
+                430
+              ],
+              "16": [
+                219,
+                82,
+                293,
+                430
+              ],
+              "128": [
+                219,
+                82,
+                293,
+                430
+              ]
+            },
+            "native_bytes_unchanged": true,
+            "git_path": "modules/fidelity-r30/native/other-games/poses/re4-dr-salvador-pc-published/native-270.png",
+            "source_url": "https://models.spriters-resource.com/pc_computer/residentevil4/asset/284058/",
+            "source_edition": "PC port 2007, equivalence to target original 2005 unverified",
+            "target_edition_admitted": false,
+            "visually_inspected": true,
+            "observed_facing": "right",
+            "pose_kind": "native model T pose",
+            "complete_body_visible": true,
+            "complete_chainsaw_visible": false,
+            "observation": "Whole dressed model with sack, sleeves, suspenders, worn trousers and shoes; no equipped chainsaw. These are source studies of a different port, not qualified original-2005 combat candidates."
+          }
+        ],
+        "source_equivalence_to_original_2005_verified": false,
+        "no_weapon_in_recovered_native_views": true
+      },
+      "refusal_and_turn_decision": {
+        "own_r34_portrait_status": "GENERATED",
+        "own_r34_body_status": "HELD_REFERENCE",
+        "own_historical_tool_refusal_found": false,
+        "own_current_tool_refusal": false,
+        "related_uid": "re4r-chainsaw-villager",
+        "related_edition": "Resident Evil 4 remake (2023)",
+        "related_kind": "portrait",
+        "related_status": "BLOCKED_BY_TOOL",
+        "related_receipt": "modules/fidelity-r34/assets/lots/lot_1/re4r-chainsaw-villager/portrait.json",
+        "related_error_code": "moderation_blocked",
+        "related_moderation_stage": "output",
+        "related_request_id": "7e6f6c80-eaa5-4f1c-be0d-8e8e80118f72",
+        "related_categories": [
+          "violence"
+        ],
+        "related_retry_prohibited": true,
+        "related_historical_observations": [
+          "Refus conservé sans nouvelle tentative ni variante ; aucun corps ne sera soumis pour ce sujet."
+        ],
+        "related_idle_status": "BLOCKED_BY_TOOL_PRIOR_PHASE",
+        "decision_this_pass": "No Salvador2005 generation. Research is retained only. This is a continuation decision informed by incomplete exact-edition sources and the related refusal, not a new tool refusal for the original-2005 UID.",
+        "parent_instruction_confirmed": true
+      }
+    }
+  ],
+  "supplementary_public_research_not_admitted": [
+    {
+      "url": "https://models.spriters-resource.com/pc_computer/residentevil4/asset/284058/",
+      "finding": "Published PC2007 model; retained under held-pc2007. Full model views lack the weapon and edition equivalence remains unverified."
+    },
+    {
+      "url": "https://www.nexusmods.com/residentevil42023/mods/752",
+      "finding": "Mod description references original model enhanced with HD Project textures and ported to the remake. Not an unmodified exact-2005 source; no image admitted."
+    },
+    {
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3357795979",
+      "finding": "Addon title says2005 but attribution describes HD Remastered/NinjaRipper/rigged port. Not qualified as native original2005."
+    },
+    {
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3397599419",
+      "finding": "Edited player model with described hand/strap limitations, not exact source proof."
+    },
+    {
+      "url": "https://residentevil.fandom.com/wiki/Chainsaw_Man",
+      "finding": "Search metadata mentions a2005bottlecap. Page retrieval returned402; no relevant full image was actually inspected or admitted."
+    },
+    {
+      "url": "https://creativeuncut.com/art_resident-evil-4_b.html",
+      "finding": "Gallery metadata identifies2005GC/PS2 and official art. Candidate misc08/misc09 image endpoints returned403 or inaccessible CDN redirect; no image admitted."
+    },
+    {
+      "url": "https://tenor.com/view/resident-evil-4-dr-salvador-chainsaw-man-gif-4611865738567399040",
+      "finding": "Search found a later-uploaded GIF with no verified edition or model provenance. Not admitted."
+    },
+    {
+      "url": "https://jaderlink.blogspot.com/2025/01/re4-descricao-dos-arquivos.html",
+      "finding": "Model file map mentions em1600/em1603. No complete exact-edition visual source was obtained from it; not admitted."
+    }
+  ],
+  "historical_record_cache": [
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v17/history/continuation-v16-salvador-gigante-extract.json",
+      "bytes": 4398,
+      "sha256": "b74f20268bd715a262ce2faa12457482eab8124fa10cd736a43d72f8a8bf59ed"
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v17/history/docs__R27_SPRITE_REVIEW_BATCHES__pose-kind-audit__re4-el-gigante.json",
+      "bytes": 2392,
+      "sha256": "7e9ce5608e8eb427755db5be2988a7e09e2a2157d326e56f219628085d89b5b5"
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v17/history/docs__R28_SPRITE_REVIEW__re4-dr-salvador.json",
+      "bytes": 1525,
+      "sha256": "5565fe09a5db4898519dc93853cc181dfa7957c86a4dc4d49f26581a66924d93"
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v17/history/modules__fidelity-r27__sprites__records__re4-dr-salvador.json",
+      "bytes": 5352,
+      "sha256": "58f8b52d2e0cf6a4183919c6d5fcdf0933715a43495394aed35cdb0e7eb44e7b"
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v17/history/modules__fidelity-r27__sprites__records__re4-el-gigante.json",
+      "bytes": 5189,
+      "sha256": "787b8b840eaeaac25ce8f7f65667b990a5902af8f78783555fd2ad76dede8249"
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v17/history/modules__fidelity-r34__assets__lots__lot_1__re4-el-gigante__idle.json",
+      "bytes": 5970,
+      "sha256": "cdc952a43f859f5f0cacb39e21683949feec9eb890bf371bb5207d36e3635b98"
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v17/history/modules__fidelity-r34__assets__lots__lot_1__re4-el-gigante__portrait.json",
+      "bytes": 4236,
+      "sha256": "f10a18e5fe36dd72d28222fa2371a87d08036e1cd2678d5fc3aee784afa0dfa2"
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v17/history/modules__fidelity-r34__assets__lots__lot_1__re4-el-gigante__research__resume-call-1.json",
+      "bytes": 4059,
+      "sha256": "a6c631edb32bfafcddb19857a7d484c9f427bd430be90dd3525eb9afec011735"
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v17/history/modules__fidelity-r34__assets__lots__lot_3__re4-dr-salvador__idle.json",
+      "bytes": 4286,
+      "sha256": "91ebb13f57ebcc8d7002f3f4a6c5551340ab5ab3df02fe6db1a758acac3264cc"
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v17/history/modules__fidelity-r34__assets__lots__lot_3__re4-dr-salvador__portrait.json",
+      "bytes": 3888,
+      "sha256": "41163fb5286e7801b84fb723f59b2df5900ee02b1c534c6b7541229c4879cd6e"
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v17/history/modules__fidelity-r34__assets__lots__lot_3__re4-dr-salvador__research__source-refresh.json",
+      "bytes": 1226,
+      "sha256": "b3339c3d1045ade082841dde2f7dfbbcc65a144256bfe8bf8eb0119dc010c985"
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v17/history/modules__fidelity-r34__assets__source-research-extra__lot3__assessment.json",
+      "bytes": 5977,
+      "sha256": "51d77bd2d1fe923b6db5564a8686bdcfdffb33b38cbfcce1f085c0a27a6ee1ca"
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v17/history/native-path-audit.json",
+      "bytes": 998,
+      "sha256": "48280d012ff7f7ecc1021c000422167507ba66a206f4eb42b44804b5a68b4517"
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v17/history/re4-armadura-r27-record.json",
+      "bytes": 5273,
+      "sha256": "3a9d1a2c16b5168bc7263ea5b8faa64bd8432579c72c5421d11f013e9653b78c"
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v17/history/re4-armadura-r34-idle.json",
+      "bytes": 3425,
+      "sha256": "90b7ea87f8d678c98d8b47e9d696980028ad8d065c6a9d823a46c919ddac3366"
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v17/history/re4-armadura-r34-portrait.json",
+      "bytes": 3493,
+      "sha256": "e38c4511615c789f22ef4454d62f0b15b307333a71955b4fe3d8ee6af8ae0f58"
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v17/history/re4-colmillos-r27-record.json",
+      "bytes": 5284,
+      "sha256": "f2acf5eac14ad1f880c16688c56e25fc77e75547d7f66fc90adcb0dc8e930470"
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v17/history/re4-colmillos-r34-idle.json",
+      "bytes": 3492,
+      "sha256": "e13e2a686f36e2743cca5a719bb3289d5a2e456a5f971a89837d518a9b78fb57"
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v17/history/re4-colmillos-r34-portrait.json",
+      "bytes": 3646,
+      "sha256": "3f39a69ffb592d3ec40fe24089017f6c2d6aea636559890d5c5ee4a8d37a6a8a"
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v17/history/related-identity-refusal-audit.json",
+      "bytes": 2075,
+      "sha256": "19db118dacbe5de1ea5d021c959c4a140732bde34c94513a33fb734d2269a989"
+    },
+    {
+      "local_path": "/workspace/scratch/3fced93cfb0a/references-v17/history/related-re4r-chainsaw-villager-refusal.json",
+      "bytes": 2622,
+      "sha256": "55b4795c471d3879859ceea6a8291db14a2e3ec853b63bcfe2e5c565d5a8bce8"
+    }
+  ],
+  "audit_output_policy": {
+    "generated_images": 0,
+    "source_image_bytes_modified": false,
+    "publication_performed": false,
+    "runtime_files_touched": false,
+    "no_certification_of_unseen_source_images": true,
+    "historical_repository_files_mutated": false,
+    "v17_document_created": "docs/SOURCES_RE4_SALVADOR_GIGANTE_V17.json"
+  }
+}

@@ -1,6 +1,16 @@
 # Resident Evil Combat — publication des lots de production
 
-La [PR #22](https://github.com/darknigthmare/resident-evil-bow-protocol/pull/22) conserve les snapshots **V5 à V11 et V14–V16** pour revue. Chaque lot garde les octets de ses images, documents et archives figés. Les sources documentaires originales et les modèles restent exclus de cette publication.
+La [PR #22](https://github.com/darknigthmare/resident-evil-bow-protocol/pull/22) conserve les snapshots **V5 à V11 et V14–V17** pour revue. Chaque lot garde les octets de ses images, documents et archives figés. Les sources documentaires originales et les modèles restent exclus de cette publication.
+
+## Nouvelle continuation du 20 novembre 2026 — V17
+
+Le [bilan V17](CONTINUATION_V17_20261120.md) ajoute **12 nouveaux PNG : 8 poses candidates et 4 essais conservés pour 5 identités RE4 original (2005)**. El Gigante reçoit une gauche corrigée ; Armadura noir/or, Colmillos avec appendices dorsaux, J.J. et le soldat au lance-roquettes reçoivent les vues qualifiées décrites dans le [lot V17](v17/README.md).
+
+Le [manifeste](v17/manifests/ASSET_MANIFEST_V17.json), le [journal](GENERATION_LEDGER_V17_20261120.json) et la [validation](V17_VALIDATION_20261120.json) relient les images aux prompts, sources, mesures et revues. L’[inventaire des 346 UID](CONTINUATION_V17_20261120.json) actualise 5 sujets générés et la décision de hold Salvador ; les 340 autres entrées restent identiques à V16.
+
+**Le corpus atteint 121 PNG : 85 candidats visuels et 36 essais.** Il comprend des directions et des décors, pas 121 personnages. Les 44 PNG annoncés V12/V13 restent non récupérés. Les [décisions de source](v17/docs/SOURCE_DECISIONS_V17.json) distinguent la réévaluation de Colmillos, l’Armadura argenté encore incomplet, le marteau tenu faute d’attribution exacte et Salvador sans génération ni nouveau refus propre.
+
+La [CI du parent 1ed251b8](v17/docs/CI_PARENT_1ED251B.json) confirme 19 succès et 6 échecs sur la même garde R34. Ce relevé ne décrit pas le futur commit V17. La fidélité 1:1, l’animation et l’admission moteur restent non certifiées ; les snapshots, refus historiques et runtime sont conservés. Les sections suivantes décrivent leurs propres points historiques.
 
 ## Nouvelle continuation du 20 novembre 2026 — V16
 

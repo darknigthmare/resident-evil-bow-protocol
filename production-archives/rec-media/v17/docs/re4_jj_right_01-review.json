@@ -1,0 +1,111 @@
+{
+  "schema": "rec.static-candidate-independent-review.v17",
+  "asset": "J.J. original — Resident Evil 4 (2005), RIGHT 01",
+  "id": "re4_jj_right_01",
+  "uid": "re4-jj",
+  "variant": "original_2005_beret_eyepatch_minigun",
+  "reviewed_at": "2026-11-20T13:37:35.123889+00:00",
+  "reviewer": "reference_research",
+  "asset_path": "assets/re4_jj_right_01.png",
+  "original_path": "/workspace/scratch/3fced93cfb0a/generated_images/exec-04764e93-7788-44a8-b246-a90dec42de76.png",
+  "sha256": "e0255796c02702180f0f0f7a9f72f11efa5988f6fa92272c3ee0963d6cd1201d",
+  "bytes": 1039665,
+  "verdict": "CANDIDATE_STATIC_WITH_LIMITS",
+  "review_status": "CANDIDATE_STATIC_WITH_LIMITS",
+  "excluded_from_candidate_count": false,
+  "source_refs_reviewed": [
+    {
+      "path": "/workspace/scratch/3fced93cfb0a/references-v17/re4-jj-refr-full.png",
+      "sha256": "54ab2432f1010117b4328be48713214d6c741a3b98555ca5ed7b8a21b9579eb5",
+      "role": "Rendu complet attribué à RE4 original par REFR, recoupé avec le crop R34 ; modèle natif et textures 1:1 non certifiés."
+    }
+  ],
+  "source_document": "docs/SOURCES_RE4_ISLAND_V17.json",
+  "prompt_record": "prompts/re4_jj_right_01.json",
+  "technical_record": "docs/re4_jj_right_01-technical.json",
+  "visual_checks": {
+    "orientation": "Tête tournée à droite, minigun pointant nettement à droite, pied avancé orienté à droite. Présentation trois quarts à torse encore largement frontal, pas un profil strict ; direction droite néanmoins lisible.",
+    "variant": "J.J. reconnaissable : béret bordeaux, foulard brun rouge, cache-œil unique, haut sombre sans manches, bandes de munitions, pantalon brun court effiloché, bas de mollets nus et chaussures sombres. Aucun casque, lunettes, cigare ou équipement emprunté au Gatling Gun Majini RE5 observé.",
+    "eyepatch_laterality": "Cache-œil sur le côté anatomique droit, côté proche visible dans la tête tournée vers la droite ; œil gauche découvert. Le détail blanc du motif est une interprétation générée et n’est pas certifié identique pixel par pixel.",
+    "arm_and_hand_connections": {
+      "expected_arm_count": 2,
+      "anatomical_left": "Épaule du côté droit de l’image, bras/coude et avant-bras continus jusqu’à la main placée sur la poignée supérieure transversale. Les doigts enroulés appartiennent à cette main.",
+      "anatomical_right": "Épaule du côté gauche de l’image, bras descendant puis avant-bras ramené vers l’arrière du boîtier. Le poignet est visible ; la main et la commande arrière restent largement masquées par le boîtier. Aucun membre supplémentaire ni main détachée observé.",
+      "both_hand_grips_fully_exposed": false,
+      "rear_hand_control_geometry_certified": false,
+      "limitation": "La prise arrière exacte n’est démontrée ni par la source unique ni par cette vue ; son occlusion naturelle est conservée. La cohérence de la chaîne du bras visible est contrôlée, sans prétendre voir les doigts cachés."
+    },
+    "weapon": "Un minigun complet porté à hauteur plausible de taille/poitrine, six ouvertures distinctes visibles à la bouche, longs canons et anneaux reliés au boîtier. La poignée supérieure et la main gauche se raccordent de manière cohérente. Pas de tir ni flamme.",
+    "ammunition_belt": "Longue bande visible raccordée au boîtier, descendante en courbe et finissant librement en bas à gauche. Extrémité terminale complète et séparée du bord. Aucune rupture évidente du ruban ni prolongement hors cadre.",
+    "legs_and_feet": "Deux jambes reliées au bassin, deux bas de mollets et deux chaussures complets. Pas de pied détaché ou membre supplémentaire observé. L’écartement est une pose statique générée, sans validation d’appuis moteur.",
+    "framing": "Un seul personnage entier avec arme, chaussures et bande libre complètes. Aucun décor, texte, logo, bordure, grille ou autre sujet. Les marges principales restent positives.",
+    "limits": [
+      "La marge de 10 % demandée n’est pas atteinte sur trois côtés : gauche/haut/droite/bas 63/142/70/107 px, soit 5,25/10,82/5,84/8,16 %. Aucune extrémité principale n’est coupée.",
+      "Le torse reste plus frontal que le profil latéral dominant demandé ; la tête, le pied avancé et l’arme indiquent néanmoins clairement la droite.",
+      "La main arrière et sa commande sont naturellement masquées ; aucune certification de ses doigts ou de la mécanique cachée.",
+      "La nouvelle rotation expose des volumes non prouvés par une vue native indépendante. Les formes du visage, les chaussures, l’usure, le motif du cache-œil, les détails mécaniques et la disposition exacte des cartouches restent des interprétations générées.",
+      "Alpha réel présent ; résidus de très faible alpha hors silhouette. Pas de nettoyage effectué.",
+      "Candidat statique généré uniquement : aucune certification 1:1, animation originale, intégration moteur, collision, ancrage ou validation dans le jeu."
+    ]
+  },
+  "failed_gates": [],
+  "uncertain_gates": [
+    "rear_hand_control_geometry_occluded",
+    "unseen_native_surfaces_unverified"
+  ],
+  "alpha": {
+    "mode": "RGBA",
+    "size": [
+      1199,
+      1312
+    ],
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox_alpha_gte16": [
+      63,
+      142,
+      1129,
+      1205
+    ],
+    "margins_alpha16_left_top_right_bottom": [
+      63,
+      142,
+      70,
+      107
+    ],
+    "margins_alpha16_percent_left_top_right_bottom": [
+      5.25,
+      10.82,
+      5.84,
+      8.16
+    ],
+    "bbox_all_nonzero_alpha": [
+      0,
+      23,
+      1185,
+      1312
+    ],
+    "pixels_alpha0": 1159360,
+    "pixels_alpha1_to15": 28578,
+    "pixels_alpha1_to3": 22595,
+    "pixels_alpha255": 558,
+    "all_subject_alpha_255": false,
+    "halo_finding": "Composites gris et clair calculés avec le canal alpha du PNG original : pas de fond opaque ou large halo substantiel observé. Des résidus très faibles subsistent hors de la silhouette, jusque sur certains bords ; les octets originaux sont conservés."
+  },
+  "qa_previews_only": [
+    "/workspace/scratch/3fced93cfb0a/qa-v17/re4_jj_right_01-gray.jpg",
+    "/workspace/scratch/3fced93cfb0a/qa-v17/re4_jj_right_01-light.jpg"
+  ],
+  "inspection_method": "Inspection personnelle du rendu source complet et des deux composites gris/clair construits avec le vrai alpha. Comptage visuel des six ouvertures, suivi des bras, contrôle de la latéralité du cache-œil, de la bande libre et du cadre. Mesures sur le PNG original ; copie exacte vérifiée par octets. Aucune retouche du livrable.",
+  "original_bytes_modified": false,
+  "original_generated_bytes_verified_identical": true,
+  "one_subject_per_image_reviewed": true,
+  "quality_rejection_is_tool_refusal": false,
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false,
+  "animation_frames": 1,
+  "can_mirror": false,
+  "recommended_action": "Conserver RIGHT 01 comme candidat statique J.J. original avec limites documentées. Aucun défaut concret ne justifie une correction de cette sortie dans cette revue ; ne pas certifier la prise arrière cachée ou une fidélité 1:1."
+}
