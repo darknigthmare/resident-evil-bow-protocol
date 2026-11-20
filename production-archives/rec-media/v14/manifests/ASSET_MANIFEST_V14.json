@@ -1,0 +1,139 @@
+{
+  "schema": "rec.media.v14.manifest",
+  "date": "2026-11-20",
+  "repository": "darknigthmare/resident-evil-bow-protocol",
+  "pull_request": 22,
+  "baseline_commit": "dc9e217a34d5ad41cd6009a750b112b84038f33c",
+  "state": "CHECKPOINT_1",
+  "summary": {
+    "png": 3,
+    "candidates": 3,
+    "trials": 0,
+    "unique_uids": 3
+  },
+  "assets": [
+    {
+      "id": "re4-leader-zealot-left-01",
+      "uid": "re4-castle-ganado-leader-zealot",
+      "label": "Leader Zealot — robe rouge",
+      "edition": "Resident Evil 4 (2005)",
+      "file": "assets/REC_LEADER_ZEALOT_RE4_2005_FULLBODY_LEFT_V14_01.png",
+      "direction": "left",
+      "sha256": "19328945c2eb51037008b0c479409f875e5022a457b8aff92808893b49bd881c",
+      "bytes": 2076091,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_pixels": 967424,
+      "bbox_alpha16": [
+        71,
+        15,
+        833,
+        1525
+      ],
+      "review_status": "CANDIDATE_STATIC_WITH_LIMITS",
+      "review": "docs/leader-left-review.json",
+      "prompt": "prompts/re4-leader-zealot-left-01.json",
+      "one_subject_per_image_reviewed": true,
+      "original_generated_bytes_unchanged": true,
+      "mirror_performed": false,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "animation_frames": 1
+    },
+    {
+      "id": "re4-castle-ganado-left-01",
+      "uid": "re4-castle-ganado",
+      "label": "Castle Ganado — moine chauve à faux",
+      "edition": "Resident Evil 4 (2005)",
+      "file": "assets/REC_CASTLE_GANADO_RE4_2005_FULLBODY_LEFT_V14_01.png",
+      "direction": "left",
+      "sha256": "2cd08bdf20cd5db41daf912f48e6c1c2f36105db43c281273322b62c77c00939",
+      "bytes": 1257567,
+      "dimensions": [
+        1218,
+        1292
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 965113,
+      "bbox_alpha16": [
+        25,
+        95,
+        1161,
+        1253
+      ],
+      "review_status": "CANDIDATE_STATIC_WITH_LIMITS",
+      "review": "docs/castle-left-review.json",
+      "prompt": "prompts/re4-castle-ganado-left-01.json",
+      "one_subject_per_image_reviewed": true,
+      "original_generated_bytes_unchanged": true,
+      "mirror_performed": false,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "animation_frames": 1
+    },
+    {
+      "id": "re1r-yawn-left-01",
+      "uid": "re1r-yawn",
+      "label": "Yawn",
+      "edition": "Resident Evil remake (2002)",
+      "file": "assets/REC_YAWN_REMAKE_2002_FULLBODY_LEFT_V14_01.png",
+      "direction": "left",
+      "sha256": "c4c4fe544a24afee82e7c359439acfdae49bc6adf68053a30009f7987dcc3c19",
+      "bytes": 1389006,
+      "dimensions": [
+        1754,
+        897
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 1031440,
+      "bbox_alpha16": [
+        90,
+        20,
+        1701,
+        870
+      ],
+      "review_status": "CANDIDATE_STATIC_WITH_LIMITS",
+      "review": "docs/yawn-left-review.json",
+      "prompt": "prompts/re1r-yawn-left-01.json",
+      "one_subject_per_image_reviewed": true,
+      "original_generated_bytes_unchanged": true,
+      "mirror_performed": false,
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "animation_frames": 1
+    }
+  ],
+  "recovery_v12_v13": {
+    "historically_announced_png": 44,
+    "recovered_original_png": 0,
+    "published_in_this_batch": 0,
+    "status": "ORIGINAL_BYTES_NOT_FOUND_IN_ACCESSIBLE_SOURCES",
+    "note": "V12/V13 numbering reserved; newly generated V14 outputs must never be presented as recovered V12/V13 originals."
+  },
+  "runtime_modified": false,
+  "canonical_one_to_one_certified": false,
+  "animation_complete": false,
+  "engine_admitted": false,
+  "source_bitmaps_included": false,
+  "limits": [
+    "Static generated candidates only; hidden anatomy, exact original geometry and textures are not certified.",
+    "No engine import, pivots, contacts, collisions or animation validation.",
+    "All V5-V11 historical files remain unchanged.",
+    "Existing R34 CI rejects production-archives additions; no assertion or guard is modified."
+  ]
+}

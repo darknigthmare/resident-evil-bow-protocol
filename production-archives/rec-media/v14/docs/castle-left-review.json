@@ -1,0 +1,60 @@
+{
+  "schema": "rec.static-candidate-independent-review.v14",
+  "asset": "Castle Ganado RE4 original 2005 — left with scythe",
+  "reviewed_at": "2026-11-20",
+  "reviewer": "audit_pr",
+  "original_path": "/workspace/scratch/f967ba67c530/generated_images/exec-6095012d-1d5d-46c4-bc4c-c35c9d4a6787.png",
+  "sha256": "2cd08bdf20cd5db41daf912f48e6c1c2f36105db43c281273322b62c77c00939",
+  "verdict": "CANDIDATE_STATIC_WITH_LIMITS",
+  "source_refs_reviewed": [
+    "references-v14/re4-castle-ganado-catalog.png",
+    "references-v14/re4-2005-los-iluminados-lineup.jpg"
+  ],
+  "visual_checks": {
+    "orientation": "Head, gaze, body action and scythe blade directed toward screen left in front three-quarter stance.",
+    "identity_costume": "Bald pale thin hostile cultist, dark brown habit, chain necklace, rope belt and dark shoes agree with catalogue and the original RE4 group lineup.",
+    "weapon_and_hands": "One complete wooden-shaft scythe, both blade tip and butt visible. Two hands wrap the shaft coherently; no obvious duplication or shaft-through-hand defect. Gripping pose occludes portions of fingers, so exact hidden joint anatomy is unverified.",
+    "framing": "Full single body and both shoes visible. No shield, crossbow, additional figure, scenery or text.",
+    "limits": [
+      "Generated materials and face are interpretations of source character, not original model geometry.",
+      "Left blade margin is 25 pixels at alpha16.",
+      "Single static pose only; no animation or engine admission."
+    ]
+  },
+  "alpha": {
+    "mode": "RGBA",
+    "size": [
+      1218,
+      1292
+    ],
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox_alpha_gte16": [
+      25,
+      95,
+      1161,
+      1253
+    ],
+    "margins_alpha16_left_top_right_bottom": [
+      25,
+      95,
+      57,
+      39
+    ],
+    "pixels_alpha0": 965113,
+    "pixels_alpha1_to15": 33515,
+    "pixels_alpha1_to3": 29512,
+    "outside_bbox16_nonzero_pixels": 4055,
+    "outside_bbox16_max_alpha": 9,
+    "halo_finding": "No broad dark halo or opaque field observed in actual alpha compositions on light and mid-gray backgrounds. Low-alpha residual fringe exists, mostly alpha1–3. Dark RGB under alpha0 is invisible; alpha1 bbox is not the visible subject bbox."
+  },
+  "qa_previews_only": [
+    "review-v14/castle-left-on-light.jpg",
+    "review-v14/castle-left-on-gray.jpg"
+  ],
+  "original_bytes_modified": false,
+  "canonical_one_to_one_certified": false,
+  "engine_admitted": false
+}

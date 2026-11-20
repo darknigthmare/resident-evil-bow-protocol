@@ -1,0 +1,260 @@
+{
+  "schema": "rec.reference-research.v14.20261120",
+  "date": "2026-11-20",
+  "repository": "darknigthmare/resident-evil-bow-protocol",
+  "baseline_commit": "dc9e217a34d5ad41cd6009a750b112b84038f33c",
+  "scope": "Source research only. No image generation, runtime changes or publication by this researcher.",
+  "canonical_one_to_one_certified": false,
+  "entries": [
+    {
+      "uid": "re1r-yawn",
+      "edition": "Resident Evil remake (2002)",
+      "decision": "BODY_EXTENT_DOCUMENTED_GENERATION_CANDIDATE_WITH_LIMITS",
+      "references": [
+        {
+          "local_path": "/workspace/scratch/f967ba67c530/references-v14/yawn-archives-1.png",
+          "filename": "yawn-archives-1.png",
+          "url": "https://les-archives-resident-evil-biohazard.fr/wp-content/uploads/2024/08/2Yawn%C2%B2-768x434.png",
+          "source_page": "https://les-archives-resident-evil-biohazard.fr/lore-yawn/",
+          "bytes": 179249,
+          "sha256": "b84c751d197b7ac60945ff4943c8a4f6eb1ea40ac83bd3184ba4cbb1097bfdab",
+          "dimensions": [
+            768,
+            434
+          ],
+          "role": "supplementary-complete-body-documentary-image",
+          "visually_inspected": true,
+          "notes": [
+            "The downloaded page HTML labels this exact image Resident Evil (2002)/Biohazard (2002).",
+            "Whole thick-bodied snake silhouette visible: raised neck, low coil under the neck and rearward to viewer right, long tapering tail extending to viewer left.",
+            "Olive-brown dorsal scales, lighter ochre segmented ventral scales, pale irregular patches on lower flank.",
+            "Very wide open mouth, prominent long outer upper fangs and thinner inner/lower teeth; precise count of small teeth not certified.",
+            "Top of skull nearly touches upper edge; the retained catalogue supplies a less cropped head in a different view.",
+            "Red rectangular frame, white field and large gray site logo are page decoration and are not character design.",
+            "This is a secondary-hosted static illustration. Hidden side, underside and original mesh geometry remain unverified."
+          ]
+        },
+        {
+          "local_path": "/workspace/scratch/f967ba67c530/references-v14/yawn-catalog.png",
+          "filename": "yawn-catalog.png",
+          "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/dc9e217a34d5ad41cd6009a750b112b84038f33c/assets/catalog/re1r-yawn.png",
+          "source_page": "https://www.evilresource.com/resident-evil-remake/enemies/yawn",
+          "bytes": 127347,
+          "sha256": "2818dd75e9a98bfb9767d2a94e03a2f86f73249afa1637aa1413d7f64fc3d6c2",
+          "dimensions": [
+            450,
+            360
+          ],
+          "role": "retained-catalogue-head-reference",
+          "visually_inspected": true,
+          "notes": [
+            "Fetched via git show HEAD:assets/catalog/re1r-yawn.png from exact current PR head, without editing bytes.",
+            "Head and short neck only; body coverage by itself insufficient.",
+            "Visual comparison supports same 2002 head: blunt green/olive-scaled snout, honeycomb scale pattern, broad gape, long fangs, pale brown segmented underside.",
+            "Head orientation differs from the supplementary body image; matching pose is not claimed."
+          ]
+        }
+      ],
+      "limits": [
+        "Source hosted by third party; no original mesh or frame-by-frame motion inspected.",
+        "Near-side body extent supported; hidden surfaces unresolved.",
+        "Generated candidate must not copy site watermark or present itself as native original pixels."
+      ],
+      "excluded": [
+        "yawn-archives-0.png: page labels Resident Evil 1996, different design; not used for 2002 target."
+      ]
+    },
+    {
+      "uid": "recv-sweeper",
+      "edition": "Resident Evil CODE: Veronica (2000)",
+      "decision": "COMPLETE_ARTWORK_FOUND_MODEL_APPEARANCE_CONFLICT_STUDY_ONLY",
+      "references": [
+        {
+          "local_path": "/workspace/scratch/f967ba67c530/references-v14/sweeper-cv.png",
+          "filename": "sweeper-cv.png",
+          "url": "https://les-archives-resident-evil-biohazard.fr/wp-content/uploads/2026/06/1Sweeper%C2%B2-768x434.png",
+          "source_page": "https://les-archives-resident-evil-biohazard.fr/lore-sweeper/",
+          "bytes": 221460,
+          "sha256": "3ad035f5e041ab81314fa1c1134d9816779253a63c78be6011b072c9ab0d6876",
+          "dimensions": [
+            768,
+            434
+          ],
+          "role": "supplementary-complete-artwork",
+          "visually_inspected": true,
+          "notes": [
+            "Page explicitly labels this image Resident Evil CODE: Veronica/Biohazard CODE: Veronica.",
+            "Complete crouching body shown, with both foot silhouettes and long hand claws fully visible.",
+            "Artwork has orange/brown tissue and dark scale plates edged with magenta/purple; red-orange eye; smoother shading than the retained game-style crop.",
+            "Primary studio or original guide source for this artwork was not independently identified.",
+            "Do not copy red page border or gray watermark."
+          ]
+        },
+        {
+          "local_path": "/workspace/scratch/f967ba67c530/references-v14/sweeper-cv-catalog.png",
+          "filename": "sweeper-cv-catalog.png",
+          "url": "https://www.evilresource.com/images/data/full/recv/sweeper.png?b1bc428d",
+          "source_page": "https://www.evilresource.com/resident-evil-code-veronica/enemies/sweeper",
+          "bytes": 163582,
+          "sha256": "5f922cba61aa6368c15bf356de91cc8867606d861cb1c7fdd82c9c5075feb3bf",
+          "dimensions": [
+            450,
+            360
+          ],
+          "role": "retained-catalogue-appearance",
+          "visually_inspected": true,
+          "notes": [
+            "Bytes match retained reference SHA256 from R34 idle receipt.",
+            "Only upper body, hands and feet cut off.",
+            "Dark mauve/gray textured body, black toothy maw, pink/purple netlike scale boundaries and red eye.",
+            "The full artwork cannot establish exact game-model textures; source mismatch stays explicit."
+          ]
+        }
+      ],
+      "limits": [
+        "Body art supports a study, not exact game-model admission.",
+        "No new complete in-game model view was found in the bounded research."
+      ]
+    },
+    {
+      "uid": "recv-moth",
+      "edition": "Resident Evil CODE: Veronica (2000)",
+      "decision": "EDITION_SOURCE_CONFLICT_REQUIRES_REVIEW",
+      "references": [
+        {
+          "local_path": "/workspace/scratch/f967ba67c530/references-v14/moth-catalog.png",
+          "filename": "moth-catalog.png",
+          "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/dc9e217a34d5ad41cd6009a750b112b84038f33c/assets/catalog/recv-moth.png",
+          "source_page": "https://www.evilresource.com/resident-evil-code-veronica/enemies/moth",
+          "bytes": 131893,
+          "sha256": "51f6521ac956939c5c012ec3015c025ee1a6c28f8c9e06d48684b6ccb3ed9f92",
+          "dimensions": [
+            450,
+            360
+          ],
+          "role": "retained-catalogue-reference",
+          "visually_inspected": true,
+          "notes": [
+            "Side view with broad gray-green wings, dark round eyespots, gray segmented abdomen, slender antennae and legs. Wing tips cropped.",
+            "Visually matches the image labelled Darkside Chronicles by a second secondary site. This is a provenance conflict, not a definitive correction of the original UID."
+          ]
+        },
+        {
+          "local_path": "/workspace/scratch/f967ba67c530/references-v14/moth-archives-1.png",
+          "filename": "moth-archives-1.png",
+          "url": "https://les-archives-resident-evil-biohazard.fr/wp-content/uploads/2026/06/2Moth-ou-Papillon-de-Nuit%C2%B2-768x434.png",
+          "source_page": "https://les-archives-resident-evil-biohazard.fr/lore-moth/",
+          "bytes": 112008,
+          "sha256": "65514514dfc6ca07d88208ed29d549c9b6e5a3e80e9eb277829d6c08b6948915",
+          "dimensions": [
+            768,
+            434
+          ],
+          "role": "edition-conflict-documentary-reference",
+          "visually_inspected": true,
+          "notes": [
+            "HTML caption explicitly says Resident Evil The Darkside Chronicles/Biohazard The Darkside Chronicles.",
+            "Extends the same side-view wing/abdomen image used by current catalogue.",
+            "Do not silently promote to an exact CV 2000 full-body reference."
+          ]
+        },
+        {
+          "local_path": "/workspace/scratch/f967ba67c530/references-v14/moth-cv-kaitai-concept.jpg",
+          "filename": "moth-cv-kaitai-concept.jpg",
+          "url": "https://www.projectumbrella.net/uploads/1/3/0/6/130616230/mothcvksart_orig.jpg",
+          "source_page": "https://www.projectumbrella.net/biohazard-codeveronica-complete-edition-kaitai-shinsho.html",
+          "bytes": 33688,
+          "sha256": "c27d7db0fe9c948cf1d94e8c4547ac778e35844b4a7da1f7565e0e34d857b159",
+          "dimensions": null,
+          "role": "published-concept-art-documentation",
+          "visually_inspected": true,
+          "notes": [
+            "Page is a translation/transcription of BIOHAZARD CODE:Veronica Complete Edition Kaitai Shinsho and labels this image a rear view with visible ovipositor.",
+            "Art shows brown/olive wings with pink eyespots and two long hanging tail-like wing extensions; pale yellow segmented abdomen.",
+            "Its silhouette matches the Archives site image captioned CV.",
+            "Concept art is not proof of the final shipped game model. Do not combine it with Darkside-like model as if all were one final design."
+          ]
+        }
+      ],
+      "limits": [
+        "No final-model incarnation conclusion.",
+        "Generation deferred for this target until source edition conflict resolved."
+      ]
+    },
+    {
+      "uid": "re0-eliminator",
+      "edition": "Resident Evil 0 (2002), white-furred variant",
+      "decision": "REMAINS_HELD_EXACT_WHITE_LOWER_BODY_UNDOCUMENTED",
+      "references": [
+        {
+          "local_path": "/workspace/scratch/f967ba67c530/references-v14/eliminator-archives-0.png",
+          "filename": "eliminator-archives-0.png",
+          "url": "https://les-archives-resident-evil-biohazard.fr/wp-content/uploads/2024/05/Eliminator%C2%B2-768x434.png",
+          "source_page": "https://les-archives-resident-evil-biohazard.fr/lore-eliminator/",
+          "bytes": 158992,
+          "sha256": "b938388d6200539e5702e74ef91e8d139e3ab3d96f336817a8478bc426ec6ff4",
+          "dimensions": [
+            768,
+            434
+          ],
+          "role": "excluded-brown-complete-variant",
+          "visually_inspected": true,
+          "notes": [
+            "Complete body but brown/tan fur, so does not solve exact white variant requirement.",
+            "Page includes both RE0 and Umbrella Chronicles in history and does not uniquely caption this rendering by game."
+          ]
+        },
+        {
+          "local_path": "/workspace/scratch/f967ba67c530/references-v14/eliminator-cutscene.jpg",
+          "filename": "eliminator-cutscene.jpg",
+          "url": "https://s2-techtudo.glbimg.com/3USSeFDXwIaRjS-fxPUkIWddFFY%3D/0x0%3A695x370/984x0/smart/filters%3Astrip_icc%28%29/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2021/6/T/cB60WCQAmFQ2Hzk3mWew/2016-01-25-resident-evil-zero-eliminator-copy.jpg",
+          "source_page": "https://www.techtudo.com.br/noticias/2016/01/como-matar-inimigos-comuns-de-resident-evil-0-hd-remaster.ghtml",
+          "bytes": 79496,
+          "sha256": "490e0bd91e704b0c216f4b9f85b95e546875a9312f8281f381aa56cb42c4b4f6",
+          "dimensions": null,
+          "role": "partial-in-game-capture",
+          "visually_inspected": true,
+          "notes": [
+            "White/gray-furred creature upper body visible in HD Remaster cutscene, but feet and lower limbs remain cut off.",
+            "Does not resolve original 2002 whole-body pigmentation or exact anatomy."
+          ]
+        }
+      ],
+      "limits": [
+        "Exact full white variant still unsupported.",
+        "Excluded art and partial cutscene must not be falsely counted as completion."
+      ]
+    },
+    {
+      "uid": "recv-bat",
+      "edition": "Resident Evil CODE: Veronica (2000)",
+      "decision": "REMAINS_HELD_CROPPED_WING_TIP",
+      "references": [],
+      "limits": [
+        "R34 source holds one raised wing tip outside frame. No new complete exact-edition source found in bounded research.",
+        "No original model inspected; no generation performed."
+      ]
+    },
+    {
+      "uid": "reoutbreak-hunter-gamma",
+      "edition": "Resident Evil Outbreak (2003)",
+      "decision": "REMAINS_HELD_NO_VERIFIED_COMPLETE_SOURCE",
+      "references": [],
+      "limits": [
+        "Search found Re:Verse Outbreak skin, RE3 remake models and fan art; those do not establish the original 2003 model.",
+        "Outbreak collection lists creature CG 036, but no actual complete source file inspected."
+      ]
+    }
+  ],
+  "blocked_sources_observed": [
+    "Fandom page loads restricted/402; did not bypass.",
+    "Creative Uncut CDN image returned 403; did not bypass.",
+    "ResidentEvilFR legacy free.fr image links returned 502."
+  ],
+  "recommended_order": [
+    "re1r-yawn: next generated candidate using two inspected references",
+    "recv-sweeper: study only if requested by parent; exact model appearance unresolved",
+    "other four identities remain held with concrete reasons"
+  ],
+  "source_bitmaps_for_publication": false
+}
