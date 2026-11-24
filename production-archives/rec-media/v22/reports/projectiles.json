@@ -1,0 +1,114 @@
+{
+  "version": "V22",
+  "generation_complete": false,
+  "scope": "Projectiles / VFX et supports associés — objets statiques guidés par références, pas admission moteur ni certification 1:1.",
+  "assets": [
+    {
+      "key": "re4r_bolt",
+      "prompt": "Create one isolated full-length Bolt projectile sprite from Resident Evil 4 Remake (2023), strictly based on the attached native inventory render. Separate ONE representative bolt from the pictured bundle: a slim blue shaft, a short dark pointed tip, a dark rear shaft section and the same black rear fins with their precise silhouette and proportions as the visible bolts. Show the complete single bolt horizontally with its pointed tip facing right and the fletching at left. Full object with generous margin, no cropped parts. Realistic game-render materials, crisp silhouette, neutral lighting, faithful blue and dark gray colors. Genuine transparent RGBA background; no floor or drop shadow, no bundle, extra objects, labels, text, diagram, motion trails, sparks, explosion or character. Do not add the explosive mine attachment; this is the plain Bolt used by Leon's Bolt Thrower.",
+      "asset_id": "REC_OBJ_RE4R_2023_BOLT_RIGHT_V22",
+      "category": "projectile",
+      "edition": "Resident Evil 4 Remake (2023)",
+      "status": "static_candidate",
+      "direction": "right",
+      "v1_actions": [],
+      "scope": "Arsenal complémentaire Leon / Bolt Thrower; ne clôt aucune des 44 actions V1.",
+      "source_urls": [
+        "https://www.evilresource.com/resident-evil-4-remake/weaponry/bolts"
+      ],
+      "review": [
+        "Objet entier, pointe à droite et empennage à gauche.",
+        "La source native montre un groupe de carreaux ; un exemplaire a été isolé et réorienté.",
+        "Des attaches et des détails de matière sont réinterprétés ; fidélité 1:1 non certifiée.",
+        "Petits résidus d’alpha près des bords ; original conservé, aucune retouche matricielle."
+      ],
+      "git_blob_sha": "963af7359aec077592c1d4c0a2c03d00084aa5cf",
+      "path": "assets/REC_OBJ_RE4R_2023_BOLT_RIGHT_V22.png",
+      "generated_path": "/workspace/scratch/39787b3268a6/generated_images/exec-c2eb6e63-6456-458f-a58c-f8eb158778d9.png",
+      "source_path": "/workspace/scratch/39787b3268a6/v22_work/references/projectiles/re4r_bolts.png",
+      "dimensions": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "bytes": 412706,
+      "sha256": "68fc8eaabf13ba1e0559c3b349e6706233aa022ed7eb7cef51491abbd67eb5d7",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_zero_pixels": 1365640,
+      "bbox_alpha128": [
+        78,
+        255,
+        2093,
+        493
+      ],
+      "canonical_fidelity_certified": false,
+      "engine_import": false,
+      "animation_complete": false
+    },
+    {
+      "key": "re0_molotov",
+      "prompt": "Reproduce the single inventory prop named Molotov Cocktail from Resident Evil Zero (2002) as an isolated game sprite, using the attached original game render as the complete visual reference. Preserve the green glass bottle's overall shape and neck proportions, the same dark red and cream worn label artwork, the pale fabric shape visible at its mouth, and its same diagonal orientation. Whole object, with generous clear margins. Retain the slightly coarse original-game texture character; do not invent tiny printed text or modernize the design. One static unlit fictional game item, realistic game-render lighting. Genuine transparent RGBA background. No scene, character, hand, duplicate, floor, shadow disc, fire, smoke, UI, labels, instructions, technical diagram or exposed interior.",
+      "asset_id": "REC_OBJ_RE0_MOLOTOV_UNLIT_V22",
+      "category": "projectile",
+      "edition": "Resident Evil Zero (2002, catalogue; plateforme du rendu source non explicitée)",
+      "status": "static_candidate",
+      "direction": "diagonal",
+      "v1_actions": [
+        "REC_REBECCA_RE0__SP2"
+      ],
+      "scope": "OBJ_BOUTEILLE_INCENDIAIRE : objet statique non allumé; vol, rotation, impact et flammes non produits.",
+      "source_urls": [
+        "https://www.evilresource.com/resident-evil-zero/weaponry/molotov-cocktail"
+      ],
+      "review": [
+        "Silhouette de bouteille verte, étiquette rouge/crème et forme de tissu reprises du rendu source inspecté.",
+        "La source basse résolution ne permet pas de certifier les petits marquages ni une variante HD.",
+        "Objet entier sur alpha ; aucune séquence d’animation produite."
+      ],
+      "git_blob_sha": "9894b9f09e591a3664a7c6fcd74da338b0e7bceb",
+      "path": "assets/REC_OBJ_RE0_MOLOTOV_UNLIT_V22.png",
+      "generated_path": "/workspace/scratch/39787b3268a6/generated_images/exec-6d704169-f16b-4ac7-878e-4d32fa134c7a.png",
+      "source_path": "/workspace/scratch/39787b3268a6/v22_work/references/projectiles/re0_molotov.png",
+      "dimensions": [
+        1402,
+        1122
+      ],
+      "mode": "RGBA",
+      "bytes": 661416,
+      "sha256": "d0bc50ea082a3564bd585e71e1c8b73c4e0e59755084311db524477fe1d2826a",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_zero_pixels": 1208742,
+      "bbox_alpha128": [
+        109,
+        48,
+        1241,
+        1052
+      ],
+      "canonical_fidelity_certified": false,
+      "engine_import": false,
+      "animation_complete": false
+    }
+  ],
+  "refusals": [
+    {
+      "asset_id": "REC_OBJ_RE2R_HAND_GRENADE_V22",
+      "edition": "Resident Evil 2 Remake (2019)",
+      "source_urls": [
+        "https://www.evilresource.com/resident-evil-2-remake/weaponry/hand-grenade"
+      ],
+      "v1_actions": [
+        "REC_HUNK_RE2R__SP5"
+      ],
+      "error": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 0de8f96c-8bae-4673-a72e-e9ac24683ace. safety_violations=[illicit].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"illicit\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "status": "tool_refusal_no_png",
+      "retried": false
+    }
+  ],
+  "source_holds": []
+}
