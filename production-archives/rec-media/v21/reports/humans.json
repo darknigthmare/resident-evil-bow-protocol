@@ -1,0 +1,300 @@
+{
+  "schema": "rec-media-v21-humans-1",
+  "date": "2026-11-24",
+  "method": "built-in image_gen, separate call per direction; output bytes copied unchanged",
+  "counts": {
+    "calls": 4,
+    "png_outputs": 3,
+    "retained_static_candidates": 3,
+    "tool_refusals": 1,
+    "identities_with_output": 2,
+    "pairs_completed": 1
+  },
+  "assets": [
+    {
+      "asset_id": "parker_revelations_hd2013_wetsuit_left",
+      "path": "assets/parker_revelations_hd2013_wetsuit_left.png",
+      "category": "character_static_sprite",
+      "character": "Parker Luciani",
+      "game": "Resident Evil Revelations HD/Unveiled Edition (2013)",
+      "costume": "BSAA Queen Zenobia mission wetsuit; distinct from Raid BSAA uniform and FBC uniform",
+      "requested_direction": "left",
+      "observed_direction": "left",
+      "observed_view": "three-quarter frontal turning toward left",
+      "status": "RETAINED_STATIC_CANDIDATE",
+      "generated": true,
+      "pixel_source": "built-in image_gen",
+      "file_bytes": 1045719,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1133695,
+      "alpha_positive_bbox": [
+        41,
+        0,
+        1234,
+        1254
+      ],
+      "alpha_ge128_bbox": [
+        213,
+        13,
+        1018,
+        1244
+      ],
+      "sha256": "87fc9440a2b23755bfae9a046f69b63953751c276c312bd509a056047a334211",
+      "git_blob_sha": "b65def6f7ace935925fef597baf20b5e27778d1f",
+      "remote_blob_sha": "b65def6f7ace935925fef597baf20b5e27778d1f",
+      "remote_blob_matches_local": true,
+      "prompt": "Use case: style-transfer. Asset type: single transparent full-body fighting-game sprite for Resident Evil Combat. Transform the supplied reference of Parker Luciani into a polished semi-realistic painted 2D sprite. Identity and costume are the BSAA Queen Zenobia infiltration wetsuit from Resident Evil Revelations HD/Unveiled Edition (2013), NOT the separate Raid BSAA uniform and NOT the FBC costume. The supplied full-body official character render is the visual reference; second Steam card corroborates HD face and torso. Preserve Parker's broad stocky realistic adult proportions, thick neck, brown medium length slightly wavy hair parted off-centre, short brown beard, compact heavy torso. Preserve the dark charcoal wetsuit, teal desaturated load-bearing vest with four front lower rectangular pouches and orange-brown closure tabs, two light grey buoyancy panels on upper chest, brown leather forearm and lower-shin reinforcements, dark hiking/diving boots, grey crotch harness and double thigh straps, original left-chest breathing hose/gauge assembly, original thigh equipment and yellow-handled knife on his LEFT outer shin. Do not swap asymmetric gear when he turns. His wood-stock pump shotgun from the reference is held in a low ready two-handed position, not fired, muzzle slightly downward. Keep plausible two hands, five fingers, two legs; one continuous firearm. Camera near side-view, mild three-quarter angle appropriate to 2D fighting; full head-to-sole body and full weapon visible, all elements at least 10% from the image borders. Feet on a consistent invisible baseline. Readable silhouette, detailed fabric, metal and leather, painted 2D game art, no vector style, no pixel art, no photography. A single person and a single pose only. True transparent RGBA background; no scene, floor, contact shadow, logo, text, border, watermark or sheet. Aim for a 2048 by 2048 square asset. Neutral soft illumination, no dramatic colored rim light. Direction: Parker's face, gaze, torso and the shotgun muzzle must point to image LEFT. A restrained combat-ready stance with knees slightly flexed; don't draw a frontal portrait.",
+      "references": [
+        {
+          "url": "https://neoapo.com/images/character/30384/1d17d32d1c701cd62ca25365498bb7e2.jpg",
+          "page_url": "https://neoapo.com/characters/30384",
+          "role": "Complete promotional full-body render, independently viewed",
+          "sha256": "11868352b601146d44e85b2a56458a6ee98ed7e8e90ebffc0d3c375317f37dba",
+          "source_pixels_published": false
+        },
+        {
+          "url": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/items/222480/ebec333ce0cb8bd2d2e44e3e58f56f541fad1f67.jpg",
+          "page_url": "https://www.steamcardexchange.net/index.php?gamepage-appid-222480",
+          "role": "HD/PC Steam card corroboration of identical face, wetsuit, vest and weapon",
+          "sha256": "473f21c9088666ce04f152937971c823aecc60e439bf5b24eb644c152dd27784",
+          "source_pixels_published": false
+        }
+      ],
+      "visual_review": {
+        "single_subject": true,
+        "full_body_visible": true,
+        "weapon": "wood-stock pump shotgun",
+        "transparent_background": true,
+        "source_edition_distinction_preserved": true,
+        "strict_side_orthographic": false,
+        "animation_complete": false,
+        "fidelity_1_to_1_certified": false,
+        "review_notes": [
+          "Face, vest, four lower pouch groups, brown shin panels and left-shin yellow knife preserved recognizably.",
+          "Gear is asymmetric, with gauge/hosing on the subject left chest in both generated views.",
+          "Stance and shotgun grip are adapted, not sampled from native combat animation.",
+          "Requested 10% vertical border not achieved; low-alpha residuals also occur near canvas edges."
+        ]
+      },
+      "limitations": [
+        "Single static bitmap; rig, pivot, contact, collision and animation unvalidated.",
+        "Requested 2048px was not guaranteed by tool; native dimensions reported without upscale.",
+        "Hidden surfaces, proportions and textures are interpreted from references.",
+        "Archive candidate only; no admission to runtime or 1:1 certification."
+      ],
+      "transforms_after_generation": []
+    },
+    {
+      "asset_id": "parker_revelations_hd2013_wetsuit_right",
+      "path": "assets/parker_revelations_hd2013_wetsuit_right.png",
+      "category": "character_static_sprite",
+      "character": "Parker Luciani",
+      "game": "Resident Evil Revelations HD/Unveiled Edition (2013)",
+      "costume": "BSAA Queen Zenobia mission wetsuit; distinct from Raid BSAA uniform and FBC uniform",
+      "requested_direction": "right",
+      "observed_direction": "right",
+      "observed_view": "three-quarter frontal turning toward right",
+      "status": "RETAINED_STATIC_CANDIDATE",
+      "generated": true,
+      "pixel_source": "built-in image_gen",
+      "file_bytes": 1001147,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1146288,
+      "alpha_positive_bbox": [
+        0,
+        0,
+        1226,
+        1254
+      ],
+      "alpha_ge128_bbox": [
+        220,
+        11,
+        1017,
+        1245
+      ],
+      "sha256": "ca66df163e39ea12d63e17a62c011608a070a6726a83f1ce6b29fe23919050c5",
+      "git_blob_sha": "6a2e4cb180ab78137774a4b1b3719a42d21080c1",
+      "remote_blob_sha": "6a2e4cb180ab78137774a4b1b3719a42d21080c1",
+      "remote_blob_matches_local": true,
+      "prompt": "Use case: style-transfer. Asset type: single transparent full-body fighting-game sprite for Resident Evil Combat. Transform the supplied reference of Parker Luciani into a polished semi-realistic painted 2D sprite. Identity and costume are the BSAA Queen Zenobia infiltration wetsuit from Resident Evil Revelations HD/Unveiled Edition (2013), NOT the separate Raid BSAA uniform and NOT the FBC costume. The supplied full-body official character render is the visual reference; second Steam card corroborates HD face and torso. Preserve Parker's broad stocky realistic adult proportions, thick neck, brown medium length slightly wavy hair parted off-centre, short brown beard, compact heavy torso. Preserve the dark charcoal wetsuit, teal desaturated load-bearing vest with four front lower rectangular pouches and orange-brown closure tabs, two light grey buoyancy panels on upper chest, brown leather forearm and lower-shin reinforcements, dark hiking/diving boots, grey crotch harness and double thigh straps, original left-chest breathing hose/gauge assembly, original thigh equipment and yellow-handled knife on his LEFT outer shin. Do not swap asymmetric gear when he turns. His wood-stock pump shotgun from the reference is held in a low ready two-handed position, not fired, muzzle slightly downward. Keep plausible two hands, five fingers, two legs; one continuous firearm. Camera near side-view, mild three-quarter angle appropriate to 2D fighting; full head-to-sole body and full weapon visible, all elements at least 10% from the image borders. Feet on a consistent invisible baseline. Readable silhouette, detailed fabric, metal and leather, painted 2D game art, no vector style, no pixel art, no photography. A single person and a single pose only. True transparent RGBA background; no scene, floor, contact shadow, logo, text, border, watermark or sheet. Aim for a 2048 by 2048 square asset. Neutral soft illumination, no dramatic colored rim light. Direction: Parker's face, gaze, torso and the shotgun muzzle must point to image RIGHT. A restrained combat-ready stance with knees slightly flexed; don't draw a frontal portrait.",
+      "references": [
+        {
+          "url": "https://neoapo.com/images/character/30384/1d17d32d1c701cd62ca25365498bb7e2.jpg",
+          "page_url": "https://neoapo.com/characters/30384",
+          "role": "Complete promotional full-body render, independently viewed",
+          "sha256": "11868352b601146d44e85b2a56458a6ee98ed7e8e90ebffc0d3c375317f37dba",
+          "source_pixels_published": false
+        },
+        {
+          "url": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/items/222480/ebec333ce0cb8bd2d2e44e3e58f56f541fad1f67.jpg",
+          "page_url": "https://www.steamcardexchange.net/index.php?gamepage-appid-222480",
+          "role": "HD/PC Steam card corroboration of identical face, wetsuit, vest and weapon",
+          "sha256": "473f21c9088666ce04f152937971c823aecc60e439bf5b24eb644c152dd27784",
+          "source_pixels_published": false
+        }
+      ],
+      "visual_review": {
+        "single_subject": true,
+        "full_body_visible": true,
+        "weapon": "wood-stock pump shotgun",
+        "transparent_background": true,
+        "source_edition_distinction_preserved": true,
+        "strict_side_orthographic": false,
+        "animation_complete": false,
+        "fidelity_1_to_1_certified": false,
+        "review_notes": [
+          "Face, vest, four lower pouch groups, brown shin panels and left-shin yellow knife preserved recognizably.",
+          "Gear is asymmetric, with gauge/hosing on the subject left chest in both generated views.",
+          "Stance and shotgun grip are adapted, not sampled from native combat animation.",
+          "Requested 10% vertical border not achieved; low-alpha residuals also occur near canvas edges."
+        ]
+      },
+      "limitations": [
+        "Single static bitmap; rig, pivot, contact, collision and animation unvalidated.",
+        "Requested 2048px was not guaranteed by tool; native dimensions reported without upscale.",
+        "Hidden surfaces, proportions and textures are interpreted from references.",
+        "Archive candidate only; no admission to runtime or 1:1 certification."
+      ],
+      "transforms_after_generation": []
+    },
+    {
+      "asset_id": "luis_re4_original2005_right",
+      "path": "assets/luis_re4_original2005_right.png",
+      "category": "character_static_sprite",
+      "character": "Luis Sera",
+      "game": "Resident Evil 4 (original 2005)",
+      "costume": "Original brown embroidered waistcoat and light shirt; not 2023 jacket",
+      "requested_direction": "right",
+      "observed_direction": "right",
+      "observed_view": "three-quarter frontal turning toward right",
+      "status": "RETAINED_STATIC_CANDIDATE",
+      "generated": true,
+      "pixel_source": "built-in image_gen",
+      "file_bytes": 740555,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1269935,
+      "alpha_positive_bbox": [
+        19,
+        23,
+        1214,
+        1254
+      ],
+      "alpha_ge128_bbox": [
+        311,
+        114,
+        949,
+        1198
+      ],
+      "sha256": "e65b7376b05cbcb3b3d481f80dfefdad5cd8ad00e914f52a0480049c46efe656",
+      "git_blob_sha": "cc06c36f338710abe5d51ff8e8c7927ad19052b2",
+      "remote_blob_sha": "cc06c36f338710abe5d51ff8e8c7927ad19052b2",
+      "remote_blob_matches_local": true,
+      "prompt": "Use case: style-transfer. Asset type: single transparent full-body 2D fighting-game sprite for Resident Evil Combat. Use the supplied native-looking full-body renders as identity, proportion and costume references for Luis Sera from the ORIGINAL Resident Evil 4 (2005), not the 2023 remake. Repaint him in a polished semi-realistic hand-painted 2D fighting game style. Preserve the lean adult male build and long narrow face, shoulder-length straight dark brown hair parted near the center, subtle stubble around chin, open off-white/grey dress shirt, loose sleeves with dark patterned cuffs, weathered reddish-brown waistcoat with intricate symmetrical black scroll embroidery and small silver buttons, dark brown boot-cut trousers, broad dark belt with large square silver double-prong buckle, low dark brown leather footwear and silver rings. Preserve native silhouette and clothing palette; never add the remake jacket, holster, armour, hat or gloves. Pose: unarmed alert standing guard adapted for 2D combat, knees slightly flexed, hands raised naturally at lower-chest height, relaxed confident expression. Two arms, two hands with five fingers each, two legs. Only one character and one pose. Mild three-quarter side view with head and torso consistently oriented toward opponent. Full head to soles including every finger and toe visible. Crucial framing: character height at most 75 percent of square canvas, with a large clear transparent border above head and below feet, no edge touches. Aim for 2048 by 2048 square composition. Actual transparent RGBA, no white backdrop, checkerboard, environment, floor plane, cast shadow, caption, watermark, frame or sprite sheet. Neutral studio illumination, detailed cloth/leather, no vector graphics, no pixel art, no photorealistic photograph. Direction: face, gaze, chest and lead foot point toward image RIGHT. Preserve handedness and asymmetries; do not simply mirror source texture.",
+      "references": [
+        {
+          "url": "https://sxhodsrixg8meuri.public.blob.vercel-storage.com/fandom-lore/characters/resident-evil-4/luis-sera-45363c7d2bda.jpg",
+          "page_url": "https://shapes.inc/fandom/resident-evil-4/enemies-and-bosses",
+          "role": "Full body render of original Luis with waistcoat, independently viewed; third-party host",
+          "sha256": "6e0274bf12098c8521bd33b89f0e87bdf4a9f1c5a80735e108a564204f1af206",
+          "source_pixels_published": false
+        },
+        {
+          "url": "https://www.evilresource.com/images/data/full/re4/luis-sera.png?bf6114f5",
+          "page_url": "https://www.evilresource.com/resident-evil-4/characters/luis-sera",
+          "role": "Original RE4 character portrait used to corroborate face and original edition",
+          "sha256": "3e53cb88ae27a04f7fcef9b9c4f0ac4c3d313d295f7c94fb7ad7965620b82632",
+          "source_pixels_published": false
+        }
+      ],
+      "visual_review": {
+        "single_subject": true,
+        "full_body_visible": true,
+        "weapon": "none",
+        "transparent_background": true,
+        "source_edition_distinction_preserved": true,
+        "strict_side_orthographic": false,
+        "animation_complete": false,
+        "fidelity_1_to_1_certified": false,
+        "review_notes": [
+          "Original white/grey shirt, ornate brown waistcoat, dark flared trousers, square belt buckle and rings preserved recognizably.",
+          "Output leans toward a conversational open-hand guard; it is a usable static stance candidate, not an authenticated original fighting pose.",
+          "Fine embroidery and rings are generative approximations; no exact topology claim.",
+          "Generous margins improved compared with Parker, but request of <=75% subject height was not fully respected."
+        ]
+      },
+      "limitations": [
+        "Single static bitmap; rig, pivot, contact, collision and animation unvalidated.",
+        "Requested 2048px was not guaranteed by tool; native dimensions reported without upscale.",
+        "Hidden surfaces, proportions and textures are interpreted from references.",
+        "Archive candidate only; no admission to runtime or 1:1 certification."
+      ],
+      "transforms_after_generation": []
+    }
+  ],
+  "unfulfilled": [
+    {
+      "asset_id": "luis_re4_original2005_left",
+      "category": "character_static_sprite",
+      "game": "Resident Evil 4 (original 2005)",
+      "requested_direction": "left",
+      "status": "TOOL_REFUSAL_NO_OUTPUT",
+      "generated": false,
+      "path": null,
+      "prompt": "Use case: style-transfer. Asset type: single transparent full-body 2D fighting-game sprite for Resident Evil Combat. Use the supplied native-looking full-body renders as identity, proportion and costume references for Luis Sera from the ORIGINAL Resident Evil 4 (2005), not the 2023 remake. Repaint him in a polished semi-realistic hand-painted 2D fighting game style. Preserve the lean adult male build and long narrow face, shoulder-length straight dark brown hair parted near the center, subtle stubble around chin, open off-white/grey dress shirt, loose sleeves with dark patterned cuffs, weathered reddish-brown waistcoat with intricate symmetrical black scroll embroidery and small silver buttons, dark brown boot-cut trousers, broad dark belt with large square silver double-prong buckle, low dark brown leather footwear and silver rings. Preserve native silhouette and clothing palette; never add the remake jacket, holster, armour, hat or gloves. Pose: unarmed alert standing guard adapted for 2D combat, knees slightly flexed, hands raised naturally at lower-chest height, relaxed confident expression. Two arms, two hands with five fingers each, two legs. Only one character and one pose. Mild three-quarter side view with head and torso consistently oriented toward opponent. Full head to soles including every finger and toe visible. Crucial framing: character height at most 75 percent of square canvas, with a large clear transparent border above head and below feet, no edge touches. Aim for 2048 by 2048 square composition. Actual transparent RGBA, no white backdrop, checkerboard, environment, floor plane, cast shadow, caption, watermark, frame or sprite sheet. Neutral studio illumination, detailed cloth/leather, no vector graphics, no pixel art, no photorealistic photograph. Direction: face, gaze, chest and lead foot point toward image LEFT. Preserve handedness and asymmetries; do not simply mirror source texture.",
+      "references": [
+        {
+          "url": "https://sxhodsrixg8meuri.public.blob.vercel-storage.com/fandom-lore/characters/resident-evil-4/luis-sera-45363c7d2bda.jpg",
+          "page_url": "https://shapes.inc/fandom/resident-evil-4/enemies-and-bosses",
+          "role": "Full body render of original Luis with waistcoat, independently viewed; third-party host",
+          "sha256": "6e0274bf12098c8521bd33b89f0e87bdf4a9f1c5a80735e108a564204f1af206",
+          "source_pixels_published": false
+        },
+        {
+          "url": "https://www.evilresource.com/images/data/full/re4/luis-sera.png?bf6114f5",
+          "page_url": "https://www.evilresource.com/resident-evil-4/characters/luis-sera",
+          "role": "Original RE4 character portrait used to corroborate face and original edition",
+          "sha256": "3e53cb88ae27a04f7fcef9b9c4f0ac4c3d313d295f7c94fb7ad7965620b82632",
+          "source_pixels_published": false
+        }
+      ],
+      "error_code": "moderation_blocked",
+      "moderation_stage": "output",
+      "categories": [
+        "other"
+      ],
+      "request_id": "a2571c67-af88-454e-b4d0-aabf30feb0bf",
+      "retry_attempted": false,
+      "software_mirror_created": false,
+      "fidelity_1_to_1_certified": false
+    }
+  ],
+  "publication": {
+    "blobs_staged_only": true,
+    "commit_or_branch_changed_by_this_agent": false
+  },
+  "source_files": "No third-party source pixels included in deliverable. URLs and hashes only."
+}
