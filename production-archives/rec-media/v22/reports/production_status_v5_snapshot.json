@@ -1,0 +1,278 @@
+{
+  "schema_version": 1,
+  "project": "Resident Evil Combat",
+  "lot": "V5",
+  "date": "2026-11-19",
+  "timezone": "Europe/Paris",
+  "scope": "Continuation des manquants identifiés, candidats graphiques et complément de conception. Ne constitue pas une livraison complète du jeu.",
+  "repository": {
+    "full_name": "darknigthmare/resident-evil-bow-protocol",
+    "audited_main": "12deacf4cf9b7706eba69fecc1c13593d030180b",
+    "merged_pr": 21,
+    "merged_date": "2026-11-15",
+    "r34_doc": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/docs/R34_DELIVERY.md",
+    "v3_v4_backup_branch": "chore/rec-media-v3-v4-backup-20261119",
+    "backup_head": "85e8daf871ed71291a961bde3acc0ed3011ced80",
+    "backup_scope": "One Alcina V3 portrait and RECOVERY.md only; not the complete V3/V4 archives.",
+    "mutated_in_v5": false
+  },
+  "previous_counts": {
+    "principal_fighters": 115,
+    "prototype_identities": 231,
+    "total_identities": 346,
+    "contextual_exercises_separate": 43,
+    "portraits_generated": 306,
+    "portraits_admitted": 305,
+    "fixed_poses_generated": 128,
+    "right_facing_fixed_poses_admitted": 114,
+    "r34_open_workstreams": 17,
+    "source": "R34_DELIVERY.md; counts are historical, not recomputed from V5 candidates."
+  },
+  "prioritized_character_gaps": [
+    {
+      "id": "sheva_business_left",
+      "status": "tool_refusal",
+      "attempt": "REC_SHEVA_RE5_BUSINESS_IDLE_LEFT_V5_01"
+    },
+    {
+      "id": "raymond_portrait",
+      "status": "candidate_created",
+      "asset": "REC_RAYMOND_REVHD_PC2013_PORTRAIT_V5_03"
+    },
+    {
+      "id": "moira_left",
+      "status": "tool_refusal",
+      "attempt": "REC_MOIRA_REV2_IDLE_LEFT_V5_01"
+    },
+    {
+      "id": "chris_re5_left",
+      "status": "tool_refusal",
+      "attempt": "REC_CHRIS_RE5_IDLE_LEFT_V5_01"
+    },
+    {
+      "id": "wesker_re5_human_right",
+      "status": "tool_refusal",
+      "attempt": "REC_WESKER_RE5_HUMAN_IDLE_RIGHT_V5_01"
+    },
+    {
+      "id": "carlos_re3_remake_left",
+      "status": "tool_refusal",
+      "attempt": "REC_CARLOS_RE3R_IDLE_LEFT_V5_01"
+    },
+    {
+      "id": "alcina_left",
+      "status": "candidate_created",
+      "asset": "REC_ALCINA_VILLAGE_IDLE_LEFT_V5_02"
+    },
+    {
+      "id": "raymond_left",
+      "status": "candidate_created",
+      "asset": "REC_RAYMOND_REVHD_PC2013_IDLE_LEFT_V5_01"
+    }
+  ],
+  "held_character_gaps": [
+    {
+      "id": "krauser",
+      "status": "historical_explicit_refusal",
+      "next_action": "No retry, including alternate costume or crop."
+    },
+    {
+      "id": "chris_safari",
+      "status": "reference_needed",
+      "next_action": "Resolve primary visual reference for exact costume and edition before generation."
+    },
+    {
+      "id": "parker_full_body",
+      "status": "reference_needed",
+      "next_action": "Resolve complete body model reference."
+    },
+    {
+      "id": "luis_full_body",
+      "status": "reference_needed",
+      "next_action": "Resolve complete body model reference."
+    },
+    {
+      "id": "jessica_edition",
+      "status": "edition_mismatch",
+      "next_action": "Keep PC2013 body and 2017 portrait distinct until edition consistency is resolved."
+    }
+  ],
+  "stages": {
+    "total_entries": 52,
+    "bitmap_entries": 36,
+    "distinct_bitmap_files": 9,
+    "procedural_without_bitmap": [
+      {
+        "id": "re5_060_adjule",
+        "name": "DÉPÔT · CONTENEURS",
+        "status": "procedural_present_bitmap_missing"
+      },
+      {
+        "id": "re5_060_big_man_majini",
+        "name": "PORT · ENTREPOSAGE",
+        "status": "procedural_present_bitmap_missing"
+      },
+      {
+        "id": "re5_060_chainsaw_majini",
+        "name": "BIDONVILLE · GRILLE",
+        "status": "procedural_present_bitmap_missing"
+      },
+      {
+        "id": "re5_060_executioner",
+        "name": "KIJUJU · PLACE PUBLIQUE",
+        "status": "procedural_present_bitmap_missing"
+      },
+      {
+        "id": "re5_060_gatling_gun_majini",
+        "name": "NAVIRE · CALES",
+        "status": "procedural_present_bitmap_missing"
+      },
+      {
+        "id": "re5_060_jill_valentine_enemy",
+        "name": "RUINES · SALLE MONARQUE",
+        "status": "procedural_present_bitmap_missing"
+      },
+      {
+        "id": "re5_060_licker_beta",
+        "name": "LABORATOIRE · CORRIDOR",
+        "status": "procedural_present_bitmap_missing"
+      },
+      {
+        "id": "re5_060_reaper",
+        "name": "MISSILES · CONVOYEURS",
+        "status": "procedural_present_bitmap_missing"
+      },
+      {
+        "id": "re5_060_popokarimu",
+        "name": "MINE · PLATEAU",
+        "status": "procedural_present_bitmap_missing"
+      },
+      {
+        "id": "re5_060_ndesu",
+        "name": "PORT · APRÈS LA POURSUITE",
+        "status": "procedural_present_bitmap_missing"
+      },
+      {
+        "id": "re5_060_irving",
+        "name": "BATEAU · EAUX CÔTIÈRES",
+        "status": "procedural_present_bitmap_missing"
+      },
+      {
+        "id": "re5_060_u_8",
+        "name": "TRICELL · PLATEFORME",
+        "status": "procedural_present_bitmap_missing"
+      },
+      {
+        "id": "re5_060_uroboros",
+        "name": "KIJUJU · INCINÉRATEUR",
+        "status": "procedural_present_bitmap_missing"
+      },
+      {
+        "id": "re5_060_uroboros_mkono",
+        "name": "TRICELL · CHAMBRE DE TEST",
+        "status": "procedural_present_bitmap_missing"
+      },
+      {
+        "id": "re5_060_uroboros_aheri",
+        "name": "NAVIRE · PONT SUPÉRIEUR",
+        "status": "procedural_present_bitmap_missing"
+      },
+      {
+        "id": "re5_060_uroboros_albert_wesker",
+        "name": "VOLCAN · PLATEAU ROCHEUX",
+        "status": "procedural_present_bitmap_missing"
+      }
+    ],
+    "source": {
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/12deacf4cf9b7706eba69fecc1c13593d030180b/data/arenas.json",
+      "git_blob_sha": "09dfee8fcc3d6039e548017a48cb173383269d7d"
+    },
+    "v5_target": "re5_060_reaper",
+    "v5_status": "Original composition and three candidate layers; not integrated; six-layer production target remains open.",
+    "production_contract": {
+      "master_width": 7680,
+      "master_height": 2160,
+      "layer_count": 6,
+      "parallax": [
+        0.04,
+        0.18,
+        0.42,
+        0.72,
+        1,
+        1.16
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "track_length": 3200,
+      "baseline_y": 900
+    }
+  },
+  "old_archives": [
+    {
+      "name": "Resident_Evil_Combat_Generation_V3.zip",
+      "bytes": 121392052,
+      "members": 332,
+      "sha256": "b4bc94e98e9f08688933e6b900896a6c1d864547e60b667ed95b0a93193c74c6",
+      "validation": "Hash matched checkpoint and ZipFile.testzip returned None before the environment changed.",
+      "currently_present": false,
+      "new_upload_completed": false
+    },
+    {
+      "name": "Resident_Evil_Combat_Generation_V4.zip",
+      "bytes": 60787557,
+      "members": 208,
+      "sha256": "c44e90b4d43e21a25e9796f1aac3569c7d2851e01b58cf6cc90f7ed180ee2b18",
+      "validation": "Hash matched checkpoint and ZipFile.testzip returned None before the environment changed.",
+      "currently_present": false,
+      "new_upload_completed": false
+    }
+  ],
+  "integration": {
+    "new_animation_sequences": 0,
+    "engine_import": false,
+    "gameplay_tests": false,
+    "canonical_fidelity_certified": false,
+    "original_bible_modified": false,
+    "moira_design": "Proposed addendum; implementation and balance validation pending."
+  },
+  "source_reference_policy": "Initial character images were generated from textual specifications. Official model images were not attached. Later revisions use earlier generated images; these are not independent fidelity evidence.",
+  "known_remaining_work": [
+    "Qualify exact edition, appearance and anatomical asymmetries against complete references.",
+    "Set pivots, frame sizes, feet baselines and scale before import.",
+    "Produce and validate frame-by-frame animations; a fixed pose is not an animation.",
+    "Finish six aligned stage layers and lateral coverage at the original target size.",
+    "Run combat, camera, interruption, resource, replay and performance tests in the existing engine.",
+    "Restore access to complete V3/V4 archives and finish durable archival transfer.",
+    "Do not count refused or reference-held tasks as completed."
+  ],
+  "previous_media_audit": {
+    "source": "Inspection of V3/V4 before environment change during this continuation; original files currently absent from the active environment.",
+    "v3_new_candidates": 54,
+    "v4_png_files": 34,
+    "v4_selected_candidates": 30,
+    "v4_preserved_trials": 4,
+    "v4_reference_count": 24,
+    "v4_samuel_direct_right_frames": 12,
+    "stage_masters_across_v3_v4": 21,
+    "v3_stage_masters": 18,
+    "v4_stage_masters": 3,
+    "do_not_regenerate_as_missing": [
+      "NEST master exists but separated layers were not aligned.",
+      "RPD master exists with a bounded preview; full camera coverage remains to validate.",
+      "Queen Zenobia master exists; camera is too low and no horizontal fighting floor was demonstrated."
+    ],
+    "admission_warning": "A generated master or candidate is not automatically an integrated arena, fighter or animation."
+  },
+  "delivery": {
+    "persistent_page_url": "https://chatgpt.com/space/page_30d95fd7e8f881919a7041757fd0f526",
+    "local_zip_available": true,
+    "local_pdf_available": true,
+    "local_docx_available": true,
+    "library_file_upload_completed": false,
+    "library_file_upload_error": "library_storage_limit_exceeded",
+    "local_file_persistence_warning": "Download the local deliverables; durable binary file saving was blocked by the storage quota."
+  }
+}
+

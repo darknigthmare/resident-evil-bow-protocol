@@ -1,6 +1,6 @@
 {
   "version": "V22",
-  "generation_complete": false,
+  "generation_complete": true,
   "scope": "Projectiles / VFX et supports associés — objets statiques guidés par références, pas admission moteur ni certification 1:1.",
   "assets": [
     {
@@ -161,5 +161,208 @@
       "retried": false
     }
   ],
-  "source_holds": []
+  "source_holds": [
+    {
+      "family_id": "FX_BALISTIQUE",
+      "status": "source_hold",
+      "reason": "Les 18 actions regroupent plusieurs éditions, armes et phases de tir. Le modèle d’arme exact et les séquences départ/impact ne sont pas verrouillés par les intitulés V1. Une balle générique inventée ne validerait pas ces actions.",
+      "actions": [
+        "REC_JILL_RE3R__SP1",
+        "REC_CHRIS_RE5__SP1",
+        "REC_LEON_RE4R__SP1",
+        "REC_CLAIRE_RE2R__SP1",
+        "REC_REBECCA_RE0__SP1",
+        "REC_BARRY_REV2__SP1",
+        "REC_BARRY_REV2__SP5",
+        "REC_ADA_RE4R__SP1",
+        "REC_HUNK_RE2R__SP1",
+        "REC_CARLOS_RE3R__SP1",
+        "REC_SHEVA_RE5__SP1",
+        "REC_SHEVA_RE5__SP5",
+        "REC_SHERRY_RE6__SP1",
+        "REC_HELENA_RE6__SP1",
+        "REC_PIERS_RE6__SP1",
+        "REC_PIERS_RE6__SP2",
+        "REC_BILLY_RE0__SP1",
+        "REC_WESKER_RE5__SP4"
+      ],
+      "source_urls": []
+    },
+    {
+      "family_id": "FX_FUSIL",
+      "status": "source_hold",
+      "reason": "Quatre actions de fusil restent à documenter par l’arme et les images départ/impact propres à chaque jeu. Aucun cône lumineux générique présenté comme effet canonique.",
+      "actions": [
+        "REC_JILL_RE3R__SP4",
+        "REC_LEON_RE4R__SP5",
+        "REC_HELENA_RE6__SP2",
+        "REC_BILLY_RE0__SP5"
+      ],
+      "source_urls": []
+    },
+    {
+      "family_id": "OBJ_GRENADE",
+      "status": "partial_candidate_and_refusal",
+      "reason": "Candidat RE5 V21 conservé pour Chris uniquement. Le rendu natif RE2R a été inspecté, puis la génération de la grenade RE2R a été refusée; aucun PNG, aucune relance. Jill/Carlos RE3R, vol, rotations et explosions restent non produits.",
+      "actions": [
+        "REC_JILL_RE3R__SP5",
+        "REC_CHRIS_RE5__SP4",
+        "REC_HUNK_RE2R__SP5",
+        "REC_CARLOS_RE3R__SP5"
+      ],
+      "source_urls": [
+        "https://www.evilresource.com/resident-evil-2-remake/weaponry/hand-grenade",
+        "https://www.evilresource.com/resident-evil-5/weaponry/hand-grenade"
+      ]
+    },
+    {
+      "family_id": "OBJ_GRENADE_INCENDIAIRE",
+      "status": "source_hold",
+      "reason": "L’action de Claire doit être rapprochée des Flame Rounds du GM 79 de RE2R. La référence d’inventaire inspectée montre les munitions groupées; elle ne valide pas un projectile séparé en vol ni le feu d’impact. Ne pas y substituer la grenade RE5.",
+      "actions": [
+        "REC_CLAIRE_RE2R__SP2"
+      ],
+      "source_urls": [
+        "https://www.evilresource.com/resident-evil-2-remake/weaponry/flame-rounds"
+      ]
+    },
+    {
+      "family_id": "FX_ELECTRIQUE_PROJECTILE",
+      "status": "simulation_and_source_hold",
+      "reason": "Le Spark Shot et ses Needle Cartridges RE2R sont identifiés. Le chargeur inspecté montre seulement une partie des aiguilles. Le projectile lent de V1 est une règle de simulation; corps entier, câble et séquence électrique restent à documenter.",
+      "actions": [
+        "REC_CLAIRE_RE2R__SP5"
+      ],
+      "source_urls": [
+        "https://www.evilresource.com/resident-evil-2-remake/weaponry/spark-shot",
+        "https://www.evilresource.com/resident-evil-2-remake/weaponry/needle-cartridges"
+      ]
+    },
+    {
+      "family_id": "OBJ_BOUTEILLE_INCENDIAIRE",
+      "status": "partial_static_candidate",
+      "reason": "Un objet RE0 entier non allumé a été généré depuis le rendu d’inventaire inspecté. La plateforme du rendu et le détail HD ne sont pas certifiés. Vol, rotation, allumage, éclatement et feu au sol restent manquants.",
+      "actions": [
+        "REC_REBECCA_RE0__SP2"
+      ],
+      "source_urls": [
+        "https://www.evilresource.com/resident-evil-zero/weaponry/molotov-cocktail"
+      ]
+    },
+    {
+      "family_id": "FX_LAMPE",
+      "status": "simulation_and_source_hold",
+      "reason": "L’éclat local de lampe de Barry est une proposition de simulation V1. La référence de phase, la forme et les durées exactes ne sont pas verrouillées; aucun effet plein écran inventé.",
+      "actions": [
+        "REC_BARRY_REV2__SP3"
+      ],
+      "source_urls": []
+    },
+    {
+      "family_id": "OBJ_GRAPPIN",
+      "status": "source_hold",
+      "reason": "L’article de Capcom confirme le grappin d’Ada Separate Ways 2023 et ses usages. Le téléchargement de sa capture a renvoyé HTTP403; tête complète et attache du câble n’ont pas pu être inspectées. Le lanceur seul ne suffit pas à valider le projectile.",
+      "actions": [
+        "REC_ADA_RE4R__SP2",
+        "REC_ADA_RE4R__SP3"
+      ],
+      "source_urls": [
+        "https://blog.playstation.com/2023/09/14/resident-evil-4-dlc-separate-ways-launches-sept-21-re4-vr-mode-arrives-as-free-dlc-this-winter/"
+      ]
+    },
+    {
+      "family_id": "OBJ_CARREAU_EXPLOSIF",
+      "status": "source_hold",
+      "reason": "Les Blast Arrows d’Ada Separate Ways 2023 sont identifiées. Le rendu inspecté montre un carquois et des empennages rouges, mais cache les pointes et une partie des tiges. Le carreau bleu du Bolt Thrower de Leon généré en V22 est distinct et ne clôt pas cette action.",
+      "actions": [
+        "REC_ADA_RE4R__SP5"
+      ],
+      "source_urls": [
+        "https://www.evilresource.com/resident-evil-4-remake/separate-ways/weaponry/blast-arrows",
+        "https://www.evilresource.com/resident-evil-4-remake/separate-ways/weaponry/blast-crossbow"
+      ]
+    },
+    {
+      "family_id": "FX_BATON_ELECTRIQUE",
+      "status": "source_hold",
+      "reason": "Le Stun Rod de Sherry RE6 est identifié et son rendu d’inventaire entier mais très peu défini a été inspecté. La charge électrique et l’impact local ne sont pas visibles dans ce rendu; pas d’effet générique présenté comme copie du jeu.",
+      "actions": [
+        "REC_SHERRY_RE6__SP2",
+        "REC_SHERRY_RE6__SP5"
+      ],
+      "source_urls": [
+        "https://www.evilresource.com/resident-evil-6/weaponry/stun-rod"
+      ]
+    },
+    {
+      "family_id": "OBJ_ROQUETTE",
+      "status": "source_hold",
+      "reason": "La cible V1 est Nemesis forme1 RE3R 2020. L’étude de roquette RE5 V21 reste hors raccord. Une vue complète du projectile RE3R en vol, avec ses phases propres, manque toujours à la validation.",
+      "actions": [
+        "REC_NEMESIS_RE3R__SP1"
+      ],
+      "source_urls": [
+        "https://www.windowscentral.com/resident-evil-3-remake-screenshots"
+      ]
+    },
+    {
+      "family_id": "OBJ_FERRAILLE",
+      "status": "simulation_and_source_hold",
+      "reason": "Le fragment projeté par Heisenberg humain est une spécification de combat V1. Aucun fragment précis de référence n’est verrouillé; ne pas le confondre avec les masses de la forme mutée.",
+      "actions": [
+        "REC_HEISENBERG_RE8__SP1"
+      ],
+      "source_urls": []
+    },
+    {
+      "family_id": "FX_MAGNETIQUE",
+      "status": "simulation_and_source_hold",
+      "reason": "Le champ local est une règle de simulation. Sa forme visuelle n’est pas un objet canonique démontré; les références de Heisenberg humain doivent être fixées avant création 1:1.",
+      "actions": [
+        "REC_HEISENBERG_RE8__SP2"
+      ],
+      "source_urls": []
+    },
+    {
+      "family_id": "OBJ_MINE_FER",
+      "status": "simulation_and_source_hold",
+      "reason": "La mine de fer de Heisenberg est une adaptation V1. Les Attachable Mines RE4R et Mine Rounds RE3R trouvées dans les catalogues sont d’autres objets; elles ne sont pas raccordées à cette fiche.",
+      "actions": [
+        "REC_HEISENBERG_RE8__SP5"
+      ],
+      "source_urls": [
+        "https://www.evilresource.com/resident-evil-4-remake/weaponry/attachable-mines",
+        "https://www.evilresource.com/resident-evil-3-remake/weaponry/mine-rounds"
+      ]
+    },
+    {
+      "family_id": "OBJ_FLECHE_EXPLOSIVE",
+      "status": "source_hold",
+      "reason": "La flèche de l’EJF-338 de Krauser RE4R est distincte du carreau d’Ada et du Bolt Thrower de Leon. Identité de l’arme repérée, mais aucune image entière de la flèche de cette édition n’a été qualifiée. La page image consultée était inaccessible.",
+      "actions": [
+        "REC_KRAUSER_RE4R__SP4"
+      ],
+      "source_urls": [
+        "https://residentevil.fandom.com/wiki/EJF-338_Compound_Bow",
+        "https://residentevil.fandom.com/wiki/Explosive_Arrows"
+      ]
+    },
+    {
+      "family_id": "FX_FLAMMES_ALEXIA",
+      "status": "effect_study_only",
+      "reason": "Une étude de flamme isolée est disponible. La capture PS2 2001 documente la transformation; la capture complémentaire près de la main n’explicite pas la plateforme. Elles n’établissent pas les quatre phases d’attaque V1. Aucune frame extraite ni animation complète certifiée.",
+      "actions": [
+        "REC_ALEXIA_CVX__SP1",
+        "REC_ALEXIA_CVX__SP2",
+        "REC_ALEXIA_CVX__SP3",
+        "REC_ALEXIA_CVX__SP5"
+      ],
+      "source_urls": [
+        "https://www.mobygames.com/game/3720/resident-evil-code-veronica-x/screenshots/ps2/798467/",
+        "https://www.gamepro.de/artikel/top-10-resident-evil-bosse-aller-zeiten,3367330.html"
+      ]
+    }
+  ],
+  "family_audit_path": "inventory/projectiles-vfx-16-families.json",
+  "all_requested_assets_generated": false
 }
