@@ -2,8 +2,8 @@ from pathlib import Path
 import copy
 import json
 
-V22 = Path(__file__).resolve().parents[1]
-V21 = Path('/workspace/scratch/39787b3268a6/production-archives/rec-media/v21')
+V22 = Path(__file__).absolute().parents[1]
+V21 = V22.parent / 'v21'
 baseline = json.loads((V21 / 'inventory/INVENTAIRE_COMPLET_V21_20261124.json').read_text())
 report_path = V22 / 'reports/projectiles.json'
 report = json.loads(report_path.read_text())
