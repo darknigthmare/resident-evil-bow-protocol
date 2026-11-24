@@ -1,0 +1,492 @@
+{
+  "schema": "rec-v22-recovered-assembly-review-1",
+  "date": "2026-11-24",
+  "reviewed_at_utc": "2026-11-24T16:06:36.467760+00:00",
+  "result": "PASS",
+  "scope": "Targeted metadata and local-link consolidation review of the recovered V22 assembly.",
+  "recovered_version": true,
+  "native_png_attachment_checkpoint": "18aa24fdf1f53b1c7ce483b8f7bc62e31b000169",
+  "checked_inputs": {
+    "ASSET_MANIFEST_V22.json": {
+      "sha256": "b7c705921bc0cf353ea5e7ef8742d5cde39e1187095e5e5f884def7912eb0a35",
+      "bytes": 642852
+    },
+    "inventory/INVENTAIRE_COMPLET_V22_20261124.json": {
+      "sha256": "32adcbffef77053995cacd6d0b5fc5077ecb697851cf29922d395c655720dee0",
+      "bytes": 3614273
+    },
+    "reports/creatures.json": {
+      "sha256": "76a023663fb545b00f2eaba70b557786ffe55e116050bcd2a5f2774889add349",
+      "bytes": 737752
+    },
+    "prompts/creatures.json": {
+      "sha256": "c106d5380cb6b2301c57dd3397e370b8327f1c27dc33f46c384922f1e3a3c025",
+      "bytes": 55642
+    },
+    "prompts/costumes.json": {
+      "sha256": "f491fb6c69addc1a0469b566de23b294a21a96d45ded0319d846d85fdf44f2a2",
+      "bytes": 251604
+    },
+    "prompts/humans_batch1.json": {
+      "sha256": "1f961813239372223ef550b54f62b3673a3f07d17151eaa9a01fe1c5d880d2fc",
+      "bytes": 3852
+    },
+    "prompts/humans_batch2.json": {
+      "sha256": "de0ca702a89df626df4d5e5924c5baee941a2df011fc3401e19f2cd845638030",
+      "bytes": 4267
+    },
+    "prompts/humans_batch3.json": {
+      "sha256": "d61fcd7b80e4a8f5fc66625b4ab99b08ff8e48b8cad49ae7a3131ce79c5eed16",
+      "bytes": 2236
+    },
+    "prompts/projectiles.json": {
+      "sha256": "e8417ddaedcb8365cfcb6ec3a38dd6f255c7679844d954205a6191a7f1c19b4b",
+      "bytes": 8863
+    },
+    "prompts/stages.json": {
+      "sha256": "0d14ce9b0e3807ccd4310c764493301e389c30fc473a4bac497f0d1b2ece3a3d",
+      "bytes": 49151
+    },
+    "prompts/stages_extra.json": {
+      "sha256": "81f51ab97bdf7ab464b032cbe35df86caaf1772b880c7d4159d48b18a4a74f82",
+      "bytes": 13015
+    },
+    "reports/costumes.json": {
+      "sha256": "b843305c0bb8f63ff98c1833b7e5598c96ecb2d6455591e969e7d6029a29bdc8",
+      "bytes": 601132
+    },
+    "reports/humans.json": {
+      "sha256": "78b7995de048cbc0e1d9dd01ec105c6591722db3b310c0ec9aae13514574c3a7",
+      "bytes": 23114
+    },
+    "reports/projectiles.json": {
+      "sha256": "8ed0e2ec23ed5ad3fce879eb798b13923f3c645671c8c46a7b9f405b53f4093c",
+      "bytes": 19045
+    },
+    "reports/stages.json": {
+      "sha256": "87b9d14f170c55fc933d4bb1679b5f2102e30e17e54f4ad954b3ef8968b8a955",
+      "bytes": 150837
+    },
+    "reports/stages_extra.json": {
+      "sha256": "3935892349095f676804574d9defa170fc5de0433bfc97225868e6cb029f97dc",
+      "bytes": 22851
+    },
+    "galerie.html": {
+      "sha256": "a783f68ef543df9da4cee214cef583aed6af1b3dd8daf3dab6c11d2a1bce861b",
+      "bytes": 143809
+    },
+    "README.md": {
+      "sha256": "2a6758c11d6859b764a38647e534c0ad4d39c0f1e051fa752c2f60a6690e57fe",
+      "bytes": 3922
+    }
+  },
+  "checks": [
+    {
+      "id": "manifest_counts_and_unique_assets",
+      "result": "PASS",
+      "method": "Count asset rows, unique IDs/paths and status values; compare against requested totals and manifest summary.",
+      "observed": {
+        "assets": 80,
+        "unique_asset_ids": 80,
+        "unique_paths": 80,
+        "statuses": {
+          "static_candidate": 77,
+          "rejected_trial": 2,
+          "visual_study": 1
+        },
+        "manifest_summary": {
+          "png_outputs": 80,
+          "static_candidates": 77,
+          "visual_studies": 1,
+          "rejected_trials": 2,
+          "tool_refusals_no_png": 13
+        }
+      },
+      "failures": []
+    },
+    {
+      "id": "local_png_file_inventory_without_decoding",
+      "result": "PASS",
+      "method": "Compare directory names with manifest paths and read filesystem size metadata only. No PNG bytes read or decoded.",
+      "observed": {
+        "local_png_count": 80,
+        "manifest_paths": 80,
+        "missing": [],
+        "unreported_pngs": [],
+        "size_mismatches": []
+      },
+      "failures": []
+    },
+    {
+      "id": "thirteen_refusals_without_png",
+      "result": "PASS",
+      "method": "Check 13 unique refusal IDs and request IDs, explicit no-image/no-retry flags, absence from manifest assets and absence of the exact named PNG.",
+      "observed": {
+        "refusal_count": 13,
+        "unique_request_ids": 13,
+        "exact_png_or_asset_hits": [],
+        "flag_or_request_id_errors": [],
+        "refusal_ids": [
+          "re4r_armadura_full_front_v22",
+          "re0_plague_crawler_full_left3q_v22",
+          "revillage_samca_full_flying3q_v22",
+          "re7_fat_molded_full_left3q_v22",
+          "revillage_mutated_heisenberg_full_front3q_v22",
+          "chris_re5_gold_heavy_metal_left",
+          "chris_re5_gold_warrior_front",
+          "leon_re4r_romantic_front",
+          "leon_re4r_hero_front",
+          "jill_re3r_stars_gear_front",
+          "ada_re4r_sw_undercover_front",
+          "leon_re4r_jacket_front",
+          "REC_OBJ_RE2R_HAND_GRENADE_V22"
+        ]
+      },
+      "failures": []
+    },
+    {
+      "id": "asset_sources_prompts_and_report_links",
+      "result": "PASS",
+      "method": "Check every asset has a nonempty prompt and nonempty HTTP(S) source URLs; check referenced local review-report files exist. External URLs were not requested.",
+      "observed": {
+        "assets_checked": 80,
+        "missing_sources": [],
+        "invalid_source_url_syntax": [],
+        "missing_prompts": [],
+        "missing_review_reports": []
+      },
+      "failures": []
+    },
+    {
+      "id": "refusal_sources_and_prompt_archive",
+      "result": "PASS",
+      "method": "Resolve refusal source fields references/sources/source_urls and find a nonempty exact-asset-ID prompt either in the manifest or in local prompt JSON files.",
+      "observed": {
+        "prompt_files_parsed": [
+          "prompts/costumes.json",
+          "prompts/creatures.json",
+          "prompts/humans_batch1.json",
+          "prompts/humans_batch2.json",
+          "prompts/humans_batch3.json",
+          "prompts/projectiles.json",
+          "prompts/stages.json",
+          "prompts/stages_extra.json"
+        ],
+        "refusals": [
+          {
+            "asset_id": "re4r_armadura_full_front_v22",
+            "sources_nonempty": true,
+            "prompt_nonempty": true,
+            "prompt_embedded_in_manifest": true,
+            "prompt_files": [
+              "prompts/creatures.json"
+            ]
+          },
+          {
+            "asset_id": "re0_plague_crawler_full_left3q_v22",
+            "sources_nonempty": true,
+            "prompt_nonempty": true,
+            "prompt_embedded_in_manifest": true,
+            "prompt_files": [
+              "prompts/creatures.json"
+            ]
+          },
+          {
+            "asset_id": "revillage_samca_full_flying3q_v22",
+            "sources_nonempty": true,
+            "prompt_nonempty": true,
+            "prompt_embedded_in_manifest": true,
+            "prompt_files": [
+              "prompts/creatures.json"
+            ]
+          },
+          {
+            "asset_id": "re7_fat_molded_full_left3q_v22",
+            "sources_nonempty": true,
+            "prompt_nonempty": true,
+            "prompt_embedded_in_manifest": true,
+            "prompt_files": [
+              "prompts/creatures.json"
+            ]
+          },
+          {
+            "asset_id": "revillage_mutated_heisenberg_full_front3q_v22",
+            "sources_nonempty": true,
+            "prompt_nonempty": true,
+            "prompt_embedded_in_manifest": true,
+            "prompt_files": [
+              "prompts/creatures.json"
+            ]
+          },
+          {
+            "asset_id": "chris_re5_gold_heavy_metal_left",
+            "sources_nonempty": true,
+            "prompt_nonempty": true,
+            "prompt_embedded_in_manifest": true,
+            "prompt_files": [
+              "prompts/costumes.json"
+            ]
+          },
+          {
+            "asset_id": "chris_re5_gold_warrior_front",
+            "sources_nonempty": true,
+            "prompt_nonempty": true,
+            "prompt_embedded_in_manifest": true,
+            "prompt_files": [
+              "prompts/costumes.json"
+            ]
+          },
+          {
+            "asset_id": "leon_re4r_romantic_front",
+            "sources_nonempty": true,
+            "prompt_nonempty": true,
+            "prompt_embedded_in_manifest": true,
+            "prompt_files": [
+              "prompts/costumes.json"
+            ]
+          },
+          {
+            "asset_id": "leon_re4r_hero_front",
+            "sources_nonempty": true,
+            "prompt_nonempty": true,
+            "prompt_embedded_in_manifest": true,
+            "prompt_files": [
+              "prompts/costumes.json"
+            ]
+          },
+          {
+            "asset_id": "jill_re3r_stars_gear_front",
+            "sources_nonempty": true,
+            "prompt_nonempty": true,
+            "prompt_embedded_in_manifest": true,
+            "prompt_files": [
+              "prompts/costumes.json"
+            ]
+          },
+          {
+            "asset_id": "ada_re4r_sw_undercover_front",
+            "sources_nonempty": true,
+            "prompt_nonempty": true,
+            "prompt_embedded_in_manifest": true,
+            "prompt_files": [
+              "prompts/costumes.json"
+            ]
+          },
+          {
+            "asset_id": "leon_re4r_jacket_front",
+            "sources_nonempty": true,
+            "prompt_nonempty": true,
+            "prompt_embedded_in_manifest": true,
+            "prompt_files": [
+              "prompts/costumes.json"
+            ]
+          },
+          {
+            "asset_id": "REC_OBJ_RE2R_HAND_GRENADE_V22",
+            "sources_nonempty": true,
+            "prompt_nonempty": true,
+            "prompt_embedded_in_manifest": false,
+            "prompt_files": [
+              "prompts/projectiles.json"
+            ]
+          }
+        ],
+        "note": "The grenade refusal prompt is resolved from prompts/projectiles.json rather than an embedded manifest prompt."
+      },
+      "failures": []
+    },
+    {
+      "id": "fifteen_creatures_reconciled",
+      "result": "PASS",
+      "method": "Match all 15 creature IDs, UID, paths, SHA fields, dimensions and prompts between report and manifest; match each inventory BOW media path/runtime declaration and exact prompt archive record. SHA fields are compared as metadata, not recomputed from PNGs.",
+      "observed": {
+        "manifest_creatures": 15,
+        "report_creatures": 15,
+        "links": [
+          {
+            "asset_id": "rerev_draghignazzo_full_left3q_v22",
+            "uid": "rerev-draghignazzo",
+            "path": "assets/rerev_draghignazzo_full_left3q_v22.png",
+            "git_blob_sha": "290f7222c21633893282640255283fa60face29b"
+          },
+          {
+            "asset_id": "rerev_scarmiglione_full_front3q_v22",
+            "uid": "rerev-scarmiglione",
+            "path": "assets/rerev_scarmiglione_full_front3q_v22.png",
+            "git_blob_sha": "71f1633014ce34bf360fe6082596ff6bf5cd45ad"
+          },
+          {
+            "asset_id": "re0_mimicry_marcus_humanoid_full_front3q_v22",
+            "uid": "re0-mimicry-marcus",
+            "path": "assets/re0_mimicry_marcus_humanoid_full_front3q_v22.png",
+            "git_blob_sha": "66118b994cf0c3791e9ccf39b1ebd3156832b978"
+          },
+          {
+            "asset_id": "re0_queen_leech_first_form_full_front_v22",
+            "uid": "re0-queen-leech",
+            "path": "assets/re0_queen_leech_first_form_full_front_v22.png",
+            "git_blob_sha": "2226f94d38795645585fb2274020b0451920da67"
+          },
+          {
+            "asset_id": "re5_kipepeo_full_flying3q_v22",
+            "uid": "re5-kipepeo",
+            "path": "assets/re5_kipepeo_full_flying3q_v22.png",
+            "git_blob_sha": "d87b036fdcc28620c12c5b04b762d2e81e0041f6"
+          },
+          {
+            "asset_id": "recv_moth_full_flying_left3q_v22",
+            "uid": "recv-moth",
+            "path": "assets/recv_moth_full_flying_left3q_v22.png",
+            "git_blob_sha": "dfd77cdbe2644bfe872676456a23375dc1d2b3fb"
+          },
+          {
+            "asset_id": "recv_bat_full_flying3q_v22",
+            "uid": "recv-bat",
+            "path": "assets/recv_bat_full_flying3q_v22.png",
+            "git_blob_sha": "6b756abcca2fbf437d815fecc2c48d311e940c92"
+          },
+          {
+            "asset_id": "re2r_g_young_full_right3q_v22",
+            "uid": "re2r-g-young",
+            "path": "assets/re2r_g_young_full_right3q_v22.png",
+            "git_blob_sha": "b48ec7b9e714f130cedd2606afce3128b2c62a46"
+          },
+          {
+            "asset_id": "reoutbreak_baby_moth_full_right3q_v22",
+            "uid": "reoutbreak-baby-moth",
+            "path": "assets/reoutbreak_baby_moth_full_right3q_v22.png",
+            "git_blob_sha": "613ec8d106f7d4ecb5d6bb11d269c7fb415a0ea6"
+          },
+          {
+            "asset_id": "rerev2_giant_whip_spider_full_front3q_v22",
+            "uid": "rerev2-giant-whip-spider",
+            "path": "assets/rerev2_giant_whip_spider_full_front3q_v22.png",
+            "git_blob_sha": "665401b6678083c0f40a751b68f71932116ec723"
+          },
+          {
+            "asset_id": "re4r_novistador_full_flying_front3q_v22",
+            "uid": "re4r-novistador",
+            "path": "assets/re4r_novistador_full_flying_front3q_v22.png",
+            "git_blob_sha": "3a7f3fe62426f3a761ca1a98aab2c24d3301288f"
+          },
+          {
+            "asset_id": "re2r_g_third_form_full_front_v22",
+            "uid": "re2r-g-third-form",
+            "path": "assets/re2r_g_third_form_full_front_v22.png",
+            "git_blob_sha": "3127dc02c3a498373e71f735d151dd0600237789"
+          },
+          {
+            "asset_id": "revillage_large_lycan_full_front_v22",
+            "uid": "revillage-lycan-large",
+            "path": "assets/revillage_large_lycan_full_front_v22.png",
+            "git_blob_sha": "88fdafea32ff9e744b7c57582490aa24d1f96481"
+          },
+          {
+            "asset_id": "revillage_mother_miranda_ceremonial_full_front_v22",
+            "uid": "revillage-mother-miranda",
+            "path": "assets/revillage_mother_miranda_ceremonial_full_front_v22.png",
+            "git_blob_sha": "32246de1f61a706e3dc62158789a84383029e515"
+          },
+          {
+            "asset_id": "re7_little_crawler_full_top3q_v22",
+            "uid": "re7-little-crawler",
+            "path": "assets/re7_little_crawler_full_top3q_v22.png",
+            "git_blob_sha": "cdbb347e47037331c2b2756b01856e3bde2c05e9"
+          }
+        ]
+      },
+      "failures": []
+    },
+    {
+      "id": "no_affirmative_fidelity_engine_or_animation_flags",
+      "result": "PASS",
+      "method": "Recursively examine explicit fidelity-1:1, one-to-one, engine_complete, engine_admitted and animation-complete fields in the manifest, inventory and all referenced production reports; reject true or positive numeric declarations.",
+      "observed": {
+        "files": [
+          "ASSET_MANIFEST_V22.json",
+          "inventory/INVENTAIRE_COMPLET_V22_20261124.json",
+          "reports/costumes.json",
+          "reports/creatures.json",
+          "reports/humans.json",
+          "reports/projectiles.json",
+          "reports/stages.json",
+          "reports/stages_extra.json"
+        ],
+        "field_occurrences": {
+          "engine_admitted": 416,
+          "canonical_1_1_certified": 3,
+          "canonical_fidelity_1_1_certified": 160,
+          "animation_complete": 444,
+          "canonical_one_to_one_certified": 408,
+          "fidelite_1_1_certifiee": 3,
+          "fidelite_1_1_validee": 880,
+          "animation_complete_validee": 378,
+          "fidelity_1_1_certified": 1,
+          "canonical_one_to_one_certifications": 1
+        },
+        "engine_complete_occurrences": 0,
+        "affirmative_fields": []
+      },
+      "failures": []
+    },
+    {
+      "id": "gallery_local_links_and_cards",
+      "result": "PASS",
+      "method": "Parse HTML href/src attributes and check local target-file existence; reconcile 80 card image paths/categories/statuses with the manifest. No browser rendering or image decoding.",
+      "observed": {
+        "local_link_occurrences": 243,
+        "unique_local_targets": 89,
+        "external_links_not_requested": 119,
+        "cards": 80,
+        "card_statuses": {
+          "static_candidate": 77,
+          "rejected_trial": 2,
+          "visual_study": 1
+        },
+        "missing_local_targets": [],
+        "card_errors": []
+      },
+      "failures": []
+    },
+    {
+      "id": "visible_scope_caveats",
+      "result": "PASS",
+      "method": "Check the supplied README and parsed gallery text contain their explicit fidelity/integration limitations and the gallery displays the expected production totals.",
+      "observed": {
+        "readme_no_certification_statement_found": true,
+        "gallery_limitation_statement_found": true
+      },
+      "failures": []
+    },
+    {
+      "id": "inventory_embeds_current_manifest",
+      "result": "PASS",
+      "method": "Compare the inventory's livraison_v22 object against the manifest object and compare the inventory's recorded manifest SHA256 with the actual JSON document SHA256.",
+      "observed": {
+        "embedded_manifest_equal": true,
+        "manifest_sha256": "b7c705921bc0cf353ea5e7ef8742d5cde39e1187095e5e5f884def7912eb0a35",
+        "inventory_recorded_manifest_sha256": "b7c705921bc0cf353ea5e7ef8742d5cde39e1187095e5e5f884def7912eb0a35"
+      },
+      "failures": []
+    },
+    {
+      "id": "reviewed_document_snapshot_stable",
+      "result": "PASS",
+      "method": "Recompute the hashes of reviewed text/JSON documents at the end of the check to detect concurrent modifications. PNG contents were not read.",
+      "observed": {
+        "reviewed_document_count": 18,
+        "changed_documents": []
+      },
+      "failures": []
+    }
+  ],
+  "not_performed": [
+    "No PNG decoding, pixel inspection, image transformation or image-content hash recomputation.",
+    "No renewed external-source requests or provenance/edition/fidelity certification.",
+    "No browser rendering or interactive-gallery behavior test.",
+    "No workbook cell or rendered-sheet validation; coordinator performs that separate review.",
+    "No engine import, gameplay, collision, animation or 1:1 acceptance test.",
+    "No modification to assemble_delivery.py and no commit."
+  ],
+  "interpretation": "PASS means the enumerated metadata counts, documentary links and declarations are consistent for this recovered snapshot; it does not certify image fidelity, complete franchise coverage or engine readiness."
+}

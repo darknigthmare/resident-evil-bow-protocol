@@ -1,6 +1,6 @@
 {
   "schema": "rec.humans.v22/1",
-  "generation_complete": false,
+  "generation_complete": true,
   "scope": "Additional static candidates for V1 finishing sheets; nominal archive search does not establish global absence.",
   "assets": [
     {
@@ -246,9 +246,90 @@
       "engine_admitted": false,
       "animation_complete": false,
       "historical_global_absence_certified": false
+    },
+    {
+      "asset_id": "REC_ADA_RE4R_SW_DEFAULT_FULLBODY_FRONT_V22_01",
+      "hero_id": "REC_ADA_RE4R",
+      "name": "Ada Wong — tenue DEFAULT Separate Ways",
+      "edition": "Resident Evil 4 remake Separate Ways (2023)",
+      "category": "character",
+      "source_page": "https://gamewith.jp/biohazard-re4/article/show/419677",
+      "source_image_url": "https://img.gamewith.jp/img/original_d765ef782c0540055c9a383c55296341.png",
+      "source_path": "/workspace/scratch/39787b3268a6/v22_work/references/costumes/ada_gamewith_jp_33_original.png",
+      "direction": "front_three_quarter",
+      "prompt": "Create exactly ONE full-body transparent-background static sprite of adult Ada Wong wearing the DEFAULT outfit from Resident Evil 4 remake Separate Ways (2023), using the supplied native Extras-menu screenshot as the visual source. Preserve the visible character, pose and outfit precisely: short dark side-parted bob, mature adult face, deep burgundy-red ribbed long-sleeve turtleneck sweater dress, dark stockings, tall fitted black boots with the same heel shape, black gloves, black shoulder harness with its observed asymmetrical buckles and straps, dark hip belt and thigh gear. Maintain the anatomical arrangement of equipment seen in the image, including the silver-gray handgun held downward in her right hand and the dark holstered equipment with a brown upper grip at her left hip. The left forearm is relaxed across the body near the right elbow as in the source. Match the actual dark hair displayed on the model; do not interpret menu text as a request for different hair. Preserve the naturally offset legs, entire shoe soles and complete silhouette. Use the exact visible ribbing, garment length, harness silhouette and original restrained palette, no substitution with the Chinese-style dress from RE4 2005 or with another optional costume. One isolated detailed semi-realistic game sprite, natural adult anatomy, generous transparent margin on all sides, no extra weapon, no firing or action effects. Genuine alpha transparency: no black menu backdrop, menu text, interface, floor, cast shadow, label, watermark, second figure or collage. Avoid inventing unreadable logos or fine details absent from the reference.",
+      "dimensions": [
+        897,
+        1752
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_zero_pixels": 1170937,
+      "alpha_ge128_bbox": [
+        252,
+        21,
+        679,
+        1732
+      ],
+      "path": "production-archives/rec-media/v22/assets/REC_ADA_RE4R_SW_DEFAULT_FULLBODY_FRONT_V22_01.png",
+      "bytes": 780245,
+      "sha256": "41f3bda495940b492e107c65017f1567d0cc5329732429b656d46d0993800bc2",
+      "git_blob_sha": "e424f9f747fd40d2b984d66fbeee23a9a73de87c",
+      "source_output_path": "/workspace/scratch/39787b3268a6/generated_images/exec-215aadcf-a9db-4457-8836-f57d94c41ad9.png",
+      "status": "candidate_static_full_body",
+      "observed_direction": "front_three_quarter",
+      "visually_reviewed": true,
+      "review_origin": "Revue visuelle effectuée avant l’interruption ; octets restaurés depuis le blob Git identique.",
+      "references": [
+        {
+          "source_page": "https://gamewith.jp/biohazard-re4/article/show/419677",
+          "image_url": "https://img.gamewith.jp/img/original_d765ef782c0540055c9a383c55296341.png",
+          "visually_inspected": true
+        }
+      ],
+      "limitations": [
+        "Candidat statique unique : aucune animation ni vue arrière complète.",
+        "Référence : capture native du menu Extras, DEFAULT, Separate Ways remake 2023, publiée par GameWith.",
+        "Le modèle visible a les cheveux noirs ; le texte d’accessoire du menu évoque une autre coiffure. La combinaison exacte n’est pas certifiée.",
+        "Fins contours alpha colorés et marges serrées observés ; aucune retouche des pixels.",
+        "Détails fins et proportions non certifiés 1:1. Ce modèle de base est distinct de la demande Undercover refusée."
+      ],
+      "canonical_one_to_one_certified": false,
+      "engine_admitted": false,
+      "animation_complete": false,
+      "historical_global_absence_certified": false
     }
   ],
   "refusals": [],
-  "source_holds": [],
-  "canonical_one_to_one_certified": false
+  "source_holds": [
+    {
+      "hero_id": "REC_SHERRY_RE6",
+      "name": "Sherry Birkin",
+      "edition": "Resident Evil 6",
+      "status": "SOURCE_HOLD",
+      "reason_fr": "Les références examinées ne verrouillent pas une vue complète, assez lisible et attribuée à la tenue/édition exacte. Les captures sont petites, recadrées ou partiellement masquées.",
+      "generation_attempted": false
+    },
+    {
+      "hero_id": "REC_JAKE_RE6",
+      "name": "Jake Muller",
+      "edition": "Resident Evil 6",
+      "status": "SOURCE_HOLD",
+      "reason_fr": "Les références examinées ne verrouillent pas le corps entier et les détails de la tenue exacte ; vues petites, recadrées ou masquées. Une référence complète de la bonne édition reste nécessaire.",
+      "generation_attempted": false
+    },
+    {
+      "hero_id": "REC_PIERS_RE6",
+      "name": "Piers Nivans",
+      "edition": "Resident Evil 6",
+      "status": "SOURCE_HOLD",
+      "reason_fr": "Les images examinées restent insuffisantes pour les détails complets de la tenue et de l’équipement. Édition, corps entier et accessoires doivent être verrouillés ensemble.",
+      "generation_attempted": false
+    }
+  ],
+  "canonical_one_to_one_certified": false,
+  "recovery_note": "Rapport reconstitué après redémarrage de l’environnement : quatre fiches exactes du checkpoint4, prompt Ada exact en mémoire, PNG Ada identique au blob transféré avant interruption, décisions SOURCE_HOLD conservées. Le hash de ce document est nouveau ; les PNG ne sont pas régénérés."
 }

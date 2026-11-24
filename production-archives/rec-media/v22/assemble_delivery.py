@@ -34,9 +34,13 @@ def url_list(row):
     result = []
     for key in ('sources', 'references', 'source_urls'):
         for ref in row.get(key, []) or []:
-            value = ref if isinstance(ref, str) else ref.get('url') or ref.get('page_url')
+            value = ref if isinstance(ref, str) else ref.get('url') or ref.get('page_url') or ref.get('source_page')
             if value and value.startswith(('https://', 'http://')) and value not in result:
                 result.append(value)
+    for key in ('source_page',):
+        value = row.get(key)
+        if value and value.startswith(('https://', 'http://')) and value not in result:
+            result.append(value)
     return result
 
 def as_list(value):
@@ -124,7 +128,8 @@ summary = {
     'runtime_stages_with_v22_candidate':len({a['runtime_id'] for a in selected('stage') if a['runtime_id']}),
     'v1_extra_specs_with_v22_candidate':len({a['spec_id'] for a in selected('stage') if a['spec_id']}),
     'creature_uids_with_v22_candidate':len({a['uid'] for a in selected('creature')}),
-    'costume_variants_with_v22_candidate':len({a['catalogue_id'] for a in selected('costume')}),
+    'costume_variants_with_v22_candidate':len({a['catalogue_id'] for a in selected('costume') if not str(a['catalogue_id']).startswith('COST_ANNEX_')}),
+    'costume_annex_variants_with_v22_candidate':len({a['catalogue_id'] for a in selected('costume') if str(a['catalogue_id']).startswith('COST_ANNEX_')}),
     'hero_sheets_with_v22_candidate':len({a['hero_id'] for a in selected('character') if a['hero_id']}),
     'engine_admitted':0, 'canonical_1_1_certified':0, 'completed_animations':0,
     'png_archive_before_v22':171, 'png_archive_after_v22':171+len(assets)
@@ -168,7 +173,7 @@ def attach(row, matches, default_note, hold=None, refusal=None):
     row['etudes_v22'] = [PREFIX+a['path'] for a in matches if a['status']=='visual_study']
     row['statut_v22'] = 'candidat_statique_produit' if candidates else 'refus_outil_sans_png' if refusal else 'reference_a_reunir' if hold else 'historique_conserve'
     row['note_v22'] = 'Une ou plusieurs images statiques candidates sont disponibles. Vues, détails, animations et intégration restent à valider.' if candidates else default_note
-    if hold: row['attente_v22'] = hold; row['note_v22'] = hold.get('reason') or hold.get('specific_need_or_hold_reason') or default_note
+    if hold: row['attente_v22'] = hold; row['note_v22'] = hold.get('reason_fr') or hold.get('reason') or hold.get('specific_need_or_hold_reason') or default_note
     if refusal: row['refus_v22'] = refusal
     row['fidelite_1_1_validee'] = False
 
@@ -184,9 +189,27 @@ for row in inventory['specifications_stages_v1_non_cumulees']:
     if not matches and row.get('catalogue_match'):
         matches = [a for a in assets if a['runtime_id']==row['catalogue_match']]
     attach(row, matches, 'Spécification V1 conservée ; rapprochement runtime et archives à lire séparément.')
+    row['medias_historiques_rapproches_v22'] = []
+    audit = stage_by_id.get(row.get('catalogue_match'))
+    extra = next((r for r in stage_audit['v1_unmatched_specs'] if r['id']==row['id']), None)
+    if not matches and audit:
+        row['statut_v22'] = audit['status']
+        row['note_v22'] = audit.get('specific_need_or_hold_reason', row['note_v22'])
+        row['audit_v22'] = audit
+        if row['id']=='STG_KIJUJU':
+            row['medias_historiques_rapproches_v22'] = ['production-archives/rec-media/v21/assets/REC_STAGE_RE5_PUBLIC_ASSEMBLY_MASTER_V21_01.png']
+    if not matches and extra and extra.get('v22_status','').startswith('preserved_v21'):
+        row['statut_v22'] = extra['v22_status']
+        row['note_v22'] = extra['note']
+        old = extra.get('existing_asset_path') or 'production-archives/rec-media/v21/assets/'+extra['existing_asset_id']+'.png'
+        row['medias_historiques_rapproches_v22'] = [old]
+        row['note_v22'] += ' Master historique : '+Path(old).name
 for row in inventory['bow']:
     uid = row['uid']
     attach(row, [a for a in assets if a['uid']==uid], 'État historique conservé ; compléter les vues, références et animations selon le besoin déjà documenté.', hold_by_uid.get(uid), refusal_by_uid.get(uid))
+    reviewed = next((r for r in reports['creatures'].get('examined_targets', []) if r.get('uid')==uid), None)
+    reviewed = reviewed or hold_by_uid.get(uid) or refusal_by_uid.get(uid) or next((r for r in reports['creatures']['assets'] if r.get('uid')==uid), {})
+    row['declaration_runtime_v22'] = reviewed.get('runtime_existing_media', {})
 for section in ('heroes','extensions','costumes_base','costume_targets_v5','recovery'):
     for row in inventory[section]:
         hero_id = row['id'].removesuffix('__COSTUME') if section in ('heroes','costumes_base') else None
@@ -197,6 +220,58 @@ variants = costume_audit['variants']
 for row in inventory['heroes']:
     related_ids = {v['id'] for v in variants if v.get('fiche_v1')==row['id']}
     row['variantes_costume_v22'] = [PREFIX+a['path'] for a in selected('costume') if a['catalogue_id'] in related_ids]
+
+annex_path = BASE/'inventory/costumes-fan-design-annexe.json'
+annex = json.loads(annex_path.read_text()) if annex_path.exists() else {}
+inventory['annexe_costumes_v22'] = annex
+character_path = BASE/'inventory/characters-v1-reconciliation.json'
+character_audit = json.loads(character_path.read_text()) if character_path.exists() else {}
+if not args.allow_in_progress:
+    assert character_audit and annex, 'Final character reconciliation and costume annex are required'
+inventory['audit_personnages_v22'] = character_audit
+for section in ('heroes', 'extensions'):
+    mapping = {r['id']:r for r in character_audit.get(section, [])}
+    for row in inventory[section]:
+        reviewed = mapping.get(row['id'])
+        if reviewed:
+            row['audit_personnage_v22'] = reviewed
+            row['raccord_catalogue_v22'] = reviewed.get('runtime_match_kind', '')
+            row['correspondances_runtime_v22'] = reviewed.get('runtime_matches', [])
+            row['note_rapprochement_v22'] = reviewed.get('note_v22', '')
+        hold = next((r for r in reports['humans'].get('source_holds', []) if r.get('hero_id')==row['id']), None)
+        if hold and not row['medias_v22']:
+            row['attente_v22'] = hold
+            row['statut_v22'] = 'SOURCE_HOLD'
+            row['note_v22'] = hold.get('reason_fr') or hold.get('reason')
+
+qualification_labels = {
+    'candidat_statique_produit':'Candidat statique produit',
+    'static_candidate':'Candidat statique', 'candidate_produced':'Candidat produit',
+    'refus_outil_sans_png':'Refus outil — aucun PNG',
+    'reference_a_reunir':'Référence complète à réunir',
+    'historique_conserve':'Historique conservé',
+    'SOURCE_HOLD':'Référence complète à réunir', 'source_hold':'Référence complète à réunir',
+    'ARCHIVE_RECOVERY_HOLD':'Archive à récupérer', 'RECOVERY_HOLD':'Archive à récupérer',
+    'EXISTING_V21_CANDIDATE_REUSE_REVIEW':'Candidat V21 — réutilisation à examiner',
+    'preserved_v21_extra':'Master V21 conservé', 'preserved_v21_candidate':'Candidat V21 conservé',
+    'partial_candidate':'Candidat partiel — séquences à produire',
+    'visual_study_only':'Étude visuelle uniquement',
+    'partial_static_candidate':'Candidat statique partiel',
+    'base_overlap':'Recoupe la tenue de base',
+    'BASE_OVERLAP':'Recoupe la tenue de base'
+}
+qualification_labels.update({
+    'new_static_candidate':'Nouveau candidat statique',
+    'new_tool_refusal_not_retried':'Refus outil — non relancé',
+    'existing_v21_not_regenerated':'Existant V21 conservé',
+    'historical_refusal_left_preserved_not_retried':'Refus historique gauche conservé',
+    'base_incarnation_overlap_not_regenerated':'Recoupe la tenue de base',
+    'effect_study_only':'Étude d’effet uniquement',
+    'partial_candidate_and_refusal':'Candidat partiel et refus conservé',
+    'simulation_and_source_hold':'Simulation à définir / référence à réunir'
+})
+inventory['qualification_labels_v22'] = qualification_labels
+inventory['recovery_note_v22'] = 'Après interruption du calcul, les 80 PNG natifs ont été récupérés depuis leurs blobs Git et vérifiés identiques. Les rapports finaux et l’inventaire ont été reconstitués depuis les checkpoints, prompts et décisions conservés ; leurs nouvelles empreintes sont enregistrées.'
 inventory['source_hashes']['v21_inventory_sha256'] = hashlib.sha256((V21/'inventory/INVENTAIRE_COMPLET_V21_20261124.json').read_bytes()).hexdigest()
 inventory['source_hashes']['v22_manifest_sha256'] = hashlib.sha256((BASE/'ASSET_MANIFEST_V22.json').read_bytes()).hexdigest()
 inventory['limites_v22'] = [
@@ -212,7 +287,7 @@ write_json(BASE/'inventory/INVENTAIRE_COMPLET_V22_20261124.json', inventory)
 
 def cell(value):
     if isinstance(value, (list, dict)): value = json.dumps(value, ensure_ascii=False)
-    return str(value or '—').replace('|', '\\|').replace('\n', '<br>')
+    return str('—' if value is None or value=='' else value).replace('|', '\\|').replace('\n', '<br>')
 
 def table(headers, rows):
     return '| '+' | '.join(headers)+' |\n| '+' | '.join('---' for _ in headers)+' |\n'+ '\n'.join('| '+' | '.join(cell(v) for v in row)+' |' for row in rows)+'\n'
@@ -231,12 +306,13 @@ lines = [f'# Resident Evil Combat — inventaire complet V22\n\nÉtat du 24 nove
          '## Personnages / B.O.W. — 346 UID suivis\n\nLes 129 attentes de source V21 sont réexaminées dans le rapport creatures.json. Les 61 états de refus historiques restent conservés. Une entrée de catalogue ne prouve pas une absence globale.\n',
          table(['UID','Nom / édition','État historique','Observation V22','Candidats V22','Besoin ou motif précis'], [[r['uid'],r['nom']+' — '+r['edition'],r['statut'],r['statut_v22'],short_paths(r['medias_v22']),r['note_v22']] for r in inventory['bow']]),
          '## Personnages V1 — 24 fiches de finition\n',
-         table(['ID','Personnage / édition','État conservé','Variantes V22 associées','Besoin'], [[r['id'],r['nom']+' — '+r['edition'],r['statut'],short_paths(r.get('variantes_costume_v22',[])),r['besoin']] for r in inventory['heroes']]),
+         table(['ID','Personnage / édition','Corps V22','Raccord catalogue','Costumes V22 associés','Observation / besoin'], [[r['id'],r['nom']+' — '+r['edition'],short_paths(r.get('medias_v22',[])),r.get('raccord_catalogue_v22'),short_paths(r.get('variantes_costume_v22',[])),r.get('note_rapprochement_v22') or r['besoin']] for r in inventory['heroes']]),
          '## Extensions proposées — 60 lignes à dédoublonner\n\nAucune de ces propositions n’est automatiquement un nouveau personnage confirmé.\n',
-         table(['ID','Nom / édition','État','Besoin'], [[r['id'],r['nom']+' — '+r['edition'],r['statut'],r['besoin']] for r in inventory['extensions']]),
+         table(['ID','Nom / édition','État','Raccord catalogue','Observation / besoin'], [[r['id'],r['nom']+' — '+r['edition'],r['statut'],r.get('raccord_catalogue_v22'),r.get('note_rapprochement_v22') or r['besoin']] for r in inventory['extensions']]),
          '## Costumes — 38 variantes ciblées\n',
          table(['ID','Personnage / costume','Édition','État V22','PNG V22','Preuve / limites'], [[r['id'],r['personnage']+' — '+r['nom_releve'],r['edition'],r.get('status_v22'),short_paths([a['path'] if isinstance(a,dict) else a for a in r.get('v22_assets',[])]),r.get('note_v22') or r.get('statut_documentaire')] for r in variants]),
-         'Le Fan Design T-shirt Pack reste une entrée de pack non décomposée, hors des 38 variantes individuelles.\n',
+         '## Annexe — quatre Fan Design T-shirts\n\nQuatre motifs du pack RE0 HD sont documentés séparément des 38 variantes principales. Les descriptions ne sont pas présentées comme des noms officiels individuels.\n',
+         table(['ID','Motif / description','PNG','Limites'], [[a['catalogue_id'],a['name'],f"[PNG](../{a['path']})",a['limitations']] for a in selected('costume') if str(a['catalogue_id']).startswith('COST_ANNEX_')]),
          '## Tenues de base — 24 descriptions\n',
          table(['ID','Personnage / édition','Description','Besoin'], [[r['id'],r['nom']+' — '+r['edition'],r['description'],r['besoin']] for r in inventory['costumes_base']]),
          '## Projectiles / VFX — 16 familles, 44 actions\n\nAucune famille ni action n’est complète. Le carreau simple de Leon est un complément distinct du carreau explosif d’Ada.\n',
@@ -288,7 +364,7 @@ Les masters de scènes complètent {summary['runtime_stages_with_v22_candidate']
 
 ## Ce qui reste ouvert
 
-Les listes détaillées couvrent 52 arènes runtime, 24 spécifications de scène V1, 346 UID suivis, 24 fiches de finition, 60 propositions d’extension, 24 tenues de base, 38 variantes de costume ciblées et 44 actions réparties en 16 familles de projectiles/VFX. Ces unités se recoupent : aucun total global de « manquants » ni pourcentage d’achèvement de franchise n’est calculé.
+Les listes détaillées couvrent 52 arènes runtime, 24 spécifications de scène V1, 346 UID suivis, 24 fiches de finition, 60 propositions d’extension, 24 tenues de base, 38 variantes de costume ciblées, quatre motifs Fan Design séparés et 44 actions réparties en 16 familles de projectiles/VFX. Ces unités se recoupent : aucun total global de « manquants » ni pourcentage d’achèvement de franchise n’est calculé. Les 32 PNG de costumes comprennent 28 variantes principales et quatre annexes.
 
 Les fichiers sont des candidats de revue. **Zéro asset V22 est certifié 1:1, animé complètement ou admis dans le moteur.** Les décors ont été adaptés à un cadrage latéral ; les calques, les collisions, les zones cachées et la continuité des animations restent à produire ou vérifier. Les sources tronquées, les éditions incertaines et les archives annoncées non récupérées sont explicitement signalées.
 
@@ -299,6 +375,8 @@ Les 61 états de refus historiques B.O.W. et les autres refus documentés sont c
 Chaque PNG est décodé et vérifié par dimensions, SHA-256 et SHA de blob Git. Les sprites possèdent un alpha utile ; les résidus éventuels sont signalés sans retouche silencieuse. Les sorties natives sont copiées inchangées. Les références tierces sont documentées par URL, sans redistribution de leurs bitmaps.
 
 Les fichiers V21 et antérieurs, le moteur, les gardes et les workflows restent inchangés. La PR demeure en brouillon ; le relevé final de publication documente l’état CI observé. La garde cumulative avait un échec antérieur sur `production-archives/rec-media/CI_CHECKPOINT2_20261120.json` ; cela ne vaut pas validation CI du présent lot.
+
+Les 80 PNG ont été restaurés à l’identique depuis leurs blobs Git après une interruption du calcul. Les rapports et l’inventaire ont été reconstitués depuis les checkpoints et les données de génération conservées ; leurs nouvelles empreintes ne sont pas confondues avec celles des fichiers temporaires antérieurs.
 
 ## Reproduire l’assemblage
 
