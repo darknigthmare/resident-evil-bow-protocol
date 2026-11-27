@@ -1,0 +1,1188 @@
+COMBAT GAMES — GUIDE GÉNÉRAL ET CAHIER DES CHARGES COMMUN
+Version 1.0 — 25 novembre 2026 — Pour les projets de Darknigthmare
+
+OBJECTIF
+
+Créer des jeux de combat complets, agréables à jouer, spectaculaires et fidèles
+à leur univers. Ce document sert de référence commune pour la conception,
+la bible, les assets, l'implémentation et la validation de chaque projet.
+
+La fidélité 1:1 concerne l'identité, l'apparence, les capacités, les armes,
+les lieux et la personnalité. Les adaptations nécessaires à la jouabilité
+doivent être documentées. « 1:1 » ne désigne pas le format carré d'une image.
+
+Les exigences de ce document sont des propositions de conception. Les faits
+concernant les jeux de référence sont regroupés avec leurs sources en fin
+de fichier. Les quantités et fonctionnalités doivent être fixées par projet.
+
+SOMMAIRE
+
+00. Utilisation du guide et priorités
+01. Identité du projet et périmètre
+02. Fidélité au lore et sources
+03. Roster, personnages, variantes et costumes
+04. Fondations du système de combat
+05. Movesets, coups spéciaux et ressources
+06. Ultimes, finishers et conclusions de combat
+07. Présentation et relations entre personnages
+08. Histoire individuelle de chaque personnage
+09. Campagne globale distincte
+10. Illustrations et cinématiques narratives
+11. Boss, machines et Boss Rush
+12. Modes de jeu
+13. Arènes : lieux, composition et lisibilité
+14. Arènes vivantes, statiques et événements
+15. Arènes connectées, transitions et interactions
+16. Ennemis, soutiens, véhicules et projectiles
+17. Direction artistique et production des assets
+18. Animations, VFX, son et caméra
+19. Interface et expérience utilisateur
+20. Tutoriels, entraînement et apprentissage
+21. IA et difficulté
+22. Équilibrage et accessibilité
+23. Multijoueur, réseau et replays
+24. Progression, sauvegardes et rejouabilité
+25. Organisation, inventaires et statistiques
+26. Critères de validation et ordre de production
+27. Fiches types à remplir
+28. Instruction prête à transmettre à un projet
+29. Références vérifiées et vocabulaire
+
+
+00. UTILISATION DU GUIDE ET PRIORITÉS
+
+Pour chaque projet :
+
+- Lire les consignes particulières et examiner ce qui existe déjà.
+- Identifier le moteur, les modes retenus, les univers et les plateformes.
+- Transformer ce guide en exigences identifiées et vérifiables.
+- Classer chaque exigence : retenue, différée, à décider ou non applicable.
+- Justifier les éléments non applicables ; conserver les éléments différés
+  dans la feuille de route.
+- Repérer les contenus manquants avant de lancer de nouvelles productions.
+- Compléter les fiches, puis produire, intégrer et tester selon la phase.
+
+Niveaux de priorité :
+
+P0 — FONDATIONS : combat fonctionnel, commandes, défense, lisibilité,
+entraînement de base, sauvegardes, performances et validation.
+
+P1 — CIBLE COMMUNE : histoires par personnage, campagne globale distincte,
+boss et Boss Rush, identité fidèle, arènes vivantes/statiques, connexions
+et interactions cohérentes. Ces objectifs reprennent le besoin initial.
+
+P2 — EXTENSIONS : tag, coopération, hub exploratoire, avatar, progression
+RPG, combats à plusieurs, classement, variantes de campagnes et modes
+supplémentaires. À retenir selon l'intérêt réel pour le projet.
+
+Une dépendance change l'ordre de travail : si le jeu doit être jouable
+en ligne, son architecture réseau se décide dès P0. Une campagne avec
+exploration nécessite aussi une validation précoce de ses déplacements.
+
+Les fonctionnalités proposées ne sont pas toutes à cumuler. Fixer un
+ensemble cohérent de règles, puis mesurer ses conséquences sur la production.
+Le périmètre d'une première version peut être limité et explicitement clos.
+
+Respecter la phase de production demandée. En phase « sprites de base
+seulement », produire les éléments fixes manquants et documenter les besoins
+d'animation pour la suite. La conception générale doit rester complète.
+
+
+01. IDENTITÉ DU PROJET ET PÉRIMÈTRE
+
+Définir avant l'extension du contenu :
+
+- Titre, univers, ton, période et continuité de référence.
+- Promesse du jeu : ce que le joueur doit ressentir et apprendre.
+- Format principal : duel latéral 2D/2,5D, équipes, plusieurs plans ou 3D.
+- Direction artistique, échelle des personnages et lisibilité recherchée.
+- Public visé, niveau de complexité et difficulté d'apprentissage.
+- Plateformes, périphériques et configurations de référence.
+- Modes de lancement et extensions prévues.
+- Langues, sous-titrage, présentation des dialogues et besoins audio.
+- Limites du périmètre : œuvres incluses, contenus exclus ou à confirmer.
+- Trois à cinq piliers de conception permettant d'arbitrer les choix.
+
+Exemple de piliers : fidélité reconnaissable, combat lisible, personnalité
+forte des combattants, campagnes cohérentes et arènes expressives.
+
+Retenir une base technique commune lorsque plusieurs projets partagent
+un moteur. Les données, règles particulières et contenus doivent permettre
+à chaque univers de conserver son identité.
+
+
+02. FIDÉLITÉ AU LORE ET SOURCES
+
+Créer un référentiel des œuvres et de leur statut dans la continuité choisie.
+Pour chaque personnage, costume, arme, pouvoir, lieu et événement, conserver
+une référence exploitable : œuvre, version, chapitre/épisode/scène ou page,
+et lien lorsque disponible.
+
+Distinguer explicitement :
+
+- CANON ATTESTÉ : présent dans une source retenue pour cette continuité.
+- ADAPTATION JOUABLE : expression d'un élément attesté, ajustée pour le jeu.
+- ORIGINAL COMPATIBLE : création du projet cohérente avec l'univers.
+- ALTERNATIF / CROSSOVER : variante volontaire extérieure à la continuité.
+- À CONFIRMER : information insuffisante ou sources contradictoires.
+
+Vérifier la silhouette, les proportions, les matériaux, les couleurs,
+les signes distinctifs, les accessoires, les armes et leur emplacement.
+Vérifier aussi le caractère, les motivations, le langage, les alliances,
+les limites des pouvoirs et les techniques réellement associées au personnage.
+
+Une version jeune, une version adulte, une adaptation film et une adaptation
+jeu peuvent avoir des capacités différentes. Les assembler exige un choix
+de variante composite annoncé. Un costume doit rester cohérent avec sa période.
+
+La fidélité visuelle doit être contrôlée contre les références. Une image
+générée, même séduisante, n'est pas validée par sa seule existence.
+
+Les dégâts, distances, durées, ressources et fenêtres de vulnérabilité sont
+des paramètres du jeu. Documenter leurs adaptations pour préserver l'identité
+sans transformer une puissance narrative en victoire automatique.
+
+Lorsque les sources ne donnent aucun nom officiel à une technique, créer
+un nom adapté à l'univers et le signaler comme nom conçu pour le projet.
+Conserver les incertitudes visibles dans les fiches jusqu'à leur résolution.
+
+
+03. ROSTER, PERSONNAGES, VARIANTES ET COSTUMES
+
+Établir un inventaire par œuvre et par rôle :
+
+- Personnages principaux, secondaires et figures de soutien pertinentes.
+- Antagonistes, rivaux, sous-boss et boss.
+- Ennemis récurrents, soldats, créatures, robots et machines.
+- Invocations, compagnons, assistances et PNJ.
+- Personnages originaux compatibles et crossovers, si retenus.
+
+Attribuer un statut précis : jouable, boss uniquement, ennemi, soutien,
+PNJ, présence narrative ou proposition à étudier. La présence au catalogue
+n'impose pas de rendre tout le monde jouable.
+
+Différencier :
+
+- PERSONNAGE : identité distincte avec son kit et sa place dans le récit.
+- VARIANTE : version modifiant réellement les capacités ou les règles.
+- TRANSFORMATION : état accessible au cours d'un affrontement.
+- COSTUME : apparence alternative conservant le kit prévu.
+- PALETTE : changement de couleurs servant aussi à distinguer les joueurs.
+
+Un costume cosmétique doit conserver les règles de collision prévues.
+Une modification importante de morphologie exige une vérification spécifique.
+Une arme ou un pouvoir différent peut justifier une variante plutôt qu'un skin.
+
+Pour chaque combattant, définir son rôle, son rythme, ses forces et faiblesses,
+sa ressource propre, ses outils distinctifs et son plan de jeu.
+Les catégories comme corps-à-corps, projection, distance, pièges ou soutien
+servent à expliquer son fonctionnement ; elles ne doivent pas déformer le lore.
+
+Prévoir portraits de sélection, portrait HUD, visuel versus, sprite de combat,
+poses de présentation, costumes, armes, effets et besoins narratifs.
+Préciser les compatibilités entre version, costume, période et scénario.
+
+
+04. FONDATIONS DU SYSTÈME DE COMBAT
+
+Définir les règles universelles :
+
+- Nombre de joueurs, côtés, manches, durée et conditions de victoire.
+- Traitement des égalités, double KO, temps écoulé et abandon.
+- Plan de déplacement, limites du terrain et changement de côté.
+- Marche, recul, accroupissement, saut et mouvements propres au système.
+- Organisation des boutons, commandes directionnelles et orientation.
+- Garde, niveaux d'attaque, projections, mise au sol et relève.
+- Ressources communes, gain, dépense et conservation entre manches.
+- Comportement lors d'une pause ou d'une déconnexion de périphérique.
+
+Choisir les mécaniques supplémentaires selon l'identité du jeu : course,
+double saut, déplacement aérien, parade précise, esquive, garde aérienne,
+contre, rupture de combo, assistance, changement d'arme ou de posture.
+Chaque mécanique retenue doit apporter une décision compréhensible.
+
+Définir le neutral : phase où les joueurs cherchent une ouverture par
+le placement, la portée, les déplacements et la menace de leurs attaques.
+Chaque personnage doit posséder un plan pour approcher, contrôler l'espace,
+punir une attaque ratée, répondre aux sauts et gérer la pression adverse.
+
+Prévoir des réponses aux projectiles, aux projections et aux attaques dans
+le dos selon les règles retenues. Les personnages peuvent avoir des faiblesses
+différentes ; celles-ci doivent rester intelligibles et testables.
+
+Spécifier les règles de saisie : tolérance directionnelle, ordre de priorité
+des commandes, mise en mémoire brève d'une entrée, maintien d'une touche,
+commandes simultanées et changement de côté pendant la saisie.
+
+Pour un combat conçu autour de 60 pas de simulation par seconde, conserver
+cette cadence indépendamment des ralentissements ou effets de rendu.
+Fixer et tester la cadence cible du projet ; distinguer simulation et affichage.
+
+
+05. MOVESETS, COUPS SPÉCIAUX ET RESSOURCES
+
+Le moveset doit exprimer le personnage. Prévoir, selon ses capacités :
+
+- Attaques normales debout, accroupies et aériennes.
+- Attaques directionnelles et enchaînements caractéristiques.
+- Projections, réponses aux projections et variations compatibles.
+- Coups spéciaux, versions renforcées et ultimes.
+- Attaques à distance, pièges, invocations ou équipements pertinents.
+- Déplacements particuliers, défenses et contre-attaques.
+- Postures, transformations ou gestion d'armes propres au personnage.
+
+Ne pas imposer le même nombre de coups à tous. Vérifier que chaque kit est
+cohérent, suffisamment complet et distinct des autres.
+
+Pour CHAQUE action, documenter :
+
+- Identifiant, nom, source, statut de fidélité et rôle tactique.
+- Commande, orientation et conditions d'utilisation.
+- Démarrage, phase active et récupération, exprimés en pas de simulation.
+- Portée, déplacements, zones qui frappent et zones vulnérables.
+- Dégâts, effet sur la garde, coût et gain de ressources.
+- Résultat en touche, en garde, en contre et en cas d'attaque ratée.
+- Durée d'immobilisation après touche ou garde, et avantage ou désavantage
+  temporel qui en résulte pour les combattants.
+- État produit : recul, chute, projection, rebond, changement de côté, etc.
+- Annulations autorisées vers une autre action et fenêtres correspondantes.
+- Invulnérabilité, résistance à un coup, restrictions et vulnérabilités.
+- Interaction avec les projectiles, objets, boss et transitions d'arènes.
+- Animations, VFX, SFX, caméra et informations données au joueur.
+
+Définir les combos autorisés, les limites de prolongation, les rebonds,
+la réduction éventuelle des dégâts et le retour au contrôle du défenseur.
+Vérifier particulièrement les murs, les assistances et les changements de zone.
+
+Pour chaque ressource personnelle : capacité, gain, dépense, recharge,
+épuisement, visibilité et remise à zéro. Une munition, une surchauffe ou
+une énergie doit produire une vraie décision de jeu.
+
+Les valeurs initiales sont des hypothèses d'équilibrage. Leur validation
+demande des affrontements et situations reproductibles.
+
+
+06. ULTIMES, FINISHERS ET CONCLUSIONS DE COMBAT
+
+Distinguer quatre éléments :
+
+- ULTIME : attaque puissante utilisable pendant le combat selon ses règles.
+- FINISHER : action de conclusion accessible après une condition définie.
+- VICTOIRE : présentation du vainqueur à la fin de l'affrontement.
+- OUTRO NARRATIVE : résolution de l'histoire individuelle ou de campagne.
+
+Créer un nom de famille adapté à chaque univers : technique terminale,
+neutralisation, exécution, capture, scellement, bannissement, extraction,
+rituel de victoire ou autre appellation pertinente.
+Ces termes sont des pistes de création, pas des noms officiels universels.
+
+Le résultat doit correspondre aux intentions du personnage. Un héros qui
+épargne ses adversaires peut désarmer ou immobiliser ; un autre personnage
+peut conclure différemment. Le degré de violence dépend du projet et du mode.
+
+Pour chaque finisher, définir :
+
+- Nom, origine du nom et justification dans le lore.
+- Conditions, commande, distance et modes autorisés.
+- Cibles compatibles et réaction prévue pour chaque famille de morphologie.
+- Déroulement, durée, caméra, effets, sons et répliques.
+- Résultat, état final et retour aux écrans de jeu.
+- Solution de remplacement pour cible géante, mécanique, immatérielle,
+  sans anatomie humanoïde ou incompatible avec la séquence principale.
+- Compatibilité avec le décor, le costume et les transformations.
+- Possibilité d'abréger la présentation selon les règles du mode.
+
+Un finisher de stage doit recevoir sa propre fiche. Préciser aussi le statut
+narratif d'une conclusion arcade : elle ne change pas automatiquement le canon
+de la campagne principale.
+
+
+07. PRÉSENTATION ET RELATIONS ENTRE PERSONNAGES
+
+Prévoir pour chaque personnage : arrivée en combat, pose de départ, provocations,
+réactions, victoire, défaite et éléments de sortie pertinents.
+Respecter son langage corporel, son attitude, ses gestes et sa façon de parler.
+
+Construire une matrice de relations : allié, rival, ennemi, mentor, inconnu,
+relation hypothétique ou rencontre impossible dans la continuité retenue.
+
+Prioriser les échanges personnalisés pour :
+
+- Rivaux et partenaires majeurs du scénario.
+- Relations importantes attestées dans l'univers.
+- Rencontres clés de campagne.
+- Combats miroir et variantes d'un même personnage, si utilisés.
+- Boss ou adversaires provoquant une réaction particulière.
+
+Prévoir des répliques génériques fidèles pour les autres rencontres.
+Évaluer le volume avant d'exiger une scène unique pour chaque paire du roster.
+
+Les dialogues doivent tenir compte de la période et de ce que les personnages
+savent à ce moment. Les connaissances du joueur ne sont pas automatiquement
+celles du combattant.
+
+
+08. HISTOIRE INDIVIDUELLE DE CHAQUE PERSONNAGE
+
+Chaque personnage jouable doit disposer d'une route adaptée au périmètre
+narratif retenu : introduction, motivation, rivalité, progression et conclusion.
+
+Structure conseillée :
+
+1. Situation initiale : lieu, période, état du personnage et objectif personnel.
+2. Événement déclencheur : raison concrète de se battre.
+3. Premières confrontations : adversaires et enjeux expliqués.
+4. Rencontre du rival : conflit personnel et dialogue spécifique.
+5. Revers ou révélation : évolution de l'objectif ou du regard du personnage.
+6. Confrontation décisive : rival, boss personnel ou objectif final.
+7. Outro : résolution, conséquences et éventuelle ouverture.
+
+Définir un rival principal lorsque cela a du sens et des rivaux secondaires
+justifiés. Une relation inventée doit porter son statut de création du projet.
+Éviter de distribuer le même parcours à tous avec seulement un portrait changé.
+
+Pour chaque combat : raison, lieu, adversaire, version, dialogue d'entrée,
+condition de victoire, conséquence et transition vers la suite.
+
+Définir si la route est compatible avec la campagne globale, parallèle,
+alternative ou hypothétique. Expliquer les affrontements entre alliés,
+les doublons, les versions incompatibles et les retours de personnages disparus.
+
+Prévoir illustrations ou cinématiques d'intro, scènes de rivalité et outro,
+sauvegarde, reprise, choix de difficulté et consultation des scènes débloquées.
+Les embranchements et fins multiples sont des extensions à chiffrer séparément.
+
+
+09. CAMPAGNE GLOBALE DISTINCTE
+
+Écrire une histoire commune possédant son intrigue, sa chronologie et sa
+résolution. Elle doit relier des événements et des points de vue autour
+d'un conflit d'ensemble.
+
+Définir :
+
+- Situation du monde, incident déclencheur et menace principale.
+- Factions, alliances, conflits et objectifs contradictoires.
+- Personnages centraux, secondaires utiles et antagonistes.
+- Progression en actes et chapitres, avec enjeux croissants.
+- Révélations, revers, changements du monde et conséquences persistantes.
+- Affrontement final, résolution et épilogue.
+
+Chaque chapitre indique : personnage jouable, objectif narratif, objectif
+de jeu, lieux, adversaires, scènes, assets, conditions d'échec et de progression.
+Changer de personnage doit servir le récit et permettre d'apprendre son rôle.
+
+Choisir le format adapté :
+
+- Campagne cinématique en chapitres alternant scènes et affrontements.
+- Campagne avec exploration, hubs, missions et progression.
+- Aventure latérale avec groupes d'ennemis, étapes et boss.
+- Structure hybride, si les transitions entre ces activités sont maîtrisées.
+
+Exploration, avatar, coopération, équipements et arbres de compétences sont
+des modules possibles. Leur intégration nécessite un périmètre et une conception
+propres ; les statistiques de campagne doivent être séparées des règles de duel
+lorsqu'elles changent l'équilibre.
+
+Prévoir sélection et reprise de chapitre, checkpoints, réglage de difficulté,
+passage des scènes, journal des objectifs et résumé utile après interruption.
+Les embranchements doivent préciser les choix, conséquences et convergences.
+
+
+10. ILLUSTRATIONS ET CINÉMATIQUES NARRATIVES
+
+Pour chaque intro, rencontre de rival, transition et outro, préparer une fiche
+de scène avant de produire ses images.
+
+La fiche comprend :
+
+- Fonction de la scène et information que le joueur doit comprendre.
+- Personnages, versions, costumes, armes, blessures et état émotionnel.
+- Lieu, époque, moment, météo et état du monde.
+- Découpage en plans ou illustrations, avec progression dramatique.
+- Sujet principal, action, pose, expression et direction des regards.
+- Cadrage, composition, point de vue et espace réservé aux textes.
+- Lumière, palette, atmosphère et éléments de décor indispensables.
+- Dialogues, narration, sous-titres, musique, bruitages et silences.
+- Transition vers le combat ou la scène suivante.
+- Références et statut canonique ou original de chaque élément important.
+
+Différencier les rôles visuels : l'intro pose une situation et une motivation ;
+la scène de rivalité rend le conflit visible ; l'outro montre une conséquence.
+Des illustrations doivent raconter quelque chose au-delà d'une pose promotionnelle.
+
+Prévoir la continuité entre les images : blessures, tenue, armes, positions,
+éclairage et destruction. Les textes et sous-titres sont conservés séparément
+des images lorsque cela facilite la localisation.
+
+Une illustration complète peut réunir plusieurs personnages. Un sprite isolé
+reste un asset distinct. Les besoins de parallaxe ou de mise en mouvement
+doivent être précisés avant de demander des calques séparés.
+
+
+11. BOSS, MACHINES ET BOSS RUSH
+
+Classer les rencontres :
+
+- Boss au format duel classique.
+- Rival ou élite avec mécanique particulière.
+- Boss à phases, transformations ou changements de comportement.
+- Créature géante ou entité nécessitant des règles adaptées.
+- Véhicule, machine, tourelle ou plateforme armée.
+- Rencontre scénarisée mêlant ennemis, objectifs et environnement.
+
+Pour chaque boss : rôle dans le récit, échelle, arène, phases, attaques,
+signaux d'annonce, vulnérabilités, fenêtres de contre-attaque, conditions
+de victoire et d'échec, conclusion et récompense.
+
+Tester la rencontre avec les familles de combattants prévues : courte portée,
+longue portée, projections, petites tailles, grandes tailles et mobilités
+particulières. Une immunité doit être lisible et laisser une solution.
+
+Les machines peuvent demander des points faibles, des parties destructibles,
+des cycles d'attaque ou une gestion de distance. Choisir ces systèmes en fonction
+de la machine représentée et du moteur, en conservant une échelle convaincante.
+
+La version jouable d'un boss, si elle existe, reçoit son propre équilibrage.
+Conserver séparément les règles de campagne et les règles de compétition.
+
+BOSS RUSH :
+
+- Liste et conditions d'accès aux boss.
+- Ordre fixe, choix de parcours ou ordre variable explicitement réglé.
+- Vie, ressources et effets conservés entre combats.
+- Récupération, nombre d'essais, sauvegarde ou reprise autorisée.
+- Difficulté, variantes, score, temps et critères de résultat.
+- Récompenses et possibilité de réessayer un boss à l'entraînement.
+- Coopération éventuelle, conçue comme module supplémentaire.
+
+
+12. MODES DE JEU
+
+FONDATIONS :
+
+- Versus local : choix des combattants, stage, règles et revanche rapide.
+- Combat contre l'IA : difficulté, sélection libre et paramètres utiles.
+- Entraînement : réglages, commandes, diagnostic et remise en situation.
+- Tutoriels et guides des mécaniques effectivement présentes.
+
+CIBLE COMMUNE :
+
+- Histoire individuelle / Arcade narratif.
+- Campagne globale.
+- Boss Combat : sélection d'une rencontre de boss.
+- Boss Rush.
+- Galerie et codex des contenus débloqués, selon le projet.
+
+EXTENSIONS À CHOISIR :
+
+- Survie, série chronométrée et défis à objectifs.
+- Tournoi local avec tableau et règles de confrontation.
+- Équipes successives, où les combattants se relaient après une défaite.
+- Tag, avec changement de combattant pendant le match.
+- Assistances, avec soutien ponctuel d'un autre personnage.
+- Coopération contre ennemis et boss.
+- Affrontements à plusieurs ou sur plusieurs plans.
+- Missions latérales, variantes de récit et contenus originaux.
+- Parties privées en ligne, matchmaking, classement et observation.
+
+Chaque mode doit posséder une fiche : règles, joueurs, sélection, progression,
+conditions de victoire, sauvegarde, récompenses, UI et compatibilités.
+Un bouton de menu seul ne constitue pas un mode terminé.
+
+
+13. ARÈNES : LIEUX, COMPOSITION ET LISIBILITÉ
+
+Prévoir deux catégories complémentaires :
+
+- Lieux attestés : environnement identifiable d'une œuvre de référence.
+- Lieux originaux compatibles : architecture, technologie, culture et biome
+  cohérents avec l'univers, sans les présenter comme lieux officiels.
+
+Pour chaque arène : nom, source, période, fonction, personnages associés,
+dimensions jouables, sol, limites, collisions, lumière et ambiance.
+
+Organiser les plans nécessaires : fond lointain, architecture intermédiaire,
+activité de fond, plan de combat, éléments d'avant-plan et effets.
+Prévoir les couches séparées uniquement lorsque leur usage le nécessite.
+
+Le plan de combat doit rester clair : pieds ancrés au sol, échelle cohérente,
+contraste suffisant, perspective adaptée et limites compréhensibles.
+Les éléments d'avant-plan ne doivent pas cacher les informations décisives.
+
+Les variantes jour/nuit, météo ou destruction doivent avoir une justification
+et un coût de production identifié. Préciser si elles modifient les règles
+ou seulement la présentation.
+
+Associer une ambiance sonore et, si pertinent, un thème musical ou une variation.
+Prévoir des versions de campagne correspondant à l'état du monde.
+
+
+14. ARÈNES VIVANTES, STATIQUES ET ÉVÉNEMENTS
+
+Distinguer QUATRE AXES indépendants :
+
+1. PRÉSENTATION : décor animé, animation réduite ou décor statique.
+2. INTERACTIONS : objets et points d'action utilisables par les combattants.
+3. DANGERS : événements qui modifient la vie, la position ou l'état des joueurs.
+4. TRANSITIONS : passages vers une autre zone de combat.
+
+Un décor vivant peut être entièrement neutre pour le gameplay. Une présentation
+statique peut conserver des interactions. Afficher les règles choisies avant
+le match et partager les mêmes règles de jeu entre les participants.
+
+Exemples d'activité cohérente : PNJ qui travaillent ou réagissent, faune,
+machines en fonctionnement, transports au loin, écrans, vent, pluie,
+éclairage changeant, conflit de fond ou événement lié au récit.
+
+Pour chaque événement : déclencheur, fréquence, durée, acteurs, sons,
+effets, priorité, état après l'événement et éventuel impact sur le combat.
+Éviter que les boucles se répètent toutes au même moment.
+
+La version statique ou réduite doit conserver les repères utiles et le même
+terrain lorsque le réglage est purement visuel. Remplacer les annonces animées
+d'un danger par un signal lisible si les règles conservent ce danger.
+
+Proposer des profils configurables :
+
+- SPECTACLE : activité et événements autorisés par le projet.
+- COMPÉTITION : règles stables, effets lisibles et mécanique de stage annoncée.
+- CONFORT / PERFORMANCE : présentation simplifiée et secousses réduites.
+
+Les options de confort peuvent être locales si elles préservent toute
+l'information nécessaire. Les interactions, dangers et transitions sont
+des règles communes au match.
+
+
+15. ARÈNES CONNECTÉES, TRANSITIONS ET INTERACTIONS
+
+ARÈNES CONNECTÉES
+
+Concevoir un ensemble de zones cohérent : quais et hangar, toit et étage,
+surface et souterrain, passerelle et salle principale, etc.
+Ces exemples sont des propositions de structure, à adapter au lore.
+
+Pour chaque liaison, définir :
+
+- Zone de départ, destination et emplacement exact de la connexion.
+- Déclencheur : projection, technique particulière, rupture de paroi,
+  seuil de destruction ou action volontaire clairement définie.
+- Conditions : position, direction, ressources, état du mur et mode de jeu.
+- Possibilité d'éviter, défendre ou empêcher le déclenchement.
+- Dégâts, compteur de combo, ressources et comportement du chronomètre.
+- Séquence de caméra, durée et option de présentation abrégée.
+- Positions, orientation et état de contrôle à l'arrivée.
+- Règles de retour, usage unique ou répétable et remise à zéro.
+- Comportement en cas de double déclenchement, KO ou interruption.
+
+La zone d'arrivée doit exister, être chargée à temps et être jouable.
+Une transition doit conserver des règles cohérentes entre simulation,
+présentation, replay et réseau. Vérifier les boucles de transition abusives.
+
+OBJETS ET ACTIONS INTERACTIVES
+
+Prévoir, lorsque cela correspond au lieu : lancer, briser, pousser, prendre
+appui, ouvrir, activer, pirater, couper une alimentation ou déclencher un dispositif.
+
+Pour chaque interaction :
+
+- Objet, position, portée d'accès et indication visuelle.
+- Capacités requises et action possible selon le combattant.
+- Commande, démarrage, récupération, coût et vulnérabilité.
+- Effet, dégâts éventuels, cible et moyens de réponse.
+- Usage unique, charges, récupération ou renouvellement.
+- État après usage, destruction et remise à zéro entre manches.
+- Compatibilité avec les profils de règles et la version statique.
+
+Une force surhumaine, un gadget, une capacité technique ou une agilité
+particulière peuvent offrir des usages différents du même élément.
+Préserver les solutions prévues pour les autres combattants.
+
+
+16. ENNEMIS, SOUTIENS, VÉHICULES ET PROJECTILES
+
+Créer des inventaires distincts pour : ennemis, élites, faune hostile,
+robots, machines, véhicules, compagnons, invocations, assistances et PNJ.
+Préciser leur rôle et leurs modes d'utilisation.
+
+Les ennemis de campagne ont besoin d'une silhouette lisible, d'un comportement,
+d'attaques annoncées, de réactions aux coups et de règles d'apparition.
+Varier leurs fonctions : pression, distance, protection, embuscade ou soutien,
+lorsque l'univers le permet.
+
+Pour chaque projectile ou attaque distante, documenter :
+
+- Source, propriétaire, arme et statut de fidélité.
+- Forme, taille, couleur, orientation et vitesse de lecture visuelle.
+- Point d'émission, trajectoire, vitesse, portée et durée de vie.
+- Dégâts, collisions, nombre de touches et effet à l'impact.
+- Destruction, annulation, réflexion ou traversée, selon le système.
+- Accrochage d'une cible, limites de suivi et moyens de réponse éventuels.
+- Interaction avec garde, objets, décor, invocations et autres projectiles.
+- Effets de départ, trajet, impact, dissipation et sons associés.
+
+Séparer l'image du projectile, son effet de trajet et son impact lorsque
+le moteur doit les manipuler indépendamment.
+
+Pour les objets de décor, préciser : purement visuel, destructible,
+interactif, élément de mission ou obstacle. Toute fonction de gameplay
+nécessite des règles et un retour visuel compréhensible.
+
+
+17. DIRECTION ARTISTIQUE ET PRODUCTION DES ASSETS
+
+Établir une charte commune : style, détail, lumière, contours, palette,
+proportions, textures, perspective et traitement des effets.
+Pour les projets de combat 2D UHD, viser une qualité homogène à la taille
+d'affichage réelle et contrôler la lisibilité après réduction.
+
+Règles pour les sprites autonomes :
+
+- Un personnage, projectile ou élément exploitable par image source demandée.
+- Personnage entier lorsqu'une vue complète est requise ; armes et membres
+  indispensables restent visibles dans le cadrage.
+- Fond réellement transparent pour les éléments détourés.
+- Orientation, échelle, ligne de sol, marges et point d'ancrage convenus.
+- Vérification des éléments asymétriques : arme, prothèse, insigne, bras,
+  cicatrice ou équipement ne doivent pas changer de côté par erreur.
+- Nommage stable et correspondance avec la fiche du catalogue.
+- Références visuelles et statut de validation conservés.
+
+Les fonds et illustrations peuvent être opaques. Un atlas technique peut
+être construit à l'intégration à partir des sources individuelles, en gardant
+les fichiers autonomes demandés.
+
+Pour chaque personnage, inventorier : sprite de base, variantes, costumes,
+portraits, armes, accessoires, invocations, projectiles et illustrations.
+Pour chaque stage : fond, couches nécessaires, sol, objets, PNJ, effets,
+états alternatifs, zones connectées et illustrations de sélection.
+
+Les animations doivent être planifiées même si leur production vient plus tard.
+Une pose fixe validée termine une tâche « sprite de base » ; elle ne termine
+pas à elle seule la production d'un combattant jouable.
+
+Conserver la provenance des sources et les conditions de réutilisation connues
+dans les métadonnées du projet, avec les crédits nécessaires.
+
+
+18. ANIMATIONS, VFX, SON ET CAMÉRA
+
+Définir les besoins d'animation par état : attente, déplacements, attaques,
+garde, réception de coups, chute, relève, projections, interactions,
+transformation, victoire, défaite et finisher.
+
+Prévoir les entrées et sorties d'état, la synchronisation des effets,
+les points d'émission des armes et les réactions des adversaires.
+Le dessin, les zones de collision et le moment de l'impact doivent s'accorder.
+
+VFX : départ d'attaque, trajectoire, impact, garde, contre, ressource,
+transformation et effets de décor. Leur intensité doit rester compatible
+avec la lecture des personnages et de leurs actions.
+
+SON : attaques, impacts, blocages, déplacements, équipements, voix,
+annonces, interface, ambiance et musique. Donner des signaux distincts
+aux événements importants et éviter leur saturation simultanée.
+
+CAMÉRA : cadrage du duel, limites, grands adversaires, changements de côté,
+zooms narratifs, transitions et retours au contrôle. Prévoir les formats
+d'écran ciblés et éviter les zones de combat invisibles.
+
+Le ressenti peut utiliser une brève suspension visuelle de l'impact,
+des secousses réglables, des variations sonores et une mise en scène adaptée.
+Documenter leur rapport à la simulation afin de préserver les timings.
+
+
+19. INTERFACE ET EXPÉRIENCE UTILISATEUR
+
+Prévoir les parcours complets : démarrer, choisir un mode, sélectionner,
+jouer, consulter le résultat, relancer, sauvegarder et quitter.
+
+Écrans à couvrir selon les modes :
+
+- Introduction du jeu, écran titre et menu principal.
+- Choix du mode, difficulté et paramètres.
+- Sélection des personnages, variantes, costumes et équipes.
+- Sélection du stage, profil de règles et aperçu de ses variantes.
+- Présentation versus et chargement utile.
+- HUD : vie, ressources, temps, manches et états essentiels.
+- Pause, liste des coups, options et objectifs de campagne.
+- Résultat, récompenses, revanche et retour à la sélection.
+- Chapitres, galerie, codex et progression.
+- Connexion, salon, recherche et messages d'erreur si jeu en ligne.
+
+La présentation peut être cinématique et adaptée à l'univers tout en restant
+rapide à utiliser. Prévoir le passage de l'introduction et la revanche directe.
+Un accueil lié au lieu ou à la progression doit préserver la lisibilité du menu.
+
+Prévoir navigation clavier/manette, indication du périphérique, remappage,
+confirmations sur les pertes de progression réelles et traitement des erreurs.
+Afficher clairement contenu disponible, verrouillé ou encore absent.
+
+
+20. TUTORIELS, ENTRAÎNEMENT ET APPRENTISSAGE
+
+Expliquer progressivement les mécaniques du projet : déplacements,
+distance, garde, projections, punition, ressources et combos.
+
+Pour chaque personnage : identité, plan de jeu, commandes, coups utiles,
+combos accessibles, mécanique propre et faiblesses connues.
+Prévoir des démonstrations et des exercices plutôt qu'une seule liste de termes.
+
+Fonctions d'entraînement recommandées :
+
+- Vie, ressources, position et état du partenaire configurables.
+- Remise à zéro immédiate et répétition d'une situation.
+- Garde, saut, projection, attaque ou relève programmables.
+- Enregistrement et lecture d'actions adverses.
+- Affichage des commandes, dégâts et durée des actions.
+- Affichage de diagnostic des zones qui frappent et des zones vulnérables.
+- Indication des enchaînements réussis et des erreurs compréhensibles.
+- Test des situations de coin, projectiles, changement de côté et boss.
+
+Les défis avancés, sauvegardes de séquences et reprises d'une situation
+de replay peuvent être ajoutés selon le périmètre.
+
+
+21. IA ET DIFFICULTÉ
+
+Donner à l'IA un comportement cohérent avec le combattant : agressif,
+patient, mobile, défensif, gestionnaire de ressources ou centré sur une mécanique.
+
+Régler la difficulté par la prise de décision, le temps de réaction,
+la fréquence d'erreur, la précision des combos et la gestion des ressources.
+Respecter les règles du mode ; documenter les exceptions des boss.
+
+L'IA doit savoir utiliser et affronter les outils réellement présents :
+projectiles, projections, transformations, interactions et transitions.
+Prévoir les grands adversaires et les objectifs de campagne.
+
+Une défaite doit permettre d'identifier une cause et une réponse possible.
+Prévoir une aide facultative, des conseils ou un ajustement de difficulté
+après plusieurs échecs, sans effacer la progression.
+
+
+22. ÉQUILIBRAGE ET ACCESSIBILITÉ
+
+ÉQUILIBRAGE
+
+- Évaluer les confrontations entre styles, tailles et mobilités différentes.
+- Vérifier les ouvertures, défenses, sorties de pression et contreparties.
+- Examiner les combos infinis, boucles de garde, répétitions de projection
+  et transitions permettant de retirer indéfiniment le contrôle.
+- Tester les outils à distance, invocations et interactions de stage.
+- Séparer les bonus de campagne des paramètres compétitifs si nécessaire.
+- Consigner les changements, leurs raisons et les versions de règles.
+
+ACCESSIBILITÉ
+
+- Remappage des commandes et navigation complète sans souris lorsque prévu.
+- Sous-titres, taille de texte et contraste adaptés aux plateformes.
+- Volumes séparés : voix, musique, effets et ambiance.
+- Informations essentielles exprimées par plusieurs moyens, pas seulement
+  par une couleur ou un son.
+- Réglages de secousses, flashs, intensité des effets et animation du fond.
+- Distinction nette des joueurs, costumes et palettes.
+- Passage des scènes et consultation ultérieure des contenus débloqués.
+- Commandes simplifiées ou aides éventuelles, avec règles explicites.
+
+Les aides de présentation doivent préserver les informations nécessaires.
+Les aides qui modifient les actions ou décisions de jeu demandent des règles
+de compatibilité claires selon le mode.
+
+
+23. MULTIJOUEUR, RÉSEAU ET REPLAYS
+
+LOCAL
+
+Prévoir profils de commandes, attribution des côtés, connexion et reconnexion
+des périphériques, pause, choix des règles et revanche rapide.
+Tester les périphériques annoncés, y compris les contrôleurs particuliers
+lorsqu'ils font partie des plateformes ciblées.
+
+EN LIGNE — SI RETENU
+
+Concevoir tôt une simulation reproductible et une stratégie réseau adaptée.
+Le rollback corrige une simulation prédite lorsque des commandes distantes
+arrivent ; il demande une gestion de l'état du combat dès l'architecture.
+
+Définir parties privées, recherche d'adversaire, qualité de connexion affichée,
+compatibilité des versions, gestion des déconnexions, résultat et règles de pause.
+Synchroniser les objets, ressources, événements, transitions et sources d'aléatoire
+ayant un effet sur le jeu.
+
+Les détails de services, matchmaking, classement, modération et protection
+contre les abus doivent être étudiés selon les plateformes et les modes retenus.
+Le crossplay constitue une décision de plateforme et de service à part entière.
+
+REPLAYS
+
+Conserver les commandes, règles, versions et données nécessaires pour rejouer
+le match, ou définir un autre format de capture adapté.
+Un replay doit rester reproductible avec sa version compatible ou être signalé
+comme incompatible après une mise à jour. Ajouter pause, vitesse et navigation
+selon les usages retenus.
+
+
+24. PROGRESSION, SAUVEGARDES ET REJOUABILITÉ
+
+Définir ce que le joueur gagne : maîtrise, scènes, costumes, palettes,
+illustrations, fiches de lore, défis, personnages ou modes selon le projet.
+Rendre les conditions de déblocage compréhensibles.
+
+Les statistiques, équipements et compétences de campagne doivent préciser
+leurs effets et leur compatibilité avec les autres modes. Proposer des règles
+normalisées pour les affrontements qui demandent une égalité de départ.
+
+Prévoir sauvegarde des chapitres, routes, déblocages, paramètres et profils,
+reprise après fermeture, comportement hors ligne et migration entre versions.
+Une mise à jour ne doit pas invalider silencieusement la progression.
+
+La rejouabilité peut venir des personnages, difficultés, défis, boss,
+embranchements ou règles alternatives. Choisir des objectifs qui valorisent
+la maîtrise et la découverte plutôt qu'une répétition sans enjeu.
+
+
+25. ORGANISATION, INVENTAIRES ET STATISTIQUES
+
+Conserver une bible et des catalogues structurés : personnages, coups,
+costumes, stages, connexions, objets, projectiles, ennemis, boss, scènes,
+illustrations, VFX, SFX, musiques, modes et tests.
+
+Attribuer des identifiants stables et relier les dépendances. Exemples :
+CHAR_001, MOVE_001, STAGE_001, LINK_001, BOSS_001, SCENE_001.
+Les noms lisibles peuvent évoluer sans casser ces relations.
+
+Pour chaque élément, suivre séparément :
+
+- LORE : sources identifiées / vérifiées / incertaines.
+- CONCEPTION : à définir / documentée / validée.
+- ASSETS : manquants / en production / produits / vérifiés.
+- INTÉGRATION : absente / partielle / intégrée.
+- VALIDATION : non testée / en échec / validée, avec version testée.
+- PUBLICATION : locale / commit / PR / fusion / version livrée, si applicable.
+
+Un fichier produit n'est pas automatiquement intégré. Une PR publiée n'est
+pas automatiquement fusionnée ni disponible dans une version jouable.
+Un placeholder doit rester identifié comme provisoire.
+
+Présenter les statistiques par catégorie et sur un périmètre nommé et daté :
+prévu, documenté, produit, vérifié, intégré, testé, restant et bloqué.
+Ne pas additionner arbitrairement des personnages, images et lignes de texte.
+Compter les variantes, costumes et plans d'illustration selon des unités définies.
+
+Calcul recommandé : taux d'une étape = éléments ayant passé cette étape /
+éléments retenus et applicables à cette étape dans le périmètre annoncé.
+Si le total n'est pas défini, publier un inventaire connu et ses incertitudes.
+Un dénominateur nul se présente comme « non applicable ».
+
+Pour une complétude de bout en bout, vérifier que toutes les étapes requises
+sont franchies par les mêmes éléments. Éviter une moyenne qui masque des trous.
+
+Organiser les livraisons avec références aux fichiers, changements et limites.
+Respecter les autorisations du projet pour toute publication externe.
+
+
+26. CRITÈRES DE VALIDATION ET ORDRE DE PRODUCTION
+
+DÉFINIR CE QUE « TERMINÉ » SIGNIFIE
+
+- Fiche personnage : version, sources, kit, adaptations, récit et besoins listés.
+- Sprite de base : bon sujet, fidélité contrôlée, cadrage, transparence et échelle.
+- Combattant jouable : actions, réactions, collisions, présentation et commandes
+  intégrées et testées dans les modes annoncés.
+- Arène : configurations promises fonctionnelles, limites lisibles, objets testés
+  et connexions rejoignant des zones réellement jouables.
+- Boss : phases, signaux, réponses, victoire et reprise testées.
+- Route individuelle : début, progression, rivalité et conclusion accessibles.
+- Campagne : parcours complet jusqu'à la conclusion, sauvegardes et continuité.
+- Mode : entrée, partie, résultat, sortie et reprise fonctionnels.
+
+VÉRIFICATIONS PRIORITAIRES
+
+Tester les changements de côté, différences de taille, costumes, projections,
+attaques simultanées, KO, chrono, murs, transitions et interruptions.
+Vérifier la lisibilité, les performances et les sauvegardes sur la cible.
+Pour le réseau, tester aussi latence, pertes de connexion et cohérence d'état.
+
+ORDRE RECOMMANDÉ
+
+1. Définir univers, périmètre, règles et décisions techniques structurantes.
+2. Réaliser une tranche jouable : deux styles différents, une arène et
+   un combat complet avec entraînement de base.
+3. Tester tôt les éléments déterminants du projet : boss géant, transitions,
+   coopération, exploration ou réseau lorsqu'ils sont retenus.
+4. Valider la chaîne de production avec les assets et contraintes réels.
+5. Étendre roster, coups, costumes, stages, ennemis et boss par lots cohérents.
+6. Construire une route individuelle et un chapitre de campagne représentatifs,
+   puis étendre la narration avec les méthodes validées.
+7. Compléter modes, progression, accessibilité, optimisation et validation finale.
+
+La bible et les inventaires progressent en parallèle. Le nombre d'assets doit
+suivre une méthode éprouvée et des besoins clairement identifiés.
+
+
+27. FICHES TYPES À REMPLIR
+
+FICHE A — PROJET
+
+ID / titre / version :
+Univers / œuvres / continuité / période :
+Piliers du jeu :
+Format de combat / commandes :
+Plateformes / performances cibles :
+Modes P0 / cible P1 / extensions retenues :
+Roster et périmètre de la version :
+Direction artistique :
+Règles communes et particularités :
+Phases de production :
+Incertitudes / décisions manquantes :
+Critères de livraison :
+
+FICHE B — PERSONNAGE
+
+ID / nom / version / période :
+Univers / continuité / statut au roster :
+Sources narratives et visuelles :
+Silhouette / taille / anatomie / asymétries :
+Personnalité / motivations / langage :
+Relations et rivalités :
+Rôle de combat / forces / faiblesses / réponses adverses :
+Déplacements / défense / ressource propre :
+Normaux / coups directionnels / projections :
+Spéciaux / ultimes / finishers :
+Armes / transformations / invocations / projectiles :
+Intro / provocations / victoire / défaite :
+Route individuelle / rôle dans la campagne :
+Costumes / variantes / compatibilités :
+Assets requis et identifiants :
+Adaptations de gameplay / créations originales :
+Points à confirmer :
+Statuts lore / conception / assets / intégration / test :
+Critères de validation :
+
+FICHE C — ACTION OU PROJECTILE
+
+ID / nom / propriétaire / version :
+Source / statut de fidélité :
+Rôle tactique / commande / conditions :
+Démarrage / phase active / récupération :
+Portée / déplacement / zones de collision :
+Dégâts / ressources / effet sur garde :
+Résultat en touche / garde / contre / échec :
+Immobilisation après touche / garde et avantage ou désavantage résultant :
+Enchaînements / annulations / limites :
+Trajectoire / durée de vie / impact si projectile :
+Interactions avec armes, décor et autres attaques :
+Animation / VFX / SFX / signaux visuels :
+Restrictions / vulnérabilités / adaptation :
+Statut et situations de test :
+
+FICHE D — FINISHER
+
+ID / personnage / nom / statut du nom :
+Source ou justification :
+Intention et résultat :
+Conditions / commande / modes :
+Types de cibles compatibles :
+Déroulement / durée / caméra :
+Décor / distance / points d'ancrage :
+Animations / effets / son / dialogue :
+Remplacement pour cible incompatible :
+Conséquences narratives éventuelles :
+Retour au jeu / passage abrégé :
+Statut et validation :
+
+FICHE E — ROUTE INDIVIDUELLE
+
+ID / personnage / version / statut narratif :
+Situation initiale / motivation :
+Événement déclencheur :
+Rival principal / relations secondaires :
+Liste ordonnée des combats et justification :
+Révélation ou revers :
+Confrontation finale :
+Outro et conséquences :
+Scènes et illustrations requises :
+Embranchements éventuels :
+Lien avec la campagne globale :
+Sauvegarde / reprise / récompenses :
+Statut et validation :
+
+FICHE F — CHAPITRE ET SCÈNE NARRATIVE
+
+ID / campagne / chapitre / ordre :
+Époque / lieu / état du monde :
+Objectif narratif et objectif de jeu :
+Personnage jouable / versions / autres acteurs :
+Résumé et évolution émotionnelle :
+Combats / activités / conséquences :
+Dialogues et sous-titres :
+Découpage en plans ou illustrations :
+Cadrage / poses / expressions / tenue / armes :
+Lumière / palette / ambiance / décor :
+Continuité et éléments obligatoires :
+Musique / VFX / SFX :
+Entrée / sortie / checkpoints / embranchements :
+Sources / adaptation / création originale :
+Assets requis / statut / validation :
+
+FICHE G — ARÈNE
+
+ID / nom / univers / période :
+Lieu officiel ou création originale :
+Sources et justification :
+Plan de combat / dimensions / sol / limites :
+Composition / plans / perspective / lumière :
+Ambiance et musique :
+Activités de fond et PNJ :
+Événements visuels / événements de gameplay :
+Objets interactifs et capacités requises :
+Zones connectées et identifiants des liaisons :
+Versions animée / statique / réduite :
+Profil de compétition et variantes de campagne :
+Assets requis / performances / lisibilité :
+Statuts et validation :
+
+FICHE H — ÉVÉNEMENT, INTERACTION OU TRANSITION
+
+ID / type / stage d'origine :
+Objet ou zone concernée / destination éventuelle :
+Déclencheur / conditions / capacités requises :
+Signal d'annonce / commande / moyens de réponse :
+Durée / caméra / passage abrégé :
+Dégâts / ressources / chrono / combo :
+Positions et états à l'arrivée :
+Usage unique ou répété / récupération / remise à zéro :
+État du décor après usage :
+Cas simultanés / KO / interruption :
+Présentation statique ou réduite :
+Synchronisation / replay / règles du mode :
+Assets / statut / validation :
+
+FICHE I — BOSS
+
+ID / nom / version / source :
+Type : duel / phases / géant / machine / rencontre scénarisée :
+Rôle narratif / échelle / arène :
+Phases et déclencheurs :
+Attaques et signaux d'annonce :
+Vulnérabilités et réponses possibles :
+Compatibilité avec les familles de combattants :
+Conditions de victoire / échec / conclusion :
+Difficulté / checkpoints / récompenses :
+Règles Boss Rush :
+Version jouable éventuelle et différences :
+Assets / statut / validation :
+
+FICHE J — ASSET ET SUIVI
+
+ID / catégorie / élément auquel il appartient :
+Description / source / référence :
+Format / dimensions / transparence / orientation :
+Échelle / ancrage / marges / asymétries :
+Fichier source / fichier intégré :
+Dépendances et usages :
+Statut lore / conception / production / contrôle / intégration / test :
+Version vérifiée et preuve de vérification :
+Publication éventuelle :
+Écart restant / blocage / prochaine action :
+
+
+28. INSTRUCTION PRÊTE À TRANSMETTRE À UN PROJET
+
+« Utilise ce guide comme référence de conception pour ce projet de jeu
+de combat, en respectant ses consignes particulières, son moteur, son univers
+et la phase de production demandée.
+
+Commence par examiner l'existant et comparer la bible, les assets et le jeu
+réellement fonctionnel aux rubriques du guide. Distingue ce qui est présent,
+partiel, manquant, à confirmer, différé ou non applicable.
+
+Complète la bible avec les histoires individuelles, la campagne globale,
+les rivalités, movesets, finishers, boss, stages, interactions, transitions,
+projectiles, ennemis et illustrations pertinentes. Chaque contenu doit avoir
+une fiche, des sources ou une justification et des critères de validation.
+
+Recherche une fidélité 1:1 contrôlable. Sépare les éléments officiels,
+les adaptations de gameplay, les créations originales et les crossovers.
+Précise les versions et périodes. Documente les adaptations nécessaires.
+
+Travaille les manquants par lots cohérents en réutilisant ce qui est déjà
+validé. Pour des sprites autonomes, fournis un sujet exploitable par image
+source et respecte les règles d'échelle, orientation, cadrage et transparence.
+Si la demande en cours porte sur des sprites fixes, garde la production
+d'animations pour la phase prévue tout en documentant leurs besoins.
+
+Pour tout élément intégré, vérifie son fonctionnement dans les modes annoncés.
+À chaque bilan, indique le périmètre, les quantités documentées, produites,
+vérifiées, intégrées et testées, ainsi que les restants et blocages.
+Appuie toute affirmation de complétude sur des éléments vérifiables.
+
+Propose les décisions qui améliorent le projet et signale les contradictions
+réelles. Préserve les instructions spécifiques et les autorisations de
+publication applicables. »
+
+
+29. RÉFÉRENCES VÉRIFIÉES ET VOCABULAIRE
+
+Les références suivantes inspirent des aspects distincts. Elles ne signifient
+pas que chaque jeu possède toutes les fonctions proposées dans ce guide.
+Références Mortal Kombat retenues : X, 11 et 1. Référence Street Fighter : 6.
+Les titres sont nommés précisément pour éviter une référence ambiguë au
+« dernier épisode » lors d'une réutilisation ultérieure.
+
+[S1] Capcom — Street Fighter 6 Showcase Recap, 20 avril 2023.
+World Tour propose un récit solo avec avatar et éléments RPG. Le mode Arcade
+présente les histoires des combattants et débloque des illustrations.
+Usage : distinguer aventure globale et parcours individuels.
+https://news.capcomusa.com/2023/04/20/street-fighter-6-showcase-recap/
+
+[S2] Arc System Works — Guilty Gear Isuka, fiche officielle Steam.
+La page décrit les combats locaux jusqu'à quatre participants et GG Boost,
+mode beat 'em up permettant de jouer en coopération à deux.
+Usage : aventure avec groupes d'ennemis et coopération éventuelle.
+https://store.steampowered.com/app/267900/Guilty_Gear_Isuka/
+
+[S3] WB Games — Mortal Kombat 1 FAQ.
+La FAQ décrit une histoire cinématique et distingue le mode Invasions,
+fondé sur progression et défis.
+Usage : séparer récit principal et mode de défis/progression.
+https://mortalkombatgamessupport.wbgames.com/hc/en-us/articles/16726930433939-Mortal-Kombat-1-FAQ
+
+[S4] WB Games — Mortal Kombat 11, PlayStation 5 FAQ.
+La FAQ identifie la campagne principale, l'extension Aftermath et un chapitre
+du mode Histoire.
+Usage : campagne organisée en chapitres et extensions narratives distinctes.
+https://mortalkombatgamessupport.wbgames.com/hc/en-us/articles/360057342173-Mortal-Kombat-11-PlayStation-5-FAQ
+
+[S5] WB Games — Injustice 2 Beginner Guide.
+Le guide décrit des objets d'arène dont l'utilisation varie selon le type
+de personnage : force physique ou usage de gadgets.
+Usage : interactions adaptées aux capacités du combattant.
+Cette source n'est pas utilisée pour attribuer des transitions à tous les MK.
+https://dcgamessupport.wbgames.com/hc/en-us/articles/360001922507-Injustice-2-Beginner-Guide
+
+Ces pages documentent les inspirations. Les règles originales, fiches et
+critères du présent guide constituent des propositions pour les projets.
+Les sources ont été consultées le 25 novembre 2026.
+
+VOCABULAIRE COURT
+
+Roster : ensemble des personnages d'un projet ou d'un mode.
+Moveset : ensemble des actions et techniques d'un personnage.
+Neutral : recherche d'ouverture par le placement et les menaces d'attaque.
+Hitbox : zone capable de faire toucher une attaque.
+Hurtbox : zone du personnage susceptible de recevoir une attaque.
+Frame data : durées et relations temporelles des actions de combat.
+Cancel : interruption autorisée d'une action pour en commencer une autre.
+Counterplay : réponses possibles à une stratégie ou une action adverse.
+Hitstop : brève suspension à l'impact renforçant la perception d'un coup.
+Tag : changement de combattant actif pendant le match.
+Assist : intervention temporaire d'un personnage de soutien.
+Rollback : correction de la simulation après réception d'entrées distantes.
+VFX : effets visuels. SFX : effets sonores. HUD : informations pendant le jeu.
+Placeholder : contenu provisoire servant à construire ou tester une fonction.
+Tranche jouable : petit ensemble représentatif permettant de valider le jeu
+et sa méthode de production avant d'étendre fortement son contenu.
+
+FIN DU GUIDE

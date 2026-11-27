@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <title>Archives de sélection · Resident Evil Combat · V23</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="access-model.js"></script>
+  <script defer src="demo-data.js"></script>
+  <script defer src="prototype.js"></script>
+</head>
+<body>
+  <a class="skip" href="#catalogue">Aller aux dossiers</a>
+  <header class="masthead">
+    <div class="brand"><span class="brand-mark" aria-hidden="true"></span><div><p class="eyebrow">B.O.W. PROTOCOL / RESIDENT EVIL COMBAT</p><h1>Archives de sélection</h1></div></div>
+    <span class="version">V23 <span aria-hidden="true">/</span> ÉTUDE INTERACTIVE</span>
+  </header>
+  <main>
+    <section class="brief" aria-labelledby="brief-title">
+      <div><p class="eyebrow">DOSSIER 02 — ACCÈS & DÉCOUVERTE</p><h2 id="brief-title">Chaque verrou a une raison.</h2><p>Parcourez les dossiers, consultez leurs conditions et essayez les cas d’accès. Les poses restent des images fixes.</p></div>
+      <p class="scope"><strong>Prototype isolé</strong><br>Données d’essai. Aucune partie lancée, aucun achat ni modification de votre progression.</p>
+    </section>
+    <section class="controls" aria-label="Conditions de démonstration">
+      <label class="scenario-label">Situation d’essai<select id="scenario"></select></label>
+      <label>Contexte<select id="mode"><option value="versus">Versus catalogue</option><option value="training">Entraînement</option><option value="campaign_rev2">Scénario REV2</option></select></label>
+      <label class="check"><input id="reveal" type="checkbox"> Révéler les identités</label>
+      <label class="check"><input id="reduce" type="checkbox"> Mouvement réduit</label>
+      <button type="button" id="reset" class="quiet">Réinitialiser</button>
+    </section>
+    <div class="workspace">
+      <section class="catalogue" id="catalogue" aria-labelledby="catalogue-title">
+        <div class="section-heading"><h2 id="catalogue-title">Dossiers disponibles</h2><span id="count" class="mono"></span></div>
+        <nav id="filters" class="filters" aria-label="Catégorie des dossiers">
+          <button type="button" data-filter="all" aria-pressed="true">Tous</button><button type="button" data-filter="character" aria-pressed="false">Personnages</button><button type="button" data-filter="costume" aria-pressed="false">Costumes</button><button type="button" data-filter="stage" aria-pressed="false">Stages</button><button type="button" data-filter="mode" aria-pressed="false">Modes</button>
+        </nav>
+        <ul id="slots" class="slots"></ul>
+        <div class="catalogue-footer"><p>Tab / flèches : parcourir · Entrée : consulter · Échap : retirer</p><button type="button" id="next-valid" class="quiet">Prochain choix autorisé</button></div>
+      </section>
+      <section class="dossier" aria-labelledby="detail-title">
+        <div class="section-heading"><p class="eyebrow">FICHE DU DOSSIER</p><span id="phase" class="phase">CONSULTATION</span></div>
+        <div class="detail-layout"><div class="preview" id="preview" aria-label="Aperçu du contenu"><div class="sealed" aria-hidden="true"><span></span><span></span><span></span></div></div><div class="detail-copy"><p id="detail-origin" class="eyebrow"></p><h2 id="detail-title">Sélectionnez un dossier</h2><p id="detail-status" class="status-text"></p><p id="detail-condition"></p><div id="rule-progress"></div><p id="lore" class="lore"></p></div></div>
+        <div class="actions"><button type="button" id="confirm" class="primary">Confirmer le choix</button><button type="button" id="claim" class="primary" hidden>Réclamer la récompense</button><button type="button" id="cancel" class="quiet">Retirer le choix</button></div>
+        <p id="message" class="message" role="status" aria-live="polite" aria-atomic="true"></p>
+        <details class="inspect" open><summary>Comprendre cet accès</summary><dl id="axes" class="axes"></dl><p id="permissions"></p><p id="preference"></p><p id="clock" class="clock"></p></details>
+      </section>
+    </div>
+    <section class="notes"><h2>Une archive, quatre états indépendants</h2><div><p><b>01 · Découverte</b>Un dossier secret masque aussi le nom, le texte accessible et la silhouette.</p><p><b>02 · Droit d’accès</b>Une acquisition permanente reste acquise quand une autre source expire.</p><p><b>03 · Disponibilité</b>Un contenu possédé peut attendre ses fichiers. Cela n’ajoute aucun verrou d’abonnement.</p><p><b>04 · Compatibilité</b>Une tenue, une période ou un doublon peuvent être exclus du mode choisi.</p></div></section>
+    <footer><p>La salle des archives et ses règles sont des propositions d’adaptation. Les portraits V22 sont des candidats statiques. La fidélité 1:1, les animations complètes et l’intégration moteur restent à vérifier.</p><a href="README.md">Périmètre, sources et vérifications</a></footer>
+  </main>
+</body>
+</html>

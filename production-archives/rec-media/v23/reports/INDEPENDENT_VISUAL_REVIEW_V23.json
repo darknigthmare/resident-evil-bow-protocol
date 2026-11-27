@@ -1,0 +1,1197 @@
+{
+  "schema": "rec-v23-independent-visual-review-1",
+  "date": "2026-11-27",
+  "timezone": "Europe/Paris",
+  "reviewer": "audit_reprise",
+  "scope": "Independent visual comparison of Barry/Billy against V22 bases; Rebecca self-review explicitly distinguished. No pixel edits performed.",
+  "sources": [
+    {
+      "path": "production-archives/rec-media/v22/assets/REC_BARRY_REV2_BASE_FULLBODY_FRONT_V22_01.png",
+      "sha256": "4175c086318fbff6db94359f163e429b201fac4229b4a3ddc30a421ea2a81ece",
+      "source_type": "Previously generated V22 candidate; not native Capcom game frames.",
+      "visual_inspection_before_comparison": true
+    },
+    {
+      "path": "production-archives/rec-media/v22/assets/REC_BILLY_RE0HD_PRISONER_FULLBODY_FRONT_V22_01.png",
+      "sha256": "58b3aca6c0b45814b23ca482c242ffaf478bbf4183f94ca7f7a87aa713c299f0",
+      "source_type": "Previously generated V22 candidate; not native Capcom game frames.",
+      "visual_inspection_before_comparison": true
+    },
+    {
+      "path": "production-archives/rec-media/v22/assets/REC_REBECCA_RE0HD_BASE_FULLBODY_FRONT_V22_01.png",
+      "sha256": "172dbdaf65f333ba6cf2f9891640bd4a72c078a80443bbc59e63399f1a72e640",
+      "source_type": "Previously generated V22 candidate; not native Capcom game frames.",
+      "visual_inspection_before_comparison": true
+    }
+  ],
+  "review_passes": [
+    {
+      "id": "initial_9_assets",
+      "checked_at_utc": "2026-11-27T05:33:50.188755+00:00",
+      "method": "view_image of Barry/Billy sources and all six outputs at native tool-display resolution; Rebecca source and outputs inspected earlier during generation; Pillow used only for decoding and alpha/hash metrics.",
+      "assets": [
+        {
+          "path": "assets/barry_rev2_selected_v23.png",
+          "sha256": "7f778dd85df1d07b6231edf2082441dfd5ba0ed107840d8ab2cf6edd961bd09a",
+          "bytes": 1316756,
+          "dimensions": [
+            929,
+            1693
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "fully_transparent_pixels": 973424,
+          "alpha_border_max": 1,
+          "bbox_alpha_ge128": [
+            169,
+            31,
+            767,
+            1647
+          ],
+          "bbox_height_px": 1616,
+          "bbox_height_fraction": 0.954519,
+          "baseline_y_px": 1647,
+          "margins_px": {
+            "left": 169,
+            "top": 31,
+            "right": 162,
+            "bottom": 46
+          },
+          "margin_8_percent_pass": false,
+          "single_character_visible": true,
+          "complete_silhouette_visible": true,
+          "native_alpha_usable": true,
+          "verdict": "animation_key_candidate_with_reservations",
+          "engine_admitted": false,
+          "complete_animation": false,
+          "canonical_one_to_one_certified": false,
+          "character": "Barry Burton",
+          "state": "selected",
+          "independent_of_author": true,
+          "observed_pose": "Torse redressé, menton relevé, regard proche du joueur ; avant-bras droit replié près du torse.",
+          "laterality": "Arme argentée main gauche anatomique (droite image), petit objet métallique non identifié main droite anatomique (gauche image), montre gauche et genouillère droite conservées.",
+          "issues": [
+            "Pose entière exploitable comme clé de revue ; personnage beaucoup plus grand dans sa toile que dans confirm/deselect.",
+            "Franges rouges/jaunes fines visibles par endroits, présentes aussi dans la source.",
+            "Petits détails des objets et poches régénérés ; aucune identification du petit objet au-delà de ce qui est visible."
+          ],
+          "preserved_current_path": "assets/trials/barry_rev2_selected_initial_v23.png",
+          "preserved_current_sha256": "7f778dd85df1d07b6231edf2082441dfd5ba0ed107840d8ab2cf6edd961bd09a",
+          "preserved_bytes_match_reviewed_hash": true,
+          "subsequent_status": "superseded_trial_after_reframing"
+        },
+        {
+          "path": "assets/barry_rev2_confirm_v23.png",
+          "sha256": "51c27ec5d4bd3cc7ba1303cdd1131db86ca348d5ad00348c7a9c988d5813a43d",
+          "bytes": 1220318,
+          "dimensions": [
+            929,
+            1693
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "fully_transparent_pixels": 1046207,
+          "alpha_border_max": 0,
+          "bbox_alpha_ge128": [
+            150,
+            124,
+            758,
+            1579
+          ],
+          "bbox_height_px": 1455,
+          "bbox_height_fraction": 0.859421,
+          "baseline_y_px": 1579,
+          "margins_px": {
+            "left": 150,
+            "top": 124,
+            "right": 171,
+            "bottom": 114
+          },
+          "margin_8_percent_pass": false,
+          "single_character_visible": true,
+          "complete_silhouette_visible": true,
+          "native_alpha_usable": true,
+          "verdict": "animation_key_candidate_with_reservations",
+          "engine_admitted": false,
+          "complete_animation": false,
+          "canonical_one_to_one_certified": false,
+          "character": "Barry Burton",
+          "state": "confirm",
+          "independent_of_author": true,
+          "observed_pose": "Tête et regard baissés dans un signe de confirmation ; petit objet descendu devant la ceinture, pieds plus écartés.",
+          "laterality": "Arme argentée dans main gauche, petit objet dans main droite ; montre et équipement restent des mêmes côtés anatomiques.",
+          "issues": [
+            "Silhouette plus petite et baseline plus haute que selected ; pas une frame raccordée directement.",
+            "Angle plus frontal montrant davantage de poches ; géométrie des poches exposées/parties précédemment cachées à recouper, pas de restitution exacte certifiée.",
+            "Petites franges colorées persistent ; 8% de marge non atteints en haut et en bas."
+          ],
+          "recovery_sha256_expected": "51c27ec5d4bd3cc7ba1303cdd1131db86ca348d5ad00348c7a9c988d5813a43d",
+          "recovery_sha256_matches": true
+        },
+        {
+          "path": "assets/barry_rev2_deselect_v23.png",
+          "sha256": "35d540f958cac3fa370e6d4e5fd612af318f548a13f2d57f0f13820a6781de0c",
+          "bytes": 1055843,
+          "dimensions": [
+            929,
+            1693
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "fully_transparent_pixels": 1114397,
+          "alpha_border_max": 1,
+          "bbox_alpha_ge128": [
+            175,
+            154,
+            726,
+            1529
+          ],
+          "bbox_height_px": 1375,
+          "bbox_height_fraction": 0.812168,
+          "baseline_y_px": 1529,
+          "margins_px": {
+            "left": 175,
+            "top": 154,
+            "right": 203,
+            "bottom": 164
+          },
+          "margin_8_percent_pass": true,
+          "single_character_visible": true,
+          "complete_silhouette_visible": true,
+          "native_alpha_usable": true,
+          "verdict": "animation_key_candidate_with_reservations",
+          "engine_admitted": false,
+          "complete_animation": false,
+          "canonical_one_to_one_certified": false,
+          "character": "Barry Burton",
+          "state": "deselect",
+          "independent_of_author": true,
+          "observed_pose": "Deux bras abaissés, petit objet près de cuisse droite ; tête et regard tournés vers la DROITE de l’image (sa gauche anatomique).",
+          "laterality": "Arme reste main gauche, objet reste main droite, accessoires principaux non inversés.",
+          "issues": [
+            "Direction demandée viewer left non suivie : direction réelle viewer right, explicitement conservée dans la revue.",
+            "Silhouette sensiblement plus petite que selected ; ligne des pieds décalée.",
+            "Petit objet conservé sans prétendre identifier sa fonction. Fines franges colorées demeurent."
+          ]
+        },
+        {
+          "path": "assets/billy_re0hd_selected_v23.png",
+          "sha256": "a93a3c30208083fb5271c9a6de4db3a253008bacabf7246483a65398100d6395",
+          "bytes": 852707,
+          "dimensions": [
+            1035,
+            1519
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "fully_transparent_pixels": 1173191,
+          "alpha_border_max": 1,
+          "bbox_alpha_ge128": [
+            272,
+            38,
+            774,
+            1482
+          ],
+          "bbox_height_px": 1444,
+          "bbox_height_fraction": 0.950625,
+          "baseline_y_px": 1482,
+          "margins_px": {
+            "left": 272,
+            "top": 38,
+            "right": 261,
+            "bottom": 37
+          },
+          "margin_8_percent_pass": false,
+          "single_character_visible": true,
+          "complete_silhouette_visible": true,
+          "native_alpha_usable": true,
+          "verdict": "animation_key_candidate_with_reservations",
+          "engine_admitted": false,
+          "complete_animation": false,
+          "canonical_one_to_one_certified": false,
+          "character": "Billy Coen",
+          "state": "selected",
+          "independent_of_author": true,
+          "observed_pose": "Avant-bras gauche replié devant le bas de la poitrine, main détendue sur le torse, regard de face.",
+          "laterality": "Tatouage et arme sur bras/main droits anatomiques (gauche image), menotte ouverte et chaîne courte sur poignet gauche (droite image).",
+          "issues": [
+            "Silhouette plus grande et pieds plus bas que confirm/deselect.",
+            "Halo rouge/jaune particulièrement visible le long du bras tatoué, déjà présent dans la source et maintenu.",
+            "Tracé fin du tatouage, contour de menotte et forme du pistolet ne sont pas certifiés à l’identique."
+          ],
+          "preserved_current_path": "assets/trials/billy_re0hd_selected_initial_v23.png",
+          "preserved_current_sha256": "a93a3c30208083fb5271c9a6de4db3a253008bacabf7246483a65398100d6395",
+          "preserved_bytes_match_reviewed_hash": true,
+          "subsequent_status": "superseded_trial_after_reframing"
+        },
+        {
+          "path": "assets/billy_re0hd_confirm_v23.png",
+          "sha256": "14c13d5e3cd2bf6f5928f89bb93b2ebe5b110e7c5eb764abf535c866dbbe1ce4",
+          "bytes": 789573,
+          "dimensions": [
+            1035,
+            1519
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "fully_transparent_pixels": 1227400,
+          "alpha_border_max": 0,
+          "bbox_alpha_ge128": [
+            269,
+            130,
+            825,
+            1439
+          ],
+          "bbox_height_px": 1309,
+          "bbox_height_fraction": 0.861751,
+          "baseline_y_px": 1439,
+          "margins_px": {
+            "left": 269,
+            "top": 130,
+            "right": 210,
+            "bottom": 80
+          },
+          "margin_8_percent_pass": false,
+          "single_character_visible": true,
+          "complete_silhouette_visible": true,
+          "native_alpha_usable": true,
+          "verdict": "animation_key_candidate_with_reservations",
+          "engine_admitted": false,
+          "complete_animation": false,
+          "canonical_one_to_one_certified": false,
+          "character": "Billy Coen",
+          "state": "confirm",
+          "independent_of_author": true,
+          "observed_pose": "Main gauche ouverte levée à hauteur d’épaule, cinq doigts visibles, bras droit bas tenant l’arme ; regard frontal.",
+          "laterality": "Menotte du côté gauche avec partie ouverte pendante ; tatouage et arme restent droits, sans miroir global.",
+          "issues": [
+            "Hauteur et baseline proches de deselect mais différentes de selected.",
+            "Marge basse de 80 px soit environ 5,3%, inférieure aux 8% demandés.",
+            "Franges colorées au bras tatoué et près de la main levée ; microdétails du tatouage, visage et métal à revoir avant admission."
+          ]
+        },
+        {
+          "path": "assets/billy_re0hd_deselect_v23.png",
+          "sha256": "b552a8e299cdc9b0679012a80cb233ca5ded2ea9b5de244ffa6ae3c80ee81fcc",
+          "bytes": 735644,
+          "dimensions": [
+            1035,
+            1519
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "fully_transparent_pixels": 1244791,
+          "alpha_border_max": 0,
+          "bbox_alpha_ge128": [
+            297,
+            122,
+            723,
+            1430
+          ],
+          "bbox_height_px": 1308,
+          "bbox_height_fraction": 0.861093,
+          "baseline_y_px": 1430,
+          "margins_px": {
+            "left": 297,
+            "top": 122,
+            "right": 312,
+            "bottom": 89
+          },
+          "margin_8_percent_pass": false,
+          "single_character_visible": true,
+          "complete_silhouette_visible": true,
+          "native_alpha_usable": true,
+          "verdict": "animation_key_candidate_with_reservations",
+          "engine_admitted": false,
+          "complete_animation": false,
+          "canonical_one_to_one_certified": false,
+          "character": "Billy Coen",
+          "state": "deselect",
+          "independent_of_author": true,
+          "observed_pose": "Bras gauche descendu près de cuisse, tête et haut du corps tournés légèrement vers droite image ; arme droite dirigée vers le bas.",
+          "laterality": "Tatouage bras droit, arme main droite, menotte au poignet gauche conservés.",
+          "issues": [
+            "Marge basse inférieure à 8% ; baseline différente de selected.",
+            "Franges rouges/jaunes/blanches près du bras, du poignet et du pistolet ; bord alpha à nettoyer avant admission.",
+            "Vue trois-quarts nouvelle ; volumes du visage et des surfaces nouvellement exposées restent des inférences."
+          ]
+        },
+        {
+          "path": "assets/rebecca_re0hd_selected_v23.png",
+          "sha256": "0762be6bd53fef4d2f8e3716b41af034c02cccc9f57bf42bc14d32ed7da90d82",
+          "bytes": 958974,
+          "dimensions": [
+            1037,
+            1516
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "fully_transparent_pixels": 1211525,
+          "alpha_border_max": 1,
+          "bbox_alpha_ge128": [
+            272,
+            24,
+            736,
+            1493
+          ],
+          "bbox_height_px": 1469,
+          "bbox_height_fraction": 0.968997,
+          "baseline_y_px": 1493,
+          "margins_px": {
+            "left": 272,
+            "top": 24,
+            "right": 301,
+            "bottom": 23
+          },
+          "margin_8_percent_pass": false,
+          "single_character_visible": true,
+          "complete_silhouette_visible": true,
+          "native_alpha_usable": true,
+          "verdict": "animation_key_candidate_with_reservations",
+          "engine_admitted": false,
+          "complete_animation": false,
+          "canonical_one_to_one_certified": false,
+          "character": "Rebecca Chambers",
+          "state": "selected",
+          "independent_of_author": false,
+          "observed_pose": "Arme droite abaissée, main gauche hanche, torso redressé et regard frontal.",
+          "laterality": "Poche et arme droites anatomiques, écusson gauche conservés.",
+          "issues": [
+            "Revue par l’auteur du rendu, pas une seconde validation indépendante.",
+            "Marges haut/bas inférieures à 8% et franges colorées fines ; silhouette entière sans rognage visible.",
+            "Visage, mains, écusson et pistolet régénérés, non certifiés 1:1."
+          ]
+        },
+        {
+          "path": "assets/rebecca_re0hd_confirm_v23.png",
+          "sha256": "13ff71020c0773f592f841c28d47aa90d82885f7ad373ff47c0ed2922f33cb5c",
+          "bytes": 977315,
+          "dimensions": [
+            1037,
+            1516
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "fully_transparent_pixels": 1215860,
+          "alpha_border_max": 0,
+          "bbox_alpha_ge128": [
+            252,
+            28,
+            699,
+            1485
+          ],
+          "bbox_height_px": 1457,
+          "bbox_height_fraction": 0.961082,
+          "baseline_y_px": 1485,
+          "margins_px": {
+            "left": 252,
+            "top": 28,
+            "right": 338,
+            "bottom": 31
+          },
+          "margin_8_percent_pass": false,
+          "single_character_visible": true,
+          "complete_silhouette_visible": true,
+          "native_alpha_usable": true,
+          "verdict": "animation_key_candidate_with_reservations",
+          "engine_admitted": false,
+          "complete_animation": false,
+          "canonical_one_to_one_certified": false,
+          "character": "Rebecca Chambers",
+          "state": "confirm",
+          "independent_of_author": false,
+          "observed_pose": "Main gauche ouverte levée vers épaule/visage, cinq doigts visibles ; arme droite abaissée, sourire léger.",
+          "laterality": "Geste main gauche libre, arme main droite ; poche droite et écusson gauche conservés.",
+          "issues": [
+            "Revue par l’auteur du rendu, pas une seconde validation indépendante.",
+            "Marges haut/bas inférieures à 8%, franges colorées autour de certains contours.",
+            "Main levée plus haute que la zone haute poitrine décrite ; clé valide pour un signe sobre, pas reproduction d’une animation officielle."
+          ]
+        },
+        {
+          "path": "assets/rebecca_re0hd_deselect_v23.png",
+          "sha256": "30e486f01685a92f98e48fc89e258029f2574d9aad81d3453a9aad674c55c2cd",
+          "bytes": 949752,
+          "dimensions": [
+            1037,
+            1516
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "fully_transparent_pixels": 1212021,
+          "alpha_border_max": 1,
+          "bbox_alpha_ge128": [
+            274,
+            32,
+            715,
+            1472
+          ],
+          "bbox_height_px": 1440,
+          "bbox_height_fraction": 0.949868,
+          "baseline_y_px": 1472,
+          "margins_px": {
+            "left": 274,
+            "top": 32,
+            "right": 322,
+            "bottom": 44
+          },
+          "margin_8_percent_pass": false,
+          "single_character_visible": true,
+          "complete_silhouette_visible": true,
+          "native_alpha_usable": true,
+          "verdict": "animation_key_candidate_with_reservations",
+          "engine_admitted": false,
+          "complete_animation": false,
+          "canonical_one_to_one_certified": false,
+          "character": "Rebecca Chambers",
+          "state": "deselect",
+          "independent_of_author": false,
+          "observed_pose": "Deux bras abaissés, main gauche détendue près de cuisse ; tête tournée légèrement droite image, regard encore proche du joueur.",
+          "laterality": "Arme droite, main gauche libre, poche droite et écusson gauche conservés.",
+          "issues": [
+            "Revue par l’auteur du rendu, pas une seconde validation indépendante.",
+            "Amplitude de rotation et axe du regard ne reproduisent pas exactement une consigne métrique ; pose distincte mais non animation certifiée.",
+            "Marges haut/bas inférieures à 8%, franges colorées rouges/jaunes/blanches non retouchées."
+          ]
+        }
+      ],
+      "continuity": [
+        {
+          "character": "Barry Burton",
+          "min_height_px": 1375,
+          "max_height_px": 1616,
+          "height_span_fraction_of_max": 0.149134,
+          "baseline_span_px": 118,
+          "same_canvas_dimensions": true,
+          "interpretation": "BBox depends on pose; differences nevertheless demonstrate that equal canvas sizes do not give a stable anatomical scale or anchor. These are review keys, not interchangeable finished frames."
+        },
+        {
+          "character": "Billy Coen",
+          "min_height_px": 1308,
+          "max_height_px": 1444,
+          "height_span_fraction_of_max": 0.094183,
+          "baseline_span_px": 52,
+          "same_canvas_dimensions": true,
+          "interpretation": "BBox depends on pose; differences nevertheless demonstrate that equal canvas sizes do not give a stable anatomical scale or anchor. These are review keys, not interchangeable finished frames."
+        },
+        {
+          "character": "Rebecca Chambers",
+          "min_height_px": 1440,
+          "max_height_px": 1469,
+          "height_span_fraction_of_max": 0.019741,
+          "baseline_span_px": 21,
+          "same_canvas_dimensions": true,
+          "interpretation": "BBox depends on pose; differences nevertheless demonstrate that equal canvas sizes do not give a stable anatomical scale or anchor. These are review keys, not interchangeable finished frames."
+        }
+      ],
+      "summary": {
+        "png_reviewed": 9,
+        "independent_png_reviewed": 6,
+        "author_self_reviewed_png": 3,
+        "key_candidates_with_reservations": 9,
+        "rejected_on_initial_review": 0,
+        "complete_animations": 0,
+        "engine_admissions": 0,
+        "native_alpha_usable": 9,
+        "margin_8_percent_pass": 1
+      },
+      "next_step_notice": "Parent has announced new corrected selected outputs for Barry and Billy; this pass preserves exact original hashes and does not claim to review those future files."
+    },
+    {
+      "id": "corrected_selected_2",
+      "checked_at_utc": "2026-11-27T05:34:52.865376+00:00",
+      "method": "Both corrected PNGs inspected using view_image against initial selected and V22 source; alpha metrics and hashes computed without image modification.",
+      "assets": [
+        {
+          "path": "assets/barry_rev2_selected_v23.png",
+          "sha256": "600f45cf4d2085130ff0ff1d43d9349df93bec6708efc4cba6a9ecc4dfa7c3fe",
+          "bytes": 1000742,
+          "dimensions": [
+            929,
+            1693
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "fully_transparent_pixels": 1141879,
+          "alpha_border_max": 0,
+          "bbox_alpha_ge128": [
+            213,
+            167,
+            725,
+            1526
+          ],
+          "bbox_height_px": 1359,
+          "bbox_height_fraction": 0.802717,
+          "baseline_y_px": 1526,
+          "margins_px": {
+            "left": 213,
+            "top": 167,
+            "right": 204,
+            "bottom": 167
+          },
+          "margin_8_percent_pass": true,
+          "single_character_visible": true,
+          "complete_silhouette_visible": true,
+          "native_alpha_usable": true,
+          "verdict": "animation_key_candidate_with_reservations",
+          "character": "Barry Burton",
+          "state": "selected",
+          "independent_of_author": true,
+          "observed_pose": "Menton relevé, petit objet métallique non identifié maintenu dans main droite près de poitrine, arme gauche abaissée ; pose et équipement principaux cohérents.",
+          "laterality": "Arme argentée main gauche anatomique (droite image), petit objet métallique non identifié main droite anatomique (gauche image), montre gauche et genouillère droite conservées.",
+          "engine_admitted": false,
+          "complete_animation": false,
+          "canonical_one_to_one_certified": false,
+          "issues": [
+            "Cadrage amélioré : la silhouette entière dispose maintenant de plus de 8% de marge sur les quatre côtés.",
+            "Des franges colorées restent visibles ; aucune disparition complète ni qualité alpha finale revendiquée.",
+            "L’échelle anatomique et la baseline ne sont pas validées pour une transition directe entre les trois poses.",
+            "La régénération peut modifier de petits détails ; pas une transformation pixel à pixel de la source."
+          ],
+          "supersedes_sha256": "7f778dd85df1d07b6231edf2082441dfd5ba0ed107840d8ab2cf6edd961bd09a",
+          "superseded_file": "assets/trials/barry_rev2_selected_initial_v23.png"
+        },
+        {
+          "path": "assets/billy_re0hd_selected_v23.png",
+          "sha256": "fcc4ce04c2adfc68611fe75cd91992a5ff8cd8f36094367a91dc4713ffbbd4c3",
+          "bytes": 690632,
+          "dimensions": [
+            1036,
+            1519
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "fully_transparent_pixels": 1272307,
+          "alpha_border_max": 0,
+          "bbox_alpha_ge128": [
+            300,
+            150,
+            743,
+            1389
+          ],
+          "bbox_height_px": 1239,
+          "bbox_height_fraction": 0.815668,
+          "baseline_y_px": 1389,
+          "margins_px": {
+            "left": 300,
+            "top": 150,
+            "right": 293,
+            "bottom": 130
+          },
+          "margin_8_percent_pass": true,
+          "single_character_visible": true,
+          "complete_silhouette_visible": true,
+          "native_alpha_usable": true,
+          "verdict": "animation_key_candidate_with_reservations",
+          "character": "Billy Coen",
+          "state": "selected",
+          "independent_of_author": true,
+          "observed_pose": "Avant-bras gauche devant poitrine, menotte gauche pendante, tatouage bras droit et arme droite abaissée ; pose et tenue cohérentes.",
+          "laterality": "Tatouage et arme sur bras/main droits anatomiques (gauche image), menotte ouverte et chaîne courte sur poignet gauche (droite image).",
+          "engine_admitted": false,
+          "complete_animation": false,
+          "canonical_one_to_one_certified": false,
+          "issues": [
+            "Cadrage amélioré : la silhouette entière dispose maintenant de plus de 8% de marge sur les quatre côtés.",
+            "Des franges colorées restent visibles ; aucune disparition complète ni qualité alpha finale revendiquée.",
+            "L’échelle anatomique et la baseline ne sont pas validées pour une transition directe entre les trois poses.",
+            "La régénération peut modifier de petits détails ; pas une transformation pixel à pixel de la source.",
+            "La largeur native devient 1036 px au lieu de 1035 pour les deux autres clés ; à prendre en compte au montage sans redimensionnement silencieux."
+          ],
+          "supersedes_sha256": "a93a3c30208083fb5271c9a6de4db3a253008bacabf7246483a65398100d6395",
+          "superseded_file": "assets/trials/billy_re0hd_selected_initial_v23.png"
+        }
+      ],
+      "archived_originals_verified": [
+        {
+          "path": "assets/trials/barry_rev2_selected_initial_v23.png",
+          "sha256": "7f778dd85df1d07b6231edf2082441dfd5ba0ed107840d8ab2cf6edd961bd09a",
+          "bytes": 1316756,
+          "status": "superseded_trial",
+          "original_review_pass": "initial_9_assets",
+          "integrity_matches": true
+        },
+        {
+          "path": "assets/trials/billy_re0hd_selected_initial_v23.png",
+          "sha256": "a93a3c30208083fb5271c9a6de4db3a253008bacabf7246483a65398100d6395",
+          "bytes": 852707,
+          "status": "superseded_trial",
+          "original_review_pass": "initial_9_assets",
+          "integrity_matches": true
+        }
+      ],
+      "summary": {
+        "new_png_reviewed": 2,
+        "independent_png_reviewed": 2,
+        "corrected_key_candidates": 2,
+        "archived_superseded_trials": 2,
+        "margin_8_percent_pass": 2,
+        "native_alpha_usable": 2
+      }
+    }
+  ],
+  "required_before_engine_admission": [
+    "Document the actual face/hand/foot anchors and stabilize anatomical scale and baseline across each family.",
+    "Resolve visible colored alpha fringes in source edits and re-inspect on light/dark gameplay backgrounds.",
+    "Validate detailed equipment and costume continuity, including small objects, pouch count, tattoo pattern and cuffs; do not infer identity of Barry’s small object.",
+    "Author and inspect transition frames and timing; input acknowledgement must not wait for presentation.",
+    "Keep explicit edition and generated/adapted provenance; no original-game animation or universal 1:1 claim."
+  ],
+  "documentation_link_review": {
+    "status": "awaiting_author_completion",
+    "note": "docs/combat-bible is still being written; guide author confirmed EXT02 and matrix pending. No intermediate missing link is declared as a final failure."
+  },
+  "current_assets": [
+    {
+      "path": "assets/barry_rev2_selected_v23.png",
+      "sha256": "600f45cf4d2085130ff0ff1d43d9349df93bec6708efc4cba6a9ecc4dfa7c3fe",
+      "bytes": 1000742,
+      "dimensions": [
+        929,
+        1693
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1141879,
+      "alpha_border_max": 0,
+      "bbox_alpha_ge128": [
+        213,
+        167,
+        725,
+        1526
+      ],
+      "bbox_height_px": 1359,
+      "bbox_height_fraction": 0.802717,
+      "baseline_y_px": 1526,
+      "margins_px": {
+        "left": 213,
+        "top": 167,
+        "right": 204,
+        "bottom": 167
+      },
+      "margin_8_percent_pass": true,
+      "single_character_visible": true,
+      "complete_silhouette_visible": true,
+      "native_alpha_usable": true,
+      "verdict": "animation_key_candidate_with_reservations",
+      "character": "Barry Burton",
+      "state": "selected",
+      "independent_of_author": true,
+      "observed_pose": "Menton relevé, petit objet métallique non identifié maintenu dans main droite près de poitrine, arme gauche abaissée ; pose et équipement principaux cohérents.",
+      "laterality": "Arme argentée main gauche anatomique (droite image), petit objet métallique non identifié main droite anatomique (gauche image), montre gauche et genouillère droite conservées.",
+      "engine_admitted": false,
+      "complete_animation": false,
+      "canonical_one_to_one_certified": false,
+      "issues": [
+        "Cadrage amélioré : la silhouette entière dispose maintenant de plus de 8% de marge sur les quatre côtés.",
+        "Des franges colorées restent visibles ; aucune disparition complète ni qualité alpha finale revendiquée.",
+        "L’échelle anatomique et la baseline ne sont pas validées pour une transition directe entre les trois poses.",
+        "La régénération peut modifier de petits détails ; pas une transformation pixel à pixel de la source."
+      ],
+      "supersedes_sha256": "7f778dd85df1d07b6231edf2082441dfd5ba0ed107840d8ab2cf6edd961bd09a",
+      "superseded_file": "assets/trials/barry_rev2_selected_initial_v23.png",
+      "review_pass": "corrected_selected_2"
+    },
+    {
+      "path": "assets/barry_rev2_confirm_v23.png",
+      "sha256": "51c27ec5d4bd3cc7ba1303cdd1131db86ca348d5ad00348c7a9c988d5813a43d",
+      "bytes": 1220318,
+      "dimensions": [
+        929,
+        1693
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1046207,
+      "alpha_border_max": 0,
+      "bbox_alpha_ge128": [
+        150,
+        124,
+        758,
+        1579
+      ],
+      "bbox_height_px": 1455,
+      "bbox_height_fraction": 0.859421,
+      "baseline_y_px": 1579,
+      "margins_px": {
+        "left": 150,
+        "top": 124,
+        "right": 171,
+        "bottom": 114
+      },
+      "margin_8_percent_pass": false,
+      "single_character_visible": true,
+      "complete_silhouette_visible": true,
+      "native_alpha_usable": true,
+      "verdict": "animation_key_candidate_with_reservations",
+      "engine_admitted": false,
+      "complete_animation": false,
+      "canonical_one_to_one_certified": false,
+      "character": "Barry Burton",
+      "state": "confirm",
+      "independent_of_author": true,
+      "observed_pose": "Tête et regard baissés dans un signe de confirmation ; petit objet descendu devant la ceinture, pieds plus écartés.",
+      "laterality": "Arme argentée dans main gauche, petit objet dans main droite ; montre et équipement restent des mêmes côtés anatomiques.",
+      "issues": [
+        "Silhouette plus petite et baseline plus haute que selected ; pas une frame raccordée directement.",
+        "Angle plus frontal montrant davantage de poches ; géométrie des poches exposées/parties précédemment cachées à recouper, pas de restitution exacte certifiée.",
+        "Petites franges colorées persistent ; 8% de marge non atteints en haut et en bas."
+      ],
+      "recovery_sha256_expected": "51c27ec5d4bd3cc7ba1303cdd1131db86ca348d5ad00348c7a9c988d5813a43d",
+      "recovery_sha256_matches": true,
+      "review_pass": "initial_9_assets"
+    },
+    {
+      "path": "assets/barry_rev2_deselect_v23.png",
+      "sha256": "35d540f958cac3fa370e6d4e5fd612af318f548a13f2d57f0f13820a6781de0c",
+      "bytes": 1055843,
+      "dimensions": [
+        929,
+        1693
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1114397,
+      "alpha_border_max": 1,
+      "bbox_alpha_ge128": [
+        175,
+        154,
+        726,
+        1529
+      ],
+      "bbox_height_px": 1375,
+      "bbox_height_fraction": 0.812168,
+      "baseline_y_px": 1529,
+      "margins_px": {
+        "left": 175,
+        "top": 154,
+        "right": 203,
+        "bottom": 164
+      },
+      "margin_8_percent_pass": true,
+      "single_character_visible": true,
+      "complete_silhouette_visible": true,
+      "native_alpha_usable": true,
+      "verdict": "animation_key_candidate_with_reservations",
+      "engine_admitted": false,
+      "complete_animation": false,
+      "canonical_one_to_one_certified": false,
+      "character": "Barry Burton",
+      "state": "deselect",
+      "independent_of_author": true,
+      "observed_pose": "Deux bras abaissés, petit objet près de cuisse droite ; tête et regard tournés vers la DROITE de l’image (sa gauche anatomique).",
+      "laterality": "Arme reste main gauche, objet reste main droite, accessoires principaux non inversés.",
+      "issues": [
+        "Direction demandée viewer left non suivie : direction réelle viewer right, explicitement conservée dans la revue.",
+        "Silhouette sensiblement plus petite que selected ; ligne des pieds décalée.",
+        "Petit objet conservé sans prétendre identifier sa fonction. Fines franges colorées demeurent."
+      ],
+      "review_pass": "initial_9_assets"
+    },
+    {
+      "path": "assets/billy_re0hd_selected_v23.png",
+      "sha256": "fcc4ce04c2adfc68611fe75cd91992a5ff8cd8f36094367a91dc4713ffbbd4c3",
+      "bytes": 690632,
+      "dimensions": [
+        1036,
+        1519
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1272307,
+      "alpha_border_max": 0,
+      "bbox_alpha_ge128": [
+        300,
+        150,
+        743,
+        1389
+      ],
+      "bbox_height_px": 1239,
+      "bbox_height_fraction": 0.815668,
+      "baseline_y_px": 1389,
+      "margins_px": {
+        "left": 300,
+        "top": 150,
+        "right": 293,
+        "bottom": 130
+      },
+      "margin_8_percent_pass": true,
+      "single_character_visible": true,
+      "complete_silhouette_visible": true,
+      "native_alpha_usable": true,
+      "verdict": "animation_key_candidate_with_reservations",
+      "character": "Billy Coen",
+      "state": "selected",
+      "independent_of_author": true,
+      "observed_pose": "Avant-bras gauche devant poitrine, menotte gauche pendante, tatouage bras droit et arme droite abaissée ; pose et tenue cohérentes.",
+      "laterality": "Tatouage et arme sur bras/main droits anatomiques (gauche image), menotte ouverte et chaîne courte sur poignet gauche (droite image).",
+      "engine_admitted": false,
+      "complete_animation": false,
+      "canonical_one_to_one_certified": false,
+      "issues": [
+        "Cadrage amélioré : la silhouette entière dispose maintenant de plus de 8% de marge sur les quatre côtés.",
+        "Des franges colorées restent visibles ; aucune disparition complète ni qualité alpha finale revendiquée.",
+        "L’échelle anatomique et la baseline ne sont pas validées pour une transition directe entre les trois poses.",
+        "La régénération peut modifier de petits détails ; pas une transformation pixel à pixel de la source.",
+        "La largeur native devient 1036 px au lieu de 1035 pour les deux autres clés ; à prendre en compte au montage sans redimensionnement silencieux."
+      ],
+      "supersedes_sha256": "a93a3c30208083fb5271c9a6de4db3a253008bacabf7246483a65398100d6395",
+      "superseded_file": "assets/trials/billy_re0hd_selected_initial_v23.png",
+      "review_pass": "corrected_selected_2"
+    },
+    {
+      "path": "assets/billy_re0hd_confirm_v23.png",
+      "sha256": "14c13d5e3cd2bf6f5928f89bb93b2ebe5b110e7c5eb764abf535c866dbbe1ce4",
+      "bytes": 789573,
+      "dimensions": [
+        1035,
+        1519
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1227400,
+      "alpha_border_max": 0,
+      "bbox_alpha_ge128": [
+        269,
+        130,
+        825,
+        1439
+      ],
+      "bbox_height_px": 1309,
+      "bbox_height_fraction": 0.861751,
+      "baseline_y_px": 1439,
+      "margins_px": {
+        "left": 269,
+        "top": 130,
+        "right": 210,
+        "bottom": 80
+      },
+      "margin_8_percent_pass": false,
+      "single_character_visible": true,
+      "complete_silhouette_visible": true,
+      "native_alpha_usable": true,
+      "verdict": "animation_key_candidate_with_reservations",
+      "engine_admitted": false,
+      "complete_animation": false,
+      "canonical_one_to_one_certified": false,
+      "character": "Billy Coen",
+      "state": "confirm",
+      "independent_of_author": true,
+      "observed_pose": "Main gauche ouverte levée à hauteur d’épaule, cinq doigts visibles, bras droit bas tenant l’arme ; regard frontal.",
+      "laterality": "Menotte du côté gauche avec partie ouverte pendante ; tatouage et arme restent droits, sans miroir global.",
+      "issues": [
+        "Hauteur et baseline proches de deselect mais différentes de selected.",
+        "Marge basse de 80 px soit environ 5,3%, inférieure aux 8% demandés.",
+        "Franges colorées au bras tatoué et près de la main levée ; microdétails du tatouage, visage et métal à revoir avant admission."
+      ],
+      "review_pass": "initial_9_assets"
+    },
+    {
+      "path": "assets/billy_re0hd_deselect_v23.png",
+      "sha256": "b552a8e299cdc9b0679012a80cb233ca5ded2ea9b5de244ffa6ae3c80ee81fcc",
+      "bytes": 735644,
+      "dimensions": [
+        1035,
+        1519
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1244791,
+      "alpha_border_max": 0,
+      "bbox_alpha_ge128": [
+        297,
+        122,
+        723,
+        1430
+      ],
+      "bbox_height_px": 1308,
+      "bbox_height_fraction": 0.861093,
+      "baseline_y_px": 1430,
+      "margins_px": {
+        "left": 297,
+        "top": 122,
+        "right": 312,
+        "bottom": 89
+      },
+      "margin_8_percent_pass": false,
+      "single_character_visible": true,
+      "complete_silhouette_visible": true,
+      "native_alpha_usable": true,
+      "verdict": "animation_key_candidate_with_reservations",
+      "engine_admitted": false,
+      "complete_animation": false,
+      "canonical_one_to_one_certified": false,
+      "character": "Billy Coen",
+      "state": "deselect",
+      "independent_of_author": true,
+      "observed_pose": "Bras gauche descendu près de cuisse, tête et haut du corps tournés légèrement vers droite image ; arme droite dirigée vers le bas.",
+      "laterality": "Tatouage bras droit, arme main droite, menotte au poignet gauche conservés.",
+      "issues": [
+        "Marge basse inférieure à 8% ; baseline différente de selected.",
+        "Franges rouges/jaunes/blanches près du bras, du poignet et du pistolet ; bord alpha à nettoyer avant admission.",
+        "Vue trois-quarts nouvelle ; volumes du visage et des surfaces nouvellement exposées restent des inférences."
+      ],
+      "review_pass": "initial_9_assets"
+    },
+    {
+      "path": "assets/rebecca_re0hd_selected_v23.png",
+      "sha256": "0762be6bd53fef4d2f8e3716b41af034c02cccc9f57bf42bc14d32ed7da90d82",
+      "bytes": 958974,
+      "dimensions": [
+        1037,
+        1516
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1211525,
+      "alpha_border_max": 1,
+      "bbox_alpha_ge128": [
+        272,
+        24,
+        736,
+        1493
+      ],
+      "bbox_height_px": 1469,
+      "bbox_height_fraction": 0.968997,
+      "baseline_y_px": 1493,
+      "margins_px": {
+        "left": 272,
+        "top": 24,
+        "right": 301,
+        "bottom": 23
+      },
+      "margin_8_percent_pass": false,
+      "single_character_visible": true,
+      "complete_silhouette_visible": true,
+      "native_alpha_usable": true,
+      "verdict": "animation_key_candidate_with_reservations",
+      "engine_admitted": false,
+      "complete_animation": false,
+      "canonical_one_to_one_certified": false,
+      "character": "Rebecca Chambers",
+      "state": "selected",
+      "independent_of_author": false,
+      "observed_pose": "Arme droite abaissée, main gauche hanche, torso redressé et regard frontal.",
+      "laterality": "Poche et arme droites anatomiques, écusson gauche conservés.",
+      "issues": [
+        "Revue par l’auteur du rendu, pas une seconde validation indépendante.",
+        "Marges haut/bas inférieures à 8% et franges colorées fines ; silhouette entière sans rognage visible.",
+        "Visage, mains, écusson et pistolet régénérés, non certifiés 1:1."
+      ],
+      "review_pass": "initial_9_assets"
+    },
+    {
+      "path": "assets/rebecca_re0hd_confirm_v23.png",
+      "sha256": "13ff71020c0773f592f841c28d47aa90d82885f7ad373ff47c0ed2922f33cb5c",
+      "bytes": 977315,
+      "dimensions": [
+        1037,
+        1516
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1215860,
+      "alpha_border_max": 0,
+      "bbox_alpha_ge128": [
+        252,
+        28,
+        699,
+        1485
+      ],
+      "bbox_height_px": 1457,
+      "bbox_height_fraction": 0.961082,
+      "baseline_y_px": 1485,
+      "margins_px": {
+        "left": 252,
+        "top": 28,
+        "right": 338,
+        "bottom": 31
+      },
+      "margin_8_percent_pass": false,
+      "single_character_visible": true,
+      "complete_silhouette_visible": true,
+      "native_alpha_usable": true,
+      "verdict": "animation_key_candidate_with_reservations",
+      "engine_admitted": false,
+      "complete_animation": false,
+      "canonical_one_to_one_certified": false,
+      "character": "Rebecca Chambers",
+      "state": "confirm",
+      "independent_of_author": false,
+      "observed_pose": "Main gauche ouverte levée vers épaule/visage, cinq doigts visibles ; arme droite abaissée, sourire léger.",
+      "laterality": "Geste main gauche libre, arme main droite ; poche droite et écusson gauche conservés.",
+      "issues": [
+        "Revue par l’auteur du rendu, pas une seconde validation indépendante.",
+        "Marges haut/bas inférieures à 8%, franges colorées autour de certains contours.",
+        "Main levée plus haute que la zone haute poitrine décrite ; clé valide pour un signe sobre, pas reproduction d’une animation officielle."
+      ],
+      "review_pass": "initial_9_assets"
+    },
+    {
+      "path": "assets/rebecca_re0hd_deselect_v23.png",
+      "sha256": "30e486f01685a92f98e48fc89e258029f2574d9aad81d3453a9aad674c55c2cd",
+      "bytes": 949752,
+      "dimensions": [
+        1037,
+        1516
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1212021,
+      "alpha_border_max": 1,
+      "bbox_alpha_ge128": [
+        274,
+        32,
+        715,
+        1472
+      ],
+      "bbox_height_px": 1440,
+      "bbox_height_fraction": 0.949868,
+      "baseline_y_px": 1472,
+      "margins_px": {
+        "left": 274,
+        "top": 32,
+        "right": 322,
+        "bottom": 44
+      },
+      "margin_8_percent_pass": false,
+      "single_character_visible": true,
+      "complete_silhouette_visible": true,
+      "native_alpha_usable": true,
+      "verdict": "animation_key_candidate_with_reservations",
+      "engine_admitted": false,
+      "complete_animation": false,
+      "canonical_one_to_one_certified": false,
+      "character": "Rebecca Chambers",
+      "state": "deselect",
+      "independent_of_author": false,
+      "observed_pose": "Deux bras abaissés, main gauche détendue près de cuisse ; tête tournée légèrement droite image, regard encore proche du joueur.",
+      "laterality": "Arme droite, main gauche libre, poche droite et écusson gauche conservés.",
+      "issues": [
+        "Revue par l’auteur du rendu, pas une seconde validation indépendante.",
+        "Amplitude de rotation et axe du regard ne reproduisent pas exactement une consigne métrique ; pose distincte mais non animation certifiée.",
+        "Marges haut/bas inférieures à 8%, franges colorées rouges/jaunes/blanches non retouchées."
+      ],
+      "review_pass": "initial_9_assets"
+    }
+  ],
+  "archive_trials": [
+    {
+      "path": "assets/trials/barry_rev2_selected_initial_v23.png",
+      "sha256": "7f778dd85df1d07b6231edf2082441dfd5ba0ed107840d8ab2cf6edd961bd09a",
+      "bytes": 1316756,
+      "status": "superseded_trial",
+      "original_review_pass": "initial_9_assets",
+      "integrity_matches": true
+    },
+    {
+      "path": "assets/trials/billy_re0hd_selected_initial_v23.png",
+      "sha256": "a93a3c30208083fb5271c9a6de4db3a253008bacabf7246483a65398100d6395",
+      "bytes": 852707,
+      "status": "superseded_trial",
+      "original_review_pass": "initial_9_assets",
+      "integrity_matches": true
+    }
+  ],
+  "current_continuity": [
+    {
+      "character": "Barry Burton",
+      "min_height_px": 1359,
+      "max_height_px": 1455,
+      "height_span_fraction_of_max": 0.065979,
+      "baseline_span_px": 53,
+      "same_canvas_dimensions": true,
+      "animation_alignment_validated": false
+    },
+    {
+      "character": "Billy Coen",
+      "min_height_px": 1239,
+      "max_height_px": 1309,
+      "height_span_fraction_of_max": 0.053476,
+      "baseline_span_px": 50,
+      "same_canvas_dimensions": false,
+      "animation_alignment_validated": false
+    },
+    {
+      "character": "Rebecca Chambers",
+      "min_height_px": 1440,
+      "max_height_px": 1469,
+      "height_span_fraction_of_max": 0.019741,
+      "baseline_span_px": 21,
+      "same_canvas_dimensions": true,
+      "animation_alignment_validated": false
+    }
+  ],
+  "current_summary": {
+    "native_png_files": 11,
+    "candidate_key_poses": 9,
+    "superseded_trials": 2,
+    "characters": 3,
+    "independent_unique_png_reviewed": 8,
+    "author_self_reviewed_png": 3,
+    "complete_animations": 0,
+    "engine_admissions": 0,
+    "canonical_one_to_one_certifications": 0,
+    "current_candidates_margin_8_percent_pass": 3
+  }
+}

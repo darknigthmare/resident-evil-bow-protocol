@@ -1,5 +1,9 @@
 # Resident Evil Combat — publication des lots de production
 
+## Reprise V23 — 27 novembre 2026
+
+La [bible et ses deux extensions](../../docs/combat-bible/README.md) sont intégrées avec leurs originaux et une matrice de 68 sections. Le [lot V23](v23/README.md) ajoute **11 PNG natifs : 9 clés candidates de sélection/confirmation/désélection et 2 essais remplacés**, ainsi qu’un prototype autonome des droits et slots verrouillés. [Galerie](v23/galerie.html) · [Prototype](v23/prototype/index.html) · [Manifeste](v23/ASSET_MANIFEST_V23.json). Les paragraphes suivants conservent leurs bilans historiques ; ils ne représentent pas un total V23. Aucune animation complète ni nouvelle admission moteur n’est attribuée à ces clés.
+
 Les snapshots **V5 à V11 et V14–V17**, intégrés via la [PR #22 fusionnée](https://github.com/darknigthmare/resident-evil-bow-protocol/pull/22), restent figés. La [PR #23](https://github.com/darknigthmare/resident-evil-bow-protocol/pull/23) ajoute **V18** pour revue. Chaque lot conserve ses images, documents et archives d’origine ; les bitmaps de référence et modèles sources restent hors dépôt.
 
 ## Nouvelle continuation du 20 novembre 2026 — V18

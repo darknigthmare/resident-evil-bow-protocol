@@ -36,3 +36,9 @@ npm run verify:r20:http
 Les sprites indépendants de Tyrant RE2R, Licker RE2R, Hunter RE1R et Nemesis RE3R sont livrés avec transparence, manifestes et provenance. Ils servent à la présentation du menu et à la visionneuse DEV ; Tyrant et Nemesis disposent aussi d’une surcouche de portrait dans la sélection Versus. Le rendu animé des combats est conservé. Les animations, le découpage en membres et la fidélité 1:1 du catalogue complet restent à produire.
 
 Fangame non officiel : Resident Evil appartient à ses ayants droit, dont Capcom. Voir également les notes de version et le manifeste dans `docs/`.
+
+## V23 · Bible de combat et deux extensions — 27 novembre 2026
+
+La [bible de combat](docs/combat-bible/README.md) intègre le guide général et ses deux extensions originales : taunts/sélection/équipes/bonus, puis slots verrouillés/droits/déblocages. Une matrice relie leurs 68 sections aux fichiers et aux critères encore ouverts du projet.
+
+Le [lot V23](production-archives/rec-media/v23/README.md) ajoute neuf clés de pose candidates pour Barry, Rebecca et Billy, avec deux premiers essais conservés, une [galerie de revue](production-archives/rec-media/v23/galerie.html) et un [prototype autonome des déblocages](production-archives/rec-media/v23/prototype/index.html). Les clés et le prototype ne sont pas encore raccordés au moteur ; les sources, tests, limites et suites précises sont documentés dans ce lot.

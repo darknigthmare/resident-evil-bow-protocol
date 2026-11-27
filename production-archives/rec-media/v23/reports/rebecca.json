@@ -1,0 +1,240 @@
+{
+  "schema": "rec-v23-rebecca-report-1",
+  "date": "2026-11-27",
+  "timezone": "Europe/Paris",
+  "repository": "darknigthmare/resident-evil-bow-protocol",
+  "base_commit": "7c679b38c72ee4d34fd1c39d1dc8950dd4f506aa",
+  "scope": "Three new menu key poses derived independently from the same generated Rebecca RE0HD V22 base; original edition source and limitations retained.",
+  "skills_used": [
+    "imagegen",
+    "create-game-assets@19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9"
+  ],
+  "assets": [
+    {
+      "asset_id": "REC_REBECCA_RE0HD_SELECTED_KEY_V23",
+      "hero_id": "REC_REBECCA_RE0",
+      "name": "Rebecca Chambers — selected",
+      "category": "animation_key",
+      "edition": "Resident Evil 0 HD Remaster (2016)",
+      "costume": "default S.T.A.R.S.",
+      "state": "selected",
+      "direction": "near_front",
+      "path": "assets/rebecca_re0hd_selected_v23.png",
+      "status": "animation_key_candidate",
+      "tool": "image_gen.imagegen",
+      "generation_mode": "edit",
+      "transparent_background_requested": true,
+      "reference_asset": "production-archives/rec-media/v22/assets/REC_REBECCA_RE0HD_BASE_FULLBODY_FRONT_V22_01.png",
+      "reference_asset_sha256": "172dbdaf65f333ba6cf2f9891640bd4a72c078a80443bbc59e63399f1a72e640",
+      "sources": [
+        "https://www.faxagate.com/en/gaming/resident-evil-0-costumes"
+      ],
+      "source_limitations": [
+        "Source du modèle du remaster HD 2016 ; les détails du rendu GameCube 2002 ne sont pas certifiés équivalents.",
+        "Visage, insignes, coutures et autres petits motifs interprétés depuis une référence de taille limitée.",
+        "Une seule pose statique de présentation ; aucune animation ni intégration moteur ; fidélité 1:1 non certifiée.",
+        "Pose de référence conservée, arme près de la tête et main à la hanche ; petit patch et accessoire au cou à vérifier sur le modèle HD."
+      ],
+      "dimensions": [
+        1037,
+        1516
+      ],
+      "mode": "RGBA",
+      "file_bytes": 958974,
+      "sha256": "0762be6bd53fef4d2f8e3716b41af034c02cccc9f57bf42bc14d32ed7da90d82",
+      "git_blob_sha": "d1617f4ed19a5e4d4762df17322d54fcb626fffb",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1211525,
+      "fully_opaque_pixels": 1648,
+      "bbox_alpha_ge128": [
+        272,
+        24,
+        736,
+        1493
+      ],
+      "margins_alpha_ge128_px": {
+        "left": 272,
+        "top": 24,
+        "right": 301,
+        "bottom": 23
+      },
+      "requested_eight_percent_margin_met": false,
+      "visual_review": [
+        "Corps entier, vue presque frontale, regard attentif, arme abaissée dans la main droite, main gauche sur la hanche.",
+        "Poche à droite anatomique, écusson à gauche anatomique et style de tenue conservés.",
+        "Marges hautes et basses inférieures à 8%, sans rognage visible du corps ou de l'arme.",
+        "Franges colorées fines visibles autour de certains contours; aucune retouche appliquée."
+      ],
+      "limitations": [
+        "Clé de pose adaptée pour une interface de sélection, sans source prouvant cette animation officielle Capcom.",
+        "Pose statique isolée : in-betweens, timing, pivots, stabilité de baseline et intégration moteur non validés.",
+        "Les détails fins, la position exacte des doigts, la morphologie du visage et le modèle du pistolet sont régénérés ; absence de certification pixel à pixel.",
+        "Les marges hautes/basses restent inférieures à 8% ; franges colorées fines conservées sans nettoyage."
+      ],
+      "canonical_fidelity_1_1_certified": false,
+      "animation_complete": false,
+      "engine_admitted": false,
+      "image_pixels_modified_after_generation": false,
+      "prompt": "Use case: identity-preserve.\nAsset type: ONE full-body transparent raster sprite, selected-state key pose for Resident Evil Combat.\nInput image 1 is the EDIT TARGET and sole visual authority: the existing generated Rebecca Chambers RE0 HD Remaster 2016 base sprite. Preserve this exact face, short dark bob, natural adult proportions, outfit, gray vest, green short-sleeve shirt, left-shoulder patch, brown collar, fingerless gloves, belt buckle, right-hip green pouch, cargo trousers with turned-up cuffs, gray socks, black boots, materials, colors and detailed shading. Preserve all anatomical left/right assignments, no mirroring or redesign.\nChange ONLY the pose: Rebecca straightens her torso slightly, head upright, eyes attentive toward the viewer, with a calm neutral expression. Lower her anatomically RIGHT arm to her side holding the same handgun pointed down toward the floor, index finger straight along the frame outside the trigger; left hand rests relaxed at the left hip. Keep a near-frontal three-quarter presentation close to the source with both boots planted; no action, firing, target or violence. This is a modest game-menu pose.\nTechnical composition: one single complete character including every boot sole and the whole handgun, centered, consistent scale, comfortable 8% transparent margin on all sides. Genuine native alpha transparency, no scene, floor, shadow, checkerboard pixels, solid backdrop, border, labels, text, watermark, extra objects or second character. Match the source rendering style. This is one static key pose, not a sprite sheet.",
+      "review_report": "reports/rebecca.json"
+    },
+    {
+      "asset_id": "REC_REBECCA_RE0HD_CONFIRM_KEY_V23",
+      "hero_id": "REC_REBECCA_RE0",
+      "name": "Rebecca Chambers — confirm",
+      "category": "animation_key",
+      "edition": "Resident Evil 0 HD Remaster (2016)",
+      "costume": "default S.T.A.R.S.",
+      "state": "confirm",
+      "direction": "near_front",
+      "path": "assets/rebecca_re0hd_confirm_v23.png",
+      "status": "animation_key_candidate",
+      "tool": "image_gen.imagegen",
+      "generation_mode": "edit",
+      "transparent_background_requested": true,
+      "reference_asset": "production-archives/rec-media/v22/assets/REC_REBECCA_RE0HD_BASE_FULLBODY_FRONT_V22_01.png",
+      "reference_asset_sha256": "172dbdaf65f333ba6cf2f9891640bd4a72c078a80443bbc59e63399f1a72e640",
+      "sources": [
+        "https://www.faxagate.com/en/gaming/resident-evil-0-costumes"
+      ],
+      "source_limitations": [
+        "Source du modèle du remaster HD 2016 ; les détails du rendu GameCube 2002 ne sont pas certifiés équivalents.",
+        "Visage, insignes, coutures et autres petits motifs interprétés depuis une référence de taille limitée.",
+        "Une seule pose statique de présentation ; aucune animation ni intégration moteur ; fidélité 1:1 non certifiée.",
+        "Pose de référence conservée, arme près de la tête et main à la hanche ; petit patch et accessoire au cou à vérifier sur le modèle HD."
+      ],
+      "dimensions": [
+        1037,
+        1516
+      ],
+      "mode": "RGBA",
+      "file_bytes": 977315,
+      "sha256": "13ff71020c0773f592f841c28d47aa90d82885f7ad373ff47c0ed2922f33cb5c",
+      "git_blob_sha": "2846e136e27ccff0effd2d0e0603acc5390a648a",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1215860,
+      "fully_opaque_pixels": 1887,
+      "bbox_alpha_ge128": [
+        252,
+        28,
+        699,
+        1485
+      ],
+      "margins_alpha_ge128_px": {
+        "left": 252,
+        "top": 28,
+        "right": 338,
+        "bottom": 31
+      },
+      "requested_eight_percent_margin_met": false,
+      "visual_review": [
+        "Corps entier, main gauche ouverte levée vers l'épaule/visage, cinq doigts visibles; arme abaissée dans la main droite.",
+        "Sourire léger et pose frontale, costume et accessoires conservés avec détails fins régénérés.",
+        "Marges hautes et basses inférieures à 8%, sans rognage visible; silhouettes et baselines à aligner avant animation.",
+        "Franges colorées fines visibles; aucune retouche appliquée."
+      ],
+      "limitations": [
+        "Clé de pose adaptée pour une interface de sélection, sans source prouvant cette animation officielle Capcom.",
+        "Pose statique isolée : in-betweens, timing, pivots, stabilité de baseline et intégration moteur non validés.",
+        "Les détails fins, la position exacte des doigts, la morphologie du visage et le modèle du pistolet sont régénérés ; absence de certification pixel à pixel.",
+        "Les marges hautes/basses restent inférieures à 8% ; franges colorées fines conservées sans nettoyage."
+      ],
+      "canonical_fidelity_1_1_certified": false,
+      "animation_complete": false,
+      "engine_admitted": false,
+      "image_pixels_modified_after_generation": false,
+      "prompt": "Use case: identity-preserve.\nAsset type: ONE full-body transparent raster sprite, selection-confirmation key pose for Resident Evil Combat.\nInput image 1 is the EDIT TARGET and sole visual authority: the existing generated Rebecca Chambers RE0 HD Remaster 2016 base sprite. Preserve this exact face and short dark bob, natural adult body proportions, detailed shading, olive green short-sleeve shirt, gray vest, left-shoulder patch, brown collar, fingerless gloves, two belts, metal buckle, anatomically right-hip green pouch, cargo trousers with turned-up cuffs, gray socks and black boots. Preserve every equipment placement, color and anatomical left/right assignment; no mirroring, new accessories or redesign.\nChange ONLY the pose: calm near-frontal stance, torso upright, both boots planted shoulder-width apart. Lower her anatomically RIGHT arm beside her body holding the same handgun pointed down toward the floor with index finger outside the trigger. Raise the empty anatomically LEFT hand to upper-chest height in a small relaxed acknowledgment, palm forward, five natural fingers gently open, elbow bent. Small warm restrained smile, eyes looking toward the viewer. Quiet menu confirmation, no shooting or target, no action effects.\nComposition: one complete single character, all hands, handgun, boots and soles visible; center her with generous clear transparent padding, at least 8% on every side, head and feet well inside the canvas. Genuine alpha transparency; no background, floor, ground shadow, checkerboard pattern, text, frame, duplicate character, watermark or labels. Match the source raster rendering style and its costume exactly. One static key, not an animation or sheet.",
+      "review_report": "reports/rebecca.json"
+    },
+    {
+      "asset_id": "REC_REBECCA_RE0HD_DESELECT_KEY_V23",
+      "hero_id": "REC_REBECCA_RE0",
+      "name": "Rebecca Chambers — deselect",
+      "category": "animation_key",
+      "edition": "Resident Evil 0 HD Remaster (2016)",
+      "costume": "default S.T.A.R.S.",
+      "state": "deselect",
+      "direction": "near_front",
+      "path": "assets/rebecca_re0hd_deselect_v23.png",
+      "status": "animation_key_candidate",
+      "tool": "image_gen.imagegen",
+      "generation_mode": "edit",
+      "transparent_background_requested": true,
+      "reference_asset": "production-archives/rec-media/v22/assets/REC_REBECCA_RE0HD_BASE_FULLBODY_FRONT_V22_01.png",
+      "reference_asset_sha256": "172dbdaf65f333ba6cf2f9891640bd4a72c078a80443bbc59e63399f1a72e640",
+      "sources": [
+        "https://www.faxagate.com/en/gaming/resident-evil-0-costumes"
+      ],
+      "source_limitations": [
+        "Source du modèle du remaster HD 2016 ; les détails du rendu GameCube 2002 ne sont pas certifiés équivalents.",
+        "Visage, insignes, coutures et autres petits motifs interprétés depuis une référence de taille limitée.",
+        "Une seule pose statique de présentation ; aucune animation ni intégration moteur ; fidélité 1:1 non certifiée.",
+        "Pose de référence conservée, arme près de la tête et main à la hanche ; petit patch et accessoire au cou à vérifier sur le modèle HD."
+      ],
+      "dimensions": [
+        1037,
+        1516
+      ],
+      "mode": "RGBA",
+      "file_bytes": 949752,
+      "sha256": "30e486f01685a92f98e48fc89e258029f2574d9aad81d3453a9aad674c55c2cd",
+      "git_blob_sha": "d3de68bd58f30cd005a0468ccea70fd1cbd437de",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1212021,
+      "fully_opaque_pixels": 1345,
+      "bbox_alpha_ge128": [
+        274,
+        32,
+        715,
+        1472
+      ],
+      "margins_alpha_ge128_px": {
+        "left": 274,
+        "top": 32,
+        "right": 322,
+        "bottom": 44
+      },
+      "requested_eight_percent_margin_met": false,
+      "visual_review": [
+        "Corps entier, deux bras abaissés, main gauche ouverte détendue près de la cuisse; arme dans la main droite.",
+        "Tête légèrement tournée vers sa gauche, regard encore proche de la caméra; l'amplitude exacte de 10 degrés n'est pas certifiée.",
+        "Pose distincte des deux autres clés, costume conservé sans nouvelle transformation.",
+        "Marges hautes et basses inférieures à 8%; franges colorées rouges/jaunes/blanches visibles près de certains contours, non retouchées."
+      ],
+      "limitations": [
+        "Clé de pose adaptée pour une interface de sélection, sans source prouvant cette animation officielle Capcom.",
+        "Pose statique isolée : in-betweens, timing, pivots, stabilité de baseline et intégration moteur non validés.",
+        "Les détails fins, la position exacte des doigts, la morphologie du visage et le modèle du pistolet sont régénérés ; absence de certification pixel à pixel.",
+        "Les marges hautes/basses restent inférieures à 8% ; franges colorées fines conservées sans nettoyage."
+      ],
+      "canonical_fidelity_1_1_certified": false,
+      "animation_complete": false,
+      "engine_admitted": false,
+      "image_pixels_modified_after_generation": false,
+      "prompt": "Use case: identity-preserve.\nAsset type: ONE full-body transparent raster sprite, deselection / return-to-rest key pose for Resident Evil Combat.\nInput image 1 is the EDIT TARGET and sole visual authority: the existing generated Rebecca Chambers RE0 HD Remaster 2016 base sprite. Keep this exact face, short dark brown bob, natural adult anatomy, gray vest with straps, olive green shirt and trousers, left-shoulder patch, brown collar, black fingerless gloves, metal belt buckle, anatomically right-hip green pouch, cuffs, gray socks and black boots. Preserve all asymmetric costume details and their anatomical sides. Keep its detailed raster shading, palette, material texture and frontal camera.\nChange only her body pose and gaze: both arms are now lowered naturally beside her body. Her anatomically RIGHT hand holds the same handgun safely pointed straight downward, index finger outside the trigger. The empty LEFT hand hangs relaxed near the left thigh with naturally curved fingers. Her torso stays near frontal, shoulders relax slightly, and her head and gaze turn only about 10 degrees toward her own LEFT (viewer right), as if returning attention to the menu. Quiet neutral expression, both boots planted, no side profile, no walking, no shooting, no opponent or effects. This must be visibly distinct from the original hand-on-hip pose.\nComposition: a single full character with the full handgun, hands, boots and soles inside the canvas, centered; allow 8% empty transparent space around the entire silhouette, including above the head and below feet. Genuine alpha transparency, no backdrop or floor, no cast shadow, no baked checkerboard, words, label, border, watermark, spare objects or extra figure. One static key pose only, no sprite sheet. Preserve the original appearance instead of adding any new detail.",
+      "review_report": "reports/rebecca.json",
+      "recovery_note": "Imagegen returned data URL without output_hint while /workspace was full. Exact returned PNG bytes decoded into /tmp; no generation rerun or pixel modification."
+    }
+  ],
+  "refusals": [],
+  "summary": {
+    "native_png": 3,
+    "retained_key_candidates": 3,
+    "characters": 1,
+    "complete_animations": 0,
+    "engine_admissions": 0,
+    "canonical_1_1_certifications": 0,
+    "refusals": 0
+  },
+  "post_generation_policy": "Original PNG bytes preserved; Pillow used only to decode/inspect and compute alpha metrics; no image editing, resizing, recoloring, mirroring or re-encoding.",
+  "visual_review_method": "Source inspected with view_image before edit; all three native outputs inspected at tool-return display resolution."
+}

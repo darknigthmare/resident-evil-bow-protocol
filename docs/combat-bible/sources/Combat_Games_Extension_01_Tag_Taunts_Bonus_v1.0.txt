@@ -1,0 +1,1233 @@
+COMBAT GAMES — EXTENSION 01
+PERSONNALITÉ, SÉLECTION, ÉQUIPES, CLASHES, ENTITÉS ET ACTIVITÉS BONUS
+Version 1.0 — 26 novembre 2026 — Pour les projets de Darknigthmare
+
+Complément au fichier Combat_Games_Guide_General_v1.0.txt.
+Les sections 30 à 49 prolongent les sections 00 à 29 du guide général.
+Cette extension peut être jointe séparément ou ajoutée à la bible du projet.
+
+OBJECTIF
+
+Enrichir les jeux de combat avec des provocations fidèles aux personnages,
+des animations de sélection et de désélection, des assistances, de vrais
+changements de combattant, des techniques et finishers d'équipe, des fins
+dramatiques conditionnelles, des affrontements interactifs entre techniques,
+des entités propres aux movesets, des stages bonus et un espace d'exploration
+permettant de débloquer des contenus.
+
+Les systèmes sont conçus en fonction du lore, du moteur et des modes de chaque
+projet. Toute valeur chiffrée future doit être identifiée comme hypothèse
+de réglage, mesurée et testée. Les exemples de création ne sont pas du canon.
+
+SOMMAIRE
+
+30. Portée et rattachement au guide général
+31. Taunts : provocations et réactions de personnalité
+32. Animations de sélection, confirmation et désélection
+33. Profils d'équipe et catégories de partenaires
+34. Commandes, jauges et disponibilité
+35. Assistances ponctuelles
+36. Tag : changement réel de combattant
+37. Techniques combinées et supers d'équipe
+38. Finishers d'équipe et fins dramatiques conditionnelles
+39. Clashes et confrontations avec QTE
+40. Movesets à entités indépendantes et objets placés
+41. Projectiles persistants et règles communes aux entités
+42. Stages bonus et épreuves intégrées aux histoires
+43. Espace d'exploration et de déblocage inspiré de la Krypt
+44. Cohérence narrative, relations et compatibilités
+45. Assets, animations, sons et mise en scène
+46. Interface, apprentissage, accessibilité et réseau
+47. Validation, statistiques et ordre d'intégration
+48. Dix fiches de production complémentaires
+49. Instruction d'intégration et références
+
+
+30. PORTÉE ET RATTACHEMENT AU GUIDE GÉNÉRAL
+
+Les fonctions demandées deviennent des rubriques explicites de la bible.
+Pour chaque projet, indiquer leurs modes d'utilisation, leur périmètre,
+leur priorité et leurs dépendances. Une incompatibilité doit être expliquée
+et recevoir, lorsque possible, une adaptation cohérente avec l'univers.
+
+Correspondances principales avec le guide général :
+
+- Sections 03, 05 et 07 : personnages, movesets et présentation.
+- Sections 06, 08, 09 et 10 : finishers, récits et scènes narratives.
+- Sections 11, 12, 14, 15 et 16 : modes, boss, stages et entités.
+- Sections 17 à 24 : production, UX, entraînement, équilibre et progression.
+- Sections 25 à 28 : suivi, critères de validation et instructions au projet.
+
+Conserver cinq statuts de fidélité : canon attesté, adaptation jouable,
+original compatible, alternatif/crossover et à confirmer.
+Fixer l'œuvre, l'épisode, la version et la période pour chaque référence.
+
+DISTINCTIONS À CONSERVER
+
+- Assistance : apparition temporaire d'un partenaire du roster.
+- Tag/relais : transfert réel du contrôle à un autre combattant.
+- Super d'équipe : attaque de combat réalisée conjointement.
+- Finisher d'équipe : conclusion collective après une condition définie.
+- Fin dramatique : scène de conclusion liée à un contexte particulier.
+- Entité native : compagnon, double, objet ou effet appartenant au moveset.
+- Clash : confrontation spécifique entre actions compatibles.
+- Stage bonus : épreuve distincte du duel, intégrée à un parcours.
+- Espace de déblocage : lieu exploratoire reliant progression et collections.
+
+Une même scène peut combiner plusieurs fonctions, mais chaque fonction garde
+ses conditions et ses règles. Une invocation native ne consomme un emplacement
+d'équipe que si le projet le décide explicitement et le justifie.
+
+Livrable de cette extension : spécifications de conception et de production.
+Les états « conçu », « produit », « intégré » et « testé » restent distincts.
+Respecter la phase demandée : documenter les animations maintenant, puis les
+produire dans la phase prévue si le travail en cours porte sur des sprites fixes.
+
+
+31. TAUNTS : PROVOCATIONS ET RÉACTIONS DE PERSONNALITÉ
+
+Prévoir des provocations volontaires exprimant la personnalité : défi,
+moquerie, salut, menace, démonstration de maîtrise, geste rituel, réaction
+silencieuse ou interaction avec une arme ou un compagnon.
+
+FAMILLES À ENVISAGER
+
+- Provocation générique en combat.
+- Variante propre à un rival, un allié ou un boss.
+- Variante selon costume, transformation ou équipement.
+- Geste de respect ou défi avant/après une rencontre lorsque le mode le permet.
+- Échange court entre partenaires, réservé aux duos compatibles.
+- Réaction contextuelle à un événement déjà défini dans les règles.
+
+Le nombre dépend du personnage et de la production. Prioriser une provocation
+complète par personnage concerné, puis les variantes à forte valeur narrative.
+
+FICHE OBLIGATOIRE
+
+- Identifiant, nom, source et statut de fidélité.
+- Commande, conditions d'accès et contextes de déclenchement.
+- Entrée, pose ou boucle éventuelle, sortie et durée.
+- Expression, regard, gestes, accessoires, dialogue, VFX et SFX.
+- Vulnérabilité et réaction si le personnage reçoit un coup.
+- Moments où une autre action peut interrompre la provocation.
+- Reprise de garde, déplacement ou contrôle à la sortie.
+- Fréquence de répétition des voix et interactions avec les partenaires.
+
+Deux catégories doivent être annoncées :
+
+TAUNT DE PRÉSENTATION : exprime une personnalité sans bonus direct de ressource.
+Son exposition pendant le combat reste définie ; il ne suspend pas l'adversaire.
+
+TAUNT À EFFET DE JEU : recharge, modifie un état ou produit un effet particulier
+uniquement si le kit retenu le prévoit. Il reçoit un coût, une durée, un risque,
+des limites et des réponses adverses comme toute autre action.
+
+Une interruption immédiate ne doit pas annuler gratuitement la contrepartie
+annoncée. Définir les fenêtres autorisées et vérifier leurs conséquences.
+
+Les provocations automatiques restent courtes et limitées aux états prévus.
+Elles ne doivent pas voler une commande du joueur ni forcer une scène longue
+pendant un échange. Prévoir des réglages de fréquence et de voix répétées.
+
+
+32. ANIMATIONS DE SÉLECTION, CONFIRMATION ET DÉSÉLECTION
+
+Chaque personnage doit disposer d'une présentation adaptée à l'écran de roster.
+Prévoir une animation de sélection ET une véritable animation de désélection,
+avec une sortie cohérente : recul, rangement d'arme, départ, disparition liée
+à un pouvoir, rappel de compagnon ou retour à sa pose de présentation.
+
+ÉTATS À DISTINGUER
+
+- SURVOL : le curseur consulte le personnage, sans le verrouiller.
+- PRÉSÉLECTION : aperçu du personnage, de sa version et de son équipement.
+- CONFIRMATION : réaction au choix validé, pose et éventuelle réplique.
+- ATTENTE CONFIRMÉE : boucle courte pendant le choix de l'autre joueur.
+- CHANGEMENT DE COSTUME : actualisation cohérente de l'aperçu.
+- DÉSÉLECTION : annulation, retrait du membre ou remplacement.
+- VALIDATION D'ÉQUIPE : présentation du groupe et des compatibilités.
+- DÉPART VERS LE COMBAT : transition vers la présentation versus.
+
+La désélection peut être abrégée lorsque le joueur navigue rapidement.
+Conserver une version complète observable et une sortie courte propre.
+La prise en compte du choix ne doit pas attendre la fin de l'animation.
+
+Adapter les accessoires, les entités et les effets à la version affichée.
+Lors d'une désélection, arrêter ou retirer les éléments appartenant à cet
+aperçu : voix, particules, compagnon, ombres et éclairages particuliers.
+
+Ne pas supposer qu'une animation jouée à l'envers donne une bonne désélection.
+Un geste de rangement, une réplique ou un déplacement peut exiger une séquence
+spécifique. Réutiliser des poses uniquement lorsque le résultat reste cohérent.
+
+POUR LES ÉQUIPES
+
+- Identifier actif, réserve et soutien.
+- Montrer qui peut être contrôlé et qui intervient seulement en assistance.
+- Signaler une super combinée ou une scène particulière disponible.
+- Prévoir une pose de duo pour les associations prioritaires.
+- Réagir proprement au retrait ou au remplacement d'un membre.
+- Afficher la raison d'une association indisponible dans le mode choisi.
+
+Tester les deux curseurs, les choix simultanés, les personnages identiques,
+les costumes différents, la sélection aléatoire et le changement rapide.
+Le mode à animations réduites utilise des poses lisibles et conserve les mêmes
+informations. Une option peut abréger les présentations déjà vues.
+
+
+33. PROFILS D'ÉQUIPE ET CATÉGORIES DE PARTENAIRES
+
+Choisir un profil pour chaque mode, visible avant le lancement de la partie.
+
+PROFIL ASSISTANCE
+
+Un combattant est contrôlé. Un ou plusieurs partenaires autorisés interviennent
+ponctuellement puis se retirent. Leur présence n'implique pas un kit complet
+contrôlable. La défaite suit la règle du combattant principal annoncée.
+
+PROFIL TAG
+
+Le joueur sélectionne plusieurs combattants et peut transférer le contrôle
+entre l'actif et la réserve. Les assistances sont une fonction distincte.
+
+PROFIL HYBRIDE
+
+Les membres de réserve peuvent fournir une assistance ou devenir actifs.
+Leurs disponibilités et ressources doivent empêcher les usages contradictoires.
+
+Pour chaque profil, fixer : nombre de membres, rôles, doublons autorisés,
+variantes compatibles, jauges de vie, ordre de départ et condition de défaite.
+Choisir explicitement entre défaite au premier KO, élimination de toute l'équipe
+ou règle scénarisée. Ne pas importer cette règle implicitement d'une référence.
+
+POINT DE DÉPART PROPOSÉ POUR UN MODE HYBRIDE À DEUX
+
+- Un actif et une réserve, chacun possédant sa vie.
+- Élimination de l'équipe lorsque les deux combattants sont hors combat.
+- Jauge d'équipe pour les actions collectives, ressources propres pour les kits.
+- Un seul partenaire de roster en intervention temporaire à la fois par équipe.
+- Relais automatique après KO, sans coût empêchant l'arrivée d'un survivant.
+- Assistances, relais volontaires et supers régis par leurs coûts et conditions.
+
+Ce profil est une proposition du guide, pas la description d'un jeu existant.
+Le projet peut en retenir un autre en documentant ses règles.
+
+ENTITÉS NATIVES
+
+Un double, un drone, une marionnette, une invocation ou un objet déployé possède
+son propriétaire et ses règles propres. Il ne devient pas automatiquement
+un troisième membre d'équipe. Les budgets d'entités et d'assistances sont
+distincts, puis testés ensemble pour éviter la saturation.
+
+Le rôle actif ou réserve reste distinct de l'état d'action. Un membre déjà
+engagé dans une assistance, une sortie ou une technique collective ne peut pas
+être engagé une seconde fois. Une super duo mobilise l'actif et un partenaire
+disponible, puis définit lequel reste actif à sa sortie.
+
+
+34. COMMANDES, JAUGES ET DISPONIBILITÉ
+
+Créer des actions de commande distinctes, remappables sur les périphériques :
+
+- TAUNT : provocation choisie.
+- ASSISTANCE : appel du soutien sélectionné.
+- ASSISTANCE + DIRECTION : variante définie de l'intervention, si retenue.
+- RELAIS : changement de combattant.
+- SUPER_DUO : technique combinée lorsque les conditions sont réunies.
+- FINISHER_EQUIPE : conclusion collective pendant sa fenêtre autorisée.
+- ORDRE_ENTITE : ordre réservé au kit du personnage concerné.
+
+Ces noms désignent des actions, pas des touches physiques obligatoires.
+Prévoir manette, clavier et périphériques annoncés par le projet.
+
+Un même bouton peut proposer appui court et maintien si cette ergonomie est
+retenue. Il faut alors fixer le seuil, le moment de validation et les priorités
+pour éviter qu'une assistance parte pendant une demande de relais.
+Des raccourcis distincts doivent permettre une utilisation sans ambiguïté.
+
+ÉCONOMIE RECOMMANDÉE
+
+Une jauge commune aux actions d'équipe peut faire choisir entre une aide
+immédiate, un relais et une attaque combinée plus coûteuse. Les ressources
+intrinsèques restent attachées à leur personnage ou à leur entité.
+
+Pour chaque jauge : capacité, état initial, sources de gain, dépenses,
+recharge, plafonds, conservation entre manches et visibilité.
+Les gains liés à une attaque doivent respecter les limites de combo définies.
+Décider si une recharge passive garantit un retour progressif aux actions
+d'équipe ; ce choix doit être testé contre les stratégies d'attente abusive.
+
+Distinguer :
+
+- JAUGE DISPONIBLE : quantité de ressource immédiatement dépensable.
+- RÉCUPÉRATION : temps restant avant de pouvoir rappeler le partenaire.
+- CHARGE D'UNE ACTION : maintien ou préparation nécessaire à une technique.
+- ÉTAT DU PARTENAIRE : disponible, engagé, actif, touché, sorti ou KO.
+
+Une barre pleine ne suffit pas si le partenaire est indisponible.
+Afficher clairement les raisons d'un refus et ne pas consommer une ressource
+pour une commande que les règles rejettent avant son engagement.
+
+Fixer qui paie, quand le coût est prélevé, et ce qui est conservé ou remboursé
+si l'action échoue ou est interrompue. Deux actions simultanées ne peuvent pas
+dépenser la même portion de jauge.
+
+La récupération suit une horloge de jeu définie. Préciser son évolution
+pendant pause, hitstop, cinématique, changement de zone et passage en réserve.
+Un switch ne recharge pas gratuitement le personnage ni ses objets.
+
+
+35. ASSISTANCES PONCTUELLES
+
+Choisir les actions de soutien selon le personnage : frappe courte, projectile,
+contrôle d'espace, protection, couverture, déplacement ou autre fonction
+attestée ou adaptée de façon explicite.
+
+Le soutien dispose d'un sous-ensemble documenté de ses capacités. Éviter de
+lui donner automatiquement toutes les options de son kit jouable.
+
+CYCLE COMPLET
+
+Disponible, appel engagé, arrivée, action, sortie, récupération, disponible.
+Ajouter les branches touché, interrompu ou KO lorsque la règle les prévoit.
+
+La fiche précise :
+
+- Commande, coût, variante et états depuis lesquels l'appel est autorisé.
+- Point d'arrivée, orientation, cible et délai avant la première action.
+- Signaux visuels et sonores permettant à l'adversaire de réagir.
+- Durée d'attaque, récupération et point de sortie.
+- Vulnérabilité, dégâts reçus et conséquence sur la vie de la réserve.
+- Réponse à une projection, un mur, une transition ou un boss géant.
+- Sortie si l'actif ou le soutien est mis KO.
+- Moment de départ de la récupération et conditions de rappel.
+
+Un appel en pleine réception de coups ou pendant une garde doit être conçu
+comme un secours défensif particulier, avec son coût et ses limites.
+
+Si une attaque touche à la fois l'actif et son soutien, définir les dégâts
+de chaque cible, les ressources générées et le suivi du combo. Éviter les
+récompenses doublées involontaires sur une même jauge partagée.
+
+Les assistances doivent pouvoir être entraînées et testées : appel libre,
+réaction à une situation, interruption et réponse à l'intervention adverse.
+
+
+36. TAG : CHANGEMENT RÉEL DE COMBATTANT
+
+Le tag transfère effectivement les commandes, le HUD pertinent et le contrôle
+au partenaire. Définir le moment exact où l'entrant devient le combattant actif.
+
+FORMES À DISTINGUER
+
+- RELAIS VOLONTAIRE : changement en situation autorisée, avec exposition définie.
+- RELAIS DE COMBO : passage après certaines actions pour prolonger une séquence.
+- RELAIS DE SECOURS : sortie défensive coûteuse, si le système le prévoit.
+- RELAIS APRÈS KO : arrivée du survivant lorsque la condition de victoire le permet.
+- RELAIS SCÉNARISÉ : changement imposé par un chapitre ou un objectif.
+
+Chaque forme reçoit commande, coût, délais, restrictions et solution d'échec.
+Une fonction de secours ne doit pas apparaître implicitement dans le tag libre.
+
+Définir départ, entrée, positions, orientation, collisions, vulnérabilité,
+éventuelle invulnérabilité et reprise du contrôle.
+L'arrivée peut être une course, un saut, un passage de relais ou une manifestation
+de pouvoir lorsqu'elle est compatible avec le personnage et l'arène.
+
+GESTION DES RESSOURCES
+
+- Vie propre ou vie partagée : règle annoncée pour le mode.
+- Vie éventuellement récupérable en réserve, avec rythme et plafond.
+- Conservation des munitions, transformations et ressources spécifiques.
+- Conservation des coûts et récupérations déjà engagés.
+- Traitement des effets positifs et négatifs pendant la réserve.
+- Réaction à l'absence de réserve disponible ou à l'épuisement de la jauge.
+
+Le relais de combo partage l'historique du combo : dégâts réduits, rebonds,
+captures et limites de prolongation. Le changement d'attaquant n'efface pas
+les restrictions déjà consommées.
+
+Une menace visant l'ancien actif doit garder une règle explicite : continuer
+vers sa position, conserver sa cible, perdre le suivi ou viser l'entrant
+uniquement si cette propriété est prévue. Le switch ne réécrit pas silencieusement
+le propriétaire ou la cible de tous les objets présents.
+
+Prévoir les intros et victoires d'équipe ainsi que les dialogues de relais
+prioritaires pour les duos ayant une relation forte.
+
+
+37. TECHNIQUES COMBINÉES ET SUPERS D'ÉQUIPE
+
+Prévoir des attaques puissantes mettant réellement en scène les deux membres
+ou le nombre de participants retenu. Chaque personnage doit contribuer avec
+ses propres techniques, armes, mouvements ou capacités.
+
+FORMES POSSIBLES
+
+- RELAIS D'ULTIMES : une technique prépare ou prolonge celle du partenaire.
+- ATTAQUE SYNCHRONISÉE : les participants agissent ensemble.
+- CHORÉGRAPHIE EXCLUSIVE : enchaînement conçu pour un duo particulier.
+- TECHNIQUE COMBINÉE ATTESTÉE : adaptation d'une action réellement présente
+  dans la source choisie.
+
+La référence Naruto X Boruto Ultimate Ninja Storm Connections confirme
+l'existence de techniques combinées associées à des compositions précises [E04].
+Les nouvelles techniques des projets reçoivent leurs propres fiches et statuts.
+
+CONDITIONS À FIXER
+
+- Composition, versions et états compatibles.
+- Partenaire disponible et autorisé dans la scène ou le mode.
+- Jauge, coût, portée et commande.
+- Éventuelle ouverture obtenue par une première attaque.
+- Règles en touche, en garde, en échec et en interruption.
+- Nombre de cibles et compatibilité avec les boss.
+
+Point de départ conseillé : déclencher la longue chorégraphie seulement
+après la confirmation de l'attaque initiale sur une cible compatible.
+L'échec ou la garde reçoit une résolution courte et ses conséquences de combat.
+
+Une fois engagés, les participants deviennent indisponibles pour un appel
+ou un switch parallèle. Définir la sortie de séquence, les positions, le membre
+qui reste actif, les ressources et la possibilité de poursuivre le combo.
+
+MISE EN SCÈNE
+
+Préparation visible, arrivée du partenaire, contribution de chacun, impact
+principal, réaction de la cible et retour lisible au jeu. Prévoir cadrage,
+durée, répliques, sons, VFX et variantes de taille ou de morphologie.
+
+Prioriser les duos attestés ou narrativement importants. Pour les autres,
+prévoir un relais générique compatible ou annoncer l'absence de super commune.
+Une séquence générique reste identifiée comme telle dans le suivi.
+
+Les durées, dégâts et gains de jauge restent intégrés à l'équilibrage normal.
+Une longue cinématique ne doit pas permettre une récupération gratuite
+de toutes les assistances sans que ce soit une règle délibérée du mode.
+
+
+38. FINISHERS D'ÉQUIPE ET FINS DRAMATIQUES CONDITIONNELLES
+
+FINISHER D'ÉQUIPE
+
+Conclusion exécutée par plusieurs membres : neutralisation coordonnée,
+capture, scellement, attaque terminale, extraction, rituel ou autre résultat
+cohérent avec le ton et les intentions des personnages.
+
+Préciser commande, fenêtre, participants, disponibilité, coût éventuel,
+cible, lieu, résultat, durée et conditions de remplacement.
+Un partenaire KO ne revient pas implicitement à la vie pour participer.
+Une apparition mémorielle, spirituelle ou enregistrée exige une justification.
+
+FIN DRAMATIQUE CONDITIONNELLE
+
+Scène particulière déclenchée par une combinaison définie de circonstances.
+Elle peut être individuelle ou collective ; une variante collective peut
+servir de finisher d'équipe dramatique.
+
+Les scènes dramatiques de Dragon Ball FighterZ fournissent une référence
+pour la restitution de moments de l'œuvre sous certaines conditions [E03].
+La possibilité d'un finisher générique pour chaque paire est une proposition
+de projet, pas une règle attribuée à cette référence.
+
+CONDITIONS POSSIBLES À INSCRIRE DANS UNE FICHE
+
+- Vainqueur, adversaire, partenaires et versions.
+- Lieu et état du stage : intact, détruit, autre zone ou phase de campagne.
+- Chapitre, événements déjà survenus et connaissances des personnages.
+- Dernière action ou famille d'attaque exigée.
+- Présence ou absence d'une entité ou d'un témoin.
+- Compatibilité anatomique, technique et narrative.
+
+Ces conditions sont une grille de conception : sélectionner celles qui servent
+la scène, plutôt que de les rendre toutes obligatoires.
+
+RÉSOLUTION
+
+Déterminer une priorité stable entre fin dramatique spécifique, finisher
+d'équipe, finisher individuel et victoire normale.
+Fournir une conclusion de remplacement si la scène spécifique est impossible.
+Le résultat déjà acquis ne doit pas être modifié par une simple présentation.
+Si une confrontation peut encore inverser le vainqueur, elle appartient au combat
+et doit être annoncée comme telle avant la validation de la victoire.
+
+Prévoir découverte progressive des conditions, indices dans le codex,
+consultation des scènes débloquées et passage abrégé selon le mode.
+Les fins alternatives sont clairement distinguées de la continuité principale.
+
+
+39. CLASHES ET CONFRONTATIONS AVEC QTE
+
+L'objectif est de permettre à certaines attaques identiques ou compatibles,
+engagées simultanément et entrant réellement en contact, de déclencher une
+confrontation particulière. Exemples de création à adapter : choc de lames,
+collision de rayons, lutte de force ou opposition de techniques.
+
+TROIS RÉSULTATS DIFFÉRENTS
+
+- ÉCHANGE : les deux attaques touchent selon les règles normales.
+- CLASH MÉCANIQUE : annulation, rebond ou priorité de propriétés, sans scène.
+- CLASH CINÉMATIQUE : confrontation spéciale avec ou sans interaction courte.
+
+ÉLIGIBILITÉ
+
+Créer des groupes de compatibilité reliant les attaques concernées.
+Dans un combat miroir, la même technique peut appartenir à un tel groupe.
+Deux attaques différentes peuvent aussi être compatibles si le projet le prévoit.
+Les autres collisions gardent leur résolution habituelle.
+
+Conditions à documenter : fenêtre de simultanéité, phases actives, contact
+des zones concernées, orientation, distance, ressources et états des participants.
+La simultanéité est définie dans la simulation, pas à partir du seul rendu visuel.
+
+Fixer une limite de fréquence et un délai empêchant le déclenchement répété
+d'une scène à chaque échange. Un coup à plusieurs impacts ne doit pas lancer
+plusieurs clashes pour le même engagement.
+
+DÉROULEMENT
+
+1. Détection et validation des participants.
+2. Résolution des collisions simultanées selon une priorité reproductible.
+3. Entrée courte dans la confrontation et affichage de la règle.
+4. QTE ou autre résolution choisie pour le mode.
+5. Résultat, dégâts et déplacement éventuels.
+6. Retour au combat avec positions, ressources et contrôle définis.
+
+QTE : COMMANDES ET RÉSULTATS
+
+Préférer une interaction brève : appui dans une fenêtre, direction, choix
+limité ou séquence courte. Le martèlement prolongé reste une option à justifier.
+
+Définir fenêtre de réponse, commandes valides, réussite, échec, absence d'entrée,
+égalité, double réussite, durée maximale et traitement d'une déconnexion.
+Dans un duel, préciser comment les deux réponses sont comparées.
+Les coûts, dégâts et avantages gagnés doivent être bornés et compréhensibles.
+
+Fixer ce qui arrive au chrono, aux assistances, aux pièges, aux projectiles
+et aux autres acteurs. Leur gel ou leur poursuite doit être une règle commune.
+Résoudre un projectile tiers ou une assistance arrivant au même instant sans
+favoriser arbitrairement le joueur de gauche ou l'ordre de mise à jour.
+
+PROFILS DE MODE
+
+- Histoire : QTE narratif, difficulté et aides adaptées au parcours.
+- Versus spectacle : version interactive annoncée et identique pour les joueurs.
+- Compétition : résolution sans QTE ou variante commune retenue par les règles.
+
+Prévoir commandes remappées, lisibilité, option de maintien à la place de
+pressions répétées et présentation à mouvements réduits.
+Une aide automatique en solo ne doit pas devenir un avantage caché en PvP.
+Si les QTE sont désactivés, fournir un résultat défini, par exemple séparation
+des combattants ou résolution selon les engagements prévus par le système.
+
+PRÉCISION SUR LES RÉFÉRENCES
+
+Mortal Kombat vs. DC Universe propose des séquences rapprochées et de transition
+avec leurs propres déclencheurs [E05]. Elles ne prouvent pas une règle universelle
+« deux coups simultanés déclenchent un QTE » dans les Mortal Kombat récents.
+Le mécanisme demandé est donc spécifié ici comme une règle du projet, avec
+des influences Naruto et des confrontations cinématiques clairement identifiées.
+
+Le manuel de Naruto: Ultimate Ninja 3 sur PS2 décrit des jutsu simultanés
+pouvant se rencontrer et provoquer un Jutsu Clash interactif [E10]. Cette
+référence précise ne doit pas être confondue avec Ultimate Ninja Storm 3.
+
+
+40. MOVESETS À ENTITÉS INDÉPENDANTES ET OBJETS PLACÉS
+
+Le moteur doit pouvoir faire exécuter une partie d'un moveset par une entité
+autre que le corps principal du combattant. Cela permet des personnages
+dont les actions se déroulent à plusieurs endroits du terrain.
+
+Cette capacité commune du moteur ne rend pas toutes les techniques accessibles
+à tous les personnages : chaque entité doit correspondre au kit et au lore.
+
+FAMILLES DE FONCTIONNEMENT
+
+- MARIONNETTE : entité commandée pendant que le propriétaire peut agir.
+- COMPAGNON À ORDRES : actions déclenchées par des commandes dédiées.
+- COMPAGNON AUTONOME : comportement d'IA borné et documenté, si pertinent.
+- DOUBLE : reproduction, imitation, retard ou action distincte selon le pouvoir.
+- ILLUSION : leurre ou image résiduelle, avec présence ou absence de collision
+  définie ; un effet de présentation ne devient pas implicitement un acteur.
+- OBJET PLACÉ : objet positionné puis exploité, rappelé ou activé.
+- PIÈGE : objet armé déclenché manuellement ou par une condition définie.
+- INSTALLATION : tourelle, balise ou dispositif avec fonctionnement propre.
+- ZONE PERSISTANTE : effet de terrain, champ ou invocation de durée limitée.
+- PROJECTILE PILOTÉ : attaque dont la trajectoire peut être commandée.
+
+RÉFÉRENCES ET LIMITES
+
+Zato-1 et Eddie servent de référence pour des actions simultanées et une
+gestion de ressource dédiée ; Arc System Works décrit explicitement ces deux
+aspects [E06]. Eddie n'est pas automatiquement un partenaire de tag ou une IA.
+
+Bridget sert de référence pour le placement du yo-yo et l'exploitation de cet
+objet. Arc System Works précise que les commandes et le fonctionnement ont
+évolué entre les anciens épisodes et Strive [E07]. Fixer la version avant de
+définir placement, trajet, activation, retour ou interaction avec Roger.
+Un piège explosif ou un rappel manuel inventé serait une adaptation à signaler.
+
+CONTRÔLE
+
+Définir qui reçoit chaque commande : personnage, entité ou les deux.
+Préciser boutons dédiés, commandes directionnelles, maintien, relâchement,
+ordre contextuel et action en cas d'entité absente.
+L'exécution au relâchement d'un bouton reste un choix propre au kit retenu.
+
+Définir si le propriétaire peut marcher, attaquer, garder ou subir un coup
+pendant l'action de l'entité. Décrire le coût de cette simultanéité et ses limites.
+
+OBJET PLACÉ PUIS UTILISÉ
+
+Chaque fiche indique la position autorisée, la durée de pose, l'armement,
+la durée de vie, le nombre maximal, la visibilité et les moyens de réponse.
+L'activation peut venir d'un ordre, d'un délai, d'un contact ou d'une technique
+complémentaire selon le fonctionnement choisi.
+
+Prévoir les états utiles : disponible, envoyé, placé, armé, actif, en retour,
+récupéré, interrompu ou détruit. Définir si le retour est automatique,
+temporisé ou commandé, et quels trajets peuvent réellement toucher une cible.
+
+Fixer ce qui arrive lors d'une nouvelle pose à la limite : refus, remplacement
+du plus ancien ou autre règle explicite. Une boucle de rappel et redéploiement
+ne doit pas recharger gratuitement l'objet si cela contredit son économie.
+
+Prévoir les attaques adverses capables de détruire, repousser, neutraliser,
+traverser ou contourner l'entité. Ses vulnérabilités doivent être compréhensibles.
+
+
+41. PROJECTILES PERSISTANTS ET RÈGLES COMMUNES AUX ENTITÉS
+
+Pour chaque projectile ou objet autonome, définir : propriétaire stable,
+création, coût, position, orientation, vitesse, trajectoire, durée, cibles,
+nombre d'impacts, collision, fin de vie et éventuelle commande de rappel.
+
+Variantes possibles, uniquement si elles correspondent au personnage :
+projectile direct, rebondissant, revenant, télécommandé, guidé, stationnaire,
+à activation différée, à plusieurs étapes ou lié à un point posé.
+
+Définir les interactions entre projectiles : priorité, destruction mutuelle,
+traversée, réflexion, absorption ou clash éligible. Une réflexion doit préciser
+le nouveau propriétaire pour les dégâts, la ressource et les conditions de fin.
+
+RÈGLES D'ÉTAT À RENSEIGNER POUR TOUTE ENTITÉ
+
+- Propriétaire touché : poursuivre, interrompre ou modifier l'ordre.
+- Propriétaire projeté : état, position et commandes autorisées.
+- Propriétaire en réserve : persister, se désactiver, revenir ou disparaître.
+- Propriétaire KO : résoudre les impacts déjà engagés selon l'ordre commun,
+  puis appliquer la règle de disparition ou de persistance annoncée.
+- Transformation : conserver, convertir ou remplacer l'entité.
+- Transition de stage : transférer, repositionner selon une règle ou retirer.
+- Fin de manche : remise à zéro ou conservation explicitement prévue.
+- Super, finisher ou clash : gel, retrait ou poursuite synchronisée.
+- Correction réseau : restaurer l'état sans double apparition ni double dégât.
+
+Le partenaire entrant ne devient pas automatiquement propriétaire des pièges
+du sortant. Le jeu doit conserver une attribution correcte de toutes les actions.
+
+LIMITES COMMUNES
+
+Fixer un budget de présence par personnage et par équipe : entités actives,
+projectiles, effets persistants et interventions de partenaires.
+Ces limites doivent être identiques pour une même règle de match ; les options
+graphiques peuvent réduire des particules, pas supprimer un projectile dangereux.
+
+Les coups de l'actif, du partenaire, des entités et des pièges partagent
+l'historique du combo lorsqu'ils appartiennent à la même séquence.
+Conserver réduction de dégâts, rebonds consommés, limites de capture et gains
+de ressource. Tester les cycles assistance, piège, relais et nouvelle assistance.
+
+Rendre visibles le propriétaire, l'état armé, la durée ou la disponibilité
+lorsque ces informations sont nécessaires à la décision du joueur.
+
+
+42. STAGES BONUS ET ÉPREUVES INTÉGRÉES AUX HISTOIRES
+
+Ajouter des activités courtes dans les routes individuelles et dans la campagne
+globale. Chaque activité doit avoir une fonction narrative ou d'apprentissage,
+un objectif clair, une durée et un résultat.
+
+L'emplacement dans le récit est défini : entraînement avant un rival, préparation
+d'une mission, défense pendant une évacuation, épreuve rituelle, récupération
+d'un équipement ou transition entre deux chapitres.
+
+FAMILLES D'ÉPREUVES À ADAPTER
+
+1. DESTRUCTION CONTRÔLÉE
+   Détruire un véhicule, une cible d'entraînement, un obstacle ou une installation
+   compatible avec l'univers, dans le temps ou avec les outils autorisés.
+   Prévoir zones destructibles, étapes visuelles et conditions de réussite.
+
+2. HORDE D'ENNEMIS FRAGILES
+   Affronter des vagues nombreuses avec des unités peu résistantes adaptées
+   au contexte. Fixer objectif : survie, nombre éliminé, protection ou évacuation.
+
+3. PRÉCISION ET TIR
+   Toucher des cibles, détruire des projectiles ou viser des zones particulières.
+   Prévoir une version cohérente pour les kits sans arme à distance.
+
+4. DÉFENSE ET CONTRE
+   Bloquer, esquiver, parer ou répondre à des assauts annoncés.
+
+5. MOBILITÉ ET FUITE
+   Atteindre un point, franchir des obstacles ou sortir d'une zone dangereuse.
+   Vérifier les capacités réelles du personnage sélectionné.
+
+6. PROTECTION ET EXTRACTION
+   Défendre une personne, un objet ou un dispositif pendant une séquence courte.
+
+7. INTERACTION ET SABOTAGE FICTIF
+   Activer des mécanismes, désamorcer un dispositif de jeu, pirater une console
+   ou interrompre une machine selon les capacités du personnage.
+
+8. MAÎTRISE D'ENTITÉ
+   Placer un objet, commander un compagnon, gérer un double ou effectuer
+   une attaque depuis un point déporté pour résoudre l'épreuve.
+
+9. COORDINATION D'ÉQUIPE
+   Relais, couverture, cibles complémentaires et super combinée dans un défi
+   conçu pour les deux membres réellement disponibles.
+
+10) ÉPREUVE DE CULTURE OU DE PERSONNALITÉ
+    Rituel, défi professionnel, entraînement ou activité propre au personnage,
+    avec une fonction de jeu et une justification dans son univers.
+
+La casse de véhicule s'inspire du principe de bonus stage de Street Fighter,
+attesté notamment dans le manuel de Super Street Fighter IV [E11].
+L'idée de horde souhaitée dans l'esprit d'AVP arcade est ici une proposition
+de design : les faibles PV, vagues et récompenses seront définis par projet,
+sans les présenter comme une reproduction officielle non vérifiée.
+
+FIDÉLITÉ DES ENNEMIS
+
+Choisir des unités adaptées, des variantes, des cibles d'entraînement ou une
+simulation lorsque nécessaire. Transformer un ennemi réputé redoutable en
+cible très fragile exige un contexte ou une adaptation explicite.
+
+Pour les hordes, définir apparitions, limite d'ennemis présents, prévention
+des arrivées injustes, collisions de foule, cadence, nettoyage et performances.
+Prévoir des solutions pour les personnages à ressources ou munitions limitées.
+
+RÈGLES DE CHAQUE BONUS
+
+- Personnages, versions et capacités admises.
+- Objectif principal, objectifs secondaires, chrono et conditions d'échec.
+- Score, rangs de résultat et récompenses.
+- État initial : vie, ressources, équipe, objets et environnement.
+- Conditions de sortie et état transmis à la suite du récit.
+- Rejouabilité, reprise, entraînement et sauvegarde.
+- Variantes de difficulté et aides d'accessibilité.
+
+Un bonus facultatif peut donner une récompense moindre en cas d'échec et laisser
+continuer l'histoire. Une activité indispensable à la progression doit être
+présentée comme une mission obligatoire, avec une reprise adaptée.
+Les records et récompenses doivent éviter les doubles attributions accidentelles.
+
+
+43. ESPACE D'EXPLORATION ET DE DÉBLOCAGE INSPIRÉ DE LA KRYPT
+
+Créer un lieu de collection et d'exploration appartenant à l'univers du jeu.
+Choisir un nom, une architecture, un rôle et une progression propres au projet.
+
+Exemples de directions originales à adapter : salle des trophées, archives,
+sanctuaire, musée, dojo, arsenal, base, station, vaisseau ou réserve scientifique.
+Ces noms désignent des concepts, pas des lieux officiels imposés aux franchises.
+
+Le joueur y explore des zones reliées, découvre des indices, obtient des clés
+ou accès, accomplit des épreuves et débloque des contenus. La Krypt de Mortal
+Kombat 11 constitue une référence d'espace explorable avec accès et récompenses
+[E09] ; la structure retenue ici reste celle du projet.
+
+CONTENUS DÉBLOCABLES
+
+- Costumes, palettes et accessoires compatibles.
+- Stages et variantes d'ambiance.
+- Taunts, présentations et animations de sélection/désélection.
+- Illustrations, scènes, musiques, voix ou fiches de lore.
+- Défis, routes alternatives ou rencontres supplémentaires.
+- Personnages ou soutiens, si le projet retient cette forme de progression.
+
+Tout contenu débloqué conserve son statut de fidélité : canon attesté,
+adaptation jouable, original compatible, alternatif/crossover ou à confirmer.
+Un déblocage ne transforme pas un costume inventé en costume canon.
+
+BOUCLE DE PROGRESSION
+
+Explorer, comprendre un indice, obtenir l'accès requis, résoudre l'épreuve,
+recevoir le contenu, puis découvrir de nouveaux lieux ou informations.
+Relier certaines récompenses aux histoires individuelles, bonus et boss.
+
+Préférer des déblocages ciblés et des conditions lisibles pour les contenus
+importants. Toute part d'aléatoire éventuelle doit avoir un rôle explicite,
+une gestion des doublons et une alternative pour les objectifs essentiels.
+
+PRÉREQUIS ET COHÉRENCE
+
+- Carte ou orientation compréhensible, portes et passages situés logiquement.
+- Zones, clés et mécanismes compatibles avec la technologie ou la culture.
+- Indices disponibles au bon moment, sans connaissances impossibles du personnage.
+- Conditions de récompense consultables ou découvrables de façon cohérente.
+- Absence de cycle bloquant : une clé ne doit pas exiger la récompense qu'elle ouvre.
+- Reprise après interruption et conservation des ouvertures déjà obtenues.
+- Attribution unique d'une récompense persistante malgré plusieurs interactions.
+
+Décider séparément les règles d'accès aux combattants et stages en entraînement,
+versus local et compétition. Une progression de collection ne doit pas créer
+un avantage de statistiques non annoncé dans un mode normalisé.
+
+Le lieu peut exister comme parcours 2D, environnement 2,5D/3D ou carte interactive,
+selon le moteur. Conserver l'idée d'exploration cohérente et de découverte.
+Prévoir une navigation compatible avec les périphériques du projet.
+
+
+44. COHÉRENCE NARRATIVE, RELATIONS ET COMPATIBILITÉS
+
+Étendre la matrice de relations aux équipes et aux séquences collectives.
+Chaque association peut être : attestée, plausible dans la situation,
+alliance temporaire, rencontre alternative, crossover ou incompatible.
+
+Pour un duo, fixer : période, versions, relation, motivation commune,
+connaissance mutuelle, techniques compatibles et degré de confiance.
+
+Dans une campagne, le partenaire doit être présent et disponible à ce moment.
+Expliquer une intervention à distance ou un soutien hors champ par les moyens
+réels de l'univers. Adapter les dialogues à l'évolution des relations.
+
+Les équipes libres du versus peuvent autoriser des compositions hypothétiques,
+clairement séparées du récit principal. Une scène inventée reçoit une mention
+de création originale même lorsqu'elle respecte les capacités des personnages.
+
+Prioriser la production :
+
+1. Duos attestés et protagonistes du scénario.
+2. Alliances importantes ou temporaires prévues dans la campagne.
+3. Rivaux dont la coopération produit une scène utile et justifiée.
+4. Combinaisons compatibles utilisant une chorégraphie générique.
+5. Variantes alternatives et crossovers retenus.
+
+Éviter d'exiger une animation exclusive pour chaque paire sans calculer le volume.
+Distinguer paire non ordonnée pour une pose commune et paire ordonnée lorsque
+le rôle de meneur change la scène. Pour N personnages, les paires distinctes
+sans ordre sont N × (N - 1) / 2 ; avec ordre, N × (N - 1), hors doublons.
+Les versions, costumes et adversaires peuvent ajouter d'autres cas à planifier.
+
+Relier stages bonus et déblocages aux arcs narratifs : progression d'une relation,
+apprentissage d'une technique, acquisition d'un objet ou découverte d'un lieu.
+Ces activités doivent servir le rythme de l'histoire et rester cohérentes
+avec l'urgence ou les enjeux du chapitre.
+
+
+45. ASSETS, ANIMATIONS, SONS ET MISE EN SCÈNE
+
+ÉTENDRE LES INVENTAIRES
+
+PERSONNAGE : taunt entrée/boucle/sortie, réaction d'interruption, aperçu,
+confirmation, attente sélectionnée, désélection, relais entrant/sortant,
+assistance entrée/action/sortie, participation aux scènes collectives.
+
+ÉQUIPE : portrait ou présentation, pose, dialogues, super combinée, finisher,
+fin dramatique, victoire et variantes nécessaires.
+
+ENTITÉ : apparition, attente, déplacement, commandes, attaque, réception
+de coups, rappel, disparition, destruction, projectiles et effets propres.
+
+BONUS : décor, objectif, états de destruction, ennemis, signaux, score,
+récompense et scènes d'entrée/sortie.
+
+ESPACE DE DÉBLOCAGE : carte, pièces, portes, clés, mécanismes, objets,
+présentations de collection, indices et éléments d'interface.
+
+Prévoir les ancrages des mains, armes, pieds et entités ; vérifier les côtés
+et les asymétries. Une chorégraphie à deux demande des positions compatibles
+pour les participants et la cible.
+
+Les sprites autonomes conservent un sujet exploitable par fichier source.
+Les storyboards ou illustrations collectives peuvent réunir plusieurs acteurs.
+Les atlases techniques d'intégration restent distincts des sources individuelles.
+
+POUR CHAQUE SÉQUENCE
+
+Prévoir cadrage, durée, synchronisation, sons, voix, VFX, points de contact,
+états d'entrée/sortie et éventuelle version abrégée.
+Préciser variantes de costume et de morphologie réellement nécessaires.
+
+Si les animations ne sont pas encore en production, préparer les poses clés,
+le découpage, les dépendances et les critères de fidélité. Les compter comme
+conception ou poses, puis marquer séparément les séquences réellement animées.
+
+Un aperçu animé dans un menu ne valide pas automatiquement l'animation
+de combat correspondante : contexte, échelle, collisions et transitions diffèrent.
+
+
+46. INTERFACE, APPRENTISSAGE, ACCESSIBILITÉ ET RÉSEAU
+
+INTERFACE
+
+Afficher composition de l'équipe, combattant actif, vie de réserve, jauge commune,
+récupération de l'assistance, ressources propres et raisons d'indisponibilité.
+Les indicateurs doivent conserver une hiérarchie lisible.
+
+Lorsqu'une technique exige une entité placée ou un partenaire, montrer cet état
+dans la liste des coups et dans l'entraînement. Les scènes combinées disponibles
+peuvent être signalées à la sélection sans dévoiler les scènes narratives secrètes.
+
+APPRENTISSAGE
+
+Prévoir exercices pour : appel d'assistance, punition d'une assistance,
+relais sûr, relais de combo, gestion de jauge, super duo, clash, commande d'entité,
+pose et activation d'objet. Permettre de répéter précisément la situation.
+
+L'entraînement doit régler présence et disponibilité du partenaire, ressources,
+entités, transitions, profil de clash et état de la cible.
+L'IA doit utiliser et affronter les mécanismes retenus avec des limites de réaction
+adaptées à sa difficulté.
+
+ACCESSIBILITÉ
+
+Commandes remappées, indications lisibles, alternatives aux pressions répétées,
+volumes, sous-titres, animations réduites et contrôle des effets de caméra.
+Conserver les informations critiques quand la présentation est simplifiée.
+
+Les aides visuelles peuvent être locales. Une modification de fenêtre de QTE,
+de résultat ou de vitesse de jeu doit respecter la règle commune du mode PvP.
+Définir le passage des cinématiques : choix libre en solo, procédure partagée
+ou durée normalisée dans les modes où les deux joueurs doivent rester synchronisés.
+
+RÉSEAU ET REPLAYS — POUR LES MODES CONCERNÉS
+
+Conserver une simulation reproductible des partenaires, ordres, ressources,
+entités, fenêtres de clash et résultats interactifs.
+Les décisions doivent suivre les événements de simulation, indépendamment
+de la vitesse d'affichage d'une cinématique ou du débit d'images local.
+
+Une correction réseau ne doit pas rejouer une récompense, dupliquer une entité,
+dépenser deux fois la jauge ou laisser une voix en boucle.
+Le passage abrégé d'une scène doit conduire au même état final autorisé.
+
+Documenter version des règles, entrées nécessaires et incompatibilités des replays.
+Tester les corrections au moment d'un appel, d'un relais, d'un choc de techniques
+et de l'activation d'un piège.
+
+
+47. VALIDATION, STATISTIQUES ET ORDRE D'INTÉGRATION
+
+NOUVELLES CATÉGORIES À SUIVRE
+
+- Taunts et variantes contextuelles.
+- Sélections, confirmations et désélections.
+- Assistances et formes de relais.
+- Supers combinées et chorégraphies de paires.
+- Finishers d'équipe et fins dramatiques.
+- Groupes de clash et résolutions QTE.
+- Entités natives, objets placés et projectiles persistants.
+- Stages bonus et variantes de personnage.
+- Zones, accès et récompenses de l'espace de déblocage.
+
+Pour chaque catégorie : prévu, documenté, produit, contrôlé, intégré, testé,
+restant et bloqué, sur un périmètre nommé et daté.
+Une scène conçue, une pose clé et une animation complète sont des unités distinctes.
+Une paire sans scène exclusive peut être « couverte par relais générique » ;
+elle ne doit pas être comptée comme chorégraphie exclusive produite.
+
+CAS DE VALIDATION PRIORITAIRES
+
+1. Navigation rapide puis confirmation et désélection sans effets résiduels.
+2. Taunt interrompu et retour au contrôle selon les fenêtres annoncées.
+3. Assistance et relais demandés au même instant pour un partenaire unique.
+4. Deux actions tentant de dépenser la dernière portion de jauge.
+5. Soutien touché ou KO pendant son arrivée ; état de l'équipe cohérent.
+6. Super duo demandée pendant la sortie d'une assistance.
+7. Attaque initiale du super bloquée ou ratée ; résolution correcte.
+8. Fin dramatique avec version, lieu ou partenaire incompatible ; remplacement.
+9. Clash simultané avec projectile tiers, piège ou assistance.
+10. Réussite, échec, égalité, absence de réponse et déconnexion pendant un QTE.
+11. Propriétaire en réserve ou KO avec une entité encore active.
+12. Transition d'arène pendant un combo utilisant un objet placé.
+13. Réflexion de projectile puis dégâts, attribution et éventuelle fin dramatique.
+14. Tentative de boucle infinie combinant pièges, relais et assistances.
+15. Horde à la limite de présence : performance, lisibilité et issues accessibles.
+16. Bonus réussi ou raté : bonne progression, ressources et récompenses.
+17. Déblocage, sauvegarde et rechargement : contenu conservé sans doublon.
+18. Passage abrégé d'une scène et correction réseau : même état de combat.
+
+Une fonction est validée lorsque résultat, coûts, contrôle, collisions,
+partenaires, entités et reprise correspondent à sa fiche.
+Une scène réussie visuellement doit aussi passer ces contrôles.
+
+ORDRE CONSEILLÉ
+
+1. Fixer profils d'équipe, commandes, jauges, états et règles de propriété.
+2. Intégrer un personnage avec taunt et cycle de sélection complet.
+3. Valider une assistance, un relais et un kit à entité dans une arène test.
+4. Tester les collisions entre ces systèmes et les règles de combo.
+5. Ajouter une super duo, une fin conditionnelle et un clash représentatifs.
+6. Réaliser un bonus et une zone de déblocage avec sauvegarde complète.
+7. Étendre les contenus par personnages, paires et chapitres prioritaires.
+
+Les décisions réseau et les formats de données se prennent dès les premiers
+prototypes lorsqu'ils font partie des modes retenus.
+
+
+48. DIX FICHES DE PRODUCTION COMPLÉMENTAIRES
+
+FICHE A — TAUNT
+
+ID / personnage / version / nom :
+Source / statut de fidélité :
+Contexte / adversaire ou partenaire concerné :
+Commande / conditions :
+Entrée / pose ou boucle / sortie / durée :
+Vulnérabilité / interruption / retour au contrôle :
+Effet de gameplay éventuel / coût / limites :
+Geste / expression / arme / entité :
+Réplique / VFX / SFX / fréquence :
+Assets / statuts / critères de validation :
+
+FICHE B — SÉLECTION ET DÉSÉLECTION
+
+ID / personnage / version / costume :
+Survol / aperçu / confirmation / attente :
+Désélection complète / sortie abrégée :
+Changement de costume / retrait du groupe :
+Présentation d'équipe / départ vers le combat :
+Pose / cadrage / lumière / voix / effets / compagnon :
+Priorité d'entrée / interruption / nettoyage :
+Mode à animations réduites :
+Cas de choix simultanés ou identiques :
+Assets / statuts / critères de validation :
+
+FICHE C — PROFIL D'ÉQUIPE
+
+ID / mode / assistance, tag ou hybride :
+Nombre de membres / rôles / doublons :
+Ordre de départ / membres contrôlables :
+Vie propre ou partagée / condition de défaite :
+Jauge commune / ressources individuelles / récupérations :
+Commandes remappables et priorités :
+Règles de KO / arrivée du survivant :
+Vie récupérable / statuts en réserve :
+Nombre maximal d'intervenants et d'entités :
+Restrictions de lore / versions / conditions du chapitre :
+HUD / entraînement / réseau / validation :
+
+FICHE D — ASSISTANCE OU RELAIS
+
+ID / type / actif / partenaire / versions :
+Source ou adaptation :
+Commande / états autorisés / conditions :
+Coût / prélèvement / échec / remboursement :
+Arrivée / action / départ / récupération :
+Positions / orientation / transfert du contrôle :
+Vulnérabilité / dégâts reçus / KO :
+Résultat en touche, garde, échec ou interruption :
+Combo / ressources / effets sur les entités :
+Transition de stage / boss / réseau :
+Animation / voix / VFX / SFX / validation :
+
+FICHE E — SUPER, FINISHER OU FIN DRAMATIQUE
+
+ID / type / nom / statut du nom :
+Participants / meneur / versions / relation :
+Source / adaptation / création originale :
+Conditions de composition, scénario, stage et dernière action :
+Commande / coût / disponibilité :
+Engagement initial / confirmation / échec :
+Déroulement et contribution de chacun :
+Cible / morphologie / boss / variantes nécessaires :
+Caméra / durée / dialogues / VFX / SFX :
+Priorité face aux autres conclusions possibles :
+Résultat / contrôle / positions / ressources après la scène :
+Remplacement si incompatible / version abrégée :
+Déblocage / codex / assets / statuts / validation :
+
+FICHE F — CLASH ET QTE
+
+ID / groupe d'attaques compatibles / personnages :
+Source d'inspiration / statut de création :
+Fenêtre de simultanéité / contact / distance / orientation :
+Conditions de ressource / fréquence / priorité :
+Collisions tierces et ordre de résolution :
+Scène d'entrée / règle affichée :
+Commandes / fenêtre / durée maximale :
+Réussite / échec / égalité / absence / déconnexion :
+Dégâts / coûts / avantage / positions / chrono :
+État des assistances, entités et projectiles :
+Profil solo / versus / compétition / sans QTE :
+Accessibilité / réseau / replay / assets / validation :
+
+FICHE G — ENTITÉ, OBJET PLACÉ OU PROJECTILE
+
+ID / propriétaire / version / famille :
+Source / capacités attestées / adaptations :
+Commande / contrôle direct, par ordre ou IA :
+Création / placement / armement / coût :
+Actions simultanées autorisées au propriétaire :
+Trajectoire / portée / durée / nombre maximal :
+Attaques / collision / vulnérabilité / moyens de réponse :
+Activation / rappel / expiration / destruction :
+Propriétaire touché, en réserve, transformé ou KO :
+Transition / nouvelle manche / cinématique :
+Réflexion / attribution / combo / ressources :
+Visibilité / HUD / VFX / SFX / réseau / validation :
+
+FICHE H — STAGE BONUS
+
+ID / nom / personnage ou chapitre :
+Univers / lieu / justification narrative :
+Famille d'épreuve / caractère facultatif ou obligatoire :
+Personnages et capacités compatibles :
+Objectif / durée / réussite / échec :
+Vie / ressources / équipement / équipe au départ :
+Ennemis / objets / vagues / limite de présence :
+Score / rang / récompenses :
+Scènes d'entrée et de sortie :
+État transmis à la suite de l'histoire :
+Reprise / rejouabilité / aides / sauvegarde :
+Assets / performances / statuts / validation :
+
+FICHE I — LIEU EXPLORATOIRE ET DÉBLOCAGES
+
+ID / nom propre au projet / univers / continuité :
+Rôle du lieu / personnage ou avatar d'exploration :
+Format / carte / zones / portes / connexions :
+Objets, outils, clés et indices :
+Défis et liens avec histoires, bonus et boss :
+Récompenses possibles et statut lore :
+Ressources de progression / doublons / règles de découverte :
+Conditions d'accès / prévention des impasses :
+Navigation et périphériques / confort :
+Sauvegarde / reprise / version du catalogue :
+Règles en entraînement, versus et compétition :
+Assets / statuts / critères de validation :
+
+FICHE J — CONDITION OU RÉCOMPENSE INDIVIDUELLE
+
+ID / type : scène, duo, bonus, accès ou récompense :
+Contenu concerné et identifiant :
+Conditions obligatoires / alternatives / exclusions :
+Versions / costumes / partenaires / lieu / progression :
+Événement de validation / priorité si plusieurs conditions sont vraies :
+Indice donné au joueur / visibilité dans le codex :
+Résultat / coût / contenu accordé :
+Traitement des répétitions et des doublons :
+Remplacement ou message si condition impossible :
+Sauvegarde / compatibilité des versions :
+Statuts / cas de test / preuve de validation :
+
+
+49. INSTRUCTION D'INTÉGRATION ET RÉFÉRENCES
+
+INSTRUCTION À TRANSMETTRE AUX PROJETS
+
+« Ajoute cette extension à la bible du jeu et relie ses rubriques aux personnages,
+modes, scènes, stages, systèmes de progression et inventaires existants.
+
+Documente les taunts et les animations de sélection, confirmation et désélection.
+Définis les profils d'assistance, de tag et d'équipe retenus, avec commandes,
+jauges, récupérations et règles de disponibilité. Prévois supers combinées,
+finishers collectifs et fins dramatiques pour les associations pertinentes.
+
+Définis les attaques compatibles pouvant provoquer un clash et sa résolution,
+avec QTE ou variante adaptée au mode. Étends les movesets aux entités natives,
+objets placés, doubles et projectiles persistants lorsque le lore le permet.
+
+Ajoute des stages bonus cohérents aux histoires individuelles et à la campagne,
+ainsi qu'un lieu d'exploration et de déblocage adapté à l'univers.
+
+Chaque contenu doit identifier sa version, ses sources, ses adaptations,
+ses commandes, ses ressources, ses assets et ses critères de validation.
+Priorise les personnages et relations importants, puis étends la couverture.
+
+Respecte la phase de production demandée et conserve un sujet par image source
+lorsqu'un asset autonome est requis. Distingue documentation, poses clés,
+animations produites, intégration et validation réelle.
+
+Termine chaque lot par un bilan chiffré du périmètre traité, des éléments
+manquants et des interactions encore à tester. »
+
+RÉFÉRENCES VÉRIFIÉES — CONSULTATION DU 26 NOVEMBRE 2026
+
+Les références documentent les inspirations ; les règles proposées dans cette
+extension restent à adapter et tester. Les caractéristiques d'un épisode
+ne sont pas attribuées automatiquement à toute sa série.
+
+[E01] WB Games — Mortal Kombat 1 FAQ.
+Les Kameos sont des partenaires d'assistance sélectionnés séparément.
+Usage : distinguer soutien ponctuel et changement de combattant.
+https://mortalkombatgamessupport.wbgames.com/hc/en-us/articles/16726930433939-Mortal-Kombat-1-FAQ
+
+[E02] Namco Bandai — Tekken Tag Tournament 2, manuel original PS3.
+Le manuel distingue changement de partenaire, Tag Combo, Tag Assault et
+Tag Throw. Document primaire consulté sur un miroir d'archives tiers.
+Usage : donner des règles séparées aux différentes actions d'équipe.
+https://db.hfsplay.fr/files/2020/07/23/Sony_PlayStation_3_Tekken_Tag_Tournament_2_ENfoNlk.pdf
+
+[E03] Bandai Namco — présentation de Dragon Ball FighterZ sur PlayStation Blog,
+12 janvier 2018, par Anthony Grabit, Community Manager Bandai Namco Europe.
+Le texte présente les équipes de trois et des scènes de l'œuvre déclenchées
+sous des conditions particulières.
+Usage : distinguer combat en équipe et scène dramatique conditionnelle.
+https://blog.playstation.com/archive/2018/01/12/5-things-you-need-to-know-about-this-weekends-dragon-ball-fighterz-open-beta-on-ps4/
+
+[E04] Bandai Namco — 5 astuces pour Naruto X Boruto Ultimate Ninja Storm
+Connections, 9 novembre 2023.
+Le guide décrit changements de personnage, soutiens et techniques combinées
+associées à certaines compositions, signalées à la sélection.
+Usage : techniques collectives et information de compatibilité.
+https://fr.bandainamcoent.eu/naruto/infos/5-astuces-connaitre-avant-de-jouer-naruto-x-boruto-ultimate-ninja-storm-connections
+
+[E05] Midway — Mortal Kombat vs. DC Universe, manuel original Xbox 360.
+Le manuel décrit Klose Kombat, Free Fall Kombat et Test Your Might avec
+leurs déclencheurs respectifs. Document primaire sur un miroir tiers.
+Usage : scènes interactives rapprochées ou associées à des transitions.
+https://www.videogamemanual.com/xbox360/Mortal%20Kombat%20vs.%20DC%20Universe.pdf
+
+[E06] Arc System Works — Guilty Gear Strive, notes de mise à jour 2.03,
+24 septembre 2026, section Zato-1.
+La source décrit les actions simultanées avec Eddie et la gestion de sa jauge.
+Usage : kit à entité commandée et ressource propre.
+https://www.guiltygear.com/ggst/en/news/post-5223/
+
+[E07] Arc System Works — Developer's Backyard, volume 11, section Bridget.
+La source distingue le placement du yo-yo dans les anciens épisodes et Strive.
+Usage : fixer l'épisode et les commandes avant de reproduire le kit.
+https://www.guiltygear.com/ggst/en/news/post-1657/
+
+[E08] Capcom — Street Fighter V Champion Edition, manuel en ligne, Arcade.
+Le manuel confirme des parcours Arcade incluant des bonus stages et des fins.
+Usage : intégrer des épreuves dans un parcours individuel.
+La casse de voiture est la référence de design demandée par l'utilisateur ;
+elle n'est pas attribuée spécifiquement à ce manuel de Street Fighter V.
+https://game.capcom.com/manual/sfv/en-us/page-mb.html?cat=4&subcat=1
+
+[E09] WB Games — Official MK11 PS4/Xbox Update 6/11/19, section Krypt.
+Les corrections mentionnent exploration, accès à l'armurerie, portes à clés
+et récompenses. Usage limité : lieu explorable, accès et progression.
+Les récompenses détaillées de l'extension sont des propositions pour les projets.
+https://mortalkombatgamessupport.wbgames.com/hc/en-us/articles/360024671533-Official-MK11-PS4-Xbox-Update-6-11-19
+
+[E10] Namco Bandai — Naruto: Ultimate Ninja 3, manuel original PS2 américain.
+La section Jutsu Clash décrit la confrontation de certains jutsu simultanés,
+puis une épreuve de saisie décidant de la technique qui touche.
+Document primaire consulté par son texte indexé sur un miroir tiers.
+https://www.videogamemanual.com/PS2/Naruto%20%28Shonen%20Jump%29-%20Ultimate%20Ninja%203%20%28USA%29.pdf
+
+[E11] Capcom — Super Street Fighter IV, manuel Xbox 360 français.
+Le texte indexé identifie le bonus Car Crusher, consacré à la démolition
+de voiture. Usage : référence d'épreuve de destruction distincte du duel.
+https://static.capcom.com/manuals/ssfiv/SSFIV_360_DMNL_FR-CA.pdf
+
+VOCABULAIRE COMPLÉMENTAIRE
+
+Taunt : provocation ou geste de personnalité exécuté par le combattant.
+Assistance : intervention temporaire d'un partenaire.
+Tag/relais : transfert du contrôle à un autre combattant de l'équipe.
+Clash : confrontation spécifique de deux actions compatibles.
+QTE : courte interaction demandant une réponse dans une fenêtre définie.
+Setplay : préparation d'une situation par placement, timing et outils persistants.
+Entité native : élément autonome appartenant au kit d'un personnage.
+Récupération/cooldown : durée avant qu'une action ou un soutien redevienne disponible.
+
+FIN DE L'EXTENSION 01
