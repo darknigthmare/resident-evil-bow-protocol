@@ -1,0 +1,55 @@
+{
+  "schema": "rec-v25-independent-helena-1",
+  "date": "2026-11-27",
+  "timezone": "Europe/Paris",
+  "reviewer": "root, indépendant de la génération",
+  "base_commit": "226fbba85ef7d9b248974eee8c455ec01cee95d4",
+  "asset_id": "REC_HELENA_RE6_DESELECT_HEAD_LEFT_KEY_V25",
+  "path": "../helena/outputs/helena_re6_agent_deselect_head_left_v25.png",
+  "sha256": "7ee77aa161e7507842f1eb0d6c2282d01bea18f9cdb186836ad697d13600528c",
+  "git_blob_sha": "421a53ba112b10b2631c3b54e50c21e17c862729",
+  "file_bytes": 1353016,
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alpha_range": [
+    0,
+    254
+  ],
+  "source_manifest": "../helena/manifest.json",
+  "source_manifest_sha256": "c9dd881c850e75b552ca9c2f7cb367ce0c8d1583157ab20c3a185ed4a0ede5f5",
+  "method": "Le PNG corrigé, sa cible V24 exacte et le rendu officiel Capcom 358×450 ont été ouverts séparément avec view_image. Les trois images étaient lisibles côté parent. Mesures de fichier en lecture seule.",
+  "comparisons": [
+    {
+      "role": "v24_edit_target",
+      "sha256": "7d570bbbdd12e086cf5ffeb203c4b629d8acf289853c556341bc05d22d05ae89",
+      "repo_path": "production-archives/rec-media/v24/characters/assets/helena_re6_agent_deselect_v24.png"
+    },
+    {
+      "role": "official_prerelease_render",
+      "sha256": "25a104899095b63f440bf7aabcdd13570296140efed96b7d68d06f4c4dd94215",
+      "page_url": "https://news.capcomusa.com/brelston/blog/2012/01/23/official_leon_and_helena_art_from_resident_evil_6",
+      "source_id": "helena_capcom_promo_20120123"
+    }
+  ],
+  "observed": [
+    "La tête et les yeux regardent clairement la gauche de l’image, alors que la cible V24 regarde la droite.",
+    "La figure reste entière ; les bras baissés, le pistolet dans la droite anatomique, la chemise lilas, le gilet, le collier, les équipements de ceinture et le pantalon évasé restent reconnaissables.",
+    "Aucun nouveau personnage ou objet évident ; aucune inversion globale de la figure."
+  ],
+  "remaining_limits": [
+    "Des pixels et détails hors de la tête ont aussi été régénérés ; l’invariance stricte du corps n’est pas satisfaite. Le calcul de différences détaillé reste une mesure auteur du manifeste.",
+    "Chaussures plus rondes/épaisses que le petit visuel officiel, défaut hérité de V22/V24 non résolu.",
+    "Marges verticales sous 10% et faible alpha résiduel ; aucun rendu composé ou raccord d’animation vérifié.",
+    "La source est promotionnelle, pas une preuve du modèle commercial final RE6. Une correction de regard ne certifie pas une copie canonique1:1."
+  ],
+  "decision": "correction_candidate_retained_for_direction_review",
+  "v24_original_preserved": true,
+  "automatic_runtime_replacement": false,
+  "completed_animation": false,
+  "engine_admitted": false,
+  "canonical_fidelity_1_1_certified": false,
+  "image_pixels_modified": false
+}

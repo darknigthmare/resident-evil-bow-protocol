@@ -1,0 +1,88 @@
+{
+  "schema": "rec-v25-claire-correction-inputs-1",
+  "date": "2026-11-27",
+  "timezone": "Europe/Paris",
+  "edition": "Resident Evil 2 Remake (2019), Claire Costume: Military DLC",
+  "inputs": [
+    {
+      "role": "edit_target",
+      "original_path": "/workspace/scratch/37b119cd013c/v25-characters/assets/claire_re2r_military_deselect_v25.png",
+      "copy_path": "/workspace/scratch/37b119cd013c/v25-correction-claire/inputs/claire_re2r_military_deselect_v25_exact_original.png",
+      "bytes": 1603406,
+      "sha256": "66a4c5690420c2098073806c267285539a973b4f8f6d097cbfd9b1837cbbcb87",
+      "git_blob_sha": "366bff339211aaa87ad6c390e9b30043f1c2538d",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "visually_inspected": true,
+      "byte_for_byte_copy": true,
+      "third_party_bitmap_in_repository": false
+    },
+    {
+      "role": "native_costume_reference",
+      "original_path": "/workspace/scratch/37b119cd013c/v25-character-research/steam_920562_00.jpg",
+      "copy_path": "/workspace/scratch/37b119cd013c/v25-correction-claire/inputs/steam_920562_00_exact.jpg",
+      "bytes": 231643,
+      "sha256": "9850818ed8118ee81f7d9d4be464e9c07477067ac89acf48d7e62e06e95399a3",
+      "git_blob_sha": "7cc2e2b7d302b0343b3b3c5ba7f1c9694f3d7c2a",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "mode": "RGB",
+      "visually_inspected": true,
+      "byte_for_byte_copy": true,
+      "third_party_bitmap_in_repository": false
+    },
+    {
+      "role": "native_full_body_costume_reference",
+      "original_path": "/workspace/scratch/37b119cd013c/v25-character-research/re2_gamewith_33.jpg",
+      "copy_path": "/workspace/scratch/37b119cd013c/v25-correction-claire/inputs/re2_gamewith_33_exact.jpg",
+      "bytes": 22878,
+      "sha256": "6e58b86516a9609c42c21daca4a63cc60091ab2d04bbe8eeecb5fdbbc7608db0",
+      "git_blob_sha": "789ca29c6412be823593b328fa773e933b3a9c07",
+      "dimensions": [
+        416,
+        740
+      ],
+      "mode": "RGB",
+      "visually_inspected": true,
+      "byte_for_byte_copy": true,
+      "third_party_bitmap_in_repository": false
+    }
+  ],
+  "variant_id": "COST_AUDIT_CLAIRE_MILITARY",
+  "sources": [
+    {
+      "source_id": "claire_military_official_steam_920562",
+      "kind": "official_DLC_store_native_game_screenshot",
+      "page_url": "https://store.steampowered.com/app/920562/",
+      "image_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/920562/ss_84f640a97b0bf0a615fae7cf65cc52ab99a78137.1920x1080.jpg?t=1728438738",
+      "sha256": "9850818ed8118ee81f7d9d4be464e9c07477067ac89acf48d7e62e06e95399a3",
+      "edition": "Resident Evil 2 Remake (2019), Claire Costume: Military DLC",
+      "local_reference": "inputs/steam_920562_00_exact.jpg",
+      "visually_inspected": true,
+      "third_party_bitmap_in_repository": false,
+      "limits": [
+        "Official native screenshot establishes visible face/upper costume, but the aiming pose and weapon are not the requested deselect pose."
+      ]
+    },
+    {
+      "source_id": "claire_military_gamewith_native_fullbody",
+      "kind": "native_game_fullbody_screenshot_reproduced_by_third_party",
+      "page_url": "https://gamewith.net/residentevil2/article/show/3486",
+      "image_url": "https://img.gamewith.net/img/e87acb7b88090bd7b7c90326ce34b9ae.jpg",
+      "sha256": "6e58b86516a9609c42c21daca4a63cc60091ab2d04bbe8eeecb5fdbbc7608db0",
+      "edition": "Resident Evil 2 Remake (2019), Claire Costume: Military DLC",
+      "local_reference": "inputs/re2_gamewith_33_exact.jpg",
+      "visually_inspected": true,
+      "third_party_bitmap_in_repository": false,
+      "limits": [
+        "Low-resolution 416×740 native fullbody; platform and fine details not independently certified."
+      ]
+    }
+  ],
+  "source_url_provenance": "Exact page/image URLs and variant ID supplied by source researcher /root/v24_creatures; local file SHA-256 independently matched."
+}

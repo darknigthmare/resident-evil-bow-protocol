@@ -1,0 +1,246 @@
+{
+  "schema": "rec-v25-targeted-claire-correction-1",
+  "date": "2026-11-27",
+  "timezone": "Europe/Paris",
+  "scope": "Une correction ciblée hors dépôt, un seul appel image_gen, aucune modification des sorties originales V25/V24.",
+  "assets": [
+    {
+      "asset_id": "REC_CLAIRE_RE2R_MILITARY_DESELECT_HEAD_LEFT_KEY_V25",
+      "hero_id": "REC_CLAIRE_RE2R",
+      "variant_id": "COST_AUDIT_CLAIRE_MILITARY",
+      "name": "Claire Redfield — Military, désélection tête et regard vers la gauche image",
+      "edition": "Resident Evil 2 Remake (2019), Claire Costume: Military DLC",
+      "state": "deselect",
+      "status": "correction_candidate_with_nonlocal_pixel_drift",
+      "date": "2026-11-27",
+      "timezone": "Europe/Paris",
+      "path": "/workspace/scratch/37b119cd013c/v25-correction-claire/outputs/claire_re2r_military_deselect_head_left_v25.png",
+      "native_output": "/workspace/scratch/37b119cd013c/generated_images/exec-02eee55f-6e67-42a1-a678-1b02a23593e5.png",
+      "native_output_copy_byte_identical": true,
+      "saved_bytes_equal_tool_image_url_png": true,
+      "bytes": 1576658,
+      "sha256": "a9ccc600a39858dcd05c144a5e0587bdddba0f546099be54411dbafa9913bbd3",
+      "git_blob_sha": "6ca8f2e32219cfb1896db0873313226ce9c47f28",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "alpha_histogram": {
+        "zero": 1221434,
+        "1_to_15": 19751,
+        "16_to_127": 4999,
+        "128_to_254": 326680,
+        "255": 0
+      },
+      "bbox_alpha_ge128": [
+        268,
+        120,
+        729,
+        1415
+      ],
+      "margins_alpha_ge128_px": {
+        "left": 268,
+        "top": 120,
+        "right": 295,
+        "bottom": 121
+      },
+      "body_comparison_read_only": {
+        "definition": "Union of input/output alpha >=128 pixels at rows y>=400; unpremultiplied RGB differences, no saved image transformation.",
+        "pixel_count": 275509,
+        "max_channel_rgb_delta_above_threshold_counts": {
+          "0": 274986,
+          "2": 247948,
+          "8": 128153,
+          "16": 45526,
+          "32": 9367
+        },
+        "alpha_difference_nonzero_pixels": 75152,
+        "mean_absolute_rgb_delta": 8.6788
+      },
+      "outside_samples_rgba": {
+        "(50, 50)": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "(250, 500)": [
+          56,
+          41,
+          33,
+          0
+        ],
+        "(750, 500)": [
+          73,
+          52,
+          42,
+          0
+        ],
+        "(512, 1475)": [
+          4,
+          3,
+          2,
+          0
+        ],
+        "(850, 800)": [
+          20,
+          14,
+          10,
+          0
+        ]
+      },
+      "tool": "image_gen.imagegen",
+      "generation_calls": 1,
+      "retry_calls": 0,
+      "prompt": "Use case: precise-object-edit.\nAsset type: one transparent full-body deselection character key for Resident Evil Combat.\nInput images: Image 1 is the EDIT TARGET, Claire Redfield's existing V25 Military deselect key. Images 2 and 3 are native Resident Evil 2 Remake Military costume references used only to control her identity and outfit; do not copy their weapon or aiming pose.\nPrimary request: make one targeted local correction in Image 1: turn Claire's head and both eyes clearly toward the LEFT EDGE OF THE IMAGE, the viewer's left. Her nose must point LEFT in a readable three-quarter head turn, and her eyes must look LEFT. Keep the same adult Claire identity and calm neutral deselection expression.\nInvariants: preserve everything below the neck as in Image 1: torso orientation, stance, arms, empty hands, fingers, boots, equipment, clothing, textures, palette, lighting, figure size and position. Retain the camouflage bandana and tied ends, brown hair and loose strands, off-white tank, olive tactical vest with the same patches/pouches, camouflage trousers and black lace-up boots. Preserve anatomical asymmetries: tattoo on RIGHT upper arm and strapped holster on RIGHT thigh (both on viewer's left), watch on LEFT wrist and canteen at LEFT rear hip (on viewer's right). Keep all patch and pouch placement unchanged. Do not mirror or flip the image or swap accessories. Only the head/eye direction and minimum necessary neck/hair/bandana adjustment may change. Keep both hands empty.\nComposition/background: preserve the exact 1024 by 1536 portrait framing, existing full head-to-boots silhouette, stance and margins of Image 1. One character, one pose, one native PNG with genuine transparent alpha background. No extra objects, scenery, labels, panels, or visible floor.",
+      "transparent_background_requested": true,
+      "image_pixels_modified_after_generation": false,
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "local_repository_files_modified": false,
+      "targeted_correction_of_asset_id": "REC_CLAIRE_RE2R_MILITARY_DESELECT_KEY_V25",
+      "original_target_sha256": "66a4c5690420c2098073806c267285539a973b4f8f6d097cbfd9b1837cbbcb87",
+      "original_target_retained_unchanged": true,
+      "references": [
+        {
+          "role": "edit_target",
+          "original_path": "/workspace/scratch/37b119cd013c/v25-characters/assets/claire_re2r_military_deselect_v25.png",
+          "copy_path": "/workspace/scratch/37b119cd013c/v25-correction-claire/inputs/claire_re2r_military_deselect_v25_exact_original.png",
+          "bytes": 1603406,
+          "sha256": "66a4c5690420c2098073806c267285539a973b4f8f6d097cbfd9b1837cbbcb87",
+          "git_blob_sha": "366bff339211aaa87ad6c390e9b30043f1c2538d",
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "visually_inspected": true,
+          "byte_for_byte_copy": true,
+          "third_party_bitmap_in_repository": false
+        },
+        {
+          "role": "native_costume_reference",
+          "original_path": "/workspace/scratch/37b119cd013c/v25-character-research/steam_920562_00.jpg",
+          "copy_path": "/workspace/scratch/37b119cd013c/v25-correction-claire/inputs/steam_920562_00_exact.jpg",
+          "bytes": 231643,
+          "sha256": "9850818ed8118ee81f7d9d4be464e9c07477067ac89acf48d7e62e06e95399a3",
+          "git_blob_sha": "7cc2e2b7d302b0343b3b3c5ba7f1c9694f3d7c2a",
+          "dimensions": [
+            1920,
+            1080
+          ],
+          "mode": "RGB",
+          "visually_inspected": true,
+          "byte_for_byte_copy": true,
+          "third_party_bitmap_in_repository": false
+        },
+        {
+          "role": "native_full_body_costume_reference",
+          "original_path": "/workspace/scratch/37b119cd013c/v25-character-research/re2_gamewith_33.jpg",
+          "copy_path": "/workspace/scratch/37b119cd013c/v25-correction-claire/inputs/re2_gamewith_33_exact.jpg",
+          "bytes": 22878,
+          "sha256": "6e58b86516a9609c42c21daca4a63cc60091ab2d04bbe8eeecb5fdbbc7608db0",
+          "git_blob_sha": "789ca29c6412be823593b328fa773e933b3a9c07",
+          "dimensions": [
+            416,
+            740
+          ],
+          "mode": "RGB",
+          "visually_inspected": true,
+          "byte_for_byte_copy": true,
+          "third_party_bitmap_in_repository": false
+        }
+      ],
+      "sources": [
+        {
+          "source_id": "claire_military_official_steam_920562",
+          "kind": "official_DLC_store_native_game_screenshot",
+          "page_url": "https://store.steampowered.com/app/920562/",
+          "image_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/920562/ss_84f640a97b0bf0a615fae7cf65cc52ab99a78137.1920x1080.jpg?t=1728438738",
+          "sha256": "9850818ed8118ee81f7d9d4be464e9c07477067ac89acf48d7e62e06e95399a3",
+          "edition": "Resident Evil 2 Remake (2019), Claire Costume: Military DLC",
+          "local_reference": "inputs/steam_920562_00_exact.jpg",
+          "visually_inspected": true,
+          "third_party_bitmap_in_repository": false,
+          "limits": [
+            "Official native screenshot establishes visible face/upper costume, but the aiming pose and weapon are not the requested deselect pose."
+          ]
+        },
+        {
+          "source_id": "claire_military_gamewith_native_fullbody",
+          "kind": "native_game_fullbody_screenshot_reproduced_by_third_party",
+          "page_url": "https://gamewith.net/residentevil2/article/show/3486",
+          "image_url": "https://img.gamewith.net/img/e87acb7b88090bd7b7c90326ce34b9ae.jpg",
+          "sha256": "6e58b86516a9609c42c21daca4a63cc60091ab2d04bbe8eeecb5fdbbc7608db0",
+          "edition": "Resident Evil 2 Remake (2019), Claire Costume: Military DLC",
+          "local_reference": "inputs/re2_gamewith_33_exact.jpg",
+          "visually_inspected": true,
+          "third_party_bitmap_in_repository": false,
+          "limits": [
+            "Low-resolution 416×740 native fullbody; platform and fine details not independently certified."
+          ]
+        }
+      ],
+      "visual_review": {
+        "reviewer": "v24_characters, auteur de cette correction ; revue indépendante du parent encore à effectuer",
+        "target_and_two_native_references_inspected": true,
+        "native_output_visually_inspected": true,
+        "method": "Inspection directe du PNG image_url natif rendu par image_gen, puis vérification de son identité octet pour octet avec le fichier natif et la copie sauvegardée. Aperçu view_image du nouveau fichier presque noir dans cette session ; non utilisé comme preuve de revue réussie.",
+        "head_direction": "image_left",
+        "nose_direction": "image_left",
+        "gaze_direction": "image_left",
+        "targeted_head_and_gaze_correction_observed": true,
+        "single_full_body_pose": true,
+        "visible_crop_detected": false,
+        "both_hands_empty": true,
+        "global_mirror_applied": false,
+        "anatomical_sides_preserved": {
+          "tattoo": "right upper arm",
+          "strapped_holster": "right thigh",
+          "watch": "left wrist",
+          "canteen": "left rear hip"
+        },
+        "body_stance_visually_retained": true,
+        "accessories_not_swapped_visually": true,
+        "strict_pixels_outside_head_unchanged": false,
+        "observations": [
+          "Tête, nez et yeux orientés nettement vers la gauche de l’image, corrigeant la direction de la cible.",
+          "Tatouage et holster restent à droite anatomique, montre et gourde à gauche ; mains vides et stance conservées.",
+          "Bandana et mèches suivent la nouvelle orientation de tête ; cette vue n’est pas obtenue par un miroir global.",
+          "Des textures, reflets et petits contours sous le cou ont été régénérés malgré la consigne. Les détails du tatouage, du camouflage et des écussons ne sont pas garantis immuables.",
+          "La silhouette utile reste entière. Le cadrage et le corps varient de quelques pixels ; aucun verrouillage d’échelle/pivot absolu démontré."
+        ],
+        "decision": "Conserver comme candidat de correction de direction avec dérive hors tête documentée ; parent doit décider du remplacement dans le lot V25."
+      },
+      "limitations": [
+        "Aucune copie canonique 1:1 certifiée ; visage et détails fins ont été régénérés.",
+        "Contrainte stricte de modification des seuls pixels de tête non satisfaite : comparaison sous y>=400 conservée dans les mesures.",
+        "Marges alpha >=128 : haut 120 px et bas 121 px ; seuils familiaux de 10 % et 12 % non atteints.",
+        "La transparence est réelle (alpha0–254) avec des pixels de faible alpha résiduels. Les cinq points extérieurs échantillonnés ont alpha0 malgré du RGB coloré. Aucun rendu composé moteur validé.",
+        "Une clé de désélection corrigée ne ferme aucune animation complète, action V1, intégration moteur ni nouvelle identité."
+      ],
+      "github_png_blob_created": true,
+      "git_blob_receipt": "GIT_BLOB.json",
+      "parent_placement_decision_pending": true
+    }
+  ],
+  "summary": {
+    "native_png_outputs": 1,
+    "targeted_gaze_corrections_observed": 1,
+    "strict_head_only_pixel_edits": 0,
+    "generation_calls": 1,
+    "retry_calls": 0,
+    "engine_admissions": 0,
+    "complete_animations": 0,
+    "canonical_1_1_certifications": 0,
+    "git_blobs_created": 1,
+    "trees_commits_refs_indexes_changed": 0,
+    "local_repository_files_modified": 0
+  }
+}

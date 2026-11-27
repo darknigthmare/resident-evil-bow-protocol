@@ -1,0 +1,66 @@
+{
+  "schema": "rec-v25-progress-1",
+  "date": "2026-11-27",
+  "base_commit": "226fbba85ef7d9b248974eee8c455ec01cee95d4",
+  "baseline_inventory": "../v24/PROGRESS_V24.json",
+  "baseline_sha256": "cb1eb56405fb1626dc047ef354fe143f5631eb5f1233cf23d621884a3f34410f",
+  "baseline_work_queue": "../v24/WORK_QUEUE_V24.md",
+  "delta": {
+    "png": 8,
+    "new_menu_keys": 6,
+    "gaze_correction_candidates": 1,
+    "targeted_correction_outputs": 2,
+    "superseded_trials": 1,
+    "candidate_png": 7,
+    "total_png_bytes": 12645227,
+    "new_costume_specific_menu_sequences": 2,
+    "new_costume_designs": 0,
+    "new_character_identities": 0,
+    "completed_animations": 0,
+    "engine_admissions": 0,
+    "one_to_one_certifications": 0
+  },
+  "state_coverage": [
+    {
+      "hero": "Claire Redfield",
+      "edition": "Resident Evil 2 Remake (2019)",
+      "costume": "Military",
+      "states": [
+        "selected",
+        "confirm",
+        "deselect"
+      ],
+      "new_character": false,
+      "animation_complete": false
+    },
+    {
+      "hero": "Billy Coen",
+      "edition": "Resident Evil Zero HD Remaster (2016)",
+      "costume": "Wolf Force",
+      "states": [
+        "selected",
+        "confirm",
+        "deselect"
+      ],
+      "new_character": false,
+      "animation_complete": false,
+      "not_interchangeable_with": "Billy Prisoner, clés V23"
+    }
+  ],
+  "helena": {
+    "v24_issue": "Regard vers la droite image au lieu de la gauche demandée.",
+    "v25_observed_fix": "Tête et yeux maintenant vers la gauche image.",
+    "status": "correction_candidate",
+    "whole_asset_qualified": false,
+    "v24_original_modified": false
+  },
+  "remaining": [
+    "Qualifier les traits, motifs et accessoires depuis des vues natives détaillées ; les parties reconstruites ne sont pas certifiées.",
+    "Raccorder marges, échelles, baselines, pivots et transitions ; les poses ne forment pas des animations complètes.",
+    "Contrôler les contours sur un fond composé et dans le jeu ; aucune admission moteur V25.",
+    "Les domaines costumes, héros, créatures, décors, projectiles et extensions restent distincts. Les autres besoins de V24 sont conservés.",
+    "Foundry MB4, Altar 2F, Tower of Worship, récupération V19 et refus historiques restent ouverts avec leur portée antérieure."
+  ],
+  "bible_and_extensions": "Trois sources et matrice de 68 sections présentes dans la base V23 ; aucune modification V25.",
+  "counting_note": "V24 et V25 totalisent 31 PNG de production. Les 8 de V25 comprennent 6 états proposés pour deux costumes, une correction de regard Helena V24 et le premier essai Claire conservé. Ce ne sont pas 8 nouveaux états, héros ou costumes."
+}

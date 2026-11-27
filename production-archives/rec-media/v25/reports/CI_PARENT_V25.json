@@ -1,0 +1,808 @@
+{
+  "schema": "rec-v25-parent-ci-observation-1",
+  "repository": "darknigthmare/resident-evil-bow-protocol",
+  "pull_request": 24,
+  "parent_v24_commit": "226fbba85ef7d9b248974eee8c455ec01cee95d4",
+  "parent_v24_tree": "bffc8da34a3f2ef9c3f4d19f8c6f092cc82810c2",
+  "runs_snapshot_at_utc": "2026-11-27 08:47:58 UTC",
+  "r34_log_read_at_utc": "2026-11-27 08:48:43 UTC",
+  "scope": "One collection read for the 25 runs attached to the V24 parent; current R34 jobs read once and one completed failed job log inspected. No wait for all runs.",
+  "retrieval": {
+    "workflow_runs_endpoint": "https://api.github.com/repos/darknigthmare/resident-evil-bow-protocol/actions/runs?head_sha=226fbba85ef7d9b248974eee8c455ec01cee95d4&per_page=25&page=1",
+    "workflow_run_collection_reads": 1,
+    "reported_total_count": 25,
+    "returned_runs": 25,
+    "collection_complete_at_snapshot": true,
+    "all_returned_head_sha_match_parent": true,
+    "all_returned_tree_sha_match_parent": true,
+    "all_returned_events": [
+      "pull_request"
+    ],
+    "r34_jobs_reads": 1,
+    "decoded_job_logs_read": 1
+  },
+  "summary": {
+    "snapshot_counts": {
+      "in_progress": 17,
+      "success": 3,
+      "failure": 4,
+      "queued": 1
+    },
+    "snapshot_is_final": false,
+    "all_workflows_passed": false,
+    "observed_failure_cause_count": 1,
+    "failed_runs_at_snapshot_with_logs_uninspected": [
+      45968015612,
+      45968015660,
+      45968015815,
+      45968015645
+    ],
+    "conclusions_may_change_after_snapshot": true
+  },
+  "run_inventory": [
+    {
+      "id": 45968015726,
+      "name": "R31 published provenance/build and current browser regressions",
+      "event": "pull_request",
+      "status": "in_progress",
+      "conclusion": null,
+      "head_sha": "226fbba85ef7d9b248974eee8c455ec01cee95d4",
+      "run_attempt": 1,
+      "html_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45968015726",
+      "created_at": "2026-11-27T08:44:30Z",
+      "updated_at": "2026-11-27T08:44:34Z",
+      "path": ".github/workflows/source-fidelity-r31.yml",
+      "head_tree": "bffc8da34a3f2ef9c3f4d19f8c6f092cc82810c2",
+      "log_inspected": false,
+      "cause_attribution": "not_attributed"
+    },
+    {
+      "id": 45968015605,
+      "name": "R29 complete-body sources, native frames and replay boundaries",
+      "event": "pull_request",
+      "status": "in_progress",
+      "conclusion": null,
+      "head_sha": "226fbba85ef7d9b248974eee8c455ec01cee95d4",
+      "run_attempt": 1,
+      "html_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45968015605",
+      "created_at": "2026-11-27T08:44:30Z",
+      "updated_at": "2026-11-27T08:44:34Z",
+      "path": ".github/workflows/source-fidelity-r29.yml",
+      "head_tree": "bffc8da34a3f2ef9c3f4d19f8c6f092cc82810c2",
+      "log_inspected": false,
+      "cause_attribution": "not_attributed"
+    },
+    {
+      "id": 45968015576,
+      "name": "R11 Lucas browser regressions",
+      "event": "pull_request",
+      "status": "in_progress",
+      "conclusion": null,
+      "head_sha": "226fbba85ef7d9b248974eee8c455ec01cee95d4",
+      "run_attempt": 1,
+      "html_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45968015576",
+      "created_at": "2026-11-27T08:44:30Z",
+      "updated_at": "2026-11-27T08:44:34Z",
+      "path": ".github/workflows/lucas-r11-browser.yml",
+      "head_tree": "bffc8da34a3f2ef9c3f4d19f8c6f092cc82810c2",
+      "log_inspected": false,
+      "cause_attribution": "not_attributed"
+    },
+    {
+      "id": 45968015638,
+      "name": "R22 original source fidelity",
+      "event": "pull_request",
+      "status": "in_progress",
+      "conclusion": null,
+      "head_sha": "226fbba85ef7d9b248974eee8c455ec01cee95d4",
+      "run_attempt": 1,
+      "html_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45968015638",
+      "created_at": "2026-11-27T08:44:30Z",
+      "updated_at": "2026-11-27T08:44:35Z",
+      "path": ".github/workflows/source-fidelity-r22.yml",
+      "head_tree": "bffc8da34a3f2ef9c3f4d19f8c6f092cc82810c2",
+      "log_inspected": false,
+      "cause_attribution": "not_attributed"
+    },
+    {
+      "id": 45968015675,
+      "name": "R10 intro and finisher browser regressions",
+      "event": "pull_request",
+      "status": "in_progress",
+      "conclusion": null,
+      "head_sha": "226fbba85ef7d9b248974eee8c455ec01cee95d4",
+      "run_attempt": 1,
+      "html_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45968015675",
+      "created_at": "2026-11-27T08:44:30Z",
+      "updated_at": "2026-11-27T08:44:35Z",
+      "path": ".github/workflows/r10-browser.yml",
+      "head_tree": "bffc8da34a3f2ef9c3f4d19f8c6f092cc82810c2",
+      "log_inspected": false,
+      "cause_attribution": "not_attributed"
+    },
+    {
+      "id": 45968015773,
+      "name": "R14 Baker rooms browser regressions",
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "226fbba85ef7d9b248974eee8c455ec01cee95d4",
+      "run_attempt": 1,
+      "html_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45968015773",
+      "created_at": "2026-11-27T08:44:30Z",
+      "updated_at": "2026-11-27T08:47:56Z",
+      "path": ".github/workflows/baker-r14-browser.yml",
+      "head_tree": "bffc8da34a3f2ef9c3f4d19f8c6f092cc82810c2",
+      "log_inspected": false,
+      "cause_attribution": "not_attributed"
+    },
+    {
+      "id": 45968015756,
+      "name": "R20 player interface and sprites browser regressions",
+      "event": "pull_request",
+      "status": "in_progress",
+      "conclusion": null,
+      "head_sha": "226fbba85ef7d9b248974eee8c455ec01cee95d4",
+      "run_attempt": 1,
+      "html_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45968015756",
+      "created_at": "2026-11-27T08:44:30Z",
+      "updated_at": "2026-11-27T08:47:57Z",
+      "path": ".github/workflows/interface-r20-browser.yml",
+      "head_tree": "bffc8da34a3f2ef9c3f4d19f8c6f092cc82810c2",
+      "log_inspected": false,
+      "cause_attribution": "not_attributed"
+    },
+    {
+      "id": 45968015601,
+      "name": "R12 flight browser regressions",
+      "event": "pull_request",
+      "status": "in_progress",
+      "conclusion": null,
+      "head_sha": "226fbba85ef7d9b248974eee8c455ec01cee95d4",
+      "run_attempt": 1,
+      "html_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45968015601",
+      "created_at": "2026-11-27T08:44:30Z",
+      "updated_at": "2026-11-27T08:44:34Z",
+      "path": ".github/workflows/flight-r12-browser.yml",
+      "head_tree": "bffc8da34a3f2ef9c3f4d19f8c6f092cc82810c2",
+      "log_inspected": false,
+      "cause_attribution": "not_attributed"
+    },
+    {
+      "id": 45968015648,
+      "name": "R19 save center browser regressions",
+      "event": "pull_request",
+      "status": "in_progress",
+      "conclusion": null,
+      "head_sha": "226fbba85ef7d9b248974eee8c455ec01cee95d4",
+      "run_attempt": 1,
+      "html_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45968015648",
+      "created_at": "2026-11-27T08:44:30Z",
+      "updated_at": "2026-11-27T08:44:35Z",
+      "path": ".github/workflows/saves-r19-browser.yml",
+      "head_tree": "bffc8da34a3f2ef9c3f4d19f8c6f092cc82810c2",
+      "log_inspected": false,
+      "cause_attribution": "not_attributed"
+    },
+    {
+      "id": 45968015796,
+      "name": "R33 current assets, source evidence, restore and presentation",
+      "event": "pull_request",
+      "status": "in_progress",
+      "conclusion": null,
+      "head_sha": "226fbba85ef7d9b248974eee8c455ec01cee95d4",
+      "run_attempt": 1,
+      "html_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45968015796",
+      "created_at": "2026-11-27T08:44:30Z",
+      "updated_at": "2026-11-27T08:44:34Z",
+      "path": ".github/workflows/source-fidelity-r33.yml",
+      "head_tree": "bffc8da34a3f2ef9c3f4d19f8c6f092cc82810c2",
+      "log_inspected": false,
+      "cause_attribution": "not_attributed"
+    },
+    {
+      "id": 45968015612,
+      "name": "R28 reviewed bodies, voluntary evolutions and source evidence",
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "failure",
+      "head_sha": "226fbba85ef7d9b248974eee8c455ec01cee95d4",
+      "run_attempt": 1,
+      "html_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45968015612",
+      "created_at": "2026-11-27T08:44:30Z",
+      "updated_at": "2026-11-27T08:47:58Z",
+      "path": ".github/workflows/source-fidelity-r28.yml",
+      "head_tree": "bffc8da34a3f2ef9c3f4d19f8c6f092cc82810c2",
+      "log_inspected": false,
+      "cause_attribution": "not_attributed"
+    },
+    {
+      "id": 45968015565,
+      "name": "R27 generated sprites, source scope and restored replays",
+      "event": "pull_request",
+      "status": "in_progress",
+      "conclusion": null,
+      "head_sha": "226fbba85ef7d9b248974eee8c455ec01cee95d4",
+      "run_attempt": 1,
+      "html_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45968015565",
+      "created_at": "2026-11-27T08:44:30Z",
+      "updated_at": "2026-11-27T08:44:34Z",
+      "path": ".github/workflows/source-fidelity-r27.yml",
+      "head_tree": "bffc8da34a3f2ef9c3f4d19f8c6f092cc82810c2",
+      "log_inspected": false,
+      "cause_attribution": "not_attributed"
+    },
+    {
+      "id": 45968015856,
+      "name": "R26 cumulative sources, archives and reader access",
+      "event": "pull_request",
+      "status": "queued",
+      "conclusion": null,
+      "head_sha": "226fbba85ef7d9b248974eee8c455ec01cee95d4",
+      "run_attempt": 1,
+      "html_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45968015856",
+      "created_at": "2026-11-27T08:44:30Z",
+      "updated_at": "2026-11-27T08:44:30Z",
+      "path": ".github/workflows/source-fidelity-r26.yml",
+      "head_tree": "bffc8da34a3f2ef9c3f4d19f8c6f092cc82810c2",
+      "log_inspected": false,
+      "cause_attribution": "not_attributed"
+    },
+    {
+      "id": 45968015552,
+      "name": "R34 generated roster and characters then arena selection",
+      "event": "pull_request",
+      "status": "in_progress",
+      "conclusion": null,
+      "head_sha": "226fbba85ef7d9b248974eee8c455ec01cee95d4",
+      "run_attempt": 1,
+      "html_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45968015552",
+      "created_at": "2026-11-27T08:44:30Z",
+      "updated_at": "2026-11-27T08:44:40Z",
+      "path": ".github/workflows/source-fidelity-r34.yml",
+      "head_tree": "bffc8da34a3f2ef9c3f4d19f8c6f092cc82810c2",
+      "log_inspected": true,
+      "cause_attribution": "one_completed_failed_job_only"
+    },
+    {
+      "id": 45968015707,
+      "name": "R15 Baker ambience browser regressions",
+      "event": "pull_request",
+      "status": "in_progress",
+      "conclusion": null,
+      "head_sha": "226fbba85ef7d9b248974eee8c455ec01cee95d4",
+      "run_attempt": 1,
+      "html_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45968015707",
+      "created_at": "2026-11-27T08:44:30Z",
+      "updated_at": "2026-11-27T08:46:55Z",
+      "path": ".github/workflows/baker-audio-r15-browser.yml",
+      "head_tree": "bffc8da34a3f2ef9c3f4d19f8c6f092cc82810c2",
+      "log_inspected": false,
+      "cause_attribution": "not_attributed"
+    },
+    {
+      "id": 45968015660,
+      "name": "B.O.W. Protocol QA",
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "failure",
+      "head_sha": "226fbba85ef7d9b248974eee8c455ec01cee95d4",
+      "run_attempt": 1,
+      "html_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45968015660",
+      "created_at": "2026-11-27T08:44:30Z",
+      "updated_at": "2026-11-27T08:46:52Z",
+      "path": ".github/workflows/ci.yml",
+      "head_tree": "bffc8da34a3f2ef9c3f4d19f8c6f092cc82810c2",
+      "log_inspected": false,
+      "cause_attribution": "not_attributed"
+    },
+    {
+      "id": 45968015815,
+      "name": "R32 current controls in the explicit legacy selection view",
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "failure",
+      "head_sha": "226fbba85ef7d9b248974eee8c455ec01cee95d4",
+      "run_attempt": 1,
+      "html_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45968015815",
+      "created_at": "2026-11-27T08:44:30Z",
+      "updated_at": "2026-11-27T08:46:59Z",
+      "path": ".github/workflows/gamedev-r32.yml",
+      "head_tree": "bffc8da34a3f2ef9c3f4d19f8c6f092cc82810c2",
+      "log_inspected": false,
+      "cause_attribution": "not_attributed"
+    },
+    {
+      "id": 45968015665,
+      "name": "R24 source assets, replay verification and access",
+      "event": "pull_request",
+      "status": "in_progress",
+      "conclusion": null,
+      "head_sha": "226fbba85ef7d9b248974eee8c455ec01cee95d4",
+      "run_attempt": 1,
+      "html_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45968015665",
+      "created_at": "2026-11-27T08:44:30Z",
+      "updated_at": "2026-11-27T08:47:01Z",
+      "path": ".github/workflows/source-fidelity-r24.yml",
+      "head_tree": "bffc8da34a3f2ef9c3f4d19f8c6f092cc82810c2",
+      "log_inspected": false,
+      "cause_attribution": "not_attributed"
+    },
+    {
+      "id": 45968015658,
+      "name": "Audit R9 browser regressions",
+      "event": "pull_request",
+      "status": "in_progress",
+      "conclusion": null,
+      "head_sha": "226fbba85ef7d9b248974eee8c455ec01cee95d4",
+      "run_attempt": 1,
+      "html_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45968015658",
+      "created_at": "2026-11-27T08:44:30Z",
+      "updated_at": "2026-11-27T08:47:02Z",
+      "path": ".github/workflows/audit-r9-browser.yml",
+      "head_tree": "bffc8da34a3f2ef9c3f4d19f8c6f092cc82810c2",
+      "log_inspected": false,
+      "cause_attribution": "not_attributed"
+    },
+    {
+      "id": 45968015711,
+      "name": "R23 parallel fidelity workstreams",
+      "event": "pull_request",
+      "status": "in_progress",
+      "conclusion": null,
+      "head_sha": "226fbba85ef7d9b248974eee8c455ec01cee95d4",
+      "run_attempt": 1,
+      "html_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45968015711",
+      "created_at": "2026-11-27T08:44:30Z",
+      "updated_at": "2026-11-27T08:47:19Z",
+      "path": ".github/workflows/source-fidelity-r23.yml",
+      "head_tree": "bffc8da34a3f2ef9c3f4d19f8c6f092cc82810c2",
+      "log_inspected": false,
+      "cause_attribution": "not_attributed"
+    },
+    {
+      "id": 45968015645,
+      "name": "R25 cumulative sources, archives and reader access",
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "failure",
+      "head_sha": "226fbba85ef7d9b248974eee8c455ec01cee95d4",
+      "run_attempt": 1,
+      "html_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45968015645",
+      "created_at": "2026-11-27T08:44:30Z",
+      "updated_at": "2026-11-27T08:47:29Z",
+      "path": ".github/workflows/source-fidelity-r25.yml",
+      "head_tree": "bffc8da34a3f2ef9c3f4d19f8c6f092cc82810c2",
+      "log_inspected": false,
+      "cause_attribution": "not_attributed"
+    },
+    {
+      "id": 45968016013,
+      "name": "R30 native 2D sprites, complete motion loops and selection avatars",
+      "event": "pull_request",
+      "status": "in_progress",
+      "conclusion": null,
+      "head_sha": "226fbba85ef7d9b248974eee8c455ec01cee95d4",
+      "run_attempt": 1,
+      "html_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45968016013",
+      "created_at": "2026-11-27T08:44:30Z",
+      "updated_at": "2026-11-27T08:47:31Z",
+      "path": ".github/workflows/source-fidelity-r30.yml",
+      "head_tree": "bffc8da34a3f2ef9c3f4d19f8c6f092cc82810c2",
+      "log_inspected": false,
+      "cause_attribution": "not_attributed"
+    },
+    {
+      "id": 45968015800,
+      "name": "R18 story and contextual text regressions",
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "226fbba85ef7d9b248974eee8c455ec01cee95d4",
+      "run_attempt": 1,
+      "html_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45968015800",
+      "created_at": "2026-11-27T08:44:30Z",
+      "updated_at": "2026-11-27T08:47:45Z",
+      "path": ".github/workflows/access-r18-browser.yml",
+      "head_tree": "bffc8da34a3f2ef9c3f4d19f8c6f092cc82810c2",
+      "log_inspected": false,
+      "cause_attribution": "not_attributed"
+    },
+    {
+      "id": 45968015627,
+      "name": "R16-R17 audio and combat text regressions",
+      "event": "pull_request",
+      "status": "in_progress",
+      "conclusion": null,
+      "head_sha": "226fbba85ef7d9b248974eee8c455ec01cee95d4",
+      "run_attempt": 1,
+      "html_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45968015627",
+      "created_at": "2026-11-27T08:44:30Z",
+      "updated_at": "2026-11-27T08:47:47Z",
+      "path": ".github/workflows/combat-text-r17-browser.yml",
+      "head_tree": "bffc8da34a3f2ef9c3f4d19f8c6f092cc82810c2",
+      "log_inspected": false,
+      "cause_attribution": "not_attributed"
+    },
+    {
+      "id": 45968015876,
+      "name": "R13 replay recovery browser regressions",
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "226fbba85ef7d9b248974eee8c455ec01cee95d4",
+      "run_attempt": 1,
+      "html_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45968015876",
+      "created_at": "2026-11-27T08:44:30Z",
+      "updated_at": "2026-11-27T08:47:54Z",
+      "path": ".github/workflows/replay-r13-browser.yml",
+      "head_tree": "bffc8da34a3f2ef9c3f4d19f8c6f092cc82810c2",
+      "log_inspected": false,
+      "cause_attribution": "not_attributed"
+    }
+  ],
+  "r34_observation": {
+    "run_id": 45968015552,
+    "run_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45968015552",
+    "workflow_path": ".github/workflows/source-fidelity-r34.yml",
+    "workflow_status_at_collection_snapshot": "in_progress",
+    "workflow_conclusion_at_collection_snapshot": null,
+    "job_inventory": [
+      {
+        "job_id": 140401292613,
+        "name": "Current tooling and engine, published R34 receipts",
+        "status": "completed",
+        "conclusion": "failure",
+        "steps": [
+          {
+            "number": 1,
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 2,
+            "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 3,
+            "name": "Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 4,
+            "name": "Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 5,
+            "name": "Install pinned verification tools",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 6,
+            "name": "Verify current tooling and media, then published R34 receipts before report refresh",
+            "status": "completed",
+            "conclusion": "failure"
+          },
+          {
+            "number": 7,
+            "name": "Execute new source assertions with fresh reports",
+            "status": "completed",
+            "conclusion": "skipped"
+          },
+          {
+            "number": 8,
+            "name": "Keep the original engine assertions current and their historical conservation exact",
+            "status": "completed",
+            "conclusion": "skipped"
+          },
+          {
+            "number": 9,
+            "name": "Build the current complete static delivery",
+            "status": "completed",
+            "conclusion": "skipped"
+          },
+          {
+            "number": 10,
+            "name": "Preserve actual execution outputs",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 18,
+            "name": "Post Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+            "status": "completed",
+            "conclusion": "skipped"
+          },
+          {
+            "number": 19,
+            "name": "Post Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+            "status": "completed",
+            "conclusion": "skipped"
+          },
+          {
+            "number": 20,
+            "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 21,
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success"
+          }
+        ],
+        "log_inspected": true
+      },
+      {
+        "job_id": 140401293093,
+        "name": "Current R34 default player view - generated-roster-runtime",
+        "status": "completed",
+        "conclusion": "success",
+        "steps": [
+          {
+            "number": 1,
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 2,
+            "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 3,
+            "name": "Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 4,
+            "name": "Install pinned browser tools",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 5,
+            "name": "Install the recorded Chromium and locate axe",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 6,
+            "name": "Exercise the default player flow without the legacy presentation fixture",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 7,
+            "name": "Preserve fresh default-view execution outputs",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 13,
+            "name": "Post Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 14,
+            "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 15,
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success"
+          }
+        ],
+        "log_inspected": false
+      },
+      {
+        "job_id": 140401293148,
+        "name": "Current R34 default player view - characters-arena-combat",
+        "status": "in_progress",
+        "conclusion": null,
+        "steps": [
+          {
+            "number": 1,
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 2,
+            "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 3,
+            "name": "Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 4,
+            "name": "Install pinned browser tools",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 5,
+            "name": "Install the recorded Chromium and locate axe",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 6,
+            "name": "Exercise the default player flow without the legacy presentation fixture",
+            "status": "in_progress",
+            "conclusion": null
+          },
+          {
+            "number": 7,
+            "name": "Preserve fresh default-view execution outputs",
+            "status": "pending",
+            "conclusion": null
+          },
+          {
+            "number": 13,
+            "name": "Post Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+            "status": "pending",
+            "conclusion": null
+          },
+          {
+            "number": 14,
+            "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "status": "pending",
+            "conclusion": null
+          }
+        ],
+        "log_inspected": false
+      },
+      {
+        "job_id": 140401293161,
+        "name": "Current R34 default player view - generated-assets-gallery",
+        "status": "completed",
+        "conclusion": "success",
+        "steps": [
+          {
+            "number": 1,
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 2,
+            "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 3,
+            "name": "Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 4,
+            "name": "Install pinned browser tools",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 5,
+            "name": "Install the recorded Chromium and locate axe",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 6,
+            "name": "Exercise the default player flow without the legacy presentation fixture",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 7,
+            "name": "Preserve fresh default-view execution outputs",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 13,
+            "name": "Post Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 14,
+            "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 15,
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success"
+          }
+        ],
+        "log_inspected": false
+      }
+    ],
+    "inspected_job": {
+      "job_id": 140401292613,
+      "job_name": "Current tooling and engine, published R34 receipts",
+      "job_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45968015552/job/140401292613",
+      "status": "completed",
+      "conclusion": "failure",
+      "failed_step_number": 6,
+      "failed_step_name": "Verify current tooling and media, then published R34 receipts before report refresh",
+      "observed_command": "node scripts/verify-current-r34.mjs",
+      "first_failure": "AssertionError [ERR_ASSERTION]: Unknown R34 addition: docs/combat-bible/EXTENSION_01_APPLICATION.md",
+      "reported_location": "scripts/verify-current-r34.mjs:257:92 (validateSnapshot)",
+      "exit_code": 1,
+      "attributed_only_to_this_job": true,
+      "evidence_excerpt": [
+        {
+          "line": 288,
+          "text": "2026-11-27T08:46:45.4299093Z HEAD is now at ad427a35 Merge 226fbba85ef7d9b248974eee8c455ec01cee95d4 into ba5936bda1571b9880785878783f00ef44d279f7"
+        },
+        {
+          "line": 372,
+          "text": "2026-11-27T08:46:55.4125227Z ##[group]Run node scripts/verify-current-r34.mjs"
+        },
+        {
+          "line": 391,
+          "text": "2026-11-27T08:46:56.4867673Z AssertionError [ERR_ASSERTION]: Unknown R34 addition: docs/combat-bible/EXTENSION_01_APPLICATION.md"
+        },
+        {
+          "line": 392,
+          "text": "2026-11-27T08:46:56.4868703Z     at validateSnapshot (file:///home/runner/work/resident-evil-bow-protocol/resident-evil-bow-protocol/scripts/verify-current-r34.mjs:257:92)"
+        },
+        {
+          "line": 397,
+          "text": "2026-11-27T08:46:56.4940146Z ##[error]Process completed with exit code 1."
+        }
+      ],
+      "log_total_characters": 37599,
+      "log_total_lines": 439,
+      "full_log_copied": false
+    },
+    "interpretation": "Le job de vérification R34 terminé échoue sur une addition non admise par verify-current-r34.mjs : docs/combat-bible/EXTENSION_01_APPLICATION.md. La cause est attribuée à ce seul job dont le journal a été lu. Deux jobs de vue joueur sont réussis selon leurs métadonnées et un reste en cours au relevé des jobs ; leurs journaux n’ont pas été inspectés.",
+    "skipped_steps_in_failed_job": [
+      7,
+      8,
+      9
+    ],
+    "workflow_final_conclusion_not_fetched": true
+  },
+  "attribution_limits": [
+    "Les quatre workflows déjà en échec au relevé initial n’ont pas fait l’objet d’une lecture de journal ; leurs causes restent non attribuées.",
+    "Le run R34 était encore en cours dans la collection ; seul son job de vérification déjà terminé est analysé.",
+    "Le succès de jobs frères provient des métadonnées GitHub ; aucune nouvelle QA navigateur locale n’a été exécutée.",
+    "Aucune conclusion sur les futurs fichiers V25 : ils ne sont pas inclus dans le commit parent inspecté."
+  ],
+  "actions_not_performed": [
+    "No CI rerun or dispatch",
+    "No polling until every workflow completed",
+    "No guard or workflow edit",
+    "No V24 file modification",
+    "No Git tree/index/ref mutation",
+    "No full log archive written"
+  ],
+  "only_written_file": "/workspace/scratch/37b119cd013c/v25-ci/CI_PARENT_V25.json"
+}

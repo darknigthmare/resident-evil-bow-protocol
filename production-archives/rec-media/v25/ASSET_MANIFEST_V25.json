@@ -1,0 +1,439 @@
+{
+  "schema": "rec-v25-consolidated-assets-1",
+  "date": "2026-11-27",
+  "timezone": "Europe/Paris",
+  "base_commit": "226fbba85ef7d9b248974eee8c455ec01cee95d4",
+  "path_base": "production-archives/rec-media/v25",
+  "scope": "Deux costumes officiels déjà produits en V22 reçoivent trois clés de menu chacun. Un candidat distinct corrige le regard Helena V24. Les archives précédentes ne sont pas réécrites.",
+  "summary": {
+    "png": 8,
+    "new_menu_keys": 6,
+    "gaze_correction_candidates": 1,
+    "targeted_correction_outputs": 2,
+    "superseded_trials": 1,
+    "candidate_png": 7,
+    "total_png_bytes": 12645227,
+    "new_costume_specific_menu_sequences": 2,
+    "new_costume_designs": 0,
+    "new_character_identities": 0,
+    "completed_animations": 0,
+    "engine_admissions": 0,
+    "one_to_one_certifications": 0
+  },
+  "source_manifests": [
+    {
+      "path": "characters/manifest.json",
+      "sha256": "f2c625eb9fc7fe4c410089f917c43d88670eb3ea0934f917eebc3da814bb6c8c",
+      "assets": 6
+    },
+    {
+      "path": "helena/manifest.json",
+      "sha256": "c9dd881c850e75b552ca9c2f7cb367ce0c8d1583157ab20c3a185ed4a0ede5f5",
+      "assets": 1
+    },
+    {
+      "path": "claire/manifest.json",
+      "sha256": "53ce8dec8c1fa391df6667686bd2d18ba15dcd98ff24185453cb31a850704952",
+      "assets": 1
+    }
+  ],
+  "assets": [
+    {
+      "asset_id": "REC_CLAIRE_RE2R_MILITARY_SELECTED_KEY_V25",
+      "family": "new_menu_keys",
+      "path": "characters/assets/claire_re2r_military_selected_v25.png",
+      "name": "Claire Redfield",
+      "edition": "Resident Evil 2 Remake (2019), Claire Costume: Military DLC",
+      "state": "selected",
+      "costume": "Military",
+      "hero_id": null,
+      "status": "animation_key_candidate",
+      "catalogue_id": "COST_AUDIT_CLAIRE_MILITARY",
+      "candidate": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "file_bytes": 1573956,
+      "sha256": "662795ed3ebf62596a20076f3b65986f9518d4ba4c17de4ae004b280635018af",
+      "git_blob_sha": "c54ab7c05271166371225bdc908b7bb177f0d898",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "sources": [
+        "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/920562/ss_84f640a97b0bf0a615fae7cf65cc52ab99a78137.1920x1080.jpg?t=1728438738",
+        "https://img.gamewith.net/img/e87acb7b88090bd7b7c90326ce34b9ae.jpg"
+      ],
+      "prompt": "Use case: style-transfer. Asset type: one full-body character-selection key for Resident Evil Combat.\nEdit image 1 into ONE new single pose; images 2 and 3 are supporting native game references, not extra subjects. Preserve the same exact adult identity, face, hairstyle, costume, anatomical equipment sides, body proportions and detailed semi-realistic painted 2D sprite style. Use the native references to keep clothing construction and asymmetry accurate. This is a reference-guided project adaptation; do not invent a different game incarnation.\nComposition: portrait canvas, requested 1024 x 1536. The COMPLETE silhouette, including hair, hands and both boot soles, must occupy only about 72-75% of canvas height. Intentionally zoom out from image 1: leave at least 12% fully transparent blank margin on all four sides; place head near y=205 and lowest boot sole near y=1320 on a 1536-high canvas. Center near x=512. Maintain those same body scale and foot baseline across selection keys. Exactly one character, one pose, clear complete fingers and footwear.\nScene/backdrop: actual alpha transparency. No floor, cast shadow, pedestal, gradient, glow, colored aura, halo, scene, UI, lettering, frame, diagram, inset or sheet. Do not mirror the figure or move equipment to the opposite anatomical side. No duplicate or second view. Keep both hands empty as in image 1; the guns in the native references are not requested props.\nSubject: adult Claire Redfield, Resident Evil 2 Remake (2019), official Claire Costume: Military DLC. Keep the camouflage bandana with tied ends, brown hair/loose strands, off-white tank under olive tactical vest, correct native vest pouches and patches, camouflage cargo trousers, and black lace-up combat boots. Preserve the tattoo on the anatomical RIGHT upper arm, black thigh holster with two straps on anatomical RIGHT leg, watch on anatomical LEFT wrist and canteen at anatomical LEFT rear hip. Keep original shapes/colors of the two lower vest badges and flag; no new logos, no reinterpretation as a BSAA uniform. Do not add red jacket, gloves, shotgun or launcher.\nPose change only: SELECTED / attentive preview. Torso nearly frontal with a small natural three-quarter turn toward viewer-right. Head upright and attentive toward viewer-right. Feet planted shoulder-width apart. Lower both hands from the high fists of image 1 into a relaxed low ready position beside the lower vest, elbows slightly bent, fingers naturally relaxed. Calm focused expression; no attack, no salute, no theatrical gesture. This is one still key, not an animation sheet.",
+      "source_manifest": "characters/manifest.json",
+      "source_manifest_sha256": "f2c625eb9fc7fe4c410089f917c43d88670eb3ea0934f917eebc3da814bb6c8c",
+      "independent_review": "reports/INDEPENDENT_CHARACTERS_V25.json",
+      "limitations": [
+        "Clé fixe adaptée pour le projet ; aucune animation de sélection officielle du jeu source n’est revendiquée.",
+        "Les six sorties restent des candidats. Fidélité canonique 1:1, cycle animé complet et admission moteur ne sont pas certifiés.",
+        "Les marges verticales n’atteignent pas 10 % ni la cible initiale de 12 %. Les clés suivantes conservent volontairement le cadrage du selected pour limiter la dérive entre états.",
+        "Alpha natif [0,254] préservé. Des traces très faibles à alpha 1–15 s’étendent au-delà de la silhouette ; contrôler franges, prémultiplication et fond réel avant intégration.",
+        "Les bases V22 et ces clés gardent les mains vides ; les armes visibles dans les captures natives servent au contexte source et ne sont pas reproduites. Aucun tir ni geste armé n’est validé.",
+        "Détails du visage, du camouflage, des coutures, des mains et des petits accessoires réinterprétés ; comparaison à taille de moteur nécessaire.",
+        "Les mains sont plus basses et les coudes moins fléchis que la position basse près du gilet demandée.",
+        "Les emblèmes du gilet et le tatouage conservent leurs emplacements, mais leurs tracés ne sont pas une reproduction 1:1."
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "post_generation_pixel_edits": false
+    },
+    {
+      "asset_id": "REC_BILLY_RE0HD_WOLF_FORCE_SELECTED_KEY_V25",
+      "family": "new_menu_keys",
+      "path": "characters/assets/billy_re0hd_wolf_force_selected_v25.png",
+      "name": "Billy Coen",
+      "edition": "Resident Evil Zero HD Remaster (2016), Costume Pack 1, Wolf Force",
+      "state": "selected",
+      "costume": "Wolf Force",
+      "hero_id": null,
+      "status": "animation_key_candidate",
+      "catalogue_id": "COST_AUDIT_BILLY_WOLF_FORCE",
+      "candidate": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "file_bytes": 1692051,
+      "sha256": "c3e8fd30697a8d1fa706211e3d344403494dd5111abaf5de0ffbd6b9a9b70b5c",
+      "git_blob_sha": "2b0e8c41d23059777629062a1a1c8f319240c2a4",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "sources": [
+        "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/381710/ss_a328865b12144b46243fc4a3705c187fb71e17e9.1920x1080.jpg?t=1702541116",
+        "https://www.faxagate.com/resources/-/gaming/resident-evil-0-costumes/cp1-billy-wolf-force.webp"
+      ],
+      "prompt": "Use case: style-transfer. Asset type: one full-body character-selection key for Resident Evil Combat.\nEdit image 1 into ONE new single pose; images 2 and 3 are supporting native game references, not extra subjects. Preserve the same exact adult identity, face, hairstyle, costume, anatomical equipment sides, body proportions and detailed semi-realistic painted 2D sprite style. Use the native references to keep clothing construction and asymmetry accurate. This is a reference-guided project adaptation; do not invent a different game incarnation.\nComposition: portrait canvas, requested 1024 x 1536. The COMPLETE silhouette, including hair, hands and both boot soles, must occupy only about 72-75% of canvas height. Intentionally zoom out from image 1: leave at least 12% fully transparent blank margin on all four sides; place head near y=205 and lowest boot sole near y=1320 on a 1536-high canvas. Center near x=512. Maintain those same body scale and foot baseline across selection keys. Exactly one character, one pose, clear complete fingers and footwear.\nScene/backdrop: actual alpha transparency. No floor, cast shadow, pedestal, gradient, glow, colored aura, halo, scene, UI, lettering, frame, diagram, inset or sheet. Do not mirror the figure or move equipment to the opposite anatomical side. No duplicate or second view. Keep both hands empty as in image 1; the guns in the native references are not requested props.\nSubject: adult Billy Coen, Resident Evil Zero HD Remaster (2016), official Costume Pack 1 Wolf Force costume. Preserve slicked-back brown hair, visor over anatomical RIGHT eye and olive headset, open-chest olive webbing harness with native silver upper-chest connector, five compact olive cylinders on anatomical RIGHT shoulder strap, two large cylinders/pouches at anatomical RIGHT hip, small pouch at anatomical LEFT hip, blue-gray camouflage cargo trousers, dark knee pads, dark boots, blue fingerless gauntlets with three pale bands at each wrist. Maintain the native asymmetry and original palette. No Prisoner tank top, handcuffs, chain, arm tattoo, extra firearm or newly designed armor. The promotional collage includes Rebecca: omit her completely.\nPose change only: SELECTED / attentive preview. Torso nearly frontal, head upright looking slightly toward viewer-right. Feet firmly planted shoulder-width apart. Bend both elbows modestly with the empty gloved hands relaxed at belt height and clearly separated from the webbing. Quiet alert posture, small forward weight shift, neutral confident face. No celebratory raised arms or open-mouth shout. This is one still key, not an animation sheet.",
+      "source_manifest": "characters/manifest.json",
+      "source_manifest_sha256": "f2c625eb9fc7fe4c410089f917c43d88670eb3ea0934f917eebc3da814bb6c8c",
+      "independent_review": "reports/INDEPENDENT_CHARACTERS_V25.json",
+      "limitations": [
+        "Clé fixe adaptée pour le projet ; aucune animation de sélection officielle du jeu source n’est revendiquée.",
+        "Les six sorties restent des candidats. Fidélité canonique 1:1, cycle animé complet et admission moteur ne sont pas certifiés.",
+        "Les marges verticales n’atteignent pas 10 % ni la cible initiale de 12 %. Les clés suivantes conservent volontairement le cadrage du selected pour limiter la dérive entre états.",
+        "Alpha natif [0,254] préservé. Des traces très faibles à alpha 1–15 s’étendent au-delà de la silhouette ; contrôler franges, prémultiplication et fond réel avant intégration.",
+        "Les bases V22 et ces clés gardent les mains vides ; les armes visibles dans les captures natives servent au contexte source et ne sont pas reproduites. Aucun tir ni geste armé n’est validé.",
+        "Détails du visage, du camouflage, des coutures, des mains et des petits accessoires réinterprétés ; comparaison à taille de moteur nécessaire.",
+        "Le regard est presque frontal ; orientation vers la droite de l’image très légère.",
+        "Cinq volumes cylindriques principaux restent visibles à l’épaule droite ; la lèvre/sangle supérieure et les formes de fixation varient et ne doivent pas être comptées comme un sixième cylindre.",
+        "Le microphone hérité du candidat V22 et les petits détails du casque ne sont pas recertifiés par une vue native rapprochée complète."
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "post_generation_pixel_edits": false
+    },
+    {
+      "asset_id": "REC_CLAIRE_RE2R_MILITARY_CONFIRM_KEY_V25",
+      "family": "new_menu_keys",
+      "path": "characters/assets/claire_re2r_military_confirm_v25.png",
+      "name": "Claire Redfield",
+      "edition": "Resident Evil 2 Remake (2019), Claire Costume: Military DLC",
+      "state": "confirm",
+      "costume": "Military",
+      "hero_id": null,
+      "status": "animation_key_candidate",
+      "catalogue_id": "COST_AUDIT_CLAIRE_MILITARY",
+      "candidate": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "file_bytes": 1522471,
+      "sha256": "40ea4bbd52e779e598a4002df2199f709066657c3e6d13a76cd321d4a5d488f9",
+      "git_blob_sha": "d75777bb013ba227606d26a4c7c49fbf55a282c4",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "sources": [
+        "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/920562/ss_84f640a97b0bf0a615fae7cf65cc52ab99a78137.1920x1080.jpg?t=1728438738",
+        "https://img.gamewith.net/img/e87acb7b88090bd7b7c90326ce34b9ae.jpg"
+      ],
+      "prompt": "Use case: style-transfer. Asset type: one full-body character-selection key for Resident Evil Combat.\nEdit target: image 1 is the already-generated SELECTED key. Images 2 and 3 are native game costume references only. Change only the requested modest gesture and necessary cloth folds. Keep the EXACT same adult face, hair, body proportions, costume, rendering style, anatomical equipment sides, light and palette as image 1.\nFRAMING LOCK: retain the portrait 1024 x 1536 canvas and current camera distance, figure size, head height and lowest boot baseline of image 1. Do not zoom in, crop or enlarge the subject. Keep the whole head, all fingers, all equipment and both boot soles inside the image. One complete character, ONE still pose only. The same baseline and scale are needed to compare these keys.\nBACKGROUND: actual transparent alpha, matching the cutout in image 1. No visible background, floor, shadow, glow, aura, vignette, halo, UI, text, inset, frame, panel, second figure or animation sheet.\nPreserve all anatomical sides; do not mirror. BOTH HANDS REMAIN EMPTY except when making the specified contact with existing clothing or headset. Do not import the firearms or other subjects from the native costume-reference screenshots. This is a project menu adaptation, not a claim that the source game used this exact gesture.\nSubject: adult Claire Redfield, Resident Evil 2 Remake (2019), official Claire Costume: Military DLC. Keep the camouflage bandana with tied ends, brown hair/loose strands, off-white tank under olive tactical vest, correct native vest pouches and patches, camouflage cargo trousers, and black lace-up combat boots. Preserve the tattoo on the anatomical RIGHT upper arm, black thigh holster with two straps on anatomical RIGHT leg, watch on anatomical LEFT wrist and canteen at anatomical LEFT rear hip. Keep original shapes/colors of the two lower vest badges and flag; no new logos, no reinterpretation as a BSAA uniform. Do not add red jacket, gloves, shotgun or launcher.\nPose change: CONFIRMATION key. Keep Claire's planted legs and entire body scale. Raise ONLY her anatomical LEFT forearm (viewer-right arm with the watch) so her left hand forms a small relaxed fist near the left collarbone, just in front of the vest strap; do not cover the lower vest badges. Her anatomical RIGHT arm remains relaxed at the side. Give a slight downward head nod with a composed focused expression, gaze toward the player. It must be visibly different from the low relaxed selected stance, without a salute, weapon, big smile or combat swing.",
+      "source_manifest": "characters/manifest.json",
+      "source_manifest_sha256": "f2c625eb9fc7fe4c410089f917c43d88670eb3ea0934f917eebc3da814bb6c8c",
+      "independent_review": "reports/INDEPENDENT_CHARACTERS_V25.json",
+      "limitations": [
+        "Clé fixe adaptée pour le projet ; aucune animation de sélection officielle du jeu source n’est revendiquée.",
+        "Les six sorties restent des candidats. Fidélité canonique 1:1, cycle animé complet et admission moteur ne sont pas certifiés.",
+        "Les marges verticales n’atteignent pas 10 % ni la cible initiale de 12 %. Les clés suivantes conservent volontairement le cadrage du selected pour limiter la dérive entre états.",
+        "Alpha natif [0,254] préservé. Des traces très faibles à alpha 1–15 s’étendent au-delà de la silhouette ; contrôler franges, prémultiplication et fond réel avant intégration.",
+        "Les bases V22 et ces clés gardent les mains vides ; les armes visibles dans les captures natives servent au contexte source et ne sont pas reproduites. Aucun tir ni geste armé n’est validé.",
+        "Détails du visage, du camouflage, des coutures, des mains et des petits accessoires réinterprétés ; comparaison à taille de moteur nécessaire.",
+        "Le poing gauche semble en contact avec la bretelle plutôt que strictement placé devant elle ; détail de doigts à qualifier.",
+        "Les emblèmes du gilet et le tatouage conservent leurs emplacements, mais leurs tracés ne sont pas une reproduction 1:1."
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "post_generation_pixel_edits": false
+    },
+    {
+      "asset_id": "REC_CLAIRE_RE2R_MILITARY_DESELECT_KEY_V25",
+      "family": "new_menu_keys",
+      "path": "characters/assets/claire_re2r_military_deselect_v25.png",
+      "name": "Claire Redfield",
+      "edition": "Resident Evil 2 Remake (2019), Claire Costume: Military DLC",
+      "state": "deselect",
+      "costume": "Military",
+      "hero_id": null,
+      "status": "superseded_trial",
+      "catalogue_id": "COST_AUDIT_CLAIRE_MILITARY",
+      "candidate": false,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "file_bytes": 1603406,
+      "sha256": "66a4c5690420c2098073806c267285539a973b4f8f6d097cbfd9b1837cbbcb87",
+      "git_blob_sha": "366bff339211aaa87ad6c390e9b30043f1c2538d",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "sources": [
+        "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/920562/ss_84f640a97b0bf0a615fae7cf65cc52ab99a78137.1920x1080.jpg?t=1728438738",
+        "https://img.gamewith.net/img/e87acb7b88090bd7b7c90326ce34b9ae.jpg"
+      ],
+      "prompt": "Use case: style-transfer. Asset type: one full-body character-selection key for Resident Evil Combat.\nEdit target: image 1 is the already-generated SELECTED key. Images 2 and 3 are native game costume references only. Change only the requested modest gesture and necessary cloth folds. Keep the EXACT same adult face, hair, body proportions, costume, rendering style, anatomical equipment sides, light and palette as image 1.\nFRAMING LOCK: retain the portrait 1024 x 1536 canvas and current camera distance, figure size, head height and lowest boot baseline of image 1. Do not zoom in, crop or enlarge the subject. Keep the whole head, all fingers, all equipment and both boot soles inside the image. One complete character, ONE still pose only. The same baseline and scale are needed to compare these keys.\nBACKGROUND: actual transparent alpha, matching the cutout in image 1. No visible background, floor, shadow, glow, aura, vignette, halo, UI, text, inset, frame, panel, second figure or animation sheet.\nPreserve all anatomical sides; do not mirror. BOTH HANDS REMAIN EMPTY except when making the specified contact with existing clothing or headset. Do not import the firearms or other subjects from the native costume-reference screenshots. This is a project menu adaptation, not a claim that the source game used this exact gesture.\nSubject: adult Claire Redfield, Resident Evil 2 Remake (2019), official Claire Costume: Military DLC. Keep the camouflage bandana with tied ends, brown hair/loose strands, off-white tank under olive tactical vest, correct native vest pouches and patches, camouflage cargo trousers, and black lace-up combat boots. Preserve the tattoo on the anatomical RIGHT upper arm, black thigh holster with two straps on anatomical RIGHT leg, watch on anatomical LEFT wrist and canteen at anatomical LEFT rear hip. Keep original shapes/colors of the two lower vest badges and flag; no new logos, no reinterpretation as a BSAA uniform. Do not add red jacket, gloves, shotgun or launcher.\nPose change: DESELECTION / withdrawal key. Both arms now hang naturally down with the hands open and relaxed. Shift weight subtly onto the anatomical LEFT leg and draw the anatomical RIGHT boot a little back, still fully visible, without crossing the legs; lowest grounded boot baseline stays the same. Rotate head and gaze distinctly toward VIEWER-LEFT, with only a small torso turn in that direction, keeping a mostly frontal view so the right thigh holster and front vest patches remain visible. Quiet return posture, not a reversed confirmation, no waving, no weapon and no exaggerated walk.",
+      "source_manifest": "characters/manifest.json",
+      "source_manifest_sha256": "f2c625eb9fc7fe4c410089f917c43d88670eb3ea0934f917eebc3da814bb6c8c",
+      "independent_review": "reports/INDEPENDENT_CHARACTERS_V25.json",
+      "limitations": [
+        "Clé fixe adaptée pour le projet ; aucune animation de sélection officielle du jeu source n’est revendiquée.",
+        "Les six sorties restent des candidats. Fidélité canonique 1:1, cycle animé complet et admission moteur ne sont pas certifiés.",
+        "Les marges verticales n’atteignent pas 10 % ni la cible initiale de 12 %. Les clés suivantes conservent volontairement le cadrage du selected pour limiter la dérive entre états.",
+        "Alpha natif [0,254] préservé. Des traces très faibles à alpha 1–15 s’étendent au-delà de la silhouette ; contrôler franges, prémultiplication et fond réel avant intégration.",
+        "Les bases V22 et ces clés gardent les mains vides ; les armes visibles dans les captures natives servent au contexte source et ne sont pas reproduites. Aucun tir ni geste armé n’est validé.",
+        "Détails du visage, du camouflage, des coutures, des mains et des petits accessoires réinterprétés ; comparaison à taille de moteur nécessaire.",
+        "Le regard demandé vers la gauche de l’image reste orienté à droite.",
+        "Différence de geste faible par rapport au selected : appui/botte légèrement changés, haut du corps très proche. Cette image ne valide pas la désélection directionnelle demandée.",
+        "Les emblèmes du gilet et le tatouage conservent leurs emplacements, mais leurs tracés ne sont pas une reproduction 1:1."
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "post_generation_pixel_edits": false,
+      "author_status": "animation_key_candidate_with_pose_deviation",
+      "superseded_by": "REC_CLAIRE_RE2R_MILITARY_DESELECT_HEAD_LEFT_KEY_V25",
+      "consolidation_decision": "Regard contraire à la consigne dans le premier passage ; correction gauche observée dans la revue complémentaire. Manifeste auteur intact."
+    },
+    {
+      "asset_id": "REC_BILLY_RE0HD_WOLF_FORCE_CONFIRM_KEY_V25",
+      "family": "new_menu_keys",
+      "path": "characters/assets/billy_re0hd_wolf_force_confirm_v25.png",
+      "name": "Billy Coen",
+      "edition": "Resident Evil Zero HD Remaster (2016), Costume Pack 1, Wolf Force",
+      "state": "confirm",
+      "costume": "Wolf Force",
+      "hero_id": null,
+      "status": "animation_key_candidate",
+      "catalogue_id": "COST_AUDIT_BILLY_WOLF_FORCE",
+      "candidate": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "file_bytes": 1665163,
+      "sha256": "968c576853324a3c98f38fddedfb01ef13b2fd85f079342381ea1bce990d8849",
+      "git_blob_sha": "c1fb5925ce9bbef9af19eb0f63c4c16ec39819e0",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "sources": [
+        "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/381710/ss_a328865b12144b46243fc4a3705c187fb71e17e9.1920x1080.jpg?t=1702541116",
+        "https://www.faxagate.com/resources/-/gaming/resident-evil-0-costumes/cp1-billy-wolf-force.webp"
+      ],
+      "prompt": "Use case: style-transfer. Asset type: one full-body character-selection key for Resident Evil Combat.\nEdit target: image 1 is the already-generated SELECTED key. Images 2 and 3 are native game costume references only. Change only the requested modest gesture and necessary cloth folds. Keep the EXACT same adult face, hair, body proportions, costume, rendering style, anatomical equipment sides, light and palette as image 1.\nFRAMING LOCK: retain the portrait 1024 x 1536 canvas and current camera distance, figure size, head height and lowest boot baseline of image 1. Do not zoom in, crop or enlarge the subject. Keep the whole head, all fingers, all equipment and both boot soles inside the image. One complete character, ONE still pose only. The same baseline and scale are needed to compare these keys.\nBACKGROUND: actual transparent alpha, matching the cutout in image 1. No visible background, floor, shadow, glow, aura, vignette, halo, UI, text, inset, frame, panel, second figure or animation sheet.\nPreserve all anatomical sides; do not mirror. BOTH HANDS REMAIN EMPTY except when making the specified contact with existing clothing or headset. Do not import the firearms or other subjects from the native costume-reference screenshots. This is a project menu adaptation, not a claim that the source game used this exact gesture.\nSubject: adult Billy Coen, Resident Evil Zero HD Remaster (2016), official Costume Pack 1 Wolf Force costume. Preserve slicked-back brown hair, visor over anatomical RIGHT eye and olive headset, open-chest olive webbing harness with native silver upper-chest connector, five compact olive cylinders on anatomical RIGHT shoulder strap, two large cylinders/pouches at anatomical RIGHT hip, small pouch at anatomical LEFT hip, blue-gray camouflage cargo trousers, dark knee pads, dark boots, blue fingerless gauntlets with three pale bands at each wrist. Maintain the native asymmetry and original palette. No Prisoner tank top, handcuffs, chain, arm tattoo, extra firearm or newly designed armor. The promotional collage includes Rebecca: omit her completely.\nPose change: CONFIRMATION key. Keep Billy's planted legs, body scale and feet unchanged. Raise ONLY his anatomical LEFT hand (viewer-right) and lightly touch the anatomical LEFT headset earpiece with two gloved fingertips, as a brief calm acknowledgement. Keep his right hand lowered and empty, away from the right hip pouches. A small chin dip, composed expression, mouth closed. Keep the visor on the anatomical RIGHT eye and all five cylinders on the anatomical RIGHT shoulder. No salute, cheering, firearm, fist punch, extra headset piece or new accessory.",
+      "source_manifest": "characters/manifest.json",
+      "source_manifest_sha256": "f2c625eb9fc7fe4c410089f917c43d88670eb3ea0934f917eebc3da814bb6c8c",
+      "independent_review": "reports/INDEPENDENT_CHARACTERS_V25.json",
+      "limitations": [
+        "Clé fixe adaptée pour le projet ; aucune animation de sélection officielle du jeu source n’est revendiquée.",
+        "Les six sorties restent des candidats. Fidélité canonique 1:1, cycle animé complet et admission moteur ne sont pas certifiés.",
+        "Les marges verticales n’atteignent pas 10 % ni la cible initiale de 12 %. Les clés suivantes conservent volontairement le cadrage du selected pour limiter la dérive entre états.",
+        "Alpha natif [0,254] préservé. Des traces très faibles à alpha 1–15 s’étendent au-delà de la silhouette ; contrôler franges, prémultiplication et fond réel avant intégration.",
+        "Les bases V22 et ces clés gardent les mains vides ; les armes visibles dans les captures natives servent au contexte source et ne sont pas reproduites. Aucun tir ni geste armé n’est validé.",
+        "Détails du visage, du camouflage, des coutures, des mains et des petits accessoires réinterprétés ; comparaison à taille de moteur nécessaire.",
+        "Les plis, la forme du gant et le microphone varient légèrement avec la pose.",
+        "Cinq volumes cylindriques principaux restent visibles à l’épaule droite ; la lèvre/sangle supérieure et les formes de fixation varient et ne doivent pas être comptées comme un sixième cylindre.",
+        "Le microphone hérité du candidat V22 et les petits détails du casque ne sont pas recertifiés par une vue native rapprochée complète."
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "post_generation_pixel_edits": false
+    },
+    {
+      "asset_id": "REC_BILLY_RE0HD_WOLF_FORCE_DESELECT_KEY_V25",
+      "family": "new_menu_keys",
+      "path": "characters/assets/billy_re0hd_wolf_force_deselect_v25.png",
+      "name": "Billy Coen",
+      "edition": "Resident Evil Zero HD Remaster (2016), Costume Pack 1, Wolf Force",
+      "state": "deselect",
+      "costume": "Wolf Force",
+      "hero_id": null,
+      "status": "animation_key_candidate",
+      "catalogue_id": "COST_AUDIT_BILLY_WOLF_FORCE",
+      "candidate": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "file_bytes": 1658506,
+      "sha256": "0becca8eee9603f5a294a8efcfcbf84fe6ffc26d04f9690ddb5309dc0b618798",
+      "git_blob_sha": "5fb16ea7d45d7c33527753c69f02e105d4ff6479",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "sources": [
+        "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/381710/ss_a328865b12144b46243fc4a3705c187fb71e17e9.1920x1080.jpg?t=1702541116",
+        "https://www.faxagate.com/resources/-/gaming/resident-evil-0-costumes/cp1-billy-wolf-force.webp"
+      ],
+      "prompt": "Use case: style-transfer. Asset type: one full-body character-selection key for Resident Evil Combat.\nEdit target: image 1 is the already-generated SELECTED key. Images 2 and 3 are native game costume references only. Change only the requested modest gesture and necessary cloth folds. Keep the EXACT same adult face, hair, body proportions, costume, rendering style, anatomical equipment sides, light and palette as image 1.\nFRAMING LOCK: retain the portrait 1024 x 1536 canvas and current camera distance, figure size, head height and lowest boot baseline of image 1. Do not zoom in, crop or enlarge the subject. Keep the whole head, all fingers, all equipment and both boot soles inside the image. One complete character, ONE still pose only. The same baseline and scale are needed to compare these keys.\nBACKGROUND: actual transparent alpha, matching the cutout in image 1. No visible background, floor, shadow, glow, aura, vignette, halo, UI, text, inset, frame, panel, second figure or animation sheet.\nPreserve all anatomical sides; do not mirror. BOTH HANDS REMAIN EMPTY except when making the specified contact with existing clothing or headset. Do not import the firearms or other subjects from the native costume-reference screenshots. This is a project menu adaptation, not a claim that the source game used this exact gesture.\nSubject: adult Billy Coen, Resident Evil Zero HD Remaster (2016), official Costume Pack 1 Wolf Force costume. Preserve slicked-back brown hair, visor over anatomical RIGHT eye and olive headset, open-chest olive webbing harness with native silver upper-chest connector, five compact olive cylinders on anatomical RIGHT shoulder strap, two large cylinders/pouches at anatomical RIGHT hip, small pouch at anatomical LEFT hip, blue-gray camouflage cargo trousers, dark knee pads, dark boots, blue fingerless gauntlets with three pale bands at each wrist. Maintain the native asymmetry and original palette. No Prisoner tank top, handcuffs, chain, arm tattoo, extra firearm or newly designed armor. The promotional collage includes Rebecca: omit her completely.\nPose change: DESELECTION / return key. Lower both empty gloved hands naturally alongside the hips, distinctly away from the headset. Shift weight slightly onto the anatomical LEFT leg and draw the anatomical RIGHT boot just a little back without crossing the legs; keep the lowest planted sole at the same baseline. Turn the head and gaze clearly toward VIEWER-LEFT with a slight torso follow, while remaining mostly frontal and preserving visibility of the asymmetric front harness and right hip pouches. Mouth closed, quiet disengaging posture. No raised celebration arms, weapon, attack, mirror or dramatic back view.",
+      "source_manifest": "characters/manifest.json",
+      "source_manifest_sha256": "f2c625eb9fc7fe4c410089f917c43d88670eb3ea0934f917eebc3da814bb6c8c",
+      "independent_review": "reports/INDEPENDENT_CHARACTERS_V25.json",
+      "limitations": [
+        "Clé fixe adaptée pour le projet ; aucune animation de sélection officielle du jeu source n’est revendiquée.",
+        "Les six sorties restent des candidats. Fidélité canonique 1:1, cycle animé complet et admission moteur ne sont pas certifiés.",
+        "Les marges verticales n’atteignent pas 10 % ni la cible initiale de 12 %. Les clés suivantes conservent volontairement le cadrage du selected pour limiter la dérive entre états.",
+        "Alpha natif [0,254] préservé. Des traces très faibles à alpha 1–15 s’étendent au-delà de la silhouette ; contrôler franges, prémultiplication et fond réel avant intégration.",
+        "Les bases V22 et ces clés gardent les mains vides ; les armes visibles dans les captures natives servent au contexte source et ne sont pas reproduites. Aucun tir ni geste armé n’est validé.",
+        "Détails du visage, du camouflage, des coutures, des mains et des petits accessoires réinterprétés ; comparaison à taille de moteur nécessaire.",
+        "La modification du pas reste faible et ne démontre aucune transition complète.",
+        "Cinq volumes cylindriques principaux restent visibles à l’épaule droite ; la lèvre/sangle supérieure et les formes de fixation varient et ne doivent pas être comptées comme un sixième cylindre.",
+        "Le microphone hérité du candidat V22 et les petits détails du casque ne sont pas recertifiés par une vue native rapprochée complète."
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "post_generation_pixel_edits": false
+    },
+    {
+      "asset_id": "REC_HELENA_RE6_DESELECT_HEAD_LEFT_KEY_V25",
+      "family": "gaze_correction",
+      "path": "helena/outputs/helena_re6_agent_deselect_head_left_v25.png",
+      "name": "Helena Harper — désélection, tête et regard vers la gauche image",
+      "edition": "Resident Evil 6 (2012), tenue promotionnelle de janvier 2012",
+      "state": "deselect",
+      "costume": null,
+      "hero_id": "REC_HELENA_RE6",
+      "status": "correction_candidate_with_nonlocal_pixel_drift",
+      "catalogue_id": null,
+      "candidate": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "file_bytes": 1353016,
+      "sha256": "7ee77aa161e7507842f1eb0d6c2282d01bea18f9cdb186836ad697d13600528c",
+      "git_blob_sha": "421a53ba112b10b2631c3b54e50c21e17c862729",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "sources": [
+        "https://news.capcomusa.com/brelston/blog/2012/01/23/official_leon_and_helena_art_from_resident_evil_6",
+        "https://cdn.capcom-unity.com/capcom-unity.com/user/brelston/resident_evil_6/0f9917d9a7b7e6c3652f0c8740619f50.jpg?v=161100"
+      ],
+      "prompt": "Use case: precise-object-edit.\nAsset type: one transparent full-body character key for Resident Evil Combat.\nInput images: Image 1 is the EDIT TARGET, the existing V24 Helena Harper deselect key. Image 2 is an official Capcom promotional reference from 23 January 2012: use only Helena, the woman on the left, as the identity and outfit control; the other character is not part of the output.\nPrimary request: make exactly one targeted local correction in Image 1: turn Helena's head and eye gaze clearly toward the LEFT EDGE OF THE IMAGE (the viewer's left). Her nose should point left in a readable three-quarter head turn, and both eyes should look left. Preserve her identity and the neutral deselection expression.\nInvariants: keep the entire body below the neck, torso orientation, full-body stance, limbs, hands, weapon, outfit, waist equipment, shoes, placement, scale, framing, lighting and materials as in Image 1. Keep the handgun in her ANATOMICAL RIGHT HAND, the hand on the viewer's left, held down exactly as in the target. Preserve the original asymmetries, including hair arrangement, clothing and equipment; do not mirror or flip the image. Do not adopt the reference image's body pose. Change only the head/eye direction with the minimum necessary neck/hair adjustment.\nCanvas/background: preserve the portrait 1024 by 1536 composition and the complete head-to-shoes figure with its existing margins. Return one native PNG with genuine transparent alpha background, preserving the target's transparency. No extra characters, objects, labels or scenery.",
+      "source_manifest": "helena/manifest.json",
+      "source_manifest_sha256": "c9dd881c850e75b552ca9c2f7cb367ce0c8d1583157ab20c3a185ed4a0ede5f5",
+      "independent_review": "reports/INDEPENDENT_HELENA_V25.json",
+      "limitations": [
+        "Refus de certifier une identité, tenue ou copie canonique 1:1 à partir d’un rendu promotionnel de 358×450 ; modèle commercial final RE6 non certifié.",
+        "Aucun rendu moteur/navigateur composé ni raccord de pivot/animation validé.",
+        "L’aperçu view_image du nouveau fichier s’est affiché presque noir ; la revue du résultat utilise le PNG image_url exact, rendu directement et vérifié identique au fichier, pas cet aperçu défaillant.",
+        "Vrai alpha 0–254 ; faible alpha résiduel. Les pixels RGB extérieurs échantillonnés sont à alpha 0, sans preuve d’un fond opaque.",
+        "La direction gauche est corrigée, mais des pixels sous le cou ont également changé ; aucune invariance locale stricte ni remplacement automatique de V24."
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "post_generation_pixel_edits": false,
+      "correction_of": "REC_HELENA_RE6_DESELECT_KEY_V24",
+      "v24_original_retained": true,
+      "automatic_replacement": false
+    },
+    {
+      "asset_id": "REC_CLAIRE_RE2R_MILITARY_DESELECT_HEAD_LEFT_KEY_V25",
+      "family": "menu_direction_correction",
+      "path": "claire/outputs/claire_re2r_military_deselect_head_left_v25.png",
+      "name": "Claire Redfield — Military, désélection tête et regard vers la gauche image",
+      "edition": "Resident Evil 2 Remake (2019), Claire Costume: Military DLC",
+      "state": "deselect",
+      "costume": null,
+      "hero_id": "REC_CLAIRE_RE2R",
+      "status": "correction_candidate_with_nonlocal_pixel_drift",
+      "catalogue_id": null,
+      "candidate": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "file_bytes": 1576658,
+      "sha256": "a9ccc600a39858dcd05c144a5e0587bdddba0f546099be54411dbafa9913bbd3",
+      "git_blob_sha": "6ca8f2e32219cfb1896db0873313226ce9c47f28",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "sources": [
+        "https://store.steampowered.com/app/920562/",
+        "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/920562/ss_84f640a97b0bf0a615fae7cf65cc52ab99a78137.1920x1080.jpg?t=1728438738",
+        "https://gamewith.net/residentevil2/article/show/3486",
+        "https://img.gamewith.net/img/e87acb7b88090bd7b7c90326ce34b9ae.jpg"
+      ],
+      "prompt": "Use case: precise-object-edit.\nAsset type: one transparent full-body deselection character key for Resident Evil Combat.\nInput images: Image 1 is the EDIT TARGET, Claire Redfield's existing V25 Military deselect key. Images 2 and 3 are native Resident Evil 2 Remake Military costume references used only to control her identity and outfit; do not copy their weapon or aiming pose.\nPrimary request: make one targeted local correction in Image 1: turn Claire's head and both eyes clearly toward the LEFT EDGE OF THE IMAGE, the viewer's left. Her nose must point LEFT in a readable three-quarter head turn, and her eyes must look LEFT. Keep the same adult Claire identity and calm neutral deselection expression.\nInvariants: preserve everything below the neck as in Image 1: torso orientation, stance, arms, empty hands, fingers, boots, equipment, clothing, textures, palette, lighting, figure size and position. Retain the camouflage bandana and tied ends, brown hair and loose strands, off-white tank, olive tactical vest with the same patches/pouches, camouflage trousers and black lace-up boots. Preserve anatomical asymmetries: tattoo on RIGHT upper arm and strapped holster on RIGHT thigh (both on viewer's left), watch on LEFT wrist and canteen at LEFT rear hip (on viewer's right). Keep all patch and pouch placement unchanged. Do not mirror or flip the image or swap accessories. Only the head/eye direction and minimum necessary neck/hair/bandana adjustment may change. Keep both hands empty.\nComposition/background: preserve the exact 1024 by 1536 portrait framing, existing full head-to-boots silhouette, stance and margins of Image 1. One character, one pose, one native PNG with genuine transparent alpha background. No extra objects, scenery, labels, panels, or visible floor.",
+      "source_manifest": "claire/manifest.json",
+      "source_manifest_sha256": "53ce8dec8c1fa391df6667686bd2d18ba15dcd98ff24185453cb31a850704952",
+      "independent_review": "reports/INDEPENDENT_CLAIRE_CORRECTION_V25.json",
+      "limitations": [
+        "Aucune copie canonique 1:1 certifiée ; visage et détails fins ont été régénérés.",
+        "Contrainte stricte de modification des seuls pixels de tête non satisfaite : comparaison sous y>=400 conservée dans les mesures.",
+        "Marges alpha >=128 : haut 120 px et bas 121 px ; seuils familiaux de 10 % et 12 % non atteints.",
+        "La transparence est réelle (alpha0–254) avec des pixels de faible alpha résiduels. Les cinq points extérieurs échantillonnés ont alpha0 malgré du RGB coloré. Aucun rendu composé moteur validé.",
+        "Une clé de désélection corrigée ne ferme aucune animation complète, action V1, intégration moteur ni nouvelle identité.",
+        "Le regard gauche est corrigé ; des pixels du corps ont aussi été régénérés. Le premier essai reste conservé."
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "post_generation_pixel_edits": false,
+      "correction_of": "REC_CLAIRE_RE2R_MILITARY_DESELECT_KEY_V25"
+    }
+  ],
+  "independent_reviews": [
+    "reports/INDEPENDENT_CHARACTERS_V25.json",
+    "reports/INDEPENDENT_HELENA_V25.json",
+    "reports/INDEPENDENT_CLAIRE_CORRECTION_V25.json"
+  ],
+  "blob_receipts": [
+    "characters/GIT_BLOBS_V25.json",
+    "helena/GIT_BLOB.json",
+    "claire/GIT_BLOB.json"
+  ],
+  "release_validation": "reports/QA_V25.json",
+  "parent_ci": "reports/CI_PARENT_V25.json",
+  "progress": "PROGRESS_V25.json"
+}

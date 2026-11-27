@@ -1,0 +1,12 @@
+{
+  "tool": "image_gen.imagegen",
+  "prompt": "Use case: precise-object-edit.\nAsset type: one transparent full-body character key for Resident Evil Combat.\nInput images: Image 1 is the EDIT TARGET, the existing V24 Helena Harper deselect key. Image 2 is an official Capcom promotional reference from 23 January 2012: use only Helena, the woman on the left, as the identity and outfit control; the other character is not part of the output.\nPrimary request: make exactly one targeted local correction in Image 1: turn Helena's head and eye gaze clearly toward the LEFT EDGE OF THE IMAGE (the viewer's left). Her nose should point left in a readable three-quarter head turn, and both eyes should look left. Preserve her identity and the neutral deselection expression.\nInvariants: keep the entire body below the neck, torso orientation, full-body stance, limbs, hands, weapon, outfit, waist equipment, shoes, placement, scale, framing, lighting and materials as in Image 1. Keep the handgun in her ANATOMICAL RIGHT HAND, the hand on the viewer's left, held down exactly as in the target. Preserve the original asymmetries, including hair arrangement, clothing and equipment; do not mirror or flip the image. Do not adopt the reference image's body pose. Change only the head/eye direction with the minimum necessary neck/hair adjustment.\nCanvas/background: preserve the portrait 1024 by 1536 composition and the complete head-to-shoes figure with its existing margins. Return one native PNG with genuine transparent alpha background, preserving the target's transparency. No extra characters, objects, labels or scenery.",
+  "referenced_image_paths": [
+    "/workspace/scratch/37b119cd013c/v25-correction-helena/inputs/helena_re6_agent_deselect_v24_exact_original.png",
+    "/workspace/scratch/37b119cd013c/v25-correction-helena/inputs/helena_capcom_promo_20120123_exact.jpg"
+  ],
+  "transparent_background": true,
+  "output_hint": "Generated images are saved to /workspace/scratch/37b119cd013c/generated_images as /workspace/scratch/37b119cd013c/generated_images/exec-7c7dae86-fa96-4659-9d50-9a38d7fb2702.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "image_url_characters": 1804046,
+  "base64_stored_in_report": false
+}

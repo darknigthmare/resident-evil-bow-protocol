@@ -1,0 +1,70 @@
+{
+  "asset_id": "REC_HELENA_RE6_DESELECT_HEAD_LEFT_KEY_V25",
+  "hero_id": "REC_HELENA_RE6",
+  "name": "Helena Harper — désélection, tête et regard vers la gauche image",
+  "edition": "Resident Evil 6 (2012), tenue promotionnelle de janvier 2012",
+  "state": "deselect",
+  "status": "targeted_correction_candidate_review_required",
+  "path": "/workspace/scratch/37b119cd013c/v25-correction-helena/outputs/helena_re6_agent_deselect_head_left_v25.png",
+  "native_output": "/workspace/scratch/37b119cd013c/generated_images/exec-7c7dae86-fa96-4659-9d50-9a38d7fb2702.png",
+  "native_output_copy_byte_identical": true,
+  "bytes": 1353016,
+  "sha256": "7ee77aa161e7507842f1eb0d6c2282d01bea18f9cdb186836ad697d13600528c",
+  "git_blob_sha": "421a53ba112b10b2631c3b54e50c21e17c862729",
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alpha_range": [
+    0,
+    254
+  ],
+  "alpha_histogram": {
+    "zero": 1243114,
+    "1_to_15": 14716,
+    "16_to_127": 4159,
+    "128_to_254": 310875,
+    "255": 0
+  },
+  "bbox_alpha_ge128": [
+    291,
+    135,
+    684,
+    1456
+  ],
+  "margins_alpha_ge128_px": {
+    "left": 291,
+    "top": 135,
+    "right": 340,
+    "bottom": 80
+  },
+  "body_comparison_read_only": {
+    "definition": "Pixels where either input/output alpha >=128, restricted to rows y>=400; no crop or image edit is saved. RGB deltas are unpremultiplied and do not certify perceptual equivalence.",
+    "pixel_count": 269894,
+    "max_channel_rgb_delta_above_threshold_counts": {
+      "0": 269503,
+      "2": 260887,
+      "8": 200786,
+      "16": 78185,
+      "32": 7240
+    },
+    "alpha_difference_nonzero_pixels": 54689,
+    "mean_absolute_rgb_delta": 12.5143
+  },
+  "tool": "image_gen.imagegen",
+  "tool_calls": 1,
+  "prompt": "Use case: precise-object-edit.\nAsset type: one transparent full-body character key for Resident Evil Combat.\nInput images: Image 1 is the EDIT TARGET, the existing V24 Helena Harper deselect key. Image 2 is an official Capcom promotional reference from 23 January 2012: use only Helena, the woman on the left, as the identity and outfit control; the other character is not part of the output.\nPrimary request: make exactly one targeted local correction in Image 1: turn Helena's head and eye gaze clearly toward the LEFT EDGE OF THE IMAGE (the viewer's left). Her nose should point left in a readable three-quarter head turn, and both eyes should look left. Preserve her identity and the neutral deselection expression.\nInvariants: keep the entire body below the neck, torso orientation, full-body stance, limbs, hands, weapon, outfit, waist equipment, shoes, placement, scale, framing, lighting and materials as in Image 1. Keep the handgun in her ANATOMICAL RIGHT HAND, the hand on the viewer's left, held down exactly as in the target. Preserve the original asymmetries, including hair arrangement, clothing and equipment; do not mirror or flip the image. Do not adopt the reference image's body pose. Change only the head/eye direction with the minimum necessary neck/hair adjustment.\nCanvas/background: preserve the portrait 1024 by 1536 composition and the complete head-to-shoes figure with its existing margins. Return one native PNG with genuine transparent alpha background, preserving the target's transparency. No extra characters, objects, labels or scenery.",
+  "referenced_image_paths": [
+    "/workspace/scratch/37b119cd013c/v25-correction-helena/inputs/helena_re6_agent_deselect_v24_exact_original.png",
+    "/workspace/scratch/37b119cd013c/v25-correction-helena/inputs/helena_capcom_promo_20120123_exact.jpg"
+  ],
+  "transparent_background_requested": true,
+  "image_pixels_modified_after_generation": false,
+  "engine_admitted": false,
+  "animation_complete": false,
+  "canonical_fidelity_1_1_certified": false,
+  "repository_modified": false,
+  "saved_bytes_equal_tool_image_url_png": true,
+  "visual_inspection_source": "Exact image_url PNG returned by image_gen; equality with native output and saved copy verified. view_image previews rendered nearly black despite nonzero image pixels, so those previews are not counted as successful visual inspection."
+}

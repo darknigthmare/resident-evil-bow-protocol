@@ -1,0 +1,184 @@
+{
+  "schema": "rec-v25-targeted-helena-correction-1",
+  "date": "2026-11-27",
+  "timezone": "Europe/Paris",
+  "scope": "Une correction de tête/regard hors dépôt, préparée pour revue V25 ; aucun remplacement V24.",
+  "assets": [
+    {
+      "asset_id": "REC_HELENA_RE6_DESELECT_HEAD_LEFT_KEY_V25",
+      "hero_id": "REC_HELENA_RE6",
+      "name": "Helena Harper — désélection, tête et regard vers la gauche image",
+      "edition": "Resident Evil 6 (2012), tenue promotionnelle de janvier 2012",
+      "state": "deselect",
+      "status": "correction_candidate_with_nonlocal_pixel_drift",
+      "path": "/workspace/scratch/37b119cd013c/v25-correction-helena/outputs/helena_re6_agent_deselect_head_left_v25.png",
+      "native_output": "/workspace/scratch/37b119cd013c/generated_images/exec-7c7dae86-fa96-4659-9d50-9a38d7fb2702.png",
+      "native_output_copy_byte_identical": true,
+      "bytes": 1353016,
+      "sha256": "7ee77aa161e7507842f1eb0d6c2282d01bea18f9cdb186836ad697d13600528c",
+      "git_blob_sha": "421a53ba112b10b2631c3b54e50c21e17c862729",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "alpha_histogram": {
+        "zero": 1243114,
+        "1_to_15": 14716,
+        "16_to_127": 4159,
+        "128_to_254": 310875,
+        "255": 0
+      },
+      "bbox_alpha_ge128": [
+        291,
+        135,
+        684,
+        1456
+      ],
+      "margins_alpha_ge128_px": {
+        "left": 291,
+        "top": 135,
+        "right": 340,
+        "bottom": 80
+      },
+      "body_comparison_read_only": {
+        "definition": "Pixels where either input/output alpha >=128, restricted to rows y>=400; no crop or image edit is saved. RGB deltas are unpremultiplied and do not certify perceptual equivalence.",
+        "pixel_count": 269894,
+        "max_channel_rgb_delta_above_threshold_counts": {
+          "0": 269503,
+          "2": 260887,
+          "8": 200786,
+          "16": 78185,
+          "32": 7240
+        },
+        "alpha_difference_nonzero_pixels": 54689,
+        "mean_absolute_rgb_delta": 12.5143
+      },
+      "tool": "image_gen.imagegen",
+      "tool_calls": 1,
+      "prompt": "Use case: precise-object-edit.\nAsset type: one transparent full-body character key for Resident Evil Combat.\nInput images: Image 1 is the EDIT TARGET, the existing V24 Helena Harper deselect key. Image 2 is an official Capcom promotional reference from 23 January 2012: use only Helena, the woman on the left, as the identity and outfit control; the other character is not part of the output.\nPrimary request: make exactly one targeted local correction in Image 1: turn Helena's head and eye gaze clearly toward the LEFT EDGE OF THE IMAGE (the viewer's left). Her nose should point left in a readable three-quarter head turn, and both eyes should look left. Preserve her identity and the neutral deselection expression.\nInvariants: keep the entire body below the neck, torso orientation, full-body stance, limbs, hands, weapon, outfit, waist equipment, shoes, placement, scale, framing, lighting and materials as in Image 1. Keep the handgun in her ANATOMICAL RIGHT HAND, the hand on the viewer's left, held down exactly as in the target. Preserve the original asymmetries, including hair arrangement, clothing and equipment; do not mirror or flip the image. Do not adopt the reference image's body pose. Change only the head/eye direction with the minimum necessary neck/hair adjustment.\nCanvas/background: preserve the portrait 1024 by 1536 composition and the complete head-to-shoes figure with its existing margins. Return one native PNG with genuine transparent alpha background, preserving the target's transparency. No extra characters, objects, labels or scenery.",
+      "referenced_image_paths": [
+        "/workspace/scratch/37b119cd013c/v25-correction-helena/inputs/helena_re6_agent_deselect_v24_exact_original.png",
+        "/workspace/scratch/37b119cd013c/v25-correction-helena/inputs/helena_capcom_promo_20120123_exact.jpg"
+      ],
+      "transparent_background_requested": true,
+      "image_pixels_modified_after_generation": false,
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "saved_bytes_equal_tool_image_url_png": true,
+      "visual_inspection_source": "Exact image_url PNG returned by image_gen; equality with native output and saved copy verified. view_image previews rendered nearly black despite nonzero image pixels, so those previews are not counted as successful visual inspection.",
+      "visual_review": {
+        "reviewer": "v24_characters, auteur de la correction ; revue indépendante non effectuée",
+        "native_input_and_target_inspected": true,
+        "native_output_visually_inspected": true,
+        "output_visual_evidence": "image_gen image_url rendu directement ; égalité octet pour octet vérifiée avec le PNG natif et la copie de livraison",
+        "head_direction": "image_left",
+        "gaze_direction": "image_left",
+        "targeted_head_and_gaze_correction_observed": true,
+        "weapon_hand": "anatomical_right",
+        "weapon_on_viewer_side": "left",
+        "weapon_direction": "down",
+        "full_body_single_pose": true,
+        "visible_crop_detected": false,
+        "body_pose_outfit_and_equipment_visually_retained": true,
+        "strict_pixels_outside_head_unchanged": false,
+        "global_mirror_applied": false,
+        "no_new_character_or_object_observed": true,
+        "observations": [
+          "La tête, le nez et les yeux se dirigent clairement vers la gauche de l’image ; le défaut de direction V24 est corrigé visuellement.",
+          "Pistolet conservé dans la main droite anatomique, côté gauche du spectateur, tenu vers le bas. La posture entière, la chemise violette, le gilet sombre, le pantalon, les chaussures et l’équipement restent reconnaissables.",
+          "La génération a néanmoins changé des pixels sous le cou : textures/reflets/fines formes ne sont pas figés malgré la consigne. La réussite du regard ne vaut pas une édition locale déterministe.",
+          "La silhouette est entière. Marges alpha >=128 : haut 135 px, bas 80 px ; la demande familiale de 10 % verticale n’est pas satisfaite."
+        ],
+        "limitations": [
+          "Refus de certifier une identité, tenue ou copie canonique 1:1 à partir d’un rendu promotionnel de 358×450 ; modèle commercial final RE6 non certifié.",
+          "Aucun rendu moteur/navigateur composé ni raccord de pivot/animation validé.",
+          "L’aperçu view_image du nouveau fichier s’est affiché presque noir ; la revue du résultat utilise le PNG image_url exact, rendu directement et vérifié identique au fichier, pas cet aperçu défaillant.",
+          "Vrai alpha 0–254 ; faible alpha résiduel. Les pixels RGB extérieurs échantillonnés sont à alpha 0, sans preuve d’un fond opaque."
+        ],
+        "decision": "Conserver ce candidat de correction pour revue du parent : regard corrigé, invariance stricte hors tête non satisfaite. Aucun second appel ni promotion automatique de V24."
+      },
+      "source_record": {
+        "source_id": "helena_capcom_promo_20120123",
+        "kind": "official_prerelease_promotional_render",
+        "page_url": "https://news.capcomusa.com/brelston/blog/2012/01/23/official_leon_and_helena_art_from_resident_evil_6",
+        "image_url": "https://cdn.capcom-unity.com/capcom-unity.com/user/brelston/resident_evil_6/0f9917d9a7b7e6c3652f0c8740619f50.jpg?v=161100",
+        "scratch_file": "helena_official_2012.jpg",
+        "edition": "Resident Evil 6 (2012), tenue promotionnelle de janvier 2012",
+        "page_consulted": true,
+        "visually_inspected": true,
+        "limits": [
+          "Rendu avant sortie à faible résolution, avec Helena et Leon dans la même image.",
+          "Ne certifie pas le modèle commercial ni toutes les variantes de campagne."
+        ],
+        "dimensions": [
+          358,
+          450
+        ],
+        "mode": "RGB",
+        "bytes": 36913,
+        "sha256": "25a104899095b63f440bf7aabcdd13570296140efed96b7d68d06f4c4dd94215",
+        "copied_into_repository": false,
+        "rights": "Images source Capcom ; aucune licence de réutilisation commerciale acquise ou présumée. Références consultées, bitmaps tiers non livrés."
+      },
+      "input_records": [
+        {
+          "original_path": "/workspace/scratch/37b119cd013c/resident-evil-bow-protocol/production-archives/rec-media/v24/characters/assets/helena_re6_agent_deselect_v24.png",
+          "copy_path": "/workspace/scratch/37b119cd013c/v25-correction-helena/inputs/helena_re6_agent_deselect_v24_exact_original.png",
+          "bytes": 1317630,
+          "sha256": "7d570bbbdd12e086cf5ffeb203c4b629d8acf289853c556341bc05d22d05ae89",
+          "git_blob_sha": "610ec8d5e0a39c81718ad92b48e5731105b95bf7",
+          "byte_for_byte_copy": true
+        },
+        {
+          "original_path": "/workspace/scratch/37b119cd013c/v24_characters_refs/helena_official_2012.jpg",
+          "copy_path": "/workspace/scratch/37b119cd013c/v25-correction-helena/inputs/helena_capcom_promo_20120123_exact.jpg",
+          "bytes": 36913,
+          "sha256": "25a104899095b63f440bf7aabcdd13570296140efed96b7d68d06f4c4dd94215",
+          "git_blob_sha": "edbf88000cefa02ab5b80927c8161c909f1c6791",
+          "byte_for_byte_copy": true
+        }
+      ],
+      "original_v24_target_retained_unchanged": true,
+      "generation_calls_total": 1,
+      "retry_calls": 0,
+      "parent_placement_decision_pending": false,
+      "repository_destination": null,
+      "timezone": "Europe/Paris",
+      "parent_review": {
+        "reviewer": "root",
+        "status": "candidate_retained_for_v25_deselection_review",
+        "observations": [
+          "Tête et regard vers gauche image confirmés.",
+          "Silhouette complète et pistolet main droite conservés.",
+          "Invariance stricte des pixels sous le cou non respectée et explicitement documentée.",
+          "Aperçu view_image lisible lors de la revue du parent."
+        ],
+        "v24_archive_replacement": false,
+        "canonical_fidelity_1_1_certified": false,
+        "engine_admitted": false,
+        "animation_complete": false
+      },
+      "local_repository_files_modified": false,
+      "github_png_blob_created": true,
+      "git_blob_receipt": "GIT_BLOB.json"
+    }
+  ],
+  "summary": {
+    "native_png_outputs": 1,
+    "targeted_gaze_corrections_observed": 1,
+    "strict_head_only_pixel_edits": 0,
+    "generation_calls": 1,
+    "engine_admissions": 0,
+    "complete_animations": 0,
+    "canonical_1_1_certifications": 0,
+    "repository_mutations": 1,
+    "repository_mutation_scope": "One unreferenced PNG Git blob created for parent assembly; no tree, commit, ref, index or tracked file changed.",
+    "git_blobs_created": 1
+  }
+}

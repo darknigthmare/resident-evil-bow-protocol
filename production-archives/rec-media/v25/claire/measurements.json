@@ -1,0 +1,101 @@
+{
+  "asset_id": "REC_CLAIRE_RE2R_MILITARY_DESELECT_HEAD_LEFT_KEY_V25",
+  "hero_id": "REC_CLAIRE_RE2R",
+  "variant_id": "COST_AUDIT_CLAIRE_MILITARY",
+  "name": "Claire Redfield — Military, désélection tête/gaze gauche image",
+  "edition": "Resident Evil 2 Remake (2019), Claire Costume: Military DLC",
+  "state": "deselect",
+  "status": "correction_candidate_with_nonlocal_pixel_drift",
+  "date": "2026-11-27",
+  "timezone": "Europe/Paris",
+  "path": "/workspace/scratch/37b119cd013c/v25-correction-claire/outputs/claire_re2r_military_deselect_head_left_v25.png",
+  "native_output": "/workspace/scratch/37b119cd013c/generated_images/exec-02eee55f-6e67-42a1-a678-1b02a23593e5.png",
+  "native_output_copy_byte_identical": true,
+  "saved_bytes_equal_tool_image_url_png": true,
+  "bytes": 1576658,
+  "sha256": "a9ccc600a39858dcd05c144a5e0587bdddba0f546099be54411dbafa9913bbd3",
+  "git_blob_sha": "6ca8f2e32219cfb1896db0873313226ce9c47f28",
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alpha_range": [
+    0,
+    254
+  ],
+  "alpha_histogram": {
+    "zero": 1221434,
+    "1_to_15": 19751,
+    "16_to_127": 4999,
+    "128_to_254": 326680,
+    "255": 0
+  },
+  "bbox_alpha_ge128": [
+    268,
+    120,
+    729,
+    1415
+  ],
+  "margins_alpha_ge128_px": {
+    "left": 268,
+    "top": 120,
+    "right": 295,
+    "bottom": 121
+  },
+  "body_comparison_read_only": {
+    "definition": "Union of input/output alpha >=128 pixels at rows y>=400; unpremultiplied RGB differences, no saved image transformation.",
+    "pixel_count": 275509,
+    "max_channel_rgb_delta_above_threshold_counts": {
+      "0": 274986,
+      "2": 247948,
+      "8": 128153,
+      "16": 45526,
+      "32": 9367
+    },
+    "alpha_difference_nonzero_pixels": 75152,
+    "mean_absolute_rgb_delta": 8.6788
+  },
+  "outside_samples_rgba": {
+    "(50, 50)": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "(250, 500)": [
+      56,
+      41,
+      33,
+      0
+    ],
+    "(750, 500)": [
+      73,
+      52,
+      42,
+      0
+    ],
+    "(512, 1475)": [
+      4,
+      3,
+      2,
+      0
+    ],
+    "(850, 800)": [
+      20,
+      14,
+      10,
+      0
+    ]
+  },
+  "tool": "image_gen.imagegen",
+  "generation_calls": 1,
+  "retry_calls": 0,
+  "prompt": "Use case: precise-object-edit.\nAsset type: one transparent full-body deselection character key for Resident Evil Combat.\nInput images: Image 1 is the EDIT TARGET, Claire Redfield's existing V25 Military deselect key. Images 2 and 3 are native Resident Evil 2 Remake Military costume references used only to control her identity and outfit; do not copy their weapon or aiming pose.\nPrimary request: make one targeted local correction in Image 1: turn Claire's head and both eyes clearly toward the LEFT EDGE OF THE IMAGE, the viewer's left. Her nose must point LEFT in a readable three-quarter head turn, and her eyes must look LEFT. Keep the same adult Claire identity and calm neutral deselection expression.\nInvariants: preserve everything below the neck as in Image 1: torso orientation, stance, arms, empty hands, fingers, boots, equipment, clothing, textures, palette, lighting, figure size and position. Retain the camouflage bandana and tied ends, brown hair and loose strands, off-white tank, olive tactical vest with the same patches/pouches, camouflage trousers and black lace-up boots. Preserve anatomical asymmetries: tattoo on RIGHT upper arm and strapped holster on RIGHT thigh (both on viewer's left), watch on LEFT wrist and canteen at LEFT rear hip (on viewer's right). Keep all patch and pouch placement unchanged. Do not mirror or flip the image or swap accessories. Only the head/eye direction and minimum necessary neck/hair/bandana adjustment may change. Keep both hands empty.\nComposition/background: preserve the exact 1024 by 1536 portrait framing, existing full head-to-boots silhouette, stance and margins of Image 1. One character, one pose, one native PNG with genuine transparent alpha background. No extra objects, scenery, labels, panels, or visible floor.",
+  "transparent_background_requested": true,
+  "image_pixels_modified_after_generation": false,
+  "engine_admitted": false,
+  "animation_complete": false,
+  "canonical_fidelity_1_1_certified": false,
+  "local_repository_files_modified": false
+}

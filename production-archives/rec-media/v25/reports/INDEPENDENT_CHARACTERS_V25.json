@@ -1,0 +1,320 @@
+{
+  "schema": "rec-v25-independent-characters-1",
+  "date": "2026-11-27",
+  "timezone": "Europe/Paris",
+  "reviewer": "root, indépendant de la génération des six clés",
+  "method": "Quatre captures natives, deux bases générées V22 et les six sorties intégrales ont été ouvertes avec view_image puis comparées. Mesures Pillow en lecture seule ; aucun fichier raster réécrit.",
+  "reference_files": [
+    {
+      "filename": "steam_920562_00.jpg",
+      "role": "native_steam_promotional_capture",
+      "local_inspection_path": "/workspace/scratch/37b119cd013c/v25-character-research/steam_920562_00.jpg",
+      "sha256": "9850818ed8118ee81f7d9d4be464e9c07477067ac89acf48d7e62e06e95399a3",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "visually_inspected": true
+    },
+    {
+      "filename": "re2_gamewith_33.jpg",
+      "role": "native_full_body_capture",
+      "local_inspection_path": "/workspace/scratch/37b119cd013c/v25-character-research/re2_gamewith_33.jpg",
+      "sha256": "6e58b86516a9609c42c21daca4a63cc60091ab2d04bbe8eeecb5fdbbc7608db0",
+      "dimensions": [
+        416,
+        740
+      ],
+      "visually_inspected": true
+    },
+    {
+      "filename": "claire_re2r_military_right.png",
+      "role": "generated_v22_base",
+      "local_inspection_path": "/workspace/scratch/37b119cd013c/v25-character-research/claire_re2r_military_right.png",
+      "sha256": "e12e18db453d626dbd1239bc4c59e23af2ad17d3ef8db9014ee01fcab9826d88",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "visually_inspected": true
+    },
+    {
+      "filename": "steam_381710_00.jpg",
+      "role": "native_steam_promotional_capture",
+      "local_inspection_path": "/workspace/scratch/37b119cd013c/v25-character-research/steam_381710_00.jpg",
+      "sha256": "745e8dc2a4132656c62a1d39d40ee441ae5097a2030f327db1dd7231333d03d9",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "visually_inspected": true
+    },
+    {
+      "filename": "re0_faxagate_22.webp",
+      "role": "native_full_body_capture",
+      "local_inspection_path": "/workspace/scratch/37b119cd013c/v25-character-research/re0_faxagate_22.webp",
+      "sha256": "4a2aa2052ee9a7da9deb5bee2654e5579e6a39d62663e234ae030ad5320a8ed3",
+      "dimensions": [
+        390,
+        570
+      ],
+      "visually_inspected": true
+    },
+    {
+      "filename": "billy_re0hd_wolf_force_front.png",
+      "role": "generated_v22_base",
+      "local_inspection_path": "/workspace/scratch/37b119cd013c/v25-character-research/billy_re0hd_wolf_force_front.png",
+      "sha256": "67df48af91c7e79b1ba15f8ffb210ceeb9facac0d7e03ce9b35a94e519c82a52",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "visually_inspected": true
+    }
+  ],
+  "assets": [
+    {
+      "asset_id": "REC_CLAIRE_RE2R_MILITARY_SELECTED_KEY_V25",
+      "path": "../characters/assets/claire_re2r_military_selected_v25.png",
+      "sha256": "662795ed3ebf62596a20076f3b65986f9518d4ba4c17de4ae004b280635018af",
+      "git_blob_sha": "c54ab7c05271166371225bdc908b7bb177f0d898",
+      "file_bytes": 1573956,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "bbox_alpha_ge128": [
+        269,
+        129,
+        722,
+        1413
+      ],
+      "baseline_y": 1413,
+      "fully_transparent_pixels": 1232222,
+      "low_alpha_1_to_15_pixels": 19150,
+      "observations": [
+        "Bras relâchés, tête orientée vers la droite image ; bandana, gilet et pantalon camouflage conservés.",
+        "Tatouage et holster à droite anatomique ; montre et gourde à gauche anatomique."
+      ],
+      "full_figure_observed": true,
+      "source_and_output_visually_compared": true,
+      "decision": "candidate_with_fidelity_limits",
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false
+    },
+    {
+      "asset_id": "REC_CLAIRE_RE2R_MILITARY_CONFIRM_KEY_V25",
+      "path": "../characters/assets/claire_re2r_military_confirm_v25.png",
+      "sha256": "40ea4bbd52e779e598a4002df2199f709066657c3e6d13a76cd321d4a5d488f9",
+      "git_blob_sha": "d75777bb013ba227606d26a4c7c49fbf55a282c4",
+      "file_bytes": 1522471,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "bbox_alpha_ge128": [
+        268,
+        129,
+        725,
+        1414
+      ],
+      "baseline_y": 1414,
+      "fully_transparent_pixels": 1248065,
+      "low_alpha_1_to_15_pixels": 16339,
+      "observations": [
+        "Main gauche portée à la sangle du gilet, montre maintenue à gauche ; menton un peu abaissé, geste distinct du selected.",
+        "Holster et tatouage restent sur le côté droit anatomique."
+      ],
+      "full_figure_observed": true,
+      "source_and_output_visually_compared": true,
+      "decision": "candidate_with_fidelity_limits",
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false
+    },
+    {
+      "asset_id": "REC_CLAIRE_RE2R_MILITARY_DESELECT_KEY_V25",
+      "path": "../characters/assets/claire_re2r_military_deselect_v25.png",
+      "sha256": "66a4c5690420c2098073806c267285539a973b4f8f6d097cbfd9b1837cbbcb87",
+      "git_blob_sha": "366bff339211aaa87ad6c390e9b30043f1c2538d",
+      "file_bytes": 1603406,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "bbox_alpha_ge128": [
+        271,
+        124,
+        727,
+        1414
+      ],
+      "baseline_y": 1414,
+      "fully_transparent_pixels": 1225404,
+      "low_alpha_1_to_15_pixels": 24932,
+      "observations": [
+        "Les deux bras reviennent en bas, l’appui et les pieds changent légèrement.",
+        "Le regard reste dirigé vers la DROITE image ; la demande de regard gauche n’est pas exécutée. Ce fichier nécessite un complément de correction et n’est pas une preuve de direction conforme."
+      ],
+      "full_figure_observed": true,
+      "source_and_output_visually_compared": true,
+      "decision": "direction_mismatch_pending_correction",
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false
+    },
+    {
+      "asset_id": "REC_BILLY_RE0HD_WOLF_FORCE_SELECTED_KEY_V25",
+      "path": "../characters/assets/billy_re0hd_wolf_force_selected_v25.png",
+      "sha256": "c3e8fd30697a8d1fa706211e3d344403494dd5111abaf5de0ffbd6b9a9b70b5c",
+      "git_blob_sha": "2b0e8c41d23059777629062a1a1c8f319240c2a4",
+      "file_bytes": 1692051,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "bbox_alpha_ge128": [
+        254,
+        150,
+        749,
+        1447
+      ],
+      "baseline_y": 1447,
+      "fully_transparent_pixels": 1206319,
+      "low_alpha_1_to_15_pixels": 20309,
+      "observations": [
+        "Figure frontale, mains légèrement ouvertes et écartées ; aucune arme ajoutée.",
+        "Visière sur œil droit, groupe de cylindres épaule droite, double contenant hanche droite et poche gauche conservés."
+      ],
+      "full_figure_observed": true,
+      "source_and_output_visually_compared": true,
+      "decision": "candidate_with_fidelity_limits",
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false
+    },
+    {
+      "asset_id": "REC_BILLY_RE0HD_WOLF_FORCE_CONFIRM_KEY_V25",
+      "path": "../characters/assets/billy_re0hd_wolf_force_confirm_v25.png",
+      "sha256": "968c576853324a3c98f38fddedfb01ef13b2fd85f079342381ea1bce990d8849",
+      "git_blob_sha": "c1fb5925ce9bbef9af19eb0f63c4c16ec39819e0",
+      "file_bytes": 1665163,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "bbox_alpha_ge128": [
+        233,
+        146,
+        772,
+        1447
+      ],
+      "baseline_y": 1447,
+      "fully_transparent_pixels": 1204747,
+      "low_alpha_1_to_15_pixels": 17124,
+      "observations": [
+        "Main gauche touche l’oreillette gauche, deux doigts levés ; tête légèrement abaissée.",
+        "Les asymétries principales de l’équipement sont conservées ; silhouette complète et geste distinct."
+      ],
+      "full_figure_observed": true,
+      "source_and_output_visually_compared": true,
+      "decision": "candidate_with_fidelity_limits",
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false
+    },
+    {
+      "asset_id": "REC_BILLY_RE0HD_WOLF_FORCE_DESELECT_KEY_V25",
+      "path": "../characters/assets/billy_re0hd_wolf_force_deselect_v25.png",
+      "sha256": "0becca8eee9603f5a294a8efcfcbf84fe6ffc26d04f9690ddb5309dc0b618798",
+      "git_blob_sha": "5fb16ea7d45d7c33527753c69f02e105d4ff6479",
+      "file_bytes": 1658506,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "bbox_alpha_ge128": [
+        257,
+        149,
+        765,
+        1448
+      ],
+      "baseline_y": 1448,
+      "fully_transparent_pixels": 1194724,
+      "low_alpha_1_to_15_pixels": 20760,
+      "observations": [
+        "Tête et regard vers la gauche image, les bras relâchés ; changement de pose lisible.",
+        "L’équipement ne passe pas sur le côté opposé ; visière droite et contenants droits restent reconnaissables."
+      ],
+      "full_figure_observed": true,
+      "source_and_output_visually_compared": true,
+      "decision": "candidate_with_fidelity_limits",
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false
+    }
+  ],
+  "families": {
+    "claire": {
+      "baseline_range_px": [
+        1413,
+        1414
+      ],
+      "baseline_spread_px": 1,
+      "animation_anchor_validated": false
+    },
+    "billy": {
+      "baseline_range_px": [
+        1447,
+        1448
+      ],
+      "baseline_spread_px": 1,
+      "animation_anchor_validated": false
+    }
+  },
+  "summary": {
+    "source_and_base_images_inspected": 6,
+    "output_images_inspected": 6,
+    "whole_figures": 6,
+    "direction_mismatches": 1,
+    "complete_animations": 0,
+    "one_to_one_certifications": 0
+  },
+  "cross_asset_limits": [
+    "Les mains restent vides comme les bases V22 ; les sources natives portent des armes. Ces poses de menu sont des adaptations et ne reproduisent pas une animation extraite du jeu.",
+    "Insignes, tatouage, camouflage, peau, doigts et visage sont régénérés ; leurs microdétails ne sont pas certifiés.",
+    "La marge12% n’est pas atteinte partout. Les baselines/contours et les interpolations ne sont pas validés dans le jeu.",
+    "Un aperçu RGB avec halo ne démontre pas un fond opaque ; alpha mesuré séparément. Aucun rendu composé en navigateur ou moteur."
+  ],
+  "pending_correction": "Claire deselect viewer-left : revue complémentaire requise sur la nouvelle sortie, sans réécrire ce constat du premier passage."
+}
