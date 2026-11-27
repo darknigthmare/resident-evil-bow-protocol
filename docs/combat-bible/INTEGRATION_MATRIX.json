@@ -1,0 +1,1989 @@
+{
+  "schema": "rec.combat-bible.integration.v1",
+  "project": "Resident Evil Combat / Resident Evil — B.O.W. Protocol",
+  "lot": "V23",
+  "documented_on": "2026-11-27",
+  "base_commit": "7c679b38c72ee4d34fd1c39d1dc8950dd4f506aa",
+  "base_branch": "chore/rec-media-v19-v20-20261121",
+  "base_pull_request": "https://github.com/darknigthmare/resident-evil-bow-protocol/pull/24",
+  "source_guides_manifest": "sources/manifest.json",
+  "source_sections_index": "sources/sections.json",
+  "scope": "68 original sections preserved and applied. Existing evidence paths identify source/data presence or separate reports, never automatic full-game certification. V23 isolated prototype and fixed key candidates are not wired to the existing runtime.",
+  "path_conventions": {
+    "source_file": "Relative to docs/combat-bible/",
+    "application_document": "Relative to docs/combat-bible/; heading is exact Markdown text, without leading hashes.",
+    "existing_evidence": "Relative to repository root. Historical tracked files may be absent from a sparse local checkout.",
+    "depends_on": "Source section identifiers; conceptual dependencies may cross-reference one another and are not an unlock graph."
+  },
+  "status_legend": {
+    "existing_partial": "Legacy source/data present; current extension coverage incomplete or not verified in this documentary scope.",
+    "isolated_prototype": "New V23 simulated domain or presentation exists separately; no integration with game saves, combat, accounts or payment claimed.",
+    "planned": "Project-specific decision and acceptance defined; complete gameplay implementation not delivered by this lot.",
+    "not_applicable_documentation": "Source, process, vocabulary or production specification; not a gameplay implementation status.",
+    "retained": "Original intent retained and applied without redefining its scope.",
+    "adapted": "Concrete Resident Evil application with explicit canon/design distinction.",
+    "deferred": "Requirement retained; external integration intentionally unconfigured pending real authority and contract."
+  },
+  "independent_evidence": {
+    "source_integrity": {
+      "files": 3,
+      "total_bytes": 163095,
+      "method": "Byte-for-byte local copy with SHA-256 checked against downloaded originals.",
+      "manifest": "sources/manifest.json"
+    },
+    "prototype": {
+      "readme": "production-archives/rec-media/v23/prototype/README.md",
+      "domain_report": "production-archives/rec-media/v23/prototype/reports/DOMAIN_QA.tap",
+      "browser_report": "production-archives/rec-media/v23/prototype/reports/BROWSER_QA.json",
+      "scope": "Domain tests are separately reported. Browser recipe not executed in this production environment; no screen-reader, physical-controller, full-game, account or payment certification."
+    },
+    "visuals": {
+      "manifest": "production-archives/rec-media/v23/ASSET_MANIFEST_V23.json",
+      "native_png_total": 11,
+      "candidate_keys": 9,
+      "replaced_trials_preserved": 2,
+      "completed_animations": 0,
+      "engine_admissions": 0,
+      "one_to_one_certifications": 0
+    }
+  },
+  "coverage": {
+    "expected_sections": 68,
+    "mapped_sections": 68,
+    "unique_sections": 68,
+    "documented_sections": 68,
+    "runtime_state_counts": {
+      "existing_partial": 27,
+      "isolated_prototype": 9,
+      "not_applicable_documentation": 14,
+      "planned": 18
+    },
+    "all_guide_sections_mapped": true,
+    "full_gameplay_implementation": false,
+    "canonical_one_to_one_certification": false
+  },
+  "sections": [
+    {
+      "id": "REC_GUIDE_00",
+      "section": "00",
+      "title": "UTILISATION DU GUIDE ET PRIORITÉS",
+      "source_file": "sources/Combat_Games_Guide_General_v1.0.txt",
+      "source_line_start": 52,
+      "source_line_end": 90,
+      "application_document": "README.md",
+      "application_heading": "Lire la bible",
+      "disposition": "retained",
+      "priority": "P0",
+      "existing_evidence": [
+        "AGENTS.md",
+        "docs/GAMEDEV_GUIDANCE.md"
+      ],
+      "finding": "La base impose la séparation des périmètres, des types de médias et des preuves historiques. Les trois guides sont maintenant conservés avec leur provenance.",
+      "project_decision": "Appliquer les guides à la base PR24 identifiée ; qualifier une exigence avant de la déclarer accomplie et garder les propositions de design distinctes du canon.",
+      "documentation_state": "documented",
+      "runtime_state": "not_applicable_documentation",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "Trois sources intactes, 68 sections uniques et états non ambigus ; aucun ancien résultat de QA réécrit.",
+      "depends_on": []
+    },
+    {
+      "id": "REC_GUIDE_01",
+      "section": "01",
+      "title": "IDENTITÉ DU PROJET ET PÉRIMÈTRE",
+      "source_file": "sources/Combat_Games_Guide_General_v1.0.txt",
+      "source_line_start": 91,
+      "source_line_end": 113,
+      "application_document": "README.md",
+      "application_heading": "2. Identité et piliers du jeu",
+      "disposition": "adapted",
+      "priority": "P0",
+      "existing_evidence": [
+        "data/roster.json",
+        "package.json",
+        "docs/CATALOG_REGISTER_v0.7.0.md"
+      ],
+      "finding": "Le dépôt contient un jeu JavaScript/Canvas avec roster principal, catalogue étendu et parcours séparés. Le package observé est 0.7.3.",
+      "project_decision": "Conserver la promesse de combat latéral Resident Evil, cinq piliers et des périmètres principal/prototype/contextuel ; V23 est un lot de production.",
+      "documentation_state": "documented",
+      "runtime_state": "existing_partial",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "Chaque nouveau contenu indique son mode, son public, son incarnation et sa place dans le périmètre.",
+      "depends_on": [
+        "00"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_02",
+      "section": "02",
+      "title": "FIDÉLITÉ AU LORE ET SOURCES",
+      "source_file": "sources/Combat_Games_Guide_General_v1.0.txt",
+      "source_line_start": 114,
+      "source_line_end": 149,
+      "application_document": "README.md",
+      "application_heading": "3. Référentiel de fidélité et de continuité",
+      "disposition": "adapted",
+      "priority": "P0",
+      "existing_evidence": [
+        "data/lore-movesets.json",
+        "data/asset-sources.json",
+        "docs/FIDELITE_R34.md"
+      ],
+      "finding": "Les données de movesets distinguent déjà canonical, anatomical et simulation ; des rapports de fidélité historiques existent.",
+      "project_decision": "Distinguer canon attesté, adaptation jouable, original compatible, alternatif et à confirmer. Verrouiller œuvre, édition, forme et sources sans certifier une génération par défaut.",
+      "documentation_state": "documented",
+      "runtime_state": "existing_partial",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "Une fiche HD2016 ne clôture pas une demande RE0 2002 ; chaque détail non couvert par la référence reste signalé.",
+      "depends_on": [
+        "01"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_03",
+      "section": "03",
+      "title": "ROSTER, PERSONNAGES, VARIANTES ET COSTUMES",
+      "source_file": "sources/Combat_Games_Guide_General_v1.0.txt",
+      "source_line_start": 150,
+      "source_line_end": 185,
+      "application_document": "README.md",
+      "application_heading": "5. Roster, costumes et logique de combat",
+      "disposition": "adapted",
+      "priority": "P0",
+      "existing_evidence": [
+        "data/roster.json",
+        "production-archives/rec-media/v22/inventory/characters-v1-reconciliation.json",
+        "production-archives/rec-media/v22/inventory/costumes-38-reconciliation.json"
+      ],
+      "finding": "115 combattants principaux, 231 prototypes et 43 contextuels composent les 389 entrées ; 24 fiches prioritaires et 60 extensions ont été réconciliées en V22.",
+      "project_decision": "Conserver les IDs runtime et relier explicitement les IDs de production REC_* ; séparer identité, forme et costume avec dépendances propres.",
+      "documentation_state": "documented",
+      "runtime_state": "existing_partial",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "Aucun doublon de costume compté comme nouvelle identité ; alias et éditions proches possèdent une décision traçable.",
+      "depends_on": [
+        "02"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_04",
+      "section": "04",
+      "title": "FONDATIONS DU SYSTÈME DE COMBAT",
+      "source_file": "sources/Combat_Games_Guide_General_v1.0.txt",
+      "source_line_start": 186,
+      "source_line_end": 221,
+      "application_document": "README.md",
+      "application_heading": "5.2 Contrat d'une action",
+      "disposition": "adapted",
+      "priority": "P0",
+      "existing_evidence": [
+        "src/unified-engine-v060.js",
+        "src/combat-foundation-v060.js",
+        "docs/GAMEDEV_GUIDANCE.md"
+      ],
+      "finding": "Le moteur et les fondations de combat contiennent les états, attaques et ressources de duel ; le guide du dépôt documente le pas de simulation à 60 Hz.",
+      "project_decision": "Étendre les contrats d'action sans modifier implicitement cadence, graine ou ordre d'événements. Isoler temps simulé et présentation.",
+      "documentation_state": "documented",
+      "runtime_state": "existing_partial",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "Touche, garde, vide, interruption, pause et deux orientations aboutissent à un retour au contrôle reproductible.",
+      "depends_on": [
+        "01",
+        "02"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_05",
+      "section": "05",
+      "title": "MOVESETS, COUPS SPÉCIAUX ET RESSOURCES",
+      "source_file": "sources/Combat_Games_Guide_General_v1.0.txt",
+      "source_line_start": 222,
+      "source_line_end": 264,
+      "application_document": "README.md",
+      "application_heading": "5.2 Contrat d'une action",
+      "disposition": "adapted",
+      "priority": "P0",
+      "existing_evidence": [
+        "data/lore-movesets.json",
+        "src/combat-foundation-v060.js"
+      ],
+      "finding": "Des movesets sourcés et des types d'actions existent ; leur présence ne prouve pas que chaque kit prioritaire est complet.",
+      "project_decision": "Documenter entrée, préconditions, coût, préparation/activité/récupération, collisions, résultat et annulations ; attacher ressource et objets à leur propriétaire.",
+      "documentation_state": "documented",
+      "runtime_state": "existing_partial",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "Aucune dépense doublée, annulation infinie ou remise à zéro de munitions par relais ; les valeurs sont marquées réglages du projet.",
+      "depends_on": [
+        "03",
+        "04"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_06",
+      "section": "06",
+      "title": "ULTIMES, FINISHERS ET CONCLUSIONS DE COMBAT",
+      "source_file": "sources/Combat_Games_Guide_General_v1.0.txt",
+      "source_line_start": 265,
+      "source_line_end": 299,
+      "application_document": "README.md",
+      "application_heading": "4. Carte du projet et points de raccordement",
+      "disposition": "adapted",
+      "priority": "P1",
+      "existing_evidence": [
+        "data/finishers-v053.json",
+        "src/finishers-v053.js",
+        "src/finisher-compatibility-r10.js"
+      ],
+      "finding": "Les finishers et leur compatibilité ont déjà des données et un module ; les conclusions d'équipe ne sont pas démontrées par ces seules sources.",
+      "project_decision": "Maintenir conditions, cible, forme, stage et résultat ; prévoir repli compatible et scène abrégée sans changer le vainqueur.",
+      "documentation_state": "documented",
+      "runtime_state": "existing_partial",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "Cible humaine/géante/incompatible, garde/échec, interruption et skip ne créent ni KO double ni contrôle bloqué.",
+      "depends_on": [
+        "02",
+        "04",
+        "05"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_07",
+      "section": "07",
+      "title": "PRÉSENTATION ET RELATIONS ENTRE PERSONNAGES",
+      "source_file": "sources/Combat_Games_Guide_General_v1.0.txt",
+      "source_line_start": 300,
+      "source_line_end": 324,
+      "application_document": "EXTENSION_01_APPLICATION.md",
+      "application_heading": "11. Relations, versions et priorités de production",
+      "disposition": "adapted",
+      "priority": "P1",
+      "existing_evidence": [
+        "data/chronicles.json",
+        "data/lore-movesets.json"
+      ],
+      "finding": "Les profils et récits locaux constituent un support ; les liens canoniques retenus sont également documentés par les références Capcom du registre.",
+      "project_decision": "Prioriser Chris/Sheva, Rebecca/Billy, Claire/Moira et Barry/Natalia avec période et connaissances propres ; les rencontres croisées portent un statut de simulation.",
+      "documentation_state": "documented",
+      "runtime_state": "existing_partial",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "Intro, taunt, victoire et interaction ne prêtent pas au personnage une relation ou information absente du chapitre.",
+      "depends_on": [
+        "02",
+        "03"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_08",
+      "section": "08",
+      "title": "HISTOIRE INDIVIDUELLE DE CHAQUE PERSONNAGE",
+      "source_file": "sources/Combat_Games_Guide_General_v1.0.txt",
+      "source_line_start": 325,
+      "source_line_end": 355,
+      "application_document": "README.md",
+      "application_heading": "6.2 Routes individuelles à compléter",
+      "disposition": "adapted",
+      "priority": "P1",
+      "existing_evidence": [
+        "data/chronicles.json",
+        "src/chronicles-core-v060.js",
+        "src/chronicles-v060.js"
+      ],
+      "finding": "Les Chroniques relient introductions, parcours de huit rencontres et épilogues aux profils ; certains dossiers se déclarent simulations non canoniques.",
+      "project_decision": "Conserver ces dossiers et développer séparément routes individuelles motivées, scènes et conséquences ; annoncer explicitement hypothèses et alternatives.",
+      "documentation_state": "documented",
+      "runtime_state": "existing_partial",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "Une route complète possède objectif, rencontres motivées, rival/menace, revers, fin et checkpoints cohérents avec sa version.",
+      "depends_on": [
+        "02",
+        "03",
+        "06"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_09",
+      "section": "09",
+      "title": "CAMPAGNE GLOBALE DISTINCTE",
+      "source_file": "sources/Combat_Games_Guide_General_v1.0.txt",
+      "source_line_start": 356,
+      "source_line_end": 391,
+      "application_document": "README.md",
+      "application_heading": "6.3 Campagne globale proposée : « Archives de confinement »",
+      "disposition": "adapted",
+      "priority": "P2",
+      "existing_evidence": [
+        "data/chronicles.json",
+        "src/chronicles-core-v060.js"
+      ],
+      "finding": "Les Dossiers existants ne sont pas une preuve d'une campagne globale canonique couvrant tous les épisodes.",
+      "project_decision": "Proposer Archives de confinement comme structure originale de consultation/reconstitution ; actes reliés par dossiers et bilan, sans attribuer toutes les crises à un antagoniste inventé.",
+      "documentation_state": "documented",
+      "runtime_state": "planned",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "Chaque chapitre indique période, statut et raccord d'entrée/sortie ; la campagne se distingue des routes individuelles.",
+      "depends_on": [
+        "02",
+        "08",
+        "43"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_10",
+      "section": "10",
+      "title": "ILLUSTRATIONS ET CINÉMATIQUES NARRATIVES",
+      "source_file": "sources/Combat_Games_Guide_General_v1.0.txt",
+      "source_line_start": 392,
+      "source_line_end": 422,
+      "application_document": "README.md",
+      "application_heading": "6.2 Routes individuelles à compléter",
+      "disposition": "adapted",
+      "priority": "P1",
+      "existing_evidence": [
+        "data/chronicles.json",
+        "production-archives/rec-media/v22/README.md"
+      ],
+      "finding": "Récits et images de production existent ; les poses candidates ne constituent pas les cinématiques narratives complètes.",
+      "project_decision": "Créer des storyboards par scène avec acteurs/versions, lieu, blessures, cadrage, émotions, texte séparé, audio et transition de jeu.",
+      "documentation_state": "documented",
+      "runtime_state": "existing_partial",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "Vérifier continuité entre plans, lisibilité des dialogues, skip et mêmes états finaux avec présentation réduite.",
+      "depends_on": [
+        "02",
+        "08",
+        "09",
+        "17"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_11",
+      "section": "11",
+      "title": "BOSS, MACHINES ET BOSS RUSH",
+      "source_file": "sources/Combat_Games_Guide_General_v1.0.txt",
+      "source_line_start": 423,
+      "source_line_end": 459,
+      "application_document": "README.md",
+      "application_heading": "8. Arènes, boss et continuité spatiale",
+      "disposition": "adapted",
+      "priority": "P1",
+      "existing_evidence": [
+        "data/missing-bosses.json",
+        "data/roster.json",
+        "data/lore-movesets.json",
+        "docs/R28_EVOLUTIONS_ENGINE.md"
+      ],
+      "finding": "Le catalogue comporte bosses et contextes distincts ; les formes et évolutions disposent de données et documentation propres.",
+      "project_decision": "Conserver morphologie, phase, lieu et échelle ; traiter machines/formes géantes en rencontres dédiées avant un Boss Rush.",
+      "documentation_state": "documented",
+      "runtime_state": "existing_partial",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "Caméra, cibles, collisions, transition de phase et fin sont jouables pour chaque forme ; un boss géant ne reçoit pas automatiquement les recettes humaines.",
+      "depends_on": [
+        "03",
+        "04",
+        "13"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_12",
+      "section": "12",
+      "title": "MODES DE JEU",
+      "source_file": "sources/Combat_Games_Guide_General_v1.0.txt",
+      "source_line_start": 460,
+      "source_line_end": 493,
+      "application_document": "README.md",
+      "application_heading": "7. Modes et contrats d'entrée/sortie",
+      "disposition": "adapted",
+      "priority": "P0",
+      "existing_evidence": [
+        "modules/versus.html",
+        "modules/chronicles.html",
+        "catalog-duel.html"
+      ],
+      "finding": "Versus expose CPU/local/entraînement ; Dossiers et duel catalogue ont des points d'entrée distincts. Le tag/réseau complet n'est pas établi par ces pages.",
+      "project_decision": "Documenter pour chaque mode entrée, objectif, règles, résultat, reprise et sortie ; distinguer disponible, raccord à compléter et projet.",
+      "documentation_state": "documented",
+      "runtime_state": "existing_partial",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "Aucun menu ne promet un mode inexistant ; tous les chemins démarrent, se terminent et reviennent sans état bloqué.",
+      "depends_on": [
+        "01",
+        "04",
+        "08"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_13",
+      "section": "13",
+      "title": "ARÈNES : LIEUX, COMPOSITION ET LISIBILITÉ",
+      "source_file": "sources/Combat_Games_Guide_General_v1.0.txt",
+      "source_line_start": 494,
+      "source_line_end": 520,
+      "application_document": "README.md",
+      "application_heading": "8. Arènes, boss et continuité spatiale",
+      "disposition": "adapted",
+      "priority": "P1",
+      "existing_evidence": [
+        "data/arenas.json",
+        "data/roster.json",
+        "production-archives/rec-media/v22/reports/stage_target_audit.md"
+      ],
+      "finding": "Le roster référence 52 stages et les données d'arènes existent ; la revue V22 identifie des lieux/variantes ciblés.",
+      "project_decision": "Fixer œuvre, emplacement, période, sol, limites, arrière/avant-plan et caméra ; préserver les différences entre lieux originaux et remakes.",
+      "documentation_state": "documented",
+      "runtime_state": "existing_partial",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "Contrôler taille de jeu, contraste des combattants, silhouettes de tailles différentes et absence de décor bloquant un signal de combat.",
+      "depends_on": [
+        "02",
+        "03"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_14",
+      "section": "14",
+      "title": "ARÈNES VIVANTES, STATIQUES ET ÉVÉNEMENTS",
+      "source_file": "sources/Combat_Games_Guide_General_v1.0.txt",
+      "source_line_start": 521,
+      "source_line_end": 556,
+      "application_document": "README.md",
+      "application_heading": "8. Arènes, boss et continuité spatiale",
+      "disposition": "adapted",
+      "priority": "P1",
+      "existing_evidence": [
+        "src/stage-dynamics-r6.js",
+        "src/baker-stages-r14.js",
+        "docs/COMBAT_STAGE_R6_SCOPE.md"
+      ],
+      "finding": "Des systèmes de dynamique et de scènes Baker sont présents ; leur présence ne rend pas tous les décors destructibles ou vivants.",
+      "project_decision": "Classer décor statique, ambiance non interactive, danger et interaction ; chaque événement jouable a déclencheur, avertissement, collision, dégâts et remise à zéro.",
+      "documentation_state": "documented",
+      "runtime_state": "existing_partial",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "Deux orientations et replays reproduisent l'événement ; option de confort ne supprime pas l'information utile.",
+      "depends_on": [
+        "04",
+        "13"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_15",
+      "section": "15",
+      "title": "ARÈNES CONNECTÉES, TRANSITIONS ET INTERACTIONS",
+      "source_file": "sources/Combat_Games_Guide_General_v1.0.txt",
+      "source_line_start": 557,
+      "source_line_end": 601,
+      "application_document": "README.md",
+      "application_heading": "8. Arènes, boss et continuité spatiale",
+      "disposition": "adapted",
+      "priority": "P2",
+      "existing_evidence": [
+        "data/arenas.json",
+        "src/stage-dynamics-r6.js",
+        "docs/COMBAT_STAGE_R6_SCOPE.md"
+      ],
+      "finding": "Les lieux et dynamiques actuels fournissent des points d'ancrage ; aucune topologie complète de transitions d'équipe n'est revendiquée.",
+      "project_decision": "Autoriser une connexion seulement entre zones spatialement justifiées ; préciser destination, préchargement, accès, placement et conservation combo/entités.",
+      "documentation_state": "documented",
+      "runtime_state": "planned",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "Destination valide pour tous les participants, arrivée sans collision, mêmes ressources et résultat après skip/replay.",
+      "depends_on": [
+        "13",
+        "14",
+        "41",
+        "55"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_16",
+      "section": "16",
+      "title": "ENNEMIS, SOUTIENS, VÉHICULES ET PROJECTILES",
+      "source_file": "sources/Combat_Games_Guide_General_v1.0.txt",
+      "source_line_start": 602,
+      "source_line_end": 631,
+      "application_document": "EXTENSION_01_APPLICATION.md",
+      "application_heading": "8. Entités natives, objets placés et projectiles persistants",
+      "disposition": "adapted",
+      "priority": "P1",
+      "existing_evidence": [
+        "src/combat-foundation-v060.js",
+        "data/lore-movesets.json",
+        "production-archives/rec-media/v22/inventory/projectiles-vfx-16-families.json"
+      ],
+      "finding": "Le code crée projectiles, pièges et détonations ; le plan V22 répartit 44 actions dans 16 familles. Ce n'est pas un inventaire d'entités d'équipe finalisées.",
+      "project_decision": "Séparer projectile, objet posé, créature, soutien de roster, soutien natif et véhicule ; n'accorder contrôle et dégâts qu'aux capacités sourcées.",
+      "documentation_state": "documented",
+      "runtime_state": "existing_partial",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "Chaque entité possède propriétaire, durée, budget, collision, destruction et politique de round/KO/transition.",
+      "depends_on": [
+        "02",
+        "05",
+        "40",
+        "41"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_17",
+      "section": "17",
+      "title": "DIRECTION ARTISTIQUE ET PRODUCTION DES ASSETS",
+      "source_file": "sources/Combat_Games_Guide_General_v1.0.txt",
+      "source_line_start": 632,
+      "source_line_end": 667,
+      "application_document": "README.md",
+      "application_heading": "9. Chaîne de production des médias",
+      "disposition": "adapted",
+      "priority": "P0",
+      "existing_evidence": [
+        "data/asset-sources.json",
+        "docs/FIDELITE_R34.md",
+        "production-archives/rec-media/v22/ASSET_MANIFEST_V22.json",
+        "production-archives/rec-media/v23/ASSET_MANIFEST_V23.json"
+      ],
+      "finding": "Manifestes et suivis distinguent lots et admissions. V23 produit des clés fixes candidates, sans admission automatique au moteur.",
+      "project_decision": "Source native, dérivé, génération, candidat, revue, admission, test et publication sont des états séparés ; conserver les originaux et les rejets.",
+      "documentation_state": "documented",
+      "runtime_state": "existing_partial",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "Un asset dispose de référence/version, empreinte, dimensions, transparence, ancrage, réserve et décision ; aucune retouche ne remplace l'original.",
+      "depends_on": [
+        "02",
+        "03"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_18",
+      "section": "18",
+      "title": "ANIMATIONS, VFX, SON ET CAMÉRA",
+      "source_file": "sources/Combat_Games_Guide_General_v1.0.txt",
+      "source_line_start": 668,
+      "source_line_end": 694,
+      "application_document": "README.md",
+      "application_heading": "9.2 Animations et effets",
+      "disposition": "adapted",
+      "priority": "P1",
+      "existing_evidence": [
+        "src/re-renderer.js",
+        "src/combat-camera-v060.js",
+        "src/combat-audio-v060.js",
+        "modules/fidelity-r31/motion/index.html",
+        "production-archives/rec-media/v22/inventory/projectiles-vfx-16-families.json"
+      ],
+      "finding": "Rendu, caméra, son et revue de mouvements existent. Les neuf clés V23 restent des poses fixes, pas neuf animations.",
+      "project_decision": "Relier préparation/contact/récupération au temps de simulation ; séparer corps du projectile, trajet, impact, dissipation et audio.",
+      "documentation_state": "documented",
+      "runtime_state": "existing_partial",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "Ancrage, silhouette, événements SFX/VFX et contrôle concordent à vitesse de jeu ; mouvement réduit conserve les indices.",
+      "depends_on": [
+        "04",
+        "05",
+        "17"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_19",
+      "section": "19",
+      "title": "INTERFACE ET EXPÉRIENCE UTILISATEUR",
+      "source_file": "sources/Combat_Games_Guide_General_v1.0.txt",
+      "source_line_start": 695,
+      "source_line_end": 721,
+      "application_document": "README.md",
+      "application_heading": "10. UI, accès, sauvegardes et replay",
+      "disposition": "adapted",
+      "priority": "P0",
+      "existing_evidence": [
+        "src/game-menu-r20.js",
+        "src/menu-navigation-r20.js",
+        "src/interface-preferences-r20.js",
+        "production-archives/rec-media/v23/prototype/README.md"
+      ],
+      "finding": "Le menu possède mémoire du focus, confirmation ponctuelle et gestion de requête image. Le prototype V23 est séparé.",
+      "project_decision": "Conserver navigation cohérente, commandes remappables, état informatif et UI DEV distincte ; invalider les anciennes réponses de sélection.",
+      "documentation_state": "documented",
+      "runtime_state": "existing_partial",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "Navigation rapide, retour, double appui, perte de focus et réponses inversées ne changent pas le choix courant.",
+      "depends_on": [
+        "12",
+        "32",
+        "51"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_20",
+      "section": "20",
+      "title": "TUTORIELS, ENTRAÎNEMENT ET APPRENTISSAGE",
+      "source_file": "sources/Combat_Games_Guide_General_v1.0.txt",
+      "source_line_start": 722,
+      "source_line_end": 745,
+      "application_document": "README.md",
+      "application_heading": "5.3 IA, équilibrage et apprentissage",
+      "disposition": "adapted",
+      "priority": "P1",
+      "existing_evidence": [
+        "modules/versus.html",
+        "src/trial-input-v071.js",
+        "modules/fidelity-r31/commands/index.html"
+      ],
+      "finding": "Versus propose entraînement/mannequin, auto-soin et ressource libre ; les outils de commandes ont un parcours de revue.",
+      "project_decision": "Construire des leçons progressives avec essai/retour/reprise ; enseigner garde et ressources avant assist/tag, en gardant le dojo distinct des règles du duel.",
+      "documentation_state": "documented",
+      "runtime_state": "existing_partial",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "Une leçon peut être comprise, réussie, ratée puis reprise au clavier et sur chaque contrôleur réellement testé.",
+      "depends_on": [
+        "04",
+        "05",
+        "19"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_21",
+      "section": "21",
+      "title": "IA ET DIFFICULTÉ",
+      "source_file": "sources/Combat_Games_Guide_General_v1.0.txt",
+      "source_line_start": 746,
+      "source_line_end": 763,
+      "application_document": "README.md",
+      "application_heading": "5.3 IA, équilibrage et apprentissage",
+      "disposition": "adapted",
+      "priority": "P1",
+      "existing_evidence": [
+        "src/unified-engine-v060.js",
+        "modules/versus.html"
+      ],
+      "finding": "Le choix CPU existe ; la lecture de base ne certifie pas une IA complète pour les nouvelles équipes, entités et bonus.",
+      "project_decision": "Ficher perception, délai, risque, distance et ressource ; séparer difficulté et avantages explicitement annoncés.",
+      "documentation_state": "documented",
+      "runtime_state": "existing_partial",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "L'IA réagit aux états autorisés, reste reproductible et traite un partenaire indisponible ou une entité détruite sans action impossible.",
+      "depends_on": [
+        "04",
+        "05",
+        "33",
+        "40"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_22",
+      "section": "22",
+      "title": "ÉQUILIBRAGE ET ACCESSIBILITÉ",
+      "source_file": "sources/Combat_Games_Guide_General_v1.0.txt",
+      "source_line_start": 764,
+      "source_line_end": 792,
+      "application_document": "README.md",
+      "application_heading": "5.3 IA, équilibrage et apprentissage",
+      "disposition": "adapted",
+      "priority": "P1",
+      "existing_evidence": [
+        "src/interface-preferences-r20.js",
+        "src/combat-text-r17.js",
+        "modules/fidelity-r31/performance/index.html"
+      ],
+      "finding": "Des préférences et outils de lisibilité/performance existent. Aucun résultat de balance globale n'est inféré de leur présence.",
+      "project_decision": "Mesurer avec population/version ; traquer boucles et réponses impossibles ; séparer difficulté, aide de saisie et confort.",
+      "documentation_state": "documented",
+      "runtime_state": "existing_partial",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "Comparer deux côtés, portée, gabarits, touches/gardes/ratés et seuils ; signaux utiles restent perceptibles sans couleur ou son seuls.",
+      "depends_on": [
+        "04",
+        "05",
+        "18",
+        "19",
+        "21"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_23",
+      "section": "23",
+      "title": "MULTIJOUEUR, RÉSEAU ET REPLAYS",
+      "source_file": "sources/Combat_Games_Guide_General_v1.0.txt",
+      "source_line_start": 793,
+      "source_line_end": 825,
+      "application_document": "README.md",
+      "application_heading": "10. UI, accès, sauvegardes et replay",
+      "disposition": "adapted",
+      "priority": "P1",
+      "existing_evidence": [
+        "src/catalog-replay-contract.js",
+        "src/replay-vault-r13.js",
+        "docs/REPLAY_R13_SCOPE.md",
+        "modules/versus.html"
+      ],
+      "finding": "Duels locaux et contrats de replay sont présents ; cela ne prouve pas un service de jeu en ligne ou un rollback.",
+      "project_decision": "Préserver contrats existants ; définir avant raccord réseau autorité, synchronisation d'entités/équipe, version et reprise. Ne pas annoncer le réseau livré.",
+      "documentation_state": "documented",
+      "runtime_state": "existing_partial",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "Même entrée/graine/version reproduit les états ; un replay incompatible refuse proprement sans réécriture d'historique.",
+      "depends_on": [
+        "04",
+        "18",
+        "24",
+        "41"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_24",
+      "section": "24",
+      "title": "PROGRESSION, SAUVEGARDES ET REJOUABILITÉ",
+      "source_file": "sources/Combat_Games_Guide_General_v1.0.txt",
+      "source_line_start": 826,
+      "source_line_end": 844,
+      "application_document": "README.md",
+      "application_heading": "10. UI, accès, sauvegardes et replay",
+      "disposition": "adapted",
+      "priority": "P0",
+      "existing_evidence": [
+        "src/chronicles-core-v060.js",
+        "src/save-center-r19.js",
+        "docs/SAVES_R19_SCOPE.md"
+      ],
+      "finding": "Le noyau Chroniques attribue des épilogues après parcours et contrôle leur lecture ; le centre de sauvegardes a un contrat séparé.",
+      "project_decision": "Conserver records, phases et préférences ; ne pas confondre unlocked d'épilogue avec catalogue global de droits ; versionner toute migration.",
+      "documentation_state": "documented",
+      "runtime_state": "existing_partial",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "Une ancienne sauvegarde valide reprend sans perte ; fermeture pendant révélation ou conflit d'import ne duplique pas la récompense.",
+      "depends_on": [
+        "08",
+        "51",
+        "57",
+        "64"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_25",
+      "section": "25",
+      "title": "ORGANISATION, INVENTAIRES ET STATISTIQUES",
+      "source_file": "sources/Combat_Games_Guide_General_v1.0.txt",
+      "source_line_start": 845,
+      "source_line_end": 884,
+      "application_document": "README.md",
+      "application_heading": "1. Base réellement examinée",
+      "disposition": "adapted",
+      "priority": "P0",
+      "existing_evidence": [
+        "data/roster.json",
+        "docs/FIDELITE_R34.md",
+        "production-archives/rec-media/v22/inventory/INVENTAIRE_COMPLET_V22_20261124.json",
+        "production-archives/rec-media/v23/ASSET_MANIFEST_V23.json"
+      ],
+      "finding": "Roster, suivis et inventaires utilisent des unités différentes ; les chiffres historiques ne sont pas tous des assets livrés.",
+      "project_decision": "Publier prévu/documenté/produit/revu/intégré/testé/restant/bloqué par catégorie ; V23 distingue 9 clés candidates et 2 essais conservés.",
+      "documentation_state": "documented",
+      "runtime_state": "existing_partial",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "Aucune somme de catégories qui se recoupent ni pourcentage sans dénominateur ; chaque nombre renvoie à une source datée.",
+      "depends_on": [
+        "00",
+        "03",
+        "17"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_26",
+      "section": "26",
+      "title": "CRITÈRES DE VALIDATION ET ORDRE DE PRODUCTION",
+      "source_file": "sources/Combat_Games_Guide_General_v1.0.txt",
+      "source_line_start": 885,
+      "source_line_end": 923,
+      "application_document": "README.md",
+      "application_heading": "11. Recette et séquence de livraison",
+      "disposition": "retained",
+      "priority": "P0",
+      "existing_evidence": [
+        "AGENTS.md",
+        "docs/GAMEDEV_GUIDANCE.md",
+        "docs/R31_DELIVERY.md"
+      ],
+      "finding": "Le dépôt impose des preuves de portée explicite et la préservation des anciennes assertions.",
+      "project_decision": "Passer portes identité, sprite, action, équipe, déblocage, arène et histoire avec traces séparées ; exécuter les cas seulement lors du raccord correspondant.",
+      "documentation_state": "documented",
+      "runtime_state": "not_applicable_documentation",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "Aucune case passée par simple présence de fichier ; chaque validation indique environnement, version, résultat et limites.",
+      "depends_on": [
+        "02",
+        "04",
+        "17",
+        "25"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_27",
+      "section": "27",
+      "title": "FICHES TYPES À REMPLIR",
+      "source_file": "sources/Combat_Games_Guide_General_v1.0.txt",
+      "source_line_start": 924,
+      "source_line_end": 1090,
+      "application_document": "README.md",
+      "application_heading": "5. Roster, costumes et logique de combat",
+      "disposition": "adapted",
+      "priority": "P1",
+      "existing_evidence": [
+        "production-archives/rec-media/v22/inventory/characters-v1-reconciliation.json",
+        "data/lore-movesets.json",
+        "data/arenas.json"
+      ],
+      "finding": "Les inventaires existants peuvent fournir les IDs et références ; le guide original conserve tous ses modèles de fiche.",
+      "project_decision": "Relier les fiches personnage/action/finisher/route/campagne/arène/transition/boss/mode/asset au même ID et à leur recette ; remplir les inconnues explicitement.",
+      "documentation_state": "documented",
+      "runtime_state": "not_applicable_documentation",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "Une fiche utilisable fixe version, conditions, données, présentation, dépendances, source et résultat attendu sans champ important implicitement validé.",
+      "depends_on": [
+        "03",
+        "05",
+        "08",
+        "13",
+        "17"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_28",
+      "section": "28",
+      "title": "INSTRUCTION PRÊTE À TRANSMETTRE À UN PROJET",
+      "source_file": "sources/Combat_Games_Guide_General_v1.0.txt",
+      "source_line_start": 1091,
+      "source_line_end": 1125,
+      "application_document": "README.md",
+      "application_heading": "Lire la bible",
+      "disposition": "retained",
+      "priority": "P0",
+      "existing_evidence": [
+        "docs/GAMEDEV_GUIDANCE.md"
+      ],
+      "finding": "Le guide général reste disponible intégralement ; l'application locale et la matrice rendent sa transmission au projet concrète.",
+      "project_decision": "Utiliser ces documents comme référence V23 ; ne pas remplacer la reprise effective par la copie de l'instruction générale.",
+      "documentation_state": "documented",
+      "runtime_state": "not_applicable_documentation",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "Un contributeur retrouve original, décision Resident Evil, preuve existante et prochain critère pour chacune des 30 premières sections.",
+      "depends_on": [
+        "00",
+        "25",
+        "26"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_29",
+      "section": "29",
+      "title": "RÉFÉRENCES VÉRIFIÉES ET VOCABULAIRE",
+      "source_file": "sources/Combat_Games_Guide_General_v1.0.txt",
+      "source_line_start": 1126,
+      "source_line_end": 1188,
+      "application_document": "README.md",
+      "application_heading": "3.2 Sources primaires utiles à cette intégration",
+      "disposition": "retained",
+      "priority": "P0",
+      "existing_evidence": [
+        "data/asset-sources.json",
+        "data/lore-movesets.json"
+      ],
+      "finding": "Le registre local est complété par sources officielles Capcom de partenariat, fonctions et chronologie, avec limites de consultation explicites.",
+      "project_decision": "Distinguer référence de design, source de canon et preuve d'implémentation ; une règle reprise d'un autre jeu n'est jamais attribuée à Resident Evil.",
+      "documentation_state": "documented",
+      "runtime_state": "not_applicable_documentation",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "Chaque fait narratif retenu remonte à une référence primaire ; chaque coût/frame inventé porte le statut adaptation.",
+      "depends_on": [
+        "02"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_30",
+      "section": "30",
+      "title": "PORTÉE ET RATTACHEMENT AU GUIDE GÉNÉRAL",
+      "source_file": "sources/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+      "source_line_start": 46,
+      "source_line_end": 86,
+      "application_document": "EXTENSION_01_APPLICATION.md",
+      "application_heading": "1. Existant et frontière de ce lot",
+      "disposition": "retained",
+      "priority": "P0",
+      "existing_evidence": [
+        "src/combat-foundation-v060.js",
+        "src/chronicles-core-v060.js"
+      ],
+      "finding": "Taunt mécanique, projectiles/pièges et épilogues déverrouillés existent ; les nouvelles fonctions d'équipe ne sont pas toutes raccordées.",
+      "project_decision": "Appliquer ensemble les sections 30–49 sans supprimer le guide général ni déclarer un moteur complet sur la seule intégration du texte.",
+      "documentation_state": "documented",
+      "runtime_state": "not_applicable_documentation",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "Toutes les fonctions étendues ont état, dépendances et recette distincts de la conservation des originaux.",
+      "depends_on": [
+        "00",
+        "04"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_31",
+      "section": "31",
+      "title": "TAUNTS : PROVOCATIONS ET RÉACTIONS DE PERSONNALITÉ",
+      "source_file": "sources/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+      "source_line_start": 87,
+      "source_line_end": 132,
+      "application_document": "EXTENSION_01_APPLICATION.md",
+      "application_heading": "2. Taunts : personnalité et risque",
+      "disposition": "adapted",
+      "priority": "P1",
+      "existing_evidence": [
+        "src/combat-foundation-v060.js",
+        "data/lore-movesets.json"
+      ],
+      "finding": "combat-foundation applique déjà le buff taunt dans les dégâts et affiche PROVOQUÉ ; cela ne fournit pas les animations et réactions de personnalité de tout le roster.",
+      "project_decision": "Ficher taunts Barry, Rebecca, Billy et B.O.W. avec geste/voix compatibles, risque, interruption et éventuel effet ; pas de gain infini ni citation inventée comme officielle.",
+      "documentation_state": "documented",
+      "runtime_state": "existing_partial",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "E01-02 : interruption rend le contrôle et stoppe la voix ; répétition/maintien ne multiplie ni effets ni ressources.",
+      "depends_on": [
+        "02",
+        "03",
+        "04",
+        "18"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_32",
+      "section": "32",
+      "title": "ANIMATIONS DE SÉLECTION, CONFIRMATION ET DÉSÉLECTION",
+      "source_file": "sources/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+      "source_line_start": 133,
+      "source_line_end": 177,
+      "application_document": "EXTENSION_01_APPLICATION.md",
+      "application_heading": "3. Cycle complet de sélection et désélection",
+      "disposition": "adapted",
+      "priority": "P0",
+      "existing_evidence": [
+        "src/game-menu-r20.js",
+        "production-archives/rec-media/v23/prototype/access-model.js",
+        "production-archives/rec-media/v23/prototype/reports/DOMAIN_QA.tap",
+        "production-archives/rec-media/v23/ASSET_MANIFEST_V23.json"
+      ],
+      "finding": "R20 contient une gestion de focus/requêtes ; V23 ajoute un contrôleur isolé testé au domaine et 9 clés fixes candidates, avec 2 essais remplacés conservés.",
+      "project_decision": "Huit états d'écran ; jeton par propriétaire, confirmation ponctuelle, annulation qui invalide, nettoyage présentation, deux curseurs indépendants et hasard admissible.",
+      "documentation_state": "documented",
+      "runtime_state": "isolated_prototype",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "E01-01/E01-18 : réponse tardive et double entrée sans effet parasite ; navigateur/manette et animation complète restent à vérifier.",
+      "depends_on": [
+        "19",
+        "51",
+        "63"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_33",
+      "section": "33",
+      "title": "PROFILS D'ÉQUIPE ET CATÉGORIES DE PARTENAIRES",
+      "source_file": "sources/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+      "source_line_start": 178,
+      "source_line_end": 227,
+      "application_document": "EXTENSION_01_APPLICATION.md",
+      "application_heading": "4. Profils d'équipe",
+      "disposition": "adapted",
+      "priority": "P1",
+      "existing_evidence": [
+        "src/unified-engine-v060.js",
+        "modules/versus.html"
+      ],
+      "finding": "Les entrées de duel existantes ne suffisent pas à établir un roster actif/réserve/soutien complet.",
+      "project_decision": "Définir REC_ASSIST_V1, REC_TAG_V1, REC_HYBRID_V1 et REC_STORY_PAIR_V1 avec contrôle, vie, défaite et disponibilité explicités.",
+      "documentation_state": "documented",
+      "runtime_state": "planned",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "Le menu annonce le profil ; un soutien natif n'est pas assimilé à un combattant contrôlable et un seul état occupe chaque partenaire.",
+      "depends_on": [
+        "03",
+        "04",
+        "12"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_34",
+      "section": "34",
+      "title": "COMMANDES, JAUGES ET DISPONIBILITÉ",
+      "source_file": "sources/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+      "source_line_start": 228,
+      "source_line_end": 279,
+      "application_document": "EXTENSION_01_APPLICATION.md",
+      "application_heading": "4.1 Commandes et priorité",
+      "disposition": "adapted",
+      "priority": "P1",
+      "existing_evidence": [
+        "src/combat-foundation-v060.js",
+        "src/trial-input-v071.js"
+      ],
+      "finding": "Entrées et ressources de duel existent ; les actions d'équipe décrites ici ne sont pas injectées dans les constantes legacy.",
+      "project_decision": "Actions abstraites remappables, arbitre unique et réservation atomique ; jauge100/coûts25-20-40-100 sont uniquement une proposition à tester.",
+      "documentation_state": "documented",
+      "runtime_state": "planned",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "E01-03/E01-04 : demande simultanée et dernier point de ressource ne produisent qu'un engagement, sans coût avant validation.",
+      "depends_on": [
+        "04",
+        "05",
+        "33"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_35",
+      "section": "35",
+      "title": "ASSISTANCES PONCTUELLES",
+      "source_file": "sources/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+      "source_line_start": 280,
+      "source_line_end": 315,
+      "application_document": "EXTENSION_01_APPLICATION.md",
+      "application_heading": "5.1 Cycle assistance",
+      "disposition": "adapted",
+      "priority": "P1",
+      "existing_evidence": [
+        "src/combat-foundation-v060.js",
+        "data/lore-movesets.json"
+      ],
+      "finding": "Les capacités de partenaires sont sourcées dans le registre ; aucune recette d'assistance complète du moteur n'est revendiquée.",
+      "project_decision": "Cycle demande/arrivée/action/vulnérabilité/sortie/récupération ; pilotes couverture Chris-Sheva, lampe Moira, repérage Natalia, coordination RE0.",
+      "documentation_state": "documented",
+      "runtime_state": "planned",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "E01-05/E01-06 : soutien touché ou KO à l'arrivée, demande concurrente et refus rendent des ressources et états cohérents.",
+      "depends_on": [
+        "02",
+        "33",
+        "34"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_36",
+      "section": "36",
+      "title": "TAG : CHANGEMENT RÉEL DE COMBATTANT",
+      "source_file": "sources/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+      "source_line_start": 316,
+      "source_line_end": 358,
+      "application_document": "EXTENSION_01_APPLICATION.md",
+      "application_heading": "5.3 Formes de tag",
+      "disposition": "adapted",
+      "priority": "P1",
+      "existing_evidence": [
+        "src/unified-engine-v060.js",
+        "src/combat-foundation-v060.js"
+      ],
+      "finding": "Le tag réel et la persistance de propriétaire à travers réserve/KO ne sont pas certifiés par les modules legacy.",
+      "project_decision": "Distinguer relais volontaire, combo, secours, KO et script ; conserver vie/munitions/transformation/objets ; autoriser arrivée obligatoire du survivant sans jauge.",
+      "documentation_state": "documented",
+      "runtime_state": "planned",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "E01-03/E01-11 : contrôle change une fois, partenaire ne se duplique pas et projectile ancien garde propriétaire et crédit.",
+      "depends_on": [
+        "33",
+        "34",
+        "35",
+        "41"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_37",
+      "section": "37",
+      "title": "TECHNIQUES COMBINÉES ET SUPERS D'ÉQUIPE",
+      "source_file": "sources/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+      "source_line_start": 359,
+      "source_line_end": 408,
+      "application_document": "EXTENSION_01_APPLICATION.md",
+      "application_heading": "6.2 Fiche représentative `DUO_RE5_CROSS_COVER_V1`",
+      "disposition": "adapted",
+      "priority": "P1",
+      "existing_evidence": [
+        "data/lore-movesets.json",
+        "data/finishers-v053.json"
+      ],
+      "finding": "Les données de techniques et conclusions servent de base ; le duo nommé est une chorégraphie originale proposée.",
+      "project_decision": "Réserver deux participants et ressource ; conditionner la scène à la réussite du premier contact ; couvrir garde/vide/cible incompatible.",
+      "documentation_state": "documented",
+      "runtime_state": "planned",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "E01-07 : coût et durée bornés pour touche/garde/vide, retour contrôlable et cohérence des acteurs pendant skip.",
+      "depends_on": [
+        "02",
+        "33",
+        "34",
+        "35"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_38",
+      "section": "38",
+      "title": "FINISHERS D'ÉQUIPE ET FINS DRAMATIQUES CONDITIONNELLES",
+      "source_file": "sources/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+      "source_line_start": 409,
+      "source_line_end": 458,
+      "application_document": "EXTENSION_01_APPLICATION.md",
+      "application_heading": "6.3 Priorité des conclusions",
+      "disposition": "adapted",
+      "priority": "P1",
+      "existing_evidence": [
+        "src/finishers-v053.js",
+        "src/finisher-compatibility-r10.js"
+      ],
+      "finding": "Une compatibilité de finishers solo existe ; les conclusions collectives et dramatiques restent des fiches de conception.",
+      "project_decision": "Établir une priorité unique résultat/dramatique autorisé/fin équipe/fin solo/repli ; vérifier versions, stage, survivants et état du récit.",
+      "documentation_state": "documented",
+      "runtime_state": "planned",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "E01-08/E01-18 : cas incompatible aboutit au repli déterministe, avec même vainqueur et aucune double scène.",
+      "depends_on": [
+        "02",
+        "06",
+        "37",
+        "44"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_39",
+      "section": "39",
+      "title": "CLASHES ET CONFRONTATIONS AVEC QTE",
+      "source_file": "sources/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+      "source_line_start": 459,
+      "source_line_end": 535,
+      "application_document": "EXTENSION_01_APPLICATION.md",
+      "application_heading": "7. Clashes et QTE compatibles avec Resident Evil",
+      "disposition": "adapted",
+      "priority": "P2",
+      "existing_evidence": [
+        "src/finishers-v053.js",
+        "src/combat-foundation-v060.js",
+        "docs/SEQUENCES_R8_SCOPE.md"
+      ],
+      "finding": "Les sources existantes ne prouvent pas un système générique de clashes/QTE d'équipe.",
+      "project_decision": "Distinguer collision normale, opposition mécanique et scène ; pas de duel de rayons universel ; définir réussite/échec/égalité/absence et option sans QTE.",
+      "documentation_state": "documented",
+      "runtime_state": "planned",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "E01-09/E01-10 : projectile tiers, temps expiré, déconnexion et replay ont une issue bornée et une restitution du contrôle.",
+      "depends_on": [
+        "04",
+        "18",
+        "22",
+        "23",
+        "37"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_40",
+      "section": "40",
+      "title": "MOVESETS À ENTITÉS INDÉPENDANTES ET OBJETS PLACÉS",
+      "source_file": "sources/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+      "source_line_start": 536,
+      "source_line_end": 599,
+      "application_document": "EXTENSION_01_APPLICATION.md",
+      "application_heading": "8.1 Familles retenues",
+      "disposition": "adapted",
+      "priority": "P1",
+      "existing_evidence": [
+        "src/combat-foundation-v060.js",
+        "data/lore-movesets.json"
+      ],
+      "finding": "Pièges et projectiles sont déjà émis ; le propriétaire legacy par slot ne constitue pas le futur identifiant stable d'instance en équipe.",
+      "project_decision": "Registre team_id/fighter_instance_id/spawn_id ; séparer entité native commandable, automatique, objet posé et assistance de roster ; fixer budgets et réponses.",
+      "documentation_state": "documented",
+      "runtime_state": "existing_partial",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "E01-11/E01-14/E01-15 : destruction/commande/réserve/KO et plafond d'entités ne créent ni propriété ambiguë ni boucle.",
+      "depends_on": [
+        "04",
+        "05",
+        "33",
+        "36"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_41",
+      "section": "41",
+      "title": "PROJECTILES PERSISTANTS ET RÈGLES COMMUNES AUX ENTITÉS",
+      "source_file": "sources/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+      "source_line_start": 600,
+      "source_line_end": 645,
+      "application_document": "EXTENSION_01_APPLICATION.md",
+      "application_heading": "8.2 Table d'événements à remplir par entité",
+      "disposition": "adapted",
+      "priority": "P1",
+      "existing_evidence": [
+        "src/combat-foundation-v060.js",
+        "src/catalog-replay-contract.js"
+      ],
+      "finding": "Des projectiles/pièges ont propriétaire, durée et événements ; le contrat complet de persistance multi-acteurs reste à définir.",
+      "project_decision": "Décider sort après hit, réserve, KO, transformation, transition, round, cinématique et replay ; réflexion réattribue explicitement crédit et relation d'équipe.",
+      "documentation_state": "documented",
+      "runtime_state": "existing_partial",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "E01-11/E01-12/E01-13 : aucun projectile effacé ou recréé par simple changement de contrôle ; ordre et crédit déterministes.",
+      "depends_on": [
+        "04",
+        "15",
+        "23",
+        "36",
+        "40"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_42",
+      "section": "42",
+      "title": "STAGES BONUS ET ÉPREUVES INTÉGRÉES AUX HISTOIRES",
+      "source_file": "sources/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+      "source_line_start": 646,
+      "source_line_end": 728,
+      "application_document": "EXTENSION_01_APPLICATION.md",
+      "application_heading": "9. Stages bonus intégrés aux parcours",
+      "disposition": "adapted",
+      "priority": "P2",
+      "existing_evidence": [
+        "data/chronicles.json",
+        "data/arenas.json",
+        "src/chronicles-core-v060.js"
+      ],
+      "finding": "Parcours et stages existants donnent des ancrages ; les huit bonus proposés ne sont pas livrés comme modes jouables.",
+      "project_decision": "Relier désamorçage, protection, survie, cibles, convoyage ou observation à objectif/scène/récompense ; différer familles sans référence compatible.",
+      "documentation_state": "documented",
+      "runtime_state": "planned",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "E01-15/E01-16 : règles et budget annoncés, réussite/échec/reprise exacts, ressource du parcours conservée.",
+      "depends_on": [
+        "02",
+        "08",
+        "12",
+        "13",
+        "57"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_43",
+      "section": "43",
+      "title": "ESPACE D'EXPLORATION ET DE DÉBLOCAGE INSPIRÉ DE LA KRYPT",
+      "source_file": "sources/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+      "source_line_start": 729,
+      "source_line_end": 784,
+      "application_document": "EXTENSION_01_APPLICATION.md",
+      "application_heading": "10. Hub proposé : Archives de confinement",
+      "disposition": "adapted",
+      "priority": "P2",
+      "existing_evidence": [
+        "src/chronicles-core-v060.js",
+        "data/chronicles.json"
+      ],
+      "finding": "La bible propose un hub original ; le prototype de dossiers ne constitue pas son exploration jouable.",
+      "project_decision": "Cinq zones : accueil, cartothèque, dépôt de pièces, chambre d'essais, réserve des incidents ; passages identifiés et catalogue partagé avec menus.",
+      "documentation_state": "documented",
+      "runtime_state": "planned",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "E01-17 : récompense unique après fermeture ; aucun verrou exige sa propre récompense ni porte spatiale arbitraire entre épisodes.",
+      "depends_on": [
+        "09",
+        "15",
+        "42",
+        "57",
+        "58"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_44",
+      "section": "44",
+      "title": "COHÉRENCE NARRATIVE, RELATIONS ET COMPATIBILITÉS",
+      "source_file": "sources/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+      "source_line_start": 785,
+      "source_line_end": 821,
+      "application_document": "EXTENSION_01_APPLICATION.md",
+      "application_heading": "11. Relations, versions et priorités de production",
+      "disposition": "adapted",
+      "priority": "P0",
+      "existing_evidence": [
+        "data/chronicles.json",
+        "data/lore-movesets.json",
+        "production-archives/rec-media/v22/inventory/characters-v1-reconciliation.json"
+      ],
+      "finding": "Les paires et périodes sont référencées par la chronologie et les manuels Capcom du registre ; les éditions de modèles restent distinctes.",
+      "project_decision": "Table de compatibilité par mode/chapitre/incarnation, rôle et connaissances ; générique autorisé distinct de chorégraphie exclusive.",
+      "documentation_state": "documented",
+      "runtime_state": "not_applicable_documentation",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "Une paire anachronique peut être simulation libre mais ne devient pas un événement canonique du chapitre.",
+      "depends_on": [
+        "02",
+        "03",
+        "07",
+        "33"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_45",
+      "section": "45",
+      "title": "ASSETS, ANIMATIONS, SONS ET MISE EN SCÈNE",
+      "source_file": "sources/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+      "source_line_start": 822,
+      "source_line_end": 863,
+      "application_document": "EXTENSION_01_APPLICATION.md",
+      "application_heading": "3.1 Poses V23 et usage exact",
+      "disposition": "adapted",
+      "priority": "P0",
+      "existing_evidence": [
+        "production-archives/rec-media/v23/ASSET_MANIFEST_V23.json",
+        "production-archives/rec-media/v23/README.md",
+        "production-archives/rec-media/v22/inventory/projectiles-vfx-16-families.json"
+      ],
+      "finding": "V23 conserve 11 PNG natifs : 9 clés candidates et 2 essais remplacés. Les réserves de contour/marge/ancrage ne sont pas une animation complète.",
+      "project_decision": "Produire par état et personnage, conserver sources et rejets ; séparer poses, transitions animées, VFX, son et leur intégration.",
+      "documentation_state": "documented",
+      "runtime_state": "existing_partial",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "Un état couvert a des médias validés à taille de jeu ; aucun PNG candidat compté comme animation ou admission moteur.",
+      "depends_on": [
+        "02",
+        "17",
+        "18",
+        "32"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_46",
+      "section": "46",
+      "title": "INTERFACE, APPRENTISSAGE, ACCESSIBILITÉ ET RÉSEAU",
+      "source_file": "sources/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+      "source_line_start": 864,
+      "source_line_end": 913,
+      "application_document": "EXTENSION_01_APPLICATION.md",
+      "application_heading": "12. Données de production et critères d'acceptation",
+      "disposition": "adapted",
+      "priority": "P1",
+      "existing_evidence": [
+        "src/interface-preferences-r20.js",
+        "production-archives/rec-media/v23/prototype/README.md",
+        "src/catalog-replay-contract.js"
+      ],
+      "finding": "Le socle de préférences/replay existe ; tests du prototype limités au domaine, recette navigateur non exécutée dans ce lot.",
+      "project_decision": "Montrer actif/réserve/disponibilité/coût, enseigner priorités, sous-titrer indices et prévoir synchronisation avant raccord réseau.",
+      "documentation_state": "documented",
+      "runtime_state": "planned",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "Informations utiles sans couleur seule ; même arbitrage en deux orientations et replay, options de confort sans avantage caché.",
+      "depends_on": [
+        "19",
+        "20",
+        "22",
+        "23",
+        "33",
+        "34"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_47",
+      "section": "47",
+      "title": "VALIDATION, STATISTIQUES ET ORDRE D'INTÉGRATION",
+      "source_file": "sources/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+      "source_line_start": 914,
+      "source_line_end": 972,
+      "application_document": "EXTENSION_01_APPLICATION.md",
+      "application_heading": "12. Données de production et critères d'acceptation",
+      "disposition": "adapted",
+      "priority": "P0",
+      "existing_evidence": [
+        "docs/GAMEDEV_GUIDANCE.md",
+        "production-archives/rec-media/v23/README.md",
+        "production-archives/rec-media/v23/prototype/README.md"
+      ],
+      "finding": "La recette extension 01 comporte 18 cas à exécuter au raccord ; les preuves prototype/médias restent séparées.",
+      "project_decision": "Qualifier une paire, une assistance, un relais et une entité avant de généraliser ; compter par mécanique et unité de preuve.",
+      "documentation_state": "documented",
+      "runtime_state": "not_applicable_documentation",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "E01-01 à E01-18 gardent résultat, version et limite ; aucune case passée par génération du guide.",
+      "depends_on": [
+        "25",
+        "26",
+        "31",
+        "32",
+        "33",
+        "40",
+        "42"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_48",
+      "section": "48",
+      "title": "DIX FICHES DE PRODUCTION COMPLÉMENTAIRES",
+      "source_file": "sources/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+      "source_line_start": 973,
+      "source_line_end": 1119,
+      "application_document": "EXTENSION_01_APPLICATION.md",
+      "application_heading": "12. Données de production et critères d'acceptation",
+      "disposition": "adapted",
+      "priority": "P1",
+      "existing_evidence": [
+        "data/lore-movesets.json",
+        "production-archives/rec-media/v22/inventory/INVENTAIRE_COMPLET_V22_20261124.json"
+      ],
+      "finding": "L'original conserve dix fiches A–J ; l'application fournit pilotes taunts, sélection, équipe, duo, entités, bonus et hub.",
+      "project_decision": "Chaque fiche indique ID/version, source/statut, acteurs, conditions, entrées, coûts, simulation, médias, recette et état ; ne pas inventer valeurs manquantes.",
+      "documentation_state": "documented",
+      "runtime_state": "not_applicable_documentation",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "Les dix domaines se relient à une décision et un critère même lorsque la production reste différée.",
+      "depends_on": [
+        "31",
+        "32",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "42",
+        "43"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_49",
+      "section": "49",
+      "title": "INSTRUCTION D'INTÉGRATION ET RÉFÉRENCES",
+      "source_file": "sources/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+      "source_line_start": 1120,
+      "source_line_end": 1233,
+      "application_document": "EXTENSION_01_APPLICATION.md",
+      "application_heading": "1. Existant et frontière de ce lot",
+      "disposition": "retained",
+      "priority": "P0",
+      "existing_evidence": [
+        "docs/GAMEDEV_GUIDANCE.md"
+      ],
+      "finding": "L'extension originale est importée intégralement et rapprochée de la base, sans réduire son périmètre à taunt/tag uniquement.",
+      "project_decision": "Préserver aussi clashes, entités, projectiles persistants, bonus et hub ; les références d'autres jeux expliquent des familles, pas le canon Resident Evil.",
+      "documentation_state": "documented",
+      "runtime_state": "not_applicable_documentation",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "Sections 30–49 toutes indexées avec source, application, constat et recette.",
+      "depends_on": [
+        "30",
+        "47",
+        "48"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_50",
+      "section": "50",
+      "title": "PORTÉE, PRINCIPES ET RACCORDEMENT AUX GUIDES",
+      "source_file": "sources/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+      "source_line_start": 47,
+      "source_line_end": 76,
+      "application_document": "EXTENSION_02_APPLICATION.md",
+      "application_heading": "1. État réel et résultat visé",
+      "disposition": "retained",
+      "priority": "P0",
+      "existing_evidence": [
+        "src/chronicles-core-v060.js",
+        "production-archives/rec-media/v23/prototype/README.md"
+      ],
+      "finding": "Épilogues legacy déverrouillés et prototype isolé coexistent ; aucune liaison de paiement ou migration runtime n'est fournie.",
+      "project_decision": "Raccorder l'extension 02 au même catalogue et aux présentations de l'extension 01, en séparant règles prévues et capacités effectivement testées.",
+      "documentation_state": "documented",
+      "runtime_state": "not_applicable_documentation",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "Le lecteur identifie immédiatement source importée, domaine isolé et fonctions non raccordées.",
+      "depends_on": [
+        "00",
+        "24",
+        "30"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_51",
+      "section": "51",
+      "title": "ÉTATS DE DÉCOUVERTE, DE DROIT ET DE DISPONIBILITÉ",
+      "source_file": "sources/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+      "source_line_start": 77,
+      "source_line_end": 117,
+      "application_document": "EXTENSION_02_APPLICATION.md",
+      "application_heading": "2. Quatre dimensions indépendantes",
+      "disposition": "adapted",
+      "priority": "P0",
+      "existing_evidence": [
+        "production-archives/rec-media/v23/prototype/access-model.js",
+        "production-archives/rec-media/v23/prototype/reports/DOMAIN_QA.tap",
+        "production-archives/rec-media/v23/prototype/README.md"
+      ],
+      "finding": "Le domaine V23 sépare découverte, droit, technique et compatibilité ; ses tests sont propres à la simulation.",
+      "project_decision": "Résoudre ces axes séparément : secret/indice/identifié ; sources permanent/temporaire/etc. ; fichiers/version ; mode/doublon/dépendance.",
+      "documentation_state": "documented",
+      "runtime_state": "isolated_prototype",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "E02-06/E02-07/E02-10/E02-11 : aucun asset manquant transformé en verrou commercial, aucun acquis permanent effacé par expiration temporaire.",
+      "depends_on": [
+        "03",
+        "19",
+        "24",
+        "50"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_52",
+      "section": "52",
+      "title": "LANGAGE VISUEL ADAPTÉ AU LORE",
+      "source_file": "sources/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+      "source_line_start": 118,
+      "source_line_end": 165,
+      "application_document": "EXTENSION_02_APPLICATION.md",
+      "application_heading": "3. Charte visuelle Resident Evil",
+      "disposition": "adapted",
+      "priority": "P0",
+      "existing_evidence": [
+        "production-archives/rec-media/v23/prototype/index.html",
+        "production-archives/rec-media/v23/prototype/README.md"
+      ],
+      "finding": "Le prototype utilise des dossiers et des conditions lisibles ; le rendu navigateur et lecteur d'écran réel ne sont pas certifiés dans ce lot.",
+      "project_decision": "Métaphore originale dossiers scellés/badge/casier ; silhouette seulement pour indice autorisé, emblème neutre pour secret.",
+      "documentation_state": "documented",
+      "runtime_state": "isolated_prototype",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "E02-01/E02-02/E02-17 : aucun nom/portrait/voix/texte accessible révélateur pour un secret ; état distinguable sans couleur seule.",
+      "depends_on": [
+        "02",
+        "19",
+        "51",
+        "63"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_53",
+      "section": "53",
+      "title": "EMPLACEMENTS DE PERSONNAGES ET PARTENAIRES",
+      "source_file": "sources/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+      "source_line_start": 166,
+      "source_line_end": 208,
+      "application_document": "EXTENSION_02_APPLICATION.md",
+      "application_heading": "4.1 Personnages et entités",
+      "disposition": "adapted",
+      "priority": "P0",
+      "existing_evidence": [
+        "data/roster.json",
+        "production-archives/rec-media/v23/prototype/access-model.js",
+        "production-archives/rec-media/v23/prototype/README.md"
+      ],
+      "finding": "Le catalogue réel distingue profils ; la démo illustre sélection, doublon et dépendance sans changer le roster du moteur.",
+      "project_decision": "Même content_id du menu au hub ; séparer dossier consultable, membre sélectionnable et soutien natif ; confirmer seulement après revalidation du contexte.",
+      "documentation_state": "documented",
+      "runtime_state": "isolated_prototype",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "E02-02/E02-06/E02-16 : pas de membre interdit injecté, dépendance montrée et remplacement expliqué sans perte de préférence.",
+      "depends_on": [
+        "03",
+        "32",
+        "33",
+        "51"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_54",
+      "section": "54",
+      "title": "COSTUMES, PALETTES ET ACCESSOIRES",
+      "source_file": "sources/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+      "source_line_start": 209,
+      "source_line_end": 249,
+      "application_document": "EXTENSION_02_APPLICATION.md",
+      "application_heading": "4.2 Costumes",
+      "disposition": "adapted",
+      "priority": "P1",
+      "existing_evidence": [
+        "production-archives/rec-media/v22/inventory/costumes-38-reconciliation.json",
+        "production-archives/rec-media/v23/prototype/README.md"
+      ],
+      "finding": "Les 38 variantes ciblées sont inventoriées ; Palette Archives de la démo est une fixture, sans nouveau costume dessiné livré.",
+      "project_decision": "Acquérir un costume avant son personnage reste possible ; conserver préférence et source ; bonus de soutien cosmétiques sans modification de collision/statistique.",
+      "documentation_state": "documented",
+      "runtime_state": "isolated_prototype",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "E02-06/E02-16/E02-17 : costume inaccessible propose base autorisée, acquisition reste enregistrée, aucun avantage combat payé.",
+      "depends_on": [
+        "02",
+        "03",
+        "17",
+        "51",
+        "53"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_55",
+      "section": "55",
+      "title": "STAGES, VARIANTES ET DESTINATIONS",
+      "source_file": "sources/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+      "source_line_start": 250,
+      "source_line_end": 295,
+      "application_document": "EXTENSION_02_APPLICATION.md",
+      "application_heading": "9. Stages de soutien et transitions",
+      "disposition": "adapted",
+      "priority": "P1",
+      "existing_evidence": [
+        "data/arenas.json",
+        "production-archives/rec-media/v23/prototype/README.md"
+      ],
+      "finding": "Les stages existent ; la variante proposée REC_STAGE_KIJUJU_ARCHIVE_AMBIENCE_V1 n'est pas une arène jouable livrée.",
+      "project_decision": "Séparer autorisation de choisir et de participer ; variante ambiance sans gain de jeu ; contrôler toutes destinations connectées avant lancement.",
+      "documentation_state": "documented",
+      "runtime_state": "planned",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "E02-13/E02-14/E02-15 : adversaire participe selon règle sans acquérir, destination chargée, match stable après expiration.",
+      "depends_on": [
+        "13",
+        "15",
+        "51",
+        "59",
+        "62"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_56",
+      "section": "56",
+      "title": "MODES DE JEU ET PARCOURS VERROUILLÉS",
+      "source_file": "sources/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+      "source_line_start": 296,
+      "source_line_end": 327,
+      "application_document": "EXTENSION_02_APPLICATION.md",
+      "application_heading": "4.3 Modes",
+      "disposition": "adapted",
+      "priority": "P1",
+      "existing_evidence": [
+        "modules/versus.html",
+        "modules/chronicles.html",
+        "production-archives/rec-media/v23/prototype/README.md"
+      ],
+      "finding": "Modes legacy présents et filtre de scénario simulé dans la démo ; aucun nouveau mode de survie livré par cette fixture.",
+      "project_decision": "Verrouiller seulement une condition définie et accessible ; tutoriel/accessibilité/entraînement de base accessibles ; aucune boucle de conditions.",
+      "documentation_state": "documented",
+      "runtime_state": "planned",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "E02-18 : analyse de dépendances directes/indirectes et retour utilisable si condition non remplie.",
+      "depends_on": [
+        "12",
+        "20",
+        "51",
+        "57"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_57",
+      "section": "57",
+      "title": "CONDITIONS DE DÉBLOCAGE ET PROGRESSION",
+      "source_file": "sources/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+      "source_line_start": 328,
+      "source_line_end": 372,
+      "application_document": "EXTENSION_02_APPLICATION.md",
+      "application_heading": "5. Règles de déblocage et attribution",
+      "disposition": "adapted",
+      "priority": "P0",
+      "existing_evidence": [
+        "src/chronicles-core-v060.js",
+        "production-archives/rec-media/v23/prototype/access-model.js",
+        "production-archives/rec-media/v23/prototype/reports/DOMAIN_QA.tap"
+      ],
+      "finding": "Le déblocage d'épilogue existe ; le prototype ajoute all/any/fact/counter et journal par source/révision, sans persistance de jeu.",
+      "project_decision": "Conditions ET/OU explicites et sans eval ; attribution stable et unique avant révélation, coûts/récompenses dans une transaction future persistante.",
+      "documentation_state": "documented",
+      "runtime_state": "isolated_prototype",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "E02-03/E02-04/E02-05/E02-20 : duplicata altéré, événement ancien, fermeture et alternatives n'altèrent pas le droit final.",
+      "depends_on": [
+        "24",
+        "51",
+        "64"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_58",
+      "section": "58",
+      "title": "EXPLORATION, RÉCOMPENSES ET SCÈNE DE RÉVÉLATION",
+      "source_file": "sources/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+      "source_line_start": 373,
+      "source_line_end": 406,
+      "application_document": "EXTENSION_02_APPLICATION.md",
+      "application_heading": "6. Exploration et catalogue unique",
+      "disposition": "adapted",
+      "priority": "P2",
+      "existing_evidence": [
+        "src/chronicles-core-v060.js",
+        "production-archives/rec-media/v23/prototype/README.md"
+      ],
+      "finding": "Les dossiers simulés ne réalisent pas les zones d'exploration du hub ni leur stockage permanent.",
+      "project_decision": "Menu et casier consultent le même content_id ; attribuer puis révéler, pouvoir revoir/abréger et informer avant dépense si déjà acquis.",
+      "documentation_state": "documented",
+      "runtime_state": "planned",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "E02-03/E02-05 : fermeture au milieu de la révélation conserve le droit et l'état du casier sans second débit.",
+      "depends_on": [
+        "43",
+        "51",
+        "57",
+        "64"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_59",
+      "section": "59",
+      "title": "CONTENUS DÉDIÉS AUX ABONNÉS ET MODÈLES D'ACQUISITION",
+      "source_file": "sources/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+      "source_line_start": 407,
+      "source_line_end": 454,
+      "application_document": "EXTENSION_02_APPLICATION.md",
+      "application_heading": "7. Contenus dédiés aux soutiens",
+      "disposition": "adapted",
+      "priority": "P2",
+      "existing_evidence": [
+        "production-archives/rec-media/v23/prototype/README.md"
+      ],
+      "finding": "Le prototype utilise des sources temporaires/permanentes simulées ; aucun prix, niveau réel, paiement ou offre active n'est configuré.",
+      "project_decision": "Prévoir cosmétiques, thèmes et ambiances ; annoncer modèle permanent/temporaire/lot et ne pas réserver les bases de gameplay ou de confort.",
+      "documentation_state": "documented",
+      "runtime_state": "planned",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "E02-07/E02-08/E02-17/E02-19 : chaque avantage a règle de conservation, dépendances et preuve, sans statistique payante.",
+      "depends_on": [
+        "02",
+        "51",
+        "54",
+        "55"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_60",
+      "section": "60",
+      "title": "LIAISON AVEC PATREON OU UN SERVICE ÉQUIVALENT",
+      "source_file": "sources/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+      "source_line_start": 455,
+      "source_line_end": 505,
+      "application_document": "EXTENSION_02_APPLICATION.md",
+      "application_heading": "7.1 Adaptateur fournisseur différé",
+      "disposition": "deferred",
+      "priority": "P2",
+      "existing_evidence": [
+        "production-archives/rec-media/v23/prototype/access-model.js",
+        "production-archives/rec-media/v23/prototype/README.md"
+      ],
+      "finding": "applyGrantEvent consomme une vérification injectée ; l'autorité de démo est une fixture et n'authentifie aucun abonnement réel.",
+      "project_decision": "Différer fournisseur jusqu'à autorité serveur, liaison profil, source/révision et politique réelles ; ne jamais exposer secrets ni transformer un booléen client en preuve.",
+      "documentation_state": "documented",
+      "runtime_state": "planned",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "Événement non vérifié, mauvais profil, duplicata altéré ou révision obsolète refusés ; aucun paiement branché dans V23.",
+      "depends_on": [
+        "51",
+        "57",
+        "59"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_61",
+      "section": "61",
+      "title": "EXPIRATION, CHANGEMENTS D'ACCÈS ET FONCTIONNEMENT HORS LIGNE",
+      "source_file": "sources/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+      "source_line_start": 506,
+      "source_line_end": 566,
+      "application_document": "EXTENSION_02_APPLICATION.md",
+      "application_heading": "8. Expiration, panne, hors ligne et match en cours",
+      "disposition": "adapted",
+      "priority": "P0",
+      "existing_evidence": [
+        "production-archives/rec-media/v23/prototype/access-model.js",
+        "production-archives/rec-media/v23/prototype/reports/DOMAIN_QA.tap",
+        "production-archives/rec-media/v23/prototype/README.md"
+      ],
+      "finding": "La démo distingue durée du droit et validité du justificatif, panne et expiration ; cache et horloge sont simulés.",
+      "project_decision": "Ne retirer que la source expirée ; garder découvertes/préférences/permanent ; vérifier preuve hors ligne selon politique annoncée, figer session autorisée.",
+      "documentation_state": "documented",
+      "runtime_state": "isolated_prototype",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "E02-07 à E02-12/E02-15 : pas de droit inventé ni retrait présumé en panne ; pas d'expulsion au milieu du match autorisé.",
+      "depends_on": [
+        "51",
+        "57",
+        "59",
+        "60"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_62",
+      "section": "62",
+      "title": "SÉLECTION LOCALE, MULTIJOUEUR, ENTRAÎNEMENT ET REPLAYS",
+      "source_file": "sources/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+      "source_line_start": 567,
+      "source_line_end": 602,
+      "application_document": "EXTENSION_02_APPLICATION.md",
+      "application_heading": "10. Local, invité, entraînement et replay",
+      "disposition": "adapted",
+      "priority": "P1",
+      "existing_evidence": [
+        "production-archives/rec-media/v23/prototype/access-model.js",
+        "production-archives/rec-media/v23/prototype/reports/DOMAIN_QA.tap",
+        "src/catalog-replay-contract.js"
+      ],
+      "finding": "Le prototype calcule des permissions et snapshots isolés ; cela ne synchronise pas les comptes ni n'étend le replay du moteur.",
+      "project_decision": "Séparer inspecter/aperçu/choisir/participer/entraîner/rejouer ; accès invité ne transfère pas la possession ; relecture avec contrat/version appropriés.",
+      "documentation_state": "documented",
+      "runtime_state": "isolated_prototype",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "E02-13/E02-16/E02-19 : droits du bon profil, session sans doublon interdit, replay incompatible refusé explicitement.",
+      "depends_on": [
+        "23",
+        "32",
+        "51",
+        "55",
+        "61"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_63",
+      "section": "63",
+      "title": "INTERFACE, TEXTES, ACCESSIBILITÉ ET PROTECTION DES SURPRISES",
+      "source_file": "sources/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+      "source_line_start": 603,
+      "source_line_end": 652,
+      "application_document": "EXTENSION_02_APPLICATION.md",
+      "application_heading": "3.1 Anti-spoiler cohérent",
+      "disposition": "adapted",
+      "priority": "P0",
+      "existing_evidence": [
+        "production-archives/rec-media/v23/prototype/index.html",
+        "production-archives/rec-media/v23/prototype/README.md",
+        "production-archives/rec-media/v23/prototype/reports/BROWSER_QA.json",
+        "src/interface-preferences-r20.js"
+      ],
+      "finding": "Une logique de masquage et une recette navigateur existent ; cette dernière reste non exécutée faute de binaire navigateur disponible.",
+      "project_decision": "Masquer nom, portrait, silhouette, alt/aria, infobulle et voix selon découverte ; slot verrouillé focalisable, raison et action suivantes claires.",
+      "documentation_state": "documented",
+      "runtime_state": "isolated_prototype",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "E02-01/E02-02/E02-21 : clavier, manette, lecteur d'écran, zoom et mouvement réduit testés sur plateformes annoncées avant validation.",
+      "depends_on": [
+        "19",
+        "32",
+        "51",
+        "52"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_64",
+      "section": "64",
+      "title": "PRODUCTION, SAUVEGARDE ET CRITÈRES DE VALIDATION",
+      "source_file": "sources/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+      "source_line_start": 653,
+      "source_line_end": 718,
+      "application_document": "EXTENSION_02_APPLICATION.md",
+      "application_heading": "12. Recette minimale et limites",
+      "disposition": "adapted",
+      "priority": "P0",
+      "existing_evidence": [
+        "src/save-center-r19.js",
+        "docs/SAVES_R19_SCOPE.md",
+        "production-archives/rec-media/v23/prototype/README.md"
+      ],
+      "finding": "Les sauvegardes existantes restent inchangées ; le prototype se réinitialise au chargement et ne fournit aucune migration runtime.",
+      "project_decision": "Versionner catalogue/conditions/journal ; conserver sources, records et préférences ; définir reprise/conflit/restauration et tests propres sans altérer anciennes gardes.",
+      "documentation_state": "documented",
+      "runtime_state": "planned",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "E02-05/E02-20/E02-22 : attribution unique après arrêt, événements dans le désordre et migration d'ancienne sauvegarde sans perte.",
+      "depends_on": [
+        "24",
+        "26",
+        "51",
+        "57",
+        "61"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_65",
+      "section": "65",
+      "title": "SIX FICHES DE PRODUCTION À REMPLIR",
+      "source_file": "sources/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+      "source_line_start": 719,
+      "source_line_end": 812,
+      "application_document": "EXTENSION_02_APPLICATION.md",
+      "application_heading": "11. Six fiches de production appliquées",
+      "disposition": "adapted",
+      "priority": "P1",
+      "existing_evidence": [
+        "production-archives/rec-media/v23/prototype/README.md",
+        "production-archives/rec-media/v22/inventory/costumes-38-reconciliation.json",
+        "data/arenas.json"
+      ],
+      "finding": "L'application remplit six exemples : contenu, règle, avantage, charte, stage et matrice de permissions ; ils ne valent pas livraison de leurs assets.",
+      "project_decision": "Conserver ID/version, canon/design, quatre axes, conditions, visuels, acquisition/expiration, recette et dépendances pour chaque fiche.",
+      "documentation_state": "documented",
+      "runtime_state": "not_applicable_documentation",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "Les six fiches A–F indiquent ce qui est réel, simulé ou proposé ; aucun exemple ne ressemble à une offre commerciale active.",
+      "depends_on": [
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "57",
+        "59",
+        "62"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_66",
+      "section": "66",
+      "title": "INSTRUCTION PRÊTE À TRANSMETTRE À UN PROJET",
+      "source_file": "sources/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+      "source_line_start": 813,
+      "source_line_end": 850,
+      "application_document": "EXTENSION_02_APPLICATION.md",
+      "application_heading": "12. Recette minimale et limites",
+      "disposition": "retained",
+      "priority": "P0",
+      "existing_evidence": [
+        "docs/GAMEDEV_GUIDANCE.md",
+        "production-archives/rec-media/v23/prototype/README.md"
+      ],
+      "finding": "Le guide original reste intact ; l'application décrit un ordre de raccordement et 22 critères futurs.",
+      "project_decision": "Stabiliser catalogue, vérifier prototype, relier récompense et reprise, brancher sélection réelle puis stage/replay ; fournisseur seulement avec autorité réelle.",
+      "documentation_state": "documented",
+      "runtime_state": "not_applicable_documentation",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "Sections 50–67 indexées, aucune fausse annonce de moteur, sauvegarde ou abonnement intégré.",
+      "depends_on": [
+        "50",
+        "64",
+        "65"
+      ]
+    },
+    {
+      "id": "REC_GUIDE_67",
+      "section": "67",
+      "title": "RÉFÉRENCES VÉRIFIÉES ET VOCABULAIRE",
+      "source_file": "sources/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+      "source_line_start": 851,
+      "source_line_end": 891,
+      "application_document": "EXTENSION_02_APPLICATION.md",
+      "application_heading": "1. État réel et résultat visé",
+      "disposition": "retained",
+      "priority": "P0",
+      "existing_evidence": [
+        "production-archives/rec-media/v23/prototype/README.md"
+      ],
+      "finding": "Le vocabulaire du guide est conservé et l'application distingue acquisition, disponibilité technique, droit et compatibilité.",
+      "project_decision": "Utiliser les références du guide pour comprendre les modèles, non pour imposer à Resident Evil un modèle économique ou une iconographie étrangère.",
+      "documentation_state": "documented",
+      "runtime_state": "not_applicable_documentation",
+      "verification_scope": "Source inspection and documentary application; no new full-game runtime certification.",
+      "acceptance_criterion": "Les mots disponible, acquis, installé, compatible, temporaire et vérification requise ne se substituent pas les uns aux autres.",
+      "depends_on": [
+        "02",
+        "29",
+        "50",
+        "51"
+      ]
+    }
+  ]
+}

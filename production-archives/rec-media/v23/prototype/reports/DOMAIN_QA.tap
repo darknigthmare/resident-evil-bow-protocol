@@ -1,0 +1,166 @@
+TAP version 13
+# Subtest: secret : aucun nom, portrait, silhouette, condition détaillée ou alt révélateur
+ok 1 - secret : aucun nom, portrait, silhouette, condition détaillée ou alt révélateur
+  ---
+  duration_ms: 2.940104
+  type: 'test'
+  ...
+# Subtest: silhouette : révélation partielle distincte du secret et de la possession
+ok 2 - silhouette : révélation partielle distincte du secret et de la possession
+  ---
+  duration_ms: 0.759336
+  type: 'test'
+  ...
+# Subtest: ET : toutes les conditions sont nécessaires, aucune conversion de chaîne en booléen
+ok 3 - ET : toutes les conditions sont nécessaires, aucune conversion de chaîne en booléen
+  ---
+  duration_ms: 0.310204
+  type: 'test'
+  ...
+# Subtest: OU : le défi seul rend la récompense disponible sans abonnement ni seconde branche
+ok 4 - OU : le défi seul rend la récompense disponible sans abonnement ni seconde branche
+  ---
+  duration_ms: 0.886145
+  type: 'test'
+  ...
+# Subtest: conditions malformées ou récursives : échec fermé, sans eval
+ok 5 - conditions malformées ou récursives : échec fermé, sans eval
+  ---
+  duration_ms: 0.757677
+  type: 'test'
+  ...
+# Subtest: récompense : attribution avant présentation et répétition idempotente
+ok 6 - récompense : attribution avant présentation et répétition idempotente
+  ---
+  duration_ms: 1.550967
+  type: 'test'
+  ...
+# Subtest: un compte lié, un drapeau abonné ou des fichiers présents ne valent pas droit
+ok 7 - un compte lié, un drapeau abonné ou des fichiers présents ne valent pas droit
+  ---
+  duration_ms: 0.359899
+  type: 'test'
+  ...
+# Subtest: frontière d’autorité : événements non vérifiés et mauvais profil refusés
+ok 8 - frontière d’autorité : événements non vérifiés et mauvais profil refusés
+  ---
+  duration_ms: 0.807218
+  type: 'test'
+  ...
+# Subtest: dates et type de droit invalides : aucun journal partiellement écrit
+ok 9 - dates et type de droit invalides : aucun journal partiellement écrit
+  ---
+  duration_ms: 0.496753
+  type: 'test'
+  ...
+# Subtest: doublons altérés : même événement ou révision ne peut changer sa récompense
+ok 10 - doublons altérés : même événement ou révision ne peut changer sa récompense
+  ---
+  duration_ms: 0.559908
+  type: 'test'
+  ...
+# Subtest: événements désordonnés : un ancien retrait ne supprime pas un renouvellement
+ok 11 - événements désordonnés : un ancien retrait ne supprime pas un renouvellement
+  ---
+  duration_ms: 0.26779
+  type: 'test'
+  ...
+# Subtest: costume obtenu avant son personnage : acquisition conservée, dépendance expliquée
+ok 12 - costume obtenu avant son personnage : acquisition conservée, dépendance expliquée
+  ---
+  duration_ms: 0.504787
+  type: 'test'
+  ...
+# Subtest: expiration : seule la source temporaire est retirée de l’accès effectif
+ok 13 - expiration : seule la source temporaire est retirée de l’accès effectif
+  ---
+  duration_ms: 2.532573
+  type: 'test'
+  ...
+# Subtest: remboursement : une source révoquée ne retire pas une autre acquisition
+ok 14 - remboursement : une source révoquée ne retire pas une autre acquisition
+  ---
+  duration_ms: 3.142777
+  type: 'test'
+  ...
+# Subtest: hors ligne : cache valide accepté ; justificatif périmé signifie attente, pas expiration
+ok 15 - hors ligne : cache valide accepté ; justificatif périmé signifie attente, pas expiration
+  ---
+  duration_ms: 0.446708
+  type: 'test'
+  ...
+# Subtest: installation et version : le droit reste visible mais ne permet pas un chargement impossible
+ok 16 - installation et version : le droit reste visible mais ne permet pas un chargement impossible
+  ---
+  duration_ms: 1.212573
+  type: 'test'
+  ...
+# Subtest: mode et doublon : la possession individuelle ne valide pas la composition
+ok 17 - mode et doublon : la possession individuelle ne valide pas la composition
+  ---
+  duration_ms: 0.299484
+  type: 'test'
+  ...
+# Subtest: participation et replay ne donnent pas le droit de choisir le stage
+ok 18 - participation et replay ne donnent pas le droit de choisir le stage
+  ---
+  duration_ms: 0.233712
+  type: 'test'
+  ...
+# Subtest: préférence : remplacement explicite sans effacement de l’apparence favorite
+ok 19 - préférence : remplacement explicite sans effacement de l’apparence favorite
+  ---
+  duration_ms: 0.394624
+  type: 'test'
+  ...
+# Subtest: session autorisée : instantané immuable, expiration appliquée au prochain choix
+ok 20 - session autorisée : instantané immuable, expiration appliquée au prochain choix
+  ---
+  duration_ms: 0.507867
+  type: 'test'
+  ...
+# Subtest: dépendances cycliques : pas de récursion infinie ni contenu sélectionnable
+ok 21 - dépendances cycliques : pas de récursion infinie ni contenu sélectionnable
+  ---
+  duration_ms: 0.207634
+  type: 'test'
+  ...
+# Subtest: navigation rapide : une ancienne réussite ou erreur ne remplace pas le choix récent
+ok 22 - navigation rapide : une ancienne réussite ou erreur ne remplace pas le choix récent
+  ---
+  duration_ms: 0.287835
+  type: 'test'
+  ...
+# Subtest: désélection et retour : les réponses tardives ne ressuscitent ni image ni identité
+ok 23 - désélection et retour : les réponses tardives ne ressuscitent ni image ni identité
+  ---
+  duration_ms: 0.111835
+  type: 'test'
+  ...
+# Subtest: confirmation : droits revérifiés et état indépendant de la fin de chargement visuel
+ok 24 - confirmation : droits revérifiés et état indépendant de la fin de chargement visuel
+  ---
+  duration_ms: 0.119514
+  type: 'test'
+  ...
+# Subtest: notification de récompense : conservée après un chargement visuel tardif
+ok 25 - notification de récompense : conservée après un chargement visuel tardif
+  ---
+  duration_ms: 0.074289
+  type: 'test'
+  ...
+# Subtest: sélection automatique : aucun secret, droit manquant, erreur technique ou doublon
+ok 26 - sélection automatique : aucun secret, droit manquant, erreur technique ou doublon
+  ---
+  duration_ms: 2.572999
+  type: 'test'
+  ...
+1..26
+# tests 26
+# suites 0
+# pass 26
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 169.805303

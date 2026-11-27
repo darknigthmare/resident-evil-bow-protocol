@@ -1,0 +1,20 @@
+{
+  "schema": "rec-v23-prototype-browser-qa/1",
+  "date": "2026-11-27",
+  "status": "blocked",
+  "attempted_command": "node production-archives/rec-media/v23/prototype/test-browser.mjs",
+  "runtime": "v24.22.3",
+  "playwright_browser_revision": "chromium_headless_shell-1234",
+  "browser_requested": "Chrome Headless Shell 151.0.7922.34",
+  "failure": "Playwright launch failed because the Chromium headless-shell executable is absent.",
+  "fallback_observation": "/usr/bin/chromium exists as a launcher, but /usr/lib/chromium/chromium is absent.",
+  "installation_attempt": {
+    "command": "node /opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/cli.js install chromium --only-shell",
+    "url": "https://cdn.playwright.dev/builds/cft/151.0.7922.34/linux64/chrome-headless-shell-linux64.zip",
+    "result": "HTTP 403 Site Unavailable"
+  },
+  "browser_assertions_executed": 0,
+  "screenshots_produced": 0,
+  "render_verified": false,
+  "scope": "Browser recipe prepared and syntax checked only. Domain tests are recorded separately in DOMAIN_QA.tap."
+}

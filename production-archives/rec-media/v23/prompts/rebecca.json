@@ -1,0 +1,35 @@
+{
+  "schema": "rec-v23-rebecca-prompts-1",
+  "date": "2026-11-27",
+  "timezone": "Europe/Paris",
+  "tool": "image_gen.imagegen",
+  "intent": "edit",
+  "use_case": "identity-preserve",
+  "reference_path": "production-archives/rec-media/v22/assets/REC_REBECCA_RE0HD_BASE_FULLBODY_FRONT_V22_01.png",
+  "reference_sha256": "172dbdaf65f333ba6cf2f9891640bd4a72c078a80443bbc59e63399f1a72e640",
+  "transparent_background": true,
+  "requests": [
+    {
+      "asset_id": "REC_REBECCA_RE0HD_SELECTED_KEY_V23",
+      "state": "selected",
+      "prompt": "Use case: identity-preserve.\nAsset type: ONE full-body transparent raster sprite, selected-state key pose for Resident Evil Combat.\nInput image 1 is the EDIT TARGET and sole visual authority: the existing generated Rebecca Chambers RE0 HD Remaster 2016 base sprite. Preserve this exact face, short dark bob, natural adult proportions, outfit, gray vest, green short-sleeve shirt, left-shoulder patch, brown collar, fingerless gloves, belt buckle, right-hip green pouch, cargo trousers with turned-up cuffs, gray socks, black boots, materials, colors and detailed shading. Preserve all anatomical left/right assignments, no mirroring or redesign.\nChange ONLY the pose: Rebecca straightens her torso slightly, head upright, eyes attentive toward the viewer, with a calm neutral expression. Lower her anatomically RIGHT arm to her side holding the same handgun pointed down toward the floor, index finger straight along the frame outside the trigger; left hand rests relaxed at the left hip. Keep a near-frontal three-quarter presentation close to the source with both boots planted; no action, firing, target or violence. This is a modest game-menu pose.\nTechnical composition: one single complete character including every boot sole and the whole handgun, centered, consistent scale, comfortable 8% transparent margin on all sides. Genuine native alpha transparency, no scene, floor, shadow, checkerboard pixels, solid backdrop, border, labels, text, watermark, extra objects or second character. Match the source rendering style. This is one static key pose, not a sprite sheet.",
+      "output_path": "assets/rebecca_re0hd_selected_v23.png",
+      "output_native_path": "/workspace/scratch/37b119cd013c/generated_images/exec-ce8415d9-f5be-42d2-a3a9-d0d10f47a62c.png"
+    },
+    {
+      "asset_id": "REC_REBECCA_RE0HD_CONFIRM_KEY_V23",
+      "state": "confirm",
+      "prompt": "Use case: identity-preserve.\nAsset type: ONE full-body transparent raster sprite, selection-confirmation key pose for Resident Evil Combat.\nInput image 1 is the EDIT TARGET and sole visual authority: the existing generated Rebecca Chambers RE0 HD Remaster 2016 base sprite. Preserve this exact face and short dark bob, natural adult body proportions, detailed shading, olive green short-sleeve shirt, gray vest, left-shoulder patch, brown collar, fingerless gloves, two belts, metal buckle, anatomically right-hip green pouch, cargo trousers with turned-up cuffs, gray socks and black boots. Preserve every equipment placement, color and anatomical left/right assignment; no mirroring, new accessories or redesign.\nChange ONLY the pose: calm near-frontal stance, torso upright, both boots planted shoulder-width apart. Lower her anatomically RIGHT arm beside her body holding the same handgun pointed down toward the floor with index finger outside the trigger. Raise the empty anatomically LEFT hand to upper-chest height in a small relaxed acknowledgment, palm forward, five natural fingers gently open, elbow bent. Small warm restrained smile, eyes looking toward the viewer. Quiet menu confirmation, no shooting or target, no action effects.\nComposition: one complete single character, all hands, handgun, boots and soles visible; center her with generous clear transparent padding, at least 8% on every side, head and feet well inside the canvas. Genuine alpha transparency; no background, floor, ground shadow, checkerboard pattern, text, frame, duplicate character, watermark or labels. Match the source raster rendering style and its costume exactly. One static key, not an animation or sheet.",
+      "output_path": "assets/rebecca_re0hd_confirm_v23.png",
+      "output_native_path": "/workspace/scratch/37b119cd013c/generated_images/exec-016c1d8f-42a5-4d30-93d3-d1adc01ca957.png"
+    },
+    {
+      "asset_id": "REC_REBECCA_RE0HD_DESELECT_KEY_V23",
+      "state": "deselect",
+      "prompt": "Use case: identity-preserve.\nAsset type: ONE full-body transparent raster sprite, deselection / return-to-rest key pose for Resident Evil Combat.\nInput image 1 is the EDIT TARGET and sole visual authority: the existing generated Rebecca Chambers RE0 HD Remaster 2016 base sprite. Keep this exact face, short dark brown bob, natural adult anatomy, gray vest with straps, olive green shirt and trousers, left-shoulder patch, brown collar, black fingerless gloves, metal belt buckle, anatomically right-hip green pouch, cuffs, gray socks and black boots. Preserve all asymmetric costume details and their anatomical sides. Keep its detailed raster shading, palette, material texture and frontal camera.\nChange only her body pose and gaze: both arms are now lowered naturally beside her body. Her anatomically RIGHT hand holds the same handgun safely pointed straight downward, index finger outside the trigger. The empty LEFT hand hangs relaxed near the left thigh with naturally curved fingers. Her torso stays near frontal, shoulders relax slightly, and her head and gaze turn only about 10 degrees toward her own LEFT (viewer right), as if returning attention to the menu. Quiet neutral expression, both boots planted, no side profile, no walking, no shooting, no opponent or effects. This must be visibly distinct from the original hand-on-hip pose.\nComposition: a single full character with the full handgun, hands, boots and soles inside the canvas, centered; allow 8% empty transparent space around the entire silhouette, including above the head and below feet. Genuine alpha transparency, no backdrop or floor, no cast shadow, no baked checkerboard, words, label, border, watermark, spare objects or extra figure. One static key pose only, no sprite sheet. Preserve the original appearance instead of adding any new detail.",
+      "output_path": "assets/rebecca_re0hd_deselect_v23.png",
+      "output_native_path": "/tmp/rec-v23-rebecca-deselect-recovery.png",
+      "recovery_note": "Imagegen returned data URL without output_hint while /workspace was full. Exact returned PNG bytes decoded into /tmp; no generation rerun or pixel modification."
+    }
+  ]
+}

@@ -1,0 +1,873 @@
+{
+  "schema": "rec-v24-creatures-manifest-1",
+  "date": "2026-11-27",
+  "timezone": "Europe/Paris",
+  "base_commit": "246dbb81752c5fa41a55deb3aada3941ac966fec",
+  "scope": "Six proposed animation keys for three already documented incarnations plus two superseded trials; zero newly recovered creature identities.",
+  "summary": {
+    "png": 8,
+    "candidate_keys": 6,
+    "superseded_trials": 2,
+    "incarnations": 3,
+    "new_creature_identities": 0,
+    "complete_animations": 0,
+    "engine_admissions": 0,
+    "new_refusals": 0,
+    "historical_refusals_not_retried": 66,
+    "source_holds_closed": 0
+  },
+  "sources": "SOURCE_INDEX.json",
+  "prompts": "prompts/GENERATIONS.json",
+  "assets": [
+    {
+      "asset_id": "re5_kipepeo_hover_upstroke_v24",
+      "uid": "re5-kipepeo",
+      "name": "Kipepeo",
+      "edition": "Resident Evil 5 (2009)",
+      "category": "creature",
+      "state": "hover_upstroke_key",
+      "path": "assets/re5_kipepeo_hover_upstroke_v24.png",
+      "status": "animation_key_candidate",
+      "superseded_by": null,
+      "dimensions": [
+        1206,
+        1305
+      ],
+      "file_bytes": 965678,
+      "mode": "RGBA",
+      "sha256": "518b5a8ca0ee6bbac0092d1cec102dd99fe902528f9268b54c50afd3e8863a8e",
+      "git_blob_sha": "3a134acbb7060dcfd85e70fb536d65a69ead32fd",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_bbox_nonzero": [
+        25,
+        19,
+        1174,
+        1305
+      ],
+      "alpha_bbox_128": [
+        115,
+        57,
+        1056,
+        1215
+      ],
+      "opaque_margin_fraction": {
+        "left": 0.09535655058043117,
+        "top": 0.04367816091954023,
+        "right": 0.12437810945273632,
+        "bottom": 0.06896551724137931
+      },
+      "transparent_pixel_fraction": 0.778667962867654,
+      "source_v22_asset_id": "re5_kipepeo_full_flying3q_v22",
+      "source_v22_path": "production-archives/rec-media/v22/assets/re5_kipepeo_full_flying3q_v22.png",
+      "source_v22_sha256": "929f45fa7672edf825105931d54e7ecfe7dd672db1537f602a6be4a20fb277dd",
+      "sources": [
+        {
+          "source_id": "re5-kipepeo-native-reference",
+          "uid": "re5-kipepeo",
+          "edition": "Resident Evil 5 (2009)",
+          "page_url": "https://bogleech.com/halloween/hall18-re5",
+          "image_url": "https://bogleech.com/re/re5-kipepo.png",
+          "type": "Native model reproduction hosted in a third-party review; platform unspecified.",
+          "retrieved_on": "2026-11-27",
+          "http_status": 200,
+          "local_reference_path": "/workspace/scratch/37b119cd013c/v24-creature-refs/kipepeo_native_re5.png",
+          "sha256": "1ef035bc72d82b91f8e516373ddd2d1f07ab3b8832fbd08744c7699fb8ff4ebe",
+          "bytes": 229946,
+          "dimensions": [
+            536,
+            580
+          ],
+          "visually_inspected": true,
+          "third_party_bitmap_delivered": false,
+          "license_note": "Original game design and reproduced reference remain third-party copyrighted material; used for reference, not included in this delivery."
+        }
+      ],
+      "references": [
+        {
+          "role": "native_model_reference",
+          "local_path_used": "/workspace/scratch/37b119cd013c/v24-creature-refs/kipepeo_native_re5.png",
+          "repo_path": null,
+          "source_id": "re5-kipepeo-native-reference",
+          "source_url": "https://bogleech.com/re/re5-kipepo.png",
+          "sha256": "1ef035bc72d82b91f8e516373ddd2d1f07ab3b8832fbd08744c7699fb8ff4ebe",
+          "bytes": 229946,
+          "visually_inspected": true
+        }
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: one individual 2D fighting-game creature motion key, raster with real transparent alpha. Reference image 1 is the original Kipepeo model reproduction from Resident Evil 5 (2009), authoritative for anatomy and colors; reproduce its specific design. Create a single complete Kipepeo hovering in the SAME three-quarter orientation as the reference, with a modest raised upstroke of its existing four unequal veined wings. Change only the wing hinge angles and very slight trailing-strand curvature for this animation key. Lock the long segmented pale central body, twisted hanging lower organic section, irregular small appendages and two long red tendril strands with pale yellow tips exactly to the source-visible configuration. Keep the four rusty coral-orange wing membranes with branching dark maroon veins, their ragged irregular edges and unequal sizes, and the distinctive asymmetrical silhouette. Natural semi-realistic painted raster detail, soft dimensional game lighting, no stylization into a generic butterfly or dragon. Keep every visible wing, body tip and strand complete inside the canvas with at least 10 percent transparent breathing room on all four sides; the complete silhouette occupies at most 78 percent of canvas width and height. Exactly one creature and one pose, no split views, no sheet, no ground or shadow, no victim, no characters, no blood effects, no scene, no writing, no interface, no labels. Preserve the source-facing direction; do not mirror. This is a source-guided proposed motion key, not a recovered official animation frame.",
+      "generation_output_path": "/workspace/scratch/37b119cd013c/generated_images/exec-4150ff07-2c82-4da6-b048-51e5fcb36ba7.png",
+      "generated_with": "image_gen_builtin",
+      "post_generation_bitmap_edits": false,
+      "observed_view": "source-facing three-quarter, upper unequal wings high",
+      "visual_review": "Entire Kipepeo, four membranes and trailing strands visible; source-body silhouette substantially retained. Top margin below requested 10%; faint colored fringes remain.",
+      "visual_review_scope": "Author review of full output and source; no independent or in-engine review claimed.",
+      "limitations": [
+        "Top opaque-silhouette margin is below the requested10%.",
+        "Fine red/yellow edge fringes remain; contour cleanup still required.",
+        "A raised wing key alone does not establish a complete upstroke.",
+        "Source-guided proposed motion key; not an official recovered frame.",
+        "No full animation, gameplay, hitbox, pivot or opposite-facing proof.",
+        "Third-party reproduced native references have edition/platform and detail limits."
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "new_creature_identity": false
+    },
+    {
+      "asset_id": "re4r_novistador_wingbeat_down_v24",
+      "uid": "re4r-novistador",
+      "name": "Novistador",
+      "edition": "Resident Evil 4 remake (2023)",
+      "category": "creature",
+      "state": "hover_downstroke_key",
+      "path": "assets/re4r_novistador_wingbeat_down_v24.png",
+      "status": "animation_key_candidate",
+      "superseded_by": null,
+      "dimensions": [
+        1334,
+        1179
+      ],
+      "file_bytes": 781581,
+      "mode": "RGBA",
+      "sha256": "866d1da40d1abf0b56348e444b51bdf6a81cc540b257853437a701ac982d3ce7",
+      "git_blob_sha": "5557a57fba36c0a071987e3c4cd16bb7928cfe2f",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_bbox_nonzero": [
+        33,
+        23,
+        1322,
+        1157
+      ],
+      "alpha_bbox_128": [
+        194,
+        115,
+        1127,
+        1106
+      ],
+      "opaque_margin_fraction": {
+        "left": 0.1454272863568216,
+        "top": 0.09754028837998303,
+        "right": 0.15517241379310345,
+        "bottom": 0.06191687871077184
+      },
+      "transparent_pixel_fraction": 0.8344975095149626,
+      "source_v22_asset_id": "re4r_novistador_full_flying_front3q_v22",
+      "source_v22_path": "production-archives/rec-media/v22/assets/re4r_novistador_full_flying_front3q_v22.png",
+      "source_v22_sha256": "f4042fc9ef82e85e0187b003df19008d712896995149617947527cf87e86185a",
+      "sources": [
+        {
+          "source_id": "re4r-novistador-native-reference",
+          "uid": "re4r-novistador",
+          "edition": "Resident Evil 4 remake (2023)",
+          "page_url": "https://vandal.elespanol.com/guias/guia-resident-evil-4-remake-trucos-consejos-y-secretos/enemigos-y-jefes",
+          "image_url": "https://media.vandal.net/m/3-2023/20233292011511_2.jpg",
+          "type": "Native remake2023 model-gallery screenshot reproduced by Vandal; surrounding branding excluded.",
+          "retrieved_on": "2026-11-27",
+          "http_status": 200,
+          "local_reference_path": "/workspace/scratch/37b119cd013c/v24-creature-refs/novistador_native_re4r.jpg",
+          "sha256": "8109073bc67cf37fe978e6c20d0993d69bf51ae15eb2ad6d57475c9f312cd00c",
+          "bytes": 94880,
+          "dimensions": [
+            1280,
+            725
+          ],
+          "visually_inspected": true,
+          "third_party_bitmap_delivered": false,
+          "license_note": "Original game design and reproduced reference remain third-party copyrighted material; used for reference, not included in this delivery."
+        }
+      ],
+      "references": [
+        {
+          "role": "native_model_reference",
+          "local_path_used": "/workspace/scratch/37b119cd013c/v24-creature-refs/novistador_native_re4r.jpg",
+          "repo_path": null,
+          "source_id": "re4r-novistador-native-reference",
+          "source_url": "https://media.vandal.net/m/3-2023/20233292011511_2.jpg",
+          "sha256": "8109073bc67cf37fe978e6c20d0993d69bf51ae15eb2ad6d57475c9f312cd00c",
+          "bytes": 94880,
+          "visually_inspected": true
+        }
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: single complete creature motion key for a detailed semi-realistic 2D combat game, real transparent alpha. Reference image 1 shows the actual Novistador in the Resident Evil 4 REMAKE 2023 model gallery. Use only that creature as the anatomy, silhouette, material and palette reference. Ignore the page frame, background, game logo and watermark. Render ONE full-body Novistador at the SAME frontal three-quarter angle, in a gentle flight DOWNSTROKE key: the existing thin lateral flight membranes angle about 20 degrees below their reference position, while the existing raised forewing structures stay source-shaped. The suspended legs keep the source's actual number, joints, bent shape and tapering endpoints, with only a small relaxed extension of the lowest legs. Keep the exact brown-grey translucent insectoid chitin, small yellow-green eyes, paired long fine antennae, ribbed narrow body, insect-like angular forelimbs and asymmetrical leg arrangement. No invented tail, stinger, extra wing pairs or new appendages. Do not substitute the 2005 design or make a generic praying mantis. Detailed painted raster shading consistent with the native creature. Entire silhouette including all antenna, wing and leg tips fits with at least 10 percent clean transparent margin on each edge. Occupy at most 78 percent of canvas width and height. No scene, no floor or floor shadow, no other creature/person, no effects, no text, no label or sheet. One creature, one image, one pose. This is a proposed adaptation motion key, not a certified original animation.",
+      "generation_output_path": "/workspace/scratch/37b119cd013c/generated_images/exec-f26d2b65-34a1-4903-8cef-fae93af4e8f6.png",
+      "generated_with": "image_gen_builtin",
+      "post_generation_bitmap_edits": false,
+      "observed_view": "front three-quarter hover, thin wings angled down",
+      "visual_review": "Full insectoid body with raised hard upper structures and lowered lateral membranes; lowest limbs extended. Fine color fringes at some boundaries.",
+      "visual_review_scope": "Author review of full output and source; no independent or in-engine review claimed.",
+      "limitations": [
+        "Bottom margin below requested10%.",
+        "Wing/leg motion is inferred from source anatomy, not matched to a native animation frame.",
+        "Small joints/forelimb shape and membrane translucency require native-model comparison.",
+        "Source-guided proposed motion key; not an official recovered frame.",
+        "No full animation, gameplay, hitbox, pivot or opposite-facing proof.",
+        "Third-party reproduced native references have edition/platform and detail limits."
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "new_creature_identity": false
+    },
+    {
+      "asset_id": "rev2_giant_whip_spider_ready_v24",
+      "uid": "rerev2-giant-whip-spider",
+      "name": "Giant Whip Spider",
+      "edition": "Resident Evil Revelations 2 (2015)",
+      "category": "creature",
+      "state": "ready_low_key",
+      "path": "assets/rev2_giant_whip_spider_ready_v24.png",
+      "status": "superseded_trial",
+      "superseded_by": "assets/rev2_giant_whip_spider_ready_clean_v24.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "file_bytes": 1368543,
+      "mode": "RGBA",
+      "sha256": "36e9dd8d61f4da11a747d4ecd7da91bfc49534ecf563c1da052948390948036d",
+      "git_blob_sha": "cf39685dfeeb4a8d948ba7d2e990452af2b01bf3",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "alpha_bbox_nonzero": [
+        0,
+        21,
+        1496,
+        990
+      ],
+      "alpha_bbox_128": [
+        221,
+        181,
+        1355,
+        851
+      ],
+      "opaque_margin_fraction": {
+        "left": 0.14388020833333334,
+        "top": 0.1767578125,
+        "right": 0.11783854166666667,
+        "bottom": 0.1689453125
+      },
+      "transparent_pixel_fraction": 0.8258584340413412,
+      "source_v22_asset_id": "rerev2_giant_whip_spider_full_front3q_v22",
+      "source_v22_path": "production-archives/rec-media/v22/assets/rerev2_giant_whip_spider_full_front3q_v22.png",
+      "source_v22_sha256": "6fa21c9993f4585cf9738784fd4e4b4a659cddf0900e2edcfc49a4d8672bdcf1",
+      "sources": [
+        {
+          "source_id": "rerev2-giant-whip-spider-native-reference",
+          "uid": "rerev2-giant-whip-spider",
+          "edition": "Resident Evil Revelations 2 (2015)",
+          "page_url": "https://www.evilresource.com/resident-evil-revelations-2/enemies/giant-whip-spider",
+          "image_url": "https://www.evilresource.com/images/data/full/rerevelations2/giant-whip-spider.png?d07d4a36",
+          "type": "Complete native-model reproduction in an edition-specific third-party catalog; 450x360 source.",
+          "retrieved_on": "2026-11-27",
+          "http_status": 200,
+          "local_reference_path": "/workspace/scratch/37b119cd013c/v24-creature-refs/giant_whip_spider_native_rev2.png",
+          "sha256": "0f10052d011a85912d820aef827375673925268581d9c5d9bdee689be259f503",
+          "bytes": 69750,
+          "dimensions": [
+            450,
+            360
+          ],
+          "visually_inspected": true,
+          "third_party_bitmap_delivered": false,
+          "license_note": "Original game design and reproduced reference remain third-party copyrighted material; used for reference, not included in this delivery."
+        }
+      ],
+      "references": [
+        {
+          "role": "native_model_reference",
+          "local_path_used": "/workspace/scratch/37b119cd013c/v24-creature-refs/giant_whip_spider_native_rev2.png",
+          "repo_path": null,
+          "source_id": "rerev2-giant-whip-spider-native-reference",
+          "source_url": "https://www.evilresource.com/images/data/full/rerevelations2/giant-whip-spider.png?d07d4a36",
+          "sha256": "0f10052d011a85912d820aef827375673925268581d9c5d9bdee689be259f503",
+          "bytes": 69750,
+          "visually_inspected": true
+        }
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: one complete raster creature pose for a 2D game, genuine transparent alpha. Reference image 1 is the complete Giant Whip Spider model from Resident Evil Revelations 2 (2015). Match this exact dark low arthropod design, proportions, limb arrangement, coloring and same frontal three-quarter viewing angle. Create a cautious low ready pose: bring the two EXISTING thick spiny front pedipalps slightly inward toward the head and flex the existing walking leg joints a little while preserving every visible limb and its source occlusions. Do not invent limbs hidden by this angle. Preserve the broad flat ridged olive-brown abdomen with pale narrow bands, small low head, dark mottled segmented shell, long angular legs, fine small bristles, and the thin curled endpoint of the far-right leg. The two thick front appendages are spiny pedipalps, not a second pair of giant fangs. No tail, stinger, swollen tarantula body, giant jaws, horns, glowing eyes or extra legs. Semi-realistic dimensional painted raster finish with the source's restrained olive-brown-black palette. All appendage tips inside a landscape canvas with at least 10 percent transparent margin on all four sides, silhouette no more than 78 percent of canvas width. No ground, no cast shadow, no scene, no effects, no text, no HUD, no collage, exactly one creature in one pose. This is a proposed ready key for an adapted cycle, not a certified official animation frame.",
+      "generation_output_path": "/workspace/scratch/37b119cd013c/generated_images/exec-ab522317-326d-4b5b-8e62-da297d47a00a.png",
+      "generated_with": "image_gen_builtin",
+      "post_generation_bitmap_edits": false,
+      "observed_view": "low frontal three-quarter, pedipalps brought inward",
+      "visual_review": "One complete low arthropod ready pose. Initial trial superseded by targeted background extraction request.",
+      "visual_review_scope": "Author review of full output and source; no independent or in-engine review claimed.",
+      "limitations": [
+        "Superseded trial retained as original bytes.",
+        "The tool preview shows diffuse RGB around the body, but sampled surrounding pixels have alpha0; visible in-engine halo has not been demonstrated.",
+        "Source-guided proposed motion key; not an official recovered frame.",
+        "No full animation, gameplay, hitbox, pivot or opposite-facing proof.",
+        "Third-party reproduced native references have edition/platform and detail limits."
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "new_creature_identity": false
+    },
+    {
+      "asset_id": "re5_kipepeo_hover_downstroke_v24",
+      "uid": "re5-kipepeo",
+      "name": "Kipepeo",
+      "edition": "Resident Evil 5 (2009)",
+      "category": "creature",
+      "state": "hover_downstroke_key",
+      "path": "assets/re5_kipepeo_hover_downstroke_v24.png",
+      "status": "animation_key_candidate",
+      "superseded_by": null,
+      "dimensions": [
+        1316,
+        1195
+      ],
+      "file_bytes": 988606,
+      "mode": "RGBA",
+      "sha256": "f1f69b2ed68846d4e70dda5a5d1ffa6d9650244e04e7c207e27152d0e31af5bf",
+      "git_blob_sha": "796b3d4a4bc79c173cd25a42c9a1598cef554504",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_bbox_nonzero": [
+        0,
+        29,
+        1286,
+        1195
+      ],
+      "alpha_bbox_128": [
+        59,
+        345,
+        1250,
+        1069
+      ],
+      "opaque_margin_fraction": {
+        "left": 0.044832826747720364,
+        "top": 0.28870292887029286,
+        "right": 0.05015197568389058,
+        "bottom": 0.10543933054393305
+      },
+      "transparent_pixel_fraction": 0.7869383576452036,
+      "source_v22_asset_id": "re5_kipepeo_full_flying3q_v22",
+      "source_v22_path": "production-archives/rec-media/v22/assets/re5_kipepeo_full_flying3q_v22.png",
+      "source_v22_sha256": "929f45fa7672edf825105931d54e7ecfe7dd672db1537f602a6be4a20fb277dd",
+      "sources": [
+        {
+          "source_id": "re5-kipepeo-native-reference",
+          "uid": "re5-kipepeo",
+          "edition": "Resident Evil 5 (2009)",
+          "page_url": "https://bogleech.com/halloween/hall18-re5",
+          "image_url": "https://bogleech.com/re/re5-kipepo.png",
+          "type": "Native model reproduction hosted in a third-party review; platform unspecified.",
+          "retrieved_on": "2026-11-27",
+          "http_status": 200,
+          "local_reference_path": "/workspace/scratch/37b119cd013c/v24-creature-refs/kipepeo_native_re5.png",
+          "sha256": "1ef035bc72d82b91f8e516373ddd2d1f07ab3b8832fbd08744c7699fb8ff4ebe",
+          "bytes": 229946,
+          "dimensions": [
+            536,
+            580
+          ],
+          "visually_inspected": true,
+          "third_party_bitmap_delivered": false,
+          "license_note": "Original game design and reproduced reference remain third-party copyrighted material; used for reference, not included in this delivery."
+        }
+      ],
+      "references": [
+        {
+          "role": "generated_v24_edit_reference",
+          "local_path_used": "/workspace/scratch/37b119cd013c/resident-evil-bow-protocol/production-archives/rec-media/v24/creatures/assets/re5_kipepeo_hover_upstroke_v24.png",
+          "repo_path": "production-archives/rec-media/v24/creatures/assets/re5_kipepeo_hover_upstroke_v24.png",
+          "source_id": null,
+          "source_url": null,
+          "sha256": "518b5a8ca0ee6bbac0092d1cec102dd99fe902528f9268b54c50afd3e8863a8e",
+          "bytes": 965678,
+          "visually_inspected": true
+        },
+        {
+          "role": "native_model_reference",
+          "local_path_used": "/workspace/scratch/37b119cd013c/v24-creature-refs/kipepeo_native_re5.png",
+          "repo_path": null,
+          "source_id": "re5-kipepeo-native-reference",
+          "source_url": "https://bogleech.com/re/re5-kipepo.png",
+          "sha256": "1ef035bc72d82b91f8e516373ddd2d1f07ab3b8832fbd08744c7699fb8ff4ebe",
+          "bytes": 229946,
+          "visually_inspected": true
+        }
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: single raster creature animation key on genuine transparent alpha. Image 1 is the current Kipepeo upstroke key to match in proportions, rendering, body configuration and facing; image 2 is the native Resident Evil 5 (2009) model reproduction for anatomical checking. Make the complementary DOWNSTROKE pose of this same single creature. Keep the central segmented body, hanging asymmetrical lower organic structure, same appendage count, two red trailing strands with pale yellow tips and all distinctive details. Change only the four existing wing hinge angles: the two upper unequal wings now extend broadly outward and downward from the thorax, clearly lower than in image 1, while the smaller lower wing pair follows below them. The wings retain their actual unequal shapes, ragged edges, orange-pink membranes and branching dark maroon veins. Keep the same three-quarter orientation, do not mirror or invent the hidden side. No new appendages, no symmetrical butterfly redesign. Use matching dimensional semi-realistic raster shading. Frame the FULL silhouette with 12 percent clear transparent margin on every edge, reduce the body uniformly if needed to fit wide wings inside the canvas; no physical truncation. Keep the transparent area entirely empty: no colored fringes, glow, haze, shadows, particles, or opaque background. No person, victim, scenery, text, HUD, sheet, border or multiple creatures. ONE creature, ONE proposed motion key, not a recovered official frame.",
+      "generation_output_path": "/workspace/scratch/37b119cd013c/generated_images/exec-d60ebf53-d5d8-403a-b137-3d5c8c0b94ec.png",
+      "generated_with": "image_gen_builtin",
+      "post_generation_bitmap_edits": false,
+      "observed_view": "same source-facing three-quarter, four wings spread lower",
+      "visual_review": "Distinct low/spread wing configuration, all outer wing and body tips visible. Body framing differs from upstroke; left/right margins below requested12%.",
+      "visual_review_scope": "Author review of full output and source; no independent or in-engine review claimed.",
+      "limitations": [
+        "Left and right opaque margins are below requested12%.",
+        "Frame dimensions and body scale differ from upstroke; normalization/pivots not validated.",
+        "Small membrane and tendril details drift; no canonical timing claim.",
+        "Source-guided proposed motion key; not an official recovered frame.",
+        "No full animation, gameplay, hitbox, pivot or opposite-facing proof.",
+        "Third-party reproduced native references have edition/platform and detail limits."
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "new_creature_identity": false
+    },
+    {
+      "asset_id": "re4r_novistador_wingbeat_up_v24",
+      "uid": "re4r-novistador",
+      "name": "Novistador",
+      "edition": "Resident Evil 4 remake (2023)",
+      "category": "creature",
+      "state": "hover_upstroke_key",
+      "path": "assets/re4r_novistador_wingbeat_up_v24.png",
+      "status": "superseded_trial",
+      "superseded_by": "assets/re4r_novistador_wingbeat_up_corrected_v24.png",
+      "dimensions": [
+        1334,
+        1179
+      ],
+      "file_bytes": 750110,
+      "mode": "RGBA",
+      "sha256": "23dfe2c54ab6a00374a05603868282a5288a99a48f3eec89bcc20b69dc4f1a6b",
+      "git_blob_sha": "9d0abe5b1278d4f872977e0f5bebaf730fafad49",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_bbox_nonzero": [
+        53,
+        31,
+        1310,
+        1145
+      ],
+      "alpha_bbox_128": [
+        254,
+        117,
+        1109,
+        950
+      ],
+      "opaque_margin_fraction": {
+        "left": 0.1904047976011994,
+        "top": 0.09923664122137404,
+        "right": 0.1686656671664168,
+        "bottom": 0.19423240033927056
+      },
+      "transparent_pixel_fraction": 0.8429538411455849,
+      "source_v22_asset_id": "re4r_novistador_full_flying_front3q_v22",
+      "source_v22_path": "production-archives/rec-media/v22/assets/re4r_novistador_full_flying_front3q_v22.png",
+      "source_v22_sha256": "f4042fc9ef82e85e0187b003df19008d712896995149617947527cf87e86185a",
+      "sources": [
+        {
+          "source_id": "re4r-novistador-native-reference",
+          "uid": "re4r-novistador",
+          "edition": "Resident Evil 4 remake (2023)",
+          "page_url": "https://vandal.elespanol.com/guias/guia-resident-evil-4-remake-trucos-consejos-y-secretos/enemigos-y-jefes",
+          "image_url": "https://media.vandal.net/m/3-2023/20233292011511_2.jpg",
+          "type": "Native remake2023 model-gallery screenshot reproduced by Vandal; surrounding branding excluded.",
+          "retrieved_on": "2026-11-27",
+          "http_status": 200,
+          "local_reference_path": "/workspace/scratch/37b119cd013c/v24-creature-refs/novistador_native_re4r.jpg",
+          "sha256": "8109073bc67cf37fe978e6c20d0993d69bf51ae15eb2ad6d57475c9f312cd00c",
+          "bytes": 94880,
+          "dimensions": [
+            1280,
+            725
+          ],
+          "visually_inspected": true,
+          "third_party_bitmap_delivered": false,
+          "license_note": "Original game design and reproduced reference remain third-party copyrighted material; used for reference, not included in this delivery."
+        }
+      ],
+      "references": [
+        {
+          "role": "generated_v24_edit_reference",
+          "local_path_used": "/workspace/scratch/37b119cd013c/resident-evil-bow-protocol/production-archives/rec-media/v24/creatures/assets/re4r_novistador_wingbeat_down_v24.png",
+          "repo_path": "production-archives/rec-media/v24/creatures/assets/re4r_novistador_wingbeat_down_v24.png",
+          "source_id": null,
+          "source_url": null,
+          "sha256": "866d1da40d1abf0b56348e444b51bdf6a81cc540b257853437a701ac982d3ce7",
+          "bytes": 781581,
+          "visually_inspected": true
+        },
+        {
+          "role": "native_model_reference",
+          "local_path_used": "/workspace/scratch/37b119cd013c/v24-creature-refs/novistador_native_re4r.jpg",
+          "repo_path": null,
+          "source_id": "re4r-novistador-native-reference",
+          "source_url": "https://media.vandal.net/m/3-2023/20233292011511_2.jpg",
+          "sha256": "8109073bc67cf37fe978e6c20d0993d69bf51ae15eb2ad6d57475c9f312cd00c",
+          "bytes": 94880,
+          "visually_inspected": true
+        }
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: one single whole-creature raster animation key with genuine transparent alpha. Image 1 is our Novistador downstroke key to match for identity and detailed semi-realistic finish; image 2 is the native Resident Evil 4 REMAKE 2023 gallery model, only the creature is an anatomy reference. Create the complementary hovering UPSTROKE pose at the same frontal three-quarter facing. Move only the existing thin lateral flight wings to an upward angle above the shoulders; keep the raised folded forewing structures as in the source. Preserve the exact segmented brown-grey translucent body, complex small yellow-green eyed head, paired antennae and original leg joint/appendage arrangement; the lowest dangling legs curl slightly upward for a distinct in-flight key. Do not add wings, arms, a tail, a stinger, or transform it into the 2005 species. Keep both reference-specific asymmetries and recognizable wing proportions. Frame ALL antenna, wing and leg tips with at least 12 percent clean transparent border on all sides. The whole creature occupies at most 76 percent of width and height, no cropped extremities. Transparent area must be entirely empty, no red fringe, glow, haze, shadow, scenery or ground. Do not reproduce the native source's logo, blue frame, text or watermark. One creature, one pose, no sheet or duplicate. This is an adaptation key to be reviewed, not a certified official animation frame.",
+      "generation_output_path": "/workspace/scratch/37b119cd013c/generated_images/exec-88d4f77e-c44b-4f18-b9f3-cc6766402cbd.png",
+      "generated_with": "image_gen_builtin",
+      "post_generation_bitmap_edits": false,
+      "observed_view": "front three-quarter hover, thin wings angled up",
+      "visual_review": "Complementary raised lateral membranes and curled lower leg ends, single complete creature.",
+      "visual_review_scope": "Author review of full output and source; no independent or in-engine review claimed.",
+      "limitations": [
+        "Independent review found the two posterior distal limbs curled into hooks unlike the native source; superseded by a targeted correction without deleting original PNG.",
+        "Curled lower extremities are an inferred motion pose; native animation reference remains needed.",
+        "Opaque silhouette vertical extent changes materially between keys; body anchors need separate measurement.",
+        "Thin red/yellow contour fragments remain; no edge-cleanup success claim.",
+        "Source-guided proposed motion key; not an official recovered frame.",
+        "No full animation, gameplay, hitbox, pivot or opposite-facing proof.",
+        "Third-party reproduced native references have edition/platform and detail limits."
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "new_creature_identity": false
+    },
+    {
+      "asset_id": "rev2_giant_whip_spider_ready_clean_v24",
+      "uid": "rerev2-giant-whip-spider",
+      "name": "Giant Whip Spider",
+      "edition": "Resident Evil Revelations 2 (2015)",
+      "category": "creature",
+      "state": "ready_low_key",
+      "path": "assets/rev2_giant_whip_spider_ready_clean_v24.png",
+      "status": "animation_key_candidate",
+      "superseded_by": null,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "file_bytes": 1497571,
+      "mode": "RGBA",
+      "sha256": "e6af74168784a9db9374d08a6447e5969b871d5a476dfc1a5f6988bd87f6e640",
+      "git_blob_sha": "4ad5a38c399f346032b509ca06445eb63000cad9",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "alpha_bbox_nonzero": [
+        43,
+        59,
+        1504,
+        968
+      ],
+      "alpha_bbox_128": [
+        218,
+        176,
+        1359,
+        852
+      ],
+      "opaque_margin_fraction": {
+        "left": 0.14192708333333334,
+        "top": 0.171875,
+        "right": 0.115234375,
+        "bottom": 0.16796875
+      },
+      "transparent_pixel_fraction": 0.8246510823567709,
+      "source_v22_asset_id": "rerev2_giant_whip_spider_full_front3q_v22",
+      "source_v22_path": "production-archives/rec-media/v22/assets/rerev2_giant_whip_spider_full_front3q_v22.png",
+      "source_v22_sha256": "6fa21c9993f4585cf9738784fd4e4b4a659cddf0900e2edcfc49a4d8672bdcf1",
+      "sources": [
+        {
+          "source_id": "rerev2-giant-whip-spider-native-reference",
+          "uid": "rerev2-giant-whip-spider",
+          "edition": "Resident Evil Revelations 2 (2015)",
+          "page_url": "https://www.evilresource.com/resident-evil-revelations-2/enemies/giant-whip-spider",
+          "image_url": "https://www.evilresource.com/images/data/full/rerevelations2/giant-whip-spider.png?d07d4a36",
+          "type": "Complete native-model reproduction in an edition-specific third-party catalog; 450x360 source.",
+          "retrieved_on": "2026-11-27",
+          "http_status": 200,
+          "local_reference_path": "/workspace/scratch/37b119cd013c/v24-creature-refs/giant_whip_spider_native_rev2.png",
+          "sha256": "0f10052d011a85912d820aef827375673925268581d9c5d9bdee689be259f503",
+          "bytes": 69750,
+          "dimensions": [
+            450,
+            360
+          ],
+          "visually_inspected": true,
+          "third_party_bitmap_delivered": false,
+          "license_note": "Original game design and reproduced reference remain third-party copyrighted material; used for reference, not included in this delivery."
+        }
+      ],
+      "references": [
+        {
+          "role": "generated_v24_edit_reference",
+          "local_path_used": "/workspace/scratch/37b119cd013c/resident-evil-bow-protocol/production-archives/rec-media/v24/creatures/assets/rev2_giant_whip_spider_ready_v24.png",
+          "repo_path": "production-archives/rec-media/v24/creatures/assets/rev2_giant_whip_spider_ready_v24.png",
+          "source_id": null,
+          "source_url": null,
+          "sha256": "36e9dd8d61f4da11a747d4ecd7da91bfc49534ecf563c1da052948390948036d",
+          "bytes": 1368543,
+          "visually_inspected": true
+        }
+      ],
+      "prompt": "Use case: background-extraction. Edit target: image 1, the complete Giant Whip Spider ready pose. Make ONE precise technical correction: remove the diffuse brown/grey background halo and all detached background color around and between the legs, leaving genuinely transparent empty pixels outside the creature. Preserve the creature itself, its pose, complete appendages, proportions, exact shell texture and palette, face, thick spiny front pedipalps, leg endpoints, viewpoint, scale and canvas composition. Solid shell should be opaque; retain natural fine antialiasing only at the actual contour. Do not add a floor shadow, glow, fog, light disc, fringe, scene, text, duplicate or altered anatomy. Keep all of the current creature, no cropping, stretching or mirroring. Output a real transparent PNG with ONE unchanged creature, clean cutout edges and empty surrounding alpha.",
+      "generation_output_path": "/workspace/scratch/37b119cd013c/generated_images/exec-38234466-4466-4b89-85df-02e4b0d65433.png",
+      "generated_with": "image_gen_builtin",
+      "post_generation_bitmap_edits": false,
+      "observed_view": "low frontal three-quarter, pedipalps brought inward",
+      "visual_review": "One complete ready pose, shell/bands and limbs present; technical correction preserves composition with small generated detail changes.",
+      "visual_review_scope": "Author review of full output and source; no independent or in-engine review claimed.",
+      "limitations": [
+        "This image is a new generation, not a byte-preserving deterministic alpha edit.",
+        "Opaque maximum alpha is254 rather than255; near-opaque shell and actual alpha require rendering validation.",
+        "Surrounding RGB haze is carried in fully transparent sampled pixels; no general visible-halo removal certification.",
+        "Small pedipalp curvature/bristle details differ from the low-resolution source.",
+        "Source-guided proposed motion key; not an official recovered frame.",
+        "No full animation, gameplay, hitbox, pivot or opposite-facing proof.",
+        "Third-party reproduced native references have edition/platform and detail limits."
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "new_creature_identity": false
+    },
+    {
+      "asset_id": "rev2_giant_whip_spider_step_v24",
+      "uid": "rerev2-giant-whip-spider",
+      "name": "Giant Whip Spider",
+      "edition": "Resident Evil Revelations 2 (2015)",
+      "category": "creature",
+      "state": "forward_step_key",
+      "path": "assets/rev2_giant_whip_spider_step_v24.png",
+      "status": "animation_key_candidate",
+      "superseded_by": null,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "file_bytes": 1741457,
+      "mode": "RGBA",
+      "sha256": "f6975df0d07dbaa2626bcb3dd72362027843baea684cb64d788671f834a4cafe",
+      "git_blob_sha": "1a9a9cfb66e82eddad21ddeb538b5f3ca4f65b13",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "alpha_bbox_nonzero": [
+        0,
+        13,
+        1530,
+        1024
+      ],
+      "alpha_bbox_128": [
+        75,
+        177,
+        1482,
+        863
+      ],
+      "opaque_margin_fraction": {
+        "left": 0.048828125,
+        "top": 0.1728515625,
+        "right": 0.03515625,
+        "bottom": 0.1572265625
+      },
+      "transparent_pixel_fraction": 0.7755807240804037,
+      "source_v22_asset_id": "rerev2_giant_whip_spider_full_front3q_v22",
+      "source_v22_path": "production-archives/rec-media/v22/assets/rerev2_giant_whip_spider_full_front3q_v22.png",
+      "source_v22_sha256": "6fa21c9993f4585cf9738784fd4e4b4a659cddf0900e2edcfc49a4d8672bdcf1",
+      "sources": [
+        {
+          "source_id": "rerev2-giant-whip-spider-native-reference",
+          "uid": "rerev2-giant-whip-spider",
+          "edition": "Resident Evil Revelations 2 (2015)",
+          "page_url": "https://www.evilresource.com/resident-evil-revelations-2/enemies/giant-whip-spider",
+          "image_url": "https://www.evilresource.com/images/data/full/rerevelations2/giant-whip-spider.png?d07d4a36",
+          "type": "Complete native-model reproduction in an edition-specific third-party catalog; 450x360 source.",
+          "retrieved_on": "2026-11-27",
+          "http_status": 200,
+          "local_reference_path": "/workspace/scratch/37b119cd013c/v24-creature-refs/giant_whip_spider_native_rev2.png",
+          "sha256": "0f10052d011a85912d820aef827375673925268581d9c5d9bdee689be259f503",
+          "bytes": 69750,
+          "dimensions": [
+            450,
+            360
+          ],
+          "visually_inspected": true,
+          "third_party_bitmap_delivered": false,
+          "license_note": "Original game design and reproduced reference remain third-party copyrighted material; used for reference, not included in this delivery."
+        }
+      ],
+      "references": [
+        {
+          "role": "generated_v24_edit_reference",
+          "local_path_used": "/workspace/scratch/37b119cd013c/resident-evil-bow-protocol/production-archives/rec-media/v24/creatures/assets/rev2_giant_whip_spider_ready_clean_v24.png",
+          "repo_path": "production-archives/rec-media/v24/creatures/assets/rev2_giant_whip_spider_ready_clean_v24.png",
+          "source_id": null,
+          "source_url": null,
+          "sha256": "e6af74168784a9db9374d08a6447e5969b871d5a476dfc1a5f6988bd87f6e640",
+          "bytes": 1497571,
+          "visually_inspected": true
+        },
+        {
+          "role": "native_model_reference",
+          "local_path_used": "/workspace/scratch/37b119cd013c/v24-creature-refs/giant_whip_spider_native_rev2.png",
+          "repo_path": null,
+          "source_id": "rerev2-giant-whip-spider-native-reference",
+          "source_url": "https://www.evilresource.com/images/data/full/rerevelations2/giant-whip-spider.png?d07d4a36",
+          "sha256": "0f10052d011a85912d820aef827375673925268581d9c5d9bdee689be259f503",
+          "bytes": 69750,
+          "visually_inspected": true
+        }
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: single full-body raster motion key of the Giant Whip Spider from Resident Evil Revelations 2 (2015), true transparent alpha. Image 1 is the current ready pose to match for identity, proportions, material and rendering; image 2 is the native creature model reproduction for exact anatomy. Make a distinct cautious FORWARD STEP key at the SAME low frontal three-quarter viewing angle. Keep the body at the same scale, same two-section flat olive-brown ridged abdomen and small central head. Open the two existing thick spiny pedipalps wider to the left and right, near the spread of native image 2. Shift the existing walking leg at viewer-right slightly forward and flex the rear visible leg, while all other feet support the same low posture. Preserve every visible source appendage and source occlusion; do not invent hidden legs. Preserve the thin curled terminal part of the far-right walking leg, small bristles and restrained dark brown speckled shell. Do not turn the pedipalps into fangs, add a stinger, tail, glowing eyes, oversized tarantula abdomen or new limb pairs. Match image 1's detailed semi-realistic painted raster lighting. One complete creature, one pose. Landscape transparent canvas with at least 12 percent clean margin around ALL leg and pedipalp tips; uniform smaller framing if necessary. Transparent surroundings must remain empty with no halo, fog, floor, cast shadow, effects, text, labels or scenery. This is a proposed movement key in an adaptation, not an original recovered game frame.",
+      "generation_output_path": "/workspace/scratch/37b119cd013c/generated_images/exec-dd928354-12fa-444c-bf1a-790f2c9df0d9.png",
+      "generated_with": "image_gen_builtin",
+      "post_generation_bitmap_edits": false,
+      "observed_view": "low frontal three-quarter, pedipalps spread wider",
+      "visual_review": "Distinct wider-front key with right-side leg extended forward and broad ridged abdomen. All main visible tips in frame, very narrow side margins.",
+      "visual_review_scope": "Author review of full output and source; no independent or in-engine review claimed.",
+      "limitations": [
+        "Left/right opaque margins below requested12%.",
+        "Pedipalp span and apparent body scale change between keys; cannot assert normalized cycle.",
+        "Motion and some distal limb curvature are inferred; no unseen-side certification.",
+        "Source-guided proposed motion key; not an official recovered frame.",
+        "No full animation, gameplay, hitbox, pivot or opposite-facing proof.",
+        "Third-party reproduced native references have edition/platform and detail limits."
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "new_creature_identity": false
+    },
+    {
+      "asset_id": "re4r_novistador_wingbeat_up_corrected_v24",
+      "uid": "re4r-novistador",
+      "name": "Novistador",
+      "edition": "Resident Evil 4 remake (2023)",
+      "category": "creature",
+      "state": "hover_upstroke_key",
+      "path": "assets/re4r_novistador_wingbeat_up_corrected_v24.png",
+      "status": "animation_key_candidate",
+      "superseded_by": null,
+      "dimensions": [
+        1334,
+        1179
+      ],
+      "file_bytes": 936913,
+      "mode": "RGBA",
+      "sha256": "ca3d637a9d195c0ef14a5a5871789ee297bdf37f2243ebb602583699b31e74d2",
+      "git_blob_sha": "0bb086236b86323749874f381ac6acd065e94acd",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_bbox_nonzero": [
+        27,
+        18,
+        1304,
+        1162
+      ],
+      "alpha_bbox_128": [
+        252,
+        113,
+        1109,
+        1111
+      ],
+      "opaque_margin_fraction": {
+        "left": 0.1889055472263868,
+        "top": 0.09584393553859202,
+        "right": 0.1686656671664168,
+        "bottom": 0.05767599660729432
+      },
+      "transparent_pixel_fraction": 0.7548910023359822,
+      "source_v22_asset_id": "re4r_novistador_full_flying_front3q_v22",
+      "source_v22_path": "production-archives/rec-media/v22/assets/re4r_novistador_full_flying_front3q_v22.png",
+      "source_v22_sha256": "f4042fc9ef82e85e0187b003df19008d712896995149617947527cf87e86185a",
+      "sources": [
+        {
+          "source_id": "re4r-novistador-native-reference",
+          "uid": "re4r-novistador",
+          "edition": "Resident Evil 4 remake (2023)",
+          "page_url": "https://vandal.elespanol.com/guias/guia-resident-evil-4-remake-trucos-consejos-y-secretos/enemigos-y-jefes",
+          "image_url": "https://media.vandal.net/m/3-2023/20233292011511_2.jpg",
+          "type": "Native remake2023 model-gallery screenshot reproduced by Vandal; surrounding branding excluded.",
+          "retrieved_on": "2026-11-27",
+          "http_status": 200,
+          "local_reference_path": "/workspace/scratch/37b119cd013c/v24-creature-refs/novistador_native_re4r.jpg",
+          "sha256": "8109073bc67cf37fe978e6c20d0993d69bf51ae15eb2ad6d57475c9f312cd00c",
+          "bytes": 94880,
+          "dimensions": [
+            1280,
+            725
+          ],
+          "visually_inspected": true,
+          "third_party_bitmap_delivered": false,
+          "license_note": "Original game design and reproduced reference remain third-party copyrighted material; used for reference, not included in this delivery."
+        }
+      ],
+      "references": [
+        {
+          "role": "generated_v24_edit_reference",
+          "local_path_used": "/workspace/scratch/37b119cd013c/resident-evil-bow-protocol/production-archives/rec-media/v24/creatures/assets/re4r_novistador_wingbeat_up_v24.png",
+          "repo_path": "production-archives/rec-media/v24/creatures/assets/re4r_novistador_wingbeat_up_v24.png",
+          "source_id": null,
+          "source_url": null,
+          "sha256": "23dfe2c54ab6a00374a05603868282a5288a99a48f3eec89bcc20b69dc4f1a6b",
+          "bytes": 750110,
+          "visually_inspected": true
+        },
+        {
+          "role": "native_model_reference",
+          "local_path_used": "/workspace/scratch/37b119cd013c/v24-creature-refs/novistador_native_re4r.jpg",
+          "repo_path": null,
+          "source_id": "re4r-novistador-native-reference",
+          "source_url": "https://media.vandal.net/m/3-2023/20233292011511_2.jpg",
+          "sha256": "8109073bc67cf37fe978e6c20d0993d69bf51ae15eb2ad6d57475c9f312cd00c",
+          "bytes": 94880,
+          "visually_inspected": true
+        },
+        {
+          "role": "generated_v24_edit_reference",
+          "local_path_used": "/workspace/scratch/37b119cd013c/resident-evil-bow-protocol/production-archives/rec-media/v24/creatures/assets/re4r_novistador_wingbeat_down_v24.png",
+          "repo_path": "production-archives/rec-media/v24/creatures/assets/re4r_novistador_wingbeat_down_v24.png",
+          "source_id": null,
+          "source_url": null,
+          "sha256": "866d1da40d1abf0b56348e444b51bdf6a81cc540b257853437a701ac982d3ce7",
+          "bytes": 781581,
+          "visually_inspected": true
+        }
+      ],
+      "prompt": "Use case: precise-object-edit. Edit target: IMAGE 1, our Novistador wingbeat-UP key from Resident Evil 4 REMAKE (2023). IMAGE 2 is the native model-gallery screenshot and IMAGE 3 is the matching wingbeat-DOWN key, both used ONLY to correct the shape of the two long dangling REAR legs. Make one targeted anatomical correction: replace the two U-shaped, upward-hooked distal ends hanging below the body in image 1 with the LONG, SLENDER, DOWNWARD-POINTING tapered leg segments shown in images 2 and 3. The lower leg on the viewer's LEFT should extend diagonally down-left to a narrow straight point; the lower leg on the viewer's RIGHT should descend almost vertically to a narrow straight point. Preserve their source-like joint positions and segmented material; remove the upward curls and hook turns completely. Do not straighten or alter the separate bent FRONT arms and grasping claws near the torso. Do not add or remove any limb. Preserve EVERYTHING ELSE from image 1: raised thin flight wings, raised folded upper wing structures, antennae, head/face, small yellow-green eyes, body shape, forelimbs, colors, translucent brown-grey chitin, lighting, three-quarter facing, scale and canvas composition. Same single full-body creature and one image; all tips including the newly extended rear legs remain fully inside the canvas. Real transparent alpha background, with empty surrounding pixels. No source logo or frame, no text, no floor, no scene, no shadow, no effect, no duplicate. This corrects an adaptation key to match the observed source anatomy; it does not invent a different species or a new action.",
+      "generation_output_path": "/workspace/scratch/37b119cd013c/generated_images/exec-25a30023-6afa-4550-84b2-fcf23ed0dd65.png",
+      "generated_with": "image_gen_builtin",
+      "post_generation_bitmap_edits": false,
+      "observed_view": "front three-quarter hover, flight membranes raised; both posterior distal legs point downward",
+      "visual_review": "Author inspection confirms removed upward U-shaped hooks. Viewer-left posterior leg now points diagonally down-left, viewer-right leg down almost vertically, while wings remain raised. Fine surface details and boundary pixels changed during generation.",
+      "visual_review_scope": "Author review of the corrected output and three inputs; independent second pass still pending.",
+      "limitations": [
+        "A targeted anatomical correction was generated, not a deterministic pixel-preserving edit.",
+        "Some contour fragments/color pixels increased in the RGB preview; actual composed-alpha edge quality remains to inspect.",
+        "Bottom margin below requested family margin; normalized canvas scale/anchors remain open.",
+        "Posterior point shape is closer to the native source but no exact original-frame or microdetail certification.",
+        "No full animation, gameplay, hitbox, pivot or opposite-facing proof."
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "new_creature_identity": false,
+      "replaces": "assets/re4r_novistador_wingbeat_up_v24.png"
+    }
+  ],
+  "historical_records_modified": false,
+  "limits": [
+    "All105 previous source holds remain open; this lot adds motion-key candidates to three V22 incarnations.",
+    "Native animation frame extraction, timing, common canvas/scale, pivots and opposite views remain open.",
+    "RGB values in zero-alpha pixels must not be mistaken for rendered background; actual compositing not inspected."
+  ],
+  "correction_review": {
+    "reason": "Unsourceable hook-shaped posterior Novistador leg ends identified by independent root review.",
+    "original_candidate": "re4r_novistador_wingbeat_up_v24",
+    "corrected_candidate": "re4r_novistador_wingbeat_up_corrected_v24",
+    "generation_attempts": 1,
+    "source_review_preserved": "../reports/INDEPENDENT_CREATURES_V24.json",
+    "author_correction_report": "CORRECTION_NOVISTADOR_V24.json",
+    "independent_second_pass_pending": true
+  }
+}

@@ -1,0 +1,790 @@
+{
+  "schema": "rec-media-v25-characters-1",
+  "created_at_utc": "2026-11-27T08:59:22.786076+00:00",
+  "repository": "darknigthmare/resident-evil-bow-protocol",
+  "delivery_directory": "production-archives/rec-media/v25/characters/",
+  "working_directory": "/workspace/scratch/37b119cd013c/v25-characters",
+  "scope": "Six author-produced selection keys in scratch; no runtime, repo index, tree, commit or ref mutation by this agent.",
+  "generation_calls": 6,
+  "tool": "image_gen.imagegen",
+  "refusals": 0,
+  "retries": 0,
+  "png_count": 6,
+  "file_bytes_total": 9715553,
+  "nominal_states_per_incarnation": 3,
+  "candidate_count": 6,
+  "pose_deviation_count": 1,
+  "independent_review_pending": true,
+  "refusals_historically_retried": 0,
+  "inputs_file": "inputs.json",
+  "prompts_file": "prompts.json",
+  "measurements_file": "measurements.json",
+  "native_outputs_file": "generation_outputs.json",
+  "git_blobs_file": "GIT_BLOBS_V25.json",
+  "absence_evidence": {
+    "scope": "V22 inventory + V23 manifest (11 rows including trials) + V24 characters manifest (6 rows) + nominal tracked PNG paths. Compressed or unnamed historical archives not exhaustively reopened.",
+    "repository_head_at_final_local_read": "226fbba85ef7d9b248974eee8c455ec01cee95d4",
+    "v23_rows": 11,
+    "v24_character_rows": 6,
+    "target_costume_selection_rows_before_this_lot": 0,
+    "billy_v23_relation": "The three Billy V23 selection keys are Prisoner; they do not cover the distinct Wolf Force costume.",
+    "global_absence_certified": false,
+    "historical_refusal_identity_checks": {
+      "REC_CLAIRE_RE2R": {
+        "historical_refusals": [],
+        "v22_related_costume_refusals": []
+      },
+      "REC_BILLY_RE0": {
+        "historical_refusals": [],
+        "v22_related_costume_refusals": []
+      }
+    },
+    "excluded_from_generation": [
+      "Carlos RE3R: refusal V5",
+      "Jill RE3R: refusal V1 and related V22 costume refusal",
+      "Leon RE4R: refusal V1 and related V22 costume refusals",
+      "Chris RE5: refusal V5 and related V22 costume refusals"
+    ],
+    "other_not_selected": [
+      "HUNK: no named full-body base located in audited tree",
+      "Jake/Piers/Sherry: V22 source holds, no named full-body base located",
+      "Alcina V5: initial generation documented as text-guided without native image input; no new source lock made in this task"
+    ],
+    "evidence_paths": [
+      "production-archives/rec-media/v22/inventory/INVENTAIRE_COMPLET_V22_20261124.json",
+      "production-archives/rec-media/v22/ASSET_MANIFEST_V22.json",
+      "production-archives/rec-media/v23/ASSET_MANIFEST_V23.json",
+      "production-archives/rec-media/v24/characters/ASSET_MANIFEST_CHARACTERS_V24.json"
+    ]
+  },
+  "groups": [
+    {
+      "name": "Claire Redfield",
+      "costume": "Military",
+      "states": [
+        "selected",
+        "confirm",
+        "deselect"
+      ],
+      "baseline_spread_px_alpha_ge128": 1,
+      "subject_height_spread_px_alpha_ge128": 6,
+      "all_minimum_margin_10_percent_pass": false,
+      "all_minimum_margin_12_percent_pass": false,
+      "complete_animation": false
+    },
+    {
+      "name": "Billy Coen",
+      "costume": "Wolf Force",
+      "states": [
+        "selected",
+        "confirm",
+        "deselect"
+      ],
+      "baseline_spread_px_alpha_ge128": 1,
+      "subject_height_spread_px_alpha_ge128": 4,
+      "all_minimum_margin_10_percent_pass": false,
+      "all_minimum_margin_12_percent_pass": false,
+      "complete_animation": false
+    }
+  ],
+  "assets": [
+    {
+      "asset_id": "REC_CLAIRE_RE2R_MILITARY_SELECTED_KEY_V25",
+      "path": "assets/claire_re2r_military_selected_v25.png",
+      "file_bytes": 1573956,
+      "sha256": "662795ed3ebf62596a20076f3b65986f9518d4ba4c17de4ae004b280635018af",
+      "git_blob_sha": "c54ab7c05271166371225bdc908b7bb177f0d898",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "fully_transparent_pixels": 1232222,
+      "partially_transparent_pixels": 340642,
+      "opaque_pixels": 0,
+      "bbox_alpha_thresholds": {
+        "1": [
+          27,
+          31,
+          990,
+          1536
+        ],
+        "16": [
+          269,
+          128,
+          722,
+          1414
+        ],
+        "128": [
+          269,
+          129,
+          722,
+          1413
+        ]
+      },
+      "margin_px_ge128": [
+        269,
+        129,
+        302,
+        123
+      ],
+      "margin_pct_ge128": [
+        26.27,
+        8.398,
+        29.492,
+        8.008
+      ],
+      "minimum_margin_10_percent_pass": false,
+      "minimum_margin_12_percent_pass": false,
+      "baseline_y_ge128_exclusive": 1413,
+      "subject_height_px_ge128": 1284,
+      "copied_native_bytes_match": true,
+      "name": "Claire Redfield",
+      "edition": "Resident Evil 2 Remake (2019), Claire Costume: Military DLC",
+      "costume": "Military",
+      "catalogue_id": "COST_AUDIT_CLAIRE_MILITARY",
+      "state": "selected",
+      "status": "animation_key_candidate",
+      "base_asset_id": "claire_re2r_military_right",
+      "base_repository_path": "production-archives/rec-media/v22/assets/claire_re2r_military_right.png",
+      "seed_asset_id": null,
+      "sources": [
+        {
+          "input_id": "claire_v22_base",
+          "source_page": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/226fbba85ef7d9b248974eee8c455ec01cee95d4/production-archives/rec-media/v22/assets/claire_re2r_military_right.png",
+          "image_url": null,
+          "sha256": "e12e18db453d626dbd1239bc4c59e23af2ad17d3ef8db9014ee01fcab9826d88",
+          "path": "/workspace/scratch/37b119cd013c/v25-character-research/claire_re2r_military_right.png",
+          "role": "generated_V22_full_body_edit_base_not_native_pixels"
+        },
+        {
+          "input_id": "claire_official",
+          "source_page": "https://store.steampowered.com/app/920562/",
+          "image_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/920562/ss_84f640a97b0bf0a615fae7cf65cc52ab99a78137.1920x1080.jpg?t=1728438738",
+          "sha256": "9850818ed8118ee81f7d9d4be464e9c07477067ac89acf48d7e62e06e95399a3",
+          "path": "/workspace/scratch/37b119cd013c/v25-character-research/steam_920562_00.jpg",
+          "role": "official_costume_upper_body_reference"
+        },
+        {
+          "input_id": "claire_native_full_body",
+          "source_page": "https://gamewith.net/residentevil2/article/show/3486",
+          "image_url": "https://img.gamewith.net/img/e87acb7b88090bd7b7c90326ce34b9ae.jpg",
+          "sha256": "6e58b86516a9609c42c21daca4a63cc60091ab2d04bbe8eeecb5fdbbc7608db0",
+          "path": "/workspace/scratch/37b119cd013c/v25-character-research/re2_gamewith_33.jpg",
+          "role": "native_full_body_costume_reference_reproduced_by_secondary_source"
+        }
+      ],
+      "referenced_image_paths": [
+        "/workspace/scratch/37b119cd013c/v25-character-research/claire_re2r_military_right.png",
+        "/workspace/scratch/37b119cd013c/v25-character-research/steam_920562_00.jpg",
+        "/workspace/scratch/37b119cd013c/v25-character-research/re2_gamewith_33.jpg"
+      ],
+      "prompt": "Use case: style-transfer. Asset type: one full-body character-selection key for Resident Evil Combat.\nEdit image 1 into ONE new single pose; images 2 and 3 are supporting native game references, not extra subjects. Preserve the same exact adult identity, face, hairstyle, costume, anatomical equipment sides, body proportions and detailed semi-realistic painted 2D sprite style. Use the native references to keep clothing construction and asymmetry accurate. This is a reference-guided project adaptation; do not invent a different game incarnation.\nComposition: portrait canvas, requested 1024 x 1536. The COMPLETE silhouette, including hair, hands and both boot soles, must occupy only about 72-75% of canvas height. Intentionally zoom out from image 1: leave at least 12% fully transparent blank margin on all four sides; place head near y=205 and lowest boot sole near y=1320 on a 1536-high canvas. Center near x=512. Maintain those same body scale and foot baseline across selection keys. Exactly one character, one pose, clear complete fingers and footwear.\nScene/backdrop: actual alpha transparency. No floor, cast shadow, pedestal, gradient, glow, colored aura, halo, scene, UI, lettering, frame, diagram, inset or sheet. Do not mirror the figure or move equipment to the opposite anatomical side. No duplicate or second view. Keep both hands empty as in image 1; the guns in the native references are not requested props.\nSubject: adult Claire Redfield, Resident Evil 2 Remake (2019), official Claire Costume: Military DLC. Keep the camouflage bandana with tied ends, brown hair/loose strands, off-white tank under olive tactical vest, correct native vest pouches and patches, camouflage cargo trousers, and black lace-up combat boots. Preserve the tattoo on the anatomical RIGHT upper arm, black thigh holster with two straps on anatomical RIGHT leg, watch on anatomical LEFT wrist and canteen at anatomical LEFT rear hip. Keep original shapes/colors of the two lower vest badges and flag; no new logos, no reinterpretation as a BSAA uniform. Do not add red jacket, gloves, shotgun or launcher.\nPose change only: SELECTED / attentive preview. Torso nearly frontal with a small natural three-quarter turn toward viewer-right. Head upright and attentive toward viewer-right. Feet planted shoulder-width apart. Lower both hands from the high fists of image 1 into a relaxed low ready position beside the lower vest, elbows slightly bent, fingers naturally relaxed. Calm focused expression; no attack, no salute, no theatrical gesture. This is one still key, not an animation sheet.",
+      "observed_pose": "Attente droite de l’image, bras relâchés près des cuisses, pieds écartés.",
+      "pose_requirement_pass": true,
+      "visual_review": "Author inspection of all six outputs, two generated V22 bases and four native references. Independent review is separate.",
+      "limitations": [
+        "Clé fixe adaptée pour le projet ; aucune animation de sélection officielle du jeu source n’est revendiquée.",
+        "Les six sorties restent des candidats. Fidélité canonique 1:1, cycle animé complet et admission moteur ne sont pas certifiés.",
+        "Les marges verticales n’atteignent pas 10 % ni la cible initiale de 12 %. Les clés suivantes conservent volontairement le cadrage du selected pour limiter la dérive entre états.",
+        "Alpha natif [0,254] préservé. Des traces très faibles à alpha 1–15 s’étendent au-delà de la silhouette ; contrôler franges, prémultiplication et fond réel avant intégration.",
+        "Les bases V22 et ces clés gardent les mains vides ; les armes visibles dans les captures natives servent au contexte source et ne sont pas reproduites. Aucun tir ni geste armé n’est validé.",
+        "Détails du visage, du camouflage, des coutures, des mains et des petits accessoires réinterprétés ; comparaison à taille de moteur nécessaire.",
+        "Les mains sont plus basses et les coudes moins fléchis que la position basse près du gilet demandée.",
+        "Les emblèmes du gilet et le tatouage conservent leurs emplacements, mais leurs tracés ne sont pas une reproduction 1:1."
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "pixels_modified_after_generation": false,
+      "native_image_gen_output_preserved": true
+    },
+    {
+      "asset_id": "REC_BILLY_RE0HD_WOLF_FORCE_SELECTED_KEY_V25",
+      "path": "assets/billy_re0hd_wolf_force_selected_v25.png",
+      "file_bytes": 1692051,
+      "sha256": "c3e8fd30697a8d1fa706211e3d344403494dd5111abaf5de0ffbd6b9a9b70b5c",
+      "git_blob_sha": "2b0e8c41d23059777629062a1a1c8f319240c2a4",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "fully_transparent_pixels": 1206319,
+      "partially_transparent_pixels": 366545,
+      "opaque_pixels": 0,
+      "bbox_alpha_thresholds": {
+        "1": [
+          41,
+          21,
+          994,
+          1512
+        ],
+        "16": [
+          253,
+          148,
+          750,
+          1448
+        ],
+        "128": [
+          254,
+          150,
+          749,
+          1447
+        ]
+      },
+      "margin_px_ge128": [
+        254,
+        150,
+        275,
+        89
+      ],
+      "margin_pct_ge128": [
+        24.805,
+        9.766,
+        26.855,
+        5.794
+      ],
+      "minimum_margin_10_percent_pass": false,
+      "minimum_margin_12_percent_pass": false,
+      "baseline_y_ge128_exclusive": 1447,
+      "subject_height_px_ge128": 1297,
+      "copied_native_bytes_match": true,
+      "name": "Billy Coen",
+      "edition": "Resident Evil Zero HD Remaster (2016), Costume Pack 1, Wolf Force",
+      "costume": "Wolf Force",
+      "catalogue_id": "COST_AUDIT_BILLY_WOLF_FORCE",
+      "state": "selected",
+      "status": "animation_key_candidate",
+      "base_asset_id": "billy_re0hd_wolf_force_front",
+      "base_repository_path": "production-archives/rec-media/v22/assets/billy_re0hd_wolf_force_front.png",
+      "seed_asset_id": null,
+      "sources": [
+        {
+          "input_id": "billy_v22_base",
+          "source_page": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/226fbba85ef7d9b248974eee8c455ec01cee95d4/production-archives/rec-media/v22/assets/billy_re0hd_wolf_force_front.png",
+          "image_url": null,
+          "sha256": "67df48af91c7e79b1ba15f8ffb210ceeb9facac0d7e03ce9b35a94e519c82a52",
+          "path": "/workspace/scratch/37b119cd013c/v25-character-research/billy_re0hd_wolf_force_front.png",
+          "role": "generated_V22_full_body_edit_base_not_native_pixels"
+        },
+        {
+          "input_id": "billy_official",
+          "source_page": "https://store.steampowered.com/app/381710/",
+          "image_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/381710/ss_a328865b12144b46243fc4a3705c187fb71e17e9.1920x1080.jpg?t=1702541116",
+          "sha256": "745e8dc2a4132656c62a1d39d40ee441ae5097a2030f327db1dd7231333d03d9",
+          "path": "/workspace/scratch/37b119cd013c/v25-character-research/steam_381710_00.jpg",
+          "role": "official_costume_upper_body_reference"
+        },
+        {
+          "input_id": "billy_native_full_body",
+          "source_page": "https://www.faxagate.com/en/gaming/resident-evil-0-costumes",
+          "image_url": "https://www.faxagate.com/resources/-/gaming/resident-evil-0-costumes/cp1-billy-wolf-force.webp",
+          "sha256": "4a2aa2052ee9a7da9deb5bee2654e5579e6a39d62663e234ae030ad5320a8ed3",
+          "path": "/workspace/scratch/37b119cd013c/v25-character-research/re0_faxagate_22.webp",
+          "role": "native_full_body_costume_reference_reproduced_by_secondary_source"
+        }
+      ],
+      "referenced_image_paths": [
+        "/workspace/scratch/37b119cd013c/v25-character-research/billy_re0hd_wolf_force_front.png",
+        "/workspace/scratch/37b119cd013c/v25-character-research/steam_381710_00.jpg",
+        "/workspace/scratch/37b119cd013c/v25-character-research/re0_faxagate_22.webp"
+      ],
+      "prompt": "Use case: style-transfer. Asset type: one full-body character-selection key for Resident Evil Combat.\nEdit image 1 into ONE new single pose; images 2 and 3 are supporting native game references, not extra subjects. Preserve the same exact adult identity, face, hairstyle, costume, anatomical equipment sides, body proportions and detailed semi-realistic painted 2D sprite style. Use the native references to keep clothing construction and asymmetry accurate. This is a reference-guided project adaptation; do not invent a different game incarnation.\nComposition: portrait canvas, requested 1024 x 1536. The COMPLETE silhouette, including hair, hands and both boot soles, must occupy only about 72-75% of canvas height. Intentionally zoom out from image 1: leave at least 12% fully transparent blank margin on all four sides; place head near y=205 and lowest boot sole near y=1320 on a 1536-high canvas. Center near x=512. Maintain those same body scale and foot baseline across selection keys. Exactly one character, one pose, clear complete fingers and footwear.\nScene/backdrop: actual alpha transparency. No floor, cast shadow, pedestal, gradient, glow, colored aura, halo, scene, UI, lettering, frame, diagram, inset or sheet. Do not mirror the figure or move equipment to the opposite anatomical side. No duplicate or second view. Keep both hands empty as in image 1; the guns in the native references are not requested props.\nSubject: adult Billy Coen, Resident Evil Zero HD Remaster (2016), official Costume Pack 1 Wolf Force costume. Preserve slicked-back brown hair, visor over anatomical RIGHT eye and olive headset, open-chest olive webbing harness with native silver upper-chest connector, five compact olive cylinders on anatomical RIGHT shoulder strap, two large cylinders/pouches at anatomical RIGHT hip, small pouch at anatomical LEFT hip, blue-gray camouflage cargo trousers, dark knee pads, dark boots, blue fingerless gauntlets with three pale bands at each wrist. Maintain the native asymmetry and original palette. No Prisoner tank top, handcuffs, chain, arm tattoo, extra firearm or newly designed armor. The promotional collage includes Rebecca: omit her completely.\nPose change only: SELECTED / attentive preview. Torso nearly frontal, head upright looking slightly toward viewer-right. Feet firmly planted shoulder-width apart. Bend both elbows modestly with the empty gloved hands relaxed at belt height and clearly separated from the webbing. Quiet alert posture, small forward weight shift, neutral confident face. No celebratory raised arms or open-mouth shout. This is one still key, not an animation sheet.",
+      "observed_pose": "Attente frontale, deux mains vides relevées près de la ceinture, coudes légèrement fléchis.",
+      "pose_requirement_pass": true,
+      "visual_review": "Author inspection of all six outputs, two generated V22 bases and four native references. Independent review is separate.",
+      "limitations": [
+        "Clé fixe adaptée pour le projet ; aucune animation de sélection officielle du jeu source n’est revendiquée.",
+        "Les six sorties restent des candidats. Fidélité canonique 1:1, cycle animé complet et admission moteur ne sont pas certifiés.",
+        "Les marges verticales n’atteignent pas 10 % ni la cible initiale de 12 %. Les clés suivantes conservent volontairement le cadrage du selected pour limiter la dérive entre états.",
+        "Alpha natif [0,254] préservé. Des traces très faibles à alpha 1–15 s’étendent au-delà de la silhouette ; contrôler franges, prémultiplication et fond réel avant intégration.",
+        "Les bases V22 et ces clés gardent les mains vides ; les armes visibles dans les captures natives servent au contexte source et ne sont pas reproduites. Aucun tir ni geste armé n’est validé.",
+        "Détails du visage, du camouflage, des coutures, des mains et des petits accessoires réinterprétés ; comparaison à taille de moteur nécessaire.",
+        "Le regard est presque frontal ; orientation vers la droite de l’image très légère.",
+        "Cinq volumes cylindriques principaux restent visibles à l’épaule droite ; la lèvre/sangle supérieure et les formes de fixation varient et ne doivent pas être comptées comme un sixième cylindre.",
+        "Le microphone hérité du candidat V22 et les petits détails du casque ne sont pas recertifiés par une vue native rapprochée complète."
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "pixels_modified_after_generation": false,
+      "native_image_gen_output_preserved": true
+    },
+    {
+      "asset_id": "REC_CLAIRE_RE2R_MILITARY_CONFIRM_KEY_V25",
+      "path": "assets/claire_re2r_military_confirm_v25.png",
+      "file_bytes": 1522471,
+      "sha256": "40ea4bbd52e779e598a4002df2199f709066657c3e6d13a76cd321d4a5d488f9",
+      "git_blob_sha": "d75777bb013ba227606d26a4c7c49fbf55a282c4",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "fully_transparent_pixels": 1248065,
+      "partially_transparent_pixels": 324799,
+      "opaque_pixels": 0,
+      "bbox_alpha_thresholds": {
+        "1": [
+          57,
+          31,
+          1004,
+          1517
+        ],
+        "16": [
+          267,
+          128,
+          726,
+          1415
+        ],
+        "128": [
+          268,
+          129,
+          725,
+          1414
+        ]
+      },
+      "margin_px_ge128": [
+        268,
+        129,
+        299,
+        122
+      ],
+      "margin_pct_ge128": [
+        26.172,
+        8.398,
+        29.199,
+        7.943
+      ],
+      "minimum_margin_10_percent_pass": false,
+      "minimum_margin_12_percent_pass": false,
+      "baseline_y_ge128_exclusive": 1414,
+      "subject_height_px_ge128": 1285,
+      "copied_native_bytes_match": true,
+      "name": "Claire Redfield",
+      "edition": "Resident Evil 2 Remake (2019), Claire Costume: Military DLC",
+      "costume": "Military",
+      "catalogue_id": "COST_AUDIT_CLAIRE_MILITARY",
+      "state": "confirm",
+      "status": "animation_key_candidate",
+      "base_asset_id": "claire_re2r_military_right",
+      "base_repository_path": "production-archives/rec-media/v22/assets/claire_re2r_military_right.png",
+      "seed_asset_id": "REC_CLAIRE_RE2R_MILITARY_SELECTED_KEY_V25",
+      "sources": [
+        {
+          "input_id": "claire_v22_base",
+          "source_page": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/226fbba85ef7d9b248974eee8c455ec01cee95d4/production-archives/rec-media/v22/assets/claire_re2r_military_right.png",
+          "image_url": null,
+          "sha256": "e12e18db453d626dbd1239bc4c59e23af2ad17d3ef8db9014ee01fcab9826d88",
+          "path": "/workspace/scratch/37b119cd013c/v25-character-research/claire_re2r_military_right.png",
+          "role": "generated_V22_full_body_edit_base_not_native_pixels"
+        },
+        {
+          "input_id": "claire_official",
+          "source_page": "https://store.steampowered.com/app/920562/",
+          "image_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/920562/ss_84f640a97b0bf0a615fae7cf65cc52ab99a78137.1920x1080.jpg?t=1728438738",
+          "sha256": "9850818ed8118ee81f7d9d4be464e9c07477067ac89acf48d7e62e06e95399a3",
+          "path": "/workspace/scratch/37b119cd013c/v25-character-research/steam_920562_00.jpg",
+          "role": "official_costume_upper_body_reference"
+        },
+        {
+          "input_id": "claire_native_full_body",
+          "source_page": "https://gamewith.net/residentevil2/article/show/3486",
+          "image_url": "https://img.gamewith.net/img/e87acb7b88090bd7b7c90326ce34b9ae.jpg",
+          "sha256": "6e58b86516a9609c42c21daca4a63cc60091ab2d04bbe8eeecb5fdbbc7608db0",
+          "path": "/workspace/scratch/37b119cd013c/v25-character-research/re2_gamewith_33.jpg",
+          "role": "native_full_body_costume_reference_reproduced_by_secondary_source"
+        }
+      ],
+      "referenced_image_paths": [
+        "/workspace/scratch/37b119cd013c/v25-characters/assets/claire_re2r_military_selected_v25.png",
+        "/workspace/scratch/37b119cd013c/v25-character-research/steam_920562_00.jpg",
+        "/workspace/scratch/37b119cd013c/v25-character-research/re2_gamewith_33.jpg"
+      ],
+      "prompt": "Use case: style-transfer. Asset type: one full-body character-selection key for Resident Evil Combat.\nEdit target: image 1 is the already-generated SELECTED key. Images 2 and 3 are native game costume references only. Change only the requested modest gesture and necessary cloth folds. Keep the EXACT same adult face, hair, body proportions, costume, rendering style, anatomical equipment sides, light and palette as image 1.\nFRAMING LOCK: retain the portrait 1024 x 1536 canvas and current camera distance, figure size, head height and lowest boot baseline of image 1. Do not zoom in, crop or enlarge the subject. Keep the whole head, all fingers, all equipment and both boot soles inside the image. One complete character, ONE still pose only. The same baseline and scale are needed to compare these keys.\nBACKGROUND: actual transparent alpha, matching the cutout in image 1. No visible background, floor, shadow, glow, aura, vignette, halo, UI, text, inset, frame, panel, second figure or animation sheet.\nPreserve all anatomical sides; do not mirror. BOTH HANDS REMAIN EMPTY except when making the specified contact with existing clothing or headset. Do not import the firearms or other subjects from the native costume-reference screenshots. This is a project menu adaptation, not a claim that the source game used this exact gesture.\nSubject: adult Claire Redfield, Resident Evil 2 Remake (2019), official Claire Costume: Military DLC. Keep the camouflage bandana with tied ends, brown hair/loose strands, off-white tank under olive tactical vest, correct native vest pouches and patches, camouflage cargo trousers, and black lace-up combat boots. Preserve the tattoo on the anatomical RIGHT upper arm, black thigh holster with two straps on anatomical RIGHT leg, watch on anatomical LEFT wrist and canteen at anatomical LEFT rear hip. Keep original shapes/colors of the two lower vest badges and flag; no new logos, no reinterpretation as a BSAA uniform. Do not add red jacket, gloves, shotgun or launcher.\nPose change: CONFIRMATION key. Keep Claire's planted legs and entire body scale. Raise ONLY her anatomical LEFT forearm (viewer-right arm with the watch) so her left hand forms a small relaxed fist near the left collarbone, just in front of the vest strap; do not cover the lower vest badges. Her anatomical RIGHT arm remains relaxed at the side. Give a slight downward head nod with a composed focused expression, gaze toward the player. It must be visibly different from the low relaxed selected stance, without a salute, weapon, big smile or combat swing.",
+      "observed_pose": "Main gauche anatomique ramenée près de la bretelle/clavicule gauche ; tête légèrement baissée, droite au repos.",
+      "pose_requirement_pass": true,
+      "visual_review": "Author inspection of all six outputs, two generated V22 bases and four native references. Independent review is separate.",
+      "limitations": [
+        "Clé fixe adaptée pour le projet ; aucune animation de sélection officielle du jeu source n’est revendiquée.",
+        "Les six sorties restent des candidats. Fidélité canonique 1:1, cycle animé complet et admission moteur ne sont pas certifiés.",
+        "Les marges verticales n’atteignent pas 10 % ni la cible initiale de 12 %. Les clés suivantes conservent volontairement le cadrage du selected pour limiter la dérive entre états.",
+        "Alpha natif [0,254] préservé. Des traces très faibles à alpha 1–15 s’étendent au-delà de la silhouette ; contrôler franges, prémultiplication et fond réel avant intégration.",
+        "Les bases V22 et ces clés gardent les mains vides ; les armes visibles dans les captures natives servent au contexte source et ne sont pas reproduites. Aucun tir ni geste armé n’est validé.",
+        "Détails du visage, du camouflage, des coutures, des mains et des petits accessoires réinterprétés ; comparaison à taille de moteur nécessaire.",
+        "Le poing gauche semble en contact avec la bretelle plutôt que strictement placé devant elle ; détail de doigts à qualifier.",
+        "Les emblèmes du gilet et le tatouage conservent leurs emplacements, mais leurs tracés ne sont pas une reproduction 1:1."
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "pixels_modified_after_generation": false,
+      "native_image_gen_output_preserved": true
+    },
+    {
+      "asset_id": "REC_CLAIRE_RE2R_MILITARY_DESELECT_KEY_V25",
+      "path": "assets/claire_re2r_military_deselect_v25.png",
+      "file_bytes": 1603406,
+      "sha256": "66a4c5690420c2098073806c267285539a973b4f8f6d097cbfd9b1837cbbcb87",
+      "git_blob_sha": "366bff339211aaa87ad6c390e9b30043f1c2538d",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "fully_transparent_pixels": 1225404,
+      "partially_transparent_pixels": 347460,
+      "opaque_pixels": 0,
+      "bbox_alpha_thresholds": {
+        "1": [
+          0,
+          24,
+          1024,
+          1536
+        ],
+        "16": [
+          270,
+          123,
+          728,
+          1415
+        ],
+        "128": [
+          271,
+          124,
+          727,
+          1414
+        ]
+      },
+      "margin_px_ge128": [
+        271,
+        124,
+        297,
+        122
+      ],
+      "margin_pct_ge128": [
+        26.465,
+        8.073,
+        29.004,
+        7.943
+      ],
+      "minimum_margin_10_percent_pass": false,
+      "minimum_margin_12_percent_pass": false,
+      "baseline_y_ge128_exclusive": 1414,
+      "subject_height_px_ge128": 1290,
+      "copied_native_bytes_match": true,
+      "name": "Claire Redfield",
+      "edition": "Resident Evil 2 Remake (2019), Claire Costume: Military DLC",
+      "costume": "Military",
+      "catalogue_id": "COST_AUDIT_CLAIRE_MILITARY",
+      "state": "deselect",
+      "status": "animation_key_candidate_with_pose_deviation",
+      "base_asset_id": "claire_re2r_military_right",
+      "base_repository_path": "production-archives/rec-media/v22/assets/claire_re2r_military_right.png",
+      "seed_asset_id": "REC_CLAIRE_RE2R_MILITARY_SELECTED_KEY_V25",
+      "sources": [
+        {
+          "input_id": "claire_v22_base",
+          "source_page": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/226fbba85ef7d9b248974eee8c455ec01cee95d4/production-archives/rec-media/v22/assets/claire_re2r_military_right.png",
+          "image_url": null,
+          "sha256": "e12e18db453d626dbd1239bc4c59e23af2ad17d3ef8db9014ee01fcab9826d88",
+          "path": "/workspace/scratch/37b119cd013c/v25-character-research/claire_re2r_military_right.png",
+          "role": "generated_V22_full_body_edit_base_not_native_pixels"
+        },
+        {
+          "input_id": "claire_official",
+          "source_page": "https://store.steampowered.com/app/920562/",
+          "image_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/920562/ss_84f640a97b0bf0a615fae7cf65cc52ab99a78137.1920x1080.jpg?t=1728438738",
+          "sha256": "9850818ed8118ee81f7d9d4be464e9c07477067ac89acf48d7e62e06e95399a3",
+          "path": "/workspace/scratch/37b119cd013c/v25-character-research/steam_920562_00.jpg",
+          "role": "official_costume_upper_body_reference"
+        },
+        {
+          "input_id": "claire_native_full_body",
+          "source_page": "https://gamewith.net/residentevil2/article/show/3486",
+          "image_url": "https://img.gamewith.net/img/e87acb7b88090bd7b7c90326ce34b9ae.jpg",
+          "sha256": "6e58b86516a9609c42c21daca4a63cc60091ab2d04bbe8eeecb5fdbbc7608db0",
+          "path": "/workspace/scratch/37b119cd013c/v25-character-research/re2_gamewith_33.jpg",
+          "role": "native_full_body_costume_reference_reproduced_by_secondary_source"
+        }
+      ],
+      "referenced_image_paths": [
+        "/workspace/scratch/37b119cd013c/v25-characters/assets/claire_re2r_military_selected_v25.png",
+        "/workspace/scratch/37b119cd013c/v25-character-research/steam_920562_00.jpg",
+        "/workspace/scratch/37b119cd013c/v25-character-research/re2_gamewith_33.jpg"
+      ],
+      "prompt": "Use case: style-transfer. Asset type: one full-body character-selection key for Resident Evil Combat.\nEdit target: image 1 is the already-generated SELECTED key. Images 2 and 3 are native game costume references only. Change only the requested modest gesture and necessary cloth folds. Keep the EXACT same adult face, hair, body proportions, costume, rendering style, anatomical equipment sides, light and palette as image 1.\nFRAMING LOCK: retain the portrait 1024 x 1536 canvas and current camera distance, figure size, head height and lowest boot baseline of image 1. Do not zoom in, crop or enlarge the subject. Keep the whole head, all fingers, all equipment and both boot soles inside the image. One complete character, ONE still pose only. The same baseline and scale are needed to compare these keys.\nBACKGROUND: actual transparent alpha, matching the cutout in image 1. No visible background, floor, shadow, glow, aura, vignette, halo, UI, text, inset, frame, panel, second figure or animation sheet.\nPreserve all anatomical sides; do not mirror. BOTH HANDS REMAIN EMPTY except when making the specified contact with existing clothing or headset. Do not import the firearms or other subjects from the native costume-reference screenshots. This is a project menu adaptation, not a claim that the source game used this exact gesture.\nSubject: adult Claire Redfield, Resident Evil 2 Remake (2019), official Claire Costume: Military DLC. Keep the camouflage bandana with tied ends, brown hair/loose strands, off-white tank under olive tactical vest, correct native vest pouches and patches, camouflage cargo trousers, and black lace-up combat boots. Preserve the tattoo on the anatomical RIGHT upper arm, black thigh holster with two straps on anatomical RIGHT leg, watch on anatomical LEFT wrist and canteen at anatomical LEFT rear hip. Keep original shapes/colors of the two lower vest badges and flag; no new logos, no reinterpretation as a BSAA uniform. Do not add red jacket, gloves, shotgun or launcher.\nPose change: DESELECTION / withdrawal key. Both arms now hang naturally down with the hands open and relaxed. Shift weight subtly onto the anatomical LEFT leg and draw the anatomical RIGHT boot a little back, still fully visible, without crossing the legs; lowest grounded boot baseline stays the same. Rotate head and gaze distinctly toward VIEWER-LEFT, with only a small torso turn in that direction, keeping a mostly frontal view so the right thigh holster and front vest patches remain visible. Quiet return posture, not a reversed confirmation, no waving, no weapon and no exaggerated walk.",
+      "observed_pose": "Bras baissés, appui et orientation de la botte droite légèrement modifiés ; tête toujours tournée vers la droite de l’image.",
+      "pose_requirement_pass": false,
+      "visual_review": "Author inspection of all six outputs, two generated V22 bases and four native references. Independent review is separate.",
+      "limitations": [
+        "Clé fixe adaptée pour le projet ; aucune animation de sélection officielle du jeu source n’est revendiquée.",
+        "Les six sorties restent des candidats. Fidélité canonique 1:1, cycle animé complet et admission moteur ne sont pas certifiés.",
+        "Les marges verticales n’atteignent pas 10 % ni la cible initiale de 12 %. Les clés suivantes conservent volontairement le cadrage du selected pour limiter la dérive entre états.",
+        "Alpha natif [0,254] préservé. Des traces très faibles à alpha 1–15 s’étendent au-delà de la silhouette ; contrôler franges, prémultiplication et fond réel avant intégration.",
+        "Les bases V22 et ces clés gardent les mains vides ; les armes visibles dans les captures natives servent au contexte source et ne sont pas reproduites. Aucun tir ni geste armé n’est validé.",
+        "Détails du visage, du camouflage, des coutures, des mains et des petits accessoires réinterprétés ; comparaison à taille de moteur nécessaire.",
+        "Le regard demandé vers la gauche de l’image reste orienté à droite.",
+        "Différence de geste faible par rapport au selected : appui/botte légèrement changés, haut du corps très proche. Cette image ne valide pas la désélection directionnelle demandée.",
+        "Les emblèmes du gilet et le tatouage conservent leurs emplacements, mais leurs tracés ne sont pas une reproduction 1:1."
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "pixels_modified_after_generation": false,
+      "native_image_gen_output_preserved": true
+    },
+    {
+      "asset_id": "REC_BILLY_RE0HD_WOLF_FORCE_CONFIRM_KEY_V25",
+      "path": "assets/billy_re0hd_wolf_force_confirm_v25.png",
+      "file_bytes": 1665163,
+      "sha256": "968c576853324a3c98f38fddedfb01ef13b2fd85f079342381ea1bce990d8849",
+      "git_blob_sha": "c1fb5925ce9bbef9af19eb0f63c4c16ec39819e0",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "fully_transparent_pixels": 1204747,
+      "partially_transparent_pixels": 368117,
+      "opaque_pixels": 0,
+      "bbox_alpha_thresholds": {
+        "1": [
+          107,
+          76,
+          964,
+          1456
+        ],
+        "16": [
+          233,
+          145,
+          773,
+          1447
+        ],
+        "128": [
+          233,
+          146,
+          772,
+          1447
+        ]
+      },
+      "margin_px_ge128": [
+        233,
+        146,
+        252,
+        89
+      ],
+      "margin_pct_ge128": [
+        22.754,
+        9.505,
+        24.609,
+        5.794
+      ],
+      "minimum_margin_10_percent_pass": false,
+      "minimum_margin_12_percent_pass": false,
+      "baseline_y_ge128_exclusive": 1447,
+      "subject_height_px_ge128": 1301,
+      "copied_native_bytes_match": true,
+      "name": "Billy Coen",
+      "edition": "Resident Evil Zero HD Remaster (2016), Costume Pack 1, Wolf Force",
+      "costume": "Wolf Force",
+      "catalogue_id": "COST_AUDIT_BILLY_WOLF_FORCE",
+      "state": "confirm",
+      "status": "animation_key_candidate",
+      "base_asset_id": "billy_re0hd_wolf_force_front",
+      "base_repository_path": "production-archives/rec-media/v22/assets/billy_re0hd_wolf_force_front.png",
+      "seed_asset_id": "REC_BILLY_RE0HD_WOLF_FORCE_SELECTED_KEY_V25",
+      "sources": [
+        {
+          "input_id": "billy_v22_base",
+          "source_page": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/226fbba85ef7d9b248974eee8c455ec01cee95d4/production-archives/rec-media/v22/assets/billy_re0hd_wolf_force_front.png",
+          "image_url": null,
+          "sha256": "67df48af91c7e79b1ba15f8ffb210ceeb9facac0d7e03ce9b35a94e519c82a52",
+          "path": "/workspace/scratch/37b119cd013c/v25-character-research/billy_re0hd_wolf_force_front.png",
+          "role": "generated_V22_full_body_edit_base_not_native_pixels"
+        },
+        {
+          "input_id": "billy_official",
+          "source_page": "https://store.steampowered.com/app/381710/",
+          "image_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/381710/ss_a328865b12144b46243fc4a3705c187fb71e17e9.1920x1080.jpg?t=1702541116",
+          "sha256": "745e8dc2a4132656c62a1d39d40ee441ae5097a2030f327db1dd7231333d03d9",
+          "path": "/workspace/scratch/37b119cd013c/v25-character-research/steam_381710_00.jpg",
+          "role": "official_costume_upper_body_reference"
+        },
+        {
+          "input_id": "billy_native_full_body",
+          "source_page": "https://www.faxagate.com/en/gaming/resident-evil-0-costumes",
+          "image_url": "https://www.faxagate.com/resources/-/gaming/resident-evil-0-costumes/cp1-billy-wolf-force.webp",
+          "sha256": "4a2aa2052ee9a7da9deb5bee2654e5579e6a39d62663e234ae030ad5320a8ed3",
+          "path": "/workspace/scratch/37b119cd013c/v25-character-research/re0_faxagate_22.webp",
+          "role": "native_full_body_costume_reference_reproduced_by_secondary_source"
+        }
+      ],
+      "referenced_image_paths": [
+        "/workspace/scratch/37b119cd013c/v25-characters/assets/billy_re0hd_wolf_force_selected_v25.png",
+        "/workspace/scratch/37b119cd013c/v25-character-research/steam_381710_00.jpg",
+        "/workspace/scratch/37b119cd013c/v25-character-research/re0_faxagate_22.webp"
+      ],
+      "prompt": "Use case: style-transfer. Asset type: one full-body character-selection key for Resident Evil Combat.\nEdit target: image 1 is the already-generated SELECTED key. Images 2 and 3 are native game costume references only. Change only the requested modest gesture and necessary cloth folds. Keep the EXACT same adult face, hair, body proportions, costume, rendering style, anatomical equipment sides, light and palette as image 1.\nFRAMING LOCK: retain the portrait 1024 x 1536 canvas and current camera distance, figure size, head height and lowest boot baseline of image 1. Do not zoom in, crop or enlarge the subject. Keep the whole head, all fingers, all equipment and both boot soles inside the image. One complete character, ONE still pose only. The same baseline and scale are needed to compare these keys.\nBACKGROUND: actual transparent alpha, matching the cutout in image 1. No visible background, floor, shadow, glow, aura, vignette, halo, UI, text, inset, frame, panel, second figure or animation sheet.\nPreserve all anatomical sides; do not mirror. BOTH HANDS REMAIN EMPTY except when making the specified contact with existing clothing or headset. Do not import the firearms or other subjects from the native costume-reference screenshots. This is a project menu adaptation, not a claim that the source game used this exact gesture.\nSubject: adult Billy Coen, Resident Evil Zero HD Remaster (2016), official Costume Pack 1 Wolf Force costume. Preserve slicked-back brown hair, visor over anatomical RIGHT eye and olive headset, open-chest olive webbing harness with native silver upper-chest connector, five compact olive cylinders on anatomical RIGHT shoulder strap, two large cylinders/pouches at anatomical RIGHT hip, small pouch at anatomical LEFT hip, blue-gray camouflage cargo trousers, dark knee pads, dark boots, blue fingerless gauntlets with three pale bands at each wrist. Maintain the native asymmetry and original palette. No Prisoner tank top, handcuffs, chain, arm tattoo, extra firearm or newly designed armor. The promotional collage includes Rebecca: omit her completely.\nPose change: CONFIRMATION key. Keep Billy's planted legs, body scale and feet unchanged. Raise ONLY his anatomical LEFT hand (viewer-right) and lightly touch the anatomical LEFT headset earpiece with two gloved fingertips, as a brief calm acknowledgement. Keep his right hand lowered and empty, away from the right hip pouches. A small chin dip, composed expression, mouth closed. Keep the visor on the anatomical RIGHT eye and all five cylinders on the anatomical RIGHT shoulder. No salute, cheering, firearm, fist punch, extra headset piece or new accessory.",
+      "observed_pose": "Deux doigts de la main gauche anatomique touchent l’oreillette gauche, menton abaissé ; main droite baissée.",
+      "pose_requirement_pass": true,
+      "visual_review": "Author inspection of all six outputs, two generated V22 bases and four native references. Independent review is separate.",
+      "limitations": [
+        "Clé fixe adaptée pour le projet ; aucune animation de sélection officielle du jeu source n’est revendiquée.",
+        "Les six sorties restent des candidats. Fidélité canonique 1:1, cycle animé complet et admission moteur ne sont pas certifiés.",
+        "Les marges verticales n’atteignent pas 10 % ni la cible initiale de 12 %. Les clés suivantes conservent volontairement le cadrage du selected pour limiter la dérive entre états.",
+        "Alpha natif [0,254] préservé. Des traces très faibles à alpha 1–15 s’étendent au-delà de la silhouette ; contrôler franges, prémultiplication et fond réel avant intégration.",
+        "Les bases V22 et ces clés gardent les mains vides ; les armes visibles dans les captures natives servent au contexte source et ne sont pas reproduites. Aucun tir ni geste armé n’est validé.",
+        "Détails du visage, du camouflage, des coutures, des mains et des petits accessoires réinterprétés ; comparaison à taille de moteur nécessaire.",
+        "Les plis, la forme du gant et le microphone varient légèrement avec la pose.",
+        "Cinq volumes cylindriques principaux restent visibles à l’épaule droite ; la lèvre/sangle supérieure et les formes de fixation varient et ne doivent pas être comptées comme un sixième cylindre.",
+        "Le microphone hérité du candidat V22 et les petits détails du casque ne sont pas recertifiés par une vue native rapprochée complète."
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "pixels_modified_after_generation": false,
+      "native_image_gen_output_preserved": true
+    },
+    {
+      "asset_id": "REC_BILLY_RE0HD_WOLF_FORCE_DESELECT_KEY_V25",
+      "path": "assets/billy_re0hd_wolf_force_deselect_v25.png",
+      "file_bytes": 1658506,
+      "sha256": "0becca8eee9603f5a294a8efcfcbf84fe6ffc26d04f9690ddb5309dc0b618798",
+      "git_blob_sha": "5fb16ea7d45d7c33527753c69f02e105d4ff6479",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "fully_transparent_pixels": 1194724,
+      "partially_transparent_pixels": 378140,
+      "opaque_pixels": 0,
+      "bbox_alpha_thresholds": {
+        "1": [
+          41,
+          34,
+          1010,
+          1536
+        ],
+        "16": [
+          256,
+          147,
+          766,
+          1449
+        ],
+        "128": [
+          257,
+          149,
+          765,
+          1448
+        ]
+      },
+      "margin_px_ge128": [
+        257,
+        149,
+        259,
+        88
+      ],
+      "margin_pct_ge128": [
+        25.098,
+        9.701,
+        25.293,
+        5.729
+      ],
+      "minimum_margin_10_percent_pass": false,
+      "minimum_margin_12_percent_pass": false,
+      "baseline_y_ge128_exclusive": 1448,
+      "subject_height_px_ge128": 1299,
+      "copied_native_bytes_match": true,
+      "name": "Billy Coen",
+      "edition": "Resident Evil Zero HD Remaster (2016), Costume Pack 1, Wolf Force",
+      "costume": "Wolf Force",
+      "catalogue_id": "COST_AUDIT_BILLY_WOLF_FORCE",
+      "state": "deselect",
+      "status": "animation_key_candidate",
+      "base_asset_id": "billy_re0hd_wolf_force_front",
+      "base_repository_path": "production-archives/rec-media/v22/assets/billy_re0hd_wolf_force_front.png",
+      "seed_asset_id": "REC_BILLY_RE0HD_WOLF_FORCE_SELECTED_KEY_V25",
+      "sources": [
+        {
+          "input_id": "billy_v22_base",
+          "source_page": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/226fbba85ef7d9b248974eee8c455ec01cee95d4/production-archives/rec-media/v22/assets/billy_re0hd_wolf_force_front.png",
+          "image_url": null,
+          "sha256": "67df48af91c7e79b1ba15f8ffb210ceeb9facac0d7e03ce9b35a94e519c82a52",
+          "path": "/workspace/scratch/37b119cd013c/v25-character-research/billy_re0hd_wolf_force_front.png",
+          "role": "generated_V22_full_body_edit_base_not_native_pixels"
+        },
+        {
+          "input_id": "billy_official",
+          "source_page": "https://store.steampowered.com/app/381710/",
+          "image_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/381710/ss_a328865b12144b46243fc4a3705c187fb71e17e9.1920x1080.jpg?t=1702541116",
+          "sha256": "745e8dc2a4132656c62a1d39d40ee441ae5097a2030f327db1dd7231333d03d9",
+          "path": "/workspace/scratch/37b119cd013c/v25-character-research/steam_381710_00.jpg",
+          "role": "official_costume_upper_body_reference"
+        },
+        {
+          "input_id": "billy_native_full_body",
+          "source_page": "https://www.faxagate.com/en/gaming/resident-evil-0-costumes",
+          "image_url": "https://www.faxagate.com/resources/-/gaming/resident-evil-0-costumes/cp1-billy-wolf-force.webp",
+          "sha256": "4a2aa2052ee9a7da9deb5bee2654e5579e6a39d62663e234ae030ad5320a8ed3",
+          "path": "/workspace/scratch/37b119cd013c/v25-character-research/re0_faxagate_22.webp",
+          "role": "native_full_body_costume_reference_reproduced_by_secondary_source"
+        }
+      ],
+      "referenced_image_paths": [
+        "/workspace/scratch/37b119cd013c/v25-characters/assets/billy_re0hd_wolf_force_selected_v25.png",
+        "/workspace/scratch/37b119cd013c/v25-character-research/steam_381710_00.jpg",
+        "/workspace/scratch/37b119cd013c/v25-character-research/re0_faxagate_22.webp"
+      ],
+      "prompt": "Use case: style-transfer. Asset type: one full-body character-selection key for Resident Evil Combat.\nEdit target: image 1 is the already-generated SELECTED key. Images 2 and 3 are native game costume references only. Change only the requested modest gesture and necessary cloth folds. Keep the EXACT same adult face, hair, body proportions, costume, rendering style, anatomical equipment sides, light and palette as image 1.\nFRAMING LOCK: retain the portrait 1024 x 1536 canvas and current camera distance, figure size, head height and lowest boot baseline of image 1. Do not zoom in, crop or enlarge the subject. Keep the whole head, all fingers, all equipment and both boot soles inside the image. One complete character, ONE still pose only. The same baseline and scale are needed to compare these keys.\nBACKGROUND: actual transparent alpha, matching the cutout in image 1. No visible background, floor, shadow, glow, aura, vignette, halo, UI, text, inset, frame, panel, second figure or animation sheet.\nPreserve all anatomical sides; do not mirror. BOTH HANDS REMAIN EMPTY except when making the specified contact with existing clothing or headset. Do not import the firearms or other subjects from the native costume-reference screenshots. This is a project menu adaptation, not a claim that the source game used this exact gesture.\nSubject: adult Billy Coen, Resident Evil Zero HD Remaster (2016), official Costume Pack 1 Wolf Force costume. Preserve slicked-back brown hair, visor over anatomical RIGHT eye and olive headset, open-chest olive webbing harness with native silver upper-chest connector, five compact olive cylinders on anatomical RIGHT shoulder strap, two large cylinders/pouches at anatomical RIGHT hip, small pouch at anatomical LEFT hip, blue-gray camouflage cargo trousers, dark knee pads, dark boots, blue fingerless gauntlets with three pale bands at each wrist. Maintain the native asymmetry and original palette. No Prisoner tank top, handcuffs, chain, arm tattoo, extra firearm or newly designed armor. The promotional collage includes Rebecca: omit her completely.\nPose change: DESELECTION / return key. Lower both empty gloved hands naturally alongside the hips, distinctly away from the headset. Shift weight slightly onto the anatomical LEFT leg and draw the anatomical RIGHT boot just a little back without crossing the legs; keep the lowest planted sole at the same baseline. Turn the head and gaze clearly toward VIEWER-LEFT with a slight torso follow, while remaining mostly frontal and preserving visibility of the asymmetric front harness and right hip pouches. Mouth closed, quiet disengaging posture. No raised celebration arms, weapon, attack, mirror or dramatic back view.",
+      "observed_pose": "Bras baissés, tête nettement vers la gauche de l’image, léger changement d’appui.",
+      "pose_requirement_pass": true,
+      "visual_review": "Author inspection of all six outputs, two generated V22 bases and four native references. Independent review is separate.",
+      "limitations": [
+        "Clé fixe adaptée pour le projet ; aucune animation de sélection officielle du jeu source n’est revendiquée.",
+        "Les six sorties restent des candidats. Fidélité canonique 1:1, cycle animé complet et admission moteur ne sont pas certifiés.",
+        "Les marges verticales n’atteignent pas 10 % ni la cible initiale de 12 %. Les clés suivantes conservent volontairement le cadrage du selected pour limiter la dérive entre états.",
+        "Alpha natif [0,254] préservé. Des traces très faibles à alpha 1–15 s’étendent au-delà de la silhouette ; contrôler franges, prémultiplication et fond réel avant intégration.",
+        "Les bases V22 et ces clés gardent les mains vides ; les armes visibles dans les captures natives servent au contexte source et ne sont pas reproduites. Aucun tir ni geste armé n’est validé.",
+        "Détails du visage, du camouflage, des coutures, des mains et des petits accessoires réinterprétés ; comparaison à taille de moteur nécessaire.",
+        "La modification du pas reste faible et ne démontre aucune transition complète.",
+        "Cinq volumes cylindriques principaux restent visibles à l’épaule droite ; la lèvre/sangle supérieure et les formes de fixation varient et ne doivent pas être comptées comme un sixième cylindre.",
+        "Le microphone hérité du candidat V22 et les petits détails du casque ne sont pas recertifiés par une vue native rapprochée complète."
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "pixels_modified_after_generation": false,
+      "native_image_gen_output_preserved": true
+    }
+  ],
+  "engine_admitted": false,
+  "animation_complete": false,
+  "canonical_fidelity_1_1_certified": false,
+  "note": "A separate parent-directed correction may supersede the original Claire deselect. This author lot preserves its six original PNG and measurements; no corrected result is claimed here."
+}

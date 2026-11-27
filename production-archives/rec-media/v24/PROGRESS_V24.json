@@ -1,0 +1,1796 @@
+{
+  "schema": "rec-v24-progress-1",
+  "project": "Resident Evil Combat / B.O.W. Protocol",
+  "date": "2026-11-27",
+  "timezone": "Etc/UTC",
+  "repository": "darknigthmare/resident-evil-bow-protocol",
+  "branch": "chore/rec-media-v19-v20-20261121",
+  "base_commit": "246dbb81752c5fa41a55deb3aada3941ac966fec",
+  "pull_request": 24,
+  "scope": "Consolidation des preuves V22, V23 et des quatre manifestes V24. Nouveaux états de deux incarnations humaines et de trois incarnations de créatures déjà présentes ; aucun nouveau personnage complet.",
+  "path_conventions": {
+    "default": "Chemins relatifs à la racine du dépôt.",
+    "source_hashes": "Instantané des documents lus pour cette consolidation ; aucune réécriture des sources."
+  },
+  "counting_rules": {
+    "global_remaining_count": null,
+    "global_completion_percentage": null,
+    "reason": "Les UID, fiches, variantes, actions, spécifications, vues et PNG sont des unités qui se recoupent. Aucun total global déduit par addition ou soustraction.",
+    "sixty_extensions_scope": "60 propositions d’incarnations de roster dans V1 ; distinctes des deux extensions documentaires de la bible.",
+    "candidate_definition": "Fichier réel conservé pour qualification ; ne certifie ni reproduction canonique 1:1, ni animation complète, ni admission moteur.",
+    "superseded_trial_definition": "Original conservé comme preuve de production, exclu des candidats actifs.",
+    "source_hold_scope": "Référence requise pour une partie/édition précise ; ne démontre pas l’absence de tout média historique.",
+    "nonadditive_stage_specs": "Les 24 spécifications V1 ne s’ajoutent pas aux 52 entrées de décors."
+  },
+  "domains": {
+    "stages": {
+      "catalogue_entries": 52,
+      "unit": "entrée de décor",
+      "v22_runtime_snapshot": {
+        "entries_with_bitmap": 36,
+        "entries_without_bitmap": 16,
+        "distinct_bitmap_files": 9
+      },
+      "v22_focused_audit_entries": 36,
+      "v22_focused_decisions": {
+        "candidate_produced": 18,
+        "SOURCE_HOLD": 14,
+        "ARCHIVE_RECOVERY_HOLD": 3,
+        "EXISTING_V21_CANDIDATE_REUSE_REVIEW": 1
+      },
+      "v24_candidate_plates": 3,
+      "new_runtime_admissions": 0,
+      "v1_specifications_nonadditive": 24,
+      "scope_note": "Les 36 entrées avec bitmap réutilisent 9 fichiers ; ces nombres ne mesurent pas des décors fidèles terminés."
+    },
+    "bow": {
+      "catalogue_uids": 346,
+      "unit": "UID de créature",
+      "v22_status_counts": {
+        "historique_conserve": 217,
+        "reference_a_reunir": 109,
+        "candidat_statique_produit": 15,
+        "refus_outil_sans_png": 5
+      },
+      "source_holds_v22": 105,
+      "recovery_holds_v22": 4,
+      "v22_static_candidate_uids": 15,
+      "v24_existing_uids_with_new_states": 3,
+      "v24_new_identities": 0,
+      "v24_source_holds_closed": 0
+    },
+    "heroes": {
+      "finishing_sheets": 24,
+      "unit": "fiche de finition d’une incarnation",
+      "v23_existing_incarnations_with_menu_keys": 3,
+      "v24_existing_incarnations_with_menu_keys": 2,
+      "v23_v24_distinct_incarnations_with_menu_keys": 5,
+      "v23_v24_candidate_menu_keys": 15,
+      "complete_animations": 0,
+      "new_identities": 0
+    },
+    "costumes": {
+      "targeted_variants": 38,
+      "unit": "variante ciblée",
+      "v22_status_counts": {
+        "existing_v21_not_regenerated": 1,
+        "new_static_candidate": 28,
+        "new_tool_refusal_not_retried": 7,
+        "historical_refusal_left_preserved_not_retried": 1,
+        "base_incarnation_overlap_not_regenerated": 1
+      },
+      "v22_main_candidate_png": 28,
+      "v22_fandesign_annex_candidates_separate": 4,
+      "v24_new_costume_variants": 0,
+      "franchise_exhaustive": false
+    },
+    "projectiles_vfx": {
+      "v1_actions": 44,
+      "families": 16,
+      "unit": "action V1 et famille de travail",
+      "v24_actions_receiving_partial_keys": 1,
+      "v24_action_candidate_keys": 3,
+      "v24_additional_arsenal_candidate_keys_outside_v1_actions": 2,
+      "v24_completed_actions": 0,
+      "completed_families": 0,
+      "all_44_action_closures_unproven": true
+    },
+    "roster_extensions": {
+      "candidate_proposals": 60,
+      "unit": "proposition d’incarnation à réconcilier",
+      "confirmed_new_identities_v24": 0,
+      "absence_globale_confirmee": false
+    },
+    "stage_specifications_v1": {
+      "specifications": 24,
+      "unit": "spécification à raccorder aux décors",
+      "additive_to_52_stage_catalogue": false,
+      "new_specifications_v24": 0
+    }
+  },
+  "v24_delivery": {
+    "png": 23,
+    "candidates": 20,
+    "superseded_trials": 3,
+    "by_category": {
+      "characters": {
+        "png": 6,
+        "candidates": 6,
+        "superseded_trials": 0
+      },
+      "creatures": {
+        "png": 8,
+        "candidates": 6,
+        "superseded_trials": 2
+      },
+      "projectiles": {
+        "png": 6,
+        "candidates": 5,
+        "superseded_trials": 1
+      },
+      "stages": {
+        "png": 3,
+        "candidates": 3,
+        "superseded_trials": 0
+      }
+    },
+    "native_png_bytes": 27633565,
+    "new_human_identities": 0,
+    "new_creature_identities": 0,
+    "complete_animations": 0,
+    "engine_admissions": 0,
+    "completed_v1_actions": 0,
+    "canonical_fidelity_1_1_certifications": 0,
+    "new_tool_refusals": 0,
+    "historical_refusal_retries": 0,
+    "all_requested_content_complete": false,
+    "publication_state": "Prepared evidence snapshot; publication and remote CI are managed separately by the parent. No merge or deployment claimed."
+  },
+  "character_progress": [
+    {
+      "hero_id": "REC_HELENA_RE6",
+      "name": "Helena Harper",
+      "v1_sheet_edition": "Resident Evil 6 (2012)",
+      "produced_edition": "Resident Evil 6 (2012), tenue promotionnelle de janvier 2012",
+      "edition_key": "re6_2012_agent_promo201201",
+      "costume": "agent promo janvier 2012",
+      "v22_status": "candidat_statique_produit",
+      "v22_base_path": "production-archives/rec-media/v22/assets/REC_HELENA_RE6_BASE_FULLBODY_FRONT_V22_01.png",
+      "states": [
+        {
+          "state": "selected",
+          "asset_id": "REC_HELENA_RE6_SELECTED_KEY_V24",
+          "status": "animation_key_candidate",
+          "path": "production-archives/rec-media/v24/characters/assets/helena_re6_agent_selected_v24.png"
+        },
+        {
+          "state": "confirm",
+          "asset_id": "REC_HELENA_RE6_CONFIRM_KEY_V24",
+          "status": "animation_key_candidate",
+          "path": "production-archives/rec-media/v24/characters/assets/helena_re6_agent_confirm_v24.png"
+        },
+        {
+          "state": "deselect",
+          "asset_id": "REC_HELENA_RE6_DESELECT_KEY_V24",
+          "status": "animation_key_candidate",
+          "path": "production-archives/rec-media/v24/characters/assets/helena_re6_agent_deselect_v24.png"
+        }
+      ],
+      "new_identity": false,
+      "v1_actions": [],
+      "complete_animation": false,
+      "engine_admitted": false
+    },
+    {
+      "hero_id": "REC_ADA_RE4R",
+      "name": "Ada Wong",
+      "v1_sheet_edition": "Resident Evil 4 remake Separate Ways (2023)",
+      "produced_edition": "Resident Evil 4 remake Separate Ways (2023)",
+      "edition_key": "re4r_2023_separate_ways_default",
+      "costume": "DEFAULT",
+      "v22_status": "candidat_statique_produit",
+      "v22_base_path": "production-archives/rec-media/v22/assets/REC_ADA_RE4R_SW_DEFAULT_FULLBODY_FRONT_V22_01.png",
+      "states": [
+        {
+          "state": "selected",
+          "asset_id": "REC_ADA_RE4R_SW_DEFAULT_SELECTED_KEY_V24",
+          "status": "animation_key_candidate",
+          "path": "production-archives/rec-media/v24/characters/assets/ada_re4r_sw_default_selected_v24.png"
+        },
+        {
+          "state": "confirm",
+          "asset_id": "REC_ADA_RE4R_SW_DEFAULT_CONFIRM_KEY_V24",
+          "status": "animation_key_candidate",
+          "path": "production-archives/rec-media/v24/characters/assets/ada_re4r_sw_default_confirm_v24.png"
+        },
+        {
+          "state": "deselect",
+          "asset_id": "REC_ADA_RE4R_SW_DEFAULT_DESELECT_KEY_V24",
+          "status": "animation_key_candidate",
+          "path": "production-archives/rec-media/v24/characters/assets/ada_re4r_sw_default_deselect_v24.png"
+        }
+      ],
+      "new_identity": false,
+      "v1_actions": [],
+      "complete_animation": false,
+      "engine_admitted": false
+    }
+  ],
+  "creature_progress": [
+    {
+      "uid": "re5-kipepeo",
+      "name": "Kipepeo",
+      "edition": "Resident Evil 5 (2009)",
+      "v22_status": "candidat_statique_produit",
+      "v22_base_path": "production-archives/rec-media/v22/assets/re5_kipepeo_full_flying3q_v22.png",
+      "new_identity": false,
+      "source_hold_closed": false,
+      "candidate_states": [
+        {
+          "state": "hover_upstroke_key",
+          "asset_id": "re5_kipepeo_hover_upstroke_v24",
+          "status": "animation_key_candidate",
+          "path": "production-archives/rec-media/v24/creatures/assets/re5_kipepeo_hover_upstroke_v24.png"
+        },
+        {
+          "state": "hover_downstroke_key",
+          "asset_id": "re5_kipepeo_hover_downstroke_v24",
+          "status": "animation_key_candidate",
+          "path": "production-archives/rec-media/v24/creatures/assets/re5_kipepeo_hover_downstroke_v24.png"
+        }
+      ],
+      "superseded_trials": [],
+      "v1_actions": [],
+      "complete_animation": false,
+      "engine_admitted": false
+    },
+    {
+      "uid": "re4r-novistador",
+      "name": "Novistador",
+      "edition": "Resident Evil 4 remake (2023)",
+      "v22_status": "candidat_statique_produit",
+      "v22_base_path": "production-archives/rec-media/v22/assets/re4r_novistador_full_flying_front3q_v22.png",
+      "new_identity": false,
+      "source_hold_closed": false,
+      "candidate_states": [
+        {
+          "state": "hover_downstroke_key",
+          "asset_id": "re4r_novistador_wingbeat_down_v24",
+          "status": "animation_key_candidate",
+          "path": "production-archives/rec-media/v24/creatures/assets/re4r_novistador_wingbeat_down_v24.png"
+        },
+        {
+          "state": "hover_upstroke_key",
+          "asset_id": "re4r_novistador_wingbeat_up_corrected_v24",
+          "status": "animation_key_candidate",
+          "path": "production-archives/rec-media/v24/creatures/assets/re4r_novistador_wingbeat_up_corrected_v24.png"
+        }
+      ],
+      "superseded_trials": [
+        {
+          "state": "hover_upstroke_key",
+          "asset_id": "re4r_novistador_wingbeat_up_v24",
+          "status": "superseded_trial",
+          "path": "production-archives/rec-media/v24/creatures/assets/re4r_novistador_wingbeat_up_v24.png",
+          "superseded_by": "production-archives/rec-media/v24/creatures/assets/re4r_novistador_wingbeat_up_corrected_v24.png"
+        }
+      ],
+      "v1_actions": [],
+      "complete_animation": false,
+      "engine_admitted": false
+    },
+    {
+      "uid": "rerev2-giant-whip-spider",
+      "name": "Giant Whip Spider",
+      "edition": "Resident Evil Revelations 2 (2015)",
+      "v22_status": "candidat_statique_produit",
+      "v22_base_path": "production-archives/rec-media/v22/assets/rerev2_giant_whip_spider_full_front3q_v22.png",
+      "new_identity": false,
+      "source_hold_closed": false,
+      "candidate_states": [
+        {
+          "state": "ready_low_key",
+          "asset_id": "rev2_giant_whip_spider_ready_clean_v24",
+          "status": "animation_key_candidate",
+          "path": "production-archives/rec-media/v24/creatures/assets/rev2_giant_whip_spider_ready_clean_v24.png"
+        },
+        {
+          "state": "forward_step_key",
+          "asset_id": "rev2_giant_whip_spider_step_v24",
+          "status": "animation_key_candidate",
+          "path": "production-archives/rec-media/v24/creatures/assets/rev2_giant_whip_spider_step_v24.png"
+        }
+      ],
+      "superseded_trials": [
+        {
+          "state": "ready_low_key",
+          "asset_id": "rev2_giant_whip_spider_ready_v24",
+          "status": "superseded_trial",
+          "path": "production-archives/rec-media/v24/creatures/assets/rev2_giant_whip_spider_ready_v24.png",
+          "superseded_by": "production-archives/rec-media/v24/creatures/assets/rev2_giant_whip_spider_ready_clean_v24.png"
+        }
+      ],
+      "v1_actions": [],
+      "complete_animation": false,
+      "engine_admitted": false
+    }
+  ],
+  "stage_progress": [
+    {
+      "runtime_target": "spencer_lab",
+      "name": "Laboratoire Arklay — Tyrant Room, caméra basse",
+      "edition": "Resident Evil HD Remaster (2015)",
+      "v1_spec_id": "STG_ARKLAY_LAB",
+      "v22_status": "SOURCE_HOLD",
+      "v22_focused_audit_status": "SOURCE_HOLD",
+      "v24_status": "CANDIDATE_FIDELITY_REVIEW_REQUIRED",
+      "asset_id": "REC_STAGE_RE1HD_TYRANT_ROOM_MASTER_V24_01",
+      "path": "production-archives/rec-media/v24/stages/assets/REC_STAGE_RE1HD_TYRANT_ROOM_MASTER_V24_01.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "runtime_bitmap_replaced": false,
+      "canonical_fidelity_1_1_certified": false,
+      "engine_admitted": false,
+      "parallax_complete": false,
+      "native_uhd": false,
+      "unresolved_differences": [
+        "La banque de consoles et le sol sous le Tyrant sont reconstruits : aucune preuve indépendante de leur disposition exacte.",
+        "Cadrage, plafond, textures, reflets et petits affichages régénérés ; la comparaison ne permet pas une égalité pixel à pixel.",
+        "La largeur jouable et les occlusions de la vue inclinée ne sont pas évaluées en combat."
+      ]
+    },
+    {
+      "runtime_target": "raccoon_street",
+      "name": "Shopping Plaza — façade Moon’s Donuts",
+      "edition": "Resident Evil 3 Remake (2020)",
+      "v1_spec_id": "STG_RC_STREET",
+      "v22_status": "SOURCE_HOLD",
+      "v22_focused_audit_status": "SOURCE_HOLD",
+      "v24_status": "CANDIDATE_FIDELITY_REVIEW_REQUIRED",
+      "asset_id": "REC_STAGE_RE3R_SHOPPING_PLAZA_MOONS_MASTER_V24_01",
+      "path": "production-archives/rec-media/v24/stages/assets/REC_STAGE_RE3R_SHOPPING_PLAZA_MOONS_MASTER_V24_01.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "runtime_bitmap_replaced": false,
+      "canonical_fidelity_1_1_certified": false,
+      "engine_admitted": false,
+      "parallax_complete": false,
+      "native_uhd": false,
+      "unresolved_differences": [
+        "La grande zone gauche cachée par Jill devient une terrasse détaillée avec chaises, tables, lampes et végétation. Ces détails ne sont pas prouvés par la capture.",
+        "La distribution exacte des débris et du mobilier droit est modifiée ; éclairage et reflets sont reconstruits.",
+        "Le cadrage coupe le sommet de l’enseigne comme la référence. Le périmètre est Shopping Plaza, pas Business Street."
+      ]
+    },
+    {
+      "runtime_target": "village_lake_2023",
+      "name": "Lac Del Lago — berge montagneuse au crépuscule",
+      "edition": "Resident Evil 4 Remake (2023), PC",
+      "v1_spec_id": null,
+      "v22_status": "SOURCE_HOLD",
+      "v22_focused_audit_status": "SOURCE_HOLD",
+      "v24_status": "CANDIDATE_FIDELITY_REVIEW_REQUIRED",
+      "asset_id": "REC_STAGE_RE4R_DEL_LAGO_LAKE_MASTER_V24_01",
+      "path": "production-archives/rec-media/v24/stages/assets/REC_STAGE_RE4R_DEL_LAGO_LAKE_MASTER_V24_01.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "runtime_bitmap_replaced": false,
+      "canonical_fidelity_1_1_certified": false,
+      "engine_admitted": false,
+      "parallax_complete": false,
+      "native_uhd": false,
+      "unresolved_differences": [
+        "L’eau masquée par le bateau et les grands remous est entièrement reconstruite en surface calme.",
+        "Densité des arbres, petites roches, contours fins et luminosité régénérés ; aucune topologie complète du lac déduite.",
+        "Un arrière-plan aquatique seul ne fournit pas un sol de combat ni une arène jouable."
+      ]
+    }
+  ],
+  "projectile_progress": {
+    "partial_action_id": "REC_REBECCA_RE0__SP2",
+    "partial_family_id": "OBJ_BOUTEILLE_INCENDIAIRE",
+    "candidate_asset_ids": [
+      "REC_OBJ_RE0_MOLOTOV_UPRIGHT_V24",
+      "REC_OBJ_RE0_MOLOTOV_HORIZONTAL_V24",
+      "REC_OBJ_RE0_MOLOTOV_TURNING_V24"
+    ],
+    "states": [
+      "neck_up",
+      "neck_left",
+      "neck_lower_right"
+    ],
+    "edition": "Resident Evil Zero (2002 catalogue; platform of the pictured render unspecified)",
+    "related_ex_variant_not_completed": "REC_REBECCA_RE0__EX2",
+    "additional_arsenal": {
+      "object": "Carreau simple du Bolt Thrower de Leon",
+      "edition": "Resident Evil 4 Remake (2023)",
+      "candidate_asset_ids": [
+        "REC_OBJ_RE4R_BOLT_LEFT_CORRECTED_V24",
+        "REC_OBJ_RE4R_BOLT_ASCENDING_V24"
+      ],
+      "v1_actions": [],
+      "does_not_cover": [
+        "REC_ADA_RE4R__SP5",
+        "REC_KRAUSER_RE4R__SP4"
+      ]
+    },
+    "v1_action_inventory": {
+      "source": "production-archives/rec-media/v22/inventory/INVENTAIRE_COMPLET_V22_20261124.json",
+      "json_key": "projectile_actions",
+      "action_count": 44,
+      "action_ids": [
+        "REC_JILL_RE3R__SP1",
+        "REC_JILL_RE3R__SP4",
+        "REC_JILL_RE3R__SP5",
+        "REC_CHRIS_RE5__SP1",
+        "REC_CHRIS_RE5__SP4",
+        "REC_LEON_RE4R__SP1",
+        "REC_LEON_RE4R__SP5",
+        "REC_CLAIRE_RE2R__SP1",
+        "REC_CLAIRE_RE2R__SP2",
+        "REC_CLAIRE_RE2R__SP5",
+        "REC_REBECCA_RE0__SP1",
+        "REC_REBECCA_RE0__SP2",
+        "REC_BARRY_REV2__SP1",
+        "REC_BARRY_REV2__SP3",
+        "REC_BARRY_REV2__SP5",
+        "REC_ADA_RE4R__SP1",
+        "REC_ADA_RE4R__SP2",
+        "REC_ADA_RE4R__SP3",
+        "REC_ADA_RE4R__SP5",
+        "REC_HUNK_RE2R__SP1",
+        "REC_HUNK_RE2R__SP5",
+        "REC_CARLOS_RE3R__SP1",
+        "REC_CARLOS_RE3R__SP5",
+        "REC_SHEVA_RE5__SP1",
+        "REC_SHEVA_RE5__SP5",
+        "REC_SHERRY_RE6__SP1",
+        "REC_SHERRY_RE6__SP2",
+        "REC_SHERRY_RE6__SP5",
+        "REC_HELENA_RE6__SP1",
+        "REC_HELENA_RE6__SP2",
+        "REC_PIERS_RE6__SP1",
+        "REC_PIERS_RE6__SP2",
+        "REC_BILLY_RE0__SP1",
+        "REC_BILLY_RE0__SP5",
+        "REC_WESKER_RE5__SP4",
+        "REC_NEMESIS_RE3R__SP1",
+        "REC_HEISENBERG_RE8__SP1",
+        "REC_HEISENBERG_RE8__SP2",
+        "REC_HEISENBERG_RE8__SP5",
+        "REC_KRAUSER_RE4R__SP4",
+        "REC_ALEXIA_CVX__SP1",
+        "REC_ALEXIA_CVX__SP2",
+        "REC_ALEXIA_CVX__SP3",
+        "REC_ALEXIA_CVX__SP5"
+      ],
+      "v24_completed_actions": 0,
+      "v24_actions_with_no_new_asset_contribution": 43,
+      "partial_action_mapping": {
+        "action_id": "REC_REBECCA_RE0__SP2",
+        "name": "Bouteille de flamme",
+        "hero_id": "REC_REBECCA_RE0",
+        "edition": "Resident Evil 0 (2002, modèle HD de référence à verrouiller)",
+        "family_id": "OBJ_BOUTEILLE_INCENDIAIRE",
+        "related_ex_variant": "REC_REBECCA_RE0__EX2",
+        "v22_family_status": "partial_static_candidate",
+        "v24_status": "partial_orientation_candidates_added",
+        "v24_candidate_asset_ids": [
+          "REC_OBJ_RE0_MOLOTOV_UPRIGHT_V24",
+          "REC_OBJ_RE0_MOLOTOV_HORIZONTAL_V24",
+          "REC_OBJ_RE0_MOLOTOV_TURNING_V24"
+        ],
+        "action_complete": false,
+        "canonical_fidelity_1_1_certified": false,
+        "engine_admitted": false
+      },
+      "other_action_mappings_preserved_from_v22": true
+    },
+    "families": [
+      {
+        "family_id": "FX_BALISTIQUE",
+        "name": "Balles et effets de tir",
+        "action_count": 18,
+        "v22_status": "source_hold",
+        "v24_candidate_asset_ids": [],
+        "family_complete": false,
+        "refusal_asset_ids": []
+      },
+      {
+        "family_id": "FX_FUSIL",
+        "name": "Décharges de fusil",
+        "action_count": 4,
+        "v22_status": "source_hold",
+        "v24_candidate_asset_ids": [],
+        "family_complete": false,
+        "refusal_asset_ids": []
+      },
+      {
+        "family_id": "OBJ_GRENADE",
+        "name": "Grenades à explosion",
+        "action_count": 4,
+        "v22_status": "partial_candidate_and_refusal",
+        "v24_candidate_asset_ids": [],
+        "family_complete": false,
+        "refusal_asset_ids": [
+          "REC_OBJ_RE2R_HAND_GRENADE_V22"
+        ]
+      },
+      {
+        "family_id": "OBJ_GRENADE_INCENDIAIRE",
+        "name": "Grenades incendiaires",
+        "action_count": 1,
+        "v22_status": "source_hold",
+        "v24_candidate_asset_ids": [],
+        "family_complete": false,
+        "refusal_asset_ids": []
+      },
+      {
+        "family_id": "FX_ELECTRIQUE_PROJECTILE",
+        "name": "Projectile électrique de simulation",
+        "action_count": 1,
+        "v22_status": "simulation_and_source_hold",
+        "v24_candidate_asset_ids": [],
+        "family_complete": false,
+        "refusal_asset_ids": []
+      },
+      {
+        "family_id": "OBJ_BOUTEILLE_INCENDIAIRE",
+        "name": "Bouteilles incendiaires",
+        "action_count": 1,
+        "v22_status": "partial_static_candidate",
+        "v24_candidate_asset_ids": [
+          "REC_OBJ_RE0_MOLOTOV_UPRIGHT_V24",
+          "REC_OBJ_RE0_MOLOTOV_HORIZONTAL_V24",
+          "REC_OBJ_RE0_MOLOTOV_TURNING_V24"
+        ],
+        "family_complete": false,
+        "refusal_asset_ids": []
+      },
+      {
+        "family_id": "FX_LAMPE",
+        "name": "Éclat local de lampe",
+        "action_count": 1,
+        "v22_status": "simulation_and_source_hold",
+        "v24_candidate_asset_ids": [],
+        "family_complete": false,
+        "refusal_asset_ids": []
+      },
+      {
+        "family_id": "OBJ_GRAPPIN",
+        "name": "Grappin et câble",
+        "action_count": 2,
+        "v22_status": "source_hold",
+        "v24_candidate_asset_ids": [],
+        "family_complete": false,
+        "refusal_asset_ids": []
+      },
+      {
+        "family_id": "OBJ_CARREAU_EXPLOSIF",
+        "name": "Carreau explosif",
+        "action_count": 1,
+        "v22_status": "source_hold",
+        "v24_candidate_asset_ids": [],
+        "family_complete": false,
+        "refusal_asset_ids": []
+      },
+      {
+        "family_id": "FX_BATON_ELECTRIQUE",
+        "name": "Électricité de contact",
+        "action_count": 2,
+        "v22_status": "source_hold",
+        "v24_candidate_asset_ids": [],
+        "family_complete": false,
+        "refusal_asset_ids": []
+      },
+      {
+        "family_id": "OBJ_ROQUETTE",
+        "name": "Roquette",
+        "action_count": 1,
+        "v22_status": "source_hold",
+        "v24_candidate_asset_ids": [],
+        "family_complete": false,
+        "refusal_asset_ids": []
+      },
+      {
+        "family_id": "OBJ_FERRAILLE",
+        "name": "Ferraille projetée",
+        "action_count": 1,
+        "v22_status": "simulation_and_source_hold",
+        "v24_candidate_asset_ids": [],
+        "family_complete": false,
+        "refusal_asset_ids": []
+      },
+      {
+        "family_id": "FX_MAGNETIQUE",
+        "name": "Champ magnétique local",
+        "action_count": 1,
+        "v22_status": "simulation_and_source_hold",
+        "v24_candidate_asset_ids": [],
+        "family_complete": false,
+        "refusal_asset_ids": []
+      },
+      {
+        "family_id": "OBJ_MINE_FER",
+        "name": "Mine de fer de simulation",
+        "action_count": 1,
+        "v22_status": "simulation_and_source_hold",
+        "v24_candidate_asset_ids": [],
+        "family_complete": false,
+        "refusal_asset_ids": []
+      },
+      {
+        "family_id": "OBJ_FLECHE_EXPLOSIVE",
+        "name": "Flèche explosive",
+        "action_count": 1,
+        "v22_status": "source_hold",
+        "v24_candidate_asset_ids": [],
+        "family_complete": false,
+        "refusal_asset_ids": []
+      },
+      {
+        "family_id": "FX_FLAMMES_ALEXIA",
+        "name": "Feu réactif d’Alexia",
+        "action_count": 4,
+        "v22_status": "effect_study_only",
+        "v24_candidate_asset_ids": [],
+        "family_complete": false,
+        "refusal_asset_ids": []
+      }
+    ]
+  },
+  "assets": [
+    {
+      "asset_id": "REC_HELENA_RE6_SELECTED_KEY_V24",
+      "category": "characters",
+      "path": "production-archives/rec-media/v24/characters/assets/helena_re6_agent_selected_v24.png",
+      "name": "Helena Harper",
+      "edition": "Resident Evil 6 (2012), tenue promotionnelle de janvier 2012",
+      "state": "selected",
+      "status": "animation_key_candidate",
+      "candidate": true,
+      "bytes": 1332000,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "300d980080abd789bef71323a6c01101db59f1a23f88cb48ad5cd2c3b49af1aa",
+      "git_blob_sha": "8d7b1f80b0008bba95328574db0ccb8e2a59902e",
+      "manifest": "production-archives/rec-media/v24/characters/ASSET_MANIFEST_CHARACTERS_V24.json",
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "v1_actions": [],
+      "hero_id": "REC_HELENA_RE6",
+      "edition_key": "re6_2012_agent_promo201201",
+      "costume": "agent promo janvier 2012"
+    },
+    {
+      "asset_id": "REC_HELENA_RE6_CONFIRM_KEY_V24",
+      "category": "characters",
+      "path": "production-archives/rec-media/v24/characters/assets/helena_re6_agent_confirm_v24.png",
+      "name": "Helena Harper",
+      "edition": "Resident Evil 6 (2012), tenue promotionnelle de janvier 2012",
+      "state": "confirm",
+      "status": "animation_key_candidate",
+      "candidate": true,
+      "bytes": 1349693,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "a4456f13f4f25627716e8c43eebe29266853d6646a4bf40a2040648d2c165b13",
+      "git_blob_sha": "293b37a8a1459e5e3ae039ebf02ed10b1fb09b38",
+      "manifest": "production-archives/rec-media/v24/characters/ASSET_MANIFEST_CHARACTERS_V24.json",
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "v1_actions": [],
+      "hero_id": "REC_HELENA_RE6",
+      "edition_key": "re6_2012_agent_promo201201",
+      "costume": "agent promo janvier 2012"
+    },
+    {
+      "asset_id": "REC_HELENA_RE6_DESELECT_KEY_V24",
+      "category": "characters",
+      "path": "production-archives/rec-media/v24/characters/assets/helena_re6_agent_deselect_v24.png",
+      "name": "Helena Harper",
+      "edition": "Resident Evil 6 (2012), tenue promotionnelle de janvier 2012",
+      "state": "deselect",
+      "status": "animation_key_candidate",
+      "candidate": true,
+      "bytes": 1317630,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "7d570bbbdd12e086cf5ffeb203c4b629d8acf289853c556341bc05d22d05ae89",
+      "git_blob_sha": "610ec8d5e0a39c81718ad92b48e5731105b95bf7",
+      "manifest": "production-archives/rec-media/v24/characters/ASSET_MANIFEST_CHARACTERS_V24.json",
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "v1_actions": [],
+      "hero_id": "REC_HELENA_RE6",
+      "edition_key": "re6_2012_agent_promo201201",
+      "costume": "agent promo janvier 2012"
+    },
+    {
+      "asset_id": "REC_ADA_RE4R_SW_DEFAULT_SELECTED_KEY_V24",
+      "category": "characters",
+      "path": "production-archives/rec-media/v24/characters/assets/ada_re4r_sw_default_selected_v24.png",
+      "name": "Ada Wong",
+      "edition": "Resident Evil 4 remake Separate Ways (2023)",
+      "state": "selected",
+      "status": "animation_key_candidate",
+      "candidate": true,
+      "bytes": 1349544,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "566ab97ded17e9b89761a3b17319a05c02eb00deccbf8269e313f6c99d8fe92f",
+      "git_blob_sha": "dbebacc136589439fd629b14871eabab32fc3b40",
+      "manifest": "production-archives/rec-media/v24/characters/ASSET_MANIFEST_CHARACTERS_V24.json",
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "v1_actions": [],
+      "hero_id": "REC_ADA_RE4R",
+      "edition_key": "re4r_2023_separate_ways_default",
+      "costume": "DEFAULT"
+    },
+    {
+      "asset_id": "REC_ADA_RE4R_SW_DEFAULT_CONFIRM_KEY_V24",
+      "category": "characters",
+      "path": "production-archives/rec-media/v24/characters/assets/ada_re4r_sw_default_confirm_v24.png",
+      "name": "Ada Wong",
+      "edition": "Resident Evil 4 remake Separate Ways (2023)",
+      "state": "confirm",
+      "status": "animation_key_candidate",
+      "candidate": true,
+      "bytes": 1330872,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "d617be46d3406ee252d75ca69675f82e3d3464b1a6ff46c6edbc4ce844a8be15",
+      "git_blob_sha": "c5711049a924926408182c1bdc360c15b135718e",
+      "manifest": "production-archives/rec-media/v24/characters/ASSET_MANIFEST_CHARACTERS_V24.json",
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "v1_actions": [],
+      "hero_id": "REC_ADA_RE4R",
+      "edition_key": "re4r_2023_separate_ways_default",
+      "costume": "DEFAULT"
+    },
+    {
+      "asset_id": "REC_ADA_RE4R_SW_DEFAULT_DESELECT_KEY_V24",
+      "category": "characters",
+      "path": "production-archives/rec-media/v24/characters/assets/ada_re4r_sw_default_deselect_v24.png",
+      "name": "Ada Wong",
+      "edition": "Resident Evil 4 remake Separate Ways (2023)",
+      "state": "deselect",
+      "status": "animation_key_candidate",
+      "candidate": true,
+      "bytes": 1315733,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "1243adf8a5856a6c4092f0fede65e32c06cd7ec67c00bb457d9f3e60f6e2dcf0",
+      "git_blob_sha": "9e344328cf5c9f34ed6bce2d809b4660caf579c5",
+      "manifest": "production-archives/rec-media/v24/characters/ASSET_MANIFEST_CHARACTERS_V24.json",
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "v1_actions": [],
+      "hero_id": "REC_ADA_RE4R",
+      "edition_key": "re4r_2023_separate_ways_default",
+      "costume": "DEFAULT"
+    },
+    {
+      "asset_id": "re5_kipepeo_hover_upstroke_v24",
+      "category": "creatures",
+      "path": "production-archives/rec-media/v24/creatures/assets/re5_kipepeo_hover_upstroke_v24.png",
+      "name": "Kipepeo",
+      "edition": "Resident Evil 5 (2009)",
+      "state": "hover_upstroke_key",
+      "status": "animation_key_candidate",
+      "candidate": true,
+      "bytes": 965678,
+      "dimensions": [
+        1206,
+        1305
+      ],
+      "sha256": "518b5a8ca0ee6bbac0092d1cec102dd99fe902528f9268b54c50afd3e8863a8e",
+      "git_blob_sha": "3a134acbb7060dcfd85e70fb536d65a69ead32fd",
+      "manifest": "production-archives/rec-media/v24/creatures/manifest.json",
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "v1_actions": [],
+      "uid": "re5-kipepeo"
+    },
+    {
+      "asset_id": "re4r_novistador_wingbeat_down_v24",
+      "category": "creatures",
+      "path": "production-archives/rec-media/v24/creatures/assets/re4r_novistador_wingbeat_down_v24.png",
+      "name": "Novistador",
+      "edition": "Resident Evil 4 remake (2023)",
+      "state": "hover_downstroke_key",
+      "status": "animation_key_candidate",
+      "candidate": true,
+      "bytes": 781581,
+      "dimensions": [
+        1334,
+        1179
+      ],
+      "sha256": "866d1da40d1abf0b56348e444b51bdf6a81cc540b257853437a701ac982d3ce7",
+      "git_blob_sha": "5557a57fba36c0a071987e3c4cd16bb7928cfe2f",
+      "manifest": "production-archives/rec-media/v24/creatures/manifest.json",
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "v1_actions": [],
+      "uid": "re4r-novistador"
+    },
+    {
+      "asset_id": "rev2_giant_whip_spider_ready_v24",
+      "category": "creatures",
+      "path": "production-archives/rec-media/v24/creatures/assets/rev2_giant_whip_spider_ready_v24.png",
+      "name": "Giant Whip Spider",
+      "edition": "Resident Evil Revelations 2 (2015)",
+      "state": "ready_low_key",
+      "status": "superseded_trial",
+      "candidate": false,
+      "bytes": 1368543,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "36e9dd8d61f4da11a747d4ecd7da91bfc49534ecf563c1da052948390948036d",
+      "git_blob_sha": "cf39685dfeeb4a8d948ba7d2e990452af2b01bf3",
+      "manifest": "production-archives/rec-media/v24/creatures/manifest.json",
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "v1_actions": [],
+      "uid": "rerev2-giant-whip-spider",
+      "superseded_by": "production-archives/rec-media/v24/creatures/assets/rev2_giant_whip_spider_ready_clean_v24.png"
+    },
+    {
+      "asset_id": "re5_kipepeo_hover_downstroke_v24",
+      "category": "creatures",
+      "path": "production-archives/rec-media/v24/creatures/assets/re5_kipepeo_hover_downstroke_v24.png",
+      "name": "Kipepeo",
+      "edition": "Resident Evil 5 (2009)",
+      "state": "hover_downstroke_key",
+      "status": "animation_key_candidate",
+      "candidate": true,
+      "bytes": 988606,
+      "dimensions": [
+        1316,
+        1195
+      ],
+      "sha256": "f1f69b2ed68846d4e70dda5a5d1ffa6d9650244e04e7c207e27152d0e31af5bf",
+      "git_blob_sha": "796b3d4a4bc79c173cd25a42c9a1598cef554504",
+      "manifest": "production-archives/rec-media/v24/creatures/manifest.json",
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "v1_actions": [],
+      "uid": "re5-kipepeo"
+    },
+    {
+      "asset_id": "re4r_novistador_wingbeat_up_v24",
+      "category": "creatures",
+      "path": "production-archives/rec-media/v24/creatures/assets/re4r_novistador_wingbeat_up_v24.png",
+      "name": "Novistador",
+      "edition": "Resident Evil 4 remake (2023)",
+      "state": "hover_upstroke_key",
+      "status": "superseded_trial",
+      "candidate": false,
+      "bytes": 750110,
+      "dimensions": [
+        1334,
+        1179
+      ],
+      "sha256": "23dfe2c54ab6a00374a05603868282a5288a99a48f3eec89bcc20b69dc4f1a6b",
+      "git_blob_sha": "9d0abe5b1278d4f872977e0f5bebaf730fafad49",
+      "manifest": "production-archives/rec-media/v24/creatures/manifest.json",
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "v1_actions": [],
+      "uid": "re4r-novistador",
+      "superseded_by": "production-archives/rec-media/v24/creatures/assets/re4r_novistador_wingbeat_up_corrected_v24.png"
+    },
+    {
+      "asset_id": "rev2_giant_whip_spider_ready_clean_v24",
+      "category": "creatures",
+      "path": "production-archives/rec-media/v24/creatures/assets/rev2_giant_whip_spider_ready_clean_v24.png",
+      "name": "Giant Whip Spider",
+      "edition": "Resident Evil Revelations 2 (2015)",
+      "state": "ready_low_key",
+      "status": "animation_key_candidate",
+      "candidate": true,
+      "bytes": 1497571,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "e6af74168784a9db9374d08a6447e5969b871d5a476dfc1a5f6988bd87f6e640",
+      "git_blob_sha": "4ad5a38c399f346032b509ca06445eb63000cad9",
+      "manifest": "production-archives/rec-media/v24/creatures/manifest.json",
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "v1_actions": [],
+      "uid": "rerev2-giant-whip-spider"
+    },
+    {
+      "asset_id": "rev2_giant_whip_spider_step_v24",
+      "category": "creatures",
+      "path": "production-archives/rec-media/v24/creatures/assets/rev2_giant_whip_spider_step_v24.png",
+      "name": "Giant Whip Spider",
+      "edition": "Resident Evil Revelations 2 (2015)",
+      "state": "forward_step_key",
+      "status": "animation_key_candidate",
+      "candidate": true,
+      "bytes": 1741457,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "f6975df0d07dbaa2626bcb3dd72362027843baea684cb64d788671f834a4cafe",
+      "git_blob_sha": "1a9a9cfb66e82eddad21ddeb538b5f3ca4f65b13",
+      "manifest": "production-archives/rec-media/v24/creatures/manifest.json",
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "v1_actions": [],
+      "uid": "rerev2-giant-whip-spider"
+    },
+    {
+      "asset_id": "re4r_novistador_wingbeat_up_corrected_v24",
+      "category": "creatures",
+      "path": "production-archives/rec-media/v24/creatures/assets/re4r_novistador_wingbeat_up_corrected_v24.png",
+      "name": "Novistador",
+      "edition": "Resident Evil 4 remake (2023)",
+      "state": "hover_upstroke_key",
+      "status": "animation_key_candidate",
+      "candidate": true,
+      "bytes": 936913,
+      "dimensions": [
+        1334,
+        1179
+      ],
+      "sha256": "ca3d637a9d195c0ef14a5a5871789ee297bdf37f2243ebb602583699b31e74d2",
+      "git_blob_sha": "0bb086236b86323749874f381ac6acd065e94acd",
+      "manifest": "production-archives/rec-media/v24/creatures/manifest.json",
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "v1_actions": [],
+      "uid": "re4r-novistador"
+    },
+    {
+      "asset_id": "REC_OBJ_RE4R_BOLT_LEFT_CORRECTED_V24",
+      "category": "projectiles",
+      "path": "production-archives/rec-media/v24/projectiles/assets/re4r_bolt_left_corrected_v24.png",
+      "name": "Carreau simple RE4R — gauche, sans attaches ajoutées",
+      "edition": "Resident Evil 4 Remake (2023)",
+      "state": "left",
+      "status": "orientation_key_candidate",
+      "candidate": true,
+      "bytes": 348278,
+      "dimensions": [
+        2172,
+        724
+      ],
+      "sha256": "30b7a89edc07ab5831d69924ac85c53194d8044cdde449d7b9329256fd7edf10",
+      "git_blob_sha": "b549c7db65539f81f2560a4151e3f9edee58c048",
+      "manifest": "production-archives/rec-media/v24/projectiles/ASSET_MANIFEST_PROJECTILES_V24.json",
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "v1_actions": [],
+      "role": "additional_arsenal_orientation"
+    },
+    {
+      "asset_id": "REC_OBJ_RE0_MOLOTOV_UPRIGHT_V24",
+      "category": "projectiles",
+      "path": "production-archives/rec-media/v24/projectiles/assets/re0_molotov_upright_v24.png",
+      "name": "Bouteille RE0 non allumée — verticale",
+      "edition": "Resident Evil Zero (2002 catalogue; platform of the pictured render unspecified)",
+      "state": "neck_up",
+      "status": "orientation_key_candidate",
+      "candidate": true,
+      "bytes": 1126317,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "0b6e4d30da8b6b0fb8b9d2f1dd3c7b5bf298f9a6a8e7fa592756450d6d2ff8bb",
+      "git_blob_sha": "20ac0d2c46b8e3369abf9d122f3e4bc38356c2ae",
+      "manifest": "production-archives/rec-media/v24/projectiles/ASSET_MANIFEST_PROJECTILES_V24.json",
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "v1_actions": [
+        "REC_REBECCA_RE0__SP2"
+      ],
+      "role": "partial_orientation_key_for_existing_action"
+    },
+    {
+      "asset_id": "REC_OBJ_RE4R_BOLT_LEFT_V24",
+      "category": "projectiles",
+      "path": "production-archives/rec-media/v24/projectiles/assets/trials/re4r_bolt_left_v24.png",
+      "name": "Carreau simple RE4R — gauche, premier essai",
+      "edition": "Resident Evil 4 Remake (2023)",
+      "state": "left",
+      "status": "superseded_trial",
+      "candidate": false,
+      "bytes": 398248,
+      "dimensions": [
+        2172,
+        724
+      ],
+      "sha256": "1423767ca6544d22cedfb9ef82dcee029fd2b53770c6a3c07f3bfca1595a6fa3",
+      "git_blob_sha": "6d37164497a9855b84b1c9010dcf806fabc608ce",
+      "manifest": "production-archives/rec-media/v24/projectiles/ASSET_MANIFEST_PROJECTILES_V24.json",
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "v1_actions": [],
+      "role": "additional_arsenal_orientation",
+      "superseded_by": "production-archives/rec-media/v24/projectiles/assets/re4r_bolt_left_corrected_v24.png"
+    },
+    {
+      "asset_id": "REC_OBJ_RE0_MOLOTOV_HORIZONTAL_V24",
+      "category": "projectiles",
+      "path": "production-archives/rec-media/v24/projectiles/assets/re0_molotov_horizontal_v24.png",
+      "name": "Bouteille RE0 non allumée — horizontale",
+      "edition": "Resident Evil Zero (2002 catalogue; platform of the pictured render unspecified)",
+      "state": "neck_left",
+      "status": "orientation_key_candidate",
+      "candidate": true,
+      "bytes": 947181,
+      "dimensions": [
+        1983,
+        793
+      ],
+      "sha256": "f00019fda3f765ff79dfc90349ff3a5a27e70744ba133cae640e96c26d08b4f2",
+      "git_blob_sha": "59bca9d5ab0f6eb6227981b3e53c8ec48a19276e",
+      "manifest": "production-archives/rec-media/v24/projectiles/ASSET_MANIFEST_PROJECTILES_V24.json",
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "v1_actions": [
+        "REC_REBECCA_RE0__SP2"
+      ],
+      "role": "partial_orientation_key_for_existing_action"
+    },
+    {
+      "asset_id": "REC_OBJ_RE4R_BOLT_ASCENDING_V24",
+      "category": "projectiles",
+      "path": "production-archives/rec-media/v24/projectiles/assets/re4r_bolt_ascending_v24.png",
+      "name": "Carreau simple RE4R — inclinaison montante",
+      "edition": "Resident Evil 4 Remake (2023)",
+      "state": "upper_right",
+      "status": "orientation_key_candidate",
+      "candidate": true,
+      "bytes": 220820,
+      "dimensions": [
+        1774,
+        887
+      ],
+      "sha256": "5708d8117a6a158638d59dd26d02322cba059e250f3277efd36b0d47b2468d08",
+      "git_blob_sha": "adeda3cca2851384fa893c4ae358a040d038ab38",
+      "manifest": "production-archives/rec-media/v24/projectiles/ASSET_MANIFEST_PROJECTILES_V24.json",
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "v1_actions": [],
+      "role": "additional_arsenal_orientation"
+    },
+    {
+      "asset_id": "REC_OBJ_RE0_MOLOTOV_TURNING_V24",
+      "category": "projectiles",
+      "path": "production-archives/rec-media/v24/projectiles/assets/re0_molotov_turning_v24.png",
+      "name": "Bouteille RE0 non allumée — rotation opposée",
+      "edition": "Resident Evil Zero (2002 catalogue; platform of the pictured render unspecified)",
+      "state": "neck_lower_right",
+      "status": "orientation_key_candidate",
+      "candidate": true,
+      "bytes": 564505,
+      "dimensions": [
+        1402,
+        1122
+      ],
+      "sha256": "fa545cae0824c0bbe283e3be0b8b4829430927610da29470da6b146549fbc5bc",
+      "git_blob_sha": "08dd097b524ef76dadc50cb4d31ff0ccc671deb1",
+      "manifest": "production-archives/rec-media/v24/projectiles/ASSET_MANIFEST_PROJECTILES_V24.json",
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "v1_actions": [
+        "REC_REBECCA_RE0__SP2"
+      ],
+      "role": "partial_orientation_key_for_existing_action"
+    },
+    {
+      "asset_id": "REC_STAGE_RE1HD_TYRANT_ROOM_MASTER_V24_01",
+      "category": "stages",
+      "path": "production-archives/rec-media/v24/stages/assets/REC_STAGE_RE1HD_TYRANT_ROOM_MASTER_V24_01.png",
+      "name": "Laboratoire Arklay — Tyrant Room, caméra basse",
+      "edition": "Resident Evil HD Remaster (2015)",
+      "state": "flat_environment_master",
+      "status": "CANDIDATE_FIDELITY_REVIEW_REQUIRED",
+      "candidate": true,
+      "bytes": 2454204,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "ac3ce318a1cd2210d1e46d9c7d168f517e5da604f765d3f38f03544892b91750",
+      "git_blob_sha": "f95b5bf5c3254b89093c32b2e82bd8d6766c24d4",
+      "manifest": "production-archives/rec-media/v24/stages/manifest.json",
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "v1_actions": [],
+      "runtime_target": "spencer_lab"
+    },
+    {
+      "asset_id": "REC_STAGE_RE3R_SHOPPING_PLAZA_MOONS_MASTER_V24_01",
+      "category": "stages",
+      "path": "production-archives/rec-media/v24/stages/assets/REC_STAGE_RE3R_SHOPPING_PLAZA_MOONS_MASTER_V24_01.png",
+      "name": "Shopping Plaza — façade Moon’s Donuts",
+      "edition": "Resident Evil 3 Remake (2020)",
+      "state": "flat_environment_master",
+      "status": "CANDIDATE_FIDELITY_REVIEW_REQUIRED",
+      "candidate": true,
+      "bytes": 2557067,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "adae145fc2f8e17a70522bc04edfda3f23caf7eb59484c4d10e84e5d42c77a5f",
+      "git_blob_sha": "d46ee3b31d15541797d12ed072e38e5586e9b15b",
+      "manifest": "production-archives/rec-media/v24/stages/manifest.json",
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "v1_actions": [],
+      "runtime_target": "raccoon_street"
+    },
+    {
+      "asset_id": "REC_STAGE_RE4R_DEL_LAGO_LAKE_MASTER_V24_01",
+      "category": "stages",
+      "path": "production-archives/rec-media/v24/stages/assets/REC_STAGE_RE4R_DEL_LAGO_LAKE_MASTER_V24_01.png",
+      "name": "Lac Del Lago — berge montagneuse au crépuscule",
+      "edition": "Resident Evil 4 Remake (2023), PC",
+      "state": "flat_environment_master",
+      "status": "CANDIDATE_FIDELITY_REVIEW_REQUIRED",
+      "candidate": true,
+      "bytes": 1991014,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "c8efa5d262d55ce8083fb55fa6d788901608c73e58ba8f6608dab89301d52cf3",
+      "git_blob_sha": "40096d181c0ce48753a9e3c5377325713330bd52",
+      "manifest": "production-archives/rec-media/v24/stages/manifest.json",
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "v1_actions": [],
+      "runtime_target": "village_lake_2023"
+    }
+  ],
+  "v23_carryover": {
+    "summary": {
+      "png_total": 11,
+      "candidate_keys": 9,
+      "superseded_trials": 2,
+      "identities": 3,
+      "complete_animations": 0,
+      "new_engine_admissions": 0,
+      "tool_refusals": 0
+    },
+    "menu_keys": [
+      {
+        "hero_id": "REC_BARRY_REV2",
+        "edition": "Resident Evil Revelations 2 (2015), tenue de mission fondée sur le rendu promotionnel 2014",
+        "superseded_trial_ids": [
+          "REC_BARRY_REV2_SELECTED_INITIAL_TRIAL_V23"
+        ],
+        "complete_animation": false,
+        "engine_admitted": false,
+        "new_identity": false,
+        "candidate_asset_ids": [
+          "REC_BARRY_REV2_SELECTED_KEY_V23",
+          "REC_BARRY_REV2_CONFIRM_KEY_V23",
+          "REC_BARRY_REV2_DESELECT_KEY_V23"
+        ],
+        "states": [
+          "selected",
+          "confirm",
+          "deselect"
+        ]
+      },
+      {
+        "hero_id": "REC_REBECCA_RE0",
+        "edition": "Resident Evil 0 HD Remaster (2016)",
+        "superseded_trial_ids": [],
+        "complete_animation": false,
+        "engine_admitted": false,
+        "new_identity": false,
+        "candidate_asset_ids": [
+          "REC_REBECCA_RE0HD_SELECTED_KEY_V23",
+          "REC_REBECCA_RE0HD_CONFIRM_KEY_V23",
+          "REC_REBECCA_RE0HD_DESELECT_KEY_V23"
+        ],
+        "states": [
+          "selected",
+          "confirm",
+          "deselect"
+        ]
+      },
+      {
+        "hero_id": "REC_BILLY_RE0",
+        "edition": "Resident Evil Zero HD Remaster (2016), tenue Prisoner",
+        "superseded_trial_ids": [
+          "REC_BILLY_RE0HD_SELECTED_INITIAL_TRIAL_V23"
+        ],
+        "complete_animation": false,
+        "engine_admitted": false,
+        "new_identity": false,
+        "candidate_asset_ids": [
+          "REC_BILLY_RE0HD_SELECTED_KEY_V23",
+          "REC_BILLY_RE0HD_CONFIRM_KEY_V23",
+          "REC_BILLY_RE0HD_DESELECT_KEY_V23"
+        ],
+        "states": [
+          "selected",
+          "confirm",
+          "deselect"
+        ]
+      }
+    ],
+    "bible": {
+      "coverage": {
+        "expected_sections": 68,
+        "mapped_sections": 68,
+        "unique_sections": 68,
+        "documented_sections": 68,
+        "runtime_state_counts": {
+          "existing_partial": 27,
+          "isolated_prototype": 9,
+          "not_applicable_documentation": 14,
+          "planned": 18
+        },
+        "all_guide_sections_mapped": true,
+        "full_gameplay_implementation": false,
+        "canonical_one_to_one_certification": false
+      },
+      "path": "docs/combat-bible/",
+      "full_gameplay_implementation": false,
+      "source_guides_manifest": "docs/combat-bible/sources/manifest.json"
+    },
+    "isolated_prototype": {
+      "historical_domain_tests_passed": 26,
+      "tests_rerun_v24": false,
+      "browser_qa_status": "blocked_in_v23",
+      "browser_assertions_executed_v23": 0,
+      "browser_limitation": "Chromium headless-shell absent ; tentative de téléchargement HTTP 403. Ce statut historique n’est pas une nouvelle inspection de l’environnement.",
+      "runtime_connected": false,
+      "tag_status": "specified_not_implemented",
+      "rewards_status": "specified_not_connected"
+    },
+    "task_states": {
+      "REC-V23-GUIDES": "integrated_documentation",
+      "REC-V23-KEYS": "produced_reviewed_candidates",
+      "REC-V23-UNLOCK": "isolated_prototype",
+      "REC-V23-ANIMATION": "open",
+      "REC-V23-TAG": "specified_not_implemented",
+      "REC-V23-REWARDS": "specified_not_connected",
+      "REC-V19-RECOVERY": "historical_recovery_open",
+      "REC-V22-REMAINING": "historical_backlog_preserved"
+    }
+  },
+  "preserved_holds_and_refusals": {
+    "historical_bow_refusals_pre_v22": 61,
+    "new_v22_creature_refusals": {
+      "count": 5,
+      "uids": [
+        "re0-plague-crawler",
+        "re4r-armadura",
+        "re7-molded-fat",
+        "revillage-mutated-heisenberg",
+        "revillage-samca"
+      ]
+    },
+    "creature_manifest_historical_refusals_not_retried": 66,
+    "refusal_scope_note": "66 décrit les 61 états historiques BOW et les 5 refus créatures V22, pas le total de tous les refus du projet. Le refus Ubistvo V19 reste conservé dans sa récupération dédiée.",
+    "all_domains_v22_new_tool_refusals": 13,
+    "all_domains_v22_mixed_hold_records": 142,
+    "mixed_hold_records_are_not_unique_remaining_assets": true,
+    "v22_bow_recovery_hold_uids": [
+      "re6-lepotitsa",
+      "re6-shrieker",
+      "re6-ubistvo",
+      "re6-zombie-dog"
+    ],
+    "v22_source_hold_cluster_129_decomposition": {
+      "candidate_uids": 15,
+      "tool_refusal_uids": 5,
+      "source_hold_uids": 105,
+      "recovery_hold_uids": 4
+    },
+    "v24_bow_holds_closed": 0,
+    "v22_stage_source_hold_targets": [
+      "spencer_lab",
+      "raccoon_street",
+      "clock_tower",
+      "dead_factory",
+      "rockfort",
+      "antarctic",
+      "edonia",
+      "heisenberg",
+      "ark",
+      "village_lake_2023",
+      "dimitrescu_battlements_2021",
+      "edonia_crash_2012",
+      "old_house_lantern_2017",
+      "eveline_corridor_2017"
+    ],
+    "v24_stage_candidate_overlay_on_source_holds": [
+      "spencer_lab",
+      "raccoon_street",
+      "village_lake_2023"
+    ],
+    "stage_hold_overlay_note": "Trois candidats sourcés ajoutent des preuves à des cibles auparavant SOURCE_HOLD ; géométrie cachée, animation/parallaxe et admission restent ouvertes. Le compteur historique V22 n’est pas réécrit en nombre de décors restants.",
+    "v24_stage_source_holds_researched_without_png": [
+      {
+        "runtime_target": "heisenberg",
+        "name": "Heisenberg’s Factory — Foundry MB4, Casting Machine",
+        "edition": "Resident Evil Village (2021)",
+        "status": "SOURCE_HOLD",
+        "reason": "Plan et pièce identifiés ; seul gros plan exploitable de la machine mesure 416 × 206 et masque le centre avec un objet. Les vues de passage et de grosse mécanique ne prouvent pas le décor de Foundry.",
+        "next_evidence": "Vue native large de Foundry montrant machine, sol, paillasses et accès, plus angle complémentaire si occultations."
+      },
+      {
+        "runtime_target": "old_house_lantern_2017",
+        "name": "Old House — Altar 2F, extrémité est au mécanisme à lanterne",
+        "edition": "Resident Evil 7 biohazard (2017)",
+        "status": "SOURCE_HOLD",
+        "reason": "L’Altar 2F et le mécanisme est sont corroborés, distincts de Gallery 1F / Greenhouse ; captures directes de la pièce inaccessibles, HTTP 403. La carte ne permet pas de recréer fidèlement le décor.",
+        "next_evidence": "Capture native de la salle à la balance et une seconde vue depuis la porte/côté commodes, édition et plateforme identifiées."
+      },
+      {
+        "runtime_target": "dimitrescu_battlements_2021",
+        "name": "Tower of Worship — passage extérieur de la première phase",
+        "edition": "Resident Evil Village (2021)",
+        "status": "SOURCE_HOLD",
+        "reason": "Fenêtres, parapet et montagnes visibles ; environ la moitié du centre masquée par le boss et l’arme. Les autres angles ne révèlent pas les parties cachées de cette caméra. Génération volontairement non exécutée après revue du périmètre.",
+        "next_evidence": "Vue large native sans boss ou caméra complémentaire de la même face montrant le passage, le sol et le parapet complets."
+      }
+    ],
+    "stage_archive_recovery_targets": [
+      "rpd_hall",
+      "nest",
+      "queen_zenobia"
+    ],
+    "same_refused_content_retried_v24": false,
+    "v22_bow_source_hold_count": 105,
+    "source_hold_uid_reference": {
+      "source": "production-archives/rec-media/v22/inventory/INVENTAIRE_COMPLET_V22_20261124.json",
+      "json_key": "bow",
+      "filter": "attente_v22.status == SOURCE_HOLD"
+    }
+  },
+  "archive_recovery": {
+    "new_originals_recovered_v24": 0,
+    "records": [
+      {
+        "id": "RECOVERY_V3",
+        "lot": "V3",
+        "statut": "présent annoncé non récupéré",
+        "quantite_annoncee": "54 candidats dans le suivi V5 ; archive 121 392 052 octets"
+      },
+      {
+        "id": "RECOVERY_V4",
+        "lot": "V4",
+        "statut": "présent annoncé non récupéré",
+        "quantite_annoncee": "34 PNG annoncés : 30 candidats et 4 essais"
+      },
+      {
+        "id": "RECOVERY_V12_V13",
+        "lot": "V12/V13",
+        "statut": "présent annoncé non récupéré",
+        "quantite_annoncee": "44 PNG annoncés"
+      },
+      {
+        "id": "RECOVERY_V19",
+        "lot": "V19",
+        "statut": "présent annoncé non récupéré",
+        "quantite_annoncee": "9 PNG annoncés : 7 candidats et 2 essais"
+      }
+    ],
+    "v19_uid_mapping": [
+      {
+        "uid": "re6-lepotitsa",
+        "name": "Lepotitsa",
+        "edition": "Resident Evil 6 (2012)",
+        "status": "RECOVERY_HOLD",
+        "note": "Un média V19 est annoncé mais son original reste à récupérer et à inspecter. Le portrait disponible est tronqué ; l’absence globale n’est pas établie.",
+        "global_absence_confirmed": false
+      },
+      {
+        "uid": "re6-shrieker",
+        "name": "Shrieker",
+        "edition": "Resident Evil 6 (2012)",
+        "status": "RECOVERY_HOLD",
+        "note": "Un média V19 est annoncé mais son original reste à récupérer. Le portrait coupe le bas du corps et les mains ; aucune nouvelle absence globale n’est conclue.",
+        "global_absence_confirmed": false
+      },
+      {
+        "uid": "re6-ubistvo",
+        "name": "Ubistvo",
+        "edition": "Resident Evil 6 (2012)",
+        "status": "RECOVERY_HOLD",
+        "note": "Le média V19 annoncé reste à récupérer et le refus V19 est conservé sans nouvelle tentative. Le portrait coupe le corps et les extrémités de l’arme organique.",
+        "global_absence_confirmed": false
+      },
+      {
+        "uid": "re6-zombie-dog",
+        "name": "Zombie Dog",
+        "edition": "Resident Evil 6 (2012)",
+        "status": "RECOVERY_HOLD",
+        "note": "Le média ZombieDogC annoncé en V19 reste à récupérer et à inspecter. La référence coupe le corps et plusieurs pattes ; l’absence globale n’est pas confirmée.",
+        "global_absence_confirmed": false
+      }
+    ],
+    "v19_announced_png": 9,
+    "v19_announced_candidates": 7,
+    "v19_announced_trials": 2,
+    "v19_counted_as_recovered_or_published_in_v24": false
+  },
+  "independent_reviews": {
+    "character_report": "production-archives/rec-media/v24/reports/INDEPENDENT_CHARACTERS_V24.json",
+    "projectile_report": "production-archives/rec-media/v24/reports/INDEPENDENT_PROJECTILES_V24.json",
+    "stage_report": "production-archives/rec-media/v24/reports/INDEPENDENT_STAGES_V24.json",
+    "creature_first_pass_report": "production-archives/rec-media/v24/reports/INDEPENDENT_CREATURES_V24.json",
+    "creature_correction_report": "production-archives/rec-media/v24/reports/INDEPENDENT_CREATURES_CORRECTION_V24.json",
+    "creature_review_sequence": "Premier rapport conservé comme preuve des 7 PNG disponibles au premier passage ; complément sur le 8e PNG corrigé. Décompte final du manifeste : 8 PNG, 6 candidats, 2 essais remplacés.",
+    "creature_correction_decision": "corrected_candidate_retained_with_contour_and_animation_limits",
+    "creature_correction_remaining_limits": [
+      "Les pattes ne sont pas certifiées dans une articulation d’animation native ; cette correction ne certifie que la disparition du défaut visuel ciblé.",
+      "Contours rouges et gris visibles dans l’aperçu. Au critère R>120, R>1.8G et R>1.8B, 13853 pixels rouges ont alpha1–15 et28 ont alpha128–254 : il existe du bruit de faible alpha réel, distinct d’un fond opaque.",
+      "Dimensions, échelle et ancre varient face à la pose basse ; raccord et timing non validés.",
+      "Pas de rendu composé en navigateur ou moteur ; pas de certification1:1."
+    ],
+    "stage_review_summary": {
+      "source_images_inspected": 3,
+      "output_images_inspected": 3,
+      "candidate_masters": 3,
+      "native_UHD_outputs": 0,
+      "completed_parallax_sets": 0,
+      "engine_admissions": 0,
+      "one_to_one_certifications": 0
+    },
+    "character_review_summary": {
+      "images_reviewed": 6,
+      "reference_images_reviewed": 4,
+      "candidate_retained_with_corrections": 6,
+      "one_to_one_certified": 0,
+      "animations_certified": 0,
+      "engine_admissions": 0,
+      "sha256_mismatches": 0,
+      "visible_crops_detected": 0,
+      "margin_requirement_failures": 6,
+      "gaze_direction_mismatches": 1
+    },
+    "review_is_not_engine_validation": true
+  },
+  "queue": [
+    {
+      "id": "REC-V24-QUALIFY-CHARACTERS",
+      "priority": "P0",
+      "status": "open",
+      "target_ids": [
+        "REC_HELENA_RE6",
+        "REC_ADA_RE4R"
+      ],
+      "evidence": [
+        "production-archives/rec-media/v24/reports/INDEPENDENT_CHARACTERS_V24.json",
+        "production-archives/rec-media/v24/characters/ASSET_MANIFEST_CHARACTERS_V24.json"
+      ],
+      "required_evidence": "Vues natives détaillées de l’incarnation et du costume exacts, dont chaussures Helena et petites pièces de l’équipement. Correction du regard Helena deselect, actuellement opposé à la consigne ; préserver les asymétries. Raccord d’échelle et d’ancre ; vérifier les contours par composition alpha, les marges hautes/basses et les six images ensemble.",
+      "acceptance": "Revue comparative documentée par fichier et rendu composé ; ne pas certifier 1:1 d’après une seule référence ni fermer une animation avec trois poses."
+    },
+    {
+      "id": "REC-V24-QUALIFY-CREATURES",
+      "priority": "P0",
+      "status": "open",
+      "target_ids": [
+        "re5-kipepeo",
+        "re4r-novistador",
+        "rerev2-giant-whip-spider"
+      ],
+      "evidence": [
+        "production-archives/rec-media/v24/reports/INDEPENDENT_CREATURES_V24.json",
+        "production-archives/rec-media/v24/reports/INDEPENDENT_CREATURES_CORRECTION_V24.json",
+        "production-archives/rec-media/v24/creatures/manifest.json"
+      ],
+      "required_evidence": "Séquences natives permettant de comparer articulations, membranes, soies et extrémités, avec édition/plateforme identifiées. Le Novistador corrigé a perdu les crochets indus ; vérifier le bruit de faible alpha restant et le raccord à la pose basse. Échelles, ancres, timings et intervalles du battement ou du pas ; conserver les deux essais remplacés comme preuves.",
+      "acceptance": "Six clés candidates qualifiées séparément ; aucune identité nouvelle ni cycle complet revendiqué sans séquence et validation moteur."
+    },
+    {
+      "id": "REC-V24-QUALIFY-PROJECTILES",
+      "priority": "P0",
+      "status": "open",
+      "target_ids": [
+        "REC_REBECCA_RE0__SP2",
+        "RE4R_LEON_SIMPLE_BOLT_ADDITIONAL_ARSENAL"
+      ],
+      "evidence": [
+        "production-archives/rec-media/v24/reports/INDEPENDENT_PROJECTILES_V24.json",
+        "production-archives/rec-media/v24/projectiles/ASSET_MANIFEST_PROJECTILES_V24.json"
+      ],
+      "required_evidence": "Verrouiller la plateforme du rendu RE0 et la géométrie de la bouteille sous les trois orientations. Contrôler proportions, échelle et ancre ; les six PNG, essai compris, n’atteignent pas toutes les marges de 12 %. Confirmer sur alpha composé les petits contours : les points extérieurs échantillonnés autour de la bouteille verticale sont alpha 0, distincts du bruit de faible alpha réel. Conserver le premier carreau à deux attaches dans les essais ; la correction a supprimé ces attaches sans certifier les détails fins.",
+      "acceptance": "Cinq orientations qualifiées ; seul SP2 Rebecca reçoit une contribution partielle et le carreau simple reste hors des 44 actions V1."
+    },
+    {
+      "id": "REC-V24-QUALIFY-STAGES",
+      "priority": "P0",
+      "status": "open",
+      "target_ids": [
+        "spencer_lab",
+        "raccoon_street",
+        "village_lake_2023"
+      ],
+      "evidence": [
+        "production-archives/rec-media/v24/reports/INDEPENDENT_STAGES_V24.json",
+        "production-archives/rec-media/v24/stages/manifest.json"
+      ],
+      "required_evidence": "Tyrant Room : seconde vue des consoles et du sol masqués dans la source ; ne pas fusionner des salles du laboratoire. Shopping Plaza : vues complémentaires de la terrasse gauche et du mobilier ; garder ce lieu distinct de Business Street. Del Lago : confirmer le support de combat aquatique/embarcation ; une plaque d’eau sans sol ne définit pas une arène jouable. Qualifier couverture latérale, échelle des combattants, profondeur et occlusions ; produire ensuite des calques réellement séparés.",
+      "acceptance": "Revue géométrique sourcée avant remplacement runtime ; les plaques RGB 1672×941 restent non UHD, non parallaxe et hors moteur."
+    },
+    {
+      "id": "REC-V24-NEXT-STAGE-SOURCES",
+      "priority": "P1",
+      "status": "source_hold",
+      "target_ids": [
+        "heisenberg",
+        "old_house_lantern_2017",
+        "dimitrescu_battlements_2021"
+      ],
+      "evidence": [
+        "production-archives/rec-media/v24/stages/manifest.json"
+      ],
+      "required_evidence": "Vue native large de Foundry montrant machine, sol, paillasses et accès, plus angle complémentaire si occultations. Capture native de la salle à la balance et une seconde vue depuis la porte/côté commodes, édition et plateforme identifiées. Vue large native sans boss ou caméra complémentaire de la même face montrant le passage, le sol et le parapet complets.",
+      "acceptance": "Captures natives des mêmes pièces et angles couvrant les parties cachées ; carte ou gros plan seuls insuffisants. Aucune génération nouvelle déclarée pour ces trois cibles."
+    },
+    {
+      "id": "REC-V24-MENU-ANIMATION-ENGINE",
+      "priority": "P1",
+      "status": "open",
+      "target_ids": [
+        "REC_BARRY_REV2",
+        "REC_REBECCA_RE0",
+        "REC_BILLY_RE0",
+        "REC_HELENA_RE6",
+        "REC_ADA_RE4R"
+      ],
+      "evidence": [
+        "production-archives/rec-media/v23/ASSET_MANIFEST_V23.json",
+        "production-archives/rec-media/v24/characters/ASSET_MANIFEST_CHARACTERS_V24.json",
+        "production-archives/rec-media/v23/SELECTION_KEYS_V23.json"
+      ],
+      "required_evidence": "Définir tailles et pivots par incarnation, puis produire les transitions cohérentes selected/confirm/deselect avec durées et événements. Raccorder les médias aux états de sélection du jeu et vérifier annulation, confirmation répétée, chargement retardé et retour au repos. Exécuter une recette dans un navigateur disponible, conserver captures et traces ; la recette V23 était bloquée et n’a pas été relancée par cette consolidation.",
+      "acceptance": "Preuve d’animation et d’événements dans le vrai flux de jeu ; les 15 clés candidates V23+V24 ne sont pas 15 animations."
+    },
+    {
+      "id": "REC-V24-44-V1-ACTIONS",
+      "priority": "P1",
+      "status": "open",
+      "target_ids": [
+        "44 actions V1 ; voir projectile_progress.v1_action_inventory.action_ids"
+      ],
+      "evidence": [
+        "production-archives/rec-media/v22/inventory/INVENTAIRE_COMPLET_V22_20261124.json",
+        "production-archives/rec-media/v24/projectiles/ASSET_MANIFEST_PROJECTILES_V24.json"
+      ],
+      "required_evidence": "Verrouiller arme/objet, jeu et plateforme pour chacune des 16 familles, en conservant les refus de portée précise. SP2 Rebecca : départ, trajectoire/rotation, allumage, bris, feu d’impact, durées, ancrage et variante EX2 à documenter et implémenter. SP5 Ada : Blast Arrows entières de Separate Ways ; SP4 Krauser : flèche EJF-338 entière. Le carreau bleu de Leon ne peut servir de substitution. Distinguer les effets observés du jeu source des règles de simulation V1 ; conserver une preuve par action et variante.",
+      "acceptance": "Une action se ferme seulement après couverture de ses phases, intégration et comportement vérifié. Aucune des 44 actions ni des 16 familles n’est fermée par V24."
+    },
+    {
+      "id": "REC-V24-BIBLE-EXTENSIONS",
+      "priority": "P1",
+      "status": "documented_implementation_partial",
+      "target_ids": [
+        "guide_general",
+        "extension_01_tag_taunts_bonus",
+        "extension_02_slots_unlocks_subscribers"
+      ],
+      "evidence": [
+        "docs/combat-bible/INTEGRATION_MATRIX.json",
+        "docs/combat-bible/sources/manifest.json",
+        "production-archives/rec-media/v23/WORK_QUEUE_V23.json"
+      ],
+      "required_evidence": "Transformer les décisions Tag/assistances/supers duo/finishers en états de simulation, règles de compatibilité et événements vérifiables. Relier progressivement les droits, découvertes et récompenses à la sauvegarde et aux autorités réelles ; le prototype isolé n’établit aucun abonnement ni achat opérationnel. Compléter les taunts, stances et victoires seulement avec références d’incarnation et critères de raccord ; ne pas comptabiliser les clés de menu comme ces actions.",
+      "acceptance": "Garder les 68 sections tracées avec preuves par exigence. Documentation intégrée, prototype et gameplay sont des statuts distincts."
+    },
+    {
+      "id": "REC-V24-ARCHIVE-RECOVERY",
+      "priority": "P1",
+      "status": "recovery_hold",
+      "target_ids": [
+        "RECOVERY_V3",
+        "RECOVERY_V4",
+        "RECOVERY_V12_V13",
+        "RECOVERY_V19",
+        "re6-lepotitsa",
+        "re6-shrieker",
+        "re6-ubistvo",
+        "re6-zombie-dog"
+      ],
+      "evidence": [
+        "production-archives/rec-media/v22/inventory/INVENTAIRE_COMPLET_V22_20261124.json",
+        "production-archives/rec-media/v23/WORK_QUEUE_V23.json"
+      ],
+      "required_evidence": "Récupérer les originaux V3/V4, V12/V13 et V19 ; comparer SHA-256, doublons, édition, silhouette et statut aux fichiers déjà attestés. V19 : retrouver les 9 PNG annoncés, 7 candidats et 2 essais, sans les compter comme livrés ; préserver le refus Ubistvo sans relance. Rapprocher RPD, NEST et Queen Zenobia des archives de décors avant toute conclusion d’absence globale.",
+      "acceptance": "Fichiers effectivement retrouvés et inspectés, avec provenance ; un compteur historique n’est pas une récupération."
+    },
+    {
+      "id": "REC-V24-REMAINING-INVENTORY",
+      "priority": "P2",
+      "status": "historical_backlog_preserved",
+      "target_ids": [
+        "bow_346",
+        "heroes_24",
+        "costumes_38",
+        "extension_candidates_60",
+        "stage_specs_v1_24"
+      ],
+      "evidence": [
+        "production-archives/rec-media/v22/inventory/INVENTAIRE_COMPLET_V22_20261124.json"
+      ],
+      "required_evidence": "Reprendre les 105 SOURCE_HOLD BOW et les besoins des médias existants par UID exact, sans répéter les demandes refusées. Rapprocher les 24 fiches de héros et les 60 propositions d’extensions des listes inspectées et des archives récupérées ; autre forme ou costume ne crée pas automatiquement une identité. Poursuivre les 38 variantes ciblées de costumes en conservant leurs refus et chevauchements ; annexe FanDesign de 4 candidats distincte. Traiter les 24 spécifications V1 comme des raccords à réconcilier, sans les additionner aux 52 décors.",
+      "acceptance": "Chaque entrée conserve son unité, son édition, son statut et sa preuve ; aucun total global de manquants ni pourcentage de complétion inventé."
+    },
+    {
+      "id": "REC-V24-PUBLICATION-CI",
+      "priority": "P1",
+      "status": "parent_publication_and_ci_followup",
+      "target_ids": [
+        "pull_request_24"
+      ],
+      "evidence": [
+        "production-archives/rec-media/v23/reports/CI_FOLLOWUP_V23.json"
+      ],
+      "required_evidence": "Publication atomique pilotée par le parent avec les SHA des fichiers réels ; ne pas confondre création de blobs, mise à jour de branche, merge et admission moteur. Observer la CI du commit effectivement publié. La garde R34 possède une liste fermée ; son rapport V23 conserve le blocage des nouveaux dossiers. Conserver les gardes et anciens rapports ; résoudre le périmètre de validation explicitement, sans réécrire un échec en succès.",
+      "acceptance": "Rapport de CI attaché au commit exact ; aucun vert global, merge ou déploiement revendiqué avant observation."
+    }
+  ],
+  "validation_of_this_consolidation": {
+    "four_manifests_read": 4,
+    "png_files_present": 23,
+    "png_sha256_matches": 23,
+    "git_blob_sha_matches": 23,
+    "byte_count_matches": 23,
+    "unmanifested_png_under_four_asset_directories": 0,
+    "action_ids_unique": 44,
+    "family_ids_unique": 16,
+    "all_action_family_ids_exist": true,
+    "all_23_png_listed_exactly_once": true,
+    "all_44_actions_remain_unclosed": true,
+    "pixel_edits": false,
+    "new_runtime_tests": false,
+    "source_documents_modified": false,
+    "git_index_commit_or_ref_changed_by_this_task": false
+  },
+  "source_documents": [
+    {
+      "path": "production-archives/rec-media/v22/inventory/INVENTAIRE_COMPLET_V22_20261124.json",
+      "sha256": "32adcbffef77053995cacd6d0b5fc5077ecb697851cf29922d395c655720dee0",
+      "bytes": 3614273
+    },
+    {
+      "path": "production-archives/rec-media/v23/ASSET_MANIFEST_V23.json",
+      "sha256": "9cac198ee8040930e9832856b1f45afb9d094405eeba07c04ef0e86907cc0294",
+      "bytes": 59949
+    },
+    {
+      "path": "production-archives/rec-media/v23/WORK_QUEUE_V23.json",
+      "sha256": "a94044f6a8a5b571f703bd1da6bec66e5bd18b104ceff0615b52d95f0e23cdbf",
+      "bytes": 2225
+    },
+    {
+      "path": "production-archives/rec-media/v23/SELECTION_KEYS_V23.json",
+      "sha256": "61633e488e68931f52b8df1de8e82bcf2778298f20aa45007f955db65d6de06d",
+      "bytes": 7048
+    },
+    {
+      "path": "docs/combat-bible/INTEGRATION_MATRIX.json",
+      "sha256": "06f09758c679126906fb7b9b8aed21e747358b833d15834507a6c38d5dd2ef31",
+      "bytes": 97496
+    },
+    {
+      "path": "docs/combat-bible/sources/manifest.json",
+      "sha256": "20fd03b605396632a56246d22a50ca4f189cd8f2962d908206081d7c0936f35f",
+      "bytes": 2101
+    },
+    {
+      "path": "production-archives/rec-media/v24/characters/ASSET_MANIFEST_CHARACTERS_V24.json",
+      "sha256": "c2c5494766c201b988e4eba4a8433234f44c3c10a34e41cdf7786263f32b2454",
+      "bytes": 34836
+    },
+    {
+      "path": "production-archives/rec-media/v24/creatures/manifest.json",
+      "sha256": "d4ded6dcdd18688604457591181b96d3298465900a48158c9e3965ac720d49c5",
+      "bytes": 51686
+    },
+    {
+      "path": "production-archives/rec-media/v24/projectiles/ASSET_MANIFEST_PROJECTILES_V24.json",
+      "sha256": "fc2d2fa4fb352c01466359e2981bab2074b019bf83aaf0c1bbceac34e466db11",
+      "bytes": 26681
+    },
+    {
+      "path": "production-archives/rec-media/v24/stages/manifest.json",
+      "sha256": "eb24ff6cdc8a14ed6a4bfdb9a8d19cdfcafa22851f1a10f90e34ad9a66eb6698",
+      "bytes": 16248
+    },
+    {
+      "path": "production-archives/rec-media/v24/reports/INDEPENDENT_CHARACTERS_V24.json",
+      "sha256": "a28482dbe5b1e4509d45f3218ca678501425b6f96ed1018b235ea405642f18fd",
+      "bytes": 21276
+    },
+    {
+      "path": "production-archives/rec-media/v24/reports/INDEPENDENT_CREATURES_V24.json",
+      "sha256": "9c9fafb1a6e05cedc6cab9527366af07812b8418815a817ebad7356f1383a403",
+      "bytes": 10642
+    },
+    {
+      "path": "production-archives/rec-media/v24/reports/INDEPENDENT_CREATURES_CORRECTION_V24.json",
+      "sha256": "7a093c6e0b3ab5eec4b5f17c2a64ade2a2d774e5bfa04732bcb8f1f1274b26d8",
+      "bytes": 2415
+    },
+    {
+      "path": "production-archives/rec-media/v24/reports/INDEPENDENT_PROJECTILES_V24.json",
+      "sha256": "f159ba8fb048fd33e43258ee52d6f4c4c056654570cfa339ef27ab7bb4b6d9bb",
+      "bytes": 19161
+    },
+    {
+      "path": "production-archives/rec-media/v24/reports/INDEPENDENT_STAGES_V24.json",
+      "sha256": "d0da543e716334f814c25834889b9bc4268d7ed512d7d25f71d35c830e69837a",
+      "bytes": 6449
+    },
+    {
+      "path": "production-archives/rec-media/v23/reports/CI_FOLLOWUP_V23.json",
+      "sha256": "9a5541272bbafa29c20addba6e1055706cffc08f372b00f38695568a1caf1603",
+      "bytes": 3879
+    },
+    {
+      "path": "production-archives/rec-media/v23/prototype/reports/DOMAIN_QA.tap",
+      "sha256": "968bb548630bd404e67c9dc98747e7d56bd6bf8ba86f0a8addc5ff5cd81700e0",
+      "bytes": 6114
+    },
+    {
+      "path": "production-archives/rec-media/v23/prototype/reports/BROWSER_QA.json",
+      "sha256": "3606d01ae82008d1cc74fb3b87201e25aeec122e53b1532bcc5a4559f067d46d",
+      "bytes": 1088
+    }
+  ]
+}

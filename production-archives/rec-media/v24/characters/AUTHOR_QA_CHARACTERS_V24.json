@@ -1,0 +1,136 @@
+{
+  "schema": "rec-v24-character-author-qa-1",
+  "date": "2026-11-27",
+  "reviewer": "v24_characters production author; independent review pending root",
+  "checks": [
+    {
+      "asset_id": "REC_HELENA_RE6_SELECTED_KEY_V24",
+      "file_present_nonempty": true,
+      "png_decodes": true,
+      "native_rgba": true,
+      "useful_transparency": true,
+      "whole_subject_inside_alpha128_frame": true,
+      "sha256_and_git_recorded": true,
+      "byte_identity_to_output": true,
+      "author_visual_review_done": true,
+      "ten_percent_margin_met": false
+    },
+    {
+      "asset_id": "REC_HELENA_RE6_CONFIRM_KEY_V24",
+      "file_present_nonempty": true,
+      "png_decodes": true,
+      "native_rgba": true,
+      "useful_transparency": true,
+      "whole_subject_inside_alpha128_frame": true,
+      "sha256_and_git_recorded": true,
+      "byte_identity_to_output": true,
+      "author_visual_review_done": true,
+      "ten_percent_margin_met": false
+    },
+    {
+      "asset_id": "REC_HELENA_RE6_DESELECT_KEY_V24",
+      "file_present_nonempty": true,
+      "png_decodes": true,
+      "native_rgba": true,
+      "useful_transparency": true,
+      "whole_subject_inside_alpha128_frame": true,
+      "sha256_and_git_recorded": true,
+      "byte_identity_to_output": true,
+      "author_visual_review_done": true,
+      "ten_percent_margin_met": false
+    },
+    {
+      "asset_id": "REC_ADA_RE4R_SW_DEFAULT_SELECTED_KEY_V24",
+      "file_present_nonempty": true,
+      "png_decodes": true,
+      "native_rgba": true,
+      "useful_transparency": true,
+      "whole_subject_inside_alpha128_frame": true,
+      "sha256_and_git_recorded": true,
+      "byte_identity_to_output": true,
+      "author_visual_review_done": true,
+      "ten_percent_margin_met": false
+    },
+    {
+      "asset_id": "REC_ADA_RE4R_SW_DEFAULT_CONFIRM_KEY_V24",
+      "file_present_nonempty": true,
+      "png_decodes": true,
+      "native_rgba": true,
+      "useful_transparency": true,
+      "whole_subject_inside_alpha128_frame": true,
+      "sha256_and_git_recorded": true,
+      "byte_identity_to_output": true,
+      "author_visual_review_done": true,
+      "ten_percent_margin_met": false
+    },
+    {
+      "asset_id": "REC_ADA_RE4R_SW_DEFAULT_DESELECT_KEY_V24",
+      "file_present_nonempty": true,
+      "png_decodes": true,
+      "native_rgba": true,
+      "useful_transparency": true,
+      "whole_subject_inside_alpha128_frame": true,
+      "sha256_and_git_recorded": true,
+      "byte_identity_to_output": "Exact tool data URL bytes decoded; see recovery note.",
+      "author_visual_review_done": true,
+      "ten_percent_margin_met": false
+    }
+  ],
+  "families": [
+    {
+      "hero_id": "REC_HELENA_RE6",
+      "states": [
+        "selected",
+        "confirm",
+        "deselect"
+      ],
+      "silhouette_height_range_px": [
+        1318,
+        1349
+      ],
+      "baseline_spread_px": 16,
+      "all_native_canvas_dimensions": [
+        1024,
+        1536
+      ],
+      "animation_complete": false,
+      "remaining": [
+        "Ancrages et échelle à stabiliser.",
+        "Transitions intermédiaires et timing non livrés.",
+        "Contrôle des contours sur fond de jeu non effectué."
+      ]
+    },
+    {
+      "hero_id": "REC_ADA_RE4R",
+      "states": [
+        "selected",
+        "confirm",
+        "deselect"
+      ],
+      "silhouette_height_range_px": [
+        1332,
+        1363
+      ],
+      "baseline_spread_px": 25,
+      "all_native_canvas_dimensions": [
+        1024,
+        1536
+      ],
+      "animation_complete": false,
+      "remaining": [
+        "Ancrages et échelle à stabiliser.",
+        "Transitions intermédiaires et timing non livrés.",
+        "Contrôle des contours sur fond de jeu non effectué."
+      ]
+    }
+  ],
+  "scope": "Décodage des PNG, alpha, dimensions, empreintes et inspection visuelle des six sorties ; aucun test navigateur/moteur.",
+  "limitations": [
+    "0/6 marge 10 % conforme sur tous les côtés.",
+    "Helena deselect regarde côté image opposé au prompt.",
+    "Les cadres ont même taille mais les silhouettes et baselines varient.",
+    "Apparence et petites pièces non certifiées 1:1."
+  ],
+  "zero_pixel_transforms": true,
+  "tests_of_gameplay_run": false
+}

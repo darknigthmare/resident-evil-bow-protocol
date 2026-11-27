@@ -1,0 +1,510 @@
+{
+  "schema": "rec-v24-projectiles-1",
+  "date": "2026-11-27",
+  "timezone": "Europe/Paris",
+  "base_commit": "246dbb81752c5fa41a55deb3aada3941ac966fec",
+  "assets": [
+    {
+      "asset_id": "REC_OBJ_RE4R_BOLT_LEFT_CORRECTED_V24",
+      "name": "Carreau simple RE4R — gauche, sans attaches ajoutées",
+      "category": "projectile",
+      "state": "left",
+      "edition": "Resident Evil 4 Remake (2023)",
+      "path": "assets/re4r_bolt_left_corrected_v24.png",
+      "status": "orientation_key_candidate",
+      "dimensions": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "file_bytes": 348278,
+      "sha256": "30b7a89edc07ab5831d69924ac85c53194d8044cdde449d7b9329256fd7edf10",
+      "git_blob_sha": "b549c7db65539f81f2560a4151e3f9edee58c048",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1383018,
+      "low_alpha_1_to_15_pixels": 13350,
+      "bbox_alpha_nonzero": [
+        139,
+        91,
+        2037,
+        627
+      ],
+      "bbox_alpha_ge128": [
+        143,
+        258,
+        2031,
+        496
+      ],
+      "margins_alpha_ge128_px": {
+        "left": 143,
+        "top": 258,
+        "right": 141,
+        "bottom": 228
+      },
+      "sources": [
+        "https://www.evilresource.com/resident-evil-4-remake/weaponry/bolts"
+      ],
+      "reference_inputs": [
+        {
+          "kind": "superseded_v24_trial",
+          "path": "production-archives/rec-media/v24/projectiles/assets/trials/re4r_bolt_left_v24.png",
+          "sha256": "1423767ca6544d22cedfb9ef82dcee029fd2b53770c6a3c07f3bfca1595a6fa3"
+        },
+        {
+          "source_id": "re4r_native_bolts",
+          "sha256": "15d2000721e1226f035c6e9f890c86c0b2819d12b683dc7dfa1277f2dcdfac07",
+          "kind": "native_inventory_render_reproduced_by_third_party",
+          "url": "https://www.evilresource.com/resident-evil-4-remake/weaponry/bolts"
+        }
+      ],
+      "prompt": "Use case: precise-object-edit. Correct image 1, the generated left-facing plain Bolt sprite, using image 2, the original Resident Evil 4 Remake 2023 inventory render, as the authority. There are two incorrect little silver rectangular metal clips on the blue shaft near its join with the black tail. REMOVE BOTH CLIPS completely. The blue shaft should be smooth and uninterrupted, as the original individual bolts in image 2. Preserve one full left-facing bolt, its single simple dark point, exact blue shaft and dark tail proportions, black swept fletching, materials and lighting. Keep the original object without adding any attachment, collar, text, screw, extra fin, trail or explosive piece. Also frame the complete corrected object at approximately 75 percent of the canvas width so there is clearly at least 12 percent empty transparent margin at both ends. Wide 3:1 transparent canvas. One object only. True RGBA transparency with a clean smooth silhouette and no colored outline, no floor or shadow. Do not change this into an arrow from a different weapon.",
+      "prompt_file": "prompts/correction-and-upright.json",
+      "tool": "image_gen.imagegen",
+      "generation_mode": "edit",
+      "transparent_background_requested": true,
+      "native_output": "/workspace/scratch/37b119cd013c/generated_images/exec-928b26a0-d173-471c-9578-64aa26ca3728.png",
+      "native_output_bytes_verified": true,
+      "v1_actions": [],
+      "role": "additional_arsenal_orientation",
+      "limitations": [
+        "Orientation statique adaptée ; pas de frame extraite du jeu ni de séquence animée complète.",
+        "Échelle, ancrage et contours à vérifier dans le moteur ; pixels de très faible alpha résiduels.",
+        "Les marges demandées ne sont pas atteintes sur tous les côtés ; aucune silhouette utile n’est rognée.",
+        "Carreau simple de Leon : ne remplace pas les Blast Arrows d’Ada ni les flèches de Krauser. Les fins détails et angles sont reconstruits."
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "image_pixels_modified_after_generation": false
+    },
+    {
+      "asset_id": "REC_OBJ_RE0_MOLOTOV_UPRIGHT_V24",
+      "name": "Bouteille RE0 non allumée — verticale",
+      "category": "projectile",
+      "state": "neck_up",
+      "edition": "Resident Evil Zero (2002 catalogue; platform of the pictured render unspecified)",
+      "path": "assets/re0_molotov_upright_v24.png",
+      "status": "orientation_key_candidate",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "file_bytes": 1126317,
+      "sha256": "0b6e4d30da8b6b0fb8b9d2f1dd3c7b5bf298f9a6a8e7fa592756450d6d2ff8bb",
+      "git_blob_sha": "20ac0d2c46b8e3369abf9d122f3e4bc38356c2ae",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "fully_transparent_pixels": 1294105,
+      "low_alpha_1_to_15_pixels": 8188,
+      "bbox_alpha_nonzero": [
+        153,
+        97,
+        954,
+        1536
+      ],
+      "bbox_alpha_ge128": [
+        362,
+        100,
+        652,
+        1402
+      ],
+      "margins_alpha_ge128_px": {
+        "left": 362,
+        "top": 100,
+        "right": 372,
+        "bottom": 134
+      },
+      "sources": [
+        "https://www.evilresource.com/resident-evil-zero/weaponry/molotov-cocktail"
+      ],
+      "reference_inputs": [
+        {
+          "source_id": "re0_native_molotov",
+          "sha256": "c5a31f6e55d5080eef86803437de6a77ec5e332d11a163a7721ac5f323da3da3",
+          "kind": "native_inventory_render_reproduced_by_third_party",
+          "url": "https://www.evilresource.com/resident-evil-zero/weaponry/molotov-cocktail"
+        },
+        {
+          "kind": "generated_v22_candidate",
+          "path": "production-archives/rec-media/v22/assets/REC_OBJ_RE0_MOLOTOV_UNLIT_V22.png",
+          "source_commit": "246dbb81752c5fa41a55deb3aada3941ac966fec",
+          "sha256": "d0bc50ea082a3564bd585e71e1c8b73c4e0e59755084311db524477fe1d2826a"
+        }
+      ],
+      "prompt": "Use case: precise-object-edit. Create one new orientation key of the SAME Resident Evil Zero fictional unlit bottle prop shown in the references. Image 1 is the original native inventory render; image 2 is a previous generated candidate for material continuity. Show the complete object nearly upright, with its neck and pale cloth pointing UP, bottle base DOWN and the red-and-cream label facing the viewer in a mild three-quarter view. Preserve the native bottle's shoulder and neck proportions, dark green glass, slightly coarse 2002-era game texture, old worn label artwork and irregular pale cloth at the mouth. Do not invent legible print or update the object into a modern design. This is only a static UNLIT video-game prop orientation key: no fire, smoke, broken glass, inside view, diagram, or instructions. Keep the entire object within the central 70 percent of a portrait canvas, with at least 12 percent transparent margins above and below, and broad margins left and right. One complete object, one pose, no duplicate, hand, character, setting, HUD, captions or grid. Neutral original game-render lighting. Real transparent RGBA background, no floor, shadow plane or colored halo.",
+      "prompt_file": "prompts/correction-and-upright.json",
+      "tool": "image_gen.imagegen",
+      "generation_mode": "edit",
+      "transparent_background_requested": true,
+      "native_output": "/workspace/scratch/37b119cd013c/generated_images/v24_molotov_upright_recovered.png",
+      "native_output_bytes_verified": true,
+      "v1_actions": [
+        "REC_REBECCA_RE0__SP2"
+      ],
+      "role": "partial_orientation_key_for_existing_action",
+      "limitations": [
+        "Orientation statique adaptée ; pas de frame extraite du jeu ni de séquence animée complète.",
+        "Échelle, ancrage et contours à vérifier dans le moteur ; pixels de très faible alpha résiduels.",
+        "Les marges demandées ne sont pas atteintes sur tous les côtés ; aucune silhouette utile n’est rognée.",
+        "Objet non allumé ; plateforme source non précisée. Aucun allumage, éclatement ou feu d’impact produit, aucun marquage fin certifié."
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "image_pixels_modified_after_generation": false
+    },
+    {
+      "asset_id": "REC_OBJ_RE4R_BOLT_LEFT_V24",
+      "name": "Carreau simple RE4R — gauche, premier essai",
+      "category": "projectile",
+      "state": "left",
+      "edition": "Resident Evil 4 Remake (2023)",
+      "path": "assets/trials/re4r_bolt_left_v24.png",
+      "status": "superseded_trial",
+      "dimensions": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "file_bytes": 398248,
+      "sha256": "1423767ca6544d22cedfb9ef82dcee029fd2b53770c6a3c07f3bfca1595a6fa3",
+      "git_blob_sha": "6d37164497a9855b84b1c9010dcf806fabc608ce",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1361888,
+      "low_alpha_1_to_15_pixels": 17563,
+      "bbox_alpha_nonzero": [
+        69,
+        115,
+        2099,
+        674
+      ],
+      "bbox_alpha_ge128": [
+        77,
+        254,
+        2096,
+        499
+      ],
+      "margins_alpha_ge128_px": {
+        "left": 77,
+        "top": 254,
+        "right": 76,
+        "bottom": 225
+      },
+      "sources": [
+        "https://www.evilresource.com/resident-evil-4-remake/weaponry/bolts"
+      ],
+      "reference_inputs": [
+        {
+          "source_id": "re4r_native_bolts",
+          "sha256": "15d2000721e1226f035c6e9f890c86c0b2819d12b683dc7dfa1277f2dcdfac07",
+          "kind": "native_inventory_render_reproduced_by_third_party",
+          "url": "https://www.evilresource.com/resident-evil-4-remake/weaponry/bolts"
+        },
+        {
+          "kind": "generated_v22_candidate",
+          "path": "production-archives/rec-media/v22/assets/REC_OBJ_RE4R_2023_BOLT_RIGHT_V22.png",
+          "source_commit": "246dbb81752c5fa41a55deb3aada3941ac966fec",
+          "sha256": "68fc8eaabf13ba1e0559c3b349e6706233aa022ed7eb7cef51491abbd67eb5d7"
+        }
+      ],
+      "prompt": "Use case: precise-object-edit. Asset type: one isolated 2D projectile sprite for Resident Evil Combat. Image 1 is the primary original in-game inventory render of plain Bolts from Resident Evil 4 Remake (2023); image 2 is the previous generated right-facing candidate, provided only for visual continuity. Create ONE complete individual plain bolt viewed from the side with the dark pointed tip facing LEFT and the rear black fletching at RIGHT. Prioritize the exact blue-shaft/dark-rear proportions and the narrow swept fin shape seen on the visible individual bolts of the native reference. Preserve the original simple pointed tip, dark rear nock, subdued blue metal shaft, and realistic game materials; do not invent metal clamps, attachments or extra barbs. New left-facing view with consistent neutral upper lighting. Keep the complete object centered on a wide 3:1 canvas with at least 10 percent clear margin at both ends and generous vertical padding. A single object and a single pose, no bundle, duplicate, frame grid, scene, hand, character, HUD, labels or text. No explosive attachment, smoke, sparks, trail, impact, floor or shadow plane. Genuine transparent RGBA background with a clean edge and no colored halo. This depicts a fictional video-game item only.",
+      "prompt_file": "prompts/initial.json",
+      "tool": "image_gen.imagegen",
+      "generation_mode": "edit",
+      "transparent_background_requested": true,
+      "native_output": "/workspace/scratch/37b119cd013c/generated_images/exec-641c218f-e40b-40cd-b495-979532c737e5.png",
+      "native_output_bytes_verified": true,
+      "v1_actions": [],
+      "role": "additional_arsenal_orientation",
+      "limitations": [
+        "Orientation statique adaptée ; pas de frame extraite du jeu ni de séquence animée complète.",
+        "Échelle, ancrage et contours à vérifier dans le moteur ; pixels de très faible alpha résiduels.",
+        "Les marges demandées ne sont pas atteintes sur tous les côtés ; aucune silhouette utile n’est rognée.",
+        "Carreau simple de Leon : ne remplace pas les Blast Arrows d’Ada ni les flèches de Krauser. Les fins détails et angles sont reconstruits.",
+        "Essai remplacé : deux attaches métalliques sans support dans le rendu natif."
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "image_pixels_modified_after_generation": false,
+      "superseded_by": "assets/re4r_bolt_left_corrected_v24.png"
+    },
+    {
+      "asset_id": "REC_OBJ_RE0_MOLOTOV_HORIZONTAL_V24",
+      "name": "Bouteille RE0 non allumée — horizontale",
+      "category": "projectile",
+      "state": "neck_left",
+      "edition": "Resident Evil Zero (2002 catalogue; platform of the pictured render unspecified)",
+      "path": "assets/re0_molotov_horizontal_v24.png",
+      "status": "orientation_key_candidate",
+      "dimensions": [
+        1983,
+        793
+      ],
+      "mode": "RGBA",
+      "file_bytes": 947181,
+      "sha256": "f00019fda3f765ff79dfc90349ff3a5a27e70744ba133cae640e96c26d08b4f2",
+      "git_blob_sha": "59bca9d5ab0f6eb6227981b3e53c8ec48a19276e",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1020632,
+      "low_alpha_1_to_15_pixels": 23366,
+      "bbox_alpha_nonzero": [
+        33,
+        35,
+        1953,
+        773
+      ],
+      "bbox_alpha_ge128": [
+        131,
+        208,
+        1856,
+        667
+      ],
+      "margins_alpha_ge128_px": {
+        "left": 131,
+        "top": 208,
+        "right": 127,
+        "bottom": 126
+      },
+      "sources": [
+        "https://www.evilresource.com/resident-evil-zero/weaponry/molotov-cocktail"
+      ],
+      "reference_inputs": [
+        {
+          "source_id": "re0_native_molotov",
+          "sha256": "c5a31f6e55d5080eef86803437de6a77ec5e332d11a163a7721ac5f323da3da3",
+          "kind": "native_inventory_render_reproduced_by_third_party",
+          "url": "https://www.evilresource.com/resident-evil-zero/weaponry/molotov-cocktail"
+        },
+        {
+          "kind": "generated_v22_candidate",
+          "path": "production-archives/rec-media/v22/assets/REC_OBJ_RE0_MOLOTOV_UNLIT_V22.png",
+          "source_commit": "246dbb81752c5fa41a55deb3aada3941ac966fec",
+          "sha256": "d0bc50ea082a3564bd585e71e1c8b73c4e0e59755084311db524477fe1d2826a"
+        }
+      ],
+      "prompt": "Use case: precise-object-edit. Asset type: one isolated fictional game-item sprite for Resident Evil Combat. Image 1 is the primary original inventory render of the unlit Molotov Cocktail from Resident Evil Zero, with the source platform unspecified; image 2 is the previous generated V22 candidate for continuity. Render the SAME single complete green-glass bottle in a new horizontal mid-turn pose: neck and pale fabric at LEFT, round bottle base at RIGHT, label face still visible in a mild three-quarter view. Preserve the exact source silhouette proportions, long neck, dark green slightly coarse game texture, worn red-and-cream rectangular label artwork and pale fabric silhouette. Keep the old-game texture character; do not modernize the design or invent readable small print. This is a static UNLIT orientation key of the already existing fictional prop, with no fire, smoke, broken glass, internal view, technical diagram or instructions. Center the full bottle with at least 10 percent transparent padding on every side. One object, one pose per image; no hand, person, scenery, duplicate, UI, grid, caption, floor or drop shadow. Real transparent RGBA background and crisp clean silhouette without any colored halo. Preserve the neutral lighting of the references.",
+      "prompt_file": "prompts/initial.json",
+      "tool": "image_gen.imagegen",
+      "generation_mode": "edit",
+      "transparent_background_requested": true,
+      "native_output": "/workspace/scratch/37b119cd013c/generated_images/exec-c87c4915-be29-492c-881b-60a48af10c05.png",
+      "native_output_bytes_verified": true,
+      "v1_actions": [
+        "REC_REBECCA_RE0__SP2"
+      ],
+      "role": "partial_orientation_key_for_existing_action",
+      "limitations": [
+        "Orientation statique adaptée ; pas de frame extraite du jeu ni de séquence animée complète.",
+        "Échelle, ancrage et contours à vérifier dans le moteur ; pixels de très faible alpha résiduels.",
+        "Les marges demandées ne sont pas atteintes sur tous les côtés ; aucune silhouette utile n’est rognée.",
+        "Objet non allumé ; plateforme source non précisée. Aucun allumage, éclatement ou feu d’impact produit, aucun marquage fin certifié."
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "image_pixels_modified_after_generation": false
+    },
+    {
+      "asset_id": "REC_OBJ_RE4R_BOLT_ASCENDING_V24",
+      "name": "Carreau simple RE4R — inclinaison montante",
+      "category": "projectile",
+      "state": "upper_right",
+      "edition": "Resident Evil 4 Remake (2023)",
+      "path": "assets/re4r_bolt_ascending_v24.png",
+      "status": "orientation_key_candidate",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "mode": "RGBA",
+      "file_bytes": 220820,
+      "sha256": "5708d8117a6a158638d59dd26d02322cba059e250f3277efd36b0d47b2468d08",
+      "git_blob_sha": "adeda3cca2851384fa893c4ae358a040d038ab38",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1486489,
+      "low_alpha_1_to_15_pixels": 6965,
+      "bbox_alpha_nonzero": [
+        76,
+        78,
+        1738,
+        837
+      ],
+      "bbox_alpha_ge128": [
+        200,
+        241,
+        1611,
+        672
+      ],
+      "margins_alpha_ge128_px": {
+        "left": 200,
+        "top": 241,
+        "right": 163,
+        "bottom": 215
+      },
+      "sources": [
+        "https://www.evilresource.com/resident-evil-4-remake/weaponry/bolts"
+      ],
+      "reference_inputs": [
+        {
+          "source_id": "re4r_native_bolts",
+          "sha256": "15d2000721e1226f035c6e9f890c86c0b2819d12b683dc7dfa1277f2dcdfac07",
+          "kind": "native_inventory_render_reproduced_by_third_party",
+          "url": "https://www.evilresource.com/resident-evil-4-remake/weaponry/bolts"
+        }
+      ],
+      "prompt": "Use case: precise-object-edit. One isolated fictional projectile sprite from Resident Evil 4 Remake (2023), based strictly on the supplied original inventory render of the plain Bolts. Isolate ONE complete representative bolt from the pictured bundle and turn it in the image plane into a shallow upward angle: pointed tip toward the UPPER RIGHT, rear fletching toward the LOWER LEFT, about 20 degrees above horizontal. Preserve the thin blue shaft, the dark pointed simple tip, long dark rear section and narrow swept black fletching visible in the native reference. Keep the native proportions and understated materials, no silver rectangular clips or novel attachments. Full object visible, only one bolt, centered within 70 percent of a wide landscape canvas with generous transparent space all around. Realistic game-render lighting. True transparent RGBA background with clean edges. No bundle, character, hand, weapon launcher, explosion, mine attachment, smoke, motion trail, scenery, floor, shadow, diagram, captions or grid. This is only an orientation key for a 2D adaptation, not a technical weapon diagram.",
+      "prompt_file": "prompts/orientations.json",
+      "tool": "image_gen.imagegen",
+      "generation_mode": "edit",
+      "transparent_background_requested": true,
+      "native_output": "/workspace/scratch/37b119cd013c/generated_images/exec-eee1161a-9f13-400e-851e-265e84d08fa1.png",
+      "native_output_bytes_verified": true,
+      "v1_actions": [],
+      "role": "additional_arsenal_orientation",
+      "limitations": [
+        "Orientation statique adaptée ; pas de frame extraite du jeu ni de séquence animée complète.",
+        "Échelle, ancrage et contours à vérifier dans le moteur ; pixels de très faible alpha résiduels.",
+        "Les marges demandées ne sont pas atteintes sur tous les côtés ; aucune silhouette utile n’est rognée.",
+        "Carreau simple de Leon : ne remplace pas les Blast Arrows d’Ada ni les flèches de Krauser. Les fins détails et angles sont reconstruits."
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "image_pixels_modified_after_generation": false
+    },
+    {
+      "asset_id": "REC_OBJ_RE0_MOLOTOV_TURNING_V24",
+      "name": "Bouteille RE0 non allumée — rotation opposée",
+      "category": "projectile",
+      "state": "neck_lower_right",
+      "edition": "Resident Evil Zero (2002 catalogue; platform of the pictured render unspecified)",
+      "path": "assets/re0_molotov_turning_v24.png",
+      "status": "orientation_key_candidate",
+      "dimensions": [
+        1402,
+        1122
+      ],
+      "mode": "RGBA",
+      "file_bytes": 564505,
+      "sha256": "fa545cae0824c0bbe283e3be0b8b4829430927610da29470da6b146549fbc5bc",
+      "git_blob_sha": "08dd097b524ef76dadc50cb4d31ff0ccc671deb1",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1267445,
+      "low_alpha_1_to_15_pixels": 11515,
+      "bbox_alpha_nonzero": [
+        0,
+        9,
+        1402,
+        1122
+      ],
+      "bbox_alpha_ge128": [
+        125,
+        92,
+        1249,
+        1045
+      ],
+      "margins_alpha_ge128_px": {
+        "left": 125,
+        "top": 92,
+        "right": 153,
+        "bottom": 77
+      },
+      "sources": [
+        "https://www.evilresource.com/resident-evil-zero/weaponry/molotov-cocktail"
+      ],
+      "reference_inputs": [
+        {
+          "source_id": "re0_native_molotov",
+          "sha256": "c5a31f6e55d5080eef86803437de6a77ec5e332d11a163a7721ac5f323da3da3",
+          "kind": "native_inventory_render_reproduced_by_third_party",
+          "url": "https://www.evilresource.com/resident-evil-zero/weaponry/molotov-cocktail"
+        }
+      ],
+      "prompt": "Use case: precise-object-edit. Create one isolated orientation key for the same fictional UNLIT Molotov Cocktail inventory prop from Resident Evil Zero shown in the supplied native render. Rotate the whole visible prop in the image plane so its pale fabric and neck point toward the LOWER RIGHT, and its rounded bottle base toward the UPPER LEFT. This is the opposite tilt of the reference, while retaining the same visible face and worn label; the label rotates with the object. Preserve the long-neck green bottle proportions, slightly coarse old-game texture, worn red-and-cream label artwork and irregular pale fabric shape. Do not invent new legible lettering, patterns, hardware or an HD redesign. One full object occupying about 70 percent of the canvas diagonal with broad clear margins; neutral game-render lighting. Real transparent RGBA background, no floor or shadow. No fire, smoke, broken glass, human, hand, construction information, diagram, UI, caption, grid or extra object. This is a static fictional-game art orientation only.",
+      "prompt_file": "prompts/orientations.json",
+      "tool": "image_gen.imagegen",
+      "generation_mode": "edit",
+      "transparent_background_requested": true,
+      "native_output": "/workspace/scratch/37b119cd013c/generated_images/exec-9d0d13c8-859a-4cb7-934d-f07b13450a45.png",
+      "native_output_bytes_verified": true,
+      "v1_actions": [
+        "REC_REBECCA_RE0__SP2"
+      ],
+      "role": "partial_orientation_key_for_existing_action",
+      "limitations": [
+        "Orientation statique adaptée ; pas de frame extraite du jeu ni de séquence animée complète.",
+        "Échelle, ancrage et contours à vérifier dans le moteur ; pixels de très faible alpha résiduels.",
+        "Les marges demandées ne sont pas atteintes sur tous les côtés ; aucune silhouette utile n’est rognée.",
+        "Objet non allumé ; plateforme source non précisée. Aucun allumage, éclatement ou feu d’impact produit, aucun marquage fin certifié."
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "image_pixels_modified_after_generation": false
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "re4r_native_bolts",
+      "file": "re4r_bolts_native.png",
+      "url": "https://www.evilresource.com/resident-evil-4-remake/weaponry/bolts",
+      "image_url": "https://www.evilresource.com/images/data/full/re4remake/bolts.png?6ffd99c6=",
+      "sha256": "15d2000721e1226f035c6e9f890c86c0b2819d12b683dc7dfa1277f2dcdfac07",
+      "kind": "native_inventory_render_reproduced_by_third_party",
+      "edition": "Resident Evil 4 Remake (2023)",
+      "observed": "Bundle of plain blue bolts; pointed dark tips and black fletching are visible. No silver clips on the shafts.",
+      "limits": "Several bolts overlap. A single complete side view is reconstructed, not extracted.",
+      "redistributed": false,
+      "dimensions": [
+        450,
+        360
+      ]
+    },
+    {
+      "source_id": "re0_native_molotov",
+      "file": "re0_molotov_native.png",
+      "url": "https://www.evilresource.com/resident-evil-zero/weaponry/molotov-cocktail",
+      "image_url": "https://www.evilresource.com/images/data/full/re0/molotov-cocktail.png?27512703=",
+      "sha256": "c5a31f6e55d5080eef86803437de6a77ec5e332d11a163a7721ac5f323da3da3",
+      "kind": "native_inventory_render_reproduced_by_third_party",
+      "edition": "Resident Evil Zero (2002 catalogue; platform of the pictured render unspecified)",
+      "observed": "One complete unlit green bottle with pale cloth, worn red/cream label and diagonal orientation.",
+      "limits": "Source is low definition; small lettering and HD2016 details are not certified.",
+      "redistributed": false,
+      "dimensions": [
+        450,
+        360
+      ]
+    }
+  ],
+  "summary": {
+    "png": 6,
+    "candidate_orientation_keys": 5,
+    "superseded_trials": 1,
+    "complete_v1_actions": 0,
+    "complete_animations": 0
+  },
+  "recovery_note": "Upright PNG was returned without output_hint; exact tool base64 bytes decoded, no re-encoding or pixel modification.",
+  "historical_refusals_retried": false,
+  "pixel_editing_performed": false,
+  "scope": "Five orientation candidates, including three partial keys for RE0 SP2 and two additional Leon arsenal orientations. No closure of the 44 V1 actions."
+}

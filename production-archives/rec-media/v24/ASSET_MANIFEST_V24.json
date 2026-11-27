@@ -1,0 +1,1166 @@
+{
+  "schema": "rec-v24-consolidated-assets-1",
+  "date": "2026-11-27",
+  "timezone": "Europe/Paris",
+  "base_commit": "246dbb81752c5fa41a55deb3aada3941ac966fec",
+  "scope": "Nouveaux candidats média hors moteur, états manquants et propositions de décors ; les essais remplacés sont conservés. Aucun statut historique clôturé par simple présence de PNG.",
+  "path_base": "production-archives/rec-media/v24",
+  "submanifests": [
+    {
+      "domain": "characters",
+      "path": "characters/ASSET_MANIFEST_CHARACTERS_V24.json",
+      "sha256": "c2c5494766c201b988e4eba4a8433234f44c3c10a34e41cdf7786263f32b2454",
+      "assets": 6
+    },
+    {
+      "domain": "creatures",
+      "path": "creatures/manifest.json",
+      "sha256": "d4ded6dcdd18688604457591181b96d3298465900a48158c9e3965ac720d49c5",
+      "assets": 8
+    },
+    {
+      "domain": "projectiles",
+      "path": "projectiles/ASSET_MANIFEST_PROJECTILES_V24.json",
+      "sha256": "fc2d2fa4fb352c01466359e2981bab2074b019bf83aaf0c1bbceac34e466db11",
+      "assets": 6
+    },
+    {
+      "domain": "stages",
+      "path": "stages/manifest.json",
+      "sha256": "eb24ff6cdc8a14ed6a4bfdb9a8d19cdfcafa22851f1a10f90e34ad9a66eb6698",
+      "assets": 3
+    }
+  ],
+  "summary": {
+    "png": 23,
+    "candidates": 20,
+    "superseded_trials": 3,
+    "by_domain": {
+      "characters": {
+        "png": 6,
+        "candidates": 6,
+        "superseded_trials": 0
+      },
+      "creatures": {
+        "png": 8,
+        "candidates": 6,
+        "superseded_trials": 2
+      },
+      "projectiles": {
+        "png": 6,
+        "candidates": 5,
+        "superseded_trials": 1
+      },
+      "stages": {
+        "png": 3,
+        "candidates": 3,
+        "superseded_trials": 0
+      }
+    },
+    "total_png_bytes": 27633565,
+    "new_character_identities": 0,
+    "new_creature_identities": 0,
+    "complete_animations": 0,
+    "completed_v1_projectile_actions": 0,
+    "completed_parallax_sets": 0,
+    "engine_admissions": 0,
+    "one_to_one_certifications": 0
+  },
+  "assets": [
+    {
+      "asset_id": "REC_HELENA_RE6_SELECTED_KEY_V24",
+      "domain": "characters",
+      "path": "characters/assets/helena_re6_agent_selected_v24.png",
+      "status": "animation_key_candidate",
+      "candidate": true,
+      "name": "Helena Harper",
+      "edition": "Resident Evil 6 (2012), tenue promotionnelle de janvier 2012",
+      "state": "selected",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "file_bytes": 1332000,
+      "sha256": "300d980080abd789bef71323a6c01101db59f1a23f88cb48ad5cd2c3b49af1aa",
+      "git_blob_sha": "8d7b1f80b0008bba95328574db0ccb8e2a59902e",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "source_manifest": "characters/ASSET_MANIFEST_CHARACTERS_V24.json",
+      "source_manifest_sha256": "c2c5494766c201b988e4eba4a8433234f44c3c10a34e41cdf7786263f32b2454",
+      "sources": [
+        "https://news.capcomusa.com/brelston/blog/2012/01/23/official_leon_and_helena_art_from_resident_evil_6"
+      ],
+      "prompt": "Use case: identity-preserve.\nAsset type: ONE full-body raster character sprite, a static menu-animation key for Resident Evil Combat. This is a new adapted menu gesture, not a claimed Capcom animation.\nInput 1 is the EDIT TARGET: V22 Helena Harper from Resident Evil 6, agent outfit based on Capcom's January 2012 promotional render. Input 2 is its original official source, showing Helena on the viewer's LEFT and Leon on the right; use ONLY Helena to verify costume anatomy, never copy Leon. Lock her medium-length layered light-brown hair, mature serious face, pale lavender short-sleeve collared blouse, dark fitted buttoned waistcoat, small necklace, dark belt and observed hip gear, dark subtly pinstriped flared trousers and practical dark heeled shoes. Keep the same dark handgun in her ANATOMICAL RIGHT hand, lowered toward the floor. Bare hands and same finger shapes; no new gloves, bracelet or badge.\nChange only the pose: stand more upright with both feet naturally separated, shoulders attentive and chin slightly raised, looking toward the viewer. Lift the empty anatomical LEFT hand off the hip and place its palm lightly against the upper chest just below the collarbone, elbow bent outward slightly. The RIGHT arm stays down with the same pistol muzzle toward the floor. Reserved professional expression, no smile or theatrical gesture.\nFraming: portrait 2:3 canvas, entire crown-to-soles figure centered, character height only 76 percent of canvas, at least 10 percent empty margin on ALL sides. Both feet and all fingers, pistol and clothing stay inside the frame. Preserve the same lighting, natural adult proportions, palette and detailed realistic game-sprite finish of input 1. Output ONE pose and ONE figure. Genuine RGBA alpha transparency: background alpha must be zero, no ambient background haze, no scenery, floor, cast shadow, checkerboard pixels, text, captions, labels, panels, watermarks, glow or second figure. Do not mirror, crop, add costume parts, replace weapons or invent logos.",
+      "limitations": [
+        "Clé statique candidate de menu ; transitions, timing, pivots et raccord dans le moteur restent à produire et vérifier.",
+        "Fidélité 1:1 non certifiée : visage, doigts, matériaux, détails fins et proportions ont été régénérés.",
+        "Les marges hautes ou basses sont inférieures aux 10 % demandés ; pas de rognage visible de la silhouette alpha >=128.",
+        "Les fichiers ont de la transparence réelle, avec des pixels de très faible alpha dispersés. Le RGB coloré sous alpha zéro n’est pas un fond opaque ; les contours restent à inspecter en jeu.",
+        "Incarnation fondée sur l’art promotionnel de janvier 2012 ; détails finaux du modèle commercial RE6 non certifiés.",
+        "Revue indépendante : baseline variable et contours à vérifier dans le moteur ; les six poses n'atteignent pas toutes les marges demandées."
+      ],
+      "review_reports": [
+        "reports/INDEPENDENT_CHARACTERS_V24.json"
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "post_generation_pixel_edits": false,
+      "hero_id": "REC_HELENA_RE6",
+      "costume": "agent promo janvier 2012",
+      "edition_key": "re6_2012_agent_promo201201"
+    },
+    {
+      "asset_id": "REC_HELENA_RE6_CONFIRM_KEY_V24",
+      "domain": "characters",
+      "path": "characters/assets/helena_re6_agent_confirm_v24.png",
+      "status": "animation_key_candidate",
+      "candidate": true,
+      "name": "Helena Harper",
+      "edition": "Resident Evil 6 (2012), tenue promotionnelle de janvier 2012",
+      "state": "confirm",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "file_bytes": 1349693,
+      "sha256": "a4456f13f4f25627716e8c43eebe29266853d6646a4bf40a2040648d2c165b13",
+      "git_blob_sha": "293b37a8a1459e5e3ae039ebf02ed10b1fb09b38",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "source_manifest": "characters/ASSET_MANIFEST_CHARACTERS_V24.json",
+      "source_manifest_sha256": "c2c5494766c201b988e4eba4a8433234f44c3c10a34e41cdf7786263f32b2454",
+      "sources": [
+        "https://news.capcomusa.com/brelston/blog/2012/01/23/official_leon_and_helena_art_from_resident_evil_6"
+      ],
+      "prompt": "Use case: identity-preserve.\nAsset type: ONE full-body raster character sprite, a static menu-animation key for Resident Evil Combat. This is a new adapted menu gesture, not a claimed Capcom animation.\nInput 1 is the EDIT TARGET: V22 Helena Harper from Resident Evil 6, agent outfit based on Capcom's January 2012 promotional render. Input 2 is its original official source, showing Helena on the viewer's LEFT and Leon on the right; use ONLY Helena to verify costume anatomy, never copy Leon. Lock her medium-length layered light-brown hair, mature serious face, pale lavender short-sleeve collared blouse, dark fitted buttoned waistcoat, small necklace, dark belt and observed hip gear, dark subtly pinstriped flared trousers and practical dark heeled shoes. Keep the same dark handgun in her ANATOMICAL RIGHT hand, lowered toward the floor. Bare hands and same finger shapes; no new gloves, bracelet or badge.\nChange only the pose: body stays near frontal, both feet planted. Raise her EMPTY anatomical LEFT hand to shoulder height for a small calm acknowledgment, palm facing the viewer and five natural fingers gently separated. Keep her right arm down holding the same handgun pointed toward the floor. A very slight reassuring smile and direct gaze. No waving motion blur and no added action effects.\nFraming: portrait 2:3 canvas, entire crown-to-soles figure centered, character height only 76 percent of canvas, at least 10 percent empty margin on ALL sides. Both feet and all fingers, pistol and clothing stay inside the frame. Preserve the same lighting, natural adult proportions, palette and detailed realistic game-sprite finish of input 1. Output ONE pose and ONE figure. Genuine RGBA alpha transparency: background alpha must be zero, no ambient background haze, no scenery, floor, cast shadow, checkerboard pixels, text, captions, labels, panels, watermarks, glow or second figure. Do not mirror, crop, add costume parts, replace weapons or invent logos.",
+      "limitations": [
+        "Clé statique candidate de menu ; transitions, timing, pivots et raccord dans le moteur restent à produire et vérifier.",
+        "Fidélité 1:1 non certifiée : visage, doigts, matériaux, détails fins et proportions ont été régénérés.",
+        "Les marges hautes ou basses sont inférieures aux 10 % demandés ; pas de rognage visible de la silhouette alpha >=128.",
+        "Les fichiers ont de la transparence réelle, avec des pixels de très faible alpha dispersés. Le RGB coloré sous alpha zéro n’est pas un fond opaque ; les contours restent à inspecter en jeu.",
+        "Incarnation fondée sur l’art promotionnel de janvier 2012 ; détails finaux du modèle commercial RE6 non certifiés.",
+        "Revue indépendante : baseline variable et contours à vérifier dans le moteur ; les six poses n'atteignent pas toutes les marges demandées."
+      ],
+      "review_reports": [
+        "reports/INDEPENDENT_CHARACTERS_V24.json"
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "post_generation_pixel_edits": false,
+      "hero_id": "REC_HELENA_RE6",
+      "costume": "agent promo janvier 2012",
+      "edition_key": "re6_2012_agent_promo201201"
+    },
+    {
+      "asset_id": "REC_HELENA_RE6_DESELECT_KEY_V24",
+      "domain": "characters",
+      "path": "characters/assets/helena_re6_agent_deselect_v24.png",
+      "status": "animation_key_candidate",
+      "candidate": true,
+      "name": "Helena Harper",
+      "edition": "Resident Evil 6 (2012), tenue promotionnelle de janvier 2012",
+      "state": "deselect",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "file_bytes": 1317630,
+      "sha256": "7d570bbbdd12e086cf5ffeb203c4b629d8acf289853c556341bc05d22d05ae89",
+      "git_blob_sha": "610ec8d5e0a39c81718ad92b48e5731105b95bf7",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "source_manifest": "characters/ASSET_MANIFEST_CHARACTERS_V24.json",
+      "source_manifest_sha256": "c2c5494766c201b988e4eba4a8433234f44c3c10a34e41cdf7786263f32b2454",
+      "sources": [
+        "https://news.capcomusa.com/brelston/blog/2012/01/23/official_leon_and_helena_art_from_resident_evil_6"
+      ],
+      "prompt": "Use case: identity-preserve.\nAsset type: ONE full-body raster character sprite, a static menu-animation key for Resident Evil Combat. This is a new adapted menu gesture, not a claimed Capcom animation.\nInput 1 is the EDIT TARGET: V22 Helena Harper from Resident Evil 6, agent outfit based on Capcom's January 2012 promotional render. Input 2 is its original official source, showing Helena on the viewer's LEFT and Leon on the right; use ONLY Helena to verify costume anatomy, never copy Leon. Lock her medium-length layered light-brown hair, mature serious face, pale lavender short-sleeve collared blouse, dark fitted buttoned waistcoat, small necklace, dark belt and observed hip gear, dark subtly pinstriped flared trousers and practical dark heeled shoes. Keep the same dark handgun in her ANATOMICAL RIGHT hand, lowered toward the floor. Bare hands and same finger shapes; no new gloves, bracelet or badge.\nChange only the pose: lower BOTH arms beside her torso, her EMPTY anatomical LEFT hand hanging naturally beside the left thigh, fingers gently curved. The anatomical RIGHT hand retains the same handgun muzzle downward. Shoulders relax and the head/gaze turns slightly toward her own RIGHT, viewer left. Neutral reserved expression, both feet planted. This must be distinct from the original left-hand-on-hip pose; no walking or action.\nFraming: portrait 2:3 canvas, entire crown-to-soles figure centered, character height only 76 percent of canvas, at least 10 percent empty margin on ALL sides. Both feet and all fingers, pistol and clothing stay inside the frame. Preserve the same lighting, natural adult proportions, palette and detailed realistic game-sprite finish of input 1. Output ONE pose and ONE figure. Genuine RGBA alpha transparency: background alpha must be zero, no ambient background haze, no scenery, floor, cast shadow, checkerboard pixels, text, captions, labels, panels, watermarks, glow or second figure. Do not mirror, crop, add costume parts, replace weapons or invent logos.",
+      "limitations": [
+        "Clé statique candidate de menu ; transitions, timing, pivots et raccord dans le moteur restent à produire et vérifier.",
+        "Fidélité 1:1 non certifiée : visage, doigts, matériaux, détails fins et proportions ont été régénérés.",
+        "Les marges hautes ou basses sont inférieures aux 10 % demandés ; pas de rognage visible de la silhouette alpha >=128.",
+        "Les fichiers ont de la transparence réelle, avec des pixels de très faible alpha dispersés. Le RGB coloré sous alpha zéro n’est pas un fond opaque ; les contours restent à inspecter en jeu.",
+        "Incarnation fondée sur l’art promotionnel de janvier 2012 ; détails finaux du modèle commercial RE6 non certifiés.",
+        "Regard opposé à la direction demandée ; correction encore ouverte.",
+        "Revue indépendante : baseline variable et contours à vérifier dans le moteur ; les six poses n'atteignent pas toutes les marges demandées.",
+        "Revue indépendante : regard vers la droite de l'image malgré le prompt vers la gauche ; correction ouverte."
+      ],
+      "review_reports": [
+        "reports/INDEPENDENT_CHARACTERS_V24.json"
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "post_generation_pixel_edits": false,
+      "hero_id": "REC_HELENA_RE6",
+      "costume": "agent promo janvier 2012",
+      "edition_key": "re6_2012_agent_promo201201"
+    },
+    {
+      "asset_id": "REC_ADA_RE4R_SW_DEFAULT_SELECTED_KEY_V24",
+      "domain": "characters",
+      "path": "characters/assets/ada_re4r_sw_default_selected_v24.png",
+      "status": "animation_key_candidate",
+      "candidate": true,
+      "name": "Ada Wong",
+      "edition": "Resident Evil 4 remake Separate Ways (2023)",
+      "state": "selected",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "file_bytes": 1349544,
+      "sha256": "566ab97ded17e9b89761a3b17319a05c02eb00deccbf8269e313f6c99d8fe92f",
+      "git_blob_sha": "dbebacc136589439fd629b14871eabab32fc3b40",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "source_manifest": "characters/ASSET_MANIFEST_CHARACTERS_V24.json",
+      "source_manifest_sha256": "c2c5494766c201b988e4eba4a8433234f44c3c10a34e41cdf7786263f32b2454",
+      "sources": [
+        "https://gamewith.jp/biohazard-re4/article/show/419677",
+        "https://news.capcomusa.com/lets/browse/ya-salio-caminos-separados-el-dlc-de-resident-evil-4"
+      ],
+      "prompt": "Use case: identity-preserve.\nAsset type: ONE full-body raster character sprite, a static menu-animation key for Resident Evil Combat. This is a new adapted menu gesture, not a claimed Capcom animation.\nInput 1 is the EDIT TARGET: V22 Ada Wong in DEFAULT Resident Evil 4 remake Separate Ways (2023) outfit. Input 2 is the native Extras-menu screenshot used for visual verification; ignore all surrounding menu text and background. Lock the actual BLACK short side-parted bob shown on the model, adult facial identity, burgundy-red ribbed long-sleeve turtleneck sweater dress, black gloves, dark stockings, tall fitted black heeled boots, black shoulder harness and exactly the observed buckles, hip belt and thigh straps. Keep the silver-gray handgun in her ANATOMICAL RIGHT hand, pointed down, and the same holstered equipment with brown grip on her ANATOMICAL LEFT hip. No substitution with RE4 2005 costume or other optional outfit.\nChange only the pose: uncross her empty anatomical LEFT arm and place the LEFT hand at her left waist, elbow subtly outward. Keep the RIGHT hand down with the same silver handgun muzzle toward the floor. Stand upright, body near frontal and naturally offset feet, chin slightly raised and eyes attentive toward the viewer. Maintain a cool neutral expression. All equipment remains attached to its original anatomical side.\nFraming: portrait 2:3 canvas, entire crown-to-soles figure centered, character height only 76 percent of canvas, at least 10 percent empty margin on ALL sides. Both feet and all fingers, pistol and clothing stay inside the frame. Preserve the same lighting, natural adult proportions, palette and detailed realistic game-sprite finish of input 1. Output ONE pose and ONE figure. Genuine RGBA alpha transparency: background alpha must be zero, no ambient background haze, no scenery, floor, cast shadow, checkerboard pixels, text, captions, labels, panels, watermarks, glow or second figure. Do not mirror, crop, add costume parts, replace weapons or invent logos.",
+      "limitations": [
+        "Clé statique candidate de menu ; transitions, timing, pivots et raccord dans le moteur restent à produire et vérifier.",
+        "Fidélité 1:1 non certifiée : visage, doigts, matériaux, détails fins et proportions ont été régénérés.",
+        "Les marges hautes ou basses sont inférieures aux 10 % demandés ; pas de rognage visible de la silhouette alpha >=128.",
+        "Les fichiers ont de la transparence réelle, avec des pixels de très faible alpha dispersés. Le RGB coloré sous alpha zéro n’est pas un fond opaque ; les contours restent à inspecter en jeu.",
+        "Incarnation DEFAULT Separate Ways 2023 ; elle ne valide pas un costume RE4 2005, Dress ou Undercover.",
+        "Revue indépendante : baseline variable et contours à vérifier dans le moteur ; les six poses n'atteignent pas toutes les marges demandées."
+      ],
+      "review_reports": [
+        "reports/INDEPENDENT_CHARACTERS_V24.json"
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "post_generation_pixel_edits": false,
+      "hero_id": "REC_ADA_RE4R",
+      "costume": "DEFAULT",
+      "edition_key": "re4r_2023_separate_ways_default"
+    },
+    {
+      "asset_id": "REC_ADA_RE4R_SW_DEFAULT_CONFIRM_KEY_V24",
+      "domain": "characters",
+      "path": "characters/assets/ada_re4r_sw_default_confirm_v24.png",
+      "status": "animation_key_candidate",
+      "candidate": true,
+      "name": "Ada Wong",
+      "edition": "Resident Evil 4 remake Separate Ways (2023)",
+      "state": "confirm",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "file_bytes": 1330872,
+      "sha256": "d617be46d3406ee252d75ca69675f82e3d3464b1a6ff46c6edbc4ce844a8be15",
+      "git_blob_sha": "c5711049a924926408182c1bdc360c15b135718e",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "source_manifest": "characters/ASSET_MANIFEST_CHARACTERS_V24.json",
+      "source_manifest_sha256": "c2c5494766c201b988e4eba4a8433234f44c3c10a34e41cdf7786263f32b2454",
+      "sources": [
+        "https://gamewith.jp/biohazard-re4/article/show/419677",
+        "https://news.capcomusa.com/lets/browse/ya-salio-caminos-separados-el-dlc-de-resident-evil-4"
+      ],
+      "prompt": "Use case: identity-preserve.\nAsset type: ONE full-body raster character sprite, a static menu-animation key for Resident Evil Combat. This is a new adapted menu gesture, not a claimed Capcom animation.\nInput 1 is the EDIT TARGET: V22 Ada Wong in DEFAULT Resident Evil 4 remake Separate Ways (2023) outfit. Input 2 is the native Extras-menu screenshot used for visual verification; ignore all surrounding menu text and background. Lock the actual BLACK short side-parted bob shown on the model, adult facial identity, burgundy-red ribbed long-sleeve turtleneck sweater dress, black gloves, dark stockings, tall fitted black heeled boots, black shoulder harness and exactly the observed buckles, hip belt and thigh straps. Keep the silver-gray handgun in her ANATOMICAL RIGHT hand, pointed down, and the same holstered equipment with brown grip on her ANATOMICAL LEFT hip. No substitution with RE4 2005 costume or other optional outfit.\nChange only the pose: bend the empty anatomical LEFT elbow, lift the LEFT hand to upper-chest level and make a small relaxed acknowledgment with the palm angled toward the viewer, fingers naturally open. The RIGHT arm remains lowered beside the right thigh holding the same silver handgun muzzle down. Slight restrained closed-mouth smile, direct gaze, body near frontal, feet planted and naturally separated. No extra accessory, weapon use or effects.\nFraming: portrait 2:3 canvas, entire crown-to-soles figure centered, character height only 76 percent of canvas, at least 10 percent empty margin on ALL sides. Both feet and all fingers, pistol and clothing stay inside the frame. Preserve the same lighting, natural adult proportions, palette and detailed realistic game-sprite finish of input 1. Output ONE pose and ONE figure. Genuine RGBA alpha transparency: background alpha must be zero, no ambient background haze, no scenery, floor, cast shadow, checkerboard pixels, text, captions, labels, panels, watermarks, glow or second figure. Do not mirror, crop, add costume parts, replace weapons or invent logos.",
+      "limitations": [
+        "Clé statique candidate de menu ; transitions, timing, pivots et raccord dans le moteur restent à produire et vérifier.",
+        "Fidélité 1:1 non certifiée : visage, doigts, matériaux, détails fins et proportions ont été régénérés.",
+        "Les marges hautes ou basses sont inférieures aux 10 % demandés ; pas de rognage visible de la silhouette alpha >=128.",
+        "Les fichiers ont de la transparence réelle, avec des pixels de très faible alpha dispersés. Le RGB coloré sous alpha zéro n’est pas un fond opaque ; les contours restent à inspecter en jeu.",
+        "Incarnation DEFAULT Separate Ways 2023 ; elle ne valide pas un costume RE4 2005, Dress ou Undercover.",
+        "Revue indépendante : baseline variable et contours à vérifier dans le moteur ; les six poses n'atteignent pas toutes les marges demandées."
+      ],
+      "review_reports": [
+        "reports/INDEPENDENT_CHARACTERS_V24.json"
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "post_generation_pixel_edits": false,
+      "hero_id": "REC_ADA_RE4R",
+      "costume": "DEFAULT",
+      "edition_key": "re4r_2023_separate_ways_default"
+    },
+    {
+      "asset_id": "REC_ADA_RE4R_SW_DEFAULT_DESELECT_KEY_V24",
+      "domain": "characters",
+      "path": "characters/assets/ada_re4r_sw_default_deselect_v24.png",
+      "status": "animation_key_candidate",
+      "candidate": true,
+      "name": "Ada Wong",
+      "edition": "Resident Evil 4 remake Separate Ways (2023)",
+      "state": "deselect",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "file_bytes": 1315733,
+      "sha256": "1243adf8a5856a6c4092f0fede65e32c06cd7ec67c00bb457d9f3e60f6e2dcf0",
+      "git_blob_sha": "9e344328cf5c9f34ed6bce2d809b4660caf579c5",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "source_manifest": "characters/ASSET_MANIFEST_CHARACTERS_V24.json",
+      "source_manifest_sha256": "c2c5494766c201b988e4eba4a8433234f44c3c10a34e41cdf7786263f32b2454",
+      "sources": [
+        "https://gamewith.jp/biohazard-re4/article/show/419677",
+        "https://news.capcomusa.com/lets/browse/ya-salio-caminos-separados-el-dlc-de-resident-evil-4"
+      ],
+      "prompt": "Use case: identity-preserve.\nAsset type: ONE full-body raster character sprite, a static menu-animation key for Resident Evil Combat. This is a new adapted menu gesture, not a claimed Capcom animation.\nInput 1 is the EDIT TARGET: V22 Ada Wong in DEFAULT Resident Evil 4 remake Separate Ways (2023) outfit. Input 2 is the native Extras-menu screenshot used for visual verification; ignore all surrounding menu text and background. Lock the actual BLACK short side-parted bob shown on the model, adult facial identity, burgundy-red ribbed long-sleeve turtleneck sweater dress, black gloves, dark stockings, tall fitted black heeled boots, black shoulder harness and exactly the observed buckles, hip belt and thigh straps. Keep the silver-gray handgun in her ANATOMICAL RIGHT hand, pointed down, and the same holstered equipment with brown grip on her ANATOMICAL LEFT hip. No substitution with RE4 2005 costume or other optional outfit.\nChange only the pose: let BOTH arms hang naturally at her sides; her EMPTY anatomical LEFT hand relaxed next to her left thigh, while her RIGHT hand holds the same silver handgun downward. Keep her body near frontal, shoulders relaxed and head/gaze turned slightly toward her own LEFT, viewer right. Both feet planted, quiet neutral expression. Do not reproduce the original crossed-arm gesture and do not introduce walking, firing or a back view.\nFraming: portrait 2:3 canvas, entire crown-to-soles figure centered, character height only 76 percent of canvas, at least 10 percent empty margin on ALL sides. Both feet and all fingers, pistol and clothing stay inside the frame. Preserve the same lighting, natural adult proportions, palette and detailed realistic game-sprite finish of input 1. Output ONE pose and ONE figure. Genuine RGBA alpha transparency: background alpha must be zero, no ambient background haze, no scenery, floor, cast shadow, checkerboard pixels, text, captions, labels, panels, watermarks, glow or second figure. Do not mirror, crop, add costume parts, replace weapons or invent logos.",
+      "limitations": [
+        "Clé statique candidate de menu ; transitions, timing, pivots et raccord dans le moteur restent à produire et vérifier.",
+        "Fidélité 1:1 non certifiée : visage, doigts, matériaux, détails fins et proportions ont été régénérés.",
+        "Les marges hautes ou basses sont inférieures aux 10 % demandés ; pas de rognage visible de la silhouette alpha >=128.",
+        "Les fichiers ont de la transparence réelle, avec des pixels de très faible alpha dispersés. Le RGB coloré sous alpha zéro n’est pas un fond opaque ; les contours restent à inspecter en jeu.",
+        "Incarnation DEFAULT Separate Ways 2023 ; elle ne valide pas un costume RE4 2005, Dress ou Undercover.",
+        "Revue indépendante : baseline variable et contours à vérifier dans le moteur ; les six poses n'atteignent pas toutes les marges demandées."
+      ],
+      "review_reports": [
+        "reports/INDEPENDENT_CHARACTERS_V24.json"
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "post_generation_pixel_edits": false,
+      "hero_id": "REC_ADA_RE4R",
+      "costume": "DEFAULT",
+      "edition_key": "re4r_2023_separate_ways_default"
+    },
+    {
+      "asset_id": "re5_kipepeo_hover_upstroke_v24",
+      "domain": "creatures",
+      "path": "creatures/assets/re5_kipepeo_hover_upstroke_v24.png",
+      "status": "animation_key_candidate",
+      "candidate": true,
+      "name": "Kipepeo",
+      "edition": "Resident Evil 5 (2009)",
+      "state": "hover_upstroke_key",
+      "dimensions": [
+        1206,
+        1305
+      ],
+      "mode": "RGBA",
+      "file_bytes": 965678,
+      "sha256": "518b5a8ca0ee6bbac0092d1cec102dd99fe902528f9268b54c50afd3e8863a8e",
+      "git_blob_sha": "3a134acbb7060dcfd85e70fb536d65a69ead32fd",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "source_manifest": "creatures/manifest.json",
+      "source_manifest_sha256": "d4ded6dcdd18688604457591181b96d3298465900a48158c9e3965ac720d49c5",
+      "sources": [
+        "https://bogleech.com/halloween/hall18-re5",
+        "https://bogleech.com/re/re5-kipepo.png"
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: one individual 2D fighting-game creature motion key, raster with real transparent alpha. Reference image 1 is the original Kipepeo model reproduction from Resident Evil 5 (2009), authoritative for anatomy and colors; reproduce its specific design. Create a single complete Kipepeo hovering in the SAME three-quarter orientation as the reference, with a modest raised upstroke of its existing four unequal veined wings. Change only the wing hinge angles and very slight trailing-strand curvature for this animation key. Lock the long segmented pale central body, twisted hanging lower organic section, irregular small appendages and two long red tendril strands with pale yellow tips exactly to the source-visible configuration. Keep the four rusty coral-orange wing membranes with branching dark maroon veins, their ragged irregular edges and unequal sizes, and the distinctive asymmetrical silhouette. Natural semi-realistic painted raster detail, soft dimensional game lighting, no stylization into a generic butterfly or dragon. Keep every visible wing, body tip and strand complete inside the canvas with at least 10 percent transparent breathing room on all four sides; the complete silhouette occupies at most 78 percent of canvas width and height. Exactly one creature and one pose, no split views, no sheet, no ground or shadow, no victim, no characters, no blood effects, no scene, no writing, no interface, no labels. Preserve the source-facing direction; do not mirror. This is a source-guided proposed motion key, not a recovered official animation frame.",
+      "limitations": [
+        "Top opaque-silhouette margin is below the requested10%.",
+        "Fine red/yellow edge fringes remain; contour cleanup still required.",
+        "A raised wing key alone does not establish a complete upstroke.",
+        "Source-guided proposed motion key; not an official recovered frame.",
+        "No full animation, gameplay, hitbox, pivot or opposite-facing proof.",
+        "Third-party reproduced native references have edition/platform and detail limits."
+      ],
+      "review_reports": [
+        "reports/INDEPENDENT_CREATURES_V24.json",
+        "reports/INDEPENDENT_CREATURES_CORRECTION_V24.json"
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "post_generation_pixel_edits": false,
+      "uid": "re5-kipepeo",
+      "superseded_by": null
+    },
+    {
+      "asset_id": "re4r_novistador_wingbeat_down_v24",
+      "domain": "creatures",
+      "path": "creatures/assets/re4r_novistador_wingbeat_down_v24.png",
+      "status": "animation_key_candidate",
+      "candidate": true,
+      "name": "Novistador",
+      "edition": "Resident Evil 4 remake (2023)",
+      "state": "hover_downstroke_key",
+      "dimensions": [
+        1334,
+        1179
+      ],
+      "mode": "RGBA",
+      "file_bytes": 781581,
+      "sha256": "866d1da40d1abf0b56348e444b51bdf6a81cc540b257853437a701ac982d3ce7",
+      "git_blob_sha": "5557a57fba36c0a071987e3c4cd16bb7928cfe2f",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "source_manifest": "creatures/manifest.json",
+      "source_manifest_sha256": "d4ded6dcdd18688604457591181b96d3298465900a48158c9e3965ac720d49c5",
+      "sources": [
+        "https://vandal.elespanol.com/guias/guia-resident-evil-4-remake-trucos-consejos-y-secretos/enemigos-y-jefes",
+        "https://media.vandal.net/m/3-2023/20233292011511_2.jpg"
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: single complete creature motion key for a detailed semi-realistic 2D combat game, real transparent alpha. Reference image 1 shows the actual Novistador in the Resident Evil 4 REMAKE 2023 model gallery. Use only that creature as the anatomy, silhouette, material and palette reference. Ignore the page frame, background, game logo and watermark. Render ONE full-body Novistador at the SAME frontal three-quarter angle, in a gentle flight DOWNSTROKE key: the existing thin lateral flight membranes angle about 20 degrees below their reference position, while the existing raised forewing structures stay source-shaped. The suspended legs keep the source's actual number, joints, bent shape and tapering endpoints, with only a small relaxed extension of the lowest legs. Keep the exact brown-grey translucent insectoid chitin, small yellow-green eyes, paired long fine antennae, ribbed narrow body, insect-like angular forelimbs and asymmetrical leg arrangement. No invented tail, stinger, extra wing pairs or new appendages. Do not substitute the 2005 design or make a generic praying mantis. Detailed painted raster shading consistent with the native creature. Entire silhouette including all antenna, wing and leg tips fits with at least 10 percent clean transparent margin on each edge. Occupy at most 78 percent of canvas width and height. No scene, no floor or floor shadow, no other creature/person, no effects, no text, no label or sheet. One creature, one image, one pose. This is a proposed adaptation motion key, not a certified original animation.",
+      "limitations": [
+        "Bottom margin below requested10%.",
+        "Wing/leg motion is inferred from source anatomy, not matched to a native animation frame.",
+        "Small joints/forelimb shape and membrane translucency require native-model comparison.",
+        "Source-guided proposed motion key; not an official recovered frame.",
+        "No full animation, gameplay, hitbox, pivot or opposite-facing proof.",
+        "Third-party reproduced native references have edition/platform and detail limits."
+      ],
+      "review_reports": [
+        "reports/INDEPENDENT_CREATURES_V24.json",
+        "reports/INDEPENDENT_CREATURES_CORRECTION_V24.json"
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "post_generation_pixel_edits": false,
+      "uid": "re4r-novistador",
+      "superseded_by": null
+    },
+    {
+      "asset_id": "rev2_giant_whip_spider_ready_v24",
+      "domain": "creatures",
+      "path": "creatures/assets/rev2_giant_whip_spider_ready_v24.png",
+      "status": "superseded_trial",
+      "candidate": false,
+      "name": "Giant Whip Spider",
+      "edition": "Resident Evil Revelations 2 (2015)",
+      "state": "ready_low_key",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "file_bytes": 1368543,
+      "sha256": "36e9dd8d61f4da11a747d4ecd7da91bfc49534ecf563c1da052948390948036d",
+      "git_blob_sha": "cf39685dfeeb4a8d948ba7d2e990452af2b01bf3",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "source_manifest": "creatures/manifest.json",
+      "source_manifest_sha256": "d4ded6dcdd18688604457591181b96d3298465900a48158c9e3965ac720d49c5",
+      "sources": [
+        "https://www.evilresource.com/resident-evil-revelations-2/enemies/giant-whip-spider",
+        "https://www.evilresource.com/images/data/full/rerevelations2/giant-whip-spider.png?d07d4a36"
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: one complete raster creature pose for a 2D game, genuine transparent alpha. Reference image 1 is the complete Giant Whip Spider model from Resident Evil Revelations 2 (2015). Match this exact dark low arthropod design, proportions, limb arrangement, coloring and same frontal three-quarter viewing angle. Create a cautious low ready pose: bring the two EXISTING thick spiny front pedipalps slightly inward toward the head and flex the existing walking leg joints a little while preserving every visible limb and its source occlusions. Do not invent limbs hidden by this angle. Preserve the broad flat ridged olive-brown abdomen with pale narrow bands, small low head, dark mottled segmented shell, long angular legs, fine small bristles, and the thin curled endpoint of the far-right leg. The two thick front appendages are spiny pedipalps, not a second pair of giant fangs. No tail, stinger, swollen tarantula body, giant jaws, horns, glowing eyes or extra legs. Semi-realistic dimensional painted raster finish with the source's restrained olive-brown-black palette. All appendage tips inside a landscape canvas with at least 10 percent transparent margin on all four sides, silhouette no more than 78 percent of canvas width. No ground, no cast shadow, no scene, no effects, no text, no HUD, no collage, exactly one creature in one pose. This is a proposed ready key for an adapted cycle, not a certified official animation frame.",
+      "limitations": [
+        "Superseded trial retained as original bytes.",
+        "The tool preview shows diffuse RGB around the body, but sampled surrounding pixels have alpha0; visible in-engine halo has not been demonstrated.",
+        "Source-guided proposed motion key; not an official recovered frame.",
+        "No full animation, gameplay, hitbox, pivot or opposite-facing proof.",
+        "Third-party reproduced native references have edition/platform and detail limits."
+      ],
+      "review_reports": [
+        "reports/INDEPENDENT_CREATURES_V24.json",
+        "reports/INDEPENDENT_CREATURES_CORRECTION_V24.json"
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "post_generation_pixel_edits": false,
+      "uid": "rerev2-giant-whip-spider",
+      "superseded_by": "assets/rev2_giant_whip_spider_ready_clean_v24.png"
+    },
+    {
+      "asset_id": "re5_kipepeo_hover_downstroke_v24",
+      "domain": "creatures",
+      "path": "creatures/assets/re5_kipepeo_hover_downstroke_v24.png",
+      "status": "animation_key_candidate",
+      "candidate": true,
+      "name": "Kipepeo",
+      "edition": "Resident Evil 5 (2009)",
+      "state": "hover_downstroke_key",
+      "dimensions": [
+        1316,
+        1195
+      ],
+      "mode": "RGBA",
+      "file_bytes": 988606,
+      "sha256": "f1f69b2ed68846d4e70dda5a5d1ffa6d9650244e04e7c207e27152d0e31af5bf",
+      "git_blob_sha": "796b3d4a4bc79c173cd25a42c9a1598cef554504",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "source_manifest": "creatures/manifest.json",
+      "source_manifest_sha256": "d4ded6dcdd18688604457591181b96d3298465900a48158c9e3965ac720d49c5",
+      "sources": [
+        "https://bogleech.com/halloween/hall18-re5",
+        "https://bogleech.com/re/re5-kipepo.png"
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: single raster creature animation key on genuine transparent alpha. Image 1 is the current Kipepeo upstroke key to match in proportions, rendering, body configuration and facing; image 2 is the native Resident Evil 5 (2009) model reproduction for anatomical checking. Make the complementary DOWNSTROKE pose of this same single creature. Keep the central segmented body, hanging asymmetrical lower organic structure, same appendage count, two red trailing strands with pale yellow tips and all distinctive details. Change only the four existing wing hinge angles: the two upper unequal wings now extend broadly outward and downward from the thorax, clearly lower than in image 1, while the smaller lower wing pair follows below them. The wings retain their actual unequal shapes, ragged edges, orange-pink membranes and branching dark maroon veins. Keep the same three-quarter orientation, do not mirror or invent the hidden side. No new appendages, no symmetrical butterfly redesign. Use matching dimensional semi-realistic raster shading. Frame the FULL silhouette with 12 percent clear transparent margin on every edge, reduce the body uniformly if needed to fit wide wings inside the canvas; no physical truncation. Keep the transparent area entirely empty: no colored fringes, glow, haze, shadows, particles, or opaque background. No person, victim, scenery, text, HUD, sheet, border or multiple creatures. ONE creature, ONE proposed motion key, not a recovered official frame.",
+      "limitations": [
+        "Left and right opaque margins are below requested12%.",
+        "Frame dimensions and body scale differ from upstroke; normalization/pivots not validated.",
+        "Small membrane and tendril details drift; no canonical timing claim.",
+        "Source-guided proposed motion key; not an official recovered frame.",
+        "No full animation, gameplay, hitbox, pivot or opposite-facing proof.",
+        "Third-party reproduced native references have edition/platform and detail limits."
+      ],
+      "review_reports": [
+        "reports/INDEPENDENT_CREATURES_V24.json",
+        "reports/INDEPENDENT_CREATURES_CORRECTION_V24.json"
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "post_generation_pixel_edits": false,
+      "uid": "re5-kipepeo",
+      "superseded_by": null
+    },
+    {
+      "asset_id": "re4r_novistador_wingbeat_up_v24",
+      "domain": "creatures",
+      "path": "creatures/assets/re4r_novistador_wingbeat_up_v24.png",
+      "status": "superseded_trial",
+      "candidate": false,
+      "name": "Novistador",
+      "edition": "Resident Evil 4 remake (2023)",
+      "state": "hover_upstroke_key",
+      "dimensions": [
+        1334,
+        1179
+      ],
+      "mode": "RGBA",
+      "file_bytes": 750110,
+      "sha256": "23dfe2c54ab6a00374a05603868282a5288a99a48f3eec89bcc20b69dc4f1a6b",
+      "git_blob_sha": "9d0abe5b1278d4f872977e0f5bebaf730fafad49",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "source_manifest": "creatures/manifest.json",
+      "source_manifest_sha256": "d4ded6dcdd18688604457591181b96d3298465900a48158c9e3965ac720d49c5",
+      "sources": [
+        "https://vandal.elespanol.com/guias/guia-resident-evil-4-remake-trucos-consejos-y-secretos/enemigos-y-jefes",
+        "https://media.vandal.net/m/3-2023/20233292011511_2.jpg"
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: one single whole-creature raster animation key with genuine transparent alpha. Image 1 is our Novistador downstroke key to match for identity and detailed semi-realistic finish; image 2 is the native Resident Evil 4 REMAKE 2023 gallery model, only the creature is an anatomy reference. Create the complementary hovering UPSTROKE pose at the same frontal three-quarter facing. Move only the existing thin lateral flight wings to an upward angle above the shoulders; keep the raised folded forewing structures as in the source. Preserve the exact segmented brown-grey translucent body, complex small yellow-green eyed head, paired antennae and original leg joint/appendage arrangement; the lowest dangling legs curl slightly upward for a distinct in-flight key. Do not add wings, arms, a tail, a stinger, or transform it into the 2005 species. Keep both reference-specific asymmetries and recognizable wing proportions. Frame ALL antenna, wing and leg tips with at least 12 percent clean transparent border on all sides. The whole creature occupies at most 76 percent of width and height, no cropped extremities. Transparent area must be entirely empty, no red fringe, glow, haze, shadow, scenery or ground. Do not reproduce the native source's logo, blue frame, text or watermark. One creature, one pose, no sheet or duplicate. This is an adaptation key to be reviewed, not a certified official animation frame.",
+      "limitations": [
+        "Independent review found the two posterior distal limbs curled into hooks unlike the native source; superseded by a targeted correction without deleting original PNG.",
+        "Curled lower extremities are an inferred motion pose; native animation reference remains needed.",
+        "Opaque silhouette vertical extent changes materially between keys; body anchors need separate measurement.",
+        "Thin red/yellow contour fragments remain; no edge-cleanup success claim.",
+        "Source-guided proposed motion key; not an official recovered frame.",
+        "No full animation, gameplay, hitbox, pivot or opposite-facing proof.",
+        "Third-party reproduced native references have edition/platform and detail limits."
+      ],
+      "review_reports": [
+        "reports/INDEPENDENT_CREATURES_V24.json",
+        "reports/INDEPENDENT_CREATURES_CORRECTION_V24.json"
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "post_generation_pixel_edits": false,
+      "uid": "re4r-novistador",
+      "superseded_by": "assets/re4r_novistador_wingbeat_up_corrected_v24.png"
+    },
+    {
+      "asset_id": "rev2_giant_whip_spider_ready_clean_v24",
+      "domain": "creatures",
+      "path": "creatures/assets/rev2_giant_whip_spider_ready_clean_v24.png",
+      "status": "animation_key_candidate",
+      "candidate": true,
+      "name": "Giant Whip Spider",
+      "edition": "Resident Evil Revelations 2 (2015)",
+      "state": "ready_low_key",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "file_bytes": 1497571,
+      "sha256": "e6af74168784a9db9374d08a6447e5969b871d5a476dfc1a5f6988bd87f6e640",
+      "git_blob_sha": "4ad5a38c399f346032b509ca06445eb63000cad9",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "source_manifest": "creatures/manifest.json",
+      "source_manifest_sha256": "d4ded6dcdd18688604457591181b96d3298465900a48158c9e3965ac720d49c5",
+      "sources": [
+        "https://www.evilresource.com/resident-evil-revelations-2/enemies/giant-whip-spider",
+        "https://www.evilresource.com/images/data/full/rerevelations2/giant-whip-spider.png?d07d4a36"
+      ],
+      "prompt": "Use case: background-extraction. Edit target: image 1, the complete Giant Whip Spider ready pose. Make ONE precise technical correction: remove the diffuse brown/grey background halo and all detached background color around and between the legs, leaving genuinely transparent empty pixels outside the creature. Preserve the creature itself, its pose, complete appendages, proportions, exact shell texture and palette, face, thick spiny front pedipalps, leg endpoints, viewpoint, scale and canvas composition. Solid shell should be opaque; retain natural fine antialiasing only at the actual contour. Do not add a floor shadow, glow, fog, light disc, fringe, scene, text, duplicate or altered anatomy. Keep all of the current creature, no cropping, stretching or mirroring. Output a real transparent PNG with ONE unchanged creature, clean cutout edges and empty surrounding alpha.",
+      "limitations": [
+        "This image is a new generation, not a byte-preserving deterministic alpha edit.",
+        "Opaque maximum alpha is254 rather than255; near-opaque shell and actual alpha require rendering validation.",
+        "Surrounding RGB haze is carried in fully transparent sampled pixels; no general visible-halo removal certification.",
+        "Small pedipalp curvature/bristle details differ from the low-resolution source.",
+        "Source-guided proposed motion key; not an official recovered frame.",
+        "No full animation, gameplay, hitbox, pivot or opposite-facing proof.",
+        "Third-party reproduced native references have edition/platform and detail limits."
+      ],
+      "review_reports": [
+        "reports/INDEPENDENT_CREATURES_V24.json",
+        "reports/INDEPENDENT_CREATURES_CORRECTION_V24.json"
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "post_generation_pixel_edits": false,
+      "uid": "rerev2-giant-whip-spider",
+      "superseded_by": null
+    },
+    {
+      "asset_id": "rev2_giant_whip_spider_step_v24",
+      "domain": "creatures",
+      "path": "creatures/assets/rev2_giant_whip_spider_step_v24.png",
+      "status": "animation_key_candidate",
+      "candidate": true,
+      "name": "Giant Whip Spider",
+      "edition": "Resident Evil Revelations 2 (2015)",
+      "state": "forward_step_key",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "file_bytes": 1741457,
+      "sha256": "f6975df0d07dbaa2626bcb3dd72362027843baea684cb64d788671f834a4cafe",
+      "git_blob_sha": "1a9a9cfb66e82eddad21ddeb538b5f3ca4f65b13",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "source_manifest": "creatures/manifest.json",
+      "source_manifest_sha256": "d4ded6dcdd18688604457591181b96d3298465900a48158c9e3965ac720d49c5",
+      "sources": [
+        "https://www.evilresource.com/resident-evil-revelations-2/enemies/giant-whip-spider",
+        "https://www.evilresource.com/images/data/full/rerevelations2/giant-whip-spider.png?d07d4a36"
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: single full-body raster motion key of the Giant Whip Spider from Resident Evil Revelations 2 (2015), true transparent alpha. Image 1 is the current ready pose to match for identity, proportions, material and rendering; image 2 is the native creature model reproduction for exact anatomy. Make a distinct cautious FORWARD STEP key at the SAME low frontal three-quarter viewing angle. Keep the body at the same scale, same two-section flat olive-brown ridged abdomen and small central head. Open the two existing thick spiny pedipalps wider to the left and right, near the spread of native image 2. Shift the existing walking leg at viewer-right slightly forward and flex the rear visible leg, while all other feet support the same low posture. Preserve every visible source appendage and source occlusion; do not invent hidden legs. Preserve the thin curled terminal part of the far-right walking leg, small bristles and restrained dark brown speckled shell. Do not turn the pedipalps into fangs, add a stinger, tail, glowing eyes, oversized tarantula abdomen or new limb pairs. Match image 1's detailed semi-realistic painted raster lighting. One complete creature, one pose. Landscape transparent canvas with at least 12 percent clean margin around ALL leg and pedipalp tips; uniform smaller framing if necessary. Transparent surroundings must remain empty with no halo, fog, floor, cast shadow, effects, text, labels or scenery. This is a proposed movement key in an adaptation, not an original recovered game frame.",
+      "limitations": [
+        "Left/right opaque margins below requested12%.",
+        "Pedipalp span and apparent body scale change between keys; cannot assert normalized cycle.",
+        "Motion and some distal limb curvature are inferred; no unseen-side certification.",
+        "Source-guided proposed motion key; not an official recovered frame.",
+        "No full animation, gameplay, hitbox, pivot or opposite-facing proof.",
+        "Third-party reproduced native references have edition/platform and detail limits."
+      ],
+      "review_reports": [
+        "reports/INDEPENDENT_CREATURES_V24.json",
+        "reports/INDEPENDENT_CREATURES_CORRECTION_V24.json"
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "post_generation_pixel_edits": false,
+      "uid": "rerev2-giant-whip-spider",
+      "superseded_by": null
+    },
+    {
+      "asset_id": "re4r_novistador_wingbeat_up_corrected_v24",
+      "domain": "creatures",
+      "path": "creatures/assets/re4r_novistador_wingbeat_up_corrected_v24.png",
+      "status": "animation_key_candidate",
+      "candidate": true,
+      "name": "Novistador",
+      "edition": "Resident Evil 4 remake (2023)",
+      "state": "hover_upstroke_key",
+      "dimensions": [
+        1334,
+        1179
+      ],
+      "mode": "RGBA",
+      "file_bytes": 936913,
+      "sha256": "ca3d637a9d195c0ef14a5a5871789ee297bdf37f2243ebb602583699b31e74d2",
+      "git_blob_sha": "0bb086236b86323749874f381ac6acd065e94acd",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "source_manifest": "creatures/manifest.json",
+      "source_manifest_sha256": "d4ded6dcdd18688604457591181b96d3298465900a48158c9e3965ac720d49c5",
+      "sources": [
+        "https://vandal.elespanol.com/guias/guia-resident-evil-4-remake-trucos-consejos-y-secretos/enemigos-y-jefes",
+        "https://media.vandal.net/m/3-2023/20233292011511_2.jpg"
+      ],
+      "prompt": "Use case: precise-object-edit. Edit target: IMAGE 1, our Novistador wingbeat-UP key from Resident Evil 4 REMAKE (2023). IMAGE 2 is the native model-gallery screenshot and IMAGE 3 is the matching wingbeat-DOWN key, both used ONLY to correct the shape of the two long dangling REAR legs. Make one targeted anatomical correction: replace the two U-shaped, upward-hooked distal ends hanging below the body in image 1 with the LONG, SLENDER, DOWNWARD-POINTING tapered leg segments shown in images 2 and 3. The lower leg on the viewer's LEFT should extend diagonally down-left to a narrow straight point; the lower leg on the viewer's RIGHT should descend almost vertically to a narrow straight point. Preserve their source-like joint positions and segmented material; remove the upward curls and hook turns completely. Do not straighten or alter the separate bent FRONT arms and grasping claws near the torso. Do not add or remove any limb. Preserve EVERYTHING ELSE from image 1: raised thin flight wings, raised folded upper wing structures, antennae, head/face, small yellow-green eyes, body shape, forelimbs, colors, translucent brown-grey chitin, lighting, three-quarter facing, scale and canvas composition. Same single full-body creature and one image; all tips including the newly extended rear legs remain fully inside the canvas. Real transparent alpha background, with empty surrounding pixels. No source logo or frame, no text, no floor, no scene, no shadow, no effect, no duplicate. This corrects an adaptation key to match the observed source anatomy; it does not invent a different species or a new action.",
+      "limitations": [
+        "A targeted anatomical correction was generated, not a deterministic pixel-preserving edit.",
+        "Some contour fragments/color pixels increased in the RGB preview; actual composed-alpha edge quality remains to inspect.",
+        "Bottom margin below requested family margin; normalized canvas scale/anchors remain open.",
+        "Posterior point shape is closer to the native source but no exact original-frame or microdetail certification.",
+        "No full animation, gameplay, hitbox, pivot or opposite-facing proof.",
+        "Les pointes arrière sont corrigées ; bruit de faible alpha et raccord à la pose basse toujours ouverts."
+      ],
+      "review_reports": [
+        "reports/INDEPENDENT_CREATURES_V24.json",
+        "reports/INDEPENDENT_CREATURES_CORRECTION_V24.json"
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "post_generation_pixel_edits": false,
+      "uid": "re4r-novistador",
+      "superseded_by": null
+    },
+    {
+      "asset_id": "REC_OBJ_RE4R_BOLT_LEFT_CORRECTED_V24",
+      "domain": "projectiles",
+      "path": "projectiles/assets/re4r_bolt_left_corrected_v24.png",
+      "status": "orientation_key_candidate",
+      "candidate": true,
+      "name": "Carreau simple RE4R — gauche, sans attaches ajoutées",
+      "edition": "Resident Evil 4 Remake (2023)",
+      "state": "left",
+      "dimensions": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "file_bytes": 348278,
+      "sha256": "30b7a89edc07ab5831d69924ac85c53194d8044cdde449d7b9329256fd7edf10",
+      "git_blob_sha": "b549c7db65539f81f2560a4151e3f9edee58c048",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "source_manifest": "projectiles/ASSET_MANIFEST_PROJECTILES_V24.json",
+      "source_manifest_sha256": "fc2d2fa4fb352c01466359e2981bab2074b019bf83aaf0c1bbceac34e466db11",
+      "sources": [
+        "https://www.evilresource.com/resident-evil-4-remake/weaponry/bolts"
+      ],
+      "prompt": "Use case: precise-object-edit. Correct image 1, the generated left-facing plain Bolt sprite, using image 2, the original Resident Evil 4 Remake 2023 inventory render, as the authority. There are two incorrect little silver rectangular metal clips on the blue shaft near its join with the black tail. REMOVE BOTH CLIPS completely. The blue shaft should be smooth and uninterrupted, as the original individual bolts in image 2. Preserve one full left-facing bolt, its single simple dark point, exact blue shaft and dark tail proportions, black swept fletching, materials and lighting. Keep the original object without adding any attachment, collar, text, screw, extra fin, trail or explosive piece. Also frame the complete corrected object at approximately 75 percent of the canvas width so there is clearly at least 12 percent empty transparent margin at both ends. Wide 3:1 transparent canvas. One object only. True RGBA transparency with a clean smooth silhouette and no colored outline, no floor or shadow. Do not change this into an arrow from a different weapon.",
+      "limitations": [
+        "Orientation statique adaptée ; pas de frame extraite du jeu ni de séquence animée complète.",
+        "Échelle, ancrage et contours à vérifier dans le moteur ; pixels de très faible alpha résiduels.",
+        "Les marges demandées ne sont pas atteintes sur tous les côtés ; aucune silhouette utile n’est rognée.",
+        "Carreau simple de Leon : ne remplace pas les Blast Arrows d’Ada ni les flèches de Krauser. Les fins détails et angles sont reconstruits."
+      ],
+      "review_reports": [
+        "reports/INDEPENDENT_PROJECTILES_V24.json"
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "post_generation_pixel_edits": false,
+      "v1_actions": [],
+      "role": "additional_arsenal_orientation"
+    },
+    {
+      "asset_id": "REC_OBJ_RE0_MOLOTOV_UPRIGHT_V24",
+      "domain": "projectiles",
+      "path": "projectiles/assets/re0_molotov_upright_v24.png",
+      "status": "orientation_key_candidate",
+      "candidate": true,
+      "name": "Bouteille RE0 non allumée — verticale",
+      "edition": "Resident Evil Zero (2002 catalogue; platform of the pictured render unspecified)",
+      "state": "neck_up",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "file_bytes": 1126317,
+      "sha256": "0b6e4d30da8b6b0fb8b9d2f1dd3c7b5bf298f9a6a8e7fa592756450d6d2ff8bb",
+      "git_blob_sha": "20ac0d2c46b8e3369abf9d122f3e4bc38356c2ae",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "source_manifest": "projectiles/ASSET_MANIFEST_PROJECTILES_V24.json",
+      "source_manifest_sha256": "fc2d2fa4fb352c01466359e2981bab2074b019bf83aaf0c1bbceac34e466db11",
+      "sources": [
+        "https://www.evilresource.com/resident-evil-zero/weaponry/molotov-cocktail"
+      ],
+      "prompt": "Use case: precise-object-edit. Create one new orientation key of the SAME Resident Evil Zero fictional unlit bottle prop shown in the references. Image 1 is the original native inventory render; image 2 is a previous generated candidate for material continuity. Show the complete object nearly upright, with its neck and pale cloth pointing UP, bottle base DOWN and the red-and-cream label facing the viewer in a mild three-quarter view. Preserve the native bottle's shoulder and neck proportions, dark green glass, slightly coarse 2002-era game texture, old worn label artwork and irregular pale cloth at the mouth. Do not invent legible print or update the object into a modern design. This is only a static UNLIT video-game prop orientation key: no fire, smoke, broken glass, inside view, diagram, or instructions. Keep the entire object within the central 70 percent of a portrait canvas, with at least 12 percent transparent margins above and below, and broad margins left and right. One complete object, one pose, no duplicate, hand, character, setting, HUD, captions or grid. Neutral original game-render lighting. Real transparent RGBA background, no floor, shadow plane or colored halo.",
+      "limitations": [
+        "Orientation statique adaptée ; pas de frame extraite du jeu ni de séquence animée complète.",
+        "Échelle, ancrage et contours à vérifier dans le moteur ; pixels de très faible alpha résiduels.",
+        "Les marges demandées ne sont pas atteintes sur tous les côtés ; aucune silhouette utile n’est rognée.",
+        "Objet non allumé ; plateforme source non précisée. Aucun allumage, éclatement ou feu d’impact produit, aucun marquage fin certifié."
+      ],
+      "review_reports": [
+        "reports/INDEPENDENT_PROJECTILES_V24.json"
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "post_generation_pixel_edits": false,
+      "v1_actions": [
+        "REC_REBECCA_RE0__SP2"
+      ],
+      "role": "partial_orientation_key_for_existing_action"
+    },
+    {
+      "asset_id": "REC_OBJ_RE4R_BOLT_LEFT_V24",
+      "domain": "projectiles",
+      "path": "projectiles/assets/trials/re4r_bolt_left_v24.png",
+      "status": "superseded_trial",
+      "candidate": false,
+      "name": "Carreau simple RE4R — gauche, premier essai",
+      "edition": "Resident Evil 4 Remake (2023)",
+      "state": "left",
+      "dimensions": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "file_bytes": 398248,
+      "sha256": "1423767ca6544d22cedfb9ef82dcee029fd2b53770c6a3c07f3bfca1595a6fa3",
+      "git_blob_sha": "6d37164497a9855b84b1c9010dcf806fabc608ce",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "source_manifest": "projectiles/ASSET_MANIFEST_PROJECTILES_V24.json",
+      "source_manifest_sha256": "fc2d2fa4fb352c01466359e2981bab2074b019bf83aaf0c1bbceac34e466db11",
+      "sources": [
+        "https://www.evilresource.com/resident-evil-4-remake/weaponry/bolts"
+      ],
+      "prompt": "Use case: precise-object-edit. Asset type: one isolated 2D projectile sprite for Resident Evil Combat. Image 1 is the primary original in-game inventory render of plain Bolts from Resident Evil 4 Remake (2023); image 2 is the previous generated right-facing candidate, provided only for visual continuity. Create ONE complete individual plain bolt viewed from the side with the dark pointed tip facing LEFT and the rear black fletching at RIGHT. Prioritize the exact blue-shaft/dark-rear proportions and the narrow swept fin shape seen on the visible individual bolts of the native reference. Preserve the original simple pointed tip, dark rear nock, subdued blue metal shaft, and realistic game materials; do not invent metal clamps, attachments or extra barbs. New left-facing view with consistent neutral upper lighting. Keep the complete object centered on a wide 3:1 canvas with at least 10 percent clear margin at both ends and generous vertical padding. A single object and a single pose, no bundle, duplicate, frame grid, scene, hand, character, HUD, labels or text. No explosive attachment, smoke, sparks, trail, impact, floor or shadow plane. Genuine transparent RGBA background with a clean edge and no colored halo. This depicts a fictional video-game item only.",
+      "limitations": [
+        "Orientation statique adaptée ; pas de frame extraite du jeu ni de séquence animée complète.",
+        "Échelle, ancrage et contours à vérifier dans le moteur ; pixels de très faible alpha résiduels.",
+        "Les marges demandées ne sont pas atteintes sur tous les côtés ; aucune silhouette utile n’est rognée.",
+        "Carreau simple de Leon : ne remplace pas les Blast Arrows d’Ada ni les flèches de Krauser. Les fins détails et angles sont reconstruits.",
+        "Essai remplacé : deux attaches métalliques sans support dans le rendu natif."
+      ],
+      "review_reports": [
+        "reports/INDEPENDENT_PROJECTILES_V24.json"
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "post_generation_pixel_edits": false,
+      "v1_actions": [],
+      "superseded_by": "assets/re4r_bolt_left_corrected_v24.png",
+      "role": "additional_arsenal_orientation"
+    },
+    {
+      "asset_id": "REC_OBJ_RE0_MOLOTOV_HORIZONTAL_V24",
+      "domain": "projectiles",
+      "path": "projectiles/assets/re0_molotov_horizontal_v24.png",
+      "status": "orientation_key_candidate",
+      "candidate": true,
+      "name": "Bouteille RE0 non allumée — horizontale",
+      "edition": "Resident Evil Zero (2002 catalogue; platform of the pictured render unspecified)",
+      "state": "neck_left",
+      "dimensions": [
+        1983,
+        793
+      ],
+      "mode": "RGBA",
+      "file_bytes": 947181,
+      "sha256": "f00019fda3f765ff79dfc90349ff3a5a27e70744ba133cae640e96c26d08b4f2",
+      "git_blob_sha": "59bca9d5ab0f6eb6227981b3e53c8ec48a19276e",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "source_manifest": "projectiles/ASSET_MANIFEST_PROJECTILES_V24.json",
+      "source_manifest_sha256": "fc2d2fa4fb352c01466359e2981bab2074b019bf83aaf0c1bbceac34e466db11",
+      "sources": [
+        "https://www.evilresource.com/resident-evil-zero/weaponry/molotov-cocktail"
+      ],
+      "prompt": "Use case: precise-object-edit. Asset type: one isolated fictional game-item sprite for Resident Evil Combat. Image 1 is the primary original inventory render of the unlit Molotov Cocktail from Resident Evil Zero, with the source platform unspecified; image 2 is the previous generated V22 candidate for continuity. Render the SAME single complete green-glass bottle in a new horizontal mid-turn pose: neck and pale fabric at LEFT, round bottle base at RIGHT, label face still visible in a mild three-quarter view. Preserve the exact source silhouette proportions, long neck, dark green slightly coarse game texture, worn red-and-cream rectangular label artwork and pale fabric silhouette. Keep the old-game texture character; do not modernize the design or invent readable small print. This is a static UNLIT orientation key of the already existing fictional prop, with no fire, smoke, broken glass, internal view, technical diagram or instructions. Center the full bottle with at least 10 percent transparent padding on every side. One object, one pose per image; no hand, person, scenery, duplicate, UI, grid, caption, floor or drop shadow. Real transparent RGBA background and crisp clean silhouette without any colored halo. Preserve the neutral lighting of the references.",
+      "limitations": [
+        "Orientation statique adaptée ; pas de frame extraite du jeu ni de séquence animée complète.",
+        "Échelle, ancrage et contours à vérifier dans le moteur ; pixels de très faible alpha résiduels.",
+        "Les marges demandées ne sont pas atteintes sur tous les côtés ; aucune silhouette utile n’est rognée.",
+        "Objet non allumé ; plateforme source non précisée. Aucun allumage, éclatement ou feu d’impact produit, aucun marquage fin certifié."
+      ],
+      "review_reports": [
+        "reports/INDEPENDENT_PROJECTILES_V24.json"
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "post_generation_pixel_edits": false,
+      "v1_actions": [
+        "REC_REBECCA_RE0__SP2"
+      ],
+      "role": "partial_orientation_key_for_existing_action"
+    },
+    {
+      "asset_id": "REC_OBJ_RE4R_BOLT_ASCENDING_V24",
+      "domain": "projectiles",
+      "path": "projectiles/assets/re4r_bolt_ascending_v24.png",
+      "status": "orientation_key_candidate",
+      "candidate": true,
+      "name": "Carreau simple RE4R — inclinaison montante",
+      "edition": "Resident Evil 4 Remake (2023)",
+      "state": "upper_right",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "mode": "RGBA",
+      "file_bytes": 220820,
+      "sha256": "5708d8117a6a158638d59dd26d02322cba059e250f3277efd36b0d47b2468d08",
+      "git_blob_sha": "adeda3cca2851384fa893c4ae358a040d038ab38",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "source_manifest": "projectiles/ASSET_MANIFEST_PROJECTILES_V24.json",
+      "source_manifest_sha256": "fc2d2fa4fb352c01466359e2981bab2074b019bf83aaf0c1bbceac34e466db11",
+      "sources": [
+        "https://www.evilresource.com/resident-evil-4-remake/weaponry/bolts"
+      ],
+      "prompt": "Use case: precise-object-edit. One isolated fictional projectile sprite from Resident Evil 4 Remake (2023), based strictly on the supplied original inventory render of the plain Bolts. Isolate ONE complete representative bolt from the pictured bundle and turn it in the image plane into a shallow upward angle: pointed tip toward the UPPER RIGHT, rear fletching toward the LOWER LEFT, about 20 degrees above horizontal. Preserve the thin blue shaft, the dark pointed simple tip, long dark rear section and narrow swept black fletching visible in the native reference. Keep the native proportions and understated materials, no silver rectangular clips or novel attachments. Full object visible, only one bolt, centered within 70 percent of a wide landscape canvas with generous transparent space all around. Realistic game-render lighting. True transparent RGBA background with clean edges. No bundle, character, hand, weapon launcher, explosion, mine attachment, smoke, motion trail, scenery, floor, shadow, diagram, captions or grid. This is only an orientation key for a 2D adaptation, not a technical weapon diagram.",
+      "limitations": [
+        "Orientation statique adaptée ; pas de frame extraite du jeu ni de séquence animée complète.",
+        "Échelle, ancrage et contours à vérifier dans le moteur ; pixels de très faible alpha résiduels.",
+        "Les marges demandées ne sont pas atteintes sur tous les côtés ; aucune silhouette utile n’est rognée.",
+        "Carreau simple de Leon : ne remplace pas les Blast Arrows d’Ada ni les flèches de Krauser. Les fins détails et angles sont reconstruits."
+      ],
+      "review_reports": [
+        "reports/INDEPENDENT_PROJECTILES_V24.json"
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "post_generation_pixel_edits": false,
+      "v1_actions": [],
+      "role": "additional_arsenal_orientation"
+    },
+    {
+      "asset_id": "REC_OBJ_RE0_MOLOTOV_TURNING_V24",
+      "domain": "projectiles",
+      "path": "projectiles/assets/re0_molotov_turning_v24.png",
+      "status": "orientation_key_candidate",
+      "candidate": true,
+      "name": "Bouteille RE0 non allumée — rotation opposée",
+      "edition": "Resident Evil Zero (2002 catalogue; platform of the pictured render unspecified)",
+      "state": "neck_lower_right",
+      "dimensions": [
+        1402,
+        1122
+      ],
+      "mode": "RGBA",
+      "file_bytes": 564505,
+      "sha256": "fa545cae0824c0bbe283e3be0b8b4829430927610da29470da6b146549fbc5bc",
+      "git_blob_sha": "08dd097b524ef76dadc50cb4d31ff0ccc671deb1",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "source_manifest": "projectiles/ASSET_MANIFEST_PROJECTILES_V24.json",
+      "source_manifest_sha256": "fc2d2fa4fb352c01466359e2981bab2074b019bf83aaf0c1bbceac34e466db11",
+      "sources": [
+        "https://www.evilresource.com/resident-evil-zero/weaponry/molotov-cocktail"
+      ],
+      "prompt": "Use case: precise-object-edit. Create one isolated orientation key for the same fictional UNLIT Molotov Cocktail inventory prop from Resident Evil Zero shown in the supplied native render. Rotate the whole visible prop in the image plane so its pale fabric and neck point toward the LOWER RIGHT, and its rounded bottle base toward the UPPER LEFT. This is the opposite tilt of the reference, while retaining the same visible face and worn label; the label rotates with the object. Preserve the long-neck green bottle proportions, slightly coarse old-game texture, worn red-and-cream label artwork and irregular pale fabric shape. Do not invent new legible lettering, patterns, hardware or an HD redesign. One full object occupying about 70 percent of the canvas diagonal with broad clear margins; neutral game-render lighting. Real transparent RGBA background, no floor or shadow. No fire, smoke, broken glass, human, hand, construction information, diagram, UI, caption, grid or extra object. This is a static fictional-game art orientation only.",
+      "limitations": [
+        "Orientation statique adaptée ; pas de frame extraite du jeu ni de séquence animée complète.",
+        "Échelle, ancrage et contours à vérifier dans le moteur ; pixels de très faible alpha résiduels.",
+        "Les marges demandées ne sont pas atteintes sur tous les côtés ; aucune silhouette utile n’est rognée.",
+        "Objet non allumé ; plateforme source non précisée. Aucun allumage, éclatement ou feu d’impact produit, aucun marquage fin certifié."
+      ],
+      "review_reports": [
+        "reports/INDEPENDENT_PROJECTILES_V24.json"
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "post_generation_pixel_edits": false,
+      "v1_actions": [
+        "REC_REBECCA_RE0__SP2"
+      ],
+      "role": "partial_orientation_key_for_existing_action"
+    },
+    {
+      "asset_id": "REC_STAGE_RE1HD_TYRANT_ROOM_MASTER_V24_01",
+      "domain": "stages",
+      "path": "stages/assets/REC_STAGE_RE1HD_TYRANT_ROOM_MASTER_V24_01.png",
+      "status": "CANDIDATE_FIDELITY_REVIEW_REQUIRED",
+      "candidate": true,
+      "name": "Laboratoire Arklay — Tyrant Room, caméra basse",
+      "edition": "Resident Evil HD Remaster (2015)",
+      "state": "environment_master",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "file_bytes": 2454204,
+      "sha256": "ac3ce318a1cd2210d1e46d9c7d168f517e5da604f765d3f38f03544892b91750",
+      "git_blob_sha": "f95b5bf5c3254b89093c32b2e82bd8d6766c24d4",
+      "alpha_range": null,
+      "source_manifest": "stages/manifest.json",
+      "source_manifest_sha256": "eb24ff6cdc8a14ed6a4bfdb9a8d19cdfcafa22851f1a10f90e34ad9a66eb6698",
+      "sources": [
+        "https://adventuregamers.com/walkthroughs/resident-evil-hd-remaster",
+        "https://adventuregamers.com/wp-content/uploads/2026/02/Resident-Evil-HD-Remaster-Tyrant.jpg"
+      ],
+      "prompt": {
+        "path": "prompts/executed_prompts.json",
+        "asset_id": "REC_STAGE_RE1HD_TYRANT_ROOM_MASTER_V24_01",
+        "reference_image_count": 1,
+        "tool": "image_gen.imagegen",
+        "transparent_background": false
+      },
+      "limitations": [
+        "Les nouvelles consoles, leurs affichages et le sol occulté ne sont pas vérifiés par une seconde vue.",
+        "Textures, reflets et microgéométrie ont été régénérés : aucune correspondance pixel à pixel.",
+        "La perspective inclinée et la largeur de zone jouable ne sont pas validées pour deux combattants.",
+        "Image unique aplatie : aucun calque parallaxe, masque de profondeur, occlusion ou élément animé livré.",
+        "Résolution native réelle 1 672 × 941, inférieure à UHD 3 840 × 2 160 ; aucun agrandissement ni retouche bitmap après génération.",
+        "Candidat de production hors moteur ; fidélité canonique 1:1 et jouabilité non certifiées.",
+        "L’absence historique complète n’est pas établie : les archives V3/V4 restent partiellement à récupérer selon V22.",
+        "Revue indépendante réalisée : les détails nouvellement visibles derrière les personnages de la source demeurent inférés."
+      ],
+      "review_reports": [
+        "reports/INDEPENDENT_STAGES_V24.json"
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "post_generation_pixel_edits": false,
+      "runtime_target": "spencer_lab",
+      "parallax_complete": false
+    },
+    {
+      "asset_id": "REC_STAGE_RE3R_SHOPPING_PLAZA_MOONS_MASTER_V24_01",
+      "domain": "stages",
+      "path": "stages/assets/REC_STAGE_RE3R_SHOPPING_PLAZA_MOONS_MASTER_V24_01.png",
+      "status": "CANDIDATE_FIDELITY_REVIEW_REQUIRED",
+      "candidate": true,
+      "name": "Shopping Plaza — façade Moon’s Donuts",
+      "edition": "Resident Evil 3 Remake (2020)",
+      "state": "environment_master",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "file_bytes": 2557067,
+      "sha256": "adae145fc2f8e17a70522bc04edfda3f23caf7eb59484c4d10e84e5d42c77a5f",
+      "git_blob_sha": "d46ee3b31d15541797d12ed072e38e5586e9b15b",
+      "alpha_range": null,
+      "source_manifest": "stages/manifest.json",
+      "source_manifest_sha256": "eb24ff6cdc8a14ed6a4bfdb9a8d19cdfcafa22851f1a10f90e34ad9a66eb6698",
+      "sources": [
+        "https://www.gamesradar.com/resident-evil-3-remake-review/",
+        "https://cdn.mos.cms.futurecdn.net/5e4YdMqJdgDqAKsfmvphxj.jpg"
+      ],
+      "prompt": {
+        "path": "prompts/executed_prompts.json",
+        "asset_id": "REC_STAGE_RE3R_SHOPPING_PLAZA_MOONS_MASTER_V24_01",
+        "reference_image_count": 1,
+        "tool": "image_gen.imagegen",
+        "transparent_background": false
+      },
+      "limitations": [
+        "Disposition détaillée des tables, sièges et garde-corps gauche reconstruite : elle n’est pas certifiée canonique.",
+        "La génération ajoute de la lisibilité et change le rendu des reflets, affiches et petits accessoires.",
+        "Façade et néons sont des repères conservés ; leur détail typographique n’est pas une reproduction graphique exacte.",
+        "Angle en plongée et marches : aucune ligne de combat latérale ou collision validée.",
+        "Image unique aplatie : aucun calque parallaxe, masque de profondeur, occlusion ou élément animé livré.",
+        "Résolution native réelle 1 672 × 941, inférieure à UHD 3 840 × 2 160 ; aucun agrandissement ni retouche bitmap après génération.",
+        "Candidat de production hors moteur ; fidélité canonique 1:1 et jouabilité non certifiées.",
+        "L’absence historique complète n’est pas établie : les archives V3/V4 restent partiellement à récupérer selon V22.",
+        "Revue indépendante réalisée : les détails nouvellement visibles derrière les personnages de la source demeurent inférés."
+      ],
+      "review_reports": [
+        "reports/INDEPENDENT_STAGES_V24.json"
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "post_generation_pixel_edits": false,
+      "runtime_target": "raccoon_street",
+      "parallax_complete": false
+    },
+    {
+      "asset_id": "REC_STAGE_RE4R_DEL_LAGO_LAKE_MASTER_V24_01",
+      "domain": "stages",
+      "path": "stages/assets/REC_STAGE_RE4R_DEL_LAGO_LAKE_MASTER_V24_01.png",
+      "status": "CANDIDATE_FIDELITY_REVIEW_REQUIRED",
+      "candidate": true,
+      "name": "Lac Del Lago — berge montagneuse au crépuscule",
+      "edition": "Resident Evil 4 Remake (2023), PC",
+      "state": "environment_master",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "file_bytes": 1991014,
+      "sha256": "c8efa5d262d55ce8083fb55fa6d788901608c73e58ba8f6608dab89301d52cf3",
+      "git_blob_sha": "40096d181c0ce48753a9e3c5377325713330bd52",
+      "alpha_range": null,
+      "source_manifest": "stages/manifest.json",
+      "source_manifest_sha256": "eb24ff6cdc8a14ed6a4bfdb9a8d19cdfcafa22851f1a10f90e34ad9a66eb6698",
+      "sources": [
+        "https://www.shacknews.com/article/134730/resident-evil-4-pc-impressions-now-thats-a-weapon",
+        "https://shacknews-www.s3.amazonaws.com/assets/editorial/2023/03/resident-evil-4-water-ripple.jpg"
+      ],
+      "prompt": {
+        "path": "prompts/executed_prompts.json",
+        "asset_id": "REC_STAGE_RE4R_DEL_LAGO_LAKE_MASTER_V24_01",
+        "reference_image_count": 1,
+        "tool": "image_gen.imagegen",
+        "transparent_background": false
+      },
+      "limitations": [
+        "La berge et les crêtes restent proches de la capture ; leur détail est régénéré, pas relevé géométriquement.",
+        "Le calme de l’eau est une adaptation de plaque de décor, pas la reproduction de la même frame du combat.",
+        "Absence de surface terrestre de combat : un système aquatique/embarcation reste à concevoir et qualifier avant toute intégration.",
+        "Image unique aplatie : aucun calque parallaxe, masque de profondeur, occlusion ou élément animé livré.",
+        "Résolution native réelle 1 672 × 941, inférieure à UHD 3 840 × 2 160 ; aucun agrandissement ni retouche bitmap après génération.",
+        "Candidat de production hors moteur ; fidélité canonique 1:1 et jouabilité non certifiées.",
+        "L’absence historique complète n’est pas établie : les archives V3/V4 restent partiellement à récupérer selon V22.",
+        "Revue indépendante réalisée : les détails nouvellement visibles derrière les personnages de la source demeurent inférés."
+      ],
+      "review_reports": [
+        "reports/INDEPENDENT_STAGES_V24.json"
+      ],
+      "engine_admitted": false,
+      "animation_complete": false,
+      "canonical_fidelity_1_1_certified": false,
+      "post_generation_pixel_edits": false,
+      "runtime_target": "village_lake_2023",
+      "parallax_complete": false
+    }
+  ],
+  "independent_review_reports": [
+    "reports/INDEPENDENT_CHARACTERS_V24.json",
+    "reports/INDEPENDENT_CREATURES_V24.json",
+    "reports/INDEPENDENT_CREATURES_CORRECTION_V24.json",
+    "reports/INDEPENDENT_PROJECTILES_V24.json",
+    "reports/INDEPENDENT_STAGES_V24.json"
+  ],
+  "ci_baseline_report": "reports/CI_BASELINE_V24.json",
+  "progress": "PROGRESS_V24.json",
+  "work_queue": "WORK_QUEUE_V24.md",
+  "release_validation": "reports/QA_RELEASE_V24.json",
+  "unchanged_rules": [
+    "Sources et éditions distinctes ; aucune fusion remake/original/remaster sans preuve.",
+    "Aucun refus historique retenté, aucun inventaire ancien ou garde de provenance réécrit.",
+    "Les références tierces sont citées et hachées, leurs bitmaps ne sont pas livrés.",
+    "Les images sont les sorties natives du générateur, sans transformation de pixels après génération."
+  ]
+}

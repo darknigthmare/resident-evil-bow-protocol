@@ -1,0 +1,71 @@
+{
+  "schema": "rec-v25-independent-claire-correction-1",
+  "date": "2026-11-27",
+  "timezone": "Europe/Paris",
+  "reviewer": "root, indépendant de la génération",
+  "base_commit": "226fbba85ef7d9b248974eee8c455ec01cee95d4",
+  "asset_id": "REC_CLAIRE_RE2R_MILITARY_DESELECT_HEAD_LEFT_KEY_V25",
+  "path": "../claire/outputs/claire_re2r_military_deselect_head_left_v25.png",
+  "sha256": "a9ccc600a39858dcd05c144a5e0587bdddba0f546099be54411dbafa9913bbd3",
+  "git_blob_sha": "6ca8f2e32219cfb1896db0873313226ce9c47f28",
+  "file_bytes": 1576658,
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alpha_range": [
+    0,
+    254
+  ],
+  "bbox_alpha_ge128": [
+    268,
+    120,
+    729,
+    1415
+  ],
+  "baseline_y": 1415,
+  "source_manifest": "../claire/manifest.json",
+  "source_manifest_sha256": "53ce8dec8c1fa391df6667686bd2d18ba15dcd98ff24185453cb31a850704952",
+  "reference_files": [
+    {
+      "filename": "claire_re2r_military_deselect_v25.png",
+      "role": "initial_v25_target",
+      "local_inspection_path": "/workspace/scratch/37b119cd013c/v25-characters/assets/claire_re2r_military_deselect_v25.png",
+      "sha256": "66a4c5690420c2098073806c267285539a973b4f8f6d097cbfd9b1837cbbcb87",
+      "visually_inspected": true
+    },
+    {
+      "filename": "steam_920562_00.jpg",
+      "role": "native_steam_capture",
+      "local_inspection_path": "/workspace/scratch/37b119cd013c/v25-character-research/steam_920562_00.jpg",
+      "sha256": "9850818ed8118ee81f7d9d4be464e9c07477067ac89acf48d7e62e06e95399a3",
+      "visually_inspected": true
+    },
+    {
+      "filename": "re2_gamewith_33.jpg",
+      "role": "native_full_body_capture",
+      "local_inspection_path": "/workspace/scratch/37b119cd013c/v25-character-research/re2_gamewith_33.jpg",
+      "sha256": "6e58b86516a9609c42c21daca4a63cc60091ab2d04bbe8eeecb5fdbbc7608db0",
+      "visually_inspected": true
+    }
+  ],
+  "method": "Correction intégrale ouverte avec view_image, lisible côté parent ; comparaison avec cible initiale, Steam et vue entière déjà inspectées. Mesures PNG en lecture seule.",
+  "observed": [
+    "Tête, nez et yeux dirigés clairement vers la GAUCHE de l’image. Le défaut de direction du premier essai est corrigé.",
+    "Figure entière, mains vides, tatouage et holster à droite anatomique, montre et gourde à gauche. La stance reste visuellement proche de la cible.",
+    "Le bandana suit la rotation de tête ; aucune inversion globale des côtés du corps."
+  ],
+  "remaining_limits": [
+    "Des pixels sous le cou ont aussi été régénérés : microtextures, insignes et détails ne sont pas immuables. La mesure différentielle auteur est conservée dans son manifeste.",
+    "Marges demandées toujours non atteintes ; contours, proportions fines et raccord temporel non vérifiés dans le moteur.",
+    "La correction du regard ne certifie ni le visage, ni les insignes, ni la fidélité canonique1:1."
+  ],
+  "decision": "retain_corrected_candidate_and_mark_initial_as_superseded_trial_in_global_manifest",
+  "superseded_asset_id": "REC_CLAIRE_RE2R_MILITARY_DESELECT_KEY_V25",
+  "original_preserved": true,
+  "engine_admitted": false,
+  "animation_complete": false,
+  "canonical_fidelity_1_1_certified": false,
+  "image_pixels_modified": false
+}

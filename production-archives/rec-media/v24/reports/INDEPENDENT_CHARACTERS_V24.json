@@ -1,0 +1,643 @@
+{
+  "schema": "rec-v24-independent-characters-review-1",
+  "reviewed_at": "2026-11-27T09:22:27.622997+01:00",
+  "reviewer_task": "/root/v24_creatures",
+  "independent_of_character_generation": true,
+  "base_commit": "246dbb81752c5fa41a55deb3aada3941ac966fec",
+  "review_scope": "Inspection visuelle de chacune des six sorties, des deux bases générées V22 et des deux sources visuelles natives/promotionnelles ; mesures directement recalculées depuis les PNG. Aucun fichier de personnages modifié.",
+  "author_manifest_sha256": "c2c5494766c201b988e4eba4a8433234f44c3c10a34e41cdf7786263f32b2454",
+  "source_manifest_sha256": "533a6567ba76ea0822307578f8e23eef8b9e9ee0dbf6d49d791e1581ad1d2164",
+  "reference_images": [
+    {
+      "filename": "helena_official_2012.jpg",
+      "local_path": "/workspace/scratch/37b119cd013c/v24_characters_refs/helena_official_2012.jpg",
+      "sha256": "25a104899095b63f440bf7aabcdd13570296140efed96b7d68d06f4c4dd94215",
+      "dimensions": [
+        358,
+        450
+      ],
+      "visually_inspected": true,
+      "kind": "official_prerelease_2012_reference"
+    },
+    {
+      "filename": "REC_HELENA_RE6_BASE_FULLBODY_FRONT_V22_01.png",
+      "local_path": "/workspace/scratch/37b119cd013c/v24_characters_refs/REC_HELENA_RE6_BASE_FULLBODY_FRONT_V22_01.png",
+      "sha256": "9a0b7dba2bbdc94ceaa124a72325aef10f5f959948f0b392e987db2d360b0537",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "visually_inspected": true,
+      "kind": "generated_v22_base"
+    },
+    {
+      "filename": "ada_native_extras.png",
+      "local_path": "/workspace/scratch/37b119cd013c/v24_characters_refs/ada_native_extras.png",
+      "sha256": "fe9cc5f5833094d94a9775a38c9858400b288f076662b00ed52a9ef66bbd8095",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "visually_inspected": true,
+      "kind": "native_2023_menu_reproduced_by_third_party"
+    },
+    {
+      "filename": "REC_ADA_RE4R_SW_DEFAULT_FULLBODY_FRONT_V22_01.png",
+      "local_path": "/workspace/scratch/37b119cd013c/v24_characters_refs/REC_ADA_RE4R_SW_DEFAULT_FULLBODY_FRONT_V22_01.png",
+      "sha256": "41f3bda495940b492e107c65017f1567d0cc5329732429b656d46d0993800bc2",
+      "dimensions": [
+        897,
+        1752
+      ],
+      "visually_inspected": true,
+      "kind": "generated_v22_base"
+    }
+  ],
+  "assets": [
+    {
+      "asset_id": "REC_HELENA_RE6_SELECTED_KEY_V24",
+      "hero_id": "REC_HELENA_RE6",
+      "path": "../characters/assets/helena_re6_agent_selected_v24.png",
+      "sha256": "300d980080abd789bef71323a6c01101db59f1a23f88cb48ad5cd2c3b49af1aa",
+      "sha256_matches_author_manifest": true,
+      "visually_inspected": true,
+      "reference_comparison_performed": true,
+      "verdict": "retain_candidate_with_open_corrections",
+      "independent_observations": {
+        "pose": "Face presque frontale, main gauche anatomique sur le haut du buste, bras droit abaissé avec pistolet.",
+        "asymmetry": "Pistolet à droite anatomique (gauche image), équipement de ceinture du même côté ; main libre gauche.",
+        "source_comparison": "Cheveux bruns mi-longs, blouse lilas, gilet sombre boutonné, pantalon évasé et bijoux proches de la base V22 et de la tenue promotionnelle. Les chaussures sont plus rondes et plus épaisses que la petite silhouette officielle.",
+        "differences": [
+          "La forme de visage et le volume de cheveux sont régénérés ; le petit rendu officiel ne permet pas une équivalence exacte.",
+          "Les chaussures et les détails de ceinture héritent de l’interprétation V22, avec bouts plus massifs que la référence promotionnelle."
+        ],
+        "gaze": "near_front",
+        "gaze_prompt_match": true
+      },
+      "silhouette_complete_visible": true,
+      "cropped_body_part_detected": false,
+      "distinct_menu_gesture": true,
+      "technical_measurements": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          254
+        ],
+        "alpha_bbox_128": [
+          270,
+          100,
+          724,
+          1449
+        ],
+        "alpha_bbox_nonzero": [
+          25,
+          55,
+          990,
+          1497
+        ],
+        "margins_alpha128_px": {
+          "left": 270,
+          "top": 100,
+          "right": 300,
+          "bottom": 87
+        },
+        "ten_percent_margin_all_edges": false,
+        "baseline_y_px": 1449,
+        "silhouette_height_px": 1349,
+        "fully_transparent_pixel_fraction": 0.7922388712565104,
+        "alpha_1_to_127_pixels": 20200,
+        "background_sample_rgba": {
+          "(512, 50)": [
+            33,
+            28,
+            23,
+            0
+          ],
+          "(100, 750)": [
+            4,
+            3,
+            2,
+            0
+          ],
+          "(850, 750)": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "(100, 1400)": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "canonical_fidelity_1_1_certified": false,
+      "engine_admitted": false,
+      "animation_complete": false
+    },
+    {
+      "asset_id": "REC_HELENA_RE6_CONFIRM_KEY_V24",
+      "hero_id": "REC_HELENA_RE6",
+      "path": "../characters/assets/helena_re6_agent_confirm_v24.png",
+      "sha256": "a4456f13f4f25627716e8c43eebe29266853d6646a4bf40a2040648d2c165b13",
+      "sha256_matches_author_manifest": true,
+      "visually_inspected": true,
+      "reference_comparison_performed": true,
+      "verdict": "retain_candidate_with_open_corrections",
+      "independent_observations": {
+        "pose": "Main gauche anatomique levée et ouverte à hauteur d’épaule, cinq doigts visibles ; arme droite dirigée vers le bas.",
+        "asymmetry": "Arme à droite anatomique, geste libre à gauche ; aucune inversion de la ceinture observée.",
+        "source_comparison": "Même tenue et palette que selected/V22 ; expression plus douce et geste de salut distinct. Le geste est une adaptation de menu.",
+        "differences": [
+          "Le visage, les mèches, l’espacement des boutons et la forme de la main varient légèrement.",
+          "Le sourire discret et le salut ne sont pas attestés comme animation originale par la référence fixe."
+        ],
+        "gaze": "near_front",
+        "gaze_prompt_match": true
+      },
+      "silhouette_complete_visible": true,
+      "cropped_body_part_detected": false,
+      "distinct_menu_gesture": true,
+      "technical_measurements": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          254
+        ],
+        "alpha_bbox_128": [
+          281,
+          121,
+          718,
+          1465
+        ],
+        "alpha_bbox_nonzero": [
+          47,
+          114,
+          978,
+          1516
+        ],
+        "margins_alpha128_px": {
+          "left": 281,
+          "top": 121,
+          "right": 306,
+          "bottom": 71
+        },
+        "ten_percent_margin_all_edges": false,
+        "baseline_y_px": 1465,
+        "silhouette_height_px": 1344,
+        "fully_transparent_pixel_fraction": 0.7874832153320312,
+        "alpha_1_to_127_pixels": 20481,
+        "background_sample_rgba": {
+          "(512, 50)": [
+            21,
+            17,
+            13,
+            0
+          ],
+          "(100, 750)": [
+            4,
+            2,
+            3,
+            0
+          ],
+          "(850, 750)": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "(100, 1400)": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "canonical_fidelity_1_1_certified": false,
+      "engine_admitted": false,
+      "animation_complete": false
+    },
+    {
+      "asset_id": "REC_HELENA_RE6_DESELECT_KEY_V24",
+      "hero_id": "REC_HELENA_RE6",
+      "path": "../characters/assets/helena_re6_agent_deselect_v24.png",
+      "sha256": "7d570bbbdd12e086cf5ffeb203c4b629d8acf289853c556341bc05d22d05ae89",
+      "sha256_matches_author_manifest": true,
+      "visually_inspected": true,
+      "reference_comparison_performed": true,
+      "verdict": "retain_candidate_with_open_corrections",
+      "independent_observations": {
+        "pose": "Bras libre gauche abaissé, arme droite toujours vers le bas, tête et regard tournés vers la droite de l’image.",
+        "asymmetry": "Pistolet anatomique droit conservé ; le geste de repos est distinct des deux autres.",
+        "source_comparison": "Identité et tenue compatibles avec la famille V22, vue plus reposée ; les chaussures restent plus arrondies que la source promotionnelle.",
+        "differences": [
+          "Direction du regard vers la droite de l’image confirmée visuellement ; contraire à la direction gauche demandée.",
+          "Visage/volume de cheveux, plis et hauteur de silhouette diffèrent des deux autres clés."
+        ],
+        "gaze": "viewer_right",
+        "gaze_prompt_match": false
+      },
+      "silhouette_complete_visible": true,
+      "cropped_body_part_detected": false,
+      "distinct_menu_gesture": true,
+      "technical_measurements": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          254
+        ],
+        "alpha_bbox_128": [
+          292,
+          138,
+          682,
+          1456
+        ],
+        "alpha_bbox_nonzero": [
+          35,
+          31,
+          1002,
+          1458
+        ],
+        "margins_alpha128_px": {
+          "left": 292,
+          "top": 138,
+          "right": 342,
+          "bottom": 80
+        },
+        "ten_percent_margin_all_edges": false,
+        "baseline_y_px": 1456,
+        "silhouette_height_px": 1318,
+        "fully_transparent_pixel_fraction": 0.7910003662109375,
+        "alpha_1_to_127_pixels": 21646,
+        "background_sample_rgba": {
+          "(512, 50)": [
+            19,
+            16,
+            14,
+            0
+          ],
+          "(100, 750)": [
+            2,
+            1,
+            0,
+            0
+          ],
+          "(850, 750)": [
+            12,
+            10,
+            9,
+            0
+          ],
+          "(100, 1400)": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "canonical_fidelity_1_1_certified": false,
+      "engine_admitted": false,
+      "animation_complete": false
+    },
+    {
+      "asset_id": "REC_ADA_RE4R_SW_DEFAULT_SELECTED_KEY_V24",
+      "hero_id": "REC_ADA_RE4R",
+      "path": "../characters/assets/ada_re4r_sw_default_selected_v24.png",
+      "sha256": "566ab97ded17e9b89761a3b17319a05c02eb00deccbf8269e313f6c99d8fe92f",
+      "sha256_matches_author_manifest": true,
+      "visually_inspected": true,
+      "reference_comparison_performed": true,
+      "verdict": "retain_candidate_with_open_corrections",
+      "independent_observations": {
+        "pose": "Corps presque frontal, main gauche anatomique sur la hanche, bras droit abaissé tenant le pistolet clair.",
+        "asymmetry": "Pistolet à droite anatomique (gauche image), holster avec poignée brune sur la cuisse gauche anatomique (droite image) ; sangle triangulaire du même côté.",
+        "source_comparison": "Carré noir, robe pull rouge à col haut, gants noirs, harnais, ceinture et bottes hautes correspondent à la base V22 et à la vue de menu native. Jambes décroisées pour la nouvelle pose.",
+        "differences": [
+          "Les rivets/boucles et plis du harnais varient ; pas d’identité géométrique 1:1 démontrée.",
+          "Le modèle source est petit et son menu affiche une option de couleur de cheveux différente de l’apparence noire observée ; configuration native exacte non certifiée."
+        ],
+        "gaze": "near_front",
+        "gaze_prompt_match": true
+      },
+      "silhouette_complete_visible": true,
+      "cropped_body_part_detected": false,
+      "distinct_menu_gesture": true,
+      "technical_measurements": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          254
+        ],
+        "alpha_bbox_128": [
+          301,
+          104,
+          754,
+          1467
+        ],
+        "alpha_bbox_nonzero": [
+          2,
+          33,
+          1010,
+          1520
+        ],
+        "margins_alpha128_px": {
+          "left": 301,
+          "top": 104,
+          "right": 270,
+          "bottom": 69
+        },
+        "ten_percent_margin_all_edges": false,
+        "baseline_y_px": 1467,
+        "silhouette_height_px": 1363,
+        "fully_transparent_pixel_fraction": 0.8006496429443359,
+        "alpha_1_to_127_pixels": 20993,
+        "background_sample_rgba": {
+          "(512, 50)": [
+            20,
+            20,
+            19,
+            0
+          ],
+          "(100, 750)": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "(850, 750)": [
+            2,
+            1,
+            0,
+            0
+          ],
+          "(100, 1400)": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "canonical_fidelity_1_1_certified": false,
+      "engine_admitted": false,
+      "animation_complete": false
+    },
+    {
+      "asset_id": "REC_ADA_RE4R_SW_DEFAULT_CONFIRM_KEY_V24",
+      "hero_id": "REC_ADA_RE4R",
+      "path": "../characters/assets/ada_re4r_sw_default_confirm_v24.png",
+      "sha256": "d617be46d3406ee252d75ca69675f82e3d3464b1a6ff46c6edbc4ce844a8be15",
+      "sha256_matches_author_manifest": true,
+      "visually_inspected": true,
+      "reference_comparison_performed": true,
+      "verdict": "retain_candidate_with_open_corrections",
+      "independent_observations": {
+        "pose": "Main gauche gantée levée avec paume ouverte et doigts visibles ; arme droite abaissée.",
+        "asymmetry": "Arme claire à droite anatomique ; holster à poignée brune et sangle sur la cuisse gauche conservés.",
+        "source_comparison": "Tenue et identité proches de selected et V22 ; geste de confirmation nettement distinct. Bottes hautes et talons demeurent entiers.",
+        "differences": [
+          "La main, les coutures et la position des boucles sont régénérées.",
+          "Les appuis se trouvent plus hauts que dans selected ; aucune stabilité d’échelle/pivot animée démontrée."
+        ],
+        "gaze": "near_front",
+        "gaze_prompt_match": true
+      },
+      "silhouette_complete_visible": true,
+      "cropped_body_part_detected": false,
+      "distinct_menu_gesture": true,
+      "technical_measurements": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          254
+        ],
+        "alpha_bbox_128": [
+          289,
+          110,
+          696,
+          1442
+        ],
+        "alpha_bbox_nonzero": [
+          41,
+          19,
+          1006,
+          1511
+        ],
+        "margins_alpha128_px": {
+          "left": 289,
+          "top": 110,
+          "right": 328,
+          "bottom": 94
+        },
+        "ten_percent_margin_all_edges": false,
+        "baseline_y_px": 1442,
+        "silhouette_height_px": 1332,
+        "fully_transparent_pixel_fraction": 0.8051268259684244,
+        "alpha_1_to_127_pixels": 22878,
+        "background_sample_rgba": {
+          "(512, 50)": [
+            17,
+            16,
+            15,
+            0
+          ],
+          "(100, 750)": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "(850, 750)": [
+            3,
+            1,
+            1,
+            0
+          ],
+          "(100, 1400)": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "canonical_fidelity_1_1_certified": false,
+      "engine_admitted": false,
+      "animation_complete": false
+    },
+    {
+      "asset_id": "REC_ADA_RE4R_SW_DEFAULT_DESELECT_KEY_V24",
+      "hero_id": "REC_ADA_RE4R",
+      "path": "../characters/assets/ada_re4r_sw_default_deselect_v24.png",
+      "sha256": "1243adf8a5856a6c4092f0fede65e32c06cd7ec67c00bb457d9f3e60f6e2dcf0",
+      "sha256_matches_author_manifest": true,
+      "visually_inspected": true,
+      "reference_comparison_performed": true,
+      "verdict": "retain_candidate_with_open_corrections",
+      "independent_observations": {
+        "pose": "Deux bras abaissés, main gauche libre près de la cuisse, pistolet droit vers le bas ; tête tournée légèrement vers la droite de l’image.",
+        "asymmetry": "Arme à droite et holster gauche cohérents avec les deux autres états ; aucune permutation latérale détectée.",
+        "source_comparison": "Carré noir, robe rouge côtelée, gants et bottes cohérents avec la base. La retombée de sangle sous le bras gauche paraît plus longue/visible.",
+        "differences": [
+          "La retombée du harnais et certains contours d’équipement diffèrent de selected/confirm.",
+          "Détails des doigts, visage, arme et bord de robe non certifiés par la vue native à faible taille."
+        ],
+        "gaze": "viewer_right",
+        "gaze_prompt_match": true
+      },
+      "silhouette_complete_visible": true,
+      "cropped_body_part_detected": false,
+      "distinct_menu_gesture": true,
+      "technical_measurements": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          254
+        ],
+        "alpha_bbox_128": [
+          280,
+          119,
+          736,
+          1459
+        ],
+        "alpha_bbox_nonzero": [
+          67,
+          103,
+          962,
+          1462
+        ],
+        "margins_alpha128_px": {
+          "left": 280,
+          "top": 119,
+          "right": 288,
+          "bottom": 77
+        },
+        "ten_percent_margin_all_edges": false,
+        "baseline_y_px": 1459,
+        "silhouette_height_px": 1340,
+        "fully_transparent_pixel_fraction": 0.7983976999918619,
+        "alpha_1_to_127_pixels": 21495,
+        "background_sample_rgba": {
+          "(512, 50)": [
+            16,
+            16,
+            15,
+            0
+          ],
+          "(100, 750)": [
+            2,
+            1,
+            1,
+            0
+          ],
+          "(850, 750)": [
+            16,
+            8,
+            10,
+            0
+          ],
+          "(100, 1400)": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "canonical_fidelity_1_1_certified": false,
+      "engine_admitted": false,
+      "animation_complete": false
+    }
+  ],
+  "families": [
+    {
+      "hero_id": "REC_ADA_RE4R",
+      "reviewed_images": 3,
+      "baseline_range_px": [
+        1442,
+        1467
+      ],
+      "baseline_spread_px": 25,
+      "silhouette_height_range_px": [
+        1332,
+        1363
+      ],
+      "gestures_distinct": true,
+      "same_anatomical_weapon_side": true,
+      "all_minimum_ten_percent_margin_met": false,
+      "stable_animation_anchor_validated": false
+    },
+    {
+      "hero_id": "REC_HELENA_RE6",
+      "reviewed_images": 3,
+      "baseline_range_px": [
+        1449,
+        1465
+      ],
+      "baseline_spread_px": 16,
+      "silhouette_height_range_px": [
+        1318,
+        1349
+      ],
+      "gestures_distinct": true,
+      "same_anatomical_weapon_side": true,
+      "all_minimum_ten_percent_margin_met": false,
+      "stable_animation_anchor_validated": false
+    }
+  ],
+  "summary": {
+    "images_reviewed": 6,
+    "reference_images_reviewed": 4,
+    "candidate_retained_with_corrections": 6,
+    "one_to_one_certified": 0,
+    "animations_certified": 0,
+    "engine_admissions": 0,
+    "sha256_mismatches": 0,
+    "visible_crops_detected": 0,
+    "margin_requirement_failures": 6,
+    "gaze_direction_mismatches": 1
+  },
+  "findings": [
+    "Les six silhouettes sont entières et les gestes sont distincts. Les armes restent dans la main droite anatomique ; le holster de cuisse Ada reste à gauche anatomique.",
+    "Les écarts de baseline sont recalculés : Helena16px, Ada25px. Les six images échouent au minimum10% sur au moins un bord vertical.",
+    "Helena deselect regarde bien vers la droite de l’image, contrairement au prompt ; correction encore ouverte.",
+    "La petite référence Helena montre des chaussures plus fines que l’interprétation V22 et V24 ; la fidélité de ce détail reste ouverte.",
+    "Les valeurs RGB autour des figures sont parfois colorées, mais les échantillons extérieurs ont alpha0. L’aperçu RGB seul ne démontre pas un fond opaque ou un halo effectivement composé.",
+    "Toutes les sorties culminent à alpha254 ; l’intégration et les contours sur fond de jeu restent à vérifier."
+  ],
+  "not_performed": [
+    "Pas de test navigateur ou moteur.",
+    "Pas de comparaison avec séquences d’animation natives.",
+    "Pas de certification modèle commercial final Helena depuis la promotion2012.",
+    "Pas de certification pixel1:1, doigts, microdétails, armes ou licence commerciale."
+  ],
+  "writes_limited_to": "production-archives/rec-media/v24/reports/INDEPENDENT_CHARACTERS_V24.json"
+}

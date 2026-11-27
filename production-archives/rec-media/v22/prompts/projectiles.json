@@ -1,0 +1,80 @@
+[
+  {
+    "key": "re2r_hand_grenade",
+    "prompt": "Create a single isolated 2.5D game sprite of the intact hand grenade from Resident Evil 2 Remake (2019), using the attached native inventory render as the only design reference. Preserve the reference object's exact olive-green worn egg-shaped body, middle seam, dark broad top silhouette and long dark side lever, proportions, aged paint and asymmetric orientation. One whole object only, at the same three-quarter angle as the reference, fully contained with generous transparent padding. Render crisp realistic materials and readable contours matching the reference, with neutral lighting. The result must have a genuinely transparent RGBA background: no black fill, floor, cast shadow, scene, labels, text, diagram, duplicate, explosion, smoke or character. This is an intact fictional game prop asset, not a technical diagram. Do not invent hidden detail or add new components.",
+    "ref": "/workspace/scratch/39787b3268a6/v22_work/references/projectiles/re2r_hand_grenade.png",
+    "asset_id": "REC_OBJ_RE2R_HAND_GRENADE_V22",
+    "category": "projectile",
+    "edition": "Resident Evil 2 Remake (2019)",
+    "v1_actions": [
+      "REC_HUNK_RE2R__SP5"
+    ],
+    "source_urls": [
+      "https://www.evilresource.com/resident-evil-2-remake/weaponry/hand-grenade"
+    ],
+    "output_hint": null,
+    "git_blob_sha": null,
+    "error": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 0de8f96c-8bae-4673-a72e-e9ac24683ace. safety_violations=[illicit].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"illicit\\\"\\n      ]\\n    }\\n  }\\n}\")"
+  },
+  {
+    "key": "re4r_bolt",
+    "prompt": "Create one isolated full-length Bolt projectile sprite from Resident Evil 4 Remake (2023), strictly based on the attached native inventory render. Separate ONE representative bolt from the pictured bundle: a slim blue shaft, a short dark pointed tip, a dark rear shaft section and the same black rear fins with their precise silhouette and proportions as the visible bolts. Show the complete single bolt horizontally with its pointed tip facing right and the fletching at left. Full object with generous margin, no cropped parts. Realistic game-render materials, crisp silhouette, neutral lighting, faithful blue and dark gray colors. Genuine transparent RGBA background; no floor or drop shadow, no bundle, extra objects, labels, text, diagram, motion trails, sparks, explosion or character. Do not add the explosive mine attachment; this is the plain Bolt used by Leon's Bolt Thrower.",
+    "ref": "/workspace/scratch/39787b3268a6/v22_work/references/projectiles/re4r_bolts.png",
+    "asset_id": "REC_OBJ_RE4R_2023_BOLT_RIGHT_V22",
+    "filename": "REC_OBJ_RE4R_2023_BOLT_RIGHT_V22.png",
+    "category": "projectile",
+    "edition": "Resident Evil 4 Remake (2023)",
+    "status": "static_candidate",
+    "direction": "right",
+    "v1_actions": [],
+    "scope": "Arsenal complémentaire Leon / Bolt Thrower; ne clôt aucune des 44 actions V1.",
+    "source_urls": [
+      "https://www.evilresource.com/resident-evil-4-remake/weaponry/bolts"
+    ],
+    "review": [
+      "Objet entier, pointe à droite et empennage à gauche.",
+      "La source native montre un groupe de carreaux ; un exemplaire a été isolé et réorienté.",
+      "Des attaches et des détails de matière sont réinterprétés ; fidélité 1:1 non certifiée.",
+      "Petits résidus d’alpha près des bords ; original conservé, aucune retouche matricielle."
+    ],
+    "output_hint": "Generated images are saved to /workspace/scratch/39787b3268a6/generated_images as /workspace/scratch/39787b3268a6/generated_images/exec-c2eb6e63-6456-458f-a58c-f8eb158778d9.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+    "git_blob_sha": "963af7359aec077592c1d4c0a2c03d00084aa5cf",
+    "error": null
+  },
+  {
+    "key": "re0_molotov",
+    "prompt": "Reproduce the single inventory prop named Molotov Cocktail from Resident Evil Zero (2002) as an isolated game sprite, using the attached original game render as the complete visual reference. Preserve the green glass bottle's overall shape and neck proportions, the same dark red and cream worn label artwork, the pale fabric shape visible at its mouth, and its same diagonal orientation. Whole object, with generous clear margins. Retain the slightly coarse original-game texture character; do not invent tiny printed text or modernize the design. One static unlit fictional game item, realistic game-render lighting. Genuine transparent RGBA background. No scene, character, hand, duplicate, floor, shadow disc, fire, smoke, UI, labels, instructions, technical diagram or exposed interior.",
+    "ref": "/workspace/scratch/39787b3268a6/v22_work/references/projectiles/re0_molotov.png",
+    "asset_id": "REC_OBJ_RE0_MOLOTOV_UNLIT_V22",
+    "filename": "REC_OBJ_RE0_MOLOTOV_UNLIT_V22.png",
+    "category": "projectile",
+    "edition": "Resident Evil Zero (2002, catalogue; plateforme du rendu source non explicitée)",
+    "status": "static_candidate",
+    "direction": "diagonal",
+    "v1_actions": [
+      "REC_REBECCA_RE0__SP2"
+    ],
+    "scope": "OBJ_BOUTEILLE_INCENDIAIRE : objet statique non allumé; vol, rotation, impact et flammes non produits.",
+    "source_urls": [
+      "https://www.evilresource.com/resident-evil-zero/weaponry/molotov-cocktail"
+    ],
+    "review": [
+      "Silhouette de bouteille verte, étiquette rouge/crème et forme de tissu reprises du rendu source inspecté.",
+      "La source basse résolution ne permet pas de certifier les petits marquages ni une variante HD.",
+      "Objet entier sur alpha ; aucune séquence d’animation produite."
+    ],
+    "output_hint": "Generated images are saved to /workspace/scratch/39787b3268a6/generated_images as /workspace/scratch/39787b3268a6/generated_images/exec-6d704169-f16b-4ac7-878e-4d32fa134c7a.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+    "git_blob_sha": "9894b9f09e591a3664a7c6fcd74da338b0e7bceb",
+    "error": null
+  },
+  {
+    "key": "alexia_cvx_fire_study",
+    "prompt": "Create ONE isolated static visual-effects sprite for Resident Evil Combat, studying the orange-gold flames associated with Alexia Ashford's first humanoid form in Resident Evil CODE: Veronica X. The first reference shows the small ragged flames around her palm; the second is a PlayStation 2 (2001) screenshot supporting their warm yellow-orange palette and spark-like edges. Recreate a compact upward-flaring orange flame cluster with hot golden-yellow interior, uneven red-orange outer tongues and a few tiny warm sparks, retaining the softer irregular game-effect character of the reference. This is an EFFECT STUDY, not an exact extracted frame. Isolate only fire: no hand, skin, silhouette of a person, environment, stairs, text, HUD or other object. One cohesive flame cluster centered with generous transparent padding, soft semitransparent flame tips, true transparent RGBA background. No black or white rectangle behind it, no floor, no shadow, no ring, no magic symbol, no blue electricity, no photoreal bonfire. No grid, no spritesheet or multiple variations. Keep the glow local rather than filling the canvas.",
+    "refs": [
+      "/workspace/scratch/39787b3268a6/v22_work/references/projectiles/alexia_cv_gamepro.jpg",
+      "/workspace/scratch/39787b3268a6/v22_work/references/projectiles/alexia_cvx_ps2_moby.jpg"
+    ],
+    "output_hint": "Generated images are saved to /workspace/scratch/39787b3268a6/generated_images as /workspace/scratch/39787b3268a6/generated_images/exec-1a3886a1-fb34-4122-b597-7fd3d619a3a3.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+    "git_blob_sha": "fb1d2ed725294b0851c90e5448b6507e31468886"
+  }
+]

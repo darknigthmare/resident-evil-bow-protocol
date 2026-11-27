@@ -1,0 +1,566 @@
+{
+  "schema": "rec-v24-independent-projectile-review-1",
+  "date": "2026-11-27",
+  "timezone": "Europe/Paris",
+  "reviewer": "v24_characters agent, independent from projectile production",
+  "reviewed_base_commit": "246dbb81752c5fa41a55deb3aada3941ac966fec",
+  "scope": "Inspection visuelle des six PNG et des quatre références locales ; mesures alpha/dimensions/empreintes. Aucun moteur, collision ou animation évalué.",
+  "methods": [
+    "Affichage des fichiers natifs avec view_image avant conclusions visuelles.",
+    "Pillow en lecture seule pour dimensions, histogrammes alpha, bbox au seuil >=128 et échantillons RGBA.",
+    "SHA-256 et SHA Git calculés sur les octets des fichiers examinés.",
+    "Aucune transformation de pixels, aucun recadrage, aucune normalisation."
+  ],
+  "references": [
+    {
+      "file": "re4r_bolts_native.png",
+      "local_inspection_path": "/workspace/scratch/37b119cd013c/v24-references/projectiles/re4r_bolts_native.png",
+      "kind": "native_game_object_render_reproduced_by_third_party",
+      "source_url": "https://www.evilresource.com/resident-evil-4-remake/weaponry/bolts",
+      "sha256": "15d2000721e1226f035c6e9f890c86c0b2819d12b683dc7dfa1277f2dcdfac07",
+      "bytes": 61200,
+      "dimensions": [
+        450,
+        360
+      ],
+      "visually_inspected": true
+    },
+    {
+      "file": "REC_OBJ_RE4R_2023_BOLT_RIGHT_V22.png",
+      "local_inspection_path": "/workspace/scratch/37b119cd013c/v24-references/projectiles/REC_OBJ_RE4R_2023_BOLT_RIGHT_V22.png",
+      "kind": "generated_v22_base",
+      "source_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/246dbb81752c5fa41a55deb3aada3941ac966fec/production-archives/rec-media/v22/assets/REC_OBJ_RE4R_2023_BOLT_RIGHT_V22.png",
+      "sha256": "68fc8eaabf13ba1e0559c3b349e6706233aa022ed7eb7cef51491abbd67eb5d7",
+      "bytes": 412706,
+      "dimensions": [
+        2172,
+        724
+      ],
+      "visually_inspected": true
+    },
+    {
+      "file": "re0_molotov_native.png",
+      "local_inspection_path": "/workspace/scratch/37b119cd013c/v24-references/projectiles/re0_molotov_native.png",
+      "kind": "native_game_object_render_reproduced_by_third_party",
+      "source_url": "https://www.evilresource.com/resident-evil-zero/weaponry/molotov-cocktail",
+      "sha256": "c5a31f6e55d5080eef86803437de6a77ec5e332d11a163a7721ac5f323da3da3",
+      "bytes": 63689,
+      "dimensions": [
+        450,
+        360
+      ],
+      "visually_inspected": true
+    },
+    {
+      "file": "REC_OBJ_RE0_MOLOTOV_UNLIT_V22.png",
+      "local_inspection_path": "/workspace/scratch/37b119cd013c/v24-references/projectiles/REC_OBJ_RE0_MOLOTOV_UNLIT_V22.png",
+      "kind": "generated_v22_base",
+      "source_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/blob/246dbb81752c5fa41a55deb3aada3941ac966fec/production-archives/rec-media/v22/assets/REC_OBJ_RE0_MOLOTOV_UNLIT_V22.png",
+      "sha256": "d0bc50ea082a3564bd585e71e1c8b73c4e0e59755084311db524477fe1d2826a",
+      "bytes": 661416,
+      "dimensions": [
+        1402,
+        1122
+      ],
+      "visually_inspected": true
+    }
+  ],
+  "assets": [
+    {
+      "path": "projectiles/assets/re0_molotov_horizontal_v24.png",
+      "file_bytes": 947181,
+      "sha256": "f00019fda3f765ff79dfc90349ff3a5a27e70744ba133cae640e96c26d08b4f2",
+      "git_blob_sha": "59bca9d5ab0f6eb6227981b3e53c8ec48a19276e",
+      "dimensions": [
+        1983,
+        793
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1020632,
+      "alpha_1_to_15_pixels": 23366,
+      "alpha_16_to_127_pixels": 3660,
+      "alpha_ge128_pixels": 524861,
+      "bbox_alpha_ge128": [
+        131,
+        208,
+        1856,
+        667
+      ],
+      "bbox_alpha_nonzero": [
+        33,
+        35,
+        1953,
+        773
+      ],
+      "margins_alpha_ge128_px": {
+        "left": 131,
+        "top": 208,
+        "right": 127,
+        "bottom": 126
+      },
+      "margins_alpha_ge128_percent": {
+        "left": 6.606,
+        "top": 26.23,
+        "right": 6.404,
+        "bottom": 15.889
+      },
+      "requested_twelve_percent_margin_met": false,
+      "nonzero_alpha_pixels_outside_alpha128_bbox": 7370,
+      "max_alpha_outside_alpha128_bbox": 121,
+      "halo_samples": [],
+      "useful_alpha": true,
+      "visually_inspected": true,
+      "full_object_inside_frame": true,
+      "source_reference_files": [
+        "re0_molotov_native.png",
+        "REC_OBJ_RE0_MOLOTOV_UNLIT_V22.png"
+      ],
+      "observed_direction": "col et tissu vers la gauche, fond de bouteille vers la droite, axe presque horizontal",
+      "observations": [
+        "Un seul objet entier, tissu non allumé, bouteille verte, bande claire au col et étiquette rouge/crème avec motif sombre conservés.",
+        "Le fond circulaire reste visible en trois-quarts ; la nouvelle orientation change la perspective.",
+        "Le dessin et les caractères de l’étiquette sont réinterprétés et plus détaillés que le petit rendu natif. La forme précise du tissu varie."
+      ],
+      "review_decision": "retain_as_static_orientation_candidate",
+      "native_shape_assessment": "Famille visuelle reconnaissable ; géométrie et proportions exactes non certifiées.",
+      "canonical_fidelity_1_1_certified": false,
+      "animation_complete": false,
+      "engine_admitted": false
+    },
+    {
+      "path": "projectiles/assets/re0_molotov_turning_v24.png",
+      "file_bytes": 564505,
+      "sha256": "fa545cae0824c0bbe283e3be0b8b4829430927610da29470da6b146549fbc5bc",
+      "git_blob_sha": "08dd097b524ef76dadc50cb4d31ff0ccc671deb1",
+      "dimensions": [
+        1402,
+        1122
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1267445,
+      "alpha_1_to_15_pixels": 11515,
+      "alpha_16_to_127_pixels": 2933,
+      "alpha_ge128_pixels": 291151,
+      "bbox_alpha_ge128": [
+        125,
+        92,
+        1249,
+        1045
+      ],
+      "bbox_alpha_nonzero": [
+        0,
+        9,
+        1402,
+        1122
+      ],
+      "margins_alpha_ge128_px": {
+        "left": 125,
+        "top": 92,
+        "right": 153,
+        "bottom": 77
+      },
+      "margins_alpha_ge128_percent": {
+        "left": 8.916,
+        "top": 8.2,
+        "right": 10.913,
+        "bottom": 6.863
+      },
+      "requested_twelve_percent_margin_met": false,
+      "nonzero_alpha_pixels_outside_alpha128_bbox": 899,
+      "max_alpha_outside_alpha128_bbox": 78,
+      "halo_samples": [],
+      "useful_alpha": true,
+      "visually_inspected": true,
+      "full_object_inside_frame": true,
+      "source_reference_files": [
+        "re0_molotov_native.png",
+        "REC_OBJ_RE0_MOLOTOV_UNLIT_V22.png"
+      ],
+      "observed_direction": "fond de bouteille en haut à gauche, col et tissu en bas à droite",
+      "observations": [
+        "Un seul objet entier, orientation inversée dans le plan par rapport à la base V22 ; étiquette tournée avec la bouteille.",
+        "Palette vert sombre, rouge/crème, tissu beige conservée, aucune flamme ou fumée ajoutée.",
+        "La quantité de fond de bouteille visible et les plis du tissu sont régénérés ; ce PNG n’établit pas une rotation 3D continue."
+      ],
+      "review_decision": "retain_as_static_orientation_candidate",
+      "native_shape_assessment": "Silhouette compatible comme étude d’orientation ; continuité volumétrique à vérifier.",
+      "canonical_fidelity_1_1_certified": false,
+      "animation_complete": false,
+      "engine_admitted": false
+    },
+    {
+      "path": "projectiles/assets/re0_molotov_upright_v24.png",
+      "file_bytes": 1126317,
+      "sha256": "0b6e4d30da8b6b0fb8b9d2f1dd3c7b5bf298f9a6a8e7fa592756450d6d2ff8bb",
+      "git_blob_sha": "20ac0d2c46b8e3369abf9d122f3e4bc38356c2ae",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "fully_transparent_pixels": 1294105,
+      "alpha_1_to_15_pixels": 8188,
+      "alpha_16_to_127_pixels": 2158,
+      "alpha_ge128_pixels": 268413,
+      "bbox_alpha_ge128": [
+        362,
+        100,
+        652,
+        1402
+      ],
+      "bbox_alpha_nonzero": [
+        153,
+        97,
+        954,
+        1536
+      ],
+      "margins_alpha_ge128_px": {
+        "left": 362,
+        "top": 100,
+        "right": 372,
+        "bottom": 134
+      },
+      "margins_alpha_ge128_percent": {
+        "left": 35.352,
+        "top": 6.51,
+        "right": 36.328,
+        "bottom": 8.724
+      },
+      "requested_twelve_percent_margin_met": false,
+      "nonzero_alpha_pixels_outside_alpha128_bbox": 2129,
+      "max_alpha_outside_alpha128_bbox": 96,
+      "halo_samples": [
+        {
+          "xy": [
+            300,
+            300
+          ],
+          "rgba": [
+            13,
+            11,
+            9,
+            0
+          ]
+        },
+        {
+          "xy": [
+            700,
+            500
+          ],
+          "rgba": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "xy": [
+            300,
+            1000
+          ],
+          "rgba": [
+            10,
+            11,
+            6,
+            0
+          ]
+        },
+        {
+          "xy": [
+            750,
+            1000
+          ],
+          "rgba": [
+            20,
+            18,
+            13,
+            0
+          ]
+        },
+        {
+          "xy": [
+            500,
+            1490
+          ],
+          "rgba": [
+            8,
+            11,
+            5,
+            0
+          ]
+        },
+        {
+          "xy": [
+            500,
+            50
+          ],
+          "rgba": [
+            47,
+            39,
+            32,
+            0
+          ]
+        },
+        {
+          "xy": [
+            300,
+            700
+          ],
+          "rgba": [
+            6,
+            8,
+            6,
+            0
+          ]
+        }
+      ],
+      "useful_alpha": true,
+      "visually_inspected": true,
+      "full_object_inside_frame": true,
+      "source_reference_files": [
+        "re0_molotov_native.png",
+        "REC_OBJ_RE0_MOLOTOV_UNLIT_V22.png"
+      ],
+      "observed_direction": "verticale, tissu en haut et fond en bas",
+      "observations": [
+        "Un seul objet entier, vert sombre avec l’étiquette rouge/crème et le tissu beige non allumé.",
+        "Le corps apparaît plus étroit et le col assez long dans cette nouvelle vue ; le rapport exact des volumes face au rendu natif incliné reste à vérifier.",
+        "Le faux halo visible dans l’aperçu correspond aux RGB colorés sous alpha nul aux sept points contrôlés ; il ne prouve pas un fond lumineux opaque. Des pixels à faible alpha existent ailleurs."
+      ],
+      "review_decision": "retain_as_static_orientation_candidate_with_proportion_reservations",
+      "native_shape_assessment": "Vue verticale inférée depuis des références inclinées ; proportions et détail d’étiquette non certifiés.",
+      "canonical_fidelity_1_1_certified": false,
+      "animation_complete": false,
+      "engine_admitted": false
+    },
+    {
+      "path": "projectiles/assets/re4r_bolt_ascending_v24.png",
+      "file_bytes": 220820,
+      "sha256": "5708d8117a6a158638d59dd26d02322cba059e250f3277efd36b0d47b2468d08",
+      "git_blob_sha": "adeda3cca2851384fa893c4ae358a040d038ab38",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1486489,
+      "alpha_1_to_15_pixels": 6965,
+      "alpha_16_to_127_pixels": 2319,
+      "alpha_ge128_pixels": 77765,
+      "bbox_alpha_ge128": [
+        200,
+        241,
+        1611,
+        672
+      ],
+      "bbox_alpha_nonzero": [
+        76,
+        78,
+        1738,
+        837
+      ],
+      "margins_alpha_ge128_px": {
+        "left": 200,
+        "top": 241,
+        "right": 163,
+        "bottom": 215
+      },
+      "margins_alpha_ge128_percent": {
+        "left": 11.274,
+        "top": 27.17,
+        "right": 9.188,
+        "bottom": 24.239
+      },
+      "requested_twelve_percent_margin_met": false,
+      "nonzero_alpha_pixels_outside_alpha128_bbox": 464,
+      "max_alpha_outside_alpha128_bbox": 114,
+      "halo_samples": [],
+      "useful_alpha": true,
+      "visually_inspected": true,
+      "full_object_inside_frame": true,
+      "source_reference_files": [
+        "re4r_bolts_native.png",
+        "REC_OBJ_RE4R_2023_BOLT_RIGHT_V22.png"
+      ],
+      "observed_direction": "pointe vers le haut-droite, empennage vers le bas-gauche",
+      "observations": [
+        "Un seul carreau entier : tige bleue, pointe sombre et empennage sombre conservés.",
+        "La jonction de la tige ne présente pas les deux clips clairs indus du candidat V22 et du premier essai gauche.",
+        "L’empennage paraît plus fin et différemment projeté que dans le candidat horizontal ; épaisseur, profil des ailerons et perspective à recouper avec le modèle natif."
+      ],
+      "review_decision": "retain_as_static_orientation_candidate",
+      "native_shape_assessment": "Palette et assemblage général cohérents, mais section et ailerons non certifiés 1:1.",
+      "canonical_fidelity_1_1_certified": false,
+      "animation_complete": false,
+      "engine_admitted": false
+    },
+    {
+      "path": "projectiles/assets/re4r_bolt_left_corrected_v24.png",
+      "file_bytes": 348278,
+      "sha256": "30b7a89edc07ab5831d69924ac85c53194d8044cdde449d7b9329256fd7edf10",
+      "git_blob_sha": "b549c7db65539f81f2560a4151e3f9edee58c048",
+      "dimensions": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1383018,
+      "alpha_1_to_15_pixels": 13350,
+      "alpha_16_to_127_pixels": 3412,
+      "alpha_ge128_pixels": 172748,
+      "bbox_alpha_ge128": [
+        143,
+        258,
+        2031,
+        496
+      ],
+      "bbox_alpha_nonzero": [
+        139,
+        91,
+        2037,
+        627
+      ],
+      "margins_alpha_ge128_px": {
+        "left": 143,
+        "top": 258,
+        "right": 141,
+        "bottom": 228
+      },
+      "margins_alpha_ge128_percent": {
+        "left": 6.584,
+        "top": 35.635,
+        "right": 6.492,
+        "bottom": 31.492
+      },
+      "requested_twelve_percent_margin_met": false,
+      "nonzero_alpha_pixels_outside_alpha128_bbox": 1468,
+      "max_alpha_outside_alpha128_bbox": 99,
+      "halo_samples": [],
+      "useful_alpha": true,
+      "visually_inspected": true,
+      "full_object_inside_frame": true,
+      "source_reference_files": [
+        "re4r_bolts_native.png",
+        "REC_OBJ_RE4R_2023_BOLT_RIGHT_V22.png"
+      ],
+      "observed_direction": "pointe à gauche, empennage à droite, axe horizontal",
+      "observations": [
+        "Un seul carreau entier ; palette bleu/noir conservée.",
+        "Les deux plaquettes métalliques rectangulaires visibles à la jonction sur le premier essai ont effectivement disparu.",
+        "Des détails de texture et le profil d’empennage restent interprétés ; la source montre plusieurs carreaux et ne fournit pas cette vue orthogonale isolée.",
+        "La correction réduit l’encombrement dans la toile, mais les marges latérales restent largement sous 12 %."
+      ],
+      "review_decision": "retain_corrected_candidate_replacing_trial",
+      "native_shape_assessment": "Correction ciblée constatée, sans certification globale de géométrie.",
+      "canonical_fidelity_1_1_certified": false,
+      "animation_complete": false,
+      "engine_admitted": false
+    },
+    {
+      "path": "projectiles/assets/trials/re4r_bolt_left_v24.png",
+      "file_bytes": 398248,
+      "sha256": "1423767ca6544d22cedfb9ef82dcee029fd2b53770c6a3c07f3bfca1595a6fa3",
+      "git_blob_sha": "6d37164497a9855b84b1c9010dcf806fabc608ce",
+      "dimensions": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1361888,
+      "alpha_1_to_15_pixels": 17563,
+      "alpha_16_to_127_pixels": 3735,
+      "alpha_ge128_pixels": 189342,
+      "bbox_alpha_ge128": [
+        77,
+        254,
+        2096,
+        499
+      ],
+      "bbox_alpha_nonzero": [
+        69,
+        115,
+        2099,
+        674
+      ],
+      "margins_alpha_ge128_px": {
+        "left": 77,
+        "top": 254,
+        "right": 76,
+        "bottom": 225
+      },
+      "margins_alpha_ge128_percent": {
+        "left": 3.545,
+        "top": 35.083,
+        "right": 3.499,
+        "bottom": 31.077
+      },
+      "requested_twelve_percent_margin_met": false,
+      "nonzero_alpha_pixels_outside_alpha128_bbox": 2147,
+      "max_alpha_outside_alpha128_bbox": 122,
+      "halo_samples": [],
+      "useful_alpha": true,
+      "visually_inspected": true,
+      "full_object_inside_frame": true,
+      "source_reference_files": [
+        "re4r_bolts_native.png",
+        "REC_OBJ_RE4R_2023_BOLT_RIGHT_V22.png"
+      ],
+      "observed_direction": "pointe à gauche, empennage à droite, axe horizontal",
+      "observations": [
+        "Un seul carreau entier, mais deux clips métalliques rectangulaires clairs sont visibles à la jonction tige bleue/empennage sombre.",
+        "Ces détails sont hérités du candidat V22 et ne sont pas attestés par le rendu natif fourni.",
+        "Marges latérales très serrées ; le fichier corrigé est présent et distinct."
+      ],
+      "review_decision": "keep_as_superseded_trial_not_candidate",
+      "native_shape_assessment": "Essai écarté : détails métalliques indus et cadrage serré.",
+      "superseded_by": "projectiles/assets/re4r_bolt_left_corrected_v24.png",
+      "canonical_fidelity_1_1_certified": false,
+      "animation_complete": false,
+      "engine_admitted": false
+    }
+  ],
+  "summary": {
+    "inspected_png": 6,
+    "retained_candidates": 5,
+    "superseded_trials": 1,
+    "useful_alpha": 6,
+    "full_object_inside_frame": 6,
+    "twelve_percent_margin_pass": 0,
+    "complete_animations": 0,
+    "engine_admitted": 0,
+    "canonical_fidelity_1_1_certified": 0
+  },
+  "cross_asset_findings": [
+    "La correction du carreau gauche retire les deux clips indus ; le premier essai doit rester séparé des candidats.",
+    "Les six images ont une transparence utile ; aucun fond opaque généralisé n’est détecté. Le halo RGB de la bouteille verticale est transparent aux sept points examinés, ce qui ne certifie pas tous les pixels de contour.",
+    "Les cinq candidats ne ferment pas les animations de vol, les étapes de lancer, les impacts ou explosions.",
+    "Les images changent de toile, d’échelle et de perspective ; leurs ancres ne sont pas prêtes pour une séquence sans travail supplémentaire.",
+    "Les références natives sont des rendus d’objet reproduits par un site tiers, et les bases V22 restent générées. Les parties cachées et nouvelles orientations sont inférées."
+  ],
+  "review_made_no_pixel_changes": true
+}
