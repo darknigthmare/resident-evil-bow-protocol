@@ -1,0 +1,324 @@
+{
+  "schema": "rec.stage-manifest.v24.1",
+  "batch": "V24",
+  "created_on": "2026-11-27",
+  "baseline_head": "246dbb81752c5fa41a55deb3aada3941ac966fec",
+  "inventory_basis": "production-archives/rec-media/v22/inventory/INVENTAIRE_COMPLET_V22_20261124.json",
+  "scope": "Trois plaques de décor candidates et trois cibles documentées sans génération. Ce lot ne ferme pas l’ensemble des manquants V22.",
+  "asset_count": 3,
+  "generated_calls_executed": 3,
+  "source_index": "SOURCE_INDEX_V24.json",
+  "visual_qa": "QA_STAGES_V24.json",
+  "assets": [
+    {
+      "asset_id": "REC_STAGE_RE1HD_TYRANT_ROOM_MASTER_V24_01",
+      "path": "assets/REC_STAGE_RE1HD_TYRANT_ROOM_MASTER_V24_01.png",
+      "name": "Laboratoire Arklay — Tyrant Room, caméra basse",
+      "edition": "Resident Evil HD Remaster (2015)",
+      "status": "CANDIDATE_FIDELITY_REVIEW_REQUIRED",
+      "runtime_target": "spencer_lab",
+      "inventory_v22_status": "SOURCE_HOLD",
+      "output_kind": "generated_flat_environment_master_candidate",
+      "dimensions": {
+        "width": 1672,
+        "height": 941,
+        "unit": "px"
+      },
+      "format": "PNG",
+      "color_mode": "RGB",
+      "has_alpha_channel": false,
+      "alpha_extrema": null,
+      "bytes": 2454204,
+      "sha256": "ac3ce318a1cd2210d1e46d9c7d168f517e5da604f765d3f38f03544892b91750",
+      "git_blob_sha": "f95b5bf5c3254b89093c32b2e82bd8d6766c24d4",
+      "engine_admitted": false,
+      "canonical_fidelity_1_1_certified": false,
+      "canonical_one_to_one_certified": false,
+      "parallax_complete": false,
+      "historical_absence_certified": false,
+      "uhd_native": false,
+      "requested_art_target": "paysage 16:9, UHD 3 840 × 2 160",
+      "scope_decision": "Proposition bornée à Tyrant Room pour une entrée Arklay dont la salle restait indéfinie. Ne combine pas puits technique et cuves de salles différentes.",
+      "sources": [
+        {
+          "source_id": "SRC_TYRANT_HD_NATIVE",
+          "page_url": "https://adventuregamers.com/walkthroughs/resident-evil-hd-remaster",
+          "image_url": "https://adventuregamers.com/wp-content/uploads/2026/02/Resident-Evil-HD-Remaster-Tyrant.jpg"
+        }
+      ],
+      "references": [
+        "SRC_TYRANT_HD_NATIVE"
+      ],
+      "prompt": {
+        "path": "prompts/executed_prompts.json",
+        "asset_id": "REC_STAGE_RE1HD_TYRANT_ROOM_MASTER_V24_01",
+        "reference_image_count": 1,
+        "tool": "image_gen.imagegen",
+        "transparent_background": false
+      },
+      "observed_source_features": [
+        "Rangée de cuves cyan à droite ; paroi technique gauche ; consoles et tuyaux au fond ; même point de vue bas et oblique.",
+        "Tyrant debout et humain arrière supprimés. Les silhouettes confinées dans les cuves font partie du décor de référence et restent visibles."
+      ],
+      "inferred_or_reconstructed_regions": [
+        "Consoles centrales auparavant derrière le Tyrant.",
+        "Détail du sol et des reflets sous les personnages supprimés."
+      ],
+      "limitations": [
+        "Les nouvelles consoles, leurs affichages et le sol occulté ne sont pas vérifiés par une seconde vue.",
+        "Textures, reflets et microgéométrie ont été régénérés : aucune correspondance pixel à pixel.",
+        "La perspective inclinée et la largeur de zone jouable ne sont pas validées pour deux combattants.",
+        "Image unique aplatie : aucun calque parallaxe, masque de profondeur, occlusion ou élément animé livré.",
+        "Résolution native réelle 1 672 × 941, inférieure à UHD 3 840 × 2 160 ; aucun agrandissement ni retouche bitmap après génération.",
+        "Candidat de production hors moteur ; fidélité canonique 1:1 et jouabilité non certifiées.",
+        "L’absence historique complète n’est pas établie : les archives V3/V4 restent partiellement à récupérer selon V22."
+      ],
+      "provenance": {
+        "generated_original_file": "/workspace/scratch/37b119cd013c/generated_images/exec-83158a2a-5b4d-42c9-9182-2a2d38f317cd.png",
+        "original_bytes_preserved": true,
+        "copy_method": "shutil.copyfile",
+        "post_generation_bitmap_edit": false
+      },
+      "visual_qa": {
+        "reviewer": "v24_stages",
+        "review_date": "2026-11-27",
+        "reference_and_output_visually_inspected": true,
+        "no_active_character_or_hud_observed": true,
+        "peer_review": "pending_parent_review",
+        "admission": "HOLD"
+      }
+    },
+    {
+      "asset_id": "REC_STAGE_RE3R_SHOPPING_PLAZA_MOONS_MASTER_V24_01",
+      "path": "assets/REC_STAGE_RE3R_SHOPPING_PLAZA_MOONS_MASTER_V24_01.png",
+      "name": "Shopping Plaza — façade Moon’s Donuts",
+      "edition": "Resident Evil 3 Remake (2020)",
+      "status": "CANDIDATE_FIDELITY_REVIEW_REQUIRED",
+      "runtime_target": "raccoon_street",
+      "inventory_v22_status": "SOURCE_HOLD",
+      "output_kind": "generated_flat_environment_master_candidate",
+      "dimensions": {
+        "width": 1672,
+        "height": 941,
+        "unit": "px"
+      },
+      "format": "PNG",
+      "color_mode": "RGB",
+      "has_alpha_channel": false,
+      "alpha_extrema": null,
+      "bytes": 2557067,
+      "sha256": "adae145fc2f8e17a70522bc04edfda3f23caf7eb59484c4d10e84e5d42c77a5f",
+      "git_blob_sha": "d46ee3b31d15541797d12ed072e38e5586e9b15b",
+      "engine_admitted": false,
+      "canonical_fidelity_1_1_certified": false,
+      "canonical_one_to_one_certified": false,
+      "parallax_complete": false,
+      "historical_absence_certified": false,
+      "uhd_native": false,
+      "requested_art_target": "paysage 16:9, UHD 3 840 × 2 160",
+      "scope_decision": "Choix explicite de Shopping Plaza côté Moon’s Donuts pour le besoin de rue RE3R ; ni Business Street ni Redstone Street.",
+      "sources": [
+        {
+          "source_id": "SRC_RE3R_PLAZA_NATIVE",
+          "page_url": "https://www.gamesradar.com/resident-evil-3-remake-review/",
+          "image_url": "https://cdn.mos.cms.futurecdn.net/5e4YdMqJdgDqAKsfmvphxj.jpg"
+        }
+      ],
+      "references": [
+        "SRC_RE3R_PLAZA_NATIVE"
+      ],
+      "prompt": {
+        "path": "prompts/executed_prompts.json",
+        "asset_id": "REC_STAGE_RE3R_SHOPPING_PLAZA_MOONS_MASTER_V24_01",
+        "reference_image_count": 1,
+        "tool": "image_gen.imagegen",
+        "transparent_background": false
+      },
+      "observed_source_features": [
+        "Façade turquoise, grande enseigne tronquée au bord haut, auvent rayé, néons donuts et OPEN.",
+        "Parasols, pavés mouillés, entrée par des marches et garde-corps au bas de l’image.",
+        "Jill, arme, éclair de bouche, ennemis et corps supprimés."
+      ],
+      "inferred_or_reconstructed_regions": [
+        "Mobilier et aménagement du café gauche largement masqués par Jill.",
+        "Sol et mobilier partiellement masqués par les ennemis, le corps et le flash."
+      ],
+      "limitations": [
+        "Disposition détaillée des tables, sièges et garde-corps gauche reconstruite : elle n’est pas certifiée canonique.",
+        "La génération ajoute de la lisibilité et change le rendu des reflets, affiches et petits accessoires.",
+        "Façade et néons sont des repères conservés ; leur détail typographique n’est pas une reproduction graphique exacte.",
+        "Angle en plongée et marches : aucune ligne de combat latérale ou collision validée.",
+        "Image unique aplatie : aucun calque parallaxe, masque de profondeur, occlusion ou élément animé livré.",
+        "Résolution native réelle 1 672 × 941, inférieure à UHD 3 840 × 2 160 ; aucun agrandissement ni retouche bitmap après génération.",
+        "Candidat de production hors moteur ; fidélité canonique 1:1 et jouabilité non certifiées.",
+        "L’absence historique complète n’est pas établie : les archives V3/V4 restent partiellement à récupérer selon V22."
+      ],
+      "provenance": {
+        "generated_original_file": "/workspace/scratch/37b119cd013c/generated_images/exec-6898e745-6804-42b7-89e1-7f594f417390.png",
+        "original_bytes_preserved": true,
+        "copy_method": "shutil.copyfile",
+        "post_generation_bitmap_edit": false
+      },
+      "visual_qa": {
+        "reviewer": "v24_stages",
+        "review_date": "2026-11-27",
+        "reference_and_output_visually_inspected": true,
+        "no_active_character_or_hud_observed": true,
+        "peer_review": "pending_parent_review",
+        "admission": "HOLD"
+      }
+    },
+    {
+      "asset_id": "REC_STAGE_RE4R_DEL_LAGO_LAKE_MASTER_V24_01",
+      "path": "assets/REC_STAGE_RE4R_DEL_LAGO_LAKE_MASTER_V24_01.png",
+      "name": "Lac Del Lago — berge montagneuse au crépuscule",
+      "edition": "Resident Evil 4 Remake (2023), PC",
+      "status": "CANDIDATE_FIDELITY_REVIEW_REQUIRED",
+      "runtime_target": "village_lake_2023",
+      "inventory_v22_status": "SOURCE_HOLD",
+      "output_kind": "generated_flat_environment_master_candidate",
+      "dimensions": {
+        "width": 1672,
+        "height": 941,
+        "unit": "px"
+      },
+      "format": "PNG",
+      "color_mode": "RGB",
+      "has_alpha_channel": false,
+      "alpha_extrema": null,
+      "bytes": 1991014,
+      "sha256": "c8efa5d262d55ce8083fb55fa6d788901608c73e58ba8f6608dab89301d52cf3",
+      "git_blob_sha": "40096d181c0ce48753a9e3c5377325713330bd52",
+      "engine_admitted": false,
+      "canonical_fidelity_1_1_certified": false,
+      "canonical_one_to_one_certified": false,
+      "parallax_complete": false,
+      "historical_absence_certified": false,
+      "uhd_native": false,
+      "requested_art_target": "paysage 16:9, UHD 3 840 × 2 160",
+      "scope_decision": "Plaque aquatique de la direction de caméra du combat du chapitre 3. Conserve le lac et sa berge, sans inventer une plateforme de combat.",
+      "sources": [
+        {
+          "source_id": "SRC_RE4R_LAKE_NATIVE",
+          "page_url": "https://www.shacknews.com/article/134730/resident-evil-4-pc-impressions-now-thats-a-weapon",
+          "image_url": "https://shacknews-www.s3.amazonaws.com/assets/editorial/2023/03/resident-evil-4-water-ripple.jpg"
+        }
+      ],
+      "references": [
+        "SRC_RE4R_LAKE_NATIVE"
+      ],
+      "prompt": {
+        "path": "prompts/executed_prompts.json",
+        "asset_id": "REC_STAGE_RE4R_DEL_LAGO_LAKE_MASTER_V24_01",
+        "reference_image_count": 1,
+        "tool": "image_gen.imagegen",
+        "transparent_background": false
+      },
+      "observed_source_features": [
+        "Crêtes anguleuses et berge boisée, ciel rose-violet, eau sombre et brume de rive.",
+        "Leon, bateau, harpon et HUD supprimés ; forts remous d’action remplacés par de petites rides."
+      ],
+      "inferred_or_reconstructed_regions": [
+        "Grande zone d’eau du premier plan précédemment couverte par le bateau et la mousse.",
+        "État apaisé des vagues, reflets et microdétail de la rive."
+      ],
+      "limitations": [
+        "La berge et les crêtes restent proches de la capture ; leur détail est régénéré, pas relevé géométriquement.",
+        "Le calme de l’eau est une adaptation de plaque de décor, pas la reproduction de la même frame du combat.",
+        "Absence de surface terrestre de combat : un système aquatique/embarcation reste à concevoir et qualifier avant toute intégration.",
+        "Image unique aplatie : aucun calque parallaxe, masque de profondeur, occlusion ou élément animé livré.",
+        "Résolution native réelle 1 672 × 941, inférieure à UHD 3 840 × 2 160 ; aucun agrandissement ni retouche bitmap après génération.",
+        "Candidat de production hors moteur ; fidélité canonique 1:1 et jouabilité non certifiées.",
+        "L’absence historique complète n’est pas établie : les archives V3/V4 restent partiellement à récupérer selon V22."
+      ],
+      "provenance": {
+        "generated_original_file": "/workspace/scratch/37b119cd013c/generated_images/exec-055e03fb-6560-4062-8036-dade2103d444.png",
+        "original_bytes_preserved": true,
+        "copy_method": "shutil.copyfile",
+        "post_generation_bitmap_edit": false
+      },
+      "visual_qa": {
+        "reviewer": "v24_stages",
+        "review_date": "2026-11-27",
+        "reference_and_output_visually_inspected": true,
+        "no_active_character_or_hud_observed": true,
+        "peer_review": "pending_parent_review",
+        "admission": "HOLD"
+      }
+    }
+  ],
+  "open_targets": [
+    {
+      "runtime_target": "heisenberg",
+      "name": "Heisenberg’s Factory — Foundry MB4, Casting Machine",
+      "edition": "Resident Evil Village (2021)",
+      "status": "SOURCE_HOLD",
+      "generated_asset": null,
+      "references": [
+        "SRC_FOUNDRY_MAP",
+        "SRC_FOUNDRY_CASTING_CLOSEUP"
+      ],
+      "excluded_references": [
+        "SRC_FOUNDRY_REJECTED_GEAR_VIEW"
+      ],
+      "reason": "Plan et pièce identifiés ; seul gros plan exploitable de la machine mesure 416 × 206 et masque le centre avec un objet. Les vues de passage et de grosse mécanique ne prouvent pas le décor de Foundry.",
+      "next_evidence": "Vue native large de Foundry montrant machine, sol, paillasses et accès, plus angle complémentaire si occultations.",
+      "canonical_fidelity_1_1_certified": false,
+      "engine_admitted": false
+    },
+    {
+      "runtime_target": "old_house_lantern_2017",
+      "name": "Old House — Altar 2F, extrémité est au mécanisme à lanterne",
+      "edition": "Resident Evil 7 biohazard (2017)",
+      "status": "SOURCE_HOLD",
+      "generated_asset": null,
+      "references": [
+        "SRC_ALTAR_MAP"
+      ],
+      "textual_source_urls": [
+        "https://gamefaqs.gamespot.com/ps4/219968-resident-evil-7-biohazard-gold-edition/faqs/82509/the-old-house",
+        "https://www.neoseeker.com/resident-evil-7-biohazard/walkthrough/04_-_Old_House",
+        "https://www.cheatcc.com/guides/resident-evil-7-biohazard-guide-walkthrough/walkthrough-8/old-house-grenade-launcher-greenhouse/"
+      ],
+      "reason": "L’Altar 2F et le mécanisme est sont corroborés, distincts de Gallery 1F / Greenhouse ; captures directes de la pièce inaccessibles, HTTP 403. La carte ne permet pas de recréer fidèlement le décor.",
+      "next_evidence": "Capture native de la salle à la balance et une seconde vue depuis la porte/côté commodes, édition et plateforme identifiées.",
+      "canonical_fidelity_1_1_certified": false,
+      "engine_admitted": false
+    },
+    {
+      "runtime_target": "dimitrescu_battlements_2021",
+      "name": "Tower of Worship — passage extérieur de la première phase",
+      "edition": "Resident Evil Village (2021)",
+      "status": "SOURCE_HOLD",
+      "generated_asset": null,
+      "references": [
+        "SRC_TOWER_NEXUS_NATIVE",
+        "SRC_TOWER_GAME8_BACK_NATIVE",
+        "SRC_TOWER_GAME8_FRONT_NATIVE"
+      ],
+      "excluded_references": [
+        "SRC_TOWER_GAME8_SCOPE_NATIVE"
+      ],
+      "textual_source_urls": [
+        "https://www.gamewatcher.com/resident-evil-village-lady-dimitrescu-boss-fight",
+        "https://www.powerpyx.com/resident-evil-8-village-walkthrough/"
+      ],
+      "reason": "Fenêtres, parapet et montagnes visibles ; environ la moitié du centre masquée par le boss et l’arme. Les autres angles ne révèlent pas les parties cachées de cette caméra. Génération volontairement non exécutée après revue du périmètre.",
+      "next_evidence": "Vue large native sans boss ou caméra complémentaire de la même face montrant le passage, le sol et le parapet complets.",
+      "canonical_fidelity_1_1_certified": false,
+      "engine_admitted": false
+    }
+  ],
+  "production_gate": {
+    "engine_admitted": false,
+    "canonical_fidelity_1_1_certified": false,
+    "parallax_complete": false,
+    "uhd_delivery_complete": false,
+    "remaining": [
+      "Contrôle comparatif indépendant des références et sorties.",
+      "Captures supplémentaires pour les parties occultées/inférées.",
+      "Vrai master UHD et déclinaisons techniques distinctes si retenu.",
+      "Calques parallaxe, masques, sol/collisions et essai moteur à produire séparément."
+    ]
+  }
+}

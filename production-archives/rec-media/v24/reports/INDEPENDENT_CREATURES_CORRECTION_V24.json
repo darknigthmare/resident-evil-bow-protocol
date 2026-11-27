@@ -1,0 +1,50 @@
+{
+  "schema": "rec-v24-independent-creature-correction-1",
+  "date": "2026-11-27",
+  "timezone": "Europe/Paris",
+  "reviewer": "root, indépendant de la génération des créatures",
+  "first_pass_report": "INDEPENDENT_CREATURES_V24.json",
+  "first_pass_sha256": "9c9fafb1a6e05cedc6cab9527366af07812b8418815a817ebad7356f1383a403",
+  "first_pass_status": "Preuve du premier passage conservée sans réécriture ; ses décomptes décrivent les 7 fichiers alors disponibles.",
+  "asset_id": "re4r_novistador_wingbeat_up_corrected_v24",
+  "path": "../creatures/assets/re4r_novistador_wingbeat_up_corrected_v24.png",
+  "sha256": "ca3d637a9d195c0ef14a5a5871789ee297bdf37f2243ebb602583699b31e74d2",
+  "git_blob_sha": "0bb086236b86323749874f381ac6acd065e94acd",
+  "dimensions": [
+    1334,
+    1179
+  ],
+  "bytes": 936913,
+  "mode": "RGBA",
+  "alpha_range": [
+    0,
+    255
+  ],
+  "alpha_histogram_groups": {
+    "zero": 1187282,
+    "1_to_15": 154487,
+    "16_to_127": 10565,
+    "128_to_254": 220136,
+    "255": 316
+  },
+  "method": "Sortie corrigée inspectée intégralement ; comparaison avec la capture native RE4R et le premier passage déjà inspectés. Mesure alpha en lecture seule.",
+  "observed_fix": "Les deux longues extrémités arrière sont désormais effilées et étendues vers le bas ; les crochets recourbés du premier essai ne sont plus présents. Les ailes restent dans une pose haute.",
+  "remaining_limits": [
+    "Les pattes ne sont pas certifiées dans une articulation d’animation native ; cette correction ne certifie que la disparition du défaut visuel ciblé.",
+    "Contours rouges et gris visibles dans l’aperçu. Au critère R>120, R>1.8G et R>1.8B, 13853 pixels rouges ont alpha1–15 et28 ont alpha128–254 : il existe du bruit de faible alpha réel, distinct d’un fond opaque.",
+    "Dimensions, échelle et ancre varient face à la pose basse ; raccord et timing non validés.",
+    "Pas de rendu composé en navigateur ou moteur ; pas de certification1:1."
+  ],
+  "superseded_asset_id": "re4r_novistador_wingbeat_up_v24",
+  "decision": "corrected_candidate_retained_with_contour_and_animation_limits",
+  "final_creature_counts": {
+    "png": 8,
+    "candidates": 6,
+    "superseded_trials": 2,
+    "completed_animations": 0
+  },
+  "canonical_fidelity_1_1_certified": false,
+  "engine_admitted": false,
+  "animation_complete": false,
+  "post_generation_pixel_edits": false
+}

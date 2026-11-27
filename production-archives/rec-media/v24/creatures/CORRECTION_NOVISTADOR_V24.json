@@ -1,0 +1,48 @@
+{
+  "schema": "rec-v24-novistador-correction-1",
+  "date": "2026-11-27",
+  "requested_by": "independent root reviewer",
+  "reviewer": "author_of_correction",
+  "independent_review": false,
+  "first_review_path": "../reports/INDEPENDENT_CREATURES_V24.json",
+  "first_review_sha256": "9c9fafb1a6e05cedc6cab9527366af07812b8418815a817ebad7356f1383a403",
+  "first_review_modified": false,
+  "initial_image": {
+    "path": "assets/re4r_novistador_wingbeat_up_v24.png",
+    "sha256": "23dfe2c54ab6a00374a05603868282a5288a99a48f3eec89bcc20b69dc4f1a6b",
+    "status": "superseded_trial"
+  },
+  "corrected_image": {
+    "asset_id": "re4r_novistador_wingbeat_up_corrected_v24",
+    "path": "assets/re4r_novistador_wingbeat_up_corrected_v24.png",
+    "sha256": "ca3d637a9d195c0ef14a5a5871789ee297bdf37f2243ebb602583699b31e74d2",
+    "git_blob_sha": "0bb086236b86323749874f381ac6acd065e94acd",
+    "dimensions": [
+      1334,
+      1179
+    ],
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visual_review": "Author inspection confirms removed upward U-shaped hooks. Viewer-left posterior leg now points diagonally down-left, viewer-right leg down almost vertically, while wings remain raised. Fine surface details and boundary pixels changed during generation.",
+    "limitations": [
+      "A targeted anatomical correction was generated, not a deterministic pixel-preserving edit.",
+      "Some contour fragments/color pixels increased in the RGB preview; actual composed-alpha edge quality remains to inspect.",
+      "Bottom margin below requested family margin; normalized canvas scale/anchors remain open.",
+      "Posterior point shape is closer to the native source but no exact original-frame or microdetail certification.",
+      "No full animation, gameplay, hitbox, pivot or opposite-facing proof."
+    ]
+  },
+  "prompt_file": "prompts/NOVISTADOR_CORRECTION.json",
+  "attempts": 1,
+  "source_images_visually_inspected": [
+    "/workspace/scratch/37b119cd013c/resident-evil-bow-protocol/production-archives/rec-media/v24/creatures/assets/re4r_novistador_wingbeat_up_v24.png",
+    "/workspace/scratch/37b119cd013c/v24-creature-refs/novistador_native_re4r.jpg",
+    "/workspace/scratch/37b119cd013c/resident-evil-bow-protocol/production-archives/rec-media/v24/creatures/assets/re4r_novistador_wingbeat_down_v24.png"
+  ],
+  "correction_observed_by_author": true,
+  "independent_second_pass_pending": true,
+  "remaining_fidelity_1_1_certified": false,
+  "image_pixels_modified_after_generation": false
+}

@@ -1,0 +1,465 @@
+{
+  "schema": "rec-v24-ci-baseline-1",
+  "date": "2026-11-27",
+  "timezone": "Europe/Paris",
+  "repository": "darknigthmare/resident-evil-bow-protocol",
+  "inspected_commit": "246dbb81752c5fa41a55deb3aada3941ac966fec",
+  "scope": "État CI du HEAD V23 publié, relu avant publication V24. Ce rapport ne constitue pas un résultat CI du futur lot V24.",
+  "retrieval": "GitHub connector : workflow runs filtrés par commit ; jobs des six exécutions en échec ; logs décodés de chacun des six jobs échoués. Tous ces jobs confirment head_sha égal au commit inspecté.",
+  "summary": {
+    "runs_returned": 25,
+    "success": 18,
+    "failure": 6,
+    "cancelled": 1,
+    "failed_jobs_logs_individually_inspected": 6,
+    "distinct_first_failure_causes_observed": 1,
+    "full_logs_copied": false,
+    "excerpt_lines_total": 30
+  },
+  "cause_groups": [
+    {
+      "id": "r34_closed_addition_scope",
+      "failed_run_ids": [
+        45948186279,
+        45948186403,
+        45948186126,
+        45948186235,
+        45948186319,
+        45948186320
+      ],
+      "affected_path": "docs/combat-bible/EXTENSION_01_APPLICATION.md",
+      "guard": "scripts/verify-current-r34.mjs",
+      "assertion": "allowedAddition(item.file)",
+      "observed_error": "Unknown R34 addition: docs/combat-bible/EXTENSION_01_APPLICATION.md",
+      "evidence_level": "Directly observed separately in all six failed-job logs.",
+      "explanation": "La garde R34 arrête les exécutions à la première addition documentaire non admise par sa liste fermée. Le chemin de la nouvelle bible ne correspond ni à ses ajouts R34 autorisés ni à ses chemins d’outils IA explicitement énumérés.",
+      "inference_limit": "C’est la première cause bloquante observée dans chaque job. Cet arrêt ne prouve pas que toutes les assertions ultérieures auraient réussi, ni qu’aucun autre problème n’existe."
+    }
+  ],
+  "failed_runs": [
+    {
+      "run_id": 45948186279,
+      "workflow": "B.O.W. Protocol QA",
+      "run_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45948186279",
+      "job_id": 140337621949,
+      "job_name": "verify",
+      "job_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45948186279/job/140337621949",
+      "head_sha": "246dbb81752c5fa41a55deb3aada3941ac966fec",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "failure",
+      "failed_steps": [
+        "Run npm run verify"
+      ],
+      "cause_group": "r34_closed_addition_scope",
+      "error": "AssertionError [ERR_ASSERTION]: Unknown R34 addition: docs/combat-bible/EXTENSION_01_APPLICATION.md",
+      "excerpt_lines": [
+        "2026-11-27T05:56:30.2339397Z AssertionError [ERR_ASSERTION]: Unknown R34 addition: docs/combat-bible/EXTENSION_01_APPLICATION.md",
+        "2026-11-27T05:56:30.2340726Z     at validateSnapshot (file:///home/runner/work/resident-evil-bow-protocol/resident-evil-bow-protocol/scripts/verify-current-r34.mjs:257:92)",
+        "2026-11-27T05:56:30.2342084Z     at file:///home/runner/work/resident-evil-bow-protocol/resident-evil-bow-protocol/scripts/verify-current-r34.mjs:278:20",
+        "2026-11-27T05:56:30.2343006Z     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)",
+        "2026-11-27T05:56:30.2465252Z ##[error]Process completed with exit code 1."
+      ],
+      "log_line_count_inspected": 374,
+      "skipped_jobs": [],
+      "successful_sibling_jobs": []
+    },
+    {
+      "run_id": 45948186403,
+      "workflow": "R28 reviewed bodies, voluntary evolutions and source evidence",
+      "run_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45948186403",
+      "job_id": 140337621443,
+      "job_name": "provenance",
+      "job_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45948186403/job/140337621443",
+      "head_sha": "246dbb81752c5fa41a55deb3aada3941ac966fec",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "failure",
+      "failed_steps": [
+        "Validate current engine and historical assertions before report generation"
+      ],
+      "cause_group": "r34_closed_addition_scope",
+      "error": "AssertionError [ERR_ASSERTION]: Unknown R34 addition: docs/combat-bible/EXTENSION_01_APPLICATION.md",
+      "excerpt_lines": [
+        "2026-11-27T05:56:29.9990810Z AssertionError [ERR_ASSERTION]: Unknown R34 addition: docs/combat-bible/EXTENSION_01_APPLICATION.md",
+        "2026-11-27T05:56:29.9992190Z     at validateSnapshot (file:///home/runner/work/resident-evil-bow-protocol/resident-evil-bow-protocol/scripts/verify-current-r34.mjs:257:92)",
+        "2026-11-27T05:56:29.9993471Z     at file:///home/runner/work/resident-evil-bow-protocol/resident-evil-bow-protocol/scripts/verify-current-r34.mjs:278:20",
+        "2026-11-27T05:56:29.9994312Z     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)",
+        "2026-11-27T05:56:30.0165494Z ##[error]Process completed with exit code 1."
+      ],
+      "log_line_count_inspected": 473,
+      "skipped_jobs": [
+        {
+          "job_id": 140339457837,
+          "name": "build"
+        },
+        {
+          "job_id": 140339458596,
+          "name": "browser"
+        }
+      ],
+      "successful_sibling_jobs": []
+    },
+    {
+      "run_id": 45948186126,
+      "workflow": "R32 current controls in the explicit legacy selection view",
+      "run_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45948186126",
+      "job_id": 140337620464,
+      "job_name": "current",
+      "job_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45948186126/job/140337620464",
+      "head_sha": "246dbb81752c5fa41a55deb3aada3941ac966fec",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "failure",
+      "failed_steps": [
+        "Check the current delta and input regression before any report refresh"
+      ],
+      "cause_group": "r34_closed_addition_scope",
+      "error": "AssertionError [ERR_ASSERTION]: Unknown R34 addition: docs/combat-bible/EXTENSION_01_APPLICATION.md",
+      "excerpt_lines": [
+        "2026-11-27T05:56:39.3678916Z AssertionError [ERR_ASSERTION]: Unknown R34 addition: docs/combat-bible/EXTENSION_01_APPLICATION.md",
+        "2026-11-27T05:56:39.3680787Z     at validateSnapshot (file:///home/runner/work/resident-evil-bow-protocol/resident-evil-bow-protocol/scripts/verify-current-r34.mjs:257:92)",
+        "2026-11-27T05:56:39.3689953Z     at file:///home/runner/work/resident-evil-bow-protocol/resident-evil-bow-protocol/scripts/verify-current-r34.mjs:278:20",
+        "2026-11-27T05:56:39.3704107Z     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)",
+        "2026-11-27T05:56:39.3822240Z ##[error]Process completed with exit code 1."
+      ],
+      "log_line_count_inspected": 383,
+      "skipped_jobs": [],
+      "successful_sibling_jobs": []
+    },
+    {
+      "run_id": 45948186235,
+      "workflow": "R25 cumulative sources, archives and reader access",
+      "run_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45948186235",
+      "job_id": 140337620498,
+      "job_name": "provenance",
+      "job_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45948186235/job/140337620498",
+      "head_sha": "246dbb81752c5fa41a55deb3aada3941ac966fec",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "failure",
+      "failed_steps": [
+        "Verify the reviewed current delta before any R25 report refresh"
+      ],
+      "cause_group": "r34_closed_addition_scope",
+      "error": "AssertionError [ERR_ASSERTION]: Unknown R34 addition: docs/combat-bible/EXTENSION_01_APPLICATION.md",
+      "excerpt_lines": [
+        "2026-11-27T05:52:54.8214569Z AssertionError [ERR_ASSERTION]: Unknown R34 addition: docs/combat-bible/EXTENSION_01_APPLICATION.md",
+        "2026-11-27T05:52:54.8215969Z     at validateSnapshot (file:///home/runner/work/resident-evil-bow-protocol/resident-evil-bow-protocol/scripts/verify-current-r34.mjs:257:92)",
+        "2026-11-27T05:52:54.8216822Z     at file:///home/runner/work/resident-evil-bow-protocol/resident-evil-bow-protocol/scripts/verify-current-r34.mjs:278:20",
+        "2026-11-27T05:52:54.8217433Z     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)",
+        "2026-11-27T05:52:54.8274723Z ##[error]Process completed with exit code 1."
+      ],
+      "log_line_count_inspected": 393,
+      "skipped_jobs": [
+        {
+          "job_id": 140338349242,
+          "name": "browser"
+        },
+        {
+          "job_id": 140338349425,
+          "name": "build"
+        }
+      ],
+      "successful_sibling_jobs": []
+    },
+    {
+      "run_id": 45948186319,
+      "workflow": "R26 cumulative sources, archives and reader access",
+      "run_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45948186319",
+      "job_id": 140337621462,
+      "job_name": "provenance",
+      "job_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45948186319/job/140337621462",
+      "head_sha": "246dbb81752c5fa41a55deb3aada3941ac966fec",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "failure",
+      "failed_steps": [
+        "Verify the reviewed current delta before any R26 report refresh"
+      ],
+      "cause_group": "r34_closed_addition_scope",
+      "error": "AssertionError [ERR_ASSERTION]: Unknown R34 addition: docs/combat-bible/EXTENSION_01_APPLICATION.md",
+      "excerpt_lines": [
+        "2026-11-27T05:52:55.5169017Z AssertionError [ERR_ASSERTION]: Unknown R34 addition: docs/combat-bible/EXTENSION_01_APPLICATION.md",
+        "2026-11-27T05:52:55.5170577Z     at validateSnapshot (file:///home/runner/work/resident-evil-bow-protocol/resident-evil-bow-protocol/scripts/verify-current-r34.mjs:257:92)",
+        "2026-11-27T05:52:55.5171477Z     at file:///home/runner/work/resident-evil-bow-protocol/resident-evil-bow-protocol/scripts/verify-current-r34.mjs:278:20",
+        "2026-11-27T05:52:55.5172082Z     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)",
+        "2026-11-27T05:52:55.5225817Z ##[error]Process completed with exit code 1."
+      ],
+      "log_line_count_inspected": 394,
+      "skipped_jobs": [
+        {
+          "job_id": 140338353463,
+          "name": "browser"
+        },
+        {
+          "job_id": 140338353759,
+          "name": "build"
+        }
+      ],
+      "successful_sibling_jobs": []
+    },
+    {
+      "run_id": 45948186320,
+      "workflow": "R34 generated roster and characters then arena selection",
+      "run_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45948186320",
+      "job_id": 140337621287,
+      "job_name": "Current tooling and engine, published R34 receipts",
+      "job_url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45948186320/job/140337621287",
+      "head_sha": "246dbb81752c5fa41a55deb3aada3941ac966fec",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "failure",
+      "failed_steps": [
+        "Verify current tooling and media, then published R34 receipts before report refresh"
+      ],
+      "cause_group": "r34_closed_addition_scope",
+      "error": "AssertionError [ERR_ASSERTION]: Unknown R34 addition: docs/combat-bible/EXTENSION_01_APPLICATION.md",
+      "excerpt_lines": [
+        "2026-11-27T05:52:42.5965506Z AssertionError [ERR_ASSERTION]: Unknown R34 addition: docs/combat-bible/EXTENSION_01_APPLICATION.md",
+        "2026-11-27T05:52:42.5966098Z     at validateSnapshot (file:///home/runner/work/resident-evil-bow-protocol/resident-evil-bow-protocol/scripts/verify-current-r34.mjs:257:92)",
+        "2026-11-27T05:52:42.5966683Z     at file:///home/runner/work/resident-evil-bow-protocol/resident-evil-bow-protocol/scripts/verify-current-r34.mjs:278:20",
+        "2026-11-27T05:52:42.5967354Z     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)",
+        "2026-11-27T05:52:42.6031788Z ##[error]Process completed with exit code 1."
+      ],
+      "log_line_count_inspected": 433,
+      "skipped_jobs": [],
+      "successful_sibling_jobs": [
+        {
+          "job_id": 140337621014,
+          "name": "Current R34 default player view - characters-arena-combat"
+        },
+        {
+          "job_id": 140337621303,
+          "name": "Current R34 default player view - generated-roster-runtime"
+        },
+        {
+          "job_id": 140337621360,
+          "name": "Current R34 default player view - generated-assets-gallery"
+        }
+      ]
+    }
+  ],
+  "run_inventory": [
+    {
+      "run_id": 45948186298,
+      "name": "R18 story and contextual text regressions",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45948186298"
+    },
+    {
+      "run_id": 45948186279,
+      "name": "B.O.W. Protocol QA",
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45948186279"
+    },
+    {
+      "run_id": 45948186403,
+      "name": "R28 reviewed bodies, voluntary evolutions and source evidence",
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45948186403"
+    },
+    {
+      "run_id": 45948186126,
+      "name": "R32 current controls in the explicit legacy selection view",
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45948186126"
+    },
+    {
+      "run_id": 45948186241,
+      "name": "R11 Lucas browser regressions",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45948186241"
+    },
+    {
+      "run_id": 45948186369,
+      "name": "R13 replay recovery browser regressions",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45948186369"
+    },
+    {
+      "run_id": 45948186328,
+      "name": "R15 Baker ambience browser regressions",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45948186328"
+    },
+    {
+      "run_id": 45948186224,
+      "name": "R23 parallel fidelity workstreams",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45948186224"
+    },
+    {
+      "run_id": 45948186134,
+      "name": "R14 Baker rooms browser regressions",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45948186134"
+    },
+    {
+      "run_id": 45948186208,
+      "name": "R29 complete-body sources, native frames and replay boundaries",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45948186208"
+    },
+    {
+      "run_id": 45948186267,
+      "name": "R24 source assets, replay verification and access",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45948186267"
+    },
+    {
+      "run_id": 45948186579,
+      "name": "R16-R17 audio and combat text regressions",
+      "status": "completed",
+      "conclusion": "cancelled",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45948186579"
+    },
+    {
+      "run_id": 45948186138,
+      "name": "R27 generated sprites, source scope and restored replays",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45948186138"
+    },
+    {
+      "run_id": 45948186191,
+      "name": "R33 current assets, source evidence, restore and presentation",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45948186191"
+    },
+    {
+      "run_id": 45948186269,
+      "name": "R31 published provenance/build and current browser regressions",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45948186269"
+    },
+    {
+      "run_id": 45948186237,
+      "name": "R20 player interface and sprites browser regressions",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45948186237"
+    },
+    {
+      "run_id": 45948186235,
+      "name": "R25 cumulative sources, archives and reader access",
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45948186235"
+    },
+    {
+      "run_id": 45948186319,
+      "name": "R26 cumulative sources, archives and reader access",
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45948186319"
+    },
+    {
+      "run_id": 45948186392,
+      "name": "R19 save center browser regressions",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45948186392"
+    },
+    {
+      "run_id": 45948186320,
+      "name": "R34 generated roster and characters then arena selection",
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45948186320"
+    },
+    {
+      "run_id": 45948186242,
+      "name": "R10 intro and finisher browser regressions",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45948186242"
+    },
+    {
+      "run_id": 45948186190,
+      "name": "R22 original source fidelity",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45948186190"
+    },
+    {
+      "run_id": 45948186218,
+      "name": "Audit R9 browser regressions",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45948186218"
+    },
+    {
+      "run_id": 45948186142,
+      "name": "R12 flight browser regressions",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45948186142"
+    },
+    {
+      "run_id": 45948186277,
+      "name": "R30 native 2D sprites, complete motion loops and selection avatars",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45948186277"
+    }
+  ],
+  "cancelled_run": {
+    "run_id": 45948186579,
+    "name": "R16-R17 audio and combat text regressions",
+    "cause": "Non inspectée ; annulation conservée comme état distinct, sans attribution à la garde."
+  },
+  "successful_sibling_observation": {
+    "run_id": 45948186320,
+    "jobs": [
+      {
+        "job_id": 140337621014,
+        "name": "Current R34 default player view - characters-arena-combat"
+      },
+      {
+        "job_id": 140337621303,
+        "name": "Current R34 default player view - generated-roster-runtime"
+      },
+      {
+        "job_id": 140337621360,
+        "name": "Current R34 default player view - generated-assets-gallery"
+      }
+    ],
+    "scope": "Les trois jobs de vues joueur R34 sont signalés success par l’API jobs. Le job tooling/provenance du même workflow échoue. Aucun succès global R34 ou V24 n’est déduit de ces trois résultats."
+  },
+  "skipped_downstream_observation": {
+    "run_ids": [
+      45948186403,
+      45948186235,
+      45948186319
+    ],
+    "scope": "Les jobs build et browser R28, R25 et R26 sont skipped après leur job provenance en échec ; ils ne sont pas comptés comme validés."
+  },
+  "guard_observation": {
+    "path": "scripts/verify-current-r34.mjs",
+    "sha256": "28b4502fe3533f9f54ef58ce279c04270580383bd37ceeae4547ddbb14f7f6f6",
+    "read_only_inspection": true,
+    "changes_made": false,
+    "rule_unchanged": true
+  },
+  "conclusion": "Les six échecs ont bien une première cause commune démontrée par leurs propres logs : l’addition de la bible hors liste fermée R34. La CI globale de ce HEAD n’est pas verte. V24 reste un ajout de médias/documentation ; sa publication devra être lue séparément, sans assouplir les gardes ni réécrire les résultats historiques.",
+  "not_performed": [
+    "Aucune nouvelle exécution CI déclenchée.",
+    "Aucune relance de workflow.",
+    "Aucun test local, garde, rapport historique, index, arbre Git, commit ou ref modifié."
+  ],
+  "writes_limited_to": "production-archives/rec-media/v24/reports/CI_BASELINE_V24.json"
+}

@@ -1,0 +1,553 @@
+{
+  "schema": "rec-v24-characters-1",
+  "date": "2026-11-27",
+  "timezone": "Europe/Paris",
+  "base_commit": "246dbb81752c5fa41a55deb3aada3941ac966fec",
+  "scope": "6 nouvelles clés de menu pour deux incarnations V22 sans ces clés dans V23 ; aucun nouveau combattant complet et aucune absence historique globale prétendue.",
+  "path_base": "production-archives/rec-media/v24/characters",
+  "assets": [
+    {
+      "asset_id": "REC_HELENA_RE6_SELECTED_KEY_V24",
+      "hero_id": "REC_HELENA_RE6",
+      "name": "Helena Harper",
+      "category": "animation_key",
+      "state": "selected",
+      "edition": "Resident Evil 6 (2012), tenue promotionnelle de janvier 2012",
+      "costume": "agent promo janvier 2012",
+      "edition_key": "re6_2012_agent_promo201201",
+      "path": "assets/helena_re6_agent_selected_v24.png",
+      "status": "animation_key_candidate",
+      "tool": "image_gen.imagegen",
+      "generation_mode": "edit",
+      "transparent_background_requested": true,
+      "reference_asset": "production-archives/rec-media/v22/assets/REC_HELENA_RE6_BASE_FULLBODY_FRONT_V22_01.png",
+      "reference_asset_sha256": "9a0b7dba2bbdc94ceaa124a72325aef10f5f959948f0b392e987db2d360b0537",
+      "native_reference_source_id": "helena_capcom_promo_20120123",
+      "sources": [
+        "https://news.capcomusa.com/brelston/blog/2012/01/23/official_leon_and_helena_art_from_resident_evil_6"
+      ],
+      "prompt": "Use case: identity-preserve.\nAsset type: ONE full-body raster character sprite, a static menu-animation key for Resident Evil Combat. This is a new adapted menu gesture, not a claimed Capcom animation.\nInput 1 is the EDIT TARGET: V22 Helena Harper from Resident Evil 6, agent outfit based on Capcom's January 2012 promotional render. Input 2 is its original official source, showing Helena on the viewer's LEFT and Leon on the right; use ONLY Helena to verify costume anatomy, never copy Leon. Lock her medium-length layered light-brown hair, mature serious face, pale lavender short-sleeve collared blouse, dark fitted buttoned waistcoat, small necklace, dark belt and observed hip gear, dark subtly pinstriped flared trousers and practical dark heeled shoes. Keep the same dark handgun in her ANATOMICAL RIGHT hand, lowered toward the floor. Bare hands and same finger shapes; no new gloves, bracelet or badge.\nChange only the pose: stand more upright with both feet naturally separated, shoulders attentive and chin slightly raised, looking toward the viewer. Lift the empty anatomical LEFT hand off the hip and place its palm lightly against the upper chest just below the collarbone, elbow bent outward slightly. The RIGHT arm stays down with the same pistol muzzle toward the floor. Reserved professional expression, no smile or theatrical gesture.\nFraming: portrait 2:3 canvas, entire crown-to-soles figure centered, character height only 76 percent of canvas, at least 10 percent empty margin on ALL sides. Both feet and all fingers, pistol and clothing stay inside the frame. Preserve the same lighting, natural adult proportions, palette and detailed realistic game-sprite finish of input 1. Output ONE pose and ONE figure. Genuine RGBA alpha transparency: background alpha must be zero, no ambient background haze, no scenery, floor, cast shadow, checkerboard pixels, text, captions, labels, panels, watermarks, glow or second figure. Do not mirror, crop, add costume parts, replace weapons or invent logos.",
+      "file_bytes": 1332000,
+      "sha256": "300d980080abd789bef71323a6c01101db59f1a23f88cb48ad5cd2c3b49af1aa",
+      "git_blob_sha": "8d7b1f80b0008bba95328574db0ccb8e2a59902e",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "fully_transparent_pixels": 1246084,
+      "alpha_1_to_127_pixels": 20200,
+      "fully_opaque_pixels": 0,
+      "bbox_alpha_ge128": [
+        270,
+        100,
+        724,
+        1449
+      ],
+      "bbox_alpha_nonzero": [
+        25,
+        55,
+        990,
+        1497
+      ],
+      "margins_alpha_ge128_px": {
+        "left": 270,
+        "top": 100,
+        "right": 300,
+        "bottom": 87
+      },
+      "ten_percent_margin_met": false,
+      "silhouette_height_px": 1349,
+      "observed_direction": "near_front",
+      "author_visual_review": [
+        "Corps entier ; main gauche anatomique portée au haut du buste, arme conservée dans la droite, regard presque frontal.",
+        "Les bijoux, coutures et détails du visage sont régénérés depuis la base et la petite référence officielle."
+      ],
+      "limitations": [
+        "Clé statique candidate de menu ; transitions, timing, pivots et raccord dans le moteur restent à produire et vérifier.",
+        "Fidélité 1:1 non certifiée : visage, doigts, matériaux, détails fins et proportions ont été régénérés.",
+        "Les marges hautes ou basses sont inférieures aux 10 % demandés ; pas de rognage visible de la silhouette alpha >=128.",
+        "Les fichiers ont de la transparence réelle, avec des pixels de très faible alpha dispersés. Le RGB coloré sous alpha zéro n’est pas un fond opaque ; les contours restent à inspecter en jeu.",
+        "Incarnation fondée sur l’art promotionnel de janvier 2012 ; détails finaux du modèle commercial RE6 non certifiés."
+      ],
+      "canonical_fidelity_1_1_certified": false,
+      "engine_admitted": false,
+      "animation_complete": false,
+      "image_pixels_modified_after_generation": false,
+      "native_output": "/workspace/scratch/37b119cd013c/generated_images/exec-bbe25a3b-fd43-4c3f-8416-6d7fa7b76c10.png",
+      "anchor_proposal": {
+        "x": 497.0,
+        "y": 1449,
+        "method": "centre horizontal alpha>=128 / bas de silhouette ; proposition non validée en jeu",
+        "engine_approved": false
+      }
+    },
+    {
+      "asset_id": "REC_HELENA_RE6_CONFIRM_KEY_V24",
+      "hero_id": "REC_HELENA_RE6",
+      "name": "Helena Harper",
+      "category": "animation_key",
+      "state": "confirm",
+      "edition": "Resident Evil 6 (2012), tenue promotionnelle de janvier 2012",
+      "costume": "agent promo janvier 2012",
+      "edition_key": "re6_2012_agent_promo201201",
+      "path": "assets/helena_re6_agent_confirm_v24.png",
+      "status": "animation_key_candidate",
+      "tool": "image_gen.imagegen",
+      "generation_mode": "edit",
+      "transparent_background_requested": true,
+      "reference_asset": "production-archives/rec-media/v22/assets/REC_HELENA_RE6_BASE_FULLBODY_FRONT_V22_01.png",
+      "reference_asset_sha256": "9a0b7dba2bbdc94ceaa124a72325aef10f5f959948f0b392e987db2d360b0537",
+      "native_reference_source_id": "helena_capcom_promo_20120123",
+      "sources": [
+        "https://news.capcomusa.com/brelston/blog/2012/01/23/official_leon_and_helena_art_from_resident_evil_6"
+      ],
+      "prompt": "Use case: identity-preserve.\nAsset type: ONE full-body raster character sprite, a static menu-animation key for Resident Evil Combat. This is a new adapted menu gesture, not a claimed Capcom animation.\nInput 1 is the EDIT TARGET: V22 Helena Harper from Resident Evil 6, agent outfit based on Capcom's January 2012 promotional render. Input 2 is its original official source, showing Helena on the viewer's LEFT and Leon on the right; use ONLY Helena to verify costume anatomy, never copy Leon. Lock her medium-length layered light-brown hair, mature serious face, pale lavender short-sleeve collared blouse, dark fitted buttoned waistcoat, small necklace, dark belt and observed hip gear, dark subtly pinstriped flared trousers and practical dark heeled shoes. Keep the same dark handgun in her ANATOMICAL RIGHT hand, lowered toward the floor. Bare hands and same finger shapes; no new gloves, bracelet or badge.\nChange only the pose: body stays near frontal, both feet planted. Raise her EMPTY anatomical LEFT hand to shoulder height for a small calm acknowledgment, palm facing the viewer and five natural fingers gently separated. Keep her right arm down holding the same handgun pointed toward the floor. A very slight reassuring smile and direct gaze. No waving motion blur and no added action effects.\nFraming: portrait 2:3 canvas, entire crown-to-soles figure centered, character height only 76 percent of canvas, at least 10 percent empty margin on ALL sides. Both feet and all fingers, pistol and clothing stay inside the frame. Preserve the same lighting, natural adult proportions, palette and detailed realistic game-sprite finish of input 1. Output ONE pose and ONE figure. Genuine RGBA alpha transparency: background alpha must be zero, no ambient background haze, no scenery, floor, cast shadow, checkerboard pixels, text, captions, labels, panels, watermarks, glow or second figure. Do not mirror, crop, add costume parts, replace weapons or invent logos.",
+      "file_bytes": 1349693,
+      "sha256": "a4456f13f4f25627716e8c43eebe29266853d6646a4bf40a2040648d2c165b13",
+      "git_blob_sha": "293b37a8a1459e5e3ae039ebf02ed10b1fb09b38",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "fully_transparent_pixels": 1238604,
+      "alpha_1_to_127_pixels": 20481,
+      "fully_opaque_pixels": 0,
+      "bbox_alpha_ge128": [
+        281,
+        121,
+        718,
+        1465
+      ],
+      "bbox_alpha_nonzero": [
+        47,
+        114,
+        978,
+        1516
+      ],
+      "margins_alpha_ge128_px": {
+        "left": 281,
+        "top": 121,
+        "right": 306,
+        "bottom": 71
+      },
+      "ten_percent_margin_met": false,
+      "silhouette_height_px": 1344,
+      "observed_direction": "near_front",
+      "author_visual_review": [
+        "Corps entier ; main gauche anatomique ouverte à hauteur d’épaule, cinq doigts visibles ; arme abaissée dans la droite.",
+        "Léger sourire, posture réservée ; nouvelle pose de menu propre à cette adaptation."
+      ],
+      "limitations": [
+        "Clé statique candidate de menu ; transitions, timing, pivots et raccord dans le moteur restent à produire et vérifier.",
+        "Fidélité 1:1 non certifiée : visage, doigts, matériaux, détails fins et proportions ont été régénérés.",
+        "Les marges hautes ou basses sont inférieures aux 10 % demandés ; pas de rognage visible de la silhouette alpha >=128.",
+        "Les fichiers ont de la transparence réelle, avec des pixels de très faible alpha dispersés. Le RGB coloré sous alpha zéro n’est pas un fond opaque ; les contours restent à inspecter en jeu.",
+        "Incarnation fondée sur l’art promotionnel de janvier 2012 ; détails finaux du modèle commercial RE6 non certifiés."
+      ],
+      "canonical_fidelity_1_1_certified": false,
+      "engine_admitted": false,
+      "animation_complete": false,
+      "image_pixels_modified_after_generation": false,
+      "native_output": "/workspace/scratch/37b119cd013c/generated_images/exec-9ec194c5-005a-4923-97e5-447970624507.png",
+      "anchor_proposal": {
+        "x": 499.5,
+        "y": 1465,
+        "method": "centre horizontal alpha>=128 / bas de silhouette ; proposition non validée en jeu",
+        "engine_approved": false
+      }
+    },
+    {
+      "asset_id": "REC_HELENA_RE6_DESELECT_KEY_V24",
+      "hero_id": "REC_HELENA_RE6",
+      "name": "Helena Harper",
+      "category": "animation_key",
+      "state": "deselect",
+      "edition": "Resident Evil 6 (2012), tenue promotionnelle de janvier 2012",
+      "costume": "agent promo janvier 2012",
+      "edition_key": "re6_2012_agent_promo201201",
+      "path": "assets/helena_re6_agent_deselect_v24.png",
+      "status": "animation_key_candidate",
+      "tool": "image_gen.imagegen",
+      "generation_mode": "edit",
+      "transparent_background_requested": true,
+      "reference_asset": "production-archives/rec-media/v22/assets/REC_HELENA_RE6_BASE_FULLBODY_FRONT_V22_01.png",
+      "reference_asset_sha256": "9a0b7dba2bbdc94ceaa124a72325aef10f5f959948f0b392e987db2d360b0537",
+      "native_reference_source_id": "helena_capcom_promo_20120123",
+      "sources": [
+        "https://news.capcomusa.com/brelston/blog/2012/01/23/official_leon_and_helena_art_from_resident_evil_6"
+      ],
+      "prompt": "Use case: identity-preserve.\nAsset type: ONE full-body raster character sprite, a static menu-animation key for Resident Evil Combat. This is a new adapted menu gesture, not a claimed Capcom animation.\nInput 1 is the EDIT TARGET: V22 Helena Harper from Resident Evil 6, agent outfit based on Capcom's January 2012 promotional render. Input 2 is its original official source, showing Helena on the viewer's LEFT and Leon on the right; use ONLY Helena to verify costume anatomy, never copy Leon. Lock her medium-length layered light-brown hair, mature serious face, pale lavender short-sleeve collared blouse, dark fitted buttoned waistcoat, small necklace, dark belt and observed hip gear, dark subtly pinstriped flared trousers and practical dark heeled shoes. Keep the same dark handgun in her ANATOMICAL RIGHT hand, lowered toward the floor. Bare hands and same finger shapes; no new gloves, bracelet or badge.\nChange only the pose: lower BOTH arms beside her torso, her EMPTY anatomical LEFT hand hanging naturally beside the left thigh, fingers gently curved. The anatomical RIGHT hand retains the same handgun muzzle downward. Shoulders relax and the head/gaze turns slightly toward her own RIGHT, viewer left. Neutral reserved expression, both feet planted. This must be distinct from the original left-hand-on-hip pose; no walking or action.\nFraming: portrait 2:3 canvas, entire crown-to-soles figure centered, character height only 76 percent of canvas, at least 10 percent empty margin on ALL sides. Both feet and all fingers, pistol and clothing stay inside the frame. Preserve the same lighting, natural adult proportions, palette and detailed realistic game-sprite finish of input 1. Output ONE pose and ONE figure. Genuine RGBA alpha transparency: background alpha must be zero, no ambient background haze, no scenery, floor, cast shadow, checkerboard pixels, text, captions, labels, panels, watermarks, glow or second figure. Do not mirror, crop, add costume parts, replace weapons or invent logos.",
+      "file_bytes": 1317630,
+      "sha256": "7d570bbbdd12e086cf5ffeb203c4b629d8acf289853c556341bc05d22d05ae89",
+      "git_blob_sha": "610ec8d5e0a39c81718ad92b48e5731105b95bf7",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "fully_transparent_pixels": 1244136,
+      "alpha_1_to_127_pixels": 21646,
+      "fully_opaque_pixels": 0,
+      "bbox_alpha_ge128": [
+        292,
+        138,
+        682,
+        1456
+      ],
+      "bbox_alpha_nonzero": [
+        35,
+        31,
+        1002,
+        1458
+      ],
+      "margins_alpha_ge128_px": {
+        "left": 292,
+        "top": 138,
+        "right": 342,
+        "bottom": 80
+      },
+      "ten_percent_margin_met": false,
+      "silhouette_height_px": 1318,
+      "observed_direction": "near_front; gaze_viewer_right",
+      "author_visual_review": [
+        "Deux bras abaissés, arme à droite anatomique et main gauche libre, pieds entiers.",
+        "Le visage regarde effectivement vers la DROITE de l’image (sa gauche), alors que le prompt demandait la gauche de l’image (sa droite). La direction demandée n’est pas validée."
+      ],
+      "limitations": [
+        "Clé statique candidate de menu ; transitions, timing, pivots et raccord dans le moteur restent à produire et vérifier.",
+        "Fidélité 1:1 non certifiée : visage, doigts, matériaux, détails fins et proportions ont été régénérés.",
+        "Les marges hautes ou basses sont inférieures aux 10 % demandés ; pas de rognage visible de la silhouette alpha >=128.",
+        "Les fichiers ont de la transparence réelle, avec des pixels de très faible alpha dispersés. Le RGB coloré sous alpha zéro n’est pas un fond opaque ; les contours restent à inspecter en jeu.",
+        "Incarnation fondée sur l’art promotionnel de janvier 2012 ; détails finaux du modèle commercial RE6 non certifiés.",
+        "Regard opposé à la direction demandée ; correction encore ouverte."
+      ],
+      "canonical_fidelity_1_1_certified": false,
+      "engine_admitted": false,
+      "animation_complete": false,
+      "image_pixels_modified_after_generation": false,
+      "native_output": "/workspace/scratch/37b119cd013c/generated_images/exec-5e78696d-d40d-4b38-89eb-09d00097e07f.png",
+      "anchor_proposal": {
+        "x": 487.0,
+        "y": 1456,
+        "method": "centre horizontal alpha>=128 / bas de silhouette ; proposition non validée en jeu",
+        "engine_approved": false
+      }
+    },
+    {
+      "asset_id": "REC_ADA_RE4R_SW_DEFAULT_SELECTED_KEY_V24",
+      "hero_id": "REC_ADA_RE4R",
+      "name": "Ada Wong",
+      "category": "animation_key",
+      "state": "selected",
+      "edition": "Resident Evil 4 remake Separate Ways (2023)",
+      "costume": "DEFAULT",
+      "edition_key": "re4r_2023_separate_ways_default",
+      "path": "assets/ada_re4r_sw_default_selected_v24.png",
+      "status": "animation_key_candidate",
+      "tool": "image_gen.imagegen",
+      "generation_mode": "edit",
+      "transparent_background_requested": true,
+      "reference_asset": "production-archives/rec-media/v22/assets/REC_ADA_RE4R_SW_DEFAULT_FULLBODY_FRONT_V22_01.png",
+      "reference_asset_sha256": "41f3bda495940b492e107c65017f1567d0cc5329732429b656d46d0993800bc2",
+      "native_reference_source_id": "ada_native_extras_2023",
+      "sources": [
+        "https://gamewith.jp/biohazard-re4/article/show/419677",
+        "https://news.capcomusa.com/lets/browse/ya-salio-caminos-separados-el-dlc-de-resident-evil-4"
+      ],
+      "prompt": "Use case: identity-preserve.\nAsset type: ONE full-body raster character sprite, a static menu-animation key for Resident Evil Combat. This is a new adapted menu gesture, not a claimed Capcom animation.\nInput 1 is the EDIT TARGET: V22 Ada Wong in DEFAULT Resident Evil 4 remake Separate Ways (2023) outfit. Input 2 is the native Extras-menu screenshot used for visual verification; ignore all surrounding menu text and background. Lock the actual BLACK short side-parted bob shown on the model, adult facial identity, burgundy-red ribbed long-sleeve turtleneck sweater dress, black gloves, dark stockings, tall fitted black heeled boots, black shoulder harness and exactly the observed buckles, hip belt and thigh straps. Keep the silver-gray handgun in her ANATOMICAL RIGHT hand, pointed down, and the same holstered equipment with brown grip on her ANATOMICAL LEFT hip. No substitution with RE4 2005 costume or other optional outfit.\nChange only the pose: uncross her empty anatomical LEFT arm and place the LEFT hand at her left waist, elbow subtly outward. Keep the RIGHT hand down with the same silver handgun muzzle toward the floor. Stand upright, body near frontal and naturally offset feet, chin slightly raised and eyes attentive toward the viewer. Maintain a cool neutral expression. All equipment remains attached to its original anatomical side.\nFraming: portrait 2:3 canvas, entire crown-to-soles figure centered, character height only 76 percent of canvas, at least 10 percent empty margin on ALL sides. Both feet and all fingers, pistol and clothing stay inside the frame. Preserve the same lighting, natural adult proportions, palette and detailed realistic game-sprite finish of input 1. Output ONE pose and ONE figure. Genuine RGBA alpha transparency: background alpha must be zero, no ambient background haze, no scenery, floor, cast shadow, checkerboard pixels, text, captions, labels, panels, watermarks, glow or second figure. Do not mirror, crop, add costume parts, replace weapons or invent logos.",
+      "file_bytes": 1349544,
+      "sha256": "566ab97ded17e9b89761a3b17319a05c02eb00deccbf8269e313f6c99d8fe92f",
+      "git_blob_sha": "dbebacc136589439fd629b14871eabab32fc3b40",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "fully_transparent_pixels": 1259313,
+      "alpha_1_to_127_pixels": 20993,
+      "fully_opaque_pixels": 0,
+      "bbox_alpha_ge128": [
+        301,
+        104,
+        754,
+        1467
+      ],
+      "bbox_alpha_nonzero": [
+        2,
+        33,
+        1010,
+        1520
+      ],
+      "margins_alpha_ge128_px": {
+        "left": 301,
+        "top": 104,
+        "right": 270,
+        "bottom": 69
+      },
+      "ten_percent_margin_met": false,
+      "silhouette_height_px": 1363,
+      "observed_direction": "near_front",
+      "author_visual_review": [
+        "Corps entier ; main gauche anatomique à la taille, arme grise dans la droite ; équipement à poignée brune conservé à la hanche gauche.",
+        "Cheveux noirs, robe pull côtelée bordeaux et harnais du modèle DEFAULT conservés avec détails régénérés."
+      ],
+      "limitations": [
+        "Clé statique candidate de menu ; transitions, timing, pivots et raccord dans le moteur restent à produire et vérifier.",
+        "Fidélité 1:1 non certifiée : visage, doigts, matériaux, détails fins et proportions ont été régénérés.",
+        "Les marges hautes ou basses sont inférieures aux 10 % demandés ; pas de rognage visible de la silhouette alpha >=128.",
+        "Les fichiers ont de la transparence réelle, avec des pixels de très faible alpha dispersés. Le RGB coloré sous alpha zéro n’est pas un fond opaque ; les contours restent à inspecter en jeu.",
+        "Incarnation DEFAULT Separate Ways 2023 ; elle ne valide pas un costume RE4 2005, Dress ou Undercover."
+      ],
+      "canonical_fidelity_1_1_certified": false,
+      "engine_admitted": false,
+      "animation_complete": false,
+      "image_pixels_modified_after_generation": false,
+      "native_output": "/workspace/scratch/37b119cd013c/generated_images/exec-3cc130f4-d9d7-4da6-b4b5-d18c1ef30484.png",
+      "anchor_proposal": {
+        "x": 527.5,
+        "y": 1467,
+        "method": "centre horizontal alpha>=128 / bas de silhouette ; proposition non validée en jeu",
+        "engine_approved": false
+      }
+    },
+    {
+      "asset_id": "REC_ADA_RE4R_SW_DEFAULT_CONFIRM_KEY_V24",
+      "hero_id": "REC_ADA_RE4R",
+      "name": "Ada Wong",
+      "category": "animation_key",
+      "state": "confirm",
+      "edition": "Resident Evil 4 remake Separate Ways (2023)",
+      "costume": "DEFAULT",
+      "edition_key": "re4r_2023_separate_ways_default",
+      "path": "assets/ada_re4r_sw_default_confirm_v24.png",
+      "status": "animation_key_candidate",
+      "tool": "image_gen.imagegen",
+      "generation_mode": "edit",
+      "transparent_background_requested": true,
+      "reference_asset": "production-archives/rec-media/v22/assets/REC_ADA_RE4R_SW_DEFAULT_FULLBODY_FRONT_V22_01.png",
+      "reference_asset_sha256": "41f3bda495940b492e107c65017f1567d0cc5329732429b656d46d0993800bc2",
+      "native_reference_source_id": "ada_native_extras_2023",
+      "sources": [
+        "https://gamewith.jp/biohazard-re4/article/show/419677",
+        "https://news.capcomusa.com/lets/browse/ya-salio-caminos-separados-el-dlc-de-resident-evil-4"
+      ],
+      "prompt": "Use case: identity-preserve.\nAsset type: ONE full-body raster character sprite, a static menu-animation key for Resident Evil Combat. This is a new adapted menu gesture, not a claimed Capcom animation.\nInput 1 is the EDIT TARGET: V22 Ada Wong in DEFAULT Resident Evil 4 remake Separate Ways (2023) outfit. Input 2 is the native Extras-menu screenshot used for visual verification; ignore all surrounding menu text and background. Lock the actual BLACK short side-parted bob shown on the model, adult facial identity, burgundy-red ribbed long-sleeve turtleneck sweater dress, black gloves, dark stockings, tall fitted black heeled boots, black shoulder harness and exactly the observed buckles, hip belt and thigh straps. Keep the silver-gray handgun in her ANATOMICAL RIGHT hand, pointed down, and the same holstered equipment with brown grip on her ANATOMICAL LEFT hip. No substitution with RE4 2005 costume or other optional outfit.\nChange only the pose: bend the empty anatomical LEFT elbow, lift the LEFT hand to upper-chest level and make a small relaxed acknowledgment with the palm angled toward the viewer, fingers naturally open. The RIGHT arm remains lowered beside the right thigh holding the same silver handgun muzzle down. Slight restrained closed-mouth smile, direct gaze, body near frontal, feet planted and naturally separated. No extra accessory, weapon use or effects.\nFraming: portrait 2:3 canvas, entire crown-to-soles figure centered, character height only 76 percent of canvas, at least 10 percent empty margin on ALL sides. Both feet and all fingers, pistol and clothing stay inside the frame. Preserve the same lighting, natural adult proportions, palette and detailed realistic game-sprite finish of input 1. Output ONE pose and ONE figure. Genuine RGBA alpha transparency: background alpha must be zero, no ambient background haze, no scenery, floor, cast shadow, checkerboard pixels, text, captions, labels, panels, watermarks, glow or second figure. Do not mirror, crop, add costume parts, replace weapons or invent logos.",
+      "file_bytes": 1330872,
+      "sha256": "d617be46d3406ee252d75ca69675f82e3d3464b1a6ff46c6edbc4ce844a8be15",
+      "git_blob_sha": "c5711049a924926408182c1bdc360c15b135718e",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "fully_transparent_pixels": 1266355,
+      "alpha_1_to_127_pixels": 22878,
+      "fully_opaque_pixels": 0,
+      "bbox_alpha_ge128": [
+        289,
+        110,
+        696,
+        1442
+      ],
+      "bbox_alpha_nonzero": [
+        41,
+        19,
+        1006,
+        1511
+      ],
+      "margins_alpha_ge128_px": {
+        "left": 289,
+        "top": 110,
+        "right": 328,
+        "bottom": 94
+      },
+      "ten_percent_margin_met": false,
+      "silhouette_height_px": 1332,
+      "observed_direction": "near_front",
+      "author_visual_review": [
+        "Main gauche anatomique ouverte, cinq doigts visibles ; arme dans la droite et équipement de hanche du bon côté.",
+        "Le geste monte près du visage/épaule, plus haut que le haut du buste demandé. La pose est un acquiescement adapté, pas une animation officielle attestée."
+      ],
+      "limitations": [
+        "Clé statique candidate de menu ; transitions, timing, pivots et raccord dans le moteur restent à produire et vérifier.",
+        "Fidélité 1:1 non certifiée : visage, doigts, matériaux, détails fins et proportions ont été régénérés.",
+        "Les marges hautes ou basses sont inférieures aux 10 % demandés ; pas de rognage visible de la silhouette alpha >=128.",
+        "Les fichiers ont de la transparence réelle, avec des pixels de très faible alpha dispersés. Le RGB coloré sous alpha zéro n’est pas un fond opaque ; les contours restent à inspecter en jeu.",
+        "Incarnation DEFAULT Separate Ways 2023 ; elle ne valide pas un costume RE4 2005, Dress ou Undercover."
+      ],
+      "canonical_fidelity_1_1_certified": false,
+      "engine_admitted": false,
+      "animation_complete": false,
+      "image_pixels_modified_after_generation": false,
+      "native_output": "/workspace/scratch/37b119cd013c/generated_images/exec-f49c7aad-732d-4906-b573-6b8e4371153b.png",
+      "anchor_proposal": {
+        "x": 492.5,
+        "y": 1442,
+        "method": "centre horizontal alpha>=128 / bas de silhouette ; proposition non validée en jeu",
+        "engine_approved": false
+      }
+    },
+    {
+      "asset_id": "REC_ADA_RE4R_SW_DEFAULT_DESELECT_KEY_V24",
+      "hero_id": "REC_ADA_RE4R",
+      "name": "Ada Wong",
+      "category": "animation_key",
+      "state": "deselect",
+      "edition": "Resident Evil 4 remake Separate Ways (2023)",
+      "costume": "DEFAULT",
+      "edition_key": "re4r_2023_separate_ways_default",
+      "path": "assets/ada_re4r_sw_default_deselect_v24.png",
+      "status": "animation_key_candidate",
+      "tool": "image_gen.imagegen",
+      "generation_mode": "edit",
+      "transparent_background_requested": true,
+      "reference_asset": "production-archives/rec-media/v22/assets/REC_ADA_RE4R_SW_DEFAULT_FULLBODY_FRONT_V22_01.png",
+      "reference_asset_sha256": "41f3bda495940b492e107c65017f1567d0cc5329732429b656d46d0993800bc2",
+      "native_reference_source_id": "ada_native_extras_2023",
+      "sources": [
+        "https://gamewith.jp/biohazard-re4/article/show/419677",
+        "https://news.capcomusa.com/lets/browse/ya-salio-caminos-separados-el-dlc-de-resident-evil-4"
+      ],
+      "prompt": "Use case: identity-preserve.\nAsset type: ONE full-body raster character sprite, a static menu-animation key for Resident Evil Combat. This is a new adapted menu gesture, not a claimed Capcom animation.\nInput 1 is the EDIT TARGET: V22 Ada Wong in DEFAULT Resident Evil 4 remake Separate Ways (2023) outfit. Input 2 is the native Extras-menu screenshot used for visual verification; ignore all surrounding menu text and background. Lock the actual BLACK short side-parted bob shown on the model, adult facial identity, burgundy-red ribbed long-sleeve turtleneck sweater dress, black gloves, dark stockings, tall fitted black heeled boots, black shoulder harness and exactly the observed buckles, hip belt and thigh straps. Keep the silver-gray handgun in her ANATOMICAL RIGHT hand, pointed down, and the same holstered equipment with brown grip on her ANATOMICAL LEFT hip. No substitution with RE4 2005 costume or other optional outfit.\nChange only the pose: let BOTH arms hang naturally at her sides; her EMPTY anatomical LEFT hand relaxed next to her left thigh, while her RIGHT hand holds the same silver handgun downward. Keep her body near frontal, shoulders relaxed and head/gaze turned slightly toward her own LEFT, viewer right. Both feet planted, quiet neutral expression. Do not reproduce the original crossed-arm gesture and do not introduce walking, firing or a back view.\nFraming: portrait 2:3 canvas, entire crown-to-soles figure centered, character height only 76 percent of canvas, at least 10 percent empty margin on ALL sides. Both feet and all fingers, pistol and clothing stay inside the frame. Preserve the same lighting, natural adult proportions, palette and detailed realistic game-sprite finish of input 1. Output ONE pose and ONE figure. Genuine RGBA alpha transparency: background alpha must be zero, no ambient background haze, no scenery, floor, cast shadow, checkerboard pixels, text, captions, labels, panels, watermarks, glow or second figure. Do not mirror, crop, add costume parts, replace weapons or invent logos.",
+      "file_bytes": 1315733,
+      "sha256": "1243adf8a5856a6c4092f0fede65e32c06cd7ec67c00bb457d9f3e60f6e2dcf0",
+      "git_blob_sha": "9e344328cf5c9f34ed6bce2d809b4660caf579c5",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "fully_transparent_pixels": 1255771,
+      "alpha_1_to_127_pixels": 21495,
+      "fully_opaque_pixels": 0,
+      "bbox_alpha_ge128": [
+        280,
+        119,
+        736,
+        1459
+      ],
+      "bbox_alpha_nonzero": [
+        67,
+        103,
+        962,
+        1462
+      ],
+      "margins_alpha_ge128_px": {
+        "left": 280,
+        "top": 119,
+        "right": 288,
+        "bottom": 77
+      },
+      "ten_percent_margin_met": false,
+      "silhouette_height_px": 1340,
+      "observed_direction": "near_front; gaze_viewer_right",
+      "author_visual_review": [
+        "Deux bras abaissés, main gauche libre, arme grise en main droite ; visage légèrement tourné vers la droite de l’image comme demandé.",
+        "PNG retourné en data URL sans chemin de sortie : octets exacts décodés et sauvegardés, sans régénération ni modification des pixels."
+      ],
+      "limitations": [
+        "Clé statique candidate de menu ; transitions, timing, pivots et raccord dans le moteur restent à produire et vérifier.",
+        "Fidélité 1:1 non certifiée : visage, doigts, matériaux, détails fins et proportions ont été régénérés.",
+        "Les marges hautes ou basses sont inférieures aux 10 % demandés ; pas de rognage visible de la silhouette alpha >=128.",
+        "Les fichiers ont de la transparence réelle, avec des pixels de très faible alpha dispersés. Le RGB coloré sous alpha zéro n’est pas un fond opaque ; les contours restent à inspecter en jeu.",
+        "Incarnation DEFAULT Separate Ways 2023 ; elle ne valide pas un costume RE4 2005, Dress ou Undercover."
+      ],
+      "canonical_fidelity_1_1_certified": false,
+      "engine_admitted": false,
+      "animation_complete": false,
+      "image_pixels_modified_after_generation": false,
+      "native_output": "exact PNG bytes decoded from image_gen data URL; no output_hint supplied",
+      "anchor_proposal": {
+        "x": 508.0,
+        "y": 1459,
+        "method": "centre horizontal alpha>=128 / bas de silhouette ; proposition non validée en jeu",
+        "engine_approved": false
+      }
+    }
+  ],
+  "families": [
+    {
+      "hero_id": "REC_HELENA_RE6",
+      "states": [
+        "selected",
+        "confirm",
+        "deselect"
+      ],
+      "silhouette_height_range_px": [
+        1318,
+        1349
+      ],
+      "baseline_spread_px": 16,
+      "all_native_canvas_dimensions": [
+        1024,
+        1536
+      ],
+      "animation_complete": false,
+      "remaining": [
+        "Ancrages et échelle à stabiliser.",
+        "Transitions intermédiaires et timing non livrés.",
+        "Contrôle des contours sur fond de jeu non effectué."
+      ]
+    },
+    {
+      "hero_id": "REC_ADA_RE4R",
+      "states": [
+        "selected",
+        "confirm",
+        "deselect"
+      ],
+      "silhouette_height_range_px": [
+        1332,
+        1363
+      ],
+      "baseline_spread_px": 25,
+      "all_native_canvas_dimensions": [
+        1024,
+        1536
+      ],
+      "animation_complete": false,
+      "remaining": [
+        "Ancrages et échelle à stabiliser.",
+        "Transitions intermédiaires et timing non livrés.",
+        "Contrôle des contours sur fond de jeu non effectué."
+      ]
+    }
+  ],
+  "source_manifest": "sources.json",
+  "prompts": "prompts.json",
+  "refusals": [],
+  "summary": {
+    "png": 6,
+    "animation_key_candidates": 6,
+    "characters": 2,
+    "complete_animations": 0,
+    "engine_admitted": 0,
+    "canonical_fidelity_1_1_certified": 0
+  }
+}
