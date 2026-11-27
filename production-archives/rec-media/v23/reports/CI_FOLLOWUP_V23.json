@@ -1,0 +1,90 @@
+{
+  "schema": "rec-v23-ci-followup-1",
+  "date": "2026-11-27",
+  "timezone": "Europe/Paris",
+  "repository": "darknigthmare/resident-evil-bow-protocol",
+  "inspected_commit": "fea27e137cfface468d71875e7621aa0ffe0c34a",
+  "parent_v22": "7c679b38c72ee4d34fd1c39d1dc8950dd4f506aa",
+  "regression": {
+    "error": "AssertionError [ERR_ASSERTION]: Frozen file changed: README.md",
+    "cause": "La première publication V23 complétait le README racine, fichier figé par la garde R34.",
+    "runs": [
+      {
+        "workflow": "R25",
+        "run_id": 45947593642,
+        "job_id": 140335753501,
+        "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45947593642/job/140335753501",
+        "conclusion": "failure",
+        "error": "Frozen file changed: README.md"
+      },
+      {
+        "workflow": "R26",
+        "run_id": 45947593534,
+        "job_id": 140335753159,
+        "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45947593534/job/140335753159",
+        "conclusion": "failure",
+        "error": "Frozen file changed: README.md"
+      },
+      {
+        "workflow": "R28",
+        "run_id": 45947593558,
+        "job_id": 140335753441,
+        "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45947593558/job/140335753441",
+        "conclusion": "failure",
+        "error": "Frozen file changed: README.md"
+      },
+      {
+        "workflow": "R32",
+        "run_id": 45947593580,
+        "job_id": 140335753681,
+        "url": "https://github.com/darknigthmare/resident-evil-bow-protocol/actions/runs/45947593580/job/140335753681",
+        "conclusion": "failure",
+        "error": "Frozen file changed: README.md"
+      }
+    ]
+  },
+  "correction": {
+    "restored_indexes": [
+      {
+        "path": "README.md",
+        "restored_from": "7c679b38c72ee4d34fd1c39d1dc8950dd4f506aa",
+        "git_blob_sha": "9f766599c370e0ce8c465c9e7c859877e83ec9f8",
+        "sha256": "f4e3523def331b2f2114bbe1302c5ed05617d248352fcaad65b44c09d10b185b",
+        "bytes": 2335,
+        "v23_modified_sha256": "38c6dcc41ceed35e09c90eb803379c87bc737deff7fe053b65ca2b07c34a2b31",
+        "identical_to_parent": true
+      },
+      {
+        "path": "production-archives/rec-media/README.md",
+        "restored_from": "7c679b38c72ee4d34fd1c39d1dc8950dd4f506aa",
+        "git_blob_sha": "d26eebf6ffb6ec95465e2deac90bf6a33f2a2bb5",
+        "sha256": "150e3ccad0c053bb4305c60c6559d3b53905e93192268dae455b803ff1b2c713",
+        "bytes": 24862,
+        "v23_modified_sha256": "1a67e9e6f76e85cbd5bbc00ba90fac486959491d9b1d45db807bfd576373c24b",
+        "identical_to_parent": true
+      }
+    ],
+    "v23_assets_guides_and_prototype_retained": true
+  },
+  "historical_guard": {
+    "path": "scripts/verify-current-r34.mjs",
+    "unchanged": true,
+    "remaining_limit": "allowedAddition possède une liste fermée R34/outils IA et rejette aussi les nouveaux dossiers docs/combat-bible et production-archives/rec-media/v23. Le prochain premier message peut donc différer du CI_CHECKPOINT du parent. Aucun résultat CI global vert n’est revendiqué.",
+    "rules_modified": false
+  },
+  "validation_initiale": {
+    "commit": "fea27e137cfface468d71875e7621aa0ffe0c34a",
+    "report": "VALIDATION_V23.json",
+    "scope": "84 contrôles passés avant ce correctif documentaire ; comprenant 26 tests de domaine. Les fichiers du prototype et les PNG ne sont pas modifiés.",
+    "original_reports_preserved": true
+  },
+  "correction_validation": {
+    "markdown_local_links_checked": 194,
+    "missing": [],
+    "restored_indexes_equal_parent_bytes": true,
+    "guard_unchanged": true,
+    "diff_check_passed": true,
+    "code_and_images_unchanged_since_inspected_commit": true
+  },
+  "remote_ci_after_correction": "Non observée dans ce rapport préparé avant création du commit correctif."
+}

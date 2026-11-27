@@ -65,3 +65,9 @@ La vérification navigateur reste **bloquée** : Chromium absent et télécharge
 4. Reprendre les autres manquants depuis [l’inventaire V22](../v22/inventory/INVENTAIRE_COMPLET_V22_20261124.md). Les récupérations V19, les formes encore sans références complètes et les séquences de projectiles restent ouvertes ; ces clés ne les ferment pas.
 
 Les scripts du lot n’altèrent aucune preuve historique. `assemble_v23.py` assemble uniquement les nouveaux JSON et la galerie depuis les PNG existants et leurs prompts ; `validate_v23.py` contrôle ce périmètre. Le lot ne modifie ni le moteur, ni les contrats de replay, ni les workflows et gardes historiques. La publication dans une PR reste distincte d’une fusion ou d’une mise en production.
+
+## Suivi de la publication et des contrôles historiques
+
+La première publication V23 (`fea27e137cfface468d71875e7621aa0ffe0c34a`) a ajouté des liens aux deux index antérieurs. Les logs R25, R26, R28 et R32 ont alors signalé `Frozen file changed: README.md`. Le correctif rétablit le README racine et l’index médias **octet pour octet à leur état V22** ; la bible, ses sources, les poses et le prototype restent dans leurs nouveaux dossiers.
+
+Le [suivi CI de cette correction](reports/CI_FOLLOWUP_V23.json) conserve les liens des quatre exécutions et la preuve de restauration. Le contrôle R34 possède une liste fermée de chemins et n’admet pas les nouveaux dossiers `docs/combat-bible/` ou `production-archives/rec-media/v23/`. Leur publication ne signifie donc pas que la CI générale est validée. Aucun ancien garde, contrat ou résultat n’a été assoupli. Le rapport de validation initial reste la preuve des contrôles exécutés avant cette correction documentaire ; le suivi consigne les vérifications propres au correctif.
